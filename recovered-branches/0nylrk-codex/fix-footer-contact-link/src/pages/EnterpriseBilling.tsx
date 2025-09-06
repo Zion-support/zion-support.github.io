@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/EnterpriseBilling.tsx
 
 <<<<<<< HEAD
 
@@ -12,29 +14,33 @@ import { Navigate } from "react-router-dom",
   const hasBillingAccess = user?.role === "enterprise_admin" || 
                           (user?.permissions && user.permissions.includes('billing_access')),
 =======
+========
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/EnterpriseBilling.tsx
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
+=======
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -45,13 +51,13 @@ import {SEO} from "@/components/SEO";
 import {ProtectedRoute} from "@/components/ProtectedRoute";
 export default function EnterpriseBilling() {;
   const { user } = useAuth();
-
+<<<<<<< HEAD
   // Check if user has billing permissions;
   const hasBillingAccess = user?.role === "enterprise_admin" || ;
                           (user?.permissions && user && user.permissions.includes('billing_access'));
-
   if (!hasBillingAccess) {;
     return <Navigate to="/unauthorized" />;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/EnterpriseBilling.tsx
 
 =======
 
@@ -63,6 +69,42 @@ export default function EnterpriseBilling() {;
   }
   return (
 <<<<<<< HEAD
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { BillingDashboard } from "@/components/enterprise/billing/BillingDashboard",
+import { useAuth } from "@/hooks/useAuth",
+import { Navigate } from "react-router-dom",
+<<<<<<< HEAD
+import { SEO } from "@/components/SEO";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+export default function EnterpriseBilling() {
+  const { user } = useAuth();
+  // Check if user has billing permissions
+
+  const hasBillingAccess = user?.role === "enterprise_admin" |
+                          (user?.permissions && user.permissions.includes('billing_access'));
+
+=======
+import { SEO } from "@/components/SEO",
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+export default function EnterpriseBilling() {
+  const { user } = useAuth(),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  
+  // Check if user has billing permissions
+  const hasBillingAccess = user?.role === "enterprise_admin" || 
+                          (user?.permissions && user.permissions.includes('billing_access')),
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  if (!hasBillingAccess) {
+    return <Navigate to="/unauthorized" />
+  }
+  return (
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <ProtectedRoute>
       <SEO
         title="Enterprise Billing - Zion AI Marketplace"
@@ -75,6 +117,7 @@ export default function EnterpriseBilling() {;
       <Footer />
     </ProtectedRoute>
   )
+<<<<<<< HEAD
 
 =======
 
@@ -83,6 +126,14 @@ export default function EnterpriseBilling() {;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -101,11 +152,50 @@ export default function EnterpriseBilling() {;
   }
 ;
   return (;
+<<<<<<< HEAD
 
+========
+  }
+  return (
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/EnterpriseBilling.tsx
     <ProtectedRoute>;
       <SEO
         title="Enterprise Billing - Zion AI Marketplace"
         description="Manage your subscription, view invoice history, and download billing statements."
+=======
+
+import React from "react",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { BillingDashboard } from "@/components/enterprise/billing/BillingDashboard",;
+import { useAuth } from "@/hooks/useAuth",;
+import { Navigate } from "react-router-dom",;
+import { SEO } from "@/components/SEO",;
+import { ProtectedRoute } from "@/components/ProtectedRoute",;
+;
+export default function EnterpriseBilling() {;
+  const { user } = useAuth(),;
+  ;
+  // Check if user has billing permissions;
+  const hasBillingAccess = user?.role === "enterprise_admin" || ;
+                          (user?.permissions && user.permissions.includes('billing_access')),;
+  ;
+  if (!hasBillingAccess) {;
+    return <Navigate to="/unauthorized" />,;
+  }
+;
+  return (;
+    <ProtectedRoute>;
+      <SEO ;
+        title="Enterprise Billing - Zion AI Marketplace";
+        description="Manage your subscription, view invoice history, and download billing statements.";
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+    <ProtectedRoute>;
+      <SEO;
+        title="Enterprise Billing - Zion AI Marketplace";
+        description="Manage your subscription, view invoice history, and download billing statements.";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       />;
       <Header />;
       <main className="min-h-screen bg-background">;
@@ -113,6 +203,8 @@ export default function EnterpriseBilling() {;
       </main>;
       <Footer />;
     </ProtectedRoute>;
+<<<<<<< HEAD
+<<<<<<< HEAD
   );
 
 <<<<<<< HEAD
@@ -123,8 +215,6 @@ export default function EnterpriseBilling() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -165,5 +255,28 @@ if ( {) {
       <Footer />;
     </ProtectedRoute>);
 }
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/EnterpriseBilling.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+=======
+  ),;}
+ export default function EnterpriseBilling () {
+  const {
+  user 
+}= useAuth ();
+//Check if user has billing permissions 
+}Enterprise Billing - Zion AI Marketplace"description=" Manage your subscription, view invoice history, and download billing statements."/> <Header /> <main className=" min-h-screen bg-background" > <BillingDashboard /> </main> <Footer /> </ProtectedRoute>) 
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/EnterpriseBilling.tsx
+=======
+  );
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

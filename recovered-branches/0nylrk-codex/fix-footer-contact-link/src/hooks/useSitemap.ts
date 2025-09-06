@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useSitemap.ts
 
 
 <<<<<<< HEAD
@@ -28,23 +30,118 @@ export function useSitemap() {;
   };
   
 
+========
+<<<<<<< HEAD
+return accessibleRoutes && accessibleRoutes.find(route => route && route.path === path)
+  };
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useSitemap.ts
+=======
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useAuth  } from './useAuth';
+import { getAccessibleRoutes  } from '@/config/sitemap';
+=======
+import {useAuth} from './useAuth';
+import {getAccessibleRoutes} from '@/config/sitemap';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import type { SitemapItem } from '@/config/sitemap';
+// Define the allowed user types
+
+<<<<<<< HEAD
+type UserType = 'employer' | 'buyer' | 'jobSeeker' | 'creator' | 'admin';
+export function useSitemap() {
+=======
+export function useSitemap() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const { user, isAuthenticated } = useAuth();
+  // Get routes that the current user can access
+  // Cast userType to UserType or pass undefined if not valid
+  const userType = user?.userType && isValidUserType(user.userType) ? user.userType as UserType : undefined;
+  const accessibleRoutes = getAccessibleRoutes(isAuthenticated, userType);
+  // Helper function to find a route by path
+  const findRouteByPath = (path: string): SitemapItem | undefined => {
+    return accessibleRoutes.find(route => route.path === path)
+  }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   // Helper function to check if a user can access a specific path
   const canAccessRoute = (path: string): boolean => {
     const route = findRouteByPath(path);
     if (!route) return false;
     // If route requires authentication and user is not authenticated
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useSitemap.ts
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useSitemap.ts
     if (route && route.requiredAuth && !isAuthenticated) return false;
-    
     // If route requires specific roles and user doesn't have one
     if (route && route.requiredRoles && route && route.requiredRoles.length > 0) {
       if (!user || !user && user.userType) return false;
       const userTypeEnum = isValidUserType(user && user.userType) ? user && user.userType as UserType : undefined,
       return userTypeEnum ? route && route.requiredRoles.includes(userTypeEnum) : false
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useSitemap.ts
 
+========
+=======
+
+import { useAuth } from './useAuth',;
+import { getAccessibleRoutes } from '@/config/sitemap',;
+import type { SitemapItem } from '@/config/sitemap',;
+;
+// Define the allowed user types;
+type UserType = 'employer' | 'buyer' | 'jobSeeker' | 'creator' | 'admin',;
+;
+export function useSitemap() {;
+  const { user, isAuthenticated } = useAuth(),;
+  ;
+  // Get routes that the current user can access;
+  // Cast userType to UserType or pass undefined if not valid;
+  const userType = user?.userType && isValidUserType(user.userType) ? user.userType as UserType :undefined,;
+  const accessibleRoutes = getAccessibleRoutes(isAuthenticated, userType),;
+  ;
+  // Helper function to find a route by path;
+  const findRouteByPath = (path:string):SitemapItem | undefined => {;
+    return accessibleRoutes.find(route => route.path === path);
+  },;
+  ;
+  // Helper function to check if a user can access a specific path;
+  const canAccessRoute = (path:string):boolean => {;
+    const route = findRouteByPath(path),;
+    ;
+    if (!route) return false,;
+    ;
+    // If route requires authentication and user is not authenticated;
+    if (route.requiredAuth && !isAuthenticated) return false,;
+    ;
+    // If route requires specific roles and user doesn't have one;
+    if (route.requiredRoles && route.requiredRoles.length > 0) {;
+      if (!user || !user.userType) return false,;
+      const userTypeEnum = isValidUserType(user.userType) ? user.userType as UserType :undefined,;
+      return userTypeEnum ? route.requiredRoles.includes(userTypeEnum) :false;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useSitemap.ts
+    }
+    ;
+    return true,;
+  },;
+;
+  // Helper function to check if userType is valid;
+  function isValidUserType(type:string):boolean {;
+    return ['employerbuyer', 'jobSeekercreator', 'admin'].includes(type),;
+  }
+<<<<<<< HEAD
+=======
+    if (route.requiredAuth && !isAuthenticated) return false;
+    // If route requires specific roles and user doesn't have one
+    if (route.requiredRoles && route.requiredRoles.length > 0) {
+      if (!user |!user.userType) return false;
+      const userTypeEnum = isValidUserType(user.userType) ? user.userType as UserType : undefined
+      return userTypeEnum ? route.requiredRoles.includes(userTypeEnum) : false
     }
     return true
   }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   // Helper function to check if userType is valid
   function isValidUserType(type: string): boolean {
     return ['employerbuyerjobSeekercreatoradmin'].includes(type)
@@ -52,8 +149,9 @@ export function useSitemap() {;
   return {
     accessibleRoutes;
     findRouteByPath;
-
+<<<<<<< HEAD
     canAccessRoute
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useSitemap.ts
 <<<<<<< HEAD
 
 import { useAuth } from './useAuth',;
@@ -61,6 +159,8 @@ import { getAccessibleRoutes } from '@/config/sitemap',;
 import type { SitemapItem } from '@/config/sitemap',;
 =======
 =======
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useSitemap.ts
 import {use_auth} from './use_auth';
 import {getAccessibleRoutes} from '@/config / sitemap';
 import type { SitemapItem } from '@/config / sitemap';
@@ -120,6 +220,7 @@ if (return false) {
     accessible_routes;
     findRouteByPath;
     canAccessRoute;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useSitemap.ts
 
 <<<<<<< HEAD
 =======
@@ -128,5 +229,74 @@ if (return false) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useSitemap.ts
   }
 }
+=======
+  ;
+  return {;
+    accessibleRoutes,;
+    findRouteByPath,;
+    canAccessRoute;
+  },;
+} // Define the allowed user types type UserType = 'employer' | 'buyer' | 'jobSeeker' | 'creator' | 'admin';
+if (!route) return false;
+// If route requires authentication and user is not authenticated if (route.requiredAuth && !isAuthenticated) return false;
+// If route requires specific roles and user doesn't have one if (route.requiredRoles && route.requiredRoles.length > 0) {
+  return true 
+};
+// Helper function to check if userType is valid 
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+    canAccessRoute
+=======
+import { useAuth } from './useAuth',;
+import { getAccessibleRoutes } from '@/config/sitemap',;
+import type { SitemapItem } from '@/config/sitemap',;
+// Define the allowed user types;
+type UserType = 'employer' | 'buyer' | 'jobSeeker' | 'creator' | 'admin',;
+export function useSitemap() {;
+  const { user, isAuthenticated } = useAuth(),;
+  // Get routes that the current user can access;
+  // Cast userType to UserType or pass undefined if not valid;
+  const userType = user?.userType && isValidUserType(user.userType) ? user.userType as UserType : undefined,;
+  const accessibleRoutes = getAccessibleRoutes(isAuthenticated, userType),;
+  // Helper function to find a route by path;
+  const findRouteByPath = (path: string): SitemapItem | undefined => {;
+    return accessibleRoutes.find(route => route.path === path);
+  },;
+  // Helper function to check if a user can access a specific path;
+  const canAccessRoute = (path: string): boolean => {;
+    const route = findRouteByPath(path),;
+    if (!route) return false,;
+    // If route requires authentication and user is not authenticated;
+    if (route.requiredAuth && !isAuthenticated) return false,;
+    // If route requires specific roles and user doesn't have one;
+    if (route.requiredRoles && route.requiredRoles.length > 0) {;
+      if (!user || !user.userType) return false,;
+      const userTypeEnum = isValidUserType(user.userType) ? user.userType as UserType : undefined,;
+      return userTypeEnum ? route.requiredRoles.includes(userTypeEnum) : false;
+    }
+;
+    return true;
+  },;
+  // Helper function to check if userType is valid;
+  function isValidUserType(type: string): boolean {;
+    return ['employerbuyerjobSeekercreatoradmin'].includes(type);
+  }
+;
+  return {;
+    accessibleRoutes;
+    findRouteByPath;
+    canAccessRoute;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  }
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src/pages/Home.tsx
 <<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -9,6 +10,10 @@ import { SEO } from '../components/SEO';
 import { usePerformance } from '../hooks/usePerformance';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+import React from 'react';
+import { Link } from 'react-router-dom';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/pages/Home.tsx
 const Home: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -113,5 +118,9 @@ const Home: React.FC = () => {
     </div>
   );
 };
+<<<<<<< HEAD:src/pages/Home.tsx
 
+=======
+;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/pages/Home.tsx
 export default Home;

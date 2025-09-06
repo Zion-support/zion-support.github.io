@@ -37,6 +37,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -53,12 +59,24 @@
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   --quantum-ripple: 0 0 60px rgba(0, 255, 255, 0.2);
   --holographic-matrix: 0 0 80px rgba(139, 92, 246, 0.15);
   --neural-cyberpunk: 0 0 70px rgba(236, 73, 153, 0.25);
   --quantum-space: 0 0 90px rgba(0, 255, 255, 0.1);
   --holographic-neural: 0 0 100px rgba(139, 92, 246, 0.08);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+  --quantum-matrix: 0 0 120px rgba(0, 255, 255, 0.05);
+
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -99,6 +117,10 @@
   --quantum-space: 0 0 1400px rgba(0, 255, 255, 0.015);
   --holographic-events: 0 0 1000px rgba(255, 20, 147, 0.04);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 
 * {
@@ -246,8 +268,13 @@ body {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
+
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
@@ -265,6 +292,10 @@ body {
   --quantum-matrix: 0 0 120px rgba(0, 255, 255, 0.05);}
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
@@ -302,6 +333,11 @@ body {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -318,6 +354,10 @@ body {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 .text-high-contrast-warning {
   color: var(--text-warning);
   text-shadow: 0 0 10px rgba(245, 158, 11, 0.5);
@@ -472,6 +512,14 @@ input, textarea, select {
   background: rgba(0, 255, 255, 0.4);
   color: white;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -493,6 +541,10 @@ input, textarea, select {
     transform: scale(1.02);
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 
 @keyframes holographic-matrix {
@@ -556,8 +608,13 @@ input, textarea, select {
     background-size: 200% 200%;
     box-shadow: var(--cyberpunk-resonance);
   }
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
+
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
@@ -575,6 +632,10 @@ input, textarea, select {
   text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);}
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
 /* Enhanced Body Styles */
 body {
@@ -624,6 +685,18 @@ body {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+
+  animation: backgroundFloat 30s ease-in-out infinite;
+
+}
+  animation: backgroundFloat 30s ease-in-out infinite;}
+
+}
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -654,6 +727,10 @@ body {
   animation: backgroundFloat 30s ease-in-out infinite;}
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
 /* Futuristic Grid Pattern */
 body::after {
@@ -664,6 +741,12 @@ body::after {
   width: 100%;
   height: 100%;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -682,11 +765,28 @@ body::after {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   background: 
     radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.15) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
     radial-gradient(circle at 40% 40%, rgba(236, 73, 153, 0.15) 0%, transparent 50%),
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+    radial-gradient(circle at 60% 60%, rgba(16, 185, 129, 0.1) 0%, transparent 50%);
+
+  pointer-events: none;
+    radial-gradient(circle at 60% 60%, rgba(16, 185, 129, 0.1) 0%, transparent 50%);  pointer-events: none;
+
+  pointer-events: none;
+
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -725,6 +825,10 @@ body::after {
     radial-gradient(circle at 60% 60%, rgba(16, 185, 129, 0.1) 0%, transparent 50%);  pointer-events: none;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   z-index: -1;
   animation: backgroundFloat 25s ease-in-out infinite;
 }
@@ -766,6 +870,11 @@ body::after {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+=======
 /* Enhanced Background Animations */
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
 =======
@@ -778,19 +887,23 @@ body::after {
 =======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 /* Enhanced Background Animations */
+/* Enhanced Background Animations */
+
 /* Enhanced Background Animations */
 <<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
+
 =======
-=======
-/* Enhanced Background Animations */
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 @keyframes backgroundFloat {
   0%, 100% {
     transform: translate(0, 0) rotate(0deg);
@@ -799,6 +912,12 @@ body::after {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -815,6 +934,10 @@ body::after {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     transform: translateY(-20px) rotate(1deg);
   }
   50% {
@@ -822,8 +945,20 @@ body::after {
   }
   75% {
 <<<<<<< HEAD
+<<<<<<< HEAD
     transform: translateY(-15px) rotate(0.5deg);
 =======
+
+transform: translateY(-15px) rotate(0.5deg);
+  }
+    transform: translateY(-15px) rotate(0.5deg);  }
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+    transform: translateY(-15px) rotate(0.5deg);
+
     transform: translate(-10px, -10px) rotate(1deg);
   }
   50% {
@@ -831,8 +966,14 @@ body::after {
   }
   75% {
     transform: translate(-5px, 10px) rotate(0.5deg);
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
+
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -859,6 +1000,10 @@ body::after {
     transform: translateY(-15px) rotate(0.5deg);  }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 
 @keyframes quantumFlow {
@@ -873,6 +1018,11 @@ body::after {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -889,6 +1039,10 @@ body::after {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 @keyframes matrixFlow {
   0% {
     transform: translateX(0) translateY(0);
@@ -985,6 +1139,14 @@ body::after {
 
 /* Enhanced Button Animations */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+.btn-quantum {
+
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1006,6 +1168,10 @@ h1, h2, h3, h4, h5, h6 {
 a {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   position: relative;
 }
 
@@ -1015,8 +1181,14 @@ a:hover {
 
 /* Enhanced Buttons */
 .btn-futuristic {
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
+
   position: relative;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
@@ -1034,6 +1206,10 @@ a:hover {
 .btn-quantum {  position: relative;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   overflow: hidden;
   background: linear-gradient(45deg, #00ffff, #0080ff);
   border: none;
@@ -1042,6 +1218,12 @@ a:hover {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 =======
@@ -1060,6 +1242,10 @@ a:hover {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   border: 2px solid transparent;
   background: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple));
   border: none;
@@ -1071,6 +1257,12 @@ a:hover {
   transition: all 0.3s ease;
   box-shadow: var(--quantum-glow);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
 =======
 <<<<<<< HEAD
@@ -1090,6 +1282,10 @@ a:hover {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 
 .btn-quantum::before {
@@ -1112,6 +1308,12 @@ a:hover {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1128,11 +1330,28 @@ a:hover {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   box-shadow: var(--quantum-glow);
 }
 
 /* Enhanced Card Animations */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+.card-quantum {
+
+  position: relative;
+.card-quantum {  position: relative;
+
+  position: relative;
+
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1174,6 +1393,10 @@ a:hover {
 .card-quantum {  position: relative;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   overflow: hidden;
   transition: all 0.3s ease;
 }
@@ -1185,6 +1408,12 @@ a:hover {
   left: 0;
   right: 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1203,6 +1432,10 @@ a:hover {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   bottom: 0;
   background: linear-gradient(45deg, transparent, rgba(0, 255, 255, 0.1), transparent);
   transform: translateX(-100%);
@@ -1308,6 +1541,12 @@ a:hover {
   font-family: 'Rajdhani', 'Inter', sans-serif;
   font-weight: 600;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1316,14 +1555,14 @@ a:hover {
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 >>>>>>> main
-  letter-spacing: 0.05em;
+<<<<<<< HEAD
 =======
-  height: 2px;
-  background: linear-gradient(90deg, var(--neon-cyan), var(--neon-purple), var(--neon-pink));
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
-}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+  letter-spacing: 0.05em;
 
+<<<<<<< HEAD
+=======
 .card-futuristic:hover::before {
   transform: scaleX(1);
 }
@@ -1769,11 +2008,23 @@ pre code {
 =======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 
 /* Enhanced Responsive Design */
 @media (max-width: 768px) {
   letter-spacing: 0.05em;}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+}
+
+/* Enhanced Responsive Design */
+@media (max-width: 768px) {
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> main
 
 /* Enhanced Responsive Design */
@@ -1794,6 +2045,10 @@ pre code {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   .text-gradient-rainbow,
   .text-gradient-quantum {
     background-size: 200% 200%;
@@ -1802,6 +2057,14 @@ pre code {
   .particle-quantum,
   .particle-holographic {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+    display: none;
+
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1815,6 +2078,10 @@ pre code {
   .card-futuristic {
     padding: 16px;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }
   
   .btn-futuristic {
@@ -1835,8 +2102,14 @@ pre code {
   .btn-futuristic {
     padding: 8px 16px;
     font-size: 13px;
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
+
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
@@ -1854,6 +2127,10 @@ pre code {
     display: none;  }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 
 /* Enhanced Accessibility */
@@ -1870,6 +2147,11 @@ pre code {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1886,11 +2168,27 @@ pre code {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 /* Enhanced Focus States */
 .focus-quantum:focus {
   outline: 2px solid #00ffff;
   outline-offset: 2px;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+  box-shadow: 0 0 0 4px rgba(0, 255, 255, 0.1);
+
+}
+  box-shadow: 0 0 0 4px rgba(0, 255, 255, 0.1);}
+
+}
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1935,6 +2233,10 @@ pre code {
   box-shadow: 0 0 0 4px rgba(0, 255, 255, 0.1);}
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
 /* Enhanced Dark Mode Support */
 @media (prefers-color-scheme: dark) {
@@ -1943,6 +2245,12 @@ pre code {
     --neon-purple: #a855f7;
     --neon-pink: #ec4899;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1961,6 +2269,10 @@ pre code {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }
   50% { 
     box-shadow: 
@@ -2458,8 +2770,20 @@ pre code {
   
   .grid-bg {
 <<<<<<< HEAD
+<<<<<<< HEAD
     background-size: 25px 25px;
 =======
+
+background-size: 25px 25px;
+  }
+    background-size: 25px 25px;  }
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+    background-size: 25px 25px;
+
   }
 }
 
@@ -2477,8 +2801,14 @@ pre code {
   
   .btn-futuristic {
     border: 2px solid currentColor;
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
+
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2504,6 +2834,10 @@ pre code {
     background-size: 25px 25px;  }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 
 /* Enhanced Accessibility */

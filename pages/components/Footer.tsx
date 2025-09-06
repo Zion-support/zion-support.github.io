@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -9,25 +10,23 @@ import { motion } from "framer-motion";
 import {
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -43,6 +42,7 @@ import {;
   Linkedin,;
   Instagram,;
   Github,;
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 } from "lucide-react";
@@ -53,12 +53,135 @@ import React from 'react';
 import Link from 'next/link';
 <<<<<<< HEAD
 
+=======
+} from "lucide-react";
+const Footer = () => {
+  const currentYear = new Date().getFullYear();
+import React from 'react';
+import Link from 'next/link';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import {
+<<<<<<< HEAD
+  Mail
+  Phone
+  MapPin
+  Facebook
+  Twitter
+  Linkedin
+  Instagram
+  Github
+=======
+  Mail,
+  Phone,
+  MapPin,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+  Github,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+} from "lucide-react";
+const Footer = () => {
+  const currentYear = new Date().getFullYear();
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+import React from 'react';
+import Link from 'next/link';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, Github } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+import { 
+  Phone, 
+  Mail, 
+  MapPin, 
+  Globe, 
+  ArrowRight,
+  Brain,
+  Network,
+  Cloud,
+  Shield,
+  BarChart3,
+  Users,
+  Settings,
+  FileText,
+  MessageSquare,
+  Calendar,
+  ShoppingCart,
+  BookOpen,
+  Building,
+  Heart,
+  DollarSign,
+  Target,
+  Zap,
+  Award,
+  Star,
+  CheckCircle,
+  Clock,
+  TrendingUp,
+  Eye,
+  Lock,
+  Code,
+  Home,
+  Camera,
+  Music,
+  Gamepad2,
+  Truck,
+  Calculator,
+  CreditCard,
+  Paintbrush,
+  HardDrive,
+  Activity,
+  Lightbulb,
+  Wrench,
+  PieChart,
+  ClipboardList,
+  Layers;
+} from 'lucide-react';
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+<<<<<<< HEAD
+=======
+import React from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import {
+  Mail
+  Phone
+  MapPin
+  Facebook
+  Twitter
+  Linkedin
+  Instagram
+  Github
+} from "lucide-react";
+const Footer = () => {
+  const currentYear = new Date().getFullYear();
+>>>>>>> origin/main
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 const footerSections = [
   {
     title: 'Services',
@@ -157,7 +280,12 @@ const microSaasCategories = [
 
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const footerLinks = {
     services: [
       { name: "AI Services", href: "/ai-services" }
@@ -167,11 +295,19 @@ const microSaasCategories = [
       { name: "Cybersecurity", href: "/cybersecurity" }
       { name: "Database Solutions", href: "/database-solutions" }
     ]
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 
+=======
+<<<<<<< HEAD
+  };
+
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     solutions: [
       { name: "Enterprise Solutions", href: "/enterprise-solutions" }
       { name: "Startup Solutions", href: "/startup-solutions" }
@@ -205,10 +341,17 @@ const microSaasCategories = [
       { name: "Accessibility", href: "/accessibility" }
     ]
   }
+<<<<<<< HEAD
 
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const socialLinks = [
     { name: "Facebook", href: "#", icon: Facebook }
     { name: "Twitter", href: "#", icon: Twitter }
@@ -216,10 +359,13 @@ const microSaasCategories = [
     { name: "Instagram", href: "#", icon: Instagram }
     { name: "GitHub", href: "#", icon: Github }
 <<<<<<< HEAD
+<<<<<<< HEAD
   ];
 
 =======
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const footerLinks = {;
     services: [;
       { name: "AI Services", href: "/ai-services" },;
@@ -262,6 +408,7 @@ const microSaasCategories = [
       { name: "Accessibility", href: "/accessibility" },;
     ],;
   };
+<<<<<<< HEAD
 =======
   ];
 
@@ -279,15 +426,39 @@ const microSaasCategories = [
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const socialLinks = [;
     { name: "Facebook", href: "#", icon: Facebook },;
     { name: "Twitter", href: "#", icon: Twitter },;
     { name: "LinkedIn", href: "#", icon: Linkedin },;
     { name: "Instagram", href: "#", icon: Instagram },;
     { name: "GitHub", href: "#", icon: Github },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   ];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const microSaasCategories = [
+  { title: 'Marketing Tools', icon: Target, count: 15 },
+  { title: 'Productivity', icon: Settings, count: 12 },
+  { title: 'Analytics', icon: BarChart3, count: 18 },
+  { title: 'Automation', icon: Zap, count: 22 },
+  { title: 'Security', icon: Shield, count: 8 },
+  { title: 'Finance', icon: DollarSign, count: 10 },
+  { title: 'Design', icon: Paintbrush, count: 6 },
+  { title: 'Development', icon: Code, count: 14 }
+];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
     <footer className="bg-gray-900 text-white">;
       <div className="container mx-auto px-4 py-16">;
@@ -297,7 +468,10 @@ const microSaasCategories = [
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               transition={{ duration: 0 && 0.8 }}>;
               <div className="flex items-center space-x-2 mb-6">;
                 <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">;
@@ -325,8 +499,11 @@ const microSaasCategories = [
               </div>;
             </motion && motion.div>;
           </div>;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           {/* Services */}
           <div>;
             <motion&& motion.div
@@ -344,12 +521,18 @@ const microSaasCategories = [
                     </Link>;
                   </li>;
                 ))}
+<<<<<<< HEAD
 
               </ul>;
             </motion && motion.div>;
           </div>;
 
 
+=======
+              </ul>;
+            </motion && motion.div>;
+          </div>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           {/* Solutions */}
           <div>;
             <motion&& motion.div
@@ -367,12 +550,18 @@ const microSaasCategories = [
                     </Link>;
                   </li>;
                 ))}
+<<<<<<< HEAD
 
               </ul>;
             </motion && motion.div>;
           </div>;
 
 
+=======
+              </ul>;
+            </motion && motion.div>;
+          </div>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           {/* Company */}
           <div>;
             <motion&& motion.div
@@ -390,12 +579,18 @@ const microSaasCategories = [
                     </Link>;
                   </li>;
                 ))}
+<<<<<<< HEAD
 
               </ul>;
             </motion && motion.div>;
           </div>;
 
 
+=======
+              </ul>;
+            </motion && motion.div>;
+          </div>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           {/* Resources & Legal */}
           <div>;
             <motion&& motion.div
@@ -413,6 +608,7 @@ const microSaasCategories = [
                     </Link>;
                   </li>;
                 ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
               </ul>
               <h3 className="text-lg font-semibold mb-6">Legal</h3>
@@ -434,13 +630,17 @@ const microSaasCategories = [
 
 =======
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </ul>;
-
               <h3 className="text-lg font-semibold mb-6">Legal</h3>;
               <ul className="space-y-3">;
                 {footerLinks && footerLinks.legal.map((link, index) => (;
                   <li key={index}>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     <Link
                       href={link && link.href}
                       className="text-gray-400 hover:text-white transition-colors">;
@@ -448,11 +648,16 @@ const microSaasCategories = [
                     </Link>;
                   </li>;
                 ))}
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </ul>;
             </motion && motion.div>;
           </div>;
         </div>;
+<<<<<<< HEAD
 
 
 
@@ -460,6 +665,31 @@ const microSaasCategories = [
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+              </ul>
+            </motion.div>
+          </div>
+        </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-12 pt-8">;
           <div className="flex flex-col md:flex-row justify-between items-center">;
@@ -467,11 +697,13 @@ const microSaasCategories = [
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
+=======
               transition={{ duration: 0.8 }}
               className="text-gray-400 text-sm mb-4 md:mb-0"
             >
               © {currentYear} Zion Tech Group. All rights reserved.
             </motion.div>
+<<<<<<< HEAD
 
 =======
 
@@ -487,13 +719,24 @@ const microSaasCategories = [
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             <motion.div
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+            <motion.div
               transition={{ duration: 0 && 0.8 }}
               className="text-gray-400 text-sm mb-4 md:mb-0">;
               © {currentYear} Zion Tech Group. All rights reserved.;
             </motion && motion.div>;
-
             <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -508,12 +751,21 @@ const microSaasCategories = [
                 </a>;
               ))}
 <<<<<<< HEAD
+=======
             </motion.div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 
 =======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {/* Service Categories */}
         <div className="mt-16 pt-8 border-t border-gray-800">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -530,7 +782,6 @@ const microSaasCategories = [
                 ))}
               </div>
             </div>
-
             {/* AI Service Categories */}
             <div>
               <h4 className="text-lg font-semibold mb-4 text-green-400">AI Services</h4>
@@ -544,7 +795,6 @@ const microSaasCategories = [
                 ))}
               </div>
             </div>
-
             {/* IT Service Categories */}
             <div>
               <h4 className="text-lg font-semibold mb-4 text-purple-400">IT Services</h4>
@@ -560,7 +810,6 @@ const microSaasCategories = [
             </div>
           </div>
         </div>
-
         {/* Stats Section */}
         <div className="mt-16 pt-8 border-t border-gray-800">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
@@ -583,7 +832,6 @@ const microSaasCategories = [
           </div>
         </div>
       </div>
-
       {/* Bottom Bar */}
       <div className="bg-gray-800 border-t border-gray-700">
         <div className="container mx-auto px-4 py-6">
@@ -593,6 +841,7 @@ const microSaasCategories = [
               <Link href="/privacy" className="hover:text-white transition-colors ml-1">Privacy Policy</Link> | 
               <Link href="/terms" className="hover:text-white transition-colors ml-1">Terms of Service</Link>
             </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -601,6 +850,16 @@ const microSaasCategories = [
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+            
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -619,10 +878,15 @@ const microSaasCategories = [
               ))}
             </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <div className="flex items-center space-x-6">
               <Link href="/sitemap" className="text-gray-400 hover:text-white transition-colors text-sm">
                 Sitemap
@@ -635,25 +899,29 @@ const microSaasCategories = [
               </Link>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </div>
         </div>
       </div>
     </footer>
-=======
             </motion && motion.div>;
           </div>;
         </div>;
       </div>;
     </footer>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 }
 export default Footer;
-=======
 import React from './react';
 import Link from './next / link';
 import { motion  } from './framer-motion';
@@ -891,4 +1159,3 @@ const Footer = () =>: any {
 ;
 export default Footer;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

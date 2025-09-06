@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/pricing/ClientBudgetRecommender.tsx
 
 
 <<<<<<< HEAD
@@ -6,11 +8,20 @@ import { Button } from "@/components/ui/button",
 
 =======
 
+=======
+
+<<<<<<< HEAD
+import React, { useState } from "react";
+<<<<<<< HEAD
+import { Button } from "@/components/ui/button";
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import {Button} from "@/components/ui/button";
 import {getClientBudgetSuggestion, PricingSuggestion, ClientBudgetParams, trackPricingSuggestion} from "@/services/pricingSuggestionService";
 import {PricingSuggestionBox} from "./PricingSuggestionBox";
 import {useAuth} from "@/hooks/useAuth";
 import {Sparkles} from "lucide-react";
+<<<<<<< HEAD
 
 =======
 import React, { useState } from "react",
@@ -18,6 +29,13 @@ import { Button } from "@/components/ui/button",
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { 
   getClientBudgetSuggestion;
   PricingSuggestion;
@@ -25,9 +43,13 @@ import {
   trackPricingSuggestion
 } from "@/services/pricingSuggestionService",
 import { PricingSuggestionBox } from "./PricingSuggestionBox",
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+========
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/pricing/ClientBudgetRecommender.tsx
 import {Button} from "@/components/ui/button";
 import {getClientBudgetSuggestion, PricingSuggestion, ClientBudgetParams, trackPricingSuggestion} from "@/services/pricingSuggestionService";
 import {PricingSuggestionBox} from "./PricingSuggestionBox";
@@ -36,28 +58,60 @@ import {Sparkles} from "lucide-react";
 interface ClientBudgetRecommenderProps {;
   jobTitle: string,;
   category: string,;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/pricing/ClientBudgetRecommender.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/pricing/ClientBudgetRecommender.tsx
   timeline?: string;
   scope?: string;
   experienceLevel?: string;
   onSuggestionApplied: (minValue: number, maxValue: number) => void;
 }
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/pricing/ClientBudgetRecommender.tsx
 
 
 export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = ({;
 
+========
+export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = ({;
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/pricing/ClientBudgetRecommender.tsx
+=======
+<<<<<<< HEAD
+import { useAuth } from "@/hooks/useAuth";
+import { Sparkles } from "lucide-react";
+interface ClientBudgetRecommenderProps {
+
+  jobTitle: string
+  category: string
+
+  timeline?: string;
+  scope?: string;
+  experienceLevel?: string;
+  onSuggestionApplied: (minValue: number, maxValue: number) => void
+}
+export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = ({
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   jobTitle;
   category;
   timeline;
   scope;
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/pricing/ClientBudgetRecommender.tsx
 
   experienceLevel,;
   onSuggestionApplied}) => {;
 
+=======
+
+  experienceLevel
+
+  onSuggestionApplied}) => {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const [isLoading, setIsLoading] = useState(false);
   const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null),
   const { user } = useAuth();
 
+<<<<<<< HEAD
 
   const generateSuggestion = async () => {;
     if (!jobTitle || !category) {;
@@ -66,16 +120,30 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
     }
     setIsLoading(true);
 
+========
+  experienceLevel,;
+  onSuggestionApplied}) => {;
+  const [isLoading, setIsLoading] = useState(false);
+  const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null),
+  const { user } = useAuth();
+  const generateSuggestion = async () => {;
+    if (!jobTitle || !category) {;
+      return;
+    }
+    setIsLoading(true);
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/pricing/ClientBudgetRecommender.tsx
     try {;
       const params: ClientBudgetParams = {;
         jobTitle,;
         category};
-
       if (timeline) params && params.timeline = timeline;
       if (scope) params && params.scope = scope;
       if (experienceLevel) params && params.experienceLevel = experienceLevel;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/pricing/ClientBudgetRecommender.tsx
 
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/pricing/ClientBudgetRecommender.tsx
       const result = await getClientBudgetSuggestion(params);
       setSuggestion(result);
     } catch (error) {;
@@ -83,6 +151,7 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
     } finally {;
       setIsLoading(false);
     }
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/pricing/ClientBudgetRecommender.tsx
 
   };
 
@@ -92,6 +161,28 @@ import { useAuth } from "@/hooks/useAuth",
 import { Sparkles } from "lucide-react",
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+  const generateSuggestion = async () => {
+    if (!jobTitle |!category) {
+      return
+    }
+    setIsLoading(true);
+    try {
+      const params: ClientBudgetParams = {
+        jobTitle
+        category}
+      if (timeline) params.timeline = timeline;
+      if (scope) params.scope = scope;
+      if (experienceLevel) params.experienceLevel = experienceLevel;
+      const result = await getClientBudgetSuggestion(params);
+=======
+import { useAuth } from "@/hooks/useAuth",
+import { Sparkles } from "lucide-react",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 interface ClientBudgetRecommenderProps {
   jobTitle: string,
   category: string,
@@ -99,8 +190,32 @@ interface ClientBudgetRecommenderProps {
   scope?: string,
   experienceLevel?: string,
   onSuggestionApplied: (minValue: number, maxValue: number) => void
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+
+export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = ({;
+  jobTitle;
+  category;
+  timeline;
+  scope;
+  experienceLevel,
+  onSuggestionApplied}) => {
+  const [isLoading, setIsLoading] = useState(false);
+  const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null);
+  const { user } = useAuth();
+
+  const generateSuggestion = async () => {
+    if (!jobTitle || !category) {
+      return
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import {;
@@ -134,9 +249,16 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
   const generateSuggestion = async () => {;
     if (!jobTitle || !category) {;
       return;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     }
 
     setIsLoading(true),
@@ -150,12 +272,17 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
       if (experienceLevel) params.experienceLevel = experienceLevel,
 
       const result = await getClientBudgetSuggestion(params),
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       setSuggestion(result)
     } catch (error) {
       console.error("Error generating budget suggestion:", error)
     } finally {
       setIsLoading(false)
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -163,6 +290,31 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+    }
+  }
+  const handleApplySuggestion = () => {
+    if (suggestion) {
+      onSuggestionApplied(suggestion.minRate, suggestion.maxRate);
+      // Track this suggestion application
+      if (user) {
+        trackPricingSuggestion({
+          userId: user.id
+          suggestionType: 'client'
+          suggestedMin: suggestion.minRate
+          suggestedMax: suggestion.maxRate
+          accepted: true
+        })
+      }
+    }
+<<<<<<< HEAD
+  }
+=======
+  };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 ;
     setIsLoading(true),;
     try {;
@@ -180,11 +332,14 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
       setIsLoading(false);
     }
   },;
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+========
+  };
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/pricing/ClientBudgetRecommender.tsx
   const handleApplySuggestion = () => {;
     if (suggestion) {;
       onSuggestionApplied(suggestion && suggestion.minRate, suggestion && suggestion.maxRate);
-
       // Track this suggestion application;
       if (user) {;
         trackPricingSuggestion({;
@@ -192,11 +347,23 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
           suggestionType: 'client',;
           suggestedMin: suggestion && suggestion.minRate,;
           suggestedMax: suggestion && suggestion.maxRate,;
+=======
+  const handleApplySuggestion = () => {;
+    if (suggestion) {;
+      onSuggestionApplied(suggestion.minRate, suggestion.maxRate),;
+      // Track this suggestion application;
+      if (user) {;
+        trackPricingSuggestion({;
+          userId: user.id,;
+          suggestionType: 'client',;
+          suggestedMin: suggestion.minRate,;
+          suggestedMax: suggestion.maxRate,;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           accepted: true;
         });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       }
     }
+<<<<<<< HEAD
 
   },
 <<<<<<< HEAD
@@ -213,28 +380,59 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
     <div className="space-y-4">;
       <div>;
         {!suggestion && !isLoading ? (;
+=======
+  },
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  return (
+    <div className="space-y-4">
+      <div>
+        {!suggestion && !isLoading ? (
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <Button
             type="button"
             variant="outline"
             onClick={generateSuggestion}
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/pricing/ClientBudgetRecommender.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/pricing/ClientBudgetRecommender.tsx
             disabled={!jobTitle || !category}
             className="w-full">;
             <Sparkles className="h-4 w-4 mr-2" /> Get Budget Recommendation;
           </Button>;
         ) : (;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/pricing/ClientBudgetRecommender.tsx
 
           <PricingSuggestionBox
 <<<<<<< HEAD
+=======
+            disabled={!jobTitle |!category}
+            className="w-full"
+          >
+            <Sparkles className="h-4 w-4 mr-2" /> Get Budget Recommendation
+          </Button>
+        ) : (
+          <PricingSuggestionBox
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             suggestion={suggestion}
             isLoading={isLoading}
             onApplySuggestion={handleApplySuggestion}
             rateType="hourly"
           />
         )}
+<<<<<<< HEAD
 
 =======
 =======
+========
+          <PricingSuggestionBox
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/pricing/ClientBudgetRecommender.tsx
 import React, { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { getClientBudgetSuggestion, PricingSuggestion, ClientBudgetParams, trackPricingSuggestion } from '@/services / pricingSuggestionService';
@@ -331,16 +529,18 @@ if ( {) {
             <Sparkles className="h - 4 w - 4 mr - 2" /> Get Budget Recommendation;
           </Button>) : (
           <PricingSuggestionBox;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             suggestion={suggestion}
             is_loading={is_loading}
             onApplySuggestion={handleApplySuggestion}
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/pricing/ClientBudgetRecommender.tsx
 
 
 
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/pricing/ClientBudgetRecommender.tsx
       </div>;
     </div>;
   );
@@ -354,13 +554,188 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
             rate_type="hourly";
           />)}
       </div>;
     </div>);
 }
 ;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/pricing/ClientBudgetRecommender.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+=======
+
+import React, { useState } from "react",;
+import { Button } from "@/components/ui/button",;
+import { ;
+  getClientBudgetSuggestion,;
+  PricingSuggestion,;
+  ClientBudgetParams,;
+  trackPricingSuggestion;
+} from "@/services/pricingSuggestionService",;
+import { PricingSuggestionBox } from "./PricingSuggestionBox",;
+import { useAuth } from "@/hooks/useAuth",;
+import { Sparkles } from "lucide-react",;
+;
+interface ClientBudgetRecommenderProps {;
+  jobTitle:string,;
+  category:string,;
+  timeline?:string,;
+  scope?:string,;
+  experienceLevel?:string,;
+  onSuggestionApplied:(minValue:number, maxValue:number) => void;
+}
+;
+export const ClientBudgetRecommender:React.FC<ClientBudgetRecommenderProps> = ({;
+  jobTitle,;
+  category,;
+  timeline,;
+  scope,;
+  experienceLevel,;
+  onSuggestionApplied}) => {;
+  const [isLoading, setIsLoading] = useState(false),;
+  const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null),;
+  const { user } = useAuth(),;
+;
+  const generateSuggestion = async () => {;
+    if (!jobTitle || !category) {;
+      return,;
+    }
+;
+    setIsLoading(true),;
+    try {;
+      const params:ClientBudgetParams = {;
+        jobTitle,;
+        category},;
+;
+      if (timeline) params.timeline = timeline,;
+      if (scope) params.scope = scope,;
+      if (experienceLevel) params.experienceLevel = experienceLevel,;
+;
+      const result = await getClientBudgetSuggestion(params),;
+      setSuggestion(result),;
+    } catch (error) {;
+      console.error("Error generating budget suggestion:", error),;
+    } finally {;
+      setIsLoading(false),;
+    }
+  },;
+;
+  const handleApplySuggestion = () => {;
+    if (suggestion) {;
+      onSuggestionApplied(suggestion.minRate, suggestion.maxRate),;
+      ;
+      // Track this suggestion application;
+      if (user) {;
+        trackPricingSuggestion({;
+          userId:user.id,;
+          suggestionType:'client',;
+          suggestedMin:suggestion.minRate,;
+          suggestedMax:suggestion.maxRate,;
+          accepted:true;
+        }),;
+      }
+    }
+  },;
+;
+  return (;
+    <div className="space-y-4">;
+      <div>;
+        {!suggestion && !isLoading ? (;
+          <Button;
+            type="button";
+            variant="outline";
+            onClick={generateSuggestion}
+            disabled={!jobTitle || !category}
+            className="w-full";
+          >;
+            <Sparkles className="h-4 w-4 mr-2" /> Get Budget Recommendation;
+          </Button>;
+        ) :(;
+          <PricingSuggestionBox;
+            suggestion={suggestion}
+            isLoading={isLoading}
+            onApplySuggestion={handleApplySuggestion}
+            rateType="hourly";
+          />;
+        )}
+      </div>;
+    </div>;
+  ),;
+},; import {
+  getClientBudgetSuggestion;
+PricingSuggestion;
+ClientBudgetParams;
+trackPricingSuggestion interface ClientBudgetRecommenderProps {
+  jobTitle: string;
+category: string;
+timeline?: string;
+scope?: string;
+experienceLevel?: string;
+onSuggestionApplied: (minValue: number, maxValue: number) => void 
+}export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = ({
+  jobTitle;
+category;
+timeline;
+scope;
+experienceLevel;
+onSuggestionApplied 
+}) => {
+  const [isLoading, setIsLoading] = useState (false);
+const [suggestion, setSuggestion] = useState<PricingSuggestion | null> (null);
+const {
+  user 
+}= useAuth ();
+const generateSuggestion = async () => {
+  if (!jobTitle || !category) {
+  return 
+}setIsLoading (true);
+try {
+  const params: ClientBudgetParams = {
+  jobTitle;
+category 
+};
+if (scope) params.scope = scope;
+if (experienceLevel) params.experienceLevel = experienceLevel;
+}finally {
+  setIsLoading (false) 
+}
+};
+const handleApplySuggestion = () => {
+  if (suggestion) {
+  onSuggestionApplied (suggestion.minRate, suggestion.maxRate);
+trackPricingSuggestion ({
+  
+}
+}
+};
+return (<div className="space-y-4" > <div> {
+  !suggestion && !isLoading ? (<Button type="button" variant="outline" onClick= {
+  generateSuggestion 
+}> <Sparkles className="h-4 w-4 mr-2" /> Get Budget Recommendation </Button>) : (<PricingSuggestionBox />) 
+}</div> </div>) 
+};
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/pricing/ClientBudgetRecommender.tsx
+=======
+<<<<<<< HEAD
+      </div>
+    </div>
+  )
+<<<<<<< HEAD
+}
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+      </div>;
+    </div>;
+  );
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+};
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

@@ -555,10 +555,20 @@ code { @apply font-mono; }
   backdrop-filter: blur(20px);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   border: 1px solid rgba(6, 182, 212, 0.2);
   border-radius: 16px;
   padding: 24px;
   transition: all var(--animation-normal) ease;
+<<<<<<< HEAD
+=======
 =======
   border: 1px solid rgba(59, 130, 246, 0.2);
   border-radius: 16px;
@@ -603,28 +613,32 @@ code { @apply font-mono; }
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-1849
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   position: relative;
   border: 1px solid rgba(6, 182, 212, 0.2);
   border-radius: 16px;
   padding: 24px;
   transition: all var(--animation-normal) ease;  position: relative;
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-  border: 1px solid rgba(6, 182, 212, 0.2);
+
+border: 1px solid rgba(6, 182, 212, 0.2);
   border-radius: 16px;
   padding: 24px;
   transition: all var(--animation-normal) ease;  position: relative;
+<<<<<<< HEAD
+
+  position: relative;
+
+=======
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   border: 2px solid transparent;
   background: linear-gradient(45deg, #3b82f6, #8b5cf6, #ec4899, #06b6d4);
   background-clip: padding-box;
@@ -636,6 +650,12 @@ code { @apply font-mono; }
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -652,6 +672,10 @@ code { @apply font-mono; }
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   top: 0;
   left: 0;
   right: 0;
@@ -1031,6 +1055,12 @@ code { @apply font-mono; }
 
 .gradient-text {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1039,18 +1069,19 @@ code { @apply font-mono; }
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 >>>>>>> main
-  background: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple), var(--neon-pink));
+<<<<<<< HEAD
 =======
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  background: linear-gradient(45deg, #3b82f6, #8b5cf6, #ec4899, #06b6d4);
-  border-radius: inherit;
-  z-index: -1;
-  animation: quantum-rotate 3s linear infinite;
-}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+  background: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple), var(--neon-pink));
 
+<<<<<<< HEAD
+  -webkit-background-clip: text;
+  background: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple), var(--neon-pink));  -webkit-background-clip: text;
+
+  -webkit-background-clip: text;
+
+=======
 @keyframes quantum-rotate {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
@@ -1239,11 +1270,20 @@ code { @apply font-mono; }
   background: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple), var(--neon-pink));  -webkit-background-clip: text;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1262,6 +1302,10 @@ code { @apply font-mono; }
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 .gradient-border {
   border: 2px solid;
   border-image: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple), var(--neon-pink)) 1;
@@ -1428,6 +1472,14 @@ code { @apply font-mono; }
     background-color: #111827;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+}
+}
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 =======
 .gradient-text-purple {
@@ -1449,6 +1501,10 @@ code { @apply font-mono; }
 }
 <<<<<<< HEAD
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
 .gradient-text-pink {
   background: linear-gradient(45deg, #ec4899, #f97316);
@@ -1544,6 +1600,9 @@ code { @apply font-mono; }
   outline: none;
   box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.5);
 }
+<<<<<<< HEAD
+
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-1849
 <<<<<<< HEAD
 =======
@@ -1559,3 +1618,7 @@ code { @apply font-mono; }
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

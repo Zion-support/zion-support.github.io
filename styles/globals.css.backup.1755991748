@@ -963,6 +963,12 @@ h3 {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -980,6 +986,7 @@ h3 {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
   
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   .text-gradient-cyan,
   .text-gradient-purple,
   .text-gradient-rainbow {
@@ -1033,6 +1040,14 @@ h3 {
     display: none;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+}
+}
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 =======
 }
@@ -1049,6 +1064,10 @@ h3 {
 }
 <<<<<<< HEAD
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
 /* Additional Futuristic Styles */
 .text-gradient-green {
@@ -1422,6 +1441,9 @@ h3 {
     animation: none;
   }
 }
+<<<<<<< HEAD
+
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-5df1
 <<<<<<< HEAD
 =======
@@ -1437,3 +1459,7 @@ h3 {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

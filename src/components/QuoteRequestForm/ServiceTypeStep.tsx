@@ -1,4 +1,13 @@
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { useEffect, useState } from "react",
 import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes",
 import { Input } from "@/components/ui/input",
@@ -10,6 +19,7 @@ import Skeleton from "@/components/ui/skeleton",
 import { useDebounce } from "@/hooks/useDebounce",
 import { useIsMounted } from "@/hooks/useIsMounted",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 const listingSchema = z.object({
 =======
@@ -18,6 +28,19 @@ import {logErrorToProduction} from '@/utils/productionLogger';
 const listingSchema = null;
 onst listingSchema = z.object({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+import { z } from "zod";
+import {logErrorToProduction} from '@/utils/productionLogger';
+const listingSchema = null;
+=======
+import { z } from "zod",
+import {logErrorToProduction} from '@/utils/productionLogger',
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+const listingSchema = z.object({
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   id: z.string(),
   title: z.string(),
   category: z.string(),
@@ -25,13 +48,22 @@ onst listingSchema = z.object({
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       const maxRetries = 3
   const sourceListings = listings
 }
   )
 }
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 const listingsSchema = z.array(listingSchema),
 
 interface ServiceTypeStepProps {
@@ -39,6 +71,10 @@ interface ServiceTypeStepProps {
   updateFormData: (data: Partial<QuoteFormData>) => void
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {
   const [searchQuery, setSearchQuery] = useState(""),
   const debouncedQuery = useDebounce(searchQuery, 300),
@@ -158,10 +194,15 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
   }),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (
 =======
 >>>>>>>   return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  return (
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="space-y-6">
       <div>
         <h3 className="text-xl font-semibold text-white mb-4">What are you looking for?</h3>
@@ -212,8 +253,11 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />
             <Input
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               placeholder={`Search ${formData.serviceType}...`}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
@@ -233,7 +277,11 @@ const listingSchema = z.object({
 
   )
 }
+<<<<<<< HEAD
 >>>>>>> 
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     },;
     fetchServices();
   }, [formData.serviceType, debouncedQuery, isMounted]),;
@@ -354,7 +402,15 @@ const listingSchema = z.object({
   );
 }
 ;
+<<<<<<< HEAD
 
 >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

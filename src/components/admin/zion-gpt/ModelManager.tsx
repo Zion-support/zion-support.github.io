@@ -1,16 +1,68 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 }
 
       }
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { useState, useEffect  } from 'react';
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge";
+<<<<<<< HEAD
 }
+=======
+=======
+
+        .order('createdAt', { ascending: false }),
+
+  const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string,) => {
+    try {
+      // If activating, deactivate all other models with the same purpose
+      if (!currentActive) {
+        await supabase
+          .from('model_versions')
+          .update({ active: false })
+          .eq('purpose', purpose)
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+<<<<<<< HEAD
+import { useState, useEffect } from 'react',
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
+import { Badge } from "@/components/ui/badge",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from 'lucide-react'
+import { supabase  } from '@/integrations/supabase/client';
+import { ModelConfig  } from '@/utils/zion-gpt';
+import {logErrorToProduction} from '@/utils/productionLogger';
+interface ModelVersionData extends ModelConfig {
+  trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed';
+  errorMessage?: string
+<<<<<<< HEAD
+=======
+import { useState, useEffect } from 'react',;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;
+import { Badge } from "@/components/ui/badge",;
+import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from 'lucide-react';
+import { supabase } from '@/integrations/supabase/client',;
+import { ModelConfig } from '@/utils/zion-gpt',;
+import {logErrorToProduction} from '@/utils/productionLogger',;
+interface ModelVersionData extends ModelConfig {;
+  trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed',;
+  errorMessage?: string;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
 
         .order('createdAt', { ascending: false })
@@ -22,8 +74,89 @@ import { Badge } from "@/components/ui/badge";
           .from('model_versions')
           .update({ active: false })
           .eq('purpose', purpose)
+<<<<<<< HEAD
 >>>>>>>       }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+;
+export function ZionGPTModelManager() {;
+  const [models, setModels] = useState<ModelVersionData[]>([]),;
+  const [isLoading, setIsLoading] = useState(true),;
+  const [activeJobs, setActiveJobs] = useState<{[key: string]: boolean}>({}),;
+  // Fetch model data on component mount;
+  useEffect(() => {;
+    fetchModels();
+  }, []),;
+  const fetchModels = async () => {;
+    try {;
+      setIsLoading(true),;
+      const { data, error } = await supabase;
+        .from('model_versions');
+        .select('*');
+        .order('createdAt', { ascending: false }),;
+      if (error) throw error,;
+      // Map the data to our component state;
+      setModels(data.map((model: any) => ({;
+        id: model.id,;
+        version: model.version,;
+        createdAt: model.created_at,;
+        baseModel: model.base_model,;
+        purpose: model.purpose,;
+        active: model.active,;
+        trainingStatus: model.training_status,;
+        errorMessage: model.error_message;
+      })));
+    } catch (error) {;
+      logErrorToProduction('Error fetching models:', { data: error });
+    } finally {;
+      setIsLoading(false);
+    }
+  },;
+  const checkTrainingStatus = async (modelId: string) => {;
+    try {;
+      setActiveJobs(prev => ({ ...prev, [modelId]: true })),;
+      // Call an edge function that checks the OpenAI fine-tuning job status;
+      const { data, error } = await supabase.functions.invoke('check-training-status', {;
+        body: { modelId }
+      }),;
+      if (error) throw error,;
+      // Update the local model status;
+      setModels(prev =>;
+        prev.map(model =>;
+          model.id === modelId;
+            ? { ...model, trainingStatus: (data as any)?.status || 'failed', errorMessage: (data as any)?.error || 'Unknown error' } ;
+            : model;
+        );
+      ),;
+      // Also update in the database;
+      await supabase;
+        .from('model_versions');
+        .update({;
+          training_status: (data as any)?.status || 'failed',;
+          error_message: (data as any)?.error || 'Unknown error',;
+          // If training succeeded, automatically set to active;
+          ...((data as any)?.status === 'succeeded' ? { active: true } : {});
+        });
+        .eq('id', modelId);
+    } catch (error) {;
+      logErrorToProduction('Error checking status for model ${modelId}:', { data: error });
+    } finally {;
+      setActiveJobs(prev => ({ ...prev, [modelId]: false }));
+    }
+  },;
+  const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string) => {;
+    try {;
+      // If activating, deactivate all other models with the same purpose;
+      if (!currentActive) {;
+        await supabase;
+          .from('model_versions');
+          .update({ active: false });
+          .eq('purpose', purpose);
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       // Update this model
       await supabase
         .from('model_versions')
@@ -34,6 +167,7 @@ import { Badge } from "@/components/ui/badge";
     } catch (error) {
       logErrorToProduction('Error toggling model active state:', { data: error })
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   }
@@ -132,31 +266,111 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <Badge className="bg-blue-500">Training</Badge>;
                     ) : (;
                       <Badge className="bg-yellow-500">Queued</Badge>;
+=======
+  }
+=======
+  },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+  return (
+    <Card className="w-full">
+      <CardHeader className="flex flex-row items-center justify-between">
+        <div>
+          <CardTitle>ZionGPT Models</CardTitle>
+          <CardDescription>
+            Manage fine-tuned AI models for different platform features
+          </CardDescription>
+        </div>
+        <Button onClick={fetchModels} variant="outline" size="sm">
+          <RefreshCw className="h-4 w-4 mr-2" /> Refresh
+        </Button>
+      </CardHeader>
+      <CardContent>
+        {isLoading ? (
+          <div className="flex items-center justify-center h-24">
+            <Loader2 className="h-8 w-8 animate-spin text-primary" />
+          </div>
+        ) : (
+          <Table>
+            <TableHeader>
+              <TableRow>
+                <TableHead>Model ID</TableHead>
+                <TableHead>Version</TableHead>
+                <TableHead>Purpose</TableHead>
+                <TableHead>Base Model</TableHead>
+                <TableHead>Status</TableHead>
+                <TableHead>Created</TableHead>
+                <TableHead className="text-right">Actions</TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              {models.map((model,) => (
+                <TableRow key={model.id}>
+                  <TableCell className="font-medium">{model.id}</TableCell>
+                  <TableCell>v{model.version}</TableCell>
+                  <TableCell>{model.purpose}</TableCell>
+                  <TableCell>{model.baseModel}</TableCell>
+                  <TableCell>
+                    {model.trainingStatus === 'succeeded' ? (
+                      <Badge className="bg-green-500">Ready</Badge>
+                    ) : model.trainingStatus === 'failed' ? (
+                      <Badge className="bg-red-500">Failed</Badge>
+                    ) : model.trainingStatus === 'running' ? (
+                      <Badge className="bg-blue-500">Training</Badge>
+                    ) : (
+                      <Badge className="bg-yellow-500">Queued</Badge>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     )}
                     {model.active && <Badge className="ml-2 bg-purple-500">Active</Badge>}
                   </TableCell>
                   <TableCell>{new Date(model.createdAt).toLocaleDateString()}</TableCell>
                   <TableCell className="text-right">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                       >
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     {model.trainingStatus === 'queued' |model.trainingStatus === 'running' ? (
                       <Button
                         variant="ghost"
                         size="sm"
                         onClick = {(,) => checkTrainingStatus(model.id),}
                         disabled = {activeJobs[model.id],}
+<<<<<<< HEAD
                         onClick={() => checkTrainingStatus(model.id)}
                         disabled={activeJobs[model.id]}
                         onClick = {(,) => checkTrainingStatus(model.id),}
                         disabled = {activeJobs[model.id],}
 >>>>>>>                       >
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+                    {model.trainingStatus === 'queued' || model.trainingStatus === 'running' ? (
+                      <Button
+                        variant="ghost"
+                        size="sm"
+<<<<<<< HEAD
+                        onClick={() => checkTrainingStatus(model.id)}
+                        disabled={activeJobs[model.id]}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+                        onClick = {(,) => checkTrainingStatus(model.id),}
+                        disabled = {activeJobs[model.id],}
+=======
+                        onClick={() => checkTrainingStatus(model.id)}
+                        disabled={activeJobs[model.id]}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                      >
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                         {activeJobs[model.id] ? (
                           <Loader2 className="h-4 w-4 animate-spin" />
                         ) : (
                           <RefreshCw className="h-4 w-4" />
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
                         )}
                         <span className="ml-1">Check</span>;
@@ -172,6 +386,27 @@ ursor/fix-website-loading-errors-and-merge-6662
                         onClick = {(,) => toggleModelActive(model.id, model.active, model.purpose),}
 >>>>>>>                       >
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+                        )}
+                        <span className="ml-1">Check</span>
+                      </Button>
+                    ) : model.trainingStatus === 'succeeded' ? (
+                      <Button
+<<<<<<< HEAD
+                        variant = {model.active ? "outline" : "default",}
+                        size="sm"
+                        onClick = {(,) => toggleModelActive(model.id, model.active, model.purpose),}
+=======
+                        variant={model.active ? "outline" : "default"}
+                        size="sm"
+                        onClick={() => toggleModelActive(model.id, model.active, model.purpose)}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                      >
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                         {model.active ? (
                           <>
                             <CheckCircle className="h-4 w-4 mr-1" /> Active
@@ -180,24 +415,45 @@ ursor/fix-website-loading-errors-and-merge-6662
                           <>
                             <Play className="h-4 w-4 mr-1" /> Activate
                           </>
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
                         )}
                       </Button>;
                     ) : (;
+=======
+                        )}
+                      </Button>
+                    ) : (
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       <Button
                         variant="ghost"
                         size="sm"
                         className="text-red-500"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                         title = {model.errorMessage || "Training failed",}
 
                         title={model.errorMessage || "Training failed"}
 
+=======
+<<<<<<< HEAD
+                        title = {model.errorMessage |"Training failed",}
+=======
+                        title={model.errorMessage || "Training failed"}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+                        title = {model.errorMessage || "Training failed",}
+=======
+                        title={model.errorMessage || "Training failed"}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       >
                         <AlertCircle className="h-4 w-4 mr-1" /> Error
                       </Button>
                     )}
+<<<<<<< HEAD
 
               ))}
 =======
@@ -235,3 +491,39 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+                  </TableCell>
+                </TableRow>
+=======
+                  </TableCell>;
+                </TableRow>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              ))}
+            </TableBody>
+          </Table>
+        )}
+      </CardContent>
+    </Card>
+  )
+}
+<<<<<<< HEAD
+}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+;
+=======
+>>>>>>> main
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

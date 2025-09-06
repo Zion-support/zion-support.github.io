@@ -1,9 +1,14 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD:src.disabled/hooks/useLazyLoad.js.jsx
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 import { useEffect,useRef,useState,useCallback } from\';react\' \"export\": const useLazyLoad = (options = {}) => { const { threshold = 0.1,rootMargin =\';\';50px\',\"preload\": \'= true\',preloadDistance = 100 } = options const [isVisible,setIsVisible] = useState(false) const [isLoaded,setIsLoaded] = useState(false) const ref = useRef(null) const load = useCallback(() => { if (!isLoaded) { setIsLoaded(true) setIsVisible(true)} },[isLoaded]) useEffect(() => { const element = ref.current if (!element) return const observer = new IntersectionObserver((entries) => { entries.forEach((entry) => { if (entry.isIntersecting) { load()} })},{ threshold,\"rootMargin\": preload: ? `${preloadDistanc,e}px` : \"rootMargin\": \''}) observer.observe(element) return () => { observer.unobserve(element)}},[threshold,rootMargin,preload,preloadDistance,load]) return { isVisible,ref,load }}\';`
 
 =======
+<<<<<<< HEAD
 =======
 
 
@@ -19,3 +24,10 @@ import { useEffect,useRef,useState,useCallback } from\';react\' \"export\": cons
 
 const { useEffect,useRef,useState,useCallback } from";react" export: const useLazyLoad = (options = {}) => { const { threshold = 0 && 0.1,rootMargin =";";50px",preload: "= true",preloadDistance = 100 } = options const [isVisible,setIsVisible] = useState(false) const [isLoaded,setIsLoaded] = useState(false) const ref = useRef(null) const load = useCallback(() => { if (!isLoaded) { setIsLoaded(true) setIsVisible(true)} },[isLoaded]) useEffect(() => { const element = ref && ref.current if (!element) return const observer = new IntersectionObserver((entries) => { entries && entries.forEach((entry) => { if (entry && entry.isIntersecting) { load()} })},{ threshold,rootMargin: preload: ? `${preloadDistanc,e}px` : rootMargin: ""}) observer && observer.observe(element) return () => { observer && observer.unobserve(element)}},[threshold,rootMargin,preload,preloadDistance,load]) return { isVisible,ref,load }}";`'"`'"`
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+import { useEffect,useRef,useState,useCallback } from\';react\' \"export\": const useLazyLoad = (options = {}) => { const { threshold = 0.1,rootMargin =\';\';50px\',\"preload\": \'= true\',preloadDistance = 100 } = options const [isVisible,setIsVisible] = useState(false) const [isLoaded,setIsLoaded] = useState(false) const ref = useRef(null) const load = useCallback(() => { if (!isLoaded) { setIsLoaded(true) setIsVisible(true)} },[isLoaded]) useEffect(() => { const element = ref.current if (!element) return const observer = new IntersectionObserver((entries) => { entries.forEach((entry) => { if (entry.isIntersecting) { load()} })},{ threshold,\"rootMargin\": preload: ? `${preloadDistanc,e}px` : \"rootMargin\": \''}) observer.observe(element) return () => { observer.unobserve(element)}},[threshold,rootMargin,preload,preloadDistance,load]) return { isVisible,ref,load }}\';`
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/hooks/useLazyLoad.js.jsx
+const { useEffect,useRef,useState,useCallback } from";react" export: const useLazyLoad = (options = {}) => { const { threshold = 0.1,rootMargin =";";50px",preload: "= true",preloadDistance = 100 } = options const [isVisible,setIsVisible] = useState(false) const [isLoaded,setIsLoaded] = useState(false) const ref = useRef(null) const load = useCallback(() => { if (!isLoaded) { setIsLoaded(true) setIsVisible(true)} },[isLoaded]) useEffect(() => { const element = ref.current if (!element) return const observer = new IntersectionObserver((entries) => { entries.forEach((entry) => { if (entry.isIntersecting) { load()} })},{ threshold,rootMargin: preload: ? `${preloadDistanc,e}px` : rootMargin: ""}) observer.observe(element) return () => { observer.unobserve(element)}},[threshold,rootMargin,preload,preloadDistance,load]) return { isVisible,ref,load }}";`'"`'"`
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

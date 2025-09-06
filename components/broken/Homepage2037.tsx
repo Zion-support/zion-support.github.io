@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -8,10 +9,188 @@ import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026'
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React from 'react';
+import Layout from './layout / Layout';
+import UltraFuturisticServiceCard2026 from './ui / UltraFuturisticServiceCard2026';
+import Link from 'next / link';
+import { motion } from 'framer-motion';
+import { 
+  ArrowRight, Star, Users, Award, Clock, 
+  Brain, Atom, Shield, Rocket, Zap;
+  TrendingUp, Globe, Cpu, Database, Cloud;
+  Lock, Palette, Target, CheckCircle, Sparkles
+} from 'lucide-react';
+// Import new service data;
+import { realMicroSaasServices2025 } from '../data/real-micro-saas-services-2025';
+import { realITServices2025 } from '../data/real-it-services-2025';
+import { realAIServices2025 } from '../data/real-ai-services-2025';
+const Homepage2037: React.FC = () => {
+  // Get featured services from each category
+  const featuredMicroSaas = realMicroSaasServices2025.filter(service => service.popular).slice(0, 3);
+  const featuredIT = realITServices2025.filter(service => service.popular).slice(0, 3);
+  const featuredAI = realAIServices2025.filter(service => service.popular).slice(0, 3);
+  return (
+    <Layout>;
+      {/* Main Content */}
+      <main className="relative z-10">
+        {/* Hero Section */}
+        <section className="min-h-screen flex items-center justify-center px-4 relative">
+          {/* Animated background elements */}
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
+            <div className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-r from-green-500/20 to-teal-500/20 rounded-full blur-3xl animate-pulse delay-500"></div>
+          </div>
+          <div className="text-center max-w-5xl mx-auto relative z-10">
+            <motion.div
+          <div className='absolute inset-0 overflow-hidden'>;
+            <div className='absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse'></div>;
+            <div className='absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000'></div>;
+            <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-r from-green-500/20 to-teal-500/20 rounded-full blur-3xl animate-pulse delay-500'></div>;
+          </div>;
+          <div className='text-center max-w-5xl mx-auto relative z-10'>            <motion && motion.div        {/* Hero Section */}
+        <section className="min-h-screen flex items-center justify-center px-4 relative">;
+          {/* Animated background elements */}
+          <div className="absolute inset-0 overflow-hidden">;
+            <div className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse"></div>;
+            <div className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>;
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-r from-green-500/20 to-teal-500/20 rounded-full blur-3xl animate-pulse delay-500"></div>;
+          </div>;
+          <div className="text-center max-w-5xl mx-auto relative z-10">;
+            <motion&& motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}>;
+              {/* Main heading with enhanced typography */}
+              <div className="mb-8">
+                <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent leading-tight">
+                  Zion Tech Group
+                </h1>
+                <div className="text-2xl md:text-3xl text-gray-300 mb-4 font-light">
+                  Pioneering the Future of Technology
+                </div>
+                <div className="text-xl md:text-2xl text-cyan-400 font-medium">
+                  Revolutionary AI • Quantum Computing • Enterprise Solutions
+                </div>
+              </div>
+              <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
+                Transform your business with cutting-edge AI, quantum computing, and enterprise solutions.
+                We deliver innovative technology that drives business transformation and shapes the future.
+              </p>
+              {/* Enhanced CTA buttons */}
+              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <Link href="/contact">
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-lg rounded-2xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-2xl shadow-cyan-500/25 hover:shadow-cyan-500/40"
+                  >
+                    Start Your Transformation
+                  </motion.button>
+                </Link>
+                <Link href="/services">
+                  <motion.button 
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-bold text-lg rounded-2xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105"
+                  >
+                    Explore Services
+                  </motion.button>
+                </Link>
+
+  return (_<Layout>
+      {/* Main Content */}
+      <main className=&quot;relative z-10&quot;>
+        {/* Hero Section */}
+        <section className=&quot;min-h-screen flex items-center justify-center px-4 relative&quot;>
+          {/* Animated background elements */}
+          <div className=&quot;absolute inset-0 overflow-hidden&quot;>
+            <div className=&quot;absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse&quot;></div>
+            <div className=&quot;absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000&quot;></div>
+            <div className=&quot;absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-r from-green-500/20 to-teal-500/20 rounded-full blur-3xl animate-pulse delay-500&quot;></div>
+          </div>
+          
+          <div className=&quot;text-center max-w-5xl mx-auto relative z-10&quot;>
+            <motion.div
+              initial={_{ opacity: 0, _y: 30}}
+              animate={_{ opacity: 1, _y: 0}}
+              transition={_{ duration: 1}}
+            >
+              {/* Main heading with enhanced typography */}
+              <div className=&quot;mb-8&quot;>
+                <h1 className=&quot;text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent leading-tight&quot;>
+                  Zion Tech Group
+                </h1>
+                <div className=&quot;text-2xl md:text-3xl text-gray-300 mb-4 font-light&quot;>
+                  Pioneering the Future of Technology
+                </div>
+                <div className=&quot;text-xl md:text-2xl text-cyan-400 font-medium&quot;>
+                  Revolutionary AI • Quantum Computing • Enterprise Solutions
+                </div>
+              </div>
+              
+              <p className=&quot;text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed&quot;>
+                Transform your business with cutting-edge AI, quantum computing, and enterprise solutions. 
+                We deliver innovative technology that drives business transformation and shapes the future.
+              </p>
+              
+              {/* Enhanced CTA buttons */}
+              <div className=&quot;flex flex-col sm:flex-row gap-6 justify-center items-center&quot;>
+                <Link href=&quot;/contact&quot;>
+                  <motion.button 
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className=&quot;px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-lg rounded-2xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-2xl shadow-cyan-500/25 hover:shadow-cyan-500/40&quot;
+                  >
+                    Start Your Transformation
+                  </motion.button>
+                </a>
+                <Link href=&quot;/services&quot;>
+                  <motion.button 
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className=&quot;px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-bold text-lg rounded-2xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105&quot;
+                  >
+                    Explore Services
+                  </motion.button>
+                </a>
+
+=======
+<<<<<<< HEAD
+import React from 'react',
+import Layout from './layout/Layout',
+import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026',
+=======
+import React from 'react';
+import Layout from './layout/Layout';
+import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -44,9 +223,53 @@ import UltraFuturisticServiceCard2026 from './ui / UltraFuturisticServiceCard202
 import Link from 'next / link';
 import { motion } from 'framer-motion';
 
+=======
+<<<<<<< HEAD
+  ArrowRight
+  Star
+  Users
+  Award
+  Clock
+  Brain
+  Atom
+  Shield
+  Rocket
+  Zap
+  TrendingUp
+  Globe
+  Cpu
+  Database
+  Cloud
+  Lock
+  Palette
+  Target
+  CheckCircle
+  Sparkles;} from 'lucide-react';import {
+  ArrowRight, Star, Users, Award, Clock
+=======
+  ArrowRight,
+  Star,
+  Users,
+  Award,
+  Clock,
+  Brain,
+  Atom,
+  Shield,
+  Rocket,
+  Zap,
+  TrendingUp,
+  Globe,
+  Cpu,
+  Database,
+  Cloud,
+  Lock,
+  Palette,
+  Target,
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   CheckCircle,;
-  Sparkles,;} from 'lucide-react';import { ;
+  Sparkles,;} from 'lucide-react';import {
   ArrowRight, Star, Users, Award, Clock, ;
+<<<<<<< HEAD
 
 =======
 import { 
@@ -70,6 +293,18 @@ import { realITServices2025 } from '../data/real-it-services-2025';
 import { realAIServices2025 } from '../data/real-ai-services-2025';
 
 <<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  Brain, Atom, Shield, Rocket, Zap;
+  TrendingUp, Globe, Cpu, Database, Cloud;
+  Lock, Palette, Target, CheckCircle, Sparkles
+
+// Import new service data
+import { realMicroSaasServices2025  } from '../data/real-micro-saas-services-2025';
+import { realITServices2025  } from '../data/real-it-services-2025';
+import { realAIServices2025 } from '../data/real-ai-services-2025';
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 const Homepage2037: React.FC = () => {
   // Get featured services from each category
   const featuredMicroSaas = realMicroSaasServices2025
@@ -111,6 +346,7 @@ const Homepage2037: React.FC = () => {
           </div>
           <div className="text-center max-w-5xl mx-auto relative z-10">
             <motion.div
+<<<<<<< HEAD
 
 =======
 
@@ -121,10 +357,22 @@ const Homepage2037: React.FC = () => {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1 }}>;
+              transition={{ duration: 1 }}
+            >
               {/* Main heading with enhanced typography */}
+<<<<<<< HEAD
 <<<<<<< HEAD
               <div className='mb-8'>
                 <h1 className='text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent leading-tight'>
@@ -133,6 +381,18 @@ const Homepage2037: React.FC = () => {
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+              <div className='mb-8'>
+                <h1 className='text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent leading-tight'>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   Zion Tech Group
                 </h1>
                 <div className='text-2xl md:text-3xl text-gray-300 mb-4 font-light'>
@@ -157,11 +417,6 @@ const Homepage2037: React.FC = () => {
                     Start Your Transformation
                   </motion.button>
                 </Link>                  Zion Tech Group
-=======
-              <div className="mb-8">
-                <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent leading-tight">
-                  Zion Tech Group
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 </h1>
                 <div className="text-2xl md:text-3xl text-gray-300 mb-4 font-light">
                   Pioneering the Future of Technology
@@ -185,6 +440,7 @@ const Homepage2037: React.FC = () => {
                     Start Your Transformation
                   </motion.button>
                 </Link>
+<<<<<<< HEAD
 
                 <Link href="/services">
                   <motion.button 
@@ -193,16 +449,33 @@ const Homepage2037: React.FC = () => {
                     className="px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-bold text-lg rounded-2xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105"
                   >
 
+=======
+                <Link href='/services'>
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className='px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-bold text-lg rounded-2xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105'                  >                <Link href="/services">
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-bold text-lg rounded-2xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     Explore Services
                   </motion.button>
                 </Link>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </div>
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
 
 
               <div className='mb-8'>;
+=======
+<<<<<<< HEAD
+<div className='mb-8'>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <h1 className='text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent leading-tight'>;
                   Zion Tech Group;
                 </h1>;
@@ -213,13 +486,11 @@ const Homepage2037: React.FC = () => {
                   Revolutionary AI • Quantum Computing • Enterprise Solutions;
                 </div>;
               </div>;
-
               <p className='text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed'>;
                 Transform your business with cutting-edge AI, quantum computing,;
                 and enterprise solutions. We deliver innovative technology that;
                 drives business transformation and shapes the future.;
               </p>;
-
               {/* Enhanced CTA buttons */}
               <div className='flex flex-col sm:flex-row gap-6 justify-center items-center'>;
                 <Link href='/contact'>;
@@ -238,12 +509,10 @@ const Homepage2037: React.FC = () => {
                   Revolutionary AI • Quantum Computing • Enterprise Solutions;
                 </div>;
               </div>;
-
               <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">;
                 Transform your business with cutting-edge AI, quantum computing, and enterprise solutions. ;
                 We deliver innovative technology that drives business transformation and shapes the future.;
               </p>;
-
               {/* Enhanced CTA buttons */}
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">;
                 <Link href="/contact">;
@@ -270,8 +539,6 @@ const Homepage2037: React.FC = () => {
             </motion && motion.div>;
           </div>;
         </section>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Enhanced Company Stats */}
         <section className='py-24 px-4 bg-black/40 backdrop-blur-sm'>;
           <div className='max-w-7xl mx-auto'>            <motion && motion.div        <section className="py-24 px-4 bg-black/40 backdrop-blur-sm">;
@@ -279,11 +546,12 @@ const Homepage2037: React.FC = () => {
             <motion&& motion.div
 
 =======
-
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Enhanced Company Stats */}
         <section className="py-24 px-4 bg-black/40 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto">
             <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -295,10 +563,20 @@ const Homepage2037: React.FC = () => {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
               className='text-center mb-16'
 
@@ -306,6 +584,20 @@ const Homepage2037: React.FC = () => {
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+              className="text-center mb-16"
+            >
+=======
+              className='text-center mb-16'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             >
               <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>
                 Trusted by Industry Leaders
@@ -316,10 +608,7 @@ const Homepage2037: React.FC = () => {
               </p>
             </motion.div>
             <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>              <motion.div            >
-=======
-              className="text-center mb-16"
-            >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Trusted by Industry Leaders
               </h2>
@@ -330,10 +619,13 @@ const Homepage2037: React.FC = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               className='text-center mb-16'>;
               <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>;
                 Trusted by Industry Leaders;
@@ -343,7 +635,6 @@ const Homepage2037: React.FC = () => {
                 across industries;
               </p>;
             </motion && motion.div>;
-
             <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>              <motion && motion.div            >;
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">;
                 Trusted by Industry Leaders;
@@ -352,9 +643,9 @@ const Homepage2037: React.FC = () => {
                 Our innovative solutions are powering the future of technology across industries;
               </p>;
             </motion && motion.div>;
-
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">;
               <motion&& motion.div
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -365,10 +656,23 @@ const Homepage2037: React.FC = () => {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className='text-center p-8 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-2xl border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300'
 
@@ -376,6 +680,20 @@ const Homepage2037: React.FC = () => {
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+                className="text-center p-8 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-2xl border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300"
+              >
+=======
+                className='text-center p-8 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-2xl border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               >
                 <div className='text-5xl font-bold text-cyan-400 mb-3'>50+</div>
                 <div className='text-gray-300 text-lg'>AI Services</div>
@@ -383,20 +701,21 @@ const Homepage2037: React.FC = () => {
                   Revolutionary Solutions
                 </div>
               </motion.div>              >
-=======
-                className="text-center p-8 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-2xl border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300"
-              >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <div className="text-5xl font-bold text-cyan-400 mb-3">50+</div>
                 <div className="text-gray-300 text-lg">AI Services</div>
                 <div className="text-cyan-400 text-sm mt-2">Revolutionary Solutions</div>
               </motion.div>
+<<<<<<< HEAD
 
               
 
               <motion.div
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+              <motion.div
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 className='text-center p-8 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-2xl border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300'>;
                 <div className='text-5xl font-bold text-cyan-400 mb-3'>50+</div>;
                 <div className='text-gray-300 text-lg'>AI Services</div>;
@@ -408,15 +727,18 @@ const Homepage2037: React.FC = () => {
                 <div className="text-gray-300 text-lg">AI Services</div>;
                 <div className="text-cyan-400 text-sm mt-2">Revolutionary Solutions</div>;
               </motion && motion.div>;
-
               <motion&& motion.div
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className='text-center p-8 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300'
 
@@ -424,6 +746,20 @@ const Homepage2037: React.FC = () => {
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+                className="text-center p-8 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300"
+              >
+=======
+                className='text-center p-8 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               >
                 <div className='text-5xl font-bold text-blue-400 mb-3'>
                   100+
@@ -433,20 +769,21 @@ const Homepage2037: React.FC = () => {
                   Future Technology
                 </div>
               </motion.div>              >
-=======
-                className="text-center p-8 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300"
-              >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <div className="text-5xl font-bold text-blue-400 mb-3">100+</div>
                 <div className="text-gray-300 text-lg">Quantum Solutions</div>
                 <div className="text-blue-400 text-sm mt-2">Future Technology</div>
               </motion.div>
+<<<<<<< HEAD
 
               
 
               <motion.div
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+              <motion.div
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 className='text-center p-8 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300'>;
                 <div className='text-5xl font-bold text-blue-400 mb-3'>;
                   100+;
@@ -460,15 +797,18 @@ const Homepage2037: React.FC = () => {
                 <div className="text-gray-300 text-lg">Quantum Solutions</div>;
                 <div className="text-blue-400 text-sm mt-2">Future Technology</div>;
               </motion && motion.div>;
-
               <motion&& motion.div
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.3 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className='text-center p-8 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-2xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300'
 
@@ -476,6 +816,20 @@ const Homepage2037: React.FC = () => {
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+                className="text-center p-8 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-2xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300"
+              >
+=======
+                className='text-center p-8 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-2xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               >
                 <div className='text-5xl font-bold text-purple-400 mb-3'>
                   24/7
@@ -487,20 +841,21 @@ const Homepage2037: React.FC = () => {
                   Always Available
                 </div>
               </motion.div>              >
-=======
-                className="text-center p-8 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-2xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300"
-              >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <div className="text-5xl font-bold text-purple-400 mb-3">24/7</div>
                 <div className="text-gray-300 text-lg">Autonomous Operations</div>
                 <div className="text-purple-400 text-sm mt-2">Always Available</div>
               </motion.div>
+<<<<<<< HEAD
 
               
 
               <motion.div
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+              <motion.div
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 className='text-center p-8 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-2xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300'>;
                 <div className='text-5xl font-bold text-purple-400 mb-3'>;
                   24/7;
@@ -516,33 +871,73 @@ const Homepage2037: React.FC = () => {
                 <div className="text-gray-300 text-lg">Autonomous Operations</div>;
                 <div className="text-purple-400 text-sm mt-2">Always Available</div>;
               </motion && motion.div>;
-
               <motion&& motion.div
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+                className="text-center p-8 bg-gradient-to-br from-green-500/10 to-teal-500/10 rounded-2xl border border-green-500/20 hover:border-green-500/40 transition-all duration-300"
+=======
+                className='text-center p-8 bg-gradient-to-br from-green-500/10 to-teal-500/10 rounded-2xl border border-green-500/20 hover:border-green-500/40 transition-all duration-300'
+              >
+                <div className='text-5xl font-bold text-green-400 mb-3'>∞</div>
+                <div className='text-gray-300 text-lg'>
+                  Future Possibilities
+                </div>
+                <div className='text-green-400 text-sm mt-2'>
+                  Limitless Innovation
+                </div>              </motion.div>                className="text-center p-8 bg-gradient-to-br from-green-500/10 to-teal-500/10 rounded-2xl border border-green-500/20 hover:border-green-500/40 transition-all duration-300"
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+              >
+                <div className="text-5xl font-bold text-green-400 mb-3">∞</div>
+                <div className="text-gray-300 text-lg">Future Possibilities</div>
+                <div className="text-green-400 text-sm mt-2">Limitless Innovation</div>
+                className='text-center p-8 bg-gradient-to-br from-green-500/10 to-teal-500/10 rounded-2xl border border-green-500/20 hover:border-green-500/40 transition-all duration-300'>;
+                <div className='text-5xl font-bold text-green-400 mb-3'>∞</div>;
+                <div className='text-gray-300 text-lg'>;
+                  Future Possibilities;
+                </div>;
+                <div className='text-green-400 text-sm mt-2'>;
+                  Limitless Innovation;
+                </div>              </motion && motion.div>                className="text-center p-8 bg-gradient-to-br from-green-500/10 to-teal-500/10 rounded-2xl border border-green-500/20 hover:border-green-500/40 transition-all duration-300";
+              >;
+                <div className="text-5xl font-bold text-green-400 mb-3">∞</div>;
+                <div className="text-gray-300 text-lg">Future Possibilities</div>;
+                <div className="text-green-400 text-sm mt-2">Limitless Innovation</div>;
+            </div>;
+          </div>;
+        </section>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {/* Featured AI Services */}
         <section className='py-24 px-4'>;
           <div className='max-w-7xl mx-auto'>            <motion && motion.div        <section className="py-24 px-4">;
           <div className="max-w-7xl mx-auto">;
             <motion&& motion.div
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </motion.div>
             </div>
           </div>
         </section>
-
-        {/* Featured AI Services */}
+{/* Featured AI Services */}
         <section className="py-24 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -554,10 +949,20 @@ const Homepage2037: React.FC = () => {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
               className='text-center mb-16'
 
@@ -565,6 +970,20 @@ const Homepage2037: React.FC = () => {
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+              className="text-center mb-16"
+            >
+=======
+              className='text-center mb-16'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             >
               <div className='flex items-center justify-center space-x-3 mb-6'>
                 <Brain className='w-8 h-8 text-cyan-400' />
@@ -578,10 +997,7 @@ const Homepage2037: React.FC = () => {
               </p>
             </motion.div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {featuredAI.map((service, index) => (            >
-=======
-              className="text-center mb-16"
-            >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="flex items-center justify-center space-x-3 mb-6">
                 <Brain className="w-8 h-8 text-cyan-400" />
                 <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -596,8 +1012,11 @@ const Homepage2037: React.FC = () => {
               {featuredAI.map((service, index) => (
                 <motion.div
                   key={service.id}
+<<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               className='text-center mb-16'>;
               <div className='flex items-center justify-center space-x-3 mb-6'>;
                 <Brain className='w-8 h-8 text-cyan-400' />;
@@ -610,7 +1029,6 @@ const Homepage2037: React.FC = () => {
                 breakthrough consciousness and emotional intelligence platforms;
               </p>;
             </motion && motion.div>;
-
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {featuredAI && featuredAI.map((service, index) => (            >;
               <div className="flex items-center justify-center space-x-3 mb-6">;
                 <Brain className="w-8 h-8 text-cyan-400" />;
@@ -622,20 +1040,21 @@ const Homepage2037: React.FC = () => {
                 Experience the future of artificial intelligence with our breakthrough consciousness and emotional intelligence platforms;
               </p>;
             </motion && motion.div>;
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
               {featuredAI && featuredAI.map((service, index) => (;
                 <motion&& motion.div
                   key={service && service.id}
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                   viewport={{ once: true }}>;
                   <UltraFuturisticServiceCard2026
-=======
 import {
   ArrowRight,
   Star,
@@ -925,6 +1344,7 @@ const Homepage2037: React.FC = () => {
                   viewport={{ once: true }}
                 >;
                   <UltraFuturisticServiceCard2026;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     service={{
 <<<<<<< HEAD
@@ -952,40 +1372,94 @@ const Homepage2037: React.FC = () => {
 =======
 
 
+=======
+                    service={{
+                      id: service && service.id,
+                      name: service && service.name,
+                      tagline: service && service.tagline,
+                      description: service && service.description,
+                      price: service && service.price,
+                      period: service && service.period,
+                      features: service && service.features.slice(0, 5),
+                      popular: service && service.popular,
+                      category: service && service.category,
+                      icon: service && service.icon,
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     }}
                     variant='ai'                  />;
                 </motion && motion.div>;
               ))}
+<<<<<<< HEAD
 
             </div>                      popular: service && service.popular,;
                       category: service && service.category,;
                       icon: service && service.icon;
 
+=======
+<<<<<<< HEAD
+            </div>                      popular: service && service.popular,;
+                      category: service && service.category,;
+                      icon: service && service.icon;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     }}
                     variant="ai";
                   />;
                 </motion && motion.div>;
               ))}
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+                      id: service.id,
+                      name: service.name,
+                      tagline: service.tagline,
+                      description: service.description,
+                      price: service.price,
+                      period: service.period,
+</div>;
+            <motion&& motion.div
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+            </div>                      popular: service.popular
+                      category: service.category
+=======
+            </div>                      popular: service.popular,
+                      category: service.category,
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                      icon: service.icon
+                    }}
+                    variant="ai"
+=======
+            </div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   />
                 </motion.div>
               ))}
             </div>
-            
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <motion.div
+<<<<<<< HEAD
 =======
             </div>;
 
             <motion&& motion.div
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
               className='text-center mt-12'
 
@@ -993,15 +1467,26 @@ const Homepage2037: React.FC = () => {
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+              className="text-center mt-12"
+            >
+=======
+              className='text-center mt-12'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             >
               <Link href='/ai-services'>
                 <button className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2 mx-auto shadow-lg shadow-cyan-500/25'>
                   View All AI Services
                   <ArrowRight className='w-5 h-5' />                </button>            >
-=======
-              className="text-center mt-12"
-            >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <Link href="/ai-services">
                 <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2 mx-auto shadow-lg shadow-cyan-500/25">
                   View All AI Services
@@ -1011,8 +1496,11 @@ const Homepage2037: React.FC = () => {
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               className='text-center mt-12'>;
               <Link href='/ai-services'>;
                 <button className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2 mx-auto shadow-lg shadow-cyan-500/25'>;
@@ -1027,13 +1515,12 @@ const Homepage2037: React.FC = () => {
             </motion && motion.div>;
           </div>;
         </section>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Featured Enterprise IT Services */}
         <section className='py-24 px-4 bg-black/20'>;
           <div className='max-w-7xl mx-auto'>            <motion && motion.div        <section className="py-24 px-4 bg-black/20">;
           <div className="max-w-7xl mx-auto">;
             <motion&& motion.div
+<<<<<<< HEAD
 
 =======
 
@@ -1052,10 +1539,25 @@ const Homepage2037: React.FC = () => {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+        {/* Featured Enterprise IT Services */}
+        <section className="py-24 px-4 bg-black/20">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
               className='text-center mb-16'
 
@@ -1063,6 +1565,20 @@ const Homepage2037: React.FC = () => {
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+              className="text-center mb-16"
+            >
+=======
+              className='text-center mb-16'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             >
               <div className='flex items-center justify-center space-x-3 mb-6'>
                 <Shield className='w-8 h-8 text-blue-400' />
@@ -1076,10 +1592,7 @@ const Homepage2037: React.FC = () => {
               </p>
             </motion.div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {featuredIT.map((service, index) => (            >
-=======
-              className="text-center mb-16"
-            >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="flex items-center justify-center space-x-3 mb-6">
                 <Shield className="w-8 h-8 text-blue-400" />
                 <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
@@ -1094,8 +1607,11 @@ const Homepage2037: React.FC = () => {
               {featuredIT.map((service, index) => (
                 <motion.div
                   key={service.id}
+<<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               className='text-center mb-16'>;
               <div className='flex items-center justify-center space-x-3 mb-6'>;
                 <Shield className='w-8 h-8 text-blue-400' />;
@@ -1108,7 +1624,6 @@ const Homepage2037: React.FC = () => {
                 and autonomous operations;
               </p>;
             </motion && motion.div>;
-
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {featuredIT && featuredIT.map((service, index) => (            >;
               <div className="flex items-center justify-center space-x-3 mb-6">;
                 <Shield className="w-8 h-8 text-blue-400" />;
@@ -1120,25 +1635,27 @@ const Homepage2037: React.FC = () => {
                 Future-proof your enterprise with quantum-secure infrastructure and autonomous operations;
               </p>;
             </motion && motion.div>;
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
               {featuredIT && featuredIT.map((service, index) => (;
                 <motion&& motion.div
                   key={service && service.id}
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                   viewport={{ once: true }}>;
                   <UltraFuturisticServiceCard2026
-=======
                       features: service.features.slice (0, 5),
                       popular: service.popular,
                       category: service.category,
                       icon: service.icon,
                     }}
+<<<<<<< HEAD
                     variant='ai'                  />;
                 </motion.div>))}
             </div>                      popular: service.popular,
@@ -1212,6 +1729,7 @@ const Homepage2037: React.FC = () => {
                   viewport={{ once: true }}
                 >;
                   <UltraFuturisticServiceCard2026;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     service={{
 <<<<<<< HEAD
@@ -1239,20 +1757,40 @@ const Homepage2037: React.FC = () => {
 =======
 
 
+=======
+                    service={{
+                      id: service && service.id,
+                      name: service && service.name,
+                      tagline: service && service.tagline,
+                      description: service && service.description,
+                      price: service && service.price,
+                      period: service && service.period,
+                      features: service && service.features.slice(0, 5),
+                      popular: service && service.popular,
+                      category: service && service.category,
+                      icon: service && service.icon,
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     }}
                     variant='enterprise'                  />;
                 </motion && motion.div>;
               ))}
+<<<<<<< HEAD
 
             </div>                      popular: service && service.popular,;
                       category: service && service.category,;
                       icon: service && service.icon;
 
+=======
+            </div>                      popular: service && service.popular,;
+                      category: service && service.category,;
+                      icon: service && service.icon;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     }}
                     variant="enterprise";
                   />;
                 </motion && motion.div>;
               ))}
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -1269,10 +1807,21 @@ const Homepage2037: React.FC = () => {
             <motion&& motion.div
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+                      id: service.id,
+                      name: service.name,
+                      tagline: service.tagline,
+                      description: service.description,
+                      price: service.price,
+                      period: service.period,
+</div>;
+            <motion&& motion.div
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
               className='text-center mt-12'
 
@@ -1280,15 +1829,57 @@ const Homepage2037: React.FC = () => {
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+              className="text-center mt-12"
+            >
+=======
+                    variant='enterprise'                  />
+                </motion.div>
+              ))}
+<<<<<<< HEAD
+<<<<<<< HEAD
+            </div>                      popular: service.popular
+                      category: service.category
+=======
+            </div>                      popular: service.popular,
+                      category: service.category,
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                      icon: service.icon
+                    }}
+                    variant="enterprise"
+=======
+            </div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                  />
+                </motion.div>
+              ))}
+            </div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className='text-center mt-12'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             >
               <Link href='/it-services'>
                 <button className='px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2 mx-auto shadow-lg shadow-blue-500/25'>
                   View All IT Services
                   <ArrowRight className='w-5 h-5' />                </button>            >
-=======
-              className="text-center mt-12"
-            >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <Link href="/it-services">
                 <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2 mx-auto shadow-lg shadow-blue-500/25">
                   View All IT Services
@@ -1298,8 +1889,11 @@ const Homepage2037: React.FC = () => {
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               className='text-center mt-12'>;
               <Link href='/it-services'>;
                 <button className='px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2 mx-auto shadow-lg shadow-blue-500/25'>;
@@ -1314,13 +1908,12 @@ const Homepage2037: React.FC = () => {
             </motion && motion.div>;
           </div>;
         </section>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Featured Micro SAAS Services */}
         <section className='py-24 px-4'>;
           <div className='max-w-7xl mx-auto'>            <motion && motion.div        <section className="py-24 px-4">;
           <div className="max-w-7xl mx-auto">;
             <motion&& motion.div
+<<<<<<< HEAD
 
 =======
 
@@ -1339,10 +1932,25 @@ const Homepage2037: React.FC = () => {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+        {/* Featured Micro SAAS Services */}
+        <section className="py-24 px-4">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
               className='text-center mb-16'
 
@@ -1350,6 +1958,20 @@ const Homepage2037: React.FC = () => {
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+              className="text-center mb-16"
+            >
+=======
+              className='text-center mb-16'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             >
               <div className='flex items-center justify-center space-x-3 mb-6'>
                 <Rocket className='w-8 h-8 text-green-400' />
@@ -1363,10 +1985,7 @@ const Homepage2037: React.FC = () => {
               </p>
             </motion.div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {featuredMicroSaas.map((service, index) => (            >
-=======
-              className="text-center mb-16"
-            >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="flex items-center justify-center space-x-3 mb-6">
                 <Rocket className="w-8 h-8 text-green-400" />
                 <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-green-400 to-teal-500 bg-clip-text text-transparent">
@@ -1381,8 +2000,11 @@ const Homepage2037: React.FC = () => {
               {featuredMicroSaas.map((service, index) => (
                 <motion.div
                   key={service.id}
+<<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               className='text-center mb-16'>;
               <div className='flex items-center justify-center space-x-3 mb-6'>;
                 <Rocket className='w-8 h-8 text-green-400' />;
@@ -1395,7 +2017,6 @@ const Homepage2037: React.FC = () => {
                 and AI-powered insights;
               </p>;
             </motion && motion.div>;
-
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {featuredMicroSaas && featuredMicroSaas.map((service, index) => (            >;
               <div className="flex items-center justify-center space-x-3 mb-6">;
                 <Rocket className="w-8 h-8 text-green-400" />;
@@ -1407,25 +2028,27 @@ const Homepage2037: React.FC = () => {
                 Transform your business operations with intelligent automation and AI-powered insights;
               </p>;
             </motion && motion.div>;
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
               {featuredMicroSaas && featuredMicroSaas.map((service, index) => (;
                 <motion&& motion.div
                   key={service && service.id}
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                   viewport={{ once: true }}>;
                   <UltraFuturisticServiceCard2026
-=======
                       features: service.features.slice (0, 5),
                       popular: service.popular,
                       category: service.category,
                       icon: service.icon,
                     }}
+<<<<<<< HEAD
                     variant='enterprise'                  />;
                 </motion.div>))}
             </div>                      popular: service.popular,
@@ -1499,6 +2122,7 @@ const Homepage2037: React.FC = () => {
                   viewport={{ once: true }}
                 >;
                   <UltraFuturisticServiceCard2026;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     service={{
 <<<<<<< HEAD
@@ -1526,20 +2150,40 @@ const Homepage2037: React.FC = () => {
 =======
 
 
+=======
+                    service={{
+                      id: service && service.id,
+                      name: service && service.name,
+                      tagline: service && service.tagline,
+                      description: service && service.description,
+                      price: service && service.price,
+                      period: service && service.period,
+                      features: service && service.features.slice(0, 5),
+                      popular: service && service.popular,
+                      category: service && service.category,
+                      icon: service && service.icon,
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     }}
                     variant='automation'                  />;
                 </motion && motion.div>;
               ))}
+<<<<<<< HEAD
 
             </div>                      popular: service && service.popular,;
                       category: service && service.category,;
                       icon: service && service.icon;
 
+=======
+            </div>                      popular: service && service.popular,;
+                      category: service && service.category,;
+                      icon: service && service.icon;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     }}
                     variant="automation";
                   />;
                 </motion && motion.div>;
               ))}
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -1556,10 +2200,21 @@ const Homepage2037: React.FC = () => {
             <motion&& motion.div
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+                      id: service.id,
+                      name: service.name,
+                      tagline: service.tagline,
+                      description: service.description,
+                      price: service.price,
+                      period: service.period,
+</div>;
+            <motion&& motion.div
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
               className='text-center mt-12'
 
@@ -1567,15 +2222,57 @@ const Homepage2037: React.FC = () => {
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+              className="text-center mt-12"
+            >
+=======
+                    variant='automation'                  />
+                </motion.div>
+              ))}
+<<<<<<< HEAD
+<<<<<<< HEAD
+            </div>                      popular: service.popular
+                      category: service.category
+=======
+            </div>                      popular: service.popular,
+                      category: service.category,
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                      icon: service.icon
+                    }}
+                    variant="automation"
+=======
+            </div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                  />
+                </motion.div>
+              ))}
+            </div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className='text-center mt-12'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             >
               <Link href='/micro-saas'>
                 <button className='px-8 py-4 bg-gradient-to-r from-green-500 to-teal-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-teal-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2 mx-auto shadow-lg shadow-green-500/25'>
                   View All SAAS Solutions
                   <ArrowRight className='w-5 h-5' />                </button>            >
-=======
-              className="text-center mt-12"
-            >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <Link href="/micro-saas">
                 <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-teal-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-teal-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2 mx-auto shadow-lg shadow-green-500/25">
                   View All SAAS Solutions
@@ -1585,8 +2282,11 @@ const Homepage2037: React.FC = () => {
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               className='text-center mt-12'>;
               <Link href='/micro-saas'>;
                 <button className='px-8 py-4 bg-gradient-to-r from-green-500 to-teal-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-teal-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2 mx-auto shadow-lg shadow-green-500/25'>;
@@ -1601,13 +2301,12 @@ const Homepage2037: React.FC = () => {
             </motion && motion.div>;
           </div>;
         </section>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Enhanced Why Choose Us Section */}
         <section className='py-24 px-4 bg-black/30'>;
           <div className='max-w-7xl mx-auto'>            <motion && motion.div        <section className="py-24 px-4 bg-black/30">;
           <div className="max-w-7xl mx-auto">;
             <motion&& motion.div
+<<<<<<< HEAD
 
 =======
 
@@ -1626,10 +2325,25 @@ const Homepage2037: React.FC = () => {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+        {/* Enhanced Why Choose Us Section */}
+        <section className="py-24 px-4 bg-black/30">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
               className='text-center mb-16'
 
@@ -1637,6 +2351,20 @@ const Homepage2037: React.FC = () => {
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+              className="text-center mb-16"
+            >
+=======
+              className='text-center mb-16'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             >
               <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent'>
                 Why Choose Zion Tech Group?
@@ -1647,10 +2375,7 @@ const Homepage2037: React.FC = () => {
               </p>
             </motion.div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>              <motion.div            >
-=======
-              className="text-center mb-16"
-            >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
                 Why Choose Zion Tech Group?
               </h2>
@@ -1661,10 +2386,13 @@ const Homepage2037: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               className='text-center mb-16'>;
               <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent'>;
                 Why Choose Zion Tech Group?;
@@ -1674,7 +2402,6 @@ const Homepage2037: React.FC = () => {
                 deliver exceptional results;
               </p>;
             </motion && motion.div>;
-
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>              <motion && motion.div            >;
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">;
                 Why Choose Zion Tech Group?;
@@ -1683,9 +2410,9 @@ const Homepage2037: React.FC = () => {
                 We combine cutting-edge technology with proven expertise to deliver exceptional results;
               </p>;
             </motion && motion.div>;
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
               <motion&& motion.div
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -1696,10 +2423,23 @@ const Homepage2037: React.FC = () => {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className='text-center p-8 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-2xl border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 group'
 
@@ -1707,6 +2447,20 @@ const Homepage2037: React.FC = () => {
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+                className="text-center p-8 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-2xl border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 group"
+              >
+=======
+                className='text-center p-8 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-2xl border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 group'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               >
                 <div className='w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300'>
                   <Brain className='w-10 h-10 text-white' />
@@ -1719,22 +2473,23 @@ const Homepage2037: React.FC = () => {
                   evolve, and transform your business operations
                 </p>
               </motion.div>              >
-=======
-                className="text-center p-8 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-2xl border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 group"
-              >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Brain className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">AI-First Approach</h3>
                 <p className="text-gray-300 leading-relaxed">Leading-edge artificial intelligence solutions that adapt, evolve, and transform your business operations</p>
               </motion.div>
+<<<<<<< HEAD
 
               
 
               <motion.div
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+              <motion.div
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 className='text-center p-8 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-2xl border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 group'>;
                 <div className='w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300'>;
                   <Brain className='w-10 h-10 text-white' />;
@@ -1753,15 +2508,18 @@ const Homepage2037: React.FC = () => {
                 <h3 className="text-2xl font-bold text-white mb-4">AI-First Approach</h3>;
                 <p className="text-gray-300 leading-relaxed">Leading-edge artificial intelligence solutions that adapt, evolve, and transform your business operations</p>;
               </motion && motion.div>;
-
               <motion&& motion.div
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className='text-center p-8 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 group'
 
@@ -1769,6 +2527,20 @@ const Homepage2037: React.FC = () => {
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+                className="text-center p-8 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 group"
+              >
+=======
+                className='text-center p-8 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 group'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               >
                 <div className='w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300'>
                   <Atom className='w-10 h-10 text-white' />
@@ -1781,22 +2553,23 @@ const Homepage2037: React.FC = () => {
                   prepare you for the future
                 </p>
               </motion.div>              >
-=======
-                className="text-center p-8 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 group"
-              >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Atom className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">Quantum Innovation</h3>
                 <p className="text-gray-300 leading-relaxed">Next-generation quantum computing and security solutions that prepare you for the future</p>
               </motion.div>
+<<<<<<< HEAD
 
               
 
               <motion.div
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+              <motion.div
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 className='text-center p-8 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 group'>;
                 <div className='w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300'>;
                   <Atom className='w-10 h-10 text-white' />;
@@ -1815,15 +2588,18 @@ const Homepage2037: React.FC = () => {
                 <h3 className="text-2xl font-bold text-white mb-4">Quantum Innovation</h3>;
                 <p className="text-gray-300 leading-relaxed">Next-generation quantum computing and security solutions that prepare you for the future</p>;
               </motion && motion.div>;
-
               <motion&& motion.div
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.3 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className='text-center p-8 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-2xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 group'
 
@@ -1831,6 +2607,20 @@ const Homepage2037: React.FC = () => {
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+                className="text-center p-8 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-2xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 group"
+              >
+=======
+                className='text-center p-8 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-2xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 group'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               >
                 <div className='w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300'>
                   <Shield className='w-10 h-10 text-white' />
@@ -1843,22 +2633,23 @@ const Homepage2037: React.FC = () => {
                   your most valuable assets
                 </p>
               </motion.div>              >
-=======
-                className="text-center p-8 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-2xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 group"
-              >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Shield className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">Enterprise Security</h3>
                 <p className="text-gray-300 leading-relaxed">Military-grade security and compliance solutions that protect your most valuable assets</p>
               </motion.div>
+<<<<<<< HEAD
 
               
 
               <motion.div
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+              <motion.div
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 className='text-center p-8 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-2xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 group'>;
                 <div className='w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300'>;
                   <Shield className='w-10 h-10 text-white' />;
@@ -1877,15 +2668,18 @@ const Homepage2037: React.FC = () => {
                 <h3 className="text-2xl font-bold text-white mb-4">Enterprise Security</h3>;
                 <p className="text-gray-300 leading-relaxed">Military-grade security and compliance solutions that protect your most valuable assets</p>;
               </motion && motion.div>;
-
               <motion&& motion.div
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className='text-center p-8 bg-gradient-to-br from-green-500/10 to-teal-500/10 rounded-2xl border border-green-500/20 hover:border-green-500/40 transition-all duration-300 group'
 
@@ -1893,6 +2687,20 @@ const Homepage2037: React.FC = () => {
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+                className="text-center p-8 bg-gradient-to-br from-green-500/10 to-teal-500/10 rounded-2xl border border-green-500/20 hover:border-green-500/40 transition-all duration-300 group"
+              >
+=======
+                className='text-center p-8 bg-gradient-to-br from-green-500/10 to-teal-500/10 rounded-2xl border border-green-500/20 hover:border-green-500/40 transition-all duration-300 group'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               >
                 <div className='w-20 h-20 bg-gradient-to-r from-green-500 to-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300'>
                   <Zap className='w-10 h-10 text-white' />
@@ -1904,10 +2712,7 @@ const Homepage2037: React.FC = () => {
                   Fast implementation and continuous optimization to get you up
                   and running quickly
                 </p>              </motion.div>              >
-=======
-                className="text-center p-8 bg-gradient-to-br from-green-500/10 to-teal-500/10 rounded-2xl border border-green-500/20 hover:border-green-500/40 transition-all duration-300 group"
-              >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Zap className="w-10 h-10 text-white" />
                 </div>
@@ -1917,9 +2722,14 @@ const Homepage2037: React.FC = () => {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 
 
                 className='text-center p-8 bg-gradient-to-br from-green-500/10 to-teal-500/10 rounded-2xl border border-green-500/20 hover:border-green-500/40 transition-all duration-300 group'>;
+=======
+<<<<<<< HEAD
+className='text-center p-8 bg-gradient-to-br from-green-500/10 to-teal-500/10 rounded-2xl border border-green-500/20 hover:border-green-500/40 transition-all duration-300 group'>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <div className='w-20 h-20 bg-gradient-to-r from-green-500 to-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300'>;
                   <Zap className='w-10 h-10 text-white' />;
                 </div>;
@@ -1939,8 +2749,6 @@ const Homepage2037: React.FC = () => {
             </div>;
           </div>;
         </section>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Enhanced Call to Action */}
         <section className='py-24 px-4'>;
           <div className='max-w-5xl mx-auto text-center'>            <motion && motion.div        <section className="py-24 px-4">;
@@ -1948,11 +2756,12 @@ const Homepage2037: React.FC = () => {
             <motion&& motion.div
 
 =======
-
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Enhanced Call to Action */}
         <section className="py-24 px-4">
           <div className="max-w-5xl mx-auto text-center">
             <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1964,10 +2773,20 @@ const Homepage2037: React.FC = () => {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
               className='relative'
 
@@ -1982,7 +2801,44 @@ const Homepage2037: React.FC = () => {
               className="relative"
             >
 
+=======
+              className="relative"
+            >
               {/* Background decoration */}
+=======
+              className='relative'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            >
+              {/* Background decoration */}
+              <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-3xl blur-3xl'></div>
+              <div className='relative z-10 p-12 bg-gradient-to-r from-black/80 to-gray-900/80 backdrop-blur-xl rounded-3xl border border-cyan-500/30'>
+                <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-green-400 via-cyan-400 to-teal-500 bg-clip-text text-transparent'>
+                  Ready to Transform Your Business?
+                </h2>
+                <p className='text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed'>
+                  Join the future of technology with Zion Tech Group. Let's
+                  build something extraordinary together and shape the future of
+                  your industry.
+                </p>
+                <div className='flex flex-col sm:flex-row gap-6 justify-center items-center'>
+                  <Link href='/contact'>
+                    <motion.button
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className='px-12 py-5 bg-gradient-to-r from-green-500 to-teal-600 text-white font-bold text-xl rounded-2xl hover:from-green-600 hover:to-teal-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-green-500/25'                    >
+                      Start Your Journey Today
+                    </motion.button>
+                  </Link>            >
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+              {/* Background decoration */}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-3xl blur-3xl"></div>
               <div className="relative z-10 p-12 bg-gradient-to-r from-black/80 to-gray-900/80 backdrop-blur-xl rounded-3xl border border-cyan-500/30">
                 <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-green-400 via-cyan-400 to-teal-500 bg-clip-text text-transparent">
@@ -2001,21 +2857,29 @@ const Homepage2037: React.FC = () => {
                       Start Your Journey Today
                     </motion.button>
                   </Link>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   <Link href="/demo">
                     <motion.button 
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       className="px-12 py-5 border-2 border-green-400 text-green-400 font-bold text-xl rounded-2xl hover: bg-green-400 hover:text-black transition-all duration-300 transform hover:scale-105"
                     >
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       Request Demo
                     </motion.button>
                   </Link>
                 </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-3xl blur-3xl'></div>;
-
               <div className='relative z-10 p-12 bg-gradient-to-r from-black/80 to-gray-900/80 backdrop-blur-xl rounded-3xl border border-cyan-500/30'>;
                 <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-green-400 via-cyan-400 to-teal-500 bg-clip-text text-transparent'>;
                   Ready to Transform Your Business?;
@@ -2025,7 +2889,6 @@ const Homepage2037: React.FC = () => {
                   build something extraordinary together and shape the future of;
                   your industry.;
                 </p>;
-
                 <div className='flex flex-col sm:flex-row gap-6 justify-center items-center'>;
                   <Link href='/contact'>;
                     <motion&& motion.button
@@ -2037,7 +2900,6 @@ const Homepage2037: React.FC = () => {
                   </Link>            >;
               {/* Background decoration */}
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-3xl blur-3xl"></div>;
-
               <div className="relative z-10 p-12 bg-gradient-to-r from-black/80 to-gray-900/80 backdrop-blur-xl rounded-3xl border border-cyan-500/30">;
                 <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-green-400 via-cyan-400 to-teal-500 bg-clip-text text-transparent">;
                   Ready to Transform Your Business?;
@@ -2045,7 +2907,6 @@ const Homepage2037: React.FC = () => {
                 <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed">;
                   Join the future of technology with Zion Tech Group. Let's build something extraordinary together and shape the future of your industry.;
                 </p>;
-
                 <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">;
                   <Link href="/contact">;
                     <motion&& motion.button 
@@ -2068,10 +2929,12 @@ const Homepage2037: React.FC = () => {
                     </motion && motion.button>;
                   </Link>;
                 </div>;
-
                 <div className='mt-8 text-gray-400'>;
                   <p className='text-sm'>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     Contact us:{' '}
                     <a
                       href='tel:+13024640950'
@@ -2082,6 +2945,7 @@ const Homepage2037: React.FC = () => {
                   <p className='text-sm'>;
                     Email:{' '}
                     <a
+<<<<<<< HEAD
 
                 
                 <div className="mt-8 text-gray-400">
@@ -2089,14 +2953,38 @@ const Homepage2037: React.FC = () => {
                   <p className="text-sm">Email: <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">kleber@ziontechgroup.com</a></p>
                 </div>
 
+=======
+                <div className="mt-8 text-gray-400">
+                  <p className="text-sm">Contact us: <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">+1 302 464 0950</a></p>
+                  <p className="text-sm">Email: <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">kleber@ziontechgroup.com</a></p>
+<<<<<<< HEAD
+                    >
+                      Request Demo
+                    </motion.button>
+                  </a>
+                </div>
+                
+                <div className=&quot;mt-8 text-gray-400&quot;>
+                  <p className=&quot;text-sm&quot;>Contact us: <a href=&quot;tel:+13024640950&quot; className=&quot;text-cyan-400 hover:text-cyan-300&quot;>+1 302 464 0950</a></p>
+                  <p className=&quot;text-sm&quot;>Email: <a href=&quot;mailto:kleber@ziontechgroup.com&quot; className=&quot;text-cyan-400 hover:text-cyan-300&quot;>kleber@ziontechgroup.com</a></p>
+
+                </div>
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </div>
             </motion.div>
           </div>
         </section>
       </main>
     </Layout>
+<<<<<<< HEAD
 
                       href='mailto:kleber@ziontechgroup && ziontechgroup.com'
+=======
+<<<<<<< HEAD
+href='mailto:kleber@ziontechgroup && ziontechgroup.com'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       className='text-cyan-400 hover:text-cyan-300'>;
                       kleber@ziontechgroup && ziontechgroup.com;
                     </a>;
@@ -2121,16 +3009,20 @@ export default Homepage2037;
 
 =======
 };
-
 export default Homepage2037;  );
+<<<<<<< HEAD
 
+=======
+  )
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 };
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default Homepage2037;
+<<<<<<< HEAD
 
 
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       features: service.features.slice (0, 5),
                       popular: service.popular,
                       category: service.category,
@@ -2390,6 +3282,7 @@ export default Homepage2037);
 ;
 export default Homepage2037;
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -2399,3 +3292,29 @@ export default Homepage2037;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+  );
+<<<<<<< HEAD
+}
+=======
+};
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default Homepage2037;  )
+}
+export default Homepage2037;
+
+<<<<<<< HEAD
+=======
+export default Homepage2037;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+export default Homepage2037;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

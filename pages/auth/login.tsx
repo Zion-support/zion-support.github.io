@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import Link from 'next/link';
@@ -15,6 +16,9 @@ import { supabase } from '@/utils/supabase/client';
 
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import type {;
   AuthError,;
   User,;
@@ -30,21 +34,78 @@ import {;
   logInfo,;
   logWarn,;
   logErrorToProduction,;
+<<<<<<< HEAD
 
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useRouter  } from 'next/router';
+import { useEffect, useState, FormEvent  } from 'react';
+import Link from 'next/link',
+import { Facebook, Mail, Clock, RefreshCw } from 'lucide-react'
+=======
+import { useRouter } from 'next/router';
+import { useEffect, useState, FormEvent } from 'react';
+=======
+import {useRouter} from 'next/router';
+import {useEffect, useState, FormEvent} from 'react';
+=======
+import { useRouter } from 'next/router';
+import { useEffect, useState, FormEvent } from 'react';
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import Link from 'next/link';
+import { Facebook, Mail, Clock, RefreshCw } from 'lucide-react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+import Head from 'next/head';
+
+import { signIn } from 'next-auth/react';
+import { supabase } from '@/utils/supabase/client';
+<<<<<<< HEAD
+import type {
+<<<<<<< HEAD
+  AuthError
+  User
+  AuthChangeEvent
+  Session;
+} from '@supabase/supabase-js';
+import {
+  logInfo
+  logWarn
+  logErrorToProduction;
+=======
+  AuthError,
+  User,
+  AuthChangeEvent,;
+  Session,;
+} from '@supabase/supabase-js';
+import {
+  logInfo,
+  logWarn,;
+  logErrorToProduction,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 } from '@/utils/productionLogger';
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import {;
   Card,;
   CardContent,;
   CardDescription,;
   CardHeader,;
   CardTitle,;
+<<<<<<< HEAD
 
 =======
 import {
@@ -65,6 +126,10 @@ const LoginPage = () => {
 const LoginPage = () => {;
 
 =======
+=======
+} from '@/components/ui/card';
+const LoginPage = () => {;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { useRouter } from 'next/router';
 import { useEffect, useState, FormEvent } from 'react';
 import Link from 'next/link';
@@ -72,13 +137,36 @@ import { Facebook, Mail, Clock, RefreshCw } from 'lucide-react'
 import Head from 'next/head';
 import { signIn } from 'next-auth/react';
 import { supabase } from '@/utils/supabase/client';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+import {
+<<<<<<< HEAD
+  Card
+  CardContent
+  CardDescription
+  CardHeader
+  CardTitle;
+=======
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,;
+  CardTitle,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+} from '@/components/ui/card';
+const LoginPage = () => {
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import type { AuthError, User, AuthChangeEvent, Session } from '@supabase/supabase-js';
 import { logInfo, logWarn, logErrorToProduction } from '@/utils/productionLogger';
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+<<<<<<< HEAD
 <<<<<<< HEAD
 const LoginPage = () => {;
 
@@ -91,16 +179,43 @@ const LoginPage = () => {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+const LoginPage = () => {
+=======
+const LoginPage = () => {;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const router = useRouter();
   const { t } = useTranslation();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState<AuthError | null>(null);
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+  const [isLoading, setIsLoading] = useState(false), // For login form submission
+  const [user, setUser] = useState<User | null>(null);
+  const [isCheckingSession, setIsCheckingSession] = useState(true), // For initial session check
+  const [sessionChecked, setSessionChecked] = useState(false), // New state: true after initial getSession completes
+=======
+  const [isLoading, setIsLoading] = useState(false), // For login form submission;
+  const [user, setUser] = useState<User | null>(null);
+  const [isCheckingSession, setIsCheckingSession] = useState(true), // For initial session check;
+  const [sessionChecked, setSessionChecked] = useState(false), // New state: true after initial getSession completes;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  const [sessionCheckTimedOut, setSessionCheckTimedOut] = useState(false);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const [isEmailUnverified, setIsEmailUnverified] = useState(false);
   const [verificationEmailSent, setVerificationEmailSent] = useState(false);
   const [isResendingVerification, setIsResendingVerification] = useState(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           logInfo('LoginPage: Initial session check complete. isCheckingSession: false, sessionChecked: true');
@@ -150,22 +265,521 @@ const LoginPage = () => {;
 
   const [proactiveResendMessage, setProactiveResendMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null),
 
+=======
+  // States for the new proactive resend form;
+  const [showProactiveResendForm, setShowProactiveResendForm] = useState(false);
+  const [proactiveResendEmail, setProactiveResendEmail] = useState('');
+  const [isProactivelyResending, setIsProactivelyResending] = useState(false);
+import {use_router} from 'next / router';
+import {useEffect, useState, FormEvent} from 'react';
+import Link from 'next / link';
+import { Facebook, Mail, Clock, RefreshCw } from 'lucide-react';
+import Head from 'next / head';
+import { sign_in } from 'next - auth / react';
+import { supabase } from '@/utils / supabase / client';
+import type {
+  AuthError,
+  User,
+  AuthChangeEvent,
+  Session,
+} from '@supabase / supabase - js';
+import {
+  log_info,
+  log_warn,
+  logErrorToProduction,
+} from '@/utils / production_logger';
+import { use_translation } from 'react - i18next';
+import { Button } from '@/components / ui / button';
+import { Input } from '@/components / ui / input';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components / ui / card';
+const LoginPage = () =>: any {
+  const router = use_router ();
+  const { t } = use_translation ();
+  const [email, set_email] = useState ('');
+  const [password, set_password] = useState ('');
+  const [error, set_error] = useState < AuthError | null>(null);
+  const [is_loading, setIsLoading] = useState (false); // For login form submission;
+  const [user, set_user] = useState < User | null>(null);
+  const [isCheckingSession, setIsCheckingSession] = useState (true); // For initial session check;
+  const [session_checked, setSessionChecked] = useState (false); // New state: true after initial get_session completes  const [sessionCheckTimedOut, setSessionCheckTimedOut] = useState (false);
+  const [isEmailUnverified, setIsEmailUnverified] = useState (false);
+  const [verificationEmailSent, setVerificationEmailSent] = useState (false);
+  const [isResendingVerification, setIsResendingVerification] = useState (false);
+;
+  // States for the new proactive resend form;
+  const [showProactiveResendForm, setShowProactiveResendForm] = useState (false);
+  const [proactiveResendEmail, setProactiveResendEmail] = useState ('');
+  const [isProactivelyResending, setIsProactivelyResending] = useState (false);
+  const [proactiveResendMessage, setProactiveResendMessage] = useState<{
+    type: 'success' | 'error';
+  const [proactiveResendMessage, setProactiveResendMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null),
+=======
+<<<<<<< HEAD
+  // States for the new proactive resend form
+  const [showProactiveResendForm, setShowProactiveResendForm] = useState(false);
+  const [proactiveResendEmail, setProactiveResendEmail] = useState('');
+  const [isProactivelyResending, setIsProactivelyResending] = useState(false);
+  const [proactiveResendMessage, setProactiveResendMessage] = useState<{
+    type: 'success' | 'error';
+    text: string
+  } | null>(null);
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   // Using centralized Supabase client (imported at top)
   // Effect for initial session check and auth state changes
   useEffect(() => {
     let mounted = true;
+<<<<<<< HEAD
 
     text: string,;
   } | null>(null);
+=======
+<<<<<<< HEAD
+    text: string,;
+  } | null>(null);
   // Using centralized Supabase client (imported at top);
-
   // Effect for initial session check and auth state changes;
   useEffect(() => {;
     let mounted = true;
     logInfo('LoginPage: Initial session check effect runs.'),;
-
     const sessionTimeoutId = setTimeout(() => {;
       if (mounted) {;
+        logWarn('LoginPage: Session check timeout after 5 seconds');
+        setSessionCheckTimedOut(true);
+        setIsCheckingSession(false); // Allow form to render if timeout;
+        setSessionChecked(true); // Mark check as complete even on timeout      }
+    }, 5000);
+    const checkSessionAndListen = async () => {;
+      if (!mounted) return;
+      setIsCheckingSession(true);
+      try {;
+        logInfo('LoginPage: Calling supabase && supabase.auth.getSession()'),;
+        const {;
+          data: { session },;
+          error: sessionError,;
+        } = await supabase && supabase.auth.getSession();
+        clearTimeout(sessionTimeoutId); // Clear timeout once getSession completes;
+        if (!mounted) return;
+        if (sessionError) {;
+          logErrorToProduction('LoginPage: Error getting session:', {;
+            data: sessionError,;
+          });
+          setError(sessionError as any); // Cast to any if type is too strict;
+        } else {;
+          logInfo('LoginPage: getSession returned, user:', {;
+            data: session?.user?.id,;
+          });
+          setUser(session?.user ?? null);
+        }
+      } catch (e) {;
+        if (mounted) {;
+          logErrorToProduction('LoginPage: Exception during getSession:', {;
+            data: e,;
+          });
+          clearTimeout(sessionTimeoutId); // Ensure timeout is cleared on error too        }
+      } finally {;
+        if (mounted) {;
+          setIsCheckingSession(false);
+          setSessionChecked(true);
+          logInfo(;
+            'LoginPage: Initial session check complete. isCheckingSession: false, sessionChecked: true';
+          );        }
+      }
+      // Listener for auth state changes;
+      logInfo('LoginPage: Setting up onAuthStateChange listener.'),;
+      const { data: authListener } = supabase && supabase.auth.onAuthStateChange(;
+        (event: AuthChangeEvent, session: Session | null) => {;
+          if (!mounted) return,;
+          logInfo('LoginPage: onAuthStateChange event:', {;
+            event,;
+            userId: session?.user?.id,;
+          });
+          setUser(session?.user ?? null);
+          // If auth state changes after initial check, ensure sessionChecked is true;
+          // This handles cases like login/logout in another tab.;
+          if (!sessionChecked && event !== 'INITIAL_SESSION') {;
+            setSessionChecked(true);
+            logInfo(;
+              'LoginPage: onAuthStateChange updated sessionChecked to true.';
+            ),;
+          }
+        }
+      );
+      return () => {;
+        // Cleanup for listener;
+=======
+    logInfo('LoginPage: Initial session check effect runs.')
+    const sessionTimeoutId = setTimeout(() => {
+      if (mounted) {
+        logWarn('LoginPage: Session check timeout after 5 seconds');
+        setSessionCheckTimedOut(true);
+        setIsCheckingSession(false); // Allow form to render if timeout
+        setSessionChecked(true); // Mark check as complete even on timeout      }
+    }, 5000);
+    const checkSessionAndListen = async () => {
+      if (!mounted) return;
+      setIsCheckingSession(true);
+      try {
+        logInfo('LoginPage: Calling supabase.auth.getSession()')
+        const {
+          data: { session }
+          error: sessionError
+        } = await supabase.auth.getSession();
+        clearTimeout(sessionTimeoutId); // Clear timeout once getSession completes
+        if (!mounted) return;
+        if (sessionError) {
+          logErrorToProduction('LoginPage: Error getting session:', {
+            data: sessionError
+          });
+          setError(sessionError as any); // Cast to any if type is too strict
+        } else {
+          logInfo('LoginPage: getSession returned, user:', {
+            data: session?.user?.id
+          });
+          setUser(session?.user ?? null);
+        }
+      } catch (e) {
+        if (mounted) {
+          logErrorToProduction('LoginPage: Exception during getSession:', {
+            data: e
+          });
+          clearTimeout(sessionTimeoutId); // Ensure timeout is cleared on error too        }
+      } finally {
+        if (mounted) {
+          setIsCheckingSession(false);
+          setSessionChecked(true);
+          logInfo(
+            'LoginPage: Initial session check complete. isCheckingSession: false, sessionChecked: true'
+          );        }
+      }
+      // Listener for auth state changes
+      logInfo('LoginPage: Setting up onAuthStateChange listener.')
+      const { data: authListener } = supabase.auth.onAuthStateChange(
+        (event: AuthChangeEvent, session: Session | null) => {
+          if (!mounted) return
+          logInfo('LoginPage: onAuthStateChange event:', {
+            event
+            userId: session?.user?.id
+          });
+          setUser(session?.user ?? null);
+          // If auth state changes after initial check, ensure sessionChecked is true
+          // This handles cases like login/logout in another tab.
+          if (!sessionChecked && event !== 'INITIAL_SESSION') {
+            setSessionChecked(true);
+            logInfo(
+              'LoginPage: onAuthStateChange updated sessionChecked to true.'
+            )
+          }
+        }
+      );
+      return () => {
+        // Cleanup for listener
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+        logInfo('LoginPage: Unsubscribing from onAuthStateChange.');
+        authListener?.subscription?.unsubscribe();
+      };    }
+    const unsubscribePromise = checkSessionAndListen();
+<<<<<<< HEAD
+    return () => {;
+      mounted = false;
+      clearTimeout(sessionTimeoutId); // Clear timeout on unmount;
+      logInfo('LoginPage: Unmounting, cleaning up auth listener.');
+      unsubscribePromise && unsubscribePromise.then(cleanup => cleanup && cleanup());
+    };
+  }, []); // Run only once on mount;
+  // Effect for handling redirection AFTER session is checked and user state is updated;
+  useEffect(() => {;
+    logInfo(;
+      `LoginPage: Redirection effect runs. sessionChecked: ${sessionChecked}, isLoading: ${isLoading}, user: ${user?.id}, pathname: ${router && router.pathname}`;
+    );
+    // Only redirect if the initial session check is complete, not currently submitting login form, and user exists;
+    if (sessionChecked && !isLoading && user) {;
+      // Get returnTo from query params, decode it if it exists;
+      let returnTo = '/dashboard'; // Default fallback;
+      if (router && router.query.returnTo && typeof router && router.query.returnTo === 'string') {;
+        try {;
+          returnTo = decodeURIComponent(router && router.query.returnTo);
+        } catch (e) {;
+          logWarn('Failed to decode returnTo parameter:', {;
+            data: router && router.query.returnTo,;
+=======
+    return () => {
+      mounted = false;
+      clearTimeout(sessionTimeoutId); // Clear timeout on unmount
+      logInfo('LoginPage: Unmounting, cleaning up auth listener.');
+      unsubscribePromise.then(cleanup => cleanup && cleanup());
+    }
+  }, []); // Run only once on mount
+  // Effect for handling redirection AFTER session is checked and user state is updated
+  useEffect(() => {
+    logInfo(
+      `LoginPage: Redirection effect runs. sessionChecked: ${sessionChecked}, isLoading: ${isLoading}, user: ${user?.id}, pathname: ${router.pathname}`
+    );
+    // Only redirect if the initial session check is complete, not currently submitting login form, and user exists
+    if (sessionChecked && !isLoading && user) {
+      // Get returnTo from query params, decode it if it exists
+      let returnTo = '/dashboard'; // Default fallback
+      if (router.query.returnTo && typeof router.query.returnTo === 'string') {
+        try {
+          returnTo = decodeURIComponent(router.query.returnTo);
+        } catch (e) {
+          logWarn('Failed to decode returnTo parameter:', {
+            data: router.query.returnTo
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+          });
+          returnTo = '/dashboard';
+        }
+      }
+<<<<<<< HEAD
+    logInfo('LoginPage: Initial session check effect runs.'),
+    const sessionTimeoutId = setTimeout(() => {
+      if (mounted) {
+        logWarn('LoginPage: Session check timeout after 5 seconds'),
+        setSessionCheckTimedOut(true);
+        setIsCheckingSession(false), // Allow form to render if timeout
+        setSessionChecked(true), // Mark check as complete even on timeout
+      }
+    }, 5000);
+  // Using centralized Supabase client (imported at top);
+  // Effect for initial session check and auth state changes;
+  useEffect (() => {
+    let mounted = true;
+    log_info ('LoginPage: Initial session check effect runs.'),
+    const sessionTimeoutId = set_timeout (() => {
+      // Check condition
+if ( {) {
+  $2
+}
+        log_warn ('LoginPage: Session check timeout after 5 seconds');
+        setSessionCheckTimedOut (true);
+        setIsCheckingSession (false); // Allow form to render if timeout;
+        setSessionChecked (true); // Mark check as complete even on timeout      }
+    }, 5000);
+;
+    const checkSessionAndListen = async () => {
+      // Check condition
+if (return) {
+  $2
+}
+      setIsCheckingSession (true);
+      try {
+      }, 100); // Small delay to let session stabilize;
+      return () => clearTimeout(redirectTimer);
+    }
+    // Return undefined for all other cases;
+    return undefined;
+  }, [user, sessionChecked, isLoading, router, router && router.query.returnTo]); // Dependencies: user, sessionChecked, isLoading, router;
+  const handleResendVerification = async () => {;
+    if (!email) {;
+      setError({;
+        name: 'ValidationError',;
+        message: 'Please enter your email address first',;
+      } as AuthError);
+      return;
+    }
+
+  // Using centralized Supabase client (imported at top)
+
+  // Effect for initial session check and auth state changes
+  useEffect(() => {
+    let mounted = true
+    logInfo('LoginPage: Initial session check effect runs.'),
+
+    const _sessionTimeoutId = setTimeout__(() => {
+      if (mounted) {
+        logWarn('LoginPage: Session check timeout after 5 seconds'),
+        setSessionCheckTimedOut(true),
+        setIsCheckingSession(false), // Allow form to render if timeout
+        setSessionChecked(true), // Mark check as complete even on timeout
+      }
+    }, 5000),
+
+    const checkSessionAndListen = async () => {
+      if (!mounted) return,
+
+      setIsCheckingSession(true),
+      try {
+
+      setIsCheckingSession(true),
+      try {
+
+        logInfo('LoginPage: Calling supabase.auth.getSession()'),
+        const { data: { session }, error: sessionError } = await supabase.auth.getSession(),
+        clearTimeout(sessionTimeoutId), // Clear timeout once getSession completes
+        if (!mounted) return,
+
+        if (sessionError) {
+          logErrorToProduction('LoginPage: Error getting session:', { data: sessionError }),
+          setError(sessionError as any), // Cast to any if type is too strict
+        } else {
+          logInfo('LoginPage: getSession returned, user:', { data: session?.user?.id }),
+          setUser(session?.user ?? null)
+        }
+      } catch (e) {
+        if (mounted) {
+          logErrorToProduction('LoginPage: Exception during getSession:', { data:  e }),
+          clearTimeout(sessionTimeoutId), // Ensure timeout is cleared on error too
+        }
+      } finally {
+        if (mounted) {
+          setIsCheckingSession(false),
+          setSessionChecked(true),
+          logInfo('LoginPage: Initial session check complete. isCheckingSession: false, sessionChecked: true')
+        }
+=======
+      // Prevent redirecting back to auth pages or creating loops
+      const authPages = [
+        '/auth/login'
+        '/auth/register'
+        '/login'
+        '/signup'
+        '/auth/forgot-password'
+      ];
+      if (authPages.includes(returnTo) |returnTo.startsWith('/auth/')) {
+        returnTo = '/dashboard';
+      }
+      // Ensure returnTo is a relative path to prevent open redirect attacks
+      if (returnTo.startsWith('http') |returnTo.includes('://')) {
+        returnTo = '/dashboard';
+      }
+      logInfo(
+        `LoginPage: Conditions met for redirect. Current path: ${router.pathname}, Target: ${returnTo}`
+      );
+      // Add a small delay to ensure session is fully established
+      const redirectTimer = setTimeout(() => {
+        // Double-check that we're still logged in before redirecting
+        if (user && router.pathname === '/auth/login') {
+          logInfo(`LoginPage: Executing delayed redirect to ${returnTo}`);
+          router.replace(returnTo); // Use replace to avoid back button issues
+        }
+      }, 100); // Small delay to let session stabilize
+      return () => clearTimeout(redirectTimer);
+    }
+    // Return undefined for all other cases
+    return undefined;
+  }, [user, sessionChecked, isLoading, router, router.query.returnTo]); // Dependencies: user, sessionChecked, isLoading, router
+  const handleResendVerification = async () => {
+    if (!email) {
+      setError({
+        name: 'ValidationError'
+        message: 'Please enter your email address first'
+      } as AuthError);
+      return;
+    }
+    setIsResendingVerification(true);
+    try {
+      const response = await fetch('/api/resend-verification-email', {
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({ email })
+      });
+      if (response.ok) {
+        setVerificationEmailSent(true);
+        setError(null);
+      } else {
+        const data = await response.json();
+        setError({
+          name: 'ResendError'
+          message: data.message |'Failed to resend verification email'
+        } as AuthError);
+      }
+    } catch (err) {
+      setError({
+        name: 'NetworkError'
+        message: 'Failed to resend verification email. Please try again.'
+      } as AuthError);
+    } finally {
+      setIsResendingVerification(false);    }
+  }
+  const handleProactiveResendVerification = async (e: FormEvent) => {
+    e.preventDefault()
+    if (!proactiveResendEmail) {
+      setProactiveResendMessage({
+        type: 'error'
+        text: 'Please enter your email address.'
+      });
+      return;    }
+    setIsProactivelyResending(true);
+    setProactiveResendMessage(null);
+    try {
+      const response = await fetch('/api/resend-verification-email', {
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({ email: proactiveResendEmail }),      });
+      const data = await response.json();
+      if (response.ok) {
+        setProactiveResendMessage({
+          type: 'success'
+          text: `Verification email sent to ${proactiveResendEmail}. Please check your inbox (and spam folder).`
+        });
+      } else {
+        setProactiveResendMessage({
+          type: 'error'
+          text: data.message |'Failed to resend verification email.'
+        });
+      }
+    } catch (err) {
+      setProactiveResendMessage({
+        type: 'error'
+        text: 'An unexpected error occurred. Please try again.'
+      });
+    } finally {
+      setIsProactivelyResending(false);    }
+  }
+  const handleLogin = async (e: FormEvent) => {
+    e.preventDefault();
+    setIsLoading(true);
+    setError(null);
+    setIsEmailUnverified(false);
+    setVerificationEmailSent(false)
+    try {
+      logInfo('Attempting Supabase login with email:', { data: email });
+      const { data, error: signInError } =
+        await supabase.auth.signInWithPassword({
+          email
+          password
+        });
+      if (signInError) {
+        logErrorToProduction('Supabase sign-in error:', { data: signInError });
+        // Check if error is related to email verification
+        const messageIncludesEmailNotConfirmed =
+          signInError.message?.toLowerCase().includes('email not confirmed') |
+          signInError.message?.toLowerCase().includes('email_not_confirmed') |
+          signInError.message?.toLowerCase().includes('verify') |
+          signInError.message?.toLowerCase().includes('confirm');
+        // As per issue description, check for a specific error code "email_not_verified"
+        // Assuming 'code' is a property on the error object. Supabase errors might have different structures.
+        const codeIsEmailNotVerified =
+          (signInError as any).code === 'email_not_verified';
+        if (messageIncludesEmailNotConfirmed |codeIsEmailNotVerified) {
+          setIsEmailUnverified(true);
+          setError({
+            name: 'EmailNotVerifiedError'
+            message:
+              'Please verify your email address before logging in. Check your inbox for a verification link.'
+          } as AuthError);
+          setShowProactiveResendForm(false); // Hide proactive form if reactive one is triggered
+=======
+  // States for the new proactive resend form;
+  const [showProactiveResendForm, setShowProactiveResendForm] = useState(false);
+  const [proactiveResendEmail, setProactiveResendEmail] = useState('');
+  const [isProactivelyResending, setIsProactivelyResending] = useState(false);
+  const [proactiveResendMessage, setProactiveResendMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null),;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+  // Using centralized Supabase client (imported at top);
+  // Effect for initial session check and auth state changes;
+  useEffect(() => {;
+    let mounted = true;
+    logInfo('LoginPage: Initial session check effect runs.');
+    const sessionTimeoutId = setTimeout(() => {;
+      if (mounted) {;
+<<<<<<< HEAD
 
         logWarn('LoginPage: Session check timeout after 5 seconds');
         setSessionCheckTimedOut(true);
@@ -211,10 +825,134 @@ const LoginPage = () => {;
             logInfo(;
               'LoginPage: onAuthStateChange updated sessionChecked to true.';
             ),;
+=======
+        logWarn('LoginPage: Session check timeout after 5 seconds');
+        setSessionCheckTimedOut(true);
+        setIsCheckingSession(false), // Allow form to render if timeout;
+        setSessionChecked(true), // Mark check as complete even on timeout;
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    }, 5000),;
+    const checkSessionAndListen = async () => {;
+      if (!mounted) return;
+      setIsCheckingSession(true);
+      try {
+        logInfo('LoginPage: Calling supabase.auth.getSession()');
+        const { data: { session }, error: sessionError } = await supabase.auth.getSession();
+        clearTimeout(sessionTimeoutId), // Clear timeout once getSession completes;
+        if (!mounted) return,;
+        if (sessionError) {;
+          logErrorToProduction('LoginPage: Error getting session:', { data: sessionError });
+          setError(sessionError as any), // Cast to any if type is too strict;
+        } else {;
+          logInfo('LoginPage: getSession returned, user:', { data: session?.user?.id });
+          setUser(session?.user ?? null);
+          } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      } catch (error) {
+        if (mounted) {;
+          logErrorToProduction('LoginPage: Exception during getSession:', { data:  e });
+          clearTimeout(sessionTimeoutId), // Ensure timeout is cleared on error too;
+          } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      } finally {;
+        if (mounted) {;
+          setIsCheckingSession(false);
+          setSessionChecked(true);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          logInfo(
+            'LoginPage: Initial session check complete. isCheckingSession: false, sessionChecked: true'
+          );        }
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+      }
+
+      // Listener for auth state changes
+      logInfo('LoginPage: Setting up onAuthStateChange listener.'),
+<<<<<<< HEAD
+      const { data: authListener } = supabase.auth.onAuthStateChange((event: AuthChangeEvent, session: Session | null) => {
+        if (!mounted) return,
+        logInfo('LoginPage: onAuthStateChange event:', { 
+          event,
+          userId: session?.user?.id 
+        }),
+        setUser(session?.user ?? null),
+        // If auth state changes after initial check, ensure sessionChecked is true
+        // This handles cases like login/logout in another tab.
+        }
+      }),
+      
+      return () => { // Cleanup for listener
+        logInfo('LoginPage: Unsubscribing from onAuthStateChange.'),
+        authListener?.subscription?.unsubscribe()
+      }
+    },
+
+    const unsubscribePromise = checkSessionAndListen()
+
+    return () => {
+      mounted = false,
+      clearTimeout(sessionTimeoutId), // Clear timeout on unmount
+      logInfo('LoginPage: Unmounting, cleaning up auth listener.'),
+      unsubscribePromise.then(cleanup => cleanup && cleanup())
+    }
+  }, []), // Run only once on mount
+
+  // Effect for handling redirection AFTER session is checked and user state is updated
+  useEffect(() => {
+    logInfo(`LoginPage: Redirection effect runs. sessionChecked: ${sessionChecked}, isLoading: ${isLoading}, user: ${user?.id}, pathname: ${router.pathname}`),
+    
+    // Only redirect if the initial session check is complete, not currently submitting login form, and user exists
+    if (sessionChecked && !isLoading && user) {
+      // Get returnTo from query params, decode it if it exists
+      let returnTo = '/dashboard', // Default fallback
+      
+      if (router.query.returnTo && typeof router.query.returnTo === 'string') {
+        try {
+          returnTo = decodeURIComponent(router.query.returnTo)
+        } catch (e) {
+          logWarn('Failed to decode returnTo parameter:', { data: router.query.returnTo }),
+          returnTo = '/dashboard'
+
+        }
+      }
+      
+      // Prevent redirecting back to auth pages or creating loops
+      const authPages = ['/auth/login/auth/register/login/signup/auth/forgot-password']
+      if (authPages.includes(returnTo) || returnTo.startsWith('/auth/')) {
+        returnTo = '/dashboard'
+=======
+      const { data: authListener } = supabase.auth.onAuthStateChange(
+        (event: AuthChangeEvent, session: Session | null) => {
+          if (!mounted) return,
+          logInfo('LoginPage: onAuthStateChange event:', {
+            event,
+            userId: session?.user?.id,
+          });
+          setUser(session?.user ?? null);
+          // If auth state changes after initial check, ensure sessionChecked is true
+          // This handles cases like login/logout in another tab.
+          if (!sessionChecked && event !== 'INITIAL_SESSION') {
+            setSessionChecked(true);
+            logInfo(
+              'LoginPage: onAuthStateChange updated sessionChecked to true.'
+            ),
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           }
         }
       );
 
+<<<<<<< HEAD
       return () => {;
         // Cleanup for listener;
 
@@ -263,43 +1001,102 @@ const LoginPage = () => {;
 
 =======
       
+=======
+      return () => {
+        // Cleanup for listener
+        logInfo('LoginPage: Unsubscribing from onAuthStateChange.');
+        authListener?.subscription?.unsubscribe();
+      };    };
+
+    const unsubscribePromise = checkSessionAndListen();
+
+    return () => {
+      mounted = false;
+      clearTimeout(sessionTimeoutId); // Clear timeout on unmount
+      logInfo('LoginPage: Unmounting, cleaning up auth listener.');
+      unsubscribePromise.then(cleanup => cleanup && cleanup());
+    };
+  }, []); // Run only once on mount
+
+  // Effect for handling redirection AFTER session is checked and user state is updated
+  useEffect(() => {
+    logInfo(
+      `LoginPage: Redirection effect runs. sessionChecked: ${sessionChecked}, isLoading: ${isLoading}, user: ${user?.id}, pathname: ${router.pathname}`
+    );
+
+    // Only redirect if the initial session check is complete, not currently submitting login form, and user exists
+    if (sessionChecked && !isLoading && user) {
+      // Get returnTo from query params, decode it if it exists
+      let returnTo = '/dashboard'; // Default fallback
+
+      if (router.query.returnTo && typeof router.query.returnTo === 'string') {
+        try {
+          returnTo = decodeURIComponent(router.query.returnTo);
+        } catch (e) {
+          logWarn('Failed to decode returnTo parameter:', {
+            data: router.query.returnTo,
+          });
+          returnTo = '/dashboard';
+        }
+      }
+
+      // Prevent redirecting back to auth pages or creating loops
+      const authPages = [
+        '/auth/login',
+        '/auth/register',
+        '/login',
+        '/signup',
+        '/auth/forgot-password',
+      ];
+      if (authPages.includes(returnTo) || returnTo.startsWith('/auth/')) {
+        returnTo = '/dashboard';
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+      }
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       // Ensure returnTo is a relative path to prevent open redirect attacks
       if (returnTo.startsWith('http') || returnTo.includes('://')) {
+<<<<<<< HEAD
         returnTo = '/dashboard'
       }
-      
-      logInfo(`LoginPage: Conditions met for redirect. Current path: ${router.pathname}, Target: ${returnTo}`),
+logInfo(`LoginPage: Conditions met for redirect. Current path: ${router.pathname}, Target: ${returnTo}`),
       // Add a small delay to ensure session is fully established
       const redirectTimer = setTimeout(() => {
         // Double-check that we're still logged in before redirecting
+      
+      // Add a small delay to ensure session is fully established
+      const _redirectTimer = setTimeout__(() => {_// Double-check that we're still logged in before redirecting
+
         if (user && router.pathname === '/auth/login') {
           logInfo(`LoginPage: Executing delayed redirect to ${returnTo}`),
           router.replace(returnTo), // Use replace to avoid back button issues
         }
       }, 100), // Small delay to let session stabilize
-      
-      return () => clearTimeout(redirectTimer)
+return () => clearTimeout(redirectTimer)
     }
-    
     // Return undefined for all other cases
     return undefined
   }, [user, sessionChecked, isLoading, router, router.query.returnTo]), // Dependencies: user, sessionChecked, isLoading, router
-
   const handleResendVerification = async () => {
     if (!email) {
       setError({ name: 'ValidationError', message: 'Please enter your email address first' } as AuthError),
       return
     }
+<<<<<<< HEAD
     
 
     setIsResendingVerification(true);
 
 
+=======
+setIsResendingVerification(true);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     try {;
       const response = await fetch('/api/resend-verification-email', {;
         method: 'POST',;
         headers: { 'Content-Type': 'application/json' },;
         body: JSON && JSON.stringify({ email }),;
+<<<<<<< HEAD
 
 =======
         method: 'POST',
@@ -307,8 +1104,12 @@ const LoginPage = () => {;
         body: JSON.stringify({ email })
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email })
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       });
-
       if (response && response.ok) {;
         setVerificationEmailSent(true);
         setError(null);
@@ -319,24 +1120,52 @@ const LoginPage = () => {;
           message: data && data.message || 'Failed to resend verification email',;
         } as AuthError);
       }
+<<<<<<< HEAD
 
 
     setIsProactivelyResending(true);
     setProactiveResendMessage(null);
 
 
+=======
+  };
+  const handleProactiveResendVerification = async (e: FormEvent) => {;
+    e && e.preventDefault(),;
+    if (!proactiveResendEmail) {;
+      setProactiveResendMessage({;
+        type: 'error',;
+        text: 'Please enter your email address.',;
+      });
+      return;    }
+    } catch (err) {
+      setError({ name: 'NetworkError', message: 'Failed to resend verification email. Please try again.' } as AuthError)
+    } finally {
+      setIsResendingVerification(false)
+    }
+};
+  const handleProactiveResendVerification = async (e: FormEvent) => {
+    e.preventDefault();
+    if (!proactiveResendEmail) {
+      setProactiveResendMessage({ type: 'error', text: 'Please enter your email address.' }),
+      return
+    }
+setIsProactivelyResending(true);
+    setProactiveResendMessage(null);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     try {;
       const response = await fetch('/api/resend-verification-email', {;
         method: 'POST',;
         headers: { 'Content-Type': 'application/json' },;
         body: JSON && JSON.stringify({ email: proactiveResendEmail }),      });
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: proactiveResendEmail })
       });
-
       const data = await response.json();
       if (response.ok) {
         setProactiveResendMessage({ type: 'success', text: `Verification email sent to ${proactiveResendEmail}. Please check your inbox (and spam folder).` })
@@ -348,10 +1177,14 @@ const LoginPage = () => {;
     } finally {
       setIsProactivelyResending(false)
     }
+<<<<<<< HEAD
   };
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
+=======
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       const data = await response && response.json();
       if (response && response.ok) {;
         setProactiveResendMessage({;
@@ -369,6 +1202,7 @@ const LoginPage = () => {;
       setProactiveResendMessage({;
         type: 'error',;
         text: 'An unexpected error occurred. Please try again.',;
+<<<<<<< HEAD
 
 
       });
@@ -431,15 +1265,18 @@ const LoginPage = () => {;
       setIsProactivelyResending(false);    }
 
 
+=======
+      });
+    } finally {;
+      setIsProactivelyResending(false);    }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   };
-
   const handleLogin = async (e: FormEvent) => {;
     e && e.preventDefault();
     setIsLoading(true);
     setError(null);
     setIsEmailUnverified(false);
     setVerificationEmailSent(false),;
-
     try {;
       logInfo('Attempting Supabase login with email:', { data: email });
       const { data, error: signInError } =;
@@ -447,10 +1284,8 @@ const LoginPage = () => {;
           email,;
           password,;
         });
-
       if (signInError) {;
         logErrorToProduction('Supabase sign-in error:', { data: signInError });
-
         // Check if error is related to email verification;
         const messageIncludesEmailNotConfirmed =;
           signInError && signInError.message?.toLowerCase().includes('email not confirmed') ||;
@@ -461,7 +1296,6 @@ const LoginPage = () => {;
         // Assuming 'code' is a property on the error object. Supabase errors might have different structures.;
         const codeIsEmailNotVerified =;
           (signInError as any).code === 'email_not_verified';
-
         if (messageIncludesEmailNotConfirmed || codeIsEmailNotVerified) {;
           setIsEmailUnverified(true);
           setError({;
@@ -470,10 +1304,8 @@ const LoginPage = () => {;
               'Please verify your email address before logging in. Check your inbox for a verification link.',;
           } as AuthError);
           setShowProactiveResendForm(false); // Hide proactive form if reactive one is triggered;
-
           // Auto-resend verification email;
           setTimeout(() => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             handleResendVerification();
           }, 1000);
         } else {;
@@ -502,33 +1334,364 @@ const LoginPage = () => {;
             }
             // Add more specific checks here if needed for other Supabase error messages;
           }
+<<<<<<< HEAD
 
           setError({;
             name: signInError && signInError.name || 'AuthApiError',;
             message: displayMessage,;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+          setError({;
+            name: signInError && signInError.name || 'AuthApiError',;
+            message: displayMessage,;
+    setVerificationEmailSent(false);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     try {
       logInfo('Attempting Supabase login with email:', { data: email }),
       const { data, error: signInError } = await supabase.auth.signInWithPassword({
         email;
         password});
+=======
+        returnTo = '/dashboard';
+      }
 
+      logInfo(
+        `LoginPage: Conditions met for redirect. Current path: ${router.pathname}, Target: ${returnTo}`
+      );
+      // Add a small delay to ensure session is fully established
+      const redirectTimer = setTimeout(() => {
+        // Double-check that we're still logged in before redirecting
+        if (user && router.pathname === '/auth/login') {
+          logInfo(`LoginPage: Executing delayed redirect to ${returnTo}`);
+          router.replace(returnTo); // Use replace to avoid back button issues
+        }
+      }, 100); // Small delay to let session stabilize
+
+      return () => clearTimeout(redirectTimer);
+    }
+
+    // Return undefined for all other cases
+    return undefined;
+  }, [user, sessionChecked, isLoading, router, router.query.returnTo]); // Dependencies: user, sessionChecked, isLoading, router
+
+  const handleResendVerification = async () => {
+    if (!email) {
+      setError({
+        name: 'ValidationError',
+        message: 'Please enter your email address first',
+      } as AuthError);
+      return;
+    }
+    setIsResendingVerification(true);
+    try {
+      const response = await fetch('/api/resend-verification-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      });
+
+      if (response.ok) {
+        setVerificationEmailSent(true);
+        setError(null);
+      } else {
+        const data = await response.json();
+        setError({
+          name: 'ResendError',
+          message: data.message || 'Failed to resend verification email',
+        } as AuthError);
+      }
+    } catch (err) {
+      setError({
+        name: 'NetworkError',
+        message: 'Failed to resend verification email. Please try again.',
+      } as AuthError);
+    } finally {
+      setIsResendingVerification(false);    }
+  };
+
+  const handleProactiveResendVerification = async (e: FormEvent) => {
+    e.preventDefault(),
+    if (!proactiveResendEmail) {
+      setProactiveResendMessage({
+        type: 'error',
+        text: 'Please enter your email address.',
+      });
+      return;    }
+
+    setIsProactivelyResending(true);
+    setProactiveResendMessage(null);
+    try {
+      const response = await fetch('/api/resend-verification-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: proactiveResendEmail }),      });
+
+      const data = await response.json();
+      if (response.ok) {
+        setProactiveResendMessage({
+          type: 'success',
+          text: `Verification email sent to ${proactiveResendEmail}. Please check your inbox (and spam folder).`,
+        });
+      } else {
+        setProactiveResendMessage({
+          type: 'error',
+          text: data.message || 'Failed to resend verification email.',
+        });
+      }
+    } catch (err) {
+      setProactiveResendMessage({
+        type: 'error',
+        text: 'An unexpected error occurred. Please try again.',
+      });
+    } finally {
+      setIsProactivelyResending(false);    }
+  };
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          logInfo('LoginPage: Initial session check complete. isCheckingSession: false, sessionChecked: true');
+          } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      // Listener for auth state changes
+      logInfo('LoginPage: Setting up onAuthStateChange listener.'),
+      const { data: authListener } = supabase.auth.onAuthStateChange((event: AuthChangeEvent, session: Session | null) => {
+        if (!mounted) return,
+        logInfo('LoginPage: onAuthStateChange event:', {
+          event,
+          userId: session?.user?.id
+        }),
+        setUser(session?.user ?? null),
+        // If auth state changes after initial check, ensure sessionChecked is true
+        // This handles cases like login/logout in another tab.
+        if (!sessionChecked && event !== "INITIAL_SESSION") {
+           setSessionChecked(true),
+           logInfo('LoginPage: onAuthStateChange updated sessionChecked to true.')
+;
+      // Listener for auth state changes;
+      logInfo('LoginPage: Setting up onAuthStateChange listener.');
+      const { data: authListener } = supabase.auth.onAuthStateChange((event: AuthChangeEvent, session: Session | null) => {;
+        if (!mounted) return,;
+        logInfo('LoginPage: onAuthStateChange event:', {;
+          event,;
+          userId: session?.user?.id;
+        });
+        setUser(session?.user ?? null);
+        // If auth state changes after initial check, ensure sessionChecked is true;
+        // This handles cases like login/logout in another tab.;
+        if (!sessionChecked && event !== "INITIAL_SESSION") {;
+           setSessionChecked(true);
+           logInfo('LoginPage: onAuthStateChange updated sessionChecked to true.');
+          } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      }),;
+      return () => { // Cleanup for listener;
+        logInfo('LoginPage: Unsubscribing from onAuthStateChange.');
+        authListener?.subscription?.unsubscribe();
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    },;
+    const unsubscribePromise = checkSessionAndListen();
+    return () => {;
+      mounted = false;
+      clearTimeout(sessionTimeoutId), // Clear timeout on unmount;
+      logInfo('LoginPage: Unmounting, cleaning up auth listener.');
+      unsubscribePromise.then(cleanup => cleanup && cleanup());
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  }, []), // Run only once on mount;
+  // Effect for handling redirection AFTER session is checked and user state is updated;
+  useEffect(() => {;
+    logInfo(`LoginPage: Redirection effect runs. sessionChecked: ${sessionChecked}, isLoading: ${isLoading}, user: ${user?.id}, pathname: ${router.pathname}`);
+    // Only redirect if the initial session check is complete, not currently submitting login form, and user exists;
+    if (sessionChecked && !isLoading && user) {;
+      // Get returnTo from query params, decode it if it exists;
+      let returnTo = '/dashboard', // Default fallback;
+      if (router.query.returnTo && typeof router.query.returnTo === 'string') {;
+        try {
+          returnTo = decodeURIComponent(router.query.returnTo);
+        } catch (error) {
+          logWarn('Failed to decode returnTo parameter:', { data: router.query.returnTo });
+          returnTo = '/dashboard';
+          } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+      // Prevent redirecting back to auth pages or creating loops;
+      const authPages = ['/auth/login/auth/register/login/signup/auth/forgot-password'];
+      if (authPages.includes(returnTo) || returnTo.startsWith('/auth/')) {;
+        returnTo = '/dashboard';
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+      // Ensure returnTo is a relative path to prevent open redirect attacks;
+      if (returnTo.startsWith('http') || returnTo.includes('://')) {;
+        returnTo = '/dashboard';
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+      logInfo(`LoginPage: Conditions met for redirect. Current path: ${router.pathname}, Target: ${returnTo}`);
+      // Add a small delay to ensure session is fully established;
+      const redirectTimer = setTimeout(() => {;
+        // Double-check that we're still logged in before redirecting;
+        if (user && router.pathname === '/auth/login') {;
+          logInfo(`LoginPage: Executing delayed redirect to ${returnTo}`);
+          router.replace(returnTo), // Use replace to avoid back button issues;
+          } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      }, 100), // Small delay to let session stabilize;
+      return () => clearTimeout(redirectTimer);
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+    // Return undefined for all other cases;
+    return undefined;
+  }, [user, sessionChecked, isLoading, router, router.query.returnTo]), // Dependencies: user, sessionChecked, isLoading, router;
+  const handleResendVerification = async () => {;
+    if (!email) {;
+      setError({ name: 'ValidationError', message: 'Please enter your email address first' } as AuthError);
+      return;
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+    setIsResendingVerification(true);
+    try {
+      const response = await fetch('/api/resend-verification-email', {;
+        method: 'POST',;
+        headers: { 'Content-Type': 'application/json' },;
+        body: JSON.stringify({ email });
+      }),;
+      if (response.ok) {;
+        setVerificationEmailSent(true);
+        setError(null);
+      } else {;
+        const data = await response.json();
+        setError({ name: 'ResendError', message: data.message || 'Failed to resend verification email' } as AuthError);
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    } catch (error) {
+      setError({ name: 'NetworkError', message: 'Failed to resend verification email. Please try again.' } as AuthError);
+    } finally {;
+      setIsResendingVerification(false);
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  },;
+  const handleProactiveResendVerification = async (e: FormEvent) => {;
+    e.preventDefault();
+    if (!proactiveResendEmail) {;
+      setProactiveResendMessage({ type: 'error', text: 'Please enter your email address.' });
+      return;
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+    setIsProactivelyResending(true);
+    setProactiveResendMessage(null);
+    try {
+      const response = await fetch('/api/resend-verification-email', {;
+        method: 'POST',;
+        headers: { 'Content-Type': 'application/json' },;
+        body: JSON.stringify({ email: proactiveResendEmail });
+      }),;
+      const data = await response.json();
+      if (response.ok) {;
+        setProactiveResendMessage({ type: 'success', text: `Verification email sent to ${proactiveResendEmail}. Please check your inbox (and spam folder).` });
+      } else {;
+        setProactiveResendMessage({ type: 'error', text: data.message || 'Failed to resend verification email.' });
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    } catch (error) {
+      setProactiveResendMessage({ type: 'error', text: 'An unexpected error occurred. Please try again.' });
+    } finally {;
+      setIsProactivelyResending(false);
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  },
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const handleLogin = async (e: FormEvent) => {
+    e.preventDefault(),
+    setIsLoading(true),
+    setError(null),
+    setIsEmailUnverified(false),
+    setVerificationEmailSent(false),
+    try {
+      logInfo('Attempting Supabase login with email:', { data: email }),
+      const { data, error: signInError } = await supabase.auth.signInWithPassword({
+        email,
+        password}),
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       if (signInError) {
         logErrorToProduction('Supabase sign-in error:', { data: signInError }),
         // Check if error is related to email verification
         const messageIncludesEmailNotConfirmed = signInError.message?.toLowerCase().includes('email not confirmed') ||
                                                  signInError.message?.toLowerCase().includes('email_not_confirmed') ||
                                                  signInError.message?.toLowerCase().includes('verify') ||
+<<<<<<< HEAD
                                                  signInError.message?.toLowerCase().includes('confirm');
         // As per issue description, check for a specific error code "email_not_verified"
         // Assuming 'code' is a property on the error object. Supabase errors might have different structures.
         const codeIsEmailNotVerified = (signInError as any).code === 'email_not_verified';
-
         if (messageIncludesEmailNotConfirmed || codeIsEmailNotVerified) {
           setIsEmailUnverified(true);
           setError({ 
             name: 'EmailNotVerifiedError',
+<<<<<<< HEAD
 <<<<<<< HEAD
             message: 'Please verify your email address before logging in. Check your inbox for a verification link.'
           } as AuthError),
@@ -536,13 +1699,79 @@ const LoginPage = () => {;
 =======
 
 
+=======
+            message: 'Please verify your email address before logging in. Check your inbox for a verification link.' 
+          } as AuthError);
+        }
+        setError({;
+          name: 'UnknownAuthError',;
+          message: 'Login failed due to an unknown error. Please try again.',;
+        } as AuthError);
+        // Assuming 'code' is a property on the error object. Supabase errors might have different structures.
+        const codeIsEmailNotVerified = (signInError as any).code === 'email_not_verified'
+
+        if (messageIncludesEmailNotConfirmed || codeIsEmailNotVerified) {
+          setIsEmailUnverified(true),
+          setError({ 
+            name: 'EmailNotVerifiedError',
+            message: 'Please verify your email address before logging in. Check your inbox for a verification link.' 
+          } as AuthError),
+          setShowProactiveResendForm(false), // Hide proactive form if reactive one is triggered
+          
+=======
+                                                 signInError.message?.toLowerCase().includes('confirm'),
+        // As per issue description, check for a specific error code "email_not_verified"
+        // Assuming 'code' is a property on the error object. Supabase errors might have different structures.
+        const codeIsEmailNotVerified = (signInError as any).code === 'email_not_verified',
+        if (messageIncludesEmailNotConfirmed || codeIsEmailNotVerified) {
+          setIsEmailUnverified(true),
+          setError({
+            name: 'EmailNotVerifiedError',
+            message: 'Please verify your email address before logging in. Check your inbox for a verification link.'
+          } as AuthError),
+          setShowProactiveResendForm(false), // Hide proactive form if reactive one is triggered
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+          // Auto-resend verification email
+          setTimeout(() => {
+            handleResendVerification()
+          }, 1000)
+        } else {
+          // MODIFIED SECTION FOR BETTER ERROR MESSAGES
+          let displayMessage = 'Login failed. Please check your credentials and try again.', // Default user-friendly message
+          if (signInError.message) {
+<<<<<<< HEAD
+              if (signInError.message.toLowerCase().includes('invalid login credentials')) {
+                  displayMessage = 'Invalid email or password. Please try again.'
+              } else if (signInError.message.toLowerCase().includes('network request failed')) {
+                  displayMessage = 'Network error. Please check your internet connection and try again.'
+              } else if (signInError.message.toLowerCase().includes('user disabled')) {
+                  displayMessage = 'Your account has been disabled. Please contact support.'
+              }
+              // Add more specific checks here if needed for other Supabase error messages
+          }
+          setError({ name: signInError.name || 'AuthApiError', message: displayMessage } as AuthError)
+        }
+
+      } else if (data.user) {
+        logInfo('Supabase sign-in successful, user:', { data: data.user }),
+        setUser(data.user), // setUser to trigger useEffect for redirection
+        // Redirection is now handled by the useEffect hook
+      } else {
+        // Should not happen if signInError is null and data.user is null
+logWarn('Supabase sign-in returned no error but no user.');
+        setError({ name: 'UnknownAuthError', message: 'Login failed due to an unknown error. Please try again.' } as AuthError)
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       }
     } catch (catchedError: any) {;
       logErrorToProduction('Exception during Supabase sign-in:', {;
         data: catchedError,;
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       });
       // Check if the caught error is a network error;
       let exceptionMessage = 'An unexpected error occurred. Please try again.';
@@ -557,6 +1786,7 @@ const LoginPage = () => {;
       } else if (catchedError && catchedError.message) {;
         exceptionMessage = catchedError && catchedError.message;
       }
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
@@ -583,14 +1813,214 @@ const LoginPage = () => {;
                   displayMessage = 'Your account has been disabled. Please contact support.'
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   };
+=======
+      setError({;
+        name: 'ExceptionError',;
+        message: exceptionMessage,;
+      } as AuthError);
+    } finally {;
+      setIsLoading(false);    }
+      setError({ name: 'ExceptionError', message: exceptionMessage } as AuthError)
+    } finally {
+      setIsLoading(false)
+    }
+};
+=======
+<<<<<<< HEAD
+            if (
+              signInError.message
+                .toLowerCase()
+                .includes('invalid login credentials')
+            ) {
+              displayMessage = 'Invalid email or password. Please try again.';
+            } else if (
+              signInError.message
+                .toLowerCase()
+                .includes('network request failed')
+            ) {
+              displayMessage =
+                'Network error. Please check your internet connection and try again.';
+            } else if (
+              signInError.message.toLowerCase().includes('user disabled')
+            ) {
+              displayMessage =
+                'Your account has been disabled. Please contact support.';
+            }
+            // Add more specific checks here if needed for other Supabase error messages
+          }
+          setError({
+            name: signInError.name |'AuthApiError'
+            message: displayMessage
+          } as AuthError);
+        }
+      } else if (data.user) {
+        logInfo('Supabase sign-in successful, user:', { data: data.user });
+        setUser(data.user); // setUser to trigger useEffect for redirection        // Redirection is now handled by the useEffect hook
+      } else {
+        // Should not happen if signInError is null and data.user is null
+        logWarn('Supabase sign-in returned no error but no user.');
+        setError({
+          name: 'UnknownAuthError'
+          message: 'Login failed due to an unknown error. Please try again.'
+        } as AuthError);
+      }
+    } catch (catchedError: any) {
+      logErrorToProduction('Exception during Supabase sign-in:', {
+        data: catchedError
+      });
+      // Check if the caught error is a network error
+      let exceptionMessage = 'An unexpected error occurred. Please try again.';
+      if (
+        catchedError.message &&
+        catchedError.message
+          .toLowerCase()
+          .includes('networkerror when attempting to fetch resource')
+      ) {
+        exceptionMessage =
+          'Network error. Please check your internet connection and try again.';
+      } else if (catchedError.message) {
+        exceptionMessage = catchedError.message;
+      }
+      setError({
+        name: 'ExceptionError'
+        message: exceptionMessage
+      } as AuthError);
+    } finally {
+      setIsLoading(false);    }
+  }
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  // Auto-redirect to verification status page for unverified users after showing message
+  useEffect(() => {
+    if (isEmailUnverified && verificationEmailSent && email) {
+      const timer = setTimeout(() => {
+<<<<<<< HEAD
+};
+=======
+        router.push(`/verify-status?email=${encodeURIComponent(email)}`);
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+    return undefined; // Explicitly return undefined if condition is not met  }, [isEmailUnverified, verificationEmailSent, email, router]);
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+              if (signInError.message.toLowerCase().includes('invalid login credentials')) {
+                  displayMessage = 'Invalid email or password. Please try again.'
+              } else if (signInError.message.toLowerCase().includes('network request failed')) {
+                  displayMessage = 'Network error. Please check your internet connection and try again.'
+              } else if (signInError.message.toLowerCase().includes('user disabled')) {
+                  displayMessage = 'Your account has been disabled. Please contact support.'
+  };
+  const handleLogin = async (e: FormEvent) => {;
+    e.preventDefault();
+    setIsLoading(true);
+    setError(null);
+    setIsEmailUnverified(false);
+    setVerificationEmailSent(false);
+    try {
+      logInfo('Attempting Supabase login with email:', { data: email });
+      const { data, error: signInError } = await supabase.auth.signInWithPassword({;
+        email;
+        password});
+      if (signInError) {;
+        logErrorToProduction('Supabase sign-in error:', { data: signInError });
+        // Check if error is related to email verification;
+        const messageIncludesEmailNotConfirmed = signInError.message?.toLowerCase().includes('email not confirmed') ||;
+                                                 signInError.message?.toLowerCase().includes('email_not_confirmed') ||;
+                                                 signInError.message?.toLowerCase().includes('verify') ||;
+                                                 signInError.message?.toLowerCase().includes('confirm');
+        // As per issue description, check for a specific error code "email_not_verified";
+        // Assuming 'code' is a property on the error object. Supabase errors might have different structures.;
+        const codeIsEmailNotVerified = (signInError as any).code === 'email_not_verified';
+        if (messageIncludesEmailNotConfirmed || codeIsEmailNotVerified) {;
+          setIsEmailUnverified(true);
+          setError({;
+            name: 'EmailNotVerifiedError';
+            message: 'Please verify your email address before logging in. Check your inbox for a verification link.';
+          } as AuthError);
+          setShowProactiveResendForm(false), // Hide proactive form if reactive one is triggered;
+          // Auto-resend verification email;
+          setTimeout(() => {;
+            handleResendVerification();
+          }, 1000);
+        } else {;
+          // MODIFIED SECTION FOR BETTER ERROR MESSAGES;
+          let displayMessage = 'Login failed. Please check your credentials and try again.', // Default user-friendly message;
+          if (signInError.message) {;
+              if (signInError.message.toLowerCase().includes('invalid login credentials')) {;
+                  displayMessage = 'Invalid email or password. Please try again.';
+              } else if (signInError.message.toLowerCase().includes('network request failed')) {;
+                  displayMessage = 'Network error. Please check your internet connection and try again.';
+              } else if (signInError.message.toLowerCase().includes('user disabled')) {;
+                  displayMessage = 'Your account has been disabled. Please contact support.';
+                } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              // Add more specific checks here if needed for other Supabase error messages;
+            } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          setError({ name: signInError.name || 'AuthApiError', message: displayMessage } as AuthError);
+          } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      } else if (data.user) {;
+        logInfo('Supabase sign-in successful, user:', { data: data.user });
+        setUser(data.user), // setUser to trigger useEffect for redirection;
+        // Redirection is now handled by the useEffect hook;
+      } else {;
+        // Should not happen if signInError is null and data.user is null;
+        logWarn('Supabase sign-in returned no error but no user.');
+        setError({ name: 'UnknownAuthError', message: 'Login failed due to an unknown error. Please try again.' } as AuthError);
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    } catch (error) {
+      logErrorToProduction('Exception during Supabase sign-in:', { data: catchedError });
+      // Check if the caught error is a network error;
+      let exceptionMessage = 'An unexpected error occurred. Please try again.';
+      if (catchedError.message && catchedError.message.toLowerCase().includes('networkerror when attempting to fetch resource')) {;
+        exceptionMessage = 'Network error. Please check your internet connection and try again.';
+      } else if (catchedError.message) {;
+        exceptionMessage = catchedError.message;
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      setError({ name: 'ExceptionError', message: exceptionMessage } as AuthError);
+    } finally {;
+      setIsLoading(false);
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  },;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   // Auto-redirect to verification status page for unverified users after showing message;
   useEffect(() => {;
     if (isEmailUnverified && verificationEmailSent && email) {;
       const timer = setTimeout(() => {;
+<<<<<<< HEAD
 
 
 =======
+=======
+<<<<<<< HEAD
+        router && router.push(`/verify-status?email=${encodeURIComponent(email)}`);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         log_info ('LoginPage: Calling supabase.auth.get_session ()'),
         const {
           data: { session },
@@ -951,18 +2381,21 @@ if ( {) {
 }
       const timer = set_timeout (() => {
         router.push (`/verify - status?email=${encodeURIComponent (email)}`);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }, 3000);
       return () => clear_timeout (timer);
     }
     return undefined; // Explicitly return undefined if condition is not met  }, [isEmailUnverified, verificationEmailSent, email, router]);
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         router.push(`/verify-status?email=${encodeURIComponent(email)}`)
       }, 3000);
       return () => clearTimeout(timer)
     }
     return undefined, // Explicitly return undefined if condition is not met
   }, [isEmailUnverified, verificationEmailSent, email, router]);
+<<<<<<< HEAD
 
 
 =======
@@ -989,11 +2422,18 @@ if ( {) {
 
 
 
+=======
+  // --- Rendering Logic ---
+  // 1. Primary Loading State: During initial session check
+  if (isCheckingSession) {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   // --- Rendering Logic ---;
-
   // 1. Primary Loading State: During initial session check;
   if (isCheckingSession) {;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     logInfo('LoginPage: Rendering "Checking authentication..."');
     return (
       <div className='min-h-screen flex items-center justify-center'>;
@@ -1006,12 +2446,18 @@ if ( {) {
         </div>;
       </div>;
     );  }
+<<<<<<< HEAD
 
 
   // 2. Redirecting State: If session is checked, user exists, and not currently submitting form;
   // The redirection useEffect will handle the actual push. This UI is for the brief moment before that.;
   if (sessionChecked && user && !isLoading) {;
 
+=======
+  // 2. Redirecting State: If session is checked, user exists, and not currently submitting form;
+  // The redirection useEffect will handle the actual push. This UI is for the brief moment before that.;
+  if (sessionChecked && user && !isLoading) {;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     logInfo('LoginPage: Rendering "Already Logged In / Redirecting..."');
     return (
       <div className='min-h-screen flex items-center justify-center'>;
@@ -1022,6 +2468,7 @@ if ( {) {
         </div>;
       </div>;
     );  }
+<<<<<<< HEAD
 
   // Defensive check: If router.pathname is not /auth/login, do not render the login form.
   // This is a safeguard against the component's content persisting on other auth routes.
@@ -1030,6 +2477,27 @@ if ( {) {
       `LoginPage: Current pathname is ${router.pathname}, not /auth/login or /login. Rendering null to prevent incorrect display.`
 =======
 =======
+=======
+        router.push(`/verify-status?email=${encodeURIComponent(email)}`);
+      }, 3000),;
+      return () => clearTimeout(timer);
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    return undefined, // Explicitly return undefined if condition is not met
+  }, [isEmailUnverified, verificationEmailSent, email, router]),
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  // --- Rendering Logic ---
+  // 1. Primary Loading State: During initial session check
+  if (isCheckingSession) {
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     logInfo('LoginPage: Rendering "Checking authentication..."'),
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -1037,23 +2505,162 @@ if ( {) {
           <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4"></div>
           <p className="text-gray-600">Checking authentication...</p>
           <p className="text-sm text-gray-500 mt-2">This should only take a moment</p>
+<<<<<<< HEAD
+    }
+    return undefined, // Explicitly return undefined if condition is not met
+  }, [isEmailUnverified, verificationEmailSent, email, router]),
+
+  // --- Rendering Logic ---
+
+  // 1. Primary Loading State: During initial session check
+  if (isCheckingSession) {
+
+    return (
+      <div className=&quot;min-h-screen flex items-center justify-center&quot;>
+        <div className=&quot;text-center&quot;>
+          <div className=&quot;animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4&quot;></div>
+          <p className=&quot;text-gray-600&quot;>Checking authentication...</p>
+          <p className=&quot;text-sm text-gray-500 mt-2&quot;>This should only take a moment</p>
+
         </div>
       </div>
 <<<<<<< HEAD
 
+=======
+        </div>
+      </div>
+<<<<<<< HEAD
+    );  }
+=======
+    )
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   // 2. Redirecting State: If session is checked, user exists, and not currently submitting form
   // The redirection useEffect will handle the actual push. This UI is for the brief moment before that.
   if (sessionChecked && user && !isLoading) {
     logInfo('LoginPage: Rendering "Already Logged In / Redirecting..."'),
+<<<<<<< HEAD
+return (
+=======
     return (
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4"></div>
           <h2 className="text-2xl font-bold mb-4">Already Logged In</h2>
           <p className="text-gray-600 mb-4">Redirecting to your dashboard...</p>
+<<<<<<< HEAD
+
+    return (
+      <div className=&quot;min-h-screen flex items-center justify-center&quot;>
+        <div className=&quot;text-center&quot;>
+          <div className=&quot;animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4&quot;></div>
+          <h2 className=&quot;text-2xl font-bold mb-4&quot;>Already Logged In</h2>
+          <p className=&quot;text-gray-600 mb-4&quot;>Redirecting to your dashboard...</p>
+
         </div>
       </div>
 
+    )
+    return undefined, // Explicitly return undefined if condition is not met;
+  }, [isEmailUnverified, verificationEmailSent, email, router]),;
+  // --- Rendering Logic ---;
+  // 1. Primary Loading State: During initial session check;
+  if (isCheckingSession) {;
+    logInfo('LoginPage: Rendering "Checking authentication..."');
+    return (;
+      <div className="min-h-screen flex items-center justify-center">;
+        <div className="text-center">;
+          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4"></div>;
+          <p className="text-gray-600">Checking authentication...</p>;
+          <p className="text-sm text-gray-500 mt-2">This should only take a moment</p>;
+        </div>;
+      </div>;
+    );
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+}
+;
+  // 2. Redirecting State: If session is checked, user exists, and not currently submitting form;
+  // The redirection useEffect will handle the actual push. This UI is for the brief moment before that.;
+  if (sessionChecked && user && !isLoading) {;
+    logInfo('LoginPage: Rendering "Already Logged In / Redirecting..."');
+    return (;
+      <div className="min-h-screen flex items-center justify-center">;
+        <div className="text-center">;
+          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4"></div>;
+          <h2 className="text-2xl font-bold mb-4">Already Logged In</h2>;
+          <p className="text-gray-600 mb-4">Redirecting to your dashboard...</p>;
+        </div>;
+      </div>;
+    );
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  // 3. Render Login Form: If session is checked and no user, OR if a login attempt is in progress (isLoading);
+  // This also covers the case where a user was present but a login attempt failed, clearing the user.;
+  logInfo(`LoginPage: Rendering login form. sessionChecked: ${sessionChecked}, user: ${user?.id}, isLoading: ${isLoading}, pathname: ${router.pathname}`);
+  // Defensive check: If router.pathname is not /auth/login, do not render the login form.;
+=======
+
+
+=======
+// 3. Render Login Form: If session is checked and no user, OR if a login attempt is in progress (isLoading)
+  // This also covers the case where a user was present but a login attempt failed, clearing the user.
+  logInfo(`LoginPage: Rendering login form. sessionChecked: ${sessionChecked}, user: ${user?.id}, isLoading: ${isLoading}, pathname: ${router.pathname}`),
+  // Defensive check: If router.pathname is not /auth/login, do not render the login form.
+  // This is a safeguard against the component's content persisting on other auth routes.
+  if (router.pathname !== '/auth/login' && router.pathname !== '/login') {
+    logWarn(`LoginPage: Current pathname is ${router.pathname}, not /auth/login or /login. Rendering null to prevent incorrect display.`);
+    return null, // Or a minimal loader/empty div
+  }
+  // 3. Render Login Form: If session is checked and no user, OR if a login attempt is in progress (isLoading);
+  // This also covers the case where a user was present but a login attempt failed, clearing the user.;
+  logInfo(;
+    `LoginPage: Rendering login form. sessionChecked: ${sessionChecked}, user: ${user?.id}, isLoading: ${isLoading}, pathname: ${router && router.pathname}`;
+=======
+        </div>
+      </div>
+<<<<<<< HEAD
+    );  }
+  // 3. Render Login Form: If session is checked and no user, OR if a login attempt is in progress (isLoading)
+  // This also covers the case where a user was present but a login attempt failed, clearing the user.
+  logInfo(
+    `LoginPage: Rendering login form. sessionChecked: ${sessionChecked}, user: ${user?.id}, isLoading: ${isLoading}, pathname: ${router.pathname}`
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  );
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+  // Defensive check: If router && router.pathname is not /auth/login, do not render the login form.;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+  // This is a safeguard against the component's content persisting on other auth routes.;
+<<<<<<< HEAD
+
+=======
+  if (router && router.pathname !== '/auth/login' && router && router.pathname !== '/login') {;
+    logWarn(;
+      `LoginPage: Current pathname is ${router && router.pathname}, not /auth/login or /login. Rendering null to prevent incorrect display.`;
+    );
+    return null; // Or a minimal loader/empty div  }
+<<<<<<< HEAD
+  }
+
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
     )
     return undefined, // Explicitly return undefined if condition is not met;
   }, [isEmailUnverified, verificationEmailSent, email, router]),;
@@ -1099,13 +2706,8 @@ if ( {) {
   // This also covers the case where a user was present but a login attempt failed, clearing the user.;
   logInfo(`LoginPage: Rendering login form. sessionChecked: ${sessionChecked}, user: ${user?.id}, isLoading: ${isLoading}, pathname: ${router.pathname}`);
   // Defensive check: If router.pathname is not /auth/login, do not render the login form.;
-=======
-
-
-  // Defensive check: If router && router.pathname is not /auth/login, do not render the login form.;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   // This is a safeguard against the component's content persisting on other auth routes.;
-
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   if (router.pathname !== '/auth/login' && router.pathname !== '/login') {;
     logWarn(`LoginPage: Current pathname is ${router.pathname}, not /auth/login or /login. Rendering null to prevent incorrect display.`);
     return null, // Or a minimal loader/empty div;
@@ -1114,14 +2716,25 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
     <>
       <Head>
         <title>{`${t('auth.sign_in')} - Zion Tech Marketplace`}</title>
-        <meta name="description" content="Sign in to your Zion Tech Marketplace account" />
+<<<<<<< HEAD
+<meta name="description" content="Sign in to your Zion Tech Marketplace account" />
       </Head>
+<<<<<<< HEAD
 
 =======
 
@@ -1137,17 +2750,42 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+      <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm: px-6 lg:px-8">
+        <Card className="w-full max-w-md">
+          <CardHeader>
+=======
+        <meta name="description" content="Sign in to your Zion Tech Marketplace account" />
+      </Head>
+<<<<<<< HEAD
+      <div className='min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8'>
+        <Card className='w-full max-w-md'>          <CardHeader>
+=======
+      <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+        <Card className="w-full max-w-md">
+          <CardHeader>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <CardTitle>Sign In</CardTitle>
             <CardDescription>
               Enter your email and password to access your account
             </CardDescription>
           </CardHeader>
           <CardContent>
+<<<<<<< HEAD
 
 
         />;
+=======
+<<<<<<< HEAD
+/>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       </Head>;
-
       <div className='min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8'>;
         <Card className='w-full max-w-md'>          <CardHeader>;
             <CardTitle>Sign In</CardTitle>;
@@ -1162,11 +2800,11 @@ if ( {) {
                   <p className='text-sm text-red-600'>{error && error.message}</p>;
                 </div>;
               )}
-
               <div className='space-y-2'>;
                 <label htmlFor='email' className='text-sm font-medium'>;
                   Email;
                 </label>;
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -1177,6 +2815,8 @@ if ( {) {
                   onChange={e => setEmail(e && e.target.value)}                  required;
 
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
 =======
 
             <form onSubmit={handleLogin} className="space-y-4">
@@ -1184,6 +2824,7 @@ if ( {) {
                 <div className="p-3 bg-red-50 border border-red-200 rounded-md">
                   <p className="text-sm text-red-600">{error.message}</p>
                 </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
                   id="email"
@@ -1213,32 +2854,66 @@ if ( {) {
               </div>
 =======
 
+=======
+<<<<<<< HEAD
+              )}
+              <div className='space-y-2'>
+                <label htmlFor='email' className='text-sm font-medium'>
+                  Email
+                </label>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+                <Input
+                  id='email'
+                  type='email'
+                  value={email}
+                  onChange={e => setEmail(e && e.target.value)}                  required;
+            <form onSubmit={handleLogin} className="space-y-4">
+              {error && (
+                <div className="p-3 bg-red-50 border border-red-200 rounded-md">
+                  <p className="text-sm text-red-600">{error.message}</p>
+                </div>
+              )}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <div className="space-y-2">
                 <label htmlFor="email" className="text-sm font-medium">
                   Email
                 </label>
                 <Input
+<<<<<<< HEAD
 
 
+=======
+                  id="email"
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                  disabled={isLoading}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 />;
               </div>;
-
               <div className='space-y-2'>;
                 <label htmlFor='password' className='text-sm font-medium'>;
                   Password;
                 </label>;
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <Input
                   id='password'
                   type='password'
                   value={password}
                   onChange={e => setPassword(e && e.target.value)}                  required;
+<<<<<<< HEAD
 
 =======
               
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <div className="space-y-2">
                 <label htmlFor="password" className="text-sm font-medium">
                   Password
@@ -1249,20 +2924,146 @@ if ( {) {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   required
+<<<<<<< HEAD
 
                   disabled={isLoading}
 
               
+=======
+                  disabled={isLoading}
               <Button type="submit" className="w-full" disabled={isLoading || isEmailUnverified}>
                 {isLoading ? 'Signing in...' : isEmailUnverified ? t('auth.email_verification_required') : t('auth.sign_in')}
               </Button>
             </form>
-            
             <div className="mt-6 text-center">
               <p className="text-sm text-gray-600">
                 Don't have an account?{' '}
+<<<<<<< HEAD
                 <Link href="/auth/register" className="text-blue-600 hover: underline">
                   Sign up
+=======
+                <Link
+                  href='/auth/register'
+                  className='text-blue-600 hover:underline'
+                >                  Sign up
+=======
+              )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              <div className="space-y-2">
+                <label htmlFor="email" className="text-sm font-medium">
+                  Email
+                </label>
+                <Input
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                  id='email'
+                  type='email'
+                  value={email}
+                  onChange={e => setEmail(e.target.value)}                  required
+                  disabled={isLoading}
+                />
+              </div>
+              <div className='space-y-2'>
+                <label htmlFor='password' className='text-sm font-medium'>
+                  Password
+                </label>
+                <Input
+                  id='password'
+                  type='password'
+                  value={password}
+                  onChange={e => setPassword(e.target.value)}                  required
+                  disabled={isLoading}
+                />
+              </div>
+              <Button
+                type='submit'
+                className='w-full'
+                disabled={isLoading || isEmailUnverified}
+              >
+                {isLoading
+                  ? 'Signing in...'
+                  : isEmailUnverified
+                    ? t('auth.email_verification_required')
+                    : t('auth.sign_in')}
+              </Button>
+            </form>
+            <div className='mt-6 text-center'>
+              <p className='text-sm text-gray-600'>
+                Don't have an account?{' '}
+                <Link
+                  href='/auth/register'
+                  className='text-blue-600 hover:underline'
+                >                  Sign up
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                  id="email"
+                  type="email"
+                  value={email  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  onChange={(e) => setEmail(e.target.value)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  required;
+                  disabled={isLoading  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                />
+              </div>
+              <div className="space-y-2">
+                <label htmlFor="password" className="text-sm font-medium">
+                  Password
+                </label>
+                <Input
+                  id="password"
+                  type="password"
+                  value={password  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  onChange={(e) => setPassword(e.target.value)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  required;
+                  disabled={isLoading  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                />
+              </div>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+              <Button type="submit" className="w-full" disabled={isLoading || isEmailUnverified}>
+                {isLoading ? 'Signing in...' : isEmailUnverified ? t('auth.email_verification_required') : t('auth.sign_in')  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              </Button>
+            </form>
+            <div className="mt-6 text-center">
+              <p className="text-sm text-gray-600">
+                Don't have an account?{' '  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                <Link href="/auth/register" className="text-blue-600 hover: underline">
+                  Sign up
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1270,6 +3071,14 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 </Link>
               </p>
             </div>
@@ -1277,6 +3086,7 @@ if ( {) {
         </Card>
       </div>
     </>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1291,8 +3101,11 @@ if ( {) {
 export default LoginPage,
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 />;
+=======
+<<<<<<< HEAD
+/>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </div>;
-
               <Button
                 type='submit'
                 className='w-full'
@@ -1304,15 +3117,17 @@ export default LoginPage,
                     : t('auth && auth.sign_in')}
               </Button>;
             </form>;
-
             <div className='mt-6 text-center'>;
               <p className='text-sm text-gray-600'>;
                 Don't have an account?{' '}
                 <Link
                   href='/auth/register'
                   className='text-blue-600 hover:underline'>                  Sign up;
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 ;
   // --- Rendering Logic ---;
   // 1. Primary Loading State: During initial session check;
@@ -1425,14 +3240,50 @@ if ( {) {
                   href='/auth / register';
                   className='text - blue - 600 hover:underline';
                 >                  Sign up;
+<<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+=======
+<<<<<<< HEAD
+);
+};export default LoginPage;
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+  )
+},
+export default LoginPage,
+                />;
+              </div>;
+              <Button type="submit" className="w-full" disabled={isLoading || isEmailUnverified}>;
+                {isLoading ? 'Signing in...' : isEmailUnverified ? t('auth.email_verification_required') : t('auth.sign_in')  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              </Button>;
+            </form>;
+            <div className="mt-6 text-center">;
+              <p className="text-sm text-gray-600">;
+                Don't have an account?{' '  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                <Link href="/auth/register" className="text-blue-600 hover: underline">;
+                  Sign up;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 </Link>;
               </p>;
             </div>;
           </CardContent>;
         </Card>;
       </div>;
+<<<<<<< HEAD
 
 
 =======
@@ -1451,3 +3302,23 @@ export default LoginPage;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+  )
+};
+export default LoginPage;
+    </>);
+}export default LoginPage;
+;
+=======
+    </>;
+  );
+},;
+export default LoginPage;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

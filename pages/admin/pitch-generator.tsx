@@ -1,11 +1,135 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
+=======
+<<<<<<< HEAD
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React, { useState } from 'react';
+import Head from 'next / head';
+;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React, { useState } from 'react';
+import Head from 'next/head';
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 interface Slide {
   id: string;
   title: string;
   content: string;
+<<<<<<< HEAD
+  chart?: {
+    type: string;
+    data: Array<{ label: string; value: number }>;
+  }
+function SlidePreview({
+  slide
+  isActive
+  onClick
+=======
+<<<<<<< HEAD
+  chart?: {;
+    type: string;
+    data: Array<{ label: string; value: number }>;
+  }
+;
+function SlidePreview ({
+  slide,
+  is_active,
+  on_click,
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+}: {
+  slide: Slide;
+  isActive: boolean;
+  onClick: () => void;
+}) {
+<<<<<<< HEAD
+    >
+      <div className='font-semibold text-sm line-clamp-2'>
+        {slide.title |'Untitled'}
+      </div>
+      <div className='text-xs text-gray-500 dark:text-gray-400 line-clamp-3 mt-1 whitespace-pre-wrap'>
+        {slide.content |'—'}
+      </div>
+    </button>
+  );
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+
+=======
+  };
+function SlidePreview(): any ({;
+  slide,;
+  isActive,;
+  onClick,;
+}: {;
+  slide: Slide;
+  isActive: boolean;
+  onClick: () => void;
+}) {;
+    >;
+      <div className='font-semibold text-sm line-clamp-2'>;
+        {slide && slide.title || 'Untitled'}
+      </div>;
+      <div className='text-xs text-gray-500 dark:text-gray-400 line-clamp-3 mt-1 whitespace-pre-wrap'>;
+        {slide && slide.content || '—'}
+      </div>;
+    </button>;
+  );
+export const getServerSideProps: GetServerSideProps = async ctx => {;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+  const result = await requireAdminRole(ctx);
+  // @ts-ignore;
+  if ('redirect' in result) return result;
+  return result;
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+export default function PitchGenerator() {
+  const [builder, setBuilder] = useState<BuilderState>({
+
+=======
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+};
+export default function PitchGenerator() {;
+  const [builder, setBuilder] = useState<BuilderState>({;
+    mission: '',;
+    fundingStage: '',;
+    vision: '',;
+    roundType: '',;
+    targetRaise: '',;
+    assets: [],;
+<<<<<<< HEAD
+
+=======
+
+=======
+=======
   chart?: {
     type: string;
     data: Array<{ label: string; value: number }>;
@@ -28,46 +152,47 @@ function SlidePreview({
       </div>
     </button>
   );
+<<<<<<< HEAD
+export const getServerSideProps: GetServerSideProps = async ctx => {
 =======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+export const getServerSideProps: GetServerSideProps = async ctx => {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const result = await requireAdminRole(ctx);
-  // @ts-ignore;
+  // @ts-ignore
   if ('redirect' in result) return result;
   return result;
-<<<<<<< HEAD
 }
 export default function PitchGenerator() {
   const [builder, setBuilder] = useState<BuilderState>({
-
+<<<<<<< HEAD
+    mission: ''
+    fundingStage: ''
+    vision: ''
+    roundType: ''
+    targetRaise: ''
+    assets: []
 =======
-
-};
-
-export default function PitchGenerator() {;
-  const [builder, setBuilder] = useState<BuilderState>({;
-    mission: '',;
-    fundingStage: '',;
-    vision: '',;
-    roundType: '',;
-    targetRaise: '',;
-    assets: [],;
-
-=======
-
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     mission: '',
     fundingStage: '',
     vision: '',
     roundType: '',
     targetRaise: '',
     assets: [],;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   });  const [slides, setSlides] = useState<Slide[]>([]);
   const [activeIndex, setActiveIndex] = useState(0);
   const [loading, setLoading] = useState(false);
   const [versionTag, setVersionTag] = useState<string | null>(null);
+<<<<<<< HEAD
   const [history, setHistory] = useState<;
     { id: string; createdAt: string, version: string }[];
   >([]);
@@ -89,6 +214,7 @@ export default function PitchGenerator() {;
   const autoFetchMetrics = useCallback(async () => {
 
 =======
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -149,20 +275,137 @@ export default function PitchGenerator() {
 
 
 
+=======
+  const [history, setHistory] = useState<
+    { id: string; createdAt: string, version: string }[]
+  >([]);
+  const activeSlide = slides[activeIndex];
+  const onAssetDrop = useCallback((e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    const files = Array.from(e.dataTransfer.files |[]);
+    setBuilder(b => ({ ...b, assets: [...b.assets, ...files] }));  }, []);
+  const prevent = (e: React.DragEvent) => {
+    e.preventDefault();
+    e.stopPropagation()
+  }
+  const operatorPrompt = useMemo(
+    () =>
+      `Create a 10-slide investor pitch deck for a high-growth AI services marketplace. Include market size, traction, business model, team, token strategy, and call to action.`
+    []
+  );
+  const autoFetchMetrics = useCallback(async () => {
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+import React, { useCallback, useMemo, useState } from 'react';
+import Head from 'next/head';
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import { GetServerSideProps } from 'next';
+import { requireAdminRole } from '../../utils/auth';
+export type Slide = {
+<<<<<<< HEAD
+  id: string,
+  title: string,
+  content: string,
+  chart?: {
+    type: 'bar' | 'funnel' | 'timeline',
+    data: Array<{ label: string, value: number }>
+  }
+};
+type BuilderState = {
+  mission: string,
+  fundingStage: string,
+  vision: string,
+  roundType: 'Seed' | 'Series A' | 'Token Sale' | '',
+  targetRaise: string,
+  assets: File[]
+};
+function uid() {
+  return Math.random().toString(36).slice(2)
+=======
+  id: string;
+  title: string;
+  content: string;
+  chart?: {;
+    type: 'bar' | 'funnel' | 'timeline';
+    data: Array<{ label: string, value: number }>;
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+},;
+type BuilderState = {
+  mission: string;
+  fundingStage: string;
+  vision: string;
+  roundType: 'Seed' | 'Series A' | 'Token Sale' | '';
+  targetRaise: string;
+  assets: File[];
+};
+function uid() {;
+  return Math.random().toString(36).slice(2);
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+}
+function SlidePreview({ slide, isActive, onClick }: { slide: Slide, isActive: boolean, onClick: () => void }) {
+  return (
+    <button onClick={onClick} className={`w-56 shrink-0 border rounded-md p-3 text-left bg-white/70 dark:bg-gray-900 ${isActive ? 'ring-2 ring-blue-500' : 'border-gray-200 dark:border-gray-800'}`}>
+      <div className="font-semibold text-sm line-clamp-2">{slide.title || 'Untitled'}</div>
+      <div className="text-xs text-gray-500 dark:text-gray-400 line-clamp-3 mt-1 whitespace-pre-wrap">{slide.content || '—'}</div>
+<<<<<<< HEAD
+</button>
+  )
+}
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+  const result = await requireAdminRole(ctx);
+  // @ts-ignore
+  if ('redirect' in result) return result;
+  return result
+};
+export default function PitchGenerator() {
+  const [builder, setBuilder] = useState<BuilderState>({ mission: '', fundingStage: '', vision: '', roundType: '', targetRaise: '', assets: [] }),
+=======
+    </button>
+  )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+export const getServerSideProps: GetServerSideProps = async (ctx) => {;
+  const result = await requireAdminRole(ctx);
+  // @ts-ignore;
+  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+};
+export default function PitchGenerator(req, res) {
+  try {
+  const [builder, setBuilder] = useState<BuilderState>({ mission: '', fundingStage: '', vision: '', roundType: '', targetRaise: '', assets: [] }),;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  const [slides, setSlides] = useState<Slide[]>([]);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [loading, setLoading] = useState(false);
+  const [versionTag, setVersionTag] = useState<string | null>(null);
+<<<<<<< HEAD
+  const [history, setHistory] = useState<{ id: string, createdAt: string, version: string }[]>([]),
+  const activeSlide = slides[activeIndex];
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const onAssetDrop = useCallback((e: React && React.DragEvent<HTMLDivElement>) => {;
     e && e.preventDefault();
     const files = Array && Array.from(e && e.dataTransfer.files || []);
     setBuilder(b => ({ ...b, assets: [...b && b.assets, ...files] }));  }, []);
-
   const prevent = (e: React && React.DragEvent) => {;
     e && e.preventDefault();
     e && e.stopPropagation(),;
   };
-
   const operatorPrompt = useMemo(;
     () =>;
       `Create a 10-slide investor pitch deck for a high-growth AI services marketplace. Include market size, traction, business model, team, token strategy, and call to action.`,;
     [];
+<<<<<<< HEAD
 
 
   );
@@ -177,23 +420,26 @@ export default function PitchGenerator() {
 
 =======
 =======
+=======
+  );
+  const autoFetchMetrics = useCallback(async () => {;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const files = Array.from(e.dataTransfer.files || []);
     setBuilder((b) => ({ ...b, assets: [...b.assets, ...files] }))
   }, []);
-
   const prevent = (e: React.DragEvent) => {
     e.preventDefault();
     e.stopPropagation()
   };
-
   const operatorPrompt = useMemo(() => `Create a 10-slide investor pitch deck for a high-growth AI services marketplace. Include market size, traction, business model, team, token strategy, and call to action.`, []);
-
   const autoFetchMetrics = useCallback(async () => {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     setLoading(true);
     try {;
       const res = await fetch('/api/admin/pitch/metrics');
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     >;
       <div className='font - semibold text - sm line - clamp - 2'>;
         {slide.title || 'Untitled'}
@@ -217,23 +463,108 @@ if (return result) {
     try {
       const res = await fetch ('/api / admin / pitch / metrics');
       const data = await res.json ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       return data;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     } catch (e) {;
       return {};
     } finally {;
       setLoading(false);    }
+<<<<<<< HEAD
 
   }, []);
 
+=======
+      const data = await res.json();
+    </button>
+  )
+}
+
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+  const result = await requireAdminRole(ctx)
+  // @ts-ignore
+  if ('redirect' in result) return result,
+  return result
+},
+
+export default function PitchGenerator() {
+  const [builder, setBuilder] = useState<BuilderState>({ mission: '', fundingStage: '', vision: '', roundType: '', targetRaise: '', assets: [] }),
+  const [slides, setSlides] = useState<Slide[]>([]),
+  const [activeIndex, setActiveIndex] = useState(0),
+  const [loading, setLoading] = useState(false),
+  const [versionTag, setVersionTag] = useState<string | null>(null),
+  const [history, setHistory] = useState<{ id: string, createdAt: string, version: string }[]>([]),
+
+  const activeSlide = slides[activeIndex]
+
+  const onAssetDrop = useCallback((e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault(),
+    const files = Array.from(e.dataTransfer.files || [])
+    setBuilder((b) => ({ ...b, assets: [...b.assets, ...files] }))
+  }, []),
+
+  const prevent = (e: React.DragEvent) => {
+    e.preventDefault(),
+    e.stopPropagation()
+  },
+
+  const operatorPrompt = useMemo(() => `Create a 10-slide investor pitch deck for a high-growth AI services marketplace. Include market size, traction, business model, team, token strategy, and call to action.`, []),
+
+  const autoFetchMetrics = useCallback(async () => {
+    setLoading(true),
+    try {
+      const res = await fetch('/api/admin/pitch/metrics')
+      const data = await res.json()
+
+      return data
+    } catch (e) {
+      return {}
+    } finally {
+      setLoading(false)
+    }
+}, []);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const buildDeck = useCallback(async () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     setLoading(true);
     try {;
       const metrics = await autoFetchMetrics();
+<<<<<<< HEAD
 
 
+=======
+      const res = await fetch('/api/admin/pitch/generate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+operatorPrompt;
+          inputs: builder,
+          metrics})});
+      const json = await res.json();
+      const newSlides: Slide[] = json.slides || [],
+      setSlides(newSlides);
+      setActiveIndex(0);
+      const v = json.version |`v${new Date().toISOString()}`;
+      setVersionTag(v);
+      const res = await fetch('/api/admin/pitch/generate', {;
+        method: 'POST',;
+        headers: { 'Content-Type': 'application/json' },;
+        body: JSON && JSON.stringify({;
+          operatorPrompt,;
+          inputs: builder,;
+          metrics,;
+        }),;
+      });
+      const json = await res && res.json();
+      const newSlides: Slide[] = json && json.slides || [];      setSlides(newSlides);
+      setActiveIndex(0);
+      const v = json && json.version || `v${new Date().toISOString()}`;
+      setVersionTag(v);
+      setHistory(h => [;
+        { id: uid(), createdAt: new Date().toISOString(), version: v },;
+        ...h,;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       ]);
     } catch (e) {;
       // noop;
@@ -241,7 +572,10 @@ if (return result) {
       setLoading(false);
     }
   }, [autoFetchMetrics, builder, operatorPrompt]);
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 ;
   const build_deck = useCallback (async () => {
     set_loading (true);
@@ -284,18 +618,93 @@ if (return) {
           method: 'POST',
           headers: { 'Content - Type': 'application / json' },
           body: JSON.stringify ({ slide: slides[idx] }),
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         });
         const json = await res.json ();
         set_slides (arr =>;
           arr.map ((s, i) =>;
             index === idx;
+=======
+  const [history, setHistory] = useState<{ id: string, createdAt: string, version: string }[]>([]),;
+  const activeSlide = slides[activeIndex];
+  const onAssetDrop = useCallback((e: React.DragEvent<HTMLDivElement>) => {;
+    e.preventDefault();
+    const files = Array.from(e.dataTransfer.files || []);
+    setBuilder((b) => ({ ...b, assets: [...b.assets, ...files] }));
+  }, []),;
+  const prevent = (e: React.DragEvent) => {;
+    e.preventDefault();
+    e.stopPropagation();
+  };
+  const operatorPrompt = useMemo(() => `Create a 10-slide investor pitch deck for a high-growth AI services marketplace. Include market size, traction, business model, team, token strategy, and call to action.`, []),;
+  const autoFetchMetrics = useCallback(async () => {;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    setLoading(true);
+    try {
+      const res = await fetch('/api/admin/pitch/metrics');
+      const data = await res.json();
+      return data;
+<<<<<<< HEAD
+    } catch (e) {
+      return {}
+    } finally {
+      setLoading(false);    }
+  }, []);
+  const buildDeck = useCallback(async () => {
+    setLoading(true);
+    try {
+      const metrics = await autoFetchMetrics();
+      const res = await fetch('/api/admin/pitch/generate', {
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({
+          operatorPrompt
+          inputs: builder
+          metrics
+        })
+      });
+      const json = await res.json();
+      const newSlides: Slide[] = json.slides |[];      setSlides(newSlides);
+      setActiveIndex(0);
+      const v = json.version |`v${new Date().toISOString()}`;
+      setVersionTag(v);
+      setHistory(h => [
+        { id: uid(), createdAt: new Date().toISOString(), version: v }
+        ...h
+      ]);
+    } catch (e) {
+      // noop
+    } finally {
+      setLoading(false);
+    }
+  }, [autoFetchMetrics, builder, operatorPrompt]);
+  const rephraseSlide = useCallback(
+    async (idx: number) => {
+      if (!slides[idx]) return;
+      setLoading(true)
+      try {
+        const res = await fetch('/api/admin/pitch/rewrite', {
+          method: 'POST'
+          headers: { 'Content-Type': 'application/json' }
+          body: JSON.stringify({ slide: slides[idx] })
+        });
+        const json = await res.json();
+        setSlides(arr =>
+          arr.map((s, i) =>
+            i === idx
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               ? {
                   ...s
                   title: json.title |s.title
                   content: json.content |s.content
-=======
-
+<<<<<<< HEAD
   const rephraseSlide = useCallback(;
     async (idx: number) => {;
       if (!slides[idx]) return;
@@ -314,12 +723,16 @@ if (return) {
                   ...s,;
                   title: json && json.title || s && s.title,;
                   content: json && json.content || s && s.content,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 }
+<<<<<<< HEAD
 
     },;
     [slides];
 
+=======
+    },;
+    [slides];
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   );
   const addSlide = useCallback(async () => {;
 =======
@@ -394,9 +807,12 @@ if (return) {
     try {;
       const res = await fetch('/api/admin/pitch/add-slide', { method: 'POST' });
 <<<<<<< HEAD
+<<<<<<< HEAD
       const json = await res.json();
 =======
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       const json = await res && res.json();
       setSlides(arr => [;
         ...arr,;
@@ -405,20 +821,192 @@ if (return) {
           title: json && json.title || 'New Slide',;
           content: json && json.content || '',;
         },;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       ]);
       setActiveIndex(slides && slides.length);
     } catch (e) {;
     } finally {;
       setLoading(false);    }
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+      setHistory((h) => [{ id: uid(), createdAt: new Date().toISOString(), version: v }, ...h])
+    } catch (e) {
+      // noop
+    } finally {
+      setLoading(false)
+    }
+}, [autoFetchMetrics, builder, operatorPrompt]);
+  const rephraseSlide = useCallback(async (idx: number) => {
+    if (!slides[idx]) return;
+    setLoading(true);
+    try {
+      const res = await fetch('/api/admin/pitch/rewrite', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ slide: slides[idx] })}),
+const json = await res.json();
+      setSlides((arr) => arr.map((s, i) => (i === idx ? { ...s, title: json.title || s.title, content: json.content || s.content } : s)))
+    } catch (e) {
+    } finally {
+      setLoading(false)
+    }
+}, [slides]);
+  const addSlide = useCallback(async () => {
+    setLoading(true);
+    try {
+      const res = await fetch('/api/admin/pitch/add-slide', { method: 'POST' }),
+      const json = await res.json();
+      setSlides((arr) => [...arr, { id: uid(), title: json.title || 'New Slide', content: json.content || '' }]),
+      setActiveIndex(slides.length)
+    } catch (e) {
+    } finally {
+      setLoading(false)
+    }
+}, [slides.length]);
+  const exportPdf = useCallback(async () => {
+    setLoading(true);
+    try {
+      const res = await fetch('/api/admin/pitch/export', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ slides, format: 'pdf', version: versionTag }) }),
+      const blob = await res.blob();
+=======
+                }
+              : s
+          )
+        );
+      } catch (e) {
+      } finally {
+        setLoading(false);
+      }
+    }
+    [slides]
+  );
+  const addSlide = useCallback(async () => {
+=======
+    } catch (error) {
+      return {  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    } finally {;
+      setLoading(false);
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  }, []),;
+  const buildDeck = useCallback(async () => {;
+    setLoading(true);
+    try {
+      const metrics = await autoFetchMetrics();
+      const res = await fetch('/api/admin/pitch/generate', {;
+        method: 'POST',;
+        headers: { 'Content-Type': 'application/json' },;
+        body: JSON.stringify({;
+          operatorPrompt,;
+          inputs: builder,;
+          metrics})}),;
+      const json = await res.json();
+      const newSlides: Slide[] = json.slides || [];
+      setSlides(newSlides);
+      setActiveIndex(0);
+      const v = json.version || `v${new Date().toISOString()}`;
+      setVersionTag(v);
+      setHistory((h) => [{ id: uid(), createdAt: new Date().toISOString(), version: v }, ...h]);
+    } catch (error) {
+      // noop;
+    } finally {;
+      setLoading(false);
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  }, [autoFetchMetrics, builder, operatorPrompt]),;
+  const rephraseSlide = useCallback(async (idx: number) => {;
+    if (!slides[idx]) return;
+    setLoading(true);
+    try {
+      const res = await fetch('/api/admin/pitch/rewrite', {;
+        method: 'POST',;
+        headers: { 'Content-Type': 'application/json' },;
+        body: JSON.stringify({ slide: slides[idx] })}),;
+      const json = await res.json();
+      setSlides((arr) => arr.map((s, i) => (i === idx ? { ...s, title: json.title || s.title, content: json.content || s.content } : s)));
+    } catch (error) {
+    } finally {;
+      setLoading(false);
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  }, [slides]),;
+  const addSlide = useCallback(async () => {;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    setLoading(true);
+    try {
+      const res = await fetch('/api/admin/pitch/add-slide', { method: 'POST' });
+      const json = await res.json();
+<<<<<<< HEAD
+      setSlides(arr => [
+        ...arr
+        {
+          id: uid()
+          title: json.title |'New Slide'
+          content: json.content |''
+        }
+      ]);
+      setActiveIndex(slides.length);
+    } catch (e) {
+    } finally {
+      setLoading(false);    }
+  }, [slides.length]);
+  const exportPdf = useCallback(async () => {
+    setLoading(true);
+    try {
+      const res = await fetch('/api/admin/pitch/export', {
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({ slides, format: 'pdf', version: versionTag })
+      });      const blob = await res.blob();
+=======
+      setSlides((arr) => [...arr, { id: uid(), title: json.title || 'New Slide', content: json.content || '' }]),;
+      setActiveIndex(slides.length);
+    } catch (error) {
+    } finally {;
+      setLoading(false);
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  }, [slides.length]),;
+  const exportPdf = useCallback(async () => {;
+    setLoading(true);
+    try {
+      const res = await fetch('/api/admin/pitch/export', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ slides, format: 'pdf', version: versionTag }) }),;
+      const blob = await res.blob();
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
       a.download = `pitch-deck-${versionTag |'draft'}.pdf`;
       a.click();
+<<<<<<< HEAD
 <<<<<<< HEAD
       URL.revokeObjectURL(url);
 
@@ -450,11 +1038,14 @@ if (return) {
 
 =======
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       URL.revokeObjectURL(url)
     } catch (e) {
     } finally {
       setLoading(false)
     }
+<<<<<<< HEAD
 
   }, [slides, versionTag]);
   const exportGoogleSlides = useCallback(async () => {
@@ -462,8 +1053,13 @@ if (return) {
     try {
 
 
+=======
+}, [slides, versionTag]);
+  const exportGoogleSlides = useCallback(async () => {
+    setLoading(true);
+    try {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }, [slides && slides.length]);
-
   const exportPdf = useCallback(async () => {;
     setLoading(true);
     try {;
@@ -482,7 +1078,6 @@ if (return) {
     } finally {;
       setLoading(false);    }
   }, [slides, versionTag]);
-
   const exportGoogleSlides = useCallback(async () => {;
     setLoading(true);
     try {;
@@ -494,7 +1089,6 @@ if (return) {
           format: 'gslides',;
           version: versionTag,;
         }),;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
       const json = await res && res.json();
       if (json && json.url) {;
@@ -504,6 +1098,7 @@ if (return) {
     } finally {;
       setLoading(false);    }
   }, [slides, versionTag]);
+<<<<<<< HEAD
 
 
 
@@ -522,21 +1117,157 @@ if (return) {
 
     return (
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+      const res = await fetch('/api/admin/pitch/export', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ slides, format: 'gslides', version: versionTag }) }),
+      const json = await res.json();
+      if (json && json.url) {
+        window.open(json.url, '_blank')
+      }
+    } catch (e) {
+    } finally {
+      setLoading(false)
+    }
+}, [slides, versionTag]);
+  const updateActiveSlide = (updates: Partial<Slide>) => {
+    setSlides((arr) => arr.map((s, i) => (i === activeIndex ? { ...s, ...updates } : s)))
+  };
+  const renderChartPreview = (slide: Slide) => {
+    if (!slide.chart) return null
+    const { type, data } = slide.chart;
+  const updateActiveSlide = (updates: Partial<Slide>) => {;
+    setSlides(arr =>;
+      arr && arr.map((s, i) => (i === activeIndex ? { ...s, ...updates } : s));
+    );  };
+  const renderChartPreview = (slide: Slide) => {;
+    if (!slide && slide.chart) return null,;
+    const { type, data } = slide && slide.chart;
+=======
+      URL.revokeObjectURL(url);
+<<<<<<< HEAD
+    } catch (e) {
+    } finally {
+      setLoading(false);    }
+  }, [slides, versionTag]);
+  const exportGoogleSlides = useCallback(async () => {
+    setLoading(true);
+    try {
+      const res = await fetch('/api/admin/pitch/export', {
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({
+          slides
+          format: 'gslides'
+          version: versionTag
+        })
+      });
+=======
+    } catch (error) {
+    } finally {;
+      setLoading(false);
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  }, [slides, versionTag]),;
+  const exportGoogleSlides = useCallback(async () => {;
+    setLoading(true);
+    try {
+      const res = await fetch('/api/admin/pitch/export', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ slides, format: 'gslides', version: versionTag }) }),;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+      const json = await res.json();
+      if (json && json.url) {;
+        window.open(json.url, '_blank');
+<<<<<<< HEAD
+      }
+    } catch (e) {
+    } finally {
+      setLoading(false);    }
+  }, [slides, versionTag]);
+<<<<<<< HEAD
+  const updateActiveSlide = (updates: Partial<Slide>) => {
+    setSlides(arr =>
+      arr.map((s, i) => (i === activeIndex ? { ...s, ...updates } : s))
+    );  }
+  const renderChartPreview = (slide: Slide) => {
+    if (!slide.chart) return null
+    const { type, data } = slide.chart;
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    } catch (error) {
+    } finally {;
+      setLoading(false);
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  }, [slides, versionTag]),
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const updateActiveSlide = (updates: Partial<Slide>) => {
+    setSlides((arr) => arr.map((s, i) => (i === activeIndex ? { ...s, ...updates } : s)))
+  },
+  const renderChartPreview = (slide: Slide) => {
+    if (!slide.chart) return null,
+    const { type, data } = slide.chart,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+    return (
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <div className="mt-3">
         <div className="text-xs text-gray-500 dark:text-gray-400">Chart preview: {type}</div>
         <div className="flex gap-2 items-end h-24 mt-2">
           {type === 'bar' && data.map((d) => (
             <div key={d.label} className="bg-blue-500 w-6" style={{ height: `${Math.max(4, d.value)}px` }} title={`${d.label}: ${d.value}`} />
+<<<<<<< HEAD
           ))}
+=======
+          ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           {type === 'funnel' && (
             <div className="w-full">
               <div className="flex flex-col gap-1">
                 {data.map((d, idx) => (
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
                   <div key={d.label} className="bg-purple-500 text-white text-xs px-2 py-1" style={{ width: `${100 - idx * 12}%` }}>{d.label}: {d.value}</div>
+=======
+<<<<<<< HEAD
+                  <div key={d.label} className="bg-purple-500 text-white text-xs px-2 py-1" style={{ width: `${100 - idx * 12}%` }}>{d.label}: {d.value}</div>
+                ))}
+=======
+<<<<<<< HEAD
+                  <div
+                    key={d.label}
+                    className='bg-purple-500 text-white text-xs px-2 py-1'
+                    style={{ width: `${100 - idx * 12}%` }}
+                  >
+                    {d.label}: {d.value}
+                  </div>                ))}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+              </div>
+            </div>
+          )}
+=======
+                  <div key={d.label} className="bg-purple-500 text-white text-xs px-2 py-1" style={{ width: `${100 - idx * 12}%` }}>{d.label}: {d.value}</div>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -549,21 +1280,42 @@ if (return) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           {type === 'timeline' && (
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          {type === 'timeline' && (
+<<<<<<< HEAD
+<div className="text-xs grid grid-cols-4 gap-2 w-full">
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <div className="text-xs grid grid-cols-4 gap-2 w-full">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               {data.map((d) => (
                 <div key={d.label} className="border p-1 rounded">
                   <div className="font-medium">{d.label}</div>
                   <div>{d.value}</div>
                 </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
+=======
+<<<<<<< HEAD
+              ))}
+            </div>;
+          )}
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               disabled={loading || slides && slides.length === 0}
               className='px-3 py-2 rounded bg-gray-900 text-white disabled:opacity-50'>;
               Download PDF;
@@ -572,7 +1324,6 @@ if (return) {
               onClick={exportGoogleSlides}
               disabled={loading || slides && slides.length === 0}
               className='px-3 py-2 rounded bg-green-600 text-white disabled:opacity-50'>;
-=======
               : s));
       } catch (e) {
       } finally {
@@ -719,20 +1470,29 @@ if (return null, ) {
               disabled={loading || slides.length === 0}
               className='px - 3 py - 2 rounded bg - green - 600 text - white disabled:opacity - 50';
             >;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               Export to Google Slides;
             </button>;
           </div>;
         </div>;
+<<<<<<< HEAD
 
                 className='w-full border rounded px-2 py-1 bg-transparent';
               />;
 
 
+=======
+                className='w-full border rounded px-2 py-1 bg-transparent';
+              />;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <div
                 onDrop={onAssetDrop}
                 onDragOver={prevent}
                 onDragEnter={prevent}
+<<<<<<< HEAD
 
                 className='px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-sm'
               >
@@ -740,11 +1500,43 @@ if (return null, ) {
               </button>
               <ul className='text-sm mt-2 list-disc ml-5 text-gray-600 dark:text-gray-300'>                <li>Active users (30d)</li>
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         </div>
       </div>
     )
   };
+=======
+<<<<<<< HEAD
+        </div>
+      </div>
+    );
+  }
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            </div>;
+          )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        </div>
+      </div>
+    )
+  },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
 =======
 
@@ -779,6 +1571,7 @@ if (return null, ) {
       <Head>
         <title>Pitch Generator - Admin</title>
       </Head>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
                 <option>Series A</option>
@@ -790,6 +1583,99 @@ if (return null, ) {
 =======
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      <div className='space-y-6'>
+        <div className='flex items-center justify-between'>
+          <h1 className='text-2xl font-semibold'>Pitch Generator</h1>
+          <div className='flex gap-2'>
+            <button
+              onClick={buildDeck}
+              disabled={loading}
+              className='px-3 py-2 rounded bg-blue-600 text-white disabled:opacity-50'
+            >
+              Generate Deck
+            </button>
+            <button
+              onClick={exportPdf}
+              disabled={loading |slides.length === 0}
+              className='px-3 py-2 rounded bg-gray-900 text-white disabled:opacity-50'
+            >
+              Download PDF
+            </button>
+            <button
+              onClick={exportGoogleSlides}
+              disabled={loading |slides.length === 0}
+              className='px-3 py-2 rounded bg-green-600 text-white disabled:opacity-50'
+            >
+              Export to Google Slides
+            </button>
+          </div>
+        </div>
+        <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
+          <div className='lg:col-span-1 space-y-4'>
+            <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
+              <div className='font-medium mb-2'>Inputs</div>
+              <label className='block text-sm mb-1'>Company mission</label>
+              <input
+                value={builder.mission}
+                onChange={e =>
+                  setBuilder({ ...builder, mission: e.target.value })
+                }
+                className='w-full border rounded px-2 py-1 bg-transparent'
+              />
+              <label className='block text-sm mt-3 mb-1'>
+                Current funding stage
+              </label>
+              <input
+                value={builder.fundingStage}
+                onChange={e =>
+                  setBuilder({ ...builder, fundingStage: e.target.value })
+                }
+                className='w-full border rounded px-2 py-1 bg-transparent'
+              />
+              <label className='block text-sm mt-3 mb-1'>Vision/goals</label>
+              <textarea
+                value={builder.vision}
+                onChange={e =>
+                  setBuilder({ ...builder, vision: e.target.value })
+                }
+                className='w-full border rounded px-2 py-1 bg-transparent'
+                rows={3}
+              />
+              <label className='block text-sm mt-3 mb-1'>Round type</label>
+              <select
+                value={builder.roundType}
+                onChange={e =>
+                  setBuilder({ ...builder, roundType: e.target.value as any })
+                }
+                className='w-full border rounded px-2 py-1 bg-transparent'
+              >
+                <option value=''>Select</option>                <option>Seed</option>
+                <option>Series A</option>
+                <option>Token Sale</option>
+              </select>
+              <label className='block text-sm mt-3 mb-1'>
+                Target raise amount
+              </label>
+              <input
+                value={builder.targetRaise}
+                onChange={e =>
+                  setBuilder({ ...builder, targetRaise: e.target.value })
+                }
+                className='w-full border rounded px-2 py-1 bg-transparent'
+              />
+              <div
+                onDrop={onAssetDrop}
+                onDragOver={prevent}
+                onDragEnter={prevent}
+                className='mt-4 border-2 border-dashed rounded-md p-4 text-center text-sm text-gray-500 dark:text-gray-400'
+              >
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <div className="space-y-6">
         <div className="flex items-center justify-between">
           <h1 className="text-2xl font-semibold">Pitch Generator</h1>
@@ -799,27 +1685,133 @@ if (return null, ) {
             <button onClick={exportGoogleSlides} disabled={loading || slides.length === 0} className="px-3 py-2 rounded bg-green-600 text-white disabled:opacity-50">Export to Google Slides</button>
           </div>
         </div>
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
+          <div className='lg:col-span-1 space-y-4'>
+            <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
+              <div className='font-medium mb-2'>Inputs</div>
+              <label className='block text-sm mb-1'>Company mission</label>
+              <input
+                value={builder.mission}
+                onChange={e =>
+                  setBuilder({ ...builder, mission: e.target.value })
+                }
+                className='w-full border rounded px-2 py-1 bg-transparent'
+              />
+              <label className='block text-sm mt-3 mb-1'>
+                Current funding stage
+              </label>
+              <input
+                value={builder.fundingStage}
+                onChange={e =>
+                  setBuilder({ ...builder, fundingStage: e.target.value })
+                }
+                className='w-full border rounded px-2 py-1 bg-transparent'
+              />
+              <label className='block text-sm mt-3 mb-1'>Vision/goals</label>
+              <textarea
+                value={builder.vision}
+                onChange={e =>
+                  setBuilder({ ...builder, vision: e.target.value })
+                }
+                className='w-full border rounded px-2 py-1 bg-transparent'
+                rows={3}
+              />
+              <label className='block text-sm mt-3 mb-1'>Round type</label>
+              <select
+                value={builder.roundType}
+                onChange={e =>
+                  setBuilder({ ...builder, roundType: e.target.value as any })
+                }
+                className='w-full border rounded px-2 py-1 bg-transparent'
+              >
+                <option value=''>Select</option>                <option>Seed</option>
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="lg:col-span-1 space-y-4">
+            <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
+              <div className="font-medium mb-2">Inputs</div>
+              <label className="block text-sm mb-1">Company mission</label>
+              <input value={builder.mission} onChange={(e) => setBuilder({ ...builder, mission: e.target.value })} className="w-full border rounded px-2 py-1 bg-transparent" />
+              <label className="block text-sm mt-3 mb-1">Current funding stage</label>
+              <input value={builder.fundingStage} onChange={(e) => setBuilder({ ...builder, fundingStage: e.target.value })} className="w-full border rounded px-2 py-1 bg-transparent" />
+              <label className="block text-sm mt-3 mb-1">Vision/goals</label>
+              <textarea value={builder.vision} onChange={(e) => setBuilder({ ...builder, vision: e.target.value })} className="w-full border rounded px-2 py-1 bg-transparent" rows={3} />
+              <label className="block text-sm mt-3 mb-1">Round type</label>
+              <select value={builder.roundType} onChange={(e) => setBuilder({ ...builder, roundType: e.target.value as any })} className="w-full border rounded px-2 py-1 bg-transparent">
+                <option value="">Select</option>
+                <option>Seed</option>
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+                <option>Series A</option>
+                <option>Token Sale</option>
+              </select>
+              <label className="block text-sm mt-3 mb-1">Target raise amount</label>
+<<<<<<< HEAD
+<input value={builder.targetRaise} onChange={(e) => setBuilder({ ...builder, targetRaise: e.target.value })} className="w-full border rounded px-2 py-1 bg-transparent" />
+              <div onDrop={onAssetDrop} onDragOver={prevent} onDragEnter={prevent} className="mt-4 border-2 border-dashed rounded-md p-4 text-center text-sm text-gray-500 dark:text-gray-400">
+=======
+              <input value={builder.targetRaise} onChange={(e) => setBuilder({ ...builder, targetRaise: e.target.value })} className="w-full border rounded px-2 py-1 bg-transparent" />
+              <div onDrop={onAssetDrop} onDragOver={prevent} onDragEnter={prevent} className="mt-4 border-2 border-dashed rounded-md p-4 text-center text-sm text-gray-500 dark:text-gray-400">
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 Drag & drop logos, photos here
                 <div className="text-xs mt-1">{builder.assets.length} file(s) added</div>
               </div>
             </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
+              <div className='font-medium mb-2'>Auto Data</div>
+              <button
+                onClick={autoFetchMetrics}
+                className='px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-sm'
+              >
+                Refresh
+              </button>
+              <ul className='text-sm mt-2 list-disc ml-5 text-gray-600 dark:text-gray-300'>                <li>Active users (30d)</li>
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
               <div className="font-medium mb-2">Auto Data</div>
               <button onClick={autoFetchMetrics} className="px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-sm">Refresh</button>
               <ul className="text-sm mt-2 list-disc ml-5 text-gray-600 dark:text-gray-300">
                 <li>Active users (30d)</li>
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <li>GMV, MRR, YoY growth</li>
                 <li>Total completed projects</li>
                 <li>Global reach</li>
@@ -827,6 +1819,7 @@ if (return null, ) {
                 <li>Notable clients or case studies</li>
               </ul>
             </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -840,13 +1833,16 @@ if (return null, ) {
                 {history.map(h => (
 =======
                 className='mt-4 border-2 border-dashed rounded-md p-4 text-center text-sm text-gray-500 dark:text-gray-400'>;
+=======
+<<<<<<< HEAD
+className='mt-4 border-2 border-dashed rounded-md p-4 text-center text-sm text-gray-500 dark:text-gray-400'>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 Drag & drop logos, photos here;
                 <div className='text-xs mt-1'>;
                   {builder && builder.assets.length} file(s) added;
                 </div>;
               </div>;
             </div>;
-
             <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>;
               <div className='font-medium mb-2'>Auto Data</div>;
               <button
@@ -863,7 +1859,6 @@ if (return null, ) {
                 <li>Notable clients or case studies</li>;
               </ul>;
             </div>;
-
             <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>;
               <div className='font-medium mb-2'>History</div>;
               <div className='text-xs text-gray-500 dark:text-gray-400'>;
@@ -871,9 +1866,12 @@ if (return null, ) {
               </div>;
               <ul className='mt-2 space-y-1 text-sm'>;
                 {history && history.map(h => (;
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   <li
                     key={h && h.id}
                     className='flex justify-between border rounded px-2 py-1'>;
@@ -881,9 +1879,12 @@ if (return null, ) {
                     <span className='text-gray-500 dark:text-gray-400'>;
                       {new Date(h && h.createdAt).toLocaleString()}
                     </span>                  </li>;
+<<<<<<< HEAD
 
 =======
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
               <div className="font-medium mb-2">History</div>
               <div className="text-xs text-gray-500 dark:text-gray-400">Version: {versionTag || '—'}</div>
@@ -893,14 +1894,17 @@ if (return null, ) {
                     <span>{h.version}</span>
                     <span className="text-gray-500 dark:text-gray-400">{new Date(h.createdAt).toLocaleString()}</span>
                   </li>
+<<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 ))}
 
+=======
+                ))}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </ul>;
             </div>;
           </div>;
-
           <div className='lg:col-span-2 space-y-4'>;
             <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>;
               <div className='flex items-center justify-between'>;
@@ -911,7 +1915,10 @@ if (return null, ) {
               </div>;
               <div className='mt-3 flex gap-3 overflow-x-auto py-2'>;
                 {slides && slides.map((s, i) => (;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   <SlidePreview
                     key={s && s.id}
                     slide={s}
@@ -921,9 +1928,11 @@ if (return null, ) {
                 ))}
                 <button
                   onClick={addSlide}
+<<<<<<< HEAD
 
-                  className='w-56 shrink-0 border rounded-md p-3 text-left bg-gray-50 dark:bg-gray-800 border-dashed border-2 text-gray-500'>;
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+                  className='w-56 shrink-0 border rounded-md p-3 text-left bg-gray-50 dark:bg-gray-800 border-dashed border-2 text-gray-500'>;
         <div className='grid grid - cols - 1 lg:grid - cols - 3 gap - 6'>;
           <div className='lg:col - span - 1 space - y-4'>;
             <div className='border rounded - md p - 4 bg - white / 70 dark:bg - gray - 900'>;
@@ -1043,12 +2052,18 @@ if (return null, ) {
                   on_click={add_slide}
                   className='w - 56 shrink - 0 border rounded - md p - 3 text - left bg - gray - 50 dark:bg - gray - 800 border - dashed border - 2 text - gray - 500';
                 >;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   + Add Slide;
                 </button>;
               </div>;
             </div>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             {/* Active Slide Editor */}
             {active_slide && (
               <div className='border rounded - md p - 4 bg - white / 70 dark:bg - gray - 900'>;
@@ -1063,15 +2078,20 @@ if (return null, ) {
                       on_click={() => rephrase_slide (active_index)}
                       disabled={loading}
                       className='px - 2 py - 1 rounded bg - blue - 600 text - white text - sm disabled:opacity - 50';
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     >;
                       Rephrase;
                     </button>;
                   </div>;
                 </div>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 />;
-
                 <div className='mt-4 grid grid-cols-3 gap-2 text-sm'>;
                   <button
                     onClick={() =>;
@@ -1086,14 +2106,20 @@ if (return null, ) {
                           ],;
                         },;
                       });
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     }
                     className='border rounded px-2 py-1';
                   >;
                     Bar Chart;
                   </button>;
                   <button
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     onClick={() =>;
                       updateActiveSlide({;
                         chart: {;
@@ -1105,14 +2131,20 @@ if (return null, ) {
                           ],;
                         },;
                       });
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     }
                     className='border rounded px-2 py-1';
                   >;
                     Funnel;
                   </button>;
                   <button
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     onClick={() =>;
                       updateActiveSlide({;
                         chart: {;
@@ -1124,21 +2156,27 @@ if (return null, ) {
                           ],;
                         },;
                       });
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     }
                     className='border rounded px-2 py-1';
                   >;
                     Timeline;
                   </button>;
                 </div>              </div>;
+<<<<<<< HEAD
 
 =======
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <div className="lg:col-span-2 space-y-4">
             <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
               <div className="flex items-center justify-between">
                 <div className="font-medium">Slides</div>
-                <div className="text-sm text-gray-500 dark:text-gray-400">{slides.length} total</div>
+<div className="text-sm text-gray-500 dark:text-gray-400">{slides.length} total</div>
               </div>
               <div className="mt-3 flex gap-3 overflow-x-auto py-2">
                 {slides.map((s, i) => (
@@ -1147,7 +2185,6 @@ if (return null, ) {
                 <button onClick={addSlide} className="w-56 shrink-0 border rounded-md p-3 text-left bg-gray-50 dark:bg-gray-800 border-dashed border-2 text-gray-500">+ Add Slide</button>
               </div>
             </div>
-
             {activeSlide && (
               <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
                 <div className="flex items-center justify-between">
@@ -1157,15 +2194,14 @@ if (return null, ) {
                   </div>
                 </div>
                 <textarea value={activeSlide.content} onChange={(e) => updateActiveSlide({ content: e.target.value })} className="w-full mt-3 border rounded px-2 py-1 bg-transparent" rows={10} />
-
                 <div className="mt-4 grid grid-cols-3 gap-2 text-sm">
                   <button onClick={() => updateActiveSlide({ chart: { type: 'bar', data: [{ label: 'Q1', value: 20 }, { label: 'Q2', value: 40 }, { label: 'Q3', value: 60 }, { label: 'Q4', value: 80 }] } })} className="border rounded px-2 py-1">Bar Chart</button>
                   <button onClick={() => updateActiveSlide({ chart: { type: 'funnel', data: [{ label: 'Visitors', value: 100 }, { label: 'Signups', value: 40 }, { label: 'Projects', value: 15 }] } })} className="border rounded px-2 py-1">Funnel</button>
                   <button onClick={() => updateActiveSlide({ chart: { type: 'timeline', data: [{ label: 'MVP', value: 2023 }, { label: 'Seed', value: 2024 }, { label: 'Series A', value: 2025 }] } })} className="border rounded px-2 py-1">Timeline</button>
                 </div>
-
                 {renderChartPreview(activeSlide)}
               </div>
+<<<<<<< HEAD
 
             )}
 <<<<<<< HEAD
@@ -1247,24 +2283,102 @@ if (return null, ) {
   }
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+            )}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </div>;
         </div>;
       </main>;
     </>;
   );
+<<<<<<< HEAD
 
 
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       </div>
     </EnhancedLayout>
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                 <textarea;
                   value={active_slide.content}
                   on_change={e => updateActiveSlide ({ content: e.target.value })}
                   className='w - full mt - 3 border rounded px - 2 py - 1 bg - transparent';
+=======
+<<<<<<< HEAD
+            <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
+              <div className='font-medium mb-2'>History</div>
+              <div className='text-xs text-gray-500 dark:text-gray-400'>
+<<<<<<< HEAD
+                Version: {versionTag |'—'}
+=======
+                Version: {versionTag || '—'}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              </div>
+              <ul className='mt-2 space-y-1 text-sm'>
+                {history.map(h => (
+                  <li
+                    key={h.id}
+                    className='flex justify-between border rounded px-2 py-1'
+                  >
+                    <span>{h.version}</span>
+                    <span className='text-gray-500 dark:text-gray-400'>
+                      {new Date(h.createdAt).toLocaleString()}
+                    </span>                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+          <div className='lg:col-span-2 space-y-4'>
+            <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
+              <div className='flex items-center justify-between'>
+                <div className='font-medium'>Slides</div>
+                <div className='text-sm text-gray-500 dark:text-gray-400'>
+                  {slides.length} total
+                </div>
+              </div>
+              <div className='mt-3 flex gap-3 overflow-x-auto py-2'>
+                {slides.map((s, i) => (
+                  <SlidePreview
+                    key={s.id}
+                    slide={s}
+                    isActive={i === activeIndex}
+                    onClick={() => setActiveIndex(i)}
+                  />
+                ))}
+                <button
+                  onClick={addSlide}
+                  className='w-56 shrink-0 border rounded-md p-3 text-left bg-gray-50 dark:bg-gray-800 border-dashed border-2 text-gray-500'
+                >
+                  + Add Slide
+                </button>
+              </div>
+            </div>
+            {/* Active Slide Editor */}
+            {activeSlide && (
+              <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
+                <div className='flex items-center justify-between'>
+                  <input
+                    value={activeSlide.title}
+                    onChange={e => updateActiveSlide({ title: e.target.value })}
+                    className='font-semibold text-lg bg-transparent border-b focus:outline-none'
+                  />
+                  <div className='flex gap-2'>
+                    <button
+                      onClick={() => rephraseSlide(activeIndex)}
+                      disabled={loading}
+                      className='px-2 py-1 rounded bg-blue-600 text-white text-sm disabled:opacity-50'
+                    >
+                      Rephrase
+                    </button>
+                  </div>
+                </div>
+                <textarea
+                  value={activeSlide.content}
+                  onChange={e => updateActiveSlide({ content: e.target.value })}
+                  className='w-full mt-3 border rounded px-2 py-1 bg-transparent'
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   rows={10}
                 />;
                 <div className='mt - 4 grid grid - cols - 3 gap - 2 text - sm'>;
@@ -1316,11 +2430,16 @@ if (return null, ) {
                         },
                       });
                     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     className='border rounded px - 2 py - 1';
                   >;
                     Timeline;
                   </button>;
                 </div>              </div>)}
+<<<<<<< HEAD
           </div>;
         </div>;
 </main>;
@@ -1329,11 +2448,103 @@ if (return null, ) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+=======
+          </div>;
+        </div>;
+</main>;
+    </>);
+;
+=======
+                    className='border rounded px-2 py-1'
+                  >
+                    Timeline
+                  </button>
+                </div>              </div>
+            )}
+          </div>
+        </div>
+</main>
+    </>
+  );
+<<<<<<< HEAD
+=======
+
+}
+}
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+            <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
+              <div className="font-medium mb-2">History</div>
+              <div className="text-xs text-gray-500 dark:text-gray-400">Version: {versionTag || '—'}</div>
+              <ul className="mt-2 space-y-1 text-sm">
+                {history.map((h) => (
+                  <li key={h.id} className="flex justify-between border rounded px-2 py-1">
+                    <span>{h.version}</span>
+                    <span className="text-gray-500 dark:text-gray-400">{new Date(h.createdAt).toLocaleString()}</span>
+                  </li>
+                ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              </ul>;
+            </div>;
+          </div>;
+          <div className="lg:col-span-2 space-y-4">;
+            <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">;
+              <div className="flex items-center justify-between">;
+                <div className="font-medium">Slides</div>;
+                <div className="text-sm text-gray-500 dark:text-gray-400">{slides.length} total</div>;
+              </div>;
+              <div className="mt-3 flex gap-3 overflow-x-auto py-2">;
+                {slides.map((s, i) => (;
+                  <SlidePreview key={s.id} slide={s} isActive={i === activeIndex} onClick={() => setActiveIndex(i)} />;
+                ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                <button onClick={addSlide} className="w-56 shrink-0 border rounded-md p-3 text-left bg-gray-50 dark:bg-gray-800 border-dashed border-2 text-gray-500">+ Add Slide</button>;
+              </div>;
+            </div>;
+            {activeSlide && (;
+              <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">;
+                <div className="flex items-center justify-between">;
+                  <input value={activeSlide.title} onChange={(e) => updateActiveSlide({ title: e.target.value })} className="font-semibold text-lg bg-transparent border-b focus:outline-none" />;
+                  <div className="flex gap-2">;
+                    <button onClick={() => rephraseSlide(activeIndex)} disabled={loading} className="px-2 py-1 rounded bg-blue-600 text-white text-sm disabled:opacity-50">Rephrase</button>;
+                  </div>;
+                </div>;
+                <textarea value={activeSlide.content} onChange={(e) => updateActiveSlide({ content: e.target.value })} className="w-full mt-3 border rounded px-2 py-1 bg-transparent" rows={10} />;
+                <div className="mt-4 grid grid-cols-3 gap-2 text-sm">;
+                  <button onClick={() => updateActiveSlide({ chart: { type: 'bar', data: [{ label: 'Q1', value: 20 }, { label: 'Q2', value: 40 }, { label: 'Q3', value: 60 }, { label: 'Q4', value: 80 }] } })} className="border rounded px-2 py-1">Bar Chart</button>;
+                  <button onClick={() => updateActiveSlide({ chart: { type: 'funnel', data: [{ label: 'Visitors', value: 100 }, { label: 'Signups', value: 40 }, { label: 'Projects', value: 15 }] } })} className="border rounded px-2 py-1">Funnel</button>;
+                  <button onClick={() => updateActiveSlide({ chart: { type: 'timeline', data: [{ label: 'MVP', value: 2023 }, { label: 'Seed', value: 2024 }, { label: 'Series A', value: 2025 }] } })} className="border rounded px-2 py-1">Timeline</button>;
+                </div>;
+                {renderChartPreview(activeSlide)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              </div>;
+            )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </div>;
+        </div>;
+      </div>;
+    </EnhancedLayout>;
+  );
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1341,3 +2552,11 @@ if (return null, ) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

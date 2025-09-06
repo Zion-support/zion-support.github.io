@@ -1,22 +1,41 @@
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/messaging/useMessages.ts
 
 
 <<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { UserProfile, UserDetails  } from '@/types/auth';
+import { supabase  } from '@/integrations/supabase/client';
+import { Message, Conversation  } from '@/types/messaging';
+import { toast } from '@/hooks/use-toast';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 import {UserProfile, UserDetails} from '@/types/auth';
 import {supabase} from '@/integrations/supabase/client';
 import {Message, Conversation} from '@/types/messaging';
 import {toast} from '@/hooks/use-toast';
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 // Allow either UserProfile or UserDetails
 
 type UserWithProfile = UserProfile | UserDetails | null;
 /**
  * Hook to handle message operations
  */
+<<<<<<< HEAD
 export function useMessages(
 =======
+========
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/messaging/useMessages.ts
 import {UserProfile, UserDetails} from '@/types / auth';
 import {supabase} from '@/integrations / supabase / client';
 import {Message, Conversation} from '@/types / messaging';
@@ -28,7 +47,6 @@ type UserWithProfile = UserProfile | UserDetails | null;
 * Hook to handle message operations;
 */;
 export function use_messages (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   user: UserWithProfile;
   active_conversation: Conversation | null;
   active_messages: Message[];
@@ -37,15 +55,18 @@ export function use_messages (
   set_conversations: (updater: (prev: Conversation[]) => Conversation[]) => void;
   setUnreadCount: (updater: (prev: number) => number) => void;
   setIsLoading: (loading: boolean) => void;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/messaging/useMessages.ts
 
       
       if (unreadMessages && unreadMessages.length > 0) {
 
+========
+      if (unreadMessages && unreadMessages.length > 0) {
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/messaging/useMessages.ts
         await markAsRead(conversationId)
       }
     } catch (error) {
       console && console.error('Error fetching messages:', error)
-=======
   fetch_conversations: () => Promise < void>) {
   /**;
   * Fetch messages for a conversation;
@@ -82,15 +103,50 @@ if ( {) {
       }
     } catch (error) {
       console.error ('Error fetching messages:', error);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       setIsLoading (false);
     }
   }
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/messaging/useMessages.ts
 
       if (unreadMessages.length > 0) {
         await markAsRead(conversationId)
 
+=======
+export function useMessages(;
+  user: UserWithProfile;
+  activeConversation: Conversation | null;
+  activeMessages: Message[];
+  setActiveMessages: (updater: (prev: Message[]) => Message[]) => void;
+  conversations: Conversation[];
+  setConversations: (updater: (prev: Conversation[]) => Conversation[]) => void;
+  setUnreadCount: (updater: (prev: number) => number) => void;
+  setIsLoading: (loading: boolean) => void;
+  fetchConversations: () => Promise<void>
+) {
+  /**
+   * Fetch messages for a conversation
+   */
+  const loadMessages = async (conversationId: string) => {
+    if (!user) return;
+    setIsLoading(true)
+    try {
+      const { data, error } = await supabase
+        .from('messages')
+        .select('*')
+        .eq('conversation_id', conversationId)
+        .order('created_at', { ascending: true });
+      if (error) throw error;
+      // Use updater function for setActiveMessages
+      setActiveMessages(() => data as Message[]);
+      // Mark messages as read
+      const unreadMessages = data.filter(
+        msg => !msg.read && msg.recipient_id === user.id
+      );
+      if (unreadMessages.length > 0) {
+        await markAsRead(conversationId)
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { UserProfile, UserDetails } from '@/types/auth',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Message, Conversation } from '@/types/messaging',;
@@ -132,18 +188,27 @@ export function useMessages(;
       ),;
       if (unreadMessages.length > 0) {;
         await markAsRead(conversationId);
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       }
     } catch (error) {
       console.error('Error fetching messages:', error)
     } finally {
       setIsLoading(false)
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -153,16 +218,34 @@ export function useMessages(;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+  }
+=======
+  };
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   /**
    * Send a message to an existing conversation
    */
   const sendMessage = async (conversationId: string, content: string) => {
+<<<<<<< HEAD
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/messaging/useMessages.ts
     if (!user || !content && content.trim() || !conversationId) return;
-    
     try {
       const conversation = conversations && conversations.find(c => c && c.id === conversationId),
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/messaging/useMessages.ts
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/messaging/useMessages.ts
+=======
+    if (!user |!content.trim() |!conversationId) return;
+    try {
+      const conversation = conversations.find(c => c.id === conversationId)
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       if (!conversation) {
         throw new Error('Conversation not found')
       }
@@ -171,8 +254,13 @@ export function useMessages(;
         .from('messages')
         .insert({
           conversation_id: conversationId;
+<<<<<<< HEAD
           sender_id: user && user.id;
           recipient_id: conversation && conversation.user_id;
+=======
+          sender_id: user.id;
+          recipient_id: conversation.user_id;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           content;
           created_at: new Date().toISOString()
           read: false
@@ -184,6 +272,7 @@ export function useMessages(;
       if (activeConversation && activeConversation.id === conversationId) {
         setActiveMessages(prev => [...prev, data as Message])
       }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -191,6 +280,14 @@ export function useMessages(;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+      // Update conversations list
+      await fetchConversations();
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   },;
   /**;
    * Send a message to an existing conversation;
@@ -221,6 +318,7 @@ export function useMessages(;
       if (activeConversation && activeConversation.id === conversationId) {;
         setActiveMessages(prev => [...prev, data as Message]);
       }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
       // Update conversations list
@@ -229,11 +327,18 @@ export function useMessages(;
 =======
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       
       // Update conversations list
       await fetchConversations(),
       
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       // Return the sent message
@@ -243,6 +348,22 @@ export function useMessages(;
       toast({
 
 <<<<<<< HEAD
+=======
+      // Return the sent message
+      return data
+    } catch (error) {
+      console.error('Error sending message:', error),
+      toast({
+<<<<<<< HEAD
+        title: "Failed to send message";
+        description: "Please try again later"
+        variant: "destructive"
+      })
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     }
   }
   /**
@@ -259,6 +380,8 @@ export function useMessages(;
         .eq('read', false);
       if (error) throw error;
       // Update active messages to show they've been read
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/messaging/useMessages.ts
       setActiveMessages(prev =>
         prev.map(msg =>
           msg.recipient_id === user.id ? { ...msg, read: true } : msg
@@ -276,40 +399,84 @@ export function useMessages(;
         prev && prev.map(conv => 
           conv && conv.id === conversationId 
 
+========
+      setActiveMessages(prev => 
+        prev && prev.map(msg => 
+          msg && msg.recipient_id === user && user.id ? { ...msg, read: true } : msg
+        )
+      );
+      // Update conversations to reflect read messages
+      setConversations(prev => 
+        prev && prev.map(conv => 
+          conv && conv.id === conversationId 
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/messaging/useMessages.ts
+=======
+      setActiveMessages(prev =>
+        prev.map(msg =>
+          msg.recipient_id === user.id ? { ...msg, read: true } : msg
+        )
+      );
+      // Update conversations to reflect read messages
+      setConversations(prev =>
+        prev.map(conv =>
+          conv.id === conversationId
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             ? { ...conv, unread_count: 0 }
             : conv
         )
       );
       // Recalculate unread count
       setUnreadCount(prev => {
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/messaging/useMessages.ts
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/messaging/useMessages.ts
         const updatedConversations = conversations && conversations.map(conv => 
           conv && conv.id === conversationId 
             ? { ...conv, unread_count: 0 }
             : conv
         );
-        
         return updatedConversations && updatedConversations.reduce(
           (total, conv) => total + (conv && conv.unread_count || 0), 
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/messaging/useMessages.ts
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/messaging/useMessages.ts
+=======
+        const updatedConversations = conversations.map(conv =>
+          conv.id === conversationId
+            ? { ...conv, unread_count: 0 }
+            : conv
+        );
+        return updatedConversations.reduce(
+          (total, conv) => total + (conv.unread_count |0)
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           0
         )
       })
     } catch (error) {
+<<<<<<< HEAD
       console && console.error('Error marking messages as read:', error)
+=======
+      console.error('Error marking messages as read:', error)
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     }
   }
   return {
     loadMessages;
     sendMessage;
-
+<<<<<<< HEAD
     markAsRead
 <<<<<<< HEAD
 
 =======
   }
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/messaging/useMessages.ts
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/messaging/useMessages.ts
 ;
   /**;
   * Send a message to an existing conversation;
@@ -365,6 +532,31 @@ if ( {) {
       });
     }
 <<<<<<< HEAD
+=======
+
+    markAsRead
+=======
+<<<<<<< HEAD
+        title: "Failed to send message",
+        description: "Please try again later",
+        variant: "destructive"
+      })
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+;
+      // Update conversations list;
+      await fetchConversations(),;
+      // Return the sent message;
+      return data;
+    } catch (error) {;
+      console.error('Error sending message:', error),;
+      toast({;
+        title: "Failed to send message",;
+        description: "Please try again later",;
+        variant: "destructive";
+      });
+    }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   },;
   /**;
    * Mark messages as read;
@@ -413,6 +605,7 @@ if ( {) {
     loadMessages;
     sendMessage;
     markAsRead;
+<<<<<<< HEAD
 
 =======
 =======
@@ -475,5 +668,217 @@ if (throw error) {
     send_message;
     markAsRead;
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
+=======
+
+import { UserProfile, UserDetails } from '@/types/auth',;
+import { supabase } from '@/integrations/supabase/client',;
+import { Message, Conversation } from '@/types/messaging',;
+import { toast } from '@/hooks/use-toast',;
+;
+// Allow either UserProfile or UserDetails;
+type UserWithProfile = UserProfile | UserDetails | null,;
+;
+/**;
+ * Hook to handle message operations;
+ */;
+export function useMessages(;
+  user:UserWithProfile,;
+  activeConversation:Conversation | null,;
+  activeMessages:Message[],;
+  setActiveMessages:(updater:(prev:Message[]) => Message[]) => void,;
+  conversations:Conversation[],;
+  setConversations:(updater:(prev:Conversation[]) => Conversation[]) => void,;
+  setUnreadCount:(updater:(prev:number) => number) => void,;
+  setIsLoading:(loading:boolean) => void,;
+  fetchConversations:() => Promise<void>;
+) {;
+  /**;
+   * Fetch messages for a conversation;
+   */;
+  const loadMessages = async (conversationId:string) => {;
+    if (!user) return,;
+    ;
+    setIsLoading(true),;
+    ;
+    try {;
+      const { data, error } = await supabase;
+        .from('messages');
+        .select('*');
+        .eq('conversation_id', conversationId);
+        .order('created_at', { ascending:true }),;
+        ;
+      if (error) throw error,;
+      ;
+      // Use updater function for setActiveMessages;
+      setActiveMessages(() => data as Message[]),;
+      ;
+      // Mark messages as read;
+      const unreadMessages = data.filter(;
+        msg => !msg.read && msg.recipient_id === user.id;
+      ),;
+      ;
+      if (unreadMessages.length > 0) {;
+        await markAsRead(conversationId),;
+      }
+    } catch (error) {;
+      console.error('Error fetching messages:', error),;
+    } finally {;
+      setIsLoading(false),;
+    }
+  },;
+;
+  /**;
+   * Send a message to an existing conversation;
+   */;
+  const sendMessage = async (conversationId:string, content:string) => {;
+    if (!user || !content.trim() || !conversationId) return,;
+    ;
+    try {;
+      const conversation = conversations.find(c => c.id === conversationId),;
+      if (!conversation) {;
+        throw new Error('Conversation not found');
+      }
+;
+      // Send the message;
+      const { data, error } = await supabase;
+        .from('messages');
+        .insert({;
+          conversation_id:conversationId,;
+          sender_id:user.id,;
+          recipient_id:conversation.user_id,;
+          content,;
+          created_at:new Date().toISOString(),;
+          read:false;
+        });
+        .select('*');
+        .single(),;
+        ;
+      if (error) throw error,;
+      ;
+      // Update active messages if this conversation is selected;
+      if (activeConversation && activeConversation.id === conversationId) {;
+        setActiveMessages(prev => [...prev, data as Message]),;
+      }
+      ;
+      // Update conversations list;
+      await fetchConversations(),;
+      ;
+      // Return the sent message;
+      return data,;
+    } catch (error) {;
+      console.error('Error sending message:', error),;
+      toast({;
+        title:"Failed to send message",;
+        description:"Please try again later",;
+        variant:"destructive";
+      }),;
+    }
+  },;
+;
+  /**;
+   * Mark messages as read;
+   */;
+  const markAsRead = async (conversationId:string) => {;
+    if (!user || !conversationId) return,;
+    ;
+    try {;
+      const { error } = await supabase;
+        .from('messages');
+        .update({ read:true });
+        .eq('conversation_id', conversationId);
+        .eq('recipient_id', user.id);
+        .eq('read', false),;
+        ;
+      if (error) throw error,;
+      ;
+      // Update active messages to show they've been read;
+      setActiveMessages(prev => ;
+        prev.map(msg => ;
+          msg.recipient_id === user.id ? { ...msg, read:true } msg;
+        );
+      ),;
+      ;
+      // Update conversations to reflect read messages;
+      setConversations(prev => ;
+        prev.map(conv => ;
+          conv.id === conversationId ;
+            ? { ...conv, unread_count:0 } conv;
+        );
+      ),;
+      ;
+      // Recalculate unread count;
+      setUnreadCount(prev => {;
+        const updatedConversations = conversations.map(conv => ;
+          conv.id === conversationId ;
+            ? { ...conv, unread_count:0 } conv;
+        ),;
+        ;
+        return updatedConversations.reduce(;
+          (total, conv) => total + (conv.unread_count || 0), ;
+          0;
+        ),;
+      }),;
+    } catch (error) {;
+      console.error('Error marking messages as read:', error),;
+    }
+  },;
+;
+  return {;
+    loadMessages,;
+    sendMessage,;
+    markAsRead;
+  },;
+} //Allow either UserProfile or UserDetails type UserWithProfile = UserProfile | UserDetails | null;
+/** * Hook to handle message operations */export function useMessages (user: UserWithProfile, activeConversation: Conversation | null, activeMessages: Message[], setActiveMessages: (updater: (prev: Message[]) => Message[]) => void;
+conversations: Conversation[];
+setConversations: (updater: (prev: Conversation[]) => Conversation[]) => void;
+setUnreadCount: (updater: (prev: number) => number) => void;
+setIsLoading: (loading: boolean) => void;
+fetchConversations: () => Promise<void>) {
+  /** * Fetch messages for a conversation */setIsLoading (true);
+try {
+  const {
+  data, error 
+}= await supabase .from ('messages') .select ('*') .eq ('conversation id', conversationId) if (error) throw error;
+//Use updater function for setActiveMessages //Mark messages as read const unreadMessages = data.filter (msg => !msg.read && msg.recipient id === user.id);
+/** * Send a message to an existing conversation */ //Send the message const {
+  data, error 
+}= await supabase .from ('messages') .insert ({
+  conversation id: conversationId, sender id: user.id, recipient id: conversation.user id, content, created at: new Date () .toISOString (), read: false 
+}) .select ('*') .single ();
+if (error) throw error;
+//Update active messages if this conversation is selected //Update conversations list await fetchConversations ();
+//Return the sent message 
+}
+};
+/** * Mark messages as read */try {
+  const {
+  error 
+}= await supabase .from ('messages') .update ({
+  read: true 
+}) .eq ('conversation id', conversationId) .eq ('recipient id', user.id) .eq ('read', false);
+if (error) throw error;
+//Update active messages to show they've been read setActiveMessages (prev => prev.map (msg => msg.recipient id === user.id ? {
+  ...msg, read: true 
+}: msg) );
+//Update conversations to reflect read messages setConversations (prev => prev.map (conv => conv.id === conversationId ? {
+  ...conv, unread count: 0 
+}: conv) );
+// Recalculate unread count setUnreadCount (prev => {
+  const updatedConversations = conversations.map (conv => conv.id === conversationId ? {
+  ...conv, unread count: 0 
+}: conv);
+return updatedConversations.reduce ( (total, conv) => total + (conv.unread count || 0);
+0 
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  }
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

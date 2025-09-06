@@ -1,20 +1,42 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<<< HEAD:src/components/jobs/SuggestedJobs.tsx
 
+=======
+
+<<<<<<< HEAD
+    updateJobMatchStatus
+=======
+<<<<<<< HEAD
+    updateJobMatchStatus, 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { useAuth } from "@/hooks/useAuth"
 import { Loader2 } from 'lucide-react'import { Badge } from "@/components/ui/badge"
 import { useJobSuggestions } from "@/hooks/useJobSuggestions"
 import { JobMatchesCard } from "./JobMatchesCard"
 import { NoJobsCard } from "./NoJobsCard"
+<<<<<<< HEAD
 =======
     updateJobMatchStatus
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+<<<<<<< HEAD
+=======
+=======
+updateJobMatchStatus, 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { useAuth } from "@/hooks/useAuth",
 import { Loader2 } from 'lucide-react'
 import { Badge } from "@/components/ui/badge",
 import { useJobSuggestions } from "@/hooks/useJobSuggestions",
 import { JobMatchesCard } from "./JobMatchesCard",
 import { NoJobsCard } from "./NoJobsCard",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 interface SuggestedJobsProps {
@@ -26,12 +48,65 @@ interface SuggestedJobsProps {
 export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
 
 <<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+interface SuggestedJobsProps {
+  talentId?: string
+}
+export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+  const { user } = useAuth()
+  const currentTalentId = talentId |user?.id
+  const {
+    isLoading
+    updateJobMatchStatus
+    categorizedMatches: {
+      newMatches
+      viewedMatches
+      appliedMatches
+    }
+  } = useJobSuggestions(currentTalentId)
+  const handleApply = (matchId: string, jobId: string) => {
+    updateJobMatchStatus(matchId, 'applied');    // In a real app, this might redirect to application form or open a modal
+  }
+  const handleDecline = (matchId: string) => {
+    updateJobMatchStatus(matchId, 'declined')
+  }
+=======
+  const { user } = useAuth(),
+  const currentTalentId = talentId || user?.id,
+=======
+  const { user } = useAuth()
+  const currentTalentId = talentId || user?.id
+=======
+  const { user } = useAuth(),
+  const currentTalentId = talentId || user?.id,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const { 
     isLoading,
     updateJobMatchStatus, 
     categorizedMatches: { 
+<<<<<<< HEAD
 
 =======
+========
+updateJobMatchStatus,
+import { use_auth  } from '@/hooks / use_auth';
+import { Loader2 } from 'lucide-react'import { Badge  } from '@/components / ui / badge';
+import { useJobSuggestions  } from '@/hooks / useJobSuggestions';
+import { JobMatchesCard  } from './JobMatchesCard';
+import { NoJobsCard  } from './NoJobsCard';
+interface SuggestedJobsProps {
+  talent_id?: string;
+}
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/SuggestedJobs.tsx
 export /**
  * SuggestedJobs - Function description
  */
@@ -49,15 +124,24 @@ function SuggestedJobs() {
   } = useJobSuggestions (currentTalentId);
   const handle_apply = (match_id: string, job_id: string) =>: any {
     updateJobMatchStatus (match_id, 'applied');    // In a real app, this might redirect to application form or open a modal;
+<<<<<<<< HEAD:src/components/jobs/SuggestedJobs.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/SuggestedJobs.tsx
   }
   const handle_decline = (match_id: string) =>: any {
     updateJobMatchStatus (match_id, 'declined');
   }
+<<<<<<<< HEAD:src/components/jobs/SuggestedJobs.tsx
 >>>>>>>   const { 
     isLoading,
     updateJobMatchStatus, 
     categorizedMatches: { 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       newMatches,
       viewedMatches,
       appliedMatches ;
@@ -69,7 +153,12 @@ function SuggestedJobs() {
   const handleDecline = (matchId: string) => {
     updateJobMatchStatus(matchId, 'declined')
   }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       newMatches, 
       viewedMatches, 
       appliedMatches 
@@ -85,6 +174,7 @@ function SuggestedJobs() {
     updateJobMatchStatus(matchId, 'declined')
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -92,40 +182,71 @@ function SuggestedJobs() {
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   if (isLoading) {
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/SuggestedJobs.tsx
   // Check condition
 if ( {) {
   $2
 }
+<<<<<<<< HEAD:src/components/jobs/SuggestedJobs.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>>     return (
 
 
+========
+    return (
+      <div className="flex items - center justify - center p - 6">;
+        <Loader2 className="w - 6 h - 6 animate - spin text - primary" />;
+      </div>);
+  }
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/SuggestedJobs.tsx
     updateJobMatchStatus, ;
 import { useAuth } from "@/hooks/useAuth";
 import { Loader2 } from 'lucide-react'import { Badge } from "@/components/ui/badge";
 import { useJobSuggestions } from "@/hooks/useJobSuggestions";
 import { JobMatchesCard } from "./JobMatchesCard";
 import { NoJobsCard } from "./NoJobsCard";
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  if (isLoading) {
+    return (
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <div className="flex items-center justify-center p-6">
         <Loader2 className="w-6 h-6 animate-spin text-primary" />
       </div>
     )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+  }
+  if (newMatches.length === 0 && viewedMatches.length === 0 && appliedMatches.length === 0) {
+    return <NoJobsCard />
+<<<<<<< HEAD
+  }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { useAuth } from "@/hooks/useAuth",;
 import { Loader2 } from 'lucide-react';
 import { Badge } from "@/components/ui/badge",;
 import { useJobSuggestions } from "@/hooks/useJobSuggestions",;
 import { JobMatchesCard } from "./JobMatchesCard",;
 import { NoJobsCard } from "./NoJobsCard",;
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 interface SuggestedJobsProps {;
   talentId?: string;
 }
-
 export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
   const { user } = useAuth();
   const currentTalentId = talentId || user?.id;
@@ -138,28 +259,54 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
       appliedMatches ;
     } ;
   } = useJobSuggestions(currentTalentId);
-
   const handleApply = (matchId: string, jobId: string) => {;
     updateJobMatchStatus(matchId, 'applied');    // In a real app, this might redirect to application form or open a modal;
+=======
+interface SuggestedJobsProps {;
+  talentId?: string;
+}
+;
+export function SuggestedJobs({ talentId }: SuggestedJobsProps) {;
+  const { user } = useAuth(),;
+  const currentTalentId = talentId || user?.id,;
+  const {;
+    isLoading,;
+    updateJobMatchStatus,;
+    categorizedMatches: {;
+      newMatches,;
+      viewedMatches,;
+      appliedMatches;
+    } ;
+  } = useJobSuggestions(currentTalentId),;
+  const handleApply = (matchId: string, jobId: string) => {;
+    updateJobMatchStatus(matchId, 'applied'),;
+    // In a real app, this might redirect to application form or open a modal;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   };
-
   const handleDecline = (matchId: string) => {;
     updateJobMatchStatus(matchId, 'declined');
   };
   if (isLoading) {;
+<<<<<<< HEAD
     return (
+=======
+    return (;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <div className="flex items-center justify-center p-6">;
         <Loader2 className="w-6 h-6 animate-spin text-primary" />;
       </div>;
     );
   }
-
+<<<<<<< HEAD
   if (newMatches && newMatches.length === 0 && viewedMatches && viewedMatches.length === 0 && appliedMatches && appliedMatches.length === 0) {;
     return <NoJobsCard />;
 <<<<<<< HEAD
 
   }
+<<<<<<<< HEAD:src/components/jobs/SuggestedJobs.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/SuggestedJobs.tsx
   return (
 =======
 >>>>>>>   }
@@ -168,6 +315,22 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     <div className="space-y-6">
       {/* New Matches Section */}
+<<<<<<<< HEAD:src/components/jobs/SuggestedJobs.tsx
+=======
+;
+  if (newMatches.length === 0 && viewedMatches.length === 0 && appliedMatches.length === 0) {;
+    return <NoJobsCard />;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  }
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  return (
+    <div className="space-y-6">
+      {/* New Matches Section */}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       {newMatches.length > 0 && (
         <div className="space-y-4">
           <div className="flex items-center justify-between">
@@ -176,6 +339,7 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
               {newMatches.length} New
             </Badge>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           <div className="grid gap-4 md:grid-cols-2">
@@ -190,19 +354,74 @@ ursor/fix-website-loading-errors-and-merge-6662
     <div className="space-y-6">;
       {/* New Matches Section */}
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/SuggestedJobs.tsx
       {newMatches && newMatches.length > 0 && (;
+=======
+
+import { useAuth } from "@/hooks/useAuth",;
+import { Loader2 } from 'lucide-react';
+import { Badge } from "@/components/ui/badge",;
+import { useJobSuggestions } from "@/hooks/useJobSuggestions",;
+import { JobMatchesCard } from "./JobMatchesCard",;
+import { NoJobsCard } from "./NoJobsCard",;
+;
+interface SuggestedJobsProps {;
+  talentId?:string,;
+}
+;
+export function SuggestedJobs({ talentId } SuggestedJobsProps) {;
+  const { user } = useAuth(),;
+  const currentTalentId = talentId || user?.id,;
+  const { ;
+    isLoading,;
+    updateJobMatchStatus, ;
+    categorizedMatches:{ ;
+      newMatches, ;
+      viewedMatches, ;
+      appliedMatches ;
+    } ;
+  } = useJobSuggestions(currentTalentId),;
+;
+  const handleApply = (matchId:string, jobId:string) => {;
+    updateJobMatchStatus(matchId, 'applied'),;
+    // In a real app, this might redirect to application form or open a modal;
+  },;
+;
+  const handleDecline = (matchId:string) => {;
+    updateJobMatchStatus(matchId, 'declined'),;
+  },;
+;
+  if (isLoading) {;
+    return (;
+      <div className="flex items-center justify-center p-6">;
+        <Loader2 className="w-6 h-6 animate-spin text-primary" />;
+      </div>;
+    ),;
+  }
+;
+  if (newMatches.length === 0 && viewedMatches.length === 0 && appliedMatches.length === 0) {;
+    return <NoJobsCard />,;
+  }
+  ;
+  return (;
+    <div className="space-y-6">;
+      {/* New Matches Section */}
+      {newMatches.length > 0 && (;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <div className="space-y-4">;
           <div className="flex items-center justify-between">;
             <h3 className="text-lg font-medium">New Job Matches</h3>;
             <Badge className="bg-green-100 text-green-800 border-green-300">;
+<<<<<<< HEAD
               {newMatches && newMatches.length} New;
             </Badge>;
           </div>;
-
           <div className="grid gap-4 md:grid-cols-2">;
             {newMatches && newMatches.map(match => (;
 >>>>>>>               <JobMatchesCard
                 key = {match && match.id,}
+<<<<<<<< HEAD:src/components/jobs/SuggestedJobs.tsx
 
                 match = {match,}
                 onApply = {handleApply,}
@@ -210,12 +429,29 @@ ursor/fix-website-loading-errors-and-merge-6662
           
 >>>>>>>           <div className="grid gap-4 md:grid-cols-2">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+          <div className="grid gap-4 md:grid-cols-2">
+            {newMatches.map(match => (
+              <JobMatchesCard
+                key = {match.id,}
+                match = {match,}
+                onApply = {handleApply,}
+                onDecline = {handleDecline,}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+          
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+          <div className="grid gap-4 md:grid-cols-2">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             {newMatches.map(match => (
               <JobMatchesCard 
                 key={match.id} 
                 match={match} 
                 onApply={handleApply} 
                 onDecline={handleDecline} 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -224,10 +460,34 @@ ursor/fix-website-loading-errors-and-merge-6662
               />
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>             ))}
+========
+                match = {match,}
+                onApply = {handleApply,}
+                onDecline = {handleDecline,}
+              />;
+            ))}
+=======
+              {newMatches.length} New;
+            </Badge>;
+          </div>;
+          ;
+          <div className="grid gap-4 md:grid-cols-2">;
+            {newMatches.map(match => (;
+              <JobMatchesCard ;
+                key={match.id} ;
+                match={match} ;
+                onApply={handleApply} ;
+                onDecline={handleDecline} ;
+              />;            ))}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/SuggestedJobs.tsx
           </div>;
         </div>;
       )}
+      ;
+      {/* Previously Viewed Section */}
 <<<<<<< HEAD
+<<<<<<<< HEAD:src/components/jobs/SuggestedJobs.tsx
 
 ;
 
@@ -239,10 +499,32 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       {/* Previously Viewed Section */}
 >>>>>>>       {viewedMatches.length > 0 && (
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+              />
+            ))}
+          </div>
+        </div>
+      )}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+      
+=======
+;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      {/* Previously Viewed Section */}
+      {viewedMatches.length > 0 && (
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <div className="space-y-4">
           <div className="flex items-center justify-between">
             <h3 className="text-lg font-medium">Previously Viewed</h3>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           <div className="grid gap-4 md:grid-cols-2">
@@ -258,12 +540,29 @@ ursor/fix-website-loading-errors-and-merge-6662
           
 >>>>>>>           <div className="grid gap-4 md:grid-cols-2">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+          <div className="grid gap-4 md:grid-cols-2">
+            {viewedMatches.map(match => (
+              <JobMatchesCard
+                key = {match.id,}
+                match = {match,}
+                onApply = {handleApply,}
+                onDecline = {handleDecline,}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+          
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+          <div className="grid gap-4 md:grid-cols-2">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             {viewedMatches.map(match => (
               <JobMatchesCard 
                 key={match.id} 
                 match={match} 
                 onApply={handleApply} 
                 onDecline={handleDecline} 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -272,10 +571,44 @@ ursor/fix-website-loading-errors-and-merge-6662
               />
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>             ))}
+========
+      {viewedMatches && viewedMatches.length > 0 && (;
+=======
+      {viewedMatches.length > 0 && (;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+        <div className="space-y-4">;
+          <div className="flex items-center justify-between">;
+            <h3 className="text-lg font-medium">Previously Viewed</h3>;
+          </div>;
+<<<<<<< HEAD
+          <div className="grid gap-4 md:grid-cols-2">;
+            {viewedMatches && viewedMatches.map(match => (;
+              <JobMatchesCard
+                key = {match && match.id,}
+                match = {match,}
+                onApply = {handleApply,}
+                onDecline = {handleDecline,}
+              />;
+            ))}
+=======
+          ;
+          <div className="grid gap-4 md:grid-cols-2">;
+            {viewedMatches.map(match => (;
+              <JobMatchesCard ;
+                key={match.id} ;
+                match={match} ;
+                onApply={handleApply} ;
+                onDecline={handleDecline} ;
+              />;            ))}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/SuggestedJobs.tsx
           </div>;
         </div>;
       )}
+      ;
+      {/* Applied Jobs Section */}
 <<<<<<< HEAD
+<<<<<<<< HEAD:src/components/jobs/SuggestedJobs.tsx
 
 ;
 
@@ -287,10 +620,32 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       {/* Applied Jobs Section */}
 >>>>>>>       {appliedMatches.length > 0 && (
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+              />
+            ))}
+          </div>
+        </div>
+      )}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+      
+=======
+;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      {/* Applied Jobs Section */}
+      {appliedMatches.length > 0 && (
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <div className="space-y-4">
           <div className="flex items-center justify-between">
             <h3 className="text-lg font-medium">Applied Jobs</h3>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -298,27 +653,48 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                 key = {match.id,}
       {/* Applied Jobs Section */}
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/SuggestedJobs.tsx
       {appliedMatches && appliedMatches.length > 0 && (;
+=======
+      {appliedMatches.length > 0 && (;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <div className="space-y-4">;
           <div className="flex items-center justify-between">;
             <h3 className="text-lg font-medium">Applied Jobs</h3>;
           </div>;
-
+<<<<<<< HEAD
           <div className="grid gap-4 md:grid-cols-2">;
             {appliedMatches && appliedMatches.map(match => (;
               <JobMatchesCard
                 key = {match && match.id,}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+          <div className="grid gap-4 md:grid-cols-2">
+            {appliedMatches.map(match => (
+<<<<<<< HEAD
+              <JobMatchesCard
+=======
+              <JobMatchesCard 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                key = {match.id,}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 match = {match,}
                 onApply = {handleApply,}
                 onDecline = {handleDecline,}
                 showApplied = {true,}
+<<<<<<< HEAD
+<<<<<<<< HEAD:src/components/jobs/SuggestedJobs.tsx
               />
 <<<<<<< HEAD
 
 =======
           
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+              />
+=======
+          
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <div className="grid gap-4 md:grid-cols-2">
             {appliedMatches.map(match => (
               <JobMatchesCard 
@@ -329,17 +705,28 @@ ursor/fix-website-loading-errors-and-merge-6662
                 showApplied={true}
               />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             ))}
           </div>
         </div>
       )}
+<<<<<<< HEAD
 
 =======
 >>>>>>>             ))}
           </div>
         </div>
       )}
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     </div>
   )
 }= useJobSuggestions (currentTalentId)
@@ -394,18 +781,115 @@ if (isLoading) {
 }</div> </div>)
 }</div>)
 }'"}
+<<<<<<< HEAD
 >>>>>>> 
 ursor/fix-website-loading-errors-and-merge-6662
+========
+=======
+          ;
+          <div className="grid gap-4 md:grid-cols-2">;
+            {appliedMatches.map(match => (;
+              <JobMatchesCard ;
+                key={match.id} ;
+                match={match} ;
+                onApply={handleApply} ;                onDecline={handleDecline}
+                showApplied={true}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+              />;
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/SuggestedJobs.tsx
             ))}
           </div>;
         </div>;
       )}
+<<<<<<<< HEAD:src/components/jobs/SuggestedJobs.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/SuggestedJobs.tsx
     </div>;
+<<<<<<< HEAD
   );
+<<<<<<<< HEAD:src/components/jobs/SuggestedJobs.tsx
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+========
+=======
+  ),; interface SuggestedJobsProps {;
+  talentId?: string ;
+}export function SuggestedJobs ({;
+  talentId ;
+}: SuggestedJobsProps) {;
+  const {;
+  user ;
+}= useAuth ();
+const currentTalentId = talentId || user?.id;
+const {;
+  isLoading;
+updateJobMatchStatus;
+categorizedMatches: {;
+  newMatches;
+viewedMatches;
+appliedMatches ;
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+}= useJobSuggestions (currentTalentId);
+const handleApply = (matchId: string, jobId: string) => {;
+  updateJobMatchStatus (matchId,  'applied');
+//In a real app, this might redirect to application form or open a modal ;
+};
+const handleDecline = (matchId: string) => {';
+  updateJobMatchStatus (matchId, 'declined') ;
+};
+if (isLoading) {;
+  return (<div className="flex items-center justify-center p-6" > <Loader2 className="w-6 h-6 animate-spin text-primary" /> </div>) ;
+<<<<<<< HEAD
+}if (newMatches && newMatches.length === 0 && viewedMatches && viewedMatches.length === 0 && appliedMatches && appliedMatches.length === 0) {;
+=======
+}if (newMatches.length === 0 && viewedMatches.length === 0 && appliedMatches.length === 0) {;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  return <NoJobsCard /> ";
+}return (<div className="space-y-6" > {;
+  /* New Matches Section */ ;
+}{";
+<<<<<<< HEAD
+  newMatches && newMatches.length > 0 && (<div className="space-y-4" > <div className="flex items-center justify-between" > <h3 className="text-lg font-medium" >New Job Matches</h3> <Badge className="bg-green-100 text-green-800 border-green-300" > newMatches && newMatches.length ;
+}New </Badge> </div> <JobMatchesCardkey= {
+  match && match.id 
+}match= {
+  match 
+}onApply= {
+  handleApply 
+}onDecline= {
+  handleDecline 
+}/>) ) ;
+}</div> </div>) ";
+}</div> <div className="grid gap-4 md:grid-cols-2" > {;
+  viewedMatches && viewedMatches.map (match => (<JobMatchesCardkey= {
+  match && match.id 
+}match= {
+  match 
+}onApply= {
+  handleApply 
+}onDecline= {
+  handleDecline 
+}/>) ) ;
+}</div> </div>) ";
+}</div> <div className="grid gap-4 md:grid-cols-2" > {;
+  appliedMatches && appliedMatches.map (match => (<JobMatchesCardkey= {
+  match && match.id 
+}match= {
+  match 
+}onApply= {
+  handleApply 
+}onDecline= {
+  handleDecline 
+}showApplied= {
+  true 
+}/>) ) ;
+}</div> </div>) ;
+}</div>) ;
+}'"}
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/SuggestedJobs.tsx
   // Check condition
 if ( {) {
   $2
@@ -525,6 +1009,7 @@ if ( {) {
 }</div> </div>);
 }</div>);
 }'"}
+<<<<<<<< HEAD:src/components/jobs/SuggestedJobs.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> }
 ;
@@ -532,3 +1017,56 @@ if ( {) {
 >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+=======
+  newMatches.length > 0 && (<div className="space-y-4" > <div className="flex items-center justify-between" > <h3 className="text-lg font-medium" >New Job Matches</h3> <Badge className="bg-green-100 text-green-800 border-green-300" > newMatches.length ;
+}New </Badge> </div> <JobMatchesCard key= {;
+  match.id ;
+}match= {;
+  match ;
+}onApply= {;
+  handleApply ;
+}onDecline= {;
+  handleDecline ;
+}/>) ) ;
+}</div> </div>) ";
+}</div> <div className="grid gap-4 md:grid-cols-2" > {;
+  viewedMatches.map (match => (<JobMatchesCard key= {;
+  match.id ;
+}match= {;
+  match ;
+}onApply= {;
+  handleApply ;
+}onDecline= {;
+  handleDecline ;
+}/>) ) ;
+}</div> </div>) ";
+}</div> <div className="grid gap-4 md:grid-cols-2" > {;
+  appliedMatches.map (match => (<JobMatchesCard key= {;
+  match.id ;
+}match= {;
+  match ;
+}onApply= {;
+  handleApply ;
+}onDecline= {;
+  handleDecline ;
+}showApplied= {;
+  true ;
+}/>) ) ;
+}</div> </div>) ;
+}</div>) ;
+}'"
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/SuggestedJobs.tsx
+=======
+=======
+    </div>;
+  );
+}
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

@@ -1,18 +1,32 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
 import { Switch  } from '@/components/ui/switch';
 import { Button  } from '@/components/ui/button';
 import { Label  } from '@/components/ui/label';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+}
+}
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React, { useState } from 'react',
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',
 import { Switch } from '@/components/ui/switch',
 import { Button } from '@/components/ui/button',
 import { Label } from '@/components/ui/label',
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import { ShieldAlert, Info } from 'lucide-react'
@@ -23,6 +37,13 @@ import {
 >>>>>>> import { ShieldAlert, Info } from 'lucide-react'
 import {logErrorToProduction} from '@/utils/productionLogger';
 import {
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+import { ShieldAlert, Info } from 'lucide-react'
+import {logErrorToProduction} from '@/utils/productionLogger';
+import {
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   Accordion;
   AccordionContent;
   AccordionItem;
@@ -37,7 +58,49 @@ export function FraudDetectionSettings() {
   const [aiAnalysisEnabled, setAiAnalysisEnabled] = useState(true);
   const [isSaving, setIsSaving] = useState(false);
   const handleSavePreferences = null;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger} from "@/components/ui/accordion",
+import { toast } from '@/hooks/use-toast',
+import { supabase } from '@/integrations/supabase/client',
+import { useAuth } from '@/hooks/useAuth',
+export function FraudDetectionSettings() {
+  const { user } = useAuth(),
+  const [messageScanningEnabled, setMessageScanningEnabled] = useState(true),
+  const [activityMonitoringEnabled, setActivityMonitoringEnabled] = useState(true),
+  const [aiAnalysisEnabled, setAiAnalysisEnabled] = useState(true),
+  const [isSaving, setIsSaving] = useState(false),
+  
+  const handleSavePreferences = async () => {
+    if (!user?.id) return,
+    
+    setIsSaving(true),
+    try {
+      // In a real implementation, we would save these preferences to the database
+      // For now, we'll just simulate a successful save
+      await new Promise(resolve => setTimeout(resolve, 1000)),
+      
+      toast({
+        title: "Settings saved",
+        description: "Your fraud detection preferences have been updated."})
+    } catch (error) {
+      logErrorToProduction('Error saving preferences:', { data: error }),
+      toast({
+        title: "Error",
+        description: "Failed to save your preferences. Please try again.",
+        variant: "destructive"})
+    } finally {
+      setIsSaving(false)
+    }
+  },
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
     <Card className="mb-8">
       <CardHeader className="space-y-1">
@@ -143,11 +206,17 @@ export function FraudDetectionSettings() {
     </Card>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 }
 }
 >>>>>>> 
+=======
+}
+}
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React, { useState } from 'react',;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',;
 import { Switch } from '@/components/ui/switch',;
@@ -291,7 +360,15 @@ export function FraudDetectionSettings() {;
   );
 }
 ;
+<<<<<<< HEAD
 
 >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

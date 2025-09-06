@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import { CategoryCard } from "@/components/CategoryCard";
@@ -9,11 +10,24 @@ import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'
 
 
 
+=======
+<<<<<<< HEAD
+import { CategoryCard } from "@/components/CategoryCard";
+import { GradientHeading } from "@/components/GradientHeading";
+import ErrorBoundary from "@/components/GlobalErrorBoundary", // Import ErrorBoundary
+=======
+import { CategoryCard } from '@/components/CategoryCard'
+import { GradientHeading } from '@/components/GradientHeading'
+import ErrorBoundary from '@/components/GlobalErrorBoundary'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 // Reusing the categories array from CategoriesSection.tsx
 // Ideally, this would come from a shared data source or API
 
 const categories = [
   {
+<<<<<<< HEAD
 
 export default function AllCategoriesPage() {
   return (
@@ -96,12 +110,44 @@ const categories = [;
 
 export default function AllCategoriesPage() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    title: 'Services'
+    description: 'On-demand IT support, consulting, development, and more'
+    icon: <Briefcase className='w-10 h-10' />
+    link: '/services', // Link for the card itself
+  }
+  {
+    title: 'Talents'
+    description: 'Connect with AI experts, developers, and tech specialists'
+    icon: <Users className='w-10 h-10' />
+    link: '/talent', // Link for the card itself
+    color: undefined, // Let CategoryCard use default color
+  }
+  {
+    title: 'Equipment'
+    description: 'Rent or buy specialized hardware, servers, and devices'
+    icon: <HardDrive className='w-10 h-10' />
+    link: '/equipment', // Link for the card itself
+    color: undefined, // Let CategoryCard use default color
+  }
+  {
+    title: 'Innovation'
+    description: 'Discover cutting-edge solutions and tech breakthroughs'
+    icon: <Lightbulb className='w-10 h-10' />
+    link: '/innovation'
+    color: undefined, // Let CategoryCard use default color
+  }
+]
+
+export default function AllCategoriesPage() {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
-    <div className='min-h-screen bg-zion-blue'>;
-      <div className='container mx-auto px-4 py-12'>;
-        <div className='text-center mb-12'>;
+    <div className='min-h-screen bg-zion-blue'>
+      <div className='container mx-auto px-4 py-12'>
+        <div className='text-center mb-12'>
           <GradientHeading
             level='h1'
+<<<<<<< HEAD
 
 
             Explore our extensive range of AI services and products. Find;
@@ -120,17 +166,113 @@ export default function AllCategoriesPage() {;
             ))}
 
           </div>;
+=======
+            className='text-4xl md:text-5xl font-bold mb-4'
+          >
+            All Categories
+          </GradientHeading>
+          <p className='text-zion-slate-light text-lg max-w-3xl mx-auto'>
+            Explore our extensive range of AI services and products. Find
+            exactly what you're looking for to enhance your business or personal
+            projects.          </p>
+        </div>
+        <ErrorBoundary>
+          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6'>
+            {categories.map(category => (
+              <CategoryCard
+                key={category.id}
+                title={category.title}
+                description={category.description}
+                icon={category.icon}
+                href={category.href}
+              />
+            ))}
+          </div>
+        <ErrorBoundary>
+          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6'>
+            {categories.map(category => (          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {categories.map((category) => (
+              <CategoryCard
+=======
+import { CategoryCard } from "@/components/CategoryCard",
+import { GradientHeading } from "@/components/GradientHeading",
+import ErrorBoundary from "@/components/GlobalErrorBoundary", // Import ErrorBoundary
+import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
+          </p>
+        </div>
+
+        <ErrorBoundary>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {categories.map((category) => (
+              <CategoryCard
+import { CategoryCard } from "@/components/CategoryCard",;
+import { GradientHeading } from "@/components/GradientHeading",;
+import ErrorBoundary from "@/components/GlobalErrorBoundary", // Import ErrorBoundary;
+import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react';
+// Reusing the categories array from CategoriesSection.tsx;
+// Ideally, this would come from a shared data source or API;
+const categories = [;
+  {;
+    title: "Services",;
+    description: "On-demand IT support, consulting, development, and more",;
+    icon: <Briefcase className="w-10 h-10" />,;
+    link: "/services", // Link for the card itself;
+    color: undefined, // Let CategoryCard use default color;
+  },;
+  {;
+    title: "Talents",;
+    description: "Connect with AI experts, developers, and tech specialists",;
+    icon: <Users className="w-10 h-10" />,;
+    link: "/talent", // Link for the card itself;
+    color: undefined, // Let CategoryCard use default color;
+  },;
+  {;
+    title: "Equipment",;
+    description: "Rent or buy specialized hardware, servers, and devices",;
+    icon: <HardDrive className="w-10 h-10" />,;
+    link: "/equipment", // Link for the card itself;
+    color: undefined, // Let CategoryCard use default color;
+  },;
+  {;
+    title: "Innovation",;
+    description: "Discover cutting-edge solutions and tech breakthroughs",;
+    icon: <Lightbulb className="w-10 h-10" />,;
+    link: "/innovation",;
+    color: undefined, // Let CategoryCard use default color;
+  }];
+export default function AllCategoriesPage() {;
+  return (;
+    <div className="min-h-screen bg-zion-blue">;
+      <div className="container mx-auto px-4 py-12">;
+        <div className="text-center mb-12">;
+          <GradientHeading level="h1" className="text-4xl md:text-5xl font-bold mb-4">;
+            All Categories;
+          </GradientHeading>;
+          <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">;
+            Explore our extensive range of AI services and products.;
+            Find exactly what you're looking for to enhance your business or personal projects.;
+          </p>;
+        </div>;
         <ErrorBoundary>;
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">;
             {categories.map((category) => (;
               <CategoryCard;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 key={category.title}
                 title={category.title}
                 description={category.description}
                 icon={category.icon}
+<<<<<<< HEAD
 
 =======
 >>>>>>>                 key={category.title}
@@ -145,6 +287,37 @@ export default function AllCategoriesPage() {;
               />;
             ))}
 
+=======
+<<<<<<< HEAD
+            {categories.map((category,) => (
+              <CategoryCard
+                key = {category.title,}
+                title = {category.title,}
+                description = {category.description,}
+                icon = {category.icon,}
+                // The CategoryCard itself is a Link to its specific category page
+                // So we don't pass the category.link to a 'to' prop here directly
+                // The 'link' in the categories array above is used by CategoryCard's internal Link
+              />
+            ))}
+          </div>
+        </ErrorBoundary>
+      </div>;
+    </div>;
+  );
+};
+}
+<<<<<<< HEAD
+=======
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+                // The CategoryCard itself is a Link to its specific category page;
+                // So we don't pass the category.link to a 'to' prop here directly;
+                // The 'link' in the categories array above is used by CategoryCard's internal Link;
+              />;
+            ))}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </div>;
         </ErrorBoundary>;
       </div>;
@@ -153,9 +326,16 @@ export default function AllCategoriesPage() {;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

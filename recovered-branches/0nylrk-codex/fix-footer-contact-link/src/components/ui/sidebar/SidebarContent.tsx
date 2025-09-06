@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {cn} from "@/lib/utils";
@@ -36,6 +37,44 @@ export function SidebarContent(): any ({ className, children, ...props }: Sideba
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+import React from "react";
+<<<<<<< HEAD
+import { cn } from "@/lib/utils";
+=======
+import React from "react",
+import { cn } from "@/lib/utils",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+import {cn} from "@/lib/utils";
+=======
+import React from "react",
+import { cn } from "@/lib/utils",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+interface SidebarContentProps extends React.HTMLAttributes<HTMLDivElement> {
+  className?: string,
+  children?: React.ReactNode
+}
+export function SidebarContent({
+  className
+  children
+  ...props
+}: SidebarContentProps) {
+  return (
+    <div className={cn("flex-1 px-2 py-4", className)} {...props}>
+<<<<<<< HEAD
+      {children}
+    </div>
+<<<<<<< HEAD
+  );
+}
+=======
+  )
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React from "react",;
 import { cn } from "@/lib/utils",;
 interface SidebarContentProps extends React.HTMLAttributes<HTMLDivElement> {;
@@ -45,6 +84,7 @@ interface SidebarContentProps extends React.HTMLAttributes<HTMLDivElement> {;
 ;
 export function SidebarContent({ className, children, ...props }: SidebarContentProps) {;
   return (;
+<<<<<<< HEAD
 
     <div className={cn("flex-1 px-2 py-4", className)} {...props}>;
       {children}
@@ -65,3 +105,16 @@ export function SidebarContent({ className, children, ...props }: SidebarContent
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+    <div className={cn("flex-1 px-2 py-4", className)} {...props}>;
+      {children}
+    </div>;
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+}
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

@@ -1,7 +1,22 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
+=======
+import React from 'react'
+import { Heart } from 'lucide-react'
+import { cn } from "@/lib/utils",
+import { useToast } from "@/hooks/use-toast";
+import { useRouter } from 'next/router';
+interface TalentCardSaveButtonProps {
+  profileId: string;
+  profileName: string;
+  isSaved: boolean;
+  onToggleSave?: (id: string, isSaved: boolean) => void;
+  isAuthenticated: boolean
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export function TalentCardSaveButton({
 
   profileId
@@ -26,7 +41,14 @@ export function TalentCardSaveButton({
       const returnTo = encodeURIComponent(router.asPath)
       router.push(`/auth/login?returnTo=${returnTo}`)
       return
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React from "react",
 import { Heart } from 'lucide-react'
 import { cn } from "@/lib/utils",
@@ -41,10 +63,17 @@ interface TalentCardSaveButtonProps {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function TalentCardSaveButton({
 =======
 xport function TalentCardSaveButton({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export function TalentCardSaveButton({
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   profileId,
   profileName,
   isSaved,
@@ -52,8 +81,13 @@ xport function TalentCardSaveButton({
   isAuthenticated
 }: TalentCardSaveButtonProps) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const { toast } = useToast()
   const router = useRouter()
   // Using router.asPath for current path
@@ -69,7 +103,12 @@ xport function TalentCardSaveButton({
       })
       const returnTo = encodeURIComponent(router.asPath)
       router.push(`/auth/login?returnTo=${returnTo}`)
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const { toast } = useToast(),
   const router = useRouter(),
   // Using router.asPath for current path
@@ -124,21 +163,37 @@ export function TalentCardSaveButton({;
       const returnTo = encodeURIComponent(router.asPath),;
       router.push(`/auth/login?returnTo=${returnTo}`),;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       return;
 
 =======
 >>>>>>>       return;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+      return;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     }
     setLocalIsSaved(!localIsSaved)
     if (onToggleSave) {
       onToggleSave(profileId, !localIsSaved)
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     toast({
       title: localIsSaved ? 'Removed from favorites' : 'Added to favorites'
       description: localIsSaved
@@ -148,6 +203,7 @@ export function TalentCardSaveButton({;
     })
   }
     >
+<<<<<<< HEAD
   isAuthenticated: boolean;
 export function TalentCardSaveButton(): any ({;
   profileId,;
@@ -192,29 +248,51 @@ export function TalentCardSaveButton(): any ({;
 
     >;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <Heart
         className={cn(
           'h-4 w-4 transition-colors'
           localIsSaved ? 'fill-red-500 text-red-500' : 'text-zion-slate'
+<<<<<<< HEAD
 
         )}      />;
     </button>;
   );
 
+=======
+        )}      />
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
     </button>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }variant: "default"
 })
 }
 }/> </button>)
 }"
 }
+<<<<<<< HEAD
     
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+}variant: "default" 
+}) 
+};
+}/> </button>) ;
+}";
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+    
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     toast({
       title: localIsSaved ? "Removed from favorites" : "Added to favorites",
       description: localIsSaved 
@@ -224,6 +302,7 @@ export function TalentCardSaveButton(): any ({;
     })
   },
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -271,22 +350,48 @@ if ( {) {
     }
     toast ({
       title: localIsSaved ? 'Removed from favorites' : 'Added to favorites',
+=======
+  return (
+    <button 
+      className="absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-blue-light/30 transition-colors"
+      onClick={handleSaveToggle}
+      aria-label={localIsSaved ? "Remove from favorites" : "Save to favorites"}
+    >
+      <Heart 
+        className={cn(
+          "h-4 w-4 transition-colors", 
+          localIsSaved ? "fill-red-500 text-red-500" : "text-zion-slate"
+        )} 
+      />
+    </button>
+  )
+;
+    toast({;
+      title: localIsSaved ? "Removed from favorites" : "Added to favorites",;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       description: localIsSaved;
-        ? `${profile_name} has been removed from your favorites`;
-        : `${profile_name} has been added to your favorites`,
-      variant: 'default',
+        ? `${profileName} has been removed from your favorites`;
+        : `${profileName} has been added to your favorites`,;
+      variant: "default";
     });
-  }
+  };
+  return (;
+    <button;
+      className="absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-blue-light/30 transition-colors";
+      onClick={handleSaveToggle}
+      aria-label={localIsSaved ? "Remove from favorites" : "Save to favorites"}
     >;
       <Heart;
-        className={cn (
-          'h - 4 w - 4 transition - colors',
-          localIsSaved ? 'fill - red - 500 text - red - 500' : 'text - zion - slate')}      />;
-    </button>);
-}variant: "default";
-});
+        className={cn(;
+          "h-4 w-4 transition-colors";
+          localIsSaved ? "fill-red-500 text-red-500" : "text-zion-slate";
+        )} ;
+      />;
+    </button>;
+  );
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -297,3 +402,9 @@ if ( {) {
 >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
 =======
@@ -20,6 +24,7 @@ export default function Index({ }: IndexProps) {
 
 
 export default function Index({ }: IndexProps) {
+<<<<<<< HEAD
 =======
 
 class ErrorBoundary extends React.Component {
@@ -53,11 +58,13 @@ interface IndexProps {;
 export default function Index(): any ({ }: IndexProps) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages.disabled_full/talent/index.tsx
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
-    <div>;
-      <h1>Index</h1>;
-      <p>This component is currently under development.</p>;
-    </div>;
+    <div>
+      <h1>Index</h1>
+      <p>This component is currently under development.</p>
+    </div>
   );
 
 <<<<<<< HEAD

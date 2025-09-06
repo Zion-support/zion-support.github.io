@@ -1,9 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React from 'react';
 interface TeamProps {
   // Add props here as needed
 }
+<<<<<<< HEAD
 
 import React from 'react';
 interface TeamProps {
@@ -13,6 +17,11 @@ interface TeamProps {
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+import React from 'react';
+interface TeamProps {
+  // Add props here as needed
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export default function Team({ }: TeamProps) {
   return (
     <div>
@@ -20,6 +29,7 @@ export default function Team({ }: TeamProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -29,3 +39,6 @@ export default function Team({ }: TeamProps) {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

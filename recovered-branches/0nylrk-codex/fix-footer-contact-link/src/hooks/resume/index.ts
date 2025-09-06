@@ -1,6 +1,23 @@
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/resume/index.ts
 
 
 <<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useState  } from 'react';
+import { Resume  } from '@/types/resume';
+import { useFetchResume  } from './useFetchResume';
+import { useResumeActions  } from './useResumeActions';
+import { useWorkExperience  } from './useWorkExperience';
+import { useEducation  } from './useEducation';
+import { useSkills  } from './useSkills';
+import { useCertifications  } from './useCertifications';
+import { useResumeList  } from './useResumeList';
+export function useResume() {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 import {useState} from 'react';
 import {Resume} from '@/types/resume';
@@ -12,9 +29,13 @@ import {useSkills} from './useSkills';
 import {useCertifications} from './useCertifications';
 import {useResumeList} from './useResumeList';
 export function useResume() {;
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const [resume, setResume] = useState<Resume | null>(null);
 
   const fetchResumeOperations = useFetchResume();
@@ -25,8 +46,13 @@ export function useResume() {;
   const certOperations = useCertifications();
   const resumeListOperations = useResumeList();
   // Determine overall loading state
+<<<<<<< HEAD
 
   const isLoading = 
+========
+<<<<<<< HEAD
+const isLoading = 
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/resume/index.ts
     fetchResumeOperations && fetchResumeOperations.isLoading || 
     resumeActions && resumeActions.isLoading || 
     workOperations && workOperations.isLoading || 
@@ -34,7 +60,6 @@ export function useResume() {;
     skillsOperations && skillsOperations.isLoading || 
     certOperations && certOperations.isLoading ||
     resumeListOperations && resumeListOperations.isLoading;
-  
   // Determine overall error state (use first non-null error)
   const error = 
     fetchResumeOperations && fetchResumeOperations.error || 
@@ -44,17 +69,42 @@ export function useResume() {;
     skillsOperations && skillsOperations.isLoading || 
     certOperations && certOperations.error ||
     resumeListOperations && resumeListOperations.error;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/resume/index.ts
   
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/resume/index.ts
   // Override the fetch resume function to update local state
   const fetchResume = async (resumeId?: string) => {
     const result = await fetchResumeOperations && fetchResumeOperations.fetchResume(resumeId);
+=======
+  const isLoading =
+    fetchResumeOperations.isLoading |
+    resumeActions.isLoading |
+    workOperations.isLoading |
+    educationOperations.isLoading |
+    skillsOperations.isLoading |
+    certOperations.isLoading |
+    resumeListOperations.isLoading;
+  // Determine overall error state (use first non-null error)
+  const error =
+    fetchResumeOperations.error |
+    resumeActions.error |
+    workOperations.error |
+    educationOperations.error |
+    skillsOperations.isLoading |
+    certOperations.error |
+    resumeListOperations.error;
+  // Override the fetch resume function to update local state
+  const fetchResume = async (resumeId?: string) => {
+    const result = await fetchResumeOperations.fetchResume(resumeId);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     if (result) {
       setResume(result)
     }
     return result
   }
-=======
+<<<<<<< HEAD
 import {useState} from 'react';
 import {Resume} from '@/types / resume';
 import {useFetchResume} from './useFetchResume';
@@ -110,44 +160,43 @@ if ( {) {
     return result;
   }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return {
     // State;
     is_loading;
     error;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/resume/index.ts
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/resume/index.ts
     resume: resume || fetchResumeOperations && fetchResumeOperations.resume;
     resumes: resumeListOperations && resumeListOperations.resumes;
-    
     // Basic resume operations
     fetchResume;
     createResume: resumeActions && resumeActions.createResume;
     updateBasicInfo: resumeActions && resumeActions.updateBasicInfo;
     setActiveResume: resumeActions && resumeActions.setActiveResume;
-    
     // Work experience operations
     addWorkExperience: workOperations && workOperations.addWorkExperience;
     updateWorkExperience: workOperations && workOperations.updateWorkExperience;
     deleteWorkExperience: workOperations && workOperations.deleteWorkExperience;
-    
     // Education operations
     addEducation: educationOperations && educationOperations.addEducation;
     updateEducation: educationOperations && educationOperations.updateEducation;
     deleteEducation: educationOperations && educationOperations.deleteEducation;
-    
     // Skills operations
     addSkill: skillsOperations && skillsOperations.addSkill;
     deleteSkill: skillsOperations && skillsOperations.deleteSkill;
-    
     // Certifications operations
     addCertification: certOperations && certOperations.addCertification;
     updateCertification: certOperations && certOperations.updateCertification,
     deleteCertification: certOperations && certOperations.deleteCertification
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/resume/index.ts
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/resume/index.ts
   }
 }
 // Export all hooks
-=======
 ;
     // Basic resume operations;
     fetch_resume;
@@ -176,8 +225,106 @@ if ( {) {
   }
 }
 // Export all hooks;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export * from './useFetchResume';
+=======
+
+import { useState } from 'react',;
+import { Resume } from '@/types/resume',;
+import { useFetchResume } from './useFetchResume',;
+import { useResumeActions } from './useResumeActions',;
+import { useWorkExperience } from './useWorkExperience',;
+import { useEducation } from './useEducation',;
+import { useSkills } from './useSkills',;
+import { useCertifications } from './useCertifications',;
+import { useResumeList } from './useResumeList',;
+;
+export function useResume() {;
+  const [resume, setResume] = useState<Resume | null>(null),;
+  ;
+  const fetchResumeOperations = useFetchResume(),;
+  const resumeActions = useResumeActions(),;
+  const workOperations = useWorkExperience(),;
+  const educationOperations = useEducation(),;
+  const skillsOperations = useSkills(),;
+  const certOperations = useCertifications(),;
+  const resumeListOperations = useResumeList(),;
+  ;
+  // Determine overall loading state;
+  const isLoading = ;
+    fetchResumeOperations.isLoading || ;
+    resumeActions.isLoading || ;
+    workOperations.isLoading || ;
+    educationOperations.isLoading || ;
+    skillsOperations.isLoading || ;
+    certOperations.isLoading ||;
+    resumeListOperations.isLoading,;
+  ;
+  // Determine overall error state (use first non-null error);
+  const error = ;
+    fetchResumeOperations.error || ;
+    resumeActions.error || ;
+    workOperations.error || ;
+    educationOperations.error || ;
+    skillsOperations.isLoading || ;
+    certOperations.error ||;
+    resumeListOperations.error,;
+  ;
+  // Override the fetch resume function to update local state;
+  const fetchResume = async (resumeId?:string) => {;
+    const result = await fetchResumeOperations.fetchResume(resumeId),;
+    if (result) {;
+      setResume(result),;
+    }
+    return result,;
+  },;
+  ;
+  return {;
+    // State;
+    isLoading,;
+    error,;
+    resume:resume || fetchResumeOperations.resume,;
+    resumes:resumeListOperations.resumes,;
+    ;
+    // Basic resume operations;
+    fetchResume,;
+    createResume:resumeActions.createResume,;
+    updateBasicInfo:resumeActions.updateBasicInfo,;
+    setActiveResume:resumeActions.setActiveResume,;
+    ;
+    // Work experience operations;
+    addWorkExperience:workOperations.addWorkExperience,;
+    updateWorkExperience:workOperations.updateWorkExperience,;
+    deleteWorkExperience:workOperations.deleteWorkExperience,;
+    ;
+    // Education operations;
+    addEducation:educationOperations.addEducation,;
+    updateEducation:educationOperations.updateEducation,;
+    deleteEducation:educationOperations.deleteEducation,;
+    ;
+    // Skills operations;
+    addSkill:skillsOperations.addSkill,;
+    deleteSkill:skillsOperations.deleteSkill,;
+    ;
+    // Certifications operations;
+    addCertification:certOperations.addCertification,;
+    updateCertification:certOperations.updateCertification,;
+    deleteCertification:certOperations.deleteCertification;
+  },;
+}
+;
+// Export all hooks;
+export * from './useFetchResume',;
+export * from './useResumeActions',;
+export * from './useWorkExperience',;
+export * from './useEducation',;
+export * from './useSkills',;
+export * from './useCertifications',;
+export * from './useResumeList',;
+export * from './useResumeUtils',; // Determine overall loading state const isLoading = fetchResumeOperations.isLoading || resumeActions.isLoading || workOperations.isLoading || educationOperations.isLoading || skillsOperations.isLoading || certOperations.isLoading || resumeListOperations.isLoading;
+// Determine overall error state (use first non-null error) const error = fetchResumeOperations.error || resumeActions.error || workOperations.error || educationOperations.error || skillsOperations.isLoading || certOperations.error || resumeListOperations.error;
+// Override the fetch resume function to update local state 
+}// Export all hooks export * from './useFetchResume';
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 export * from './useResumeActions';
 export * from './useWorkExperience';
 export * from './use_education';
@@ -187,6 +334,7 @@ export * from './useResumeList';
 export * from './useResumeUtils';
 
 <<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/resume/index.ts
 =======
 
 ;
@@ -195,6 +343,50 @@ export * from './useResumeUtils';
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+  return {
+    // State
+    isLoading;
+    error;
+    resume: resume |fetchResumeOperations.resume;
+    resumes: resumeListOperations.resumes;
+    // Basic resume operations
+    fetchResume;
+    createResume: resumeActions.createResume;
+    updateBasicInfo: resumeActions.updateBasicInfo;
+    setActiveResume: resumeActions.setActiveResume;
+    // Work experience operations
+    addWorkExperience: workOperations.addWorkExperience;
+    updateWorkExperience: workOperations.updateWorkExperience;
+    deleteWorkExperience: workOperations.deleteWorkExperience;
+    // Education operations
+    addEducation: educationOperations.addEducation;
+    updateEducation: educationOperations.updateEducation;
+    deleteEducation: educationOperations.deleteEducation;
+    // Skills operations
+    addSkill: skillsOperations.addSkill;
+    deleteSkill: skillsOperations.deleteSkill;
+    // Certifications operations
+    addCertification: certOperations.addCertification;
+    updateCertification: certOperations.updateCertification
+    deleteCertification: certOperations.deleteCertification
+  }
+}
+// Export all hooks
+export * from './useFetchResume';
+export * from './useResumeActions';
+export * from './useWorkExperience';
+export * from './useEducation';
+export * from './useSkills';
+export * from './useCertifications';
+export * from './useResumeList';
+export * from './useResumeUtils';
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { useState } from 'react',;
 import { Resume } from '@/types/resume',;
 import { useFetchResume } from './useFetchResume',;
@@ -277,6 +469,7 @@ export * from './useSkills',;
 export * from './useCertifications',;
 export * from './useResumeList';
 export * from './useResumeUtils';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -284,3 +477,15 @@ export * from './useResumeUtils';
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+;
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/resume/index.ts
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

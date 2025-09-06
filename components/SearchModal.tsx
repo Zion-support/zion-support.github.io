@@ -1,26 +1,35 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React, { useState, useEffect, useRef } from './react';
 import { Search, X, ArrowRight, Clock  } from './lucide-react';
 import Link from './next / link';
 ;
+<<<<<<< HEAD
 
-interface SearchResult {
 =======
-
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+interface SearchResult {
 interface SearchResult {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   title: string;
   description: string;
   url: string;
   category: string;
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 interface SearchModalProps {
   is_open: boolean;
   on_close: () => void;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 const search_data: SearchResult[] = [;
   // Services;
   {
@@ -47,7 +56,10 @@ const search_data: SearchResult[] = [;
     url: "/cloud - solutions",
     category: "Services",
   },
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   {
     title: "Cybersecurity"
     description: "Security audits, penetration testing, and compliance"
@@ -55,7 +67,10 @@ const search_data: SearchResult[] = [;
     category: "Services"
   }
   {
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     title: "Blockchain Solutions",
     description: "Smart contracts, DeFi, and blockchain development",
     url: "/blockchain - services",
@@ -106,7 +121,10 @@ const search_data: SearchResult[] = [;
     category: "Industries",
   },
   // Company;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   {
     title: "About Us"
     description: "Learn about Zion Tech Group and our mission"
@@ -138,15 +156,20 @@ const search_data: SearchResult[] = [;
     category: "Company"
   }
 ];
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
+=======
+<<<<<<< HEAD
+export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 interface SearchModalProps {;
   isOpen: boolean;
   onClose: () => void;
 }
-
 const searchData: SearchResult[] = [;
   // Services;
   {;
@@ -185,7 +208,6 @@ const searchData: SearchResult[] = [;
     url: "/blockchain-services",;
     category: "Services",;
   },;
-
   // Solutions;
   {;
     title: "Digital Transformation",;
@@ -205,7 +227,6 @@ const searchData: SearchResult[] = [;
     url: "/startup-solutions",;
     category: "Solutions",;
   },;
-
   // Industries;
   {;
     title: "Healthcare",;
@@ -231,7 +252,6 @@ const searchData: SearchResult[] = [;
     url: "/industries/manufacturing",;
     category: "Industries",;
   },;
-
   // Company;
   {;
     title: "About Us",;
@@ -264,13 +284,25 @@ const searchData: SearchResult[] = [;
     category: "Company",;
   },;
 ];
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+  useEffect(() => {;
+    if (isOpen && inputRef && inputRef.current) {;
+      inputRef && inputRef.current.focus();
+=======
+=======
+
+export default function SearchModal({ isOpen, onClose }: SearchModalProps) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<SearchResult[]>([]);
   const [recentSearches, setRecentSearches] = useState<string[]>([]);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
+<<<<<<< HEAD
 
 
   useEffect(() => {;
@@ -279,6 +311,14 @@ const searchData: SearchResult[] = [;
     }
   }, [isOpen]);
 
+=======
+  useEffect(() => {
+    if (isOpen && inputRef.current) {
+      inputRef.current.focus();
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+    }
+  }, [isOpen]);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   useEffect(() => {;
     // Load recent searches from localStorage;
     const saved = localStorage && localStorage.getItem("recent-searches");
@@ -286,7 +326,6 @@ const searchData: SearchResult[] = [;
       setRecentSearches(JSON && JSON.parse(saved));
     }
   }, []);
-
   useEffect(() => {;
     if (query && query.trim()) {;
       const filtered = searchData && searchData.filter(;
@@ -294,12 +333,14 @@ const searchData: SearchResult[] = [;
           item && item.title.toLowerCase().includes(query && query.toLowerCase()) ||;
           item && item.description.toLowerCase().includes(query && query.toLowerCase()) ||;
           item && item.category.toLowerCase().includes(query && query.toLowerCase()),;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       );
       setResults(filtered);
     } else {;
       setResults([]);
-=======
 ;
 export default /**
  * SearchModal - Function description
@@ -344,15 +385,19 @@ if ( {) {
       set_results (filtered);
     } else {
       set_results ([]);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
     setSelectedIndex (0);
   }, [query]);
+<<<<<<< HEAD
 
 
   const handleKeyDown = (e: React && React.KeyboardEvent) => {;
     if (e && e.key === "Escape") {;
 
+=======
+  const handleKeyDown = (e: React && React.KeyboardEvent) => {;
+    if (e && e.key === "Escape") {;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       onClose();
     } else if (e && e.key === "ArrowDown") {;
       e && e.preventDefault();
@@ -363,9 +408,11 @@ if ( {) {
     } else if (e && e.key === "Enter" && results[selectedIndex]) {;
       handleResultClick(results[selectedIndex]);
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   };
-
   const handleResultClick = (result: SearchResult) => {;
     // Add to recent searches;
     const newRecent = [;
@@ -374,13 +421,14 @@ if ( {) {
     ].slice(0, 5);
     setRecentSearches(newRecent);
     localStorage && localStorage.setItem("recent-searches", JSON && JSON.stringify(newRecent));
-
     // Navigate to result;
     window && window.location.href = result && result.url;
   };
-
   const handleRecentClick = (search: string) => {;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     setQuery(search);
   }
   if (!isOpen) return null;
@@ -391,10 +439,14 @@ if ( {) {
         <div
           className="fixed inset-0 bg-black bg-opacity-50 transition-opacity"
           onClick={onClose}
+<<<<<<< HEAD
 
         />;
 
 
+=======
+        />;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {/* Modal */}
         <div className="relative w-full max-w-2xl bg-white rounded-lg shadow-xl">;
           {/* Search Input */}
@@ -411,13 +463,19 @@ if ( {) {
             />;
             <button
               onClick={onClose}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               className="ml-3 p-1 hover:bg-gray-100 rounded">;
               <X className="w-5 h-5" />;
             </button>;
           </div>;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           {/* Results */}
           <div className="max-h-96 overflow-y-auto">;
             {query && query.trim() ? (;
@@ -425,7 +483,6 @@ if ( {) {
                 <div className="p-2">;
                   {results && results.map((result, index) => (;
                     <div
-=======
 ;
   const handleKeyDown = (e: React.KeyboardEvent) =>: any {
     // Check condition
@@ -510,15 +567,17 @@ if (return null) {
                 <div className="p - 2">;
                   {results.map ((result, index) => (
                     <div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       key={index}
                       className={`p - 3 rounded - lg cursor - pointer transition - colors ${
                         index === selected_index;
                           ? "bg - blue - 50 border border - blue - 200";
                           : "hover:bg - gray - 50";
                       }`}
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <div>;
                   <div className="text-sm text-gray-500 mb-3">;
                     Popular Searches;
@@ -530,7 +589,10 @@ if (return null) {
                       "Cybersecurity",;
                       "Digital Transformation",;
                     ].map((term) => (;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       <button
                         key={term}
                         onClick={() => setQuery(term)}
@@ -548,7 +610,6 @@ if (return null) {
       </div>;
     </div>;
   );
-=======
                       on_click={() => handleResultClick (result)}
                     >;
                       <div className="flex items - start justify - between">;
@@ -617,5 +678,4 @@ if (return null) {
         </div>;
       </div>;
     </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

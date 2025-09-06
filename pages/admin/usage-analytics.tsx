@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -9,6 +10,15 @@
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React, { useCallback, useEffect, useMemo, useState } from 'react',;
 import Head from 'next/head',;
 import EnhancedLayout from '../../components/layout/EnhancedLayout',;
@@ -21,6 +31,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   if ('redirect' in result) return result,
   return result
 },
+<<<<<<< HEAD
 
 type Datum = { label: string, value: number },
 
@@ -48,21 +59,66 @@ function PieChart({ data, size = 160 }: { data: Datum[], size?: number }) {
     <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`}>{slices}</svg>
   )
 <<<<<<< HEAD
-
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+
+type Datum = { label: string, value: number },
+
+function PieChart({ data, size = 160 }: { data: Datum[], size?: number }) {
+  const total = Math.max(1, data.reduce((s, d) => s + d.value, 0)),
+  let acc = 0,
+  const radius = size / 2,
+  const center = radius,
+  const colors = ['#3b82f6#10b981#f59e0b#8b5cf6#ef4444#06b6d4'],
+
+  const slices = data.map((d, i) => {
+    const start = (acc / total) * 2 * Math.PI,
+    acc += d.value,
+    const end = (acc / total) * 2 * Math.PI,
+    const x1 = center + radius * Math.cos(start),
+    const y1 = center + radius * Math.sin(start),
+    const x2 = center + radius * Math.cos(end),
+    const y2 = center + radius * Math.sin(end),
+    const largeArc = end - start > Math.PI ? 1 : 0,
+    const path = `M ${center} ${center} L ${x1} ${y1} A ${radius} ${radius} 0 ${largeArc} 1 ${x2} ${y2} Z`,
+    return <path key={d.label} d={path} fill={colors[i % colors.length]} />
+  }),
+
+  return (
+    <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`}>{slices}</svg>
+  )
+=======
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import Head from 'next/head';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { GetServerSideProps } from 'next';
 import { requireAdminRole } from '../../utils/auth';
 import DatePicker from 'react-datepicker';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+  const result = await requireAdminRole(ctx)
+  // @ts-ignore
+  if ('redirect' in result) return result
+  return result
+}
+type Datum = { label: string, value: number }
+function PieChart({ data, size = 160 }: { data: Datum[], size?: number }) {
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const total = Math.max(1, data.reduce((s, d) => s + d.value, 0));
 =======
 
@@ -79,7 +135,6 @@ function PieChart({ data, size = 160 }: { data: Datum[], size?: number }) {;
   const radius = size / 2;
   const center = radius;
   const colors = ['#3b82f6#10b981#f59e0b#8b5cf6#ef4444#06b6d4'];
-
   const slices = data.map((d, i) => {
     const start = (acc / total) * 2 * Math.PI;
     acc += d.value;
@@ -90,6 +145,7 @@ function PieChart({ data, size = 160 }: { data: Datum[], size?: number }) {;
     const y2 = center + radius * Math.sin(end);
     const largeArc = end - start > Math.PI ? 1 : 0;
     const path = `M ${center} ${center} L ${x1} ${y1} A ${radius} ${radius} 0 ${largeArc} 1 ${x2} ${y2} Z`;
+<<<<<<< HEAD
 
     return <path key={d.label} d={path} fill={colors[i % colors.length]} />;
   });
@@ -135,9 +191,10 @@ function Funnel({ data }: { data: Datum[] }) {
   )
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     return <path key={d.label} d={path} fill={colors[i % colors.length]} />
   })
-=======
 import React, { useCallback, useEffect, useMemo, useState } from 'react',
 import Head from 'next / head',
 import EnhancedLayout from '../../components / layout / EnhancedLayout',
@@ -176,11 +233,13 @@ function PieChart() {
     const path = `M ${center} ${center} L ${x1} ${y1} A ${radius} ${radius} 0 ${large_arc} 1 ${x2} ${y2} Z`,
     return <path key={d.label} d={path} fill={colors[i % colors.length]} />;
   }),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <svg width={size} height={size} view_box={`0 0 ${size} ${size}`}>{slices}</svg>);
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 /**
  * LineChart - Function description
  */
@@ -191,17 +250,24 @@ function LineChart() {
     const coordinate_y = height - (d.value / max) * height,
     return `${x}, ${y}`;
   }).join (' '),
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
     <svg width={width} height={height} className="border rounded bg - white / 40 dark:bg - gray - 900 / 40">;
       <polyline fill="none" stroke="#3b82f6" stroke_width="2" points={points} />;
     </svg>);
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 /**
  * Funnel - Function description
  */
 function Funnel() {
+<<<<<<< HEAD
 
   return (
 
@@ -241,19 +307,39 @@ function Funnel() {
 export default function UsageAnalytics(req, res) {
   try {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  return (
+    <div className="flex flex - col gap - 2">;
+      {data.map ((d, i) => (
+        <div key={d.label} className="bg - purple - 500 text - white text - sm px - 3 py - 2 rounded" style={{ width: `${100 - i * 12}%` }}>;
+          {d.label}: {d.value}
+        </div>))}
+    </div>);
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const [start, setStart] = useState<Date>(new Date(Date.now() - 29 * 24 * 3600 * 1000));
   const [end, setEnd] = useState<Date>(new Date());
   const [userType, setUserType] = useState<string>('all');
   const [loading, setLoading] = useState(false);
   const [pagesMostUsed, setPagesMostUsed] = useState<Datum[]>([]);
   const [events, setEvents] = useState<Datum[]>([]);
+<<<<<<< HEAD
 
 
+=======
+  const [line, setLine] = useState<{ date: string, value: number }[]>([]),
+  const [funnel, setFunnel] = useState<Datum[]>([]);
+  const refresh = useCallback(async () => {
+    setLoading(true)
+    try {
+      const params = new URLSearchParams({ start: start.toISOString(), end: end.toISOString(), userType });
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       const res = await fetch(`/api/admin/analytics/summary?${params.toString()}`);
       const json = await res.json();
       setPagesMostUsed(json.pagesMostUsed || []);
       setEvents(json.events || []);
       setLine(json.line || []);
+<<<<<<< HEAD
 <<<<<<< HEAD
       setFunnel(json.funnel || []);
     } finally {;
@@ -297,9 +383,9 @@ export default function UsageAnalytics(req, res) {
           </div>
         </div>
 =======
-      setFunnel(json.funnel || [])
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+      setFunnel(json.funnel || [])
 export default /**
  * UsageAnalytics - Function description
  */
@@ -322,13 +408,14 @@ function UsageAnalytics() {
       set_events (json.events || []),
       set_line (json.line || []),
       set_funnel (json.funnel || []);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       set_loading (false);
     }
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <div className="border rounded p-4 bg-white/70 dark:bg-gray-900">
             <div className="font-medium mb-2">Most Used Features</div>
@@ -337,9 +424,318 @@ function UsageAnalytics() {
               <ul className="text-sm">
                 {pagesMostUsed.slice(0, 6).map((d) => (
                   <li key={d.label} className="flex justify-between gap-4 min-w-[180px]"><span>{d.label}</span><span className="text-gray-500">{d.value}</span></li>
+    </svg>
+  )
+}
 
+function Funnel({ data }: { data: Datum[] }) {
+  return (
+    <div className=&quot;flex flex-col gap-2&quot;>
+      {data.map((d, i) => (
+        <div key={d.label} className=&quot;bg-purple-500 text-white text-sm px-3 py-2 rounded&quot; style={{ width: `${100 - i * 12}%` }}>
+=======
+  const total = Math.max(1, data.reduce((s, d) => s + d.value, 0))
+  let acc = 0
+  const radius = size / 2
+  const center = radius
+  const colors = ['#3b82f6#10b981#f59e0b#8b5cf6#ef4444#06b6d4']
+  const slices = data.map((d, i) => {
+    const start = (acc / total) * 2 * Math.PI
+    acc += d.value
+    const end = (acc / total) * 2 * Math.PI
+    const x1 = center + radius * Math.cos(start)
+    const y1 = center + radius * Math.sin(start)
+    const x2 = center + radius * Math.cos(end)
+    const y2 = center + radius * Math.sin(end)
+    const largeArc = end - start > Math.PI ? 1 : 0
+    const path = `M ${center} ${center} L ${x1} ${y1} A ${radius} ${radius} 0 ${largeArc} 1 ${x2} ${y2} Z`
+    return <path key={d.label} d={path} fill={colors[i % colors.length]} />
+  })
+  return (
+    <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`}>{slices}</svg>
+  )
+=======
+export const getServerSideProps: GetServerSideProps = async (ctx) => {;
+  const result = await requireAdminRole(ctx);
+  // @ts-ignore;
+  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+};
+type Datum = { label: string, value: number };
+function PieChart({ data, size = 160 }: { data: Datum[], size?: number }) {;
+  const total = Math.max(1, data.reduce((s, d) => s + d.value, 0)),;
+  let acc = 0;
+  const radius = size / 2;
+  const center = radius;
+  const colors = ['#3b82f6#10b981#f59e0b#8b5cf6#ef4444#06b6d4'];
+  const slices = data.map((d, i) => {;
+    const start = (acc / total) * 2 * Math.PI;
+    acc += d.value;
+    const end = (acc / total) * 2 * Math.PI;
+    const x1 = center + radius * Math.cos(start);
+    const y1 = center + radius * Math.sin(start);
+    const x2 = center + radius * Math.cos(end);
+    const y2 = center + radius * Math.sin(end);
+    const largeArc = end - start > Math.PI ? 1 : 0;
+    const path = `M ${center} ${center} L ${x1} ${y1} A ${radius} ${radius} 0 ${largeArc} 1 ${x2} ${y2} Z`;
+    return <path key={d.label} d={path} fill={colors[i % colors.length]} />;
+  });
+  return (;
+    <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`}>{slices}</svg>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+function LineChart({ data, width = 360, height = 140 }: { data: { date: string, value: number }[], width?: number, height?: number }) {
+  const max = Math.max(1, ...data.map((d) => d.value))
+  const points = data.map((d, i) => {
+    const x = (i / Math.max(1, data.length - 1)) * width
+    const y = height - (d.value / max) * height
+    return `${x},${y}`
+  }).join(' ')
+  return (
+    <svg width={width} height={height} className="border rounded bg-white/40 dark:bg-gray-900/40">
+      <polyline fill="none" stroke="#3b82f6" strokeWidth="2" points={points} />
+    </svg>
+  )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+function Funnel({ data }: { data: Datum[] }) {
+  return (
+    <div className="flex flex-col gap-2">
+      {data.map((d, i) => (
+        <div key={d.label} className="bg-purple-500 text-white text-sm px-3 py-2 rounded" style={{ width: `${100 - i * 12}%` }}>
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+          {d.label}: {d.value}
+        </div>
+      ))}
+    </div>
+  )
+<<<<<<< HEAD
+}
+<<<<<<< HEAD
+
+export default function UsageAnalytics() {
+  const [start, setStart] = useState<Date>(new Date(Date.now() - 29 * 24 * 3600 * 1000)),
+  const [end, setEnd] = useState<Date>(new Date()),
+  const [userType, setUserType] = useState<string>('all'),
+  const [loading, setLoading] = useState(false),
+  const [pagesMostUsed, setPagesMostUsed] = useState<Datum[]>([]),
+  const [events, setEvents] = useState<Datum[]>([]),
+  const [line, setLine] = useState<{ date: string, value: number }[]>([]),
+  const [funnel, setFunnel] = useState<Datum[]>([]),
+
+  const refresh = useCallback(async () => {
+    setLoading(true),
+    try {
+      const params = new URLSearchParams({ start: start.toISOString(), end: end.toISOString(), userType }),
+      const res = await fetch(`/api/admin/analytics/summary?${params.toString()}`)
+      const json = await res.json()
+      setPagesMostUsed(json.pagesMostUsed || []),
+      setEvents(json.events || []),
+      setLine(json.line || []),
+      setFunnel(json.funnel || [])
+    } finally {
+      setLoading(false)
+    }
+  }, [start, end, userType]),
+
+  return (_<EnhancedLayout>
+      <Head>
+        <title>Usage Analytics - Admin</title>
+      </Head>
+      <div className=&quot;space-y-6&quot;>
+        <div className=&quot;flex items-center justify-between&quot;>
+          <h1 className=&quot;text-2xl font-semibold&quot;>Usage Analytics</h1>
+          <button onClick={refresh} disabled={loading} className=&quot;px-3 py-2 rounded bg-blue-600 text-white disabled:opacity-50&quot;>Refresh</button>
+        </div>
+
+        <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-4 border rounded p-4 bg-white/70 dark:bg-gray-900&quot;>
+          <div>
+            <div className=&quot;text-sm&quot;>Start</div>
+            <DatePicker selected={start} onChange={(d) => d && setStart(d)} className=&quot;w-full border rounded px-2 py-1 bg-transparent&quot; />
+          </div>
+          <div>
+            <div className=&quot;text-sm&quot;>End</div>
+            <DatePicker selected={end} onChange={(d) => d && setEnd(d)} className=&quot;w-full border rounded px-2 py-1 bg-transparent&quot; />
+          </div>
+          <div>
+            <div className=&quot;text-sm&quot;>User type</div>
+            <select value={userType} onChange={(e) => setUserType(e.target.value)} className=&quot;w-full border rounded px-2 py-1 bg-transparent&quot;>
+              <option value=&quot;all&quot;>All</option>
+              <option value=&quot;freelancer&quot;>Freelancer</option>
+              <option value=&quot;b2b&quot;>B2B</option>
+              <option value=&quot;hiring_manager&quot;>Hiring Manager</option>
+              <option value=&quot;guest&quot;>Guest</option>
+            </select>
+          </div>
+        </div>
+
+        <div className=&quot;grid grid-cols-1 lg:grid-cols-3 gap-6&quot;>
+          <div className=&quot;border rounded p-4 bg-white/70 dark:bg-gray-900&quot;>
+            <div className=&quot;font-medium mb-2&quot;>Most Used Features</div>
+            <div className=&quot;flex items-center gap-4&quot;>
+              <PieChart data={pagesMostUsed.slice(0, 6)} />
+              <ul className=&quot;text-sm&quot;>
+                {pagesMostUsed.slice(0, 6).map((d) => (
+                  <li key={d.label} className=&quot;flex justify-between gap-4 min-w-[180px]&quot;><span>{d.label}</span><span className=&quot;text-gray-500&quot;>{d.value}</span></li>
+
+=======
+export default function UsageAnalytics() {
+  const [start, setStart] = useState<Date>(new Date(Date.now() - 29 * 24 * 3600 * 1000))
+  const [end, setEnd] = useState<Date>(new Date())
+  const [userType, setUserType] = useState<string>('all')
+  const [loading, setLoading] = useState(false)
+  const [pagesMostUsed, setPagesMostUsed] = useState<Datum[]>([])
+  const [events, setEvents] = useState<Datum[]>([])
+  const [line, setLine] = useState<{ date: string, value: number }[]>([])
+  const [funnel, setFunnel] = useState<Datum[]>([])
+  const refresh = useCallback(async () => {
+    setLoading(true)
+    try {
+      const params = new URLSearchParams({ start: start.toISOString(), end: end.toISOString(), userType })
+      const res = await fetch(`/api/admin/analytics/summary?${params.toString()}`)
+      const json = await res.json()
+      setPagesMostUsed(json.pagesMostUsed |[])
+      setEvents(json.events |[])
+      setLine(json.line |[])
+      setFunnel(json.funnel |[])
+    } finally {
+      setLoading(false)
+    }
+  }, [start, end, userType])
+  useEffect(() => { refresh() }, [])
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+          {d.label}: {d.value  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 <<<<<<< HEAD
 =======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+        </div>;
+      ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    </div>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+export default function UsageAnalytics(req, res) {
+  try {
+  const [start, setStart] = useState<Date>(new Date(Date.now() - 29 * 24 * 3600 * 1000));
+  const [end, setEnd] = useState<Date>(new Date());
+  const [userType, setUserType] = useState<string>('all');
+  const [loading, setLoading] = useState(false);
+  const [pagesMostUsed, setPagesMostUsed] = useState<Datum[]>([]);
+  const [events, setEvents] = useState<Datum[]>([]);
+  const [line, setLine] = useState<{ date: string, value: number }[]>([]),;
+  const [funnel, setFunnel] = useState<Datum[]>([]);
+  const refresh = useCallback(async () => {;
+    setLoading(true);
+    try {
+      const params = new URLSearchParams({ start: start.toISOString(), end: end.toISOString(), userType }),;
+      const res = await fetch(`/api/admin/analytics/summary?${params.toString()}`);
+      const json = await res.json();
+      setPagesMostUsed(json.pagesMostUsed || []);
+      setEvents(json.events || []);
+      setLine(json.line || []);
+      setFunnel(json.funnel || []);
+    } finally {;
+      setLoading(false);
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  }, [start, end, userType]),
+  useEffect(() => { refresh() }, []),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  return (
+    <EnhancedLayout>
+      <Head>
+        <title>Usage Analytics - Admin</title>
+      </Head>
+      <div className="space-y-6">
+        <div className="flex items-center justify-between">
+          <h1 className="text-2xl font-semibold">Usage Analytics</h1>
+          <button onClick={refresh} disabled={loading} className="px-3 py-2 rounded bg-blue-600 text-white disabled:opacity-50">Refresh</button>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 border rounded p-4 bg-white/70 dark:bg-gray-900">
+          <div>
+            <div className="text-sm">Start</div>
+            <DatePicker selected={start} onChange={(d) => d && setStart(d)} className="w-full border rounded px-2 py-1 bg-transparent" />
+          </div>
+          <div>
+            <div className="text-sm">End</div>
+            <DatePicker selected={end} onChange={(d) => d && setEnd(d)} className="w-full border rounded px-2 py-1 bg-transparent" />
+          </div>
+          <div>
+            <div className="text-sm">User type</div>
+            <select value={userType} onChange={(e) => setUserType(e.target.value)} className="w-full border rounded px-2 py-1 bg-transparent">
+              <option value="all">All</option>
+              <option value="freelancer">Freelancer</option>
+              <option value="b2b">B2B</option>
+              <option value="hiring_manager">Hiring Manager</option>
+              <option value="guest">Guest</option>
+            </select>
+          </div>
+        </div>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="border rounded p-4 bg-white/70 dark:bg-gray-900">
+            <div className="font-medium mb-2">Most Used Features</div>
+            <div className="flex items-center gap-4">
+              <PieChart data={pagesMostUsed.slice(0, 6)} />
+              <ul className="text-sm">
+                {pagesMostUsed.slice(0, 6).map((d) => (
+                  <li key={d.label} className="flex justify-between gap-4 min-w-[180px]"><span>{d.label}</span><span className="text-gray-500">{d.value}</span></li>
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+                ))}
+=======
+                ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              </ul>
+            </div>
+          </div>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+<div className="border rounded p-4 bg-white/70 dark:bg-gray-900 lg:col-span-2">
+=======
+<<<<<<< HEAD
 
                 ))  } catch (error) {
     console.error("Error:", error);
@@ -355,7 +751,10 @@ function UsageAnalytics() {
           </div>
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <div className="border rounded p-4 bg-white/70 dark:bg-gray-900 lg:col-span-2">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <div className="font-medium mb-2">Events Over Time</div>
             <LineChart data={line} />
             <div className="mt-3 grid grid-cols-2 gap-2 text-sm">
@@ -364,13 +763,24 @@ function UsageAnalytics() {
                   <span>{e.label}</span>
                   <span className="text-gray-500">{e.value}</span>
                 </div>
-              ))}
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             </div>
           </div>
         </div>
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<div className="border rounded p-4 bg-white/70 dark:bg-gray-900">
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <div className="border rounded p-4 bg-white/70 dark:bg-gray-900">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <div className="font-medium mb-2">Funnel</div>
           <Funnel data={funnel} />
         </div>
@@ -379,6 +789,7 @@ function UsageAnalytics() {
         </div>
       </div>
     </EnhancedLayout>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   )
@@ -392,6 +803,18 @@ function UsageAnalytics() {
 }
 
 =======
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  );
+};
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  )
+<<<<<<< HEAD
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }, [start, end, user_type]),
   useEffect (() => { refresh () }, []),
   return (
@@ -457,6 +880,7 @@ function UsageAnalytics() {
       </div>;
     </EnhancedLayout>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
@@ -464,3 +888,17 @@ function UsageAnalytics() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

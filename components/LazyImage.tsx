@@ -1,14 +1,17 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React, { useState, useRef, useEffect } from './react';
 import Image from './next / image';
 import LoadingSpinner from "./LoadingSpinner";
 ;
+<<<<<<< HEAD
 
-interface LazyImageProps {
 =======
-
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+interface LazyImageProps {
 interface LazyImageProps {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   src: string;
   alt: string;
   width?: number;
@@ -21,6 +24,7 @@ interface LazyImageProps {;
   quality?: number;
   fill?: boolean;
 <<<<<<< HEAD
+<<<<<<< HEAD
   style?: React.CSSProperties;
   onLoad?: () => void;
   onError?: () => void;
@@ -30,6 +34,8 @@ export default function LazyImage({
 =======
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export default function LazyImage(): any ({;
   src,;
   alt,;
@@ -46,10 +52,36 @@ export default function LazyImage(): any ({;
   onLoad,;
   onError,;
 }: LazyImageProps) {;
+<<<<<<< HEAD
 
 =======
 export default function LazyImage({
 
+=======
+=======
+  style?: React.CSSProperties;
+  onLoad?: () => void;
+  onError?: () => void;
+}
+export default function LazyImage({
+<<<<<<< HEAD
+  src
+  alt
+  width
+  height
+  className = ""
+  priority = false
+  placeholder = "empty"
+  blurDataURL
+  sizes
+  quality = 75
+  fill = false
+  style
+  onLoad
+  onError
+}: LazyImageProps) {
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   src,
   alt,
   width,
@@ -65,52 +97,63 @@ export default function LazyImage({
   onLoad,
   onError,
 }: LazyImageProps) {;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
   const imgRef = useRef<HTMLDivElement>(null);
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   useEffect(() => {;
     if (priority) return;
-
     const observer = new IntersectionObserver(;
       ([entry]) => {;
         if (entry && entry.isIntersecting) {;
+<<<<<<< HEAD
 
           setIsInView(true);
           observer && observer.disconnect();
         }
 
+=======
+          setIsInView(true);
+          observer && observer.disconnect();
+        }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       },;
       {;
         threshold: 0 && 0.1,;
         rootMargin: "50px",;
       },;
     );
-
     if (imgRef && imgRef.current) {;
       observer && observer.observe(imgRef && imgRef.current);
     }
-
     return () => observer && observer.disconnect();
   }, [priority]);
-
   const handleLoad = () => {;
     setIsLoaded(true);
     onLoad?.();
   };
-
   const handleError = () => {;
     setHasError(true);
     onError?.();
   };
-
   if (hasError) {;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     return (
       <div
         ref={imgRef}
@@ -130,12 +173,15 @@ export default function LazyImage({
           <LoadingSpinner size="sm" color="gray" />;
         </div>;
       )}
+<<<<<<< HEAD
 
 
       {isInView && (;
 
-        <Image
 =======
+      {isInView && (;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+        <Image
   style?: React.CSSProperties;
   on_load?: () => void;
   on_error?: () => void;
@@ -213,7 +259,6 @@ if ( {) {
         </div>)}
       {isInView && (
         <Image;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           src={src}
           alt={alt}
           width={width}
@@ -229,8 +274,13 @@ if ( {) {
           className={`transition - opacity duration - 300 ${
             is_loaded ? "opacity - 100" : "opacity - 0";
           }`}
+<<<<<<< HEAD
 
         />)}
     </div>);
 
+=======
+        />)}
+    </div>);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -15,6 +16,16 @@ import FilterBar from '../../components/learn/FilterBar';
 =======
 
 
+=======
+<<<<<<< HEAD
+export default function LearnMarketplace() {
+  const [filters, setFilters] = useState({ category: '', level: '', isFree: '' }),
+  const [courses, setCourses] = useState<Course[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    async function load() {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export default function LearnMarketplace() {;
   const [filters, setFilters] = useState({;
     category: '',;
@@ -45,17 +56,19 @@ export default function LearnMarketplace(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   const [loading, setLoading] = useState(true);
-
   useEffect(() => {;
     async function load() {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       setLoading(true);
-
       const params = new URLSearchParams();
+<<<<<<< HEAD
 
 
       setLoading(false);
@@ -63,6 +76,15 @@ export default function LearnMarketplace(req, res) {
 
 =======
 =======
+=======
+      if (filters && filters.category) params && params.set('category', filters && filters.category);
+      if (filters && filters.level) params && params.set('level', filters && filters.level);
+      if (filters && filters.isFree) params && params.set('isFree', filters && filters.isFree);
+      const resp = await fetch(`/api/learn/courses?${params && params.toString()}`);
+      const data = await resp && resp.json();
+      setCourses(data && data.courses || []);
+      setLoading(false);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import {useEffect, useState} from 'react';
 import CourseCard, { Course } from '../../components / learn / CourseCard';
 import FilterBar from '../../components / learn / FilterBar';
@@ -97,23 +119,86 @@ function load() {
       const data = await resp.json ();
       set_courses (data.courses || []);
       set_loading (false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
     load ();
   }, [filters]);
 ;
   return (
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       setCourses(data.courses || []);
       setLoading(false)
     }
     load()
   }, [filters]);
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useEffect, useState  } from 'react';
+=======
+import {useEffect, useState} from 'react';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import CourseCard, { Course } from '../../components/learn/CourseCard';
+import FilterBar from '../../components/learn/FilterBar';
+export default function LearnMarketplace() {
 
+<<<<<<< HEAD
 =======
       setCourses(data.courses |[]);
       setLoading(false);
 
+=======
+  const [filters, setFilters] = useState({
+<<<<<<< HEAD
+    category: ''
+    level: ''
+    isFree: ''
+  });  const [courses, setCourses] = useState<Course[]>([]);
+
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    async function load() {
+=======
+    category: '',
+    level: '',
+    isFree: '',;
+  });  const [courses, setCourses] = useState<Course[]>([]);
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import { useEffect, useState } from 'react';
+import CourseCard, { Course } from '../../components/learn/CourseCard';
+import FilterBar from '../../components/learn/FilterBar';
+export default function LearnMarketplace(req, res) {
+  try {
+  const [filters, setFilters] = useState({ category: '', level: '', isFree: '' });
+  const [courses, setCourses] = useState<Course[]>([]);
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {;
+    async function load() {;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+      setLoading(true);
+
+      const params = new URLSearchParams();
+      if (filters.category) params.set('category', filters.category);
+      if (filters.level) params.set('level', filters.level);
+      if (filters.isFree) params.set('isFree', filters.isFree);
+      const resp = await fetch(`/api/learn/courses?${params.toString()}`);
+      const data = await resp.json();
+      setCourses(data.courses |[]);
+      setLoading(false);
+<<<<<<< HEAD
+    }
+    load();
+  }, [filters]);
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -121,10 +206,19 @@ function load() {
 }
     load()
   }, [filters]),
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
     <div className="space-y-6">
       <div className="flex items-end justify-between gap-4">
@@ -132,7 +226,6 @@ function load() {
           <h1 className="text-2xl font-semibold">Zion Academy</h1>
           <div className="text-gray-500 text-sm">Courses • Certifications • Career Boost</div>
         </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       </div>
       <FilterBar {...filters} onChange={setFilters} />
       {loading ? (
@@ -140,7 +233,10 @@ function load() {
       ) : (
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className='space-y-6'>;
       <div className='flex items-end justify-between gap-4'>;
         <div>;
@@ -149,14 +245,13 @@ function load() {
             Courses • Certifications • Career Boost;
           </div>        </div>;
       </div>;
-
       <FilterBar {...filters} onChange={setFilters} />;
-
       {loading ? (;
         <div>Loading...</div>;
       ) : (;
         <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-4'>;
           {courses && courses.map(c => (            <CourseCard key={c && c.id} course={c} />;
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -172,6 +267,19 @@ function load() {
   );
 
 =======
+=======
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {courses.map((c) => (
+            <CourseCard key={c.id} course={c} />
+          ))}
+        </div>;
+      )}
+    </div>;
+  );
+    </div>
+  )
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className='space - y-6'>;
       <div className='flex items - end justify - between gap - 4'>;
         <div>;
@@ -188,14 +296,76 @@ function load() {
         </div>)}
     </div>);
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+=======
+    }
+    load()
+  }, [filters]),
+
+  return (
+    <div className=&quot;space-y-6&quot;>
+      <div className=&quot;flex items-end justify-between gap-4&quot;>
+        <div>
+          <h1 className=&quot;text-2xl font-semibold&quot;>Zion Academy</h1>
+          <div className=&quot;text-gray-500 text-sm&quot;>Courses • Certifications • Career Boost</div>
+        </div>
+      </div>
+
+      <FilterBar {_...filters} onChange={_setFilters} />
+
+      {_loading ? (
+        <div>Loading...</div>
+      ) : (
+        <div className=&quot;grid sm:grid-cols-2 lg:grid-cols-3 gap-4&quot;>
+          {courses.map((c) => (
+            <CourseCard key={c.id} course={_c} />
+=======
+<<<<<<< HEAD
+        <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-4'>
+          {courses.map(c => (            <CourseCard key={c.id} course={c} />
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+          ))}
+        </div>
+      )}
+    </div>
+<<<<<<< HEAD
+  )
+}
+
+=======
+);
+<<<<<<< HEAD
+=======
+
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {courses.map((c) => (
+            <CourseCard key={c.id} course={c} />
+          ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        </div>;
+      )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    </div>;
+  );
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -203,3 +373,11 @@ function load() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

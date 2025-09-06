@@ -1,12 +1,28 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Head from 'next/head';
 =======
 
 
+=======
+export default function Page() {;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
     <div className='min-h-screen bg-slate-950 text-white'>;
       <Head>;
         <title>Playbook — Autonomous Delivery</title>;
+<<<<<<< HEAD
+=======
+=======
+import Head from 'next/head';
+<<<<<<< HEAD
+export default function Page() {
+  return (
+    <div className='min-h-screen bg-slate-950 text-white'>
+      <Head>
+        <title>Playbook — Autonomous Delivery</title>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <meta
           name='description'
           content='A practical step-by-step playbook for reliable autonomous delivery.'
@@ -26,9 +42,13 @@ import Head from 'next/head';
           className='mt-4'
           dangerouslySetInnerHTML={{
             __html:
+<<<<<<< HEAD
 
               '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/explore" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/explore</a></p><h2>Purpose</h2><p>Operational steps to execute reliably with measurable outcomes.</p><h2>Checklist</h2><ol><li>Define objectives, KPIs, and guardrails.</li><li>Inventory data, models, tools, and constraints.</li><li>Design evaluation and feedback loops upfront.</li><li>Implement smallest viable slice with telemetry.</li><li>Iterate, measure, and harden for production.</li></ol><h2>Notes</h2><p class="text-white/75">Autonomous cloud systems are live and improving the app in real timeAutonomous Cloud AutomationsSelf-improving, cloud-native agents that invent, generate, and run new automation factories—fixing, optimizing, and syncing changes to the repository continuously && continuously.Explore AutomationsLive Meta Factory24/7A</p>',;
 
+=======
+              '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/explore" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/explore</a></p><h2>Purpose</h2><p>Operational steps to execute reliably with measurable outcomes.</p><h2>Checklist</h2><ol><li>Define objectives, KPIs, and guardrails.</li><li>Inventory data, models, tools, and constraints.</li><li>Design evaluation and feedback loops upfront.</li><li>Implement smallest viable slice with telemetry.</li><li>Iterate, measure, and harden for production.</li></ol><h2>Notes</h2><p class="text-white/75">Autonomous cloud systems are live and improving the app in real timeAutonomous Cloud AutomationsSelf-improving, cloud-native agents that invent, generate, and run new automation factories—fixing, optimizing, and syncing changes to the repository continuously && continuously.Explore AutomationsLive Meta Factory24/7A</p>',;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           }}
         />;
         <p className='mt-6 text-white/60 text-sm'>;
@@ -37,6 +57,7 @@ import Head from 'next/head';
       </main>;
     </div>;
   );export default function Page() {;
+<<<<<<< HEAD
 
 =======
 
@@ -72,6 +93,26 @@ export default function Page() {
 }
 
 =======
+=======
+export default function Page() {
+  return (
+    <div className="min-h-screen bg-slate-950 text-white">;
+      <Head>;
+        <title>Playbook — Autonomous Delivery</title>;
+        <meta name="description" content="A practical step-by-step playbook for reliable autonomous delivery." />;
+        <meta property="og:title" content="Playbook — Autonomous Delivery" />;
+        <meta property="og:description" content="A practical step-by-step playbook for reliable autonomous delivery." />;
+        <meta name="twitter:card" content="summary_large_image" />;
+      </Head>;
+      <main className="container mx-auto px-6 py-12 prose prose-invert">;
+        <h1 className="text-3xl font-extrabold">Playbook — Autonomous Delivery</h1>;
+        <div className="mt-4" dangerouslySetInnerHTML={{ __html: "<p>Signal source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup && ziontechgroup.com/explore\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup && ziontechgroup.com/explore</a></p><h2>Purpose</h2><p>Operational steps to execute reliably with measurable outcomes.</p><h2>Checklist</h2><ol><li>Define objectives, KPIs, and guardrails.</li><li>Inventory data, models, tools, and constraints.</li><li>Design evaluation and feedback loops upfront.</li><li>Implement smallest viable slice with telemetry.</li><li>Iterate, measure, and harden for production.</li></ol><h2>Notes</h2><p class=\"text-white/75\">Autonomous cloud systems are live and improving the app in real timeAutonomous Cloud AutomationsSelf-improving, cloud-native agents that invent, generate, and run new automation factories—fixing, optimizing, and syncing changes to the repository continuously && continuously.Explore AutomationsLive Meta Factory24/7A</p>" }} />;
+        <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Playbook Factory.</p>;
+      </main>;
+    </div>;
+  );
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import Head from 'next / head';
 export default /**
  * Page - Function description
@@ -127,12 +168,68 @@ function Page() {
       </main>;
     </div>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+      <Head>
+        <title>Playbook — Autonomous Delivery</title>
+        <meta name=&quot;description&quot; content=&quot;A practical step-by-step playbook for reliable autonomous delivery.&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;Playbook — Autonomous Delivery&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;A practical step-by-step playbook for reliable autonomous delivery.&quot; />
+        <meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; />
+      </Head>
+<<<<<<< HEAD
+      <main className=&quot;container mx-auto px-6 py-12 prose prose-invert&quot;>
+        <h1 className=&quot;text-3xl font-extrabold&quot;>Playbook — Autonomous Delivery</h1>
+        <div className=&quot;mt-4&quot; dangerouslySetInnerHTML={{ __html: "<p>Signal source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/explore\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com/explore</a></p><h2>Purpose</h2><p>Operational steps to execute reliably with measurable outcomes.</p><h2>Checklist</h2><ol><li>Define objectives, KPIs, and guardrails.</li><li>Inventory data, models, tools, and constraints.</li><li>Design evaluation and feedback loops upfront.</li><li>Implement smallest viable slice with telemetry.</li><li>Iterate, measure, and harden for production.</li></ol><h2>Notes</h2><p class=\"text-white/75\">Autonomous cloud systems are live and improving the app in real timeAutonomous Cloud AutomationsSelf-improving, cloud-native agents that invent, generate, and run new automation factories—fixing, optimizing, and syncing changes to the repository continuously.Explore AutomationsLive Meta Factory24/7A</p>" }} />
+        <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Playbook Factory.</p>
+      </main>
+    </div>
+  )
+}
+
+=======
+      <main className='container mx-auto px-6 py-12 prose prose-invert'>
+        <h1 className='text-3xl font-extrabold'>
+          Playbook — Autonomous Delivery
+        </h1>
+        <div
+          className='mt-4'
+          dangerouslySetInnerHTML={{
+            __html:
+<<<<<<< HEAD
+              '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/explore" target="_blank" rel="noopener">https://ziontechgroup.com/explore</a></p><h2>Purpose</h2><p>Operational steps to execute reliably with measurable outcomes.</p><h2>Checklist</h2><ol><li>Define objectives, KPIs, and guardrails.</li><li>Inventory data, models, tools, and constraints.</li><li>Design evaluation and feedback loops upfront.</li><li>Implement smallest viable slice with telemetry.</li><li>Iterate, measure, and harden for production.</li></ol><h2>Notes</h2><p class="text-white/75">Autonomous cloud systems are live and improving the app in real timeAutonomous Cloud AutomationsSelf-improving, cloud-native agents that invent, generate, and run new automation factories—fixing, optimizing, and syncing changes to the repository continuously.Explore AutomationsLive Meta Factory24/7A</p>'
+=======
+              '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/explore" target="_blank" rel="noopener">https://ziontechgroup.com/explore</a></p><h2>Purpose</h2><p>Operational steps to execute reliably with measurable outcomes.</p><h2>Checklist</h2><ol><li>Define objectives, KPIs, and guardrails.</li><li>Inventory data, models, tools, and constraints.</li><li>Design evaluation and feedback loops upfront.</li><li>Implement smallest viable slice with telemetry.</li><li>Iterate, measure, and harden for production.</li></ol><h2>Notes</h2><p class="text-white/75">Autonomous cloud systems are live and improving the app in real timeAutonomous Cloud AutomationsSelf-improving, cloud-native agents that invent, generate, and run new automation factories—fixing, optimizing, and syncing changes to the repository continuously.Explore AutomationsLive Meta Factory24/7A</p>',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          }}
+        />
+        <p className='mt-6 text-white/60 text-sm'>
+          Auto-generated by Cloud Playbook Factory.
+        </p>
+      </main>
+<<<<<<< HEAD
+    </div>
+=======
+    </div>;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  );export default function Page() {
+  return (
+=======
+
+export default function Page() {
+  return (
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="min-h-screen bg-slate-950 text-white">
       <Head>
         <title>Playbook — Autonomous Delivery</title>
@@ -146,8 +243,27 @@ function Page() {
         <div className="mt-4" dangerouslySetInnerHTML={{ __html: "<p>Signal source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/explore\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com/explore</a></p><h2>Purpose</h2><p>Operational steps to execute reliably with measurable outcomes.</p><h2>Checklist</h2><ol><li>Define objectives, KPIs, and guardrails.</li><li>Inventory data, models, tools, and constraints.</li><li>Design evaluation and feedback loops upfront.</li><li>Implement smallest viable slice with telemetry.</li><li>Iterate, measure, and harden for production.</li></ol><h2>Notes</h2><p class=\"text-white/75\">Autonomous cloud systems are live and improving the app in real timeAutonomous Cloud AutomationsSelf-improving, cloud-native agents that invent, generate, and run new automation factories—fixing, optimizing, and syncing changes to the repository continuously.Explore AutomationsLive Meta Factory24/7A</p>" }} />
         <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Playbook Factory.</p>
       </main>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    </div>
+<<<<<<< HEAD
+  );
+}
+=======
+=======
+<<<<<<< HEAD
+    </div>;
+  );
+}
+
+}
+=======
+    </div>
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   )
   } catch (error) {
     console.error("Error:", error);
@@ -155,9 +271,18 @@ function Page() {
   }
 }
 ;
+<<<<<<< HEAD
 
 =======
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

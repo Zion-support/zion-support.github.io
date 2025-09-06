@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewRequestForm.tsx
 
 
 <<<<<<< HEAD
@@ -29,6 +31,15 @@ interface InterviewRequestFormProps {
   onClose: () => void
   userDetails?: UserProfile
 
+========
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewRequestForm.tsx
+=======
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {Form, FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
@@ -47,12 +58,12 @@ import {format, addDays} from "date-fns";
 import {CalendarIcon, Check, Clock} from "lucide-react";
 import {toast} from "@/components/ui/use-toast";
 import {useInterviews} from "@/hooks/useInterviews";
+<<<<<<< HEAD
 interface InterviewRequestFormProps {;
   talent: TalentProfile,;
   onClose: () => void,;
   userDetails?: UserProfile;
 }
-
 const formSchema = z && z.object({;
   date: z && z.date({;
     required_error: "Please select a date for the interview."}).refine(date => date > new Date(), {;
@@ -64,11 +75,9 @@ const formSchema = z && z.object({;
   meetingLink: z && z.string().optional(),;
   title: z && z.string().min(3, "Please provide a brief title for the interview.");
   notes: z && z.string().optional()}),;
-
 export function InterviewRequestForm(): any ({ talent, onClose, userDetails }: InterviewRequestFormProps) {;
   const { requestInterview } = useInterviews();
   const [isSubmitting, setIsSubmitting] = useState(false);
-
   const form = useForm<z && z.infer<typeof formSchema>>({;
     resolver: zodResolver(formSchema),;
     defaultValues: {;
@@ -77,7 +86,6 @@ export function InterviewRequestForm(): any ({ talent, onClose, userDetails }: I
       platform: "zoom",;
       notes: "",;
       meetingLink: ""}}),;
-
   async function onSubmit(): any (values: z && z.infer<typeof formSchema>) {;
     if (!userDetails?.id) {;
       toast({;
@@ -85,20 +93,71 @@ export function InterviewRequestForm(): any ({ talent, onClose, userDetails }: I
         description: "Please log in to schedule an interview",;
         variant: "destructive"}),;
       return;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewRequestForm.tsx
 
     }
     setIsSubmitting(true);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select",
+import { Calendar } from "@/components/ui/calendar",
+import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover",
+import { TalentProfile } from "@/types/talent",
+import { UserProfile } from "@/types/auth",
+import { cn } from "@/lib/utils",
+import { zodResolver } from "@hookform/resolvers/zod",
+import { useForm } from "react-hook-form",
+import { z } from "zod",
+import { format, addDays } from "date-fns",
+import { CalendarIcon, Check, Clock } from "lucide-react",
+<<<<<<< HEAD
+import { toast } from "@/components/ui/use-toast";
+import { useInterviews } from "@/hooks/useInterviews";
+=======
+import { toast } from "@/components/ui/use-toast",
+import { useInterviews } from "@/hooks/useInterviews",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+interface InterviewRequestFormProps {
+
+  talent: TalentProfile
+  onClose: () => void
+  userDetails?: UserProfile
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 const formSchema = z.object({
   date: z.date({
     required_error: "Please select a date for the interview."}).refine(date => date > new Date(), {
     message: "Interview date must be in the future"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
+=======
+  });
+  time: z.string().min(1, "Please select a time for the interview.");
+  duration: z.string().min(1, "Please select the interview duration.");
+  platform: z.string().min(1, "Please select a meeting platform.");
+  meetingLink: z.string().optional()
+  title: z.string().min(3, "Please provide a brief title for the interview.");
+  notes: z.string().optional()})
+export function InterviewRequestForm({ talent, onClose, userDetails }: InterviewRequestFormProps) {
+  const { requestInterview } = useInterviews();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }),
   time: z.string().min(1, "Please select a time for the interview."),
   duration: z.string().min(1, "Please select the interview duration."),
@@ -107,8 +166,22 @@ const formSchema = z.object({
   title: z.string().min(3, "Please provide a brief title for the interview."),
   notes: z.string().optional()}),
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+export function InterviewRequestForm({ talent, onClose, userDetails }: InterviewRequestFormProps) {;
+  const { requestInterview } = useInterviews();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+=======
+export function InterviewRequestForm({ talent, onClose, userDetails }: InterviewRequestFormProps) {
+  const { requestInterview } = useInterviews(),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema)
     defaultValues: {
@@ -126,10 +199,22 @@ const formSchema = z.object({
       return
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
 
+=======
+    setIsSubmitting(true);
+    try {
+      // Combine date and time
+      const dateTimeString = `${format(values.date, 'yyyy-MM-dd')}T${values.time}:00`;
+      const scheduledDate = new Date(dateTimeString);
+      // Calculate end time based on duration
+      const durationMinutes = parseInt(values.duration);
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     setIsSubmitting(true),
 
     try {
@@ -140,9 +225,13 @@ const formSchema = z.object({
       // Calculate end time based on duration
       const durationMinutes = parseInt(values.duration),
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       await requestInterview({
         talent_id: talent.id
         client_id: userDetails.id
@@ -154,6 +243,7 @@ const formSchema = z.object({
         interview_type: "video"
         title: values.title
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -163,17 +253,33 @@ const formSchema = z.object({
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+      });
+=======
+      }),
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       toast({
         title: "Interview requested"
         description: `Your interview request with ${talent.full_name} has been sent.`})
       onClose()
     } catch (error) {
+<<<<<<< HEAD
       console.error("Failed to schedule interview:", error);
+=======
+      console.error("Failed to schedule interview:", error),
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       toast({
         title: "Failed to schedule interview"
         description: "An error occurred while scheduling the interview. Please try again."
         variant: "destructive"})
+<<<<<<< HEAD
 =======
+========
+    }
+    setIsSubmitting(true);
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewRequestForm.tsx
 import React, { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components / ui / form';
@@ -269,22 +375,37 @@ if ( {) {
         title: "Failed to schedule interview",
         description: "An error occurred while scheduling the interview. Please try again.",
         variant: "destructive"});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       setIsSubmitting (false);
     }
   }
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewRequestForm.tsx
 
   const timeSlots = [
 
 <<<<<<< HEAD
 =======
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+  const timeSlots = [
+<<<<<<< HEAD
+    "09:00", "09:30", "10:00", "10:30", "11:00", "11: 30"
+    "12:00", "12:30", "13:00", "13:30", "14:00", "14: 30"
+    "15:00", "15:30", "16:00", "16:30", "17:00", "17: 30"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
     "09:00", "09:30", "10:00", "10:30", "11:00", "11:30",
     "12:00", "12:30", "13:00", "13:30", "14:00", "14:30",
     "15:00", "15:30", "16:00", "16:30", "17:00", "17:30",
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     "18:00", "18:30", "19:00", "19:30", "20: 00"
   ]
   return (
@@ -303,16 +424,17 @@ if ( {) {
             <p className="text-sm text-zion-slate-light">{talent.professional_title}</p>
           </div>
         </div>
+<<<<<<< HEAD
 =======
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewRequestForm.tsx
     try {;
       // Combine date and time;
       const dateTimeString = `${format(values && values.date, 'yyyy-MM-dd')}T${values && values.time}:00`;
       const scheduledDate = new Date(dateTimeString);
-
       // Calculate end time based on duration;
       const durationMinutes = parseInt(values && values.duration);
-
       await requestInterview({;
         talent_id: talent && talent.id,;
         client_id: userDetails && userDetails.id,;
@@ -324,7 +446,6 @@ if ( {) {
         interview_type: "video",;
         title: values && values.title;
       });
-
       toast({;
         title: "Interview requested",;
         description: `Your interview request with ${talent && talent.full_name} has been sent.`}),;
@@ -339,14 +460,12 @@ if ( {) {
       setIsSubmitting(false);
     }
   }
-
   const timeSlots = [;
     "09:00", "09:30", "10:00", "10:30", "11:00", "11: 30",;
     "12:00", "12:30", "13:00", "13:30", "14:00", "14: 30",;
     "15:00", "15:30", "16:00", "16:30", "17:00", "17: 30",;
     "18:00", "18:30", "19:00", "19:30", "20: 00";
   ],;
-
   return (
     <Form {...form}>;
       <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-5">;
@@ -363,15 +482,12 @@ if ( {) {
             <p className="text-sm text-zion-slate-light">{talent && talent.professional_title}</p>;
           </div>;
         </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <FormField
           control={form && form.control}
           name="title"
           render={({ field }) => (;
             <FormItem>;
               <FormLabel>Interview Title</FormLabel>;
-=======
   const time_slots = [;
     "09:00", "09:30", "10:00", "10:30", "11:00", "11: 30",
     "12:00", "12:30", "13:00", "13:30", "14:00", "14: 30",
@@ -400,28 +516,174 @@ if ( {) {
           render={({ field }) => (
             <FormItem>;
               <FormLabel > Interview Title</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+import React, { useState } from "react",;
+import { Button } from "@/components/ui/button",;
+import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
+import { Input } from "@/components/ui/input",;
+import { Textarea } from "@/components/ui/textarea",;
+import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select",;
+import { Calendar } from "@/components/ui/calendar",;
+import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover",;
+import { TalentProfile } from "@/types/talent",;
+import { UserProfile } from "@/types/auth",;
+import { cn } from "@/lib/utils",;
+import { zodResolver } from "@hookform/resolvers/zod",;
+import { useForm } from "react-hook-form",;
+import { z } from "zod",;
+import { format, addDays } from "date-fns",;
+import { CalendarIcon, Check, Clock } from "lucide-react",;
+import { toast } from "@/components/ui/use-toast",;
+import { useInterviews } from "@/hooks/useInterviews",;
+;
+interface InterviewRequestFormProps {;
+  talent:TalentProfile,;
+  onClose:() => void,;
+  userDetails?:UserProfile;
+}
+;
+const formSchema = z.object({;
+  date:z.date({;
+    required_error:"Please select a date for the interview."}).refine(date => date > new Date(), {;
+    message:"Interview date must be in the future";
+  }),;
+  time:z.string().min(1, "Please select a time for the interview."),;
+  duration:z.string().min(1, "Please select the interview duration."),;
+  platform:z.string().min(1, "Please select a meeting platform."),;
+  meetingLink:z.string().optional(),;
+  title:z.string().min(3, "Please provide a brief title for the interview."),;
+  notes:z.string().optional()}),;
+;
+export function InterviewRequestForm({ talent, onClose, userDetails } InterviewRequestFormProps) {;
+  const { requestInterview } = useInterviews(),;
+  const [isSubmitting, setIsSubmitting] = useState(false),;
+;
+  const form = useForm<z.infer<typeof formSchema>>({;
+    resolver:zodResolver(formSchema),;
+    defaultValues:{;
+      title:`Interview with ${talent.full_name}`,;
+      duration:"30",;
+      platform:"zoom",;
+      notes:"",;
+      meetingLink:""}}),;
+;
+  async function onSubmit(values:z.infer<typeof formSchema>) {;
+    if (!userDetails?.id) {;
+      toast({;
+        title:"Authentication required",;
+        description:"Please log in to schedule an interview",;
+        variant:"destructive"}),;
+      return,;
+    }
+;
+    setIsSubmitting(true),;
+;
+    try {;
+      // Combine date and time;
+      const dateTimeString = `${format(values.date, 'yyyy-MM-dd')}T${values.time} 00`,;
+      const scheduledDate = new Date(dateTimeString),;
+      ;
+      // Calculate end time based on duration;
+      const durationMinutes = parseInt(values.duration),;
+;
+      await requestInterview({;
+        talent_id:talent.id,;
+        client_id:userDetails.id,;
+        scheduled_date:scheduledDate.toISOString(),;
+        duration_minutes:durationMinutes,;
+        notes:values.notes,;
+        meeting_platform:values.platform as any,;
+        meeting_link:values.meetingLink,;
+        interview_type:"video",;
+        title:values.title;
+      }),;
+;
+      toast({;
+        title:"Interview requested",;
+        description:`Your interview request with ${talent.full_name} has been sent.`}),;
+      onClose(),;
+    } catch (error) {;
+      console.error("Failed to schedule interview:", error),;
+      toast({;
+        title:"Failed to schedule interview",;
+        description:"An error occurred while scheduling the interview. Please try again.",;
+        variant:"destructive"}),;
+    } finally {;
+      setIsSubmitting(false),;
+    }
+  }
+;
+  const timeSlots = [;
+    "09:00", "09:30", "10:00", "10:30", "11:00", "11:30",;
+    "12:00", "12:30", "13:00", "13:30", "14:00", "14:30",;
+    "15:00", "15:30", "16:00", "16:30", "17:00", "17:30",;
+    "18:00", "18:30", "19:00", "19:30", "20:00";
+  ],;
+;
+  return (;
+    <Form {...form}>;
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">;
+        <div className="flex items-center mb-6">;
+          <div className="flex-shrink-0 h-12 w-12 rounded-full overflow-hidden mr-4">;
+            <img ;
+              src={talent.profile_picture_url || "/placeholder.svg"} ;
+              alt={talent.full_name} ;
+              className="h-full w-full object-cover";
+            />;
+          </div>;
+          <div>;
+            <h3 className="text-lg font-medium text-white">{talent.full_name}</h3>;
+            <p className="text-sm text-zion-slate-light">{talent.professional_title}</p>;
+          </div>;
+        </div>;
+;
+        <FormField;
+          control={form.control}
+          name="title";
+          render={({ field }) => (;
+            <FormItem>;
+              <FormLabel>Interview Title</FormLabel>;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <FormControl>;
                 <Input placeholder="Brief title for the interview" {...field} />;
               </FormControl>;
               <FormMessage />;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewRequestForm.tsx
 
+========
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewRequestForm.tsx
         />;
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewRequestForm.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewRequestForm.tsx
           <FormField
             control={form && form.control}
             name="date"
+=======
+            </FormItem>;
+          )}
+        />;
+;
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+          <FormField;
+            control={form.control}
+            name="date";
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             render={({ field }) => (;
               <FormItem className="flex flex-col">;
                 <FormLabel>Date</FormLabel>;
                 <Popover>;
                   <PopoverTrigger asChild>;
                     <FormControl>;
+<<<<<<< HEAD
                       <Button
                         variant="outline"
                         className={cn(
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewRequestForm.tsx
 
 <<<<<<< HEAD
 =======
@@ -432,6 +694,8 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                           !field.value && "text-muted-foreground"
 =======
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewRequestForm.tsx
                           "w-full pl-3 text-left font-normal"
                           !field && field.value && "text-muted-foreground"
                         )}>;
@@ -439,16 +703,80 @@ if ( {) {
                           format(field && field.value, "PPP");
                         ) : (;
                           <span>Pick a date</span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                         )}
+=======
+                      <Button;
+                        variant="outline";
+                        className={cn(;
+                          "w-full pl-3 text-left font-normal",;
+                          !field.value && "text-muted-foreground";
+                        )}
+                      >;
+                        {field.value ? (;
+                          format(field.value, "PPP");
+                        ) :(;
+                          <span>Pick a date</span>;
+                        )}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                         <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />;
                       </Button>;
                     </FormControl>;
                   </PopoverTrigger>;
                   <PopoverContent className="w-auto p-0" align="start">;
+<<<<<<< HEAD
                     <Calendar
                       mode="single"
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewRequestForm.tsx
 <<<<<<< HEAD
+=======
+        <FormField
+          control={form.control}
+          name="title"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Interview Title</FormLabel>
+              <FormControl>
+                <Input placeholder="Brief title for the interview" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <FormField
+            control={form.control}
+            name="date"
+            render={({ field }) => (
+              <FormItem className="flex flex-col">
+                <FormLabel>Date</FormLabel>
+                <Popover>
+                  <PopoverTrigger asChild>
+                    <FormControl>
+                      <Button
+                        variant="outline"
+                        className={cn(
+<<<<<<< HEAD
+                          "w-full pl-3 text-left font-normal";
+
+=======
+                          "w-full pl-3 text-left font-normal",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+                          !field.value && "text-muted-foreground"
+                        )}
+                      >
+                        {field.value ? (
+                          format(field.value, "PPP")
+                        ) : (
+                          <span>Pick a date</span>
+                        )}
+                        <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
+                      </Button>
+                    </FormControl>
+                  </PopoverTrigger>
+                  <PopoverContent className="w-auto p-0" align="start">
+                    <Calendar
+                      mode="single"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       selected={field.value}
                       onSelect={field.onChange}
                       disabled={(date) => date < new Date() |date > addDays(new Date(), 90)}
@@ -459,13 +787,20 @@ if ( {) {
                 </Popover>
                 <FormMessage />
               </FormItem>
+<<<<<<< HEAD
 
 =======
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewRequestForm.tsx
                       selected={field && field.value}
                       onSelect={field && field.onChange}
 =======
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
@@ -620,11 +955,11 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                       mode="single"
                       selected={field.value}
                       onSelect={field.onChange}
+<<<<<<< HEAD
 
                       disabled={(date) => date < new Date() || date > addDays(new Date(), 90)}
                       initialFocus;
                       className="p-3 pointer-events-auto";
-=======
             </FormItem>)}
         />;
         <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
@@ -658,11 +993,26 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                       disabled={(date) => date < new Date () || date > add_days (new Date (), 90)}
                       initial_focus;
                       className="p - 3 pointer - events - auto";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+                    <Calendar;
+                      mode="single";
+                      selected={field.value}
+                      onSelect={field.onChange}
+                      disabled={(date) => date < new Date() || date > addDays(new Date(), 90)}
+                      initialFocus;
+                      className="p-3 pointer-events-auto";
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+                      disabled={(date) => date < new Date() || date > addDays(new Date(), 90)}
+                      initialFocus;
+                      className="p-3 pointer-events-auto";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     />;
                   </PopoverContent>;
                 </Popover>;
                 <FormMessage />;
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewRequestForm.tsx
 
               </FormItem>;
 
@@ -681,6 +1031,9 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                 <FormLabel>Time</FormLabel>;
                 <Select onValueChange={field && field.onChange} defaultValue={field && field.value}>;
 =======
+========
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewRequestForm.tsx
               </FormItem>)}
           />;
           <FormField;
@@ -690,18 +1043,35 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
               <FormItem>;
                 <FormLabel > Time</FormLabel>;
                 <Select onValueChange={field.on_change} default_value={field.value}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+              </FormItem>;            )}
+          />;
+;
+          <FormField;
+            control={form.control}
+            name="time";
+            render={({ field }) => (;
+              <FormItem>;
+                <FormLabel>Time</FormLabel>;
+                <Select onValueChange={field.onChange} defaultValue={field.value}>;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <FormControl>;
                     <SelectTrigger>;
                       <SelectValue placeholder="Select time" />;
                     </SelectTrigger>;
                   </FormControl>;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewRequestForm.tsx
 
+========
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewRequestForm.tsx
           />;
         </div>;
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewRequestForm.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewRequestForm.tsx
           <FormField
             control={form && form.control}
             name="duration"
@@ -709,7 +1079,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
               <FormItem>;
                 <FormLabel>Duration</FormLabel>;
                 <Select onValueChange={field && field.onChange} defaultValue={field && field.value}>;
-=======
                   <SelectContent className="max - h-[300px]">;
                     {time_slots.map ((time) => (
                       <SelectItem key={time} value={time}>;
@@ -729,7 +1098,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
               <FormItem>;
                 <FormLabel > Duration</FormLabel>;
                 <Select onValueChange={field.on_change} default_value={field.value}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   <FormControl>;
                     <SelectTrigger>;
                       <SelectValue placeholder="Select duration" />;
@@ -743,10 +1111,14 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                   </SelectContent>;
                 </Select>;
                 <FormMessage />;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewRequestForm.tsx
 
           />;
 
 
+========
+          />;
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewRequestForm.tsx
           <FormField
             control={form && form.control}
             name="platform"
@@ -754,7 +1126,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
               <FormItem>;
                 <FormLabel>Platform</FormLabel>;
                 <Select onValueChange={field && field.onChange} defaultValue={field && field.value}>;
-=======
               </FormItem>)}
           />;
           <FormField;
@@ -764,7 +1135,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
               <FormItem>;
                 <FormLabel > Platform</FormLabel>;
                 <Select onValueChange={field.on_change} default_value={field.value}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   <FormControl>;
                     <SelectTrigger>;
                       <SelectValue placeholder="Select platform" />;
@@ -772,30 +1142,107 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                   </FormControl>;
                   <SelectContent>;
                     <SelectItem value="zoom">Zoom</SelectItem>;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewRequestForm.tsx
 
                     <SelectItem value="google - meet">Google Meet</SelectItem>;
 
+========
+                    <SelectItem value="google - meet">Google Meet</SelectItem>;
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewRequestForm.tsx
                     <SelectItem value="teams">Microsoft Teams</SelectItem>;
                     <SelectItem value="other">Other</SelectItem>;
                   </SelectContent>;
                 </Select>;
                 <FormMessage />;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewRequestForm.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewRequestForm.tsx
           />;
         </div>;
-
         {form && form.watch('platform') !== 'in-app' && (;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewRequestForm.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewRequestForm.tsx
           <FormField
             control={form && form.control}
             name="meetingLink"
+=======
+                  <SelectContent className="max-h-[300px]">;
+                    {timeSlots.map((time) => (;
+                      <SelectItem key={time} value={time}>;
+                        {time}
+                      </SelectItem>;                    ))}
+                  </SelectContent>;
+                </Select>;
+                <FormMessage />;
+              </FormItem>;
+            )}
+          />;
+        </div>;
+;
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+          <FormField;
+            control={form.control}
+            name="duration";
+            render={({ field }) => (;
+              <FormItem>;
+                <FormLabel>Duration</FormLabel>;
+                <Select onValueChange={field.onChange} defaultValue={field.value}>;
+                  <FormControl>;
+                    <SelectTrigger>;
+                      <SelectValue placeholder="Select duration" />;
+                    </SelectTrigger>;
+                  </FormControl>;
+                  <SelectContent>;
+                    <SelectItem value="15">15 minutes</SelectItem>;
+                    <SelectItem value="30">30 minutes</SelectItem>;
+                    <SelectItem value="45">45 minutes</SelectItem>;
+                    <SelectItem value="60">60 minutes</SelectItem>;
+                  </SelectContent>;
+                </Select>;
+                <FormMessage />;
+              </FormItem>;            )}
+          />;
+;
+          <FormField;
+            control={form.control}
+            name="platform";
+            render={({ field }) => (;
+              <FormItem>;
+                <FormLabel>Platform</FormLabel>;
+                <Select onValueChange={field.onChange} defaultValue={field.value}>;
+                  <FormControl>;
+                    <SelectTrigger>;
+                      <SelectValue placeholder="Select platform" />;
+                    </SelectTrigger>;
+                  </FormControl>;
+                  <SelectContent>;
+                    <SelectItem value="zoom">Zoom</SelectItem>;
+                    <SelectItem value="google-meet">Google Meet</SelectItem>;
+                    <SelectItem value="teams">Microsoft Teams</SelectItem>;
+                    <SelectItem value="other">Other</SelectItem>;
+                  </SelectContent>;
+                </Select>;
+                <FormMessage />;
+              </FormItem>;
+            )}
+          />;
+        </div>;
+;
+        {form.watch('platform') !== 'in-app' && (;
+          <FormField;
+            control={form.control}
+            name="meetingLink";
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             render={({ field }) => (;
               <FormItem>;
                 <FormLabel>Meeting Link (Optional)</FormLabel>;
                 <FormControl>;
+<<<<<<< HEAD
                   <Input
                     placeholder={`Add your ${form && form.watch('platform')} link here`}
-=======
               </FormItem>)}
           />;
         </div>;
@@ -809,12 +1256,100 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                 <FormControl>;
                   <Input;
                     placeholder={`Add your ${form.watch ('platform')} link here`}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+                  <Input;
+                    placeholder={`Add your ${form.watch('platform')} link here`}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     {...field}
                   />;
                 </FormControl>;
                 <FormMessage />;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewRequestForm.tsx
 
+=======
+              </FormItem>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="time"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Time</FormLabel>
+                <Select onValueChange={field.onChange} defaultValue={field.value}>
+                  <FormControl>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Select time" />
+                    </SelectTrigger>
+                  </FormControl>
+                  <SelectContent className="max-h-[300px]">
+                    {timeSlots.map((time) => (
+                      <SelectItem key={time} value={time}>
+                        {time}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <FormField
+            control={form.control}
+            name="duration"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Duration</FormLabel>
+                <Select onValueChange={field.onChange} defaultValue={field.value}>
+                  <FormControl>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Select duration" />
+                    </SelectTrigger>
+                  </FormControl>
+                  <SelectContent>
+                    <SelectItem value="15">15 minutes</SelectItem>
+                    <SelectItem value="30">30 minutes</SelectItem>
+                    <SelectItem value="45">45 minutes</SelectItem>
+                    <SelectItem value="60">60 minutes</SelectItem>
+                  </SelectContent>
+                </Select>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="platform"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Platform</FormLabel>
+                <Select onValueChange={field.onChange} defaultValue={field.value}>
+                  <FormControl>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Select platform" />
+                    </SelectTrigger>
+                  </FormControl>
+                  <SelectContent>
+                    <SelectItem value="zoom">Zoom</SelectItem>
+                    <SelectItem value="google-meet">Google Meet</SelectItem>
+                    <SelectItem value="teams">Microsoft Teams</SelectItem>
+                    <SelectItem value="other">Other</SelectItem>
+                  </SelectContent>
+                </Select>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+        </div>
+        {form.watch('platform') !== 'in-app' && (
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <FormField
             control={form.control}
             name="meetingLink"
@@ -832,6 +1367,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             )}
           />
         )}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -843,11 +1379,28 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
           control={form && form.control}
           name="notes"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+        <FormField
+          control={form.control}
+          name="notes"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           render={({ field }) => (
             <FormItem>
               <FormLabel>Notes (Optional)</FormLabel>
               <FormControl>
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+                <Textarea
+=======
+                <Textarea 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   placeholder="Share what you'd like to discuss in this interview"
                   className="h-20"
                   {...field}
@@ -868,14 +1421,31 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
       </form>
     </Form>
   )
+<<<<<<< HEAD
 
 =======
 
+========
+<<<<<<< HEAD
+=======
+              </FormItem>;            )}
+          />;
+        )}
+;
+        <FormField;
+          control={form.control}
+          name="notes";
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewRequestForm.tsx
           render={({ field }) => (;
             <FormItem>;
               <FormLabel>Notes (Optional)</FormLabel>;
               <FormControl>;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewRequestForm.tsx
 
+========
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewRequestForm.tsx
                 <Textarea
 =======
 
@@ -884,7 +1454,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   placeholder="Share what you'd like to discuss in this interview"
                   className="h-20"
-=======
               </FormItem>)}
           />)}
         <FormField;
@@ -897,28 +1466,49 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                 <Textarea;
                   placeholder="Share what you'd like to discuss in this interview";
                   className="h - 20";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+                <Textarea ;
+                  placeholder="Share what you'd like to discuss in this interview";
+                  className="h-20";
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   {...field}
                 />;
               </FormControl>;
               <FormMessage />;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewRequestForm.tsx
 
+========
+<<<<<<< HEAD
         />;
-
+=======
+            </FormItem>;
+          )}
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewRequestForm.tsx
+        />;
+;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <div className="flex justify-end gap-4 pt-4">;
           <Button variant="outline" onClick={onClose} type="button">;
             Cancel;
           </Button>;
           <Button type="submit" disabled={isSubmitting}>;
+<<<<<<< HEAD
             {isSubmitting ? "Scheduling..." : "Schedule Interview"}
+=======
+            {isSubmitting ? "Scheduling..." :"Schedule Interview"}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           </Button>;
         </div>;
       </form>;
     </Form>;
+<<<<<<< HEAD
   );
 }
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewRequestForm.tsx
 
 =======
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewRequestForm.tsx
             </FormItem>)}
         />;
         <div className="flex justify - end gap - 4 pt - 4">;
@@ -931,7 +1521,34 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
         </div>;
       </form>;
     </Form>);
+=======
+  ),; interface InterviewRequestFormProps {
+  talent: TalentProfile;
+onClose: () => void;
+userDetails?: UserProfile 
+}const formSchema = z.object ({
+  date: z.date ({
+  required error: "Please select a date for the interview." 
+}) .refine (date => date > new Date (), {
+  message: "Interview date must be in the future" 
+});
+time: z.string () .min (1, "Please select a time for the interview.");
+duration: z.string () .min (1, "Please select the interview duration.");
+platform: z.string () .min (1, "Please select a meeting platform.");
+const form = useForm<z.infer<typeof formSchema>> ({
+  resolver: zodResolver (formSchema), defaultValues: {
+  title: `Interview with $ {
+  talent.full name 
+}`;
+async function onSubmit (values: z.infer<typeof formSchema>) {
+  if (!userDetails?.id) {
+  toast ({
+  return;
+}setIsSubmitting (true);
+}finally {
+  setIsSubmitting (false) 
 }
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewRequestForm.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -940,3 +1557,50 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+}const timeSlots = [ "09:00", "09:30", "10:00", "10:30", "11:00", "11:30";
+"12:00", "12:30", "13:00", "13:30", "14:00", "14:30";
+"15:00", "15:30", "16:00", "16:30", "17:00", "17:30";
+"18:00", "18:30", "19:00", "19:30", "20: 00" ];
+}/> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormLabel>Date</FormLabel> <Popover> <PopoverTrigger asChild> <FormControl> <Button) : (<span>Pick a date</span>) 
+}<CalendarIcon className="ml-auto h-4 w-4 opacity-50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start" > <Calendar initialFocus className="p-3 pointer-events-auto" /> </PopoverContent> </Popover> <FormMessage /> </FormItem>) 
+}/> <FormField <FormLabel>Time</FormLabel> <Select onValueChange= {
+  field.onChange 
+}defaultValue= {
+  field.value 
+}> <FormControl> <SelectTrigger> <SelectValue placeholder="Select time" /> </SelectTrigger> </FormControl> </SelectItem>) ) 
+}</SelectContent> </Select> <FormMessage /> </FormItem>) 
+}/> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormItem> <FormLabel>Duration</FormLabel> <Select onValueChange= {
+  field.onChange 
+}defaultValue= {
+  field.value 
+}> <FormControl> <SelectTrigger> <SelectValue placeholder="Select duration" /> </SelectTrigger> </FormControl> <SelectContent> <SelectItem value="15" >15 minutes</SelectItem> <SelectItem value="30" >30 minutes</SelectItem> <SelectItem value="45" >45 minutes</SelectItem> <SelectItem value="60" >60 minutes</SelectItem> </SelectContent> </Select> <FormMessage /> </FormItem>) 
+}/> <FormField <FormItem> <FormLabel>Platform</FormLabel> <Select onValueChange= {
+  field.onChange 
+}defaultValue= {
+  field.value 
+}> <FormControl> <SelectTrigger> <SelectValue placeholder="Select platform" /> </SelectTrigger> </FormControl> <SelectContent> <SelectItem value="zoom" >Zoom</SelectItem> <SelectItem value="google-meet" >Google Meet</SelectItem> <SelectItem value="teams" >Microsoft Teams</SelectItem> <SelectItem value="other" >Other</SelectItem> </SelectContent> </Select> <FormMessage /> </FormItem>) 
+}/> </div> {
+  form.watch ('platform') !== 'in-app' && (<FormField control= {
+  form.control 
+}<FormItem> <FormLabel>Meeting Link (Optional) </FormLabel> <FormControl> <Input placeholder= {
+  `Add your $ {
+  form.watch ('platform') 
+}link here` 
+}{
+  ...field 
+}/> </FormControl> <FormMessage /> </FormItem>) 
+}/>) 
+}<FormField <FormItem> <FormLabel>Notes (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) 
+}/> </Button> </div> </form> </Form>) 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+}
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/interviews/InterviewRequestForm.tsx
+=======
+<<<<<<< HEAD
+}
+=======
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

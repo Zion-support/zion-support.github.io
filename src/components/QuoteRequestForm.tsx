@@ -1,8 +1,17 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { useState } from "react";
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
 import { useToast } from "@/hooks/use-toast";
@@ -38,10 +47,18 @@ import { Sparkles, Loader2 } from 'lucide-react'
 import { z } from "zod",
 export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | "summary",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import {useState} from "react"
 import {logDebug, logErrorToProduction} from '@/utils/productionLogger'
 import {useToast} from "@/hooks/use-toast"
@@ -62,11 +79,22 @@ import {z} from "zod"
 export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | "summary"
 const serviceStepSchema = z.object({
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   serviceType: z.string().min(1)
   specificItem: z.object({ id: z.string() })})
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+  serviceType: z.string().min(1)
+  specificItem: z.object({ id: z.string() })})
+=======
+  serviceType: z.string().min(1),
+  specificItem: z.object({ id: z.string() })}),
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export function QuoteRequestForm() {
   const router = useRouter()
   const { toast } = useToast()
@@ -75,10 +103,19 @@ export function QuoteRequestForm() {
   const [autoFillLoading, setAutoFillLoading] = useState(false)
   const [autoFillOpen, setAutoFillOpen] = useState(false)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   serviceType: z.string().min(1),
   specificItem: z.object({ id: z.string() })}),
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+<<<<<<< HEAD
+  serviceType: z.string().min(1),
+  specificItem: z.object({ id: z.string() })}),
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
 export function QuoteRequestForm() {
   const router = useRouter(),
@@ -88,12 +125,22 @@ export function QuoteRequestForm() {
   const [autoFillLoading, setAutoFillLoading] = useState(false),
   const [autoFillOpen, setAutoFillOpen] = useState(false),
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   const [formData, setFormData] = useState<QuoteFormData>({
 =======
   
 >>>>>>>   const [formData, setFormData] = useState<QuoteFormData>({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+  
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const [formData, setFormData] = useState<QuoteFormData>({
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     serviceType: ""
     serviceCategory: ""
     specificItem: null
@@ -106,6 +153,7 @@ export function QuoteRequestForm() {
       amount: 0
       type: "fixed"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     }
@@ -114,16 +162,47 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     contactInfo: {
 >>>>>>>       name: ""
+=======
+    }
+=======
+    },
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    contactInfo: {
+      name: ""
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       email: ""
       phone: ""
       company: ""
     }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
   )
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+  })
+  const updateFormData = (data: Partial<QuoteFormData>,) => {
+    setFormData(prev => ({
+      ...prev;
+};
+  );
+};
+}
+<<<<<<< HEAD
+
+  )
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }),
   
   const updateFormData = (data: Partial<QuoteFormData>) => {
@@ -206,6 +285,7 @@ ursor/fix-website-loading-errors-and-merge-6662
     }
   },
 
+<<<<<<< HEAD
 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 import { useState } from './react';
@@ -274,3 +354,282 @@ function QuoteRequestForm() {
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+  const handleAutoFill = async (description: string) => {
+    setAutoFillLoading(true),
+    try {
+      const res = await fetch("/api/openai/match", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ projectDescription: description })}),
+      if (!res.ok) throw new Error("Request failed"),
+      const { category, itemId, timeline, budget } = await res.json(),
+      updateFormData({
+        projectDescription: description,
+        serviceType: category,
+        serviceCategory: category,
+        specificItem: itemId
+          ? { id: itemId, title: "AI Selected Item", category }
+          : formData.specificItem,
+        timeline: timeline || formData.timeline,
+        budget: { ...formData.budget, ...(budget || {}) }}),
+      setCurrentStep("summary"),
+      setAutoFillOpen(false)
+    } catch (err) {
+      logErrorToProduction("Auto-fill API error", err as Error, { component: 'QuoteRequestForm', projectDescription: description }),
+      toast({
+        title: "Auto-fill Failed",
+        description: "We couldn't process your request. Please try again.",
+        variant: "destructive"})
+    } finally {
+      setAutoFillLoading(false)
+    }
+  },
+  
+  const renderStepContent = () => {
+    switch (currentStep) {
+      case "service":
+        return <ServiceTypeStep formData={formData} updateFormData={updateFormData} />,
+      case "details":
+        return <ProjectDetailsStep formData={formData} updateFormData={updateFormData} />,
+      case "timeline":
+        return <TimelineStep formData={formData} updateFormData={updateFormData} />,
+      case "budget":
+        return <BudgetStep formData={formData} updateFormData={updateFormData} />,
+      case "summary":
+        return <SummaryStep formData={formData} updateFormData={updateFormData} />,
+      default: return null
+    }
+  },
+  
+  return (
+    <div className="container mx-auto px-4 py-12">
+      <div className="max-w-3xl mx-auto">
+        <div className="text-center mb-8 space-y-3">
+          <GradientHeading>Request a Quote</GradientHeading>
+          <p className="text-zion-slate-light mt-4">
+            Tell us about your project and we'll create a customized quote for you
+          </p>
+          <div className="inline-flex items-center bg-zion-blue-dark py-1 px-3 rounded-full mt-3 border border-zion-purple/20">
+            <Sparkles className="h-4 w-4 text-zion-cyan mr-1" />
+            <span className="text-sm text-white">AI-powered matching</span>
+          </div>
+          <Button
+            size="sm"
+            onClick={() => setAutoFillOpen(true)}
+            disabled={autoFillLoading}
+            className="mt-2"
+          >
+            {autoFillLoading && (
+              <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+            )}
+            Auto Fill with AI
+          </Button>
+        </div>
+        
+        <Card className="bg-zion-blue-dark border border-zion-blue-light mb-8">
+          <CardContent className="px-6 py-8">
+            <StepProgress currentStep={currentStep} />
+            
+            <div className="mt-8">
+              {renderStepContent()}
+            </div>
+            
+            <div className="flex justify-between mt-8">
+              {currentStep !== "service" && (
+                <Button
+                  variant="outline"
+                  onClick={handleBack}
+                  className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10"
+                >
+                  Back
+                </Button>
+              )}
+              
+              {currentStep !== "summary" ? (
+                <Button 
+                  onClick={handleNext}
+                  className="ml-auto bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
+                >
+                  Continue
+                </Button>
+              ) : (
+                <Button 
+                  onClick={handleSubmit}
+                  disabled={isSubmitting}
+                  className="ml-auto bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
+                >
+                  {isSubmitting ? "Submitting..." : "Submit Request"}
+                </Button>
+      case "details": setCurrentStep("timeline"),;
+        break,;
+      case "timeline":;
+        setCurrentStep("budget"),;
+        break,;
+      case "budget":;
+        setCurrentStep("summary"),;
+        break,;
+      default:;
+        break;
+    }
+  },;
+  const handleBack = () => {;
+    switch (currentStep) {;
+      case "details": setCurrentStep("service"),;
+        break,;
+      case "timeline":;
+        setCurrentStep("details"),;
+        break,;
+      case "budget":;
+        setCurrentStep("timeline"),;
+        break,;
+      case "summary":;
+        setCurrentStep("budget"),;
+        break,;
+      default:;
+        break;
+    }
+  },;
+  const handleSubmit = async () => {;
+    setIsSubmitting(true),;
+    try {;
+      // In a real application, you would send the data to your backend;
+      logDebug("Submitting form data:", { data: formData }),;
+      // Simulate API call;
+      await new Promise(resolve => setTimeout(resolve, 1500)),;
+      toast({;
+        title: "Quote Request Submitted",;
+        description: "We've received your request and will get back to you soon."}),;
+      // Redirect to confirmation page or homepage;
+      router.push("/");
+    } catch (error) {;
+      toast({;
+        title: "Submission Failed",;
+        description: "There was an error submitting your request. Please try again.",;
+        variant: "destructive"});
+    } finally {;
+      setIsSubmitting(false);
+    }
+  },;
+  const handleAutoFill = async (description: string) => {;
+    setAutoFillLoading(true),;
+    try {;
+      const res = await fetch("/api/openai/match", {;
+        method: "POST",;
+        headers: { "Content-Type": "application/json" },;
+        body: JSON.stringify({ projectDescription: description })}),;
+      if (!res.ok) throw new Error("Request failed"),;
+      const { category, itemId, timeline, budget } = await res.json(),;
+      updateFormData({;
+        projectDescription: description,;
+        serviceType: category,;
+        serviceCategory: category,;
+        specificItem: itemId;
+          ? { id: itemId, title: "AI Selected Item", category }
+          : formData.specificItem,;
+        timeline: timeline || formData.timeline,;
+        budget: { ...formData.budget, ...(budget || {}) }}),;
+      setCurrentStep("summary"),;
+      setAutoFillOpen(false);
+    } catch (err) {;
+      logErrorToProduction("Auto-fill API error", err as Error, { component: 'QuoteRequestForm', projectDescription: description }),;
+      toast({;
+        title: "Auto-fill Failed",;
+        description: "We couldn't process your request. Please try again.",;
+        variant: "destructive"});
+    } finally {;
+      setAutoFillLoading(false);
+    }
+  },;
+  const renderStepContent = () => {;
+    switch (currentStep) {;
+      case "service":;
+        return <ServiceTypeStep formData={formData} updateFormData={updateFormData} />,;
+      case "details":;
+        return <ProjectDetailsStep formData={formData} updateFormData={updateFormData} />,;
+      case "timeline":;
+        return <TimelineStep formData={formData} updateFormData={updateFormData} />,;
+      case "budget":;
+        return <BudgetStep formData={formData} updateFormData={updateFormData} />,;
+      case "summary":;
+        return <SummaryStep formData={formData} updateFormData={updateFormData} />;
+      default: return null;
+    }
+  };
+  return (;
+    <div className="container mx-auto px-4 py-12">;
+      <div className="max-w-3xl mx-auto">;
+        <div className="text-center mb-8 space-y-3">;
+          <GradientHeading>Request a Quote</GradientHeading>;
+          <p className="text-zion-slate-light mt-4">;
+            Tell us about your project and we'll create a customized quote for you;
+          </p>;
+          <div className="inline-flex items-center bg-zion-blue-dark py-1 px-3 rounded-full mt-3 border border-zion-purple/20">;
+            <Sparkles className="h-4 w-4 text-zion-cyan mr-1" />;
+            <span className="text-sm text-white">AI-powered matching</span>;
+          </div>;
+          <Button;
+            size="sm";
+            onClick={() => setAutoFillOpen(true)}
+            disabled={autoFillLoading}
+            className="mt-2";
+          >;
+            {autoFillLoading && (;
+              <Loader2 className="h-4 w-4 mr-2 animate-spin" />;
+            )}
+            Auto Fill with AI;
+          </Button>;
+        </div>;
+        <Card className="bg-zion-blue-dark border border-zion-blue-light mb-8">;
+          <CardContent className="px-6 py-8">;
+            <StepProgress currentStep={currentStep} />;
+            <div className="mt-8">;
+              {renderStepContent()}
+            </div>;
+            <div className="flex justify-between mt-8">;
+              {currentStep !== "service" && (;
+                <Button;
+                  variant="outline";
+                  onClick={handleBack}
+                  className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10";
+                >;
+                  Back;
+                </Button>;
+              )}
+;
+              {currentStep !== "summary" ? (;
+                <Button;
+                  onClick={handleNext}
+                  className="ml-auto bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white";
+                >;
+                  Continue;
+                </Button>;
+              ) : (;
+                <Button;
+                  onClick={handleSubmit}
+                  disabled={isSubmitting}
+                  className="ml-auto bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white";
+                >;
+                  {isSubmitting ? "Submitting..." : "Submit Request"}
+                </Button>;
+              )}
+            </div>;
+          </CardContent>;
+        </Card>;
+      </div>;
+      <AutoFillModal;
+        open={autoFillOpen}
+        onOpenChange={setAutoFillOpen}
+        onSubmit={handleAutoFill}
+        loading={autoFillLoading}
+      />;
+    </div>;
+  );
+}
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

@@ -4,16 +4,20 @@ import { render, screen  } from "@testing-library/react"
 const { render, screen } from "@testing-library/react"; render(<AIChatAssistant />);" expect(screen.getByRole("main")).toBeInTheDocument()});" it('displays correct content', () => {; render(<AIChatAssistant />); / Add specific content checks based on component functionality});" it('handles user interactions', () => {; render(<AIChatAssistant />); / Add interaction tests based on component functionality})})""
 import { render, screen  } from "@testing-library/react";
     expect(screen.getByRole("main")).toBeInTheDocument()});
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     render(<AIChatAssistant />);
     // Add specific content checks based on component functionality});,
   it("handles user interactions", () => {;"}
     render(<AIChatAssistant />);
 import { render,screen } from "@testing-library/react"; render(<AIChatAssistant />); expect(screen.getByRole("main")).toBeInTheDocument()}); it("displays correct content",() => {; render(<AIChatAssistant />); it("handles user interactions",() => {; render(<AIChatAssistant />)})
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -24,3 +28,9 @@ import { render,screen } from "@testing-library/react"; render(<AIChatAssistant 
   it('handles user interactions', () => {;
 import { render,screen } from "@testing-library/react"; render(<AIChatAssistant />); expect(screen.getByRole("main")).toBeInTheDocument()}); it('displays correct content', () => {; render(<AIChatAssistant />); it("handles user interactions"
 
+=======
+    // Add interaction tests based on component functionality})});
+  it('displays correct content', () => {;
+  it('handles user interactions', () => {;
+import { render,screen } from "@testing-library/react"; render(<AIChatAssistant />); expect(screen.getByRole("main")).toBeInTheDocument()}); it('displays correct content', () => {; render(<AIChatAssistant />); it("handles user interactions"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

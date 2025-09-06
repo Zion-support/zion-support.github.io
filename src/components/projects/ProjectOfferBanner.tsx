@@ -1,5 +1,13 @@
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
+=======
+  
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useEffect, useState } from "react"
 import { useRouter } from 'next/router'
 import { Bell, Calendar, X } from 'lucide-react'import { Button } from "@/components/ui/button"
@@ -24,9 +32,10 @@ export function ProjectOfferBanner() {
       return updated
     })
   }
-  const handleViewOffer = (project_id: string, ) =>: any {
-    router.push (`/project/${project_id}`);
+  const handleViewOffer = (projectId: string,) => {
+    router.push(`/project/${projectId}`)
   }
+<<<<<<< HEAD
 
     return null
 <<<<<<< HEAD
@@ -34,6 +43,16 @@ export function ProjectOfferBanner() {
 =======
   }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+  if (isLoading |pendingOffers.length === 0 |pendingOffers.every(p => dismissed.has(p.id))) {
+
+    return null
+<<<<<<< HEAD
+  }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { useEffect, useState } from "react",
 import { useRouter } from 'next/router',
 import { Bell, Calendar, X } from 'lucide-react'
@@ -83,6 +102,7 @@ export function ProjectOfferBanner() {;
   if (isLoading || pendingOffers.length === 0 || pendingOffers.every(p => dismissed.has(p.id))) {;
     return null;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   }
 
@@ -92,19 +112,36 @@ export function ProjectOfferBanner() {;
 >>>>>>>   return (
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  }
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
 >>>>>>>     <div className="mb-6 space-y-3">
       {pendingOffers
         .filter(offer => !dismissed.has(offer.id))
         .map(offer => (
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
           <Card
             key = {offer.id,}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+          <Card
+            key = {offer.id,}
+=======
+          <Card 
+            key={offer.id} 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             className="border-2 border-primary bg-primary/5"
-            onClick = {(,) => handleViewOffer(offer.id),}
+            onClick={() => handleViewOffer(offer.id)}
           >
             <CardContent className="p-4 flex items-center justify-between">
               <div className="flex items-center gap-2">
@@ -119,17 +156,28 @@ export function ProjectOfferBanner() {;
                 </div>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>>               <div className="flex items-center gap-2">
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+              
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <div className="flex items-center gap-2">
 >>>>>>>                 <Button size="sm" className="whitespace-nowrap">
                   View Offer
                 </Button>
                 <Button
                   size="sm"
+<<<<<<< HEAD
                   variant="ghost"
                   onClick={(e) => handleDismiss(offer.id, e)}
                 >
@@ -233,15 +281,18 @@ export function ProjectOfferBanner() {;
                 <Button
                   size="sm" 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   variant="ghost"
-                  onClick = {(e,) => handleDismiss(offer && offer.id, e),}
-                >;
-                  <X className="h-4 w-4" />;
-                </Button>;
-              </div>;
-            </CardContent>;
-          </Card>;
+                  onClick={(e) => handleDismiss(offer.id, e)}
+                >
+                  <X className="h-4 w-4" />
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
         ))}
+<<<<<<< HEAD
 
   if ()) {) {
   $2
@@ -344,3 +395,39 @@ if () ) {) {
 >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+    </div>
+  )
+}, [projects, isLoading])
+const handleDismiss = (projectId: string, e: React.MouseEvent) => {
+  e.stopPropagation ()
+setDismissed (prev => {
+  const updated = new Set (prev)
+updated.add (projectId)
+return updated
+})
+}
+const handleViewOffer = (projectId: string) => {
+  router.push (`/project/$ {
+  projectId
+}`)
+}
+if (isLoading |pendingOffers.length === 0 |pendingOffers.every (p => dismissed.has (p.id) ) ) {
+  return null
+}return (<div className="mb-6 space-y-3" > {
+  pendingOffers offer.id "
+}> <CardContent className="p-4 flex items-center justify-between" > <div className="flex items-center gap-2" > <div className="bg-primary/10 rounded-full p-2" > <Bell className="h-4 w-4 text-primary" /> </div> <div> </p> </div> </div> <div className="flex items-center gap-2" > <Button size="sm" className="whitespace-nowrap" > View Offer </Button> <Button > <X className="h-4 w-4" /> </Button> </div> </CardContent> </Card>) )
+}</div>)
+}'"}
+=======
+    </div>;
+  );
+}
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

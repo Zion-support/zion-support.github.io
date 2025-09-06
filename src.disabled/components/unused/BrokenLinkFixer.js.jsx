@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD:src.disabled/components/unused/BrokenLinkFixer.js.jsx
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 import _React,{ useState,useEffect,useCallback } from';react' import { motion,AnimatePresence } from';';framer-motion' import { LinkIcon,ExclamationTriangleIcon,CheckCircleIcon,XMarkIcon,ArrowPathIcon,WrenchScrewdriverIcon,InformationCircleIcon } from';';@heroicons/react/24/outline' "export": const BrokenLinkFixer = ({ className = '';';,"autoCheck": '= true',showDetails = true,fixBrokenLinks = true }) => { const [isOpen,setIsOpen] = useState(false) const [links,setLinks] = useState([]) const [isChecking,setIsChecking] = useState(false) const [activeTab,setActiveTab] = useState('overview';';) const [stats,setStats] = useState({ "total": '0',"healthy": '0',"broken": '0',"checking": '0',"unknown": '0'})''';) const [stats,setStats] = useState({ "total": '0',"healthy": '0',"broken": '0',"checking": '0',"unknown": '0' })'
 
@@ -16,9 +20,20 @@ import _React,{ useState,useEffect,useCallback } from';react' import { motion,An
 =======
 import _React,{ useState,useEffect,useCallback } from';react' import { motion,AnimatePresence } from';';framer-motion' import { LinkIcon,ExclamationTriangleIcon,CheckCircleIcon,XMarkIcon,ArrowPathIcon,WrenchScrewdriverIcon,InformationCircleIcon } from';';@heroicons/react/24/outline' "export": const BrokenLinkFixer = ({ className = '';';,"autoCheck": '= true',showDetails = true,fixBrokenLinks = true }) => { const [isOpen,setIsOpen] = useState(false) const [links,setLinks] = useState([]) const [isChecking,setIsChecking] = useState(false) const [activeTab,setActiveTab] = useState('overview';';) const [stats,setStats] = useState({ "total": '0',"healthy": '0',"broken": '0',"checking": '0',"unknown": '0'})''';) const [stats,setStats] = useState({ "total": '0',"healthy": '0',"broken": '0',"checking": '0',"unknown": '0' })'
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
+<<<<<<< HEAD
 
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+:src.disabled/components/unused/BrokenLinkFixer.js.jsx
+import React,{ useState,useEffect,useCallback } from\';react\' import { motion,AnimatePresence } from\';\';framer-motion\' import { LinkIcon,ExclamationTriangleIcon,CheckCircleIcon,XMarkIcon,ArrowPathIcon,WrenchScrewdriverIcon,InformationCircleIcon } from\';\';@heroicons/react/24/outline\' \"export\": const BrokenLinkFixer = ({ className = \'';\';,\"autoCheck\": \'= true\',showDetails = true,fixBrokenLinks = true }) => { const [isOpen,setIsOpen] = useState(false) const [links,setLinks] = useState([]) const [isChecking,setIsChecking] = useState(false) const [activeTab,setActiveTab] = useState(\'overview\';\';) const [stats,setStats] = useState({ \"total\": \'0\',\"healthy\": \'0\',\"broken\": \'0\',\"checking\": \'0\',\"unknown\": \'0\'})\''\';) const [stats,setStats] = useState({ \"total\": \'0\',\"healthy\": \'0\',\"broken\": \'0\',\"checking\": \'0\',\"unknown\": \'0\' })\'
+const React,{ useState,useEffect,useCallback } from";react" import { motion,AnimatePresence } from";";framer-motion" import { LinkIcon,ExclamationTriangleIcon,CheckCircleIcon,XMarkIcon,ArrowPathIcon,WrenchScrewdriverIcon,InformationCircleIcon } from";";@heroicons/react/24/outline" export: const BrokenLinkFixer = ({ className = "";";,autoCheck: "= true",showDetails = true,fixBrokenLinks = true }) => { const [isOpen,setIsOpen] = useState(false) const [links,setLinks] = useState([]) const [isChecking,setIsChecking] = useState(false) const [activeTab,setActiveTab] = useState("overview";";) const [stats,setStats] = useState({ total: "0",healthy: "0",broken: "0",checking: "0",unknown: "0"})""";) const [stats,setStats] = useState({ total: "0",healthy: "0",broken: "0",checking: "0",unknown: "0" })"'"'"
+import _React,{ useState,useEffect,useCallback } from';react' import { motion,AnimatePresence } from';';framer-motion' import { LinkIcon,ExclamationTriangleIcon,CheckCircleIcon,XMarkIcon,ArrowPathIcon,WrenchScrewdriverIcon,InformationCircleIcon } from';';@heroicons/react/24/outline' "export": const BrokenLinkFixer = ({ className = '';';,"autoCheck": '= true',showDetails = true,fixBrokenLinks = true }) => { const [isOpen,setIsOpen] = useState(false) const [links,setLinks] = useState([]) const [isChecking,setIsChecking] = useState(false) const [activeTab,setActiveTab] = useState('overview';';) const [stats,setStats] = useState({ "total": '0',"healthy": '0',"broken": '0',"checking": '0',"unknown": '0'})''';) const [stats,setStats] = useState({ "total": '0',"healthy": '0',"broken": '0',"checking": '0',"unknown": '0' })'
 import _React,{ useState,useEffect,useCallback } from';react' import { motion,AnimatePresence } from';';framer-motion' import { LinkIcon,ExclamationTriangleIcon,CheckCircleIcon,XMarkIcon,ArrowPathIcon,WrenchScrewdriverIcon,InformationCircleIcon } from';';@heroicons/react/24/outline' "export": const BrokenLinkFixer = ({ className = '';';,"autoCheck": '= true',showDetails = true,fixBrokenLinks = true }) => { const [isOpen,setIsOpen] = useState(false) const [links,setLinks] = useState([]) const [isChecking,setIsChecking] = useState(false) const [activeTab,setActiveTab] = useState('overview', ') const [stats,setStats] = useState({ "total": '0',"healthy": '0',"broken": '0',"checking": '0',"unknown": '0'})''';) const [stats,setStats] = useState({ "total": '0',"healthy": '0',"broken": '0',"checking": '0',"unknown": '0' })'
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/src.disabled/components/unused/BrokenLinkFixer.js.jsx
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/unused/BrokenLinkFixer.js.jsx
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

@@ -1,13 +1,24 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD:src.disabled/components/ui/form.jsx
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 import React from \'react\'; \"export\": const Form = ({ children,...props }) => { return <div {...props}>{children}</div> } export const FormField = ({ children,name }) => { return <div data-field={name}>{children}</div> } export const FormItem = ({ children,className = \'' }) => {\'; \"return\": <div className={className}>{children}</div> } export const FormControl = ({ children }) => { return <>{children}</> } export const FormLabel = ({ children,className = \'' }) => {\'; \"return\": <label className={className}>{children}</label> } export const FormMessage = ({ className = \'' }) => {\'; \"return\": <div className={className}></div> } \'
 const React from "react"; export: const Form = ({ children,.props }) => { return <div {.props}>{children}</div> } export const FormField = ({ children,name }) => { return <div data-field={name}>{children}</div> } export const FormItem = ({ children,className = "" }) => {"; return: <div className={className}>{children}</div> } export const FormControl = ({ children }) => { return <>{children}</> } export const FormLabel = ({ children,className = "" }) => {"; return: <label className={className}>{children}</label> } export const FormMessage = ({ className = "" }) => {"; return: <div className={className}></div> } "'"'"
 
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 import React from \'react\'; \"export\": const Form = ({ children,...props }) => { return <div {...props}>{children}</div> } export const FormField = ({ children,name }) => { return <div data-field={name}>{children}</div> } export const FormItem = ({ children,className = \'' }) => {\'; \"return\": <div className={className}>{children}</div> } export const FormControl = ({ children }) => { return <>{children}</> } export const FormLabel = ({ children,className = \'' }) => {\'; \"return\": <label className={className}>{children}</label> } export const FormMessage = ({ className = \'' }) => {\'; \"return\": <div className={className}></div> } \'
 const React from "react"; export: const Form = ({ children,.props }) => { return <div {.props}>{children}</div> } export const FormField = ({ children,name }) => { return <div data-field={name}>{children}</div> } export const FormItem = ({ children,className = "" }) => {"; return: <div className={className}>{children}</div> } export const FormControl = ({ children }) => { return <>{children}</> } export const FormLabel = ({ children,className = "" }) => {"; return: <label className={className}>{children}</label> } export const FormMessage = ({ className = "" }) => {"; return: <div className={className}></div> } "'"'"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/ui/form.jsx
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import _React from 'react'; "export": const Form = ({ children,...props }) => { return <div {...props}>{children}</div> } export const FormField = ({ children,name }) => { return <div data-field={name}>{children}</div> } export const FormItem = ({ children,className = '' }) => {'; "return": <div className={className}>{children}</div> } export const FormControl = ({ children }) => { return <>{children}</> } export const FormLabel = ({ children,className = '' }) => {'; "return": <label className={className}>{children}</label> } export const FormMessage = ({ className = '' }) => {'; "return": <div className={className}></div> } '

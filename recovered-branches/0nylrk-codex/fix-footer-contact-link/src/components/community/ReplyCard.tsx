@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/community/ReplyCard.tsx
 
 <<<<<<< HEAD
 
@@ -8,6 +10,15 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 =======
+========
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/community/ReplyCard.tsx
+=======
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import {formatDistanceToNow} from "date-fns";
 import {ThumbsUp, ThumbsDown, CheckCircle} from "@/components/icons";
 import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
@@ -16,18 +27,56 @@ import {Button} from "@/components/ui/button";
 import {Badge} from "@/components/ui/badge";
 import {ForumReply} from "@/types/community";
 import {cn} from "@/lib/utils";
+<<<<<<< HEAD
 interface ReplyCardProps {;
   reply: ForumReply,;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/community/ReplyCard.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/community/ReplyCard.tsx
   onMarkAnswer?: () => void;
   canMarkAnswer?: boolean;
   className?: string;
 }
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/community/ReplyCard.tsx
 
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { formatDistanceToNow } from "date-fns",
+import { ThumbsUp, ThumbsDown, CheckCircle } from "@/components/icons",
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",
+<<<<<<< HEAD
+import { ForumReply } from "@/types/community";
+import { cn } from "@/lib/utils";
+interface ReplyCardProps {
+
+  reply: ForumReply
+
+  onMarkAnswer?: () => void;
+  canMarkAnswer?: boolean;
+  className?: string
+}
+
+export const ReplyCard = ({
+  reply;
+  onMarkAnswer
+  canMarkAnswer = false;
+=======
+import { ForumReply } from "@/types/community",
+import { cn } from "@/lib/utils",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 interface ReplyCardProps {
   reply: ForumReply,
   onMarkAnswer?: () => void,
@@ -35,6 +84,7 @@ interface ReplyCardProps {
   className?: string
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   onMarkAnswer, 
   canMarkAnswer = false,
@@ -49,14 +99,28 @@ export const ReplyCard = ({
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+export const ReplyCard = ({ ;
+  reply;
+=======
+export const ReplyCard = ({ 
+  reply,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  onMarkAnswer, 
+  canMarkAnswer = false,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   className
 }: ReplyCardProps) => {
   const timeAgo = formatDistanceToNow(new Date(reply.createdAt), { addSuffix: true })
   return (
     <Card className={cn(
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/community/ReplyCard.tsx
 export const ReplyCard = ({ ;
   reply;
   onMarkAnswer, ;
@@ -67,6 +131,15 @@ export const ReplyCard = ({ ;
       reply.isAnswer && "border-green-500/50 bg-green-50 dark:bg-green-950/20",
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+      "transition-shadow";
+      reply.isAnswer && "border-green-500/50 bg-green-50 dark: bg-green-950/20"
+=======
+      "transition-shadow",
+      reply.isAnswer && "border-green-500/50 bg-green-50 dark:bg-green-950/20",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       className
     )}>
       <CardHeader className="flex flex-row items-start gap-4 space-y-0">
@@ -81,7 +154,10 @@ export const ReplyCard = ({ ;
             </span>
             {reply.authorRole && (
               <Badge variant="outline" className="ml-2 text-xs">
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
 import { formatDistanceToNow } from "date-fns",;
@@ -103,26 +179,41 @@ export const ReplyCard = ({;
   reply,;
   onMarkAnswer,;
   canMarkAnswer = false,;
+<<<<<<< HEAD
 
   className;
 }: ReplyCardProps) => {;
   const timeAgo = formatDistanceToNow(new Date(reply && reply.createdAt), { addSuffix: true }),;
-
   return (
     <CardclassName={cn(
       "transition-shadow"
       reply && reply.isAnswer && "border-green-500/50 bg-green-50 dark: bg-green-950/20",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       className
     )}>;
       <CardHeader className="flex flex-row items-start gap-4 space-y-0">;
         <Avatar className="h-8 w-8">;
           <AvatarImage src={reply && reply.authorAvatar} />;
           <AvatarFallback>{reply && reply.authorName.charAt(0)}</AvatarFallback>;
+=======
+  className;
+}: ReplyCardProps) => {;
+  const timeAgo = formatDistanceToNow(new Date(reply.createdAt), { addSuffix: true }),;
+  return (;
+    <Card className={cn(;
+      "transition-shadow",;
+      reply.isAnswer && "border-green-500/50 bg-green-50 dark:bg-green-950/20",;
+      className;
+    )}>;
+      <CardHeader className="flex flex-row items-start gap-4 space-y-0">;
+        <Avatar className="h-8 w-8">;
+          <AvatarImage src={reply.authorAvatar} />;
+          <AvatarFallback>{reply.authorName.charAt(0)}</AvatarFallback>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         </Avatar>;
         <div className="flex-1">;
           <div className="flex items-center">;
             <span className="font-medium">;
+<<<<<<< HEAD
               {reply && reply.authorName}
             </span>;
             {reply && reply.authorRole && (;
@@ -144,7 +235,31 @@ export const ReplyCard = ({;
           </div>;
           <div className="text-xs text-muted-foreground">;
             {timeAgo}
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/community/ReplyCard.tsx
 <<<<<<< HEAD
+=======
+              {reply.authorName}
+            </span>;
+            {reply.authorRole && (;
+              <Badge variant="outline" className="ml-2 text-xs">;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                {reply.authorRole}
+              </Badge>
+            )}
+            {reply.isAnswer && (
+              <Badge className="ml-2 bg-green-500 text-white">
+                <CheckCircle className="h-3 w-3 mr-1" />
+                Answer
+              </Badge>
+            )}
+          </div>
+          <div className="text-xs text-muted-foreground">
+            {timeAgo}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </div>
         </div>
       </CardHeader>
@@ -168,19 +283,20 @@ export const ReplyCard = ({;
             Mark as Answer
           </Button>
         )}
+<<<<<<< HEAD
 
 export default ReplyCard;
 
 =======
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/community/ReplyCard.tsx
           </div>;
         </div>;
       </CardHeader>;
-
       <CardContent>;
         <div>{reply && reply.content}</div>;
       </CardContent>;
-
       <CardFooter className="flex justify-between">;
         <div className="flex items-center gap-2">;
           <Button variant="ghost" size="sm" className="px-2">;
@@ -192,7 +308,6 @@ export default ReplyCard;
             <span>{reply && reply.downvotes}</span>;
           </Button>;
         </div>;
-
         {canMarkAnswer && !reply && reply.isAnswer && (;
           <Button size="sm" variant="outline" onClick={onMarkAnswer} className="text-green-600">;
             <CheckCircle className="h-4 w-4 mr-1" />;
@@ -202,16 +317,28 @@ export default ReplyCard;
 =======
 
 
+=======
+<<<<<<< HEAD
+      </CardFooter>
+    </Card>
+  )
+}
+export default ReplyCard;
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       </CardFooter>;
     </Card>;
   );
 };
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/community/ReplyCard.tsx
 
 
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/community/ReplyCard.tsx
 export default ReplyCard;
-
-=======
 import { formatDistanceToNow } from './date - fns';
 import { ThumbsUp, ThumbsDown, CheckCircle } from '@/components / icons';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components / ui / card';
@@ -288,5 +415,139 @@ export const ReplyCard = ({
 ;
 export default ReplyCard;
 ;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/community/ReplyCard.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+=======
+
+import { formatDistanceToNow } from "date-fns",;
+import { ThumbsUp, ThumbsDown, CheckCircle } from "@/components/icons",;
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
+import { Button } from "@/components/ui/button",;
+import { Badge } from "@/components/ui/badge",;
+import { ForumReply } from "@/types/community",;
+import { cn } from "@/lib/utils",;
+;
+interface ReplyCardProps {;
+  reply:ForumReply,;
+  onMarkAnswer?:() => void,;
+  canMarkAnswer?:boolean,;
+  className?:string;
+}
+;
+export const ReplyCard = ({ ;
+  reply,;
+  onMarkAnswer, ;
+  canMarkAnswer = false,;
+  className;
+} ReplyCardProps) => {;
+  const timeAgo = formatDistanceToNow(new Date(reply.createdAt), { addSuffix:true }),;
+;
+  return (;
+    <Card className={cn(;
+      "transition-shadow",;
+      reply.isAnswer && "border-green-500/50 bg-green-50 dark:bg-green-950/20",;
+      className;
+    )}>;
+      <CardHeader className="flex flex-row items-start gap-4 space-y-0">;
+        <Avatar className="h-8 w-8">;
+          <AvatarImage src={reply.authorAvatar} />;
+          <AvatarFallback>{reply.authorName.charAt(0)}</AvatarFallback>;
+        </Avatar>;
+        <div className="flex-1">;
+          <div className="flex items-center">;
+            <span className="font-medium">;
+              {reply.authorName}
+            </span>;
+            {reply.authorRole && (;
+              <Badge variant="outline" className="ml-2 text-xs">;                {reply.authorRole}
+              </Badge>;
+            )}
+            {reply.isAnswer && (;
+              <Badge className="ml-2 bg-green-500 text-white">;
+                <CheckCircle className="h-3 w-3 mr-1" />;
+                Answer;
+              </Badge>;
+            )}
+          </div>;
+          <div className="text-xs text-muted-foreground">;
+            {timeAgo}
+          </div>;
+        </div>;
+      </CardHeader>;
+      ;
+      <CardContent>;
+        <div>{reply.content}</div>;
+      </CardContent>;
+      ;
+      <CardFooter className="flex justify-between">;
+        <div className="flex items-center gap-2">;
+          <Button variant="ghost" size="sm" className="px-2">;
+            <ThumbsUp className="h-4 w-4 mr-1" />;
+            <span>{reply.upvotes}</span>;
+          </Button>;
+          <Button variant="ghost" size="sm" className="px-2">;
+            <ThumbsDown className="h-4 w-4 mr-1" />;
+            <span>{reply.downvotes}</span>;
+          </Button>;
+        </div>;
+        ;
+        {canMarkAnswer && !reply.isAnswer && (;
+          <Button size="sm" variant="outline" onClick={onMarkAnswer} className="text-green-600">;
+            <CheckCircle className="h-4 w-4 mr-1" />;
+            Mark as Answer;
+          </Button>;
+        )}
+      </CardFooter>;
+    </Card>;
+  ),;
+},;
+;
+export default ReplyCard,; interface ReplyCardProps {
+  reply: ForumReply;
+onMarkAnswer?: () => void;
+canMarkAnswer?: boolean;
+className?: string 
+}export const ReplyCard = ({
+  reply;
+onMarkAnswer;
+canMarkAnswer = false;
+className 
+}: ReplyCardProps) => {
+  const timeAgo = formatDistanceToNow (new Date (reply.createdAt), {
+  addSuffix: true 
+});
+return (<Card className= {
+  cn ("transition-shadow";
+reply.isAnswer && "border-green-500/50 bg-green-50 dark:bg-green-950/20";
+className) 
+}> <CardHeader className="flex flex-row items-start gap-4 space-y-0" > <Avatar className="h-8 w-8" > <AvatarImage src= {
+  reply.authorAvatar 
+}/> <AvatarFallback> {
+  reply.authorName.charAt (0) 
+}</AvatarFallback> </Avatar> <div className="flex-1" > <div className="flex items-center" > <span className="font-medium" > {
+  reply.authorName 
+}</span> {
+  reply.authorRole && (<Badge variant="outline" className="ml-2 text-xs" > {
+  reply.authorRole 
+}</Badge>) 
+}{
+  reply.isAnswer && (<Badge className="ml-2 bg-green-500 text-white" > <CheckCircle className="h-3 w-3 mr-1" /> 
+}</div> </div> </div> </CardHeader> <CardContent> <div> {
+  reply.content 
+}</div> </CardContent> Mark as Answer </Button>) 
+}</CardFooter> </Card>) 
+};
+export default ReplyCard;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/community/ReplyCard.tsx
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default ReplyCard;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

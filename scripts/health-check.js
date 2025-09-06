@@ -22,16 +22,21 @@ const { execSync } = require('child_process');
 
 class HealthChecker {
   constructor() {
+<<<<<<< HEAD
 
     this && this.checks = [],
     this && this.results = []
 
+=======
+    this.checks = [];
+    this.results = [];
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }
 
   async checkBuildFiles() {
-    const buildDir = path && path.join(process && process.cwd(), '.next');
-    const exists = fs && fs.existsSync(buildDir);
-    this && this.results.push({
+    const buildDir = path.join(process.cwd(), '.next');
+    const exists = fs.existsSync(buildDir);
+    this.results.push({
       check: 'Build Files',
       status: exists ? 'PASS' : 'FAIL',
       message: exists ? 'Build directory exists' : 'Build directory missing'
@@ -40,13 +45,13 @@ class HealthChecker {
   }
 
   async checkDependencies() {
-    const packageJsonPath = path && path.join(process && process.cwd(), 'package && package.json');
-    const nodeModulesPath = path && path.join(process && process.cwd(), 'node_modules');
+    const packageJsonPath = path.join(process.cwd(), 'package.json');
+    const nodeModulesPath = path.join(process.cwd(), 'node_modules');
     
-    const packageExists = fs && fs.existsSync(packageJsonPath);
-    const nodeModulesExists = fs && fs.existsSync(nodeModulesPath);
+    const packageExists = fs.existsSync(packageJsonPath);
+    const nodeModulesExists = fs.existsSync(nodeModulesPath);
     
-    this && this.results.push({
+    this.results.push({
       check: 'Dependencies',
       status: packageExists && nodeModulesExists ? 'PASS' : 'FAIL',
       message: packageExists && nodeModulesExists ? 'Dependencies installed' : 'Missing dependencies'
@@ -56,10 +61,10 @@ class HealthChecker {
   }
 
   async checkEnvironmentVariables() {
-    const envFile = path && path.join(process && process.cwd(), '.env && env.local');
-    const envExists = fs && fs.existsSync(envFile);
+    const envFile = path.join(process.cwd(), '.env.local');
+    const envExists = fs.existsSync(envFile);
     
-    this && this.results.push({
+    this.results.push({
       check: 'Environment Variables',
       status: envExists ? 'PASS' : 'WARN',
       message: envExists ? 'Environment file exists' : 'No environment file found'
@@ -69,37 +74,51 @@ class HealthChecker {
   }
 
   async runAllChecks() {
-    console && console.log('🏥 Running Health Checks...');
+    console.log('🏥 Running Health Checks...');
     
-    await this && this.checkBuildFiles();
-    await this && this.checkDependencies();
-    await this && this.checkEnvironmentVariables();
+    await this.checkBuildFiles();
+    await this.checkDependencies();
+    await this.checkEnvironmentVariables();
     
-    const passed = this && this.results.filter(r => r && r.status === 'PASS').length;
-    const failed = this && this.results.filter(r => r && r.status === 'FAIL').length;
-    const warnings = this && this.results.filter(r => r && r.status === 'WARN').length;
+    const passed = this.results.filter(r => r.status === 'PASS').length;
+    const failed = this.results.filter(r => r.status === 'FAIL').length;
+    const warnings = this.results.filter(r => r.status === 'WARN').length;
     
+<<<<<<< HEAD
 
     console && console.log('\n📊 Health Check Results: '),
     this && this.results.forEach(result => {
       const icon = result && result.status === 'PASS' ? '✅' : result && result.status === 'FAIL' ? '❌' : '⚠️';
       console && console.log(`${icon} ${result && result.check}: ${result && result.message}`);
 
+=======
+    console.log('\n📊 Health Check Results:');
+    this.results.forEach(result => {
+      const icon = result.status === 'PASS' ? '✅' : result.status === 'FAIL' ? '❌' : '⚠️';
+      console.log(`${icon} ${result.check}: ${result.message}`);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     });
     
-    console && console.log(`\n📈 Summary: ${passed} passed, ${failed} failed, ${warnings} warnings`);
+    console.log(`\n📈 Summary: ${passed} passed, ${failed} failed, ${warnings} warnings`);
     
     return {
       passed,
       failed,
       warnings,
-      results: this && this.results
+      results: this.results
     };
   }
 
+<<<<<<< HEAD
+=======
+if (require.main === module) {
+  const checker = new HealthChecker();
+  checker.runAllChecks().catch(console.error);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
 <<<<<<< HEAD
 module.exports = HealthChecker;
+<<<<<<< HEAD
 =======
 if (require && require.main === module) {
     const checker = new HealthChecker(),
@@ -121,3 +140,6 @@ module && module.exports = app
 const express = const app = express() app && app.get("/health",(req,res) => { res && res.status(200).json({status: "healthy",timestamp: new Date().toISOString(),uptime: process && process.uptime(); memory: process && process.memoryUsage(); version: process && process.env.npm_package_version || "1 && 1.0.0"})}) app && app.get("/ready",(req,res) => { res && res.status(200).json({status: "ready",timestamp: new Date().toISOString()})}) module && module.exports = app
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

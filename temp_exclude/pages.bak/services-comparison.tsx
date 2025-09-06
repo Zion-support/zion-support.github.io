@@ -1,11 +1,12 @@
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React from 'react';
-
 interface ServicescomparisonProps {;
   // Add props here as needed;
 }
-
 export default function Servicescomparison(): any ({ }: ServicescomparisonProps) {;
   return (
     <div>;

@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchingResults.tsx
 
 <<<<<<< HEAD
 import { useState } from "react",
@@ -8,6 +10,14 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { BarChart3, BriefcaseIcon, Monitor, User } from "@/components/icons",
 =======
+========
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchingResults.tsx
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import {useState} from "react";
 import {MatchResultItem} from "@/lib/ai-matchmaking";
 import {Card, CardContent} from "@/components/ui/card";
@@ -17,35 +27,72 @@ import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {BarChart3, BriefcaseIcon, Monitor, User} from "@/components/icons";
 import {Skeleton} from "@/components/ui/skeleton";
 import {cn} from "@/lib/utils";
+<<<<<<< HEAD
 interface AIMatchingResultsProps {;
   matches: MatchResultItem[],;
   onSelectMatch?: (match: MatchResultItem) => void,;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchingResults.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchingResults.tsx
   isLoading?: boolean;
   projectDescription?: string;
   serviceType?: string;
 }
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchingResults.tsx
 
 
 export function AIMatchingResults(): any ({;
 
+========
+export function AIMatchingResults(): any ({;
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchingResults.tsx
   matches;
   onSelectMatch;
-
   isLoading = false;
   projectDescription = "";
   serviceType: _serviceType = "";
 }: AIMatchingResultsProps) {;
   const [activeTab, setActiveTab] = useState("all");
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchingResults.tsx
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { useState } from "react",
+import { MatchResultItem } from "@/lib/ai-matchmaking",
+import { Card, CardContent } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { BarChart3, BriefcaseIcon, Monitor, User } from "@/components/icons",
+<<<<<<< HEAD
+import { Skeleton } from "@/components/ui/skeleton";
+import { cn } from "@/lib/utils";
+interface AIMatchingResultsProps {
+
+  matches: MatchResultItem[]
+  onSelectMatch?: (match: MatchResultItem) => void
+
+  isLoading?: boolean;
+  projectDescription?: string;
+=======
+import { Skeleton } from "@/components/ui/skeleton",
+import { cn } from "@/lib/utils",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 interface AIMatchingResultsProps {
   matches: MatchResultItem[],
   onSelectMatch?: (match: MatchResultItem) => void,
   isLoading?: boolean,
   projectDescription?: string,
+<<<<<<< HEAD
 
   serviceType?: string
 }
@@ -62,18 +109,68 @@ export function AIMatchingResults({
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  serviceType?: string
+}
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+export function AIMatchingResults({;
+  matches;
+  onSelectMatch;
+  isLoading = false;
+  projectDescription = "";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export function AIMatchingResults({
+<<<<<<< HEAD
+  matches;
+  onSelectMatch;
+
+  isLoading = false;
+  projectDescription = "";
+  serviceType: _serviceType = ""
+}: AIMatchingResultsProps) {
+  const [activeTab, setActiveTab] = useState("all");
+=======
+  matches,
+  onSelectMatch,
+  isLoading = false,
+  projectDescription = "",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  serviceType: _serviceType = ""
+}: AIMatchingResultsProps) {
+  const [activeTab, setActiveTab] = useState("all"),
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   // Group matches by category
   const categories = {
     all: matches
     talent: matches.filter(match => match.category.toLowerCase().includes("talent"))
     services: matches.filter(match => match.category.toLowerCase().includes("service"))
     equipment: matches.filter(match => match.category.toLowerCase().includes("equipment"))
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 
+=======
+<<<<<<< HEAD
+  }
+  // Get the icon for a category
+  const getCategoryIcon = (category: string) => {
+    const lowerCategory = category.toLowerCase();
+    if (lowerCategory.includes("talent")) return User;
+    if (lowerCategory.includes("equipment")) return Monitor
+    return BriefcaseIcon
+  }
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   },
   
   // Get the icon for a category
@@ -84,8 +181,12 @@ export function AIMatchingResults({
     return BriefcaseIcon
   },
   
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   if (isLoading) {
     return (
       <div className="space-y-4">
@@ -112,7 +213,10 @@ export function AIMatchingResults({
               <p className="text-xs text-zion-slate-light">Your search:</p>
               <p className="text-sm text-white">{projectDescription}</p>
             </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
 import { useState } from "react",;
@@ -140,7 +244,10 @@ export function AIMatchingResults({;
   serviceType: _serviceType = "";
 }: AIMatchingResultsProps) {;
   const [activeTab, setActiveTab] = useState("all"),;
+<<<<<<< HEAD
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchingResults.tsx
   // Group matches by category;
   const categories = {;
     all: matches,;
@@ -148,7 +255,6 @@ export function AIMatchingResults({;
     services: matches && matches.filter(match => match && match.category.toLowerCase().includes("service")),;
     equipment: matches && matches.filter(match => match && match.category.toLowerCase().includes("equipment"));
   };
-
   // Get the icon for a category;
   const getCategoryIcon = (category: string) => {;
     const lowerCategory = category && category.toLowerCase();
@@ -156,10 +262,71 @@ export function AIMatchingResults({;
     if (lowerCategory && lowerCategory.includes("equipment")) return Monitor,;
     return BriefcaseIcon;
   };
-
   if (isLoading) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
+=======
+import { useState } from "react",;
+import { MatchResultItem } from "@/lib/ai-matchmaking",;
+import { Card, CardContent } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",;
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { BarChart3, BriefcaseIcon, Monitor, User } from "@/components/icons",;
+import { Skeleton } from "@/components/ui/skeleton",;
+import { cn } from "@/lib/utils",;
+;
+interface AIMatchingResultsProps {;
+  matches:MatchResultItem[],;
+  onSelectMatch?:(match:MatchResultItem) => void,;
+  isLoading?:boolean,;
+  projectDescription?:string,;
+  serviceType?:string;
+}
+;
+export function AIMatchingResults({;
+  matches,;
+  onSelectMatch,;
+  isLoading = false,;
+  projectDescription = "",;
+  serviceType:_serviceType = "";
+} AIMatchingResultsProps) {;
+  const [activeTab, setActiveTab] = useState("all"),;
+  ;
+  // Group matches by category;
+  const categories = {;
+    all:matches,;
+    talent:matches.filter(match => match.category.toLowerCase().includes("talent")),;
+    services:matches.filter(match => match.category.toLowerCase().includes("service")),;
+    equipment:matches.filter(match => match.category.toLowerCase().includes("equipment"));
+  },;
+  ;
+  // Get the icon for a category;
+  const getCategoryIcon = (category:string) => {;
+=======
+  // Group matches by category;
+  const categories = {;
+    all: matches,;
+    talent: matches.filter(match => match.category.toLowerCase().includes("talent")),;
+    services: matches.filter(match => match.category.toLowerCase().includes("service")),;
+    equipment: matches.filter(match => match.category.toLowerCase().includes("equipment"));
+  },;
+  // Get the icon for a category;
+  const getCategoryIcon = (category: string) => {;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+    const lowerCategory = category.toLowerCase(),;
+    if (lowerCategory.includes("talent")) return User,;
+    if (lowerCategory.includes("equipment")) return Monitor,;
+    return BriefcaseIcon;
+  },;
+<<<<<<< HEAD
+  ;
+  if (isLoading) {;
+    return (;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+  if (isLoading) {;
+    return (;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <div className="space-y-4">;
         <Skeleton className="h-10 w-full" />;
         <div className="space-y-3">;
@@ -168,13 +335,33 @@ export function AIMatchingResults({;
           <Skeleton className="h-[120px] w-full" />;
         </div>;
       </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
     );
   }
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchingResults.tsx
 
 
   if (matches && matches.length === 0) {;
 
+========
+  if (matches && matches.length === 0) {;
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchingResults.tsx
     return (
+=======
+    ),;
+  }
+  ;
+  if (matches.length === 0) {;
+    return (;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+    );
+  }
+;
+  if (matches.length === 0) {;
+    return (;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <Card className="bg-zion-blue-dark border-zion-blue-light text-center p-6">;
         <CardContent className="pt-6">;
           <BarChart3 className="h-12 w-12 mx-auto text-zion-slate-light mb-3" />;
@@ -187,6 +374,7 @@ export function AIMatchingResults({;
               <p className="text-xs text-zion-slate-light">Your search:</p>;
               <p className="text-sm text-white">{projectDescription}</p>;
             </div>;
+<<<<<<< HEAD
 
 
 
@@ -195,8 +383,10 @@ export function AIMatchingResults({;
           )}
         </CardContent>;
       </Card>;
+<<<<<<< HEAD
     );
   }
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchingResults.tsx
 
 <<<<<<< HEAD
 =======
@@ -205,6 +395,22 @@ export function AIMatchingResults({;
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          )}
+        </CardContent>
+      </Card>
+    )
+  }
+<<<<<<< HEAD
+=======
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
     <div className="space-y-4">
       <Tabs defaultValue="all" value={activeTab} onValueChange={setActiveTab} className="w-full">
@@ -224,7 +430,10 @@ export function AIMatchingResults({;
         </TabsList>
         {Object.entries(categories).map(([tab, items]) => (
           <TabsContent key={tab} value={tab} className="mt-4 space-y-3">
+<<<<<<< HEAD
 =======
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchingResults.tsx
 import { useState } from './react';
 import { MatchResultItem } from '@/lib / ai - matchmaking';
 import { Card, CardContent } from '@/components / ui / card';
@@ -320,18 +529,27 @@ if ( {) {
         </TabsList>;
         {Object.entries (categories).map (([tab, items]) => (
           <TabsContent key={tab} value={tab} className="mt - 4 space - y-3">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             {items.length > 0 ? (
               items.map ((match) => {
                 const CategoryIcon = getCategoryIcon (match.category);
                 return (
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchingResults.tsx
 
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchingResults.tsx
   return (
+=======
+    ),;
+  }
+  ;
+  return (;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     <div className="space-y-4">;
       <Tabs defaultValue="all" value={activeTab} onValueChange={setActiveTab} className="w-full">;
         <TabsList className="bg-zion-blue-dark border border-zion-blue-light grid grid-cols-4 w-full">;
           <TabsTrigger value="all" className="data-[state=active]:bg-zion-purple/20">;
+<<<<<<< HEAD
             All ({categories && categories.all.length});
           </TabsTrigger>;
           <TabsTrigger value="talent" className="data-[state=active]:bg-zion-purple/20">;
@@ -344,7 +562,6 @@ if ( {) {
             Equipment ({categories && categories.equipment.length});
           </TabsTrigger>;
         </TabsList>;
-
         {Object && Object.entries(categories).map(([tab, items]) => (;
           <TabsContent key={tab} value={tab} className="mt-4 space-y-3">;
             {items && items.length > 0 ? (;
@@ -361,22 +578,66 @@ if ( {) {
                         "w-2", 
                         match && match.category.toLowerCase().includes("talent") ? "bg-zion-cyan" : 
                         match && match.category.toLowerCase().includes("service") ? "bg-zion-purple" : 
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchingResults.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchingResults.tsx
                         "bg-green-500"
+=======
+            All ({categories.all.length});
+          </TabsTrigger>;
+          <TabsTrigger value="talent" className="data-[state=active]:bg-zion-purple/20">;
+            Talent ({categories.talent.length});
+          </TabsTrigger>;
+          <TabsTrigger value="services" className="data-[state=active]:bg-zion-purple/20">;
+            Services ({categories.services.length});
+          </TabsTrigger>;
+          <TabsTrigger value="equipment" className="data-[state=active]:bg-zion-purple/20">;
+            Equipment ({categories.equipment.length});
+          </TabsTrigger>;
+        </TabsList>;
+        ;
+        {Object.entries(categories).map(([tab, items]) => (;
+          <TabsContent key={tab} value={tab} className="mt-4 space-y-3">;
+            {items.length > 0 ? (;
+              items.map((match) => {;
+                const CategoryIcon = getCategoryIcon(match.category),;
+                return (;
+                  <Card ;
+                    key={match.id}
+                    className="bg-zion-blue-dark border-zion-blue-light overflow-hidden transition-all hover:border-zion-purple/50 cursor-pointer";
+                    onClick={() => onSelectMatch && onSelectMatch(match)}
+                  >;
+                    <div className="flex">;
+                      <div className={cn(;
+                        "w-2", ;
+                        match.category.toLowerCase().includes("talent") ? "bg-zion-cyan" :;
+                        match.category.toLowerCase().includes("service") ? "bg-zion-purple" :;
+                        "bg-green-500";
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       )} />;
                       <div className="flex-1 p-4">;
                         <div className="flex items-start gap-4">;
                           <Avatar className="h-12 w-12 border border-zion-blue-light">;
+<<<<<<< HEAD
                             {match && match.image ? (;
                               <AvatarImage src={match && match.image} />;
                             ) : (;
+=======
+                            {match.image ? (;
+                              <AvatarImage src={match.image} />;
+                            ) :(;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                               <AvatarFallback className="bg-zion-purple/20">;
                                 <CategoryIcon className="h-6 w-6 text-zion-purple" />;
                               </AvatarFallback>;
                             )}
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchingResults.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchingResults.tsx
                           </Avatar>;
-
+<<<<<<< HEAD
                           <div className="flex-1">;
                             <div className="flex justify-between">;
                               <div>;
@@ -388,22 +649,47 @@ if ( {) {
                                   <div className="font-medium text-white">${match && match.price}</div>;
                                   <div className="text-xs text-zion-slate-light">;
                                     {match && match.category.toLowerCase().includes("talent") ? "/hour" : ""}
+=======
+                          ;
+                          <div className="flex-1">;
+                            <div className="flex justify-between">;
+                              <div>;
+                                <h3 className="font-medium text-white">{match.title}</h3>;
+                                <p className="text-zion-slate-light text-sm">{match.description}</p>;
+                              </div>;
+                              {match.price && (;
+                                <div className="text-right ml-2">;
+                                  <div className="font-medium text-white">${match.price}</div>;
+                                  <div className="text-xs text-zion-slate-light">;
+                                    {match.category.toLowerCase().includes("talent") ? "/hour" :""}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                                   </div>;
                                 </div>;
                               )}
                             </div>;
-
+<<<<<<< HEAD
                             <div className="mt-2 flex flex-wrap gap-1">;
                               <Badge variant="outline" className="text-xs bg-zion-blue text-zion-cyan border-zion-cyan/30">;
                                 {match && match.category}
                               </Badge>;
                               {match && match.skills && match && match.skills.slice(0, 3).map((skill: string, i: number) => (;
+=======
+                            ;
+                            <div className="mt-2 flex flex-wrap gap-1">;
+                              <Badge variant="outline" className="text-xs bg-zion-blue text-zion-cyan border-zion-cyan/30">;
+                                {match.category}
+                              </Badge>;
+                              {match.skills && match.skills.slice(0, 3).map((skill:string, i:number) => (;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                                 <Badge key={i} variant="outline" className="text-xs bg-zion-blue-dark text-white border-zion-blue-light">;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchingResults.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchingResults.tsx
                                   {skill}
                                 </Badge>;
                               ))}
-=======
+<<<<<<< HEAD
                   <Card;
                     key={match.id}
                     className="bg - zion - blue - dark border - zion - blue - light overflow - hidden transition - all hover:border - zion - purple / 50 cursor - pointer";
@@ -446,13 +732,18 @@ if ( {) {
                                 <Badge key={i} variant="outline" className="text - xs bg - zion - blue - dark text - white border - zion - blue - light">;
                                   {skill}
                                 </Badge>))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                             </div>;
                           </div>;
                         </div>;
                       </div>;
                     </div>;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchingResults.tsx
 
+========
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchingResults.tsx
                   </Card>);
               })) : (
               <div className="text - center py - 8 text - zion - slate - light">;
@@ -461,5 +752,126 @@ if ( {) {
           </TabsContent>))}
       </Tabs>;
     </div>);
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchingResults.tsx
 
+========
+=======
+                  </Card>;
+                ),;
+              });
+            ) :(;
+              <div className="text-center py-8 text-zion-slate-light">;
+                No {tab} matches found.;
+              </div>;            )}
+          </TabsContent>;
+        ))}
+      </Tabs>;
+    </div>;
+  ),; interface AIMatchingResultsProps {
+  matches: MatchResultItem[];
+onSelectMatch?: (match: MatchResultItem) => void;
+isLoading?: boolean;
+projectDescription?: string;
+serviceType?: string 
+}export function AIMatchingResults ({
+  matches;
+onSelectMatch;
+isLoading = false;
+projectDescription = "";
+serviceType: serviceType = "" 
+}: AIMatchingResultsProps) {
+  //Group matches by category const categories = {
+  all: matches;
+if (isLoading) {
+  return (<div className=" space-y-4"> <Skeleton className=" h-10 w-full"/> <div className=" space-y-3"> <Skeleton className=" h-[120px] w-full"/> <Skeleton className=" h-[120px] w-full"/> <Skeleton className=" h-[120px] w-full"/> </div> </div>) 
+}if (matches.length === 0) {
+  return (<Card className=" bg-zion-blue-dark border-zion-blue-light text-center p-6"> <CardContent className=" pt-6"> <BarChart3 className=" h-12 w-12 mx-auto text-zion-slate-light mb-3"/> <p className=" text-white font-medium mb-2">No matches found</p> <p className=" text-zion-slate-light text-sm mb-4"> projectDescription && (<div className=" bg-zion-blue-light/20 p-3 rounded-md text-left"> <p className=" text-xs text-zion-slate-light">Your search:</p> <p className=" text-sm text-white"> {
+  projectDescription 
+}</p> </div>) 
+}</CardContent> </Card>) 
+}return (<AvatarImage src= {
+  match.image 
+}/>) : (<AvatarFallback className=" bg-zion-purple/20"> <CategoryIcon className=" h-6 w-6 text-zion-purple"/> </AvatarFallback>) 
+}</Avatar> <div className=" flex-1"> <div className=" flex justify-between"> <div> </div> </div>) 
+}</div> </Badge>) ) 
+}</div> </div> </div> </div> </div> </Card>) 
+}) ) : (<div className="text-center py-8 text-zion-slate-light"> No {
+  tab 
+}matches found. </div>) 
+}</TabsContent>) ) 
+}</Tabs> </div>) 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchingResults.tsx
+=======
+            {items.length > 0 ? (
+              items.map((match) => {
+                const CategoryIcon = getCategoryIcon(match.category),
+                return (
+                  <Card
+                    key={match.id}
+                    className="bg-zion-blue-dark border-zion-blue-light overflow-hidden transition-all hover:border-zion-purple/50 cursor-pointer"
+                    onClick={() => onSelectMatch && onSelectMatch(match)}
+                  >
+                    <div className="flex">
+                      <div className={cn(
+                        "w-2"
+                        match.category.toLowerCase().includes("talent") ? "bg-zion-cyan" :
+                        match.category.toLowerCase().includes("service") ? "bg-zion-purple" :
+
+                        "bg-green-500"
+                      )} />
+                      <div className="flex-1 p-4">
+                        <div className="flex items-start gap-4">
+                          <Avatar className="h-12 w-12 border border-zion-blue-light">
+                            {match.image ? (
+                              <AvatarImage src={match.image} />
+                            ) : (
+                              <AvatarFallback className="bg-zion-purple/20">
+                                <CategoryIcon className="h-6 w-6 text-zion-purple" />
+                              </AvatarFallback>
+                            )}
+                          </Avatar>
+                          <div className="flex-1">
+                            <div className="flex justify-between">
+                              <div>
+                                <h3 className="font-medium text-white">{match.title}</h3>
+                                <p className="text-zion-slate-light text-sm">{match.description}</p>
+                              </div>
+                              {match.price && (
+                                <div className="text-right ml-2">
+                                  <div className="font-medium text-white">${match.price}</div>
+                                  <div className="text-xs text-zion-slate-light">
+                                    {match.category.toLowerCase().includes("talent") ? "/hour" : ""}
+                                  </div>
+                                </div>
+                              )}
+                            </div>
+                            <div className="mt-2 flex flex-wrap gap-1">
+                              <Badge variant="outline" className="text-xs bg-zion-blue text-zion-cyan border-zion-cyan/30">
+                                {match.category}
+                              </Badge>
+                              {match.skills && match.skills.slice(0, 3).map((skill: string, i: number) => (
+                                <Badge key={i} variant="outline" className="text-xs bg-zion-blue-dark text-white border-zion-blue-light">
+                                  {skill}
+                                </Badge>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </Card>
+                )
+              })
+            ) : (
+              <div className="text-center py-8 text-zion-slate-light">
+                No {tab} matches found.
+              </div>
+            )}
+          </TabsContent>
+        ))}
+      </Tabs>
+    </div>
+  )
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }

@@ -5,6 +5,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -21,6 +26,10 @@
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
@@ -47,18 +56,30 @@ a {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 >>>>>>> main
-/* Enhanced scrollbar */
+<<<<<<< HEAD
 =======
-/* Import Inter font for modern typography */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+/* Enhanced scrollbar */
 
+<<<<<<< HEAD
+::-webkit-scrollbar {
+/* Enhanced scrollbar */::-webkit-scrollbar {
+
+::-webkit-scrollbar {
+
+=======
 /* CSS Variables for modern theming */
 :root {
   --background: #000000;
@@ -120,11 +141,21 @@ a {
 /* Enhanced scrollbar */::-webkit-scrollbar {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   width: 12px;
 }
 
 ::-webkit-scrollbar-track {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -143,6 +174,10 @@ a {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   background: rgba(15, 23, 42, 0.3);
   backdrop-filter: blur(10px);
 }
@@ -281,6 +316,12 @@ a {
 
 /* Quantum Field Effects */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -289,13 +330,14 @@ a {
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 >>>>>>> main
-.quantum-field-2029 {
+<<<<<<< HEAD
 =======
-  background: rgba(0, 0, 0, 0.4);
-  border-radius: 6px;
-  border: 1px solid rgba(0, 255, 255, 0.2);
-}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+.quantum-field-2029 {
 
+<<<<<<< HEAD
+=======
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple));
   border-radius: 6px;
@@ -1050,6 +1092,7 @@ body::after {
 =======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   position: relative;
   overflow: hidden;
 }
@@ -1060,24 +1103,25 @@ body::after {
 }
 
 .quantum-field-2029::before {  content: '';
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+
 .quantum-field-2029 {  position: relative;
   overflow: hidden;
 }
 
 .quantum-field-2029::before {  content: '';
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   position: absolute;
   top: -50%;
   left: -50%;
@@ -1089,6 +1133,12 @@ body::after {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1105,6 +1155,10 @@ body::after {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     rgba(0, 255, 255, 0.1),
     transparent,
     rgba(139, 92, 246, 0.1),
@@ -1312,26 +1366,30 @@ body::after {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 >>>>>>> main
-/* Hover effects */
+<<<<<<< HEAD
 =======
-    rgba(59, 130, 246, 0.1),
-    transparent,
-    rgba(147, 51, 234, 0.1),
-    transparent,
-    rgba(16, 185, 129, 0.1),
-    transparent,
-    rgba(239, 68, 68, 0.1),
-    transparent
-  );
-  animation: quantumRotate 10s linear infinite;
-}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+/* Hover effects */
 
+<<<<<<< HEAD
+.hover-lift {
+/* Hover effects */.hover-lift {
+
+.hover-lift {
+
+=======
 @keyframes quantumRotate {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
@@ -1358,11 +1416,21 @@ body::after {
 /* Hover effects */.hover-lift {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hover-lift:hover {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1381,6 +1449,10 @@ body::after {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   transform: translateY(-8px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
@@ -1436,6 +1508,14 @@ body::after {
 .card-hover {
   @apply card hover:bg-white/20 hover:transform hover:scale-105 hover:shadow-xl;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+}
+}
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 =======
   transform: translateY(-8px) scale(1.02);
@@ -1456,6 +1536,10 @@ body::after {
 }
 <<<<<<< HEAD
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
 .hover-glow:hover {
   box-shadow: 
@@ -1628,6 +1712,9 @@ body::after {
     background: none !important;
   }
 }
+<<<<<<< HEAD
+
+=======
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
 <<<<<<< HEAD
 =======
@@ -1643,3 +1730,7 @@ body::after {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

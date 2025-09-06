@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 export default function CoachWidget() {;
@@ -9,13 +10,35 @@ export default function CoachWidget() {;
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
 
+=======
+<<<<<<< HEAD
+=======
+import React, { useState } from 'react';
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+export default function CoachWidget() {;
+  const [input, setInput] = useState('');
+  const [reply, setReply] = useState<string | null>(null),
+  const [loading, setLoading] = useState(false);
+<<<<<<< HEAD
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+=======
+  async function ask() {
+    if (!input.trim()) return;
+    setLoading(true);
+    try {
+
+      const resp = await fetch('/api/learn/coach', {
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         body: JSON.stringify({ prompt: input })
       });
       const data = await resp.json();
       setReply(data.text |'');
     } finally {
-=======
-
+<<<<<<< HEAD
   async function ask() {;
     if (!input && input.trim()) return;
     setLoading(true);
@@ -28,9 +51,9 @@ export default function CoachWidget() {;
       const data = await resp && resp.json();
       setReply(data && data.text || '');
     } finally {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       setLoading(false);    }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   return (      });
@@ -50,27 +73,45 @@ export default function CoachWidget() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (      });
 
+=======
+  return (      });
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       const data = await resp && resp.json();
       setReply(data && data.text || '');
     } finally {;
       setLoading(false);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     }
   }
 <<<<<<< HEAD
 
   return (
+<<<<<<< HEAD
 
 =======
   return (
 
 
+=======
+    </div>;
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
+    <div className="border rounded p-3">
+      <div className="font-medium mb-2">ZionGPT Coach</div>
+      <div className="flex gap-2">
+        <input className="flex-1 border rounded px-3 py-2 bg-white dark:bg-black" placeholder="Ask for help..." value={input} onChange={(e) => setInput(e.target.value)} />
+        <button onClick={ask} className="px-3 py-2 bg-blue-600 text-white rounded" disabled={loading}>{loading ? '...' : 'Ask'}</button>
+      </div>
+      {reply && <div className="mt-2 text-sm text-gray-800 dark:text-gray-200">{reply}</div>}
+    </div>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+  );
+}
 import React, { useState } from 'react';
 export default /**
  * CoachWidget - Function description
@@ -128,7 +169,58 @@ function ask() {
           {reply}
         </div>)}
     </div>);
+
+  async function ask() {
+    if (!input.trim()) return,
+    setLoading(true),
+    try {
+      const resp = await fetch('/api/learn/coach', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ prompt: input })
+      }),
+      const data = await resp.json()
+      setReply(data.text || '')
+=======
+      setLoading(false);    }
+  }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+
+  return (
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  return (      });
+      const data = await resp.json();
+      setReply(data.text |'')
+=======
+
+  return (
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+    } finally {
+      setLoading(false)
+    }
+  }
+<<<<<<< HEAD
+
+  return (
+    <div className=&quot;border rounded p-3&quot;>
+      <div className=&quot;font-medium mb-2&quot;>ZionGPT Coach</div>
+      <div className=&quot;flex gap-2&quot;>
+        <input className=&quot;flex-1 border rounded px-3 py-2 bg-white dark:bg-black&quot; placeholder=&quot;Ask for help...&quot; value={input} onChange={(e) => setInput(e.target.value)} />
+        <button onClick={ask} className=&quot;px-3 py-2 bg-blue-600 text-white rounded&quot; disabled={loading}>{loading ? '...' : 'Ask'}</button>
+      </div>
+      {reply && <div className=&quot;mt-2 text-sm text-gray-800 dark:text-gray-200&quot;>{reply}</div>}
+    </div>
+  )
+
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
     }
@@ -141,3 +233,46 @@ function ask() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+  return (
+    <div className='border rounded p-3'>
+      <div className='font-medium mb-2'>ZionGPT Coach</div>
+      <div className='flex gap-2'>
+        <input
+          className='flex-1 border rounded px-3 py-2 bg-white dark:bg-black'
+          placeholder='Ask for help...'
+          value={input}
+          onChange={e => setInput(e.target.value)}
+        />
+        <button
+          onClick={ask}
+          className='px-3 py-2 bg-blue-600 text-white rounded'
+          disabled={loading}
+        >
+          {loading ? '...' : 'Ask'}
+        </button>
+      {reply && (
+        <div className='mt-2 text-sm text-gray-800 dark:text-gray-200'>
+          {reply}
+        </div>
+      )}
+    </div>
+);
+}
+=======
+<<<<<<< HEAD
+
+  return (
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+  return (
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

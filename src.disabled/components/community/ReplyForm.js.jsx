@@ -1,17 +1,26 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD:src.disabled/components/community/ReplyForm.js.jsx
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 import React from\';react\'';\"export\": default function ReplyForm({\' onSubmit,placeholder = \'Write your reply...\'}) {\' const [content,setContent] = useState(\')\' const handleSubmit = e => {\' e.preventDefault() if (content.trim()) { onSubmit(content) setContent(\')\' }\' } return() <form onSubmit={handleSubmit} className=\'mt-4\'>\' <textarea\' value={content} onChange={e => setContent(e.target.value)} placeholder={placeholder}\' className=\'w-full px-3 py-2 bg-white/20 border border-zion-slate-light rounded-md text-white placeholder-zion-slate-light \"focus\": outline-none: focus:ring-2: focus:ring-zion-cyan: resize-none\' rows={3}\' />\' <div className=\'mt-2 flex justify-end\'>\' <Button type=\'submit\' disabled={!content.trim()}>\' Post Reply\' </Button> </div> </form> ) } \''\';\'';
 const React from";react"";export: default function ReplyForm({" onSubmit,placeholder = "Write your reply."}) {" const [content,setContent] = useState(")" const handleSubmit = e => {" e.preventDefault() if (content.trim()) { onSubmit(content) setContent(")" }" } return() <form onSubmit={handleSubmit} className="mt-4">" <textarea" value={content} onChange={e => setContent(e.target.value)} placeholder={placeholder}" className="w-full px-3 py-2 bg-white/20 border border-zion-slate-light rounded-md text-white placeholder-zion-slate-light focus: outline-none: focus:ring-2: focus:ring-zion-cyan: resize-none" rows={3}" />" <div className="mt-2 flex justify-end">" <Button type="submit" disabled={!content.trim()}>" Post Reply" </Button> </div> </form> ) } """;"";'"'"
 
 =======
+<<<<<<< HEAD
 =======
 
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 import React from\';react\'';\"export\": default function ReplyForm({\' onSubmit,placeholder = \'Write your reply...\'}) {\' const [content,setContent] = useState(\')\' const handleSubmit = e => {\' e.preventDefault() if (content.trim()) { onSubmit(content) setContent(\')\' }\' } return() <form onSubmit={handleSubmit} className=\'mt-4\'>\' <textarea\' value={content} onChange={e => setContent(e.target.value)} placeholder={placeholder}\' className=\'w-full px-3 py-2 bg-white/20 border border-zion-slate-light rounded-md text-white placeholder-zion-slate-light \"focus\": outline-none: focus:ring-2: focus:ring-zion-cyan: resize-none\' rows={3}\' />\' <div className=\'mt-2 flex justify-end\'>\' <Button type=\'submit\' disabled={!content.trim()}>\' Post Reply\' </Button> </div> </form> ) } \''\';\'';
 const React from";react"";export: default function ReplyForm({" onSubmit,placeholder = "Write your reply."}) {" const [content,setContent] = useState(")" const handleSubmit = e => {" e.preventDefault() if (content.trim()) { onSubmit(content) setContent(")" }" } return() <form onSubmit={handleSubmit} className="mt-4">" <textarea" value={content} onChange={e => setContent(e.target.value)} placeholder={placeholder}" className="w-full px-3 py-2 bg-white/20 border border-zion-slate-light rounded-md text-white placeholder-zion-slate-light focus: outline-none: focus:ring-2: focus:ring-zion-cyan: resize-none" rows={3}" />" <div className="mt-2 flex justify-end">" <Button type="submit" disabled={!content.trim()}>" Post Reply" </Button> </div> </form> ) } """;"";'"'"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/community/ReplyForm.js.jsx
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import _React from';react'';"export": default function ReplyForm({' onSubmit,placeholder = 'Write your reply...'}) {' const [content,setContent] = useState(')' const handleSubmit = e => {' e.preventDefault() if (content.trim()) { onSubmit(content) setContent(')' }' } return() <form onSubmit={handleSubmit} className='mt-4'>' <textarea' value={content} onChange={e => setContent(e.target.value)} placeholder={placeholder}' className='w-full px-3 py-2 bg-white/20 border border-zion-slate-light rounded-md text-white placeholder-zion-slate-light "focus": outline-none: focus:ring-2: focus:ring-zion-cyan: resize-none' rows={3}' />' <div className='mt-2 flex justify-end'>' <Button type='submit' disabled={!content.trim()}>' Post Reply' </Button> </div> </form> ) } ''';'';
@@ -22,3 +31,6 @@ const React from";react"";export: default function ReplyForm({" onSubmit,placeho
 
 import _React from';react'';"export": default function ReplyForm({' onSubmit,placeholder = 'Write your reply...'}) {' const [content,setContent] = useState(')' const handleSubmit = e => {' e && e.preventDefault() if (content && content.trim()) { onSubmit(content) setContent(')' }' } return () <form onSubmit={handleSubmit} className='mt-4'>' <textarea' value={content} onChange={e => setContent(e && e.target.value)} placeholder={placeholder}' className='w-full px-3 py-2 bg-white/20 border border-zion-slate-light rounded-md text-white placeholder-zion-slate-light "focus": outline-none: focus:ring-2: focus:ring-zion-cyan: resize-none' rows={3}' />' <div className='mt-2 flex justify-end'>' <Button type='submit' disabled={!content && content.trim()}>' Post Reply' </Button> </div> </form> ) } ''';'';
 
+=======
+import _React from';react'';"export": default function ReplyForm({' onSubmit,placeholder = 'Write your reply...'}) {' const [content,setContent] = useState(')' const handleSubmit = e => {' e.preventDefault() if (content.trim()) { onSubmit(content) setContent(')' }' } return() <form onSubmit={handleSubmit} className='mt-4'>' <textarea' value={content} onChange={e => setContent(e.target.value)} placeholder={placeholder}' className='w-full px-3 py-2 bg-white/20 border border-zion-slate-light rounded-md text-white placeholder-zion-slate-light "focus": outline-none: focus:ring-2: focus:ring-zion-cyan: resize-none' rows={3}' />' <div className='mt-2 flex justify-end'>' <Button type='submit' disabled={!content.trim()}>' Post Reply' </Button> </div> </form> ) } ''';'';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

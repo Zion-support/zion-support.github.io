@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -17,6 +18,13 @@ interface BlockchainsolutionsProps {
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+module.exports = default function BlockchainSolutions() { return null}
+module.exports = default function BlockchainSolutions() { return null}
+import React from 'react';
+interface BlockchainsolutionsProps {
+  // Add props here as needed
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export default function Blockchainsolutions({ }: BlockchainsolutionsProps) {
   return (
     <div>
@@ -25,9 +33,13 @@ export default function Blockchainsolutions({ }: BlockchainsolutionsProps) {
     </div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

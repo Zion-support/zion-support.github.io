@@ -1,9 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 
+=======
+generateZionWiki;
+  buildMarkdownFromWiki;
+  buildWikitextFromWiki;
+  operatorPrompt;
+  slugify} from '../utils/data/zionContent';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 function CopyButton({ text, label }: { text: string, label: string }) {
   const [copied, setCopied] = useState(false)
   return (
@@ -12,6 +20,7 @@ function CopyButton({ text, label }: { text: string, label: string }) {
         await navigator.clipboard.writeText(text)
         setCopied(true)
         setTimeout(() => setCopied(false), 1500)
+<<<<<<< HEAD
 <<<<<<< HEAD
       }}
       className="px-3 py-1 rounded border text-xs hover:bg-gray-50 dark:hover:bg-gray-900"
@@ -83,11 +92,23 @@ export default function WikiPage() {
 =======
 =======
 import React, { useMemo, useState } from 'react',
+=======
+import React, { useMemo, useState } from 'react',
+=======
+<<<<<<< HEAD
+import React, { useMemo, useState } from 'react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React, { useMemo, useState } from 'react',;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import {
   generateZionWiki,
   buildMarkdownFromWiki,
   buildWikitextFromWiki,
-  operator_prompt,
+<<<<<<< HEAD
+operator_prompt,
   slugify} from '../utils / data / zion_content',
 /**
  * CopyButton - Function description
@@ -100,22 +121,26 @@ function CopyButton() {
         await navigator.clipboard.write_text (text),
         set_copied (true),
         set_timeout (() => set_copied (false), 1500);
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       }}
       className="px - 3 py - 1 rounded border text - xs hover:bg - gray - 50 dark:hover:bg - gray - 900";
     >;
       {copied ? 'Copied' : label}
     </button>);
 }
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export default function WikiPage() {
   const wiki = useMemo(() => generateZionWiki(), [])
   const md = useMemo(() => buildMarkdownFromWiki(wiki), [wiki])
   const wikitext = useMemo(() => buildWikitextFromWiki(wiki), [wiki])
-
-=======
 export default /**
  * WikiPage - Function description
  */
@@ -123,7 +148,6 @@ function WikiPage() {
   const wiki = useMemo (() => generateZionWiki (), []),
   const md = useMemo (() => buildMarkdownFromWiki (wiki), [wiki]),
   const wikitext = useMemo (() => buildWikitextFromWiki (wiki), [wiki]),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <div className="grid grid - cols - 1 lg:grid - cols-[260px, 1fr] gap - 8">;
       <aside className="sticky top - 20 self - start hidden lg:block">;
@@ -132,6 +156,7 @@ function WikiPage() {
           {wiki.sections.map ((s) => (
             <li key={s.id}>;
               <a href={`#${slugify (s.title)}`} className="opacity - 80 hover:opacity - 100">;
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 {s.title}
 
@@ -191,6 +216,269 @@ function WikiPage() {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+                {s.title}
+      <article className="prose dark:prose-invert max-w-none">
+        <h1>{wiki.title}</h1>
+        <div className="not-prose border rounded p-4 bg-white/60 dark:bg-black/20 mb-4">
+          <div className="grid grid-cols-2 gap-x-6 gap-y-1 text-sm">
+            <div className="font-semibold">Founder</div><div>{wiki.infobox.founder}</div>
+            <div className="font-semibold">Launch Year</div><div>{wiki.infobox.launchYear}</div>
+            <div className="font-semibold">Token</div><div>{wiki.infobox.token}</div>
+            <div className="font-semibold">Protocol Type</div><div>{wiki.infobox.protocolType}</div>
+          </div>
+        </div>
+        <p>{wiki.intro}</p>
+        {wiki.sections.map((s) => (
+          <section key={s.id} id={slugify(s.title)}>
+            <h2>{s.title}</h2>
+            {s.paragraphs.map((p, i) => (
+              <p key={i}>{p}</p>
+            ))}
+          </section>
+        ))}
+        <h2 id="references">References</h2>
+        <ol>
+          {wiki.references.map((r, i) => (
+            <li key={i}>{r}</li>
+          ))}
+        </ol>
+        <div className="not-prose mt-10 p-4 border rounded bg-white/60 dark:bg-black/20">
+          <div className="flex items-center justify-between mb-2">
+            <div className="font-semibold">Export</div>
+            <div className="flex gap-2">
+              <CopyButton text={md} label="Copy Markdown" />
+              <CopyButton text={wikitext} label="Copy Wikitext" />
+            </div>
+          </div>
+          <pre className="overflow-auto text-xs whitespace-pre-wrap">
+{md}
+          </pre>
+        </div>
+        <div className="not-prose mt-6 p-4 border rounded bg-white/60 dark:bg-black/20">
+          <div className="font-semibold mb-2">Operator Prompt</div>
+          <pre className="overflow-auto text-xs whitespace-pre-wrap">{operatorPrompt}</pre>
+    >
+      {_copied ? 'Copied' : label}
+    </button>
+  )
+}
+
+export default function WikiPage() {
+  const wiki = useMemo(() => generateZionWiki(), []),
+  const md = useMemo(() => buildMarkdownFromWiki(wiki), [wiki]),
+  const wikitext = useMemo(() => buildWikitextFromWiki(wiki), [wiki]),
+
+  return (
+    <div className=&quot;grid grid-cols-1 lg:grid-cols-[260px,1fr] gap-8&quot;>
+      <aside className=&quot;sticky top-20 self-start hidden lg:block&quot;>
+        <div className=&quot;text-sm font-semibold mb-2&quot;>Table of contents</div>
+        <ul className=&quot;space-y-1 text-sm&quot;>
+          {wiki.sections.map((s) => (
+            <li key={s.id}>
+              <a href={`#${slugify(s.title)}`} className=&quot;opacity-80 hover:opacity-100&quot;>
+                {s.title}
+              </Link>
+            </li>
+          ))}
+          <li>
+            <a href=&quot;#references&quot; className=&quot;opacity-80 hover:opacity-100&quot;>References</Link>
+          </li>
+        </ul>
+      </aside>
+
+      <article className=&quot;prose dark:prose-invert max-w-none&quot;>
+        <h1>{wiki.title}</h1>
+        <div className=&quot;not-prose border rounded p-4 bg-white/60 dark:bg-black/20 mb-4&quot;>
+          <div className=&quot;grid grid-cols-2 gap-x-6 gap-y-1 text-sm&quot;>
+            <div className=&quot;font-semibold&quot;>Founder</div><div>{wiki.infobox.founder}</div>
+            <div className=&quot;font-semibold&quot;>Launch Year</div><div>{wiki.infobox.launchYear}</div>
+            <div className=&quot;font-semibold&quot;>Token</div><div>{wiki.infobox.token}</div>
+            <div className=&quot;font-semibold&quot;>Protocol Type</div><div>{wiki.infobox.protocolType}</div>
+          </div>
+        </div>
+        <p>{_wiki.intro}</p>
+
+        {_wiki.sections.map(_(s) => (
+          <section key={s.id} id={_slugify(s.title)}>
+            <h2>{_s.title}</h2>
+            {_s.paragraphs.map(_(p, _i) => (
+              <p key={i}>{_p}</p>
+            ))}
+          </section>
+        ))}
+
+        <h2 id=&quot;references&quot;>References</h2>
+        <ol>
+          {_wiki.references.map(_(r, _i) => (
+            <li key={i}>{_r}</li>
+          ))}
+        </ol>
+
+        <div className=&quot;not-prose mt-10 p-4 border rounded bg-white/60 dark:bg-black/20&quot;>
+          <div className=&quot;flex items-center justify-between mb-2&quot;>
+            <div className=&quot;font-semibold&quot;>Export</div>
+            <div className=&quot;flex gap-2&quot;>
+              <CopyButton text={md} label=&quot;Copy Markdown&quot; />
+              <CopyButton text={wikitext} label=&quot;Copy Wikitext&quot; />
+            </div>
+          </div>
+          <pre className=&quot;overflow-auto text-xs whitespace-pre-wrap&quot;>
+{md}
+          </pre>
+        </div>
+
+        <div className=&quot;not-prose mt-6 p-4 border rounded bg-white/60 dark:bg-black/20&quot;>
+          <div className=&quot;font-semibold mb-2&quot;>Operator Prompt</div>
+          <pre className=&quot;overflow-auto text-xs whitespace-pre-wrap&quot;>{operatorPrompt}</pre>
+
+=======
+  operatorPrompt,
+  slugify} from '../utils/data/zionContent',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+import {
+  generateZionWiki
+  buildMarkdownFromWiki
+  buildWikitextFromWiki
+  operatorPrompt
+  slugify} from '../utils/data/zionContent'
+function CopyButton({ text, label }: { text: string, label: string }) {
+  const [copied, setCopied] = useState(false)
+  return (
+    <button
+      onClick={async () => {
+        await navigator.clipboard.writeText(text)
+        setCopied(true)
+        setTimeout(() => setCopied(false), 1500)
+      }}
+      className="px-3 py-1 rounded border text-xs hover:bg-gray-50 dark:hover:bg-gray-900"
+    >
+      {copied ? 'Copied' : label}
+    </button>
+  )
+<<<<<<< HEAD
+}
+export default function WikiPage() {
+  const wiki = useMemo(() => generateZionWiki(), [])
+  const md = useMemo(() => buildMarkdownFromWiki(wiki), [wiki])
+  const wikitext = useMemo(() => buildWikitextFromWiki(wiki), [wiki])
+
+=======
+=======
+=======
+import React, { useMemo, useState } from 'react';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import {;
+  generateZionWiki,;
+  buildMarkdownFromWiki,;
+  buildWikitextFromWiki,;
+  operatorPrompt,;
+  slugify} from '../utils/data/zionContent',;
+function CopyButton({ text, label }: { text: string, label: string }) {;
+  const [copied, setCopied] = useState(false);
+  return (;
+    <button;
+      onClick={async () => {;
+        await navigator.clipboard.writeText(text);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 1500);
+      }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      className="px-3 py-1 rounded border text-xs hover:bg-gray-50 dark:hover:bg-gray-900"
+    >
+      {copied ? 'Copied' : label  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    </button>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+export default function WikiPage() {
+  const wiki = useMemo(() => generateZionWiki(), []),
+  const md = useMemo(() => buildMarkdownFromWiki(wiki), [wiki]),
+  const wikitext = useMemo(() => buildWikitextFromWiki(wiki), [wiki]),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  return (
+    <div className="grid grid-cols-1 lg:grid-cols-[260px,1fr] gap-8">
+      <aside className="sticky top-20 self-start hidden lg:block">
+        <div className="text-sm font-semibold mb-2">Table of contents</div>
+        <ul className="space-y-1 text-sm">
+          {wiki.sections.map((s) => (
+            <li key={s.id}>
+              <a href={`#${slugify(s.title)}`} className="opacity-80 hover:opacity-100">
+<<<<<<< HEAD
+                {s.title}
+              </a>
+=======
+                {s.title  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              </Link>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            </li>
+          ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          <li>
+<<<<<<< HEAD
+            <a href="#references" className="opacity-80 hover:opacity-100">References</a>
+=======
+            <a href="#references" className="opacity-80 hover:opacity-100">References</Link>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          </li>
+        </ul>
+      </aside>
+      <article className="prose dark:prose-invert max-w-none">
+        <h1>{wiki.title}</h1>
+        <div className="not-prose border rounded p-4 bg-white/60 dark:bg-black/20 mb-4">
+          <div className="grid grid-cols-2 gap-x-6 gap-y-1 text-sm">
+            <div className="font-semibold">Founder</div><div>{wiki.infobox.founder}</div>
+            <div className="font-semibold">Launch Year</div><div>{wiki.infobox.launchYear}</div>
+            <div className="font-semibold">Token</div><div>{wiki.infobox.token}</div>
+            <div className="font-semibold">Protocol Type</div><div>{wiki.infobox.protocolType}</div>
+          </div>
+        </div>
+        <p>{wiki.intro}</p>
+        {wiki.sections.map((s) => (
+          <section key={s.id} id={slugify(s.title)}>
+            <h2>{s.title}</h2>
+            {s.paragraphs.map((p, i) => (
+              <p key={i}>{p}</p>
+<<<<<<< HEAD
+            ))}
+          </section>
+        ))}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -202,6 +490,7 @@ function WikiPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -209,14 +498,28 @@ function WikiPage() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <h2 id="references">References</h2>
         <ol>
           {wiki.references.map((r, i) => (
             <li key={i}>{r}</li>
-          ))}
+          ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         </ol>
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <div className="not-prose mt-10 p-4 border rounded bg-white/60 dark:bg-black/20">
           <div className="flex items-center justify-between mb-2">
             <div className="font-semibold">Export</div>
@@ -226,24 +529,39 @@ function WikiPage() {
             </div>
           </div>
           <pre className="overflow-auto text-xs whitespace-pre-wrap">
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
+=======
+<<<<<<< HEAD
+{md}
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 {md  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </pre>
         </div>
         <div className="not-prose mt-6 p-4 border rounded bg-white/60 dark:bg-black/20">
           <div className="font-semibold mb-2">Operator Prompt</div>
           <pre className="overflow-auto text-xs whitespace-pre-wrap">{operatorPrompt}</pre>
+<<<<<<< HEAD
         </div>
       </article>
 
@@ -253,6 +571,20 @@ function WikiPage() {
 }
 
 =======
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+        </div>
+      </article>
+<<<<<<< HEAD
+    </div>;
+  );
+};
+=======
+    </div>
+  )
+<<<<<<< HEAD
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </a>;
             </li>))}
           <li>;
@@ -301,16 +633,30 @@ function WikiPage() {
       </article>;
     </div>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
     </div>
   )
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

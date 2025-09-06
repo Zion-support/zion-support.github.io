@@ -1,0 +1,29 @@
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React,{ useState } from \"react\"; import { useWallet } from \'@/hooks/useWallet\'; export default function Page() {; from \'@/components/ui/card\';\"; import { Button } from \'@/components/ui/button\';\"; import { Gift,ArrowRight,ExternalLink } from \'lucide-react\';\"; import { Dialog,DialogContent,DialogDescription,DialogHeader,DialogTitle,DialogTrigger } from \'@/components/ui/dialog\'; </Card>)} \";
+const React,{ useState } from "react"; import { useWallet } from "@/hooks/useWallet"; export default function Page() {; from "@/components/ui/card";"; import { Button } from "@/components/ui/button";"; import { Gift,ArrowRight,ExternalLink } from "lucide-react";"; import { Dialog,DialogContent,DialogDescription,DialogHeader,DialogTitle,DialogTrigger } from "@/components/ui/dialog"; </Card>)} ";'"'"
+<<<<<<< HEAD:src.disabled/src/components/wallet/RedeemTokensCard.jsx
+import _React,{ useState } from "react"; import { useWallet } from '@/hooks/useWallet'; export default function Page() {; from '@/components/ui/card';"; import { Button } from '@/components/ui/button';"; import { Gift,ArrowRight,ExternalLink } from 'lucide-react';"; import { Dialog,DialogContent,DialogDescription,DialogHeader,DialogTitle,DialogTrigger } from '@/components/ui/dialog'; </Card>)} ";
+=======
+<<<<<<< HEAD:backup-problematic-files/src.disabled/src/components/wallet/RedeemTokensCard.jsx
+import _React,{ useState } from "react"; import { useWallet } from '@/hooks/useWallet'; export default function Page() {; from '@/components/ui/card';"; import { Button } from '@/components/ui/button';"; import { Gift,ArrowRight,ExternalLink } from 'lucide-react';"; import { Dialog,DialogContent,DialogDescription,DialogHeader,DialogTitle,DialogTrigger } from '@/components/ui/dialog'; </Card>)} ";
+=======
+import _React,{ useState } from "react"; import { useWallet } from '@/hooks/useWallet'; export default function Page() {; from '@/components/ui/card';"; import { Button } from '@/components/ui/button';"; import { Gift,ArrowRight,ExternalLink } from 'lucide-react';"; import { Dialog,DialogContent,DialogDescription,DialogHeader,DialogTitle,DialogTrigger } from '@/components/ui/dialog'; </Card>)} ";
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:src.disabled/src/components/wallet/RedeemTokensCard.jsx
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src.disabled/src/components/wallet/RedeemTokensCard.jsx

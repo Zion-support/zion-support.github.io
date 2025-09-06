@@ -1,13 +1,19 @@
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/SitemapPage.tsx
 
 <<<<<<< HEAD
 
 =======
+========
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/SitemapPage.tsx
 import React from './react';
 import { complete_sitemap, dynamic_paths  } from '@/config / sitemap';
 import { Link  } from './react-router-dom';
 import { ChevronRight  } from './lucide-react';
 import { SEO  } from './SEO';
 import { AppLayout  } from '@/layout / AppLayout';
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/SitemapPage.tsx
 
 export const SitemapPage: React.FC = () => {
 =======
@@ -15,12 +21,16 @@ export const SitemapPage: React.FC = () => {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+========
+export const SitemapPage: React.FC = () => {
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/SitemapPage.tsx
 import React from 'react';
 import {completeSitemap, dynamicPaths} from '@/config/sitemap';
 import {Link} from 'react-router-dom';
 import {ChevronRight} from 'lucide-react';
 import {SEO} from './SEO';
 import {AppLayout} from '@/layout/AppLayout';
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/SitemapPage.tsx
 
 
 =======
@@ -42,16 +52,37 @@ export const SitemapPage: React.FC = () => {
   return (
     <AppLayout>;
 
+========
+export const SitemapPage: React.FC = () => {;
+  return (
+=======
+
+import React from 'react',;
+import { completeSitemap, dynamicPaths } from '@/config/sitemap',;
+import { Link } from 'react-router-dom',;
+import { ChevronRight } from 'lucide-react',;
+import { SEO } from './SEO',;
+import { AppLayout } from '@/layout/AppLayout',;
+;
+export const SitemapPage:React.FC = () => {;
+  return (;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+    <AppLayout>;
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/SitemapPage.tsx
       <SEO;
         title="Sitemap | Zion AI Marketplace";
         description="Complete sitemap of the Zion AI Marketplace";
         keywords="sitemap, zion, ai marketplace, navigation";
+<<<<<<< HEAD
         canonical="https://app.ziontechgroup.com / sitemap - page";
       />;
       <div className="container mx - auto px - 4 py - 12">;
         <h1 className="text - 3xl font - bold mb - 8">Sitemap</h1>;
         <div className="grid md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/SitemapPage.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/SitemapPage.tsx
           {/* Public Pages */}
           <div className="bg - zion - blue - dark p - 6 rounded - lg">;
             <h2 className="text - xl font - bold mb - 4 text - zion - cyan">;
@@ -68,7 +99,10 @@ export const SitemapPage: React.FC = () => {
                     >;
                       <ChevronRight className="h - 4 w - 4 mr - 2" />;
                       {route.label}
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/SitemapPage.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/SitemapPage.tsx
                     </Link>;
                   </li>))}
             </ul>;
@@ -91,13 +125,19 @@ export const SitemapPage: React.FC = () => {
                 .map ((route) => (
                   <li key={route.path}>;
                     <Link;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/SitemapPage.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/SitemapPage.tsx
                       to={route.path}
                       className="flex items - center hover:text - zion - purple";
                     >;
                       <ChevronRight className="h - 4 w - 4 mr - 2" />;
                       {route.label}
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/SitemapPage.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/SitemapPage.tsx
                     </Link>;
                   </li>))}
             </ul>;
@@ -120,13 +160,19 @@ export const SitemapPage: React.FC = () => {
                 .map ((route) => (
                   <li key={route.path}>;
                     <Link;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/SitemapPage.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/SitemapPage.tsx
                       to={route.path}
                       className="flex items - center hover:text - zion - purple";
                     >;
                       <ChevronRight className="h - 4 w - 4 mr - 2" />;
                       {route.label}
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/SitemapPage.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/SitemapPage.tsx
                     </Link>;
                   </li>))}
             </ul>;
@@ -149,18 +195,27 @@ export const SitemapPage: React.FC = () => {
                 .map ((route) => (
                   <li key={route.path}>;
                     <Link;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/SitemapPage.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/SitemapPage.tsx
                       to={route.path}
                       className="flex items - center hover:text - zion - purple";
                     >;
                       <ChevronRight className="h - 4 w - 4 mr - 2" />;
                       {route.label}
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/SitemapPage.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/SitemapPage.tsx
                     </Link>;
                   </li>))}
             </ul>;
           </div>;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/SitemapPage.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/SitemapPage.tsx
           {/* Admin Routes */}
           <div className="bg - zion - blue - dark p - 6 rounded - lg">;
             <h2 className="text - xl font - bold mb - 4 text - zion - cyan">;
@@ -180,12 +235,14 @@ export const SitemapPage: React.FC = () => {
                     >;
                       <ChevronRight className="h - 4 w - 4 mr - 2" />;
                       {route.label}
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/SitemapPage.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/SitemapPage.tsx
         canonical="https://app && app.ziontechgroup.com/sitemap-page"
       />;
       <div className="container mx-auto px-4 py-12">;
         <h1 className="text-3xl font-bold mb-8">Sitemap</h1>;
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
           {/* Public Pages */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">;
@@ -206,7 +263,6 @@ export const SitemapPage: React.FC = () => {
               }
             </ul>;
           </div>;
-
           {/* Talent Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">;
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Talent Pages</h2>;
@@ -230,7 +286,6 @@ export const SitemapPage: React.FC = () => {
               }
             </ul>;
           </div>;
-
           {/* Client Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">;
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Client Pages</h2>;
@@ -254,7 +309,6 @@ export const SitemapPage: React.FC = () => {
               }
             </ul>;
           </div>;
-
           {/* Shared Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">;
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Authenticated User Pages</h2>;
@@ -278,7 +332,6 @@ export const SitemapPage: React.FC = () => {
               }
             </ul>;
           </div>;
-
           {/* Admin Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">;
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Admin Pages</h2>;
@@ -301,13 +354,139 @@ export const SitemapPage: React.FC = () => {
               }
             </ul>;
           </div>;
-
+=======
+        canonical="https://app.ziontechgroup.com/sitemap-page";
+      />;
+      <div className="container mx-auto px-4 py-12">;
+        <h1 className="text-3xl font-bold mb-8">Sitemap</h1>;
+        ;
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
+          {/* Public Pages */}
+          <div className="bg-zion-blue-dark p-6 rounded-lg">;
+            <h2 className="text-xl font-bold mb-4 text-zion-cyan">Public Pages</h2>;
+            <ul className="space-y-2">;
+              {completeSitemap;
+                .filter(route => !route.requiredAuth);
+                .map(route => (;
+                  <li key={route.path}>;
+                    <Link ;
+                      to={route.path} ;
+                      className="flex items-center hover:text-zion-purple";
+                    >;
+                      <ChevronRight className="h-4 w-4 mr-2" />;
+                      {route.label}
+                    </Link>;
+                  </li>;
+                ));              }
+            </ul>;
+          </div>;
+          ;
+          {/* Talent Routes */}
+          <div className="bg-zion-blue-dark p-6 rounded-lg">;
+            <h2 className="text-xl font-bold mb-4 text-zion-cyan">Talent Pages</h2>;
+            <p className="text-sm text-zion-slate mb-4">Requires talent or creator account</p>;
+            <ul className="space-y-2">;
+              {completeSitemap;
+                .filter(route => ;
+                  route.requiredRoles?.includes('jobSeeker') || ;
+                  route.requiredRoles?.includes('creator');
+                );
+                .map(route => (;
+                  <li key={route.path}>;
+                    <Link ;
+                      to={route.path} ;
+                      className="flex items-center hover:text-zion-purple";
+                    >;
+                      <ChevronRight className="h-4 w-4 mr-2" />;
+                      {route.label}
+                    </Link>;
+                  </li>;
+                ));              }
+            </ul>;
+          </div>;
+          ;
+          {/* Client Routes */}
+          <div className="bg-zion-blue-dark p-6 rounded-lg">;
+            <h2 className="text-xl font-bold mb-4 text-zion-cyan">Client Pages</h2>;
+            <p className="text-sm text-zion-slate mb-4">Requires employer or buyer account</p>;
+            <ul className="space-y-2">;
+              {completeSitemap;
+                .filter(route => ;
+                  route.requiredRoles?.includes('employer') || ;
+                  route.requiredRoles?.includes('buyer');
+                );
+                .map(route => (;
+                  <li key={route.path}>;
+                    <Link ;
+                      to={route.path} ;
+                      className="flex items-center hover:text-zion-purple";
+                    >;
+                      <ChevronRight className="h-4 w-4 mr-2" />;
+                      {route.label}
+                    </Link>;
+                  </li>;
+                ));              }
+            </ul>;
+          </div>;
+          ;
+          {/* Shared Routes */}
+          <div className="bg-zion-blue-dark p-6 rounded-lg">;
+            <h2 className="text-xl font-bold mb-4 text-zion-cyan">Authenticated User Pages</h2>;
+            <p className="text-sm text-zion-slate mb-4">Requires any account type</p>;
+            <ul className="space-y-2">;
+              {completeSitemap;
+                .filter(route => ;
+                  route.requiredAuth && ;
+                  (!route.requiredRoles || route.requiredRoles.length === 0);
+                );
+                .map(route => (;
+                  <li key={route.path}>;
+                    <Link ;
+                      to={route.path} ;
+                      className="flex items-center hover:text-zion-purple";
+                    >;
+                      <ChevronRight className="h-4 w-4 mr-2" />;
+                      {route.label}
+                    </Link>;
+                  </li>;
+                ));              }
+            </ul>;
+          </div>;
+          ;
+          {/* Admin Routes */}
+          <div className="bg-zion-blue-dark p-6 rounded-lg">;
+            <h2 className="text-xl font-bold mb-4 text-zion-cyan">Admin Pages</h2>;
+            <p className="text-sm text-zion-slate mb-4">Requires admin account</p>;
+            <ul className="space-y-2">;
+              {completeSitemap;
+                .filter(route => ;
+                  route.requiredRoles?.includes('admin');
+                );
+                .map(route => (;
+                  <li key={route.path}>;
+                    <Link ;
+                      to={route.path} ;
+                      className="flex items-center hover:text-zion-purple";
+                    >;
+                      <ChevronRight className="h-4 w-4 mr-2" />;
+                      {route.label}
+                    </Link>;
+                  </li>;
+                ));              }
+            </ul>;
+          </div>;
+          ;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           {/* Dynamic Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">;
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Dynamic Pages</h2>;
             <p className="text-sm text-zion-slate mb-4">Pages with dynamic parameters</p>;
             <ul className="space-y-2">;
+<<<<<<< HEAD
               {Object && Object.entries(dynamicPaths).map(([key, path]) => (;
+=======
+              {Object.entries(dynamicPaths).map(([key, path]) => (;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <li key={key}>;
                   <div className="flex items-center text-zion-slate">;
                     <ChevronRight className="h-4 w-4 mr-2" />;
@@ -316,6 +495,7 @@ export const SitemapPage: React.FC = () => {
                 </li>;
               ))}
 <<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/SitemapPage.tsx
 
 =======
 =======
@@ -323,6 +503,8 @@ export const SitemapPage: React.FC = () => {
 
 
 =======
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/SitemapPage.tsx
                     </Link>;
                   </li>))}
             </ul>;
@@ -343,13 +525,19 @@ export const SitemapPage: React.FC = () => {
                     {path} <span className="ml - 2 text - xs italic">({key})</span>;
                   </div>;
                 </li>))}
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/SitemapPage.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/SitemapPage.tsx
             </ul>;
           </div>;
         </div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/SitemapPage.tsx
     </AppLayout>;
 
   );
@@ -361,3 +549,218 @@ export const SitemapPage: React.FC = () => {
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+========
+    </AppLayout>);
+}
+;
+=======
+    </AppLayout>;
+  ),;
+},; /> <div className="container mx-auto px-4 py-12" > <h1 className="text-3xl font-bold mb-8" >Sitemap</h1> <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" > {
+  /* Public Pages */ 
+}.filter (route => !route.requiredAuth) .map (route => (<li key= {
+  route.path 
+}> <Link </Link> </li>) ) 
+}</ul> </div> .filter (route => route.requiredRoles?.includes ('jobSeeker') || route.requiredRoles?.includes ('creator') ) .map (route => (<li key= {
+  route.path 
+}> <Link </Link> </li>) ) 
+}</ul> </div> .filter (route => route.requiredRoles?.includes ('employer') || route.requiredRoles?.includes ('buyer') ) .map (route => (<li key= {
+  route.path 
+}> <Link </Link> </li>) ) 
+}</ul> </div> .filter (route => route.requiredAuth && (!route.requiredRoles || route.requiredRoles.length === 0) ) .map (route => (<li key= {
+  route.path 
+}> <Link </Link> </li>) ) 
+}</ul> </div> .filter (route => route.requiredRoles?.includes ('admin') ) .map (route => (<li key= {
+  route.path 
+}> <Link </Link> </li>) ) 
+}</ul> </div> </div> </li>) ) 
+}</ul> </div> </div> </div> </AppLayout>) 
+};
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/SitemapPage.tsx
+=======
+
+import React from "react";
+import { completeSitemap, dynamicPaths } from "@/config/sitemap";
+import { Link } from "react-router-dom";
+import { ChevronRight } from "lucide-react";
+import { SEO } from "./SEO";
+import { AppLayout } from "@/layout/AppLayout";
+
+export const SitemapPage: React.FC = () => {
+  return (
+    <AppLayout>
+      <SEO
+        title="Sitemap | Zion AI Marketplace"
+        description="Complete sitemap of the Zion AI Marketplace"
+        keywords="sitemap, zion, ai marketplace, navigation"
+        canonical="https://app.ziontechgroup.com/sitemap-page"
+      />
+      <div className="container mx-auto px-4 py-12">
+        <h1 className="text-3xl font-bold mb-8">Sitemap</h1>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Public Pages */}
+          <div className="bg-zion-blue-dark p-6 rounded-lg">
+            <h2 className="text-xl font-bold mb-4 text-zion-cyan">
+              Public Pages
+            </h2>
+            <ul className="space-y-2">
+              {completeSitemap
+                .filter((route) => !route.requiredAuth)
+                .map((route) => (
+                  <li key={route.path}>
+                    <Link
+                      to={route.path}
+                      className="flex items-center hover:text-zion-purple"
+                    >
+                      <ChevronRight className="h-4 w-4 mr-2" />
+                      {route.label}
+                    </Link>
+                  </li>
+                ))}
+            </ul>
+          </div>
+
+          {/* Talent Routes */}
+          <div className="bg-zion-blue-dark p-6 rounded-lg">
+            <h2 className="text-xl font-bold mb-4 text-zion-cyan">
+              Talent Pages
+            </h2>
+            <p className="text-sm text-zion-slate mb-4">
+              Requires talent or creator account
+            </p>
+            <ul className="space-y-2">
+              {completeSitemap
+                .filter(
+                  (route) =>
+route.requiredRoles?.includes("jobSeeker") |
+                    route.requiredRoles?.includes("creator")
+                )
+                .map((route) => (
+                  <li key={route.path}>
+                    <Link
+                      to={route.path}
+                      className="flex items-center hover:text-zion-purple"
+                    >
+                      <ChevronRight className="h-4 w-4 mr-2" />
+                      {route.label}
+                    </Link>
+                  </li>
+                ))}
+            </ul>
+          </div>
+
+          {/* Client Routes */}
+          <div className="bg-zion-blue-dark p-6 rounded-lg">
+            <h2 className="text-xl font-bold mb-4 text-zion-cyan">
+              Client Pages
+            </h2>
+            <p className="text-sm text-zion-slate mb-4">
+              Requires employer or buyer account
+            </p>
+            <ul className="space-y-2">
+              {completeSitemap
+                .filter(
+                  (route) =>
+route.requiredRoles?.includes("employer") |
+                    route.requiredRoles?.includes("buyer")
+                )
+                .map((route) => (
+                  <li key={route.path}>
+                    <Link
+                      to={route.path}
+                      className="flex items-center hover:text-zion-purple"
+                    >
+                      <ChevronRight className="h-4 w-4 mr-2" />
+                      {route.label}
+                    </Link>
+                  </li>
+                ))}
+            </ul>
+          </div>
+
+          {/* Shared Routes */}
+          <div className="bg-zion-blue-dark p-6 rounded-lg">
+            <h2 className="text-xl font-bold mb-4 text-zion-cyan">
+              Authenticated User Pages
+            </h2>
+            <p className="text-sm text-zion-slate mb-4">
+              Requires any account type
+            </p>
+            <ul className="space-y-2">
+              {completeSitemap
+                .filter(
+                  (route) =>
+                    route.requiredAuth &&
+(!route.requiredRoles |route.requiredRoles.length === 0)
+                )
+                .map((route) => (
+                  <li key={route.path}>
+                    <Link
+                      to={route.path}
+                      className="flex items-center hover:text-zion-purple"
+                    >
+                      <ChevronRight className="h-4 w-4 mr-2" />
+                      {route.label}
+                    </Link>
+                  </li>
+                ))}
+            </ul>
+          </div>
+
+          {/* Admin Routes */}
+          <div className="bg-zion-blue-dark p-6 rounded-lg">
+            <h2 className="text-xl font-bold mb-4 text-zion-cyan">
+              Admin Pages
+            </h2>
+            <p className="text-sm text-zion-slate mb-4">
+              Requires admin account
+            </p>
+            <ul className="space-y-2">
+              {completeSitemap
+                .filter((route) => route.requiredRoles?.includes("admin"))
+                .map((route) => (
+                  <li key={route.path}>
+                    <Link
+                      to={route.path}
+                      className="flex items-center hover:text-zion-purple"
+                    >
+                      <ChevronRight className="h-4 w-4 mr-2" />
+                      {route.label}
+                    </Link>
+                  </li>
+                ))}
+            </ul>
+          </div>
+
+          {/* Dynamic Routes */}
+          <div className="bg-zion-blue-dark p-6 rounded-lg">
+            <h2 className="text-xl font-bold mb-4 text-zion-cyan">
+              Dynamic Pages
+            </h2>
+            <p className="text-sm text-zion-slate mb-4">
+              Pages with dynamic parameters
+            </p>
+            <ul className="space-y-2">
+              {Object.entries(dynamicPaths).map(([key, path]) => (
+                <li key={key}>
+                  <div className="flex items-center text-zion-slate">
+                    <ChevronRight className="h-4 w-4 mr-2" />
+                    {path} <span className="ml-2 text-xs italic">({key})</span>
+                  </div>
+                </li>
+              ))}
+</ul>
+          </div>
+        </div>
+      </div>
+    </AppLayout>
+
+  );
+}
+
+  );
+};
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

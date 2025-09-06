@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 }</div> </div>) };
@@ -8,6 +9,73 @@ const ReviewCard: React.FC<Props> = ({ review, onReport }) => {;
 import StarRating from './StarRating';
 import type { PublicReview } from '../../types/reviews';
 =======
+=======
+<<<<<<< HEAD:components/reviews/ReviewCard.tsx
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+ > Report abuse </button> </div>) ;
+}</div> </div>) };
+const ReviewCard: React.FC<Props> = ({ review, onReport }) => {;
+=======
+<<<<<<< HEAD:components/reviews/ReviewCard.tsx
+<<<<<<< HEAD
+ > Report abuse </button> </div>)
+}</div> </div>) }
+=======
+ > Report abuse </button> </div>) 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+<<<<<<< HEAD:backup-problematic-files/reviews/ReviewCard.tsx
+import React from 'react',
+import StarRating from './StarRating',
+import type { PublicReview } from '../../types/reviews',
+type Props = {
+  review: PublicReview,
+  onReport?: (id: string) => void
+},
+
+const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
+  return (
+    <div className="enhanced-card hover:shadow-lg transition-shadow">
+      <div className="flex items-center justify-between mb-2">
+        <div className="flex items-center gap-2">
+          <StarRating value={review.rating} onChange={() => {}} readOnly size={18} />
+          <span className="text-sm text-gray-500">{new Date(review.createdAt).toLocaleDateString()}</span>
+        </div>
+        <button
+          className="text-xs text-red-500 hover:underline"
+          onClick={() => onReport && onReport(review.id)}
+=======
+> Report abuse </button> </div>) 
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/reviews/ReviewCard.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}</div> </div>) };
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/reviews/ReviewCard.tsx
+const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:backup-problematic-files/reviews/ReviewCard.tsx
+  return (import React from 'react';
+import StarRating from './StarRating';
+import type { PublicReview } from '../../types/reviews';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React from 'react';
 import StarRating from './StarRating';
 import type { PublicReview } from '../../types/reviews';
@@ -16,6 +84,7 @@ type Props = {
   review: PublicReview,
   onReport?: (id: string) => void
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 import {Star} from 'lucide-react';
@@ -30,6 +99,24 @@ const ReviewCard: React.FC<Props> = ({ review, onReport }) => {;
     <div className='enhanced-card hover:shadow-lg transition-shadow'>;
       <div className='flex items-center justify-between mb-2'>;
         <div className='flex items-center gap-2'>;
+=======
+import {Star} from 'lucide-react';
+type Props = {;
+  review: PublicReview,;
+  onReport?: (id: string) => void;
+const ReviewCard: React.FC<Props> = ({ review, onReport }) => {;
+  return (
+<<<<<<< HEAD:components/reviews/ReviewCard.tsx
+    <div className='enhanced-card hover:shadow-lg transition-shadow'>;
+      <div className='flex items-center justify-between mb-2'>;
+        <div className='flex items-center gap-2'>;
+=======
+<<<<<<< HEAD:components/reviews/ReviewCard.tsx
+    <div className='enhanced-card hover:shadow-lg transition-shadow'>
+      <div className='flex items-center justify-between mb-2'>
+        <div className='flex items-center gap-2'>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:backup-problematic-files/reviews/ReviewCard.tsx
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <StarRating
             value={review && review.rating}
             onChange={() => {}}
@@ -56,6 +143,7 @@ const ReviewCard: React.FC<Props> = ({ review, onReport }) => {;
         <span className='text-sm font-medium'>{review && review.authorName}</span>;
         {review && review.categories?.wouldWorkWithAgain && (;
           <span className='pill pill-success'>Would work again</span>;
+<<<<<<< HEAD
 =======
   return (
 
@@ -81,12 +169,20 @@ const ReviewCard: React.FC<Props> = ({ review, onReport }) => {;
       </div>;
       <p className='text-sm leading-6'>{review && review.text}</p>;
 
+=======
+        )}
+      </div>;
+      <p className='text-sm leading-6'>{review && review.text}</p>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <div className='flex flex-wrap gap-2 mt-3'>;
         {typeof review && review.categories?.communication === 'number' && (;
           <span className='pill'>;
             Communication: {review && review.categories.communication}★;
           </span>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         )}
         {typeof review && review.categories?.qualityOfWork === 'number' && (;
           <span className='pill'>;
@@ -101,15 +197,119 @@ const ReviewCard: React.FC<Props> = ({ review, onReport }) => {;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 
 
 };
 
+=======
+  return (
+    <div className="enhanced-card hover: shadow-lg transition-shadow">
+      <div className="flex items-center justify-between mb-2">
+        <div className="flex items-center gap-2">
+          <StarRating value={review.rating} onChange={() => {}} readOnly size={18} />
+          <span className="text-sm text-gray-500">{new Date(review.createdAt).toLocaleDateString()}</span>
+        </div>
+        <button
+          className="text-xs text-red-500 hover:underline"
+<<<<<<< HEAD:components/reviews/ReviewCard.tsx
+          onClick={() => onReport && onReport(review.id)}
+
+=======
+=======
+
+          onClick={() => onReport && onReport(review.id)}
+
+>>>>>>> main:components/reviews/ReviewCard.tsx
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/reviews/ReviewCard.tsx
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/reviews/ReviewCard.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:backup-problematic-files/reviews/ReviewCard.tsx
+        >
+          Report abuse
+        </button>
+      </div>
+<<<<<<< HEAD:components/reviews/ReviewCard.tsx
+<div className="flex items-center gap-2 mb-3">
+        <span className="text-sm font-medium">{review.authorName}</span>
+        {review.categories?.wouldWorkWithAgain && (
+=======
+<<<<<<< HEAD:backup-problematic-files/reviews/ReviewCard.tsx
+      <div className="flex items-center gap-2 mb-3">
+        <span className="text-sm font-medium">{review.authorName}</span>
+        {review.categories?.wouldWorkWithAgain && (
+          <span className="pill pill-success">Would work again</span>
+        )}
+      </div>
+      <p className="text-sm leading-6">{review.text}</p>
+
+      <div className="flex flex-wrap gap-2 mt-3">
+        {typeof review.categories?.communication === 'number' && (
+          <span className="pill">Communication: {review.categories.communication}★</span>
+        )}
+        {typeof review.categories?.qualityOfWork === 'number' && (
+          <span className="pill">Quality: {review.categories.qualityOfWork}★</span>
+        )}
+        {typeof review.categories?.timeliness === 'number' && (
+          <span className="pill">Timeliness: {review.categories.timeliness}★</span>
+        )}
+      </div>;
+    </div>;
+  );
+},;
+=======
+      <div className='flex items-center gap-2 mb-3'>
+        <span className='text-sm font-medium'>{review.authorName}</span>
+        {review.categories?.wouldWorkWithAgain && (
+          <span className='pill pill-success'>Would work again</span>
+        )}
+      </div>
+      <p className='text-sm leading-6'>{review.text}</p>
+      <div className='flex flex-wrap gap-2 mt-3'>
+        {typeof review.categories?.communication === 'number' && (
+          <span className='pill'>
+            Communication: {review.categories.communication}★
+          </span>
+        )}
+        {typeof review.categories?.qualityOfWork === 'number' && (
+          <span className='pill'>
+            Quality: {review.categories.qualityOfWork}★
+          </span>
+        )}
+        {typeof review.categories?.timeliness === 'number' && (
+          <span className='pill'>
+            Timeliness: {review.categories.timeliness}★
+          </span>
+        )}
+      </div>
+    </div>
+  );
+<<<<<<< HEAD
+}
+=======
+};
+
+<<<<<<< HEAD:components/reviews/ReviewCard.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default ReviewCard;        {review.categories?.wouldWorkWithAgain && (
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:backup-problematic-files/reviews/ReviewCard.tsx
+          <span className="pill pill-success">Would work again</span>
+        )}
+      </div>
+      <p className="text-sm leading-6">{review.text}</p>
+      <div className="flex flex-wrap gap-2 mt-3">
+        {typeof review.categories?.communication === 'number' && (
+          <span className="pill">Communication: {review.categories.communication}★</span>
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export default ReviewCard;        {review && review.categories?.wouldWorkWithAgain && (;
           <span className="pill pill-success">Would work again</span>;
         )}
       </div>;
       <p className="text-sm leading-6">{review && review.text}</p>;
+<<<<<<< HEAD
 
       <div className="flex flex-wrap gap-2 mt-3">;
         {typeof review && review.categories?.communication === 'number' && (;
@@ -118,18 +318,33 @@ export default ReviewCard;        {review && review.categories?.wouldWorkWithAga
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         )}
+=======
+      <div className="flex flex-wrap gap-2 mt-3">;
+        {typeof review && review.categories?.communication === 'number' && (;
+          <span className="pill">Communication: {review && review.categories.communication}★</span>;
+        )}
+<<<<<<< HEAD:components/reviews/ReviewCard.tsx
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {typeof review && review.categories?.qualityOfWork === 'number' && (;
           <span className="pill">Quality: {review && review.categories.qualityOfWork}★</span>;
         )}
         {typeof review && review.categories?.timeliness === 'number' && (;
           <span className="pill">Timeliness: {review && review.categories.timeliness}★</span>;
         )}
+<<<<<<< HEAD
 
 
 export default ReviewCard;
 
 
 =======
+=======
+      </div>;
+    </div>;
+  );
+};
+export default ReviewCard;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 > Report abuse </button> </div>);
 }</div> </div>) }
 ;
@@ -209,13 +424,36 @@ export default ReviewCard;        {review.categories?.wouldWorkWithAgain && (
 ;
 export default ReviewCard;
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
+=======
+=======
+        {typeof review.categories?.timeliness === 'number' && (
+          <span className="pill">Timeliness: {review.categories.timeliness}★</span>
+        )}
+      </div>
+    </div>
+  )
+}
+export default ReviewCard;
+<<<<<<< HEAD
+
+<<<<<<< HEAD:components/reviews/ReviewCard.tsx
+=======
+>>>>>>> main:components/reviews/ReviewCard.tsx
+export default ReviewCard;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/reviews/ReviewCard.tsx
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 =======
 >>>>>>> main:components/reviews/ReviewCard.tsx
 export default ReviewCard;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/reviews/ReviewCard.tsx
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:backup-problematic-files/reviews/ReviewCard.tsx
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

@@ -1,5 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 ;
 const MainSidebar.dynamic = () => {
   return (
@@ -8,5 +11,8 @@ const MainSidebar.dynamic = () => {
     </div>);
 }
 ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export default MainSidebar.dynamic;

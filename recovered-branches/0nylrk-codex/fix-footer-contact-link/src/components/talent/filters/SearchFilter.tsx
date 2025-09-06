@@ -1,13 +1,19 @@
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/talent/filters/SearchFilter.tsx
 
 <<<<<<< HEAD
 
 import { Input } from "@/components/ui/input",
 
 =======
+========
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/talent/filters/SearchFilter.tsx
 import {Input} from "@/components/ui/input";
 import {SearchIcon} from "lucide-react";
 import {SearchFilterProps} from "@/types/filters";
 export function SearchFilter(): any ({ searchTerm, setSearchTerm }: SearchFilterProps) {;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/talent/filters/SearchFilter.tsx
 
 =======
 
@@ -16,20 +22,42 @@ export function SearchFilter(): any ({ searchTerm, setSearchTerm }: SearchFilter
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/talent/filters/SearchFilter.tsx
   return (
     <div className="mb-6">;
       <div className="relative">;
         <SearchIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />;
+=======
+import { Input } from "@/components/ui/input",
+import { SearchIcon } from "lucide-react";
+import { SearchFilterProps } from "@/types/filters";
+
+import { Input } from "@/components/ui/input";
+import { SearchIcon } from "lucide-react";
+import { SearchFilterProps } from "@/types/filters";
+
+export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
+  return (
+    <div className="mb-6">
+      <div className="relative">
+        <SearchIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <Input
           type="text"
           placeholder="Search talents..."
           value={searchTerm}
 <<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/talent/filters/SearchFilter.tsx
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           onChange={(e) => setSearchTerm(e.target.value)}
           className="pl-10 bg-zion-blue border-zion-blue-light text-white placeholder-zion-slate-light"
         />
       </div>
     </div>
+<<<<<<< HEAD
 
 import { Input } from "@/components/ui/input",;
 import { SearchIcon } from "lucide-react",;
@@ -48,20 +76,44 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
 
           onChange={(e) => setSearchTerm(e && e.target.value)}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+          onChange={(e) => setSearchTerm(e && e.target.value)}
+=======
+
+import { Input } from "@/components/ui/input",;
+import { SearchIcon } from "lucide-react",;
+import { SearchFilterProps } from "@/types/filters",;
+;
+export function SearchFilter({ searchTerm, setSearchTerm } SearchFilterProps) {;
+  return (;
+    <div className="mb-6">;
+      <div className="relative">;
+        <SearchIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />;
+        <Input;
+          type="text";
+          placeholder="Search talents...";
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/talent/filters/SearchFilter.tsx
           className="pl-10 bg-zion-blue border-zion-blue-light text-white placeholder-zion-slate-light";
         />;
       </div>;
     </div>;
+<<<<<<< HEAD
   );
 <<<<<<< HEAD
 
 }
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/talent/filters/SearchFilter.tsx
 ;
 
 =======
 }
 
 =======
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/talent/filters/SearchFilter.tsx
 import { Input  } from '@/components / ui / input';
 import { SearchIcon  } from './lucide-react';
 import { SearchFilterProps  } from '@/types / filters';
@@ -83,6 +135,7 @@ function SearchFilter() {
       </div>;
     </div>);
 }
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/talent/filters/SearchFilter.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -90,3 +143,22 @@ function SearchFilter() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+=======
+  ),;}
+ export function SearchFilter ({
+  searchTerm, setSearchTerm 
+}: SearchFilterProps) {
+  return (<div className="mb-6" > <div className="relative" > <SearchIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" /> text"placeholder=" Search talents..." value= {
+  searchTerm 
+}/> </div> </div>) 
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/talent/filters/SearchFilter.tsx
+=======
+);
+}
+}
+;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

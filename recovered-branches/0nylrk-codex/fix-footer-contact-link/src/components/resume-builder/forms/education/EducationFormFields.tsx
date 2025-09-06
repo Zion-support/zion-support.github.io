@@ -1,8 +1,35 @@
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationFormFields.tsx
 
 
 <<<<<<< HEAD
 =======
 
+=======
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useForm  } from 'react-hook-form';
+import { zodResolver  } from '@hookform/resolvers/zod';
+import { z  } from 'zod';
+import { format  } from 'date-fns';
+import { Loader2  } from 'lucide-react';
+import { Button  } from '@/components/ui/button';
+import { Textarea  } from '@/components/ui/textarea';
+import { Input  } from '@/components/ui/input';
+import { Checkbox  } from '@/components/ui/checkbox';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import { Form;
+  FormControl;
+  FormField;
+  FormItem;
+  FormLabel;
+  FormMessage } from '@/components/ui/form';
+import { useState  } from 'react';
+import { EducationFormFieldsProps  } from './types';
+import { Education } from '@/types/resume';
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import {useForm} from 'react-hook-form';
 import {zodResolver} from '@hookform/resolvers/zod';
 import {z} from 'zod';
@@ -17,9 +44,13 @@ import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/
 import {useState} from 'react';
 import {EducationFormFieldsProps} from './types';
 import {Education} from '@/types/resume';
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 // Define schema for form validation
 
 const educationSchema = z.object({
@@ -33,19 +64,33 @@ const educationSchema = z.object({
   location: z.string().optional()})
 type EducationFormValues = z.infer<typeof educationSchema>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
 
 
+=======
+export function EducationFormFields({
+  isEditing
+  onSubmit
+  onCancel
+}: EducationFormFieldsProps) {
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export function EducationFormFields({ 
   isEditing, 
   onSubmit, 
   onCancel 
 }: EducationFormFieldsProps) {;
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const form = useForm<EducationFormValues>({
@@ -68,16 +113,22 @@ export function EducationFormFields({
     } finally {
       setIsLoading(false)
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
 
 =======
 
+========
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationFormFields.tsx
 import {useForm} from 'react-hook-form';
 import {zodResolver} from '@hookform/resolvers/zod';
-=======
 import {use_form} from 'react - hook - form';
 import {zod_resolver} from '@hookform / resolvers / zod';
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationFormFields.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationFormFields.tsx
 import {z} from 'zod';
 import {format} from 'date - fns';
 import {Loader2} from 'lucide-react';
@@ -89,6 +140,7 @@ import {Alert, AlertDescription} from '@/components / ui / alert';
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/components / ui / form';
 import {useState} from 'react';
 import {EducationFormFieldsProps} from './types';
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationFormFields.tsx
 
     }
 
@@ -96,6 +148,15 @@ import {EducationFormFieldsProps} from './types';
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+    }
+<<<<<<< HEAD
+  }
+=======
+  };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
 import { z } from 'zod',;
@@ -116,6 +177,7 @@ import {;
 import { useState } from 'react',;
 import { EducationFormFieldsProps } from './types',;
 import { Education } from '@/types/resume',;
+<<<<<<< HEAD
 
 // Define schema for form validation;
 const educationSchema = z && z.object({;
@@ -138,12 +200,33 @@ export function EducationFormFields(): any ({ ;
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
+=======
+// Define schema for form validation;
+const educationSchema = z.object({;
+  institution: z.string().min(1, 'Institution is required'),;
+  degree: z.string().min(1, 'Degree is required'),;
+  field_of_study: z.string().optional(),;
+  start_date: z.string().min(1, 'Start date is required'),;
+  end_date: z.string().optional(),;
+  is_current: z.boolean().default(false),;
+  description: z.string().optional(),;
+  location: z.string().optional()}),;
+type EducationFormValues = z.infer<typeof educationSchema>,;
+export function EducationFormFields({;
+  isEditing,;
+  onSubmit,;
+  onCancel;
+}: EducationFormFieldsProps) {;
+  const [isLoading, setIsLoading] = useState(false),;
+  const [error, setError] = useState<string | null>(null),;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const form = useForm<EducationFormValues>({;
     resolver: zodResolver(educationSchema),;
     defaultValues: {;
       institution: '',;
       degree: '',;
       field_of_study: '',;
+<<<<<<< HEAD
       start_date: format(new Date(), 'yyyy-MM-dd');
       is_current: false,;
       description: '',;
@@ -178,6 +261,36 @@ export function EducationFormFields(): any ({ ;
             control={form && form.control}
             name="institution"
 <<<<<<< HEAD
+=======
+      start_date: format(new Date(), 'yyyy-MM-dd'),;
+      is_current: false,;
+      description: '',;
+      location: ''}}),;
+  const handleSubmit = async (data: EducationFormValues) => {;
+    setIsLoading(true),;
+    setError(null);
+    try {;
+      await onSubmit(data);
+    } catch (err: any) {;
+      setError(err.message || 'An error occurred');
+    } finally {;
+      setIsLoading(false);
+    }
+  },
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+  return (
+    <Form {...form}>
+      <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <FormField
+            control={form.control}
+            name="institution"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             render={({ field }) => (
               <FormItem>
                 <FormLabel>Institution</FormLabel>
@@ -223,11 +336,14 @@ export function EducationFormFields(): any ({ ;
               <FormItem>
                 <FormLabel>Start Date</FormLabel>
                 <FormControl>
+<<<<<<< HEAD
 =======
             render={({ field }) => (;
               <FormItem>;
                 <FormLabel>Institution</FormLabel>;
 =======
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationFormFields.tsx
 import {Education} from '@/types / resume';
 // Define schema for form validation;
 const education_schema = z.object ({
@@ -280,39 +396,134 @@ function EducationFormFields() {
             render={({ field }) => (
               <FormItem>;
                 <FormLabel > Institution</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+import { useForm } from 'react-hook-form',;
+import { zodResolver } from '@hookform/resolvers/zod',;
+import { z } from 'zod',;
+import { format } from 'date-fns',;
+import { Loader2 } from 'lucide-react',;
+import { Button } from '@/components/ui/button',;
+import { Textarea } from '@/components/ui/textarea',;
+import { Input } from '@/components/ui/input',;
+import { Checkbox } from '@/components/ui/checkbox',;
+import { Alert, AlertDescription } from '@/components/ui/alert',;
+import {;
+  Form,;
+  FormControl,;
+  FormField,;
+  FormItem,;
+  FormLabel,;
+  FormMessage} from '@/components/ui/form',;
+import { useState } from 'react',;
+import { EducationFormFieldsProps } from './types',;
+import { Education } from '@/types/resume',;
+;
+// Define schema for form validation;
+const educationSchema = z.object({;
+  institution:z.string().min(1, 'Institution is required'),;
+  degree:z.string().min(1, 'Degree is required'),;
+  field_of_study:z.string().optional(),;
+  start_date:z.string().min(1, 'Start date is required'),;
+  end_date:z.string().optional(),;
+  is_current:z.boolean().default(false),;
+  description:z.string().optional(),;
+  location:z.string().optional()}),;
+;
+type EducationFormValues = z.infer<typeof educationSchema>,;
+;
+export function EducationFormFields({ ;
+  isEditing, ;
+  onSubmit, ;
+  onCancel ;
+} EducationFormFieldsProps) {;
+  const [isLoading, setIsLoading] = useState(false),;
+  const [error, setError] = useState<string | null>(null),;
+;
+  const form = useForm<EducationFormValues>({;
+    resolver:zodResolver(educationSchema),;
+    defaultValues:{;
+      institution:'',;
+      degree:'',;
+      field_of_study:'',;
+      start_date:format(new Date(), 'yyyy-MM-dd'),;
+      is_current:false,;
+      description:'',;
+      location:''}}),;
+;
+  const handleSubmit = async (data:EducationFormValues) => {;
+    setIsLoading(true),;
+    setError(null),;
+    try {;
+      await onSubmit(data);
+    } catch (err:any) {;
+      setError(err.message || 'An error occurred');
+    } finally {;
+      setIsLoading(false),;
+    }
+  },;
+;
+  return (;
+    <Form {...form}>;
+      <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">;
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+          <FormField;
+            control={form.control}
+            name="institution";
+            render={({ field }) => (;
+              <FormItem>;
+                <FormLabel>Institution</FormLabel>;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <FormControl>;
                   <Input placeholder="University of California, MIT, etc." {...field} />;
                 </FormControl>;
                 <FormMessage />;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationFormFields.tsx
 
           />;
 
 
+========
+<<<<<<< HEAD
+          />;
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationFormFields.tsx
           <FormField
             control={form && form.control}
             name="degree"
+=======
+              </FormItem>;            )}
+          />;
+;
+          <FormField;
+            control={form.control}
+            name="degree";
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             render={({ field }) => (;
               <FormItem>;
                 <FormLabel>Degree</FormLabel>;
                 <FormControl>;
+<<<<<<< HEAD
                   <Input placeholder="Bachelor's, Master's, Ph && Ph.D, etc." {...field} />;
                 </FormControl>;
                 <FormMessage />;
               </FormItem>;
             )}
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationFormFields.tsx
 
           />;
         </div>;
 
 
+========
+          />;
+        </div>;
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationFormFields.tsx
         <FormField
           control={form && form.control}
           name="field_of_study"
           render={({ field }) => (;
             <FormItem>;
               <FormLabel>Field of Study</FormLabel>;
-=======
               </FormItem>)}
           />;
           <FormField;
@@ -334,15 +545,17 @@ function EducationFormFields() {
           render={({ field }) => (
             <FormItem>;
               <FormLabel > Field of Study</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               <FormControl>;
                 <Input placeholder="Computer Science, Engineering, etc." {...field} />;
               </FormControl>;
               <FormMessage />;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationFormFields.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationFormFields.tsx
         />;
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationFormFields.tsx
 
           <FormField
             control={form && form.control}
@@ -354,6 +567,15 @@ function EducationFormFields() {
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+<<<<<<< HEAD
+                  <Input
+                    type="date"
+=======
+                  <Input 
+                    type="date" 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     {...field}
                     value={field.value |''}
                   />
@@ -363,24 +585,62 @@ function EducationFormFields() {
             )}
           />
           <div className="space-y-4">
+<<<<<<< HEAD
+========
+          <FormField
+            control={form && form.control}
+            name="start_date"
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationFormFields.tsx
 =======
+                  <Input placeholder="Bachelor's, Master's, Ph.D, etc." {...field} />;
+                </FormControl>;
+                <FormMessage />;
+              </FormItem>;            )}
+          />;
+        </div>;
+;
+        <FormField;
+          control={form.control}
+          name="field_of_study";
+          render={({ field }) => (;
+            <FormItem>;
+              <FormLabel>Field of Study</FormLabel>;
+              <FormControl>;
+                <Input placeholder="Computer Science, Engineering, etc." {...field} />;
+              </FormControl>;
+              <FormMessage />;
+            </FormItem>;
+          )}
+        />;
+;
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+          <FormField;
+            control={form.control}
+            name="start_date";
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             render={({ field }) => (;
               <FormItem>;
                 <FormLabel>Start Date</FormLabel>;
                 <FormControl>;
+<<<<<<< HEAD
                   <Input
                     type="date" 
                     {...field}
                     value={field && field.value || ''} 
+=======
+                  <Input ;
+                    type="date" ;
+                    {...field}
+                    value={field.value || ''} ;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   />;
                 </FormControl>;
                 <FormMessage />;
               </FormItem>;
             )}
           />;
-
+<<<<<<< HEAD
           <div className="space-y-4">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <FormField
               control={form && form.control}
               name="is_current"
@@ -390,6 +650,19 @@ function EducationFormFields() {
                     <Checkbox
                       checked={field && field.value}
                       onCheckedChange={field && field.onChange}
+=======
+;
+          <div className="space-y-4">;
+            <FormField;
+              control={form.control}
+              name="is_current";
+              render={({ field }) => (;
+                <FormItem className="flex flex-row items-start space-x-3 space-y-0 py-2">;
+                  <FormControl>;
+                    <Checkbox;
+                      checked={field.value}
+                      onCheckedChange={field.onChange}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     />;
                   </FormControl>;
                   <div className="space-y-1 leading-none">;
@@ -397,19 +670,36 @@ function EducationFormFields() {
                   </div>;
                 </FormItem>;
               )}
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationFormFields.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationFormFields.tsx
             />;
-
+<<<<<<< HEAD
             {!form && form.watch('is_current') && (;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationFormFields.tsx
 
               <FormField
                 control={form && form.control}
                 name="end_date"
 
+========
+              <FormField
+                control={form && form.control}
+                name="end_date"
+=======
+;
+            {!form.watch('is_current') && (;
+              <FormField;
+                control={form.control}
+                name="end_date";
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationFormFields.tsx
                 render={({ field }) => (;
                   <FormItem>;
                     <FormLabel>End Date</FormLabel>;
                     <FormControl>;
+<<<<<<< HEAD
                       <Input
                         type="date" 
                         {...field} 
@@ -418,22 +708,40 @@ function EducationFormFields() {
                     </FormControl>;
                     <FormMessage />;
                   </FormItem>;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationFormFields.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationFormFields.tsx
                 )}
+=======
+                      <Input ;
+                        type="date" ;
+                        {...field} ;
+                        value={field.value || ''} ;
+                      />;
+                    </FormControl>;
+                    <FormMessage />;
+                  </FormItem>;                )}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               />;
             )}
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationFormFields.tsx
 
           </div>;
         </div>;
 
 
+========
+          </div>;
+        </div>;
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationFormFields.tsx
         <FormField
           control={form && form.control}
           name="location"
           render={({ field }) => (;
             <FormItem>;
               <FormLabel>Location (Optional)</FormLabel>;
-=======
             </FormItem>)}
         />;
         <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
@@ -495,26 +803,48 @@ function EducationFormFields() {
           render={({ field }) => (
             <FormItem>;
               <FormLabel > Location (Optional)</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               <FormControl>;
                 <Input placeholder="Cambridge, MA" {...field} />;
               </FormControl>;
               <FormMessage />;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationFormFields.tsx
 
         />;
 
 
+========
+        />;
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationFormFields.tsx
         <FormField
           control={form && form.control}
           name="description"
+=======
+;
+        <FormField;
+          control={form.control}
+          name="location";
+          render={({ field }) => (;
+            <FormItem>;
+              <FormLabel>Location (Optional)</FormLabel>;
+              <FormControl>;
+                <Input placeholder="Cambridge, MA" {...field} />;
+              </FormControl>;
+              <FormMessage />;
+            </FormItem>;          )}
+        />;
+;
+        <FormField;
+          control={form.control}
+          name="description";
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           render={({ field }) => (;
             <FormItem>;
               <FormLabel>Description (Optional)</FormLabel>;
               <FormControl>;
+<<<<<<< HEAD
                 <Textarea
                   placeholder="Notable achievements, courses, activities..."
                   className="min-h-[100px]"
-=======
             </FormItem>)}
         />;
         <FormField;
@@ -527,46 +857,167 @@ function EducationFormFields() {
                 <Textarea;
                   placeholder="Notable achievements, courses, activities...";
                   className="min - h-[100px]";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+                <Textarea;
+                  placeholder="Notable achievements, courses, activities...";
+                  className="min-h-[100px]";
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   {...field}
                 />;
               </FormControl>;
               <FormMessage />;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationFormFields.tsx
 
+========
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationFormFields.tsx
         />;
-
         {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
-
         <div className="flex justify-between pt-2">;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationFormFields.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationFormFields.tsx
           <Button
             type="button"
             variant="outline"
             onClick={onCancel}>;
             {isEditing ? 'Cancel' : 'Back'}
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationFormFields.tsx
 
           </Button>;
 
           <Button type="submit" disabled={isLoading}>;
             {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
 <<<<<<< HEAD
+=======
+            <FormField
+              control={form.control}
+              name="is_current"
+              render={({ field }) => (
+                <FormItem className="flex flex-row items-start space-x-3 space-y-0 py-2">
+                  <FormControl>
+                    <Checkbox
+                      checked={field.value}
+                      onCheckedChange={field.onChange}
+                    />
+                  </FormControl>
+                  <div className="space-y-1 leading-none">
+                    <FormLabel>I am currently studying here</FormLabel>
+                  </div>
+                </FormItem>
+              )}
+            />
+            {!form.watch('is_current') && (
+              <FormField
+                control={form.control}
+                name="end_date"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>End Date</FormLabel>
+                    <FormControl>
+                      <Input
+                        type="date"
+                        {...field}
+                        value={field.value |''}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            )}
+          </div>
+        </div>
+        <FormField
+          control={form.control}
+          name="location"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Location (Optional)</FormLabel>
+              <FormControl>
+                <Input placeholder="Cambridge, MA" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="description"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Description (Optional)</FormLabel>
+              <FormControl>
+                <Textarea
+                  placeholder="Notable achievements, courses, activities..."
+                  className="min-h-[100px]"
+                  {...field}
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
+        <div className="flex justify-between pt-2">
+          <Button
+            type="button"
+            variant="outline"
+            onClick={onCancel}
+          >
+            {isEditing ? 'Cancel' : 'Back'}
+          </Button>
+          <Button type="submit" disabled={isLoading}>
+            {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             {isEditing ? 'Update' : 'Add'} Education
           </Button>
         </div>
       </form>
     </Form>
   )
+<<<<<<< HEAD
 
 =======
+========
+          </Button>;
+          <Button type="submit" disabled={isLoading}>;
+            {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationFormFields.tsx
             {isEditing ? 'Update' : 'Add'} Education;
+=======
+            </FormItem>;
+          )}
+        />;
+;
+        {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
+;
+        <div className="flex justify-between pt-2">;
+          <Button;
+            type="button";
+            variant="outline";
+            onClick={onCancel}
+          >;
+            {isEditing ? 'Cancel' :'Back'}
+          </Button>;
+;
+          <Button type="submit" disabled={isLoading}>;
+            {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+            {isEditing ? 'Update' :'Add'} Education;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           </Button>;
         </div>;
       </form>;
     </Form>;
+<<<<<<< HEAD
   );
 }
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationFormFields.tsx
 
 =======
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationFormFields.tsx
             </FormItem>)}
         />;
         {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
@@ -586,6 +1037,7 @@ function EducationFormFields() {
       </form>;
     </Form>);
 }
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationFormFields.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -594,3 +1046,37 @@ function EducationFormFields() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+=======
+  ),;}
+ type EducationFormValues = z.infer<typeof educationSchema>;
+</FormControl> <FormMessage /> </FormItem>) 
+}/> <FormField </FormControl> <FormMessage /> </FormItem>) 
+}/> </div> <FormField </FormControl> <FormMessage /> </FormItem>) 
+}/> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormItem> <FormLabel>Start Date</FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) 
+}/> <div className="space-y-4" > <FormField <FormControl> <Checkbox checked= {
+  field.value 
+}onCheckedChange= {
+  field.onChange 
+}/> </FormControl> <div className="space-y-1 leading-none" > <FormLabel>I am currently studying here</FormLabel> </div> </FormItem>) 
+}/> {
+  !form.watch ('is current') && (<FormField control= {
+  form.control 
+}<FormItem> <FormLabel>End Date</FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) 
+}/>) 
+}</div> </div> <FormField </FormControl> <FormMessage /> </FormItem>) 
+}/> <FormField <FormItem> <FormLabel>Description (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) 
+}/> <div className="flex justify-between pt-2" > <Button > {
+  isEditing ? 'Cancel' : 'Back' 
+}</Button> </Button> </div> </form> </Form>) 
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationFormFields.tsx
+=======
+<<<<<<< HEAD
+}
+=======
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

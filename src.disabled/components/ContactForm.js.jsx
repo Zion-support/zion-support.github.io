@@ -1,17 +1,26 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD:src.disabled/components/ContactForm.js.jsx
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 import React from\';react\' const ContactForm = () => { const [formData,setFormData] = useState({ \"firstName\": \',\"lastName\": \',\"email\": \',\"comp\": \',\"phone\": \',\"service\": \',\"message\": \'}) const [isSubmitting,setIsSubmitting] = useState(false) const [submitStatus,setSubmitStatus] = useState(\'idle\') const handleInputChange = e => { const { name,value } = e.target setFormData(prev => ({ ...prev,[name]: value})) } const handleSubmit = async e => { e.preventDefault() setIsSubmitting(true) setSubmitStatus(\'idle\') try {\''\'';
 const React from";react" const ContactForm = () => { const [formData,setFormData] = useState({ firstName: ",lastName: ",email: ",comp: ",phone: ",service: ",message: "}) const [isSubmitting,setIsSubmitting] = useState(false) const [submitStatus,setSubmitStatus] = useState("idle") const handleInputChange = e => { const { name,value } = e.target setFormData(prev => ({ .prev,[name]: value})) } const handleSubmit = async e => { e.preventDefault() setIsSubmitting(true) setSubmitStatus("idle") try {"""";"""
 
 =======
+<<<<<<< HEAD
 =======
 
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 import React from\';react\' const ContactForm = () => { const [formData,setFormData] = useState({ \"firstName\": \',\"lastName\": \',\"email\": \',\"comp\": \',\"phone\": \',\"service\": \',\"message\": \'}) const [isSubmitting,setIsSubmitting] = useState(false) const [submitStatus,setSubmitStatus] = useState(\'idle\') const handleInputChange = e => { const { name,value } = e.target setFormData(prev => ({ ...prev,[name]: value})) } const handleSubmit = async e => { e.preventDefault() setIsSubmitting(true) setSubmitStatus(\'idle\') try {\''\'';
 const React from";react" const ContactForm = () => { const [formData,setFormData] = useState({ firstName: ",lastName: ",email: ",comp: ",phone: ",service: ",message: "}) const [isSubmitting,setIsSubmitting] = useState(false) const [submitStatus,setSubmitStatus] = useState("idle") const handleInputChange = e => { const { name,value } = e.target setFormData(prev => ({ .prev,[name]: value})) } const handleSubmit = async e => { e.preventDefault() setIsSubmitting(true) setSubmitStatus("idle") try {"""";"""
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/ContactForm.js.jsx
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import _React from';react' const ContactForm = () => { const [formData,setFormData] = useState({ "firstName": ',"lastName": ',"email": ',"comp": ',"phone": ',"service": ',"message": '}) const [isSubmitting,setIsSubmitting] = useState(false) const [submitStatus,setSubmitStatus] = useState('idle') const handleInputChange = e => { const { name,value } = e.target setFormData(prev => ({ ...prev,[name]: value})) } const handleSubmit = async e => { e.preventDefault() setIsSubmitting(true) setSubmitStatus('idle') try {'''';
@@ -22,3 +31,6 @@ const React from";react" const ContactForm = () => { const [formData,setFormData
 
 import _React from';react' const ContactForm = () => { const [formData,setFormData] = useState({ "firstName": ',"lastName": ',"email": ',"comp": ',"phone": ',"service": ',"message": '}) const [isSubmitting,setIsSubmitting] = useState(false) const [submitStatus,setSubmitStatus] = useState('idle') const handleInputChange = e => { const { name,value } = e && e.target setFormData(prev => ({ ...prev,[name]: value})) } const handleSubmit = async e => { e && e.preventDefault() setIsSubmitting(true) setSubmitStatus('idle') try {'''';
 
+=======
+import _React from';react' const ContactForm = () => { const [formData,setFormData] = useState({ "firstName": ',"lastName": ',"email": ',"comp": ',"phone": ',"service": ',"message": '}) const [isSubmitting,setIsSubmitting] = useState(false) const [submitStatus,setSubmitStatus] = useState('idle') const handleInputChange = e => { const { name,value } = e.target setFormData(prev => ({ ...prev,[name]: value})) } const handleSubmit = async e => { e.preventDefault() setIsSubmitting(true) setSubmitStatus('idle') try {'''';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

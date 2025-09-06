@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 #!/usr/bin/env node import fs from 'fs'; import { glob } from 'glob'; let totalFixes = 0; let filesProcessed = 0; function fixLayoutConflicts(content,filePath) { let fixedContent = content; let changes = 0; const hasLayoutComponent = fixedContent.includes("import Layout from '../components/Layout'") || fixedContent.includes("import Layout from '../components/Layout';"); const hasLayoutIcon = fixedContent.includes('Layout,') || fixedContent.includes('Layout }'); if (hasLayoutComponent && hasLayoutIcon) { fixedContent = fixedContent.replace(/Layout,\s*/g,''); fixedContent = fixedContent.replace(/,\s*Layout/g,''); fixedContent = fixedContent.replace(/{\s*Layout\s*}/g,'{}'); changes++; } return { content: fixedContent,changes }} function processFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const result = fixLayoutConflicts(content,filePath); if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8'); totalFixes += result.changes} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() {  const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}',]; const excludeDirs = [ 'node_modules','.next','build' 'dist','scripts' 'automation','automation_backup' 'src.disabled','pages.disabled','components.disabled',]; for (const pattern of patterns) { const files = await glob(pattern,{ ignore: excludeDirs.map(dir => `**/${dir}/**`),}); for (const file of files) { processFile(file)} }    } main().catch(console.error);
 
 #!/usr/bin/env node import fs from 'fs'; import { glob } from 'glob'; let totalFixes = 0; let filesProcessed = 0; function fixLayoutConflicts(content,filePath) { let fixedContent = content; let changes = 0; const hasLayoutComponent = fixedContent.includes("import Layout from '../components/Layout'") || fixedContent.includes("import Layout from '../components/Layout';"); const hasLayoutIcon = fixedContent.includes('Layout,') || fixedContent.includes('Layout }'); if (hasLayoutComponent && hasLayoutIcon) { fixedContent = fixedContent.replace(/Layout,\s*/g,''); fixedContent = fixedContent.replace(/,\s*Layout/g,''); fixedContent = fixedContent.replace(/{\s*Layout\s*}/g,'{}'); changes++; } return { content: fixedContent,changes }} function processFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const result = fixLayoutConflicts(content,filePath); if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8'); totalFixes += result.changes} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() {  const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}',]; const excludeDirs = [ 'node_modules','.next','build' 'dist','scripts' 'automation','automation_backup' 'src.disabled','pages.disabled','components.disabled',]; /**`),});  }    } main().catch(console.error);
+<<<<<<< HEAD
 
 =======
 
@@ -14,6 +18,9 @@
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 #!/usr/bin/env node
 import fs from 'fs';
 import { glob } from 'glob';
@@ -30,7 +37,10 @@ function fixLayoutConflicts(content, filePath) {;
   let changes = 0;
   // Check if both Layout component and Layout icon are imported
   const hasLayoutComponent =
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
 =======
@@ -40,30 +50,33 @@ function fixLayoutConflicts(content, filePath) {;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     fixedContent.includes("import Layout from '../components/Layout';");
-=======
-    fixedContent && fixedContent.includes("import Layout from '../components/Layout'") ||
-    fixedContent ;");
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/scripts/fix-layout-conflicts.js
   const hasLayoutIcon =
-    fixedContent && fixedContent.includes('Layout,') || fixedContent && fixedContent.includes('Layout }');
+    fixedContent.includes('Layout,') || fixedContent.includes('Layout }');
   if (hasLayoutComponent && hasLayoutIcon) {
-    // Remove Layout from lucide-react import fixedContent = fixedContent ;
-    fixedContent = fixedContent && fixedContent.replace(/,\s*Layout/g, '');
-    fixedContent = fixedContent && fixedContent.replace(/{\s*Layout\s*}/g, '{}');
+    // Remove Layout from lucide-react import
+    fixedContent = fixedContent.replace(/Layout,\s*/g, '');
+    fixedContent = fixedContent.replace(/,\s*Layout/g, '');
+    fixedContent = fixedContent.replace(/{\s*Layout\s*}/g, '{}');
     changes++;
-    console && console.log(`✅ Fixed Layout conflict in ${filePath}`)}
+    console.log(`✅ Fixed Layout conflict in ${filePath}`)}
   return { "content": fixedContent, changes }}
 // Process individual file
 function processFile(filePath) {
   try {
-    const content = fs && fs.readFileSync(filePath, 'utf8');
+    const content = fs.readFileSync(filePath, 'utf8');
     const result = fixLayoutConflicts(content, filePath);
-    if (result && result.changes > 0) {
-      fs && fs.writeFileSync(filePath, result && result.content, 'utf8');
-      totalFixes += result && result.changes}
+    if (result.changes > 0) {
+      fs.writeFileSync(filePath, result.content, 'utf8');
+      totalFixes += result.changes}
     filesProcessed++} catch (error) {
 <<<<<<< HEAD
+<<<<<<< HEAD
     console.error(`❌ Error processing ${filePath}:`, error.message)}
+=======
+    console.error(`❌ Error processing ${filePath}:`, error.message)}
+<<<<<<< HEAD
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 
     console && console.error(`❌ Error processing ${filePath}:`, error && error.message)}
@@ -78,7 +91,7 @@ function processFile(filePath) {
 
 // Main function
 async function main() {
-  console && console.log('🔧 Starting Layout conflicts fix...\n');
+  console.log('🔧 Starting Layout conflicts fix...\n');
   const patterns = ['pages/**/*.{tsx,jsx}',
     'src/**/*.{tsx,jsx}',
     'components/**/*.{tsx,jsx}',
@@ -90,12 +103,20 @@ async function main() {
       'scripts'
     'automation',
       'automation_backup'
-    'src && src.disabled',
-    'pages && pages.disabled',
-    'components && components.disabled',
+    'src.disabled',
+    'pages.disabled',
+    'components.disabled',
   ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  for (const pattern of patterns) {
+    const files = await glob(pattern, {
+      "ignore": excludeDirs.map(dir => `**/${dir}/**`)});
+    for (const file of files) {
+      processFile(file)}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 =======
 
@@ -105,18 +126,22 @@ async function main() {
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   }
-  console && console.log("\n📊 Layout Conflicts Fix "Summary": ");
-  console && console.log(`   Files processed: ${filesProcessed}`);
-  console && console.log(`   Total "fixes": ${totalFixes}`);
-  console && console.log("\n✨ Layout conflicts fix completed!")}
+  console.log("\n📊 Layout Conflicts Fix "Summary": ");
+  console.log(`   Files processed: ${filesProcessed}`);
+  console.log(`   Total "fixes": ${totalFixes}`);
+  console.log("\n✨ Layout conflicts fix completed!")}
 // Run the script
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 main().catch(console.error);
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 #!/usr/bin/env node import fs from 'fs'; import { glob } from 'glob'; let totalFixes = 0; let filesProcessed = 0; function fixLayoutConflicts(content,filePath) { let fixedContent = content; let changes = 0; const hasLayoutComponent = fixedContent.includes("import Layout from '../components/Layout'") || fixedContent.includes("import Layout from '../components/Layout';"); const hasLayoutIcon = fixedContent.includes('Layout,') || fixedContent.includes('Layout }'); if (hasLayoutComponent && hasLayoutIcon) { fixedContent = fixedContent.replace(/Layout,\s*/g,''); fixedContent = fixedContent.replace(/,\s*Layout/g,''); fixedContent = fixedContent.replace(/{\s*Layout\s*}/g,'{}'); changes++; console.log(`✅ Fixed Layout conflict in ${filePath}`)} return { content: fixedContent,changes }} function processFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const result = fixLayoutConflicts(content,filePath); if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8'); totalFixes += result.changes} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting Layout conflicts fix...\n'); const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}',]; const excludeDirs = [ 'node_modules','.next','build' 'dist','scripts' 'automation','automation_backup' 'src.disabled','pages.disabled','components.disabled',]; /**`),});  } console.log(`\n📊 Layout Conflicts Fix Summary:`); console.log(` Files processed: ${filesProcessed}`); console.log(` Total fixes: ${totalFixes}`); console.log(`\n✨ Layout conflicts fix completed!`)} main().catch(console.error);
 #!/usr/bin/env node import fs from 'fs'; import { glob } from 'glob'; let totalFixes = 0; let filesProcessed = 0; function fixLayoutConflicts(content,filePath) { let fixedContent = content; let changes = 0; const hasLayoutComponent = fixedContent.includes("import Layout from '../components/Layout'") || fixedContent.includes("import Layout from '../components/Layout';"); const hasLayoutIcon = fixedContent.includes('Layout,') || fixedContent.includes('Layout }'); if (hasLayoutComponent && hasLayoutIcon) { fixedContent = fixedContent.replace(/Layout,\s*/g,''); fixedContent = fixedContent.replace(/,\s*Layout/g,''); fixedContent = fixedContent.replace(/{\s*Layout\s*}/g,'{}'); changes++; console.log(`✅ Fixed Layout conflict in ${filePath}`)} return { content: fixedContent,changes }} function processFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const result = fixLayoutConflicts(content,filePath); if (result.changes > 0) { fs.writeFileSync(filePath,result.content,'utf8'); totalFixes += result.changes} filesProcessed++} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message)} } async function main() { console.log('🔧 Starting Layout conflicts fix...\n'); const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}',]; const excludeDirs = [ 'node_modules','.next','build' 'dist','scripts' 'automation','automation_backup' 'src.disabled','pages.disabled','components.disabled',]; /**`),});  } console.log(`\n📊 Layout Conflicts Fix Summary:`); console.log(` Files processed: ${filesProcessed}`); console.log(` Total fixes: ${totalFixes}`); console.log(`\n✨ Layout conflicts fix completed!`)} main().catch(console.error);
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -126,3 +151,6 @@ main().catch(console && console.error);
 #!/usr/bin/env node import fs from 'fs'; import { glob } from 'glob'; let totalFixes = 0; let filesProcessed = 0; function fixLayoutConflicts(content,filePath) { let fixedContent = content; let changes = 0; const hasLayoutComponent = fixedContent && fixedContent.includes("import Layout from '../components/Layout'") || fixedContent ;"); const hasLayoutIcon = fixedContent && fixedContent.includes('Layout,') || fixedContent && fixedContent.includes('Layout }'); if (hasLayoutComponent && hasLayoutIcon) { fixedContent = fixedContent && fixedContent.replace(/Layout,\s*/g,''); fixedContent = fixedContent && fixedContent.replace(/,\s*Layout/g,''); fixedContent = fixedContent && fixedContent.replace(/{\s*Layout\s*}/g,'{}'); changes++; console && console.log(`✅ Fixed Layout conflict in ${filePath}`)} return { content: fixedContent,changes }} function processFile(filePath) { try { const content = fs && fs.readFileSync(filePath,'utf8'); const result = fixLayoutConflicts(content,filePath); if (result && result.changes > 0) { fs && fs.writeFileSync(filePath,result && result.content,'utf8'); totalFixes += result && result.changes} filesProcessed++} catch (error) { console && console.error(`❌ Error processing ${filePath}:`,error && error.message)} } async function main() { console && console.log('🔧 Starting Layout conflicts fix...\n'); const patterns = [ 'pages*.{tsx,jsx}','src*.{tsx,jsx}','components*.{tsx,jsx}',]; const excludeDirs = [ 'node_modules','.next','build' 'dist','scripts' 'automation','automation_backup' 'src && src.disabled','pages && pages.disabled','components && components.disabled',]; for (const pattern of patterns) { const files = await glob(pattern,{ ignore: excludeDirs && excludeDirs.map(dir => `**/${dir}/**`),}); for (const file of files) { processFile(file)} } console && console.log(`\n📊 Layout Conflicts Fix Summary:`); console && console.log(` Files processed: ${filesProcessed}`); console && console.log(` Total fixes: ${totalFixes}`); console && console.log(`\n✨ Layout conflicts fix completed!`)} main().catch(console && console.error);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/scripts/fix-layout-conflicts.js
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

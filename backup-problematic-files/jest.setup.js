@@ -1,4 +1,11 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+require("@testing-library/jest-dom");
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import "@testing-library/jest-dom";
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 // Mock Next.js router
 jest.mock("next/router", () => ({
@@ -17,7 +24,12 @@ jest.mock("next/router", () => ({
       events: {
         on: jest.fn(),
         off: jest.fn(),
+<<<<<<< HEAD
         emit: jest.fn()
+=======
+<<<<<<< HEAD
+        emit: jest.fn(),
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       },
 <<<<<<< HEAD
 
@@ -29,6 +41,64 @@ jest.mock("next/router", () => ({
   },
 }));
 
+<<<<<<< HEAD
+=======
+// Mock Next.js Image component
+jest.mock("next/image", () => ({
+  __esModule: true,
+  default: (props) => {
+    const { src, alt, ...otherProps } = props;
+    return {
+      type: 'img',
+      props: { src, alt, ...otherProps }
+=======
+        emit: jest.fn()
+      },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:jest.setup.js
+      isFallback: false,
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD:backup-problematic-files/jest.setup.js
+      isFallback: false
+    }
+  }
+}));
+
+// Mock Next.js Image component
+jest.mock('next/image', () => ({
+  __esModule: true,
+  default: (props) => {
+    // eslint-disable-next-line @next/next/no-img-element
+    return <img {...props} />
+  }
+}));
+=======
+
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/jest.setup.js
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+    };
+  },
+}));
+
+<<<<<<< HEAD
+// Mock Next.js Link component
+jest.mock("next/link", () => ({
+  __esModule: true,
+  default: (props) => {
+    const { children, href, ...otherProps } = props;
+    return {
+      type: 'a',
+      props: { href, ...otherProps },
+      children
+    };
+  },
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 // Mock Next.js Image component
 jest.mock("next/image", () => {
   return function MockedImage({ src, alt, ...props }) {
@@ -36,6 +106,7 @@ jest.mock("next/image", () => {
   };
 });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -49,6 +120,11 @@ jest.mock('next/link', () => ({
 
 }));
 =======
+=======
+=======
+<<<<<<< HEAD:jest.setup.js
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 // Mock Next.js Link component
 jest.mock("next/link", () => {
   return function MockedLink({ children, href, ...props }) {
@@ -59,8 +135,29 @@ jest.mock("next/link", () => {
     );
   };
 });
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-17cd
 
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> main:jest.setup.js
+
+// Mock Next.js Link component
+jest.mock('next/link', () => ({
+  __esModule: true,
+  default: ({ children, href, ...props }) => {
+<<<<<<< HEAD:backup-problematic-files/jest.setup.js
+    return <a href={href} {...props}>{children}</a>
+  }
+=======
+
+  },
+>>>>>>> main:jest.setup.js
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+}));
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
@@ -68,8 +165,18 @@ Object.defineProperty(window, 'matchMedia', {
     matches: false,
     media: query,
     onchange: null,
+<<<<<<< HEAD
     addListener: jest.fn(), // deprecated
     removeListener: jest.fn(), // deprecated
+=======
+<<<<<<< HEAD
+    addListener: jest.fn(),
+    removeListener: jest.fn(),
+=======
+    addListener: jest.fn(), // deprecated
+    removeListener: jest.fn(), // deprecated
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
     dispatchEvent: jest.fn()
@@ -91,16 +198,29 @@ global.ResizeObserver = class ResizeObserver {
   observe() {}
   unobserve() {}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 };
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 };
 
 // Global test setup
 beforeEach(() => {
-  // Reset all mocks before each test
   jest.clearAllMocks();
 });
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-17cd
+=======
+=======
+<<<<<<< HEAD
+};
+=======
+};
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/jest.setup.js
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

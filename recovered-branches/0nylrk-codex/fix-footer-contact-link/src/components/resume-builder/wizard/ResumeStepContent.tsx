@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/wizard/ResumeStepContent.tsx
 
 
 <<<<<<< HEAD
@@ -53,6 +55,15 @@ import { CertificationsForm } from '../forms/CertificationsForm',;
 import { PreviewResume } from '../PreviewResume',;
 =======
 
+========
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/wizard/ResumeStepContent.tsx
+=======
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import {TabsContent} from "@/components/ui/tabs";
 import {Resume} from "@/types/resume";
 import {BasicInfoForm} from '../forms/basic-info';
@@ -61,6 +72,7 @@ import {EducationForm} from '../forms/EducationForm';
 import {SkillsForm} from '../forms/SkillsForm';
 import {CertificationsForm} from '../forms/CertificationsForm';
 import {PreviewResume} from '../PreviewResume';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 interface ResumeStepContentProps {;
   activeTab: string,;
@@ -68,7 +80,6 @@ interface ResumeStepContentProps {;
   onNextStep: () => void,;
   onPrevStep: () => void;
 }
-
 export const ResumeStepContent = ({ ;
   activeTab;
   resume, ;
@@ -80,29 +91,165 @@ export const ResumeStepContent = ({ ;
       <TabsContent value="basic-info">;
         <BasicInfoForm
           resumeId={resume?.id!} 
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/wizard/ResumeStepContent.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/wizard/ResumeStepContent.tsx
           initialData={resume?.basic_info}
           onSave={(data) => {;
             // Here you would typically save the data to your backend;
             console && console.log("Saving basic info:", data);
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/wizard/ResumeStepContent.tsx
           }}
 
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { TabsContent } from "@/components/ui/tabs",
+<<<<<<< HEAD
+import { Resume } from "@/types/resume";
+import { BasicInfoForm  } from '../forms/basic-info';
+import { WorkExperienceForm  } from '../forms/WorkExperienceForm';
+import { EducationForm  } from '../forms/EducationForm';
+import { SkillsForm  } from '../forms/SkillsForm';
+import { CertificationsForm  } from '../forms/CertificationsForm';
+import { PreviewResume } from '../PreviewResume';
+=======
+import { Resume } from "@/types/resume",
+import { BasicInfoForm } from '../forms/basic-info',
+import { WorkExperienceForm } from '../forms/WorkExperienceForm',
+import { EducationForm } from '../forms/EducationForm',
+import { SkillsForm } from '../forms/SkillsForm',
+import { CertificationsForm } from '../forms/CertificationsForm',
+import { PreviewResume } from '../PreviewResume',
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+interface ResumeStepContentProps {
+
+  activeTab: string
+  resume: Resume
+  onNextStep: () => void
+  onPrevStep: () => void
+}
+<<<<<<< HEAD
+export const ResumeStepContent = ({
+  activeTab;
+  resume
+  onNextStep
+  onPrevStep
+=======
+
+<<<<<<< HEAD
+export const ResumeStepContent = ({ ;
+  activeTab;
+=======
+export const ResumeStepContent = ({ 
+  activeTab,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  resume, 
+  onNextStep, 
+  onPrevStep 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}: ResumeStepContentProps) => {
+  return (
+    <>
+      <TabsContent value="basic-info">
+        <BasicInfoForm
+          resumeId={resume?.id!}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           initialData={resume?.basic_info}
           onSave={(data) => {
             // Here you would typically save the data to your backend
             // // // console.log("Saving basic info:", data)
           }}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           onComplete={onNextStep}
         />
       </TabsContent>
       <TabsContent value="work-experience">
+<<<<<<< HEAD
 
+========
+=======
+
+=======
+<<<<<<< HEAD
+        <WorkExperienceForm
+=======
+        <WorkExperienceForm 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+import { TabsContent } from "@/components/ui/tabs",;
+import { Resume } from "@/types/resume",;
+import { BasicInfoForm } from '../forms/basic-info',;
+import { WorkExperienceForm } from '../forms/WorkExperienceForm',;
+import { EducationForm } from '../forms/EducationForm',;
+import { SkillsForm } from '../forms/SkillsForm',;
+import { CertificationsForm } from '../forms/CertificationsForm',;
+import { PreviewResume } from '../PreviewResume',;
+<<<<<<< HEAD
+;
+interface ResumeStepContentProps {;
+  activeTab:string,;
+  resume:Resume,;
+  onNextStep:() => void,;
+  onPrevStep:() => void;
+}
+;
+export const ResumeStepContent = ({ ;
+  activeTab,;
+  resume, ;
+  onNextStep, ;
+  onPrevStep ;
+} ResumeStepContentProps) => {;
+  return (;
+    <>;
+      <TabsContent value="basic-info">;
+        <BasicInfoForm ;
+=======
+interface ResumeStepContentProps {;
+  activeTab: string,;
+  resume: Resume,;
+  onNextStep: () => void,;
+  onPrevStep: () => void;
+}
+;
+export const ResumeStepContent = ({;
+  activeTab,;
+  resume,;
+  onNextStep;
+  onPrevStep;
+}: ResumeStepContentProps) => {;
+  return (;
+    <>;
+      <TabsContent value="basic-info">;
+        <BasicInfoForm;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+          resumeId={resume?.id!} ;
+          initialData={resume?.basic_info}
+          onSave={(data) => {;
+            // Here you would typically save the data to your backend;
+<<<<<<< HEAD
+            // // // console.log("Saving basic info:", data),;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+          }}
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/wizard/ResumeStepContent.tsx
           onComplete={onNextStep} ;
         />;
       </TabsContent>;
-
+<<<<<<< HEAD
       <TabsContent value="work-experience">;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/wizard/ResumeStepContent.tsx
 <<<<<<< HEAD
         <WorkExperienceForm;
 
@@ -115,10 +262,19 @@ export const ResumeStepContent = ({ ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+        <WorkExperienceForm
+=======
+      ;
+      <TabsContent value="work-experience">;
+        <WorkExperienceForm ;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/wizard/ResumeStepContent.tsx
           resumeId={resume?.id!}
-          workExperiences={resume?.work_experience |[]}
+          workExperiences={resume?.work_experience || []}
           onComplete={onNextStep}
           onBack={onPrevStep}
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/wizard/ResumeStepContent.tsx
 <<<<<<< HEAD
         />
       </TabsContent>
@@ -126,10 +282,13 @@ export const ResumeStepContent = ({ ;
 
 =======
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/wizard/ResumeStepContent.tsx
         />;
       </TabsContent>;
-
+<<<<<<< HEAD
       <TabsContent value="education">;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/wizard/ResumeStepContent.tsx
 
         <EducationForm
 =======
@@ -138,21 +297,41 @@ export const ResumeStepContent = ({ ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+        <EducationForm
+=======
+      ;
+      <TabsContent value="education">;
+        <EducationForm ;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/wizard/ResumeStepContent.tsx
           resumeId={resume?.id!}
-          educationEntries={resume?.education |[]}
+          educationEntries={resume?.education || []}
           onComplete={onNextStep}
           onBack={onPrevStep}
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/wizard/ResumeStepContent.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/wizard/ResumeStepContent.tsx
         />;
       </TabsContent>;
-
+<<<<<<< HEAD
       <TabsContent value="skills">;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/wizard/ResumeStepContent.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/wizard/ResumeStepContent.tsx
         <SkillsForm
+=======
+      ;
+      <TabsContent value="skills">;
+        <SkillsForm;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           resumeId={resume?.id!}
-          skills={resume?.skills |[]}
+          skills={resume?.skills || []}
           onComplete={onNextStep}
           onBack={onPrevStep}
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/wizard/ResumeStepContent.tsx
 <<<<<<< HEAD
         />
       </TabsContent>
@@ -160,10 +339,13 @@ export const ResumeStepContent = ({ ;
 
 =======
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/wizard/ResumeStepContent.tsx
         />;
       </TabsContent>;
-
+<<<<<<< HEAD
       <TabsContent value="certifications">;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/wizard/ResumeStepContent.tsx
 
         <CertificationsForm
 =======
@@ -172,33 +354,113 @@ export const ResumeStepContent = ({ ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+        <CertificationsForm
+=======
+      ;
+      <TabsContent value="certifications">;
+        <CertificationsForm ;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/wizard/ResumeStepContent.tsx
           resumeId={resume?.id!}
-          certifications={resume?.certifications |[]}
+          certifications={resume?.certifications || []}
           onComplete={onNextStep}
           onBack={onPrevStep}
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/wizard/ResumeStepContent.tsx
 <<<<<<< HEAD
         />
       </TabsContent>
       <TabsContent value="preview">
 
+=======
+            // // // console.log("Saving basic info:", data);
+          }}
+          onComplete={onNextStep} ;
+        />;
+      </TabsContent>;
+      <TabsContent value="work-experience">;
+        <WorkExperienceForm;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          resumeId={resume?.id!}
+          workExperiences={resume?.work_experience |[]}
+          onComplete={onNextStep}
+          onBack={onPrevStep}
+        />
+      </TabsContent>
+      <TabsContent value="education">
+<<<<<<< HEAD
+        <EducationForm
+=======
+        <EducationForm 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+          resumeId={resume?.id!}
+          educationEntries={resume?.education |[]}
+          onComplete={onNextStep}
+          onBack={onPrevStep}
+        />
+      </TabsContent>
+      <TabsContent value="skills">
+        <SkillsForm
+          resumeId={resume?.id!}
+          skills={resume?.skills |[]}
+          onComplete={onNextStep}
+          onBack={onPrevStep}
+        />
+      </TabsContent>
+      <TabsContent value="certifications">
+<<<<<<< HEAD
+        <CertificationsForm
+=======
+        <CertificationsForm 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+          resumeId={resume?.id!}
+          certifications={resume?.certifications |[]}
+          onComplete={onNextStep}
+          onBack={onPrevStep}
+        />
+      </TabsContent>
+      <TabsContent value="preview">
+<<<<<<< HEAD
+        <PreviewResume
+          resume={resume as Resume}
+          onBack={onPrevStep}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         />
       </TabsContent>
     </>
   )
+<<<<<<< HEAD
 
 =======
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/wizard/ResumeStepContent.tsx
         />;
       </TabsContent>;
-
+<<<<<<< HEAD
       <TabsContent value="preview">;
         <PreviewResume
           resume={resume as Resume} 
+=======
+      ;
+      <TabsContent value="preview">;
+        <PreviewResume ;
+          resume={resume as Resume} ;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           onBack={onPrevStep}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         />;
       </TabsContent>;
     </>;
+<<<<<<< HEAD
   );
 <<<<<<< HEAD
 
@@ -210,8 +472,6 @@ export const ResumeStepContent = ({ ;
 
 
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import { TabsContent } from '@/components / ui / tabs';
 import { Resume } from '@/types / resume';
 import {BasicInfoForm} from '../forms / basic - info';
@@ -286,5 +546,92 @@ export const ResumeStepContent = ({
     </>);
 }
 ;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/wizard/ResumeStepContent.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+=======
+  ),;
+},; interface ResumeStepContentProps {
+  activeTab: string;
+resume: Resume;
+onNextStep: () => void;
+onPrevStep: () => void 
+}export const ResumeStepContent = ({
+  activeTab;
+resume;
+onNextStep;
+onPrevStep 
+}: ResumeStepContentProps) => {
+  return (<> <TabsContent value="basic-info" > <BasicInfoForm resumeId= {
+  resume?.id! 
+}initialData= {
+  resume?.basic info 
+}onSave= {
+  (data) => {
+  //Here you would typically save the data to your backend 
+}
+}onComplete= {
+  onNextStep 
+}work-experience"> <WorkExperienceForm resumeId= {
+  resume?.id! 
+}workExperiences= {
+  resume?.work experience || [] 
+}onComplete= {
+  onNextStep 
+}onBack= {
+  onPrevStep 
+}/> </TabsContent> <TabsContent value=" education"> <EducationForm resumeId= {
+  resume?.id! 
+}educationEntries= {
+  resume?.education || [] 
+}onComplete= {
+  onNextStep 
+}onBack= {
+  onPrevStep 
+}/> </TabsContent> <TabsContent value=" skills"> <SkillsForm resumeId= {
+  resume?.id! 
+}skills= {
+  resume?.skills || [] 
+}onComplete= {
+  onNextStep 
+}onBack= {
+  onPrevStep 
+}/> </TabsContent> <TabsContent value=" certifications"> <CertificationsForm resumeId= {
+  resume?.id! 
+}certifications= {
+  resume?.certifications || [] 
+}onComplete= {
+  onNextStep 
+}onBack= {
+  onPrevStep 
+}/> </TabsContent> <TabsContent value=" preview" > <PreviewResume resume= {
+  resume as Resume 
+}onBack= {
+  onPrevStep 
+}/> </TabsContent> </>) 
+};
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/wizard/ResumeStepContent.tsx
+=======
+<<<<<<< HEAD
+}
+
+=======
+        <PreviewResume 
+          resume={resume as Resume} 
+          onBack={onPrevStep}
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        />;
+      </TabsContent>;
+    </>;
+  );
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+};
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

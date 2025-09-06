@@ -1,9 +1,14 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 import { SkillCategoryProps  } from './types';
 import { SkillItem  } from './SkillItem';
 export const SkillCategory = ({
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/skills/SkillCategory.tsx
 
 <<<<<<< HEAD
 =======
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/skills/SkillCategory.tsx
   category,
   skills,
   on_delete,
@@ -12,6 +17,7 @@ export const SkillCategory = ({
 if (return null) {
   $2
 }
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/skills/SkillCategory.tsx
 
 =======
 
@@ -34,6 +40,8 @@ export const SkillCategory = ({ category, skills, onDelete }: SkillCategoryProps
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/skills/SkillCategory.tsx
   return (
     <div className="space - y-2">;
       <h4 className="text - sm font - medium text - muted - foreground">{category}</h4>;
@@ -43,12 +51,14 @@ export const SkillCategory = ({ category, skills, onDelete }: SkillCategoryProps
             key={skill.id}
             skill={skill}
             category={category}
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/skills/SkillCategory.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/skills/SkillCategory.tsx
 import {SkillCategoryProps} from './types';
 import {SkillItem} from './SkillItem';
 export const SkillCategory = ({ category, skills, onDelete }: SkillCategoryProps) => {;
   if (!skills || skills && skills.length === 0) return null;
-
   return (
     <div className="space-y-2">;
       <h4 className="text-sm font-medium text-muted-foreground">{category}</h4>;
@@ -59,6 +69,25 @@ export const SkillCategory = ({ category, skills, onDelete }: SkillCategoryProps
             skill={skill} 
             category={category} 
             onDelete={onDelete} 
+=======
+
+import { SkillCategoryProps } from './types',;
+import { SkillItem } from './SkillItem',;
+;
+export const SkillCategory = ({ category, skills, onDelete } SkillCategoryProps) => {;
+  if (!skills || skills.length === 0) return null,;
+  ;
+  return (;
+    <div className="space-y-2">;
+      <h4 className="text-sm font-medium text-muted-foreground">{category}</h4>;
+      <div className="flex flex-wrap gap-2">;
+        {skills.map((skill) => (;
+          <SkillItem ;
+            key={skill.id} ;
+            skill={skill} ;
+            category={category} ;
+            onDelete={onDelete} ;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           />;
         ))}
 <<<<<<< HEAD
@@ -66,6 +95,7 @@ export const SkillCategory = ({ category, skills, onDelete }: SkillCategoryProps
 =======
       </div>;
     </div>;
+<<<<<<< HEAD
   );
 =======
 
@@ -85,13 +115,68 @@ export const SkillCategory = ({ category, skills, onDelete }: SkillCategoryProps
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
             on_delete={on_delete}
           />))}
       </div>;
     </div>);
 }
 ;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/skills/SkillCategory.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+=======
+  ),;
+},; <SkillItem key= {
+  skill.id 
+}skill= {
+  skill 
+}category= {
+  category 
+}onDelete= {
+  onDelete 
+}/>) ) 
+}</div> </div>) 
+};
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/skills/SkillCategory.tsx
+=======
+import { SkillCategoryProps } from "./types";
+import { SkillItem } from "./SkillItem";
+export const SkillCategory = ({
+category
+  skills
+  onDelete
+}: SkillCategoryProps) => {
+
+  if (!skills |skills.length === 0) return null;
+
+  category,
+  skills,
+  onDelete,
+}: SkillCategoryProps) => {
+  if (!skills || skills.length === 0) return null;
+
+  return (
+    <div className="space-y-2">
+      <h4 className="text-sm font-medium text-muted-foreground">{category}</h4>
+      <div className="flex flex-wrap gap-2">
+        {skills.map((skill) => (
+          <SkillItem
+            key={skill.id}
+            skill={skill}
+            category={category}
+            onDelete={onDelete}
+          />
+        ))}
+</div>
+    </div>
+
+  );
+}
+
+  );
+
+};
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
 <<<<<<< HEAD
 =======
@@ -11,7 +16,22 @@ import {
   WifiOff
   Clock
   Zap
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+import React, { useState, useEffect } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import {
+  Loader2,
+  AlertTriangle,
+  RefreshCw,
+  Wifi,
+  WifiOff,
+  Clock,;
+  Zap;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 } from 'lucide-react'; import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
@@ -24,6 +44,7 @@ interface LoadingSpinnerProps {
   className?: string;
   showText?: boolean;
   text?: string
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -51,12 +72,45 @@ xport const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 >>>>>>>   size = 'md',
+=======
+export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import React, { useState, useEffect } from 'react',;
+import { motion, AnimatePresence } from 'framer-motion',;
+import { Loader2, AlertTriangle, RefreshCw, Wifi, WifiOff, Clock, Zap } from 'lucide-react';
+import { Button } from '@/components/ui/button',;
+import { Card, CardContent } from '@/components/ui/card',;
+import { Badge } from '@/components/ui/badge',;
+import { cn } from '@/lib/utils',;
+// Enhanced loading spinner with different variants;
+interface LoadingSpinnerProps {;
+  size?: 'sm' | 'md' | 'lg' | 'xl',;
+  variant?: 'default' | 'primary' | 'success' | 'warning' | 'error',;
+  className?: string,;
+  showText?: boolean,;
+  text?: string;
+}
+
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
+  size = 'md',
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   variant = 'default',
   className,
   showText = false,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+  text = 'Loading...',
+=======
+=======
+<<<<<<< HEAD
   text = 'Loading...',
 }) => {  const sizeClasses = {
     sm: 'h-4 w-4',
@@ -64,6 +118,32 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     lg: 'h-8 w-8',
     xl: 'h-12 w-12',
   }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  text = 'Loading...'
+}) => {
+  const sizeClasses = {
+    sm: 'h-4 w-4',
+    md: 'h-6 w-6',
+    lg: 'h-8 w-8',
+    xl: 'h-12 w-12'
+  },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+<<<<<<< HEAD
+  size = 'md'
+  variant = 'default'
+  className
+  showText = false
+  text = 'Loading...'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+}) => {  const sizeClasses = {
+    sm: 'h-4 w-4',
+    md: 'h-6 w-6',
+    lg: 'h-8 w-8',
+    xl: 'h-12 w-12',
+  }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   text = 'Loading...'
 }) => {
@@ -77,18 +157,28 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 
 =======
 >>>>>>> 
+=======
+  const variantClasses = {
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     default: 'text-muted-foreground'
     primary: 'text-primary'
     success: 'text-green-500'
     warning: 'text-yellow-500'
     error: 'text-red-500'
   }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const variantClasses = {
     default: 'text-muted-foreground',
     primary: 'text-primary',
     success: 'text-green-500',
     warning: 'text-yellow-500',
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   return (
@@ -97,6 +187,17 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   }
 >>>>>>>   return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+    error: 'text-red-500',
+  }
+=======
+    error: 'text-red-500'
+  },
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  return (
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className={cn('flex items-center gap-2', className)}>
       <Loader2
         className={cn(
@@ -110,6 +211,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       )}
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 }
@@ -148,12 +250,34 @@ export const ProgressiveLoading: React.FC < ProgressiveLoadingProps> = ({
   show_progress = true,
   on_complete,
 
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+//Progressive loading component useEffect ( () => {
+  if (currentStep !== undefined) {
+  /> </div>)
+}<motion.div key= {
+  step.id
+}className= {
+  cn ('flex items-center gap-3 p-2 rounded-md', index === activeStep ? 'bg-primary/10' : 'opacity-50')
+}initial= {
+  {
+  opacity: 0, x: -20
+export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({
+  steps
+  currentStep = 0
+  showProgress = true
+  onComplete
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }) => {
   const [activeStep, setActiveStep] = useState(0)
   const progress = ((activeStep + 1) / steps.length) * 100
   useEffect((,) => {
     if (currentStep !== undefined) {
       setActiveStep(currentStep)
+<<<<<<< HEAD
     }
   }, [currentStep])
   useEffect((,) => {
@@ -188,15 +312,15 @@ interface ProgressiveLoadingProps {
   onComplete?: () => void
 }
       setActiveStep (current_step);
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     }
-  }, [current_step]);
-  useEffect ((, ) => {
-    // Check condition
-if ( {) {
-  $2
-}
-      set_timeout (on_complete, 500);
+  }, [currentStep])
+  useEffect((,) => {
+    if (activeStep === steps.length - 1 && onComplete) {
+      setTimeout(onComplete, 500)
     }
+<<<<<<< HEAD
 
     </div>;
   );
@@ -211,36 +335,73 @@ if ( {) {
 }initial= {
   {
   opacity: 0, x: -20 
+=======
+  }, [activeStep, steps.length, onComplete])
+=======
+<<<<<<< HEAD
+    default: 'text-muted-foreground',
+    primary: 'text-primary',
+    success: 'text-green-500',
+    warning: 'text-yellow-500',
+    error: 'text-red-500'
+  },
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
+  return (
+    <div className={cn('flex items-center gap-2', className)}>
+      <Loader2 className={cn('animate-spin', sizeClasses[size], variantClasses[variant])} />
+      {showText && <span className="text-sm text-muted-foreground">{text}</span>}
+    </div>
+  )
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+},
+
+// Progressive loading component
+interface ProgressiveLoadingProps {
+  steps: Array<{ id: string, label: string, duration?: number }>,
+  currentStep?: number,
+  showProgress?: boolean,
+  onComplete?: () => void
+}
+;
 export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({;
   steps,;
   currentStep = 0,;
   showProgress = true,;
-  onComplete,;
+  onComplete;
 }) => {;
-  const [activeStep, setActiveStep] = useState(0);
-  const progress = ((activeStep + 1) / steps && steps.length) * 100;
-  useEffect((,) => {;
+  const [activeStep, setActiveStep] = useState(0),;
+  const progress = ((activeStep + 1) / steps.length) * 100,;
+  useEffect(() => {;
     if (currentStep !== undefined) {;
       setActiveStep(currentStep);
     }
-  }, [currentStep]);
-
-  useEffect((,) => {;
-    if (activeStep === steps && steps.length - 1 && onComplete) {;
+  }, [currentStep]),;
+  useEffect(() => {;
+    if (activeStep === steps.length - 1 && onComplete) {;
       setTimeout(onComplete, 500);
     }
-  }, [activeStep, steps && steps.length, onComplete]);
+  }, [activeStep, steps.length, onComplete]),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   return (
 =======
 >>>>>>>   return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  return (
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="space-y-4">
       {showProgress && (
         <div className="w-full bg-muted rounded-full h-2">
           <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             initial={{ width: 0 }}
@@ -258,12 +419,23 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({;
       <div className='space-y-2'>
 =======
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+            className='bg-primary h-2 rounded-full'
+=======
+            className="bg-primary h-2 rounded-full"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             initial={{ width: 0 }}
             animate={{ width: `${progress}%` }}
-            transition={{ duration: 0 && 0.3 }}
-          />;
-        </div>;
+            transition={{ duration: 0.3 }}
+          />
+        </div>
       )}
+<<<<<<< HEAD
 
 
 
@@ -277,15 +449,30 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({;
         {steps && steps.map((step, index) => (          <motion&& motion.div
             key = {step && step.id,}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      <div className='space-y-2'>
+        {steps.map((step, index) => (          <motion.div
+            key = {step.id,}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             className = {cn(
               'flex items-center gap-3 p-2 rounded-md'
               index === activeStep ? 'bg-primary/10' : 'opacity-50'
             ),}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+      
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <div className="space-y-2">
         {steps.map((step, index) => (
           <motion.div
@@ -295,11 +482,19 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({;
               index === activeStep ? 'bg-primary/10' : 'opacity-50';
             )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             initial={{ opacity: 0, x: -20 }}
 =======
 >>>>>>>             initial={{ opacity: 0, x: -20 }}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            initial={{ opacity: 0, x: -20 }}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             animate={{ opacity: index <= activeStep ? 1 : 0.5, x: 0 }}
             transition={{ delay: index * 0.1 }}
           >
@@ -311,6 +506,7 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({;
               <LoadingSpinner size="sm" variant="primary" />
             ) : (
               <div className="h-4 w-4 rounded-full border-2 border-muted" />
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: index <= activeStep ? 1 : 0 && 0.5, x: 0 }}
@@ -329,6 +525,24 @@ ursor/fix-website-loading-errors-and-merge-6662
         ))}
 <<<<<<< HEAD
 =======
+=======
+            )}
+            <span className="text-sm font-medium">{step.label}</span>
+          </motion.div>
+        ))}
+<<<<<<< HEAD
+      </div>
+    </div>
+  )
+}
+// Enhanced skeleton loader
+interface SkeletonProps {
+  className?: string
+  variant?: 'text' | 'circular' | 'rectangular' | 'card'
+  animation?: 'pulse' | 'wave' | 'none'
+  lines?: number
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export const Skeleton: React.FC<SkeletonProps> = ({
   className
   variant = 'rectangular'
@@ -341,18 +555,55 @@ export const Skeleton: React.FC<SkeletonProps> = ({
     circular: 'h-12 w-12 rounded-full'
     rectangular: 'h-6 w-full'
     card: 'h-48 w-full'
+<<<<<<< HEAD
+=======
+=======
+=======
+      </div>;
+    </div>;
+  );
+},;
+// Enhanced skeleton loader;
+interface SkeletonProps {;
+  className?: string,;
+  variant?: 'text' | 'circular' | 'rectangular' | 'card',;
+  animation?: 'pulse' | 'wave' | 'none',;
+  lines?: number;
+}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export const Skeleton: React.FC<SkeletonProps> = ({
   className,
   variant = 'rectangular',
   animation = 'pulse',
+<<<<<<< HEAD
   lines = 1,
 }) => {
   const baseClasses = 'bg-muted rounded'
+=======
+<<<<<<< HEAD
+  lines = 1,
+}) => {
+  const baseClasses = 'bg-muted rounded'
+=======
+  lines = 1
+}) => {
+  const baseClasses = 'bg-muted rounded',
+  
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const variantClasses = {
     text: 'h-4 w-full',
     circular: 'h-12 w-12 rounded-full',
     rectangular: 'h-6 w-full',
+<<<<<<< HEAD
     card: 'h-48 w-full',
+=======
+<<<<<<< HEAD
+    card: 'h-48 w-full',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }
   const animationClasses = {
     pulse: 'animate-pulse'
@@ -398,6 +649,7 @@ export const ErrorState: React.FC<ErrorStateProps> = ({
   maxRetries = 3
   onRetry
   className
+<<<<<<< HEAD
 }) => {
   const [isOnline, setIsOnline] = useState(true)
   useEffect(() => {
@@ -582,19 +834,37 @@ if ( {) {
       setIsOnline (navigator.on_line);
       window.addEventListener ('online', handle_online);
       window.addEventListener ('offline', handle_offline);
+=======
+}) => {
+  const [isOnline, setIsOnline] = useState(true)
+  useEffect(() => {
+    const handleOnline = () => setIsOnline(true)
+    const handleOffline = () => setIsOnline(false)
+    if (typeof window !== 'undefined') {
+      setIsOnline(navigator.onLine)
+      window.addEventListener('online', handleOnline)
+      window.addEventListener('offline', handleOffline)
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       return () => {
-        window.removeEventListener ('online', handle_online);
-        window.removeEventListener ('offline', handle_offline);
+        window.removeEventListener('online', handleOnline)
+        window.removeEventListener('offline', handleOffline)
       }
     }
+<<<<<<< HEAD
 
     return undefined;
   }, []);
   const getErrorConfig = () =>: any {
 
+=======
+    return undefined
+  }, [])
+  const getErrorConfig = () => {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     switch (variant) {
-      case 'network':;
+      case 'network':
         return {
+<<<<<<< HEAD
 
           icon: is_online ? Wifi : WifiOff,
           title:;
@@ -606,9 +876,21 @@ if ( {) {
               : 'You appear to be offline. Please check your internet connection.'),
           color: 'text - orange - 500',
 
+=======
+          icon: isOnline ? Wifi : WifiOff
+          title:
+            title |(isOnline ? 'Connection Error' : 'No Internet Connection')
+          description:
+            description |
+            (isOnline
+              ? 'Unable to connect to our servers. Please check your connection.'
+              : 'You appear to be offline. Please check your internet connection.')
+          color: 'text-orange-500'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         }
-      case 'timeout':;
+      case 'timeout':
         return {
+<<<<<<< HEAD
 
           icon: Clock,
           title: title || 'Request Timeout',
@@ -617,9 +899,18 @@ if ( {) {
             'The request took too long to complete. Please try again.',
           color: 'text - yellow - 500',
 
+=======
+          icon: Clock
+          title: title |'Request Timeout'
+          description:
+            description |
+            'The request took too long to complete. Please try again.'
+          color: 'text-yellow-500'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         }
-      case 'permission':;
+      case 'permission':
         return {
+<<<<<<< HEAD
 
           icon: AlertTriangle,
           title: title || 'Access Denied',
@@ -627,25 +918,119 @@ if ( {) {
             description || "You don't have permission to access this resource.",
           color: 'text - red - 500',
 
+=======
+          icon: AlertTriangle
+          title: title |'Access Denied'
+          description:
+            description |"You don't have permission to access this resource."
+          color: 'text-red-500'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         }
-      default:;
+      default:
         return {
+<<<<<<< HEAD
 
+=======
+          icon: AlertTriangle
+          title: title |'Something went wrong'
+          description:
+            description |'An unexpected error occurred. Please try again.'
+          color: 'text-red-500'
+        }
+    }
+  }
+  const config = getErrorConfig()
+  const Icon = config.icon
+  const canRetry = showRetry && onRetry && retryCount < maxRetries
+=======
+<<<<<<< HEAD
+      </div>;
+    </div>;
+  );
+},;
+// Enhanced skeleton loader;
+interface SkeletonProps {;
+  className?: string,;
+  variant?: 'text' | 'circular' | 'rectangular' | 'card',;
+  animation?: 'pulse' | 'wave' | 'none',;
+  lines?: number;
+}
+
+export const Skeleton: React.FC<SkeletonProps> = ({
+  className,
+  variant = 'rectangular',
+  animation = 'pulse',
+  lines = 1
+}) => {
+  const baseClasses = 'bg-muted rounded',
+  
+  const variantClasses = {
+    text: 'h-4 w-full',
+    circular: 'h-12 w-12 rounded-full',
+    rectangular: 'h-6 w-full',
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    card: 'h-48 w-full'
+  },
+
+  const animationClasses = {
+    pulse: 'animate-pulse',
+    wave: 'animate-bounce',
+    none: ''
+  },
+
+  if (variant === 'text' && lines > 1) {
+    return (
+      <div className="space-y-2">
+        {Array.from({ length: lines }).map((_, i) => (
+          <div
+            key={i}
+            className={cn(;
+              baseClasses,;
+              variantClasses.text,;
+              animationClasses[animation],;
+              i === lines - 1 ? 'w-3/4' : 'w-full',;
+              className;
+            )}
+          />;
+        ))}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       </div>;
     );
   }
-
-      />;
+;
+  return (;
+    <div;
+      className={cn(;
+        baseClasses,;
+        variantClasses[variant],;
+        animationClasses[animation],;
+        className;
+      )}
+    />;
   );
-};
-//Enhanced error state component ;
-}return undefined;
-}, []);
-const getErrorConfig = () => {;
-  switch (variant) {';
-  case 'network': return {';
-  icon: isOnline ? Wifi : WifiOff,  title: title || (isOnline ? 'Connection Error' : 'No Internet Connection'), description: description || (isOnline ? 'Unable to connect to our servers. Please check your connection.' : 'You appear to be offline. Please check your internet connection.' ;
-
+},;
+// Enhanced error state component;
+interface ErrorStateProps {;
+  error?: Error | string | null,;
+  title?: string,;
+  description?: string,;
+  action?: {;
+    label: string,;
+    onClick: () => void;
+  },;
+  secondaryAction?: {;
+    label: string,;
+    onClick: () => void;
+  },;
+  variant?: 'network' | 'generic' | 'timeout' | 'permission',;
+  showRetry?: boolean,;
+  retryCount?: number,;
+  maxRetries?: number,;
+  onRetry?: () => void,;
+  className?: string;
+}
+;
 export const ErrorState: React.FC<ErrorStateProps> = ({;
   error,;
   title,;
@@ -657,62 +1042,55 @@ export const ErrorState: React.FC<ErrorStateProps> = ({;
   retryCount = 0,;
   maxRetries = 3,;
   onRetry,;
-  className,;
+  className;
 }) => {;
-  const [isOnline, setIsOnline] = useState(true);
-
+  const [isOnline, setIsOnline] = useState(true),;
   useEffect(() => {;
-    const handleOnline = () => setIsOnline(true);
-    const handleOffline = () => setIsOnline(false);
+    const handleOnline = () => setIsOnline(true),;
+    const handleOffline = () => setIsOnline(false),;
     if (typeof window !== 'undefined') {;
-      setIsOnline(navigator && navigator.onLine);
-      window && window.addEventListener('online', handleOnline);
-      window && window.addEventListener('offline', handleOffline);
-
+      setIsOnline(navigator.onLine),;
+      window.addEventListener('online', handleOnline),;
+      window.addEventListener('offline', handleOffline),;
       return () => {;
-        window && window.removeEventListener('online', handleOnline);
-        window && window.removeEventListener('offline', handleOffline);
-      };
+        window.removeEventListener('online', handleOnline),;
+        window.removeEventListener('offline', handleOffline);
+      }
     }
-
+;
     return undefined;
-  }, []);
-
+  }, []),;
   const getErrorConfig = () => {;
     switch (variant) {;
       case 'network':;
         return {;
           icon: isOnline ? Wifi : WifiOff,;
-          title:;
-            title || (isOnline ? 'Connection Error' : 'No Internet Connection'),;
-          description:;
-            description ||;
-            (isOnline;
-              ? 'Unable to connect to our servers. Please check your connection.';
-              : 'You appear to be offline. Please check your internet connection.'),;
-          color: 'text-orange-500',;
-        };
+          title: title || (isOnline ? 'Connection Error' : 'No Internet Connection'),;
+          description: description || (isOnline;
+            ? 'Unable to connect to our servers. Please check your connection.';
+            : 'You appear to be offline. Please check your internet connection.';
+          ),;
+          color: 'text-orange-500';
+        },;
       case 'timeout':;
         return {;
           icon: Clock,;
           title: title || 'Request Timeout',;
-          description:;
-            description ||;
-            'The request took too long to complete. Please try again.',;
-          color: 'text-yellow-500',;
-        };
+          description: description || 'The request took too long to complete. Please try again.',;
+          color: 'text-yellow-500';
+        },;
       case 'permission':;
         return {;
           icon: AlertTriangle,;
           title: title || 'Access Denied',;
-          description:;
-            description || "You don't have permission to access this resource.",;
-          color: 'text-red-500',;
-        };
+          description: description || 'You don\'t have permission to access this resource.',;
+          color: 'text-red-500';
+        },;
       default:;
         return {;
           icon: AlertTriangle,;
           title: title || 'Something went wrong',;
+<<<<<<< HEAD
           description:;
             description || 'An unexpected error occurred. Please try again.',;
           color: 'text-red-500',;
@@ -735,6 +1113,10 @@ export const ErrorState: React.FC<ErrorStateProps> = ({;
           description:;
             description || 'An unexpected error occurred. Please try again.',
           color: 'text - red - 500',
+=======
+          description: description || 'An unexpected error occurred. Please try again.',;
+          color: 'text-red-500';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         }
     }
   },
@@ -743,6 +1125,7 @@ export const ErrorState: React.FC<ErrorStateProps> = ({;
   const Icon = config.icon,
   const canRetry = showRetry && onRetry && retryCount < maxRetries,
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   return (
 =======
@@ -764,10 +1147,31 @@ ursor/fix-website-loading-errors-and-merge-6662
 
           {error && process.env.NODE_ENV === 'development' && (
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  return (
+    <Card className={cn('border-destructive/20', className)}>
+      <CardContent className="p-8 text-center">
+        <motion.div
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.3 }}
+        >
+          <Icon className={cn('mx-auto mb-4 h-12 w-12', config.color)} />
+          <h3 className="text-lg font-semibold mb-2">{config.title}</h3>
+          <p className="text-muted-foreground mb-6 max-w-md mx-auto">
+            {config.description}
+          </p>
+          {error && process.env.NODE_ENV === 'development' && (
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <details className="mb-4 text-left">
               <summary className="text-sm text-muted-foreground cursor-pointer">
                 Error Details (Development)
               </summary>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 {typeof error === 'string' ? error : error.message}
@@ -778,13 +1182,26 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
               <pre className='mt-2 p-2 bg-muted rounded text-xs overflow-auto'>
 >>>>>>>                 {typeof error === 'string' ? error : error.message}
+=======
+              <pre className='mt-2 p-2 bg-muted rounded text-xs overflow-auto'>
+=======
+              <pre className="mt-2 p-2 bg-muted rounded text-xs overflow-auto">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                {typeof error === 'string' ? error : error.message}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </pre>
             </details>
           )}
+<<<<<<< HEAD
           <div className='flex flex-col sm:flex-row gap-2 justify-center'>
             {canRetry && (
               <Button onClick={onRetry} variant='default'>
                 <RefreshCw className='h-4 w-4 mr-2' />
+<<<<<<< HEAD
               <Button onClick={onRetry} variant="default">
                 <RefreshCw className="h-4 w-4 mr-2" />
               <Button onClick={onRetry} variant='default'>
@@ -824,21 +1241,55 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+
+          <div className="flex flex-col sm:flex-row gap-2 justify-center">
+            {canRetry && (
+<<<<<<< HEAD
+              <Button onClick={onRetry} variant="default">
+                <RefreshCw className="h-4 w-4 mr-2" />
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+              <Button onClick={onRetry} variant='default'>
+                <RefreshCw className='h-4 w-4 mr-2' />
+=======
+              <Button onClick={onRetry} variant="default">
+                <RefreshCw className="h-4 w-4 mr-2" />
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 Try Again {retryCount > 0 && `(${retryCount}/${maxRetries})`}
-              </Button>;
+              </Button>
             )}
 
 <<<<<<< HEAD
-            {action && (
+<<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
             {action && (;
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            {action && (
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <Button
-                onClick={action && action.onClick}
-                variant={canRetry ? 'outline' : 'default'}>;
-                {action && action.label}
-              </Button>;
+                onClick={action.onClick}
+                variant={canRetry ? 'outline' : 'default'}
+              >
+=======
+            
+            {action && (
+              <Button onClick={action.onClick} variant={canRetry ? "outline" : "default"}>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                {action.label}
+              </Button>
             )}
 
 
@@ -850,6 +1301,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 onClick={action.onClick}
                 variant={canRetry ? 'outline' : 'default'}
               >
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             {action && (
@@ -870,6 +1322,24 @@ ursor/fix-website-loading-errors-and-merge-6662
             {action && (
               <Button onClick={action.onClick} variant={canRetry ? "outline" : "default"}>
 >>>>>>>                 {action.label}
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            {secondaryAction && (
+              <Button onClick={secondaryAction.onClick} variant='ghost'>
+=======
+            
+            {secondaryAction && (
+              <Button onClick={secondaryAction.onClick} variant="ghost">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                {secondaryAction.label}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </Button>
             )}
             {secondaryAction && (
@@ -885,14 +1355,25 @@ ursor/fix-website-loading-errors-and-merge-6662
             )}
           </div>
           {!isOnline && (
-            <div className='mt-4 flex items-center justify-center gap-2 text-sm text-muted-foreground'>
-              <WifiOff className='h-4 w-4' />
+            <div className="mt-4 flex items-center justify-center gap-2 text-sm text-muted-foreground">
+              <WifiOff className="h-4 w-4" />
               <span>Offline</span>
             </div>
           )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+        </motion.div>
+      </CardContent>
+    </Card>
+  )
+}
+<motion.div initial= {
+  {
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   scale: 0.8, opacity: 0
 export const LoadingGrid: React.FC<LoadingGridProps> = ({
   count = 8
@@ -913,6 +1394,7 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
     <div className={cn(gridClasses[variant], className)}>
       {Array.from({ length: count }).map((_, i) => (
         <Card key={i} className='animate-pulse'>          <CardContent className={itemClasses[variant]}>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         </motion.div>;
 
@@ -925,16 +1407,45 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
   scale: 0 && 0.8, opacity: 0 
 
 <<<<<<< HEAD
+=======
+=======
+  scale: 0.8, opacity: 0 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+        </motion.div>;
+      </CardContent>;
+    </Card>;
+  );
+},;
+// Loading state for lists/grids;
+interface LoadingGridProps {;
+  count?: number,;
+  columns?: number,;
+  variant?: 'card' | 'list' | 'table',;
+  className?: string;
+}
+
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export const LoadingGrid: React.FC<LoadingGridProps> = ({
   count = 8,
   columns = 4,
   variant = 'card',
+<<<<<<< HEAD
 
 =======
 xport const LoadingGrid: React.FC<LoadingGridProps> = ({
   count = 8,
   columns = 4,
   variant = 'card',
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   className,
 }) => {  const gridClasses = {
     card: `grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-${columns} gap-6`,
@@ -950,7 +1461,12 @@ xport const LoadingGrid: React.FC<LoadingGridProps> = ({
     <div className={cn(gridClasses[variant], className)}>
       {Array.from({ length: count }).map((_, i) => (
         <Card key={i} className='animate-pulse'>          <CardContent className={itemClasses[variant]}>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   className
 }) => {
   const gridClasses = {
@@ -958,11 +1474,20 @@ xport const LoadingGrid: React.FC<LoadingGridProps> = ({
     list: 'space-y-4',
     table: 'space-y-2'
   },
+<<<<<<< HEAD
 export const LoadingGrid: React.FC<LoadingGridProps> = ({
   count = 8,
   columns = 4,
   variant = 'card',
 >>>>>>> 
+=======
+
+  const itemClasses = {
+    card: 'p-6 space-y-4',
+    list: 'p-4 space-y-3',
+    table: 'p-3 space-y-2'
+  },
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
   return (
     <div className={cn(gridClasses[variant], className)}>
@@ -970,11 +1495,19 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
         <Card key={i} className="animate-pulse">
           <CardContent className={itemClasses[variant]}>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             {variant === 'card' && (
 =======
 >>>>>>>             {variant === 'card' && (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            {variant === 'card' && (
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <>
                 <Skeleton variant="rectangular" className="h-32" />
                 <div className="space-y-2">
@@ -988,9 +1521,15 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
               </>
             )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+            
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             {variant === 'list' && (
               <div className="flex gap-4">
                 <Skeleton variant="circular" />
@@ -1001,9 +1540,15 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
               </div>
             )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+            
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             {variant === 'table' && (
               <div className="flex items-center gap-4">
                 <Skeleton variant="text" className="h-4 w-1/4" />
@@ -1013,8 +1558,24 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
               </div>
             )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+          </CardContent>
+        </Card>
+      ))}
+    </div>
+  )
+}
+// Performance indicator
+interface PerformanceIndicatorProps {
+  isLoading?: boolean
+  loadTime?: number
+  itemCount?: number
+  className?: string
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
   isLoading = false
   loadTime
@@ -1026,7 +1587,13 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
     if (time < 300) return 'text-yellow-500'
     return 'text-red-500'
   }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </CardContent>;
         </Card>;
       ))}
@@ -1042,16 +1609,28 @@ interface PerformanceIndicatorProps {;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
   isLoading = false,
   loadTime,
   itemCount,
+<<<<<<< HEAD
 
 =======
 xport const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
   isLoading = false,
   loadTime,
   itemCount,
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   className,
 }) => {
   const getPerformanceColor = (time: number) => {
@@ -1059,7 +1638,12 @@ xport const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
     if (time < 300) return 'text-yellow-500'
     return 'text-red-500'
   }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   className
 }) => {
   const getPerformanceColor = (time: number) => {
@@ -1069,6 +1653,13 @@ xport const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
   },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   if (isLoading) {
     return (
       <Badge variant="outline" className={cn('text-xs', className)}>
@@ -1076,6 +1667,7 @@ xport const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
         <span className="ml-1">Loading...</span>
       </Badge>
     )
+<<<<<<< HEAD
   }
 
 =======
@@ -1093,23 +1685,59 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
         <LoadingSpinner size='sm' />;
         <span className='ml - 1'>Loading...</span>;
       </Badge>);
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }
     >
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+
+  return (
+    <div className={cn('flex items-center gap-2 text-xs text-muted-foreground', className)}>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       {loadTime && (
-        <Badge variant='outline' className={getPerformanceColor(loadTime)}>
-          <Zap className='h-3 w-3 mr-1' />
+        <Badge variant="outline" className={getPerformanceColor(loadTime)}>
+          <Zap className="h-3 w-3 mr-1" />
           {loadTime}ms
         </Badge>
       )}
+<<<<<<< HEAD
 
       {itemCount && (;
         <span>{itemCount} items loaded</span>;
       )}
 
+=======
+<<<<<<< HEAD
+      {itemCount && <span>{itemCount} items loaded</span>}
+    </div>
+  )
+};
+};
+};
+}
+}
+}
+<<<<<<< HEAD
+
+=======
+}
+}
+}
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+      {itemCount && (;
+        <span>{itemCount} items loaded</span>;
+      )}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     </div>;
   );
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1117,3 +1745,9 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
 >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

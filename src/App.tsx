@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 export default function App() {
@@ -87,3 +88,19 @@ const App: React.FC = () => {
 
 export default App;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+import React from 'react';
+
+function App() {
+  return (
+    <div className="App">
+      <h1>Welcome to Zion Holdings</h1>
+      <p>Technology Solutions for the Future</p>
+    </div>
+  );
+}
+
+export default App;
+}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

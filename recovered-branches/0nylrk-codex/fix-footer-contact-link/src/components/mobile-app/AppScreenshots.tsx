@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/AppScreenshots.tsx
 
 
 <<<<<<< HEAD
@@ -16,13 +18,63 @@ export const AppScreenshots: React.FC = () => {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React, { useRef } from "react";
+import {ChevronLeft, ChevronRight} from "lucide-react";
+import {Button} from "@/components/ui/button";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React, { useRef } from "react",
+<<<<<<< HEAD
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+=======
+import { ChevronLeft, ChevronRight } from "lucide-react",
+import { Button } from "@/components/ui/button",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+// These would be replaced with actual screenshots
+
+<<<<<<< HEAD
+const mockScreenshots = [
+  { id: 1, alt: "Dashboard screen", src: "/placeholder.svg" }
+  { id: 2, alt: "Talent matching screen", src: "/placeholder.svg" }
+  { id: 3, alt: "Resume builder screen", src: "/placeholder.svg" }
+  { id: 4, alt: "Messaging screen", src: "/placeholder.svg" }
+  { id: 5, alt: "Profile screen", src: "/placeholder.svg" }]
+=======
+<<<<<<< HEAD
+export const AppScreenshots: React.FC = () => {;
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export const AppScreenshots: React.FC = () => {
+<<<<<<< HEAD
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+=======
+  const scrollContainerRef = useRef<HTMLDivElement>(null),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const scroll = (direction: "left" | "right") => {
     if (scrollContainerRef.current) {
       const scrollAmount = 300
       scrollContainerRef.current.scrollBy({
         left: direction === "left" ? -scrollAmount : scrollAmount
         behavior: "smooth"})
+<<<<<<< HEAD
 
+========
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/AppScreenshots.tsx
 import React, { useRef } from "react";
 import {ChevronLeft, ChevronRight} from "lucide-react";
 import {Button} from "@/components/ui/button";
@@ -33,20 +85,28 @@ const mockScreenshots = [;
   { id: 3, alt: "Resume builder screen", src: "/placeholder && placeholder.svg" },;
   { id: 4, alt: "Messaging screen", src: "/placeholder && placeholder.svg" },;
   { id: 5, alt: "Profile screen", src: "/placeholder && placeholder.svg" }],;
-
 export const AppScreenshots: React.FC = () => {;
   const scrollContainerRef = useRef<HTMLDivElement>(null);
-
   const scroll = (direction: "left" | "right") => {;
     if (scrollContainerRef && scrollContainerRef.current) {;
       const scrollAmount = 300,;
       scrollContainerRef && scrollContainerRef.current.scrollBy({;
         left: direction === "left" ? -scrollAmount : scrollAmount,;
         behavior: "smooth"});
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/AppScreenshots.tsx
 
     }
 <<<<<<< HEAD
 
+=======
+    }
+<<<<<<< HEAD
+  }
+=======
+  },
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
     <section className="py-16 bg-zion-blue-dark">
       <div className="container mx-auto px-4">
@@ -65,6 +125,7 @@ export const AppScreenshots: React.FC = () => {;
           >
             <ChevronLeft className="h-6 w-6" />
           </Button>
+<<<<<<< HEAD
 =======
   }
 =======
@@ -81,6 +142,13 @@ export const AppScreenshots: React.FC = () => {;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+<<<<<<< HEAD
+          <div
+=======
+          <div 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             ref={scrollContainerRef}
             className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
@@ -93,22 +161,37 @@ export const AppScreenshots: React.FC = () => {;
                 <img
                   src={screenshot.src}
                   alt={screenshot.alt}
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   className="w-full h-full object-cover"
                 />
               </div>
             ))}
           </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          <Button
+            variant="ghost"
+            size="icon"
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
           <Button 
             variant="ghost" 
             size="icon" 
             className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white" 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             onClick={() => scroll("right")}
           >
             <ChevronRight className="h-6 w-6" />
@@ -117,12 +200,22 @@ export const AppScreenshots: React.FC = () => {;
       </div>
     </section>
   )
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 },
 import React, { useRef } from "react",;
 import { ChevronLeft, ChevronRight } from "lucide-react",;
@@ -145,7 +238,43 @@ export const AppScreenshots: React.FC = () => {;
     }
   };
   return (;
+<<<<<<< HEAD
 
+========
+    }
+  }
+  return (
+=======
+
+import React, { useRef } from "react",;
+import { ChevronLeft, ChevronRight } from "lucide-react",;
+import { Button } from "@/components/ui/button",;
+;
+// These would be replaced with actual screenshots;
+const mockScreenshots = [;
+  { id:1, alt:"Dashboard screen", src:"/placeholder.svg" },;
+  { id:2, alt:"Talent matching screen", src:"/placeholder.svg" },;
+  { id:3, alt:"Resume builder screen", src:"/placeholder.svg" },;
+  { id:4, alt:"Messaging screen", src:"/placeholder.svg" },;
+  { id:5, alt:"Profile screen", src:"/placeholder.svg" }],;
+;
+export const AppScreenshots:React.FC = () => {;
+  const scrollContainerRef = useRef<HTMLDivElement>(null),;
+;
+  const scroll = (direction:"left" | "right") => {;
+    if (scrollContainerRef.current) {;
+      const scrollAmount = 300,;
+      scrollContainerRef.current.scrollBy({;
+        left:direction === "left" ? -scrollAmount :scrollAmount,;
+        behavior:"smooth"}),;
+    }
+  },;
+;
+  return (;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/AppScreenshots.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <section className="py-16 bg-zion-blue-dark">;
       <div className="container mx-auto px-4">;
         <div className="text-center mb-12">;
@@ -154,17 +283,34 @@ export const AppScreenshots: React.FC = () => {;
             Take a visual tour through the Zion app's intuitive interface.;
           </p>;
         </div>;
-
+<<<<<<< HEAD
+<<<<<<< HEAD
         <div className="relative">;
           <Button
             variant="ghost" 
             size="icon" 
             className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white" 
+=======
+        ;
+        <div className="relative">;
+          <Button ;
+            variant="ghost" ;
+            size="icon" ;
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white" ;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+        <div className="relative">;
+          <Button;
+            variant="ghost";
+            size="icon";
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             onClick={() => scroll("left")}
           >;
             <ChevronLeft className="h-6 w-6" />;
           </Button>;
-
+<<<<<<< HEAD
+<<<<<<< HEAD
           <div
             ref={scrollContainerRef}
             className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory"
@@ -176,18 +322,43 @@ export const AppScreenshots: React.FC = () => {;
                 <img
                   src={screenshot && screenshot.src} 
                   alt={screenshot && screenshot.alt}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   className="w-full h-full object-cover"
                 />;
               </div>;
             ))}
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/AppScreenshots.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/AppScreenshots.tsx
           </div>;
-
           <Button
             variant="ghost" 
             size="icon" 
             className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white" 
+=======
+          <div;
+            ref={scrollContainerRef}
+            className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory";
+            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+          >;
+            {mockScreenshots.map((screenshot) => (;
+              <div;
+                key={screenshot.id} ;
+                className="flex-shrink-0 w-60 h-[500px] snap-center rounded-xl overflow-hidden border-2 border-zion-purple/30";
+              >;
+                <img;
+                  src={screenshot.src} ;
+                  alt={screenshot.alt}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            ))}
+          </div>;
+          <Button;
+            variant="ghost";
+            size="icon";
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             onClick={() => scroll("right")}
           >;
             <ChevronRight className="h-6 w-6" />;
@@ -196,13 +367,17 @@ export const AppScreenshots: React.FC = () => {;
       </div>;
     </section>;
   );
+<<<<<<< HEAD
 
 };
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/AppScreenshots.tsx
 <<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/AppScreenshots.tsx
 import React, { useRef } from './react';
 import { ChevronLeft, ChevronRight } from './lucide-react';
 import { Button } from '@/components / ui / button';
@@ -276,5 +451,65 @@ if ( {) {
     </section>);
 }
 ;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/AppScreenshots.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+=======
+          ;
+          <div ;
+            ref={scrollContainerRef}
+            className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory";
+            style={{ scrollbarWidth:"none", msOverflowStyle:"none" }}
+          >;
+            {mockScreenshots.map((screenshot) => (;
+              <div ;
+                key={screenshot.id} ;
+                className="flex-shrink-0 w-60 h-[500px] snap-center rounded-xl overflow-hidden border-2 border-zion-purple/30";
+              >;
+                <img ;
+                  src={screenshot.src} ;
+                  alt={screenshot.alt}
+                  className="w-full h-full object-cover";
+                />;
+              </div>;
+            ))}
+          </div>;
+          ;
+          <Button ;
+            variant="ghost" ;
+            size="icon" ;
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white" ;
+            onClick={() => scroll("right")}
+          >;
+            <ChevronRight className="h-6 w-6" />;
+          </Button>;
+        </div>;
+      </div>;
+    </section>;
+  ),;
+},; export const AppScreenshots: React.FC = () => {
+  const scrollContainerRef = useRef<HTMLDivElement> (null);
+const scroll = (direction: "left" | "right") => {
+  if (scrollContainerRef.current) {
+  const scrollAmount = 300;
+scrollContainerRef.current.scrollBy ({
+  
+}
+};
+Take a visual tour through the Zion app's intuitive interface. </p> </div> <div className="relative" > <Button > <ChevronLeft className="h-6 w-6" /> </Button> <div > {
+  mockScreenshots.map ( (screenshot) => (<div key= {
+  screenshot.id 
+}className="flex-shrink-0 w-60 h-[500px] snap-center rounded-xl overflow-hidden border-2 border-zion-purple/30" > <img /> </div>) ) 
+}</div> <Button > <ChevronRight className="h-6 w-6" /> </Button> </div> </div> </section>) 
+};
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/AppScreenshots.tsx
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+};
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

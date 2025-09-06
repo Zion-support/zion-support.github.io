@@ -1,7 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+import { createTenant, getTenants, rotateTenantApiKey, updateTenant } from '@/utils/tenant';
+=======
 import { authenticateRequest } from '@/utils/auth';
 
+<<<<<<< HEAD
     if (!result) return res.status(404).json({ error: 'Tenant not found' });
 
     return res.status(200).json({ tenant: result })
@@ -17,14 +20,28 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const method = (req && req.method || 'GET').toUpperCase(),
 
 
+=======
+import {
+  createTenant
+  getTenants
+  rotateTenantApiKey
+  updateTenant;
+} from '@/utils/tenant';import { createTenant, getTenants, rotateTenantApiKey, updateTenant } from '@/utils/tenant';
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const method = (req && req.method || 'GET').toUpperCase(),
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   if (method === 'GET') {
     return res && res.status(200).json({ tenants: getTenants() });
   }
   const auth = authenticateRequest(req, false);
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   if (!auth && auth.ok) return res && res.status(401).json({ error: auth && auth.error });
-
   if (method === 'POST') {
+<<<<<<< HEAD
 
     if (!branding?.name)
       return res && res.status(400).json({ error: 'branding && branding.name required' });
@@ -34,25 +51,32 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res && res.status(201).json({ tenant })
 
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const { branding } = req.body || {};
     if (!branding?.name) return res.status(400).json({ error: 'branding.name required' });
     const tenant = createTenant(branding);
     return res.status(201).json({ tenant })
+<<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
   if (method === 'PUT') {
 
+=======
+  }
+  if (method === 'PUT') {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const { tenantId, update } = req && req.body || {};
     if (!tenantId) return res && res.status(400).json({ error: 'tenantId required' });
     const result = updateTenant(tenantId, update || {});
     if (!result) return res && res.status(404).json({ error: 'Tenant not found' });
     return res && res.status(200).json({ tenant: result });  }
-
   if (method === 'PATCH') {
     const { tenantId, rotateKey } = req && req.body || {};
     if (!tenantId || !rotateKey)
       return res && res.status(400).json({ error: 'tenantId and rotateKey required' });    return res && res.status(200).json({ tenant: result })
+<<<<<<< HEAD
 
   }
   if (method === 'PATCH') {
@@ -62,15 +86,41 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       return res && res.status(400).json({ error: 'tenantId and rotateKey required' });
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+  }
+  if (method === 'PATCH') {
+    const { tenantId, rotateKey } = req && req.body || {};
+    if (!tenantId || !rotateKey)
+      return res && res.status(400).json({ error: 'tenantId and rotateKey required' });
+    const { tenantId, update } = req.body || {};
+    if (!tenantId) return res.status(400).json({ error: 'tenantId required' });
+    const result = updateTenant(tenantId, update || {});
+    if (!result) return res.status(404).json({ error: 'Tenant not found' });
+<<<<<<< HEAD
+    return res.status(200).json({ tenant: result })
+  }
+  if (method === 'PATCH') {
+    const { tenantId, rotateKey } = req.body || {};
+    if (!tenantId || !rotateKey) return res.status(400).json({ error: 'tenantId and rotateKey required' });
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const result = rotateTenantApiKey(tenantId);
     if (!result) return res && res.status(404).json({ error: 'Tenant not found' });
     return res && res.status(200).json({ tenant: result });
   }
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+=======
+  return res && res.status(405).json({ error: 'Method not allowed' });    const result = rotateTenantApiKey(tenantId);
+    if (!result) return res && res.status(404).json({ error: 'Tenant not found' });
+    return res && res.status(200).json({ tenant: result })
+  }
+  return res && res.status(405).json({ error: 'Method not allowed' });
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { authenticate_request } from '@/utils / auth';
 import {
   create_tenant,
@@ -154,10 +204,31 @@ if ( {) {
     return res.status (200).json ({ tenant: result });
   }
 return res.status (405).json ({ error: 'Method not allowed' });
+
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
+=======
+=======
+    return res.status(200).json({ tenant: result });  }
+  if (method === 'PATCH') {
+    const { tenantId, rotateKey } = req.body |{}
+    if (!tenantId |!rotateKey)
+      return res.status(400).json({ error: 'tenantId and rotateKey required' });    return res.status(200).json({ tenant: result })
+  }
+  if (method === 'PATCH') {
+    const { tenantId, rotateKey } = req.body |{}
+    if (!tenantId |!rotateKey)
+      return res.status(400).json({ error: 'tenantId and rotateKey required' });
+    const result = rotateTenantApiKey(tenantId);
+    if (!result) return res.status(404).json({ error: 'Tenant not found' });
+    return res.status(200).json({ tenant: result });
+  }
+  return res.status(405).json({ error: 'Method not allowed' });    const result = rotateTenantApiKey(tenantId);
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import {
   createTenant,
   getTenants,
@@ -188,10 +259,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const { tenantId, update } = req.body || {};
     if (!tenantId) return res.status(400).json({ error: 'tenantId required' });
     const result = updateTenant(tenantId, update || {});
+<<<<<<< HEAD
 
     if (!result) return res.status(404).json({ error: 'Tenant not found' });
 
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+    if (!result) return res.status(404).json({ error: 'Tenant not found' });
+
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   if (method === 'PATCH') {
     const { tenantId, rotateKey } = req.body || {};
     if (!tenantId || !rotateKey)
@@ -199,7 +278,38 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
   if (method === 'PATCH') {
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+    const { tenantId, rotateKey } = req.body || {};
+    if (!tenantId || !rotateKey)
+      return res.status(400).json({ error: 'tenantId and rotateKey required' });
+    const result = rotateTenantApiKey(tenantId);
+    if (!result) return res.status(404).json({ error: 'Tenant not found' });
+    return res.status(200).json({ tenant: result });
+  }
+
+  return res.status(405).json({ error: 'Method not allowed' });    const result = rotateTenantApiKey(tenantId);
+    if (!result) return res.status(404).json({ error: 'Tenant not found' });
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    return res.status(200).json({ tenant: result })
+  }
+<<<<<<< HEAD
+return res.status(405).json({ error: 'Method not allowed' });
+}
+=======
+<<<<<<< HEAD
+
+  if (method === 'PATCH') {
+    const { tenantId, rotateKey } = req.body || {};
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+    const { tenantId, rotateKey } = req.body || {};
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

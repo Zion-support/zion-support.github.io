@@ -1,6 +1,43 @@
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentCard.tsx
 
 
 <<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+import { Button } from "@/components/ui/button",
+import { Card } from "@/components/ui/card",
+import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react",
+<<<<<<< HEAD
+import { Link } from "react-router-dom";
+import { TalentProfile } from "@/types/talent";
+export interface TalentCardProps {
+
+  talent: TalentProfile
+  onViewProfile: (id: string) => void
+  onRequestHire: (talent: TalentProfile) => void
+  isSaved: boolean
+  onToggleSave: (id: string, isSaved: boolean) => void
+
+  isAuthenticated: boolean
+}
+export function TalentCard({
+=======
+<<<<<<< HEAD
+import {Button} from "@/components/ui/button";
+import {Card} from "@/components/ui/card";
+import {Star, MapPin, Clock, ArrowRight, CheckCircle2} from "lucide-react";
+import {Link} from "react-router-dom";
+import {TalentProfile} from "@/types/talent";
+=======
+import { Button } from "@/components/ui/button",
+import { Card } from "@/components/ui/card",
+import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react",
+import { Link } from "react-router-dom",
+import { TalentProfile } from "@/types/talent",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export interface TalentCardProps {
   talent: TalentProfile,
   onViewProfile: (id: string) => void,
@@ -8,22 +45,80 @@ export interface TalentCardProps {
   isSaved: boolean,
   onToggleSave: (id: string, isSaved: boolean) => void,
   isAuthenticated: boolean
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+}
+
+export function TalentCard({;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  talent;
+  onViewProfile;
+  onRequestHire;
+  isSaved;
+  onToggleSave;
+  isAuthenticated
+}: TalentCardProps) {
+
+  const handleViewProfile = () => {
+    if (onViewProfile) {
+      onViewProfile(talent.id)
+    }
+  }
+  const handleRequestHire = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation()
+    if (onRequestHire) {
+      onRequestHire(talent)
+    }
+  }
+  const handleToggleSave = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation()
+    if (onToggleSave) {
+      onToggleSave(talent.id, !isSaved)
+    }
+<<<<<<< HEAD
+  }
+  // Extract skills - limit to 5 for display
+  const skills = talent.skills?.slice(0, 5) |[];
+=======
+import { Link } from "react-router-dom",
+import { TalentProfile } from "@/types/talent",
+export interface TalentCardProps {
+  talent: TalentProfile,
+  onViewProfile: (id: string) => void,
+  onRequestHire: (talent: TalentProfile) => void,
+  isSaved: boolean,
+  onToggleSave: (id: string, isSaved: boolean) => void,
+  isAuthenticated: boolean
+=======
+  };
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { Button } from "@/components/ui/button",;
 import { Card } from "@/components/ui/card",;
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react",;
 import { Link } from "react-router-dom",;
 import { TalentProfile } from "@/types/talent",;
+<<<<<<< HEAD
 =======
 
 
 
+========
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentCard.tsx
 import {Button} from "@/components/ui/button";
 import {Card} from "@/components/ui/card";
 import {Star, MapPin, Clock, ArrowRight, CheckCircle2} from "lucide-react";
 import {Link} from "react-router-dom";
 import {TalentProfile} from "@/types/talent";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export interface TalentCardProps {;
   talent: TalentProfile,;
   onViewProfile: (id: string) => void,;
@@ -32,15 +127,21 @@ export interface TalentCardProps {;
   onToggleSave: (id: string, isSaved: boolean) => void,;
   isAuthenticated: boolean;
 }
-
+<<<<<<< HEAD
 export function TalentCard(): any ({;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentCard.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentCard.tsx
   talent;
   onViewProfile;
   onRequestHire;
   isSaved;
   onToggleSave;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentCard.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentCard.tsx
   isAuthenticated;
 }: TalentCardProps) {;
   const handleViewProfile = () => {;
@@ -48,7 +149,6 @@ export function TalentCard(): any ({;
       onViewProfile(talent && talent.id);
     }
   };
-
   const handleRequestHire = (e: React && React.MouseEvent) => {;
     e && e.preventDefault();
     e && e.stopPropagation(),;
@@ -69,9 +169,12 @@ export function TalentCard(): any ({;
   const skills = talent.skills?.slice(0, 5) || [],
 =======
   };
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentCard.tsx
 =======
 
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentCard.tsx
   const handleToggleSave = (e: React && React.MouseEvent) => {;
     e && e.preventDefault();
     e && e.stopPropagation(),;
@@ -79,20 +182,90 @@ export function TalentCard(): any ({;
       onToggleSave(talent && talent.id, !isSaved);
     }
   };
-
   // Extract skills - limit to 5 for display;
   const skills = talent && talent.skills?.slice(0, 5) || [];
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentCard.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentCard.tsx
   return (
+=======
+
+import { Button } from "@/components/ui/button",;
+import { Card } from "@/components/ui/card",;
+import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react",;
+import { Link } from "react-router-dom",;
+import { TalentProfile } from "@/types/talent",;
+;
+export interface TalentCardProps {;
+  talent:TalentProfile,;
+  onViewProfile:(id:string) => void,;
+  onRequestHire:(talent:TalentProfile) => void,;
+  isSaved:boolean,;
+  onToggleSave:(id:string, isSaved:boolean) => void,;
+  isAuthenticated:boolean;
+}
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+;
+export function TalentCard({;
+  talent,;
+  onViewProfile,;
+  onRequestHire,;
+  isSaved,;
+  onToggleSave,;
+  isAuthenticated;
+<<<<<<< HEAD
+} TalentCardProps) {;
+  const handleViewProfile = () => {;
+    if (onViewProfile) {;
+      onViewProfile(talent.id),;    }
+  },;
+;
+  const handleRequestHire = (e:React.MouseEvent) => {;
+=======
+}: TalentCardProps) {;
+  const handleViewProfile = () => {;
+    if (onViewProfile) {;
+      onViewProfile(talent.id);
+    }
+  },;
+  const handleRequestHire = (e: React.MouseEvent) => {;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+    e.preventDefault(),;
+    e.stopPropagation(),;
+    if (onRequestHire) {;
+      onRequestHire(talent);
+    }
+  },;
+<<<<<<< HEAD
+;
+  const handleToggleSave = (e:React.MouseEvent) => {;
+    e.preventDefault(),;
+    e.stopPropagation(),;
+    if (onToggleSave) {;
+      onToggleSave(talent.id, !isSaved),;
+    }
+  },;
+;
+  // Extract skills - limit to 5 for display;
+  const skills = talent.skills?.slice(0, 5) || [],;
+;
+  return (;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     <Card className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer" onClick={handleViewProfile}>;
       <div className="p-6">;
         <div className="flex items-start">;
           {/* Avatar */}
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentCard.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentCard.tsx
           <div className="relative mr-4">;
             <div className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light">;
+<<<<<<< HEAD
               {talent && talent.profile_picture_url ? (;
                 <img
                   src={talent && talent.profile_picture_url} 
@@ -103,7 +276,10 @@ export function TalentCard(): any ({;
                 <div className="w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold">;
                   {talent && talent.full_name?.charAt(0) || "T"}
                 </div>;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentCard.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentCard.tsx
               )}
             </div>;
             {talent && talent.is_verified && (;
@@ -111,19 +287,74 @@ export function TalentCard(): any ({;
                 <CheckCircle2 className="w-5 h-5 text-zion-cyan" />;
               </div>;
             )}
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentCard.tsx
 
           </div>;
 
 
+========
+          </div>;
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentCard.tsx
           {/* Main Info */}
           <div className="flex-1">;
             <div className="flex justify-between items-start">;
               <h3 className="text-lg font-bold text-white">{talent && talent.full_name}</h3>;
+=======
+  const handleToggleSave = (e: React.MouseEvent) => {;
+    e.preventDefault(),;
+    e.stopPropagation(),;
+    if (onToggleSave) {;
+      onToggleSave(talent.id, !isSaved);
+    }
+  },
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+  // Extract skills - limit to 5 for display
+  const skills = talent.skills?.slice(0, 5) || [],
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+  return (
+    <Card className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer" onClick={handleViewProfile}>
+      <div className="p-6">
+        <div className="flex items-start">
+          {/* Avatar */}
+          <div className="relative mr-4">
+            <div className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light">
+              {talent.profile_picture_url ? (
+                <img
+                  src={talent.profile_picture_url}
+                  alt={talent.full_name}
+                  className="w-full h-full object-cover"
+                />
+              ) : (
+                <div className="w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold">
+                  {talent.full_name?.charAt(0) |"T"}
+                </div>
+              )}
+            </div>
+            {talent.is_verified && (
+              <div className="absolute -bottom-1 -right-1 bg-zion-blue p-0.5 rounded-full">
+                <CheckCircle2 className="w-5 h-5 text-zion-cyan" />
+              </div>
+            )}
+          </div>
+          {/* Main Info */}
+          <div className="flex-1">
+            <div className="flex justify-between items-start">
+              <h3 className="text-lg font-bold text-white">{talent.full_name}</h3>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <Button
                 variant="ghost"
                 size="sm"
                 className="p-1 h-auto text-zion-slate-light hover:text-zion-cyan"
 <<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentCard.tsx
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 onClick={handleToggleSave}
               >
                 <Star className={`h-5 w-5 ${isSaved ? "fill-yellow-400 text-yellow-400" : ""}`} />
@@ -131,15 +362,19 @@ export function TalentCard(): any ({;
               </Button>
             </div>
             <p className="text-zion-cyan font-medium">{talent.professional_title}</p>
+<<<<<<< HEAD
 
 =======
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentCard.tsx
                 onClick={handleToggleSave}>;
                 <Star className={`h-5 w-5 ${isSaved ? "fill-yellow-400 text-yellow-400" : ""}`} />;
                 <span className="sr-only">{isSaved ? "Saved" : "Save"}</span>;
               </Button>;
             </div>;
             <p className="text-zion-cyan font-medium">{talent && talent.professional_title}</p>;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentCard.tsx
 
 
 =======
@@ -149,6 +384,8 @@ export function TalentCard(): any ({;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentCard.tsx
             {/* Location & Availability */}
             <div className="mt-2 flex flex-wrap gap-3 text-sm">;
               {talent && talent.location && (;
@@ -161,46 +398,196 @@ export function TalentCard(): any ({;
                 <div className="flex items-center text-zion-slate-light">;
                   <Clock className="h-4 w-4 mr-1" />;
                   <span>{talent && talent.availability_type}</span>;
+=======
+              {talent.profile_picture_url ? (;
+                <img ;
+                  src={talent.profile_picture_url} ;
+                  alt={talent.full_name} ;
+                  className="w-full h-full object-cover" ;
+                />;
+              ) :(;
+                <div className="w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold">;
+                  {talent.full_name?.charAt(0) || "T"}
                 </div>;
               )}
+            </div>;
+            {talent.is_verified && (;
+              <div className="absolute -bottom-1 -right-1 bg-zion-blue p-0.5 rounded-full">;
+                <CheckCircle2 className="w-5 h-5 text-zion-cyan" />;
+              </div>;            )}
+          </div>;
+          ;
+          {/* Main Info */}
+          <div className="flex-1">;
+            <div className="flex justify-between items-start">;
+              <h3 className="text-lg font-bold text-white">{talent.full_name}</h3>;
+              <Button;
+                variant="ghost";
+                size="sm";
+                className="p-1 h-auto text-zion-slate-light hover:text-zion-cyan";
+                onClick={handleToggleSave}
+              >;
+                <Star className={`h-5 w-5 ${isSaved ? "fill-yellow-400 text-yellow-400" :""}`} />;
+                <span className="sr-only">{isSaved ? "Saved" :"Save"}</span>;
+              </Button>;
+            </div>;
+            <p className="text-zion-cyan font-medium">{talent.professional_title}</p>;
+            ;
+            {/* Location & Availability */}
+            <div className="mt-2 flex flex-wrap gap-3 text-sm">;
+              {talent.location && (;
+                <div className="flex items-center text-zion-slate-light">;
+                  <MapPin className="h-4 w-4 mr-1" />;
+                  <span>{talent.location}</span>;
+                </div>;
+              )}
+              {talent.availability_type && (;
+                <div className="flex items-center text-zion-slate-light">;
+                  <Clock className="h-4 w-4 mr-1" />;
+                  <span>{talent.availability_type}</span>;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+                </div>;
+              )}
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentCard.tsx
 
 <<<<<<< HEAD
 =======
 =======
 
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentCard.tsx
             </div>;
           </div>;
         </div>;
-
+<<<<<<< HEAD
         {/* Skills */}
         {skills && skills.length > 0 && (;
           <div className="mt-4">;
             <div className="flex flex-wrap gap-2">;
               {skills && skills.map((skill, index) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <span
                   key={index}
                   className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light">;
                   {skill}
                 </span>;
               ))}
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentCard.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentCard.tsx
               {(talent && talent.skills?.length || 0) > 5 && (;
                 <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">;
                   +{(talent && talent.skills?.length || 0) - 5} more;
                 </span>;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentCard.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentCard.tsx
               )}
+=======
+        ;
+=======
+<<<<<<< HEAD
+=======
+            
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            {/* Location & Availability */}
+            <div className="mt-2 flex flex-wrap gap-3 text-sm">
+              {talent.location && (
+                <div className="flex items-center text-zion-slate-light">
+                  <MapPin className="h-4 w-4 mr-1" />
+                  <span>{talent.location}</span>
+                </div>
+              )}
+              {talent.availability_type && (
+                <div className="flex items-center text-zion-slate-light">
+                  <Clock className="h-4 w-4 mr-1" />
+                  <span>{talent.availability_type}</span>
+                </div>
+              )}
+<<<<<<< HEAD
+            </div>
+          </div>
+        </div>
+        {/* Skills */}
+        {skills.length > 0 && (
+          <div className="mt-4">
+            <div className="flex flex-wrap gap-2">
+              {skills.map((skill, index) => (
+                <span
+                  key={index}
+                  className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light"
+                >
+                  {skill}
+                </span>
+              ))}
+              {(talent.skills?.length |0) > 5 && (
+                <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">
+                  +{(talent.skills?.length |0) - 5} more
+                </span>
+              )}
+            </div>
+          </div>
+        )}
+        {/* Hourly Rate & Actions */}
+        <div className="mt-5 flex items-center justify-between">
+          <div>
+            {talent.hourly_rate ? (
+              <div className="text-white font-bold">
+                ${talent.hourly_rate}
+                <span className="text-zion-slate-light font-normal">/hr</span>
+              </div>
+            ) : (
+              <div className="text-zion-slate-light">Rate not specified</div>
+=======
+            </div>;
+          </div>;
+        </div>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+        {/* Skills */}
+        {skills.length > 0 && (;
+          <div className="mt-4">;
+            <div className="flex flex-wrap gap-2">;
+              {skills.map((skill, index) => (;
+<<<<<<< HEAD
+                <span ;
+                  key={index}
+                  className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light";
+                >;                  {skill}
+=======
+                <span;
+                  key={index}
+                  className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light";
+                >;
+                  {skill}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+                </span>;
+              ))}
+              {(talent.skills?.length || 0) > 5 && (;
+                <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">;
+                  +{(talent.skills?.length || 0) - 5} more;
+<<<<<<< HEAD
+                </span>;              )}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </div>;
           </div>;
         )}
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentCard.tsx
 
 
 
+========
+        ;
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentCard.tsx
         {/* Hourly Rate & Actions */}
         <div className="mt-5 flex items-center justify-between">;
           <div>;
+<<<<<<< HEAD
             {talent && talent.hourly_rate ? (;
               <div className="text-white font-bold">;
                 ${talent && talent.hourly_rate}
@@ -214,28 +601,68 @@ export function TalentCard(): any ({;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             )}
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentCard.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentCard.tsx
           </div>;
-
           <div className="flex items-center gap-2">;
             {isAuthenticated && (;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentCard.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentCard.tsx
               <Button
                 size="sm"
                 variant="secondary"
                 onClick={handleRequestHire}
                 className="bg-zion-purple hover:bg-zion-purple-light text-white">;
+=======
+=======
+                </span>;
+              )}
+            </div>;
+          </div>;
+        )}
+;
+        {/* Hourly Rate & Actions */}
+        <div className="mt-5 flex items-center justify-between">;
+          <div>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+            {talent.hourly_rate ? (;
+              <div className="text-white font-bold">;
+                ${talent.hourly_rate}
+                <span className="text-zion-slate-light font-normal">/hr</span>;
+              </div>;
+<<<<<<< HEAD
+            ) :(;
+              <div className="text-zion-slate-light">Rate not specified</div>;
+            )}
+          </div>;
+          ;
+          <div className="flex items-center gap-2">;
+            {isAuthenticated && (;
+              <Button;
+                size="sm";
+                variant="secondary";
+                onClick={handleRequestHire}
+                className="bg-zion-purple hover:bg-zion-purple-light text-white";
+              >;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 Hire;
               </Button>;
             )}
-            <Button
-              size="sm"
-              variant="ghost"
+            <Button;
+              size="sm";
+              variant="ghost";
               onClick={handleViewProfile}
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentCard.tsx
 
+========
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentCard.tsx
               className="text-zion-cyan hover: text-white hover:bg-zion-blue-light">;
               View <ArrowRight className="ml-1 h-4 w-4" />;
-=======
 import { Button } from '@/components / ui / button';
 import { Card } from '@/components / ui / card';
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from './lucide-react';
@@ -383,12 +810,115 @@ if ( {) {
               className="text - zion - cyan hover: text - white hover:bg - zion - blue - light";
             >;
               View <ArrowRight className="ml - 1 h - 4 w - 4" />;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentCard.tsx
 
+========
+=======
+              className="text-zion-cyan hover:text-white hover:bg-zion-blue-light";
+            >;
+              View <ArrowRight className="ml-1 h-4 w-4" />;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentCard.tsx
             </Button>;
           </div>;
         </div>;
       </div>;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentCard.tsx
 
     </Card>);
 }
 
+========
+<<<<<<< HEAD
+    </Card>);
+}
+=======
+    </Card>;
+  );}
+ export interface TalentCardProps {
+  talent: TalentProfile;
+onViewProfile: (id: string) => void;
+onRequestHire: (talent: TalentProfile) => void;
+isSaved: boolean;
+onToggleSave: (id: string, isSaved: boolean) => void;
+isAuthenticated: boolean 
+}talent, onViewProfile, onRequestHire, isSaved, onToggleSave, isAuthenticated 
+}: TalentCardProps) {
+  const handleViewProfile = () => {
+  if (onViewProfile) {
+  </div>) 
+}</div> </Button> </div> <p className="text-zion-cyan font-medium"> {
+  talent.professional title 
+}</p> {
+  /* Location & Availability */ 
+}<div className="mt-2 flex flex-wrap gap-3 text-sm"> {
+  talent.location && (<div className="flex items-center text-zion-slate-light"> <MapPin className="h-4 w-4 mr-1" /> <span> {
+  talent.location 
+}</span> </div>) 
+}{
+  talent.availability type && (<div className="flex items-center text-zion-slate-light"> <Clock className="h-4 w-4 mr-1" /> <span> {
+  talent.availability type 
+}</span> </div>) 
+}</div> </div> </div> {
+  /* Skills */ 
+}{
+  skills.length > 0 && (<div className="mt-4"> <div className="flex flex-wrap gap-2"> {
+  skills.map ( (skill, index) => (<span key= {
+  index 
+}className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light" > {
+  skill 
+}</span>) ) 
+}{
+  (talent.skills?.length || 0) > 5 && (<span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan"> + {
+  (talent.skills?.length || 0) - 5 
+}more </span>) 
+}</div> </div>) 
+}{
+  /* Hourly Rate & Actions */ 
+}<div className="mt-5 flex items-center justify-between"> <div> {
+  talent.hourly rate ? (<div className="text-white font-bold"> $ {
+  talent.hourly rate 
+}<span className="text-zion-slate-light font-normal">/hr</span> </div>) : (<div className="text-zion-slate-light">Rate not specified</div>) 
+}</div> <Button size="sm" variant="secondary" onClick= {
+  handleRequestHire 
+}className="bg-zion-purple hover:bg-zion-purple-light text-white" > Hire </Button>) 
+}<Button > View <ArrowRight className="ml-1 h-4 w-4" /> </Button> </div> </div> </div> </Card>) 
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentCard.tsx
+=======
+            ) : (;
+              <div className="text-zion-slate-light">Rate not specified</div>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            )}
+          </div>
+          <div className="flex items-center gap-2">
+            {isAuthenticated && (
+              <Button
+                size="sm"
+                variant="secondary"
+                onClick={handleRequestHire}
+                className="bg-zion-purple hover:bg-zion-purple-light text-white"
+              >
+                Hire
+              </Button>
+            )}
+            <Button
+              size="sm"
+              variant="ghost"
+              onClick={handleViewProfile}
+              className="text-zion-cyan hover: text-white hover:bg-zion-blue-light"
+            >
+              View <ArrowRight className="ml-1 h-4 w-4" />
+            </Button>
+          </div>
+        </div>
+      </div>
+    </Card>
+  )
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

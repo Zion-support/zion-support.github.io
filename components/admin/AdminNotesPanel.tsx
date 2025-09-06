@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useMemo, useState } from 'react';
 
   targetType: string; // e.g., 'user' | 'listing'
@@ -6,25 +7,43 @@ import React, { useEffect, useMemo, useState } from 'react';
 =======
 
 
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React, { useEffect, useMemo, useState } from 'react';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export type AdminNotesPanelProps = {;
   targetType: string; // e && e.g., 'user' | 'listing';
   targetId: string; // unique identifier for the target;
 };
-
 type Note = {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   target_type: string; // e.g., 'user' | 'listing';
   target_id: string; // unique identifier for the target;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 }
 ;
 type Note = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   id: string;
   target_type: string;
   target_id: string;
   text: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
   authorId: string;
   createdAt: number;
@@ -33,21 +52,55 @@ export default function AdminNotesPanel({
 
 =======
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export type AdminNotesPanelProps = {
   targetType: string, // e.g., 'user' | 'listing'
   targetId: string,   // unique identifier for the target
 };
+=======
+import React, { useEffect, useMemo, useState } from 'react';
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 =======
 
+=======
+export type AdminNotesPanelProps = {
+=======
+export type AdminNotesPanelProps = {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  targetType: string; // e.g., 'user' | 'listing'
+  targetId: string; // unique identifier for the target
+}
+type Note = {
+  id: string;
+  targetType: string;
+  targetId: string;
+  text: string;
+  authorId: string;
+  createdAt: number;
+}
+export default function AdminNotesPanel({
+<<<<<<< HEAD
+  targetType
+  targetId
+}: AdminNotesPanelProps) {  const [isAdmin, setIsAdmin] = useState(true);}
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   targetType,
   targetId,;
 }: AdminNotesPanelProps) {  const [isAdmin, setIsAdmin] = useState(true);};
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 type Note = {
   id: string
   targetType: string
@@ -55,6 +108,7 @@ type Note = {
   text: string
   authorId: string
   createdAt: number
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -71,14 +125,32 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+}
+export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {
+<<<<<<< HEAD
+};
+export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {
+=======
+=======
+};
+
+export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const [isAdmin, setIsAdmin] = useState(true);
   const [adminId, setAdminId] = useState('admin-demo');
   const [notes, setNotes] = useState<Note[]>([]);
   const [loading, setLoading] = useState(false);
   const [adding, setAdding] = useState(false);
   const [text, setText] = useState('');
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   async function fetchNotes() {;
     try {;
       setLoading(true);
@@ -86,14 +158,20 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
         `/api/admin/notes?targetType=${encodeURIComponent(targetType)}&targetId=${encodeURIComponent(targetId)}`,;
         {;
           headers: { 'X-Admin': isAdmin ? 'true' : 'false' },;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         }
       );
       if (!res && res.ok) {;
         setNotes([]);
         return;
       }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   author_id: string;
   created_at: number;
 }
@@ -144,20 +222,79 @@ if ( {) {
       }
       const data = await res.json ();
       set_notes (data.notes || []);
+<<<<<<< HEAD
 
     } finally {
       set_loading (false);    }
   }
 
+=======
+    } finally {
+      set_loading (false);    }
+  }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       const data = await res && res.json();
       setNotes(data && data.notes || []);
     } finally {;
       setLoading(false);    }
   }
-
   useEffect(() => {;
     if (isAdmin) fetchNotes();  }, [isAdmin, targetType, targetId]);      if (!res && res.ok) {;
+<<<<<<< HEAD
 
+=======
+        setNotes([]);
+        return;
+      }
+      const res = await fetch(`/api/admin/notes?targetType=${encodeURIComponent(targetType)}&targetId=${encodeURIComponent(targetId)}`, {
+        headers: { 'X-Admin': isAdmin ? 'true' : 'false' }}),
+      if (!res.ok) {
+        setNotes([]);
+        return
+  useEffect (() => {
+    if (fetch_notes ()) {
+  $2
+}  }, [is_admin, target_type, target_id]);      // Check condition
+if ( {) {
+  $2
+}
+        set_notes ([]);
+        return;
+      }
+<<<<<<< HEAD
+      const data = await res.json ();
+      set_notes (data.notes || []);
+=======
+      const data = await res.json();
+      setNotes(data.notes |[])
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+    } finally {
+      set_loading (false);
+    }
+  }
+<<<<<<< HEAD
+      const data = await res && res.json();
+      setNotes(data && data.notes || []);
+    } finally {;
+      setLoading(false);
+    }
+  }
+  useEffect(() => {;
+    if (isAdmin) fetchNotes();    if (isAdmin) fetchNotes();
+  }, [isAdmin, targetType, targetId]);
+  async function addNote() {;
+    if (!text && text.trim()) return;
+    setAdding(true);
+    try {;
+      const res = await fetch('/api/admin/notes', {;
+        method: 'POST',;
+        headers: {;
+          'Content-Type': 'application/json',;
+          'X-Admin': isAdmin ? 'true' : 'false',;
+          'X-Admin-User': adminId,;
+        },;
+        body: JSON && JSON.stringify({ targetType, targetId, text }),;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       });
       if (!res && res.ok) {;
         alert('Failed to add note');
@@ -166,23 +303,50 @@ if ( {) {
       setText('');
       await fetchNotes();
 <<<<<<< HEAD
+<<<<<<< HEAD
     } finally {
 
       setAdding(false);    }      if (!res.ok) {
 =======
 
 =======
+=======
+    } finally {;
+      setAdding(false);    }      if (!res && res.ok) {;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         method: 'POST',
         headers: { 'Content-Type': 'application/jsonX-Admin': isAdmin ? 'true' : 'falseX-Admin-User': adminId },
         body: JSON.stringify({ targetType, targetId, text })});
+=======
+  useEffect(() => {
+    if (isAdmin) fetchNotes();    if (isAdmin) fetchNotes()
+  }, [isAdmin, targetType, targetId]);
+  async function addNote() {
+    if (!text.trim()) return;
+    setAdding(true);
+    try {
+      const res = await fetch('/api/admin/notes', {
+        method: 'POST'
+        headers: {
+          'Content-Type': 'application/json'
+          'X-Admin': isAdmin ? 'true' : 'false'
+          'X-Admin-User': adminId
+        }
+        body: JSON.stringify({ targetType, targetId, text })
+      });
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       if (!res.ok) {
+<<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         alert('Failed to add note');
         return;
       }
       setText('');
+<<<<<<< HEAD
 
 <<<<<<< HEAD
       setAdding(false);    }
@@ -210,33 +374,84 @@ if ( {) {
       <div className='rounded border p-3'>
         <div className='flex items-center gap-2 text-sm'>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+      await fetchNotes();
+<<<<<<< HEAD
+    } finally {;
+      setAdding(false);
+    }
+  }
+  if (!isAdmin) {;
+    return (
+            onChange={e => setAdminId(e && e.target.value)}
+            placeholder='Admin ID';
+          />;
+        </div>;
+      </div>;
+      <div className='space-y-2'>;
+=======
+    } finally {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      setAdding(false);    }      if (!res.ok) {
+        alert('Failed to add note');
+        return
+      }
+      setText('');
+
+<<<<<<< HEAD
+      await fetchNotes()
+    } finally {
+      setAdding(false)
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+      setAdding(false);    }
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    }
+  }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  if (!isAdmin) {
+    return (
+      <div className='rounded border p-3'>
+        <div className='flex items-center gap-2 text-sm'>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <input
             id='isAdminToggle'
             type='checkbox'
             checked={isAdmin}
-            onChange={e => setIsAdmin(e && e.target.checked)}
-          />;
-          <label htmlFor='isAdminToggle'>Admin</label>;
-        <div className='text-xs opacity-60 mt-2'>Admin-only notes hidden.</div>;
-      </div>;
+            onChange={e => setIsAdmin(e.target.checked)}
+          />
+          <label htmlFor='isAdminToggle'>Admin</label>
+        <div className='text-xs opacity-60 mt-2'>Admin-only notes hidden.</div>
+      </div>
     );
   }
   return (
-    <div className='rounded border p-4 space-y-3'>;
-      <div className='flex items-center justify-between'>;
-        <h3 className='font-medium'>Admin Notes</h3>;
-        <div className='flex items-center gap-3 text-sm'>;
-          <label className='inline-flex items-center gap-2'>;
+    <div className='rounded border p-4 space-y-3'>
+      <div className='flex items-center justify-between'>
+        <h3 className='font-medium'>Admin Notes</h3>
+        <div className='flex items-center gap-3 text-sm'>
+          <label className='inline-flex items-center gap-2'>
             <input
               type='checkbox'
               checked={isAdmin}
-              onChange={e => setIsAdmin(e && e.target.checked)}
-            />;
-            <span>Admin</span>;
-          </label>;
+              onChange={e => setIsAdmin(e.target.checked)}
+            />
+            <span>Admin</span>
+          </label>
           <input
             className='border rounded px-2 py-1'
             value={adminId}
+<<<<<<< HEAD
 
             onChange={e => setAdminId(e && e.target.value)}
             placeholder='Admin ID';
@@ -246,14 +461,25 @@ if ( {) {
 
       <div className='space-y-2'>;
 
+=======
+            onChange={e => setAdminId(e.target.value)}
+            placeholder='Admin ID'
+          />
+        </div>
+      </div>
+      <div className='space-y-2'>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <textarea
           className='w-full border rounded-md px-3 py-2'
           rows={3}
           placeholder='Write a private note (abuse, spam, special support)'
           value={text}
+<<<<<<< HEAD
           onChange={e => setText(e && e.target.value)}
         />;
         <button
+<<<<<<< HEAD
 
           disabled={!text && text.trim() || adding}
 
@@ -262,9 +488,52 @@ if ( {) {
           {adding ? 'Adding…' : 'Add Note'}
 
 
+=======
+          disabled={!text && text.trim() || adding}
+          onClick={addNote}
+          className='px-3 py-2 rounded-md bg-gray-900 text-white disabled:opacity-50'>;
+          {adding ? 'Adding…' : 'Add Note'}
+      <div className="rounded border p-3">
+        <div className="flex items-center gap-2 text-sm">
+          <input id="isAdminToggle" type="checkbox" checked={isAdmin} onChange={(e) => setIsAdmin(e.target.checked)} />
+          <label htmlFor="isAdminToggle" htmlFor="input-Admin">Admin</label>
+        </div>
+        <div className="text-xs opacity-60 mt-2">Admin-only notes hidden.</div>
+      </div>
+    )
+  }
+return (
+    <div className="rounded border p-4 space-y-3">
+      <div className="flex items-center justify-between">
+        <h3 className="font-medium">Admin Notes</h3>
+        <div className="flex items-center gap-3 text-sm">
+          <label className="inline-flex items-center gap-2">
+            <input type="checkbox" checked={isAdmin} onChange={(e) => setIsAdmin(e.target.checked)} />
+            <span>Admin</span>
+          </label>
+          <input className="border rounded px-2 py-1" value={adminId} onChange={(e) => setAdminId(e.target.value)} placeholder="Admin ID" />
+        </div>
+      </div>
+      <div className="space-y-2">
+        <textarea className="w-full border rounded-md px-3 py-2" rows={3} placeholder="Write a private note (abuse, spam, special support)" value={text} onChange={(e) => setText(e.target.value)} />
+        <button disabled={!text.trim() || adding} onClick={addNote} className="px-3 py-2 rounded-md bg-gray-900 text-white disabled:opacity-50">{adding ? 'Adding…' : 'Add Note'}</button>
+      </div>
+      <div className="border-t pt-3">
+        <div className="text-sm opacity-70 mb-2">Notes are private, time-stamped, and include author ID.</div>
+        {loading ? (
+          <div className="text-sm">Loading…</div>
+        ) : notes.length === 0 ? (
+          <div className="text-sm opacity-70">No notes yet.</div>
+        ) : (
+          <ul className="space-y-2">
+            {notes.map((n) => (
+              <li key={n.id} className="rounded border p-2 text-sm">
+                <div className="opacity-60 text-xs mb-1">{new Date(n.createdAt).toLocaleString()} • {n.authorId}</div>
+                <div>{n.text}</div>
+              </li>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         </button>;
       </div>;
-
       <div className='border-t pt-3'>;
         <div className='text-sm opacity-70 mb-2'>;
           Notes are private, time-stamped, and include author ID.;
@@ -284,6 +553,7 @@ if ( {) {
               <li key={n && n.id} className="rounded border p-2 text-sm">;
                 <div className="opacity-60 text-xs mb-1">{new Date(n && n.createdAt).toLocaleString()} • {n && n.authorId}</div>;
               </li>;
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -303,6 +573,11 @@ if ( {) {
 
 =======
 
+=======
+            ))}
+          </ul>;
+        )}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       </div>;
     </div>;
   );
@@ -314,12 +589,8 @@ if ( {) {
 =======
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   useEffect (() => {
     if (fetch_notes ()) {
   $2
@@ -443,6 +714,100 @@ if ( {) {
           </ul>)}
       </div>;
     </div>);
+        </div>
+        <div className=&quot;text-xs opacity-60 mt-2&quot;>Admin-only notes hidden.</div>
+      </div>
+    )
+  }
+
+  return (
+    <div className=&quot;rounded border p-4 space-y-3&quot;>
+      <div className=&quot;flex items-center justify-between&quot;>
+        <h3 className=&quot;font-medium&quot;>Admin Notes</h3>
+        <div className=&quot;flex items-center gap-3 text-sm&quot;>
+          <label className=&quot;inline-flex items-center gap-2&quot;>
+            <input type=&quot;checkbox&quot; checked={isAdmin} onChange={(e) => setIsAdmin(e.target.checked)} />
+            <span>Admin</span>
+          </label>
+          <input className=&quot;border rounded px-2 py-1&quot; value={adminId} onChange={(e) => setAdminId(e.target.value)} placeholder=&quot;Admin ID&quot; />
+        </div>
+      </div>
+
+      <div className=&quot;space-y-2&quot;>
+        <textarea className=&quot;w-full border rounded-md px-3 py-2&quot; rows={3} placeholder=&quot;Write a private note (abuse, spam, special support)&quot; value={text} onChange={(e) => setText(e.target.value)} />
+        <button disabled={!text.trim() || adding} onClick={addNote} className=&quot;px-3 py-2 rounded-md bg-gray-900 text-white disabled:opacity-50&quot;>{adding ? 'Adding…' : 'Add Note'}</button>
+      </div>
+
+      <div className=&quot;border-t pt-3&quot;>
+        <div className=&quot;text-sm opacity-70 mb-2&quot;>Notes are private, time-stamped, and include author ID.</div>
+        {loading ? (
+          <div className=&quot;text-sm&quot;>Loading…</div>
+        ) : notes.length === 0 ? (
+          <div className=&quot;text-sm opacity-70&quot;>No notes yet.</div>
+        ) : (
+          <ul className=&quot;space-y-2&quot;>
+            {notes.map((n) => (
+              <li key={n.id} className=&quot;rounded border p-2 text-sm&quot;>
+                <div className=&quot;opacity-60 text-xs mb-1&quot;>{new Date(n.createdAt).toLocaleString()} • {n.authorId}</div>
+                <div>{n.text}</div>
+=======
+          onChange={e => setText(e.target.value)}
+        />
+        <button
+          disabled={!text.trim() |adding}
+          onClick={addNote}
+          className='px-3 py-2 rounded-md bg-gray-900 text-white disabled:opacity-50'
+        >
+          {adding ? 'Adding…' : 'Add Note'}
+        </button>
+      </div>
+      <div className='border-t pt-3'>
+        <div className='text-sm opacity-70 mb-2'>
+          Notes are private, time-stamped, and include author ID.
+        </div>
+        {loading ? (
+          <div className='text-sm'>Loading…</div>
+        ) : notes.length === 0 ? (
+          <div className='text-sm opacity-70'>No notes yet.</div>
+        ) : (
+          <ul className='space-y-2'>
+            {notes.map(n => (
+              <li key={n.id} className='rounded border p-2 text-sm'>
+                <div className='opacity-60 text-xs mb-1'>
+                  {new Date(n.createdAt).toLocaleString()} • {n.authorId}
+                </div>                <div>{n.text}</div>          <ul className="space-y-2">
+            {notes.map((n) => (
+              <li key={n.id} className="rounded border p-2 text-sm">
+                <div className="opacity-60 text-xs mb-1">{new Date(n.createdAt).toLocaleString()} • {n.authorId}</div>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+    </div>
+<<<<<<< HEAD
+  )
+
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+<<<<<<< HEAD
+);
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
+=======
+}
+=======
+  );
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

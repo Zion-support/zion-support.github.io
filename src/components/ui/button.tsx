@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from './react';
 import Link from './next / link';
@@ -93,9 +94,49 @@ const Button: React.FC<ButtonProps> = ({;
 
   if (href) {;
 
+=======
+import React from "react"
+import Link from "next/link"
+interface ButtonProps {
+  children: React.ReactNode, href?: string
+  onClick?: () => void
+  type?: "button" | "submit" | "reset"
+  variant?: "primary" | "secondary" | "outline"
+  size?: "sm" | "md" | "lg"
+  className?: string
+  disabled?: boolean
+  style?: React.CSSProperties
+}
+const Button: React.FC<ButtonProps> = ({
+  children
+  href
+  onClick
+  type = "button"
+  variant = "primary"
+  size = "md"
+  className = ""
+  disabled = false
+  style
+}) => {
+  const baseClasses = "px-4 py-2 rounded-md font-medium transition-colors duration-200"
+  const sizeClasses = {
+    sm: "px-3 py-1.5 text-sm"
+    md: "px-4 py-2 text-base"
+    lg: "px-6 py-3 text-lg"
+  }
+  const variantClasses = {
+    primary: "bg-blue-600 text-white hover:bg-blue-700 disabled:bg-gray-400"
+    secondary: "bg-gray-600 text-white hover:bg-gray-700 disabled:bg-gray-400"
+    outline: "border border-gray-300 text-gray-700 hover:bg-gray-50 disabled:bg-gray-100"
+  }
+  const classes = `${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${className}`
+  const content = <>{children}</>
+  if (href) {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     return (
-      <Link href={href} className={classes} style={style}>;
+      <Link href={href} className={classes} style={style}>
         {content}
+<<<<<<< HEAD
 
       </Link>;
     );
@@ -123,19 +164,31 @@ if ( {) {
         {content}
       </Link>);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+      </Link>
+    )
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }
   return (
-    <button;
+    <button
       type={type}
       className={classes}
-      on_click={on_click}
+      onClick={onClick}
       disabled={disabled}
+<<<<<<< HEAD
 
     </button>;
   );
+=======
+      style={style}
+    >
+      {content}
+    </button>
+  )
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 };
-
 export { Button };
+<<<<<<< HEAD
 export default Button;
 
 =======
@@ -190,3 +243,6 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 
 Button.displayName = 'Button';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-64f2
+=======
+export default Button;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

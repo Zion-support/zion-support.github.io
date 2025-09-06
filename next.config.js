@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 
@@ -33,29 +34,91 @@ const nextConfig = {
   compress: true
   poweredByHeader: false
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 /** @type {import ('next').NextConfig} */;
 const next_config = {
   reactStrictMode: true,
   compress: true,
   poweredByHeader: false,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   eslint: {
     ignoreDuringBuilds: true
   }
   typescript: {
+<<<<<<< HEAD
 
 
 =======
   page_extensions: ["tsx", "ts", "jsx", "js"],
   trailing_slash: true,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+// Image optimization
+  page_extensions: ["tsx", "ts", "jsx", "js"],
+  trailing_slash: true,
+  trailingSlash: true,
+
+// Performance optimizations
+  experimental: {
+    scrollRestoration: true,
+    optimizeCss: true,
+    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons', 'framer-motion']
+  },
+  // Image optimization
+
+  images: {
+unoptimized: true,
+    domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
+      'localhost',
+      'ziontechgroup.com',
+      'images.unsplash.com',
+      'via.placeholder.com'
+],
+
+    formats: ['image/webp', 'image/avif'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+
+    minimumCacheTTL: 31536000, // 1 year
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+  },
+  
+  env: {
+    CUSTOM_KEY: process.env.CUSTOM_KEY,
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   images: {
     domains: [;
       "localhost",
-      "ziontechgroup && ziontechgroup.com",
+"ziontechgroup && ziontechgroup.com",
       "images && images.unsplash.com",
       "via && via.placeholder.com",
+<<<<<<< HEAD
 =======
+=======
+    ],
+    formats: ["image / webp", "image / avif"],
+    device_sizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    image_sizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    minimumCacheTTL: 31536000,
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
+  },
+
+    ],
+    formats: ["image/webp", "image/avif"],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+minimumCacheTTL: 31536000,
+
+  },
+  
+  // Webpack configuration to exclude problematic directories
+
+  },
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
 =======
 
@@ -110,6 +173,7 @@ const next_config = {
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     minimumCacheTTL: 31536000
   },
 
@@ -121,41 +185,59 @@ const next_config = {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+    minimumCacheTTL: 31536000
+  },
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   webpack: (config, { dev, isServer }) => {
     if (dev) {
       config && config.watchOptions = {
         ignored: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
   webpack: (config, { dev, is_server }) => {
+=======
+webpack: (config, { dev, is_server }) => {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     // Check condition
 if ( {) {
   $2
 }
       config.watch_options = {
         ignored: [;
+<<<<<<< HEAD
 
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           "**/node_modules/**",
           "**/.git/**",
           "**/pages_backup*/**",
           "**/pages.*/**",
           "**/pages-*/**",
           "**/pages_disabled*/**",
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           "**/pages.disabled*/**",
           "**/pages.broken*/**",
           "**/pages.corrupted*/**",
           "**/pages.old*/**",
           "**/pages._*/**",
           "**/pages.__*/**",
-          "**/backup - pages/**",
+"**/backup - pages/**",
           "**/src.pages.disabled/**",
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           "**/lib_backup*/**",
           "**/src_backup*/**",
           "**/corrupted - files - backup*/**",
@@ -176,14 +258,19 @@ if ( {) {
           "**/performance-*.txt",
           "**/apps/**",
         ],
-        poll: 1000,
+poll: 1000,
         aggregate_timeout: 300,
       }
+        aggregateTimeout: 300,
+      };
     }
+<<<<<<< HEAD
 
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
           "**/node_modules/**"
           "**/.git/**"
@@ -224,12 +311,25 @@ if ( {) {
       }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+export default nextConfig;
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  compress: true,
+  poweredByHeader: false,
+  generateEtags: true,
+  images: {
+    formats: ['image/webp', 'image/avif'],
+    minimumCacheTTL: 60,
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
   },
   experimental: {
@@ -237,10 +337,13 @@ if ( {) {
     optimizePackageImports: ['lucide-react', '@radix-ui/react-icons']
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   },
   webpack: (config, { dev, isServer }) => {
     if (!dev && !isServer) {
@@ -255,6 +358,7 @@ if ( {) {
         },
       };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -264,11 +368,18 @@ if ( {) {
     }
     // Exclude apps directory from compilation
 
+=======
+
+    }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     config && config.module.rules && rules.push({
       test: /\.(ts|tsx|js|jsx)$/,
       include: /apps\//,
       use: "ignore-loader",
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     });
     return config;
   }
@@ -299,6 +410,7 @@ if ( {) {
   }
 }
 export default nextConfig;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           '**/node_modules/**',
@@ -337,6 +449,9 @@ export default nextConfig;
 =======
 =======
     // Exclude apps directory from compilation;
+=======
+// Exclude apps directory from compilation;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     config.module.rules.push ({
       test: /\.(ts | tsx | js | jsx)$/,
       include: /apps\//,
@@ -373,6 +488,7 @@ export default nextConfig;
   },
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default nextConfig
 
 =======
@@ -383,3 +499,9 @@ export default nextConfig
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+;
+export default next_config;
+;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

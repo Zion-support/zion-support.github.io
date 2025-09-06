@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
 =======
@@ -20,6 +24,7 @@ export default function Blockchain({ }: BlockchainProps) {
 
 
 export default function Blockchain({ }: BlockchainProps) {
+<<<<<<< HEAD
 =======
 
 class ErrorBoundary extends React.Component {
@@ -53,11 +58,13 @@ interface BlockchainProps {;
 export default function Blockchain(): any ({ }: BlockchainProps) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages.disabled_full/services/blockchain.tsx
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
-    <div>;
-      <h1>Blockchain</h1>;
-      <p>This component is currently under development.</p>;
-    </div>;
+    <div>
+      <h1>Blockchain</h1>
+      <p>This component is currently under development.</p>
+    </div>
   );
 
 <<<<<<< HEAD

@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/ChatMessage.tsx
 
 
 <<<<<<< HEAD
@@ -10,6 +12,33 @@ import { cn } from "@/lib/utils",
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from "react";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {cn} from "@/lib/utils";
+import {format} from "date-fns";
+import {useTheme} from "@/hooks/useTheme";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React from "react",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { cn } from "@/lib/utils",
+<<<<<<< HEAD
+import { format } from "date-fns";
+import { useTheme } from "@/hooks/useTheme";
+=======
+import { format } from "date-fns",
+import { useTheme } from "@/hooks/useTheme",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 interface ChatMessageProps {
 
   message: string
@@ -17,6 +46,7 @@ interface ChatMessageProps {
 
   timestamp: Date
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
@@ -26,6 +56,24 @@ export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {;
+  const { theme } = useTheme();
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
+<<<<<<< HEAD
+  const { theme } = useTheme();
+=======
+  const { theme } = useTheme(),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
 
     <div className={cn("flex items-start gap-3", isUser && "flex-row-reverse")}>
@@ -38,6 +86,9 @@ export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
         ) : (
           <>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <AvatarImage
               src="https://placehold.co/40x40?text=AI"
               alt="Zion Support"
@@ -47,8 +98,12 @@ export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
         )}
       </Avatar>
       <div className={cn(
+<<<<<<< HEAD
 =======
 =======
+========
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/ChatMessage.tsx
 import React from "react";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {cn} from "@/lib/utils";
@@ -59,28 +114,56 @@ interface ChatMessageProps {;
   isUser: boolean,;
   timestamp: Date;
 }
-
 export function ChatMessage(): any ({ message, isUser, timestamp }: ChatMessageProps) {;
   const { theme } = useTheme();
-
   return (
+=======
+
+import React from "react",;
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
+import { cn } from "@/lib/utils",;
+import { format } from "date-fns",;
+import { useTheme } from "@/hooks/useTheme",;
+;
+interface ChatMessageProps {;
+  message:string,;
+  isUser:boolean,;
+  timestamp:Date;
+}
+;
+export function ChatMessage({ message, isUser, timestamp } ChatMessageProps) {;
+  const { theme } = useTheme(),;
+  ;
+  return (;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     <div className={cn("flex items-start gap-3", isUser && "flex-row-reverse")}>;
       <Avatar className="h-8 w-8">;
         {isUser ? (;
           <>;
+<<<<<<< HEAD
             <AvatarImage src="https://i && i.pravatar.cc/40?img=1" alt="User" />;
             <AvatarFallback>U</AvatarFallback>;
           </>;
         ) : (;
           <>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <AvatarImage
               src="https://placehold && placehold.co/40x40?text=AI"
               alt="Zion Support"
+=======
+            <AvatarImage src="https://i.pravatar.cc/40?img=1" alt="User" />;
+            <AvatarFallback>U</AvatarFallback>;
+          </>;
+        ) :(;
+          <>;
+            <AvatarImage;
+              src="https://placehold.co/40x40?text=AI";
+              alt="Zion Support";
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             />;
             <AvatarFallback className="bg-zion-purple text-white">Z</AvatarFallback>;
           </>;
         )}
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/ChatMessage.tsx
 
 
         "max-w-[80%] rounded-lg px-4 py-2 text-sm",
@@ -89,17 +172,31 @@ export function ChatMessage(): any ({ message, isUser, timestamp }: ChatMessageP
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+<<<<<<< HEAD
+        "max-w-[80%] rounded-lg px-4 py-2 text-sm";
+        isUser
+          ? "bg-zion-purple text-white"
+=======
+        "max-w-[80%] rounded-lg px-4 py-2 text-sm",
+        isUser 
+          ? "bg-zion-purple text-white" 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           : theme === "dark"
             ? "bg-zion-blue-light text-white"
             : "bg-gray-100 text-gray-800"
       )}>
         <div dangerouslySetInnerHTML={{ __html: formatMessageWithLinks(message) }} />
         <div className={cn(
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/ChatMessage.tsx
       </Avatar>;
-
+<<<<<<< HEAD
       <divclassName={cn(
         "max-w-[80%] rounded-lg px-4 py-2 text-sm"
         isUser 
@@ -113,6 +210,7 @@ export function ChatMessage(): any ({ message, isUser, timestamp }: ChatMessageP
           "text-xs mt-1"
           isUser 
             ? "text-white/70" 
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/ChatMessage.tsx
 
 =======
 
@@ -122,12 +220,50 @@ export function ChatMessage(): any ({ message, isUser, timestamp }: ChatMessageP
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/ChatMessage.tsx
             : theme === "dark"
               ? "text-gray-300"
               : "text-gray-500"
+=======
+      ;
+      <div className={cn(;
+        "max-w-[80%] rounded-lg px-4 py-2 text-sm",;
+        isUser ;
+          ? "bg-zion-purple text-white" ;
+          :theme === "dark";
+            ? "bg-zion-blue-light text-white";
+            :"bg-gray-100 text-gray-800";
+      )}>;
+        <div dangerouslySetInnerHTML={{ __html:formatMessageWithLinks(message) }} />;
+        <div className={cn(;
+          "text-xs mt-1",;
+          isUser ;
+            ? "text-white/70" ;
+            :theme === "dark";
+              ? "text-gray-300";
+              :"text-gray-500";
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         )}>;
           {format(timestamp, "h:mm a")}
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/ChatMessage.tsx
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          "text-xs mt-1";
+          isUser
+            ? "text-white/70"
+=======
+          "text-xs mt-1",
+          isUser 
+            ? "text-white/70" 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+            : theme === "dark"
+              ? "text-gray-300"
+              : "text-gray-500"
+        )}>
+          {format(timestamp, "h:mm a")}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         </div>
       </div>
     </div>
@@ -140,6 +276,7 @@ function formatMessageWithLinks(message: string): string {
   let formattedMessage = message.replace(
     urlRegex
     '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>'
+<<<<<<< HEAD
 =======
         </div>;
       </div>;
@@ -153,6 +290,14 @@ function formatMessageWithLinks(message: string): string {
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+<<<<<<< HEAD
+  );
+=======
+  ),
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   // Replace help center references like [Getting Started]
   const helpCenterRegex = /\[([^\]]+)\]/g
   formattedMessage = formattedMessage.replace(
@@ -161,6 +306,7 @@ function formatMessageWithLinks(message: string): string {
   )
 
   return formattedMessage
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -170,6 +316,14 @@ function formatMessageWithLinks(message: string): string {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React from "react",;
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
 import { cn } from "@/lib/utils",;
@@ -225,7 +379,16 @@ export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {;
   );
 }
 ;
+<<<<<<< HEAD
 
+========
+        </div>;
+      </div>;
+    </div>;
+<<<<<<< HEAD
+  );
+}
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/ChatMessage.tsx
 // Function to convert URLs and help links to actual clickable links;
 function formatMessageWithLinks(): any (message: string): string {;
   // Replace URLs;
@@ -234,14 +397,12 @@ function formatMessageWithLinks(): any (message: string): string {;
     urlRegex, ;
     '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>';
   );
-
   // Replace help center references like [Getting Started];
   const helpCenterRegex = /\[([^\]]+)\]/g,;
   formattedMessage = formattedMessage && formattedMessage.replace(;
     helpCenterRegex, ;
     '<a href="/help/$1" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>';
   ),;
-
   return formattedMessage;
 
 <<<<<<< HEAD
@@ -252,8 +413,6 @@ function formatMessageWithLinks(): any (message: string): string {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React from './react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
 import { cn } from '@/lib / utils';
@@ -324,5 +483,70 @@ function formatMessageWithLinks (message: string): string {
     '<a href="/help/$1" class="text - zion - cyan underline hover: text - zion - cyan / 80">$1</a>'),
   return formatted_message;
 }
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/ChatMessage.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+=======
+  ),;
+}
+;
+// Function to convert URLs and help links to actual clickable links;
+function formatMessageWithLinks(message:string):string {;
+  // Replace URLs;
+  const urlRegex = /(https?:\/\/[^\s]+)/g,;
+  let formattedMessage = message.replace(;
+    urlRegex, ;
+    '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-zion-cyan underline hover:text-zion-cyan/80">$1</a>';
+  ),;
+  ;
+  // Replace help center references like [Getting Started];
+  const helpCenterRegex = /\[([^\]]+)\]/g,;
+  formattedMessage = formattedMessage.replace(;
+    helpCenterRegex, ;
+    '<a href="/help/$1" class="text-zion-cyan underline hover:text-zion-cyan/80">$1</a>';
+  ),;
+  ;
+  return formattedMessage;
+} interface ChatMessageProps {
+  message: string;
+isUser: boolean;
+timestamp: Date 
+}export function ChatMessage ({
+  message, isUser, timestamp 
+}: ChatMessageProps) {
+  const {
+  theme 
+}= useTheme ();
+return (<div className= {
+  cn ("flex items-start gap-3", isUser && "flex-row-reverse") 
+}> <Avatar className="h-8 w-8" > {
+  isUser ? (https://i.pravatar.cc/40?img=1"alt=" User"/> <AvatarFallback>U</AvatarFallback> </>) : (<> <AvatarImage src=" https://placehold.co/40x40?text=AI"alt=" Zion Support"/> <AvatarFallback className=" bg-zion-purple text-white" >Z</AvatarFallback> </>) 
+}</Avatar> </div> </div> </div>) 
+}//Function to convert URLs and help links to actual clickable links);
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/ChatMessage.tsx
+=======
+// Function to convert URLs and help links to actual clickable links;
+function formatMessageWithLinks(message: string): string {;
+  // Replace URLs;
+  const urlRegex = /(https?:\/\/[^\s]+)/g,;
+  let formattedMessage = message.replace(;
+    urlRegex,;
+    '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>';
+  ),;
+  // Replace help center references like [Getting Started];
+  const helpCenterRegex = /\[([^\]]+)\]/g,;
+  formattedMessage = formattedMessage.replace(;
+    helpCenterRegex;
+    '<a href="/help/$1" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>';
+  );
+  return formattedMessage;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

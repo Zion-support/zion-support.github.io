@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -46,18 +47,80 @@ export default function AISEOOptimizationPage() {
 
 =======
 
+=======
+<<<<<<< HEAD
+const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-seo-optimization'));
+  if (!service) return null;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import React from 'react';
+import Head from 'next/head';
+import { Phone, Mail, MapPin, Check, ArrowRight, Star, Rocket } from 'lucide-react';
+import Layout from '../components/layout/Layout';
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+export default function AISEOOptimizationPage() {
+  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-seo-optimization'))
+  if (!service) return null
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+=======
+import React from 'react',;
+import Head from 'next/head',;
+import { Phone, Mail, MapPin, Check, ArrowRight, Star, Rocket } from 'lucide-react',;
+import Layout from '../components/layout/Layout',;
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import React from 'react';
+import Layout from '../components/layout/Layout';
+export default function AISEOOptimization() {
+  return (
+    <Layout title="AI SEO Optimization - Zion Tech Group">
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-6 py-20">
+          <h1 className="text-4xl font-bold text-center mb-8">
+            AI SEO Optimization
+          </h1>
+          <p className="text-center text-gray-600">
+            Optimize your website's SEO with AI-powered tools and strategies.
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
+import React from 'react'
+import Head from 'next/head'
+import { Phone, Mail, MapPin, Check, ArrowRight, Star, Rocket } from 'lucide-react',
+import Layout from '../components/layout/Layout'
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services'
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function AISEOOptimizationPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-seo-optimization'))
   if (!service) return null,
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
     <Layout>
       <Head>
         <title>{service.name} - Zion Tech Group</title>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<meta name="description" content={service.description} />
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <meta name="description" content={service.description} />
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <link rel="canonical" href="https://ziontechgroup.com/ai-seo-optimization" />
       </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -73,10 +136,16 @@ export default function AISEOOptimizationPage() {
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {service.features.slice(0, 12).map((feat, i) => (
                   <li key={i} className="flex items-start space-x-3 text-slate-200 w-5 h-5 text-emerald-400 mt-0.5"><Check /><span>{feat}</span></li>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
+=======
+<<<<<<< HEAD
+                ))}
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -90,10 +159,18 @@ export default function AISEOOptimizationPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </ul>
             </div>
             <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6 h-fit">
@@ -104,6 +181,7 @@ export default function AISEOOptimizationPage() {
                 </div>
                 <div className="flex items-center text-yellow-400 w-4 h-4 mr-1"><Star />{service.rating.toFixed(1)}</div>
               </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -113,6 +191,17 @@ export default function AISEOOptimizationPage() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+              <a href="/contact" className="w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200 w-5 h-5 ml-2">Boost Rankings<ArrowRight /></a>
+=======
+              <a href="/contact" className="w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200 w-5 h-5 ml-2">Boost Rankings<ArrowRight /></Link>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <div className="mt-6 space-y-3 text-sm text-slate-300">
                 <div className="flex items-center space-x-2 w-4 h-4 text-emerald-400"><Phone /><span>{service.contactInfo.mobile}</span></div>
                 <div className="flex items-center space-x-2 w-4 h-4 text-purple-400"><Mail /><span>{service.contactInfo.email}</span></div>
@@ -123,7 +212,18 @@ export default function AISEOOptimizationPage() {
         </div>
       </div>
     </Layout>
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  );
+};
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  )
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
   )
   } catch (error) {
@@ -134,6 +234,7 @@ export default function AISEOOptimizationPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -144,6 +245,8 @@ export default function AISEOOptimizationPage() {
 }
 
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React from 'react',
 import Head from 'next / head',
 import { Phone, Mail, MapPin, Check, ArrowRight, Star, Rocket } from 'lucide-react',
@@ -200,6 +303,7 @@ if (return null, ) {
       </div>;
     </Layout>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
@@ -207,3 +311,25 @@ if (return null, ) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

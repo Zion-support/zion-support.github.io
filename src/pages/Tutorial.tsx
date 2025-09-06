@@ -1,10 +1,27 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 import ReactMarkdown from "react-markdown";
 import type { Tutorial as TutorialType } from "@/types/tutorial";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { TUTORIALS } from '@/data/tutorials'
+import { SEO } from '@/components/SEO'
+import { Button } from '@/components/ui/button'
+import { ArrowLeft } from 'lucide-react'
+<<<<<<< HEAD
+import ReactMarkdown from "react-markdown";
+import type { Tutorial as TutorialType } from "@/types/tutorial";
+=======
+import ReactMarkdown from 'react-markdown'
+import type { Tutorial as TutorialType } from '@/types/tutorial'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import Link from "next/link",
 import { useRouter } from "next/router",
 import { TUTORIALS } from "@/data/tutorials",
@@ -14,8 +31,12 @@ import { ArrowLeft } from 'lucide-react'
 import ReactMarkdown from "react-markdown",
 import type { Tutorial as TutorialType } from "@/types/tutorial",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 interface TutorialPageProps {
   tutorial?: TutorialType
 export default function Tutorial({
@@ -24,8 +45,22 @@ export default function Tutorial({
   const router = useRouter()
   const slug = router.query.slug as string | undefined
   const tutorial = initialTutorial |TUTORIALS.find(t => t.slug === slug);interface TutorialPageProps {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 interface TutorialPageProps {
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+interface TutorialPageProps {
+  tutorial?: TutorialType
+export default function Tutorial({
+  tutorial: initialTutorial,;
+}: TutorialPageProps) {;
+  const router = useRouter();
+  const slug = router.query.slug as string | undefined;
+  const tutorial = initialTutorial || TUTORIALS.find(t => t.slug === slug);interface TutorialPageProps {
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   tutorial?: TutorialType
 export default function Tutorial({
   tutorial: initialTutorial,;
@@ -45,6 +80,7 @@ export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProp
   const router = useRouter()
   const slug = router.query.slug as string | undefined
   const tutorial = initialTutorial |TUTORIALS.find((t,) => t.slug === slug)
+<<<<<<< HEAD
 >>>>>>> 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -147,13 +183,23 @@ export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProp
       </div>;
     );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+  if (!tutorial) {
+    return (
+      <div className="min-h-screen bg-zion-blue flex items-center justify-center text-white">
+        Tutorial not found.
+      </div>
+    )
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }
   return (
-    <>;
-      <SEO title={tutorial && tutorial.title} description={tutorial && tutorial.excerpt} />;
-      <div className='min-h-screen bg-zion-blue pt-12 pb-20 px-4'>;
-        <div className='container mx-auto max-w-3xl'>;
+    <>
+      <SEO title={tutorial.title} description={tutorial.excerpt} />
+      <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
+        <div className="container mx-auto max-w-3xl">
           <Button
+<<<<<<< HEAD
             variant='outline'
             className='mb-8 border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'
             asChild>;
@@ -177,13 +223,96 @@ export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProp
             </p>;
           )}
 
+=======
+            variant="outline"
+            className="mb-8 border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
+            asChild
+          >
+            <Link href="/tutorials">
+              <ArrowLeft className="mr-2 h-4 w-4" /> Back to Tutorials
+            </Link>
+          </Button>
+          <h1 className="text-3xl font-bold text-white mb-4">{tutorial.title}</h1>
+          <p className="text-zion-slate-light mb-8">{tutorial.excerpt}</p>
+          <div className="prose prose-invert">
+            <ReactMarkdown>{tutorial.content}</ReactMarkdown>
+          </div>
+          {tutorial.author && (
+<<<<<<< HEAD
+            <p className='mt-8 text-white font-semibold'>
+              —{' '}
+              {typeof tutorial.author === 'string'
+                ? tutorial.author
+                : tutorial.author.name}
+            </p>
+          )}
+        </div>
+      </div>
+    </>
+  );
+};
+}
+<<<<<<< HEAD
+=======
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+            <p className="mt-8 text-white font-semibold">
+import Link from "next/link",;
+import { useRouter } from "next/router",;
+import { TUTORIALS } from "@/data/tutorials",;
+import { SEO } from "@/components/SEO",;
+import { Button } from "@/components/ui/button",;
+import { ArrowLeft } from 'lucide-react';
+import ReactMarkdown from "react-markdown",;
+import type { Tutorial as TutorialType } from "@/types/tutorial",;
+interface TutorialPageProps {;
+  tutorial?: TutorialType;
+}
+export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProps) {;
+  const router = useRouter(),;
+  const slug = router.query.slug as string | undefined;
+  const tutorial = initialTutorial || TUTORIALS.find((t) => t.slug === slug);
+  if (!tutorial) {;
+    return (;
+      <div className="min-h-screen bg-zion-blue flex items-center justify-center text-white">;
+        Tutorial not found.;
+      </div>;
+    );
+  }
+;
+  return (;
+    <>;
+      <SEO title={tutorial.title} description={tutorial.excerpt} />;
+      <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">;
+        <div className="container mx-auto max-w-3xl">;
+          <Button;
+            variant="outline";
+            className="mb-8 border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white";
+            asChild;
+          >;
+            <Link href="/tutorials">;
+              <ArrowLeft className="mr-2 h-4 w-4" /> Back to Tutorials;
+            </Link>;
+          </Button>;
+          <h1 className="text-3xl font-bold text-white mb-4">{tutorial.title}</h1>;
+          <p className="text-zion-slate-light mb-8">{tutorial.excerpt}</p>;
+          <div className="prose prose-invert">;
+            <ReactMarkdown>{tutorial.content}</ReactMarkdown>;
+          </div>;
+          {tutorial.author && (;
+            <p className="mt-8 text-white font-semibold">;
+              — {typeof tutorial.author === 'string' ? tutorial.author : tutorial.author.name}
+            </p>;
+          )}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         </div>;
       </div>;
     </>;
   );
-
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -194,3 +323,9 @@ export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProp
 >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

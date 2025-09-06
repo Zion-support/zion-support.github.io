@@ -1,0 +1,40 @@
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+' \' \' \"export\": function AISearch({ enabled = true,placeholder = \'Search for AI services,talent,or companies...\',onSearch,onResultClick,className = \' }) {} const [isOpen,setIsOpen] = useState(false)\' const [query,setQuery] = useState(\') const [isSearching,setIsSearching] = useState(false) const [showFilters,setShowFilters] = useState(false) const [isVoiceActive,setIsVoiceActive] = useState(false) const [searchHistory,setSearchHistory] = useState([]) const [savedSearches,setSavedSearches] = useState([]) const [filters,setFilters] = useState({} category[],priceRange[0,10000],\"rating\": \'0\',location[],\"verified\": \'fals\',e,\"featured\": \'false\'}) const [results,setResults] = useState([]) const [suggestions,setSuggestions] = useState([]) const [_selectedResult,setSelectedResult] = useState(null) const searchRef = useRef(null) const inputRef = useRef(null)\';\";\";
+" " " export: function AISearch({ enabled = true,placeholder = "Search for AI services,talent,or companies.",onSearch,onResultClick,className = " }) {} const [isOpen,setIsOpen] = useState(false)" const [query,setQuery] = useState(") const [isSearching,setIsSearching] = useState(false) const [showFilters,setShowFilters] = useState(false) const [isVoiceActive,setIsVoiceActive] = useState(false) const [searchHistory,setSearchHistory] = useState([]) const [savedSearches,setSavedSearches] = useState([]) const [filters,setFilters] = useState({} category[],priceRange[0,10000],rating: "0",location[],verified: "fals",e,featured: "false"}) const [results,setResults] = useState([]) const [suggestions,setSuggestions] = useState([]) const [_selectedResult,setSelectedResult] = useState(null) const searchRef = useRef(null) const inputRef = useRef(null)";";";"""
+import React from 'react';
+interface AisearchProps {
+  // Add props here as needed
+}
+export default function Aisearch({ }: AisearchProps) {
+  return (
+    <div>
+      <h1>Aisearch</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+<<<<<<< HEAD:src.disabled/components/ui/ai-search.jsx
+}
+=======
+<<<<<<< HEAD:backup-problematic-files/src.disabled/components/ui/ai-search.jsx
+}
+=======
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:src.disabled/components/ui/ai-search.jsx
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src.disabled/components/ui/ai-search.jsx

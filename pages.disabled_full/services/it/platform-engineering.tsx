@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
 =======
@@ -20,6 +24,7 @@ export default function Platformengineering({ }: PlatformengineeringProps) {
 
 
 export default function Platformengineering({ }: PlatformengineeringProps) {
+<<<<<<< HEAD
 =======
 
 class ErrorBoundary extends React.Component {
@@ -56,11 +61,13 @@ interface PlatformengineeringProps {;
 export default function Platformengineering(): any ({ }: PlatformengineeringProps) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages.disabled_full/services/it/platform-engineering.tsx
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
-    <div>;
-      <h1>Platformengineering</h1>;
-      <p>This component is currently under development.</p>;
-    </div>;
+    <div>
+      <h1>Platformengineering</h1>
+      <p>This component is currently under development.</p>
+    </div>
   );
 
 <<<<<<< HEAD

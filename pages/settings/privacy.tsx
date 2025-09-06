@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -25,6 +26,10 @@ export default function PrivacySettingsPage() {
   const load = async () => {
 
     if (!userId) return;
+=======
+<<<<<<< HEAD
+if (!userId) return;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     setLoading(true);
     setMessage('');
     const res = await fetch(`/api/fraud/settings/opt-out?userId=${encodeURIComponent(userId)}`);
@@ -36,7 +41,13 @@ export default function PrivacySettingsPage() {
 
 =======
   };
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useEffect, useState } from 'react';
+export default function PrivacySettingsPage() {
 
+<<<<<<< HEAD
 
 =======
 
@@ -44,12 +55,52 @@ export default function PrivacySettingsPage() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+  const [userId, setUserId] = useState('')
+  const [optOut, setOptOut] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [message, setMessage] = useState('')
+=======
+import React, { useEffect, useState } from 'react',
+=======
+import React, { useEffect, useState } from 'react',;
+;
+=======
+import React, { useEffect, useState } from 'react',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default function PrivacySettingsPage() {
+  const [userId, setUserId] = useState(''),
+  const [optOut, setOptOut] = useState(false),
+  const [loading, setLoading] = useState(false),
+  const [message, setMessage] = useState(''),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  const load = async () => {
+    if (!userId) return
+    setLoading(true)
+    setMessage('')
+    const res = await fetch(`/api/fraud/settings/opt-out?userId=${encodeURIComponent(userId)}`)
+    const json = await res.json()
+    if (res.ok) setOptOut(!!json.monitoringContentAnalysisOptOut)
+    else setMessage(json.error |'Failed to load')
+    setLoading(false)
+<<<<<<< HEAD
+  }
+=======
+  },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const save = async () => {
     if (!userId) return
     setLoading(true)
     setMessage('')
     const res = await fetch('/api/fraud/settings/opt-out', {
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ userId, optOut })});
@@ -57,6 +108,7 @@ export default function PrivacySettingsPage() {
     if (res.ok) setMessage('Saved');
     else setMessage(json.error || 'Save failed');
     setLoading(false)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   };
@@ -77,9 +129,47 @@ export default function PrivacySettingsPage() {
 <<<<<<< HEAD
 
 =======
+=======
+  };
+  useEffect(() => {
+    const savedUser = localStorage.getItem('user-id');
+    if (savedUser) setUserId(savedUser)
+  }, []);
+  const onSaveUser = () => {
+    localStorage.setItem('user-id', userId);
+=======
+      method: 'POST'
+      headers: { 'Content-Type': 'application/json' }
+      body: JSON.stringify({ userId, optOut })})
+    const json = await res.json()
+    if (res.ok) setMessage('Saved')
+    else setMessage(json.error |'Save failed')
+    setLoading(false)
+<<<<<<< HEAD
   }
+=======
+  },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  useEffect(() => {
+    const savedUser = localStorage.getItem('user-id')
+    if (savedUser) setUserId(savedUser)
+<<<<<<< HEAD
+  }, [])
+=======
+  }, []),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  const onSaveUser = () => {
+    localStorage.setItem('user-id', userId)
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+    load()
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+  }
+<<<<<<< HEAD
+=======
 
 =======
+<<<<<<< HEAD
 
   },
 
@@ -97,6 +187,11 @@ export default function PrivacySettingsPage() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+  },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
     <div className="p-6 max-w-2xl mx-auto">
       <h1 className="text-2xl font-bold mb-4">Privacy Settings</h1>
@@ -111,6 +206,7 @@ export default function PrivacySettingsPage() {
         </div>
         <div className="flex items-center gap-2">
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
           <button disabled={!userId || loading} className="bg-green-600 text-white px-3 py-1 rounded disabled:opacity-50" onClick={save}>Save</button>
@@ -135,6 +231,31 @@ export default function PrivacySettingsPage() {
 }
 
 =======
+=======
+          <button disabled={!userId || loading} className="bg-green-600 text-white px-3 py-1 rounded disabled:opacity-50" onClick={save}>Save</button>
+          <button disabled={!userId || loading} className="bg-gray-200 px-3 py-1 rounded disabled:opacity-50" onClick={load}>Reload</button>
+          {message && <div>{message}</div>}
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+          <button disabled={!userId |loading} className="bg-green-600 text-white px-3 py-1 rounded disabled:opacity-50" onClick={save}>Save</button>
+          <button disabled={!userId |loading} className="bg-gray-200 px-3 py-1 rounded disabled:opacity-50" onClick={load}>Reload</button>
+=======
+          <button disabled={!userId || loading} className="bg-green-600 text-white px-3 py-1 rounded disabled:opacity-50" onClick={save}>Save</button>
+          <button disabled={!userId || loading} className="bg-gray-200 px-3 py-1 rounded disabled:opacity-50" onClick={load}>Reload</button>
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          {message && <div>{message}</div>}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+        </div>
+      </div>
+    </div>
+<<<<<<< HEAD
+  )
+<<<<<<< HEAD
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React, { useEffect, useState } from 'react',
 ;
 export default /**
@@ -217,6 +338,7 @@ if (return, ) {
 =======
     </div>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
@@ -226,3 +348,35 @@ if (return, ) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+=======
+          <button disabled={!userId || loading} className="bg-green-600 text-white px-3 py-1 rounded disabled:opacity-50" onClick={save}>Save</button>
+          <button disabled={!userId || loading} className="bg-gray-200 px-3 py-1 rounded disabled:opacity-50" onClick={load}>Reload</button>
+=======
+  );
+};
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          {message && <div>{message}</div>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        </div>;
+      </div>;
+    </div>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

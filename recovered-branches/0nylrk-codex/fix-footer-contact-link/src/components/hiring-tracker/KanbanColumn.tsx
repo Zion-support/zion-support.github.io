@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/KanbanColumn.tsx
 
 
 <<<<<<< HEAD
@@ -10,6 +12,33 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {Droppable} from "react-beautiful-dnd";
+import {JobApplication} from "@/types/jobs";
+import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
+import {Badge} from "@/components/ui/badge";
+import {CandidateCard} from "./CandidateCard";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { Droppable } from "react-beautiful-dnd",
+import { JobApplication } from "@/types/jobs",
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+<<<<<<< HEAD
+import { Badge } from "@/components/ui/badge";
+import { CandidateCard } from "./CandidateCard";
+=======
+import { Badge } from "@/components/ui/badge",
+import { CandidateCard } from "./CandidateCard",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 interface KanbanColumnProps {
 
   id: string
@@ -19,14 +48,32 @@ interface KanbanColumnProps {
 
   count: number
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+export function KanbanColumn({;
+  id;
+  title;
+  description;
+  applications;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export function KanbanColumn({
   id,
   title,
   description,
   applications,
+<<<<<<< HEAD
 =======
+========
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/KanbanColumn.tsx
 import {Droppable} from "react-beautiful-dnd";
 import {JobApplication} from "@/types/jobs";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
@@ -39,33 +86,45 @@ interface KanbanColumnProps {;
   applications: JobApplication[],;
   count: number;
 }
-
 export function KanbanColumn(): any ({;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/KanbanColumn.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/KanbanColumn.tsx
   id;
   title;
   description;
   applications;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/KanbanColumn.tsx
 
 
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   count
 }: KanbanColumnProps) {
   // Add color based on column type
 
   const getBadgeVariant = (columnId: string) => {
     switch (columnId) {
+<<<<<<< HEAD
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/KanbanColumn.tsx
   count;
 }: KanbanColumnProps) {;
   // Add color based on column type;
   const getBadgeVariant = (columnId: string) => {;
     switch (columnId) {;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/KanbanColumn.tsx
 
 =======
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/KanbanColumn.tsx
 import { Droppable } from './react - beautiful - dnd';
 import { JobApplication } from '@/types / jobs';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
@@ -85,7 +144,6 @@ function KanbanColumn() {
   // Add color based on column type;
   const getBadgeVariant = (column_id: string) =>: any {
     switch (column_id) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       case "new": return "secondary";
       case "shortlisted":;
         return "outline";
@@ -93,7 +151,10 @@ function KanbanColumn() {
         return "default";
       case "hired":;
         return "success";
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/KanbanColumn.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       case "new": return "secondary",
       case "shortlisted":
         return "outline",
@@ -101,12 +162,16 @@ function KanbanColumn() {
         return "default",
       case "hired":
         return "success",
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       case "rejected":
         return "destructive"
       default:
         return "outline"
     }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -119,32 +184,93 @@ function KanbanColumn() {
     switch (columnId) {
       case "hired": return "bg-green-50",
 
+=======
+<<<<<<< HEAD
+  }
+=======
+  },
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  const getColumnBgColor = (columnId: string) => {
+    switch (columnId) {
+      case "hired": return "bg-green-50",
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       case "rejected":
         return "bg-red-50"
       default:
         return "bg-muted/30"
     }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/KanbanColumn.tsx
       case "rejected":;
         return "destructive",;
       default:;
         return "outline";
     }
   };
-
   const getColumnBgColor = (columnId: string) => {;
     switch (columnId) {;
       case "hired": return "bg-green-50";
+=======
+
+import { Droppable } from "react-beautiful-dnd",;
+import { JobApplication } from "@/types/jobs",;
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",;
+import { CandidateCard } from "./CandidateCard",;
+;
+interface KanbanColumnProps {;
+  id:string,;
+  title:string,;
+  description:string,;
+  applications:JobApplication[],;
+  count:number;
+}
+;
+export function KanbanColumn({;
+  id,;
+  title,;
+  description,;
+  applications,;
+  count;
+} KanbanColumnProps) {;
+  // Add color based on column type;
+  const getBadgeVariant = (columnId:string) => {;
+    switch (columnId) {;
+      case "new":return "secondary",;
+      case "shortlisted":;
+        return "outline",;
+      case "interview":;
+        return "default",;
+      case "hired":;
+        return "success",;
+      case "rejected":;
+        return "destructive",;
+      default:;
+        return "outline";
+    }
+  },;
+  ;
+  const getColumnBgColor = (columnId:string) => {;
+    switch (columnId) {;
+      case "hired":return "bg-green-50",;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       case "rejected":;
         return "bg-red-50",;
       default:;
         return "bg-muted/30";
+<<<<<<< HEAD
     }
   };
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/KanbanColumn.tsx
 
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/KanbanColumn.tsx
   return (
     <Card className={`${getColumnBgColor(id)} flex flex-col h-[calc(100vh-300px)] min-h-[500px]`}>;
       <CardHeader className="pb-2">;
@@ -158,12 +284,22 @@ function KanbanColumn() {
         <Droppable droppableId={id}>;
           {(provided) => (;
             <div
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/KanbanColumn.tsx
 
 
   },
   
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+  }
+
+=======
+  },
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
     <Card className={`${getColumnBgColor(id)} flex flex-col h-[calc(100vh-300px)] min-h-[500px]`}>
       <CardHeader className="pb-2">
@@ -177,14 +313,29 @@ function KanbanColumn() {
         <Droppable droppableId={id}>
           {(provided) => (
             <div
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               ref={provided.innerRef}
               {...provided.droppableProps}
               className="min-h-full space-y-2"
             >
               {applications.map((application, index) => (
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                <CandidateCard
+=======
+                <CandidateCard 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { Droppable } from "react-beautiful-dnd",;
 import { JobApplication } from "@/types/jobs",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -215,8 +366,11 @@ export function KanbanColumn({;
         return "default",;
       case "hired":;
         return "success",;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/KanbanColumn.tsx
       case "rejected":;
         return "destructive",
       default:;
@@ -253,6 +407,7 @@ export function KanbanColumn({;
             >;
               {applications.map ((application, index) => (
                 <CandidateCard;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/KanbanColumn.tsx
 
 <<<<<<< HEAD
 =======
@@ -262,17 +417,18 @@ export function KanbanColumn({;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/KanbanColumn.tsx
                   key={application.id}
-=======
               ref={provided && provided.innerRef}
               {...provided && provided.droppableProps}
               className="min-h-full space-y-2">;
               {applications && applications.map((application, index) => (;
                 <CandidateCard
                   key={application && application.id}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   application={application}
                   index={index}
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/KanbanColumn.tsx
 
                 />
               ))}
@@ -297,25 +453,31 @@ export function KanbanColumn({;
 
 =======
 =======
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/KanbanColumn.tsx
               {provided && provided.placeholder}
-
               {applications && applications.length === 0 && (;
                 <div className="h-full flex items-center justify-center border-2 border-dashed border-muted rounded-md p-4">;
                   <p className="text-center text-sm text-muted-foreground">;
                     Drag candidates here;
                   </p>;
                 </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               )}
             </div>;
           )}
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/KanbanColumn.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/KanbanColumn.tsx
         </Droppable>;
       </CardContent>;
     </Card>;
   );
 }
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/KanbanColumn.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/KanbanColumn.tsx
                 />))}
               {provided.placeholder}
               {applications.length === 0 && (
@@ -328,10 +490,171 @@ export function KanbanColumn({;
         </Droppable>;
       </CardContent>;
     </Card>);
+=======
+    }
+  },;
+  ;
+=======
+      case "rejected":;
+        return "destructive",;
+      default:;
+        return "outline";
+      case "interview":
+        return "default";
+      case "hired":
+        return "success";
+      case "rejected":
+        return "destructive",
+      default:
+        return "outline"
+    }
+  },;
+  const getColumnBgColor = (columnId: string) => {;
+    switch (columnId) {;
+      case "hired": return "bg-green-50",;
+      case "rejected":;
+        return "bg-red-50";
+      default:;
+        return "bg-muted/30";
+    }
+  };
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+  return (;
+    <Card className={`${getColumnBgColor(id)} flex flex-col h-[calc(100vh-300px)] min-h-[500px]`}>;
+      <CardHeader className="pb-2">;
+        <div className="flex justify-between items-center">;
+          <CardTitle className="text-base">{title}</CardTitle>;
+          <Badge variant={getBadgeVariant(id) as any}>{count}</Badge>;
+        </div>;
+        <p className="text-xs text-muted-foreground">{description}</p>;
+      </CardHeader>;
+      <CardContent className="flex-grow p-3 overflow-y-auto">;
+        <Droppable droppableId={id}>;
+          {(provided) => (;
+            <div;
+              ref={provided.innerRef}
+              {...provided.droppableProps}
+              className="min-h-full space-y-2";
+            >;
+              {applications.map((application, index) => (;
+<<<<<<< HEAD
+                <CandidateCard ;
+                  key={application.id}                  application={application}
+                  index={index}
+                />;
+              ))}
+              {provided.placeholder}
+              ;
+              {applications.length === 0 && (;
+                <div className="h-full flex items-center justify-center border-2 border-dashed border-muted rounded-md p-4">;
+                  <p className="text-center text-sm text-muted-foreground">;
+                    Drag candidates here;
+                  </p>;
+                </div>;              )}
+            </div>;
+          )}
+        </Droppable>;
+      </CardContent>;
+    </Card>;
+  ),; interface KanbanColumnProps {
+  id: string;
+title: string;
+description: string;
+applications: JobApplication[];
+count: number 
+}id, title, description, applications, count 
+}: KanbanColumnProps) {
+  //Add color based on column type const getBadgeVariant = (columnId: string) => {
+  switch (columnId) {
+  
 }
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/KanbanColumn.tsx
 
 =======
 ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+};
+const getColumnBgColor = (columnId: string) => {
+  switch (columnId) {
+  case "rejected": return "bg-red-50";
+default: 
+}
+};
+return (<Card className= {
+  `$ {
+  getColumnBgColor (id) 
+}flex flex-col h-[calc (100vh-300px) ] min-h-[500px]` 
+}> <CardHeader className="pb-2" > <div className="flex justify-between items-center" > <CardTitle className="text-base" > {
+  title 
+}</CardTitle> <Badge variant= {
+  getBadgeVariant (id) as any 
+}> {
+  count 
+}</Badge> </div> <p className="text-xs text-muted-foreground" > {
+  description 
+}</p> </CardHeader> <CardContent className="flex-grow p-3 overflow-y-auto" > <Droppable droppableId= {
+  id 
+}> {
+  (provided) => (<div ref= {
+  provided.innerRef 
+}{
+  ...provided.droppableProps 
+}className="min-h-full space-y-2" applications.map ( (application, index) => (<CandidateCard key= {
+  application.id 
+}application= {
+  application 
+}index= {
+  index 
+}/>) ) 
+}{
+  provided.placeholder 
+}Drag candidates here </p> </div>) 
+}</div>) 
+}</Droppable> </CardContent> </Card>) 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+}
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/KanbanColumn.tsx
+=======
+                <CandidateCard;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                  key={application.id}
+                  application={application}
+                  index={index}
+                />
+              ))}
+              {provided.placeholder}
+<<<<<<< HEAD
+=======
+              
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+              {applications.length === 0 && (
+                <div className="h-full flex items-center justify-center border-2 border-dashed border-muted rounded-md p-4">
+                  <p className="text-center text-sm text-muted-foreground">
+                    Drag candidates here
+                  </p>
+                </div>
+              )}
+            </div>
+          )}
+<<<<<<< HEAD
+        </Droppable>
+      </CardContent>
+    </Card>
+  )
+}
+=======
+        </Droppable>;
+      </CardContent>;
+    </Card>;
+  );
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 } from "../../../../utils/auth";
 export default async function handler(
@@ -28,28 +29,90 @@ export default async function handler(
 
   const user = parseUserFromRequest(req);
 
+=======
+if (req && req.method === "POST") {
+    const dispute = await getDisputeById(id);
+    if (!dispute) return res && res.status($1).json({ $2 });
+    try {
+      ensureInvolvedOrAdmin(user, dispute && dispute.clientUserId, dispute && dispute.talentUserId);
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { getDisputeById, upsertDispute } from '../../../../utils/fsdb';
+import { parseUserFromRequest, ensureInvolvedOrAdmin } from '../../../../utils/auth';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const { id } = req.query;
+  if (typeof id !== 'string') return res.status(400).json({ error: 'Invalid id' });
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const user = parseUserFromRequest(req);
-
   if (req.method === 'POST') {
     const dispute = await getDisputeById(id);
     if (!dispute) return res.status(404).json({ error: 'Not found' });
     try {
 
       ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId)
+<<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     } catch (e: any) {
 
+=======
+    } catch (e: any) {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       return res && res.status(e && e.statusCode || 403).json({ error: "Forbidden" });
     }
     const { body } = req && req.body || {};
     if (!body || typeof body !== "string")
       return res && res.status(400).json({ error: "Message body required" });
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import { getDisputeById, upsertDispute } from "../../../../utils/fsdb";
+import {
+  parseUserFromRequest
+  ensureInvolvedOrAdmin
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+import { getDisputeById, upsertDispute } from "../../../../utils/fsdb";
+import {
+  parseUserFromRequest,
+  ensureInvolvedOrAdmin,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+} from "../../../../utils/auth";
+export default async function handler(
+<<<<<<< HEAD
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+=======
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const { id } = req.query;
+  if (typeof id !== "string")
+    return res.status(400).json({ error: "Invalid id" });
+  const user = parseUserFromRequest(req);
+  if (req.method === "POST") {
+    const dispute = await getDisputeById(id);
+    if (!dispute) return res.status($1).json({ $2 });
+    try {
+      ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId);
+    } catch (e: any) {
+      return res.status(e.statusCode |403).json({ error: "Forbidden" });
+    }
+    const { body } = req.body |{}
+    if (!body |typeof body !== "string")
+      return res.status(400).json({ error: "Message body required" });
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     const now = new Date().toISOString();
     dispute && dispute.messages.push({
       id: `${Date && Date.now()}`,
       authorUserId: user && user.id,
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       authorRole:
         user && user.role === "admin"
           ? "admin"
@@ -59,6 +122,7 @@ export default async function handler(
       body
       createdAt: now
     });
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -71,6 +135,22 @@ export default async function handler(
 
 
 =======
+=======
+<<<<<<< HEAD
+    dispute && dispute.updatedAt = now;
+=======
+<<<<<<< HEAD
+=======
+    dispute.updatedAt = now;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+    await upsertDispute(dispute);
+    return res && res.status(201).json({ dispute });
+  }
+<<<<<<< HEAD
+  res && res.setHeader("Allow", "POST");
+  return res && res.status(405).end("Method Not Allowed");
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getDisputeById, upsert_dispute  } from '../../../../utils / fsdb';
 import {
@@ -127,6 +207,7 @@ if ( {) {
   res.set_header ("Allow", "POST");
   return res.status (405).end ("Method Not Allowed");
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -141,6 +222,15 @@ res.setHeader("Allow", "POST");
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+
+  res.setHeader("Allow", "POST");
+  return res.status(405).end("Method Not Allowed");
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Allow', ['POST']);
@@ -173,7 +263,11 @@ export default async function handler(req, res) {
       authorRole: (user.role === 'admin' ? 'admin' : (user.id === dispute.clientUserId ? 'client' : 'talent')),;
       body,;
       createdAt: now}),;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     dispute.updatedAt = now;
     await upsertDispute(dispute);
     return res.status(201).json({ dispute });
@@ -184,8 +278,16 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  res.setHeader("Allow", "POST");
+  return res.status(405).end("Method Not Allowed");
+}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 }
   } catch (error) {
@@ -209,7 +311,16 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

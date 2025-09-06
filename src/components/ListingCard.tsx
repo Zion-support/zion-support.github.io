@@ -1,9 +1,19 @@
+<<<<<<< HEAD
+<<<<<<<< HEAD:src/components/ListingCard.tsx
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React from 'react'
 import { cn } from '@/lib/utils'
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import Image from 'next/image';interface ListingCardProps {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   id?: string,
@@ -17,6 +27,8 @@ import Image from 'next/image';interface ListingCardProps {
   profileType?: 'service' | 'talent'
 
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   id?: string
   title: string
   description: string
@@ -26,6 +38,83 @@ import Image from 'next/image';interface ListingCardProps {
   author?: { name: string, id?: string, avatarUrl?: string, email?: string }
   className?: string
   profileType?: 'service' | 'talent'
+<<<<<<< HEAD
+  id?: string,
+========
+<<<<<<< HEAD
+import React from "react";
+import { cn } from "@/lib/utils";
+import { Badge } from "@/components/ui/badge";
+import Link from "next/link";
+import Image from "next/image";
+interface ListingCardProps {
+  id?: string;
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ListingCard.tsx
+=======
+=======
+=======
+import React from "react",
+import { cn } from "@/lib/utils",
+import { Badge } from "@/components/ui/badge",
+import Link from "next/link",
+import Image from "next/image",
+interface ListingCardProps {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  id?: string,
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+  title: string,
+  description: string,
+  images?: string[],
+  category: string,
+  tags?: string[],
+  author?: { name: string, id?: string, avatarUrl?: string, email?: string },
+  className?: string,
+  profileType?: 'service' | 'talent'
+<<<<<<< HEAD
+<<<<<<<< HEAD:src/components/ListingCard.tsx
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+interface ListingCardProps {
+  id?: string
+  title: string
+  description: string
+  images?: string[]
+  category: string
+  tags?: string[]
+  author?: { name: string; id?: string; avatarUrl?: string; email?: string }
+  className?: string
+  profileType?: 'service' | 'talent'
+export function ListingCard({
+  id
+  title
+  description
+  images
+  category
+  tags
+  author
+  className
+  profileType = 'service'
+}: ListingCardProps) {
+  // Generate a profile ID based on the listing data
+  // In a real app, this would be a proper ID from the database
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+  const profileId =
+    id |(profileType === 'service' ? 'service-provider-1' : 'talent-1')
+      >
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+import React from "react",
+import { cn } from "@/lib/utils",
+import { Badge } from "@/components/ui/badge",
+import Link from "next/link",
+import Image from "next/image",
+interface ListingCardProps {
   id?: string,
   title: string,
   description: string,
@@ -35,17 +124,43 @@ import Image from 'next/image';interface ListingCardProps {
   author?: { name: string, id?: string, avatarUrl?: string, email?: string },
   className?: string,
   profileType?: 'service' | 'talent'
-  const profileId =
-    id |(profileType === 'service' ? 'service-provider-1' : 'talent-1')
+=======
+  const profileId = null;
+    id || (profileType === 'service' ? 'service-provider-1' : 'talent-1')
       >
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React from "react",;
 import { cn } from "@/lib/utils",;
 import { Badge } from "@/components/ui/badge",;
 import Link from "next/link",;
 import Image from "next/image",;
 interface ListingCardProps {;
+<<<<<<< HEAD
+========
+}
+export function ListingCard({ 
+  id;
+  title, 
+  description, 
+  images;
+  category, 
+  tags, 
+  author, 
+  className;
+  profileType = 'service'
+}: ListingCardProps) {
+  // Generate a profile ID based on the listing data
+  // In a real app, this would be a proper ID from the database
+import React from 'react';
+import { cn } from '@/lib/utils';
+import { Badge } from '@/components/ui/badge';
+import Link from 'next/link';
+import Image from 'next/image';interface ListingCardProps {;
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ListingCard.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   id?: string,;
   title: string,;
   description: string,;
@@ -56,7 +171,7 @@ interface ListingCardProps {;
   className?: string,;
   profileType?: 'service' | 'talent';
 }
-
+<<<<<<< HEAD
 interface ListingCardProps {;
   id?: string;
   title: string;
@@ -67,8 +182,11 @@ interface ListingCardProps {;
   author?: { name: string; id?: string; avatarUrl?: string; email?: string };
   className?: string;
   profileType?: 'service' | 'talent';
-
 export function ListingCard(): any ({;
+=======
+;
+export function ListingCard({;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   id,;
   title,;
   description,;
@@ -77,17 +195,16 @@ export function ListingCard(): any ({;
   tags,;
   author,;
   className,;
+<<<<<<< HEAD
   profileType = 'service',;
 }: ListingCardProps) {;
   // Generate a profile ID based on the listing data;
   // In a real app, this would be a proper ID from the database;
   const profileId =;
     id || (profileType === 'service' ? 'service-provider-1' : 'talent-1');
-
       >;
       {images && images.length > 0 && images[0] && (;
         <div className='h-48 w-full overflow-hidden relative'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <Image
             src={images[0]}
             alt={title}
@@ -105,14 +222,19 @@ export function ListingCard(): any ({;
         </div>;
         <h3 className='text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors'>;
           {title}
+<<<<<<<< HEAD:src/components/ListingCard.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ListingCard.tsx
         </h3>;
         <p className='text-zion-slate mb-4 flex-grow'>{description}</p>;
-
         {tags && tags.length > 0 && (;
           <div className='flex flex-wrap gap-2 mb-4'>;
             {tags && tags.map((tag, i) => (;
+<<<<<<<< HEAD:src/components/ListingCard.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ListingCard.tsx
               <Badge
                 key={i}
                 variant='outline'
@@ -120,29 +242,52 @@ export function ListingCard(): any ({;
           <div className="flex flex-wrap gap-2 mb-4">;
             {tags && tags.map((tag, i) => (;
               <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">;
+<<<<<<<< HEAD:src/components/ListingCard.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ListingCard.tsx
   const profileId = id || (profileType === 'service' ? 'service-provider-1' : 'talent-1');
-
   return (
     <Link
       href = {`/profile/${profileId}`}
       tabIndex={0}
       className={cn(
-
         "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue hover: border-zion-purple/50 transition-all duration-300 group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple",
+=======
+  profileType = 'service';
+}: ListingCardProps) {;
+  // Generate a profile ID based on the listing data;
+  // In a real app, this would be a proper ID from the database;
+  const profileId = id || (profileType === 'service' ? 'service-provider-1' : 'talent-1');
+  return (;
+    <Link;
+      href={`/profile/${profileId}`}
+      tabIndex={0}
+      className={cn(
+        "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue hover:border-zion-purple/50 transition-all duration-300 group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple",
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         className
       )}
     >
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       {images && images.length > 0 && images[0] && (
 =======
 >>>>>>>       {images && images.length > 0 && images[0] && (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      {images && images.length > 0 && images[0] && (
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <div className="h-48 w-full overflow-hidden relative">
           <Image
             src={images[0]}
             alt={title}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -153,6 +298,21 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         </div>
 >>>>>>>       )}
+=======
+            className='object-cover transition-transform duration-300 group-hover:scale-105'
+            loading='lazy'          />
+=======
+            className="object-cover transition-transform duration-300 group-hover:scale-105"
+            loading="lazy"
+          />
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        </div>
+      )}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <div className="flex flex-col p-4 flex-grow">
         <div className="mb-2">
           <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan hover:bg-zion-purple/30">
@@ -160,12 +320,24 @@ ursor/fix-website-loading-errors-and-merge-6662
           </Badge>
         </div>
 <<<<<<< HEAD
+<<<<<<<< HEAD:src/components/ListingCard.tsx
+<<<<<<< HEAD
 
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <h3 className='text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors'>
           {title}
         </h3>
         <p className='text-zion-slate mb-4 flex-grow'>{description}</p>
+<<<<<<< HEAD
+========
+        <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>
+        <p className="text-zion-slate mb-4 flex-grow">{description}</p>
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ListingCard.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {tags && tags.length > 0 && (
           <div className='flex flex-wrap gap-2 mb-4'>
             {tags.map((tag, i) => (
@@ -174,13 +346,17 @@ ursor/fix-website-loading-errors-and-merge-6662
                 variant='outline'
                 className='border-zion-slate-dark text-zion-slate-light'
               >                {tag}              <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
+<<<<<<< HEAD
 >>>>>>>           <div className="flex flex-wrap gap-2 mb-4">
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           <div className="flex flex-wrap gap-2 mb-4">
 >>>>>>>             {tags.map((tag, i) => (
               <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
+<<<<<<<< HEAD:src/components/ListingCard.tsx
 <<<<<<< HEAD
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ListingCard.tsx
                 {tag}
 
 =======
@@ -197,12 +373,18 @@ ursor/fix-website-loading-errors-and-merge-6662
             ))}
           </div>;
         )}
+<<<<<<<< HEAD:src/components/ListingCard.tsx
 
 <<<<<<< HEAD
         {author && (
           <div className="flex items-center mt-auto pt-4 border-t border-zion-blue-light">
 =======
 
+========
+        {author && (;
+          <div className='flex items-center mt-auto pt-4 border-t border-zion-blue-light'>;
+            {author && author.avatarUrl ? (;
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ListingCard.tsx
               <Image
                 src={author && author.avatarUrl}
                 alt={author && author.name}
@@ -223,24 +405,70 @@ ursor/fix-website-loading-errors-and-merge-6662
             )}
             <span className="text-sm text-zion-slate-light">{author && author.name}</span>;
           </div>;
+<<<<<<<< HEAD:src/components/ListingCard.tsx
 
         
 
 
         
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ListingCard.tsx
         {author && (
 >>>>>>>           <div className="flex items-center mt-auto pt-4 border-t border-zion-blue-light">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+        <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>
+        <p className="text-zion-slate mb-4 flex-grow">{description}</p>
+        
+        {tags && tags.length > 0 && (
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          <div className="flex flex-wrap gap-2 mb-4">
+            {tags.map((tag, i) => (
+              <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
+                {tag}
+<<<<<<< HEAD
+              </Badge>
+=======
+              </Badge>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            ))}
+          </div>
+        )}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+=======
+        
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        {author && (
+          <div className="flex items-center mt-auto pt-4 border-t border-zion-blue-light">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             {author.avatarUrl ? (
               <Image src={author.avatarUrl} alt={author.name} width={32} height={32} className="rounded-full mr-2" loading="lazy" />
             ) : (
               <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2" />
             )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             <span className="text-sm text-zion-slate-light">{author.name}</span>
           </div>
         )}
+<<<<<<<< HEAD:src/components/ListingCard.tsx
 =======
 ;"}) })"
             <span className="text-sm text-zion-slate-light">{author.name}</span>
@@ -248,11 +476,39 @@ ursor/fix-website-loading-errors-and-merge-6662
         )}
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ListingCard.tsx
+=======
+            <span className='text-sm text-zion-slate-light'>{author.name}</span>          </div>        {author && (
+          <div className="flex items-center mt-auto pt-4 border-t border-zion-blue-light">
+            {author.avatarUrl ? (
+              <Image src={author.avatarUrl} alt={author.name} width={32} height={32} className="rounded-full mr-2" loading="lazy" />
+            ) : (
+              <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2" />
+            )}
+            <span className="text-sm text-zion-slate-light">{author.name}</span>
+          </div>
+        )}
+      </div>
+    </Link>
+  );
+};"}) })"
+}
+<<<<<<< HEAD
+;"}) })"
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+            <span className="text-sm text-zion-slate-light">{author.name}</span>
+          </div>
+        )}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       </div>;
     </Link>;
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
+<<<<<<< HEAD
+<<<<<<<< HEAD:src/components/ListingCard.tsx
 ;
 <<<<<<< HEAD
 
@@ -264,3 +520,225 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+;"}) })"
+  );
+}
+import React from 'react';
+import { cn } from '@/lib / utils';
+import { Badge } from '@/components / ui / badge';
+import Link from 'next / link';
+import Image from 'next / image';interface ListingCardProps {
+  id?: string,
+  title: string,
+  description: string,
+  images?: string[],
+  category: string,
+  tags?: string[],
+  author?: { name: string, id?: string, avatar_url?: string, email?: string },
+  class_name?: string,
+  profile_type?: 'service' | 'talent';
+}
+interface ListingCardProps {
+  id?: string;
+  title: string;
+  description: string;
+  images?: string[];
+  category: string;
+  tags?: string[];
+  author?: { name: string; id?: string; avatar_url?: string; email?: string }
+  class_name?: string;
+  profile_type?: 'service' | 'talent';
+export /**
+ * ListingCard - Function description
+ */
+function ListingCard() {
+  // Generate a profile ID based on the listing data;
+  // In a real app, this would be a proper ID from the database;
+  const profile_id =;
+    id || (profile_type === 'service' ? 'service - provider - 1' : 'talent - 1');
+      >;
+      {images && images.length > 0 && images[0] && (
+        <div className='h - 48 w - full overflow - hidden relative'>;
+          <Image;
+            src={images[0]}
+            alt={title}
+            className='object - cover transition - transform duration - 300 group - hover:scale - 105';
+            loading='lazy'          />;
+        </div>)}
+      <div className='flex flex - col p - 4 flex - grow'>;
+        <div className='mb - 2'>;
+          <Badge;
+            variant='secondary';
+            className='bg - zion - purple / 20 text - zion - cyan hover:bg - zion - purple / 30';
+          >;
+            {category}
+          </Badge>;
+        </div>;
+        <h3 className='text - xl font - bold mb - 2 text - white group - hover:text - zion - purple transition - colors'>;
+          {title}
+        </h3>;
+        <p className='text - zion - slate mb - 4 flex - grow'>{description}</p>;
+        {tags && tags.length > 0 && (
+          <div className='flex flex - wrap gap - 2 mb - 4'>;
+            {tags.map ((tag, i) => (
+              <Badge;
+                key={i}
+                variant='outline';
+                className='border - zion - slate - dark text - zion - slate - light';
+              >                {tag}              <Badge key={i} variant="outline" className="border - zion - slate - dark text - zion - slate - light">;
+          <div className="flex flex - wrap gap - 2 mb - 4">;
+            {tags.map ((tag, i) => (
+              <Badge key={i} variant="outline" className="border - zion - slate - dark text - zion - slate - light">;
+                {tag}
+              </Badge>))}
+          </div>)}
+        {author && (
+          <div className='flex items - center mt - auto pt - 4 border - t border - zion - blue - light'>;
+            {author.avatar_url ? (
+              <Image;
+                src={author.avatar_url}
+                alt={author.name}
+                width={32}
+                height={32}
+                className='rounded - full mr - 2';
+                loading='lazy';
+              />) : (
+              <div className='h - 8 w - 8 rounded - full bg - zion - purple / 20 mr - 2' />)}
+            <span className='text - sm text - zion - slate - light'>{author.name}</span>          </div>        {author && (
+          <div className="flex items - center mt - auto pt - 4 border - t border - zion - blue - light">;
+            {author.avatar_url ? (
+              <Image src={author.avatar_url} alt={author.name} width={32} height={32} className="rounded - full mr - 2" loading="lazy" />) : (
+              <div className="h - 8 w - 8 rounded - full bg - zion - purple / 20 mr - 2" />)}
+            <span className="text - sm text - zion - slate - light">{author.name}</span>;
+          </div>)}
+      </div>;
+    </Link>);
+}"}) })";
+=======
+import React from "react",;
+import { cn } from "@/lib/utils",;
+import { Badge } from "@/components/ui/badge",;
+import Link from "next/link",;
+import Image from "next/image",;
+;
+interface ListingCardProps {;
+  id?:string,;
+  title:string,;
+  description:string,;
+  images?:string[],;
+  category:string,;
+  tags?:string[],;
+  author?:{ name:string, id?:string, avatarUrl?:string, email?:string },;
+  className?:string,;
+  profileType?:'service' | 'talent',;
+}
+;
+export function ListingCard({ ;
+  id,;
+  title, ;
+  description, ;
+  images,;
+  category, ;
+  tags, ;
+  author, ;
+  className,;
+  profileType = 'service';
+} ListingCardProps) {;
+  // Generate a profile ID based on the listing data;
+  // In a real app, this would be a proper ID from the database;
+  const profileId = id || (profileType === 'service' ? 'service-provider-1' :'talent-1'),;
+;
+  return (;
+    <Link;
+      href={`/profile/${profileId}`}
+      tabIndex={0}
+      className={cn(;
+        "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue hover:border-zion-purple/50 transition-all duration-300 group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple",;
+        className;
+      )}
+    >;
+      {images && images.length > 0 && images[0] && (;
+        <div className="h-48 w-full overflow-hidden relative">;
+          <Image;
+            src={images[0]}
+            alt={title}
+            className="object-cover transition-transform duration-300 group-hover:scale-105";
+            loading="lazy";
+          />;
+        </div>;
+      )}
+      <div className="flex flex-col p-4 flex-grow">;
+        <div className="mb-2">;
+          <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan hover:bg-zion-purple/30">;
+            {category}
+          </Badge>;
+        </div>;
+        <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>;
+        <p className="text-zion-slate mb-4 flex-grow">{description}</p>;
+        ;
+        {tags && tags.length > 0 && (;
+          <div className="flex flex-wrap gap-2 mb-4">;
+            {tags.map((tag, i) => (;
+              <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">;
+                {tag}
+              </Badge>;            ))}
+          </div>;
+        )}
+        ;
+        {author && (;
+          <div className="flex items-center mt-auto pt-4 border-t border-zion-blue-light">;
+            {author.avatarUrl ? (;
+              <Image src={author.avatarUrl} alt={author.name} width={32} height={32} className="rounded-full mr-2" loading="lazy" />;
+            ) :(;
+              <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2" />;
+            )}
+            <span className="text-sm text-zion-slate-light">{author.name}</span>;
+          </div>;
+        )}
+      </div>;
+    </Link>;
+  ),;}
+ interface ListingCardProps {;
+  id?: string;
+title: string;
+description: string;
+images?: string[];
+category: string;
+tags?: string[];
+author?: {;
+  name: string, id?: string,  avatarUrl?: string, email?: string ;
+};
+className?: string;
+profileType?: 'service' | 'talent' ;
+}export function ListingCard ({;
+  id;
+title;
+description;
+images;
+category;
+tags;
+author;
+className;';
+profileType = 'service' ;
+}: ListingCardProps) {';
+  //Generate a profile ID based on the listing data //In a real app, this would be a proper ID from the database const profileId = id || (profileType === 'service' ? 'service-provider-1' : 'talent-1');
+`/profile/$ {;
+  profileId ;
+}` ;
+}</Badge>) ) ;
+}</div>) ;
+}) : (<div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2" />) ;
+}</div>) ;
+}</div> </Link>) ;
+}'"
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ListingCard.tsx
+=======
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
 =======
@@ -19,6 +23,7 @@ export default function Aisolutions({ }: AisolutionsProps) {
 
 
 export default function Aisolutions({ }: AisolutionsProps) {
+<<<<<<< HEAD
 =======
 
 class ErrorBoundary extends React.Component {
@@ -51,11 +56,13 @@ interface AisolutionsProps {;
 export default function Aisolutions(): any ({ }: AisolutionsProps) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages.corrupted.1756905863/services/ai-solutions.tsx
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
-    <div>;
-      <h1>Aisolutions</h1>;
-      <p>This component is currently under development.</p>;
-    </div>;
+    <div>
+      <h1>Aisolutions</h1>
+      <p>This component is currently under development.</p>
+    </div>
   );
 <<<<<<< HEAD
 =======

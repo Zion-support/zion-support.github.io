@@ -1,6 +1,10 @@
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { useState  } from 'react';
 import { useLocalStorage  } from '@/hooks';
 import { Header  } from '@/components/Header';
@@ -8,6 +12,11 @@ import { SEO  } from '@/components/SEO';
 import { useAuth  } from '@/hooks/useAuth';
 import { Button  } from '@/components/ui/button';
 import { Input  } from '@/components/ui/input';
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { useState } from 'react'
 import { useLocalStorage } from '@/hooks'
 import { Header } from '@/components/Header'
@@ -15,7 +24,11 @@ import { SEO } from '@/components/SEO'
 import { useAuth } from '@/hooks/useAuth'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { Wallet, Database, Save } from 'lucide-react'
 
 import {
@@ -94,6 +107,7 @@ export default function AccountSettings() {
         `Wallet connected: ${address.slice(0, 6)}...${address.slice(-4)}`
       )
     } catch (error: any) {
+<<<<<<< HEAD
       toast.error (error.message || 'Failed to connect wallet');
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
@@ -102,6 +116,16 @@ export default function AccountSettings() {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+      toast.error(error.message |'Failed to connect wallet')
+    }
+  }
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { useState } from 'react',;
 import { useLocalStorage } from '@/hooks',;
 import { Header } from '@/components/Header',;
@@ -175,10 +199,19 @@ export default function AccountSettings() {;
     }
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
       <SEO title="Account Settings" description="Manage your account" />
+<<<<<<< HEAD
       <Header />
 
 =======
@@ -186,27 +219,44 @@ export default function AccountSettings() {;
 >>>>>>>   return (
     <>
       <SEO title="Account Settings" description="Manage your account" />
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <Header />
+<<<<<<< HEAD
       <main className='container mx-auto py-8 px-4'>
         <h1 className='text-3xl font-bold mb-6 text-white'>Account Settings</h1>
         <div className='grid gap-6 md:grid-cols-2'>
+<<<<<<< HEAD
 >>>>>>>           <Card>
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+      <main className="container mx-auto py-8 px-4">
+        <h1 className="text-3xl font-bold mb-6 text-white">Account Settings</h1>
+        
+        <div className="grid gap-6 md:grid-cols-2">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <Card>
 >>>>>>>             <CardHeader>
               <CardTitle>Profile Settings</CardTitle>
-              <CardDescription>
-                Manage your personal information and privacy
-              </CardDescription>
+              <CardDescription>Manage your personal information and privacy</CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
               <div className="space-y-2">
                 <Label htmlFor="email">Email Address</Label>
                 <Input
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   id='email'
                   value={user?.email |''}                  disabled
                   className='bg-gray-100'
@@ -218,28 +268,63 @@ export default function AccountSettings() {;
                   <Input
                     id='didHandle'
                     value={didHandle}
-                    onChange={e => setDidHandle(e && e.target.value)}
-                    placeholder='ENS / Lens / Ceramic / Farcaster';
-                  />;
+                    onChange={e => setDidHandle(e.target.value)}
+                    placeholder='ENS / Lens / Ceramic / Farcaster'
+                  />
                   <Button
                     variant='outline'
                     onClick={handleConnectWallet}
                     type='button'
                     className='flex items-center gap-1'                  >
                     <Wallet className='h-4 w-4' />
+<<<<<<< HEAD
 >>>>>>>                     Connect
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+                  id="email"
+                  value={user?.email || ''}
+                  disabled
+                  className="bg-gray-100"
+                />
+              </div>
+              
+              <div className="space-y-2">
+                <Label htmlFor="didHandle">Web3 Identity Handle</Label>
+                <div className="flex gap-2">
+                  <Input
+                    id="didHandle"
+                    value={didHandle}
+                    onChange={(e) => setDidHandle(e.target.value)}
+                    placeholder="ENS / Lens / Ceramic / Farcaster"
+                  />
+                  <Button 
+                    variant="outline" 
+                    onClick={handleConnectWallet}
+                    type="button"
+                    className="flex items-center gap-1"
+                  >
+                    <Wallet className="h-4 w-4" />
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     Connect
 >>>>>>>                   </Button>
                 </div>
-                <p className='text-xs text-gray-500 mt-1'>
+                <p className="text-xs text-gray-500 mt-1">
                   Link your decentralized identity to display on your profile
                 </p>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <div className='flex items-center justify-between'>
                 <div className='space-y-0.5'>
                   <Label htmlFor='displayWeb3'>Display Web3 Identity</Label>
@@ -257,16 +342,48 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <div className='space-y-0.5'>
                   <Label htmlFor='backup' className='flex items-center gap-1'>
                     <Database className='h-4 w-4' />
+<<<<<<< HEAD
 >>>>>>>                     Decentralized Backup
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                     Decentralized Backup
 >>>>>>>                   </Label>
                   <p className='text-xs text-gray-500'>
+=======
+=======
+              
+              <div className="flex items-center justify-between">
+                <div className="space-y-0.5">
+                  <Label htmlFor="displayWeb3">Display Web3 Identity</Label>
+                  <p className="text-xs text-gray-500">Show your Web3 handle instead of email</p>
+                </div>
+                <Switch
+                  id="displayWeb3"
+                  checked={displayWeb3}
+                  onCheckedChange={setDisplayWeb3}
+                />
+              </div>
+              
+              <Separator />
+              
+              <div className="flex items-center justify-between">
+                <div className="space-y-0.5">
+                  <Label htmlFor="backup" className="flex items-center gap-1">
+                    <Database className="h-4 w-4" />
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                    Decentralized Backup
+                  </Label>
+                  <p className="text-xs text-gray-500">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     Backup your profile data to IPFS/Arweave
                   </p>
                 </div>
                 <Switch
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 {isSubmitting ? 'Saving...' : 'Save Settings'}
@@ -282,17 +399,56 @@ ursor/fix-website-loading-errors-and-merge-6662
                   is in beta.;
                 </div>;
 
+=======
+                  id='backup'
+                  checked={enableBackup}
+                  onCheckedChange={setEnableBackup}                />
+              </div>
+              {enableBackup && (
+                <div className='rounded-md bg-amber-50 p-3 text-sm text-amber-800'>
+                  Data will be backed up to decentralized storage. This feature
+                  is in beta.
+                </div>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               )}
               <Button
                 onClick={handleSave}
                 disabled={isSubmitting}
                 className='w-full'              >
+<<<<<<< HEAD
 >>>>>>>                 {isSubmitting ? 'Saving...' : 'Save Settings'}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+                  id="backup"
+                  checked={enableBackup}
+                  onCheckedChange={setEnableBackup}
+                />
+              </div>
+              
+              {enableBackup && (
+                <div className="rounded-md bg-amber-50 p-3 text-sm text-amber-800">
+                  Data will be backed up to decentralized storage. This feature is in beta.
+                </div>
+              )}
+;
+              <Button;
+                onClick={handleSave}
+                disabled={isSubmitting}
+                className="w-full"
+              >
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                {isSubmitting ? 'Saving...' : 'Save Settings'}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 {!isSubmitting && <Save className="ml-2 h-4 w-4" />}
               </Button>
             </CardContent>
           </Card>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -307,16 +463,23 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+          
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <Card>
 >>>>>>>             <CardHeader>
               <CardTitle>Web3 Features</CardTitle>
-              <CardDescription>
-                Manage your Web3 connections and features
-              </CardDescription>
+              <CardDescription>Manage your Web3 connections and features</CardDescription>
             </CardHeader>
-            <CardContent className='space-y-6'>
-              <div className='space-y-2'>
-                <h3 className='font-medium'>Connected Wallet</h3>
+            <CardContent className="space-y-6">
+              <div className="space-y-2">
+                <h3 className="font-medium">Connected Wallet</h3>
                 {didHandle ? (
                   <div className="flex items-center gap-2 bg-gray-100 p-3 rounded-md">
                     <svg 
@@ -358,11 +521,22 @@ ursor/fix-website-loading-errors-and-merge-6662
                 )}
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               <div>
 =======
 >>>>>>>               <div>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+              
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              <div>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <h3 className="font-medium mb-2">Backup Status</h3>
                 <div className="grid grid-cols-2 gap-2">
                   <div className="bg-gray-100 p-3 rounded-md">
@@ -392,6 +566,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </div>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     </>
@@ -399,6 +574,37 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
               
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+              <div>
+                <h3 className='font-medium mb-2'>Recovery Options</h3>
+                <Button
+                  variant='outline'
+                  className='w-full'
+                  disabled={!enableBackup}                >
+                  Restore Profile from Backup
+                </Button>
+                <p className='text-xs text-gray-500 mt-1'>
+                  {enableBackup
+                    ? 'Restore your profile data from decentralized storage'
+                    : 'Enable backup first to use this feature'}
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </main>
+<<<<<<< HEAD
+    </>
+  )
+}
+=======
+    </>;
+  );
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+              
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <div>
                 <h3 className="font-medium mb-2">Recovery Options</h3>
                 <Button 
@@ -411,6 +617,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <p className="text-xs text-gray-500 mt-1">
                   {enableBackup 
                     ? 'Restore your profile data from decentralized storage' 
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
               <div>
                 <h3 className='font-medium mb-2'>Backup Status</h3>
@@ -537,6 +744,9 @@ ursor/fix-website-loading-errors-and-merge-6662
                     ? 'Restore your profile data from decentralized storage';
 >>>>>>>                     : 'Enable backup first to use this feature'}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+                    : 'Enable backup first to use this feature'}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 </p>;
               </div>;
             </CardContent>;
@@ -548,6 +758,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -557,3 +768,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

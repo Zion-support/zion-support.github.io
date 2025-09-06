@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/sidebar/SidebarItem.tsx
 
 
 <<<<<<< HEAD
@@ -9,6 +11,24 @@ import React from "react",
 import { cn } from "@/lib/utils",
 
 <<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+import React from "react";
+<<<<<<< HEAD
+import { cn } from "@/lib/utils";
+=======
+import React from "react",
+import { cn } from "@/lib/utils",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+import {cn} from "@/lib/utils";
+=======
+import React from "react",
+import { cn } from "@/lib/utils",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 interface SidebarItemProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string,
   children?: React.ReactNode,
@@ -17,19 +37,23 @@ interface SidebarItemProps extends React.HTMLAttributes<HTMLDivElement> {
 export function SidebarItem({ className, children, active, ...props }: SidebarItemProps) {
   return (
     <div
+<<<<<<< HEAD
 
       className={cn(
 
 =======
 
 =======
+========
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/sidebar/SidebarItem.tsx
 import {cn} from "@/lib/utils";
 interface SidebarItemProps extends React && React.HTMLAttributes<HTMLDivElement> {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   className?: string;
   children?: React && React.ReactNode;
   active?: boolean;
 }
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/sidebar/SidebarItem.tsx
 
 
 export function SidebarItem(): any ({ className, children, active, ...props }: SidebarItemProps) {;
@@ -41,6 +65,14 @@ export function SidebarItem(): any ({ className, children, active, ...props }: S
         "flex items-center px-3 py-2 text-sm font-medium rounded-md"
         active ? "bg-primary/10 text-primary" : "text-muted-foreground hover: bg-accent hover:text-accent-foreground",
 
+========
+export function SidebarItem(): any ({ className, children, active, ...props }: SidebarItemProps) {;
+  return (
+    <div
+      className={cn(
+        "flex items-center px-3 py-2 text-sm font-medium rounded-md"
+        active ? "bg-primary/10 text-primary" : "text-muted-foreground hover: bg-accent hover:text-accent-foreground",
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/sidebar/SidebarItem.tsx
         className
 =======
 
@@ -50,12 +82,18 @@ export function SidebarItem(): any ({ className, children, active, ...props }: S
       )}
       {...props}>;
       {children}
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/sidebar/SidebarItem.tsx
 
     </div>;
   );
 }
 
 =======
+========
+    </div>;
+  );
+}
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/ui/sidebar/SidebarItem.tsx
 import React from './react';
 import { cn } from '@/lib / utils';
 interface SidebarItemProps extends React.HTMLAttributes < HTMLDivElement> {
@@ -78,4 +116,91 @@ function SidebarItem() {
       {children}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+import React from "react",;
+import { cn } from "@/lib/utils",;
+;
+interface SidebarItemProps extends React.HTMLAttributes<HTMLDivElement> {;
+  className?:string,;
+  children?:React.ReactNode,;
+  active?:boolean,;
+}
+;
+export function SidebarItem({ className, children, active, ...props } SidebarItemProps) {;
+  return (;
+    <div;
+      className={cn(;
+        "flex items-center px-3 py-2 text-sm font-medium rounded-md",;
+        active ? "bg-primary/10 text-primary" :"text-muted-foreground hover:bg-accent hover:text-accent-foreground",;
+        className;
+      )}
+      {...props}
+    >;
+      {children}
+    </div>;
+  ),;}
+ interface SidebarItemProps extends React.HTMLAttributes<HTMLDivElement> {
+  className?: string;
+children?: React.ReactNode;
+active?: boolean 
+}className, children, active, ...props 
+}: SidebarItemProps) {
+  return (<div className= {
+  cn () 
+}{
+  ...props 
+}> {
+  children 
+}</div>) 
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+      className={cn(;
+        "flex items-center px-3 py-2 text-sm font-medium rounded-md";
+        active ? "bg-primary/10 text-primary" : "text-muted-foreground hover: bg-accent hover:text-accent-foreground",
+        className
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      className={cn(
+<<<<<<< HEAD
+        "flex items-center px-3 py-2 text-sm font-medium rounded-md";
+        active ? "bg-primary/10 text-primary" : "text-muted-foreground hover: bg-accent hover:text-accent-foreground"
+
+        className
+=======
+        "flex items-center px-3 py-2 text-sm font-medium rounded-md",
+        active ? "bg-primary/10 text-primary" : "text-muted-foreground hover:bg-accent hover:text-accent-foreground",
+        className
+import React from "react",;
+import { cn } from "@/lib/utils",;
+interface SidebarItemProps extends React.HTMLAttributes<HTMLDivElement> {;
+  className?: string,;
+  children?: React.ReactNode,;
+  active?: boolean;
+}
+;
+export function SidebarItem({ className, children, active, ...props }: SidebarItemProps) {;
+  return (;
+    <div;
+      className={cn(;
+        "flex items-center px-3 py-2 text-sm font-medium rounded-md";
+        active ? "bg-primary/10 text-primary" : "text-muted-foreground hover:bg-accent hover:text-accent-foreground";
+        className;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      )}
+      {...props}
+    >
+      {children}
+    </div>
+  )
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

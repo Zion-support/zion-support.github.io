@@ -1,27 +1,68 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<<< HEAD:src/components/HowItWorksSection.tsx
 
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import React from 'react',
 import { GradientHeading } from "./GradientHeading",
+========
+import React from 'react';
+import { GradientHeading } from "./GradientHeading";
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/HowItWorksSection.tsx
+=======
+import React from 'react'
+import { GradientHeading } from './GradientHeading'
+import { Check, Handshake, Search, Send } from 'lucide-react'
+import { cn } from "@/lib/utils";
+import { useTranslation } from "react-i18next";
+interface HowItWorksSectionProps {
+  className?: string;
+  style?: React.CSSProperties
+<<<<<<< HEAD
+=======
+const getSteps = (t: any,) => [
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+import React from 'react',
+import { GradientHeading } from "./GradientHeading",
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { Check, Handshake, Search, Send } from 'lucide-react'
 import { cn } from "@/lib/utils",
 import { useTranslation } from "react-i18next",
 interface HowItWorksSectionProps {
   className?: string,
   style?: React.CSSProperties
+<<<<<<< HEAD
+<<<<<<<< HEAD:src/components/HowItWorksSection.tsx
 }
 <<<<<<< HEAD
 
 const getSteps = (t: any) => [
 
+========
+const getSteps = (t: any,) => [
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/HowItWorksSection.tsx
   {
 
 =======
 >>>>>>> 
 const getSteps = (t: any) => [
 >>>>>>>   {
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+const getSteps = (t: any) => [
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  {
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     title: t('how_it_works.post')
     description: t('how_it_works.post_desc')
     icon: Send
@@ -105,6 +146,7 @@ const stats = [ "
   hidden: { opacity: 0
   scale: 0.8
 }
+<<<<<<< HEAD
 import React from 'react';
 import { GradientHeading } from './GradientHeading';
 import { Check, Handshake, Search, Send } from 'lucide-react';
@@ -201,10 +243,15 @@ const stats = [ ";
   hidden: { opacity: 0,
   scale: 0.8;
 },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     visible: {
       opacity: 1,      scale: 1
       transition: {
+<<<<<<<< HEAD:src/components/HowItWorksSection.tsx
+=======
+    visible: {
+      opacity: 1,      scale: 1
+      transition: {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         duration: 0.5,"
         ease: "easeOut"}}}
   return ("
@@ -218,6 +265,27 @@ export function HowItWorksSection({
 }: HowItWorksSectionProps) {
   const { t } = useTranslation()
   const steps = getSteps(t)
+<<<<<<< HEAD
+=======
+=======
+    title: t('how_it_works.post'),
+    description: t('how_it_works.post_desc'),
+    icon: Send},
+  {
+    title: t('how_it_works.match'),
+    description: t('how_it_works.match_desc'),
+    icon: Search},
+  {
+    title: t('how_it_works.hire_buy'),
+    description: t('how_it_works.hire_buy_desc'),
+    icon: Handshake},
+  {
+    title: t('how_it_works.done'),
+    description: t('how_it_works.done_desc'),
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     icon: Check,
   },
 ]
@@ -270,6 +338,7 @@ export default function Page() {
     duration: "Ongoing","
     success: "100% client retention"}
 ]
+<<<<<<< HEAD
   {
 
     title: t('how_it_works.post'),
@@ -312,25 +381,23 @@ export default function Page() {
         </div>
 
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/HowItWorksSection.tsx
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -342,7 +409,6 @@ import { useTranslation } from 'react-i18next';
 interface HowItWorksSectionProps {;
   className?: string;
   style?: React && React.CSSProperties;
-
 const getSteps = (t: any,) => [;
   {;
     title: t('how_it_works && how_it_works.post'),;
@@ -438,19 +504,52 @@ onst stats = [ ";
       {/* Enhanced background pattern */}";
       <div className="absolute inset-0 opacity-5">";
         <divclassName="absolute inset-0" style = {
-
 export function HowItWorksSection(): any ({
+=======
+const stats = [ ";
+  { icon: <Clock className="w-6 h-6"  />, value: "3x Faster", label: "Project Delivery" },";
+  { icon: <Target className="w-6 h-6"  />, value: "99.9%", label: "Success Rate" },";
+  { icon: <TrendingUp className="w-6 h-6"  />, value: "50%", label: "Cost Reduction" },";
+  { icon: <Award className="w-6 h-6"  />, value: "1000+", label: "Projects Completed" };]
+  const [hoveredStep, setHoveredStep] = useState < number | null> (null) 
+  const [activeStep, setActiveStep] = useState < number> (0) 
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.1}}}
+  const statsVariants = {
+  hidden: { opacity: 0,
+  scale: 0.8
+},
+    visible: {
+      opacity: 1,      scale: 1,
+      transition: {
+        duration: 0.5,"
+        ease: "easeOut"}}}
+  return ("
+    <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-slate-dark to-zion-blue-dark relative overflow-hidden">
+      {/* Enhanced background pattern */}"
+      <div className="absolute inset-0 opacity-5">"
+        <div className="absolute inset-0" style = {
+export function HowItWorksSection({
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   className,
   style,
 }: HowItWorksSectionProps) {
   const { t } = useTranslation()
   const steps = getSteps(t)
+<<<<<<< HEAD
+<<<<<<<< HEAD:src/components/HowItWorksSection.tsx
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     icon: Check}],
 
 export function HowItWorksSection({ className, style }: HowItWorksSectionProps) {
   const { t } = useTranslation(),
   const steps = getSteps(t),
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   
@@ -461,6 +560,32 @@ export function HowItWorksSection({ className, style }: HowItWorksSectionProps) 
           <GradientHeading>{t('home.how_it_works_title')}</GradientHeading>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+  
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+  return (
+    <section className={cn("py-20 bg-zion-blue", className)} style={style}>
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <GradientHeading>{t('home.how_it_works_title')}</GradientHeading>
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+          <p className='text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto'>            {t('home.how_it_works_subtitle')}
+          </p>
+        </div>
+        <div className='relative'>
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
     <section className={cn("py-20 bg-zion-blue", className)} style={style}>
       <div className="container mx-auto px-4">
@@ -468,16 +593,19 @@ export function HowItWorksSection({ className, style }: HowItWorksSectionProps) 
           <GradientHeading>{t('home.how_it_works_title')}</GradientHeading>
 <<<<<<< HEAD
 
-  return (
-    <section className={cn("py-20 bg-zion-blue", className)} style={style}>
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <GradientHeading>{t('home.how_it_works_title')}</GradientHeading>
-
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <p className="text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto">
             {t('home.how_it_works_subtitle')}
           </p>
         </div>
+<<<<<<< HEAD
 
 =======
 >>>>>>>           <p className="text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto">
@@ -487,15 +615,204 @@ export function HowItWorksSection({ className, style }: HowItWorksSectionProps) 
 }
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+  return (
+    <section className={cn('py-20 bg-zion-blue', className)} style={style}>;
+      <div className='container mx-auto px-4'>;
+        <div className='text-center mb-16'>;
+          <GradientHeading>{t('home && home.how_it_works_title')}</GradientHeading>;
+          <p className='text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto'>            {t('home && home.how_it_works_subtitle')}
+          </p>;
+        </div>;
+        <div className='relative'>  ;
+  return (
+    <section className={cn("py-20 bg-zion-blue", className)} style={style}>;
+      <div className="container mx-auto px-4">;
+        <div className="text-center mb-16">;
+          <GradientHeading>{t('home && home.how_it_works_title')}</GradientHeading>;
+          <p className="text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto">;
+            {t('home && home.how_it_works_subtitle')}
+          </p>;
+        </div>;
+        <div className='relative'>;
+          <div className='absolute left-4 md:left-1/2 top-0 h-full w-0 && 0.5 bg-gradient-to-b from-zion-purple via-zion-cyan to-zion-purple-light transform -translate-x-1/2 md:block hidden'></div>;
+          <div className='space-y-12 md:space-y-0'>;
+            {steps && steps.map((step, index) => (;
+              <div
+                key={step && step.title}                className={`flex flex-col md:flex-row items-center ${
+                  index % 2 === 0 ? 'md:flex-row-reverse' : ''
+                } relative`}>;
+                <div className='md:w-1/2 mb-6 md:mb-0 md:px-12 text-center md:text-right'>;
+                  {index % 2 === 0 ? (;
+                    <div>;
+                      <h3 className='text-2xl font-bold text-white mb-3'>;
+                        {step && step.title}
+                      </h3>;
+                      <p className='text-zion-slate-light'>;
+                        {step && step.description}
+                      </p>;
+                    </div>;
+                  ) : null}
+        duration: 0.5, ";
+        ease: "ease_out"}}}
+  return (";
+    <section className="py - 20 bg - gradient - to - br from - zion - blue via - zion - slate - dark to - zion - blue - dark relative overflow - hidden">;
+      {/* Enhanced background pattern */}";
+      <div className="absolute inset - 0 opacity - 5">";
+        <div className="absolute inset - 0" style = {
+export /**
+ * HowItWorksSection - Function description
+ */
+function HowItWorksSection() {
+  const { t } = use_translation ();
+  const steps = get_steps (t);
+  return (
+    <section className={cn ('py - 20 bg - zion - blue', class_name)} style={style}>;
+      <div className='container mx - auto px - 4'>;
+        <div className='text - center mb - 16'>;
+          <GradientHeading>{t ('home.how_it_works_title')}</GradientHeading>;
+          <p className='text - zion - slate - light text - lg mt - 4 max - w-2xl mx - auto'>            {t ('home.how_it_works_subtitle')}
+          </p>;
+        </div>;
+        <div className='relative'>;
+  return (
+    <section className={cn ("py - 20 bg - zion - blue", class_name)} style={style}>;
+      <div className="container mx - auto px - 4">;
+        <div className="text - center mb - 16">;
+          <GradientHeading>{t ('home.how_it_works_title')}</GradientHeading>;
+          <p className="text - zion - slate - light text - lg mt - 4 max - w-2xl mx - auto">;
+            {t ('home.how_it_works_subtitle')}
+          </p>;
+        </div>;
+        <div className='relative'>;
+          <div className='absolute left - 4 md:left - 1/2 top - 0 h - full w - 0.5 bg - gradient - to - b from - zion - purple via - zion - cyan to - zion - purple - light transform -translate - x-1 / 2 md:block hidden'></div>;
+          <div className='space - y-12 md:space - y-0'>;
+            {steps.map ((step, index) => (
+              <div;
+                key={step.title}                className={`flex flex - col md:flex - row items - center ${
+                  index % 2 === 0 ? 'md:flex - row - reverse' : '';
+                } relative`}
+              >;
+                <div className='md:w - 1/2 mb - 6 md:mb - 0 md:px - 12 text - center md:text - right'>;
+                  {index % 2 === 0 ? (
+                    <div>;
+                      <h3 className='text - 2xl font - bold text - white mb - 3'>;
+                        {step.title}
+                      </h3>;
+                      <p className='text - zion - slate - light'>;
+                        {step.description}
+                      </p>;
+                    </div>) : null}
+                </div>;
+                <div className='relative z - 10 flex items - center justify - center w - 12 h - 12 rounded - full bg - zion - blue - light border - 2 border - zion - purple mx - 4 md:mx - 0'>;
+                  <step.icon className='w - 6 h - 6 text - zion - cyan' />;
+                </div>;
+                <div className='md:w - 1/2 md:px - 12 text - center md:text - left'>;
+                  {index % 2 !== 0 ? (
+                    <div>;
+                      <h3 className='text - 2xl font - bold text - white mb - 3'>;
+                        {step.title}
+                      </h3>;
+                      <p className='text - zion - slate - light'>;
+                        {step.description}
+                </div>;
+                <div className='relative z-10 flex items-center justify-center w-12 h-12 rounded-full bg-zion-blue-light border-2 border-zion-purple mx-4 md:mx-0'>;
+                  <step && step.icon className='w-6 h-6 text-zion-cyan' />;
+                </div>;
+                <div className='md:w-1/2 md:px-12 text-center md:text-left'>;
+                  {index % 2 !== 0 ? (;
+                    <div>;
+                      <h3 className='text-2xl font-bold text-white mb-3'>;
+                        {step && step.title}
+                      </h3>;
+                      <p className='text-zion-slate-light'>;
+                        {step && step.description}
+                      </p>                    </div>                    </div>;
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/HowItWorksSection.tsx
+        <div className="relative">
+          {/* Timeline line */}
+          <div className="absolute left-4 md:left-1/2 top-0 h-full w-0.5 bg-gradient-to-b from-zion-purple via-zion-cyan to-zion-purple-light transform -translate-x-1/2 md:block hidden"></div>
+=======
+<<<<<<< HEAD
+        <div className='relative'>
+          <div className='absolute left-4 md:left-1/2 top-0 h-full w-0.5 bg-gradient-to-b from-zion-purple via-zion-cyan to-zion-purple-light transform -translate-x-1/2 md:block hidden'></div>
+          <div className='space-y-12 md:space-y-0'>
+            {steps.map((step, index) => (
+              <div
+                key={step.title}                className={`flex flex-col md:flex-row items-center ${
+                  index % 2 === 0 ? 'md:flex-row-reverse' : ''
+                } relative`}
+              >
+                <div className='md:w-1/2 mb-6 md:mb-0 md:px-12 text-center md:text-right'>
+                  {index % 2 === 0 ? (
+                    <div>
+                      <h3 className='text-2xl font-bold text-white mb-3'>
+                        {step.title}
+                      </h3>
+                      <p className='text-zion-slate-light'>
+                        {step.description}
+                      </p>
+                    </div>
+                  ) : null}
+                </div>
+                <div className='relative z-10 flex items-center justify-center w-12 h-12 rounded-full bg-zion-blue-light border-2 border-zion-purple mx-4 md:mx-0'>
+                  <step.icon className='w-6 h-6 text-zion-cyan' />
+                </div>
+                <div className='md:w-1/2 md:px-12 text-center md:text-left'>
+                  {index % 2 !== 0 ? (
+                    <div>
+                      <h3 className='text-2xl font-bold text-white mb-3'>
+                        {step.title}
+                      </h3>
+                      <p className='text-zion-slate-light'>
+                        {step.description}
+                      </p>                    </div>                    </div>
+                  ) : null}
+                </div>
+                      <h3 className="text-2xl font-bold text-white mb-3">{step.title}</h3>
+                      <p className="text-zion-slate-light">{step.description}</p>
+                    </div>
+                  ) : null}
+                </div>
+                <div className="relative z-10 flex items-center justify-center w-12 h-12 rounded-full bg-zion-blue-light border-2 border-zion-purple mx-4 md:mx-0">
+                  <step.icon className="w-6 h-6 text-zion-cyan" />
+                </div>
+                <div className="md:w-1/2 md:px-12 text-center md:text-left">
+                  {index % 2 !== 0 ? (
+                    <div>
+                      <h3 className="text-2xl font-bold text-white mb-3">{step.title}</h3>
+                      <p className="text-zion-slate-light">{step.description}</p>
+                    </div>
+                  ) : null}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+<<<<<<< HEAD
+}
+}
+=======
+};
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
         <div className="relative">
           {/* Timeline line */}
           <div className="absolute left-4 md:left-1/2 top-0 h-full w-0.5 bg-gradient-to-b from-zion-purple via-zion-cyan to-zion-purple-light transform -translate-x-1/2 md:block hidden"></div>
           
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <div className="space-y-12 md:space-y-0">
             {steps.map((step, index) => (
               <div 
                 key={step.title}
                 className={`flex flex-col md:flex-row items-center ${
+<<<<<<< HEAD
                   index % 2 === 0 ? "md: flex-row-reverse" : "",
                 } relative`}
               >
@@ -505,28 +822,186 @@ export function HowItWorksSection({ className, style }: HowItWorksSectionProps) 
                       <h3 className="text-2xl font-bold text-white mb-3">{step.title}</h3>
                       <p className="text-zion-slate-light">{step.description}</p>
                     </div>
+<<<<<<<< HEAD:src/components/HowItWorksSection.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>>                   ) : null}
+========
+                  ) : null}
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/HowItWorksSection.tsx
                 </div>;
                       <h3 className="text-2xl font-bold text-white mb-3">{step && step.title}</h3>;
                       <p className="text-zion-slate-light">{step && step.description}</p>;
                     </div>;
                   ) : null}
+<<<<<<<< HEAD:src/components/HowItWorksSection.tsx
 
 
+========
+                </div>;
+                <div className="relative z-10 flex items-center justify-center w-12 h-12 rounded-full bg-zion-blue-light border-2 border-zion-purple mx-4 md:mx-0">;
+                  <step && step.icon className="w-6 h-6 text-zion-cyan" />;
+                </div>;
+                <div className="md:w-1/2 md:px-12 text-center md:text-left">;
+                  {index % 2 !== 0 ? (;
+                    <div>;
+                      <h3 className="text-2xl font-bold text-white mb-3">{step && step.title}</h3>;
+                      <p className="text-zion-slate-light">{step && step.description}</p>;
+                    </div>;
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/HowItWorksSection.tsx
+                  ) : null}
+=======
+
+=======
+                  index % 2 === 0 ? "md:flex-row-reverse" : ""
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+import React from 'react',;
+import { GradientHeading } from "./GradientHeading",;
+import { Check, Handshake, Search, Send } from 'lucide-react';
+import { cn } from "@/lib/utils",;
+import { useTranslation } from "react-i18next",;
+<<<<<<< HEAD
+;
+interface HowItWorksSectionProps {;
+  className?:string,;
+  style?:React.CSSProperties,;
+}
+;
+const getSteps = (t:any) => [;
+  {;
+    title:t('how_it_works.post'),;
+    description:t('how_it_works.post_desc'),;
+    icon:Send},;
+  {;
+    title:t('how_it_works.match'),;
+    description:t('how_it_works.match_desc'),;
+    icon:Search},;
+  {;
+    title:t('how_it_works.hire_buy'),;
+    description:t('how_it_works.hire_buy_desc'),;
+    icon:Handshake},;
+  {;
+    title:t('how_it_works.done'),;
+    description:t('how_it_works.done_desc'),;
+    icon:Check}],;
+;
+export function HowItWorksSection({ className, style } HowItWorksSectionProps) {;
+  const { t } = useTranslation(),;
+  const steps = getSteps(t),;
+  ;
+=======
+interface HowItWorksSectionProps {;
+  className?: string,;
+  style?: React.CSSProperties;
+}
+;
+const getSteps = (t: any) => [;
+  {;
+    title: t('how_it_works.post'),;
+    description: t('how_it_works.post_desc'),;
+    icon: Send},;
+  {;
+    title: t('how_it_works.match'),;
+    description: t('how_it_works.match_desc'),;
+    icon: Search},;
+  {;
+    title: t('how_it_works.hire_buy'),;
+    description: t('how_it_works.hire_buy_desc'),;
+    icon: Handshake},;
+  {;
+    title: t('how_it_works.done'),;
+    description: t('how_it_works.done_desc'),;
+    icon: Check}],;
+export function HowItWorksSection({ className, style }: HowItWorksSectionProps) {;
+  const { t } = useTranslation();
+  const steps = getSteps(t);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+  return (;
+    <section className={cn("py-20 bg-zion-blue", className)} style={style}>;
+      <div className="container mx-auto px-4">;
+        <div className="text-center mb-16">;
+          <GradientHeading>{t('home.how_it_works_title')}</GradientHeading>;
+          <p className="text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto">;
+            {t('home.how_it_works_subtitle')}
+          </p>;
+        </div>;
+<<<<<<< HEAD
+;
+        <div className="relative">;
+          {/* Timeline line */}
+          <div className="absolute left-4 md:left-1/2 top-0 h-full w-0.5 bg-gradient-to-b from-zion-purple via-zion-cyan to-zion-purple-light transform -translate-x-1/2 md:block hidden"></div>;
+          ;
+          <div className="space-y-12 md:space-y-0">;
+            {steps.map((step, index) => (;
+              <div ;
+                key={step.title}
+                className={`flex flex-col md:flex-row items-center ${;
+                  index % 2 === 0 ? "md:flex-row-reverse" :"";
+=======
+        <div className="relative">;
+          {/* Timeline line */}
+          <div className="absolute left-4 md:left-1/2 top-0 h-full w-0.5 bg-gradient-to-b from-zion-purple via-zion-cyan to-zion-purple-light transform -translate-x-1/2 md:block hidden"></div>;
+          <div className="space-y-12 md:space-y-0">;
+            {steps.map((step, index) => (;
+              <div;
+                key={step.title}
+                className={`flex flex-col md:flex-row items-center ${;
+                  index % 2 === 0 ? "md:flex-row-reverse" : "";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+                } relative`}
+              >;
+                <div className="md:w-1/2 mb-6 md:mb-0 md:px-12 text-center md:text-right">;
+                  {index % 2 === 0 ? (;
+                    <div>;
+                      <h3 className="text-2xl font-bold text-white mb-3">{step.title}</h3>;
+                      <p className="text-zion-slate-light">{step.description}</p>;
+                    </div>;
+<<<<<<< HEAD
+                  ) :null}
+                </div>;
+                ;
+                <div className="relative z-10 flex items-center justify-center w-12 h-12 rounded-full bg-zion-blue-light border-2 border-zion-purple mx-4 md:mx-0">;
+                  <step.icon className="w-6 h-6 text-zion-cyan" />;
+                </div>;
+;
+=======
+                  ) : null}
+                </div>;
+                <div className="relative z-10 flex items-center justify-center w-12 h-12 rounded-full bg-zion-blue-light border-2 border-zion-purple mx-4 md:mx-0">;
+                  <step.icon className="w-6 h-6 text-zion-cyan" />;
+                </div>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+                <div className="md:w-1/2 md:px-12 text-center md:text-left">;
+                  {index % 2 !== 0 ? (;
+                    <div>;
+                      <h3 className="text-2xl font-bold text-white mb-3">{step.title}</h3>;
+                      <p className="text-zion-slate-light">{step.description}</p>;
+                    </div>;
+<<<<<<< HEAD
+                  ) :null}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+                </div>;
+              </div>;
+            ))}
+<<<<<<<< HEAD:src/components/HowItWorksSection.tsx
+
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/HowItWorksSection.tsx
+=======
                   ) : null}
                 </div>;
               </div>;
             ))}
-
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </div>;
         </div>;
       </div>;
     </section>;
+<<<<<<< HEAD
+<<<<<<< HEAD
   );
 });
-
 export default Component;
+<<<<<<<< HEAD:src/components/HowItWorksSection.tsx
 
 }
 ;
@@ -537,3 +1012,108 @@ export default Component;
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+}
+}
+}
+  );
+}
+                      </p>                    </div>                    </div>) : null}
+                </div>;
+                      <h3 className="text - 2xl font - bold text - white mb - 3">{step.title}</h3>;
+                      <p className="text - zion - slate - light">{step.description}</p>;
+                    </div>) : null}
+                </div>;
+                <div className="relative z - 10 flex items - center justify - center w - 12 h - 12 rounded - full bg - zion - blue - light border - 2 border - zion - purple mx - 4 md:mx - 0">;
+                  <step.icon className="w - 6 h - 6 text - zion - cyan" />;
+                </div>;
+                <div className="md:w - 1/2 md:px - 12 text - center md:text - left">;
+                  {index % 2 !== 0 ? (
+                    <div>;
+                      <h3 className="text - 2xl font - bold text - white mb - 3">{step.title}</h3>;
+                      <p className="text - zion - slate - light">{step.description}</p>;
+                    </div>) : null}
+                </div>;
+              </div>))}
+          </div>;
+        </div>;
+      </div>;
+    </section>);
+}
+}
+}
+=======
+  ),;}
+ interface HowItWorksSectionProps {;
+  className?: string;
+style?: React.CSSProperties ;
+}const getSteps = (t: any) => [ {;
+  title: t ('how it works.post');';
+description: t ('how it works.post desc');
+icon: Send ;
+};
+{';
+  title: t ('how it works.match');';
+description: t ('how it works.match desc');
+icon: Search ;
+};
+{';
+  title: t ('how it works.hire buy');';
+description: t ('how it works.hire buy desc');
+icon: Handshake ;
+};
+{';
+  title: t ('how it works.done');';
+description: t ('how it works.done desc');
+icon: Check ;
+}];
+export function HowItWorksSection ({;
+  className, style ;
+}: HowItWorksSectionProps) {;
+  const {;
+  t ;
+}= useTranslation ();
+const steps = getSteps (t);
+return (<section className= {;
+  cn ("py-20 bg-zion-blue", className) ;
+}style= {;
+  style ";
+}> <div className="container mx-auto px-4" > <div className="text-center mb-16" > <GradientHeading> {';
+  t ('home.how it works title') ";
+}</GradientHeading> <p className="text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto" > {';
+  t ('home.how it works subtitle') ";
+}</p> </div> <div className="relative" > {;
+  /* Timeline line */ ";
+}<div className="absolute left-4 md:left-1/2 top-0 h-full w-0.5 bg-gradient-to-b from-zion-purple via-zion-cyan to-zion-purple-light transform -translate-x-1/2 md:block hidden" ></div> <div className="space-y-12 md:space-y-0" > {;
+  steps.map ( (step, index) => (<div key= {;
+  step.title ;
+}className= {;
+  `flex flex-col md:flex-row items-center $ {";
+  index % 2 === 0 ? "md:flex-row-reverse" : "" ;
+}relative` ";
+}index % 2 === 0 ? (<div> <h3 className="text-2xl font-bold text-white mb-3"> {;
+  step.title ";
+}</h3> <p className="text-zion-slate-light"> {;
+  step.description ;
+}</p> </div>) : null ";
+}</div> <div className="relative z-10 flex items-center justify-center w-12 h-12 rounded-full bg-zion-blue-light border-2 border-zion-purple mx-4 md:mx-0"> <step.icon className="w-6 h-6 text-zion-cyan"/> </div> <div className="md:w-1/2 md:px-12 text-center md:text-left"> {";
+  index % 2 !== 0 ? (<div> <h3 className="text-2xl font-bold text-white mb-3"> {;
+  step.title ";
+}</h3> <p className="text-zion-slate-light"> {;
+  step.description ;
+}</p> </div>) : null ;
+}</div> </div>) ) ;
+}</div> </div> </div> </section>) ;
+}'"
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/HowItWorksSection.tsx
+=======
+  );
+}
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

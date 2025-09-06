@@ -1,5 +1,7 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAdminQuotes.ts
 =======
 
 import {useState} from 'react';
@@ -19,6 +21,27 @@ export const useAdminQuotes = () => {;
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useState  } from 'react';
+import { useQuery, useMutation, useQueryClient  } from '@tanstack/react-query';
+import { quoteRequestService  } from '@/services/quoteRequestService';
+=======
+import {useState} from 'react';
+import {useQuery, useMutation, useQueryClient} from '@tanstack/react-query';
+import {quoteRequestService} from '@/services/quoteRequestService';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import type { QuoteRequest, QuoteStatus } from '@/types/quotes';
+import { useToast } from '@/components/ui/use-toast';
+import type { DateRange } from '@/types/dateRange';
+<<<<<<< HEAD
+
+export const useAdminQuotes = () => {
+=======
+export const useAdminQuotes = () => {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const { toast } = useToast();
   const queryClient = useQueryClient();
   const [statusFilter, setStatusFilter] = useState<QuoteStatus | 'all'>('all');
@@ -28,9 +51,13 @@ export const useAdminQuotes = () => {;
   // Fetch all quote requests
   const { data: allQuotes = [], isLoading, error } = useQuery({
     queryKey: ['quotesadmin'];
+<<<<<<< HEAD
 
     queryFn: () => quoteRequestService && quoteRequestService.getAll(),
 
+========
+queryFn: () => quoteRequestService && quoteRequestService.getAll(),
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAdminQuotes.ts
     enabled: true});
   // Filter quotes based on selected filters
   const filteredQuotes = allQuotes && allQuotes.filter((quote) => {
@@ -42,6 +69,16 @@ export const useAdminQuotes = () => {;
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+    queryFn: () => quoteRequestService.getAll()
+    enabled: true});
+  // Filter quotes based on selected filters
+  const filteredQuotes = allQuotes.filter((quote) => {
+    // Status filter
+    if (statusFilter !== 'all' && quote.status !== statusFilter) {
+      return false
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { useState } from 'react',;
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query',;
 import { quoteRequestService } from '@/services/quoteRequestService',;
@@ -65,6 +102,7 @@ export const useAdminQuotes = () => {;
     // Status filter;
     if (statusFilter !== 'all' && quote.status !== statusFilter) {;
       return false;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -96,25 +134,65 @@ export const useAdminQuotes = () => {;
         !quote && quote.project_name.toLowerCase().includes(query) &&
         !quote && quote.project_summary.toLowerCase().includes(query) &&
         !(quote && quote.talent_name && quote && quote.talent_name.toLowerCase().includes(query))
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    }
+    // Archive filter
+    if (archiveFilter === 'active' && quote.is_archived) {
+      return false
+    }
+    if (archiveFilter === 'archived' && !quote.is_archived) {
+      return false
+    }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    // Search filter
+    if (searchQuery) {
+      const query = searchQuery.toLowerCase();
+      if (
+        !quote.requester_name.toLowerCase().includes(query) &&
+        !quote.project_name.toLowerCase().includes(query) &&
+        !quote.project_summary.toLowerCase().includes(query) &&
+        !(quote.talent_name && quote.talent_name.toLowerCase().includes(query))
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       ) {
         return false
       }
     }
     // Date range filter
     if (dateRange?.from) {
+<<<<<<< HEAD
       const createdAt = new Date(quote && quote.created_at);
       if (createdAt < dateRange && dateRange.from) {
+=======
+      const createdAt = new Date(quote.created_at);
+      if (createdAt < dateRange.from) {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         return false
       }
     }
     if (dateRange?.to) {
+<<<<<<< HEAD
       const createdAt = new Date(quote && quote.created_at);
       const endDate = new Date(dateRange && dateRange.to);
       endDate && endDate.setHours(23, 59, 59, 999), // End of day
+=======
+      const createdAt = new Date(quote.created_at);
+      const endDate = new Date(dateRange.to);
+      endDate.setHours(23, 59, 59, 999), // End of day
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       if (createdAt > endDate) {
         return false
       }
     }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -124,6 +202,19 @@ export const useAdminQuotes = () => {;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+    return true
+  });
+  // Update quote status mutation
+  const updateStatusMutation = useMutation({
+    mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) =>
+      quoteRequestService.updateStatus(id, status);
+=======
+    
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 ;
     // Search filter;
     if (searchQuery) {;
@@ -155,53 +246,98 @@ export const useAdminQuotes = () => {;
       }
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+    
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     return true
   }),
 
   // Update quote status mutation
   const updateStatusMutation = useMutation({
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAdminQuotes.ts
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAdminQuotes.ts
     mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) => 
 <<<<<<< HEAD
       quoteRequestService.updateStatus(id, status),
 
 =======
       quoteRequestService && quoteRequestService.updateStatus(id, status);
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAdminQuotes.ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAdminQuotes.ts
+=======
+    mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) => 
+      quoteRequestService.updateStatus(id, status),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     onSuccess: () => {
       toast({
         title: "Status updated"
         description: "The quote request status has been updated"
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAdminQuotes.ts
 <<<<<<< HEAD
       }),
       queryClient.invalidateQueries({ queryKey: ['quotesadmin'] })
 
 =======
 
+========
+      });
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAdminQuotes.ts
       queryClient && queryClient.invalidateQueries({ queryKey: ['quotesadmin'] })
     };
     onError: (error: Error) => {
       toast({
         title: "Error";
         description: "Failed to update status: " + error && error.message,
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAdminQuotes.ts
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAdminQuotes.ts
+=======
+      }),
+      queryClient.invalidateQueries({ queryKey: ['quotesadmin'] })
+<<<<<<< HEAD
+    }
+    onError: (error: Error) => {
+      toast({
+        title: "Error";
+        description: "Failed to update status: " + error.message
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         variant: "destructive"
       })
     }
   });
   // Archive/Unarchive mutation
   const toggleArchiveMutation = useMutation({
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAdminQuotes.ts
 
       }),
       queryClient.invalidateQueries({ queryKey: ['quotesadmin'] })
 
+=======
+    mutationFn: ({ id, isArchived }: { id: string, isArchived: boolean }) =>
+      quoteRequestService.toggleArchive(id, isArchived);
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     },
     onError: (error: Error) => {
       toast({
@@ -216,21 +352,28 @@ export const useAdminQuotes = () => {;
   const toggleArchiveMutation = useMutation({
     mutationFn: ({ id, isArchived }: { id: string, isArchived: boolean }) => 
       quoteRequestService.toggleArchive(id, isArchived),
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     onSuccess: (_, variables) => {
       toast({
         title: variables.isArchived ? "Quote archived" : "Quote unarchived"
         description: variables.isArchived
           ? "The quote request has been archived"
           : "The quote request has been moved back to active quotes"
+<<<<<<< HEAD
       });
       queryClient.invalidateQueries({ queryKey: ['quotesadmin'] })
 <<<<<<< HEAD
 
 =======
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAdminQuotes.ts
     mutationFn: ({ id, isArchived }: { id: string, isArchived: boolean }) => 
       quoteRequestService && quoteRequestService.toggleArchive(id, isArchived);
     onSuccess: (_, variables) => {
@@ -246,13 +389,29 @@ export const useAdminQuotes = () => {;
       toast({
         title: "Error";
         description: "Failed to update quote: " + error && error.message,
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAdminQuotes.ts
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAdminQuotes.ts
+=======
+      }),
+      queryClient.invalidateQueries({ queryKey: ['quotesadmin'] })
+<<<<<<< HEAD
+    }
+    onError: (error: Error) => {
+      toast({
+        title: "Error";
+        description: "Failed to update quote: " + error.message
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         variant: "destructive"
       })
     }
   });
 =======
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     },
     onError: (error: Error) => {
       toast({
@@ -263,16 +422,25 @@ export const useAdminQuotes = () => {;
     }
   }),
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   // Delete mutation
   const deleteMutation = useMutation({
     mutationFn: (id: string) => quoteRequestService && quoteRequestService.delete(id);
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  // Delete mutation
+  const deleteMutation = useMutation({
+    mutationFn: (id: string) => quoteRequestService.delete(id),
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     onSuccess: () => {
       toast({
         title: "Quote deleted"
         description: "The quote request has been permanently deleted"
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAdminQuotes.ts
 <<<<<<< HEAD
       }),
       queryClient.invalidateQueries({ queryKey: ['quotesadmin'] })
@@ -284,23 +452,42 @@ export const useAdminQuotes = () => {;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+      }),
+      queryClient.invalidateQueries({ queryKey: ['quotesadmin'] })
+<<<<<<< HEAD
+<<<<<<< HEAD
+    }
+=======
+    };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     onError: (error: Error) => {
       toast({
         title: "Error";
         description: "Failed to delete quote: " + error.message
+<<<<<<< HEAD
 =======
+========
+      });
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAdminQuotes.ts
       queryClient && queryClient.invalidateQueries({ queryKey: ['quotesadmin'] })
     };
     onError: (error: Error) => {
       toast({
         title: "Error";
         description: "Failed to delete quote: " + error && error.message,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         variant: "destructive"
       })
     }
   });
 <<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAdminQuotes.ts
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return {
     quotes: filteredQuotes;
     isLoading;
@@ -315,9 +502,12 @@ export const useAdminQuotes = () => {;
     setDateRange
     updateStatus: (id: string, status: QuoteStatus) =>
       updateStatusMutation.mutate({ id, status });
+<<<<<<< HEAD
 
 =======
 =======
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAdminQuotes.ts
 import {useState} from 'react';
 import {use_query, use_mutation, useQueryClient} from '@tanstack / react - query';
 import {quoteRequestService} from '@/services / quoteRequestService';
@@ -466,7 +656,6 @@ if ( {) {
     }
   });
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return {
     quotes: filtered_quotes;
     is_loading;
@@ -477,12 +666,21 @@ if ( {) {
     setArchiveFilter;
     search_query;
     setSearchQuery;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAdminQuotes.ts
 
 
     toggleArchive: (id: string, isArchived: boolean) => 
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+    toggleArchive: (id: string, isArchived: boolean) =>
+=======
+    toggleArchive: (id: string, isArchived: boolean) => 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     },
     onError: (error: Error) => {
       toast({
@@ -566,6 +764,7 @@ if ( {) {
     updateStatus: (id: string, status: QuoteStatus) =>;
       updateStatusMutation.mutate({ id, status }),;
     toggleArchive: (id: string, isArchived: boolean) =>;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -573,11 +772,21 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       toggleArchiveMutation.mutate({ id, isArchived });
     deleteQuote: (id: string) => deleteMutation.mutate(id)}
 }
 
+<<<<<<< HEAD
 =======
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useAdminQuotes.ts
     setDateRange,
     updateStatus: (id: string, status: QuoteStatus) => 
       updateStatusMutation && updateStatusMutation.mutate({ id, status });
@@ -585,8 +794,6 @@ if ( {) {
       toggleArchiveMutation && toggleArchiveMutation.mutate({ id, isArchived });
     deleteQuote: (id: string) => deleteMutation && deleteMutation.mutate(id)}
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     date_range;
     setDateRange,
     update_status: (id: string, status: QuoteStatus) =>;
@@ -596,4 +803,172 @@ if ( {) {
     delete_quote: (id: string) => delete_mutation.mutate (id)}
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+import { useState } from 'react',;
+import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query',;
+import { quoteRequestService } from '@/services/quoteRequestService',;
+import type { QuoteRequest, QuoteStatus } from '@/types/quotes',;
+import { useToast } from '@/components/ui/use-toast',;
+import type { DateRange } from '@/types/dateRange',;
+;
+export const useAdminQuotes = () => {;
+  const { toast } = useToast(),;
+  const queryClient = useQueryClient(),;
+  const [statusFilter, setStatusFilter] = useState<QuoteStatus | 'all'>('all'),;
+  const [archiveFilter, setArchiveFilter] = useState<'active' | 'archived' | 'all'>('active'),;
+  const [searchQuery, setSearchQuery] = useState(''),;
+  const [dateRange, setDateRange] = useState<DateRange | undefined>(undefined),;
+;
+  // Fetch all quote requests;
+  const { data:allQuotes = [], isLoading, error } = useQuery({;
+    queryKey:['quotesadmin'],;
+    queryFn:() => quoteRequestService.getAll(),;
+    enabled:true}),;
+;
+  // Filter quotes based on selected filters;
+  const filteredQuotes = allQuotes.filter((quote) => {;
+    // Status filter;
+    if (statusFilter !== 'all' && quote.status !== statusFilter) {;
+      return false,;
+    }
+    ;
+    // Archive filter;
+    if (archiveFilter === 'active' && quote.is_archived) {;
+      return false,;
+    }
+    if (archiveFilter === 'archived' && !quote.is_archived) {;
+      return false,;
+    }
+    ;
+    // Search filter;
+    if (searchQuery) {;
+      const query = searchQuery.toLowerCase(),;
+      if (;
+        !quote.requester_name.toLowerCase().includes(query) &&;
+        !quote.project_name.toLowerCase().includes(query) &&;
+        !quote.project_summary.toLowerCase().includes(query) &&;
+        !(quote.talent_name && quote.talent_name.toLowerCase().includes(query));
+      ) {;
+        return false,;
+      }
+    }
+    ;
+    // Date range filter;
+    if (dateRange?.from) {;
+      const createdAt = new Date(quote.created_at),;
+      if (createdAt < dateRange.from) {;
+        return false,;
+      }
+    }
+    ;
+    if (dateRange?.to) {;
+      const createdAt = new Date(quote.created_at),;
+      const endDate = new Date(dateRange.to),;
+      endDate.setHours(23, 59, 59, 999), // End of day;
+      if (createdAt > endDate) {;
+        return false,;
+      }
+    }
+    ;
+    return true,;
+  }),;
+;
+  // Update quote status mutation;
+  const updateStatusMutation = useMutation({;
+    mutationFn:({ id, status } { id:string, status:QuoteStatus }) => ;
+      quoteRequestService.updateStatus(id, status),;
+    onSuccess:() => {;
+      toast({;
+        title:"Status updated",;
+        description:"The quote request status has been updated";
+      }),;
+      queryClient.invalidateQueries({ queryKey:['quotesadmin'] }),;
+    },;
+    onError:(error:Error) => {;
+      toast({;
+        title:"Error",;
+        description:"Failed to update status:" + error.message,;
+        variant:"destructive";
+      }),;
+    }
+  }),;
+;
+  // Archive/Unarchive mutation;
+  const toggleArchiveMutation = useMutation({;
+    mutationFn:({ id, isArchived } { id:string, isArchived:boolean }) => ;
+      quoteRequestService.toggleArchive(id, isArchived),;
+    onSuccess:(_, variables) => {;
+      toast({;
+        title:variables.isArchived ? "Quote archived" :"Quote unarchived",;
+        description:variables.isArchived ;
+          ? "The quote request has been archived" ;
+          :"The quote request has been moved back to active quotes";
+      }),;
+      queryClient.invalidateQueries({ queryKey:['quotesadmin'] }),;
+    },;
+    onError:(error:Error) => {;
+      toast({;
+        title:"Error",;
+        description:"Failed to update quote:" + error.message,;
+        variant:"destructive";
+      }),;
+    }
+  }),;
+;
+  // Delete mutation;
+  const deleteMutation = useMutation({;
+    mutationFn:(id:string) => quoteRequestService.delete(id),;
+    onSuccess:() => {;
+      toast({;
+        title:"Quote deleted",;
+        description:"The quote request has been permanently deleted";
+      }),;
+      queryClient.invalidateQueries({ queryKey:['quotesadmin'] }),;
+    },;
+    onError:(error:Error) => {;
+      toast({;
+        title:"Error",;
+        description:"Failed to delete quote:" + error.message,;
+        variant:"destructive";
+      }),;
+    }
+  }),;
+;
+  return {;
+    quotes:filteredQuotes,;
+    isLoading,;
+    error,;
+    statusFilter,;
+    setStatusFilter,;
+    archiveFilter,;
+    setArchiveFilter,;
+    searchQuery,;
+    setSearchQuery,;
+    dateRange,;
+    setDateRange,;
+    updateStatus:(id:string, status:QuoteStatus) => ;
+      updateStatusMutation.mutate({ id, status }),;
+    toggleArchive:(id:string, isArchived:boolean) => ;
+      toggleArchiveMutation.mutate({ id, isArchived }),;
+    deleteQuote:(id:string) => deleteMutation.mutate(id)},;},
+ //Filter quotes based on selected filters const filteredQuotes = allQuotes.filter ( (quote) => {
+  //Status filter if (statusFilter !== 'all' && quote.status !== statusFilter) {
+  if (!quote.requester name.toLowerCase () .includes (query) && !quote.project name.toLowerCase () .includes (query) && !quote.project summary.toLowerCase () .includes (query) && ! (quote.talent name && quote.talent name.toLowerCase () .includes (query) ) ) {
+  
+}return true;
+});
+//Update quote status mutation 
+}
+});
+//Archive/Unarchive mutation 
+}
+});
+// Delete mutation const deleteMutation = useMutation ({
+  mutationFn: (id: string) => quoteRequestService.delete (id), onSuccess: () => {
+  toast ({
+  
+}
+});
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

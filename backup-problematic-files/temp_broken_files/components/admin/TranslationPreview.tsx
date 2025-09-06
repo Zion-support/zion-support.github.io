@@ -19,16 +19,46 @@ export default function TranslationPreview() {
       <div className="text-sm text-gray-500">{loading ? 'Translating…' : error ? `Error: ${error}` : 'Ready'}</div>
       <div className="grid md:grid-cols-2 gap-4">
         {targets.map((lng) => (
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD:components/admin/TranslationPreview.tsx
+          <div key={lng} className="border rounded p-3">
+            <div className="text-xs uppercase opacity-70 mb-2">{lng}</div>
+            <div className="whitespace-pre-wrap text-sm min-h-[4rem]">
+              {translations[lng] |(lng === 'en' ? text : '')}
+            </div>
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <div key={lng} className=&quot;border rounded p-3&quot;>
             <div className=&quot;text-xs uppercase opacity-70 mb-2&quot;>{lng}</div>
             <div className=&quot;whitespace-pre-wrap text-sm min-h-[4rem]&quot;>
               {translations[lng] || (lng === 'en' ? text : '')}            </div>
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/admin/TranslationPreview.tsx
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/admin/TranslationPreview.tsx
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </div>
         ))}
       </div>
     </div>
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+  )}
+=======
+<<<<<<< HEAD:components/admin/TranslationPreview.tsx
+  );
+};
+=======
+  )}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/admin/TranslationPreview.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/home/FeatureHighlights.tsx
 
 
 <<<<<<< HEAD
@@ -8,10 +10,34 @@ import React from "react",
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from "react";
+import {Card, CardContent} from "@/components/ui/card";
+import {Check} from "lucide-react";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React from "react",
+<<<<<<< HEAD
+import { Card, CardContent } from "@/components/ui/card";
+import { Check } from "lucide-react";
+=======
+import { Card, CardContent } from "@/components/ui/card",
+import { Check } from "lucide-react",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export function FeatureHighlights() {
 
   const highlightsData = [
     {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
       features: [
@@ -21,6 +47,9 @@ export function FeatureHighlights() {
       ]
     },
 =======
+========
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/home/FeatureHighlights.tsx
 import React from "react";
 import {Card, CardContent} from "@/components/ui/card";
 import {Check} from "lucide-react";
@@ -29,12 +58,27 @@ export function FeatureHighlights() {;
     {;
       title: "For Talent Seekers",;
       features: [;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/home/FeatureHighlights.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/home/FeatureHighlights.tsx
+=======
+<<<<<<< HEAD
+      title: "For Talent Seekers"
+=======
+      title: "For Talent Seekers",
+<<<<<<< HEAD
+      features: [;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         "AI-powered talent matching based on your specific project requirements";
         "Verified profiles with skills validation and credential checking";
         "Transparent pricing and no hidden fees";
         "Direct communication with potential candidates";
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/home/FeatureHighlights.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/home/FeatureHighlights.tsx
         "Secure payment protection and dispute resolution",;
         "Post jobs and receive AI-matched applicants";
       ];
@@ -42,8 +86,11 @@ export function FeatureHighlights() {;
     {;
       title: "For Talent & Service Providers",;
       features: [;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/home/FeatureHighlights.tsx
 
 =======
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/home/FeatureHighlights.tsx
 import React from './react';
 import { Card, CardContent } from '@/components / ui / card';
 import { Check } from './lucide-react';
@@ -66,12 +113,14 @@ function FeatureHighlights() {
     {
       title: "For Talent & Service Providers",
       features: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         "Create a professional profile showcasing your skills and experience";
         "Get matched with relevant projects that fit your expertise";
         "Secure payment processing with on - time disbursements";
         "Build your reputation through client reviews and ratings";
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/home/FeatureHighlights.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/home/FeatureHighlights.tsx
         "Access to enterprise clients and high-value projects",;
         "Professional development resources and community support";
       ];
@@ -79,11 +128,15 @@ function FeatureHighlights() {
     {;
       title: "For Enterprise Clients",;
       features: [;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/home/FeatureHighlights.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/home/FeatureHighlights.tsx
         "White-labeled talent portal with your company branding";
         "Dedicated account management and priority support";
         "Custom talent pools and preferred provider networks";
         "Advanced analytics and reporting capabilities";
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/home/FeatureHighlights.tsx
 
 
       title: "For Talent Seekers",
@@ -95,6 +148,43 @@ function FeatureHighlights() {
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      features: [
+<<<<<<< HEAD
+        "AI-powered talent matching based on your specific project requirements";
+        "Verified profiles with skills validation and credential checking";
+        "Transparent pricing and no hidden fees";
+        "Direct communication with potential candidates";
+        "Secure payment protection and dispute resolution"
+        "Post jobs and receive AI-matched applicants"
+      ]
+    }
+=======
+        "AI-powered talent matching based on your specific project requirements",
+        "Verified profiles with skills validation and credential checking",
+        "Transparent pricing and no hidden fees",
+        "Direct communication with potential candidates",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+        "Secure payment protection and dispute resolution",
+        "Post jobs and receive AI-matched applicants"
+      ]
+    },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+    {
+      title: "For Talent & Service Providers"
+      features: [
+<<<<<<< HEAD
+        "Create a professional profile showcasing your skills and experience";
+        "Get matched with relevant projects that fit your expertise";
+        "Secure payment processing with on-time disbursements";
+        "Build your reputation through client reviews and ratings";
+        "Access to enterprise clients and high-value projects"
+        "Professional development resources and community support"
+      ]
+    }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
         "Create a professional profile showcasing your skills and experience",
         "Get matched with relevant projects that fit your expertise",
         "Secure payment processing with on-time disbursements",
@@ -103,6 +193,7 @@ function FeatureHighlights() {
         "Professional development resources and community support"
       ]
     },
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     {
@@ -110,6 +201,25 @@ function FeatureHighlights() {
       features: [
 
 <<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+    {
+      title: "For Enterprise Clients"
+      features: [
+<<<<<<< HEAD
+        "White-labeled talent portal with your company branding";
+        "Dedicated account management and priority support";
+        "Custom talent pools and preferred provider networks";
+        "Advanced analytics and reporting capabilities";
+        "API access for seamless integration with your HR systems"
+=======
+        "White-labeled talent portal with your company branding",
+        "Dedicated account management and priority support",
+        "Custom talent pools and preferred provider networks",
+        "Advanced analytics and reporting capabilities",
+        "API access for seamless integration with your HR systems",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         "Customizable workflow and approval processes"
       ]
     }
@@ -135,6 +245,7 @@ function FeatureHighlights() {
                       <Check className="h-5 w-5 text-zion-cyan mr-2 mt-0.5 flex-shrink-0" />
                       <span className="text-zion-slate-light">{feature}</span>
                     </li>
+<<<<<<< HEAD
 
 =======
         "White-labeled talent portal with your company branding",
@@ -147,11 +258,11 @@ function FeatureHighlights() {
         "Customizable workflow and approval processes"
       ]
 =======
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/home/FeatureHighlights.tsx
         "API access for seamless integration with your HR systems",;
         "Customizable workflow and approval processes";
       ];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
         "Access to enterprise clients and high - value projects",
         "Professional development resources and community support";
       ];
@@ -166,22 +277,43 @@ function FeatureHighlights() {
         "API access for seamless integration with your HR systems",
         "Customizable workflow and approval processes";
       ];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   ];
 ;
   return (
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/home/FeatureHighlights.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/home/FeatureHighlights.tsx
 =======
 
 import React from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
 import { Check } from "lucide-react",;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/home/FeatureHighlights.tsx
+=======
+<<<<<<< HEAD
+=======
+import React from "react",;
+import { Card, CardContent } from "@/components/ui/card",;
+import { Check } from "lucide-react",;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export function FeatureHighlights() {;
   const highlightsData = [;
     {;
       title: "For Talent Seekers",;
       features: [;
+<<<<<<< HEAD
+========
+;
+export function FeatureHighlights() {;
+  const highlightsData = [;
+    {;
+      title:"For Talent Seekers",;
+      features:[;
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/home/FeatureHighlights.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         "AI-powered talent matching based on your specific project requirements",;
         "Verified profiles with skills validation and credential checking",;
         "Transparent pricing and no hidden fees",;
@@ -191,8 +323,18 @@ export function FeatureHighlights() {;
       ];
     },;
     {;
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/home/FeatureHighlights.tsx
       title: "For Talent & Service Providers",;
       features: [;
+========
+      title:"For Talent & Service Providers",;
+      features:[;
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/home/FeatureHighlights.tsx
+=======
+      title: "For Talent & Service Providers",;
+      features: [;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         "Create a professional profile showcasing your skills and experience",;
         "Get matched with relevant projects that fit your expertise",;
         "Secure payment processing with on-time disbursements",;
@@ -202,19 +344,46 @@ export function FeatureHighlights() {;
       ];
     },;
     {;
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/home/FeatureHighlights.tsx
       title: "For Enterprise Clients",;
       features: [;
+========
+      title:"For Enterprise Clients",;
+      features:[;
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/home/FeatureHighlights.tsx
+=======
+      title: "For Enterprise Clients",;
+      features: [;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         "White-labeled talent portal with your company branding",;
         "Dedicated account management and priority support",;
         "Custom talent pools and preferred provider networks",;
         "Advanced analytics and reporting capabilities",;
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/home/FeatureHighlights.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         "API access for seamless integration with your HR systems";
         "Customizable workflow and approval processes";
       ];
     }
   ];
   return (;
+<<<<<<< HEAD
 
+========
+        "API access for seamless integration with your HR systems",;
+        "Customizable workflow and approval processes";
+      ];
+    }
+  ],;
+;
+  return (;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/home/FeatureHighlights.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <section className="py-16 bg-zion-blue">;
       <div className="container mx-auto px-4">;
         <div className="text-center mb-12">;
@@ -223,7 +392,8 @@ export function FeatureHighlights() {;
             Whatever your role in the tech ecosystem, Zion offers specialized features to help you succeed;
           </p>;
         </div>;
-
+<<<<<<< HEAD
+<<<<<<< HEAD
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">;
           {highlightsData && highlightsData.map((category, index) => (;
             <Card key={index} className="bg-zion-blue-dark border-zion-blue-light">;
@@ -235,24 +405,51 @@ export function FeatureHighlights() {;
                       <Check className="h-5 w-5 text-zion-cyan mr-2 mt-0 && 0.5 flex-shrink-0" />;
                       <span className="text-zion-slate-light">{feature}</span>;
                     </li>;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/home/FeatureHighlights.tsx
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/home/FeatureHighlights.tsx
                   ))}
+=======
+        ;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">;
+          {highlightsData.map((category, index) => (;
+            <Card key={index} className="bg-zion-blue-dark border-zion-blue-light">;
+              <CardContent className="p-6">;
+                <h3 className="text-xl font-bold text-white mb-4">{category.title}</h3>;
+                <ul className="space-y-3">;
+                  {category.features.map((feature, idx) => (;
+                    <li key={idx} className="flex items-start">;
+                      <Check className="h-5 w-5 text-zion-cyan mr-2 mt-0.5 flex-shrink-0" />;
+                      <span className="text-zion-slate-light">{feature}</span>;
+<<<<<<< HEAD
+                    </li>;                  ))}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 </ul>;
               </CardContent>;
             </Card>;
           ))}
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/home/FeatureHighlights.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/home/FeatureHighlights.tsx
         </div>;
       </div>;
     </section>;
+<<<<<<< HEAD
   );
 }
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/home/FeatureHighlights.tsx
 
 =======
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/home/FeatureHighlights.tsx
     <section className="py - 16 bg - zion - blue">;
       <div className="container mx - auto px - 4">;
         <div className="text - center mb - 12">;
@@ -279,4 +476,66 @@ export function FeatureHighlights() {;
       </div>;
     </section>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+  ),;}
+ export function FeatureHighlights () {
+  const highlightsData = [ {
+  title: "For Talent Seekers";
+features: [ "AI-powered talent matching based on your specific project requirements";
+"Verified profiles with skills validation and credential checking";
+"Transparent pricing and no hidden fees";
+"Direct communication with potential candidates";
+"Secure payment protection and dispute resolution";
+"Post jobs and receive AI-matched applicants" ] 
+};
+{
+  title: "For Talent & Service Providers";
+features: [ "Create a professional profile showcasing your skills and experience";
+"Get matched with relevant projects that fit your expertise";
+"Secure payment processing with on-time disbursements";
+"Build your reputation through client reviews and ratings";
+"Access to enterprise clients and high-value projects";
+"Professional development resources and community support" ] 
+};
+{
+  title: "For Enterprise Clients";
+features: [ "White-labeled talent portal with your company branding";
+"Dedicated account management and priority support";
+"Custom talent pools and preferred provider networks";
+"Advanced analytics and reporting capabilities";
+"API access for seamless integration with your HR systems";
+"Customizable workflow and approval processes" ] 
+}];
+return (<section className="py-16 bg-zion-blue" > <div className="container mx-auto px-4" > <div className="text-center mb-12" > <h2 className="text-3xl font-bold text-white mb-3" >Tailored Solutions for Everyone</h2> <p className="text-zion-slate-light text-lg max-w-3xl mx-auto" > Whatever your role in the tech ecosystem, Zion offers specialized features to help you succeed </p> </div> <div className="grid grid-cols-1 md:grid-cols-3 gap-6" > {
+  highlightsData.map ( (category, index) => (<Card key= {
+  index 
+}className="bg-zion-blue-dark border-zion-blue-light" > <CardContent className="p-6" > <h3 className="text-xl font-bold text-white mb-4" > {
+  category.title 
+}</h3> <ul className="space-y-3" > {
+  category.features.map ( (feature, idx) => (<li key= {
+  idx 
+}className="flex items-start" > <Check className="h-5 w-5 text-zion-cyan mr-2 mt-0.5 flex-shrink-0" /> <span className="text-zion-slate-light" > {
+  feature 
+}</span> 
+}</ul> </CardContent> </Card>) ) 
+}</div> </div> </section>) 
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+                    </li>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

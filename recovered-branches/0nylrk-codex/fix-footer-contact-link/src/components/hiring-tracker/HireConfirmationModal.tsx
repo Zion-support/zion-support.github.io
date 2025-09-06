@@ -1,17 +1,35 @@
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HireConfirmationModal.tsx
 
 
 <<<<<<< HEAD
 =======
 
+=======
+
+<<<<<<< HEAD
+import React, { useState } from 'react';
+<<<<<<< HEAD
+import {
+  Dialog;
+  DialogContent;
+  DialogDescription;
+  DialogHeader;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React, { useState } from 'react',
 import {
   Dialog,
   DialogContent,
   DialogDescription,
   DialogHeader,
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   DialogTitle} from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -20,6 +38,7 @@ import { Textarea } from "@/components/ui/textarea",
 import { toast } from "@/hooks/use-toast",
 import { supabase } from "@/integrations/supabase/client",
 import { TalentProfile } from "@/types/talent",
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   isOpen;
@@ -27,6 +46,27 @@ import { TalentProfile } from "@/types/talent",
 =======
 
 
+========
+<<<<<<< HEAD
+import React, { useState } from 'react';
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HireConfirmationModal.tsx
+=======
+<<<<<<< HEAD
+import { useAuth } from "@/hooks/useAuth";
+import { JobApplication } from "@/types/jobs";
+export interface HireConfirmationModalProps {
+
+  isOpen: boolean
+  onClose: () => void
+  candidateData?: TalentProfile;
+  application?: JobApplication;
+  onConfirm: () => void
+
+  isSubmitting?: boolean
+}
+export function HireConfirmationModal({
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
@@ -37,6 +77,7 @@ import {supabase} from "@/integrations/supabase/client";
 import {TalentProfile} from "@/types/talent";
 import {useAuth} from "@/hooks/useAuth";
 import {JobApplication} from "@/types/jobs";
+<<<<<<< HEAD
 export interface HireConfirmationModalProps {;
   isOpen: boolean,;
   onClose: () => void,;
@@ -45,26 +86,54 @@ export interface HireConfirmationModalProps {;
   onConfirm: () => void,;
   isSubmitting?: boolean;
 }
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HireConfirmationModal.tsx
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 export function HireConfirmationModal({ ;
 
 
+========
+export function HireConfirmationModal(): any ({ ;
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HireConfirmationModal.tsx
   isOpen;
   onClose, ;
   candidateData, ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   application;
   onConfirm;
   isSubmitting = false;
 }: HireConfirmationModalProps) {;
+=======
+export interface HireConfirmationModalProps {
+  isOpen: boolean,
+  onClose: () => void,;
+  candidateData?: TalentProfile;
+  application?: JobApplication;
+  onConfirm: () => void,
+  isSubmitting?: boolean
+}
+
+export function HireConfirmationModal({ ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  isOpen;
+
+  onClose
+  candidateData
+  application;
+  onConfirm;
+  isSubmitting = false
+}: HireConfirmationModalProps) {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const [projectName, setProjectName] = useState('');
   const [projectDescription, setProjectDescription] = useState('');
   const [updateAvailability, setUpdateAvailability] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
   const { user } = useAuth();
 <<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HireConfirmationModal.tsx
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   // Get talent information from either candidateData or application
   const talentData = candidateData |(application?.talent_profile as TalentProfile);
   const handleHireCandidate = async () => {
@@ -75,9 +144,14 @@ export function HireConfirmationModal({ ;
         variant: 'destructive'})
       return
 =======
+<<<<<<< HEAD
 
 =======
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React, { useState } from 'react',
 import {
   Dialog,
@@ -92,8 +166,12 @@ import { Textarea } from "@/components/ui/textarea",
 import { toast } from "@/hooks/use-toast",
 import { supabase } from "@/integrations/supabase/client",
 import { TalentProfile } from "@/types/talent",
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { useAuth } from "@/hooks/useAuth",
 import { JobApplication } from "@/types/jobs",
 export interface HireConfirmationModalProps {
@@ -150,6 +228,7 @@ export function HireConfirmationModal({;
         description: 'Please fill in both project name and description.',;
         variant: 'destructive'}),;
       return;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -157,6 +236,13 @@ export function HireConfirmationModal({;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     }
     if (!user) {
       toast({
@@ -171,11 +257,13 @@ export function HireConfirmationModal({;
         description: 'Talent information is missing.'
         variant: 'destructive'})
       return
+<<<<<<< HEAD
 
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HireConfirmationModal.tsx
   // Get talent information from either candidateData or application;
   const talentData = candidateData || (application?.talent_profile as TalentProfile);
-
   const handleHireCandidate = async () => {;
     if (!projectName || !projectDescription) {;
       toast({;
@@ -184,9 +272,12 @@ export function HireConfirmationModal({;
         variant: 'destructive'}),;
       return;
     }
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HireConfirmationModal.tsx
 
 <<<<<<< HEAD
 =======
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HireConfirmationModal.tsx
     if (!user) {;
       toast({;
         title: 'Not authenticated',;
@@ -194,13 +285,13 @@ export function HireConfirmationModal({;
         variant: 'destructive'}),;
       return;
     }
-
     if (!talentData) {;
       toast({;
         title: 'Missing talent data',;
         description: 'Talent information is missing.',;
         variant: 'destructive'}),;
       return;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HireConfirmationModal.tsx
 
     }
 =======
@@ -212,6 +303,10 @@ export function HireConfirmationModal({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     setIsLoading(true);
 
+========
+    }
+    setIsLoading(true);
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HireConfirmationModal.tsx
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components / ui / dialog';
 import { Button } from '@/components / ui / button';
 import { Input } from '@/components / ui / input';
@@ -277,14 +372,20 @@ if ( {) {
     setIsLoading (true);
 ;
     // Create a new project;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HireConfirmationModal.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HireConfirmationModal.tsx
     try {
       const { data: project_data, error: project_error } = await supabase;
         .from ('projects');
         .insert ([;
           {
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HireConfirmationModal.tsx
 
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HireConfirmationModal.tsx
     // Create a new project;
     try {;
       const { data: projectData, error: projectError } = await supabase;
@@ -300,18 +401,23 @@ if ( {) {
             payment_terms: 'hourly'}]);
         .select();
         .single();
-
       if (projectError) {;
         toast({;
           title: 'Error creating project',;
           description: projectError && projectError.message,;
           variant: 'destructive'}),;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HireConfirmationModal.tsx
 
         setIsLoading(false);
         return;
       }
 
 
+========
+        setIsLoading(false);
+        return;
+      }
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HireConfirmationModal.tsx
       // Create a new hiring record;
       const { error: hiringError } = await supabase;
         .from('hiring_records');
@@ -322,18 +428,23 @@ if ( {) {
             project_id: projectData && projectData.id,;
             hire_date: new Date().toISOString(),;
             status: 'active'}]),;
-
       if (hiringError) {;
         toast({;
           title: 'Error creating hiring record',;
           description: hiringError && hiringError.message,;
           variant: 'destructive'}),;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HireConfirmationModal.tsx
 
         setIsLoading(false);
         return;
       }
 
 
+========
+        setIsLoading(false);
+        return;
+      }
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HireConfirmationModal.tsx
       // Update the availability status;
       if (updateAvailability) {;
         try {;
@@ -341,15 +452,16 @@ if ( {) {
             .from('talent_profiles');
             .update({ availability_type: 'unavailable' });
             .eq('id', talentData && talentData.id);
-
           if (availabilityError) {;
             toast({;
               title: 'Error updating availability',;
               description: availabilityError && availabilityError.message,;
               variant: 'destructive'}),;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HireConfirmationModal.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HireConfirmationModal.tsx
             setIsLoading(false);
-=======
             client_id: user.id,
             talent_id: talent_data.user_id,
             job_id: application?.job_id || null,
@@ -412,22 +524,103 @@ if ( {) {
               description: availability_error.message,
               variant: 'destructive'}),
             setIsLoading (false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             return;
           }
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HireConfirmationModal.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HireConfirmationModal.tsx
         } catch (error) {;
           console && console.error('Error updating availability:', error);
           toast({;
             title: 'Error updating availability',;
             description: 'Failed to update candidate availability status.',;
             variant: 'destructive'}),;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HireConfirmationModal.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HireConfirmationModal.tsx
           setIsLoading(false);
           return;
         }
       }
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HireConfirmationModal.tsx
 <<<<<<< HEAD
+=======
+    }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    setIsLoading(true);
+    // Create a new project
+    try {
+      const { data: projectData, error: projectError } = await supabase
+        .from('projects')
+        .insert([
+          {
+            client_id: user.id
+            talent_id: talentData.user_id
+            job_id: application?.job_id |null
+            title: projectName
+            description: projectDescription
+            status: 'active'
+            payment_terms: 'hourly'}])
+        .select()
+        .single();
+      if (projectError) {
+        toast({
+          title: 'Error creating project'
+          description: projectError.message
+          variant: 'destructive'})
+        setIsLoading(false);
+        return
+      }
+      // Create a new hiring record
+      const { error: hiringError } = await supabase
+        .from('hiring_records')
+        .insert([
+          {
+            client_id: user.id
+            talent_id: talentData.user_id
+            project_id: projectData.id
+            hire_date: new Date().toISOString()
+            status: 'active'}])
+      if (hiringError) {
+        toast({
+          title: 'Error creating hiring record'
+          description: hiringError.message
+          variant: 'destructive'})
+        setIsLoading(false);
+        return
+      }
+      // Update the availability status
+      if (updateAvailability) {
+        try {
+          const { error: availabilityError } = await supabase
+            .from('talent_profiles')
+            .update({ availability_type: 'unavailable' })
+            .eq('id', talentData.id);
+          if (availabilityError) {
+            toast({
+              title: 'Error updating availability'
+              description: availabilityError.message
+              variant: 'destructive'})
+            setIsLoading(false);
+            return
+          }
+        } catch (error) {
+          console.error('Error updating availability:', error);
+          toast({
+            title: 'Error updating availability'
+            description: 'Failed to update candidate availability status.'
+            variant: 'destructive'})
+          setIsLoading(false);
+          return
+        }
+      }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       toast({
         title: 'Candidate hired successfully'
         description: `${talentData.full_name} has been hired for the project.`})
@@ -442,6 +635,7 @@ if ( {) {
     } finally {
       setIsLoading(false)
     }
+<<<<<<< HEAD
 
 =======
 
@@ -453,6 +647,14 @@ if ( {) {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+  }
+=======
+  };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 ;
     setIsLoading(true),;
     // Create a new project;
@@ -524,7 +726,10 @@ if ( {) {
         }
       }
 ;
+<<<<<<< HEAD
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HireConfirmationModal.tsx
       toast({;
         title: 'Candidate hired successfully',;
         description: `${talentData && talentData.full_name} has been hired for the project.`}),;
@@ -535,11 +740,24 @@ if ( {) {
       toast({;
         title: 'Error hiring candidate',;
         description: 'Failed to hire candidate. Please try again.',;
+=======
+      toast({;
+        title: 'Candidate hired successfully',;
+        description: `${talentData.full_name} has been hired for the project.`}),;
+      onConfirm(),;
+      onClose();
+    } catch (error) {;
+      console.error('Error hiring candidate:', error),;
+      toast({;
+        title: 'Error hiring candidate',;
+        description: 'Failed to hire candidate. Please try again.';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         variant: 'destructive'});
     } finally {;
       setIsLoading(false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HireConfirmationModal.tsx
 
   },
 <<<<<<< HEAD
@@ -552,6 +770,172 @@ if ( {) {
 
   return (
 
+========
+  }
+  return (
+=======
+
+import React, { useState } from 'react',;
+import {;
+  Dialog,;
+  DialogContent,;
+  DialogDescription,;
+  DialogHeader,;
+  DialogTitle} from "@/components/ui/dialog",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { Label } from "@/components/ui/label",;
+import { Textarea } from "@/components/ui/textarea",;
+import { toast } from "@/hooks/use-toast",;
+import { supabase } from "@/integrations/supabase/client",;
+import { TalentProfile } from "@/types/talent",;
+import { useAuth } from "@/hooks/useAuth",;
+import { JobApplication } from "@/types/jobs",;
+;
+export interface HireConfirmationModalProps {;
+  isOpen:boolean,;
+  onClose:() => void,;
+  candidateData?:TalentProfile,;
+  application?:JobApplication,;
+  onConfirm:() => void,;
+  isSubmitting?:boolean;
+}
+;
+export function HireConfirmationModal({ ;
+  isOpen,;
+  onClose, ;
+  candidateData, ;
+  application,;
+  onConfirm,;
+  isSubmitting = false;
+} HireConfirmationModalProps) {;
+  const [projectName, setProjectName] = useState(''),;
+  const [projectDescription, setProjectDescription] = useState(''),;
+  const [updateAvailability, setUpdateAvailability] = useState(true),;
+  const [isLoading, setIsLoading] = useState(false),;
+  const { user } = useAuth(),;
+;
+  // Get talent information from either candidateData or application;
+  const talentData = candidateData || (application?.talent_profile as TalentProfile),;
+;
+  const handleHireCandidate = async () => {;
+    if (!projectName || !projectDescription) {;
+      toast({;
+        title:'Required fields missing',;
+        description:'Please fill in both project name and description.',;
+        variant:'destructive'}),;
+      return,;
+    }
+;
+    if (!user) {;
+      toast({;
+        title:'Not authenticated',;
+        description:'You must be logged in to hire a candidate.',;
+        variant:'destructive'}),;
+      return,;
+    }
+;
+    if (!talentData) {;
+      toast({;
+        title:'Missing talent data',;
+        description:'Talent information is missing.',;
+        variant:'destructive'}),;
+      return,;
+    }
+;
+    setIsLoading(true),;
+;
+    // Create a new project;
+    try {;
+      const { data:projectData, error:projectError } = await supabase;
+        .from('projects');
+        .insert([;
+          {;
+            client_id:user.id,;
+            talent_id:talentData.user_id,;
+            job_id:application?.job_id || null,;
+            title:projectName,;
+            description:projectDescription,;
+            status:'active',;
+            payment_terms:'hourly'}]);
+        .select();
+        .single(),;
+;
+      if (projectError) {;
+        toast({;
+          title:'Error creating project',;
+          description:projectError.message,;
+          variant:'destructive'}),;
+        setIsLoading(false),;
+        return,;
+      }
+;
+      // Create a new hiring record;
+      const { error:hiringError } = await supabase;
+        .from('hiring_records');
+        .insert([;
+          {;
+            client_id:user.id,;
+            talent_id:talentData.user_id,;
+            project_id:projectData.id,;
+            hire_date:new Date().toISOString(),;
+            status:'active'}]),;
+;
+      if (hiringError) {;
+        toast({;
+          title:'Error creating hiring record',;
+          description:hiringError.message,;
+          variant:'destructive'}),;
+        setIsLoading(false),;
+        return,;
+      }
+;
+      // Update the availability status;
+      if (updateAvailability) {;
+        try {;
+          const { error:availabilityError } = await supabase;
+            .from('talent_profiles');
+            .update({ availability_type:'unavailable' });
+            .eq('id', talentData.id),;
+;
+          if (availabilityError) {;
+            toast({;
+              title:'Error updating availability',;
+              description:availabilityError.message,;
+              variant:'destructive'}),;
+            setIsLoading(false),;
+            return,;
+          }
+        } catch (error) {;
+          console.error('Error updating availability:', error),;
+          toast({;
+            title:'Error updating availability',;
+            description:'Failed to update candidate availability status.',;
+            variant:'destructive'}),;
+          setIsLoading(false),;
+          return,;
+        }
+      }
+;
+      toast({;
+        title:'Candidate hired successfully',;
+        description:`${talentData.full_name} has been hired for the project.`}),;
+      onConfirm(),;
+      onClose(),;
+    } catch (error) {;
+      console.error('Error hiring candidate:', error),;
+      toast({;
+        title:'Error hiring candidate',;
+        description:'Failed to hire candidate. Please try again.',;
+        variant:'destructive'}),;
+    } finally {;
+      setIsLoading(false),;
+    }
+  },;
+;
+  return (;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HireConfirmationModal.tsx
     <Dialog open={isOpen} onOpenChange={onClose}>;
       <DialogContent className="sm:max-w-[425px]">;
         <DialogHeader>;
@@ -565,11 +949,21 @@ if ( {) {
             <Label htmlFor="projectName" className="text-right">;
               Project Name;
             </Label>;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HireConfirmationModal.tsx
 
+========
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HireConfirmationModal.tsx
             <Input
               id="projectName"
               value={projectName}
               onChange={(e) => setProjectName(e && e.target.value)}
+=======
+            <Input;
+              id="projectName";
+              value={projectName}
+              onChange={(e) => setProjectName(e.target.value)}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               className="col-span-3";
             />;
           </div>;
@@ -577,24 +971,82 @@ if ( {) {
             <Label htmlFor="projectDescription" className="text-right mt-2">;
               Project Description;
             </Label>;
+<<<<<<< HEAD
             <Textarea
               id="projectDescription"
               value={projectDescription}
               onChange={(e) => setProjectDescription(e && e.target.value)}
+=======
+            <Textarea;
+              id="projectDescription";
+              value={projectDescription}
+              onChange={(e) => setProjectDescription(e.target.value)}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               className="col-span-3";
             />;
           </div>;
           <div className="flex items-center space-x-2">;
+<<<<<<< HEAD
+=======
+  },
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+  return (
+    <Dialog open={isOpen} onOpenChange={onClose}>
+      <DialogContent className="sm:max-w-[425px]">
+        <DialogHeader>
+          <DialogTitle>Confirm Hire</DialogTitle>
+          <DialogDescription>
+            Confirm that you want to hire {talentData?.full_name |"this candidate"} for a new project.
+          </DialogDescription>
+        </DialogHeader>
+        <div className="grid gap-4 py-4">
+          <div className="grid grid-cols-4 items-center gap-4">
+            <Label htmlFor="projectName" className="text-right">
+              Project Name
+            </Label>
+            <Input
+              id="projectName"
+              value={projectName}
+              onChange={(e) => setProjectName(e.target.value)}
+              className="col-span-3"
+            />
+          </div>
+          <div className="grid grid-cols-4 items-start gap-4">
+            <Label htmlFor="projectDescription" className="text-right mt-2">
+              Project Description
+            </Label>
+            <Textarea
+              id="projectDescription"
+              value={projectDescription}
+              onChange={(e) => setProjectDescription(e.target.value)}
+              className="col-span-3"
+            />
+          </div>
+          <div className="flex items-center space-x-2">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <input
               type="checkbox"
               id="updateAvailability"
               className="h-4 w-4"
               checked={updateAvailability}
+<<<<<<< HEAD
               onChange={(e) => setUpdateAvailability(e && e.target.checked)}
             />;
             <label
               htmlFor="updateAvailability"
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HireConfirmationModal.tsx
 <<<<<<< HEAD
+=======
+              onChange={(e) => setUpdateAvailability(e.target.checked)}
+            />
+            <label
+              htmlFor="updateAvailability"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed"
             >
               Update talent availability to "Unavailable"
@@ -612,11 +1064,13 @@ if ( {) {
       </DialogContent>
     </Dialog>
   )
+<<<<<<< HEAD
 
 =======
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HireConfirmationModal.tsx
               className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed">;
-=======
           console.error ('Error updating availability:', error);
           toast ({
             title: 'Error updating availability',
@@ -685,13 +1139,32 @@ if ( {) {
             <label;
               html_for="update_availability";
               className="text - sm font - medium leading - none peer - disabled:cursor - not - allowed";
+=======
+            <input;
+              type="checkbox";
+              id="updateAvailability";
+              className="h-4 w-4";
+              checked={updateAvailability}
+              onChange={(e) => setUpdateAvailability(e.target.checked)}
+            />;
+            <label;
+              htmlFor="updateAvailability";
+              className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed";
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             >;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HireConfirmationModal.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HireConfirmationModal.tsx
               Update talent availability to "Unavailable";
             </label>;
           </div>;
         </div>;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HireConfirmationModal.tsx
 
+========
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HireConfirmationModal.tsx
         <div className="flex justify - end gap - 2">;
           <Button type="button" variant="secondary" on_click={on_close}>;
             Cancel;
@@ -703,6 +1176,7 @@ if ( {) {
       </DialogContent>;
     </Dialog>);
 }
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HireConfirmationModal.tsx
 
 =======
 
@@ -711,3 +1185,68 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+=======
+        <div className="flex justify-end gap-2">;
+          <Button type="button" variant="secondary" onClick={onClose}>;
+            Cancel;
+          </Button>;
+          <Button type="button" onClick={handleHireCandidate} disabled={isSubmitting || isLoading}>;
+            {isLoading ? "Hiring..." :"Confirm Hire"}
+          </Button>;
+        </div>;
+      </DialogContent>;
+    </Dialog>;
+  ),;}
+ export interface HireConfirmationModalProps {
+  isOpen: boolean;
+onClose: () => void;
+candidateData?: TalentProfile;
+application?: JobApplication;
+onConfirm: () => void;
+isSubmitting?: boolean 
+}export function HireConfirmationModal ({
+  isOpen;
+onClose;
+candidateData;
+application;
+onConfirm;
+isSubmitting = false 
+}: HireConfirmationModalProps) {
+  const [projectName, setProjectName] = useState ('');
+const [projectDescription, setProjectDescription] = useState ('');
+const [updateAvailability, setUpdateAvailability] = useState (true);
+const [isLoading, setIsLoading] = useState (false);
+const {
+  user 
+}= useAuth ();
+//Get talent information from either candidateData or application const talentData = candidateData || (application?.talent profile as TalentProfile);
+if (!projectName || !projectDescription) {
+  toast ({
+  
+}setIsLoading (true);
+//Create a new project try {
+  const {
+  data: projectData, error: projectError 
+}= await supabase .from ('projects') .insert ([ {
+  client id: user.id, talent id: talentData.user id, job id: application?.job id || null, title: projectName, description: projectDescription, status: 'active', payment terms: 'hourly' 
+}]) .select () .single ();
+}//Create a new hiring record const {
+  error: hiringError 
+}= await supabase .from ('hiring records') .insert ([ 
+}//Update the availability status if (updateAvailability) {
+  try {
+  const {
+  error: availabilityError 
+}= await supabase .from ('talent profiles') </DialogDescription> </DialogHeader> <div className="grid gap-4 py-4" > <div className="grid grid-cols-4 items-center gap-4" > <Label htmlFor="projectName" className="text-right" > Project Name </Label> <Input /> </div> <div className="grid grid-cols-4 items-start gap-4" > <Label htmlFor="projectDescription" className="text-right mt-2" > Project Description </Label> <Textarea /> </div> <div className="flex items-center space-x-2" > <input /> <label htmlFor="updateAvailability" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed" > Update talent availability to "Unavailable" </label> </div> </div> </Button> </div> </DialogContent> </Dialog>) 
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/HireConfirmationModal.tsx
+=======
+<<<<<<< HEAD
+}
+=======
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

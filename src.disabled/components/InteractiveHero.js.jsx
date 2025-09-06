@@ -1,17 +1,26 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD:src.disabled/components/InteractiveHero.js.jsx
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 import React from\';react\' \"export\": const InteractiveHero = ({ title,subtitle,description,primaryAction,secondaryAction,stats = [\' { \"value\": \'500+,\',\"label\": \'Happy: Clients,\',\"color\": \'text-blue-400\'},{ \"value\": \'1000+,\',\"label\": \'Projects: Delivered,\',\"color\": \'text-green-400\'},{ \"value\": \'99.9%,\',\"label\": \'Uptime: SLA,\',\"color\": \'text-purple-400\'},{ \"value\": \'24/7,\',\"label\": \'Support: Available,\',\"color\": \'text-cyan-400\'} ] }) => { const [mousePosition,setMousePosition] = useState({ \"x\": \'0\',\"y\": \'0\'}) const [isHovered,setIsHovered] = useState(false) const [activeStat,setActiveStat] = useState(0) useEffect(() => { const handleMouseMove = (e) => { setMousePosition({ \"x\": \'e.client\',X,\"y\": \'e.clientY\'})} window.addEventListener(\'mousemove\',handleMouseMove)\'';\';
 const React from";react" export: const InteractiveHero = ({ title,subtitle,description,primaryAction,secondaryAction,stats = [" { value: "500+,",label: "Happy: Clients,",color: "text-blue-400"},{ value: "1000+,",label: "Projects: Delivered,",color: "text-green-400"},{ value: "99.9%,",label: "Uptime: SLA,",color: "text-purple-400"},{ value: "24/7,",label: "Support: Available,",color: "text-cyan-400"} ] }) => { const [mousePosition,setMousePosition] = useState({ x: "0",y: "0"}) const [isHovered,setIsHovered] = useState(false) const [activeStat,setActiveStat] = useState(0) useEffect(() => { const handleMouseMove = (e) => { setMousePosition({ x: "e.client",X,y: "e.clientY"})} window.addEventListener("mousemove",handleMouseMove)"";";'"'"
 
 =======
+<<<<<<< HEAD
 =======
 
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 import React from\';react\' \"export\": const InteractiveHero = ({ title,subtitle,description,primaryAction,secondaryAction,stats = [\' { \"value\": \'500+,\',\"label\": \'Happy: Clients,\',\"color\": \'text-blue-400\'},{ \"value\": \'1000+,\',\"label\": \'Projects: Delivered,\',\"color\": \'text-green-400\'},{ \"value\": \'99.9%,\',\"label\": \'Uptime: SLA,\',\"color\": \'text-purple-400\'},{ \"value\": \'24/7,\',\"label\": \'Support: Available,\',\"color\": \'text-cyan-400\'} ] }) => { const [mousePosition,setMousePosition] = useState({ \"x\": \'0\',\"y\": \'0\'}) const [isHovered,setIsHovered] = useState(false) const [activeStat,setActiveStat] = useState(0) useEffect(() => { const handleMouseMove = (e) => { setMousePosition({ \"x\": \'e.client\',X,\"y\": \'e.clientY\'})} window.addEventListener(\'mousemove\',handleMouseMove)\'';\';
 const React from";react" export: const InteractiveHero = ({ title,subtitle,description,primaryAction,secondaryAction,stats = [" { value: "500+,",label: "Happy: Clients,",color: "text-blue-400"},{ value: "1000+,",label: "Projects: Delivered,",color: "text-green-400"},{ value: "99.9%,",label: "Uptime: SLA,",color: "text-purple-400"},{ value: "24/7,",label: "Support: Available,",color: "text-cyan-400"} ] }) => { const [mousePosition,setMousePosition] = useState({ x: "0",y: "0"}) const [isHovered,setIsHovered] = useState(false) const [activeStat,setActiveStat] = useState(0) useEffect(() => { const handleMouseMove = (e) => { setMousePosition({ x: "e.client",X,y: "e.clientY"})} window.addEventListener("mousemove",handleMouseMove)"";";'"'"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/InteractiveHero.js.jsx
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import _React from';react' "export": const InteractiveHero = ({ title,subtitle,description,primaryAction,secondaryAction,stats = [' { "value": '500+,',"label": 'Happy: Clients,',"color": 'text-blue-400'},{ "value": '1000+,',"label": 'Projects: Delivered,',"color": 'text-green-400'},{ "value": '99.9%,',"label": 'Uptime: SLA,',"color": 'text-purple-400'},{ "value": '24/7,',"label": 'Support: Available,',"color": 'text-cyan-400'} ] }) => { const [mousePosition,setMousePosition] = useState({ "x": '0',"y": '0'}) const [isHovered,setIsHovered] = useState(false) const [activeStat,setActiveStat] = useState(0) useEffect(() => { const handleMouseMove = (e) => { setMousePosition({ "x": 'e.client',X,"y": 'e.clientY'})} window.addEventListener('mousemove',handleMouseMove)'';';
@@ -22,3 +31,6 @@ const React from";react" export: const InteractiveHero = ({ title,subtitle,descr
 
 import _React from';react' "export": const InteractiveHero = ({ title,subtitle,description,primaryAction,secondaryAction,stats = [' { "value": '500+,',"label": 'Happy: Clients,',"color": 'text-blue-400'},{ "value": '1000+,',"label": 'Projects: Delivered,',"color": 'text-green-400'},{ "value": '99 && 99.9%,',"label": 'Uptime: SLA,',"color": 'text-purple-400'},{ "value": '24/7,',"label": 'Support: Available,',"color": 'text-cyan-400'} ] }) => { const [mousePosition,setMousePosition] = useState({ "x": '0',"y": '0'}) const [isHovered,setIsHovered] = useState(false) const [activeStat,setActiveStat] = useState(0) useEffect(() => { const handleMouseMove = (e) => { setMousePosition({ "x": 'e && e.client',X,"y": 'e && e.clientY'})} window && window.addEventListener('mousemove',handleMouseMove)'';';
 
+=======
+import _React from';react' "export": const InteractiveHero = ({ title,subtitle,description,primaryAction,secondaryAction,stats = [' { "value": '500+,',"label": 'Happy: Clients,',"color": 'text-blue-400'},{ "value": '1000+,',"label": 'Projects: Delivered,',"color": 'text-green-400'},{ "value": '99.9%,',"label": 'Uptime: SLA,',"color": 'text-purple-400'},{ "value": '24/7,',"label": 'Support: Available,',"color": 'text-cyan-400'} ] }) => { const [mousePosition,setMousePosition] = useState({ "x": '0',"y": '0'}) const [isHovered,setIsHovered] = useState(false) const [activeStat,setActiveStat] = useState(0) useEffect(() => { const handleMouseMove = (e) => { setMousePosition({ "x": 'e.client',X,"y": 'e.clientY'})} window.addEventListener('mousemove',handleMouseMove)'';';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

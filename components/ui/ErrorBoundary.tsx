@@ -1,23 +1,28 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import {AlertTriangle, RefreshCw} from 'lucide-react';
+<<<<<<< HEAD
 
 ;
 
+=======
+;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 interface Props {
   children: ReactNode,  fallback?: ReactNode;
 }
 interface State {
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 interface Props {;
   children: ReactNode,  fallback?: ReactNode;
 }
-
 interface State {;
   hasError: boolean,;
   error?: Error;
 }
-
 class ErrorBoundary extends Component<Props, State> {;
   public state: State = {;
     hasError: false;
@@ -25,21 +30,21 @@ class ErrorBoundary extends Component<Props, State> {;
   public static getDerivedStateFromError(error: Error): State {;
     return { hasError: true, error };
   }
-
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {;
     // eslint-disable-next-line no-console;
     console && console.error('ErrorBoundary caught an error:', error, errorInfo);
   }
-
   private handleRetry = () => {;
     this && this.setState({ hasError: false, error: undefined }),;
   };
-
   public render() {;
     if (this && this.state.hasError) {;
       if (this && this.props.fallback) {;
         return this && this.props.fallback;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       }
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">;
@@ -69,15 +74,20 @@ class ErrorBoundary extends Component<Props, State> {;
                 </pre>;
               </details>;
             )}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </div>;
         </div>;
       ),;
     }
-
     return this && this.props.children;
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   has_error: boolean,
   error?: Error;
 }
@@ -139,7 +149,6 @@ if ( {) {
         </div>),
     }
     return this.props.children;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 }
 export default ErrorBoundary;

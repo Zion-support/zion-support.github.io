@@ -1,6 +1,20 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+interface ContractBuilderProps {
+  isOpen: boolean,
+  onClose: () => void,
+  talent: TalentProfile,
+  clientName: string,
+  onContractGenerated?: (contractContent: string,) => void
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
 export function ContractBuilder({
   isOpen
@@ -37,7 +51,12 @@ export function ContractBuilder({
         onContractGenerated = {onContractGenerated,}
       />
     )
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { useState } from "react",
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
@@ -47,8 +66,11 @@ import { TalentProfile } from "@/types/talent",
 import { ContractForm, ContractFormValues } from "./components/ContractForm",
 import { ContractPreview } from "./components/ContractPreview",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { TemplateManager } from "./templates/TemplateManager";
 import { SmartContractBuilder } from "./SmartContractBuilder";
 interface ContractBuilderProps {
@@ -65,6 +87,7 @@ export function ContractBuilder({
   onClose;
   talent;
   clientName;
+<<<<<<< HEAD
 
   onContractGenerated;
 }: ContractBuilderProps) {;
@@ -94,10 +117,24 @@ export function ContractBuilder({
         onClose={() => {;
           setShowSmartContractBuilder(false);          onClose();
 
+=======
+  onContractGenerated
+}: ContractBuilderProps) {
+  const [activeTab, setActiveTab] = useState<string>("form")
+  const [generatedContract, setGeneratedContract] = useState<string | null>(null)
+  const [formValues, setFormValues] = useState<ContractFormValues | undefined>(
+    undefined
+  ),
+  const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
+  const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false);
+  const handleLoadTemplate = null;
+          onClose()
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         }}
         talent = {talent,}
         clientName = {clientName,}
         onContractGenerated = {onContractGenerated,}
+<<<<<<< HEAD
       />;
     );
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -109,6 +146,22 @@ export function ContractBuilder({
 =======
 >>>>>>>   return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+      />
+    )
+  }
+=======
+import { TemplateManager } from "./templates/TemplateManager",
+import { SmartContractBuilder } from "./SmartContractBuilder",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  }
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  return (
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
         <DialogHeader>
@@ -120,6 +173,7 @@ export function ContractBuilder({
               <TabsTrigger value="form">Contract Details</TabsTrigger>
               <TabsTrigger value="preview" disabled={!generatedContract}>Preview</TabsTrigger>
             </TabsList>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -138,17 +192,42 @@ export function ContractBuilder({
                 variant="outline"
                 size="sm"
                 onClick = {(,) => setTemplateManagerOpen(true),}
+=======
+=======
+            
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            <div className="flex gap-2">
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => setTemplateManagerOpen(true)}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 className="flex gap-1"
               >
                 <Save className="h-4 w-4" />
                 Templates
               </Button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               <Button
 =======
 >>>>>>>               <Button
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+              
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              <Button
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 variant="secondary"
                 size="sm"
                 onClick={() => setShowSmartContractBuilder(true)}
@@ -157,6 +236,7 @@ export function ContractBuilder({
               </Button>
             </div>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               talent = {talent,}
@@ -182,6 +262,15 @@ export function ContractBuilder({
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>               talent = {talent,}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+          <TabsContent value="form" className="pt-4">
+<<<<<<< HEAD
+            <ContractForm
+=======
+            <ContractForm 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              talent = {talent,}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               clientName = {clientName,}
               initialValues = {formValues,}
               onFormValuesChange = {setFormValues,}
@@ -190,6 +279,7 @@ export function ContractBuilder({
           </TabsContent>
           <TabsContent value="preview" className="pt-4">
             {generatedContract && (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 contractContent = {generatedContract,}
@@ -208,6 +298,20 @@ ursor/fix-website-loading-errors-and-merge-6662
         </Tabs>;
 
 
+=======
+              <ContractPreview
+=======
+              <ContractPreview 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                contractContent = {generatedContract,}
+                talent = {talent,}
+                onClose = {onClose,}
+                status="ready"
+              />
+            )}
+          </TabsContent>
+        </Tabs>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <TemplateManager
           isOpen = {templateManagerOpen,}
           onClose = {() => setTemplateManagerOpen(false),}
@@ -241,10 +345,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 }/> </DialogContent> </Dialog>)
 }"}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
           
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+          
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <TabsContent value="form" className="pt-4">
             <ContractForm 
               talent={talent}
@@ -275,6 +384,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       </DialogContent>;
     </Dialog>;
   );
+<<<<<<< HEAD
 
   handleContractGenerated;
 }/> </TabsContent> />);
@@ -298,3 +408,12 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+}
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

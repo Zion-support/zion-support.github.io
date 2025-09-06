@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/pages/MobileHome.tsx
 
 <<<<<<< HEAD
 
@@ -6,6 +8,15 @@ import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation",
 import { ClientDashboard } from "../components/dashboard/ClientDashboard",
 =======
+========
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/pages/MobileHome.tsx
+=======
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React from "react";
 import {MobileHeader} from "../components/common/MobileHeader";
 import {BottomNavigation} from "../components/common/BottomNavigation";
@@ -15,12 +26,37 @@ import {useAuth} from "@/hooks/useAuth";
 export function MobileHome() {;
   const { user } = useAuth();
   const isClient = user?.userType === 'employer' || user?.userType === 'buyer';
-
+<<<<<<< HEAD
   return (
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React from "react",
+import { MobileHeader } from "../components/common/MobileHeader",
+import { BottomNavigation } from "../components/common/BottomNavigation",
+import { ClientDashboard } from "../components/dashboard/ClientDashboard",
+<<<<<<< HEAD
+import { TalentDashboard } from "../components/dashboard/TalentDashboard";
+import { useAuth } from "@/hooks/useAuth";
+export function MobileHome() {
+  const { user } = useAuth();
+
+  const isClient = user?.userType === 'employer' |user?.userType === 'buyer';
+
+=======
+import { TalentDashboard } from "../components/dashboard/TalentDashboard",
+import { useAuth } from "@/hooks/useAuth",
+export function MobileHome() {
+  const { user } = useAuth(),
+  const isClient = user?.userType === 'employer' || user?.userType === 'buyer',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
     <div className="min-h-screen">
       <MobileHeader
@@ -28,8 +64,13 @@ export function MobileHome() {;
         showNotifications
         showSettings
       />
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      <main className="py-4">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
       
       <main className="py-4">
@@ -43,6 +84,7 @@ export function MobileHome() {;
   const { user } = useAuth();
   const isClient = user?.userType === 'employer' || user?.userType === 'buyer';
   return (;
+<<<<<<< HEAD
 
     <div className="min-h-screen">;
       <MobileHeader
@@ -50,7 +92,6 @@ export function MobileHome() {;
         showNotifications 
         showSettings
       />;
-
       <main className="py-4">;
 
 
@@ -59,13 +100,10 @@ export function MobileHome() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         {isClient ? <ClientDashboard /> : <TalentDashboard />}
       </main>;
-
       <BottomNavigation />;
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React from './react';
 import { MobileHeader } from '../components / common / MobileHeader';
 import { BottomNavigation } from '../components / common / BottomNavigation';
@@ -92,4 +130,59 @@ function MobileHome() {
       <BottomNavigation />;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+import React from "react",;
+import { MobileHeader } from "../components/common/MobileHeader",;
+import { BottomNavigation } from "../components/common/BottomNavigation",;
+import { ClientDashboard } from "../components/dashboard/ClientDashboard",;
+import { TalentDashboard } from "../components/dashboard/TalentDashboard",;
+import { useAuth } from "@/hooks/useAuth",;
+;
+export function MobileHome() {;
+  const { user } = useAuth(),;
+  const isClient = user?.userType === 'employer' || user?.userType === 'buyer',;
+  ;
+  return (;
+    <div className="min-h-screen">;
+      <MobileHeader ;
+        title={isClient ? "Client Dashboard" :"Talent Dashboard"} ;
+        showNotifications ;
+        showSettings;
+      />;
+      ;
+      <main className="py-4">;
+        {isClient ? <ClientDashboard /> :<TalentDashboard />}
+      </main>;
+      ;
+      <BottomNavigation />;
+    </div>;
+  ),;}
+ export function MobileHome () {
+  const {
+  user 
+}= useAuth ();
+const isClient = user?.userType === 'employer' || user?.userType === 'buyer';
+min-h-screen" > <MobileHeader showNotifications showSettings /> </main> <BottomNavigation /> </div>) 
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+    <div className="min-h-screen">;
+      <MobileHeader;
+        title={isClient ? "Client Dashboard" : "Talent Dashboard"} ;
+        showNotifications;
+        showSettings;
+      />;
+      <main className="py-4">;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        {isClient ? <ClientDashboard /> : <TalentDashboard />}
+      </main>
+      <BottomNavigation />
+    </div>
+  )
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

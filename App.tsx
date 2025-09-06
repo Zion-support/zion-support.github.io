@@ -1,30 +1,41 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-17cd
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ErrorBoundary from './src/components/ErrorBoundary';
 import Header from './src/components/Header';
 import Sidebar from './src/components/layout/Sidebar';
 import Footer from './src/components/Footer';
-import HomePage from './src/pages/Home';
+import LandingPage from './src/pages/LandingPage';
 import AboutPage from './src/pages/About';
 import ContactPage from './src/pages/Contact';
+<<<<<<< HEAD
 import ServicesPage from './src/pages/Services';
 import PricingPage from './src/pages/Pricing';
 <<<<<<< HEAD
 
 export default function App(): React.JSX.Element {
+=======
+import ServicesPage from './src/pages/ServicesPage';
+import PricingPage from './src/pages/PricingPage';
+
+export default function App() {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
     <ErrorBoundary>
       <Router>
         <div className="min-h-screen bg-gray-50">
           <Header />
+<<<<<<< HEAD
           <div className="flex">
             <Sidebar />
             <main className="flex-1 p-6">
@@ -37,10 +48,23 @@ export default function App(): React.JSX.Element {
               </Routes>
             </main>
           </div>
+=======
+          <Sidebar />
+          <main className="flex-1 lg:ml-80">
+            <Routes>
+              <Route path="/" element={<LandingPage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+              <Route path="/services" element={<ServicesPage />} />
+              <Route path="/pricing" element={<PricingPage />} />
+            </Routes>
+          </main>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <Footer />
         </div>
       </Router>
     </ErrorBoundary>
+<<<<<<< HEAD
   );
 <<<<<<< HEAD
 }
@@ -95,3 +119,7 @@ function App() {
 =======
 }
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-17cd
+=======
+  );
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

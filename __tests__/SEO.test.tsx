@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -38,6 +39,41 @@ describe ('SEO', () => {
 });
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+import React from 'react';'
+import { render, screen } from '@testing - library / react';'
+import '@testing - library / jest - dom';'
+import SEO from '../components / SEO';'
+describe ('SEO', () => {'
+  test ('renders without crashing', () => {
+    render (<SEO />);'
+    expect (screen.getByTestId ('seo')).toBeInTheDocument ();
+
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import SEO from '../components/SEO';
+describe('SEO', () => {
+  test('renders without crashing', () => {
+    render(<SEO />);
+
+    expect(screen.getByRole('main')).toBeInTheDocument();
+  });
+  test('displays correct content', () => {
+    render(<SEO />);
+    expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument();
+  });
+});
+import React from \'react\'; import { render,screen } from \'@testing-library/react\'; import \'@testing-library/jest-dom\'; import SEO from \'../components/SEO\'; describe(\'SEO\',() => { test(\'renders without crashing\',() => { render(<SEO />); expect(screen.getByRole(\'main\')).toBeInTheDocument()}); test(\'displays correct content\',() => { render(<SEO />); expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})});
+const React from "react"; import { render,screen } from "@testing-library/react"; import "@testing-library/jest-dom"; import SEO from "./components/SEO"; describe("SEO",() => { test("renders without crashing",() => { render(<SEO />); expect(screen.getByRole("main")).toBeInTheDocument()}); test("displays correct content",() => { render(<SEO />); expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})});''"
+
+import _React from 'react'; import { render,screen } from '@testing-library/react'; import '@testing-library/jest-dom'; import SEO from '../components/SEO'; describe('SEO',() => { test('renders without crashing',() => { render(<SEO />); expect(screen.getByRole('main')).toBeInTheDocument()}); test('displays correct content',() => { render(<SEO />); expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})});
+
+    expect(screen.getByTestId('seo')).toBeInTheDocument();
+
+  });
+});'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
@@ -46,6 +82,7 @@ describe('SEO'
   test('renders without crashing'
     expect(screen.getByRole('main'
   test('displays correct content'
+<<<<<<< HEAD
 import React from \'react\'; import { render,screen } from \'@testing-library/react\'; import \'@testing-library/jest-dom\'; import SEO from \'../components/SEO\'; describe(\'SEO\',() => { test(\'renders without crashing\',() => { render(<SEO />); expect(screen.getByRole(\'main\')).toBeInTheDocument()}); test(\'displays correct content\',() => { render(<SEO />); expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})});
 const React from "react"; import { render,screen } from "@testing-library/react"; import "@testing-library/jest-dom"; import SEO from "./components/SEO"; describe('SEO', () => { test("renders without crashing",() => { render(<SEO />); expect(screen.getByRole("main")).toBeInTheDocument()}); test("displays correct content"
 <<<<<<< HEAD
@@ -63,15 +100,41 @@ const React from "react"; import { render,screen } from "@testing-library/react"
 =======
 
 describe('SEO', () => {
+=======
+import React from \'react\'; import { render,screen } from \'@testing-library/react\'; import \'@testing-library/jest-dom\'; import SEO from \'../components/SEO\'; describe(\'SEO\',() => { test(\'renders without crashing\',() => { render(<SEO />); expect(screen.getByRole(\'main\')).toBeInTheDocument()}); test(\'displays correct content\',() => { render(<SEO />); expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})});'
+const React from "react"; import { render,screen } from "@testing-library/react"; import "@testing-library/jest-dom"; import SEO from "./components/SEO"; describe('SEO', () => { test("renders without crashing",() => { render(<SEO />); expect(screen.getByRole("main")).toBeInTheDocument()}); test("displays correct content"'
+describe('SEO';'
+  test('renders without crashing';'
+    expect(screen && screen.getByRole('main';'
+  test('displays correct content';'
+import React from \'react\'; import { render,screen } from \'@testing-library/react\'; import \'@testing-library/jest-dom\'; import SEO from \'../components/SEO\'; describe(\'SEO\',() => { test(\'renders without crashing\',() => { render(<SEO />); expect(screen && screen.getByRole(\'main\')).toBeInTheDocument()}); test(\'displays correct content\',() => { render(<SEO />); expect(screen && screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})});'"
+const React from "react"; import { render,screen } from "@testing-library/react"; import "@testing-library/jest-dom"; import SEO from "./components/SEO"; describe('SEO', () => { test("renders without crashing",() => { render(<SEO />); expect(screen && screen.getByRole("main")).toBeInTheDocument()}); test("displays correct content"'
+describe('SEO', () => {'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   test('renders without crashing', () => {
-    render(<SEO />);
+    render(<SEO />);'
     expect(screen.getByRole('main')).toBeInTheDocument();
-  });
-
+  });'
   test('displays correct content', () => {
     render(<SEO />);
     expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument();
   });
+<<<<<<< HEAD
 });
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-a580
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+});'"
+
+import React from "react";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
+import SEO from "../components/SEO";
+describe("SEO", () => {
+  test("renders without crashing", () => {
+    render(<SEO />);
+    expect(screen.getByTestId("seo")).toBeInTheDocument();
+  });
+});
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

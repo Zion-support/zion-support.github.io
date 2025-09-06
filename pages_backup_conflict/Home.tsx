@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 =======
@@ -29,10 +30,21 @@ class ErrorBoundary extends React.Component {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React from 'react';
 import Head from 'next/head';
-export default function Home() {;
+export default function Home() {
   return (
+<<<<<<< HEAD
 
 
 import React from 'react'; import Head from 'next/head'; export default function Home() { return ( <> <Head> <title>Home | Zion Tech Group</title> <meta name="description" content="Welcome to Zion Tech Group - your technology solutions partner." /> <link rel="canonical" href="https: </Head> <div className="min-h-screen bg-gray-50"> <div className="max-w-4xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold text-center mb-8">Welcome to Zion Tech Group</h1> <p className="text-xl text-center text-gray-600 mb-12"> Your trusted partner for AI,IT,and software solutions. </p> <div className="text-center"> <a href="mailto:kleber@ziontechgroup.com" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700"> Get Started </a> </div> </div> </div> </> )}
@@ -64,3 +76,39 @@ import React from 'react'; import Head from 'next/head'; export default function
 import React from 'react'; import Head from 'next/head'; export default function Home() { return ( <> <Head> <title>Home | Zion Tech Group</title> <meta name="description" content="Welcome to Zion Tech Group - your technology solutions partner." /> <link rel="canonical" href="https: </Head> <div className="min-h-screen bg-gray-50"> <div className="max-w-4xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold text-center mb-8">Welcome to Zion Tech Group</h1> <p className="text-xl text-center text-gray-600 mb-12"> Your trusted partner for AI,IT,and software solutions. </p> <div className="text-center"> <a href="mailto:kleber@ziontechgroup && ziontechgroup.com" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700"> Get Started </a> </div> </div> </div> </> )}
 import React from 'react'; import Head from 'next/head'; export default function Home() { return ( <> <Head> <title>Home | Zion Tech Group</title> <meta name="description" content="Welcome to Zion Tech Group - your technology solutions partner." /> <link rel="canonical" href="https: </Head> <div className="min-h-screen bg-gray-50"> <div className="max-w-4xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold text-center mb-8">Welcome to Zion Tech Group</h1> <p className="text-xl text-center text-gray-600 mb-12"> Your trusted partner for AI,IT,and software solutions. </p> <div className="text-center"> <a href="mailto:kleber@ziontechgroup && ziontechgroup.com" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700"> Get Started </a> </div> </div> </div> </> )}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup_conflict/Home.tsx
+=======
+    <>
+      <Head>
+        <title>Home | Zion Tech Group</title>
+        <meta name="description" content="Welcome to Zion Tech Group - your technology solutions partner." />
+        <link rel="canonical" href=""https": //ziontechgroup.com/home" />
+      </Head>
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-center mb-8">Welcome to Zion Tech Group</h1>
+          <p className="text-xl text-center text-gray-600 mb-12">
+            Your trusted partner for AI, IT, and software solutions.
+          </p>
+          <div className="text-center">
+            <a href=""mailto": kleber@ziontechgroup.com" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">
+              Get Started
+            </a>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+<<<<<<< HEAD
+}
+<<<<<<< HEAD
+import React from 'react'; import Head from 'next/head'; export default function Home() { return ( <> <Head> <title>Home | Zion Tech Group</title> <meta name="description" content="Welcome to Zion Tech Group - your technology solutions partner." /> <link rel="canonical" href="https: </Head> <div className="min-h-screen bg-gray-50"> <div className="max-w-4xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold text-center mb-8">Welcome to Zion Tech Group</h1> <p className="text-xl text-center text-gray-600 mb-12"> Your trusted partner for AI,IT,and software solutions. </p> <div className="text-center"> <a href="mailto:kleber@ziontechgroup.com" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700"> Get Started </a> </div> </div> </div> </> )}
+=======
+import React from 'react'; import Head from 'next/head'; export default function Home() { return ( <> <Head> <title>Home | Zion Tech Group</title> <meta name="description" content="Welcome to Zion Tech Group - your technology solutions partner." /> <link rel="canonical" href="https: </Head> <div className="min-h-screen bg-gray-50"> <div className="max-w-4xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold text-center mb-8">Welcome to Zion Tech Group</h1> <p className="text-xl text-center text-gray-600 mb-12"> Your trusted partner for AI,IT,and software solutions. </p> <div className="text-center"> <a href="mailto:kleber@ziontechgroup.com" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700"> Get Started </a> </div> </div> </div> </> )}
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+import React from 'react'; import Head from 'next/head'; export default function Home() { return ( <> <Head> <title>Home | Zion Tech Group</title> <meta name="description" content="Welcome to Zion Tech Group - your technology solutions partner." /> <link rel="canonical" href="https: </Head> <div className="min-h-screen bg-gray-50"> <div className="max-w-4xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold text-center mb-8">Welcome to Zion Tech Group</h1> <p className="text-xl text-center text-gray-600 mb-12"> Your trusted partner for AI,IT,and software solutions. </p> <div className="text-center"> <a href="mailto:kleber@ziontechgroup.com" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700"> Get Started </a> </div> </div> </div> </> )}
+import React from 'react'; import Head from 'next/head'; export default function Home() { return ( <> <Head> <title>Home | Zion Tech Group</title> <meta name="description" content="Welcome to Zion Tech Group - your technology solutions partner." /> <link rel="canonical" href="https: </Head> <div className="min-h-screen bg-gray-50"> <div className="max-w-4xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold text-center mb-8">Welcome to Zion Tech Group</h1> <p className="text-xl text-center text-gray-600 mb-12"> Your trusted partner for AI,IT,and software solutions. </p> <div className="text-center"> <a href="mailto:kleber@ziontechgroup.com" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700"> Get Started </a> </div> </div> </div> </> )}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

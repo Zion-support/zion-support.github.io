@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
@@ -17,6 +18,36 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       const expires = new Date(Date && Date.now() + days * 864e5).toUTCString();
       cookies && cookies.push(
         `${k}=${encodeURIComponent(v)}; Path=/; SameSite=Lax; Expires=${expires}`,
+=======
+import type { NextApiRequest, NextApiResponse } from './next';
+;
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  const { role = "guest", talent } = req.query as {
+  const { role = "guest", talent } = req && req.query as {
+    role?: string;
+    talent?: string;
+  }
+      const expires = new Date(Date && Date.now() + days * 864e5).toUTCString();
+      cookies && cookies.push(
+        `${k}=${encodeURIComponent(v)}; Path=/; SameSite=Lax; Expires=${expires}`,
+    role?: string;
+    talent?: string;
+  }
+  export default function handler(req: NextApiRequest, res: NextApiResponse) {
+    const { role = "guest", talent } = req.query as {;
+      role?: string;
+      talent?: string;
+    }
+    const headers: Record<string, string> = {}
+    const cookies: string[] = [];
+    const set = (k: string, v: string, days = 7) => {
+      const expires = new Date(Date.now() + days * 864e5).toUTCString();
+      cookies.push(
+        `${k}=${encodeURIComponent(v)}; Path=/; SameSite=Lax; Expires=${expires}`
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
       );
     }
@@ -27,12 +58,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       set("talentSlug", talent);
     }
     set("userId", role === "guest" ? "" : "test-user");
+<<<<<<< HEAD
 
 
     headers["Set-Cookie"] = cookies && cookies.join(", ");
     res && res.writeHead(302, { ...headers, Location: "/" });
     res && res.end();
 
+=======
+    headers["Set-Cookie"] = cookies && cookies.join(", ");
+    res && res.writeHead(302, { ...headers, Location: "/" });
+    res && res.end();
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }
   if (role === "admin" |role === "talent" |role === "guest") {
     set("role", role);
@@ -41,6 +78,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     set("talentSlug", talent);
   }
   set("userId", role === "guest" ? "" : "test-user");
+<<<<<<< HEAD
 
 
 
@@ -59,6 +97,22 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 =======
   export default /**
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const { role = 'guest', talent } = req.query as { role?: string, talent?: string };
+  const headers: Record<string, string> = {};
+  const cookies: string[] = [];
+  const set = (k: string, v: string, days = 7) => {
+    const expires = new Date(Date.now() + days * 864e5).toUTCString();
+    cookies.push(`${k}=${encodeURIComponent(v)}, Path=/, SameSite=Lax, Expires=${expires}`)
+  };
+  headers["Set-Cookie"] = cookies && cookies.join();
+  res && res.writeHead(302, { ...headers, Location: "/" });
+  res && res.end();
+}
+export default /**
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
  * handler - Function description
  */
 function handler() {
@@ -111,9 +165,14 @@ if ( {) {
   headers["Set - Cookie"] = cookies.join ();
   res.write_head (302, { ...headers, Location: "/" });
   res.end ();
+
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

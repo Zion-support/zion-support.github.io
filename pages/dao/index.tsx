@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { useEffect, useState } from 'react';
@@ -32,9 +33,11 @@ export default function DaoMetrics(req, res) {
   if (!data) return <div>Error loading data</div>,
 
 =======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+}, []);
+  if (loading) return <div>Loading...</div>;
+  if (!data) return <div>Error loading data</div>;
   return (
     <div className="space-y-6">
       <div className="flex items-end justify-between">
@@ -55,14 +58,165 @@ export default function DaoMetrics(req, res) {
                 </div>
                 <div className="w-full h-2 bg-gray-200 dark:bg-gray-800 rounded">
                   <div className="h-2 bg-emerald-600 rounded" style={{ width: `${Math.min(100, d.percent)}%` }} />
+
+  useEffect__(() => {
+    async function load() {
+      setLoading(true),
+      const resp = await fetch('/api/dao/metrics')
+      const json = await resp.json()
+      setData(json),
+      setLoading(false)
+    }
+    load()
+  }, []),
+
+  if (loading) return <div>Loading...</div>,
+  if (!data) return <div>Error loading data</div>,
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+  return (
+<<<<<<< HEAD
+=======
+    <div className=&quot;space-y-6&quot;>
+      <div className=&quot;flex items-end justify-between&quot;>
+        <div>
+          <h1 className=&quot;text-2xl font-semibold&quot;>DAO Metrics</h1>
+          <div className=&quot;text-xs text-gray-500&quot;>Updated {new Date(data.updatedAt).toLocaleString()} {data.cached ? '(cached)' : ''}</div>
+        </div>
+      </div>
+
+      <section className=&quot;grid lg:grid-cols-2 gap-6&quot;>
+        <div className=&quot;border rounded p-4&quot;>
+          <div className=&quot;font-medium mb-2&quot;>Token Distribution (top ~sample)</div>
+          <div className=&quot;space-y-2&quot;>
+            {data.tokenDistribution.map((d) => (
+              <div key={d.address} className=&quot;text-sm&quot;>
+                <div className=&quot;flex items-center justify-between&quot;>
+                  <span className=&quot;truncate mr-2&quot;>{d.address}</span>
+                  <span>{d.percent.toFixed(2)}%</span>
+                </div>
+                <div className=&quot;w-full h-2 bg-gray-200 dark:bg-gray-800 rounded&quot;>
+                  <div className=&quot;h-2 bg-emerald-600 rounded&quot; style={{ width: `${Math.min(100, d.percent)}%` }} />
+
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { useEffect, useState } from 'react',;
+;
+type Holder = { address: string, amount: string },
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { useEffect, useState } from 'react';
+<<<<<<< HEAD
+
+type Holder = { address: string, amount: string }
+type Metrics = {
+  updatedAt: number
+  tokenDistribution: { address: string, percent: number }[]
+  topHolders: Holder[]
+  activeProposals: any[]
+  governanceParticipationRate: number
+  cached?: boolean
+}
+export default function DaoMetrics() {
+  const [data, setData] = useState<Metrics | null>(null)
+  const [loading, setLoading] = useState(true)
+  useEffect(() => {
+    async function load() {
+      setLoading(true)
+      const resp = await fetch('/api/dao/metrics')
+      const json = await resp.json()
+      setData(json)
+      setLoading(false)
+    }
+    load()
+  }, [])
+  if (loading) return <div>Loading...</div>
+  if (!data) return <div>Error loading data</div>
+
+=======
+type Holder = { address: string, amount: string };
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+type Metrics = {
+  updatedAt: number;
+  tokenDistribution: { address: string, percent: number }[],;
+  topHolders: Holder[];
+  activeProposals: any[];
+  governanceParticipationRate: number;
+  cached?: boolean;
+},;
+export default function DaoMetrics(req, res) {
+  try {
+  const [data, setData] = useState<Metrics | null>(null);
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {;
+    async function load() {;
+      setLoading(true);
+      const resp = await fetch('/api/dao/metrics');
+      const json = await resp.json();
+      setData(json);
+      setLoading(false);
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    load()
+  }, []),
+  if (loading) return <div>Loading...</div>,
+  if (!data) return <div>Error loading data</div>,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  return (
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+    <div className="space-y-6">
+      <div className="flex items-end justify-between">
+        <div>
+          <h1 className="text-2xl font-semibold">DAO Metrics</h1>
+          <div className="text-xs text-gray-500">Updated {new Date(data.updatedAt).toLocaleString()} {data.cached ? '(cached)' : ''}</div>
+        </div>
+      </div>
+      <section className="grid lg:grid-cols-2 gap-6">
+        <div className="border rounded p-4">
+          <div className="font-medium mb-2">Token Distribution (top ~sample)</div>
+          <div className="space-y-2">
+            {data.tokenDistribution.map((d) => (
+              <div key={d.address} className="text-sm">
+                <div className="flex items-center justify-between">
+                  <span className="truncate mr-2">{d.address}</span>
+                  <span>{d.percent.toFixed(2)}%</span>
+                </div>
+                <div className="w-full h-2 bg-gray-200 dark:bg-gray-800 rounded">
+                  <div className="h-2 bg-emerald-600 rounded" style={{ width: `${Math.min(100, d.percent)}%` }} />
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 </div>
               </div>
-            ))}
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           </div>
         </div>
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<div className="border rounded p-4">
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <div className="border rounded p-4">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <div className="font-medium mb-2">Top Holders (approx)</div>
           <table className="w-full text-sm">
             <thead>
@@ -73,41 +227,82 @@ export default function DaoMetrics(req, res) {
             </thead>
             <tbody>
               {data.topHolders.map((h) => (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<tr key={h.address} className="border-t border-gray-200 dark:border-gray-800">
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <tr key={h.address} className="border-t border-gray-200 dark:border-gray-800">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <td className="py-1 pr-2 truncate max-w-[10rem]">{h.address}</td>
                   <td className="py-1">{h.amount}</td>
                 </tr>
-              ))}
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             </tbody>
           </table>
         </div>
       </section>
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<section className="grid lg:grid-cols-2 gap-6">
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <section className="grid lg:grid-cols-2 gap-6">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <div className="border rounded p-4">
           <div className="font-medium mb-2">Active Proposals</div>
           {data.activeProposals.length ? (
             <ul className="list-disc pl-5 text-sm">
               {data.activeProposals.map((p, i) => (
                 <li key={i}>{JSON.stringify(p)}</li>
-              ))}
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             </ul>
           ) : (
+<<<<<<< HEAD
             <div className="text-sm text-gray-600">No active proposals.</div>
 
 <<<<<<< HEAD
 =======
 
+=======
+<<<<<<< HEAD
+<div className="text-sm text-gray-600">No active proposals.</div>
+=======
+            <div className="text-sm text-gray-600">No active proposals.</div>
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+          )}
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         </div>
         <div className="border rounded p-4">
           <div className="font-medium mb-2">Governance Participation Rate</div>
@@ -119,6 +314,7 @@ export default function DaoMetrics(req, res) {
         </div>
       </section>
     </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   )
@@ -132,6 +328,18 @@ export default function DaoMetrics(req, res) {
 }
 
 =======
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  );
+};
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  )
+<<<<<<< HEAD
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { useEffect, useState } from 'react',
 ;
 type Holder = { address: string, amount: string },
@@ -234,6 +442,7 @@ if (return <div > Error loading data</div>, ) {
       </section>;
     </div>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
@@ -241,3 +450,17 @@ if (return <div > Error loading data</div>, ) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

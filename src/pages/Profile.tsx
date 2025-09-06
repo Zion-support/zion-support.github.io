@@ -1,5 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD:src/pages/Profile.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/pages/Profile.tsx
 ;
 const Profile = () =>: any {
   return (
@@ -15,5 +18,8 @@ const Profile = () =>: any {
     </div>);
 }
 ;
+<<<<<<< HEAD:src/pages/Profile.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/pages/Profile.tsx
 export default Profile;

@@ -1,11 +1,24 @@
 ;
 interface PerformanceMetrics {
 <<<<<<< HEAD
+      const entries = list && list.getEntries();
+      entries && entries.forEach((entry) => {
+        if (entry && entry.entryType === 'navigation') {
+=======
   loadTime: number, firstContentfulPaint: number
   largestContentfulPaint: number, firstInputDelay: number
   cumulativeLayoutShift: number
 }
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+export function usePerformanceMonitor() {
+=======
+
+export function usePerformanceMonitor() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isSupported, setIsSupported] = useState(false);
   useEffect(() => {
@@ -20,6 +33,7 @@ interface PerformanceMetrics {
       const entries = list.getEntries();
       entries.forEach((entry) => {
         if (entry.entryType === 'navigation') {
+<<<<<<< HEAD
 =======
 
       const entries = list && list.getEntries();
@@ -27,25 +41,32 @@ interface PerformanceMetrics {
       entries && entries.forEach((entry) => {
         if (entry && entry.entryType === 'navigation') {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           const navEntry = entry as PerformanceNavigationTiming;
           setMetrics(prev => ({
             ...prev,
             loadTime: navEntry && navEntry.loadEventEnd - navEntry && navEntry.loadEventStart,
           }));
         }
-        
         if (entry && entry.entryType === 'paint') {
+<<<<<<< HEAD
 
           const paintEntry = entry as PerformancePaintTiming;
           if (paintEntry && paintEntry.name === 'first-contentful-paint') {
             setMetrics(prev => ({
 
+=======
+          const paintEntry = entry as PerformancePaintTiming;
+          if (paintEntry && paintEntry.name === 'first-contentful-paint') {
+            setMetrics(prev => ({
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               ...prev,
               firstContentfulPaint: paintEntry && paintEntry.startTime,
             }));
           }
         }
-        
         if (entry && entry.entryType === 'largest-contentful-paint') {
           const lcpEntry = entry as PerformanceEntry;
           setMetrics(prev => ({
@@ -53,7 +74,6 @@ interface PerformanceMetrics {
             largestContentfulPaint: lcpEntry && lcpEntry.startTime,
           }));
         }
-        
         if (entry && entry.entryType === 'first-input') {
           const fidEntry = entry as PerformanceEventTiming;
           setMetrics(prev => ({
@@ -61,14 +81,16 @@ interface PerformanceMetrics {
             firstInputDelay: fidEntry && fidEntry.processingStart - fidEntry && fidEntry.startTime,
           }));
         }
-        
         if (entry && entry.entryType === 'layout-shift') {
           const clsEntry = entry as PerformanceEntry & { value: number };
           setMetrics(prev => ({
             ...prev,
             cumulativeLayoutShift: (prev?.cumulativeLayoutShift || 0) + clsEntry && clsEntry.value,
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   load_time: number, firstContentfulPaint: number,
   largestContentfulPaint: number, firstInputDelay: number,
   cumulativeLayoutShift: number,
@@ -151,20 +173,22 @@ if ( {) {
           set_metrics (prev => ({
             ...prev,
             cumulativeLayoutShift: (prev?.cumulativeLayoutShift || 0) + cls_entry.value,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           }));
         }
       });
     });
+<<<<<<< HEAD
 
       observer && observer.disconnect();
     };
 
+=======
+      observer && observer.disconnect();
+    };
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }, []);
   return { metrics, isSupported }
 }
-
-=======
 ;
     // Observe different performance entry types;
     try {
@@ -180,4 +204,3 @@ if ( {) {
 ;
   return { metrics, is_supported }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,11 +1,20 @@
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/pages/MobileJobPost.tsx
 =======
 
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React, { useState } from "react";
 import {MobileHeader} from "../components/common/MobileHeader";
 import {BottomNavigation} from "../components/common/BottomNavigation";
@@ -17,6 +26,7 @@ import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/c
 import {Zap, ChevronLeft, ChevronRight} from "lucide-react";
 import {Badge} from "@/components/ui/badge";
 import {Card, CardContent} from "@/components/ui/card";
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -24,6 +34,15 @@ import {Card, CardContent} from "@/components/ui/card";
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+type JobPostStep = "details" | "requirements" | "budget" | "preview";
+export function MobileJobPost() {
+  const [currentStep, setCurrentStep] = useState<JobPostStep>("details");
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React, { useState } from "react",
 import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation",
@@ -41,6 +60,7 @@ import {
 import { Zap, ChevronLeft, ChevronRight } from "lucide-react",
 import { Badge } from "@/components/ui/badge",
 import { Card, CardContent } from "@/components/ui/card",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 type JobPostStep = "details" | "requirements" | "budget" | "preview",
@@ -60,6 +80,23 @@ export function MobileJobPost() {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+type JobPostStep = "details" | "requirements" | "budget" | "preview",
+
+<<<<<<< HEAD
+export function MobileJobPost() {;
+  const [currentStep, setCurrentStep] = useState<JobPostStep>("details");
+=======
+export function MobileJobPost() {
+  const [currentStep, setCurrentStep] = useState<JobPostStep>("details"),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const goToNextStep = () => {
     if (currentStep === "details") {
       setCurrentStep("requirements")
@@ -68,6 +105,7 @@ export function MobileJobPost() {
     } else if (currentStep === "budget") {
       setCurrentStep("preview")
     }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -77,6 +115,14 @@ export function MobileJobPost() {
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+  }
+=======
+  },
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const goToPrevStep = () => {
     if (currentStep === "requirements") {
       setCurrentStep("details")
@@ -85,8 +131,17 @@ export function MobileJobPost() {
     } else if (currentStep === "preview") {
       setCurrentStep("budget")
     }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  }
+=======
+  },
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const renderStepContent = () => {
     switch (currentStep) {
       case "details": return <DetailsStep />,
@@ -99,12 +154,60 @@ export function MobileJobPost() {
       default:
         return <DetailsStep />
     }
+<<<<<<< HEAD
 
+========
+export function MobileJobPost() {;
+  const [currentStep, setCurrentStep] = useState<JobPostStep>("details");
+  const goToNextStep = () => {;
+    if (currentStep === "details") {;
+      setCurrentStep("requirements");
+    } else if (currentStep === "requirements") {;
+      setCurrentStep("budget");
+    } else if (currentStep === "budget") {;
+      setCurrentStep("preview");
+    }
+  };
+  const goToPrevStep = () => {;
+    if (currentStep === "requirements") {;
+      setCurrentStep("details");
+    } else if (currentStep === "budget") {;
+      setCurrentStep("requirements");
+    } else if (currentStep === "preview") {;
+      setCurrentStep("budget");
+    }
+  };
+  const renderStepContent = () => {;
+    switch (currentStep) {;
+      case "details": return <DetailsStep />;
+      case "requirements":;
+        return <RequirementsStep />;
+      case "budget":;
+        return <BudgetStep />;
+      case "preview":;
+        return <PreviewStep />;
+      default:;
+        return <DetailsStep />;
+    }
+  };
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/pages/MobileJobPost.tsx
+=======
+<<<<<<< HEAD
+  }
+=======
+  },
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
     <div className="min-h-screen flex flex-col">
       <MobileHeader
         title={`Post a Job (${currentStep === "preview" ? 4 : currentStep === "budget" ? 3 : currentStep === "requirements" ? 2 : 1}/4)`}
         showBack
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/pages/MobileJobPost.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       />
       <main className="flex-1 py-4 pb-24 px-4">
         <div className="mb-6 flex justify-between">
@@ -128,12 +231,120 @@ export function MobileJobPost() {
             >
               <ChevronLeft className="h-4 w-4" /> Back
             </Button>
+<<<<<<< HEAD
+========
+      />;
+      <main className="flex-1 py-4 pb-24 px-4">;
+        <div className="mb-6 flex justify-between">;
+          <div className="flex space-x-1">;
+            <Badge variant={currentStep === "details" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">1</Badge>;
+            <Badge variant={currentStep === "requirements" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">2</Badge>;
+            <Badge variant={currentStep === "budget" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">3</Badge>;
+            <Badge variant={currentStep === "preview" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">4</Badge>;
+          </div>;
+=======
+
+import React, { useState } from "react",;
+import { MobileHeader } from "../components/common/MobileHeader",;
+import { BottomNavigation } from "../components/common/BottomNavigation",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { Textarea } from "@/components/ui/textarea",;
+import { Label } from "@/components/ui/label",;
+import { ;
+  Select,;
+  SelectContent,;
+  SelectItem,;
+  SelectTrigger,;
+  SelectValue ;
+} from "@/components/ui/select",;
+import { Zap, ChevronLeft, ChevronRight } from "lucide-react",;
+import { Badge } from "@/components/ui/badge",;
+import { Card, CardContent } from "@/components/ui/card",;
+;
+type JobPostStep = "details" | "requirements" | "budget" | "preview",;
+;
+export function MobileJobPost() {;
+  const [currentStep, setCurrentStep] = useState<JobPostStep>("details"),;
+  ;
+  const goToNextStep = () => {;
+    if (currentStep === "details") {;
+      setCurrentStep("requirements"),;
+    } else if (currentStep === "requirements") {;
+      setCurrentStep("budget"),;
+    } else if (currentStep === "budget") {;
+      setCurrentStep("preview"),;
+    }
+  },;
+  ;
+  const goToPrevStep = () => {;
+    if (currentStep === "requirements") {;
+      setCurrentStep("details"),;
+    } else if (currentStep === "budget") {;
+      setCurrentStep("requirements"),;
+    } else if (currentStep === "preview") {;
+      setCurrentStep("budget"),;
+    }
+  },;
+  ;
+  const renderStepContent = () => {;
+    switch (currentStep) {;
+      case "details":return <DetailsStep />,;
+      case "requirements":;
+        return <RequirementsStep />,;
+      case "budget":;
+        return <BudgetStep />,;
+      case "preview":;
+        return <PreviewStep />,;
+      default:;
+        return <DetailsStep />;
+    }
+  },;
+  ;
+  return (;
+    <div className="min-h-screen flex flex-col">;
+      <MobileHeader;
+        title={`Post a Job (${currentStep === "preview" ? 4 :currentStep === "budget" ? 3 :currentStep === "requirements" ? 2 :1}/4)`}
+        showBack;
+      />;
+      ;
+      <main className="flex-1 py-4 pb-24 px-4">;
+        <div className="mb-6 flex justify-between">;
+          <div className="flex space-x-1">;
+            <Badge variant={currentStep === "details" ? "default" :"outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">1</Badge>;
+            <Badge variant={currentStep === "requirements" ? "default" :"outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">2</Badge>;
+            <Badge variant={currentStep === "budget" ? "default" :"outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">3</Badge>;
+            <Badge variant={currentStep === "preview" ? "default" :"outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">4</Badge>;
+          </div>;
+          ;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+          <Button variant="outline" className="flex gap-1">;
+            <Zap className="h-4 w-4" /> AI Assist;
+          </Button>;
+        </div>;
+<<<<<<< HEAD
+        {renderStepContent()}
+        <div className="flex gap-2 mt-6">;
+          {currentStep !== "details" && (;
+            <Button
+              variant="outline" 
+              className="flex-1 gap-1" 
+              onClick={goToPrevStep}>;
+              <ChevronLeft className="h-4 w-4" /> Back;
+            </Button>;
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/pages/MobileJobPost.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           )}
           <Button
             className="flex-1 gap-1"
             onClick={goToNextStep}
           >
             {currentStep === "preview" ? "Publish Job" : "Continue"}
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/pages/MobileJobPost.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             {currentStep !== "preview" && <ChevronRight className="h-4 w-4" />}
           </Button>
         </div>
@@ -183,14 +394,44 @@ function DetailsStep() {
       </div>
       <div className="space-y-2">
         <Label htmlFor="description">Job Description</Label>
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <Textarea
+          id="description"
+          placeholder="Describe the job role and responsibilities"
+=======
+        <Textarea 
+          id="description" 
+          placeholder="Describe the job role and responsibilities" 
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           rows={5}
         />
       </div>
     </div>
   )
 }
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+function RequirementsStep() {
+  const [skills, setSkills] = useState<string[]>([
+    "React", "TypeScript", "Node.js"
+  ]);
+  const [newSkill, setNewSkill] = useState("");
+=======
+        <Textarea 
+          id="description" 
+          placeholder="Describe the job role and responsibilities" 
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React, { useState } from "react",;
 import { MobileHeader } from "../components/common/MobileHeader",;
 import { BottomNavigation } from "../components/common/BottomNavigation",;
@@ -209,6 +450,7 @@ import { Zap, ChevronLeft, ChevronRight } from "lucide-react",;
 import { Badge } from "@/components/ui/badge",;
 import { Card, CardContent } from "@/components/ui/card",;
 type JobPostStep = "details" | "requirements" | "budget" | "preview",;
+<<<<<<< HEAD
 =======
 
   },
@@ -223,6 +465,10 @@ type JobPostStep = "details" | "requirements" | "budget" | "preview",;
 export function MobileJobPost() {;
   const [currentStep, setCurrentStep] = useState<JobPostStep>("details");
 
+=======
+export function MobileJobPost() {;
+  const [currentStep, setCurrentStep] = useState<JobPostStep>("details"),;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const goToNextStep = () => {;
     if (currentStep === "details") {;
       setCurrentStep("requirements");
@@ -231,8 +477,12 @@ export function MobileJobPost() {;
     } else if (currentStep === "budget") {;
       setCurrentStep("preview");
     }
+<<<<<<< HEAD
   };
 
+=======
+  },;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const goToPrevStep = () => {;
     if (currentStep === "requirements") {;
       setCurrentStep("details");
@@ -241,6 +491,7 @@ export function MobileJobPost() {;
     } else if (currentStep === "preview") {;
       setCurrentStep("budget");
     }
+<<<<<<< HEAD
   };
 
   const renderStepContent = () => {;
@@ -274,6 +525,28 @@ export function MobileJobPost() {;
 
       />;
 
+=======
+  },;
+  const renderStepContent = () => {;
+    switch (currentStep) {;
+      case "details": return <DetailsStep />,;
+      case "requirements":;
+        return <RequirementsStep />,;
+      case "budget":;
+        return <BudgetStep />,;
+      case "preview":;
+        return <PreviewStep />,;
+      default:;
+        return <DetailsStep />;
+    }
+  },;
+  return (;
+    <div className="min-h-screen flex flex-col">;
+      <MobileHeader;
+        title={`Post a Job (${currentStep === "preview" ? 4 : currentStep === "budget" ? 3 : currentStep === "requirements" ? 2 : 1}/4)`}
+        showBack;
+      />;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <main className="flex-1 py-4 pb-24 px-4">;
         <div className="mb-6 flex justify-between">;
           <div className="flex space-x-1">;
@@ -282,11 +555,15 @@ export function MobileJobPost() {;
             <Badge variant={currentStep === "budget" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">3</Badge>;
             <Badge variant={currentStep === "preview" ? "default" : "outline"} className="rounded-full w-7 h-7 flex items-center justify-center p-0">4</Badge>;
           </div>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <Button variant="outline" className="flex gap-1">;
             <Zap className="h-4 w-4" /> AI Assist;
           </Button>;
         </div>;
+<<<<<<< HEAD
 
         {renderStepContent()}
 
@@ -307,30 +584,108 @@ export function MobileJobPost() {;
             {currentStep === "preview" ? "Publish Job" : "Continue"}
             {currentStep !== "preview" && <ChevronRight className="h-4 w-4" />}
 
+========
+=======
+        ;
+        {renderStepContent()}
+        ;
+        <div className="flex gap-2 mt-6">;
+          {currentStep !== "details" && (;
+            <Button ;
+              variant="outline" ;
+              className="flex-1 gap-1" ;
+              onClick={goToPrevStep}
+            >;
+              <ChevronLeft className="h-4 w-4" /> Back;
+            </Button>;
+          )}
+          ;
+          <Button ;
+            className="flex-1 gap-1";
+            onClick={goToNextStep}
+          >;
+            {currentStep === "preview" ? "Publish Job" :"Continue"}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+            {currentStep !== "preview" && <ChevronRight className="h-4 w-4" />}
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/pages/MobileJobPost.tsx
           </Button>;
         </div>;
       </main>;
-
+<<<<<<< HEAD
+=======
+        {renderStepContent()}
+;
+        <div className="flex gap-2 mt-6">;
+          {currentStep !== "details" && (;
+            <Button;
+              variant="outline";
+              className="flex-1 gap-1";
+              onClick={goToPrevStep}
+            >
+              <ChevronLeft className="h-4 w-4" /> Back
+            </Button>
+          )}
+;
+          <Button;
+            className="flex-1 gap-1";
+            onClick={goToNextStep}
+          >;
+            {currentStep === "preview" ? "Publish Job" : "Continue"}
+            {currentStep !== "preview" && <ChevronRight className="h-4 w-4" />}
+          </Button>;
+        </div>;
+      </main>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <BottomNavigation />;
     </div>;
   );
 }
-
+<<<<<<< HEAD
 function DetailsStep() {;
   return (
     <div className="space-y-4">;
       <h2 className="text-lg font-medium">Job Details</h2>;
-
       <div className="space-y-2">;
         <Label htmlFor="title">Job Title</Label>;
         <Input id="title" placeholder="e && e.g. Senior React Developer" />;
       </div>;
-
+=======
+      ;
+      <BottomNavigation />;
+    </div>;
+  ),;
+}
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+;
+function DetailsStep() {;
+  return (;
+    <div className="space-y-4">;
+      <h2 className="text-lg font-medium">Job Details</h2>;
+<<<<<<< HEAD
+      ;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+      <div className="space-y-2">;
+        <Label htmlFor="title">Job Title</Label>;
+        <Input id="title" placeholder="e.g. Senior React Developer" />;
+      </div>;
+<<<<<<< HEAD
+      ;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <div className="space-y-2">;
         <Label htmlFor="company">Company Name</Label>;
         <Input id="company" placeholder="Your company name" />;
       </div>;
-
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      ;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <div className="space-y-2">;
         <Label htmlFor="location">Location</Label>;
         <Select defaultValue="remote">;
@@ -344,7 +699,13 @@ function DetailsStep() {;
           </SelectContent>;
         </Select>;
       </div>;
-
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      ;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <div className="space-y-2">;
         <Label htmlFor="jobType">Job Type</Label>;
         <Select>;
@@ -359,19 +720,33 @@ function DetailsStep() {;
           </SelectContent>;
         </Select>;
       </div>;
-
+<<<<<<< HEAD
+<<<<<<< HEAD
       <div className="space-y-2">;
         <Label htmlFor="description">Job Description</Label>;
         <Textarea
           id="description" 
           placeholder="Describe the job role and responsibilities" 
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/pages/MobileJobPost.tsx
 
+========
+=======
+      ;
+      <div className="space-y-2">;
+        <Label htmlFor="description">Job Description</Label>;
+        <Textarea ;
+          id="description" ;
+          placeholder="Describe the job role and responsibilities" ;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/pages/MobileJobPost.tsx
           rows={5}
         />;
       </div>;
     </div>;
+<<<<<<< HEAD
   );
 }
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/pages/MobileJobPost.tsx
 
 <<<<<<< HEAD
 function RequirementsStep() {
@@ -387,6 +762,8 @@ function RequirementsStep() {
     }
 
 =======
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/pages/MobileJobPost.tsx
 import React, { useState } from './react';
 import { MobileHeader } from '../components / common / MobileHeader';
 import { BottomNavigation } from '../components / common / BottomNavigation';
@@ -543,17 +920,23 @@ function DetailsStep() {
       </div>;
       <div className="space - y-2">;
         <Label html_for="description">Job Description</Label>;
+=======
+      <div className="space-y-2">;
+        <Label htmlFor="description">Job Description</Label>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <Textarea;
           id="description";
           placeholder="Describe the job role and responsibilities";
           rows={5}
         />;
       </div>;
+<<<<<<< HEAD
     </div>);
 }
 /**
  * RequirementsStep - Function description
  */
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/pages/MobileJobPost.tsx
 
 =======
 
@@ -563,35 +946,73 @@ function DetailsStep() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/pages/MobileJobPost.tsx
 function RequirementsStep() {
   const [skills, set_skills] = useState < string[]>([;
     "React", "TypeScript", "Node.js";
   ]);
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/pages/MobileJobPost.tsx
 
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/pages/MobileJobPost.tsx
 function RequirementsStep() {;
   const [skills, setSkills] = useState<string[]>([;
     "React", "TypeScript", "Node && Node.js";
   ]);
   const [newSkill, setNewSkill] = useState("");
-
   const addSkill = () => {;
     if (newSkill && !skills && skills.includes(newSkill)) {;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/pages/MobileJobPost.tsx
 
       setSkills([...skills, newSkill]);
       setNewSkill("");
     }
 
 
+=======
+    </div>;
+  );
+}
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+function RequirementsStep() {
+  const [skills, setSkills] = useState<string[]>([
+    "React", "TypeScript", "Node.js"
+  ]),
+  const [newSkill, setNewSkill] = useState(""),
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  const addSkill = () => {
+    if (newSkill && !skills.includes(newSkill)) {
+      setSkills([...skills, newSkill]),
+      setNewSkill("")
+    }
+<<<<<<< HEAD
+  }
+  const removeSkill = (skill: string) => {
+    setSkills(skills.filter(s => s !== skill))
+  }
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   },
   
   const removeSkill = (skill: string) => {
     setSkills(skills.filter(s => s !== skill))
   },
   
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
     <div className="space-y-4">
       <h2 className="text-lg font-medium">Job Requirements</h2>
@@ -632,11 +1053,28 @@ function RequirementsStep() {;
             <Badge
               key={skill}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               variant="secondary"
               className="flex items-center gap-1 px-3 py-1"
             >
               {skill}
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+              <button
+                className="ml-1 rounded-full hover:bg-background/20 p-1"
+=======
+              <button 
+                className="ml-1 rounded-full hover:bg-background/20 p-1"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 ;
 function RequirementsStep() {;
   const [skills, setSkills] = useState<string[]>([;
@@ -648,19 +1086,57 @@ function RequirementsStep() {;
       setSkills([...skills, newSkill]),;
       setNewSkill("");
     }
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+      setSkills([...skills, newSkill]);
+      setNewSkill("");
+    }
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/pages/MobileJobPost.tsx
   };
-
   const removeSkill = (skill: string) => {;
     setSkills(skills && skills.filter(s => s !== skill));
   };
-
   return (
     <div className="space-y-4">;
       <h2 className="text-lg font-medium">Job Requirements</h2>;
-
+=======
+  ),;
+}
+;
+function RequirementsStep() {;
+  const [skills, setSkills] = useState<string[]>([;
+    "React", "TypeScript", "Node.js";
+  ]),;
+  const [newSkill, setNewSkill] = useState(""),;
+  ;
+  const addSkill = () => {;
+    if (newSkill && !skills.includes(newSkill)) {;
+      setSkills([...skills, newSkill]),;
+      setNewSkill(""),;
+    }
+  },;
+  ;
+  const removeSkill = (skill:string) => {;
+    setSkills(skills.filter(s => s !== skill));
+  },;
+  ;
+  return (;
+    <div className="space-y-4">;
+      <h2 className="text-lg font-medium">Job Requirements</h2>;
+      ;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+  };
+  const removeSkill = (skill: string) => {;
+    setSkills(skills.filter(s => s !== skill));
+  };
+  return (;
+    <div className="space-y-4">;
+      <h2 className="text-lg font-medium">Job Requirements</h2>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <div className="space-y-2">;
         <Label htmlFor="experience">Experience Level</Label>;
         <Select>;
@@ -675,7 +1151,13 @@ function RequirementsStep() {;
           </SelectContent>;
         </Select>;
       </div>;
-
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      ;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <div className="space-y-2">;
         <Label htmlFor="education">Education</Label>;
         <Select>;
@@ -692,17 +1174,41 @@ function RequirementsStep() {;
           </SelectContent>;
         </Select>;
       </div>;
-
+<<<<<<< HEAD
+<<<<<<< HEAD
       <div className="space-y-2">;
         <Label>Required Skills</Label>;
         <div className="flex flex-wrap gap-2 mb-3">;
           {skills && skills.map((skill) => (;
             <Badge
               key={skill} 
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/pages/MobileJobPost.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/pages/MobileJobPost.tsx
               variant="secondary"
               className="flex items-center gap-1 px-3 py-1">;
+=======
+      ;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+      <div className="space-y-2">;
+        <Label>Required Skills</Label>;
+        <div className="flex flex-wrap gap-2 mb-3">;
+          {skills.map((skill) => (;
+<<<<<<< HEAD
+            <Badge ;
+=======
+            <Badge;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+              key={skill} ;
+              variant="secondary";
+              className="flex items-center gap-1 px-3 py-1";
+            >;
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               {skill}
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/pages/MobileJobPost.tsx
 <<<<<<< HEAD
               <button;
                 className="ml-1 rounded-full hover:bg-background/20 p-1";
@@ -721,25 +1227,40 @@ function RequirementsStep() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+              <button ;
+                className="ml-1 rounded-full hover:bg-background/20 p-1";
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/pages/MobileJobPost.tsx
                 onClick={() => removeSkill(skill)}
               >;
                 ×;
               </button>;
             </Badge>;
           ))}
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/pages/MobileJobPost.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/pages/MobileJobPost.tsx
         </div>;
         <div className="flex gap-2">;
+<<<<<<< HEAD
           <Input
             value={newSkill}
             onChange={(e) => setNewSkill(e && e.target.value)}
             placeholder="Add a skill";
             onKeyDown={(e) => e && e.key === 'Enter' && addSkill()}
+=======
+          <Input ;
+            value={newSkill}
+            onChange={(e) => setNewSkill(e.target.value)}
+            placeholder="Add a skill";
+            onKeyDown={(e) => e.key === 'Enter' && addSkill()}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           />;
           <Button onClick={addSkill}>Add</Button>;
         </div>;
       </div>;
-
+<<<<<<< HEAD
       <div className="space-y-2">;
         <Label htmlFor="requirements">Specific Requirements</Label>;
         <Textarea
@@ -747,36 +1268,126 @@ function RequirementsStep() {;
           placeholder="List any specific requirements or qualifications" 
           rows={4}
 <<<<<<< HEAD
+=======
+              {skill}
+              <button;
+                className="ml-1 rounded-full hover:bg-background/20 p-1";
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                onClick={() => removeSkill(skill)}
+              >
+                ×
+              </button>
+            </Badge>
+          ))}
+        </div>
+        <div className="flex gap-2">
+          <Input
+            value={newSkill}
+            onChange={(e) => setNewSkill(e.target.value)}
+            placeholder="Add a skill"
+            onKeyDown={(e) => e.key === 'Enter' && addSkill()}
+          />
+          <Button onClick={addSkill}>Add</Button>
+        </div>
+      </div>
+      <div className="space-y-2">
+        <Label htmlFor="requirements">Specific Requirements</Label>
+        <Textarea
+          id="requirements"
+          placeholder="List any specific requirements or qualifications"
+          rows={4}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         />
       </div>
       <div className="space-y-2">
         <Label htmlFor="responsibilities">Key Responsibilities</Label>
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+        <Textarea
+          id="responsibilities"
+          placeholder="List the key responsibilities for this role"
+          rows={4}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         />
       </div>
     </div>
   )
+<<<<<<< HEAD
 
 =======
         />;
       </div>;
-
       <div className="space-y-2">;
         <Label htmlFor="responsibilities">Key Responsibilities</Label>;
         <Textarea
           id="responsibilities" 
           placeholder="List the key responsibilities for this role" 
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/pages/MobileJobPost.tsx
 
+========
+=======
+      ;
+      <div className="space-y-2">;
+        <Label htmlFor="requirements">Specific Requirements</Label>;
+        <Textarea ;
+          id="requirements" ;
+          placeholder="List any specific requirements or qualifications" ;
+          rows={4}
+        />;
+      </div>;
+      ;
+      <div className="space-y-2">;
+        <Label htmlFor="responsibilities">Key Responsibilities</Label>;
+        <Textarea ;
+          id="responsibilities" ;
+          placeholder="List the key responsibilities for this role" ;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/pages/MobileJobPost.tsx
           rows={4}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         />;
       </div>;
     </div>;
+<<<<<<< HEAD
   );
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/pages/MobileJobPost.tsx
 <<<<<<< HEAD
 
 }
 
+=======
+<<<<<<< HEAD
+}
+=======
+        <Textarea 
+          id="responsibilities" 
+          placeholder="List the key responsibilities for this role" 
+          rows={4}
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        />;
+      </div>;
+    </div>;
+  );
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 function BudgetStep() {
   return (
     <div className="space-y-4">
@@ -838,13 +1449,26 @@ function BudgetStep() {
       </div>
       <div className="space-y-2">
         <Label htmlFor="additionalInfo">Additional Budget Information</Label>
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+        <Textarea
+          id="additionalInfo"
+          placeholder="Any additional information about budget or payment"
+=======
+        <Textarea 
+          id="additionalInfo" 
+          placeholder="Any additional information about budget or payment" 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           rows={3}
         />
       </div>
     </div>
   )
 }
+<<<<<<< HEAD
 
 =======
 =======
@@ -854,14 +1478,15 @@ function BudgetStep() {
 }
 
 
+========
+}
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/pages/MobileJobPost.tsx
 function BudgetStep() {;
   return (
     <div className="space-y-4">;
       <h2 className="text-lg font-medium">Budget & Timeline</h2>;
-
       <div className="space-y-2">;
         <Label htmlFor="paymentType">Payment Type</Label>;
-=======
   const [new_skill, setNewSkill] = useState ("");
 ;
   const add_skill = () =>: any {
@@ -965,7 +1590,22 @@ function BudgetStep() {
       <h2 className="text - lg font - medium">Budget & Timeline</h2>;
       <div className="space - y-2">;
         <Label html_for="payment_type">Payment Type</Label>;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/pages/MobileJobPost.tsx
 
+========
+=======
+  ),;
+}
+;
+function BudgetStep() {;
+  return (;
+    <div className="space-y-4">;
+      <h2 className="text-lg font-medium">Budget & Timeline</h2>;
+      ;
+      <div className="space-y-2">;
+        <Label htmlFor="paymentType">Payment Type</Label>;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/pages/MobileJobPost.tsx
         <Select>;
           <SelectTrigger>;
             <SelectValue placeholder="Select payment type" />;
@@ -977,7 +1617,11 @@ function BudgetStep() {
           </SelectContent>;
         </Select>;
       </div>;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/pages/MobileJobPost.tsx
 
+========
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/pages/MobileJobPost.tsx
       <div className="space - y-2">;
         <Label > Salary Range</Label>;
         <div className="flex gap - 4 items - center">;
@@ -986,7 +1630,21 @@ function BudgetStep() {
           <Input placeholder="Max" type="number" className="w - full" />;
           <Select default_value="usd">;
             <SelectTrigger className="w - 24">;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/pages/MobileJobPost.tsx
 
+========
+=======
+      ;
+      <div className="space-y-2">;
+        <Label>Salary Range</Label>;
+        <div className="flex gap-4 items-center">;
+          <Input placeholder="Min" type="number" className="w-full" />;
+          <span>to</span>;
+          <Input placeholder="Max" type="number" className="w-full" />;
+          <Select defaultValue="usd">;
+            <SelectTrigger className="w-24">;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/pages/MobileJobPost.tsx
               <SelectValue placeholder="Currency" />;
             </SelectTrigger>;
             <SelectContent>;
@@ -997,7 +1655,11 @@ function BudgetStep() {
           </Select>;
         </div>;
       </div>;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/pages/MobileJobPost.tsx
 
+========
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/pages/MobileJobPost.tsx
       <div className="space - y-2">;
         <Label html_for="deadline">Application Deadline</Label>;
         <Input type="date" id="deadline" />;
@@ -1008,7 +1670,25 @@ function BudgetStep() {
       </div>;
       <div className="space - y-2">;
         <Label html_for="duration">Project Duration</Label>;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/pages/MobileJobPost.tsx
 
+========
+=======
+      ;
+      <div className="space-y-2">;
+        <Label htmlFor="deadline">Application Deadline</Label>;
+        <Input type="date" id="deadline" />;
+      </div>;
+      ;
+      <div className="space-y-2">;
+        <Label htmlFor="startDate">Expected Start Date</Label>;
+        <Input type="date" id="startDate" />;
+      </div>;
+      ;
+      <div className="space-y-2">;
+        <Label htmlFor="duration">Project Duration</Label>;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/pages/MobileJobPost.tsx
         <Select>;
           <SelectTrigger>;
             <SelectValue placeholder="Select project duration" />;
@@ -1016,15 +1696,26 @@ function BudgetStep() {
           <SelectContent>;
             <SelectItem value="ltw">Less than a week</SelectItem>;
             <SelectItem value="ltm">Less than a month</SelectItem>;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/pages/MobileJobPost.tsx
 
             <SelectItem value="1 - 3m">1 - 3 months</SelectItem>;
             <SelectItem value="3 - 6m">3 - 6 months</SelectItem>;
 
+========
+<<<<<<< HEAD
+            <SelectItem value="1 - 3m">1 - 3 months</SelectItem>;
+            <SelectItem value="3 - 6m">3 - 6 months</SelectItem>;
+=======
+            <SelectItem value="1-3m">1-3 months</SelectItem>;
+            <SelectItem value="3-6m">3-6 months</SelectItem>;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/pages/MobileJobPost.tsx
             <SelectItem value="6m+">6+ months</SelectItem>;
             <SelectItem value="ongoing">Ongoing</SelectItem>;
           </SelectContent>;
         </Select>;
       </div>;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/pages/MobileJobPost.tsx
 
 
         <Textarea 
@@ -1044,6 +1735,12 @@ function BudgetStep() {
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 function PreviewStep() {
   return (
     <div className="space-y-4">
@@ -1078,54 +1775,54 @@ function PreviewStep() {
       <Button variant="outline" className="w-full">Edit Job Post</Button>
     </div>
   )
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
+========
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/pages/MobileJobPost.tsx
 function PreviewStep() {;
   return (
     <div className="space-y-4">;
       <h2 className="text-lg font-medium mb-2">Job Preview</h2>;
-
       <Card>;
         <CardContent className="p-4">;
           <h3 className="font-bold text-lg">Senior React Developer</h3>;
           <p className="text-muted-foreground">TechCorp Inc. • Remote • Full-time</p>;
-
           <div className="flex gap-2 my-3">;
             <Badge variant="outline">React</Badge>;
             <Badge variant="outline">TypeScript</Badge>;
             <Badge variant="outline">Node && Node.js</Badge>;
           </div>;
-
           <div className="space-y-1 text-sm mt-4">;
             <p className="font-medium">Salary Range:</p>;
             <p>$80,000 - $120,000 USD / year</p>;
           </div>;
-
           <div className="space-y-1 text-sm mt-3">;
             <p className="font-medium">Experience Level:</p>;
             <p>Senior</p>;
           </div>;
-
           <div className="space-y-1 text-sm mt-3">;
             <p className="font-medium">Application Deadline:</p>;
             <p>December 15, 2023</p>;
           </div>;
-
           <div className="mt-4 pt-3 border-t border-border">;
             <h4 className="font-medium mb-2">Description</h4>;
             <p className="text-sm">We are looking for a skilled React developer to help us build out our new customer-facing application. You'll be working with a team of experienced developers to create a responsive and performant web app...</p>;
           </div>;
         </CardContent>;
       </Card>;
-
       <Button variant="outline" className="w-full">Edit Job Post</Button>;
     </div>;
   );
 }
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/pages/MobileJobPost.tsx
 
 =======
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/pages/MobileJobPost.tsx
       <div className="space - y-2">;
         <Label html_for="additional_info">Additional Budget Information</Label>;
         <Textarea;
@@ -1148,10 +1845,37 @@ function PreviewStep() {
           <h3 className="font - bold text - lg">Senior React Developer</h3>;
           <p className="text - muted - foreground">TechCorp Inc. • Remote • Full - time</p>;
           <div className="flex gap - 2 my - 3">;
+=======
+      ;
+      <div className="space-y-2">;
+        <Label htmlFor="additionalInfo">Additional Budget Information</Label>;
+        <Textarea ;
+          id="additionalInfo" ;
+          placeholder="Any additional information about budget or payment" ;
+          rows={3}
+        />;
+      </div>;
+    </div>;
+  ),;
+}
+;
+function PreviewStep() {;
+  return (;
+    <div className="space-y-4">;
+      <h2 className="text-lg font-medium mb-2">Job Preview</h2>;
+      ;
+      <Card>;
+        <CardContent className="p-4">;
+          <h3 className="font-bold text-lg">Senior React Developer</h3>;
+          <p className="text-muted-foreground">TechCorp Inc. • Remote • Full-time</p>;
+          ;
+          <div className="flex gap-2 my-3">;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <Badge variant="outline">React</Badge>;
             <Badge variant="outline">TypeScript</Badge>;
             <Badge variant="outline">Node.js</Badge>;
           </div>;
+<<<<<<< HEAD
           <div className="space - y-1 text - sm mt - 4">;
             <p className="font - medium">Salary Range:</p>;
             <p>$80, 000 - $120, 000 USD / year</p>;
@@ -1173,6 +1897,7 @@ function PreviewStep() {
       <Button variant="outline" className="w - full">Edit Job Post</Button>;
     </div>);
 }
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/pages/MobileJobPost.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -1180,3 +1905,93 @@ function PreviewStep() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+=======
+          ;
+          <div className="space-y-1 text-sm mt-4">;
+            <p className="font-medium">Salary Range:</p>;
+            <p>$80,000 - $120,000 USD / year</p>;
+          </div>;
+          ;
+          <div className="space-y-1 text-sm mt-3">;
+            <p className="font-medium">Experience Level:</p>;
+            <p>Senior</p>;
+          </div>;
+          ;
+          <div className="space-y-1 text-sm mt-3">;
+            <p className="font-medium">Application Deadline:</p>;
+            <p>December 15, 2023</p>;
+          </div>;
+          ;
+          <div className="mt-4 pt-3 border-t border-border">;
+            <h4 className="font-medium mb-2">Description</h4>;
+            <p className="text-sm">We are looking for a skilled React developer to help us build out our new customer-facing application. You'll be working with a team of experienced developers to create a responsive and performant web app...</p>;
+          </div>;
+        </CardContent>;
+      </Card>;
+      ;
+      <Button variant="outline" className="w-full">Edit Job Post</Button>;
+    </div>;
+  ),;
+} import {
+  Select;
+SelectContent;
+SelectItem;
+SelectTrigger;
+SelectValue type JobPostStep = "details" | "requirements" | "budget" | "preview";
+const goToNextStep = () => {
+  if (currentStep === "details") {
+  
+}
+};
+const goToPrevStep = () => {
+  
+}
+};
+const renderStepContent = () => {
+  switch (currentStep) {
+  case "requirements": return <RequirementsStep />;
+case "budget": return <BudgetStep />;
+case "preview": default: return <DetailsStep /> 
+}
+};
+min-h-screen flex flex-col"> <MobileHeader </div> <Button variant=" outline"className=" flex gap-1"> <Zap className=" h-4 w-4"/> AI Assist </Button> </div> {
+  renderStepContent () 
+}<Button variant=" outline"className=" flex-1 gap-1"onClick= {
+  goToPrevStep 
+}> <ChevronLeft className=" h-4 w-4"/> Back </Button>) 
+}<Button </Button> </div> </main> <BottomNavigation /> </div>) 
+}<div className=" space-y-2"> <Label htmlFor=" title">Job Title</Label> <Input id=" title"placeholder=" e.g. Senior React Developer"/> </div> <div className=" space-y-2"> <Label htmlFor=" company">Company Name</Label> <Input id=" company"placeholder=" Your company name"/> </div> <div className=" space-y-2"> <Label htmlFor=" location">Location</Label> <Select defaultValue=" remote"> <SelectTrigger> <SelectValue placeholder=" Select location type"/> </SelectTrigger> <SelectContent> <SelectItem value=" remote">Remote</SelectItem> <SelectItem value=" onsite">On-site</SelectItem> <SelectItem value=" hybrid">Hybrid</SelectItem> </SelectContent> </Select> </div> <div className=" space-y-2"> <Label htmlFor=" jobType">Job Type</Label> <Select> <SelectTrigger> <SelectValue placeholder=" Select job type"/> </SelectTrigger> <SelectContent> <SelectItem value=" fulltime">Full-time</SelectItem> <SelectItem value=" parttime">Part-time</SelectItem> <SelectItem value=" contract">Contract</SelectItem> <SelectItem value=" freelance">Freelance</SelectItem> </SelectContent> </Select> </div> <div className=" space-y-2"> <Label htmlFor=" description">Job Description</Label> <Textarea id=" description"placeholder=" Describe the job role and responsibilities"rows= {
+  5 
+}/> </div> </div>) 
+}const addSkill = () => {
+  if (newSkill && !skills.includes (newSkill) ) {
+  <div className=" space-y-2"> <Label htmlFor=" experience">Experience Level</Label> <Select> <SelectTrigger> <SelectValue placeholder=" Select experience level"/> </SelectTrigger> <SelectContent> <SelectItem value=" entry">Entry Level</SelectItem> <SelectItem value=" mid">Mid Level</SelectItem> <SelectItem value=" senior">Senior</SelectItem> <SelectItem value=" expert">Expert</SelectItem> </SelectContent> </Select> </div> <div className=" space-y-2"> <Label htmlFor=" education">Education</Label> <Select> <SelectTrigger> <SelectValue placeholder=" Select required education"/> </SelectTrigger> <SelectContent> <SelectItem value=" high school">High School</SelectItem> <SelectItem value=" associate">Associate Degree</SelectItem> <SelectItem value=" bachelor">Bachelor's Degree</SelectItem> <SelectItem value=" master">Master's Degree</SelectItem> <SelectItem value=" phd">PhD</SelectItem> <SelectItem value=" none">No Specific Requirement</SelectItem> </SelectContent> </Select> </div> <div className=" space-y-2"> <Label>Required Skills</Label> key= {
+  skill 
+}variant=" secondary"className=" flex items-center gap-1 px-3 py-1"> {
+  skill 
+}<button > × </button> </Badge>) ) 
+}</div> <div className=" flex gap-2"> <Input /> <Button onClick= {
+  addSkill 
+}>Add</Button> </div> </div> <div className=" space-y-2"> <Label htmlFor=" requirements">Specific Requirements</Label> <Textarea /> </div> <div className=" space-y-2"> <Label htmlFor=" responsibilities">Key Responsibilities</Label> <Textarea /> </div> </div>) 
+}<div className=" space-y-2"> <Label htmlFor=" paymentType">Payment Type</Label> <Select> <SelectTrigger> <SelectValue placeholder=" Select payment type"/> </SelectTrigger> <SelectContent> <SelectItem value=" hourly">Hourly Rate</SelectItem> <SelectItem value=" fixed">Fixed Price</SelectItem> <SelectItem value=" salary">Salary</SelectItem> </SelectContent> </Select> </div> <div className=" space-y-2"> <Label>Salary Range</Label> <div className=" flex gap-4 items-center"> <Input placeholder=" Min"type=" number"className=" w-full"/> <span>to</span> <Input placeholder=" Max"type=" number"className=" w-full"/> <Select defaultValue=" usd"> <SelectTrigger className=" w-24"> <SelectValue placeholder=" Currency"/> </SelectTrigger> <SelectContent> <SelectItem value=" usd">USD</SelectItem> <SelectItem value=" eur">EUR</SelectItem> <SelectItem value=" gbp">GBP</SelectItem> </SelectContent> </Select> </div> </div> <div className=" space-y-2"> <Label htmlFor=" deadline">Application Deadline</Label> <Input type=" date"id=" deadline"/> </div> <div className=" space-y-2"> <Label htmlFor=" startDate">Expected Start Date</Label> <Input type=" date"id=" startDate"/> </div> <div className=" space-y-2"> <Label htmlFor=" duration">Project Duration</Label> <Select> <SelectTrigger> <SelectValue placeholder=" Select project duration"/> </SelectTrigger> <SelectContent> <SelectItem value=" ltw">Less than a week</SelectItem> <SelectItem value=" ltm">Less than a month</SelectItem> <SelectItem value=" 1-3m">1-3 months</SelectItem> <SelectItem value=" 3-6m">3-6 months</SelectItem> <SelectItem value=" 6m+">6+ months</SelectItem> <SelectItem value=" ongoing">Ongoing</SelectItem> </SelectContent> </Select> </div> <div className=" space-y-2"> <Label htmlFor=" additionalInfo">Additional Budget Information</Label> <Textarea id=" additionalInfo"placeholder=" Any additional information about budget or payment"rows= {
+  3 
+}/> </div> </div>) 
+}<Card> <CardContent className=" p-4"> <h3 className=" font-bold text-lg">Senior React Developer</h3> <p className=" text-muted-foreground">TechCorp Inc. • Remote • Full-time</p> <div className=" flex gap-2 my-3"> <Badge variant=" outline">React</Badge> <Badge variant=" outline">TypeScript</Badge> <Badge variant=" outline">Node.js</Badge> </div> </div> <div className=" space-y-1 text-sm mt-3"> <p className=" font-medium">Experience Level:</p> <p>Senior</p> </div> </div> <div className=" mt-4 pt-3 border-t border-border"> <h4 className=" font-medium mb-2">Description</h4> <p className=" text-sm">We are looking for a skilled React developer to help us build out our new customer-facing application. You'll be working with a team of experienced developers to create a responsive and performant web app...</p> </div> </CardContent> </Card> <Button variant=" outline"className=" w-full" >Edit Job Post</Button> </div> 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/pages/MobileJobPost.tsx
+=======
+<<<<<<< HEAD
+}
+=======
+}
+<<<<<<< HEAD
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+=======
+;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

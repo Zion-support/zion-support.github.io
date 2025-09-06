@@ -11,6 +11,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+<<<<<<< HEAD
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -100,4 +101,14 @@ code {
   .content {
     padding: 1rem;
   }
+=======
+.App {
+  text-align: center;
+  padding: 2rem;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }

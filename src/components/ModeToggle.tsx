@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+<<<<<<<< HEAD:src/components/ModeToggle.tsx
 import { Moon, Sun } from 'lucide-react'
 <<<<<<< HEAD
 
@@ -17,6 +19,10 @@ import { useEffect, useState } from "react"
 
     if (!isClient) return 'light'; // Default for SSR
 =======
+=======
+import { Moon, Sun } from 'lucide-react'
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { Button } from '@/components/ui/button'
 import {
   Tooltip
@@ -32,6 +38,7 @@ import { toast } from '@/hooks/use-toast'
 import { useTheme } from '@/components/ThemeProvider'
 import { logIssue } from '@/utils/logIssue'
 import { useEffect, useState } from 'react'
+<<<<<<< HEAD
 >>>>>>> import { Button } from "@/components/ui/button"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import { toast } from "@/hooks/use-toast"
@@ -43,11 +50,48 @@ import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
 import { useTheme } from "@/components/ThemeProvider"
 import { logIssue } from "@/utils/logIssue"
 import { useEffect, useState } from "react"
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { Button } from "@/components/ui/button"
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
+import { toast } from "@/hooks/use-toast"
+import { darkModeMessages, lightModeMessages } from "@/utils/themeToggleMessages"
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+=======
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger'
+=======
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+// Use the ThemeProvider hook directly to ensure no conflicts
+import { useTheme } from "@/components/ThemeProvider"
+import { logIssue } from "@/utils/logIssue"
+import { useEffect, useState } from "react"
+<<<<<<< HEAD
+export function ModeToggle() {
+
+  const { theme, toggleTheme } = useTheme();
+  const [isClient, setIsClient] = useState(false);
+  // Ensure we're on the client side to avoid hydration mismatches
+  useEffect(() => {
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     setIsClient(true)
   }, [])
   // Determine the actual resolved theme for display purposes
 
   const resolvedTheme = (() => {
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 // Use the ThemeProvider hook directly to ensure no conflicts
 import { useTheme } from "@/components/ThemeProvider"
@@ -55,19 +99,31 @@ import { logIssue } from "@/utils/logIssue"
 import { useEffect, useState } from "react"
 
 
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     setIsClient(true);
   }, []);
   // Determine the actual resolved theme for display purposes;
   const resolvedTheme = (() => {;
+<<<<<<< HEAD
 
 
 >>>>>>>     if (!isClient) return 'light'; // Default for SSR
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    if (!isClient) return 'light'; // Default for SSR
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     if (theme === 'system') {
       return window.matchMedia('(prefers-color-scheme: dark)').matches
         ? 'dark'
         : 'light'
+<<<<<<< HEAD
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ModeToggle.tsx
 import { Moon, Sun } from 'lucide-react';
+<<<<<<< HEAD
 import { Button } from '@/components / ui / button';
 import {
   Tooltip,
@@ -115,7 +171,6 @@ if ( {) {
       return window.match_media ('(prefers - color - scheme: dark)').matches;
         ? 'dark';
         : 'light';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
     return theme;
   })();
@@ -127,17 +182,76 @@ if ( {) {
       log_info (`Theme toggle: ${resolved_theme} → ${new_theme}`);  const isDarkMode = resolved_theme === "dark";
   const handle_toggle = () =>: any {
     try {
+<<<<<<<< HEAD:src/components/ModeToggle.tsx
 
 
+=======
+    }
+    return theme
+  })()
+  const isDarkMode = resolvedTheme === 'dark'
+  const handleToggle = () => {
+    try {
+      // Determine the new theme we are switching TO
+      const newTheme = isDarkMode ? 'light' : 'dark'
+      logInfo(`Theme toggle: ${resolvedTheme} → ${newTheme}`);  const isDarkMode = resolvedTheme === "dark"
+  const handleToggle = () => {
+    try {
+      // Determine the new theme we are switching TO
+      const newTheme = isDarkMode ? 'light' : 'dark'
+      logInfo(`Theme toggle: ${resolvedTheme} → ${newTheme}`)
+      // Apply the new theme via ThemeProvider
+      toggleTheme()
+      // Show user feedback with a developer-centric message
+      const messages = null;
+        newTheme === 'dark' ? darkModeMessages : lightModeMessages
+      const title = messages[Math.floor(Math.random() * messages.length)]
+      toast({
+        title
+        description: `Theme changed to ${newTheme} mode successfully`
+      })
+      // Accessibility announcement for screen readers
+      const announcement = `Theme switched to ${newTheme} mode`
+      // Create a live region announcement
+      const liveRegion = document.createElement('div')
+      liveRegion.setAttribute('aria-live', 'polite')
+      liveRegion.setAttribute('aria-atomic', 'true')
+      liveRegion.className = 'sr-only'
+      liveRegion.textContent = announcement
+      document.body.appendChild(liveRegion)
+      // Clean up the announcement after it's been read
+      setTimeout(() => {
+        document.body.removeChild(liveRegion)
+      }, 1000) } catch (error) {
+      logErrorToProduction('Theme toggle error:', { data: error })
+      logIssue('Theme switch failed', {
+        error
+        currentTheme: theme
+        resolvedTheme
+      })
+      toast({
+        title: 'Theme switch failed'
+        description: 'Unable to change theme. Please try again.'
+        variant: 'destructive'
+      })
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     }
   }
 
   if (!isClient) {
     // Return a neutral state during SSR to prevent hydration issues
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+    
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export function ModeToggle() {
 
   const { theme, toggleTheme } = useTheme(),
@@ -213,12 +327,21 @@ export function ModeToggle() {
         aria-label="Loading theme toggle"
         className="focus-visible:ring-ring relative text-foreground"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>>       >
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       >
 >>>>>>>         <div className="h-5 w-5 bg-muted rounded animate-pulse" /> {/* Changed to bg-muted for theme consistency */}
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      >
+        <div className="h-5 w-5 bg-muted rounded animate-pulse" /> {/* Changed to bg-muted for theme consistency */}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <span className="sr-only">Loading theme toggle</span>
       </Button>
     )
@@ -228,6 +351,7 @@ export function ModeToggle() {
       <Tooltip>
         <TooltipTrigger asChild>
           <Button
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             onClick={handleToggle}
@@ -269,6 +393,8 @@ export function ModeToggle() {
               {isDarkMode ? 'light' : 'dark'}.
 >>>>>>>             </span>
 ursor/fix-website-loading-errors-and-merge-6662
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ModeToggle.tsx
 import { Moon, Sun } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {;
@@ -286,25 +412,42 @@ import {;
 import { useTheme } from '@/components/ThemeProvider';
 import { logIssue } from '@/utils/logIssue';
 import { useEffect, useState } from 'react';
-
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+            variant='ghost'
+            size='icon'
+=======
+            variant="ghost"
+            size="icon"
+import { Moon, Sun } from 'lucide-react';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { Button } from "@/components/ui/button";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { toast } from "@/hooks/use-toast";
 import { darkModeMessages, lightModeMessages } from "@/utils/themeToggleMessages";
+<<<<<<< HEAD
+<<<<<<< HEAD
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+=======
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger',;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger',;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 // Use the ThemeProvider hook directly to ensure no conflicts;
 import { useTheme } from "@/components/ThemeProvider";
 import { logIssue } from "@/utils/logIssue";
 import { useEffect, useState } from "react";
+<<<<<<< HEAD
+<<<<<<< HEAD
 export function ModeToggle() {;
   const { theme, toggleTheme } = useTheme();
   const [isClient, setIsClient] = useState(false);
-
   // Ensure we're on the client side to avoid hydration mismatches;
   useEffect(() => {;
     setIsClient(true);
   }, []);
-
   // Determine the actual resolved theme for display purposes;
   const resolvedTheme = (() => {;
     if (!isClient) return 'light'; // Default for SSR;
@@ -315,24 +458,19 @@ export function ModeToggle() {;
     }
     return theme;
   })();
-
   const isDarkMode = resolvedTheme === 'dark';
   const handleToggle = () => {;
     try {;
       // Determine the new theme we are switching TO;
       const newTheme = isDarkMode ? 'light' : 'dark';
-
       logInfo(`Theme toggle: ${resolvedTheme} → ${newTheme}`);  const isDarkMode = resolvedTheme === "dark";
-
   const handleToggle = () => {;
     try {;
       // Determine the new theme we are switching TO;
       const newTheme = isDarkMode ? 'light' : 'dark';
-
       logInfo(`Theme toggle: ${resolvedTheme} → ${newTheme}`);
       // Apply the new theme via ThemeProvider;
       toggleTheme();
-
       // Show user feedback with a developer-centric message;
       const messages =;
         newTheme === 'dark' ? darkModeMessages : lightModeMessages;
@@ -341,10 +479,8 @@ export function ModeToggle() {;
         title,;
         description: `Theme changed to ${newTheme} mode successfully`,;
       });
-
       // Accessibility announcement for screen readers;
       const announcement = `Theme switched to ${newTheme} mode`;
-
       // Create a live region announcement;
       const liveRegion = document && document.createElement('div');
       liveRegion && liveRegion.setAttribute('aria-live', 'polite');
@@ -352,7 +488,6 @@ export function ModeToggle() {;
       liveRegion && liveRegion.className = 'sr-only';
       liveRegion && liveRegion.textContent = announcement;
       document && document.body.appendChild(liveRegion);
-
       // Clean up the announcement after it's been read;
       setTimeout(() => {;
         document && document.body.removeChild(liveRegion);
@@ -368,21 +503,160 @@ export function ModeToggle() {;
         description: 'Unable to change theme. Please try again.',;
         variant: 'destructive',;
       });
+<<<<<<<< HEAD:src/components/ModeToggle.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
   }
 
 
+========
+=======
+;
+export function ModeToggle() {;
+;
+  const { theme, toggleTheme } = useTheme(),;
+  const [isClient, setIsClient] = useState(false),;
+;
+  // Ensure we're on the client side to avoid hydration mismatches;
+  useEffect(() => {;
+    setIsClient(true),;
+  }, []),;
+;
+  // Determine the actual resolved theme for display purposes;
+  const resolvedTheme = (() => {;
+    if (!isClient) return 'light', // Default for SSR;
+    ;
+    if (theme === "system") {;
+      return window.matchMedia("(prefers-color-scheme:dark)").matches ? "dark" :"light";
+    }
+    return theme,;
+  })(),;
+;
+  const isDarkMode = resolvedTheme === "dark",;
+;
+  const handleToggle = () => {;
+    try {;
+      // Determine the new theme we are switching TO;
+      const newTheme = isDarkMode ? "light" :"dark",;
+;
+      logInfo(`Theme toggle:${resolvedTheme} → ${newTheme}`),;
+;
+      // Apply the new theme via ThemeProvider;
+      toggleTheme(),;
+;
+      // Show user feedback with a developer-centric message;
+      const messages = newTheme === 'dark' ? darkModeMessages :lightModeMessages;
+      const title = messages[Math.floor(Math.random() * messages.length)];
+      toast({;
+        title,;
+        description:`Theme changed to ${newTheme} mode successfully`}),;
+;
+      // Accessibility announcement for screen readers;
+      const announcement = `Theme switched to ${newTheme} mode`,;
+      ;
+=======
+export function ModeToggle() {;
+  const { theme, toggleTheme } = useTheme(),;
+  const [isClient, setIsClient] = useState(false),;
+  // Ensure we're on the client side to avoid hydration mismatches;
+  useEffect(() => {;
+    setIsClient(true);
+  }, []),;
+  // Determine the actual resolved theme for display purposes;
+  const resolvedTheme = (() => {;
+    if (!isClient) return 'light', // Default for SSR;
+    if (theme === "system") {;
+      return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    return theme;
+  })(),;
+  const isDarkMode = resolvedTheme === "dark",;
+  const handleToggle = () => {;
+    try {;
+      // Determine the new theme we are switching TO;
+      const newTheme = isDarkMode ? "light" : "dark",;
+      logInfo(`Theme toggle: ${resolvedTheme} → ${newTheme}`),;
+      // Apply the new theme via ThemeProvider;
+      toggleTheme(),;
+      // Show user feedback with a developer-centric message;
+      const messages = newTheme === 'dark' ? darkModeMessages : lightModeMessages;
+      const title = messages[Math.floor(Math.random() * messages.length)];
+      toast({;
+        title,;
+        description: `Theme changed to ${newTheme} mode successfully`}),;
+      // Accessibility announcement for screen readers;
+      const announcement = `Theme switched to ${newTheme} mode`,;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+      // Create a live region announcement;
+      const liveRegion = document.createElement('div'),;
+      liveRegion.setAttribute('aria-livepolite'),;
+      liveRegion.setAttribute('aria-atomictrue'),;
+      liveRegion.className = 'sr-only',;
+      liveRegion.textContent = announcement,;
+      document.body.appendChild(liveRegion),;
+<<<<<<< HEAD
+      ;
+      // Clean up the announcement after it's been read;
+      setTimeout(() => {;
+        document.body.removeChild(liveRegion),;
+      }, 1000),;
+      ;
+    } catch (error) {;
+      logErrorToProduction('Theme toggle error:', { data:error }),;
+      logIssue('Theme switch failed', { error, currentTheme:theme, resolvedTheme }),;
+      toast({;
+        title:"Theme switch failed",;
+        description:"Unable to change theme. Please try again.",;
+        variant:"destructive"}),;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+    }
+  },;
+;
+=======
+      // Clean up the announcement after it's been read;
+      setTimeout(() => {;
+        document.body.removeChild(liveRegion);
+      }, 1000);
+    } catch (error) {;
+      logErrorToProduction('Theme toggle error:', { data: error }),;
+      logIssue('Theme switch failed', { error, currentTheme: theme, resolvedTheme }),;
+      toast({;
+        title: "Theme switch failed",;
+        description: "Unable to change theme. Please try again.";
+        variant: "destructive"});
+    }
+  };
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   if (!isClient) {;
     // Return a neutral state during SSR to prevent hydration issues;
-
+    return (;
+      <Button;
+        variant="ghost";
+        size="icon";
+        disabled;
+        aria-label="Loading theme toggle";
+        className="focus-visible:ring-ring relative text-foreground";
+      >;
+        <div className="h-5 w-5 bg-muted rounded animate-pulse" /> {/* Changed to bg-muted for theme consistency */}
+        <span className="sr-only">Loading theme toggle</span>;
+      </Button>;
+<<<<<<< HEAD
+    ),;
+  }
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ModeToggle.tsx
+  if (!isClient) {;
+    // Return a neutral state during SSR to prevent hydration issues;
       >;
         <div className='h-5 w-5 bg-muted rounded animate-pulse' />{' '}
         {/* Changed to bg-muted for theme consistency */}
         <span className='sr-only'>Loading theme toggle</span>;
       </Button>;
     );
+<<<<<<<< HEAD:src/components/ModeToggle.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ModeToggle.tsx
   }
   return (
     <TooltipProvider>;
@@ -399,17 +673,77 @@ export function ModeToggle() {;
             aria-pressed={isDarkMode}
             aria-label={`Toggle theme. Current theme: ${resolvedTheme}. Click to switch to ${isDarkMode ? 'light' : 'dark'} mode.`}
             title={`Switch to ${isDarkMode ? 'light' : 'dark'} mode`}
+<<<<<<<< HEAD:src/components/ModeToggle.tsx
 
+========
+            className='focus-visible:ring-ring relative group text-foreground' // Added text-foreground
+            data-testid='theme-toggle'
+            data-theme={resolvedTheme}>;
+            {isDarkMode ? (;
+              <Sun className='h-5 w-5 text-yellow-400 transition-all duration-300 group-hover:text-yellow-300 group-hover:rotate-12' />;
+            ) : (;
+              <Moon className='h-5 w-5 text-slate-600 dark:text-slate-400 transition-all duration-300 group-hover:text-slate-500 group-hover:-rotate-12' />;
+=======
+=======
+    );
+  }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+;
+  return (;
+    <TooltipProvider>;
+      <Tooltip>;
+        <TooltipTrigger asChild>;
+          <Button;
+            variant="ghost";
+            size="icon";
+<<<<<<< HEAD
+            onClick={handleToggle}
+            aria-pressed={isDarkMode}
+            aria-label={`Toggle theme. Current theme:${resolvedTheme}. Click to switch to ${isDarkMode ? 'light' :'dark'} mode.`}
+            title={`Switch to ${isDarkMode ? 'light' :'dark'} mode`}
+            className="focus-visible:ring-ring relative group text-foreground" // Added text-foreground;
+            data-testid="theme-toggle";
+            data-theme={resolvedTheme}
+          >;
+            {isDarkMode ? (;
+              <Sun className="h-5 w-5 text-yellow-400 transition-all duration-300 group-hover:text-yellow-300 group-hover:rotate-12" />;
+            ) :(;
+              <Moon className="h-5 w-5 text-slate-600 dark:text-slate-400 transition-all duration-300 group-hover:text-slate-500 group-hover:-rotate-12" />;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+            )}
+            ;
+            {/* Enhanced visual indicator */}
+<<<<<<< HEAD
+            <div
+              className={`absolute -bottom-0 && 0.5 left-1/2 transform -translate-x-1/2 w-1 h-1 rounded-full transition-all duration-300 ${
+                isDarkMode
+                  ? 'bg-yellow-400 shadow-sm shadow-yellow-400/50'
+                  : 'bg-slate-600 dark:bg-slate-400'
+              } opacity-70 group-hover:opacity-100`}
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ModeToggle.tsx
             />;
-
             <span className='sr-only'>;
+<<<<<<<< HEAD:src/components/ModeToggle.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ModeToggle.tsx
               Toggle theme. Current: {resolvedTheme}. Click to switch to{' '}
               {isDarkMode ? 'light' : 'dark'}.;
+=======
+            <div className={`absolute -bottom-0.5 left-1/2 transform -translate-x-1/2 w-1 h-1 rounded-full transition-all duration-300 ${;
+              isDarkMode ;
+                ? 'bg-yellow-400 shadow-sm shadow-yellow-400/50' ;
+                :'bg-slate-600 dark:bg-slate-400';
+            } opacity-70 group-hover:opacity-100`} />;
+            ;
+            <span className="sr-only">;
+              Toggle theme. Current:{resolvedTheme}. Click to switch to {isDarkMode ? 'light' :'dark'}.;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </span>;
           </Button>;
         </TooltipTrigger>;
         <TooltipContent>;
+<<<<<<< HEAD
           <div className='text-center'>;
             <p className='text-sm font-medium'>Theme: {resolvedTheme}</p>;
             <p className='text-xs opacity-80'>;
@@ -419,18 +753,61 @@ export function ModeToggle() {;
               <p className='text-xs opacity-60 mt-1'>;
                 Following system preference;
               </p>;
+<<<<<<<< HEAD:src/components/ModeToggle.tsx
             )}
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            onClick={handleToggle}
+            aria-pressed={isDarkMode}
+            aria-label={`Toggle theme. Current theme: ${resolvedTheme}. Click to switch to ${isDarkMode ? 'light' : 'dark'} mode.`}
+            title={`Switch to ${isDarkMode ? 'light' : 'dark'} mode`}
+<<<<<<< HEAD
+            className='focus-visible:ring-ring relative group text-foreground' // Added text-foreground
+            data-testid='theme-toggle'
+            data-theme={resolvedTheme}          >
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             className="focus-visible:ring-ring relative group text-foreground" // Added text-foreground
             data-testid="theme-toggle"
             data-theme={resolvedTheme}
           >
+<<<<<<< HEAD
 
 
             {isDarkMode ? (
               <Sun className="h-5 w-5 text-yellow-400 transition-all duration-300 group-hover:text-yellow-300 group-hover:rotate-12" />
             ) : (
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            {isDarkMode ? (
+              <Sun className="h-5 w-5 text-yellow-400 transition-all duration-300 group-hover:text-yellow-300 group-hover:rotate-12" />
+            ) : (
+<<<<<<< HEAD
+              <Moon className='h-5 w-5 text-slate-600 dark:text-slate-400 transition-all duration-300 group-hover:text-slate-500 group-hover:-rotate-12' />
+            )}
+            {/* Enhanced visual indicator */}
+            <div
+              className={`absolute -bottom-0.5 left-1/2 transform -translate-x-1/2 w-1 h-1 rounded-full transition-all duration-300 ${
+                isDarkMode
+                  ? 'bg-yellow-400 shadow-sm shadow-yellow-400/50'
+                  : 'bg-slate-600 dark:bg-slate-400'
+              } opacity-70 group-hover:opacity-100`}
+            />
+            <span className='sr-only'>
+              Toggle theme. Current: {resolvedTheme}. Click to switch to{' '}
+              {isDarkMode ? 'light' : 'dark'}.
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <Moon className="h-5 w-5 text-slate-600 dark:text-slate-400 transition-all duration-300 group-hover:text-slate-500 group-hover:-rotate-12" />
             )}
 ;
@@ -443,10 +820,20 @@ export function ModeToggle() {;
             
             <span className="sr-only">
               Toggle theme. Current: {resolvedTheme}. Click to switch to {isDarkMode ? 'light' : 'dark'}.
+<<<<<<< HEAD
 
 >>>>>>>             </span>
 >>>>>>>           </Button>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            </span>
+          </Button>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         </TooltipTrigger>
         <TooltipContent>
           <div className="text-center">
@@ -454,8 +841,11 @@ export function ModeToggle() {;
             <p className="text-xs opacity-80">Click to switch to {isDarkMode ? 'light' : 'dark'} mode</p>
             {theme === 'system' && (
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <p className='text-xs opacity-60 mt-1'>
                 Following system preference
               </p>
@@ -480,21 +870,59 @@ if (!isClient) {"
 }/> </span> </Button> </TooltipTrigger> <TooltipContent>)
 }</div> </TooltipContent> </Tooltip> </TooltipProvider>)
 }'"}
+<<<<<<< HEAD
 >>>>>>> 
 ursor/fix-website-loading-errors-and-merge-6662
+========
+=======
+          <div className="text-center">;
+            <p className="text-sm font-medium">Theme:{resolvedTheme}</p>;
+            <p className="text-xs opacity-80">Click to switch to {isDarkMode ? 'light' :'dark'} mode</p>;
+            {theme === 'system' && (;
+              <p className="text-xs opacity-60 mt-1">Following system preference</p>;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+            )}
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ModeToggle.tsx
+=======
+=======
+              <p className="text-xs opacity-60 mt-1">Following system preference</p>
+            )}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </div>;
         </TooltipContent>;
       </Tooltip>;
     </TooltipProvider>;
+<<<<<<< HEAD
+<<<<<<< HEAD
   );
+<<<<<<<< HEAD:src/components/ModeToggle.tsx
 
 
+========
+};
+if (!isClient) {";
+  //Return a neutral state during SSR to prevent hydration issues return (<Button variant="ghost" size="icon" disabled aria-label="Loading theme toggle" className="focus-visible:ring-ring relative text-foreground" > <div className="h-5 w-5 bg-muted rounded animate-pulse" /> {;
+  /* Changed to bg-muted for theme consistency */ ";
+}<span className="sr-only" >Loading theme toggle</span> </Button>) ";
+}return (<TooltipProvider> <Tooltip> <TooltipTrigger asChild> <Button) : (<Moon className="h-5 w-5 text-slate-600 dark:text-slate-400 transition-all duration-300 group-hover:text-slate-500 group-hover:-rotate-12" />) ;
+}{;
+  /* Enhanced visual indicator */ ;
+}<divclassName= {
+  `absolute -bottom-0 && 0.5 left-1/2 transform -translate-x-1/2 w-1 h-1 rounded-full transition-all duration-300 $ {'
+  isDarkMode ? 'bg-yellow-400 shadow-sm shadow-yellow-400/50': 'bg-slate-600 dark:bg-slate-400' 
+}opacity-70 group-hover:opacity-100` 
+}/> </span> </Button> </TooltipTrigger> <TooltipContent>) ;
+}</div> </TooltipContent> </Tooltip> </TooltipProvider>) ;
+}'"}
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ModeToggle.tsx
       const newTheme = isDarkMode ? "light" : "dark";
-
       logInfo(`Theme toggle: ${resolvedTheme} → ${newTheme}`),
+<<<<<<<< HEAD:src/components/ModeToggle.tsx
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ModeToggle.tsx
       // Determine the new theme we are switching TO;
       const new_theme = isDarkMode ? 'light' : 'dark';
       log_info (`Theme toggle: ${resolved_theme} → ${new_theme}`);
@@ -608,6 +1036,7 @@ if ( {") {
 }/> </span> </Button> </TooltipTrigger> <TooltipContent>);
 }</div> </TooltipContent> </Tooltip> </TooltipProvider>);
 }'"}
+<<<<<<<< HEAD:src/components/ModeToggle.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> }
 ;
@@ -615,3 +1044,65 @@ if ( {") {
 >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+=======
+  ),; //Use the ThemeProvider hook directly to ensure no conflicts import { ;
+  {;
+  {;
+  useTheme ;
+ } from "@/components/ThemeProvider";
+import {;
+  {;
+  {;
+  logIssue ";
+}from "@/utils/logIssue" import {;
+  {;
+  {;
+  useEffect, useState ";
+}from "react" export function ModeToggle () {;
+  const {;
+  theme, toggleTheme ;
+}= useTheme ();
+const [isClient, setIsClient] = useState (false);
+//Ensure we're on the client side to avoid hydration mismatches useEffect ( () => {;
+  setIsClient (true) ;
+}, []);
+//Determine the actual resolved theme for display purposes const resolvedTheme = ( () => {';
+  if (!isClient) return 'light', //Default for SSR ;
+}return theme;
+}) ();
+try {;
+  //Determine the new theme we are switching TO logInfo (`Theme toggle: $ {;
+  resolvedTheme ;
+}→ $ {;
+  newTheme ;
+}`);
+//Show user feedback with a developer-centric message ;
+}
+};
+if (!isClient) {";
+  //Return a neutral state during SSR to prevent hydration issues return (<Button variant="ghost" size="icon" disabled aria-label="Loading theme toggle" className="focus-visible:ring-ring relative text-foreground" > <div className="h-5 w-5 bg-muted rounded animate-pulse" /> {;
+  /* Changed to bg-muted for theme consistency */ ";
+}<span className="sr-only" >Loading theme toggle</span> </Button>) ";
+}return (<TooltipProvider> <Tooltip> <TooltipTrigger asChild> <Button) : (<Moon className="h-5 w-5 text-slate-600 dark:text-slate-400 transition-all duration-300 group-hover:text-slate-500 group-hover:-rotate-12" />) ;
+}{;
+  /* Enhanced visual indicator */ ;
+}<div className= {;
+  `absolute -bottom-0.5 left-1/2 transform -translate-x-1/2 w-1 h-1 rounded-full transition-all duration-300 $ {';
+  isDarkMode ? 'bg-yellow-400 shadow-sm shadow-yellow-400/50': 'bg-slate-600 dark:bg-slate-400' ;
+}opacity-70 group-hover:opacity-100` ;
+}/> </span> </Button> </TooltipTrigger> <TooltipContent>) ;
+}</div> </TooltipContent> </Tooltip> </TooltipProvider>) ;
+}'"
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ModeToggle.tsx
+=======
+  );
+}
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

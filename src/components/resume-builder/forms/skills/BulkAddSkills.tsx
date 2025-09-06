@@ -1,7 +1,16 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
+=======
+=======
+<<<<<<< HEAD
+          
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { useState  } from 'react';
 import { Button  } from '@/components/ui/button';
 import { Loader2, Sparkles } from 'lucide-react'
@@ -49,7 +58,15 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
           await onSuccess()
         } catch (err) {
           setError('Failed to parse categorized skills. Please try again.')
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Loader2, Sparkles } from 'lucide-react';
@@ -98,16 +115,23 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
         } catch (err) {;
           setError('Failed to parse categorized skills. Please try again.');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         }
 =======
 >>>>>>>         }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       }
-    } catch (err: any) {;
-      setError(err && err.message || 'Failed to categorize skills');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    } catch (err: any) {
+      setError(err.message |'Failed to categorize skills')
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   return (
@@ -115,10 +139,23 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
   }
 >>>>>>>   return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+  }
+=======
+  },
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  return (
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="bg-muted/40 p-6 rounded-lg">
       <h3 className="text-md font-medium mb-4">Bulk Add & AI Categorization</h3>
       <div className="space-y-4">
         <div className="space-y-2">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             value = {bulkSkills,}
@@ -159,6 +196,47 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+          <label className="text-sm font-medium" htmlFor="input-Enter multiple skills (comma separated)">Enter multiple skills (comma separated)</label>
+          <Textarea
+            className="min-h-24"
+            placeholder="Python, React, TypeScript, Project Management, Communication..."
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            value = {bulkSkills,}
+            onChange = {(e,) => setBulkSkills(e.target.value),}
+          />
+        </div>
+<<<<<<< HEAD
+        <Button
+          onClick = {handleCategorizeSkills,}
+          disabled = {isEnhancing |!bulkSkills.trim(),}
+=======
+          <label className="text-sm font-medium">Enter multiple skills (comma separated)</label>
+          <Textarea 
+            className="min-h-24"
+            placeholder="Python, React, TypeScript, Project Management, Communication..."
+=======
+        <Button 
+          onClick = {handleCategorizeSkills,}
+          disabled = {isEnhancing || !bulkSkills.trim(),}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            value={bulkSkills}
+            onChange={(e) => setBulkSkills(e.target.value)}
+          />;
+        </div>;
+        <Button;
+          onClick={handleCategorizeSkills}
+          disabled={isEnhancing || !bulkSkills.trim()}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           className="gap-2"
 >>>>>>>         >
           {isEnhancing ? (
@@ -168,6 +246,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           )}
           Categorize with AI
         </Button>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         <p className="text-xs text-muted-foreground mt-1">
@@ -182,11 +261,26 @@ ursor/fix-website-loading-errors-and-merge-6662
 },
 
 =======
+        <p className="text-xs text-muted-foreground mt-1">
+          AI will identify skills and categorize them automatically. This may take a moment to process.
+        </p>
+<<<<<<< HEAD
+=======
+        {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
+      </div>
+    </div>
+  );
+};
+'";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
         
         <p className="text-xs text-muted-foreground mt-1">
           AI will identify skills and categorize them automatically. This may take a moment to process.
         </p>
         
+<<<<<<< HEAD
 >>>>>>>         {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
       </div>
     </div>
@@ -198,3 +292,22 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> >>>>>>> 
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+        {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
+      </div>
+    </div>
+  )
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+'"
+
+=======
+},
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+},
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

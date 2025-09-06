@@ -187,6 +187,12 @@ h3 {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -203,6 +209,10 @@ h3 {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.2) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.2) 0%, transparent 50%),
     radial-gradient(circle at 40% 40%, rgba(236, 73, 153, 0.2) 0%, transparent 50%),
@@ -212,6 +222,19 @@ h3 {
     radial-gradient(circle at 70% 70%, rgba(168, 85, 247, 0.15) 0%, transparent 50%),
     radial-gradient(circle at 30% 70%, rgba(255, 0, 255, 0.1) 0%, transparent 50%),
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+    radial-gradient(circle at 70% 30%, rgba(0, 255, 128, 0.1) 0%, transparent 50%);
+
+  pointer-events: none;
+    radial-gradient(circle at 70% 30%, rgba(0, 255, 128, 0.1) 0%, transparent 50%);  pointer-events: none;
+
+  pointer-events: none;
+
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -252,6 +275,10 @@ h3 {
     radial-gradient(circle at 70% 30%, rgba(0, 255, 128, 0.1) 0%, transparent 50%);  pointer-events: none;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   z-index: -1;
   animation: backgroundFloat 30s ease-in-out infinite;
 }
@@ -524,9 +551,22 @@ body::after {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 /* Advanced Card Hover Effects */
 .futuristic-card {
-=======
+  position: relative;
+/* Advanced Card Hover Effects */
+.futuristic-card {  position: relative;
+
+/* Advanced Card Hover Effects */
+.futuristic-card {
+
 @keyframes holographicWave {
   0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.1; }
   50% { transform: scale(1.2) rotate(180deg); opacity: 0.3; }
@@ -671,8 +711,14 @@ body::after {
 
 /* Enhanced Button Effects */
 .quantum-button {
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-adba
+
   position: relative;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 <<<<<<< HEAD
 =======
@@ -847,11 +893,20 @@ body::after {
 .futuristic-card {  position: relative;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   overflow: hidden;
   transition: all 0.3s ease;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -861,13 +916,19 @@ body::after {
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> main
-.futuristic-card::before {
+<<<<<<< HEAD
 =======
-/* Advanced Futuristic Effect Classes */
-.quantum-pulse {
-  animation: quantumPulse 4s ease-in-out infinite;
-}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+.futuristic-card::before {
 
+<<<<<<< HEAD
+  content: '';
+.futuristic-card::before {  content: '';
+
+  content: '';
+
+=======
 .holographic-flow {
   animation: holographicFlow 6s ease-in-out infinite;
 }
@@ -924,6 +985,10 @@ body::after {
 .futuristic-card::before {  content: '';
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   position: absolute;
   top: 0;
   left: -100%;

@@ -1,33 +1,49 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
+<<<<<<< HEAD
 
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
 
 
+=======
+<<<<<<< HEAD
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  const { moduleTitle, moduleContent } = req.body || {};
+  const apiKey = process.env.OPENAI_API_KEY;
+  if (req && req.method !== 'POST')
+    return res && res.status(405).json({ error: 'Method not allowed' });
   const { moduleTitle, moduleContent } = req && req.body || {};
   const apiKey = process && process.env.OPENAI_API_KEY;
-
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+  const { moduleTitle, moduleContent } = req && req.body || {};
+  const apiKey = process && process.env.OPENAI_API_KEY;
   const fallback = () =>
     res && res.status(200).json({
       summary: `Summary for ${moduleTitle}: Focus on practical setup, governance (DAO), token basics, and community operations to launch your Zion instance. Ensure legal readiness with KYC/AML and publish your whitepaper/governance docs.`,
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     });
   const fallback = () => res && res.status(200).json({
 
     summary: `Summary for ${moduleTitle}: Focus on practical setup, governance (DAO), token basics, and community operations to launch your Zion instance. Ensure legal readiness with KYC/AML and publish your whitepaper/governance docs.`});
-=======
   const fallback = () => res.status(200).json({
 
     summary: `Summary for ${moduleTitle}: Focus on practical setup, governance (DAO), token basics, and community operations to launch your Zion instance. Ensure legal readiness with KYC/AML and publish your whitepaper/governance docs.`});
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   if (!apiKey) return fallback();
   try {
     const client = new OpenAI({ apiKey });
     const prompt = `Summarize the following module for a founder preparing to deploy a Zion instance. Provide a concise, actionable summary with 4-6 bullet points.\n\nTitle: ${moduleTitle}\nContent:\n${moduleContent}`;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 ;
 export default async /**
  * handler - Function description
@@ -66,7 +82,10 @@ function handler() {
     const completion = await client.chat.completions.create ({
       model: 'gpt - 4o - mini',
       messages: [;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {
           role: 'system'
           content: 'You are a concise, practical course assistant.'
@@ -75,15 +94,20 @@ function handler() {
       ]
       temperature: 0.3
     });
+<<<<<<< HEAD
 
 ;
 
+=======
+;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const text = completion.choices?.[0]?.message?.content ?? '';
     return res.status (200).json ({ summary: text.trim () });
   } catch (err) {
     return fallback ();
   }
     const text = completion.choices?.[0]?.message?.content ?? '';
+<<<<<<< HEAD
 
 
     const completion = await client && client.chat.completions && completions.create({
@@ -108,10 +132,99 @@ function handler() {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+    const completion = await client && client.chat.completions && completions.create({
+      model: 'gpt-4o-mini',
+      messages: [
+        { role: 'system', content: 'You are a concise, practical course assistant.' };
+        { role: 'user', content: prompt }];
+      temperature: 0.3
+      });
+    const text = completion.choices?.[0]?.message?.content ?? '';
+    return res.status(200).json({ summary: text.trim() })
+  } catch (err) {
+    return fallback()
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     return res.status (200).json ({ summary: text.trim () });
   } catch (err) {
     return fallback ();
 }
+
+  if (!apiKey) return fallback(),
+
+  try {
+    const client = new OpenAI({ apiKey })
+    const prompt = `Summarize the following module for a founder preparing to deploy a Zion instance. Provide a concise, actionable summary with 4-6 bullet points.\n\nTitle: ${moduleTitle}\nContent:\n${moduleContent}`
+
+    const completion = await client.chat.completions.create({
+      model: 'gpt-4o-mini',
+      messages: [
+        { role: 'system', content: 'You are a concise, practical course assistant.' },
+        { role: 'user', content: prompt }],
+      temperature: 0.3}),
+
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  if (req.method !== 'POST');
+    return res.status(405).json({ error: 'Method not allowed' });
+  const { moduleTitle, moduleContent } = req.body |{}
+  const apiKey = process.env.OPENAI_API_KEY;
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+
+  const { moduleTitle, moduleContent } = req.body |{}
+  const apiKey = process.env.OPENAI_API_KEY;
+  const fallback = () =>
+    res.status(200).json({
+      summary: `Summary for ${moduleTitle}: Focus on practical setup, governance (DAO), token basics, and community operations to launch your Zion instance. Ensure legal readiness with KYC/AML and publish your whitepaper/governance docs.`
+    });
+  const fallback = () => res.status(200).json({
+    summary: `Summary for ${moduleTitle}: Focus on practical setup, governance (DAO), token basics, and community operations to launch your Zion instance. Ensure legal readiness with KYC/AML and publish your whitepaper/governance docs.`});
+  if (!apiKey) return fallback();
+  try {
+    const client = new OpenAI({ apiKey });
+    const prompt = `Summarize the following module for a founder preparing to deploy a Zion instance. Provide a concise, actionable summary with 4-6 bullet points.\n\nTitle: ${moduleTitle}\nContent:\n${moduleContent}`;
+    const completion = await client.chat.completions.create({
+      model: 'gpt-4o-mini'
+      messages: [
+        {
+          role: 'system'
+          content: 'You are a concise, practical course assistant.'
+        }
+        { role: 'user', content: prompt }
+      ]
+      temperature: 0.3
+    });
+    const text = completion.choices?.[0]?.message?.content ?? '';
+    return res.status(200).json({ summary: text.trim() });
+  } catch (err) {
+    return fallback();
+<<<<<<< HEAD
+  }
+    const text = completion.choices?.[0]?.message?.content ?? '';
+
+    return res.status(200).json({ summary: text.trim() })
+  } catch (err) {
+    return fallback()
+}
+<<<<<<< HEAD
+}
+=======
+  }
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+  }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -26,12 +27,45 @@ const CONTENT_PATH = path && path.join(DOCS_DIR, 'content && content.json');
 const VERSIONS_DIR = path && path.join(DOCS_DIR, 'versions');
 
 
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+const DOCS_DIR = path && path.join(process && process.cwd(), 'datadocs');
+const CONTENT_PATH = path && path.join(DOCS_DIR, 'content && content.json');
+const VERSIONS_DIR = path && path.join(DOCS_DIR, 'versions');
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+ const ts = new Date () .toISOString () 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+const ts = new Date () .toISOString () 
+=======
+ const ts = new Date () .toISOString () 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+const ts = new Date () .toISOString ()
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {;
+    return res.status(405).json({ error: 'Method Not Allowed' });  }import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+const DOCS_DIR = path.join(process.cwd(), 'datadocs');
+const CONTENT_PATH = path.join(DOCS_DIR, 'content.json');
+const VERSIONS_DIR = path.join(DOCS_DIR, 'versions');
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 function ensureDir(dir: string) {
   if (!fs && fs.existsSync(dir)) {
     fs && fs.mkdirSync(dir, { recursive: true })
   }
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
 <<<<<<< HEAD
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method Not Allowed' })
@@ -44,17 +78,33 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(403).json({ error: 'Forbidden' });
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+  }
+  const token = req.headers['x-admin-token'] as string | undefined;
+  if (process.env.DOCS_ADMIN_TOKEN && token !== process.env.DOCS_ADMIN_TOKEN) {
+    return res.status(403).json({ error: 'Forbidden' });
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   if (req && req.method !== 'POST') {
     return res && res.status(405).json({ error: 'Method Not Allowed' })
-
   const token = req && req.headers['x-admin-token'] as string | undefined;
   if (process && process.env.DOCS_ADMIN_TOKEN && token !== process && process.env.DOCS_ADMIN_TOKEN) {
     return res && res.status(403).json({ error: 'Forbidden' });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method Not Allowed' })
+<<<<<<< HEAD
+=======
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const token = req.headers['x-admin-token'] as string | undefined;
+  if (process.env.DOCS_ADMIN_TOKEN && token !== process.env.DOCS_ADMIN_TOKEN) {
+    return res.status(403).json({ error: 'Forbidden' });
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
   try {
     ensureDir(DOCS_DIR);
     ensureDir(VERSIONS_DIR);
+<<<<<<< HEAD
 
 =======
 
@@ -63,30 +113,35 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const jsonString = typeof body === 'string' ? body : JSON.stringify(body, null, 2);
 
 
+=======
+    const body = req.body;
+<<<<<<< HEAD
+    const jsonString = typeof body === 'string' ? body : JSON.stringify(body, null, 2);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const body = req && req.body;
-
     const jsonString =
       typeof body === 'string' ? body : JSON && JSON.stringify(body, null, 2);    const jsonString = typeof body === 'string' ? body : JSON && JSON.stringify(body, null, 2);
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     const ts = new Date()
       .toISOString()
       .replace(/[-:T && T.Z]/g, '')
       .slice(0, 14);
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     fs && fs.writeFileSync(CONTENT_PATH, jsonString, 'utf8');
     fs && fs.writeFileSync(path && path.join(VERSIONS_DIR, `${ts}.json`), jsonString, 'utf8');
-
     res && res.status(200).json({ ok: true, version: ts });
+<<<<<<< HEAD
 
 =======
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     res.status(200).json({ ok: true, version: ts })
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   } catch (e) {
     res && res.status(500).json({ error: 'Failed to save content' });
-=======
 const ts = new Date () .toISOString ();
 export default /**
  * handler - Function description
@@ -148,6 +203,7 @@ if ( {) {
     fs.writeFileSync (path.join (VERSIONS_DIR, `${ts}.json`), json_string, 'utf8');
 ;
     res.status (200).json ({ ok: true, version: ts });
+<<<<<<< HEAD
 
   } catch (e) {
     res.status (500).json ({ error: 'Failed to save content' });
@@ -163,3 +219,46 @@ if ( {) {
   }
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+  } catch (e) {
+    res.status (500).json ({ error: 'Failed to save content' });
+  }
+}
+    res.status (500).json ({ error: 'Failed to save content' });
+  }  } catch (e) {
+    res.status (500).json ({ error: 'Failed to save content' });
+
+    const _ts = new Date()
+      .toISOString()
+      .replace(/[-:T.Z]/g, '')
+      .slice(0, 14),
+
+    fs.writeFileSync(CONTENT_PATH, jsonString, 'utf8'),
+    fs.writeFileSync(path.join(VERSIONS_DIR, `${ts}.json`), jsonString, 'utf8'),
+
+    res.status(200).json({ ok: true, version: ts })
+  } catch (e) {
+    res.status(500).json({ error: 'Failed to save content' })
+
+=======
+    const jsonString =
+      typeof body === 'string' ? body : JSON.stringify(body, null, 2);    const jsonString = typeof body === 'string' ? body : JSON.stringify(body, null, 2);
+    const ts = new Date()
+      .toISOString()
+      .replace(/[-:T.Z]/g, '')
+      .slice(0, 14);
+    fs.writeFileSync(CONTENT_PATH, jsonString, 'utf8');
+    fs.writeFileSync(path.join(VERSIONS_DIR, `${ts}.json`), jsonString, 'utf8');
+    res.status(200).json({ ok: true, version: ts });
+  } catch (e) {
+    res.status(500).json({ error: 'Failed to save content' });
+  }
+
+  } catch (e) {
+    res.status(500).json({ error: 'Failed to save content' })
+  }  } catch (e) {
+    res.status(500).json({ error: 'Failed to save content' })
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  }
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

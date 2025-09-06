@@ -1,7 +1,72 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
+=======
+=======
+<<<<<<< HEAD
+}; import React, { useState } from 'react'
+import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones'
+import { useAuth } from '@/hooks/useAuth'
+import { MilestoneCard } from './MilestoneCard'
+import { AddMilestoneForm } from './AddMilestoneForm'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent } from '@/components/ui/card'
+// lucide-react doesn't export PlusIcon, use our icon wrapper
+import { Plus } from 'lucide-react'import { EmptyState } from '@/components/ui/empty-state'
+interface MilestonesListProps {
+  milestones: Milestone[],
+  activities: Record<string, MilestoneActivity[]>
+  isLoading: boolean,
+  isClient: boolean,
+  onCreateMilestone: (data: any) => Promise<Milestone | null>,
+  onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promise<boolean>
+  onDeleteMilestone: (id: string) => Promise<boolean>,
+  onUploadDeliverable: (id: string, file: File) => Promise<any>,  isSubmitting: boolean,
+  onApprove?: (id: string,) => Promise<void>,
+  onReject?: (id: string,) => Promise<void>
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import { Milestone, MilestoneStatus, MilestoneActivity  } from '@/hooks/useMilestones';
+import { useAuth  } from '@/hooks/useAuth';
+import { MilestoneCard  } from './MilestoneCard';
+import { AddMilestoneForm  } from './AddMilestoneForm';
+import { Button  } from '@/components/ui/button';
+import { Card, CardContent  } from '@/components/ui/card';
+// lucide-react doesn't export PlusIcon, use our icon wrapper
+import { Plus } from 'lucide-react'
+import { EmptyState } from '@/components/ui/empty-state';
+interface MilestonesListProps {
+
+  milestones: Milestone[]
+  activities: Record<string, MilestoneActivity[]>
+  isLoading: boolean
+  isClient: boolean
+  onCreateMilestone: (data: any) => Promise<Milestone | null>
+  onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promise<boolean>
+  onDeleteMilestone: (id: string) => Promise<boolean>
+  onUploadDeliverable: (id: string, file: File) => Promise<any>,  isSubmitting: boolean
+  onApprove?: (id: string,) => Promise<void>
+  onReject?: (id: string,) => Promise<void>
+
+}
+export const MilestonesList: React.FC<MilestonesListProps> = ({
+
+  milestones
+  activities
+  isLoading
+  isClient
+  onCreateMilestone
+  onUpdateStatus
+  onDeleteMilestone
+  onUploadDeliverable
+  isSubmitting
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   onApprove
   onReject
 }) => {
@@ -9,7 +74,22 @@
   const handleSubmit = async (data: any) => {
     await onCreateMilestone(data);    setShowAddForm(false)
   }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+=======
+  onApprove,
+  onReject;
+}) => {;
+  const [showAddForm, setShowAddForm] = useState(false);
+  const handleSubmit = async (data: any) => {;
+    await onCreateMilestone(data);    setShowAddForm(false)
+  }
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React, { useState } from 'react',;
 import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -55,6 +135,13 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
   },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   if (isLoading) {
     return (
       <div className="space-y-4">
@@ -66,6 +153,7 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
               <div className="h-4 bg-muted rounded animate-pulse w-3/4"></div>
             </CardContent>
           </Card>
+<<<<<<< HEAD
 =======
 >>>>>>>   if (isLoading) {
 ursor/fix-website-loading-errors-and-merge-6662
@@ -80,25 +168,36 @@ ursor/fix-website-loading-errors-and-merge-6662
             </CardContent>;
           </Card>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         ))}
-      </div>;
-    );
+      </div>
+    )
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   if (milestones.length === 0 && !showAddForm) {
     return (
       <EmptyState
-        icon = {<span className="text-3xl">📊</span>,}
+        icon={<span className="text-3xl">📊</span>}
         title="No Milestones Yet"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   }
 
   return (
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         description = {isClient ?
           "Break down the project into manageable milestones to track progress and payments." :
           "No milestones have been created for this project yet.",}
@@ -111,6 +210,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       />
     )
   }
+<<<<<<< HEAD
       />;
     );
       />
@@ -119,6 +219,34 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>>   return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+        description={isClient ? 
+          "Break down the project into manageable milestones to track progress and payments." : 
+          "No milestones have been created for this project yet."}
+        action={isClient ? 
+          {
+            text: "Create First Milestone",
+            onClick: () => setShowAddForm(true)
+          } : undefined
+        }
+<<<<<<< HEAD
+      />;
+    );
+=======
+<<<<<<< HEAD
+      />
+    )
+=======
+      />;
+    );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  }
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  return (
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="space-y-6">
       {isClient && !showAddForm && (
         <div className="flex justify-end">
@@ -129,21 +257,37 @@ ursor/fix-website-loading-errors-and-merge-6662
         </div>
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+      
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       {showAddForm && (
         <Card>
           <CardContent className="pt-6">
             <h3 className="text-lg font-medium mb-4">Create New Milestone</h3>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+            <AddMilestoneForm
+=======
+            <AddMilestoneForm 
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               onSubmit = {handleSubmit,}
               isSubmitting = {isSubmitting,}
               onCancel = {(,) => setShowAddForm(false),}
             />
           </CardContent>
         </Card>
+<<<<<<< HEAD
       )}
       <div className="space-y-4">
         {milestones.map((milestone,) => (
@@ -181,24 +325,68 @@ ursor/fix-website-loading-errors-and-merge-6662
       <div className="space-y-4">;
         {milestones && milestones.map((milestone,) => (;
 
+=======
+      )}
+      <div className="space-y-4">
+        {milestones.map((milestone,) => (
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <MilestoneCard
-            key = {milestone && milestone.id,}
-            id = {milestone && milestone.id,}
-            projectId = {milestone && milestone.project_id,}
-            title = {milestone && milestone.title,}
-            description = {milestone && milestone.description,}
-            amount = {parseFloat(milestone && milestone.amount.toString()),}
-            status = {milestone && milestone.status,}
-            dueDate = {milestone && milestone.due_date,}
+            key = {milestone.id,}
+            id = {milestone.id,}
+            projectId = {milestone.project_id,}
+            title = {milestone.title,}
+            description = {milestone.description,}
+            amount = {parseFloat(milestone.amount.toString()),}
+            status = {milestone.status,}
+            dueDate = {milestone.due_date,}
             onApprove = {onApprove,}
             onReject = {onReject,}
+          />
+        ))}
+<<<<<<< HEAD
+
+=======
+      </div>
+    </div>
+  )
+}
+"
+<<<<<<< HEAD
+
+=======
+            <AddMilestoneForm 
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              onSubmit={handleSubmit}
+              isSubmitting={isSubmitting}
+              onCancel={() => setShowAddForm(false)}
+            />;
+          </CardContent>;
+        </Card>;
+      )}
+      
+      <div className="space-y-4">
+        {milestones.map((milestone) => (
+          <MilestoneCard
+            key={milestone.id}
+            id={milestone.id}
+            projectId={milestone.project_id}
+            title={milestone.title}
+            description={milestone.description}
+            amount={parseFloat(milestone.amount.toString())}
+            status={milestone.status}
+            dueDate={milestone.due_date}
+            onApprove={onApprove}
+            onReject={onReject}
           />;
         ))}
-
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       </div>;
     </div>;
   );
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -208,3 +396,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

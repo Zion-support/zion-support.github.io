@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { forwardRef } from 'react';
 
 export type ResumeData = {
@@ -10,6 +11,10 @@ export type ResumeData = {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+import React, { forward_ref } from 'react';
+export type ResumeData = {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   name: string;
   contact?: {;
     email?: string;
@@ -26,16 +31,19 @@ export type ResumeData = {
     start?: string;
     end?: string;
     location?: string;
+<<<<<<< HEAD
 
     bullets?: string[];  name: string,
 
+=======
+    bullets?: string[];  name: string,
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   contact?: { email?: string, phone?: string, location?: string, website?: string, linkedin?: string, github?: string }
   summary?: string;
   skills?: string[];
   technologies?: string[];
   experience?: Array<{
     title: string;    title: string
-=======
     bullets?: string[];  name: string,;
   contact?: { email?: string, phone?: string, location?: string, website?: string, linkedin?: string, github?: string };
   summary?: string;
@@ -43,13 +51,17 @@ export type ResumeData = {
   technologies?: string[];
   experience?: Array<{;
     title: string;    title: string,;
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     company?: string;
     start?: string;
     end?: string;
     location?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export type ResumePreviewProps = {;
@@ -78,29 +90,50 @@ const SectionTitle: React.FC<{ children: React.ReactNode }> = ({
   education?: Array<{
     institution: string
 =======
+=======
+    bullets?: string[];
+  }>;
+  education?: Array<{;
+    institution: string;
+    degree?: string;
+    start?: string;
+    end?: string;
+  }>;
+  certifications?: string[];
+  portfolio?: Array<{;
+    title: string;
+    description?: string;
+    link?: string;
+    technologies?: string[];
+  }>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 };
-
 export type ResumePreviewProps = {;
   data: ResumeData;
   theme?: 'light' | 'dark';
   maxPortfolioItems?: number;
 };
-
 const SectionTitle: React.FC<{ children: React && React.ReactNode }> = ({;
   children,;
 }) => (;
   <h2 className='text-lg font-semibold tracking-wide text-gray-800 dark:text-gray-100 border-b border-gray-200 dark:border-gray-700 pb-1'>    {children}  }>;
   education?: Array<{;
     institution: string,;
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     degree?: string;
     start?: string;
     end?: string;
   }>;
   certifications?: string[];
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export type ResumeData = {
   name: string,
   contact?: { email?: string, phone?: string, location?: string, website?: string, linkedin?: string, github?: string };
@@ -115,7 +148,6 @@ export type ResumeData = {
     location?: string;
     bullets?: string[]
   }>;
-=======
 }
 ;
 export type ResumePreviewProps = {
@@ -128,7 +160,10 @@ const SectionTitle: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => (
   <h2 className='text - lg font - semibold tracking - wide text - gray - 800 dark:text - gray - 100 border - b border - gray - 200 dark:border - gray - 700 pb - 1'>    {children}  }>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   education?: Array<{
     institution: string,
     degree?: string;
@@ -138,9 +173,9 @@ const SectionTitle: React.FC<{ children: React.ReactNode }> = ({
   certifications?: string[];
   portfolio?: Array<{
     title: string,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     description?: string;
     link?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
     technologies?: string[]
   }>
@@ -162,6 +197,8 @@ const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => 
     {children}
 =======
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   portfolio?: Array<{;
     title: string,;
     description?: string;
@@ -169,26 +206,24 @@ const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => 
     technologies?: string[];
   }>;
 };
-
 export type ResumePreviewProps = {;
   data: ResumeData,;
   theme?: 'light' | 'dark';
   maxPortfolioItems?: number;
 };
-
 const SectionTitle: React.FC<{ children: React && React.ReactNode }> = ({ children }) => (;
   <h2 className="text-lg font-semibold tracking-wide text-gray-800 dark:text-gray-100 border-b border-gray-200 dark:border-gray-700 pb-1">;
+<<<<<<< HEAD
 
 
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 };
-
-=======
     technologies?: string[];
   }>;
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export type ResumePreviewProps = {
   data: ResumeData,
   theme?: 'light' | 'dark';
@@ -196,6 +231,7 @@ export type ResumePreviewProps = {
 }
 ;
 const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 
@@ -221,20 +257,17 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
         <div className='p-8'>
 =======
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const portfolioItems = (data.portfolio || []).slice(0, Math.max(0, maxPortfolioItems));
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-
 export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(;
   ({ data, theme = 'light', maxPortfolioItems = 3 }, ref) => {;
     const portfolioItems = (data && data.portfolio || []).slice(;
       0,;
       Math && Math.max(0, maxPortfolioItems);
     );
-
-
       >;
         <div className='p-8'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {/* Header */}
           <header className='mb-6'>;
             <h1 className='text-3xl font-bold text-gray-900 dark:text-white'>;
@@ -244,7 +277,6 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(;
               {data && data.contact?.phone && <span>{data && data.contact.phone}</span>}
               {data && data.contact?.location && <span>{data && data.contact.location}</span>}
               {data && data.contact?.website && (;
-=======
   <h2 className="text - lg font - semibold tracking - wide text - gray - 800 dark:text - gray - 100 border - b border - gray - 200 dark:border - gray - 700 pb - 1">;
     {children}
   </h2>);
@@ -266,10 +298,10 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
               {data.contact?.phone && <span>{data.contact.phone}</span>}
               {data.contact?.location && <span>{data.contact.location}</span>}
               {data.contact?.website && (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     return (
       <div;
         ref={ref}
+<<<<<<< HEAD
 <<<<<<< HEAD
         className={`resume-a4 ${theme === 'dark' ? 'dark' : ''} bg-white dark:bg-black text-gray-900 dark:text-gray-100`}
       >
@@ -278,20 +310,234 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
           <header className="mb-6">
             <h1 className="text-3xl font-bold text-gray-900 dark:text-white">{data.name}</h1>
             <div className="mt-2 text-sm text-gray-600 dark:text-gray-300 space-x-3 flex flex-wrap">
+=======
+          <header className="mb-6">
+            <h1 className="text-3xl font-bold text-gray-900 dark:text-white">{data.name}</h1>
+            <div className="mt-2 text-sm text-gray-600 dark:text-gray-300 space-x-3 flex flex-wrap">
+        className={`resume - a4 ${theme === 'dark' ? 'dark' : ''} bg - white dark:bg - black text - gray - 900 dark:text - gray - 100`}
+      >;
+        <div className="p - 8">;
+          {/* Header */}
+          <header className="mb - 6">;
+            <h1 className="text - 3xl font - bold text - gray - 900 dark:text - white">{data.name}</h1>;
+            <div className="mt - 2 text - sm text - gray - 600 dark:text - gray - 300 space - x-3 flex flex - wrap">;
+  </h2>
+),
+
+export const ResumePreview = forwardRef<HTMLDivElement ResumePreviewProps>(
+  ({ data, theme = 'light', maxPortfolioItems = 3 }, ref) => {
+    const portfolioItems = (data.portfolio || []).slice(0, Math.max(0, maxPortfolioItems)),
+
+    return (
+      <div
+        ref={ref}
+        className={_`resume-a4 ${theme === 'dark' ? 'dark' : ''} bg-white dark:bg-black text-gray-900 dark:text-gray-100`}
+      >
+        <div className=&quot;p-8&quot;>
+          {/* Header */}
+          <header className=&quot;mb-6&quot;>
+            <h1 className=&quot;text-3xl font-bold text-gray-900 dark:text-white&quot;>{data.name}</h1>
+            <div className=&quot;mt-2 text-sm text-gray-600 dark:text-gray-300 space-x-3 flex flex-wrap&quot;>
+
+=======
+import React, { forwardRef } from 'react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export type ResumeData = {;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+export type ResumeData = {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  name: string;
+  contact?: {
+    email?: string;
+    phone?: string;
+    location?: string;
+    website?: string;
+    linkedin?: string;
+    github?: string;
+  };  summary?: string;
+  skills?: string[];
+  technologies?: string[];
+  experience?: Array<{
+    title: string;    company?: string;
+    start?: string;
+    end?: string;
+    location?: string;
+    bullets?: string[];  name: string
+  contact?: { email?: string, phone?: string, location?: string, website?: string, linkedin?: string, github?: string }
+  summary?: string;
+  skills?: string[];
+  technologies?: string[];
+  experience?: Array<{
+    title: string;    title: string
+    company?: string;
+    start?: string;
+    end?: string;
+    location?: string;
+<<<<<<< HEAD
+    bullets?: string[];
+  }>;
+  education?: Array<{
+    institution: string;
+    degree?: string;
+    start?: string;
+    end?: string;
+  }>;
+  certifications?: string[];
+  portfolio?: Array<{
+    title: string;
+    description?: string;
+    link?: string;
+    technologies?: string[];
+  }>;
+<<<<<<< HEAD
+}
+export type ResumePreviewProps = {
+=======
+};
+=======
+
+    {children}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+export type ResumePreviewProps = {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  data: ResumeData;
+  theme?: 'light' | 'dark';
+  maxPortfolioItems?: number;
+}
+const SectionTitle: React.FC<{ children: React.ReactNode }> = ({
+  children
+}) => (
+  <h2 className='text-lg font-semibold tracking-wide text-gray-800 dark:text-gray-100 border-b border-gray-200 dark:border-gray-700 pb-1'>    {children}  }>;
+  education?: Array<{
+    institution: string
+    degree?: string;
+    start?: string;
+    end?: string
+  }>;
+  certifications?: string[];
+  portfolio?: Array<{
+    title: string
+    description?: string;
+    link?: string;
+    technologies?: string[]
+  }>
+}
+export type ResumePreviewProps = {
+<<<<<<< HEAD
+  data: ResumeData
+=======
+  data: ResumeData,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  theme?: 'light' | 'dark';
+  maxPortfolioItems?: number
+}
+const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+  <h2 className="text-lg font-semibold tracking-wide text-gray-800 dark:text-gray-100 border-b border-gray-200 dark:border-gray-700 pb-1">
+    {children}
+=======
+
+    {children}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  </h2>
+);
+export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
+  ({ data, theme = 'light', maxPortfolioItems = 3 }, ref) => {
+<<<<<<< HEAD
+    const portfolioItems = (data.portfolio |[]).slice(
+      0
+      Math.max(0, maxPortfolioItems)
+=======
+    const portfolioItems = (data.portfolio || []).slice(
+      0,
+      Math.max(0, maxPortfolioItems);
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    );
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+      >
+        <div className='p-8'>
+          {/* Header */}
+          <header className='mb-6'>
+            <h1 className='text-3xl font-bold text-gray-900 dark:text-white'>
+              {data.name}
+            </h1>
+            <div className='mt-2 text-sm text-gray-600 dark:text-gray-300 space-x-3 flex flex-wrap'>              {data.contact?.email && <span>{data.contact.email}</span>}
+              {data.contact?.phone && <span>{data.contact.phone}</span>}
+              {data.contact?.location && <span>{data.contact.location}</span>}
+              {data.contact?.website && (
+    return (
+      <div
+        ref={ref}
+        className={`resume-a4 ${theme === 'dark' ? 'dark' : ''} bg-white dark:bg-black text-gray-900 dark:text-gray-100`}
+      >
+        <div className="p-8">
+          {/* Header */}
+          <header className="mb-6">
+            <h1 className="text-3xl font-bold text-gray-900 dark:text-white">{data.name}</h1>
+            <div className="mt-2 text-sm text-gray-600 dark:text-gray-300 space-x-3 flex flex-wrap">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               {data.contact?.email && <span>{data.contact.email}</span>}
               {data.contact?.phone && <span>{data.contact.phone}</span>}
               {data.contact?.location && <span>{data.contact.location}</span>}
               {data.contact?.website && (
+<<<<<<< HEAD
 
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+<a;
+                  className='underline';
+=======
+<<<<<<< HEAD
+                <a
+                  className='underline'
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+                  href={data.contact.website}
+                  target='_blank';
+                  rel='noreferrer';
+                >                  {data.contact.website}
+<<<<<<< HEAD
+                </a>)}
+              {data.contact?.linkedin && (                <a className="underline" href={data.contact.website} target="_blank" rel="noreferrer">;
+=======
+                </a>
+              )}
+              {data.contact?.linkedin && (                <a className="underline" href={data.contact.website} target="_blank" rel="noreferrer">
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   {data.contact.website}
                 </a>)}
               {data.contact?.linkedin && (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            </div>;
+          </header>;
+          {/* Summary */}
+          {data.summary && (
+            <section className="mb-5">
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <a
                   className='underline'
                   href={data.contact.linkedin}
@@ -318,6 +564,7 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
           </header>
 
 =======
+<<<<<<< HEAD
 
             </div>;
           </header>;
@@ -330,9 +577,18 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           {/* Summary */}
 
           {data.summary && (
+<<<<<<< HEAD
             <section className="mb-5">
               <SectionTitle>Professional Summary</SectionTitle>
               <p className="mt-2 text-sm leading-relaxed text-gray-800 dark:text-gray-200">{data.summary}</p>
@@ -340,6 +596,20 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
 
 <<<<<<< HEAD
 =======
+=======
+            <section className='mb-5'>
+              <SectionTitle>Professional Summary</SectionTitle>
+              <p className='mt-2 text-sm leading-relaxed text-gray-800 dark:text-gray-200'>
+                {data.summary}
+              </p>            </section>            <section className="mb-5">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+              <SectionTitle>Professional Summary</SectionTitle>
+              <p className="mt-2 text-sm leading-relaxed text-gray-800 dark:text-gray-200">{data.summary}</p>
+            </section>
+<<<<<<< HEAD
+<<<<<<< HEAD
+          )}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           {/* Summary */}
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           {data && data.summary && (;
@@ -353,6 +623,7 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
             </section>;
           )}
           {/* Skills & Technologies */}
+<<<<<<< HEAD
 
 
 
@@ -377,12 +648,33 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
               <div className='mt-2 text-sm flex flex-wrap gap-2'>
                 {data.skills?.map((s, idx) => (
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           {(data && data.skills?.length || data && data.technologies?.length) && (;
             <section className='mb-5'>;
               <SectionTitle>Skills & Technologies</SectionTitle>;
               <div className='mt-2 text-sm flex flex-wrap gap-2'>;
                 {data && data.skills?.map((s, idx) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+          {(data.skills?.length |data.technologies?.length) && (
+=======
+
+=======
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          )}
+
+          {/* Skills & Technologies */}
+          {(data.skills?.length || data.technologies?.length) && (
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+            <section className='mb-5'>
+              <SectionTitle>Skills & Technologies</SectionTitle>
+              <div className='mt-2 text-sm flex flex-wrap gap-2'>
+                {data.skills?.map((s, idx) => (
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <span
                     key={`skill-${idx}`}
                     className='px-2 py-0 && 0.5 rounded border border-gray-200 dark:border-gray-700'>                    {s}
@@ -392,14 +684,28 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
                   <span
                     key={`tech-${idx}`}
 <<<<<<< HEAD
+<<<<<<< HEAD
                     className='px-2 py-0.5 rounded border border-gray-200 dark:border-gray-700'
 
 =======
 
 =======
+=======
+                    className='px-2 py-0 && 0.5 rounded border border-gray-200 dark:border-gray-700'>                    {t}              <SectionTitle>Skills & Technologies</SectionTitle>;
+              <div className="mt-2 text-sm flex flex-wrap gap-2">;
+                {data && data.skills?.map((s, idx) => (;
+                  <span key={`skill-${idx}`} className="px-2 py-0 && 0.5 rounded border border-gray-200 dark:border-gray-700">;
+                    {s}
+                  </span>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           {(data.skills?.length || data.technologies?.length) && (
             <section className="mb-5">
               <SectionTitle>Skills & Technologies</SectionTitle>
+=======
+                    className='px-2 py-0.5 rounded border border-gray-200 dark:border-gray-700'
+<<<<<<< HEAD
+                  >                    {t}              <SectionTitle>Skills & Technologies</SectionTitle>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="mt-2 text-sm flex flex-wrap gap-2">
                 {data.skills?.map((s, idx) => (
                   <span key={`skill-${idx}`} className="px-2 py-0.5 rounded border border-gray-200 dark:border-gray-700">
@@ -407,11 +713,18 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
                   </span>
                 ))}
                 {data.technologies?.map((t, idx) => (
+<<<<<<< HEAD
                   <span key={`tech-${idx}`} className="px-2 py-0.5 rounded border border-gray-200 dark:border-gray-700">
                     {t}
                   </span>
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+<<<<<<< HEAD
+<span key={`tech-${idx}`} className="px-2 py-0.5 rounded border border-gray-200 dark:border-gray-700">
+                    {t}
+                  </span>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 ))}
                 {data && data.technologies?.map((t, idx) => (;
                   <span
@@ -423,7 +736,6 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
               </div>;
             </section>;
           )}
-=======
                 <a;
                   className='underline';
                   href={data.contact.linkedin}
@@ -491,6 +803,7 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
                     className='px - 2 py - 0.5 rounded border border - gray - 200 dark:border - gray - 700';
                   >                  <span key={`tech-${idx}`} className="px - 2 py - 0.5 rounded border border - gray - 200 dark:border - gray - 700">;
                     {t}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
                   </span>
@@ -512,10 +825,63 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
                   <div key={`exp-${idx}`}>;
                     <div className='flex items - baseline justify - between'>;
                       <h3 className='font - medium text - gray - 900 dark:text - white'>;
+=======
+                  </span>))}
+              </div>;
+            </section>)}
+          {/* Experience */}
+          {data.experience?.length ? (
+            <section className="mb-5">
+              <SectionTitle>Work Experience</SectionTitle>
+=======
+                  <span
+                    key={`tech-${idx}`}
+                    className='px-2 py-0.5 rounded border border-gray-200 dark:border-gray-700'
+                  >                  <span key={`tech-${idx}`} className="px-2 py-0.5 rounded border border-gray-200 dark:border-gray-700">
+                    {t}
+                  </span>
+                ))}
+<<<<<<< HEAD
+              </div>
+            </section>
+          )}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+                  >                    {t}
+
+                    {s}
+                  </span>
+                ))}
+                {data.technologies?.map((t, idx) => (
+
+                    {t}
+
+                  </span>
+                ))}
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              </div>
+            </section>
+          )}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+          {/* Experience */}
+          {data.experience?.length ? (
+            <section className='mb-5'>
+              <SectionTitle>Work Experience</SectionTitle>
+              <div className='mt-2 space-y-3'>
+                {data.experience.map((role, idx) => (
+                  <div key={`exp-${idx}`}>
+                    <div className='flex items-baseline justify-between'>
+                      <h3 className='font-medium text-gray-900 dark:text-white'>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                         {role.title}
                         {role.company ? ` • ${role.company}` : ''}
-<<<<<<< HEAD
                       </h3>
+<<<<<<< HEAD
 
 =======
 
@@ -529,6 +895,15 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+                      <div className='text-xs text-gray-600 dark:text-gray-300'>                        {(role.start |role.end) && (              <SectionTitle>Work Experience</SectionTitle>
+=======
+                      <div className='text-xs text-gray-600 dark:text-gray-300'>                        {(role.start || role.end) && (              <SectionTitle>Work Experience</SectionTitle>
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <div className="mt-2 space-y-3">
                 {data.experience.map((role, idx) => (
                   <div key={`exp-${idx}`}>
@@ -540,6 +915,7 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
                       <div className="text-xs text-gray-600 dark:text-gray-300">
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                         {(role.start || role.end) && (
 
@@ -549,6 +925,32 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
                           </span>
 
 
+=======
+                        {(role.start || role.end) && (
+=======
+<<<<<<< HEAD
+                        {(role.start |role.end) && (
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+                          <span>
+                            {role.start |''}
+=======
+                        {(role.start || role.end) && (
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+                      <div className='text-xs text-gray-600 dark:text-gray-300'>                        {(role.start || role.end) && (
+
+                        {(role.start || role.end) && (
+
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                          <span>
+                            {role.start || ''}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+                            {role.end ? ` – ${role.end}` : ''}
+                          </span>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           {data && data.experience?.length ? (;
             <section className='mb-5'>;
               <SectionTitle>Work Experience</SectionTitle>;
@@ -575,7 +977,6 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
                             {role && role.start || ''}
                             {role && role.end ? ` – ${role && role.end}` : ''}
                           </span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                         )}
                         {role && role.location ? ` • ${role && role.location}` : ''}
                       </div>;
@@ -584,10 +985,12 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
                       <ul className='mt-1 list-disc list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1'>                        {role && role.bullets.map((b, bIdx) => (                      <ul className="mt-1 list-disc list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1">;
                         {role && role.bullets.map((b, bIdx) => (;
                           <li key={`exp-${idx}-b-${bIdx}`}>{b}</li>;
+<<<<<<< HEAD
 
 =======
-                        )}
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+                        )}
                       </h3>;
                       <div className='text - xs text - gray - 600 dark:text - gray - 300'>                        {(role.start || role.end) && (              <SectionTitle > Work Experience</SectionTitle>;
               <div className="mt - 2 space - y-3">;
@@ -604,12 +1007,19 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
                             {role.start || ''}
                             {role.end ? ` – ${role.end}` : ''}
                           </span>)}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                         {role.location ? ` • ${role.location}` : ''}
                       </div>;
                     </div>;
                     {role.bullets?.length ? (
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       <ul className='mt - 1 list - disc list - inside text - sm text - gray - 800 dark:text - gray - 200 space - y-1'>                        {role.bullets.map ((b, b_idx) => (                      <ul className="mt - 1 list - disc list - inside text - sm text - gray - 800 dark:text - gray - 200 space - y-1">;
                         {role.bullets.map ((b, b_idx) => (
                           <li key={`exp-${idx}-b-${b_idx}`}>{b}</li>))}
@@ -617,6 +1027,7 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
                   </div>))}
               </div>;
             </section>) : null}
+<<<<<<< HEAD
 
 =======
 
@@ -689,6 +1100,92 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+          {/* Education */}
+          {data && data.education?.length ? (;
+            <section className='mb-5'>;
+              <div className='mt-2 space-y-2'>;
+                {data && data.education.map((ed, idx) => (;
+                  <div key={`edu-${idx}`} className='text-sm'>;
+                    <div className='font-medium text-gray-900 dark:text-white'>;
+                      {ed && ed.institution}
+                    </div>;
+                    <div className='text-gray-700 dark:text-gray-300'>;
+                      {[;
+                        ed && ed.degree,;
+                        ed && ed.start && ed && ed.end;
+                          ? `${ed && ed.start} – ${ed && ed.end}`;
+                          : ed && ed.start || ed && ed.end,;
+                      ]                        .filter(Boolean)                  <div key={`edu-${idx}`} className="text-sm">;
+                    <div className="font-medium text-gray-900 dark:text-white">{ed && ed.institution}</div>;
+                    <div className="text-gray-700 dark:text-gray-300">;
+                      {[ed && ed.degree, ed && ed.start && ed && ed.end ? `${ed && ed.start} – ${ed && ed.end}` : ed && ed.start || ed && ed.end];
+                        .join(' • ')}
+                    </div>;
+                  </div>;
+          {data.education?.length ? (
+            <section className="mb-5">
+              <SectionTitle>Education</SectionTitle>
+              <div className="mt-2 space-y-2">
+                {data.education.map((ed, idx) => (
+                  <div key={`edu-${idx}`} className="text-sm">
+                    <div className="font-medium text-gray-900 dark:text-white">{ed.institution}</div>
+                    <div className="text-gray-700 dark:text-gray-300">
+                      {[ed.degree, ed.start && ed.end ? `${ed.start} – ${ed.end}` : ed.start || ed.end]
+                        .filter(Boolean)
+=======
+                      <ul className='mt-1 list-disc list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1'>                        {role.bullets.map((b, bIdx) => (                      <ul className="mt-1 list-disc list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1">
+                        {role.bullets.map((b, bIdx) => (
+                          <li key={`exp-${idx}-b-${bIdx}`}>{b}</li>
+                        ))}
+                      </ul>
+                    ) : null}
+                  </div>
+                ))}
+              </div>
+            </section>
+          ) : null}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+          {/* Education */}
+          {data.education?.length ? (
+            <section className='mb-5'>
+              <div className='mt-2 space-y-2'>
+                {data.education.map((ed, idx) => (
+                  <div key={`edu-${idx}`} className='text-sm'>
+                    <div className='font-medium text-gray-900 dark:text-white'>
+                      {ed.institution}
+                    </div>
+                    <div className='text-gray-700 dark:text-gray-300'>
+                      {[
+                        ed.degree
+                        ed.start && ed.end
+                          ? `${ed.start} – ${ed.end}`
+                          : ed.start |ed.end
+                      ]                        .filter(Boolean)                  <div key={`edu-${idx}`} className="text-sm">
+                    <div className="font-medium text-gray-900 dark:text-white">{ed.institution}</div>
+                    <div className="text-gray-700 dark:text-gray-300">
+<<<<<<< HEAD
+                      {[ed.degree, ed.start && ed.end ? `${ed.start} – ${ed.end}` : ed.start |ed.end]
+=======
+                      {[ed.degree, ed.start && ed.end ? `${ed.start} – ${ed.end}` : ed.start || ed.end]
+<<<<<<< HEAD
+
+                        .filter(Boolean)
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+=======
+
+                        .filter(Boolean)
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                         .join(' • ')}
                     </div>
                   </div>
@@ -696,7 +1193,15 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
               </div>
             </section>
           ) : null}
+<<<<<<< HEAD
+{/* Certifications */}
+          {data.certifications?.length ? (
+            <section className="mb-5">
+=======
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -707,19 +1212,55 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
           {/* Certifications */}
           {data.certifications?.length ? (
             <section className="mb-5">
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+          {/* Certifications */}
+          {data.certifications?.length ? (
+            <section className='mb-5'>
+              <SectionTitle>Certifications</SectionTitle>
+              <ul className='mt-2 list-disc list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1'>                {data.certifications.map((c, idx) => (            <section className="mb-5">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <SectionTitle>Certifications</SectionTitle>
               <ul className="mt-2 list-disc list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1">
                 {data.certifications.map((c, idx) => (
                   <li key={`cert-${idx}`}>{c}</li>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 ))}
               </div>;
             </section>;
           ) : null}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
           {/* Portfolio */}
           {portfolioItems.length ? (
+=======
+          {/* Certifications */}
+          {data && data.certifications?.length ? (;
+            <section className='mb-5'>;
+              <SectionTitle>Certifications</SectionTitle>;
+              <ul className='mt-2 list-disc list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1'>                {data && data.certifications.map((c, idx) => (            <section className="mb-5">;
+              <SectionTitle>Certifications</SectionTitle>;
+              <ul className="mt-2 list-disc list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1">;
+                {data && data.certifications.map((c, idx) => (;
+                  <li key={`cert-${idx}`}>{c}</li>;
+                ))}
+              </ul>;
+            </section>;
+          ) : null}
+<<<<<<< HEAD
+          {/* Portfolio */}
+          {portfolioItems.length ? (
+            <section className="mb-5">
+              <SectionTitle>Portfolio</SectionTitle>
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+          {/* Portfolio */}
+          {portfolioItems.length ? (
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <section className='mb-5'>
               <SectionTitle>Portfolio</SectionTitle>
               <div className='mt-2 space-y-2'>
@@ -728,13 +1269,17 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
                     <div className='font-medium text-gray-900 dark:text-white'>
                       {p.title}
                       {p.link && (
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                         <a
                           className='ml-2 underline text-blue-600 dark:text-blue-400'
-                          href={p && p.link}
+                          href={p.link}
                           target='_blank'
+<<<<<<< HEAD
                           rel='noreferrer'>                          link              <SectionTitle>Portfolio</SectionTitle>;
               <div className="mt-2 space-y-2">;
                 {portfolioItems && portfolioItems.map((p, idx) => (;
@@ -767,11 +1312,15 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
           {portfolioItems.length ? (
             <section className="mb-5">
               <SectionTitle>Portfolio</SectionTitle>
+=======
+                          rel='noreferrer'
+                        >                          link              <SectionTitle>Portfolio</SectionTitle>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <div className="mt-2 space-y-2">
                 {portfolioItems.map((p, idx) => (
                   <div key={`proj-${idx}`} className="text-sm">
                     <div className="font-medium text-gray-900 dark:text-white">
-=======
                     </div>;
                     <div className='text - gray - 700 dark:text - gray - 300'>;
                       {[;
@@ -809,6 +1358,10 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
                     <div className='font - medium text - gray - 900 dark:text - white'>;
                       {p.title}
                       {p.link && (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                         <a;
                           className='ml - 2 underline text - blue - 600 dark:text - blue - 400';
                           href={p.link}
@@ -819,7 +1372,10 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
                 {portfolio_items.map ((p, idx) => (
                   <div key={`proj-${idx}`} className="text - sm">;
                     <div className="font - medium text - gray - 900 dark:text - white">;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       {p.title}
                       {p.link && (
                         <a className="ml - 2 underline text - blue - 600 dark:text - blue - 400" href={p.link} target="_blank" rel="noreferrer">;
@@ -827,6 +1383,7 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
                         </a>)}
                     </div>;
                     {p.description && (
+<<<<<<< HEAD
 
 
 ResumePreview && ResumePreview.displayName = 'ResumePreview';
@@ -843,11 +1400,17 @@ export default ResumePreview;
 export default ResumePreview;
 
 
-ResumePreview.displayName = 'ResumePreview';
-
+=======
+ResumePreview && ResumePreview.displayName = 'ResumePreview';
 export default ResumePreview;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+ResumePreview.displayName = 'ResumePreview';
+export default ResumePreview;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       <p className='text - gray - 700 dark:text - gray - 300'>;
                         {p.description}
                       </p>)}
@@ -894,5 +1457,70 @@ export default ResumePreview;
 
 =======
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+                        <a className="ml-2 underline text-blue-600 dark:text-blue-400" href={p.link} target="_blank" rel="noreferrer">
+                          link
+                        </a>
+                      )}
+                    </div>
+                    {p.description && (
+                      <p className='text-gray-700 dark:text-gray-300'>
+                        {p.description}
+                      </p>
+                    )}
+                    {p.technologies?.length ? (
+                      <div className='mt-1 text-xs flex flex-wrap gap-2'>
+                        {p.technologies.map((t, tIdx) => (
+                          <span
+                            key={`proj-${idx}-t-${tIdx}`}
+                            className='px-2 py-0.5 rounded border border-gray-200 dark:border-gray-700'
+                          >                            {t}                    )}
+                    {p.technologies?.length ? (
+                      <div className="mt-1 text-xs flex flex-wrap gap-2">
+                        {p.technologies.map((t, tIdx) => (
+                          <span key={`proj-${idx}-t-${tIdx}`} className="px-2 py-0.5 rounded border border-gray-200 dark: border-gray-700">
+                            {t}
+                          </span>
+                        ))}
+                      </div>
+                    ) : null}
+                  </div>
+                ))}
+              </div>
+            </section>
+          ) : null}
+        </div>
+      </div>
+    );
+  }
+);
+ResumePreview.displayName = 'ResumePreview';
+export default ResumePreview;
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+export default ResumePreview;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+export default ResumePreview;
+
+}
+}
+}
+}
+}
+}
+}
+}
+}
+=======
+export default ResumePreview;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

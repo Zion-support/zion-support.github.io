@@ -1,26 +1,3 @@
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
 import React from 'react';
 interface MicroSaasServicesSectionProps {
   // Add props here as needed
@@ -37,7 +14,13 @@ export default function MicroSaasServicesSection({ }: MicroSaasServicesSectionPr
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD:src.disabled/components/home/MicroSaasServicesSection.jsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 
 <<<<<<< HEAD
@@ -47,4 +30,7 @@ export default function MicroSaasServicesSection({ }: MicroSaasServicesSectionPr
 =======
 }
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/home/MicroSaasServicesSection.jsx
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -12,6 +13,22 @@ export default function ProfileDetail() {;
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+export default function ProfileDetail() {
+  // useParams is typed as `any` in this environment due to missing type;
+  // definitions, so avoid passing a type argument to prevent TS2347.;
+  const router = useRouter();
+  const profileId = router.query.profileId as string;
+  const [profileData, setProfileData] = useState<any>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { useState, useEffect } from "react",
 import { useRouter } from "next/router",
 import { supabase } from "@/integrations/supabase/client",
@@ -24,9 +41,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2, Mail, Phone, Globe } from 'lucide-react'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   useEffect(() => {
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { HireNowCTA } from "@/components/profile/HireNowCTA";
 export default function ProfileDetail() {
   // useParams is typed as `any` in this environment due to missing type
@@ -37,6 +57,7 @@ export default function ProfileDetail() {
   const [profileData, setProfileData] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+<<<<<<< HEAD
 
 >>>>>>>   useEffect(() => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -51,11 +72,40 @@ export default function ProfileDetail() {
           setError("Profile ID is missing.");
           return;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+import { HireNowCTA } from "@/components/profile/HireNowCTA",
+export default function ProfileDetail() {
+  // useParams is typed as `any` in this environment due to missing type
+  // definitions, so avoid passing a type argument to prevent TS2347.
+  const router = useRouter(),
+  const profileId = router.query.profileId as string,
+  const [profileData, setProfileData] = useState<any>(null),
+  const [isLoading, setIsLoading] = useState(true),
+  const [error, setError] = useState<string | null>(null),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  useEffect(() => {
+    const fetchProfile = async () => {
+      setIsLoading(true),
+      setError(null),
+      try {
+        if (!profileId) {
+<<<<<<< HEAD
+          setError("Profile ID is missing.");
+          return;
+=======
+          setError("Profile ID is missing."),
+          return
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         }
         const { data, error } = await supabase
           .from("talent_profiles")
           .select("*")
           .eq("id", profileId)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         if (error) {
@@ -84,6 +134,25 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>         }
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+          .single();
+=======
+          .single(),
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+        if (error) {
+          throw new Error(error.message)
+        }
+        if (!data) {
+<<<<<<< HEAD
+          setError("Profile not found.");
+          return;
+=======
+          setError("Profile not found."),
+          return
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+        }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         setProfileData(data)
       } catch (err: any) {
         setError(err.message |"Failed to fetch profile.")
@@ -91,6 +160,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           title: "Error"
           description: err.message |"Failed to fetch profile."
           variant: "destructive"})
+<<<<<<< HEAD
 
       } finally {
       } catch (err: any) {;
@@ -114,18 +184,35 @@ ursor/fix-website-loading-errors-and-merge-6662
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>   if (isLoading) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+      } finally {
+        setIsLoading(false)
+      }
+<<<<<<< HEAD
+    }
+    fetchProfile()
+  }, [profileId]);
+=======
+    },
+
+    fetchProfile()
+  }, [profileId]),
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  if (isLoading) {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     return (
       <div className="min-h-screen flex items-center justify-center">
         <p>Loading profile...</p>
       </div>
-    );
+    )
   }
   if (error) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <p>Error: {error}</p>
       </div>
-    );
+    )
   }
   if (!profileData) {
     return (
@@ -134,10 +221,24 @@ ursor/fix-website-loading-errors-and-merge-6662
       </div>
     )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         description = {profileData.bio |"Check out this talent's profile on Zion!",}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+  }
+  return (
+    <>
+      <SEO
+        title={`${profileData.full_name} | Zion AI Marketplace`}
+<<<<<<< HEAD
+        description = {profileData.bio |"Check out this talent's profile on Zion!",}
+=======
+        description = {profileData.bio || "Check out this talent's profile on Zion!",}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { useState, useEffect } from "react",;
 import { useRouter } from "next/router",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -195,39 +296,46 @@ export default function ProfileDetail() {;
     },;
     fetchProfile();
   }, [profileId]),;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   if (isLoading) {;
-    return (
+    return (;
       <div className="min-h-screen flex items-center justify-center">;
         <p>Loading profile...</p>;
       </div>;
     );
   }
-
+;
   if (error) {;
-    return (
+    return (;
       <div className="min-h-screen flex items-center justify-center">;
         <p>Error: {error}</p>;
       </div>;
     );
   }
-
+;
   if (!profileData) {;
-    return (
+    return (;
       <div className="min-h-screen flex items-center justify-center">;
         <p>Profile not found.</p>;
       </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     );
   }
-  return (
+;
+  return (;
     <>;
+<<<<<<< HEAD
 
         description = {profileData.bio |"Check out this talent's profile on Zion!",}
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <SEO;
         title={`${profileData.full_name} | Zion AI Marketplace`}
         description={profileData.bio || "Check out this talent's profile on Zion!"}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       />
@@ -289,10 +397,17 @@ export default function ProfileDetail() {;
             </Card>
 >>>>>>>             {/* About Section */}
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       />
       <Header />
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-12 gap-6">
+<<<<<<< HEAD
         title={`${profileData && profileData.full_name} | Zion AI Marketplace`}
         description = {profileData && profileData.bio || "Check out this talent's profile on Zion!",}
       />;
@@ -300,25 +415,28 @@ export default function ProfileDetail() {;
       <div className="container mx-auto px-4 py-8">;
         <div className="grid grid-cols-12 gap-6">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           {/* Main Content */}
-          <div className="col-span-12 lg:col-span-8">;
+          <div className="col-span-12 lg:col-span-8">
             {/* Profile Header */}
-            <Card className="mb-6 bg-zion-blue border-zion-blue-light">;
-              <CardHeader>;
-                <div className="flex items-center space-x-4">;
-                  <Avatar className="w-20 h-20">;
-                    {profileData && profileData.profile_picture_url ? (;
-                      <AvatarImage src={profileData && profileData.profile_picture_url} alt={profileData && profileData.full_name} />;
-                    ) : (;
-                      <AvatarFallback>{profileData && profileData.full_name?.charAt(0)}</AvatarFallback>;
+            <Card className="mb-6 bg-zion-blue border-zion-blue-light">
+              <CardHeader>
+                <div className="flex items-center space-x-4">
+                  <Avatar className="w-20 h-20">
+                    {profileData.profile_picture_url ? (
+                      <AvatarImage src={profileData.profile_picture_url} alt={profileData.full_name} />
+                    ) : (
+                      <AvatarFallback>{profileData.full_name?.charAt(0)}</AvatarFallback>
                     )}
-                  </Avatar>;
-                  <div>;
-                    <CardTitle className="text-2xl font-bold text-white flex items-center gap-2">;
-                      {profileData && profileData.full_name}
-                      {profileData && profileData.is_verified && (;
-                        <CheckCircle2 className="w-5 h-5 text-zion-cyan" />;
+                  </Avatar>
+                  <div>
+                    <CardTitle className="text-2xl font-bold text-white flex items-center gap-2">
+                      {profileData.full_name}
+                      {profileData.is_verified && (
+                        <CheckCircle2 className="w-5 h-5 text-zion-cyan" />
                       )}
+<<<<<<< HEAD
                     </CardTitle>;
                     <CardDescription className="text-zion-cyan">{profileData && profileData.professional_title}</CardDescription>;
 export default /**
@@ -447,6 +565,46 @@ if ( {) {
 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+                    </CardTitle>
+                    <CardDescription className="text-zion-cyan">{profileData.professional_title}</CardDescription>
+                  </div>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <div className="flex flex-wrap gap-4 text-sm">
+                  {profileData.location && (
+                    <div className="flex items-center text-zion-slate-light">
+                      <MapPin className="h-4 w-4 mr-1" />
+                      <span>{profileData.location}</span>
+                    </div>
+                  )}
+                  {profileData.availability && (
+                    <div className="flex items-center text-zion-slate-light">
+                      <Clock className="h-4 w-4 mr-1" />
+                      <span>{profileData.availability}</span>
+                    </div>
+                  )}
+                  {profileData.hourly_rate && (
+                    <div className="text-white font-bold">
+                      ${profileData.hourly_rate}
+                      <span className="text-zion-slate-light font-normal">/hr</span>
+                    </div>
+                  )}
+<<<<<<< HEAD
+                </div>
+              </CardContent>
+            </Card>
+=======
+                </div>;
+              </CardContent>;
+            </Card>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             {/* About Section */}
 >>>>>>>             <Card className="mb-6 bg-zion-blue border-zion-blue-light">
               <CardHeader>
@@ -507,6 +665,7 @@ if ( {) {
                       >
                         <LinkIcon className="h-4 w-4" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
                         {link.title |link.url}
@@ -540,58 +699,93 @@ if ( {) {
                         {link && link.title || link && link.url}
                       </a>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+                        {link.title |link.url}
+                      </a>
+=======
+                        {link.title || link.url}
+                      </Link>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     ))}
-                  </div>;
-                ) : (;
-                  <p className="text-zion-slate-light">No portfolio links provided.</p>;
+                  </div>
+                ) : (
+                  <p className="text-zion-slate-light">No portfolio links provided.</p>
                 )}
+<<<<<<< HEAD
 
               </CardContent>;
             </Card>;
           </div>;
 
 
+=======
+              </CardContent>
+            </Card>
+          </div>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           {/* Sidebar with HireNowCTA */}
-          <div className="col-span-4 lg:col-span-1">;
+          <div className="col-span-4 lg:col-span-1">
             <HireNowCTA
               talentProfile={{
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               }}
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 id: profileData?.id |''
                 full_name: profileData?.full_name |''
                 professional_title: profileData?.professional_title |''
                 hourly_rate: profileData?.hourly_rate |0
 
+<<<<<<< HEAD
                 hourly_rate: profileData?.hourly_rate || 0
                 hourly_rate: profileData?.hourly_rate || 0,
 >>>>>>>               }}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+                id: profileData?.id || '',
+                full_name: profileData?.full_name || '',
+                professional_title: profileData?.professional_title || '',
+<<<<<<< HEAD
+                hourly_rate: profileData?.hourly_rate || 0
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+                hourly_rate: profileData?.hourly_rate || 0,
+=======
+                hourly_rate: profileData?.hourly_rate || 0
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              }}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             />
             {/* Contact Information */}
-            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">;
-              <h3 className="text-xl font-bold mb-4">Contact</h3>;
-              <div className="flex flex-col space-y-3">;
-                {profileData && profileData.email && (;
-                  <div className="flex items-center gap-2 text-zion-slate-light">;
-                    <Mail className="h-4 w-4" />;
-                    <a href={`mailto:${profileData && profileData.email}`} className="hover:text-zion-cyan">{profileData && profileData.email}</a>;
-                  </div>;
+            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">
+              <h3 className="text-xl font-bold mb-4">Contact</h3>
+              <div className="flex flex-col space-y-3">
+                {profileData.email && (
+                  <div className="flex items-center gap-2 text-zion-slate-light">
+                    <Mail className="h-4 w-4" />
+                    <a href={`mailto:${profileData.email}`} className="hover:text-zion-cyan">{profileData.email}</Link>
+                  </div>
                 )}
-                {profileData && profileData.phone && (;
-                  <div className="flex items-center gap-2 text-zion-slate-light">;
-                    <Phone className="h-4 w-4" />;
-                    <span>{profileData && profileData.phone}</span>;
-                  </div>;
+                {profileData.phone && (
+                  <div className="flex items-center gap-2 text-zion-slate-light">
+                    <Phone className="h-4 w-4" />
+                    <span>{profileData.phone}</span>
+                  </div>
                 )}
-                {profileData && profileData.website && (;
-                  <div className="flex items-center gap-2 text-zion-slate-light">;
-                    <Globe className="h-4 w-4" />;
-                    <a href={profileData && profileData.website} target="_blank" rel="noopener noreferrer" className="hover:text-zion-cyan">;
-                      Website;
-                    </a>;
-                  </div>;
+                {profileData.website && (
+                  <div className="flex items-center gap-2 text-zion-slate-light">
+                    <Globe className="h-4 w-4" />
+                    <a href={profileData.website} target="_blank" rel="noopener noreferrer" className="hover:text-zion-cyan">
+                      Website
+                    </Link>
+                  </div>
                 )}
 <<<<<<< HEAD
 
@@ -599,12 +793,25 @@ if ( {) {
 =======
               </div>
             </div>
+<<<<<<< HEAD
 >>>>>>>             {/* Social Links */}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+              </div>;
+            </div>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            {/* Social Links */}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">
               <h3 className="text-xl font-bold mb-4">Social</h3>
               <div className="flex flex-col space-y-3">
                 {profileData.github_url && (
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
             {/* Social Links */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">;
@@ -615,54 +822,99 @@ ursor/fix-website-loading-errors-and-merge-6662
 
                     href = {profileData && profileData.github_url,}
 
+=======
+                  <a
+                    href={profileData.github_url}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
                     aria-label="GitHub"
+<<<<<<< HEAD
 
                     href = {profileData && profileData.twitter_url,}
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     title="GitHub"
                   >
                     <Github className="h-4 w-4" />
                     GitHub
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   </a>
                 )}
                 {profileData.twitter_url && (
                   <a
                     href = {profileData.twitter_url,}
+<<<<<<< HEAD
 >>>>>>>                     target="_blank"
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+                  </Link>
+                )}
+                {profileData.twitter_url && (;
+                  <a;
+                    href={profileData.twitter_url}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     target="_blank"
 >>>>>>>                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
                     aria-label="Twitter"
+<<<<<<< HEAD
 
                     href = {profileData && profileData.linkedin_url,}
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     title="Twitter"
                   >
                     <Twitter className="h-4 w-4" />
                     Twitter
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   </a>
                 )}
                 {profileData.linkedin_url && (
                   <a
                     href = {profileData.linkedin_url,}
+<<<<<<< HEAD
 >>>>>>>                     target="_blank"
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+                  </Link>
+                )}
+                {profileData.linkedin_url && (;
+                  <a;
+                    href={profileData.linkedin_url}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     target="_blank"
 >>>>>>>                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
                     aria-label="LinkedIn"
+<<<<<<< HEAD
 
                 <div className="flex flex - wrap gap - 4 text - sm">;
                   {profile_data.location && (
@@ -819,13 +1071,18 @@ ursor/fix-website-loading-errors-and-merge-6662
                     LinkedIn;
                   </a>)}
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     title="LinkedIn"
                   >
                     <Linkedin className="h-4 w-4" />
                     LinkedIn
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   </a>
                 )}
               </div>
@@ -834,6 +1091,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         </div>
       </div>
     </>
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
               </div>;
             </div>;
@@ -842,6 +1100,9 @@ ursor/fix-website-loading-errors-and-merge-6662
       </div>;
 
 >>>>>>> );
+=======
+);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 }, [profileId]);
 <p>Error: {error ;
@@ -866,12 +1127,31 @@ ursor/fix-website-loading-errors-and-merge-6662
 }target="blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan" aria-label="LinkedIn" title="LinkedIn" > <Linkedin className="h-4 w-4" /> LinkedIn </Link>) ;
 }</div> </div> </div> </div> </div> </>) ;
 }'"}
+<<<<<<< HEAD
 >>>>>>> 
+=======
+=======
+                  </Link>
+                )}
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     </>;
   );
 }
 ;
+<<<<<<< HEAD
 
 >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

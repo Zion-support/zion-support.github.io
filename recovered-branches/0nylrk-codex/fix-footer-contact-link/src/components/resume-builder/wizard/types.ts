@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {Resume} from "@/types/resume";
 =======
@@ -68,10 +69,31 @@ export interface EmptyResumeProps {
 export interface ResumeProgressProps {
   resume: Resume | null,
   progress: number
+=======
+import { Resume } from "@/types/resume";
+export interface StepProps {
+  id: string;
+  label: string
+
+}
+export interface NavigationButtonsProps {
+  onBack?: () => void;
+  onNext?: () => void;
+  isNextDisabled?: boolean;
+  backLabel?: string;
+  nextLabel?: string;
+isLoading?: boolean
+}
+
+export interface ResumeProgressProps {
+  resume: Resume | null;
+  progress: number;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 
 export interface CreateResumeFormProps {;
   onCreateResume: (title: string) => Promise<void>;
+<<<<<<< HEAD
   onCancel: () => void,
   isLoading: boolean
 =======
@@ -81,6 +103,10 @@ export interface StepProps {
   label: string
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+onCancel: () => void,
+  isLoading: boolean
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { Resume } from "@/types/resume",;
 export interface StepProps {;
   id: string,;
@@ -96,6 +122,7 @@ export interface NavigationButtonsProps {;
   isLoading?: boolean;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 }
@@ -106,12 +133,25 @@ export interface ResumeProgressProps {;
 }
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+}
+export interface ResumeProgressProps {
+  resume: Resume | null;
+  progress: number
+}
+
+export interface CreateResumeFormProps {
+  onCreateResume: (title: string) => Promise<void>;
+  onCancel: () => void;
+  isLoading: boolean
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 ;
 export interface CreateResumeFormProps {;
   onCreateResume: (title: string) => Promise<void>;
   onCancel: () => void;
   isLoading: boolean;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 export interface EmptyResumeProps {
@@ -128,3 +168,13 @@ export interface EmptyResumeProps {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+}
+export interface EmptyResumeProps {
+
+  onCreateClick: () => void;
+}
+}
+;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

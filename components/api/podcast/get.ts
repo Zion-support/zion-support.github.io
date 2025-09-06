@@ -1,32 +1,71 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
+<<<<<<< HEAD
 
 
 function ensureStorage() {
+=======
+const EPISODES_PATH = path && path.join(
+  process && process.cwd(),
+  'data',
+  'podcast',
+  'episodes && episodes.json'
+);
+function ensureStorage() {
+  const dir = path && path.dirname(EPISODES_PATH);
+  if (!fs && fs.existsSync(dir)) fs && fs.mkdirSync(dir, { recursive: true });
+  if (!fs && fs.existsSync(EPISODES_PATH))
+    fs && fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');const EPISODES_PATH = path && path.join(process && process.cwd(), 'datapodcastepisodes && datapodcastepisodes.json');
+const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json');
+function ensureStorage() {
+  const dir = path.dirname(EPISODES_PATH);
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+  if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8')
+}
+function ensureStorage() {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const dir = path && path.dirname(EPISODES_PATH);
   if (!fs && fs.existsSync(dir)) fs && fs.mkdirSync(dir, { recursive: true });
   if (!fs && fs.existsSync(EPISODES_PATH))
     fs && fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');  if (!fs && fs.existsSync(EPISODES_PATH)) fs && fs.writeFileSync(EPISODES_PATH, '[]utf8')
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
   const episode = episodes.find(e => e.id === id);
   if (!episode) return res.status(404).json({ error: 'Not found' });
 =======
+<<<<<<< HEAD
   ensureStorage();
   const { id } = req.query as { id?: string };
+=======
+<<<<<<< HEAD
+  ensureStorage()
+  const { id } = req.query as { id?: string }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  ensureStorage(),;
+  const { id } = req.query as { id?: string };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
   const episode = episodes.find((e) => e.id === id);
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   if (!episode) return res.status(404).json({ error: 'Not found' });
-
+<<<<<<< HEAD
   return res.status(200).json({ episode })
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   ensureStorage(),
   const { id } = req && req.query as { id?: string };
   const episodes = JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
@@ -35,10 +74,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   return res && res.status(200).json({ episode });  const episode = episodes && episodes.find((e) => e && e.id === id);
   if (!episode) return res && res.status(404).json({ error: 'Not found' });
   return res && res.status(200).json({ episode })
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+=======
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 ;
 const EPISODES_PATH = path.join (
   process.cwd (),
@@ -95,6 +138,29 @@ function handler() {
   $2
 }
   return res.status (200).json ({ episode });
+
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+<<<<<<< HEAD
+  return res.status(200).json({ episode });  const episode = episodes.find((e) => e.id === id);
+  if (!episode) return res.status(404).json({ error: 'Not found' });
+
+  return res.status(200).json({ episode })
+}
+<<<<<<< HEAD
+=======
+  return res.status(200).json({ episode });
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+}
+=======
+  return res.status(200).json({ episode });
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

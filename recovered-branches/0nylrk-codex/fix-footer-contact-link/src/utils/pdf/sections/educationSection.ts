@@ -1,11 +1,29 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/pdf/sections/educationSection.ts
 
+=======
+<<<<<<< HEAD
+import { jsPDF  } from 'jspdf';
+import { Education  } from '@/types/resume';
+import { PdfThemeColors  } from '../themeConfig';
+import { formatDate } from '../formatters';
+export function addEducationSection(
+=======
+import {jsPDF} from 'jspdf';
+import {Education} from '@/types/resume';
+import {PdfThemeColors} from '../themeConfig';
+import {formatDate} from '../formatters';
+export function addEducationSection(;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   doc: jsPDF;
   education: Education[];
   colors: PdfThemeColors;
   startY: number
 ): number {
+<<<<<<< HEAD
 =======
   if (education && education.length === 0) return startY;
   
@@ -15,68 +33,134 @@
   // Check if we need to add a new page
   if (yPos > 250) {
 
+========
+if (education && education.length === 0) return startY;
+  let yPos = startY;
+  // Check if we need to add a new page
+  if (yPos > 250) {
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/pdf/sections/educationSection.ts
     doc && doc.addPage(),
     yPos = 20
   }
-  
   doc && doc.setFontSize(16);
   doc && doc.setTextColor(colors && colors.heading);
   doc && doc.text('Education', 20, yPos);
   yPos += 8;
-  
   doc && doc.setDrawColor(colors && colors.accent);
   doc && doc.line(20, yPos, 60, yPos);
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/pdf/sections/educationSection.ts
 
   yPos += 8;
   // Sort education by date (newest first)
   const sortedEducation = [...education].sort((a, b) => {
 
+========
+  yPos += 8;
+  // Sort education by date (newest first)
+  const sortedEducation = [...education].sort((a, b) => {
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/pdf/sections/educationSection.ts
     if (a && a.is_current && !b && b.is_current) return -1;
     if (!a && a.is_current && b && b.is_current) return 1;
-    
     const dateA = a && a.start_date instanceof Date ? a && a.start_date : new Date(a && a.start_date);
     const dateB = b && b.start_date instanceof Date ? b && b.start_date : new Date(b && b.start_date);
     return dateB && dateB.getTime() - dateA && dateA.getTime()
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/pdf/sections/educationSection.ts
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/pdf/sections/educationSection.ts
+=======
+
+  if (education.length === 0) return startY;
+  let yPos = startY;
+  // Check if we need to add a new page
+  if (yPos > 250) {
+    doc.addPage()
+    yPos = 20
+  }
+  doc.setFontSize(16);
+  doc.setTextColor(colors.heading);
+  doc.text('Education', 20, yPos);
+  yPos += 8;
+  doc.setDrawColor(colors.accent);
+  doc.line(20, yPos, 60, yPos);
+  yPos += 8;
+  // Sort education by date (newest first)
+  const sortedEducation = [...education].sort((a, b) => {
+    if (a.is_current && !b.is_current) return -1;
+    if (!a.is_current && b.is_current) return 1;
+    const dateA = a.start_date instanceof Date ? a.start_date : new Date(a.start_date);
+    const dateB = b.start_date instanceof Date ? b.start_date : new Date(b.start_date);
+    return dateB.getTime() - dateA.getTime()
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   });
   for (const edu of sortedEducation) {
     // Check if we need to add a new page
     if (yPos > 260) {
+<<<<<<< HEAD
       doc && doc.addPage();
       yPos = 20
     }
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/pdf/sections/educationSection.ts
 
     
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/pdf/sections/educationSection.ts
     doc && doc.setFontSize(14);
     doc && doc.setTextColor(colors && colors.subheading);
     doc && doc.text(edu && edu.institution, 20, yPos);
-    
     const degreeText = `${edu && edu.degree}${edu && edu.field_of_study ?  + edu && edu.field_of_study : ''}`;
     doc && doc.setFontSize(12);
     doc && doc.text(degreeText, 20, yPos + 5);
-    
     const startDate = formatDate(edu && edu.start_date);
     const endDate = edu && edu.is_current ? 'Present' : formatDate(edu && edu.end_date);
     const dateText = `${startDate} - ${endDate}`;
-    
     doc && doc.setFontSize(10);
     doc && doc.setTextColor(colors && colors.text);
     doc && doc.text(dateText, 20, yPos + 10);
-    
     if (edu && edu.location) {
       doc && doc.text(edu && edu.location, 70, yPos + 10)
     }
-    
     if (edu && edu.description) {
       doc && doc.setFontSize(10);
       const descriptionLines = doc && doc.splitTextToSize(edu && edu.description, 170);
       doc && doc.text(descriptionLines, 20, yPos + 16);
-      
       yPos += (descriptionLines && descriptionLines.length * 5) + 20
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/pdf/sections/educationSection.ts
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/pdf/sections/educationSection.ts
     } else {
       yPos += 20
 
+=======
+      doc.addPage();
+      yPos = 20
+    }
+    doc.setFontSize(14);
+    doc.setTextColor(colors.subheading);
+    doc.text(edu.institution, 20, yPos);
+    const degreeText = `${edu.degree}${edu.field_of_study ?  + edu.field_of_study : ''}`;
+    doc.setFontSize(12);
+    doc.text(degreeText, 20, yPos + 5);
+    const startDate = formatDate(edu.start_date);
+    const endDate = edu.is_current ? 'Present' : formatDate(edu.end_date);
+    const dateText = `${startDate} - ${endDate}`;
+    doc.setFontSize(10);
+    doc.setTextColor(colors.text);
+    doc.text(dateText, 20, yPos + 10);
+    if (edu.location) {
+      doc.text(edu.location, 70, yPos + 10)
+    }
+    if (edu.description) {
+      doc.setFontSize(10);
+      const descriptionLines = doc.splitTextToSize(edu.description, 170);
+      doc.text(descriptionLines, 20, yPos + 16);
+
+      yPos += (descriptionLines.length * 5) + 20
+    } else {
+      yPos += 20
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { jsPDF } from 'jspdf',;
 import { Education } from '@/types/resume',;
 import { PdfThemeColors } from '../themeConfig',;
@@ -140,6 +224,7 @@ export function addEducationSection(;
       yPos += (descriptionLines.length * 5) + 20;
     } else {;
       yPos += 20;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -149,7 +234,6 @@ export function addEducationSection(;
     }
   }
   return yPos + 5
-=======
 import {jsPDF} from 'jspdf';
 import {Education} from '@/types / resume';
 import {PdfThemeColors} from '../theme_config';
@@ -242,5 +326,114 @@ if ( {) {
     }
   }
   return y_pos + 5;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
+=======
+
+import { jsPDF } from 'jspdf',;
+import { Education } from '@/types/resume',;
+import { PdfThemeColors } from '../themeConfig',;
+import { formatDate } from '../formatters',;
+;
+export function addEducationSection(;
+  doc:jsPDF,;
+  education:Education[],;
+  colors:PdfThemeColors,;
+  startY:number;
+):number {;
+  if (education.length === 0) return startY,;
+  ;
+  let yPos = startY,;
+  ;
+  // Check if we need to add a new page;
+  if (yPos > 250) {;
+    doc.addPage(),;
+    yPos = 20;
+  }
+  ;
+  doc.setFontSize(16),;
+  doc.setTextColor(colors.heading),;
+  doc.text('Education', 20, yPos),;
+  yPos += 8,;
+  ;
+  doc.setDrawColor(colors.accent),;
+  doc.line(20, yPos, 60, yPos),;
+  yPos += 8,;
+  ;
+  // Sort education by date (newest first);
+  const sortedEducation = [...education].sort((a, b) => {;
+    if (a.is_current && !b.is_current) return -1,;
+    if (!a.is_current && b.is_current) return 1,;
+    ;
+    const dateA = a.start_date instanceof Date ? a.start_date :new Date(a.start_date),;
+    const dateB = b.start_date instanceof Date ? b.start_date :new Date(b.start_date),;
+    return dateB.getTime() - dateA.getTime(),;
+  }),;
+  ;
+  for (const edu of sortedEducation) {;
+    // Check if we need to add a new page;
+    if (yPos > 260) {;
+      doc.addPage(),;
+      yPos = 20,;
+    }
+    ;
+    doc.setFontSize(14),;
+    doc.setTextColor(colors.subheading),;
+    doc.text(edu.institution, 20, yPos),;
+    ;
+    const degreeText = `${edu.degree}${edu.field_of_study ?  + edu.field_of_study :''}`,;
+    doc.setFontSize(12),;
+    doc.text(degreeText, 20, yPos + 5),;
+    ;
+    const startDate = formatDate(edu.start_date),;
+    const endDate = edu.is_current ? 'Present' :formatDate(edu.end_date),;
+    const dateText = `${startDate} - ${endDate}`,;
+    ;
+    doc.setFontSize(10),;
+    doc.setTextColor(colors.text),;
+    doc.text(dateText, 20, yPos + 10),;
+    ;
+    if (edu.location) {;
+      doc.text(edu.location, 70, yPos + 10),;
+    }
+    ;
+    if (edu.description) {;
+      doc.setFontSize(10),;
+      const descriptionLines = doc.splitTextToSize(edu.description, 170),;
+      doc.text(descriptionLines, 20, yPos + 16),;
+      ;
+      yPos += (descriptionLines.length * 5) + 20,;
+    } else {;
+      yPos += 20,;
+    }
+  }
+  ;
+  return yPos + 5,;}
+ doc.setFontSize (16);
+doc.setTextColor (colors.heading);
+doc.text ('Education', 20, yPos);
+yPos += 8;
+doc.setDrawColor (colors.accent);
+doc.line (20, yPos, 60, yPos);
+yPos += 8;
+// Sort education by date (newest first) for (const edu of sortedEducation) {
+  // Check if we need to add a new page if (yPos > 260) {
+  doc.setFontSize (14);
+doc.setTextColor (colors.subheading);
+doc.text (edu.institution, 20, yPos);
+doc.setFontSize (10);
+doc.setTextColor (colors.text);
+doc.text (dateText, 20, yPos + 10);
+}return yPos + 5 
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    }
+  }
+  return yPos + 5
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

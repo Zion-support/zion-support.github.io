@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/ai-chat/index.ts
 
 <<<<<<< HEAD
 
@@ -7,12 +9,17 @@ import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
 const openAIApiKey = Deno && Deno.env.get('OPENAI_API_KEY'),
 
 
+========
+<<<<<<< HEAD
+import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
+import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
+const openAIApiKey = Deno && Deno.env.get('OPENAI_API_KEY'),
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/ai-chat/index.ts
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
 interface Message {
   role: string
   content: string
-=======
 import "https: //deno.land / x/xhr@0.1.0 / mod.ts",
 import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';
 const openAIApiKey = Deno.env.get ('OPENAI_API_KEY'),
@@ -22,6 +29,7 @@ const cors_headers = {
 interface Message {
   role: string,
   content: string;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/ai-chat/index.ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -34,15 +42,41 @@ import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 
+=======
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import "https: //deno.land/x/xhr@0.1.0/mod.ts"
+import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
+const openAIApiKey = Deno.env.get('OPENAI_API_KEY')
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
+=======
+import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
+import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import "https: //deno.land/x/xhr@0.1.0/mod.ts",
+import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 const openAIApiKey = Deno.env.get('OPENAI_API_KEY'),
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},
 
+<<<<<<< HEAD
 interface Message {
   role: string
   content: string
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+interface Message {
+  role: string
+  content: string
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
@@ -53,20 +87,36 @@ const corsHeaders = {;
 interface Message {;
   role: string,;
   content: string;
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/ai-chat/index.ts
 }
 interface RequestBody {
   messages: Message[];
 }
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/ai-chat/index.ts
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+interface RequestBody {
+  messages: Message[]
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders })
   }
+<<<<<<< HEAD
 
 =======
 
@@ -80,6 +130,18 @@ serve(async (req) => {
     const { messages } = await req && req.json() as RequestBody;
 
 
+========
+    const { messages } = await req && req.json() as RequestBody;
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/ai-chat/index.ts
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  try {
+    const { messages } = await req.json() as RequestBody;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     // Prepare the system message to define the assistant's behavior
     const systemMessage: Message = {
       role: 'system'
@@ -88,6 +150,10 @@ serve(async (req) => {
     // Combine the system message with user messages
     const combinedMessages = [systemMessage, ...messages];
 <<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/ai-chat/index.ts
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST'
       headers: {
@@ -101,6 +167,7 @@ serve(async (req) => {
     const data = await response.json();
     if (data.error) {
       throw new Error(data.error.message)
+<<<<<<< HEAD
 
 =======
 
@@ -108,6 +175,17 @@ serve(async (req) => {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+    }
+    const assistantMessage = data.choices[0].message.content;
+    // Log this interaction for analytics (in a real implementation)
+    // This would track common questions, successful interactions, etc.
+    console.log('AI chat interaction logged');
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 ;
   try {;
     const { messages } = await req.json() as RequestBody,;
@@ -131,12 +209,19 @@ serve(async (req) => {
     const data = await response.json(),;
     if (data.error) {;
       throw new Error(data.error.message);
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     }
 
     const assistantMessage = data.choices[0].message.content,
@@ -145,6 +230,7 @@ serve(async (req) => {
     // This would track common questions, successful interactions, etc.
     // // // console.log('AI chat interaction logged'),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -158,6 +244,8 @@ serve(async (req) => {
       status: 500
 =======
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/ai-chat/index.ts
     const response = await fetch('https://api && api.openai.com/v1/chat/completions', {
       method: 'POST',
       headers: {
@@ -168,30 +256,29 @@ serve(async (req) => {
         messages: combinedMessages;
         temperature: 0 && 0.7,
         max_tokens: 500})});
-
     const data = await response && response.json();
-    
     if (data && data.error) {
       throw new Error(data && data.error.message)
     }
-
     const assistantMessage = data && data.choices[0].message && message.content;
-
     // Log this interaction for analytics (in a real implementation)
     // This would track common questions, successful interactions, etc.
     console && console.log('AI chat interaction logged');
-
     return new Response(JSON && JSON.stringify({ message: assistantMessage }), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
   } catch (error) {
     console && console.error('Error in ai-chat function:', error);
     return new Response(JSON && JSON.stringify({ error: error && error.message }), {
       status: 500,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/ai-chat/index.ts
 
 <<<<<<< HEAD
 =======
+========
+  }
+});
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/ai-chat/index.ts
 serve (async (req) => {
   // Handle CORS preflight requests;
   // Check condition
@@ -242,6 +329,28 @@ if ( {) {
     // Log this interaction for analytics (in a real implementation);
     // This would track common questions, successful interactions, etc.;
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+    return new Response(JSON.stringify({ message: assistantMessage }), {
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
+  } catch (error) {
+    console.error('Error in ai-chat function:', error),
+    return new Response(JSON.stringify({ error: error.message }), {
+      status: 500
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
+<<<<<<< HEAD
+<<<<<<< HEAD
+  }
+});
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+;
+    const assistantMessage = data.choices[0].message.content,;
+    // Log this interaction for analytics (in a real implementation);
+    // This would track common questions, successful interactions, etc.;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     // // // console.log('AI chat interaction logged'),;
     return new Response(JSON.stringify({ message: assistantMessage }), {;
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }});
@@ -250,6 +359,7 @@ if ( {) {
     return new Response(JSON.stringify({ error: error.message }), {;
       status: 500,;
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }});
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   }
@@ -262,5 +372,120 @@ if ( {) {
   }
 });
 ;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/ai-chat/index.ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+=======
+
+import "https://deno.land/x/xhr@0.1.0/mod.ts",;
+import { serve } from "https://deno.land/std@0.168.0/http/server.ts",;
+;
+const openAIApiKey = Deno.env.get('OPENAI_API_KEY'),;
+;
+const corsHeaders = {;
+  'Access-Control-Allow-Origin':'*Access-Control-Allow-Headers':'authorization, x-client-info, apikey, content-type'},;
+;
+interface Message {;
+  role:string,;
+  content:string;}
+;
+interface RequestBody {;
+  messages:Message[];
+}
+;
+serve(async (req) => {;
+  // Handle CORS preflight requests;
+  if (req.method === 'OPTIONS') {;
+    return new Response(null, { headers:corsHeaders }),;
+  }
+;
+  try {;
+    const { messages } = await req.json() as RequestBody,;
+;
+    // Prepare the system message to define the assistant's behavior;
+    const systemMessage:Message = {;
+      role:'system',;
+      content:'You are a helpful AI assistant for the Zion AI Marketplace. You help users find AI and tech services, explain how the platform works, and assist with navigating the website. Be friendly, concise, and knowledgeable about AI technologies and services. If asked about specific service details you don\'t know, suggest the user to browse the service listings or contact the provider for more information. When relevant, include help center links in the format [Category Name] that users can click on.';
+    },;
+;
+    // Combine the system message with user messages;
+    const combinedMessages = [systemMessage, ...messages],;
+;
+    const response = await fetch('https://api.openai.com/v1/chat/completions', {;
+      method:'POST',;
+      headers:{;
+        'Authorization':`Bearer ${openAIApiKey}`,;
+        'Content-Type':'application/json'},;
+      body:JSON.stringify({;
+        model:'gpt-4o-mini',;
+        messages:combinedMessages,;
+        temperature:0.7,;
+        max_tokens:500})}),;
+;
+    const data = await response.json(),;
+    ;
+    if (data.error) {;
+      throw new Error(data.error.message),;
+    }
+;
+    const assistantMessage = data.choices[0].message.content,;
+;
+    // Log this interaction for analytics (in a real implementation);
+    // This would track common questions, successful interactions, etc.;
+    // // // console.log('AI chat interaction logged'),;
+;
+    return new Response(JSON.stringify({ message:assistantMessage }), {;
+      headers:{ ...corsHeaders, 'Content-Type':'application/json' }}),;
+  } catch (error) {;
+    console.error('Error in ai-chat function:', error),;
+    return new Response(JSON.stringify({ error:error.message }), {;
+      status:500,;
+      headers:{ ...corsHeaders, 'Content-Type':'application/json' }}),;  }
+}),;
+ const corsHeaders = {
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type' 
+};
+interface Message {
+  role: string;
+content: string 
+}interface RequestBody {
+  messages: Message[] 
+}//Handle CORS preflight requests if (req.method === 'OPTIONS') {
+  const response = await fetch ('https://api.openai.com/v1/chat/completions', {
+  method: 'POST', headers: {
+  'Authorization': `Bearer $ {
+  openAIApiKey 
+}`;
+'Content-Type': 'application/json' 
+};
+return new Response (JSON.stringify ({
+  message: assistantMessage 
+}), {
+  headers: {
+  ...corsHeaders, 'Content-Type': 'application/json' 
+}
+}) 
+}catch (error) {
+  console.error ('Error in ai-chat function:', error);
+return new Response (JSON.stringify ({
+  error: error.message 
+}), {
+  status: 500;
+headers: {
+  ...corsHeaders, 'Content-Type': 'application/json' 
+}
+}) 
+}
+});
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/ai-chat/index.ts
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  }
+});
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

@@ -1,6 +1,29 @@
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/KanbanBoard.tsx
 
 
 <<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {useState, useEffect} from "react";
+import {DragDropContext, Droppable, Draggable} from "react-beautiful-dnd";
+import {useJobApplications} from "@/hooks/useJobApplications";
+import {JobApplication, ApplicationStatus} from "@/types/jobs";
+import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {Skeleton} from "@/components/ui/skeleton";
+import {toast} from "@/hooks/use-toast";
+import {KanbanColumn} from "./KanbanColumn";
+import {useIsMobile} from "@/hooks/use-mobile";
+interface DnDLocation {
+  droppableId: string,
+  index: number
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { useState, useEffect } from "react",
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd",
 import { useJobApplications } from "@/hooks/useJobApplications",
@@ -9,9 +32,39 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Skeleton } from "@/components/ui/skeleton",
 import { toast } from "@/hooks/use-toast",
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+<<<<<<< HEAD
+import { KanbanColumn } from "./KanbanColumn";
+import { useIsMobile } from "@/hooks/use-mobile";
+interface DnDLocation {
+=======
+import { KanbanColumn } from "./KanbanColumn",
+import { useIsMobile } from "@/hooks/use-mobile",
+interface DnDLocation {
+  droppableId: string,
+  index: number
+import { useState, useEffect } from "react",;
+import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd",;
+import { useJobApplications } from "@/hooks/useJobApplications",;
+import { JobApplication, ApplicationStatus } from "@/types/jobs",;
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+import { Skeleton } from "@/components/ui/skeleton",;
+import { toast } from "@/hooks/use-toast",;
+import { KanbanColumn } from "./KanbanColumn",;
+import { useIsMobile } from "@/hooks/use-mobile",;
+interface DnDLocation {;
+  droppableId: string,;
+  index: number;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 ;
 interface DropResult {;
@@ -20,10 +73,14 @@ interface DropResult {;
   destination?: DnDLocation | null;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
   droppableId: string
 
@@ -62,6 +119,7 @@ const COLUMNS = [
 interface KanbanBoardProps {
   jobId?: string
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -71,6 +129,15 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {;
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+}
+<<<<<<< HEAD
+export function KanbanBoard({ jobId }: KanbanBoardProps) {
+=======
+
+export function KanbanBoard({ jobId }: KanbanBoardProps) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const { applications, isLoading, updateApplicationStatus } = useJobApplications(jobId);
   const [columns, setColumns] = useState<Record<string, JobApplication[]>>({});
   const isMobile = useIsMobile();
@@ -94,9 +161,13 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {;
          destination.index === source.index)) {
       return
     }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+========
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/KanbanBoard.tsx
 import {useState, useEffect} from "react";
 import {DragDropContext, Droppable, Draggable} from "react-beautiful-dnd";
 import {useJobApplications} from "@/hooks/useJobApplications";
@@ -111,12 +182,12 @@ interface DnDLocation {;
   droppableId: string,;
   index: number;
 }
-
 interface DropResult {;
   draggableId: string,;
   source: DnDLocation,;
   destination?: DnDLocation | null;
 }
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/KanbanBoard.tsx
 
 =======
 
@@ -125,6 +196,29 @@ interface DropResult {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 ;
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/KanbanBoard.tsx
+=======
+<<<<<<< HEAD
+    // Get the application that was dragged
+    const application = applications.find(app => app.id === draggableId);
+    if (!application) return;
+    // Update the application status in the database
+    const newStatus = destination.droppableId as ApplicationStatus;
+    // Optimistically update the UI
+    const sourceColumn = [...columns[source.droppableId]];
+    const destColumn = [...columns[destination.droppableId]];
+    const [removed] = sourceColumn.splice(source.index, 1);
+    destColumn.splice(destination.index, 0, { ...removed, status: newStatus })
+    setColumns({
+      ...columns;
+      [source.droppableId]: sourceColumn;
+      [destination.droppableId]: destColumn});
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 // Define the kanban board columns based on application statuses;
 const COLUMNS = [;
   {;
@@ -147,39 +241,100 @@ const COLUMNS = [;
     id: "rejected",;
     title: "Rejected",;
     description: "Not moving forward"}],;
-
 interface KanbanBoardProps {;
   jobId?: string;
 }
-
+<<<<<<< HEAD
 export function KanbanBoard(): any ({ jobId }: KanbanBoardProps) {;
   const { applications, isLoading, updateApplicationStatus } = useJobApplications(jobId);
   const [columns, setColumns] = useState<Record<string, JobApplication[]>>({});
   const isMobile = useIsMobile();
+=======
 
+import { useState, useEffect } from "react",;
+import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd",;
+import { useJobApplications } from "@/hooks/useJobApplications",;
+import { JobApplication, ApplicationStatus } from "@/types/jobs",;
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+import { Skeleton } from "@/components/ui/skeleton",;
+import { toast } from "@/hooks/use-toast",;
+import { KanbanColumn } from "./KanbanColumn",;
+import { useIsMobile } from "@/hooks/use-mobile",;
+;
+interface DnDLocation {;
+  droppableId:string,;
+  index:number;}
+;
+interface DropResult {;
+  draggableId:string,;
+  source:DnDLocation,;
+  destination?:DnDLocation | null;
+}
+;
+// Define the kanban board columns based on application statuses;
+const COLUMNS = [;
+  {;
+    id:"new",;
+    title:"Applied",;
+    description:"New applications"},;
+  {;
+    id:"shortlisted",;
+    title:"Shortlisted",;
+    description:"Candidates selected for review"},;
+  {;
+    id:"interview",;
+    title:"Interview",;
+    description:"Scheduled for interview"},;
+  {;
+    id:"hired",;
+    title:"Hired",;
+    description:"Successful candidates"},;
+  {;
+    id:"rejected",;
+    title:"Rejected",;
+    description:"Not moving forward"}],;
+;
+interface KanbanBoardProps {;
+  jobId?:string,;
+}
+;
+export function KanbanBoard({ jobId } KanbanBoardProps) {;
+  const { applications, isLoading, updateApplicationStatus } = useJobApplications(jobId),;
+  const [columns, setColumns] = useState<Record<string JobApplication[]>>({}),;
+  const isMobile = useIsMobile(),;
+  ;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+;
+export function KanbanBoard({ jobId }: KanbanBoardProps) {;
+  const { applications, isLoading, updateApplicationStatus } = useJobApplications(jobId),;
+  const [columns, setColumns] = useState<Record<string JobApplication[]>>({}),;
+  const isMobile = useIsMobile(),;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   // Initialize columns with applications based on their status;
   useEffect(() => {;
     if (applications) {;
       // Group applications by status;
+<<<<<<< HEAD
+<<<<<<< HEAD
       const groupedApplications = COLUMNS && COLUMNS.reduce((acc, column) => {;
         acc[column && column.id] = applications && applications.filter(app => app && app.status === column && column.id);
         return acc;
       }, {} as Record<string, JobApplication[]>);
-
       setColumns(groupedApplications);
     }
   }, [applications]);
-
   // Handle drag end event to update the application status;
   const handleDragEnd = async (result: DropResult) => {;
     const { destination, source, draggableId } = result;
-
     // If there's no destination or the item is dropped in the same place, do nothing;
     if (!destination || ;
         (destination && destination.droppableId === source && source.droppableId && ;
          destination && destination.index === source && source.index)) {;
       return;
     }
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/KanbanBoard.tsx
 
 <<<<<<< HEAD
 =======
@@ -188,6 +343,29 @@ export function KanbanBoard(): any ({ jobId }: KanbanBoardProps) {;
 
     
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+      const groupedApplications = COLUMNS.reduce((acc, column) => {;
+        acc[column.id] = applications.filter(app => app.status === column.id),;
+        return acc;
+      }, {} as Record<string JobApplication[]>),;
+      setColumns(groupedApplications);
+    }
+  }, [applications]),;
+  // Handle drag end event to update the application status;
+  const handleDragEnd = async (result: DropResult) => {;
+    const { destination, source, draggableId } = result,;
+    // If there's no destination or the item is dropped in the same place, do nothing;
+    if (!destination ||;
+        (destination.droppableId === source.droppableId &&;
+         destination.index === source.index)) {;
+      return;
+    }
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     // Get the application that was dragged
     const application = applications.find(app => app.id === draggableId),
     if (!application) return,
@@ -205,7 +383,12 @@ export function KanbanBoard(): any ({ jobId }: KanbanBoardProps) {;
       ...columns,
       [source.droppableId]: sourceColumn,
       [destination.droppableId]: destColumn}),
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     // Update status in the database
     try {
       await updateApplicationStatus(draggableId, newStatus),
@@ -219,6 +402,7 @@ export function KanbanBoard(): any ({ jobId }: KanbanBoardProps) {;
         description: "Please try again"
         variant: "destructive"})
     }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -226,6 +410,15 @@ export function KanbanBoard(): any ({ jobId }: KanbanBoardProps) {;
   
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+  }
+
+=======
+  },
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   if (isLoading) {
     return (
       <div className={`grid grid-cols-1 ${!isMobile ? 'md:grid-cols-3 lg:grid-cols-5' : ''} gap-4`}>
@@ -238,29 +431,28 @@ export function KanbanBoard(): any ({ jobId }: KanbanBoardProps) {;
               <Skeleton className="h-[400px] w-full" />
             </CardContent>
           </Card>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 ;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/KanbanBoard.tsx
     // Get the application that was dragged;
     const application = applications && applications.find(app => app && app.id === draggableId);
     if (!application) return;
-
     // Update the application status in the database;
     const newStatus = destination && destination.droppableId as ApplicationStatus;
-
     // Optimistically update the UI;
     const sourceColumn = [...columns[source && source.droppableId]];
     const destColumn = [...columns[destination && destination.droppableId]];
     const [removed] = sourceColumn && sourceColumn.splice(source && source.index, 1);
     destColumn && destColumn.splice(destination && destination.index, 0, { ...removed, status: newStatus }),;
-
     setColumns({;
       ...columns;
       [source && source.droppableId]: sourceColumn;
       [destination && destination.droppableId]: destColumn});
-
     // Update status in the database;
     try {;
       await updateApplicationStatus(draggableId, newStatus);
@@ -275,12 +467,104 @@ export function KanbanBoard(): any ({ jobId }: KanbanBoardProps) {;
         variant: "destructive"});
     }
   };
-
   if (isLoading) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <div className={`grid grid-cols-1 ${!isMobile ? 'md:grid-cols-3 lg:grid-cols-5' : ''} gap-4`}>;
         {Array && Array.from({ length: isMobile ? 1 : 5 }).map((_, i) => (;
+=======
+      const groupedApplications = COLUMNS.reduce((acc, column) => {;
+        acc[column.id] = applications.filter(app => app.status === column.id),;
+        return acc,;
+      }, {} as Record<string JobApplication[]>),;
+      ;
+      setColumns(groupedApplications),;
+    }
+  }, [applications]),;
+  ;
+  // Handle drag end event to update the application status;
+  const handleDragEnd = async (result:DropResult) => {;
+    const { destination, source, draggableId } = result,;
+    ;
+    // If there's no destination or the item is dropped in the same place, do nothing;
+    if (!destination || ;
+        (destination.droppableId === source.droppableId && ;
+         destination.index === source.index)) {;
+      return,;
+    }
+    ;
+    // Get the application that was dragged;
+    const application = applications.find(app => app.id === draggableId),;
+    if (!application) return,;
+    ;
+    // Update the application status in the database;
+    const newStatus = destination.droppableId as ApplicationStatus,;
+    ;
+=======
+<<<<<<< HEAD
+=======
+;
+    // Get the application that was dragged;
+    const application = applications.find(app => app.id === draggableId),;
+    if (!application) return,;
+    // Update the application status in the database;
+    const newStatus = destination.droppableId as ApplicationStatus,;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+    // Optimistically update the UI;
+    const sourceColumn = [...columns[source.droppableId]],;
+    const destColumn = [...columns[destination.droppableId]],;
+    const [removed] = sourceColumn.splice(source.index, 1),;
+<<<<<<< HEAD
+    destColumn.splice(destination.index, 0, { ...removed, status:newStatus }),;
+    ;
+    setColumns({;
+      ...columns,;
+      [source.droppableId]:sourceColumn,;
+      [destination.droppableId]:destColumn}),;
+    ;
+=======
+    destColumn.splice(destination.index, 0, { ...removed, status: newStatus }),;
+    setColumns({;
+      ...columns,;
+      [source.droppableId]: sourceColumn,;
+      [destination.droppableId]: destColumn}),;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+    // Update status in the database;
+    try {;
+      await updateApplicationStatus(draggableId, newStatus),;
+      toast({;
+<<<<<<< HEAD
+        title:"Status updated",;
+        description:`Candidate moved to ${COLUMNS.find(col => col.id === newStatus)?.title}`}),;
+    } catch (error) {;
+      // Revert the UI changes if the database update fails;
+      toast({;
+        title:"Failed to update status",;
+        description:"Please try again",;
+        variant:"destructive"}),;
+    }
+  },;
+  ;
+  if (isLoading) {;
+    return (;
+      <div className={`grid grid-cols-1 ${!isMobile ? 'md:grid-cols-3 lg:grid-cols-5' :''} gap-4`}>;
+        {Array.from({ length:isMobile ? 1 :5 }).map((_, i) => (;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+        title: "Status updated",;
+        description: `Candidate moved to ${COLUMNS.find(col => col.id === newStatus)?.title}`});
+    } catch (error) {;
+      // Revert the UI changes if the database update fails;
+      toast({;
+        title: "Failed to update status",;
+        description: "Please try again";
+        variant: "destructive"});
+    }
+  };
+  if (isLoading) {;
+    return (;
+      <div className={`grid grid-cols-1 ${!isMobile ? 'md:grid-cols-3 lg:grid-cols-5' : ''} gap-4`}>;
+        {Array.from({ length: isMobile ? 1 : 5 }).map((_, i) => (;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <Card key={i} className="h-[500px]">;
             <CardHeader>;
               <Skeleton className="h-8 w-24" />;
@@ -289,6 +573,7 @@ export function KanbanBoard(): any ({ jobId }: KanbanBoardProps) {;
               <Skeleton className="h-[400px] w-full" />;
             </CardContent>;
           </Card>;
+<<<<<<< HEAD
 
 
 
@@ -296,8 +581,10 @@ export function KanbanBoard(): any ({ jobId }: KanbanBoardProps) {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         ))}
       </div>;
+<<<<<<< HEAD
     );
   }
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/KanbanBoard.tsx
 
 <<<<<<< HEAD
 =======
@@ -311,7 +598,17 @@ export function KanbanBoard(): any ({ jobId }: KanbanBoardProps) {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+  if (!applications || applications && applications.length === 0) {;
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/KanbanBoard.tsx
     return (
+=======
+    ),;
+  }
+  ;
+  if (!applications || applications.length === 0) {;
+    return (;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       <Card className="text-center py-16">;
         <CardContent>;
           <h3 className="text-lg font-semibold mb-2">No applications yet</h3>;
@@ -320,17 +617,24 @@ export function KanbanBoard(): any ({ jobId }: KanbanBoardProps) {;
           </p>;
         </CardContent>;
       </Card>;
+<<<<<<< HEAD
     );
   }
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/KanbanBoard.tsx
 
 
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/KanbanBoard.tsx
   return (
     <DragDropContext onDragEnd={handleDragEnd}>;
       <div className={`grid ${isMobile ? 'grid-cols-1 gap-y-6' : 'grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4'} overflow-x-auto`}>;
         {COLUMNS && COLUMNS.map(column => (;
           <KanbanColumn
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/KanbanBoard.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/KanbanBoard.tsx
 import { useState, useEffect } from './react';
 import { DragDropContext, Droppable, Draggable } from './react - beautiful - dnd';
 import { useJobApplications } from '@/hooks / useJobApplications';
@@ -479,20 +783,75 @@ if ( {) {
       <div className={`grid ${is_mobile ? 'grid - cols - 1 gap - y-6' : 'grid - cols - 1 md:grid - cols - 3 lg:grid - cols - 5 gap - 4'} overflow - x-auto`}>;
         {COLUMNS.map (column => (
           <KanbanColumn;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/KanbanBoard.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/KanbanBoard.tsx
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        ))}
+      </div>
+    )
+  }
+<<<<<<< HEAD
+  if (!applications |applications.length === 0) {
+=======
+  
+  if (!applications || applications.length === 0) {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+    return (
+      <Card className="text-center py-16">
+        <CardContent>
+          <h3 className="text-lg font-semibold mb-2">No applications yet</h3>
+          <p className="text-muted-foreground mb-6">
+            You haven't received any applications for this job yet.
+          </p>
+        </CardContent>
+      </Card>
+    )
+  }
+  return (
+    <DragDropContext onDragEnd={handleDragEnd}>
+      <div className={`grid ${isMobile ? 'grid-cols-1 gap-y-6' : 'grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4'} overflow-x-auto`}>
+        {COLUMNS.map(column => (
+          <KanbanColumn
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             key={column.id}
             id={column.id}
             title={column.title}
             description={column.description}
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/KanbanBoard.tsx
 
 <<<<<<< HEAD
 =======
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/KanbanBoard.tsx
             key={column && column.id}
             id={column && column.id}
             title={column && column.title}
             description={column && column.description}
             applications={columns[column && column.id] || []}
             count={columns[column && column.id]?.length || 0}
+=======
+    ),;
+  }
+  ;
+  return (;
+    <DragDropContext onDragEnd={handleDragEnd}>;
+      <div className={`grid ${isMobile ? 'grid-cols-1 gap-y-6' :'grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4'} overflow-x-auto`}>;
+        {COLUMNS.map(column => (;
+          <KanbanColumn;
+            key={column.id}            id={column.id}
+            title={column.title}
+            description={column.description}
+            applications={columns[column.id] || []}
+            count={columns[column.id]?.length || 0}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           />;
 =======
 
@@ -503,18 +862,124 @@ if ( {) {
         ))}
       </div>;
     </DragDropContext>;
+<<<<<<< HEAD
   );
 }
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/KanbanBoard.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/KanbanBoard.tsx
             applications={columns[column.id] || []}
             count={columns[column.id]?.length || 0}
           />))}
       </div>;
     </DragDropContext>);
+=======
+  ),; interface DnDLocation {
+  droppableId: string;
+index: number 
+}interface DropResult {
+  draggableId: string;
+source: DnDLocation;
+destination?: DnDLocation | null 
+}//Define the kanban board columns based on application statuses const COLUMNS = [ {
+  id: "new";
+title: "Applied";
+description: "New applications" 
+};
+{
+  id: "shortlisted";
+title: "Shortlisted";
+description: "Candidates selected for review" 
+};
+{
+  id: "interview";
+title: "Interview";
+description: "Scheduled for interview" 
+};
+{
+  id: "hired";
+title: "Hired";
+description: "Successful candidates" 
+};
+{
+  interface KanbanBoardProps {
+  jobId?: string 
+}export function KanbanBoard ({
+  jobId 
+}: KanbanBoardProps) {
+  const {
+  applications, isLoading, updateApplicationStatus 
+}= useJobApplications (jobId);
+const [columns, setColumns] = useState<Record<string JobApplication[]>> ({
+  
+});
+const isMobile = useIsMobile ();
+if (applications) {
+  //Group applications by status setColumns (groupedApplications) 
 }
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/KanbanBoard.tsx
 
 =======
 ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+}, [applications]);
+//Handle drag end event to update the application status //If there's no destination or the item is dropped in the same place, do nothing if (!destination || (destination.droppableId === source.droppableId && 
+}
+};
+if (isLoading) {
+  return (<div className= {
+  `grid grid-cols-1 $ {
+  !isMobile ? 'md:grid-cols-3 lg:grid-cols-5': '' 
+}gap-4` 
+}> <CardHeader> <Skeleton className="h-8 w-24" /> </CardHeader> <CardContent> <Skeleton className="h-[400px] w-full" /> </CardContent> </Card>) ) 
+}</div>) 
+}<CardContent> <h3 className="text-lg font-semibold mb-2" >No applications yet</h3> <p className="text-muted-foreground mb-6" > You haven't received any applications for this job yet. </p> </CardContent> </Card> return (<DragDropContext onDragEnd= {
+  handleDragEnd 
+}> <div className= {
+  `grid $ {
+  isMobile ? 'grid-cols-1 gap-y-6' : 'grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4' 
+}overflow-x-auto` 
+}> {
+  COLUMNS.map (column => (<KanbanColumn key= {
+  column.id 
+}id= {
+  column.id 
+}title= {
+  column.title 
+}description= {
+  column.description 
+}applications= {
+  columns[column.id] || [] 
+}count= {
+  columns[column.id]?.length || 0 
+}/>) ) 
+}</div> </DragDropContext>) 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+}
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/hiring-tracker/KanbanBoard.tsx
+=======
+<<<<<<< HEAD
+            applications={columns[column.id] |[]}
+            count={columns[column.id]?.length |0}
+          />
+        ))}
+      </div>
+    </DragDropContext>
+  )
+}
+=======
+            applications={columns[column.id] || []}
+            count={columns[column.id]?.length || 0}
+          />
+        ))}
+      </div>;
+    </DragDropContext>;
+  );
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

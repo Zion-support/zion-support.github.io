@@ -1,10 +1,35 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<<< HEAD:src/components/jobs/JobMatchesCard.tsx
 
 
 =======
 import { format } from "date-fns";
 import { JobMatch } from "@/types/jobs";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+import { useState } from 'react'
+import {
+  Card
+  CardContent
+  CardHeader
+  CardTitle
+  CardDescription
+  CardFooter
+} from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { DollarSign, Calendar, CheckCircle, XCircle } from 'lucide-react'
+<<<<<<< HEAD
+import { format } from "date-fns";
+import { JobMatch } from "@/types/jobs";
+=======
+import { format } from 'date-fns'
+import { JobMatch } from '@/types/jobs'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { useState } from "react",
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
@@ -13,11 +38,14 @@ import { DollarSign, Calendar, CheckCircle, XCircle } from 'lucide-react'
 import { format } from "date-fns",
 import { JobMatch } from "@/types/jobs",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 interface JobMatchCardProps {
   match: JobMatch;
 =======
 >>>>>>> interface JobMatchCardProps {
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/JobMatchesCard.tsx
 import { useState } from 'react';
 import {;
   Card,;
@@ -33,6 +61,7 @@ import { DollarSign, Calendar, CheckCircle, XCircle } from 'lucide-react';
 import { format } from 'date-fns';
 import { JobMatch } from '@/types/jobs';
 interface JobMatchCardProps {;
+<<<<<<<< HEAD:src/components/jobs/JobMatchesCard.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>>   match: JobMatch;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -44,18 +73,73 @@ interface JobMatchCardProps {;
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+interface JobMatchCardProps {
+  match: JobMatch;
+  onApply: (matchId: string, jobId: string) => void;
+  onDecline: (matchId: string) => void;
+  showApplied?: boolean
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+export function JobMatchesCard({
+  match
+  onApply
+  onDecline
+  showApplied = false
+}: JobMatchCardProps) {
+  const job = match.job
+  if (!job) return null
+<<<<<<< HEAD
+=======
+=======
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export function JobMatchesCard({ match, onApply, onDecline, showApplied = false }: JobMatchCardProps) {
   const job = match.job,
   
   if (!job) return null,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
   
 >>>>>>>   return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+  match: JobMatch;
+  onApply: (matchId: string, jobId: string) => void;
+  onDecline: (matchId: string) => void;
+  showApplied?: boolean
+export function JobMatchesCard(): any ({;
+  match,;
+  onApply,;
+  onDecline,;
+  showApplied = false,;
+}: JobMatchCardProps) {;
+  const job = match && match.job;
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/JobMatchesCard.tsx
   return (
 >>>>>>>     <Card className="overflow-hidden border-l-4 border-l-blue-500">
+=======
+  
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  return (
+    <Card className="overflow-hidden border-l-4 border-l-blue-500">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <CardHeader className="p-4 pb-2">
         <div className="flex justify-between items-start">
           <div>
@@ -79,7 +163,10 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
           {job.description}
         </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {match.matched_skills?.length > 0 && (
           <div className='mb-3'>
             <p className='text-xs text-muted-foreground mb-1'>
@@ -92,6 +179,7 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
               ))}
               {match.matched_skills.length > 5 && (
                 <Badge variant='secondary' className='text-xs'>
+<<<<<<< HEAD
 >>>>>>>                   +{match.matched_skills.length - 5}
 ursor/fix-website-loading-errors-and-merge-6662
           <div>;
@@ -101,11 +189,73 @@ ursor/fix-website-loading-errors-and-merge-6662
               {match && match.status === 'viewed' && match && match.viewed_at && (;
                 <span className='ml-2 text-xs text-muted-foreground'>;
                   (Viewed {format(new Date(match && match.viewed_at), 'MMM d')});
+=======
+
+=======
+=======
+        
+        {match.matched_skills?.length > 0 && (
+          <div className="mb-3">
+            <p className="text-xs text-muted-foreground mb-1">Matched skills:</p>
+            <div className="flex flex-wrap gap-1">
+              {match.matched_skills.slice(0, 5).map((skill, i) => (
+                <Badge key={i} variant="secondary" className="text-xs">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+import { useState } from "react",;
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",;
+import { Button } from "@/components/ui/button",;
+import { DollarSign, Calendar, CheckCircle, XCircle } from 'lucide-react';
+import { format } from "date-fns",;
+import { JobMatch } from "@/types/jobs",;
+<<<<<<< HEAD
+;
+interface JobMatchCardProps {;
+  match:JobMatch,;
+  onApply:(matchId:string, jobId:string) => void,;
+  onDecline:(matchId:string) => void,;
+  showApplied?:boolean;
+}
+;
+export function JobMatchesCard({ match, onApply, onDecline, showApplied = false } JobMatchCardProps) {;
+  const job = match.job,;
+  ;
+  if (!job) return null,;
+  ;
+=======
+interface JobMatchCardProps {;
+  match: JobMatch,;
+  onApply: (matchId: string, jobId: string) => void,;
+  onDecline: (matchId: string) => void,;
+  showApplied?: boolean;
+}
+;
+export function JobMatchesCard({ match, onApply, onDecline, showApplied = false }: JobMatchCardProps) {;
+  const job = match.job;
+  if (!job) return null;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+  return (;
+    <Card className="overflow-hidden border-l-4 border-l-blue-500">;
+      <CardHeader className="p-4 pb-2">;
+        <div className="flex justify-between items-start">;
+          <div>;
+            <CardTitle className="text-lg">{job.title}</CardTitle>;
+            <CardDescription>;
+              Posted {format(new Date(job.created_at), "MMM d")}
+              {match.status === 'viewed' && match.viewed_at && (;
+                <span className="ml-2 text-xs text-muted-foreground">;
+                  (Viewed {format(new Date(match.viewed_at), "MMM d")});
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 </span>;
               )}
+<<<<<<<< HEAD:src/components/jobs/JobMatchesCard.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/JobMatchesCard.tsx
             </CardDescription>;
           </div>;
+<<<<<<< HEAD
           <Badge variant='outline' className='flex items-center'>;
             {match && match.match_score}% Match;
           </Badge>;
@@ -115,7 +265,6 @@ ursor/fix-website-loading-errors-and-merge-6662
         <p className='text-sm text-muted-foreground line-clamp-2 mb-3'>;
           {job && job.description}
         </p>;
-
         {match && match.matched_skills?.length > 0 && (;
           <div className='mb-3'>;
             <p className='text-xs text-muted-foreground mb-1'>;
@@ -123,7 +272,10 @@ ursor/fix-website-loading-errors-and-merge-6662
             </p>;
             <div className='flex flex-wrap gap-1'>;
               {match && match.matched_skills.slice(0, 5).map((skill, i) => (;
+<<<<<<<< HEAD:src/components/jobs/JobMatchesCard.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/JobMatchesCard.tsx
                 <Badge key={i} variant='secondary' className='text-xs'>                  {skill}
                 </Badge>;
               ))}
@@ -140,29 +292,85 @@ ursor/fix-website-loading-errors-and-merge-6662
             </div>;
           </div>;
         )}
+<<<<<<<< HEAD:src/components/jobs/JobMatchesCard.tsx
 <<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+                </span>;
+              )}
+            </CardDescription>
+          </div>
+          <Badge variant='outline' className='flex items-center'>
+            {match.match_score}% Match
+          </Badge>
+        </div>
+      </CardHeader>
+      <CardContent className='p-4 pt-0'>
+        <p className='text-sm text-muted-foreground line-clamp-2 mb-3'>
+          {job.description}
+        </p>;
+        {match.matched_skills?.length > 0 && (;
+          <div className="mb-3">;
+            <p className="text-xs text-muted-foreground mb-1">Matched skills:</p>;
+            <div className="flex flex-wrap gap-1">;
+              {match.matched_skills.slice(0, 5).map((skill, i) => (;
+                <Badge key={i} variant="secondary" className="text-xs">;
+                  {skill}
+                </Badge>;
+              ))}
+              {match.matched_skills.length > 5 && (
+                <Badge variant="secondary" className="text-xs">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                  +{match.matched_skills.length - 5}
+                </Badge>
+              )}
+            </div>
+          </div>
+        )}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <div className='grid grid-cols-2 gap-2 mb-2 mt-3'>
           <div className='flex items-center text-sm'>
             <DollarSign className='h-4 w-4 mr-1 text-muted-foreground' />$
             {job.budget.min} - ${job.budget.max}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+        
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <div className="grid grid-cols-2 gap-2 mb-2 mt-3">
           <div className="flex items-center text-sm">
             <DollarSign className="h-4 w-4 mr-1 text-muted-foreground" />
             ${job.budget.min} - ${job.budget.max}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           </div>
 =======
 >>>>>>>           </div>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          </div>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <div className="flex items-center text-sm">
             <Calendar className="h-4 w-4 mr-1 text-muted-foreground" />
             Due: {format(new Date(job.deadline), "MMM d, yyyy")}
@@ -170,13 +378,17 @@ ursor/fix-website-loading-errors-and-merge-6662
         </div>
       </CardContent>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             Applied
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <CardFooter className='p-4 pt-0'>
         {match.status === 'applied' |showApplied ? (
           <div className='w-full flex items-center justify-center p-2 bg-green-50 text-green-700 rounded-md'>
             <CheckCircle className='h-4 w-4 mr-2' />
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
           </div>
           <div className='flex items-center text-sm'>
@@ -187,10 +399,14 @@ ursor/fix-website-loading-errors-and-merge-6662
       </CardContent>
 
 
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <CardFooter className="p-4 pt-0">
         {match.status === 'applied' || showApplied ? (
           <div className="w-full flex items-center justify-center p-2 bg-green-50 text-green-700 rounded-md">
             <CheckCircle className="h-4 w-4 mr-2" />
+<<<<<<< HEAD
 
 
 >>>>>>>             Applied
@@ -199,15 +415,39 @@ ursor/fix-website-loading-errors-and-merge-6662
         ) : match.status === 'declined' ? (
           <div className='w-full flex items-center justify-center p-2 bg-red-50 text-red-700 rounded-md'>
             <XCircle className='h-4 w-4 mr-2' />
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+            Applied
+          </div>
+        ) : match.status === 'declined' ? (
+          <div className="w-full flex items-center justify-center p-2 bg-red-50 text-red-700 rounded-md">
+            <XCircle className="h-4 w-4 mr-2" />
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             Declined
           </div>
         ) : (
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+          <div className='flex gap-2 w-full'>
+            <Button
+              className='flex-1'
+=======
+          <div className="flex gap-2 w-full">
+            <Button 
+              className="flex-1" 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               onClick={() => onApply(match.id, job.id)}
             >
               Apply Now
             </Button>
+<<<<<<< HEAD
 
 =======
           <div className='flex gap-2 w-full'>
@@ -217,12 +457,29 @@ ursor/fix-website-loading-errors-and-merge-6662
             >
               Apply Now
             </Button>
+=======
+<<<<<<< HEAD
+            <Button
+              variant='outline'
+              className='flex-1'
+              onClick={() => onDecline(match.id)}            >
+              Decline
+            </Button>
+          </div>
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         )}
       </CardFooter>
     </Card>
   )
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <Button 
               variant="outline" 
               className="flex-1"
@@ -232,11 +489,16 @@ ursor/fix-website-loading-errors-and-merge-6662
             </Button>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         )}
       </CardFooter>;
     </Card>;
   );
+<<<<<<< HEAD
 
 =======
 >>>>>>>         )}
@@ -248,15 +510,121 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 
         )}
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+========
+        <div className='grid grid-cols-2 gap-2 mb-2 mt-3'>;
+          <div className='flex items-center text-sm'>;
+            <DollarSign className='h-4 w-4 mr-1 text-muted-foreground' />$;
+            {job && job.budget.min} - ${job && job.budget.max}
+          </div>;
+          <div className='flex items-center text-sm'>;
+            <Calendar className='h-4 w-4 mr-1 text-muted-foreground' />;
+            Due: {format(new Date(job && job.deadline), 'MMM d, yyyy')}
+          </div>;
+        </div>;
+      </CardContent>;
+      <CardFooter className='p-4 pt-0'>;
+        {match && match.status === 'applied' || showApplied ? (;
+          <div className='w-full flex items-center justify-center p-2 bg-green-50 text-green-700 rounded-md'>;
+            <CheckCircle className='h-4 w-4 mr-2' />;
+            Applied;
+          </div>;
+        ) : match && match.status === 'declined' ? (;
+          <div className='w-full flex items-center justify-center p-2 bg-red-50 text-red-700 rounded-md'>;
+            <XCircle className='h-4 w-4 mr-2' />;
+            Declined;
+          </div>;
+        ) : (;
+          <div className='flex gap-2 w-full'>;
+            <Button
+              className='flex-1'
+              onClick={() => onApply(match && match.id, job && job.id)}
+            >;
+              Apply Now;
+            </Button>;
+            <Button
+              variant='outline'
+              className='flex-1'
+              onClick={() => onDecline(match && match.id)}            >;
+=======
+          <Badge variant="outline" className="flex items-center">;
+            {match.match_score}% Match;
+          </Badge>;
+        </div>;
+      </CardHeader>;
+      <CardContent className="p-4 pt-0">;
+        <p className="text-sm text-muted-foreground line-clamp-2 mb-3">;
+          {job.description}
+        </p>;
+        ;
+        {match.matched_skills?.length > 0 && (;
+          <div className="mb-3">;
+            <p className="text-xs text-muted-foreground mb-1">Matched skills:</p>;
+            <div className="flex flex-wrap gap-1">;
+              {match.matched_skills.slice(0, 5).map((skill, i) => (;
+                <Badge key={i} variant="secondary" className="text-xs">;                  {skill}
+                </Badge>;
+              ))}
+              {match.matched_skills.length > 5 && (;
+                <Badge variant="secondary" className="text-xs">;
+                  +{match.matched_skills.length - 5}
+                </Badge>;              )}
+            </div>;
+          </div>;
+        )}
+        ;
+        <div className="grid grid-cols-2 gap-2 mb-2 mt-3">;
+          <div className="flex items-center text-sm">;
+            <DollarSign className="h-4 w-4 mr-1 text-muted-foreground" />;
+            ${job.budget.min} - ${job.budget.max}
+          </div>;
+          <div className="flex items-center text-sm">;
+            <Calendar className="h-4 w-4 mr-1 text-muted-foreground" />;
+            Due:{format(new Date(job.deadline), "MMM d, yyyy")}
+          </div>;
+        </div>;
+      </CardContent>;
+      <CardFooter className="p-4 pt-0">;
+        {match.status === 'applied' || showApplied ? (;
+          <div className="w-full flex items-center justify-center p-2 bg-green-50 text-green-700 rounded-md">;
+            <CheckCircle className="h-4 w-4 mr-2" />;
+            Applied;
+          </div>;
+        ) :match.status === 'declined' ? (;
+          <div className="w-full flex items-center justify-center p-2 bg-red-50 text-red-700 rounded-md">;
+            <XCircle className="h-4 w-4 mr-2" />;
+            Declined;
+          </div>;
+        ) :(;
+          <div className="flex gap-2 w-full">;
+            <Button ;
+              className="flex-1" ;
+              onClick={() => onApply(match.id, job.id)}
+            >;
+              Apply Now;
+            </Button>;
+            <Button ;
+              variant="outline" ;
+              className="flex-1";
+              onClick={() => onDecline(match.id)}
+            >;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+              Decline;
+            </Button>;
+          </div>;
+        )}
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/JobMatchesCard.tsx
       </CardFooter>;
     </Card>;
+<<<<<<< HEAD
   );
-
 }
+<<<<<<<< HEAD:src/components/jobs/JobMatchesCard.tsx
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/JobMatchesCard.tsx
 import { useState } from 'react';
 import {
   Card,
@@ -361,9 +729,47 @@ if (return null) {
       </CardFooter>;
     </Card>);
 }
+<<<<<<<< HEAD:src/components/jobs/JobMatchesCard.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> ;
 
 >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+=======
+  ),;}
+ interface JobMatchCardProps {;
+  match: JobMatch;
+onApply: (matchId: string, jobId: string) => void;
+onDecline: (matchId: string) => void;
+showApplied?: boolean ;
+}export function JobMatchesCard ({;
+  match, onApply,  onDecline, showApplied = false ;
+}: JobMatchCardProps) {;
+  const job = match.job;
+return (<Card className="overflow-hidden border-l-4 border-l-blue-500" > <CardHeader className="p-4 pb-2" > <div className="flex justify-between items-start" > <div> <CardTitle className="text-lg" > {;
+  job.title ;
+}</CardTitle> <CardDescription> </span>) ;
+}</CardDescription> </div> + {;
+  match.matched skills.length - 5 ;
+}</Badge>) ;
+}</div> </div>) ";
+}Applied </div>) : match.status === 'declined' ? (<div className="w-full flex items-center justify-center p-2 bg-red-50 text-red-700 rounded-md" > <XCircle className="h-4 w-4 mr-2" /> Declined </div> > Apply Now </Button> <Button > Decline </Button> </div>) ;
+}</CardFooter> </Card>) ;
+}'"
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/JobMatchesCard.tsx
+=======
+<<<<<<< HEAD
+};
+}
+=======
+}
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

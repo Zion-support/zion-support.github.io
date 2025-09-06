@@ -1,6 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -9,16 +14,26 @@ export default async function handler(
     return res.status(405).json({ error: 'Method not allowed' });
   const rssUrl =
 =======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+    (process.env.SITE_URL || 'http://localhost:3000') + '/podcast.xml';
+  return res.status(200).json({ ok: true, rssUrl });export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const rssUrl = (process.env.SITE_URL |'http: //localhost:3000') + '/podcast.xml';
-
   return res.status(200).json({ ok: true, rssUrl })
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 
+=======
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     (process && process.env.SITE_URL || 'http://localhost:3000') + '/podcast && podcast.xml';
   return res && res.status(200).json({ ok: true, rssUrl });export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -26,10 +41,13 @@ export default async function handler(
   const rssUrl = (process && process.env.SITE_URL || 'http: //localhost:3000') + '/podcast && podcast.xml';
   return res && res.status(200).json({ ok: true, rssUrl })
 }
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 ;
 export default async /**
  * handler - Function description
@@ -50,7 +68,9 @@ function handler() {
 }
   const rss_url = (process.env.SITE_URL || 'http: //localhost:3000') + '/podcast.xml';
   return res.status (200).json ({ ok: true, rss_url });
+
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -62,3 +82,20 @@ function handler() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+<<<<<<< HEAD
+}
+<<<<<<< HEAD
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

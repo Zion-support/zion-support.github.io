@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -46,11 +47,45 @@ export interface FraudDetectionResult {;
 
   isFraud: boolean;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+// Fraud detection types
+export type AdminActionType =
+  | 'ban_user'
+  | 'suspend_user'
+  | 'flag_content'
+  | 'remove_content'
+  | 'investigate'
+  | 'dismiss';
+  | 'escalate';
+<<<<<<< HEAD
+export interface AdminAction {
+=======
+
+export interface AdminAction {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  id: string;
+  caseId: string;
+  type: AdminActionType;
+  adminId: string;
+  reason: string
+  details: Record<string, any>;
+  createdAt: string;
+  executedAt?: string;
+  status: 'pending' | 'executed' | 'failed'
+}
+<<<<<<< HEAD
+export interface FraudDetectionResult {
+=======
+
+export interface FraudDetectionResult {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  isFraud: boolean;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   confidence: number;
   reasons: string[];
-<<<<<<< HEAD
   suggestedActions: AdminActionType[]
   metadata: Record<string, any>;
+<<<<<<< HEAD
 }
 
 =======
@@ -58,9 +93,13 @@ export interface FraudDetectionResult {;
   suggested_actions: AdminActionType[],
   metadata: Record < string, any>;
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
+<<<<<<< HEAD
 export interface FraudDetectionConfig {
 =======
+<<<<<<< HEAD
 }
 
 
@@ -68,10 +107,16 @@ export interface FraudDetectionConfig {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+export interface FraudDetectionConfig {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   enabled: boolean;
   rules: {
-    suspicious_activity: {
+    suspiciousActivity: {
       enabled: boolean;
+<<<<<<< HEAD
 
       threshold: number,
     }
@@ -107,12 +152,42 @@ export interface FraudDetectionConfig {;
 
 
 =======
+      threshold: number
+    }
+    fakeProfile: {
+      enabled: boolean;
+      threshold: number
+    }
+    paymentFraud: {
+      enabled: boolean;
+      threshold: number
+    }
+    spam: {
+      enabled: boolean;
+      threshold: number
+    }
+  }
+  autoActions: {
+    enabled: boolean;
+    actions: AdminActionType[];
+<<<<<<< HEAD
+    confidenceThreshold: number
+  }
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
     confidenceThreshold: number,
   };
 =======
 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

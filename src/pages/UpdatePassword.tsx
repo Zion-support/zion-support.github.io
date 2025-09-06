@@ -1,7 +1,15 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 =======
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { useRouter } from 'next/router'
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm, ControllerRenderProps } from "react-hook-form"
@@ -19,7 +27,15 @@ import {
   FormMessage} from "@/components/ui/form"; import { toast } from "@/hooks/use-toast"
 import { cleanupAuthState } from "@/utils/authUtils"
 import { logErrorToProduction } from '@/utils/productionLogger'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { useState, useEffect } from "react",
 import { useRouter } from 'next/router',
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -41,7 +57,14 @@ import { toast } from "@/hooks/use-toast",
 import { cleanupAuthState } from "@/utils/authUtils",
 import { logErrorToProduction } from '@/utils/productionLogger',
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 // Form validation schema
 =======
 >>>>>>> // Form validation schema
@@ -52,6 +75,7 @@ const updatePasswordSchema = z
       .string()
       .min(8, "Password must be at least 8 characters")
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     confirmPassword: z.string()})
   .refine((data) => data.password === data.confirmPassword, {
@@ -59,6 +83,10 @@ const updatePasswordSchema = z
     path: ["confirmPassword"]}),
 
 =======
+=======
+      .max(64, "Password must be less than 64 characters")
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     confirmPassword: z.string()})
   .refine((data,) => data.password === data.confirmPassword, {
     message: "Passwords do not match"
@@ -68,6 +96,7 @@ type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>
 
   )
 }
+<<<<<<< HEAD
 >>>>>>>     confirmPassword: z.string()})
       .max(64, "Password must be less than 64 characters"),
       .max(64, "Password must be less than 64 characters"),
@@ -77,13 +106,43 @@ type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>
     message: "Passwords do not match",
     path: ["confirmPassword"]}),
 
+=======
+=======
+      .max(64, "Password must be less than 64 characters"),
+=======
+=======
+      .max(64, "Password must be less than 64 characters"),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    confirmPassword: z.string()})
+  .refine((data) => data.password === data.confirmPassword, {
+    message: "Passwords do not match",
+    path: ["confirmPassword"]}),
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>
 }
   );
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>,
 
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>,
+
+export default function UpdatePassword() {
+  const [isLoading, setIsLoading] = useState(false),
+  const [accessToken, setAccessToken] = useState<string | null>(null),
+  const [error, setError] = useState<string | null>(null),
+  const [success, setSuccess] = useState(false),
+  const router = useRouter(),
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
   // Initialize react-hook-form
   const form = useForm<UpdatePasswordFormValues>({
@@ -431,9 +490,16 @@ export default function UpdatePassword() {;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

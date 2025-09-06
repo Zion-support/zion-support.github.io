@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 function runNode(relPath, args = []) {
@@ -131,3 +132,39 @@ function log_step() {
   return { status_code: 200, body: logs.join ('\n') }
 },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+const abs = path && path.resolve(__dirname, '..', '..';
+  const res = spawnSync('node';
+    stdio: 'pipe';
+    encoding: 'utf8';
+    stdout: res && res.stdout || '';
+    stderr: res && res.stderr || '';
+  const abs = path.resolve(__dirname, '....';
+  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8';
+const path = require ('path';
+const { spawn_sync } = require ('child_process';
+  const abs = path.resolve (__dirname, '..', '..';
+  const res = spawn_sync ('node';
+    stdio: 'pipe';
+    encoding: 'utf8';
+    stdout: res.stdout || '';
+    stderr: res.stderr || '';
+  log_step ('assets:inventory', () => run_node ('automation / asset - inventory.cjs';
+  log_step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs';
+  return { status_code: 200, body: logs.join ('\n';
+  const abs = path.resolve (__dirname, '....';
+  const res = spawn_sync ('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8';
+  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '';
+  logStep('assets:inventory', () => runNode('automation/asset-inventory && inventory.cjs';
+  logStep('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs';
+  return { statusCode: 200, body: logs && logs.join('\n';
+  const abs = path && path.resolve(__dirname, '....';
+  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8';
+  return { status: res && res.status || 0, stdout: res && res.stdout || '', stderr: res && res.stderr || '';
+  logStep('assets:inventory', () => runNode('automation/asset-inventory && inventory.cjs';
+  logStep('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs';
+  return { statusCode: 200, body: logs && logs.join('\n';
+  log_step ('assets:inventory', () => run_node ('automation / asset - inventory.cjs';
+  log_step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs';
+  return { status_code: 200, body: logs.join ('\n';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

@@ -11,10 +11,13 @@ module.exports = {
       colors: {
         primary: {
           50: '#eff6ff',
+<<<<<<< HEAD
           100: '#dbeafe',
           200: '#bfdbfe',
           300: '#93c5fd',
           400: '#60a5fa',
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           500: '#3b82f6',
           600: '#2563eb',
           700: '#1d4ed8',
@@ -22,11 +25,14 @@ module.exports = {
           900: '#1e3a8a',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
           950: '#172554',
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-17cd
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         },
         gray: {
           50: '#f9fafb',
@@ -41,6 +47,7 @@ module.exports = {
           900: '#111827',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           950: '#030712'
         }
 =======
@@ -51,6 +58,10 @@ module.exports = {
           950: '#030712'
         }
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-17cd
+=======
+          950: '#030712'
+        }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
@@ -106,6 +117,7 @@ module.exports = {
   ],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
 =======
 }
@@ -113,3 +125,6 @@ module.exports = {
 =======
 };
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-17cd
+=======
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

@@ -2,27 +2,47 @@
 
 }
 =======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 
+=======
+export interface TokenTransaction {;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   id: string;
-  user_id: string;
+  userId: string;
   amount: number;
   type: 'issue' | 'redeem' | 'transfer';
   reason: string;
   timestamp: number;
-
-
-
-}
-// Mock data storage - replace with actual database;
-let transactions: TokenTransaction[] = [];
 <<<<<<< HEAD
+
+
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+}
+
+// Mock data storage - replace with actual database
+let transactions: TokenTransaction[] = [];
 export function issueTokens(userId: string, amount: number, reason: string): TokenTransaction {
   const transaction: TokenTransaction = {
+<<<<<<< HEAD
 =======
 
 
+=======
+<<<<<<< HEAD
+    id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+    userId
+    amount
+    type: 'issue'
+    reason
+    timestamp: Date.now()
+  }
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
     userId,
     amount,
@@ -31,9 +51,13 @@ export function issueTokens(userId: string, amount: number, reason: string): Tok
     timestamp: Date.now();
   };
   
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   transactions.push(transaction);
   return transaction;
 }
@@ -42,30 +66,20 @@ export function redeemTokens(userId: string, amount: number, reason: string): To
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     userId
     amount: -amount, // Negative for redemption
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
-;
-export function issue_tokens (user_id: string, amount: number, reason: string): TokenTransaction {
-  const transaction: TokenTransaction = {
-    id: `tx_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
-    user_id,
-    amount,
-    type: 'issue',
-    reason,
-    timestamp: Date.now ();
+<<<<<<< HEAD
+    type: 'redeem'
+    reason
+    timestamp: Date.now()
   }
-;
-  transactions.push (transaction);
-  return transaction;
-}
-export function redeem_tokens (user_id: string, amount: number, reason: string): TokenTransaction {
-  const transaction: TokenTransaction = {
-    id: `tx_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
-    user_id,
-    amount: -amount, // Negative for redemption;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
     type: 'redeem',
     reason,
+<<<<<<< HEAD
     timestamp: Date.now ();
   }
 ;
@@ -89,10 +103,16 @@ export function redeem_tokens (user_id: string, amount: number, reason: string):
     amount,
     reason,
     timestamp: Date && Date.now()
+=======
+    timestamp: Date.now();
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   };
-  transactions && transactions.push(transaction);
+  
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  transactions.push(transaction);
   return transaction;
 }
+<<<<<<< HEAD
 
   const current = tokenStore && tokenStore.getConfig();
   tokenStore && tokenStore.setConfig({ ...current, ...partial });
@@ -208,3 +228,22 @@ export function set_config (
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+export function setConfig(
+  partial: Partial<ReturnType<typeof getConfig>>
+): void {;
+  const current = getConfig();
+  // Update the configuration
+  Object.assign(current, partial);
+}
+<<<<<<< HEAD
+
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

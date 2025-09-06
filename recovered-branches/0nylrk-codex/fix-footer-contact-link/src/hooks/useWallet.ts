@@ -1,6 +1,19 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWallet.ts
 
+=======
+<<<<<<< HEAD
+import { useEffect, useState  } from 'react';
+import { useAuth  } from '@/hooks/useAuth';
+import { supabase  } from '@/integrations/supabase/client';
+=======
+import {useEffect, useState} from 'react';
+import {useAuth} from '@/hooks/useAuth';
+import {supabase} from '@/integrations/supabase/client';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import type { Wallet, TokenTransaction } from '@/types/tokens';
 export function useWallet() {;
   const { user } = useAuth();
@@ -15,7 +28,10 @@ export function useWallet() {;
       setWallet(null);
       setLoading(false);
       return
+<<<<<<< HEAD
 =======
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWallet.ts
 import {useEffect, useState} from 'react';
 import {use_auth} from '@/hooks / use_auth';
 import {supabase} from '@/integrations / supabase / client';
@@ -61,18 +77,71 @@ if ( {) {
     } catch (err: any) {
       console.error ('Error fetching wallet:', err);
       set_error (err.message);
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWallet.ts
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWallet.ts
     } finally {
       set_loading (false);
     }
   }
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWallet.ts
 
     setWallet(prev => prev ? { ...prev, balance: prev && prev.balance + amount } : prev);
 
+========
+    setWallet(prev => prev ? { ...prev, balance: prev && prev.balance + amount } : prev);
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWallet.ts
     setTransactions(prev => [
       {
         id: crypto && crypto.randomUUID();
         user_id: user && user.id;
+=======
+    }
+    try {
+      setLoading(true);
+      const { data, error } = await supabase
+        .from('wallets')
+        .select('*')
+        .eq('user_id', user.id)
+        .single();
+      if (error) {
+        throw error
+      }
+      setWallet(data)
+    } catch (err: any) {
+      console.error('Error fetching wallet:', err);
+      setError(err.message)
+    } finally {
+      setLoading(false)
+    }
+  }
+  async function fetchTransactions() {
+    if (!user?.id) {
+      setTransactions([]);
+      return
+    }
+    try {
+      const { data, error } = await supabase
+        .from('token_transactions')
+        .select('*')
+        .eq('user_id', user.id)
+        .order('created_at', { ascending: false });
+      if (error) throw error;
+      setTransactions((data |[]) as TokenTransaction[])
+    } catch (err: any) {
+      console.error('Error fetching transactions:', err)
+    }
+  }
+  async function earnTokens(amount: number, reason?: string) {
+    if (!user?.id) return;
+
+    setWallet(prev => prev ? { ...prev, balance: prev.balance + amount } : prev);
+    setTransactions(prev => [
+      {
+        id: crypto.randomUUID();
+        user_id: user.id;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         amount;
         transaction_type: 'earn';
         reason: reason |null
@@ -82,12 +151,21 @@ if ( {) {
   async function spendTokens(amount: number, reason?: string) {
     if (!user?.id) return;
     setWallet(prev =>
+<<<<<<< HEAD
       prev ? { ...prev, balance: Math && Math.max(0, prev && prev.balance - amount) } : prev
     );
     setTransactions(prev => [
       {
         id: crypto && crypto.randomUUID();
         user_id: user && user.id;
+=======
+      prev ? { ...prev, balance: Math.max(0, prev.balance - amount) } : prev
+    );
+    setTransactions(prev => [
+      {
+        id: crypto.randomUUID();
+        user_id: user.id;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         amount;
         transaction_type: 'burn';
         reason: reason |null
@@ -98,7 +176,7 @@ if ( {) {
     fetchWallet();
     fetchTransactions()
   }, [user?.id]);
-=======
+<<<<<<< HEAD
   async /**
  * fetch_transactions - Function description
  */
@@ -170,17 +248,24 @@ if (return) {
     fetch_transactions ();
   }, [user?.id]);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return {
     wallet;
     transactions;
     loading;
     error;
 <<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWallet.ts
+<<<<<<< HEAD
     fetchWallet;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+    fetchWallet;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { useEffect, useState } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -276,20 +361,141 @@ export function useWallet() {;
     loading,;
     error,;
     fetchWallet,;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     fetchTransactions;
     earnTokens;
 
     spendTokens}
+<<<<<<< HEAD
 =======
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useWallet.ts
     fetch_wallet;
     fetch_transactions;
     earn_tokens;
     spend_tokens}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
+=======
+
+import { useEffect, useState } from 'react',;
+import { useAuth } from '@/hooks/useAuth',;
+import { supabase } from '@/integrations/supabase/client',;
+import type { Wallet, TokenTransaction } from '@/types/tokens',;
+;
+export function useWallet() {;
+  const { user } = useAuth(),;
+  const [wallet, setWallet] = useState<Wallet | null>(null),;
+  const [transactions, setTransactions] = useState<TokenTransaction[]>([]),;
+  const [loading, setLoading] = useState(true),;
+  const [error, setError] = useState<string | null>(null),;
+;
+  async function fetchWallet() {;
+    if (!user?.id) {;
+      setWallet(null),;
+      setLoading(false),;
+      return,;
+    }
+;
+    try {;
+      setLoading(true),;
+      const { data, error } = await supabase;
+        .from('wallets');
+        .select('*');
+        .eq('user_id', user.id);
+        .single(),;
+;
+      if (error) {;
+        throw error,;
+      }
+;
+      setWallet(data),;
+    } catch (err:any) {;
+      console.error('Error fetching wallet:', err),;
+      setError(err.message),;
+    } finally {;
+      setLoading(false),;
+    }
+  }
+;
+  async function fetchTransactions() {;
+    if (!user?.id) {;
+      setTransactions([]),;
+      return,;
+    }
+    try {;
+      const { data, error } = await supabase;
+        .from('token_transactions');
+        .select('*');
+        .eq('user_id', user.id);
+        .order('created_at', { ascending:false }),;
+;
+      if (error) throw error,;
+      setTransactions((data || []) as TokenTransaction[]),;
+    } catch (err:any) {;
+      console.error('Error fetching transactions:', err),;
+    }
+  }
+;
+  async function earnTokens(amount:number, reason?:string) {;
+    if (!user?.id) return,;
+    setWallet(prev => prev ? { ...prev, balance:prev.balance + amount } prev),;
+    setTransactions(prev => [;
+      {;
+        id:crypto.randomUUID(),;
+        user_id:user.id,;
+        amount,;
+        transaction_type:'earn',;
+        reason:reason || null,;
+        created_at:new Date().toISOString()},;
+      ...prev]),;
+  }
+;
+  async function spendTokens(amount:number, reason?:string) {;
+    if (!user?.id) return,;
+    setWallet(prev =>;
+      prev ? { ...prev, balance:Math.max(0, prev.balance - amount) } prev;
+    ),;
+    setTransactions(prev => [;
+      {;
+        id:crypto.randomUUID(),;
+        user_id:user.id,;
+        amount,;
+        transaction_type:'burn',;
+        reason:reason || null,;
+        created_at:new Date().toISOString()},;
+      ...prev]),;
+  }
+;
+  useEffect(() => {;
+    fetchWallet(),;
+    fetchTransactions(),;
+  }, [user?.id]),;
+;
+  return {;
+    wallet,;
+    transactions,;
+    loading,;
+    error,;
+    fetchWallet,;
+    fetchTransactions,;
+    earnTokens,;
+    spendTokens},;
+} .from ('wallets') .select ('*') .eq ('user id', user.id) .single ();
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

@@ -1,4 +1,13 @@
+<<<<<<< HEAD
+<<<<<<<< HEAD:src/components/GlobalErrorHandler.tsx
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React, {
   createContext
   useContext
@@ -9,13 +18,40 @@ import React, {
 import { toast } from '@/hooks/use-toast'
 import { Button } from '@/components/ui/button'
 
+<<<<<<< HEAD
+========
+<<<<<<< HEAD
+import React, {;
+  createContext,;
+  useContext,;
+  useState,;
+  useCallback,;
+  ReactNode,;
+} from 'react';
+import { toast } from '@/hooks/use-toast';
+import { Button } from '@/components/ui/button';
+import { RefreshCw, AlertTriangle, Wifi, WifiOff, Shield } from 'lucide-react';
+import * as Sentry from '@sentry/nextjs';
+import { logErrorToProduction } from '@/utils/productionLogger';
+interface ErrorContextType {;
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/GlobalErrorHandler.tsx
+=======
+import { RefreshCw, AlertTriangle, Wifi, WifiOff, Shield } from 'lucide-react'
+import * as Sentry from '@sentry/nextjs';
+import {logErrorToProduction} from '@/utils/productionLogger';
+interface ErrorContextType {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   reportError: (error: Error, context?: any) => void;
   showRetryableError: (error: Error, retryAction?: () => void) => void;
   showNetworkError: (retryAction?: () => void) => void;
   showAuthError: (loginAction?: () => void) => void;
   clearAllErrors: () => void
+<<<<<<< HEAD
+<<<<<<<< HEAD:src/components/GlobalErrorHandler.tsx
 
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/GlobalErrorHandler.tsx
   create_context,
   useContext,
   useState,
@@ -57,13 +93,19 @@ if ( {) {
   $2
 }
           scope.set_context ('error_context', context);
+<<<<<<<< HEAD:src/components/GlobalErrorHandler.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/GlobalErrorHandler.tsx
         }
         scope.set_level ('error');
         Sentry.capture_exception (error);
       });
     }
+<<<<<<<< HEAD:src/components/GlobalErrorHandler.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/GlobalErrorHandler.tsx
   }, []);
   const showRetryableError = useCallback (
     (error: Error, retry_action?: () => void) => {
@@ -104,6 +146,66 @@ if ( {) {
             on_click: retry_action,
           }
 <<<<<<< HEAD
+=======
+
+}, [])
+export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
+  const [retryCount, setRetryCount] = useState<Record<string, number>>({})
+  const reportError = useCallback((error: Error, context?: any,) => {
+    // Log to console for development
+    if (process.env.NODE_ENV === 'development') {
+      logErrorToProduction('Global Error Handler:', error, context)
+    }
+    // Report to Sentry for production
+    if (process.env.NODE_ENV === 'production') {
+      Sentry.withScope(scope => {        if (context) {
+          scope.setContext('errorContext', context)
+        }
+        scope.setLevel('error')
+        Sentry.captureException(error)
+      })
+    }
+  }, [])
+  const showRetryableError = useCallback(
+    (error: Error, retryAction?: () => void) => {
+      const errorKey = error.message
+      const currentRetryCount = retryCount[errorKey] |0
+      reportError(error, { retryCount: currentRetryCount })
+      // Show user-friendly error message with retry option
+      toast({
+        title: 'Something went wrong'
+        description: getErrorMessage(error)
+        variant: 'destructive'
+        action: retryAction
+          ? {
+              label: 'Try Again'
+              onClick: () => {
+                setRetryCount(prev => ({
+                  ...prev
+                  [errorKey]: currentRetryCount + 1
+                }))
+                retryAction()
+              }
+            }
+          : undefined
+      })
+    }
+    [retryCount, reportError]
+  )
+  const showNetworkError = useCallback((retryAction?: () => void) => {
+    const isOnline = typeof navigator !== 'undefined' ? navigator.onLine : true
+    toast({
+      title: isOnline ? 'Connection Issue' : 'No Internet Connection'
+      description: isOnline
+        ? 'Unable to connect to our servers. Please check your connection and try again.'
+        : 'You appear to be offline. Please check your internet connection.'
+      variant: 'destructive'
+      action: retryAction
+        ? {
+            label: 'Retry'
+            onClick: retryAction
+          }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         : undefined
     })
   }, [])
@@ -117,6 +219,7 @@ if ( {) {
             label: 'Log In'
             onClick: loginAction
           }
+<<<<<<< HEAD
 
 import { toast } from '@/hooks/use-toast';
 =======
@@ -133,6 +236,10 @@ import { toast } from '@/hooks/use-toast';
             label: 'Log In',
             on_click: login_action,
           }
+<<<<<<<< HEAD:src/components/GlobalErrorHandler.tsx
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         : undefined
     })
   }, [])
@@ -145,16 +252,29 @@ import { toast } from '@/hooks/use-toast';
     showNetworkError
     showAuthError
     clearAllErrors
+<<<<<<< HEAD
+========
+        : undefined,
+    });
+  }, []);
+  const clearAllErrors = useCallback (() => {
+    setRetryCount ({});    // Clear any active toasts would go here if the toast system supports it;
+  }, []);
+  const context_value: ErrorContextType = {
+    report_error,
+    showRetryableError,
+    showNetworkError,
+    showAuthError,
+    clearAllErrors,
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/GlobalErrorHandler.tsx
   }
 export function GlobalErrorHandler(): any ({ children }: GlobalErrorHandlerProps) {;
   const [retryCount, setRetryCount] = useState<Record<string, number>>({});
-
   const reportError = useCallback((error: Error, context?: any,) => {;
     // Log to console for development;
     if (process && process.env.NODE_ENV === 'development') {;
       logErrorToProduction('Global Error Handler:', error, context);
     }
-
     // Report to Sentry for production;
     if (process && process.env.NODE_ENV === 'production') {;
       Sentry && Sentry.withScope(scope => {        if (context) {;
@@ -165,13 +285,11 @@ export function GlobalErrorHandler(): any ({ children }: GlobalErrorHandlerProps
       });
     }
   }, []);
-
   const showRetryableError = useCallback(;
     (error: Error, retryAction?: () => void) => {;
       const errorKey = error && error.message;
       const currentRetryCount = retryCount[errorKey] || 0;
       reportError(error, { retryCount: currentRetryCount });
-
       // Show user-friendly error message with retry option;
       toast({;
         title: 'Something went wrong',;
@@ -193,7 +311,6 @@ export function GlobalErrorHandler(): any ({ children }: GlobalErrorHandlerProps
     },;
     [retryCount, reportError];
   );
-
   const showNetworkError = useCallback((retryAction?: () => void) => {;
     const isOnline = typeof navigator !== 'undefined' ? navigator && navigator.onLine : true;
     toast({;
@@ -210,7 +327,6 @@ export function GlobalErrorHandler(): any ({ children }: GlobalErrorHandlerProps
         : undefined,;
     });
   }, []);
-
   const showAuthError = useCallback((loginAction?: (,) => void) => {;
     toast({;
       title: 'Authentication Required',;
@@ -224,11 +340,9 @@ export function GlobalErrorHandler(): any ({ children }: GlobalErrorHandlerProps
         : undefined,;
     });
   }, []);
-
   const clearAllErrors = useCallback(() => {;
     setRetryCount({});    // Clear any active toasts would go here if the toast system supports it;
   }, []);
-
   const contextValue: ErrorContextType = {;
     reportError,;
     showRetryableError,;
@@ -236,10 +350,11 @@ export function GlobalErrorHandler(): any ({ children }: GlobalErrorHandlerProps
     showAuthError,;
     clearAllErrors,;
   };
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
+<<<<<<<< HEAD:src/components/GlobalErrorHandler.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/GlobalErrorHandler.tsx
     <ErrorContext.Provider value={context_value}>;
       {children}
     </ErrorContext.Provider>);
@@ -325,7 +440,10 @@ if ( {) {
   const handleAsyncOperation = useCallback (
     async <T, >(
       operation: () => Promise < T>,
+<<<<<<<< HEAD:src/components/GlobalErrorHandler.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/GlobalErrorHandler.tsx
       options?: {
         on_error?: (error: Error) => void;
         retry_action?: () => void;
@@ -333,7 +451,10 @@ if ( {) {
       }
     ): Promise < T | null> => {
       try {
+<<<<<<<< HEAD:src/components/GlobalErrorHandler.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/GlobalErrorHandler.tsx
         const result = await operation ();
         // Check condition
 if ( {) {
@@ -345,7 +466,10 @@ if ( {) {
           });
         }
         return result;
+<<<<<<<< HEAD:src/components/GlobalErrorHandler.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/GlobalErrorHandler.tsx
       } catch (error: any) {
         report_error (error);
         // Check condition
@@ -354,10 +478,12 @@ if ( {) {
 }
           options.on_error (error);
         } else {
+<<<<<<<< HEAD:src/components/GlobalErrorHandler.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/GlobalErrorHandler.tsx
     </ErrorContext && ErrorContext.Provider>;
   );
-
 export function useGlobalErrorHandler(): any (): ErrorContextType {;
   const context = useContext(ErrorContext);
   if (!context) {;
@@ -366,11 +492,9 @@ export function useGlobalErrorHandler(): any (): ErrorContextType {;
     );
   }
   return context;
-
 // Helper function to convert technical errors to user-friendly messages;
 function getErrorMessage(): any (error: Error): string {;
   const message = error && error.message.toLowerCase(),;
-
   if (;
     message && message.includes('fetch') ||;
     message && message.includes('network') ||;
@@ -378,7 +502,6 @@ function getErrorMessage(): any (error: Error): string {;
   ) {;
     return 'Unable to connect to our servers. Please check your internet connection.';
   }
-
   if (;
     message && message.includes('auth') ||;
     message && message.includes('unauthorized') ||;
@@ -386,35 +509,27 @@ function getErrorMessage(): any (error: Error): string {;
   ) {;
     return 'Your session has expired. Please log in again.';
   }
-
   if (message && message.includes('forbidden') || message && message.includes('403')) {;
     return "You don't have permission to perform this action.";
   }
-
   if (message && message.includes('not found') || message && message.includes('404')) {;
     return 'The requested information could not be found.';
   }
-
   if (message && message.includes('timeout')) {;
     return 'Request timed out. Please try again.';
   }
-
   if (message && message.includes('validation') || message && message.includes('invalid')) {;
     return 'Please check your input and try again.';
   }
-
   if (message && message.includes('server') || message && message.includes('500')) {;
     return 'Our servers are experiencing issues. Please try again in a moment.';
   }
-
   // Fallback for unknown errors;
   return 'An unexpected error occurred. Please try again.';
-
 // Utility hook for common error scenarios;
 export function useErrorHandler() {;
   const { reportError, showRetryableError, showNetworkError, showAuthError } =;
     useGlobalErrorHandler();
-
   const handleApiError = useCallback(;
     (error: any, retryAction?: () => void) => {;
       if (error && error.response?.status === 401 || error && error.response?.status === 403) {;
@@ -426,7 +541,6 @@ export function useErrorHandler() {;
     },;
     [showRetryableError, showNetworkError, showAuthError];
   );
-
   const handleAsyncOperation = useCallback(;
     async <T,>(;
       operation: () => Promise<T>,;
@@ -438,31 +552,33 @@ export function useErrorHandler() {;
     ): Promise<T | null> => {;
       try {;
         const result = await operation();
-
         if (options?.successMessage) {;
           toast({;
             title: 'Success',;
             description: options && options.successMessage,;
           });
         }
-
         return result;
       } catch (error: any) {;
         reportError(error);
-
         if (options?.onError) {;
           options && options.onError(error);
         } else {;
           handleApiError(error, options?.retryAction);
+<<<<<<<< HEAD:src/components/GlobalErrorHandler.tsx
 
         }
         return null
       }
 
+========
+        }
+        return null
+      }
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/GlobalErrorHandler.tsx
     },;
     [reportError, handleApiError];
   );
-
   return {;
     reportError,;
     handleApiError,;
@@ -471,7 +587,10 @@ export function useErrorHandler() {;
     handleApiError;
     handleAsyncOperation}
 } ;
+<<<<<<<< HEAD:src/components/GlobalErrorHandler.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/GlobalErrorHandler.tsx
           handleApiError (error, options?.retry_action);
         }
         return null;
@@ -486,20 +605,143 @@ export function useErrorHandler() {;
     handleApiError;
     handleAsyncOperation}
 }
+<<<<<<<< HEAD:src/components/GlobalErrorHandler.tsx
+=======
+  }
+  return (
+    <ErrorContext.Provider value={contextValue}>
+      {children}
+    </ErrorContext.Provider>
+  )
+export function useGlobalErrorHandler(): ErrorContextType {
+  const context = useContext(ErrorContext)
+  if (!context) {
+    throw new Error(
+      'useGlobalErrorHandler must be used within a GlobalErrorHandler'
+    )
+  }
+  return context
+// Helper function to convert technical errors to user-friendly messages
+function getErrorMessage(error: Error): string {
+  const message = error.message.toLowerCase()
+  if (
+    message.includes('fetch') |
+    message.includes('network') |
+    message.includes('connection')
+  ) {
+    return 'Unable to connect to our servers. Please check your internet connection.'
+  }
+  if (
+    message.includes('auth') |
+    message.includes('unauthorized') |
+    message.includes('401')
+  ) {
+    return 'Your session has expired. Please log in again.'
+  }
+  if (message.includes('forbidden') |message.includes('403')) {
+    return "You don't have permission to perform this action."
+  }
+  if (message.includes('not found') |message.includes('404')) {
+    return 'The requested information could not be found.'
+  }
+  if (message.includes('timeout')) {
+    return 'Request timed out. Please try again.'
+  }
+  if (message.includes('validation') |message.includes('invalid')) {
+    return 'Please check your input and try again.'
+  }
+  if (message.includes('server') |message.includes('500')) {
+    return 'Our servers are experiencing issues. Please try again in a moment.'
+  }
+  // Fallback for unknown errors
+  return 'An unexpected error occurred. Please try again.'
+// Utility hook for common error scenarios
+export function useErrorHandler() {
+  const { reportError, showRetryableError, showNetworkError, showAuthError } =
+    useGlobalErrorHandler()
+  const handleApiError = useCallback(
+    (error: any, retryAction?: () => void) => {
+      if (error.response?.status === 401 |error.response?.status === 403) {
+        showAuthError()
+      } else if (error.code === 'NETWORK_ERROR' |!navigator.onLine) {
+        showNetworkError(retryAction) } else {
+        showRetryableError(error, retryAction)
+      }
+    }
+    [showRetryableError, showNetworkError, showAuthError]
+  )
+  const handleAsyncOperation = useCallback(
+    async <T,>(
+      operation: () => Promise<T>
+      options?: {
+        onError?: (error: Error) => void
+        retryAction?: () => void
+        successMessage?: string
+      }
+    ): Promise<T | null> => {
+      try {
+        const result = await operation()
+        if (options?.successMessage) {
+          toast({
+            title: 'Success'
+            description: options.successMessage
+          })
+        }
+        return result
+      } catch (error: any) {
+        reportError(error)
+        if (options?.onError) {
+          options.onError(error)
+        } else {
+          handleApiError(error, options?.retryAction)
+        }
+        return null
+      }
+    }
+    [reportError, handleApiError]
+  )
+  return {
+    reportError
+    handleApiError
+    handleAsyncOperation
+  };    reportError
+    handleApiError
+
+    handleAsyncOperation}
+}
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         : undefined,;
     });
   }, []);
   const clearAllErrors = useCallback(() => {;
     setRetryCount({});    // Clear any active toasts would go here if the toast system supports it
   }, [])
+<<<<<<< HEAD
 
 >>>>>>> import { toast } from '@/hooks/use-toast';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { Button } from '@/components/ui/button';
+========
+=======
+import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react',;
+import { toast } from '@/hooks/use-toast',;
+import { Button } from '@/components/ui/button',;
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/GlobalErrorHandler.tsx
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import { toast } from '@/hooks/use-toast';
+import { Button } from '@/components/ui/button';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { RefreshCw, AlertTriangle, Wifi, WifiOff, Shield } from 'lucide-react';
 import * as Sentry from '@sentry/nextjs',;
 import {logErrorToProduction} from '@/utils/productionLogger',;
 interface ErrorContextType {;
+<<<<<<< HEAD
+<<<<<<<< HEAD:src/components/GlobalErrorHandler.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   reportError: (error: Error, context?: any) => void,;
   showRetryableError: (error: Error, retryAction?: () => void) => void,;
   showNetworkError: (retryAction?: () => void) => void,;
@@ -518,12 +760,40 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {;
     // Log to console for development;
     if (process.env.NODE_ENV === 'development') {;
       logErrorToProduction('Global Error Handler:', error, context);
+<<<<<<< HEAD
+========
+  reportError:(error:Error, context?:any) => void,;
+  showRetryableError:(error:Error, retryAction?:() => void) => void,;
+  showNetworkError:(retryAction?:() => void) => void,;
+  showAuthError:(loginAction?:() => void) => void,;
+  clearAllErrors:() => void;}
+;
+const ErrorContext = createContext<ErrorContextType | null>(null),;
+;
+interface GlobalErrorHandlerProps {;
+  children:ReactNode;
+}
+;
+export function GlobalErrorHandler({ children } GlobalErrorHandlerProps) {;
+  const [retryCount, setRetryCount] = useState<Record<string number>>({}),;
+;
+  const reportError = useCallback((error:Error, context?:any) => {;
+    // Log to console for development;
+    if (process.env.NODE_ENV === 'development') {;
+      logErrorToProduction('Global Error Handler:', error, context),;
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/GlobalErrorHandler.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     }
 ;
     // Report to Sentry for production;
     if (process.env.NODE_ENV === 'production') {;
       Sentry.withScope((scope) => {;
         if (context) {;
+<<<<<<< HEAD
+<<<<<<<< HEAD:src/components/GlobalErrorHandler.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           scope.setContext('errorContext', context);
         }
         scope.setLevel('error'),;
@@ -588,16 +858,28 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {;
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 >>>>>>>   const contextValue: ErrorContextType = {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   const contextValue: ErrorContextType = {
 >>>>>>>     reportError,
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const contextValue: ErrorContextType = {
+    reportError,
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     showRetryableError,
     showNetworkError,
     showAuthError,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     clearAllErrors,
   }
   return (
@@ -613,20 +895,52 @@ export function useGlobalErrorHandler(): ErrorContextType {
     )
   }
   return context
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     clearAllErrors},
 
 
 <<<<<<< HEAD
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    clearAllErrors},
+
+  return (
+    <ErrorContext.Provider value={contextValue}>
+      {children}
+    </ErrorContext.Provider>;
+  );
+}
+;
+export function useGlobalErrorHandler(): ErrorContextType {;
+  const context = useContext(ErrorContext),;
+  if (!context) {;
+    throw new Error('useGlobalErrorHandler must be used within a GlobalErrorHandler');
+  }
+  return context;
+}
+
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 // Helper function to convert technical errors to user-friendly messages
 function getErrorMessage(error: Error): string {
   const message = error.message.toLowerCase(),
 
+<<<<<<< HEAD
 =======
 >>>>>>> // Helper function to convert technical errors to user-friendly messages
 function getErrorMessage(error: Error): string {
   const message = error.message.toLowerCase(),
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   if (
     message.includes('fetch') ||
     message.includes('network') ||
@@ -635,6 +949,16 @@ function getErrorMessage(error: Error): string {
     return 'Unable to connect to our servers. Please check your internet connection.'
   }
 
+<<<<<<< HEAD
+=======
+  if (
+    message.includes('auth') ||
+    message.includes('unauthorized') ||
+    message.includes('401')
+  ) {
+    return 'Your session has expired. Please log in again.'
+  }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
   if (message.includes('forbidden') || message.includes('403')) {
     return "You don't have permission to perform this action."
@@ -716,7 +1040,12 @@ export function useErrorHandler() {
 
 }
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   if (message.includes('fetch') || message.includes('network') || message.includes('connection')) {
     return "Unable to connect to our servers. Please check your internet connection."
   }
@@ -750,11 +1079,138 @@ export function useErrorHandler() {
 ;
   // Fallback for unknown errors;
   return "An unexpected error occurred. Please try again.";
+<<<<<<< HEAD
+========
+          scope.setContext('errorContext', context),;
+        }
+        scope.setLevel('error'),;
+        Sentry.captureException(error),;
+      }),;
+    }
+  }, []),;
+;
+  const showRetryableError = useCallback((error:Error, retryAction?:() => void) => {;
+    const errorKey = error.message,;
+    const currentRetryCount = retryCount[errorKey] || 0,;
+;
+    reportError(error, { retryCount:currentRetryCount }),;
+;
+    // Show user-friendly error message with retry option;
+    toast({;
+      title:"Something went wrong",;
+      description:getErrorMessage(error),;
+      variant:"destructive",;
+      action:retryAction ? {;
+        label:"Try Again",;
+        onClick:() => {;
+          setRetryCount(prev => ({;
+            ...prev,;
+            [errorKey]:currentRetryCount + 1;
+          })),;
+          retryAction(),;
+        }
+      } undefined}),;
+  }, [retryCount, reportError]),;
+;
+  const showNetworkError = useCallback((retryAction?:() => void) => {;
+    const isOnline = typeof navigator !== 'undefined' ? navigator.onLine :true,;
+    ;
+    toast({;
+      title:isOnline ? "Connection Issue" :"No Internet Connection",;
+      description:isOnline ;
+        ? "Unable to connect to our servers. Please check your connection and try again.";
+        :"You appear to be offline. Please check your internet connection.",;
+      variant:"destructive",;
+      action:retryAction ? {;
+        label:"Retry",;
+        onClick:retryAction;
+      } undefined}),;
+  }, []),;
+;
+  const showAuthError = useCallback((loginAction?:() => void) => {;
+    toast({;
+      title:"Authentication Required",;
+      description:"Please log in to continue with this action.",;
+      variant:"destructive",;
+      action:loginAction ? {;
+        label:"Log In",;
+        onClick:loginAction;
+      } undefined}),;
+  }, []),;
+;
+  const clearAllErrors = useCallback(() => {;
+    setRetryCount({}),;
+    // Clear any active toasts would go here if the toast system supports it;
+  }, []),;
+;
+  const contextValue:ErrorContextType = {;
+    reportError,;
+    showRetryableError,;
+    showNetworkError,;
+    showAuthError,;
+    clearAllErrors},;
+;
+  return (;
+    <ErrorContext.Provider value={contextValue}>;
+      {children}
+    </ErrorContext.Provider>;
+  ),;
+}
+;
+export function useGlobalErrorHandler():ErrorContextType {;
+  const context = useContext(ErrorContext),;
+  if (!context) {;
+    throw new Error('useGlobalErrorHandler must be used within a GlobalErrorHandler'),;
+  }
+  return context,;
+}
+;
+// Helper function to convert technical errors to user-friendly messages;
+function getErrorMessage(error:Error):string {;
+  const message = error.message.toLowerCase(),;
+;
+  if (message.includes('fetch') || message.includes('network') || message.includes('connection')) {;
+    return "Unable to connect to our servers. Please check your internet connection.";
+  }
+;
+  if (message.includes('auth') || message.includes('unauthorized') || message.includes('401')) {;
+    return "Your session has expired. Please log in again.",;
+  }
+;
+  if (message.includes('forbidden') || message.includes('403')) {;
+    return "You don't have permission to perform this action.",;
+  }
+;
+  if (message.includes('not found') || message.includes('404')) {;
+    return "The requested information could not be found.",;
+  }
+;
+  if (message.includes('timeout')) {;
+    return "Request timed out. Please try again.",;
+  }
+;
+  if (message.includes('validation') || message.includes('invalid')) {;
+    return "Please check your input and try again.",;
+  }
+;
+  if (message.includes('server') || message.includes('500')) {;
+    return "Our servers are experiencing issues. Please try again in a moment.",;
+  }
+;
+  // Fallback for unknown errors;
+  return "An unexpected error occurred. Please try again.",;
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/GlobalErrorHandler.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 ;
 // Utility hook for common error scenarios;
 export function useErrorHandler() {;
   const { reportError, showRetryableError, showNetworkError, showAuthError } = useGlobalErrorHandler(),;
+<<<<<<< HEAD
+<<<<<<<< HEAD:src/components/GlobalErrorHandler.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const handleApiError = useCallback((error: any, retryAction?: () => void) => {;
     if (error.response?.status === 401 || error.response?.status === 403) {;
       showAuthError();
@@ -806,9 +1262,96 @@ export function useErrorHandler() {;
     handleAsyncOperation}
 } ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+;
+  const handleApiError = useCallback((error:any, retryAction?:() => void) => {;
+    if (error.response?.status === 401 || error.response?.status === 403) {;
+      showAuthError(),;
+    } else if (error.code === 'NETWORK_ERROR' || !navigator.onLine) {;
+      showNetworkError(retryAction),;
+    } else {;
+      showRetryableError(error, retryAction),;    }
+  }, [showRetryableError, showNetworkError, showAuthError]),;
+;
+  const handleAsyncOperation = useCallback(async <T>(;
+    operation:() => Promise<T>,;
+    options?:{;
+      onError?:(error:Error) => void,;
+      retryAction?:() => void,;
+      successMessage?:string;
+    }
+  ):Promise<T | null> => {;
+    try {;
+      const result = await operation(),;
+      ;
+      if (options?.successMessage) {;
+        toast({;
+          title:"Success",;
+          description:options.successMessage}),;
+      }
+      ;
+      return result,;
+    } catch (error:any) {;
+      reportError(error),;
+      ;
+      if (options?.onError) {;
+        options.onError(error);
+      } else {;
+        handleApiError(error, options?.retryAction),;
+      }
+      ;
+      return null,;
+    }
+  }, [reportError, handleApiError]),;
+;
+  return {;
+    reportError,;
+    handleApiError,;
+    handleAsyncOperation},;
+}  const reportError = useCallback ( (error: Error, context?: unknown) => {;
+  //Log to console for development if (process.env.NODE ENV === 'development') {';
+  //Report to Sentry for production if (process.env.NODE ENV === 'production') {;
+  Sentry.withScope ( (scope) => {;
+  if (context) {;
+  ;
+}
+}, []);
+}
+}: undefined ;
+}) ;
+}, [retryCount, reportError]);
+//Clear any active toasts would go here if the toast system supports it ;
+}, []);
+return (<ErrorContext.Provider value= {;
+  contextValue ;
+}> {;
+  children ;
+}</ErrorContext.Provider>) ;
+}//Fallback for unknown errors return "An unexpected error occurred. Please try again." ;
+}// Utility hook for common error scenarios ;
+}return result;
+}catch (error: any) {;
+  reportError (error);
+if (options?.onError) {;
+  options.onError (error) ;
+}else {;
+  handleApiError (error, options?.retryAction) ;
+}
+}
+}, [reportError, handleApiError]);
+}'"
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/GlobalErrorHandler.tsx
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

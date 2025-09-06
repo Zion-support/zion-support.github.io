@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
 =======
@@ -20,6 +24,7 @@ export default function Smartchurn({ }: SmartchurnProps) {
 
 
 export default function Smartchurn({ }: SmartchurnProps) {
+<<<<<<< HEAD
 =======
 
 class ErrorBoundary extends React.Component {
@@ -56,11 +61,13 @@ interface SmartchurnProps {;
 export default function Smartchurn(): any ({ }: SmartchurnProps) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages.disabled_full/services/micro-saas/smart-churn.tsx
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
-    <div>;
-      <h1>Smartchurn</h1>;
-      <p>This component is currently under development.</p>;
-    </div>;
+    <div>
+      <h1>Smartchurn</h1>
+      <p>This component is currently under development.</p>
+    </div>
   );
 
 <<<<<<< HEAD

@@ -1,7 +1,34 @@
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/use-toast.ts
 
 <<<<<<< HEAD
 export const useToast = useToastHook;
 
+=======
+<<<<<<< HEAD
+import React from "react";
+
+import {useToast, as, useToastHook, Toast} from "@/components/ui/toast";
+<<<<<<< HEAD
+// Extend the Toast component props with common toast options
+export type ToastOptions = React.ComponentPropsWithoutRef<typeof Toast> & {
+  description?: string;
+  title?: string;
+  variant?: "default" | "destructive" | "success"
+}
+=======
+
+// Extend the Toast component props with common toast options
+export type ToastOptions = React.ComponentPropsWithoutRef<typeof Toast> & {;
+  description?: string;
+  title?: string;
+  variant?: "default" | "destructive" | "success"
+};
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export const useToast = useToastHook;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React from "react",
 import {
   useToast as useToastHook,
@@ -15,6 +42,7 @@ export type ToastOptions = React.ComponentPropsWithoutRef<typeof Toast> & {
 },
 
 export const useToast = useToastHook,
+<<<<<<< HEAD
 
 =======
 
@@ -44,18 +72,43 @@ baseToast && baseToast.title = (title: string) => {
 
 =======
 
+========
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/use-toast.ts
 };
-
 baseToast && baseToast.description = (description: string) => {
   baseToast({ description })
 };
-
 baseToast && baseToast.error = (error: string) => {
   baseToast({ variant: "destructive", title: "Error", description: error })
 };
-
 baseToast && baseToast.success = (message: string) => {
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/use-toast.ts
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/use-toast.ts
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+// Base toast function that delegates to the implementation from `useToastHook`.
+function baseToast(props: ToastOptions) {
+  const { toast } = useToastHook(),
+  toast(props)
+}
+// Convenience helpers mirroring common toast variants.
+baseToast.title = (title: string) => {
+  baseToast({ title })
+<<<<<<< HEAD
+}
+baseToast.description = (description: string) => {
+  baseToast({ description })
+}
+baseToast.error = (error: string) => {
+  baseToast({ variant: "destructive", title: "Error", description: error })
+}
+baseToast.success = (message: string) => {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   baseToast({ variant: "success", title: "Success", description: message })
 }
 // Export the callable toast function.
@@ -65,8 +118,7 @@ export const toast = baseToast as typeof baseToast & {
   error: (error: string) => void
   success: (message: string) => void
 }
-
-=======
+<<<<<<< HEAD
 import React from './react';
 import { use_toast, as, useToastHook, Toast } from '@/components / ui / toast';
 ;
@@ -112,9 +164,14 @@ export const toast = base_toast as typeof base_toast & {
   success: (message: string) => void;
 }
 ;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/use-toast.ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
+=======
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 },
 
 baseToast.description = (description: string) => {
@@ -130,8 +187,116 @@ baseToast.success = (message: string) => {
 },
 
 // Export the callable toast function.
+<<<<<<< HEAD
 
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+=======
+=======
+<<<<<<< HEAD
+export const toast = baseToast as typeof baseToast & {;
+  title: (title: string) => void;
+  description: (description: string) => void;
+  error: (error: string) => void,
+  success: (message: string) => void
+=======
+export const toast = baseToast as typeof baseToast & {
+  title: (title: string) => void,
+  description: (description: string) => void,
+  error: (error: string) => void,
+  success: (message: string) => void
+},
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+import React from "react",;
+import {;
+  useToast as useToastHook,;
+  Toast} from "@/components/ui/toast",;
+<<<<<<< HEAD
+;
+// Extend the Toast component props with common toast options;
+export type ToastOptions = React.ComponentPropsWithoutRef<typeof Toast> & {;
+  description?:string,;
+  title?:string,;
+  variant?:"default" | "destructive" | "success",;
+},;
+;
+export const useToast = useToastHook,;
+;
+// Base toast function that delegates to the implementation from `useToastHook`.;
+function baseToast(props:ToastOptions) {;
+  const { toast } = useToastHook(),;
+  toast(props),;
+}
+;
+// Convenience helpers mirroring common toast variants.;
+baseToast.title = (title:string) => {;
+  baseToast({ title }),;
+},;
+;
+baseToast.description = (description:string) => {;
+  baseToast({ description }),;
+},;
+;
+baseToast.error = (error:string) => {;
+  baseToast({ variant:"destructive", title:"Error", description:error }),;
+},;
+;
+baseToast.success = (message:string) => {;
+  baseToast({ variant:"success", title:"Success", description:message }),;
+},;
+;
+// Export the callable toast function.;
+export const toast = baseToast as typeof baseToast & {;
+  title:(title:string) => void,;
+  description:(description:string) => void,;
+  error:(error:string) => void,;
+  success:(message:string) => void;
+},; //Extend the Toast component props with common toast options export type ToastOptions = React.ComponentPropsWithoutRef<typeof Toast> & {
+  description?: string;
+title?: string;
+};
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/use-toast.ts
+=======
+// Extend the Toast component props with common toast options;
+export type ToastOptions = React.ComponentPropsWithoutRef<typeof Toast> & {;
+  description?: string,;
+  title?: string,;
+  variant?: "default" | "destructive" | "success";
+},;
+export const useToast = useToastHook,;
+// Base toast function that delegates to the implementation from `useToastHook`.;
+function baseToast(props: ToastOptions) {;
+  const { toast } = useToastHook(),;
+  toast(props);
+}
+;
+// Convenience helpers mirroring common toast variants.;
+baseToast.title = (title: string) => {;
+  baseToast({ title });
+},;
+baseToast.description = (description: string) => {;
+  baseToast({ description });
+},;
+baseToast.error = (error: string) => {;
+  baseToast({ variant: "destructive", title: "Error", description: error });
+},;
+baseToast.success = (message: string) => {;
+  baseToast({ variant: "success", title: "Success", description: message });
+},;
+// Export the callable toast function.;
+export const toast = baseToast as typeof baseToast & {;
+  title: (title: string) => void,;
+  description: (description: string) => void,;
+  error: (error: string) => void;
+  success: (message: string) => void;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+};
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

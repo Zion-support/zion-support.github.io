@@ -1,7 +1,257 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   try {
 
+    const repoUrl = require('../../../package.json').repository?.url || '';
+    const match = repoUrl.match(/github.com\/(.+?)\/(.+?)\.git$/i);
+    const owner = process.env.GITHUB_OWNER || (match ? match[1] : '');
+    const repo = process.env.GITHUB_REPO || (match ? match[2] : '');
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+    const resp = await fetch(apiUrl, { headers });
+    if (!resp.ok) return [];
+    const files = (await resp.json()) as Array<{ name: string, download_url: string, type: string }>,;
+    const jsonFiles = files.filter((f) => f.type === 'file' && f.name.endsWith('.json'));
+    const results: any[] = [];
+    for (const f of jsonFiles.slice(-50).reverse()) {;
+      try {
+        const r = await fetch(f.download_url, { headers });
+        if (!r.ok) continue,;
+        const j = await r.json();
+        results.push({ id: j.id || f.name, file: f.name, generatedAt: j.generatedAt, insights: j.insights });
+      } catch {;
+        // ignore;
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    return results;
+  } catch {;
+    return [];
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+export default async function handler(req, res) {
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next',
+import fs from 'fs',
+import path from 'path',
+async function fetchFromGitHub (): Promise < any[]> {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+  try {
+  const dir = path.join(process.cwd(), 'automation_logs'),;
+  try {
+    if (fs.existsSync(dir)) {;
+      const files = fs.readdirSync(dir).filter((f) => f.endsWith('.json')).sort().reverse();
+      if (files.length > 0) {;
+        const logs = files.slice(0, 50).map((f) => {;
+          try {
+            const raw = fs.readFileSync(path.join(dir, f), 'utf8'),;
+            const json = JSON.parse(raw);
+            return { id: json.id || f, file: f, generatedAt: json.generatedAt, insights: json.insights   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          } catch {;
+            return { id: f, file: f   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        });
+        return res.status(200).json({ logs });
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch {;
+=======
+
+=======
+        const inner_index = await r.json (),
+        results.push ({ id: j.id || f.name, file: f.name, generated_at: j.generated_at, insights: j.insights });
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+      } catch {
+        // ignore;
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+async function fetchFromGitHub(): Promise<any[]> {;
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import fs from 'fs',;
+import path from 'path',;
+async function fetchFromGitHub(): Promise<any[]> {
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  try {
+<<<<<<< HEAD
+
+    const repoUrl = require('../../../package.json').repository?.url |''
+    const match = repoUrl.match(/github.com\/(.+?)\/(.+?)\.git$/i)
+    const owner = process.env.GITHUB_OWNER |(match ? match[1] : '')
+    const repo = process.env.GITHUB_REPO |(match ? match[2] : '')
+    if (!owner |!repo) return []
+    const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/automation_logs`
+    const headers: Record<string, string> = { 'User-Agent': 'zion-autonomy' }
+    if (process.env.GITHUB_TOKEN) headers['Authorization'] = `token ${process.env.GITHUB_TOKEN}`
+    const resp = await fetch(apiUrl, { headers })
+    if (!resp.ok) return []
+    const files = (await resp.json()) as Array<{ name: string, download_url: string, type: string }>
+    const jsonFiles = files.filter((f) => f.type === 'file' && f.name.endsWith('.json'))
+    const results: any[] = []
+    for (const f of jsonFiles.slice(-50).reverse()) {
+      try {
+        const r = await fetch(f.download_url, { headers })
+        if (!r.ok) continue
+        const j = await r.json()
+        results.push({ id: j.id |f.name, file: f.name, generatedAt: j.generatedAt, insights: j.insights })
+      } catch {
+        // ignore
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+      }
+    }
+return results;
+  } catch {
+    return [];
+  }
+}
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+const dir = path.join (process.cwd (), 'automation_logs'),
+  try {
+<<<<<<< HEAD
+    if () {) {
+  $2
+}
+      const files = fs.readdir_sync (dir).filter ((f) => f.ends_with ('.json')).sort ().reverse (),
+      // Check condition
+if ( {) {
+  $2
+}
+        const logs = files.slice (0, 50).map ((f) => {
+          try {
+            const raw = fs.readFileSync (path.join (dir, f), 'utf8'),
+            const json = JSON.parse (raw),
+            return { id: json.id || f, file: f, generated_at: json.generated_at, insights: json.insights }
+          } catch {
+            return { id: f, file: f }
+          }
+        }),
+        return res.status (200).json ({ logs });
+<<<<<<< HEAD
+
+      }
+    }
+  } catch {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+    // fall through to GitHub;
+  }
+
+<<<<<<< HEAD
+  const remote = await fetchFromGitHub();
+
+  return res.status(200).json({ logs: remote });
+
+=======
+=======
+}
+
+=======
+=======
+      }
+    }
+  } catch {
+    // fall through to GitHub;
+  }
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+const remote = await fetchFromGitHub (),
+  return res.status (200).json ({ logs: remote });
+}
+;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+  return res.status(200).json({ logs: remote });
+
+};
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+    if (fs.existsSync(dir)) {
+      const files = fs.readdirSync(dir).filter((f) => f.endsWith('.json')).sort().reverse()
+      if (files.length > 0) {
+        const logs = files.slice(0, 50).map((f) => {
+          try {
+            const raw = fs.readFileSync(path.join(dir, f), 'utf8')
+            const json = JSON.parse(raw)
+            return { id: json.id |f, file: f, generatedAt: json.generatedAt, insights: json.insights }
+          } catch {
+            return { id: f, file: f }
+          }
+        })
+        return res.status(200).json({ logs })
+      }
+    }
+  } catch {
+    // fall through to GitHub
+  }
+const remote = await fetchFromGitHub()
+
+<<<<<<< HEAD
+  return res.status(200).json({ logs: remote })
+=======
+=======
+const remote = await fetchFromGitHub(),
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+async function fetchFromGitHub(): Promise<any[]> {;
+  try {
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     const repoUrl = require('../../../package.json').repository?.url || '';
     const match = repoUrl.match(/github.com\/(.+?)\/(.+?)\.git$/i);
     const owner = process.env.GITHUB_OWNER || (match ? match[1] : '');
@@ -84,72 +334,28 @@ export default async function handler(req, res) {
   }
 }
   } catch {;
-=======
-
-      } catch {
-        // ignore;
-      }
-    }
-return results;
-  } catch {
-    return [];
-  }
-}
-
-export default async /**
- * handler - Function description
- */
-function handler() {
-const dir = path.join (process.cwd (), 'automation_logs'),
-  try {
-    if () {) {
-  $2
-}
-      const files = fs.readdir_sync (dir).filter ((f) => f.ends_with ('.json')).sort ().reverse (),
-      // Check condition
-if ( {) {
-  $2
-}
-        const logs = files.slice (0, 50).map ((f) => {
-          try {
-            const raw = fs.readFileSync (path.join (dir, f), 'utf8'),
-            const json = JSON.parse (raw),
-            return { id: json.id || f, file: f, generated_at: json.generated_at, insights: json.insights }
-          } catch {
-            return { id: f, file: f }
-          }
-        }),
-        return res.status (200).json ({ logs });
-
-      }
-    }
-  } catch {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     // fall through to GitHub;
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
-
-<<<<<<< HEAD
-  const remote = await fetchFromGitHub();
-
-  return res.status(200).json({ logs: remote });
-
-=======
-=======
-}
-
-=======
-const remote = await fetchFromGitHub (),
-  return res.status (200).json ({ logs: remote });
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
+  const remote = await fetchFromGitHub();
   return res.status(200).json({ logs: remote });
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 
+  const remote = await fetchFromGitHub();
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  return res.status(200).json({ logs: remote });
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
+=======
 };
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

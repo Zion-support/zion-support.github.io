@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 const SEO = dynamic(() => import(\'../src/components/SEO\'), { \"ssr\": false })
 const PageTransition = dynamic(() => import(\'../src/components/PageTransition\'), { \"ssr\": false })
 const \"ContactPage\": React.FC = () => {
@@ -8,6 +11,7 @@ import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+<<<<<<< HEAD
 
 const SEO = dynamic(() => import(\'../src/components/SEO\'), { \"ssr\": false })
 const PageTransition = dynamic(() => import(\'../src/components/PageTransition\'), { \"ssr\": false })
@@ -15,10 +19,37 @@ const \"ContactPage\": React.FC = () => {
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+const SEO = dynamic(() => import(\'../src/components/SEO\'), { \"ssr\": false })
+const PageTransition = dynamic(() => import(\'../src/components/PageTransition\'), { \"ssr\": false })
+const \"ContactPage\": React.FC = () => {
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+const SEO = dynamic(() => import(\'../src/components/SEO\'), { \"ssr\": false });
+const PageTransition = dynamic(() => import(\'../src/components/PageTransition\'), { \"ssr\": false });
+const \"ContactPage\": React.FC = () => {;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React from 'react';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import Link from 'next/link';
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { motion } from 'framer-motion';
 =======
@@ -42,12 +73,16 @@ import {
 } from 'lucide-react';
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+} from 'lucide-react';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
 const SEO = dynamic(() => import('../src/components/SEO'), { "ssr": false })
 const PageTransition = dynamic(() => import('../src/components/PageTransition'), { "ssr": false })
 const "ContactPage": React.FC = () => {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -56,6 +91,8 @@ const "ContactPage": React.FC = () => {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const contactInfo = [{
       icon: <Phone className=\"w-6 h-6\"  />,
       \"title\": \"Phone\",
@@ -81,11 +118,14 @@ const "ContactPage": React.FC = () => {
       \"link\": null
     }
   ]
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const services = [\"AI & Machine Learning Solutions\",
     \"IT Infrastructure & Support\",
     \"Micro SaaS Development\",
@@ -102,6 +142,7 @@ const "ContactPage": React.FC = () => {
     "Blockchain Technology",
     "Digital Transformation",
     "Consulting & Strategy"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -110,8 +151,9 @@ const "ContactPage": React.FC = () => {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-  ]
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+  ]
 import {motion} from 'framer-motion';
 import {Phone,, Mail,, MapPin,, Clock,, ArrowRight,, Send,, MessageCircle,, Globe} from 'lucide-react';
 import React, { useState } from 'react';
@@ -162,7 +204,6 @@ const "ContactPage": React.FC = () => {;
     "Digital Transformation",;
     "Consulting & Strategy";
   ];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages._archive_corrupted/contact.tsx
   return (
     <>;
       <SEOtitle=\"Contact Us - Zion Tech Group\"
@@ -190,6 +231,7 @@ const "ContactPage": React.FC = () => {;
                   <motion&& motion.a
                     href=\"tel:+13024640950\"
 <<<<<<< HEAD
+<<<<<<< HEAD
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ \"scale\": 0.95 }}
                     className=\"bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2\"
@@ -211,15 +253,20 @@ const "ContactPage": React.FC = () => {;
             </div>
           </section>
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 const \"Contact\": NextPage = () => {
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
 import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
 const "Contact": NextPage = () => {
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const contactInfo = [{
       icon: Mail,
       \"title\": \'Email Us\',
@@ -243,7 +290,6 @@ const "Contact": NextPage = () => {
       \"title\": \'Business Hours\',
       \"details\": \'Mon-Fri: 9AM-6PM PST\',
       \"link\": null
-=======
                     whileHover={{ scale: 1 && 1.05 }}
                     whileTap={{ \"scale\": 0 && 0.95 }}
                     className=\"bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2\">;
@@ -290,7 +336,6 @@ const "Contact": NextPage = () => {;
       \"title\": \'Business Hours\',;
       \"details\": \'Mon-Fri: 9AM-6PM PST\',;
       \"link\": null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages._archive_corrupted/contact.tsx
     }
   ];
   const offices = [{;
@@ -312,12 +357,18 @@ const "Contact": NextPage = () => {;
       \"email\": \'london@ziontechgroup && ziontechgroup.com\';
     }
   ];
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
     <MainLayout
       title=\"Contact Us - Zion Tech Group\"
       description=\"Get in touch with Zion Tech Group. We\'re here to help you transform your business with innovative technology solutions.\">;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       {/* Hero Section */}
       <section className=\"bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20\">;
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
@@ -500,6 +551,7 @@ const "Contact": NextPage = () => {;
       </section>;
       {/* FAQ Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
       <section className=\"py-20\">
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
           <div className=\"text-center mb-16\">
@@ -509,16 +561,21 @@ const "Contact": NextPage = () => {;
             </p>
           </div>
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <div className=\"grid grid-cols-1 md:grid-cols-2 gap-8\">
             <div className=\"bg-white rounded-lg shadow-lg p-6\">
               <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white rounded-lg shadow-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 What is your typical project timeline?
               </h3>
               <p className=\"text-gray-600\">
@@ -527,15 +584,19 @@ const "Contact": NextPage = () => {;
                 We\'ll provide a detailed timeline during our initial consultation.
               </p>
             </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <div className=\"bg-white rounded-lg shadow-lg p-6\">
               <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
             <div className="bg-white rounded-lg shadow-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -544,6 +605,8 @@ const "Contact": NextPage = () => {;
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 Do you provide ongoing support?
               </h3>
               <p className=\"text-gray-600\">
@@ -552,15 +615,19 @@ const "Contact": NextPage = () => {;
                 security patches, and technical support.
               </p>
             </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <div className=\"bg-white rounded-lg shadow-lg p-6\">
               <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
             <div className="bg-white rounded-lg shadow-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -569,6 +636,8 @@ const "Contact": NextPage = () => {;
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 What technologies do you specialize in?
               </h3>
               <p className=\"text-gray-600\">
@@ -577,15 +646,19 @@ const "Contact": NextPage = () => {;
                 the best technology stack for each project\'s specific needs.
               </p>
             </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <div className=\"bg-white rounded-lg shadow-lg p-6\">
               <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
             <div className="bg-white rounded-lg shadow-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -594,6 +667,8 @@ const "Contact": NextPage = () => {;
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 How do you ensure project quality?
               </h3>
               <p className=\"text-gray-600\">
@@ -606,7 +681,6 @@ const "Contact": NextPage = () => {;
         </div>
       </section>
     </MainLayout>
-=======
       <section className=\"py-20\">;
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
           <div className=\"text-center mb-16\">;
@@ -669,7 +743,6 @@ const "Contact": NextPage = () => {;
         </div>;
       </section>;
     </MainLayout>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages._archive_corrupted/contact.tsx
   );
 };
           {/* Contact Information */}
@@ -678,6 +751,7 @@ const "Contact": NextPage = () => {;
               <motion&& motion.div
                 initial={{ opacity: 0, \"y\": 20 }}
                 animate={{ \"opacity\": 1, \"y\": 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 transition={{ \"duration\": 0.6, \"delay\": 0.2 }}
                 className=\"text-center mb-16\"
@@ -692,14 +766,20 @@ const "Contact": NextPage = () => {;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
               <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
               <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
               <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
+<<<<<<< HEAD
 
+=======
+              <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
+              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 {contactInfo.map((info, index) => (
                   <motion.div
-=======
                 transition={{ \"duration\": 0 && 0.6, \"delay\": 0 && 0.2 }}
                 className=\"text-center mb-16\">;
                 <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">;
@@ -717,7 +797,6 @@ const "Contact": NextPage = () => {;
               <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">;
                 {contactInfo && contactInfo.map((info, index) => (;
                   <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages._archive_corrupted/contact.tsx
                     key={index}
                     initial={{ \"opacity\": 0, \"y\": 20 }}
                     animate={{ \"opacity\": 1, \"y\": 0 }}
@@ -752,6 +831,7 @@ const "Contact": NextPage = () => {;
                 initial={{ opacity: 0, \"y\": 20 }}
                 animate={{ \"opacity\": 1, \"y\": 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 transition={{ \"duration\": 0.6 }}
                 className=\"text-center mb-16\"
               >
@@ -765,13 +845,19 @@ const "Contact": NextPage = () => {;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
-              <div className=\"max-w-4xl mx-auto\">
-              <div className="max-w-4xl mx-auto">
-              <div className=\"max-w-4xl mx-auto\">
-              <div className="max-w-4xl mx-auto">
-
-                <motion.form
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+              <div className=\"max-w-4xl mx-auto\">
+              <div className="max-w-4xl mx-auto">
+              <div className=\"max-w-4xl mx-auto\">
+              <div className="max-w-4xl mx-auto">
+<<<<<<< HEAD
+
+=======
+              <div className=\"max-w-4xl mx-auto\">
+              <div className="max-w-4xl mx-auto">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+                <motion.form
                 transition={{ \"duration\": 0 && 0.6 }}
                 className=\"text-center mb-16\">;
                 <h2 className=\"text-3xl \"md\": tex t-4xl font-bold text-gray-900 mb-4\">;
@@ -788,7 +874,6 @@ const "Contact": NextPage = () => {;
               <div className=\"max-w-4xl mx-auto\">;
               <div className="max-w-4xl mx-auto">;
                 <motion&& motion.form
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages._archive_corrupted/contact.tsx
                   initial={{ opacity: 0, \"y\": 20 }}
                   animate={{ \"opacity\": 1, \"y\": 0 }}
                   transition={{ \"duration\": 0 && 0.6, \"delay\": 0 && 0.2 }}
@@ -816,6 +901,7 @@ const "Contact": NextPage = () => {;
                         required
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
 <<<<<<< HEAD
+<<<<<<< HEAD
                         placeholder=\"your.email@example.com\"
                        />
                     </div>
@@ -823,17 +909,23 @@ const "Contact": NextPage = () => {;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
                   <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
                   <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
                   <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
+<<<<<<< HEAD
 
+=======
+                  <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
+                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     <div>
                       <label htmlFor=\"phone\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                         Phone Number
                       </label>
                       <input type=\"tel\"
-=======
                         placeholder=\"your && your.email@example && example.com\"
                        />;
                     </div>;
@@ -849,7 +941,6 @@ const "Contact": NextPage = () => {;
                         Phone Number;
                       </label>;
                       <inputtype=\"tel\"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages._archive_corrupted/contact.tsx
                         id=\"phone\"
                         name=\"phone\"
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
@@ -866,21 +957,26 @@ const "Contact": NextPage = () => {;
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
                         placeholder=\"Your company name\"
 <<<<<<< HEAD
+<<<<<<< HEAD
                        />
                     </div>
                   </div>
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   <div className=\"mb-6\">
                     <label htmlFor=\"service\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                   <div className="mb-6">
                     <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       Service Interest
                     </label>
-=======
                        />;
                     </div>;
                   </div>;
@@ -890,7 +986,6 @@ const "Contact": NextPage = () => {;
                     <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">;
                       Service Interest;
                     </label>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages._archive_corrupted/contact.tsx
                     <select
                       id=\"service\"
                       name=\"service\"
@@ -902,20 +997,25 @@ const "Contact": NextPage = () => {;
                         </option>;
                       ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
                     </select>
                   </div>
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   <div className=\"mb-6\">
                     <label htmlFor=\"message\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                   <div className="mb-6">
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       Message *
                     </label>
-=======
                     </select>;
                   </div>;
                   <div className=\"mb-6\">;
@@ -924,7 +1024,6 @@ const "Contact": NextPage = () => {;
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">;
                       Message *;
                     </label>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages._archive_corrupted/contact.tsx
                     <textarea
                       id=\"message\"
                       name=\"message\"
@@ -935,6 +1034,7 @@ const "Contact": NextPage = () => {;
                   </div>;
                   <motion&& motion.button
                     type=\"submit\"
+<<<<<<< HEAD
 <<<<<<< HEAD
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ \"scale\": 0.98 }}
@@ -947,14 +1047,21 @@ const "Contact": NextPage = () => {;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 =======
+=======
+      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     whileHover={{ scale: 1 && 1.02 }}
                     whileTap={{ \"scale\": 0 && 0.98 }}
                     className=\"w-full bg-blue-600 text-white py-4 rounded-lg font-semibold flex items-center justify-center gap-2 \"hover\": b g-blue-700 transition-colors\">;
@@ -968,8 +1075,11 @@ const "Contact": NextPage = () => {;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages._archive_corrupted/contact.tsx
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {/* Hero Section */}
         <section className=\"relative py-20 px-4\">;
           <div className=\"max-w-7xl mx-auto\">;
@@ -988,6 +1098,7 @@ const "Contact": NextPage = () => {;
           <div className=\"max-w-7xl mx-auto\">;
             <div className=\"grid grid-cols-1 \"lg\": grid-cols-2 gap-12\">;
               {/* Contact Form */}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -997,10 +1108,13 @@ const "Contact": NextPage = () => {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <div className=\"bg-slate-800/50 rounded-2xl p-8 border border-slate-700\">
                 <h2 className=\"text-3xl font-bold text-white mb-6\">Send us a Message</h2>
               <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700">
                 <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1009,12 +1123,13 @@ const "Contact": NextPage = () => {;
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 {isSubmitted ? (
                   <div className=\"text-center py-12\">
                     <CheckCircle className=\"w-16 h-16 text-green-500 mx-auto mb-4\" />
                     <h3 className=\"text-2xl font-semibold text-white mb-2\">Message Sent!</h3>
                     <p className=\"text-gray-300 mb-6\">Thank you for reaching out. We\'ll get back to you within 24 hours.</p>
-=======
               <div className=\"bg-slate-800/50 rounded-2xl p-8 border border-slate-700\">;
                 <h2 className=\"text-3xl font-bold text-white mb-6\">Send us a Message</h2>;
               <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700">;
@@ -1024,7 +1139,6 @@ const "Contact": NextPage = () => {;
                     <CheckCircle className=\"w-16 h-16 text-green-500 mx-auto mb-4\" />;
                     <h3 className=\"text-2xl font-semibold text-white mb-2\">Message Sent!</h3>;
                     <p className=\"text-gray-300 mb-6\">Thank you for reaching out. We\'ll get back to you within 24 hours.</p>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages._archive_corrupted/contact.tsx
                     <button
                       onClick={() => setIsSubmitted(false)}
                       className=\"inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-cyan-500 to-blue-500 \"hover\": from-cyan-600 hover:to-blue-600 transition-all duration-300\";
@@ -1063,6 +1177,7 @@ const "Contact": NextPage = () => {;
                           onChange={handleInputChange}
                           className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\"
 <<<<<<< HEAD
+<<<<<<< HEAD
                           placeholder=\"your@email.com\"
                         />
                       </div>
@@ -1070,16 +1185,22 @@ const "Contact": NextPage = () => {;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+<<<<<<< HEAD
 
+=======
+                    <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       <div>
                         <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-300 mb-2\">
                           Company
                         </label>
-=======
                           placeholder=\"your@email && email.com\"
                         />;
                       </div>;
@@ -1094,7 +1215,6 @@ const "Contact": NextPage = () => {;
                         <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-300 mb-2\">;
                           Company;
                         </label>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages._archive_corrupted/contact.tsx
                         <input
                           type=\"text\"
                           id=\"company\"
@@ -1172,6 +1292,7 @@ const "Contact": NextPage = () => {;
               </div>;
               {/* Contact Information */}
 <<<<<<< HEAD
+<<<<<<< HEAD
               <div className=\"space-y-8\">
                 <div>
                   <h2 className=\"text-3xl font-bold text-white mb-6\">Contact Information</h2>
@@ -1182,11 +1303,18 @@ const "Contact": NextPage = () => {;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <div className=\"space-y-6\">
                 <div className="space-y-6">
                 <div className=\"space-y-6\">
                 <div className="space-y-6">
+<<<<<<< HEAD
 
+=======
+                <div className=\"space-y-6\">
+                <div className="space-y-6">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   {contactInfo.map((info, index) => (
                     <div key={index} className=\"flex items-start space-x-4 p-4 bg-slate-800/30 rounded-lg border border-slate-700\">
                       <div className=\"w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0\">
@@ -1202,13 +1330,15 @@ const "Contact": NextPage = () => {;
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
-          </section>
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+          </section>
               <div className=\"space-y-8\">;
                 <div>;
                   <h2 className=\"text-3xl font-bold text-white mb-6\">Contact Information</h2>;
@@ -1238,7 +1368,6 @@ const "Contact": NextPage = () => {;
               </div>;
             </div>;
           </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages._archive_corrupted/contact.tsx
           {/* Services Overview */}
           <section className="py-20">;
             <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">;
@@ -1268,6 +1397,7 @@ const "Contact": NextPage = () => {;
                   </motion && motion.div>;
                 ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
               </div>
             </div>
           </section>
@@ -1281,11 +1411,13 @@ const "Contact": NextPage = () => {;
 
 export default ContactPage
 
+=======
+export default ContactPage
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </div>
         </section>
       </div>
     </>
-=======
               </div>;
             </div>;
           </section>;
@@ -1301,8 +1433,8 @@ export default ContactPage;
         </section>;
       </div>;
     </>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages._archive_corrupted/contact.tsx
   );
+<<<<<<< HEAD
 
 
 =======
@@ -1311,3 +1443,8 @@ export default ContactPage;
   import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
   import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
 
+=======
+  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
+  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
+  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

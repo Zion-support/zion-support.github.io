@@ -11,9 +11,13 @@ export default function RolePicker({ }: RolePickerProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 }
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

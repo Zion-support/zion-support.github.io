@@ -1,5 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+import {useEffect, useState} from 'react';
+function useCounter(): any (target: number, durationMs: number) {;
+=======
+<<<<<<< HEAD
+import { useEffect, useState } from 'react';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 
 
@@ -14,16 +22,21 @@ function useCounter(target: number, durationMs: number) {
 
 import {useEffect, useState} from 'react';
 
-function useCounter(): any (target: number, durationMs: number) {;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+function useCounter(target: number, durationMs: number) {
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const [value, setValue] = useState(0);
   useEffect(() => {;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     let start: number | null = null;
     let raf: number;    const step = (ts: number) => {;
-=======
     let start: number | null = null,
     let raf: number,
     const step = (ts: number) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
       if (start === null) start = ts
       const progress = Math.min(1, (ts - start) / durationMs);
@@ -37,6 +50,9 @@ export default function InteractiveStats() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       if (start === null) start = ts;
 
+=======
+      if (start === null) start = ts;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       const progress = Math && Math.min(1, (ts - start) / durationMs);
       setValue(Math && Math.floor(progress * target));
       if (progress < 1) raf = requestAnimationFrame(step);    let start: number | null = null,;
@@ -45,7 +61,16 @@ export default function InteractiveStats() {;
       if (start === null) start = ts,;
       const progress = Math && Math.min(1, (ts - start) / durationMs);
       setValue(Math && Math.floor(progress * target));
+<<<<<<< HEAD
 
+=======
+=======
+      if (start === null) start = ts
+      const progress = Math.min(1, (ts - start) / durationMs);
+      setValue(Math.floor(progress * target));
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       if (progress < 1) raf = requestAnimationFrame(step);
     }
     raf = requestAnimationFrame(step);
@@ -60,7 +85,10 @@ export default function InteractiveStats() {;
   }, [target, durationMs]);
   return value;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       if (progress < 1) raf = requestAnimationFrame(step)
     };
     raf = requestAnimationFrame(step);
@@ -68,6 +96,7 @@ export default function InteractiveStats() {;
   }, [target, durationMs]);
   return value
 }
+<<<<<<< HEAD
 
 
 export default function InteractiveStats() {
@@ -80,11 +109,30 @@ export default function InteractiveStats() {
 export default function InteractiveStats() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+<<<<<<< HEAD
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+export default function InteractiveStats() {
+<<<<<<< HEAD
+export default function InteractiveStats() {;
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+export default function InteractiveStats() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const hires = useCounter(1200, 1200);
   const experts = useCounter(450, 1200);
   const partners = useCounter(85, 1200);
   const satisfaction = useCounter(98, 1200);
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import {useEffect, useState} from 'react';
 /**
  * use_counter - Function description
@@ -135,12 +183,18 @@ function InteractiveStats() {
   const satisfaction = use_counter (98, 1200);
   return (
     <div className='grid sm:grid - cols - 2 lg:grid - cols - 4 gap - 4'>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <Stat label='Successful Hires' value={hires} suffix='+' />;
       <Stat label='AI Experts' value={experts} suffix='+' />;
       <Stat label='Partners' value={partners} suffix='+' />;
       <Stat label='Satisfaction' value={satisfaction} suffix='%' />;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
       <Stat label="Successful Hires" value={hires} suffix="+" />
@@ -149,6 +203,7 @@ function InteractiveStats() {
       <Stat label="Satisfaction" value={satisfaction} suffix="%" />
     </div>
   )
+<<<<<<< HEAD
 
 }
 <<<<<<< HEAD
@@ -174,6 +229,10 @@ function Stat({
 }: {
 =======
 
+=======
+}
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 function Stat(): any ({ label, value, suffix = '' }: { label: string, value: number, suffix?: string }) {;
   return (
     <div className="p-5 rounded-xl border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-black/40 backdrop-blur">;
@@ -181,10 +240,14 @@ function Stat(): any ({ label, value, suffix = '' }: { label: string, value: num
       <div className="text-sm text-gray-600 dark:text-gray-300">{label}</div>;
     </div>;
   );
+<<<<<<< HEAD
 
 }
 
 =======
+=======
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     </div>);
     </div>);
 }
@@ -210,6 +273,7 @@ function Stat() {
       <div className='text - sm text - gray - 600 dark:text - gray - 300'>{label}</div>;
     </div>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
       </div>
@@ -223,3 +287,63 @@ function Stat() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+    </div>
+  )
+}
+
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+function Stat({ label, value, suffix = '' }: { label: string, value: number, suffix?: string }) {
+  return (
+    <div className="p-5 rounded-xl border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-black/40 backdrop-blur">
+      <div className="text-3xl font-bold">{value}{suffix}</div>
+      <div className="text-sm text-gray-600 dark:text-gray-300">{label}</div>
+    </div>
+<<<<<<< HEAD
+  )
+}
+
+    </div>
+  )
+}
+
+=======
+<<<<<<< HEAD
+);
+=======
+  );
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+function Stat({
+  label
+  value
+  suffix = ''
+}: {
+  label: string;
+  value: number;
+  suffix?: string;
+}) {
+  return (
+    <div className='p-5 rounded-xl border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-black/40 backdrop-blur'>
+      <div className='text-3xl font-bold'>
+        {value}
+        {suffix}
+      </div>
+      <div className='text-sm text-gray-600 dark:text-gray-300'>{label}</div>
+    </div>
+<<<<<<< HEAD
+  );
+}
+=======
+  );
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

@@ -1,10 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Link from "next/link";
 
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
       <div className="max-w-7xl mx-auto">;
 =======
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import Link from './next / link';
 export default /**
  * CommunityPage - Function description
@@ -13,8 +16,22 @@ function CommunityPage() {
   return (
     <div className="min - h-screen py - 20 px - 4 sm:px - 6 lg:px - 8">;
       <div className="max - w-7xl mx - auto">;
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+import Link from "next/link";
+<<<<<<< HEAD
+export default function CommunityPage() {return (;
+=======
+export default function CommunityPage() {;
+  return (;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+    <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
+      <div className="max-w-7xl mx-auto">;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {/* Header */}
         <div className="text - center mb - 16">;
           <h1 className="text - 4xl md:text - 5xl font - bold mb - 6">;

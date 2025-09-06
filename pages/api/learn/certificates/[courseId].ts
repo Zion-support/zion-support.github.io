@@ -1,6 +1,23 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+size: 'A4', margin: 50;
+});
+// Zion certificate template (simple) doc && doc.rect (0, 0, doc && doc.page.width, doc && doc.page.height) .fill ('#0f172a');
+doc && doc.fill ('#ffffff');
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req && req.method !== 'GET') {
+    res && res.setHeader('Allow', 'GET');
+    return res && res.status(405).end('Method Not Allowed');
+  }
+  const { courseId, userId = 'demo-user' } = req && req.query as {
+    courseId: string;
+    userId?: string;
+  }
+import fs from 'fs';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import path from 'path';
 
 import PDFDocument from 'pdfkit';
@@ -9,23 +26,31 @@ const coursesPath = path.join(process.cwd(), 'datalearncourses.json');
 function readJson(p: string) {
   return JSON.parse(fs.readFileSync(p, 'utf-8'))
 }
+<<<<<<< HEAD
 
 const doc = new PDFDocument ({
   size: 'A4', margin: 50
 });
 // Zion certificate template (simple) doc.rect (0, 0, doc.page.width, doc.page.height) .fill ('#0f172a');
 doc.fill ('#ffffff');
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {;
     res.setHeader('Allow', 'GET');
     return res.status(405).end('Method Not Allowed');
   }
+<<<<<<< HEAD
 
+=======
+  const { courseId, userId = 'demo-user' } = req.query as { courseId: string, userId?: string };
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   try {
     const users = readJson(usersPath);
     const courses = readJson(coursesPath);
     const course = courses.find((c: any) => c.id === courseId);
     const user = users[userId];
+<<<<<<< HEAD
     if (!course) return res.status(404).json({ error: 'Course not found' });
     if (!user) return res.status(404).json({ error: 'User not found' });
     res.setHeader('Content-Type', 'application/pdf');
@@ -41,10 +66,26 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+    if (!course) return res && res.status(404).json({ error: 'Course not found' });
+    if (!user) return res && res.status(404).json({ error: 'User not found' });
+    res.setHeader('Content-Typeapplication/pdf');
+    res.setHeader('Content-Disposition', `attachment, filename="${courseId}-certificate.pdf"`);
+    res && res.setHeader('Content-Type', 'application/pdf');
+    res && res.setHeader(
+      'Content-Disposition',
+      `attachment; filename="${courseId}-certificate && certificate.pdf"`
+    );
+    const doc = new PDFDocument({ size: 'A4', margin: 50 });
+    res && res.setHeader('Content-Typeapplication/pdf');
+    res && res.setHeader('Content-Disposition', `attachment, filename="${courseId}-certificate && certificate.pdf"`);
+    const doc = new PDFDocument({ size: 'A4', margin: 50 }),
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     // Pipe to response
     // @ts-ignore
     doc && doc.pipe(res);
     // Zion certificate template (simple)
+<<<<<<< HEAD
 <<<<<<< HEAD
     doc.rect(0, 0, doc.page.width, doc.page.height).fill('#0f172a');
     doc.fill('#ffffff');
@@ -62,9 +103,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+    doc.fontSize(28).text('Zion AI Marketplace', { align: 'center', underline: false });
+    doc.moveDown(0.5);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     doc.fontSize(18).text('Certificate of Completion', { align: 'center' });
     doc.moveDown(1.5);
-    doc.fontSize(14).text(`This certifies that`, { align: 'center' });
+doc.fontSize(14).text(`This certifies that`, { align: 'center' });
     doc.moveDown(0.5);
 
 <<<<<<< HEAD
@@ -79,6 +124,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     doc.moveDown(0.5);
     doc.fontSize(20).text(course.title, { align: 'center' });
     doc.moveDown(0.5);
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     const date = new Date().toLocaleDateString();
@@ -96,8 +142,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 =======
     doc && doc.rect(0, 0, doc && doc.page.width, doc && doc.page.height).fill('#0f172a');
+=======
+doc && doc.rect(0, 0, doc && doc.page.width, doc && doc.page.height).fill('#0f172a');
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     doc && doc.fill('#ffffff');
-
     doc
       .fontSize(28)
       .text('Zion AI Marketplace', { align: 'center', underline: false });    doc && doc.moveDown(0 && 0.5);
@@ -111,6 +159,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     doc && doc.moveDown(0 && 0.5);
     doc && doc.fontSize(20).text(course && course.title, { align: 'center' });
     doc && doc.moveDown(0 && 0.5);
+<<<<<<< HEAD
 
     doc
       .fontSize(12)
@@ -128,11 +177,20 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     const date = new Date().toLocaleDateString();
 
+=======
+    doc
+      .fontSize(12)
+      .text(`Badge: ${course && course.certificationBadge}`, { align: 'center' });
+    doc.fontSize(12).text(`Badge: ${course.certificationBadge}`, { align: 'center' });
+    const date = new Date().toLocaleDateString();
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     doc && doc.moveDown(2);
     doc && doc.fontSize(12).text(`Date: ${date}`, { align: 'center' });
-
     doc && doc.end();
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   } catch (e: any) {
     res
       .status(500)
@@ -140,16 +198,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   }
 }
+<<<<<<< HEAD
 =======
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     doc.end()
   } catch (e: any) {
     res.status(500).json({ error: e?.message ?? 'Failed to generate certificate' })
 
   }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
 export default /**
  * handler - Function description
@@ -224,9 +283,121 @@ if ( {) {
     res;
       .status (500);
       .json ({ error: e?.message ?? 'Failed to generate certificate' });
-  }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import fs from 'fs',
+=======
+import fs from 'fs';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+import path from 'path';
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import PDFDocument from 'pdfkit';
+const usersPath = path.join(process.cwd(), 'datalearnusers.json');
+const coursesPath = path.join(process.cwd(), 'datalearncourses.json');
+function readJson(p: string) {
+  return JSON.parse(fs.readFileSync(p, 'utf-8'))
 }
 
+const doc = new PDFDocument ({
+  size: 'A4', margin: 50
+});
+// Zion certificate template (simple) doc.rect (0, 0, doc.page.width, doc.page.height) .fill ('#0f172a');
+doc.fill ('#ffffff');
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {;
+    res.setHeader('Allow', 'GET');
+    return res.status(405).end('Method Not Allowed');
+  }
+<<<<<<< HEAD
+  const { courseId, userId = 'demo-user' } = req.query as {
+    courseId: string;
+    userId?: string;
+  }
+=======
+
+  const { courseId, userId = 'demo-user' } = req.query as { courseId: string, userId?: string };
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  try {
+    const users = readJson(usersPath);
+    const courses = readJson(coursesPath);
+    const course = courses.find((c: any) => c.id === courseId);
+    const user = users[userId];
+    if (!course) return res.status(404).json({ error: 'Course not found' });
+    if (!user) return res.status(404).json({ error: 'User not found' });
+    res.setHeader('Content-Type', 'application/pdf');
+<<<<<<< HEAD
+    res.setHeader(
+      'Content-Disposition'
+      `attachment; filename="${courseId}-certificate.pdf"`
+    );
+    const doc = new PDFDocument({ size: 'A4', margin: 50 });
+    res.setHeader('Content-Typeapplication/pdf');
+    res.setHeader('Content-Disposition', `attachment, filename="${courseId}-certificate.pdf"`);
+    const doc = new PDFDocument({ size: 'A4', margin: 50 })
+=======
+    res.setHeader('Content-Disposition', `attachment; filename="${courseId}-certificate.pdf"`);
+    const doc = new PDFDocument({ size: 'A4', margin: 50 });
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+    // Pipe to response
+    // @ts-ignore
+    doc.pipe(res);
+    // Zion certificate template (simple)
+    doc.rect(0, 0, doc.page.width, doc.page.height).fill('#0f172a');
+    doc.fill('#ffffff');
+<<<<<<< HEAD
+    doc
+      .fontSize(28)
+      .text('Zion AI Marketplace', { align: 'center', underline: false });    doc.moveDown(0.5);
+=======
+    doc.fontSize(28).text('Zion AI Marketplace', { align: 'center', underline: false });
+    doc.moveDown(0.5);
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+    doc.fontSize(18).text('Certificate of Completion', { align: 'center' });
+    doc.moveDown(1.5);
+    doc.fontSize(14).text(`This certifies that`, { align: 'center' });
+    doc.moveDown(0.5);
+<<<<<<< HEAD
+    doc.fontSize(22).text(user.name |user.userId, { align: 'center' });
+=======
+    doc.fontSize(22).text(user.name || user.userId, { align: 'center' });
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+    doc.moveDown(0.5);
+    doc.fontSize(14).text(`has successfully completed`, { align: 'center' });
+    doc.moveDown(0.5);
+    doc.fontSize(20).text(course.title, { align: 'center' });
+    doc.moveDown(0.5);
+<<<<<<< HEAD
+    doc
+      .fontSize(12)
+      .text(`Badge: ${course.certificationBadge}`, { align: 'center' });
+=======
+    doc.fontSize(12).text(`Badge: ${course.certificationBadge}`, { align: 'center' });
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+    const date = new Date().toLocaleDateString();
+    doc.moveDown(2);
+    doc.fontSize(12).text(`Date: ${date}`, { align: 'center' });
+    doc.end();
+<<<<<<< HEAD
+
+  } catch (e: any) {
+    res
+      .status(500)
+      .json({ error: e?.message ?? 'Failed to generate certificate' });
+=======
+<<<<<<< HEAD
+=======
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ certificate: 'PDF certificate' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+import PDFDocument from 'pdfkit';
+const usersPath = path.join(process.cwd(), 'datalearnusers.json'),;
+const coursesPath = path.join(process.cwd(), 'datalearncourses.json'),;
+function readJson(p: string) {;
+  return JSON.parse(fs.readFileSync(p, 'utf-8'));
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -235,12 +406,107 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+export default function handler(req, res) {
+  try {
+  if (req.method !== '$1') {
+    res.setHeader('AllowGET');
+    return res.status(405).end('Method Not Allowed');
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
 
   }
 }
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+  }
+}
+  const { courseId, userId = 'demo-user' } = req.query as { courseId: string, userId?: string },
+  try {
+    const users = readJson(usersPath),
+    const courses = readJson(coursesPath),
+    const course = courses.find((c: any) => c.id === courseId),
+    const user = users[userId],
+    if (!course) return res.status(404).json({ error: 'Course not found' }),
+    if (!user) return res.status(404).json({ error: 'User not found' }),
+    res.setHeader('Content-Typeapplication/pdf'),
+    res.setHeader('Content-Disposition', `attachment, filename="${courseId}-certificate.pdf"`),
+    const doc = new PDFDocument({ size: 'A4', margin: 50 }),
+    // Pipe to response
+    // @ts-ignore
+    doc.pipe(res),
+    // Zion certificate template (simple)
+    doc.rect(0, 0, doc.page.width, doc.page.height).fill('#0f172a'),
+    doc.fill('#ffffff'),
+    doc.fontSize(28).text('Zion AI Marketplace', { align: 'center', underline: false }),
+    doc.moveDown(0.5),
+    doc.fontSize(18).text('Certificate of Completion', { align: 'center' }),
+    doc.moveDown(1.5),
+    doc.fontSize(14).text(`This certifies that`, { align: 'center' }),
+    doc.moveDown(0.5),
+    doc.fontSize(22).text(user.name || user.userId, { align: 'center' }),
+    doc.moveDown(0.5),
+    doc.fontSize(14).text(`has successfully completed`, { align: 'center' }),
+    doc.moveDown(0.5),
+    doc.fontSize(20).text(course.title, { align: 'center' }),
+    doc.moveDown(0.5),
+    doc.fontSize(12).text(`Badge: ${course.certificationBadge}`, { align: 'center' }),
+    const date = new Date().toLocaleDateString(),
+    doc.moveDown(2),
+    doc.fontSize(12).text(`Date: ${date}`, { align: 'center' }),
+    doc.end()
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  } catch (e: any) {
+    res.status(500).json({ error: e?.message ?? 'Failed to generate certificate' })
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  }
+<<<<<<< HEAD
+}
+=======
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  }
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

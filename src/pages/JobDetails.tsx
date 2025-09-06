@@ -1,21 +1,40 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+import React, { useState, useEffect } from 'react';
+
+import { useRouter } from 'next/router'; // Changed from useParams, useNavigate
+import { Header } from '@/components/Header';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import {
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   Calendar
   Clock
   DollarSign
   Tag
   Users
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   Briefcase;
 import {;
   Calendar,;
   Clock,;
   DollarSign,;
+=======
+=======
+  Calendar,
+  Clock,
+  DollarSign,
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   Tag,;
-  Users,;
-  Briefcase,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  Users;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  Briefcase;
 } from 'lucide-react';import { formatDistanceToNow } from 'date-fns';
 import { toast } from 'sonner';
 import { useAuth } from '@/hooks/useAuth';
@@ -25,6 +44,7 @@ import { ApplyToJobModal  } from '@/components/messaging/job-application';
 import { SEO  } from '@/components/SEO';
 import { useWhitelabel  } from '@/context/WhitelabelContext';
 import { JobDetailsSkeleton } from '@/components/jobs';
+<<<<<<< HEAD
 interface Job {;
 import { use_router } from 'next / router'; // Changed from use_params, use_navigate;
 import { Header } from '@/components / Header';
@@ -46,8 +66,9 @@ import { ApplyToJobModal } from '@/components / messaging / job - application';
 import { SEO } from '@/components / SEO';
 import { use_whitelabel } from '@/context / WhitelabelContext';
 import { JobDetailsSkeleton } from '@/components / jobs';
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 interface Job {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   id: string;
   title: string;
   description: string;
@@ -59,6 +80,7 @@ interface Job {
   skills?: string[];
   created_at: string;
   category: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -96,12 +118,67 @@ export default function JobDetails() {
 <<<<<<< HEAD
 
 =======
+=======
+=======
+  deadline?: string;
+
+export default function JobDetails() {;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const router = useRouter(); // Init router
   const { jobId: rawJobId } = router.query; // Get jobId from query
   const jobId = typeof rawJobId === 'string' ? rawJobId : undefined;
   const { job, isLoading, error } = useJobDetails(jobId) as {
     job: Job | undefined;
     isLoading: boolean;
+<<<<<<< HEAD
+=======
+    error: any;
+  };
+  const { user, isAuthenticated } = useAuth();
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import React, { useState, useEffect } from 'react',;
+import { useRouter } from 'next/router', // Changed from useParams, useNavigate;
+import { Header } from '@/components/Header',;
+import { Button } from '@/components/ui/button',;
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
+import { Badge } from '@/components/ui/badge',;
+import { Calendar, Clock, DollarSign, Tag, Users, Briefcase } from 'lucide-react';
+import { formatDistanceToNow } from 'date-fns',;
+import { toast } from 'sonner',;
+import { useAuth } from '@/hooks/useAuth',;
+import useJobDetails from '@/hooks/useJobDetails',;
+import { ApplyToJobModal } from '@/components/messaging/job-application',;
+import { SEO } from '@/components/SEO',;
+import { useWhitelabel } from '@/context/WhitelabelContext',;
+import { JobDetailsSkeleton } from '@/components/jobs',;
+interface Job {;
+  id: string,;
+  title: string,;
+  description: string,;
+  company_name?: string,;
+  budget: { min: number, max: number },;
+  client_id: string,;
+  skills?: string[],;
+  created_at: string,;
+  category: string,;
+  deadline?: string;
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+  deadline?: string;
+export default function JobDetails() {
+<<<<<<< HEAD
+  const router = useRouter(); // Init router
+  const { jobId: rawJobId } = router.query; // Get jobId from query
+  const jobId = typeof rawJobId === 'string' ? rawJobId : undefined;
+  const { job, isLoading, error } = useJobDetails(jobId) as {
+    job: Job | undefined;
+    isLoading: boolean;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     error: any;
   }
   const { user, isAuthenticated } = useAuth();
@@ -112,7 +189,17 @@ export default function JobDetails() {
     if (!budget) return 'Not specified';
     return `$${budget.min} - $${budget.max}`;
   }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+  const router = useRouter(), // Init router
+  const { jobId: rawJobId } = router.query, // Get jobId from query
+  const jobId = typeof rawJobId === 'string' ? rawJobId : undefined,
+  const { job, isLoading, error } = useJobDetails(jobId) as { job: Job | undefined, isLoading: boolean, error: any },
+  const { user, isAuthenticated } = useAuth(),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   // navigate is now router
   const { isWhitelabel, brandName } = useWhitelabel(),
   
@@ -123,6 +210,7 @@ export default function JobDetails() {
     return `$${budget.min} - $${budget.max}`
   },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   if (isLoading) {
 =======
@@ -142,36 +230,66 @@ ursor/fix-website-loading-errors-and-merge-6662
   };
   if (isLoading) {;
     return <JobDetailsSkeleton />;
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  if (isLoading) {
+    return <JobDetailsSkeleton />
+  }
+  if (error |!job) {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     return (
       <>
         <Header />
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       </>
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <div className='container mx-auto px-4 py-16 text-center'>
           <h1 className='text-2xl font-bold mb-4'>Job Not Found</h1>
           <p className='mb-8'>
             The job you're looking for doesn't exist or has been removed.
           </p>
           <Button onClick={() => router.push('/careers')}>View All Jobs</Button>        </div>
+<<<<<<< HEAD
 >>>>>>>       </>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     )
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+        <div className="container mx-auto px-4 py-16 text-center">
+          <h1 className="text-2xl font-bold mb-4">Job Not Found</h1>
+          <p className="mb-8">The job you're looking for doesn't exist or has been removed.</p>
+          <Button onClick={() => router.push('/careers')}>View All Jobs</Button>
+        </div>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      </>
+    )
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }
   const handleApply = () => {
     if (!isAuthenticated) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   return (
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       toast.error('Please log in to apply for this job');
       router.push(
         `/login?redirect=${encodeURIComponent(`/jobs/${jobId |''}`)}`
       ); // Added null check for jobId
       return;
     }
+<<<<<<< HEAD
 
     if (;
       user?.userType !== 'talent' &&;
@@ -185,10 +303,51 @@ ursor/fix-website-loading-errors-and-merge-6662
     setIsApplyModalOpen(true);
 
   };
-
-  const handleApplySuccess = async (appliedJobId: string) => {;
-    toast && toast.success('Application submitted successfully!');
+=======
+    if (
+      user?.userType !== 'talent' &&
+      user?.userType !== 'admin' &&
+      user?.userType !== 'client'
+    ) {
+      toast.error('Only job seekers can apply for jobs');
+      return;
+    }
+    setIsApplyModalOpen(true);
+  }
+  const handleApplySuccess = async (appliedJobId: string) => {
+    toast.success('Application submitted successfully!');
     setIsApplyModalOpen(false);
+  }
+  const isOwnJob = user?.id === job.client_id;
+=======
+      toast.error("Please log in to apply for this job"),
+      router.push(`/login?redirect=${encodeURIComponent(`/jobs/${jobId || ''}`)}`), // Added null check for jobId
+      return
+    }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+
+    if (user?.userType !== "talent" && user?.userType !== "admin" && user?.userType !== "client") {
+      toast.error("Only job seekers can apply for jobs"),
+      return
+    }
+    
+    setIsApplyModalOpen(true)
+  },
+
+  const handleApplySuccess = async (appliedJobId: string) => {
+    toast.success("Application submitted successfully!"),
+    setIsApplyModalOpen(false)
+  },
+
+<<<<<<< HEAD
+
+  const isOwnJob = user?.id === job.client_id,
+=======
+<<<<<<< HEAD
+  const handleApplySuccess = async (appliedJobId: string) => {
+    toast.success('Application submitted successfully!');
+    setIsApplyModalOpen(false);
+<<<<<<< HEAD
   }
   const isOwnJob = user?.id === job.client_id;
 
@@ -201,6 +360,18 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 
 >>>>>>>   return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+  };
+  const isOwnJob = user?.id === job.client_id;
+=======
+
+  const isOwnJob = user?.id === job.client_id,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  return (
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <>
       <SEO 
         title={`${job.title} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
@@ -208,8 +379,11 @@ ursor/fix-website-loading-errors-and-merge-6662
       />
       <Header />
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <main className='container mx-auto px-4 py-8'>
         <div className='mb-6'>
           <Button
@@ -221,6 +395,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         </div>
         <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
           <div className='lg:col-span-2'>
+<<<<<<< HEAD
 >>>>>>>             <Card>
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -231,6 +406,32 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 
 =======
+=======
+=======
+      <main className="container mx-auto px-4 py-8">
+        <div className="mb-6">
+          <Button 
+            variant="outline" 
+            size="sm"
+            onClick={() => router.push('/careers')}
+          >
+            ← Back to Jobs
+          </Button>
+        </div>
+        
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="lg:col-span-2">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            <Card>
+              <CardHeader>
+                <div className="flex justify-between items-start">
+                  <div>
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     <CardTitle className='text-2xl mb-2'>{job.title}</CardTitle>
                     <div className='flex items-center text-muted-foreground'>
                       <Calendar className='mr-2 h-4 w-4' />
@@ -240,13 +441,23 @@ ursor/fix-website-loading-errors-and-merge-6662
                           addSuffix: true
                         })}
                       </span>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+                    <CardTitle className="text-2xl mb-2">{job.title}</CardTitle>
+                    <div className="flex items-center text-muted-foreground">
+                      <Calendar className="mr-2 h-4 w-4" />
+                      <span>Posted {formatDistanceToNow(new Date(job.created_at), { addSuffix: true })}</span>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     </div>
                   </div>
                   <Badge>{job.category}</Badge>
                 </div>
               </CardHeader>
               <CardContent className="space-y-6">
+<<<<<<< HEAD
                 <div>
                   <h3 className="font-semibold text-lg mb-3">Job Description</h3>
                   <div className="whitespace-pre-wrap">
@@ -260,20 +471,154 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <div>
                   <h3 className='font-semibold text-lg mb-3'>
                     Job Description
+=======
+                <div>
+                  <h3 className="font-semibold text-lg mb-3">Job Description</h3>
+                  <div className="whitespace-pre-wrap">
+                    {job.description}
+                  </div>
+                </div>
+<<<<<<< HEAD
+                <div>
+                  <h3 className='font-semibold text-lg mb-3'>
+                    Required Skills
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   </h3>
                   <div className='flex flex-wrap gap-2'>
                     {job.skills?.map((skill: string, i: number) => (
                       <Badge key={i} variant='secondary'>                        {skill}
                       </Badge>
+<<<<<<< HEAD
 >>>>>>>                     ))}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+                
+                <div>
+                  <h3 className="font-semibold text-lg mb-3">Required Skills</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {job.skills?.map((skill: string, i: number) => (
+                      <Badge key={i} variant="secondary">
+;
+export default function JobDetails() {;
+  const router = useRouter(), // Init router;
+  const { jobId: rawJobId } = router.query, // Get jobId from query;
+  const jobId = typeof rawJobId === 'string' ? rawJobId : undefined,;
+  const { job, isLoading, error } = useJobDetails(jobId) as { job: Job | undefined, isLoading: boolean, error: any },;
+  const { user, isAuthenticated } = useAuth(),;
+  // navigate is now router;
+  const { isWhitelabel, brandName } = useWhitelabel(),;
+  const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),;
+  const formatBudget = (budget: any) => {;
+    if (!budget) return "Not specified",;
+    return `$${budget.min} - $${budget.max}`;
+  },;
+  if (isLoading) {;
+    return <JobDetailsSkeleton />;
+  }
+;
+  if (error || !job) {;
+    return (;
+      <>;
+        <Header />;
+        <div className="container mx-auto px-4 py-16 text-center">;
+          <h1 className="text-2xl font-bold mb-4">Job Not Found</h1>;
+          <p className="mb-8">The job you're looking for doesn't exist or has been removed.</p>;
+          <Button onClick={() => router.push('/careers')}>View All Jobs</Button>;
+        </div>;
+      </>;
+    );
+  }
+;
+  const handleApply = () => {;
+    if (!isAuthenticated) {;
+      toast.error("Please log in to apply for this job"),;
+      router.push(`/login?redirect=${encodeURIComponent(`/jobs/${jobId || ''}`)}`), // Added null check for jobId;
+      return;
+    }
+;
+    if (user?.userType !== "talent" && user?.userType !== "admin" && user?.userType !== "client") {;
+      toast.error("Only job seekers can apply for jobs"),;
+      return;
+    }
+;
+    setIsApplyModalOpen(true);
+  },;
+  const handleApplySuccess = async (appliedJobId: string) => {;
+    toast.success("Application submitted successfully!"),;
+    setIsApplyModalOpen(false);
+  },;
+  const isOwnJob = user?.id === job.client_id,;
+  return (;
+    <>;
+      <SEO;
+        title={`${job.title} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
+        description={job.description.substring(0, 160)}
+      />;
+      <Header />;
+      <main className="container mx-auto px-4 py-8">;
+        <div className="mb-6">;
+          <Button;
+            variant="outline";
+            size="sm";
+            onClick={() => router.push('/careers')}
+          >;
+            ← Back to Jobs;
+          </Button>;
+        </div>;
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;
+          <div className="lg:col-span-2">;
+            <Card>;
+              <CardHeader>;
+                <div className="flex justify-between items-start">;
+                  <div>;
+                    <CardTitle className="text-2xl mb-2">{job.title}</CardTitle>;
+                    <div className="flex items-center text-muted-foreground">;
+                      <Calendar className="mr-2 h-4 w-4" />;
+                      <span>Posted {formatDistanceToNow(new Date(job.created_at), { addSuffix: true })}</span>;
+                    </div>;
+                  </div>;
+                  <Badge>{job.category}</Badge>;
+                </div>;
+              </CardHeader>;
+              <CardContent className="space-y-6">;
+                <div>;
+                  <h3 className="font-semibold text-lg mb-3">Job Description</h3>;
+                  <div className="whitespace-pre-wrap">;
+                    {job.description}
+                  </div>;
+                </div>;
+                <div>;
+                  <h3 className="font-semibold text-lg mb-3">Required Skills</h3>;
+                  <div className="flex flex-wrap gap-2">;
+                    {job.skills?.map((skill: string, i: number) => (;
+                      <Badge key={i} variant="secondary">;
+                        {skill}
+                      </Badge>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                    ))}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   </div>
                 </div>
               </CardContent>
             </Card>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+=======
+          
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <div>
             <Card>
               <CardContent className="pt-6 space-y-4">
@@ -282,6 +627,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <div className="ml-3">
                     <p className="text-sm text-muted-foreground">Budget</p>
                     <p className="font-medium">{formatBudget(job.budget)}</p>
+<<<<<<< HEAD
                   </div>
                 </div>
 
@@ -313,6 +659,56 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <p className="text-sm text-muted-foreground">Deadline</p>
                     <p className="font-medium">
                       {job.deadline ? new Date(job.deadline).toLocaleDateString() : "Flexible"}
+=======
+                  </div>
+                </div>
+<<<<<<< HEAD
+                <div className='flex items-start'>
+                  <Clock className='mt-1 h-5 w-5 text-muted-foreground' />
+                  <div className='ml-3'>
+                    <p className='text-sm text-muted-foreground'>Deadline</p>
+                    <p className='font-medium'>
+                      {job.deadline
+                        ? new Date(job.deadline).toLocaleDateString()
+                        : 'Flexible'}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <Briefcase className="mt-1 h-5 w-5 text-muted-foreground" />
+                  <div className="ml-3">
+                    <p className="text-sm text-muted-foreground">Job Type</p>
+                    <p className="font-medium">Freelance / Remote</p>
+                  </div>
+                </div>
+                
+                {!isOwnJob && (
+<<<<<<< HEAD
+                  <Button 
+                    className="w-full mt-4" 
+                    onClick={handleApply}
+=======
+                  <Button
+                    className='w-full mt-4'
+                    onClick={handleApply}
+                    disabled={isOwnJob}                  >
+                    Apply Now
+                  </Button>
+                )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+                
+                <div className="flex items-start">
+                  <Clock className="mt-1 h-5 w-5 text-muted-foreground" />
+                  <div className="ml-3">
+                    <p className="text-sm text-muted-foreground">Deadline</p>
+                    <p className="font-medium">
+                      {job.deadline ? new Date(job.deadline).toLocaleDateString() : "Flexible"}
                     </p>
                   </div>
                 </div>
@@ -329,11 +725,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <Button 
                     className="w-full mt-4" 
                     onClick={handleApply}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     disabled={isOwnJob}
                   >;
                     Apply Now;
                   </Button>;
                 )}
+                
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 {isOwnJob && (
@@ -422,13 +821,18 @@ const isOwnJob = user?.id === job.client id;
 =======
 >>>>>>> 
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 {isOwnJob && (
-                  <div className='text-center p-2 bg-muted rounded-md mt-4'>
-                    <p className='text-sm text-muted-foreground'>
-                      This is your job posting
-                    </p>
+                  <div className="text-center p-2 bg-muted rounded-md mt-4">
+                    <p className="text-sm text-muted-foreground">This is your job posting</p>
                   </div>
                 )}
+<<<<<<< HEAD
 
 
                 {isOwnJob && (;
@@ -597,19 +1001,37 @@ if ( {) {
                   </div>)}
 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </main>
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </CardContent>;
             </Card>;
           </div>;
         </div>;
       </main>;
+<<<<<<< HEAD
 
 
 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       {/* Job application modal */}
-      {job && (;
+      {job && (
         <ApplyToJobModal
           job={{
+<<<<<<< HEAD
 
             id: job && job.id,
             title: job && job.title,
@@ -618,13 +1040,33 @@ if ( {) {
             budget: formatBudget(job && job.budget),
             client_id: job && job.client_id,
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+            id: job.id
+            title: job.title
+            description: job.description
+            company_name: job.company_name ?? 'Company'
+            budget: formatBudget(job.budget)
+            client_id: job.client_id
+=======
+            id: job.id,
+            title: job.title,
+            description: job.description,
+            company_name: job.company_name ?? "Company",
+            budget: formatBudget(job.budget),
+<<<<<<< HEAD
+            client_id: job.client_id,
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           }}
 
           isOpen={isApplyModalOpen}
-          onClose={() => setIsApplyModalOpen(false)}        />;
+          onClose={() => setIsApplyModalOpen(false)}        />
       )}
-    </>;
+    </>
   );
+<<<<<<< HEAD
 
 
   return (<> <Header /> <div className="container mx-auto px-4 py-16 text-center" > <h1 className="text-2xl font-bold mb-4" >Job Not Found</h1> <p className="mb-8" >The job you're looking for doesn't exist or has been removed.</p> <ButtononClick={'
@@ -656,10 +1098,18 @@ if ( {) {
   encodeURIComponent (`/jobs/$ {';
   job_id || '' ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+  return (<> <Header /> <div className="container mx-auto px-4 py-16 text-center" > <h1 className="text-2xl font-bold mb-4" >Job Not Found</h1> <p className="mb-8" >The job you're looking for doesn't exist or has been removed.</p> <Button onClick={';
+  () => router.push ('/careers') ;
+}>View All Jobs</Button> </div> </>) ;
+}router.push (`/login?redirect=$ {encodeURIComponent (`/jobs/$ {';
+  jobId |'' ;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }`) ;
 }`);
-//Added null check for job_id return;
+//Added null check for jobId return;
 }setIsApplyModalOpen (true) ;
+<<<<<<< HEAD
 
 };
 const isOwnJob = user?.id === job && job.client id;
@@ -694,10 +1144,31 @@ const isOwnJob = user?.id === job.client id;
   job && (<ApplyToJobModal job= {
   {
 
+=======
+}
+const isOwnJob = user?.id === job.client id;
+`$ {job.title ;
+}- $ {';
+  isWhitelabel ? brandName : 'Zion AI Marketplace' ;
+}` ;
+}description= {job.description.substring (0, 160) ";
+}/> <Header /> <main className="container mx-auto px-4 py-8" > <div className="mb-6" > <Button > ← Back to Jobs </Button> </div> <div className="grid grid-cols-1 lg:grid-cols-3 gap-6" > <div className="lg:col-span-2" > <Card> <CardHeader> <div className="flex justify-between items-start" > <div> </div> </div> <Badge> {job.category ";
+}</Badge> </div> </CardHeader> <CardContent className="space-y-6" > <div> </div> </div> <div> </Badge>) ) ";
+}</div> </div> </CardContent> </Card> </div> <div> <Card> </p> </div> </div> <div className="flex items-start" > <Briefcase className="mt-1 h-5 w-5 text-muted-foreground" /> <div className="ml-3" > <p className="text-sm text-muted-foreground" >Job Type</p> <p className="font-medium" >Freelance / Remote</p> </div> </div> {";
+  !isOwnJob && (<Button className="w-full mt-4" onClick={handleApply ;
+}disabled= {isOwnJob ;
+}> Apply Now </Button>) ;
+}</div>) ;
+}</CardContent> </Card> </div> </div> </main> {/* Job application modal */ ;
+}{job && (<ApplyToJobModal job= {;
+  {;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   />) ;
 }</>) ;
-}'";
+}'"
 }
+}
+<<<<<<< HEAD
 
 
 }
@@ -711,3 +1182,30 @@ const isOwnJob = user?.id === job.client id;
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+=======
+            id: job.id,
+            title: job.title,
+            description: job.description,
+            company_name: job.company_name ?? "Company",
+            budget: formatBudget(job.budget),
+=======
+;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            client_id: job.client_id}}
+          isOpen={isApplyModalOpen}
+          onClose={() => setIsApplyModalOpen(false)}
+        />;
+      )}
+    </>;
+  );
+}
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

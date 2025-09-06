@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/header/UserMenu.tsx
 
 
 <<<<<<< HEAD
@@ -7,34 +9,77 @@
     } catch (error) {
       toast({
 =======
+========
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/header/UserMenu.tsx
 import { Link  } from './react-router-dom';
 import { use_auth  } from '@/hooks / use_auth';
 import { use_toast  } from '@/hooks / use - toast';
 import { Avatar, AvatarFallback, AvatarImage  } from '@/components / ui / avatar';
 import { Button  } from '@/components / ui / button';
 =======
+<<<<<<< HEAD
+
+import { Link } from "react-router-dom",
+import { useAuth } from "@/hooks/useAuth",
+import { useToast } from "@/hooks/use-toast",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+
+import {
+  DropdownMenu
+  DropdownMenuContent
+  DropdownMenuItem
+  DropdownMenuSeparator
+  DropdownMenuTrigger
+} from "@/components/ui/dropdown-menu";
+export function UserMenu() {
+  const { user, logout } = useAuth();
+  const { toast } = useToast();
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
 import { Link } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
 import { useToast } from "@/hooks/use-toast";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/header/UserMenu.tsx
 
   DropdownMenuTrigger,;
 } from "@/components/ui/dropdown-menu";
 
 
 
+========
+  DropdownMenuTrigger,
+} from '@/components / ui / dropdown - menu';
+;
+export /**
+ * UserMenu - Function description
+ */
+function UserMenu() {
+  const { user, logout } = use_auth ();
+  const { toast } = use_toast ();
+;
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/header/UserMenu.tsx
   const handleSignOut = async () => {
     try {
       await logout ();
     } catch (error) {
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/header/UserMenu.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/header/UserMenu.tsx
 import {;
   DropdownMenu,;
   DropdownMenuContent,;
@@ -42,11 +87,9 @@ import {;
   DropdownMenuSeparator,;
   DropdownMenuTrigger,;
 } from "@/components/ui/dropdown-menu";
-
 export function UserMenu() {;
   const { user, logout } = useAuth();
   const { toast } = useToast();
-
   const handleSignOut = async () => {;
     try {;
       await logout();
@@ -55,22 +98,70 @@ export function UserMenu() {;
         title: "Error signing out",;
         description: "There was an error signing you out. Please try again.",;
         variant: "destructive",;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/header/UserMenu.tsx
 
+=======
+  DropdownMenuTrigger,;
+} from "@/components/ui/dropdown-menu";
+
+<<<<<<< HEAD
+export function UserMenu() {;
+  const { user, logout } = useAuth();
+  const { toast } = useToast();
+=======
+import { Link } from "react-router-dom",
+import { useAuth } from "@/hooks/useAuth",
+import { useToast } from "@/hooks/use-toast",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button",
+import { 
+  DropdownMenu,
+  DropdownMenuContent, 
+  DropdownMenuItem, 
+  DropdownMenuSeparator, 
+  DropdownMenuTrigger 
+} from "@/components/ui/dropdown-menu",
+
+export function UserMenu() {
+  const { user, logout } = useAuth(),
+  const { toast } = useToast(),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  const handleSignOut = async () => {
+    try {
+      await logout()
+    } catch (error) {
+      toast({
+<<<<<<< HEAD
+        title: "Error signing out"
+        description: "There was an error signing you out. Please try again."
+        variant: "destructive"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       });
     }
   }
 =======
+<<<<<<< HEAD
       toast({
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         title: "Error signing out",
         description: "There was an error signing you out. Please try again.",
         variant: "destructive"})
     }
   },
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
+========
+      });
+    }
+  }
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/header/UserMenu.tsx
   if (!user) {;
     return (
       <div className="hidden md: flex items-center space-x-4">;
@@ -80,17 +171,77 @@ export function UserMenu() {;
         <Link
           to="/signup"
           className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-zion-purple text-white hover:bg-zion-purple-light h-10 px-4 py-2">;
+=======
+
+import { Link } from "react-router-dom",;
+import { useAuth } from "@/hooks/useAuth",;
+import { useToast } from "@/hooks/use-toast",;
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
+import { Button } from "@/components/ui/button",;
+import { ;
+  DropdownMenu,;
+  DropdownMenuContent, ;
+  DropdownMenuItem, ;
+  DropdownMenuSeparator, ;
+  DropdownMenuTrigger ;
+} from "@/components/ui/dropdown-menu",;
+;
+export function UserMenu() {;
+  const { user, logout } = useAuth(),;
+  const { toast } = useToast(),;
+;
+  const handleSignOut = async () => {;
+    try {;
+      await logout(),;
+    } catch (error) {;
+      toast({;
+        title:"Error signing out",;
+        description:"There was an error signing you out. Please try again.",;
+        variant:"destructive"}),;
+    }
+  },;
+;
+  if (!user) {;
+    return (;
+      <div className="hidden md:flex items-center space-x-4">;
+        <Link to="/login" className="text-zion-slate-light hover:text-white">Login</Link>;
+        <Link ;
+          to="/signup" ;
+          className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-zion-purple text-white hover:bg-zion-purple-light h-10 px-4 py-2";
+        >;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           Register;
         </Link>;
       </div>;
     );
   }
+<<<<<<< HEAD
   return (
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/header/UserMenu.tsx
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+  if (!user) {
+    return (
+      <div className="hidden md: flex items-center space-x-4">
+        <Link to="/login" className="text-zion-slate-light hover:text-white">Login</Link>
+        <Link 
+          to="/signup" 
+          className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-zion-purple text-white hover:bg-zion-purple-light h-10 px-4 py-2"
+        >
+          Register
+        </Link>
+      </div>
+    )
+  }
+  return (
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" className="h-8 w-8 rounded-full">
           <Avatar className="h-8 w-8">
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -99,12 +250,27 @@ export function UserMenu() {;
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+            <AvatarImage
+              src={user.avatarUrl |""}
+              alt={user.displayName |"User Avatar"}
+            />
+            <AvatarFallback>
+              {user.displayName?.charAt(0).toUpperCase() |"U"}
+            </AvatarFallback>
+=======
+            <AvatarImage src={user.avatarUrl || ""} alt={user.displayName || "User Avatar"} />
+            <AvatarFallback>{user.displayName?.charAt(0).toUpperCase() || "U"}</AvatarFallback>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </Avatar>
           <span className="sr-only">Open user menu</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <div className="grid gap-2 px-2 py-2">
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -114,6 +280,19 @@ export function UserMenu() {;
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+          <div className="text-sm font-medium leading-none">
+            {user.displayName |"User"}
+          </div>
+          <div className="text-muted-foreground text-xs leading-none">
+            {user.email}
+          </div>
+=======
+          <div className="text-sm font-medium leading-none">{user.displayName || "User"}</div>
+          <div className="text-muted-foreground text-xs leading-none">{user.email}</div>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         </div>
         <DropdownMenuSeparator />
         <DropdownMenuItem asChild>
@@ -132,9 +311,22 @@ export function UserMenu() {;
         <DropdownMenuItem onClick={handleSignOut}>Sign Out</DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+========
+=======
+;
+  return (;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+    <DropdownMenu>;
+      <DropdownMenuTrigger asChild>;
+        <Button variant="ghost" className="h-8 w-8 rounded-full">;
+          <Avatar className="h-8 w-8">;
+<<<<<<< HEAD
+            <AvatarImage
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/header/UserMenu.tsx
               src={user && user.avatarUrl || ""}
               alt={user && user.displayName || "User Avatar"}
             />;
@@ -142,7 +334,14 @@ export function UserMenu() {;
               {user && user.displayName?.charAt(0).toUpperCase() || "U"}
             </AvatarFallback>;
 =======
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/header/UserMenu.tsx
 
+=======
+<<<<<<< HEAD
+  );
+}
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   )
 import { Link } from "react-router-dom",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -190,19 +389,37 @@ export function UserMenu() {;
           <Avatar className="h-8 w-8">;
             <AvatarImage src={user.avatarUrl || ""} alt={user.displayName || "User Avatar"} />;
             <AvatarFallback>{user.displayName?.charAt(0).toUpperCase() || "U"}</AvatarFallback>;
+<<<<<<< HEAD
 
+========
+            <AvatarImage src={user.avatarUrl || ""} alt={user.displayName || "User Avatar"} />;
+            <AvatarFallback>{user.displayName?.charAt(0).toUpperCase() || "U"}</AvatarFallback>;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/header/UserMenu.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </Avatar>;
           <span className="sr-only">Open user menu</span>;
         </Button>;
       </DropdownMenuTrigger>;
       <DropdownMenuContent align="end">;
         <div className="grid gap-2 px-2 py-2">;
+<<<<<<< HEAD
+<<<<<<< HEAD
           <div className="text-sm font-medium leading-none">;
             {user && user.displayName || "User"}
           </div>;
           <div className="text-muted-foreground text-xs leading-none">;
             {user && user.email}
           </div>;
+=======
+          <div className="text-sm font-medium leading-none">{user.displayName || "User"}</div>;
+          <div className="text-muted-foreground text-xs leading-none">{user.email}</div>;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+          <div className="text-sm font-medium leading-none">{user.displayName || "User"}</div>;
+          <div className="text-muted-foreground text-xs leading-none">{user.email}</div>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         </div>;
         <DropdownMenuSeparator />;
         <DropdownMenuItem asChild>;
@@ -221,9 +438,13 @@ export function UserMenu() {;
         <DropdownMenuItem onClick={handleSignOut}>Sign Out</DropdownMenuItem>;
       </DropdownMenuContent>;
     </DropdownMenu>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+<<<<<<< HEAD
+<<<<<<< HEAD
   );
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/header/UserMenu.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/header/UserMenu.tsx
       toast ({
         title: "Error signing out",
         description: "There was an error signing you out. Please try again.",
@@ -291,6 +512,7 @@ if ( {) {
         <DropdownMenuItem on_click={handleSignOut}>Sign Out</DropdownMenuItem>;
       </DropdownMenuContent>;
     </DropdownMenu>);
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/header/UserMenu.tsx
 
 }
 =======
@@ -300,3 +522,41 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+=======
+  ),; import {
+  DropdownMenu;
+DropdownMenuContent;
+DropdownMenuItem;
+DropdownMenuSeparator;
+DropdownMenuTrigger export function UserMenu () {
+  const {
+  user, logout 
+}= useAuth ();
+const {
+  toast 
+}= useToast ();
+const handleSignOut = async () => {
+  try {
+  await logout () 
+}catch (error) {
+  toast ({
+  
+}
+};
+<Link to="/login" className="text-zion-slate-light hover:text-white">Login</Link> /signup"className=" inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-zion-purple text-white hover:bg-zion-purple-light h-10 px-4 py-2"> Register </Link> </div> return (<DropdownMenu> <DropdownMenuTrigger asChild> </Avatar> <span className="sr-only">Open user menu</span> </Button> </DropdownMenuTrigger> <DropdownMenuContent align=" end"> <div className="grid gap-2 px-2 py-2"> </div> <DropdownMenuSeparator /> <DropdownMenuItem asChild> <Link to=" /dashboard">Dashboard</Link> </DropdownMenuItem> <DropdownMenuItem asChild> <Link to=" /profile">Profile</Link> </DropdownMenuItem> <DropdownMenuItem asChild> <Link to=" /saved-talents">Saved Talents</Link> </DropdownMenuItem> <DropdownMenuItem asChild> <Link to=" /wallet">Wallet</Link> </DropdownMenuItem> <DropdownMenuSeparator /> <DropdownMenuItem onClick= {
+  handleSignOut 
+}>Sign Out</DropdownMenuItem> </DropdownMenuContent> </DropdownMenu>) 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+}
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/header/UserMenu.tsx
+=======
+  );
+}
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

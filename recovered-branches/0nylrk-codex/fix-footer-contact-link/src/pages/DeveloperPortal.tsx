@@ -1,9 +1,31 @@
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/DeveloperPortal.tsx
 
 
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import {useState} from "react";
+import {useAuth} from "@/hooks/useAuth";
+import {BookOpen, Code, Key, List, LucideIcon, Terminal, Webhook} from "lucide-react";
+import {ProtectedRoute} from "@/components/ProtectedRoute";
+import {ApiKeysManager} from "@/components/developers/ApiKeysManager";
+import {WebhooksManager} from "@/components/developers/WebhooksManager";
+import {ApiDocumentation} from "@/components/developers/ApiDocumentation";
+import {ApiLogs} from "@/components/developers/ApiLogs";
+=======
+import {useState} from "react";
+import {useAuth} from "@/hooks/useAuth";
+import {BookOpen, Code, Key, List, LucideIcon, Terminal, Webhook} from "lucide-react";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { useState } from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { 
@@ -17,10 +39,15 @@ import {
 } from "lucide-react",
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { ApiKeysManager } from "@/components/developers/ApiKeysManager",
@@ -28,28 +55,36 @@ import { WebhooksManager } from "@/components/developers/WebhooksManager",
 import { ApiDocumentation } from "@/components/developers/ApiDocumentation",
 import { ApiLogs } from "@/components/developers/ApiLogs",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 interface TabDefinition {
   id: string
   label: string
 
   icon: LucideIcon
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 export function DeveloperPortal() {
 =======
+========
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/DeveloperPortal.tsx
 interface TabDefinition {;
   id: string,;
   label: string,;
   icon: LucideIcon;
 }
-
 export function DeveloperPortal() {;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/DeveloperPortal.tsx
 
   const { user } = useAuth();
 =======
@@ -60,6 +95,29 @@ export function DeveloperPortal() {;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+export function DeveloperPortal() {;
+  const { user } = useAuth();
+  const [activeTab, setActiveTab] = useState<string>("documentation");
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export function DeveloperPortal() {
+<<<<<<< HEAD
+  const { user } = useAuth();
+
+  const [activeTab, setActiveTab] = useState<string>("documentation");
+
+=======
+  const { user } = useAuth(),
+  const [activeTab, setActiveTab] = useState<string>("documentation"),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   // Define the tabs
   const tabs: TabDefinition[] = [
     { id: "documentation", label: "Documentation", icon: BookOpen }
@@ -78,7 +136,12 @@ export function DeveloperPortal() {;
           Access the Zion API, manage your API keys, and set up webhooks.
         </p>
       </div>
+<<<<<<< HEAD
 =======
+========
+  const { user } = useAuth();
+  const [activeTab, setActiveTab] = useState<string>("documentation");
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/DeveloperPortal.tsx
 import { useState } from './react';
 import { use_auth } from '@/hooks / use_auth';
 import { BookOpen, Code, Key, List, LucideIcon, Terminal, Webhook } from './lucide-react';
@@ -117,8 +180,8 @@ function DeveloperPortal() {
           Access the Zion API, manage your API keys, and set up webhooks.;
         </p>;
       </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Tabs */}
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/DeveloperPortal.tsx
 
 =======
       <div className="border-b border-zinc-800 mb-8">
@@ -130,6 +193,18 @@ function DeveloperPortal() {
             const Icon = tab.icon,
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+      {/* Tabs */}
+      <div className="border-b border-zinc-800 mb-8">
+        <div className="flex flex-wrap -mb-px">
+          {tabs.map((tab) => {
+<<<<<<< HEAD
+            const Icon = tab.icon;
+
+=======
+            const Icon = tab.icon,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             return (
               <button
                 key={tab.id}
@@ -140,7 +215,10 @@ function DeveloperPortal() {
                 }`}
                 onClick={() => setActiveTab(tab.id)}
               >
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
                 <Icon size={16} className="mr-2" />
@@ -169,15 +247,28 @@ interface TabDefinition {;
 export function DeveloperPortal() {;
   const { user } = useAuth(),;
   const [activeTab, setActiveTab] = useState<string>("documentation"),;
+<<<<<<< HEAD
 
+========
+      <div className="border - b border - zinc - 800 mb - 8">;
+        <div className="flex flex - wrap -mb - px">;
+          {tabs.map ((tab) => {
+            const Icon = tab.icon;
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/DeveloperPortal.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   // Define the tabs;
   const tabs: TabDefinition[] = [;
     { id: "documentation", label: "Documentation", icon: BookOpen },;
     { id: "api-keys", label: "API Keys", icon: Key },;
     { id: "webhooks", label: "Webhooks", icon: Webhook },;
+<<<<<<< HEAD
     { id: "logs", label: "Logs", icon: List }],;
-
   return (
+=======
+    { id: "logs", label: "Logs", icon: List }];
+  return (;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="w-full max-w-7xl mx-auto p-4 md:p-8">;
       <div className="mb-8">;
         <h1 className="text-3xl font-bold text-white flex items-center">;
@@ -188,11 +279,14 @@ export function DeveloperPortal() {;
           Access the Zion API, manage your API keys, and set up webhooks.;
         </p>;
       </div>;
-
       {/* Tabs */}
       <div className="border-b border-zinc-800 mb-8">;
         <div className="flex flex-wrap -mb-px">;
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/DeveloperPortal.tsx
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           {tabs.map((tab) => {;
             const Icon = tab.icon;
             return (;
@@ -205,30 +299,129 @@ export function DeveloperPortal() {;
                 }`}
                 onClick={() => setActiveTab(tab.id)}
               >
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <Icon size={16} className="mr-2" />
                 {tab.label}
               </button>
             )
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           })}
 
+========
+          {tabs && tabs.map((tab) => {;
+            const Icon = tab && tab.icon;
+            return (
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/DeveloperPortal.tsx
         </div>;
       </div>;
+=======
 
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/DeveloperPortal.tsx
 
+========
+import { useState } from "react",;
+import { useAuth } from "@/hooks/useAuth",;
+import { ;
+  BookOpen,;
+  Code, ;
+  Key, ;
+  List, ;
+  LucideIcon, ;
+  Terminal, ;
+  Webhook ;
+} from "lucide-react",;
+;
+import { ProtectedRoute } from "@/components/ProtectedRoute",;
+import { ApiKeysManager } from "@/components/developers/ApiKeysManager",;
+import { WebhooksManager } from "@/components/developers/WebhooksManager",;
+import { ApiDocumentation } from "@/components/developers/ApiDocumentation",;
+import { ApiLogs } from "@/components/developers/ApiLogs",;
+;
+interface TabDefinition {;
+  id:string,;
+  label:string,;
+  icon:LucideIcon;
+}
+;
+export function DeveloperPortal() {;
+  const { user } = useAuth(),;
+  const [activeTab, setActiveTab] = useState<string>("documentation"),;
+  ;
+  // Define the tabs;
+  const tabs:TabDefinition[] = [;
+    { id:"documentation", label:"Documentation", icon:BookOpen },;
+    { id:"api-keys", label:"API Keys", icon:Key },;
+    { id:"webhooks", label:"Webhooks", icon:Webhook },;
+    { id:"logs", label:"Logs", icon:List }],;
+;
+  return (;
+    <div className="w-full max-w-7xl mx-auto p-4 md:p-8">;
+      <div className="mb-8">;
+        <h1 className="text-3xl font-bold text-white flex items-center">;
+          <Terminal className="mr-3" size={32} />;
+          Developer Portal;
+        </h1>;
+        <p className="text-zinc-400 mt-2">;
+          Access the Zion API, manage your API keys, and set up webhooks.;
+        </p>;
+      </div>;
+      ;
+      {/* Tabs */}
+      <div className="border-b border-zinc-800 mb-8">;
+        <div className="flex flex-wrap -mb-px">;
+          {tabs.map((tab) => {;
+            const Icon = tab.icon,;
+            return (;
+              <button;
+                key={tab.id}
+                className={`inline-flex items-center px-4 py-3 border-b-2 text-sm font-medium ${;
+                  activeTab === tab.id;
+                    ? "text-white border-zion-purple";
+                    :"text-zinc-500 border-transparent hover:text-zinc-400 hover:border-zinc-700";
+                }`}
+                onClick={() => setActiveTab(tab.id)}
+              >;
+                <Icon size={16} className="mr-2" />;
+                {tab.label}
+              </button>;
+            ),;
+          })}
+        </div>;
+      </div>;
+      ;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/DeveloperPortal.tsx
       {/* Tab content */}
       <div>;
+=======
+          })}
+        </div>
+      </div>
+      {/* Tab content */}
+      <div>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {activeTab === "documentation" && <ApiDocumentation />}
         {activeTab === "api-keys" && <ApiKeysManager />}
         {activeTab === "webhooks" && <WebhooksManager />}
         {activeTab === "logs" && <ApiLogs />}
+<<<<<<< HEAD
       </div>;
     </div>;
+<<<<<<< HEAD
   );
 }
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/DeveloperPortal.tsx
 
 <<<<<<< HEAD
 ;
@@ -239,6 +432,8 @@ export function DeveloperPortal() {;
 
 ;
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/DeveloperPortal.tsx
 export default function ProtectedDeveloperPortal() {;
   return (
     <ProtectedRoute>;
@@ -246,11 +441,14 @@ export default function ProtectedDeveloperPortal() {;
     </ProtectedRoute>;
   );
 }
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/DeveloperPortal.tsx
 
 ;
 
 
 =======
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/DeveloperPortal.tsx
               <button;
                 key={tab.id}
                 className={`inline - flex items - center px - 4 py - 3 border - b-2 text - sm font - medium ${
@@ -284,5 +482,99 @@ function ProtectedDeveloperPortal() {
       <DeveloperPortal />;
     </ProtectedRoute>);
 }
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/DeveloperPortal.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+=======
+  ),;
+}
+=======
+      </div>
+    </div>
+  )
+}
+<<<<<<< HEAD
+export default function ProtectedDeveloperPortal() {
+  return (
+    <ProtectedRoute>
+      <DeveloperPortal />
+    </ProtectedRoute>
+  )
+}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+;
+export default function ProtectedDeveloperPortal() {;
+  return (;
+    <ProtectedRoute>;
+      <DeveloperPortal />;
+    </ProtectedRoute>;
+<<<<<<< HEAD
+  ),;
+} import {
+  {
+  {
+  BookOpen;
+Code;
+Key;
+List;
+LucideIcon;
+Terminal;
+Webhook import {
+  ProtectedRoute 
+}from "@/components/ProtectedRoute";
+import {
+  {
+  {
+  ApiKeysManager 
+}from "@/components/developers/ApiKeysManager";
+import {
+  {
+  {
+  WebhooksManager 
+}from "@/components/developers/WebhooksManager";
+import {
+  {
+  {
+  ApiDocumentation 
+}from "@/components/developers/ApiDocumentation";
+import {
+  {
+  {
+  ApiLogs 
+}from "@/components/developers/ApiLogs";
+interface TabDefinition {
+  id: string;
+label: string;
+icon: LucideIcon 
+}export function DeveloperPortal () {
+  return (<div className="w-full max-w-7xl mx-auto p-4 md:p-8" > <div className="mb-8" > <h1 className="text-3xl font-bold text-white flex items-center" > <Terminal className="mr-3" size= {
+  32 
+}/> Developer Portal </h1> <p className="text-zinc-400 mt-2" > Access the Zion API, manage your API keys, and set up webhooks. </p> </div> {
+  /* Tabs */ 
+}<div className="border-b border-zinc-800 mb-8" > <div className="flex flex-wrap -mb-px" > {
+  tabs.map ( (tab) => {
+  const Icon = tab.icon;
+return (<button tab.id 
+}className= {
+  `inline-flex items-center px-4 py-3 border-b-2 text-sm font-medium $ {
+  activeTab === tab.id </button>) 
+}) 
+}</div> </div> {
+  /* Tab content */ 
+}<div> </div> </div>) 
+}export default function ProtectedDeveloperPortal () {
+  return (<ProtectedRoute> <DeveloperPortal /> </ProtectedRoute> 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/DeveloperPortal.tsx
+=======
+  );
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

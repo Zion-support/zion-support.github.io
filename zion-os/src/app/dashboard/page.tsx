@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 "use client",;
@@ -32,6 +33,8 @@ export default function DashboardPage() {;
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 "use client",
 import { use_auth  } from '@/contexts / AuthContext';,
 import { use_router  } from './next / navigation';,
@@ -60,10 +63,46 @@ if ( {) {
         <div className="text - center">;
           <div className="animate - spin rounded - full h - 12 w - 12 border - b-2 border - blue - 500 mx - auto mb - 4"></div>;
           <p className="text - zinc - 400">Loading...</p>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+<<<<<<< HEAD
+"use client";
+import { useAuth } from "@/contexts/AuthContext";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
+import Link from "next/link";
+export default function DashboardPage() {const { user, isAuthenticated, isLoading } = useAuth();
+  const router = useRouter();
+  useEffect(() => {if (!isLoading && !isAuthenticated) {;
+      router.push("/auth/signin");
+    }
+  }, [isAuthenticated, isLoading, router]);
+  if (isLoading) {return (;
+=======
+"use client",;
+import { useAuth } from "@/contexts/AuthContext",;
+import { useRouter } from "next/navigation",;
+import { useEffect } from "react",;
+import Link from "next/link",;
+export default function DashboardPage() {;
+  const { user, isAuthenticated, isLoading } = useAuth(),;
+  const router = useRouter();
+  useEffect(() => {;
+    if (!isLoading && !isAuthenticated) {;
+      router.push("/auth/signin");
+    }
+  }, [isAuthenticated, isLoading, router]);
+  if (isLoading) {;
+    return (;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+      <div className="min-h-screen flex items-center justify-center">;
+        <div className="text-center">;
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></div>;
+          <p className="text-zinc-400">Loading...</p>;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         </div>;
       </div>);
   }
+<<<<<<< HEAD
 
 
 ;
@@ -82,6 +121,9 @@ if ( {) {
 
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   // Check condition
 if ( {) {
   $2
@@ -94,6 +136,7 @@ if ( {) {
       <div className="bg - gradient - to - r from - blue - 600 / 20 to - purple - 600 / 20 rounded - xl p - 8 border border - blue - 500 / 20">;
         <h1 className="text - 3xl font - bold text - white mb - 2">;
           Welcome back, {user?.name || "User"}! 👋;
+<<<<<<< HEAD
 
 =======
 
@@ -101,6 +144,30 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+<<<<<<< HEAD
+  if (!isAuthenticated) {return null;
+  }
+=======
+;
+  if (!isAuthenticated) {;
+    return null;
+  }
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  return (;
+    <div className="space-y-8">;
+      {/* Welcome Header */}
+      <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-xl p-8 border border-blue-500/20">;
+        <h1 className="text-3xl font-bold text-white mb-2">;
+<<<<<<< HEAD
+          Welcome back, {user?.name |"User"}! 👋;
+=======
+          Welcome back, {user?.name || "User"}! 👋;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         </h1>;
         <p className="text - zinc - 300 text - lg">;
           Ready to continue building your digital economy? Here's what you can do next.;
@@ -173,6 +240,7 @@ if ( {) {
         <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
           <div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
             <label className="block text-sm font-medium text-zinc-400 mb-1">Name</label>;
 
 =======
@@ -187,6 +255,18 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+            <label className="block text - sm font - medium text - zinc - 400 mb - 1">Name</label>;
+            <p className="text - white">{user?.name || "Not provided"}</p>;
+=======
+            <label className="block text-sm font-medium text-zinc-400 mb-1">Name</label>;
+<<<<<<< HEAD
+            <p className="text-white">{user?.name |"Not provided"}</p>;
+=======
+            <p className="text-white">{user?.name || "Not provided"}</p>;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </div>;
           <div>;
             <label className="block text - sm font - medium text - zinc - 400 mb - 1">Email</label>;

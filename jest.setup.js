@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 
 
 import "@testing-library/jest-dom";
 
 
 
+=======
+require("@testing-library/jest-dom");
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 // Mock Next.js router
 jest.mock("next/router", () => ({
   useRouter() {
@@ -19,6 +23,7 @@ jest.mock("next/router", () => ({
       prefetch: jest.fn().mockResolvedValue(undefined)
       beforePopState: jest.fn()
       events: {
+<<<<<<< HEAD
 
 import "@testing-library/jest-dom";
 
@@ -79,10 +84,33 @@ jest && jest.mock("next/link", () => {
 
 
 
+=======
+on: jest.fn()
+        off: jest.fn()
+        emit: jest.fn()
+      }
+      isFallback: false
+    }
+  }
+}));
+// Mock Next.js Image component
+jest.mock("next/image", () => {
+  return function MockImage({ src, alt, ...props }) {
+    return <img src={src} alt={alt} {...props} />;
+}
+});
+// Mock Next.js Link component
+jest.mock("next/link", () => {
+  return function MockLink({ children, href, ...props }) {
+    return <a href={href} {...props}>{children}</a>;
+  }
+});
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true
   value: jest.fn().mockImplementation(query => ({
+<<<<<<< HEAD
 
     matches: false,
     media: query,
@@ -92,6 +120,15 @@ Object.defineProperty(window, 'matchMedia', {
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
 
+=======
+    matches: false
+    media: query
+    onchange: null
+    addListener: jest.fn()
+    removeListener: jest.fn()
+    addEventListener: jest.fn()
+    removeEventListener: jest.fn()
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     dispatchEvent: jest.fn()
   }))
 });
@@ -108,6 +145,7 @@ global.ResizeObserver = class ResizeObserver {
   disconnect() {}
   observe() {}
   unobserve() {}
+<<<<<<< HEAD
 
     return <img src={src} alt={alt} {...props} />;
 
@@ -131,6 +169,34 @@ beforeEach(() => {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+};
+
+// Global test setup,
+beforeEach(() => {
+  jest.clearAllMocks();
+});
+beforeEach(() => {
+  jest.clearAllMocks();
+
+});
+// Mock matchMedia
+Object.defineProperty(window, 'matchMedia', {
+  writable: true,
+  value: jest.fn().mockImplementation(query => ({
+    matches: false,
+
+    media: query,
+    onchange: null,
+    addListener: jest.fn(),
+    removeListener: jest.fn(),
+    addEventListener: jest.fn(),
+    removeEventListener: jest.fn(),
+    dispatchEvent: jest.fn(),
+  })),
+});
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     "media": query,
     "onchange": null,
     "addListener": jest.fn(), // deprecated
@@ -138,6 +204,7 @@ beforeEach(() => {
     "addEventListener": jest.fn(),
     "removeEventListener": jest.fn(),
     "dispatchEvent": jest.fn()}))});
+<<<<<<< HEAD
 
 
 =======
@@ -177,6 +244,27 @@ jest.mock('next/link', () => ({
 // Mock window.matchMedia,Object.defineProperty(window, 'matchMedia', {
   writable: true,
   value: jest.fn().mockImplementation(query => ({
+=======
+import '@testing-library/jest-dom'; global.IntersectionObserver = class IntersectionObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; global.ResizeObserver = class ResizeObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; Object.defineProperty(window,'matchMedia',{ writable: true,value: jest.fn().mockImplementation(query => ({ matches: false,media: query,onchange: null,addListener: jest.fn(),removeListener: jest.fn(),addEventListener: jest.fn(),removeEventListener: jest.fn(),dispatchEvent: jest.fn(),})),});
+
+});
+
+  };
+});
+
+// Mock Next.js Link component
+jest.mock("next/link", () => ({
+  _esModule: true,
+  default: ({ children, href, ...props }) => {
+    return (
+      <a href={href} {...props}>
+        {children}
+      </a>
+    );
+};
+  writable: true,
+  value: jest.fn().mockImplementation((query) => ({
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     matches: false,
     media: query,
     onchange: null,
@@ -184,7 +272,11 @@ jest.mock('next/link', () => ({
 removeListener: jest.fn(), // deprecated,
 addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
+<<<<<<< HEAD
     dispatchEvent: jest.fn()
+=======
+dispatchEvent: jest.fn()
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }))
 }),
 // Mock IntersectionObserver,
@@ -211,4 +303,7 @@ beforeEach(() => {
 
 });
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

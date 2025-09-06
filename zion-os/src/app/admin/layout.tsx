@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { ReactNode } from "react";
 
@@ -10,6 +11,9 @@ export default function AdminLayout({ children }: { children: ReactNode }) {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">;
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { ReactNode  } from './react';
 export default /**
  * AdminLayout - Function description
@@ -17,7 +21,16 @@ export default /**
 function AdminLayout() {
   return (
     <div className="min - h-screen bg - gradient - to - br from - gray - 900 via - gray - 800 to - black">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+import { ReactNode } from "react";
+<<<<<<< HEAD
+export default function AdminLayout({ children }: { children: ReactNode }) {return (;
+=======
+export default function AdminLayout({ children }: { children: ReactNode }) {;
+  return (;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Admin Header */}
       <div className="glass border - b border - white / 10">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
@@ -55,6 +68,7 @@ function AdminLayout() {
       <div className="py - 8">;
         {children}
       </div>;
+<<<<<<< HEAD
 
     </div>;
   );
@@ -69,3 +83,23 @@ export default Layout;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+    </div>);
+}
+=======
+    </div>;
+  );
+<<<<<<< HEAD
+}
+=======
+};
+
+export default Layout;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

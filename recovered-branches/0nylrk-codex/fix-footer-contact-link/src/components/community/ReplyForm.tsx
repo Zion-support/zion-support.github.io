@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/community/ReplyForm.tsx
 
 <<<<<<< HEAD
 import { Button } from "@/components/ui/button";
@@ -31,21 +33,37 @@ import { Textarea } from "@/components/ui/textarea",;
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+<<<<<<< HEAD
+=======
+
+import { useState } from "react",;
+import { useForm } from "react-hook-form",;
+import { Button } from "@/components/ui/button",;
+import { Textarea } from "@/components/ui/textarea",;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/community/ReplyForm.tsx
 import {;
   Form,;
   FormControl,;
   FormField,;
   FormItem,;
+<<<<<<< HEAD
   FormMessage,;
 } from "@/components/ui/form";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
-
 interface ReplyFormProps {;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/community/ReplyForm.tsx
 
   onSubmit: (content: string) => Promise<void>;
   parentId?: string
 }
 
+========
+  onSubmit: (content: string) => Promise<void>;
+  parentId?: string
+}
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/community/ReplyForm.tsx
 import { useState  } from './react';
 import { use_form  } from './react - hook - form';
 import { Button  } from '@/components / ui / button';
@@ -64,6 +82,7 @@ import {
   FormControl,
   FormField,
   FormItem,
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/community/ReplyForm.tsx
 
 
 interface ReplyFormValues {;
@@ -72,24 +91,50 @@ interface ReplyFormValues {;
 }
 
 FormMessage,;
+=======
+import { useState } from "react",
+import { useForm } from "react-hook-form",
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import {
+Form
+  FormControl
+  FormField
+  FormItem
+  FormMessage
+
+  FormMessage,
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
 } from "@/components/ui/form";
 
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
+<<<<<<< HEAD
 
   };
 
 
 =======
 
+========
+  FormMessage,
+} from '@/components / ui / form';
+import { Card, CardContent, CardFooter  } from '@/components / ui / card';
+interface ReplyFormProps {
+  on_submit: (content: string) => Promise < void>;
+  parent_id?: string;
+}
+interface ReplyFormValues {
+interface ReplyFormValues {;
+  content: string;
+}
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/community/ReplyForm.tsx
   const form = useForm<ReplyFormValues>({;
     defaultValues: {;
       content: "",;
     },;
   });
-
   const handleSubmit = async (values: ReplyFormValues) => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     setIsSubmitting(true);
     try {;
       (await onSubmit(values && values.content), form && form.reset());
@@ -120,9 +165,12 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
                 <FormItem>;
                   <FormControl>;
                     <Textarea
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/community/ReplyForm.tsx
 
 <<<<<<< HEAD
 =======
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/community/ReplyForm.tsx
 export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
   const [is_submitting, setIsSubmitting] = useState (false);
 ;
@@ -153,35 +201,105 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
                 <FormItem>;
                   <FormControl>;
                     <Textarea;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/community/ReplyForm.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/community/ReplyForm.tsx
                       placeholder={
                         parent_id;
                           ? "Write your reply...";
                           : "Join the discussion...";
                       }
                       className="min - h-[100px] resize - y";
+=======
+  FormMessage;
+} from "@/components/ui/form",;
+import { Card, CardContent, CardFooter } from "@/components/ui/card",;
+;
+interface ReplyFormProps {;
+  onSubmit:(content:string) => Promise<void>,;
+  parentId?:string;}
+;
+interface ReplyFormValues {;
+  content:string;
+}
+;
+export const ReplyForm = ({ onSubmit, parentId } ReplyFormProps) => {;
+  const [isSubmitting, setIsSubmitting] = useState(false),;
+  ;
+  const form = useForm<ReplyFormValues>({;
+    defaultValues:{;
+      content:"";
+    }
+  }),;
+;
+  const handleSubmit = async (values:ReplyFormValues) => {;
+    setIsSubmitting(true),;
+    try {;
+      await onSubmit(values.content),;
+      form.reset();
+    } finally {;
+      setIsSubmitting(false),;
+    }
+  },;
+;
+  return (;
+    <Card>;
+      <CardContent className="pt-6">;
+        <Form {...form}>;
+          <form onSubmit={form.handleSubmit(handleSubmit)}>;
+            <FormField;
+              control={form.control}
+              name="content";
+              render={({ field }) => (;
+                <FormItem>;
+                  <FormControl>;
+                    <Textarea;
+                      placeholder={parentId ? "Write your reply..." :"Join the discussion..."}
+                      className="min-h-[100px] resize-y";
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       {...field}
                     />;
                   </FormControl>;
                   <FormMessage />;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/community/ReplyForm.tsx
 
+========
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/community/ReplyForm.tsx
                 </FormItem>)}
             />;
             <div className="mt - 4 flex justify - end">;
               <Button type="submit" disabled={is_submitting}>;
                 {is_submitting ? "Submitting..." : "Post Reply"}
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/community/ReplyForm.tsx
 
+========
+=======
+                </FormItem>;
+              )}
+            />;
+            <div className="mt-4 flex justify-end">;
+              <Button type="submit" disabled={isSubmitting}>;
+                {isSubmitting ? "Submitting..." :"Post Reply"}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/community/ReplyForm.tsx
               </Button>;
             </div>;
           </form>;
         </Form>;
       </CardContent>;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/community/ReplyForm.tsx
 
+========
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/community/ReplyForm.tsx
     </Card>);
 }
 ;
 export default ReplyForm;
 ;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/community/ReplyForm.tsx
 
 =======
 
@@ -189,6 +307,50 @@ export default ReplyForm;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+interface ReplyFormProps {
+  onSubmit: (content: string) => Promise<void>;
+  parentId?: string
+}
+interface ReplyFormValues {
+  content: string;
+}
+
+export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const form = useForm<ReplyFormValues>({
+    defaultValues: {
+      content: ""
+    }
+  });
+  const handleSubmit = async (values: ReplyFormValues) => {
+    setIsSubmitting(true);
+    try {
+      (await onSubmit(values.content), form.reset());
+    } finally {
+      setIsSubmitting(false);
+    }
+}
+
+  return (
+    <Card>
+      <CardContent className="pt-6">
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(handleSubmit)}>
+            <FormField
+              control={form.control}
+              name="content"
+              render={({ field }) => (
+                <FormItem>
+                  <FormControl>
+                    <Textarea
+placeholder={
+                        parentId
+                          ? "Write your reply..."
+                          : "Join the discussion..."
+                      }
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       className="min-h-[100px] resize-y"
                       {...field}
                     />
@@ -206,6 +368,7 @@ export default ReplyForm;
         </Form>
       </CardContent>
     </Card>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -215,3 +378,40 @@ export default ReplyForm;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+=======
+    </Card>;
+  ),;
+},;
+;
+export default ReplyForm,; import {
+  Form;
+FormControl;
+FormField;
+FormItem;
+FormMessage interface ReplyFormProps {
+  onSubmit: (content: string) => Promise<void>;
+parentId?: string 
+}interface ReplyFormValues {
+  content: string 
+}export const ReplyForm = ({
+  onSubmit, parentId 
+}: ReplyFormProps) => {
+  const [isSubmitting, setIsSubmitting] = useState (false);
+defaultValues: {
+  className="min-h-[100px] resize-y" {
+  ...field 
+}/> </FormControl> <FormMessage /> </FormItem>) 
+}/> </Button> </div> </form> </Form> </CardContent> </Card>) 
+};
+export default ReplyForm;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/community/ReplyForm.tsx
+=======
+);
+}
+export default ReplyForm;
+
+export default ReplyForm;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

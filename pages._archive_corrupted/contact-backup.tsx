@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from "react"
@@ -8,10 +9,17 @@ import type { NextPage } from 'next';
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+import React from "react"
+import type { NextPage } from 'next'
+import React from "react";
+import type { NextPage } from 'next';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 const "Contact": NextPage = () => {
   return (
     <div>Contact Backup</div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -26,3 +34,10 @@ import React from "react" import type { NextPage } from 'next' const Contact: Ne
 import React from "react" import type { NextPage } from 'next' const Contact: NextPage = () => { return ( <div>Contact Backup</div> ) } export default Contact
 ;
 
+=======
+import React from "react" import type { NextPage } from 'next' const Contact: NextPage = () => { return ( <div>Contact Backup</div> ) } export default Contact
+export default Contact
+import React from "react" import type { NextPage } from 'next' const Contact: NextPage = () => { return ( <div>Contact Backup</div> ) } export default Contact
+import React from "react" import type { NextPage } from 'next' const Contact: NextPage = () => { return ( <div>Contact Backup</div> ) } export default Contact
+;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

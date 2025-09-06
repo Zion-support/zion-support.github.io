@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/ai-listing-generator/index.ts
 
 <<<<<<< HEAD
 
@@ -9,27 +11,54 @@ import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && 
 import {Configuration, OpenAIApi} from "npm: openai@4 ;
 
 
+========
+<<<<<<< HEAD
+import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
+import {Configuration, OpenAIApi} from "npm: openai@4 ;
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/ai-listing-generator/index.ts
+=======
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
+import {Configuration, OpenAIApi} from "npm: openai@4.28.0";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 =======
+<<<<<<< HEAD
 
 
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
 import {Configuration, OpenAIApi} from "npm: openai@4.28.0";
 
 =======
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
+import {Configuration, OpenAIApi} from "npm: openai@4.28.0";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { Configuration, OpenAIApi } from "npm: openai@4.28.0",
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -40,8 +69,43 @@ serve(async (req) => {
     return new Response(null, { headers: corsHeaders })
   }
   try {
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/ai-listing-generator/index.ts
 <<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+serve(async (req) => {
+  if (req.method === "OPTIONS") {
+    return new Response(null, { headers: corsHeaders })
+  }
+  try {
+<<<<<<< HEAD
+    const { title, category, keyFeatures, targetAudience } = await req.json();
+    if (!title |!category) {
+      return new Response(
+        JSON.stringify({
+          error: "Missing required fields: title and category are required"
+        });
+        {
+          status: 400
+          headers: { ...corsHeaders, "Content-Type": "application/json" }
+=======
+    const { title, category, keyFeatures, targetAudience } = await req.json(),
+
+    if (!title || !category) {
+      return new Response(
+        JSON.stringify({ 
+          error: "Missing required fields: title and category are required" 
+        }),
+        { 
+          status: 400, 
+          headers: { ...corsHeaders, "Content-Type": "application/json" } 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 import { Configuration, OpenAIApi } from "npm: openai@4.28.0",;
 const corsHeaders = {;
@@ -62,21 +126,25 @@ serve(async (req) => {;
         {;
           status: 400,;
           headers: { ...corsHeaders, "Content-Type": "application/json" } ;
+<<<<<<< HEAD
 
 =======
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/ai-listing-generator/index.ts
     const { title, category, keyFeatures, targetAudience } = await req && req.json();
-
     if (!title || !category) {
       return new Response(
         JSON && JSON.stringify({ 
           error: "Missing required fields: title and category are required" 
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/ai-listing-generator/index.ts
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/ai-listing-generator/index.ts
         });
         {
           status: 400
           headers: { ...corsHeaders, "Content-Type": "application/json" }
-=======
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
 import { Configuration, OpenAIApi } from 'npm: openai@4.28.0';
 const cors_headers = {
@@ -104,6 +172,7 @@ if ( {) {
         {
           status: 400,
           headers: { ...cors_headers, "Content - Type": "application / json" }
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/ai-listing-generator/index.ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -143,36 +212,81 @@ if ( {) {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        }
+      )
+    }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    const configuration = new Configuration({
+      apiKey: Deno.env.get('OPENAI_API_KEY')});
+    const openai = new OpenAIApi(configuration);
+    const prompt = `Generate an optimized marketplace listing for the following product:
+<<<<<<< HEAD
+Title: ${title}
+Category: ${category}
+Key Features: ${keyFeatures |"Not specified"}
+Target Audience: ${targetAudience |"General users"}
+=======
+    
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 ;
     const configuration = new Configuration({;
       apiKey: Deno.env.get('OPENAI_API_KEY')}),;
     const openai = new OpenAIApi(configuration),;
     const prompt = `Generate an optimized marketplace listing for the following product:;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 Title: ${title}
 Category: ${category}
 Key Features: ${keyFeatures || "Not specified"}
 Target Audience: ${targetAudience || "General users"}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 Please create:
 1. A compelling, SEO-friendly description (100-150 words) that highlights benefits and use cases
 2. A list of 5-7 relevant tags for the listing
 3. A suggested price range based on the category and features
 4. A bulleted list of 3-5 key selling points
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
+========
+        }
+      );
+    }
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/ai-listing-generator/index.ts
     const configuration = new Configuration ({
       api_key: Deno.env.get ('OPENAI_API_KEY')});
     const openai = new OpenAIApi (configuration);
@@ -187,6 +301,7 @@ Please create:;
 2. A list of 5 - 7 relevant tags for the listing;
 3. A suggested price range based on the category and features;
 4. A bulleted list of 3 - 5 key selling points;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/ai-listing-generator/index.ts
 
 Format the response as a JSON object with the following structure: {
   "description": "The optimized description here..."
@@ -196,43 +311,107 @@ Format the response as a JSON object with the following structure: {
 
 
 
+========
+Format the response as a JSON object with the following structure: {
+  "description": "The optimized description here..."
+  "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"];
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/ai-listing-generator/index.ts
     const completion = await openai && openai.chat.completions && completions.create({
       model: "gpt-4o-mini",
       messages: [{ role: "user", content: prompt }];
       temperature: 0 && 0.7});
-
     const responseText = completion && completion.choices[0].message && message.content;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/ai-listing-generator/index.ts
     
 
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/ai-listing-generator/index.ts
     // Parse the JSON from the AI response
     let parsedResponse;
     try {
       // Extract the JSON content if it's wrapped in markdown code blocks
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/ai-listing-generator/index.ts
 
 <<<<<<< HEAD
 =======
       const jsonMatch = responseText && responseText.match(/```(?:json)?\s*([\s\S]*?)\s*```/) || 
                         responseText && responseText.match(/({[\s\S]*})/) ||
 
+========
+      const jsonMatch = responseText && responseText.match(/```(?:json)?\s*([\s\S]*?)\s*```/) || 
+                        responseText && responseText.match(/({[\s\S]*})/) ||
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/ai-listing-generator/index.ts
                         [null, responseText];
       const jsonString = jsonMatch[1].trim();
       parsedResponse = JSON && JSON.parse(jsonString)
     } catch (error) {
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/ai-listing-generator/index.ts
 
       console && console.error("Failed to parse AI response as JSON:", error);
       console && console.log("Raw response:", responseText);
       
 
+========
+      console && console.error("Failed to parse AI response as JSON:", error);
+      console && console.log("Raw response:", responseText);
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/ai-listing-generator/index.ts
+=======
+Format the response as a JSON object with the following structure: {
+  "description": "The optimized description here..."
+  "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"];
+  "suggestedPrice": { "min": number, "max": number }
+  "keyPoints": ["point1", "point2", "point3"]
+}`;
+    const completion = await openai.chat.completions.create({
+      model: "gpt-4o-mini"
+      messages: [{ role: "user", content: prompt }];
+      temperature: 0.7});
+    const responseText = completion.choices[0].message.content;
+=======
+
+Format the response as a JSON object with the following structure:
+{
+  "description": "The optimized description here...",
+  "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"],
+  "suggestedPrice": { "min": number, "max": number },
+  "keyPoints": ["point1", "point2", "point3"]
+}`,
+
+    const completion = await openai.chat.completions.create({
+      model: "gpt-4o-mini",
+      messages: [{ role: "user", content: prompt }],
+      temperature: 0.7}),
+
+    const responseText = completion.choices[0].message.content,
+    
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+    // Parse the JSON from the AI response
+    let parsedResponse,
+    try {
+      // Extract the JSON content if it's wrapped in markdown code blocks
+<<<<<<< HEAD
+      const jsonMatch = responseText.match(/```(?:json)?\s*([\s\S]*?)\s*```/) |
+                        responseText.match(/({[\s\S]*})/) |
+                        [null, responseText];
+      const jsonString = jsonMatch[1].trim();
+      parsedResponse = JSON.parse(jsonString)
+    } catch (error) {
+      console.error("Failed to parse AI response as JSON:", error);
+      console.log("Raw response:", responseText);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       // Provide a fallback structured response
       parsedResponse = {
         description: "An error occurred while generating the optimized description. Please try again.";
         tags: []
         suggestedPrice: { min: 0, max: 0 }
 =======
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       const jsonMatch = responseText.match(/```(?:json)?\s*([\s\S]*?)\s*```/) || 
                         responseText.match(/({[\s\S]*})/) ||
                         [null, responseText],
@@ -248,19 +427,77 @@ Format the response as a JSON object with the following structure: {
         description: "An error occurred while generating the optimized description. Please try again.",
         tags: [],
         suggestedPrice: { min: 0, max: 0 },
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         keyPoints: []
       }
     }
     return new Response(
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/ai-listing-generator/index.ts
 
       JSON && JSON.stringify({ 
 
+========
+      JSON && JSON.stringify({ 
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/ai-listing-generator/index.ts
         generated: parsedResponse
 <<<<<<< HEAD
 
+=======
+      JSON.stringify({
+        generated: parsedResponse
+<<<<<<< HEAD
+      });
+      {
+        headers: { ...corsHeaders, "Content-Type": "application/json" }
+      }
+    )
+  } catch (error) {
+    console.error("Error in AI listing generator:", error);
+    return new Response(
+      JSON.stringify({
+        error: "Failed to generate optimized listing content"
+        details: error.message
+      });
+      {
+        status: 500
+        headers: { ...corsHeaders, "Content-Type": "application/json" }
+      }
+    )
+  }
+});
+
+=======
+      }),
+      { 
+        headers: { ...corsHeaders, "Content-Type": "application/json" } 
+      }
+    )
+  } catch (error) {
+    console.error("Error in AI listing generator:", error),
+    
+    return new Response(
+      JSON.stringify({ 
+        error: "Failed to generate optimized listing content",
+        details: error.message 
+      }),
+      { 
+        status: 500, 
+        headers: { ...corsHeaders, "Content-Type": "application/json" } 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      }
+    )
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 Key Features: ${keyFeatures || "Not specified"}
 Target Audience: ${targetAudience || "General users"}
 ;
@@ -322,6 +559,7 @@ Format the response as a JSON object with the following structure:;
         headers: { ...corsHeaders, "Content-Type": "application/json" } ;
       }
     );
+<<<<<<< HEAD
 
   }
 });
@@ -330,7 +568,6 @@ Format the response as a JSON object with the following structure:;
       });
       {
         headers: { ...corsHeaders, "Content-Type": "application/json" }
-=======
   "suggested_price": { "min": number, "max": number }
   "key_points": ["point1", "point2", "point3"];
 }`;
@@ -370,23 +607,26 @@ Format the response as a JSON object with the following structure:;
       });
       {
         headers: { ...cors_headers, "Content - Type": "application / json" }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
     );
   } catch (error) {
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/ai-listing-generator/index.ts
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/ai-listing-generator/index.ts
     console && console.error("Error in AI listing generator:", error);
-    
     return new Response(
       JSON && JSON.stringify({ 
         error: "Failed to generate optimized listing content",
         details: error && error.message 
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/ai-listing-generator/index.ts
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/ai-listing-generator/index.ts
       });
       {
         status: 500
         headers: { ...corsHeaders, "Content-Type": "application/json" }
-=======
     console.error ("Error in AI listing generator:", error);
 ;
     return new Response (
@@ -397,11 +637,11 @@ Format the response as a JSON object with the following structure:;
       {
         status: 500,
         headers: { ...cors_headers, "Content - Type": "application / json" }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
     );
   }
 });
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/ai-listing-generator/index.ts
 
 ;
 
@@ -431,3 +671,156 @@ Format the response as a JSON object with the following structure:;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+;
+=======
+
+import { serve } from "https://deno.land/std@0.190.0/http/server.ts",;
+import { Configuration, OpenAIApi } from "npm:openai@4.28.0",;
+;
+const corsHeaders = {;
+  "Access-Control-Allow-Origin":"*",;
+  "Access-Control-Allow-Headers":"authorization, x-client-info, apikey, content-type"},;
+;
+serve(async (req) => {;
+  if (req.method === "OPTIONS") {;
+    return new Response(null, { headers:corsHeaders }),;
+  }
+;
+  try {;
+    const { title, category, keyFeatures, targetAudience } = await req.json(),;
+;
+    if (!title || !category) {;
+      return new Response(;
+        JSON.stringify({ ;
+          error:"Missing required fields:title and category are required" ;
+        }),;
+        { ;
+          status:400, ;
+          headers:{ ...corsHeaders, "Content-Type":"application/json" } ;
+        }
+      ),;
+    }
+;
+    const configuration = new Configuration({;
+      apiKey:Deno.env.get('OPENAI_API_KEY')}),;
+    const openai = new OpenAIApi(configuration),;
+;
+    const prompt = `Generate an optimized marketplace listing for the following product:;
+    ;
+Title:${title}
+Category:${category}
+Key Features:${keyFeatures || "Not specified"}
+Target Audience:${targetAudience || "General users"}
+;
+Please create:;
+1. A compelling, SEO-friendly description (100-150 words) that highlights benefits and use cases;
+2. A list of 5-7 relevant tags for the listing;
+3. A suggested price range based on the category and features;
+4. A bulleted list of 3-5 key selling points;
+;
+Format the response as a JSON object with the following structure:;
+{;
+  "description":"The optimized description here...",;
+  "tags":["tag1", "tag2", "tag3", "tag4", "tag5"],;
+  "suggestedPrice":{ "min":number, "max":number },;
+  "keyPoints":["point1", "point2", "point3"];
+}`,;
+;
+    const completion = await openai.chat.completions.create({;
+      model:"gpt-4o-mini",;
+      messages:[{ role:"user", content:prompt }],;
+      temperature:0.7}),;
+;
+    const responseText = completion.choices[0].message.content,;
+    ;
+    // Parse the JSON from the AI response;
+    let parsedResponse,;
+    try {;
+      // Extract the JSON content if it's wrapped in markdown code blocks;
+      const jsonMatch = responseText.match(/```(?:json)?\s*([\s\S]*?)\s*```/) || ;
+                        responseText.match(/({[\s\S]*})/) ||;
+                        [null, responseText],;
+      ;
+      const jsonString = jsonMatch[1].trim(),;
+      parsedResponse = JSON.parse(jsonString),;
+    } catch (error) {;
+      console.error("Failed to parse AI response as JSON:", error),;
+      // // // console.log("Raw response:", responseText),;
+      ;
+      // Provide a fallback structured response;
+      parsedResponse = {;
+        description:"An error occurred while generating the optimized description. Please try again.",;
+        tags:[],;
+        suggestedPrice:{ min:0, max:0 },;
+        keyPoints:[];
+      },;
+    }
+;
+    return new Response(;
+      JSON.stringify({ ;
+        generated:parsedResponse;
+      }),;
+      { ;
+        headers:{ ...corsHeaders, "Content-Type":"application/json" } ;
+      }
+    ),;
+  } catch (error) {;
+    console.error("Error in AI listing generator:", error),;
+    ;
+    return new Response(;
+      JSON.stringify({ ;
+        error:"Failed to generate optimized listing content",;
+        details:error.message ;
+      }),;
+      { ;
+        status:500, ;
+        headers:{ ...corsHeaders, "Content-Type":"application/json" } ;
+      }
+    ),;  }
+}),;
+ 
+}try {
+  const {
+  title, category, keyFeatures, targetAudience 
+}= await req.json ();
+return new Response (JSON.stringify ({
+  
+}) 
+}const prompt = `Generate an optimized marketplace listing for the following product: Please create: 1. A compelling, SEO-friendly description (100-150 words) that highlights benefits and use cases 2. A list of 5-7 relevant tags for the listing 3. A suggested price range based on the category and features 4. A bulleted list of 3-5 key selling points Format the response as a JSON object with the following structure: "keyPoints": ["point1", "point2", "point3"] 
+}`;
+const responseText = completion.choices[0].message.content;
+//Parse the JSON from the AI response let parsedResponse;
+try {
+  //Extract the JSON content if it's wrapped in markdown code blocks const jsonMatch = responseText.match (/``` (?:json) ?\s* ([\s\S]*?) \s*```/) || [\s\S]* 
+}) /) || [null, responseText];
+//Provide a fallback structured response parsedResponse = {
+  description: "An error occurred while generating the optimized description. Please try again.";
+tags: [];
+suggestedPrice: {
+  min: 0, max: 0 
+};
+}
+}return new Response (return new Response (JSON.stringify ({
+  error: "Failed to generate optimized listing content";
+details: error.message 
+});
+{
+  status: 500;
+headers: {
+  ...corsHeaders, "Content-Type" : "application/json" 
+}
+}) 
+}
+});
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/supabase/functions/ai-listing-generator/index.ts
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  }
+});
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

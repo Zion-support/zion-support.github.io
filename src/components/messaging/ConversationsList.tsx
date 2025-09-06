@@ -1,9 +1,18 @@
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 import React, { useMemo } from 'react';
 import React, { useMemo } from 'react'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+import React, { useMemo } from 'react';
+=======
+<<<<<<< HEAD
+import React, { useMemo } from 'react'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { User } from 'lucide-react'
 import { Conversation  } from '@/types/messaging';
 import { ConversationItem  } from './ConversationItem';
@@ -42,9 +51,17 @@ export function ConversationsList({
     )
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React, { useMemo } from 'react',;
 import { User } from 'lucide-react';
 import { Conversation } from '@/types/messaging',;
@@ -87,12 +104,22 @@ export function ConversationsList({;
     )
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   return (
 =======
 >>>>>>> 
 >>>>>>>   return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  return (
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="w-full md:w-80 border-r border-zion-purple/20 overflow-y-auto">
       <div className="p-3 border-b border-zion-purple/20">
         <h3 className="font-medium text-white">Conversations</h3>
@@ -106,6 +133,7 @@ export function ConversationsList({;
           </p>
         </div>
       ) : (
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
   return (
 
@@ -135,22 +163,57 @@ ursor/fix-website-loading-errors-and-merge-6662
       ) : (;
 
 >>>>>>>         <List
+=======
+        <List
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           height={listHeight}
-          itemCount={conversations && conversations.length}
+          itemCount={conversations.length}
           itemSize={itemSize}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+          width='100%'        >
+<<<<<<< HEAD
+=======
+          width="100%"
+        >
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+          {Row}
+        </List>
+      )}
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+    </div>
+  )
+}
+=======
+=======
+          {Row}
+        </List>
+      )};
+    </div>;
+  );
+};
+}
+=======
+          width="100%"
+        >
           {Row}
         </List>;
       )}
-<<<<<<< HEAD
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     </div>;
   );
 }
 ;
+<<<<<<< HEAD
 
 =======
     </div>
@@ -177,3 +240,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

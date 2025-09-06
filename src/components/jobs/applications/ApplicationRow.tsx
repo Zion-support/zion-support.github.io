@@ -1,10 +1,22 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import { Calendar, User, FileText, BarChart } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+import { formatDistanceToNow } from 'date-fns'
+<<<<<<< HEAD
+import { Calendar, User, FileText, BarChart } from 'lucide-react'
+
+import { Button } from '@/components/ui/button'
+=======
+import { Calendar, User, FileText, BarChart } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed to avoid conflict
 import { TableRow, TableCell } from '@/components/ui/table'
 import { JobApplication, ApplicationStatus } from '@/types/jobs'
@@ -14,9 +26,13 @@ import { ApplicationActions } from './ApplicationActions';
 import Image from 'next/image'; // Import next/image
 import React, { useState } from 'react'; // Import useState
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { formatDistanceToNow } from "date-fns",
 import { Calendar, User, FileText, BarChart } from 'lucide-react'
 import { Button } from "@/components/ui/button",
@@ -28,6 +44,7 @@ import { ScoreBadge } from "./ScoreBadge",
 import { ApplicationActions } from "./ApplicationActions",
 import Image from 'next/image', // Import next/image
 import React, { useState } from 'react', // Import useState
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 interface ApplicationRowProps {
@@ -49,6 +66,34 @@ interface ApplicationRowProps {
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+interface ApplicationRowProps {
+  application: JobApplication
+  processingId: string | null
+  onViewApplication: (applicationId: string) => Promise<void>
+  onStatusChange: (
+    applicationId: string
+    newStatus: ApplicationStatus
+  ) => Promise<void>
+  onViewScore: (application: JobApplication) => void
+interface ApplicationRowProps {
+  application: JobApplication
+  processingId: string | null
+  onViewApplication: (applicationId: string,) => Promise<void>
+  onStatusChange: (applicationId: string, newStatus: ApplicationStatus,) => Promise<void>
+  onViewScore: (application: JobApplication,) => void
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export function ApplicationRow({
 
   application
@@ -58,6 +103,7 @@ export function ApplicationRow({
   onViewScore
 }: ApplicationRowProps) {
   const [avatarError, setAvatarError] = useState(false)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const talentName = application.talent_profile?.full_name || 'Unknown'
@@ -86,52 +132,39 @@ export function ApplicationRow({
                 priority={false}              />
 >>>>>>>             ) : (
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+  const talentName = application.talent_profile?.full_name |'Unknown'
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
-interface ApplicationRowProps {;
-  application: JobApplication;
-  processingId: string | null;
-  onViewApplication: (applicationId: string) => Promise<void>;
-  onStatusChange: (;
-    applicationId: string,;
-    newStatus: ApplicationStatus;
-  ) => Promise<void>;
-  onViewScore: (application: JobApplication) => void;
-interface ApplicationRowProps {;
-  application: JobApplication,;
-  processingId: string | null,;
-  onViewApplication: (applicationId: string,) => Promise<void>,;
-  onStatusChange: (applicationId: string, newStatus: ApplicationStatus,) => Promise<void>,;
-  onViewScore: (application: JobApplication,) => void;
-}
+=======
+  const talentName = application.talent_profile?.full_name || 'Unknown'
+=======
 
-export function ApplicationRow(): any ({;
-  application,;
-  processingId,;
-  onViewApplication,;
-  onStatusChange,;
-  onViewScore,;
-}: ApplicationRowProps) {;
-  const [avatarError, setAvatarError] = useState(false);
-  const talentName = application && application.talent_profile?.full_name || 'Unknown';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
-    <TableRow key={application && application.id}>;
-      <TableCell>;
-        <div className='flex items-center gap-3'>;
-          <AvatarPrimitive className='h-9 w-9'>;
-            {' '}
-            {/* Using renamed AvatarPrimitive */}
-            {application && application.talent_profile?.profile_picture_url && !avatarError ? (;
+    <TableRow key={application.id}>
+      <TableCell>
+        <div className="flex items-center gap-3">
+          <AvatarPrimitive className="h-9 w-9"> {/* Using renamed AvatarPrimitive */}
+            {application.talent_profile?.profile_picture_url && !avatarError ? (
               <Image
+<<<<<<< HEAD
 
 
                 src={application.talent_profile.profile_picture_url} 
+=======
+<<<<<<< HEAD
+                src={application.talent_profile.profile_picture_url}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 alt={talentName}
                 width={36} // Corresponds to h-9 w-9 (9 * 4px = 36px)
                 height={36} // Corresponds to h-9 w-9
                 className="rounded-full object-cover" // Ensure rounded and object-cover
                 onError={() => setAvatarError(true)}
+<<<<<<< HEAD
                 priority={false}
               />
 
@@ -140,9 +173,29 @@ export function ApplicationRow(): any ({;
             ) : (
 >>>>>>>               <User className="h-5 w-5 text-gray-400" />
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+                priority={false}              />
+=======
+                src={application.talent_profile.profile_picture_url} 
+                alt={talentName}
+                width={36} // Corresponds to h-9 w-9 (9 * 4px = 36px)
+                height={36} // Corresponds to h-9 w-9
+                className="rounded-full object-cover" // Ensure rounded and object-cover
+                onError={() => setAvatarError(true)}
+                priority={false}
+              />
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            ) : (
+              <User className="h-5 w-5 text-gray-400" />
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             )}
           </AvatarPrimitive>
           <div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -150,14 +203,29 @@ export function ApplicationRow(): any ({;
             <div className='text-xs text-muted-foreground'>
               {application.talent_profile?.professional_title |'Talent'}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+            <div className='font-medium'>{talentName}</div>
+            <div className='text-xs text-muted-foreground'>
+              {application.talent_profile?.professional_title |'Talent'}
+=======
+            <div className="font-medium">
+              {talentName}
+            </div>
+            <div className="text-xs text-muted-foreground">
+              {application.talent_profile?.professional_title || "Talent"}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             </div>
           </div>
         </div>
       </TableCell>
       <TableCell>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <div className='flex items-center gap-1'>
           <Calendar className='h-4 w-4 text-muted-foreground' />
           <span>
@@ -165,6 +233,7 @@ export function ApplicationRow(): any ({;
               addSuffix: true
             })}
           </span>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         </div>
       </TableCell>
@@ -176,21 +245,55 @@ export function ApplicationRow(): any ({;
 
           <ScoreBadge application={application} />
 =======
+=======
+=======
+        <div className="flex items-center gap-1">
+          <Calendar className="h-4 w-4 text-muted-foreground" />
+          <span>{formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}</span>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+        </div>
+      </TableCell>
+      <TableCell>
+        <StatusBadge status={application.status} />
+      </TableCell>
+      <TableCell>
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <Button
           variant='ghost'
           size='sm'
           onClick={() => onViewScore(application)}
           className='flex items-center gap-1'        >
           <BarChart className='h-4 w-4 mr-1' />
+<<<<<<< HEAD
 >>>>>>>           <ScoreBadge application={application} />
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+        <Button 
+          variant="ghost" 
+          size="sm" 
+          onClick={() => onViewScore(application)}
+          className="flex items-center gap-1"
+        >
+          <BarChart className="h-4 w-4 mr-1" />
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          <ScoreBadge application={application} />
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         </Button>
       </TableCell>
       <TableCell>
         {application.resume ? (
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <Button variant='ghost' size='sm' asChild>
             <a
               href={application.resume.file_url |'#'}
@@ -199,7 +302,16 @@ export function ApplicationRow(): any ({;
             >
               <FileText className='h-4 w-4 mr-1' /> View
             </a>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+          <Button variant="ghost" size="sm" asChild>
+            <a href={application.resume.file_url || "#"} target="_blank" rel="noopener noreferrer">
+              <FileText className="h-4 w-4 mr-1" /> View
+            </Link>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </Button>
         ) : (
           <span className="text-muted-foreground text-sm">No resume</span>
@@ -207,6 +319,7 @@ export function ApplicationRow(): any ({;
       </TableCell>
       <TableCell className="text-right">
         <ApplicationActions
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -225,41 +338,78 @@ interface ApplicationRowProps {
   onViewApplication: (application_id: string, ) => Promise < void>,
   onStatusChange: (application_id: string, new_status: ApplicationStatus, ) => Promise < void>,
   onViewScore: (application: JobApplication, ) => void;
+=======
+          application = {application,}
+          processingId = {processingId,}
+          onViewApplication = {onViewApplication,}
+          onStatusChange = {onStatusChange,}
+        />
+      </TableCell>
+    </TableRow>
+  );
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
-export /**
- * ApplicationRow - Function description
- */
-function ApplicationRow() {
-  const [avatar_error, setAvatarError] = useState (false);
-  const talent_name = application.talent_profile?.full_name || 'Unknown';
-  return (
+=======
+import { formatDistanceToNow } from "date-fns",;
+import { Calendar, User, FileText, BarChart } from 'lucide-react';
+import { Button } from "@/components/ui/button",;
+import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed to avoid conflict;
+import { TableRow, TableCell } from "@/components/ui/table",;
+import { JobApplication, ApplicationStatus } from "@/types/jobs",;
+import { StatusBadge } from "./StatusBadge",;
+import { ScoreBadge } from "./ScoreBadge",;
+import { ApplicationActions } from "./ApplicationActions",;
+import Image from 'next/image', // Import next/image;
+import React, { useState } from 'react', // Import useState;
+interface ApplicationRowProps {;
+  application: JobApplication,;
+  processingId: string | null,;
+  onViewApplication: (applicationId: string) => Promise<void>,;
+  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>,;
+  onViewScore: (application: JobApplication) => void;
+}
+;
+export function ApplicationRow({;
+  application,;
+  processingId,;
+  onViewApplication,;
+  onStatusChange,;
+  onViewScore;
+}: ApplicationRowProps) {;
+  const [avatarError, setAvatarError] = useState(false);
+  const talentName = application.talent_profile?.full_name || "Unknown";
+  return (;
     <TableRow key={application.id}>;
       <TableCell>;
-        <div className='flex items - center gap - 3'>;
-          <AvatarPrimitive className='h - 9 w - 9'>;
-            {' '}
-            {/* Using renamed AvatarPrimitive */}
-            {application.talent_profile?.profile_picture_url && !avatar_error ? (
+        <div className="flex items-center gap-3">;
+          <AvatarPrimitive className="h-9 w-9"> {/* Using renamed AvatarPrimitive */}
+            {application.talent_profile?.profile_picture_url && !avatarError ? (;
               <Image;
-                src={application.talent_profile.profile_picture_url}
-                alt={talent_name}
-                width={36} // Corresponds to h - 9 w - 9 (9 * 4px = 36px);
-                height={36} // Corresponds to h - 9 w - 9;
-                className='rounded - full object - cover' // Ensure rounded and object - cover;
-                on_error={() => setAvatarError (true)}
-                priority={false}              />) : (
-              <User className='h - 5 w - 5 text - gray - 400' />)}
+                src={application.talent_profile.profile_picture_url} ;
+                alt={talentName}
+                width={36} // Corresponds to h-9 w-9 (9 * 4px = 36px);
+                height={36} // Corresponds to h-9 w-9;
+                className="rounded-full object-cover" // Ensure rounded and object-cover;
+                onError={() => setAvatarError(true)}
+                priority={false}
+              />;
+            ) : (;
+              <User className="h-5 w-5 text-gray-400" />;
+            )}
           </AvatarPrimitive>;
           <div>;
-            <div className='font - medium'>{talent_name}</div>;
-            <div className='text - xs text - muted - foreground'>;
-              {application.talent_profile?.professional_title || 'Talent'}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+            <div className="font-medium">;
+              {talentName}
+            </div>;
+            <div className="text-xs text-muted-foreground">;
+              {application.talent_profile?.professional_title || "Talent"}
             </div>;
           </div>;
         </div>;
       </TableCell>;
       <TableCell>;
+<<<<<<< HEAD
 
         <div className='flex items - center gap - 1'>;
           <Calendar className='h - 4 w - 4 text - muted - foreground' />;
@@ -273,32 +423,57 @@ function ApplicationRow() {
       </TableCell>;
       <TableCell>;
 
+=======
+        <div className="flex items-center gap-1">;
+          <Calendar className="h-4 w-4 text-muted-foreground" />;
+          <span>{formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}</span>;
+        </div>;
+      </TableCell>;
+      <TableCell>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <StatusBadge status={application.status} />;
       </TableCell>;
       <TableCell>;
         <Button;
+<<<<<<< HEAD
           variant='ghost';
           size='sm';
           on_click={() => onViewScore (application)}
           className='flex items - center gap - 1'        >;
           <BarChart className='h - 4 w - 4 mr - 1' />;
 
+=======
+          variant="ghost";
+          size="sm";
+          onClick={() => onViewScore(application)}
+          className="flex items-center gap-1";
+        >;
+          <BarChart className="h-4 w-4 mr-1" />;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <ScoreBadge application={application} />;
         </Button>;
       </TableCell>;
       <TableCell>;
+<<<<<<< HEAD
 
               href={application && application.resume.file_url || '#'}
 
               target='_blank'
               rel='noopener noreferrer'>;
               <FileText className='h-4 w-4 mr-1' /> View;
+=======
+        {application.resume ? (;
+          <Button variant="ghost" size="sm" asChild>;
+            <a href={application.resume.file_url || "#"} target="_blank" rel="noopener noreferrer">;
+              <FileText className="h-4 w-4 mr-1" /> View;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             </a>;
           </Button>;
         ) : (;
-          <span className='text-muted-foreground text-sm'>No resume</span>;
+          <span className="text-muted-foreground text-sm">No resume</span>;
         )}
       </TableCell>;
+<<<<<<< HEAD
       <TableCell className='text-right'>;
         <ApplicationActions
 >>>>>>>           application = {application,}
@@ -308,12 +483,32 @@ function ApplicationRow() {
         />
       </TableCell>
     </TableRow>
+=======
+      <TableCell className="text-right">;
+        <ApplicationActions;
+          application={application}
+          processingId={processingId}
+          onViewApplication={onViewApplication}
+          onStatusChange={onStatusChange}
+        />;
+      </TableCell>;
+    </TableRow>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   );
 };
 }
+<<<<<<< HEAD
 >>>>>>> 
 ;
 
 >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

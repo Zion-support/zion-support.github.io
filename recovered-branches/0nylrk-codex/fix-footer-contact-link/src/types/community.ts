@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 export type ForumCategory = 
@@ -20,12 +21,32 @@ export type ForumCategory =;
   | 'announcements';
 <<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+export type ForumCategory =
+=======
+export type ForumCategory = 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  | 'getting-hired'
+  | 'project-help'
+  | 'ai-tools'
+  | 'feedback';
+  | 'announcements';
+<<<<<<< HEAD
+export interface ForumCategoryInfo {
+=======
+
+export interface ForumCategoryInfo {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   id: ForumCategory;
   name: string;
   description: string;
   adminOnly: boolean
   icon: string
 }
+<<<<<<< HEAD
 
 =======
 
@@ -65,12 +86,34 @@ export interface ForumPost {;
   upvotes: number;
   downvotes: number;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export interface ForumPost {
+=======
+
+export interface ForumPost {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  id: string;
+  title: string;
+  content: string;
+  authorId: string;
+  authorName: string;
+  authorAvatar?: string;
+  authorRole?: string;
+  categoryId: ForumCategory;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+  upvotes: number;
+  downvotes: number;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   replyCount: number;
   isAnswered?: boolean;
   isPinned?: boolean;
   isLocked?: boolean
   isFeatured?: boolean
 }
+<<<<<<< HEAD
 
 =======
 
@@ -106,12 +149,41 @@ export interface ForumReply {;
   isAnswer?: boolean
 }
 
+=======
+<<<<<<< HEAD
+export interface ForumReply {
+=======
+
+export interface ForumReply {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  id: string;
+  postId: string;
+  parentReplyId?: string;
+  content: string;
+  authorId: string;
+  authorName: string;
+  authorAvatar?: string;
+  authorRole?: string;
+  createdAt: string;
+  updatedAt: string;
+  upvotes: number;
+  downvotes: number
+  isAnswer?: boolean
+}
+<<<<<<< HEAD
+export interface Badge {
+=======
+
+export interface Badge {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   id: string;
   name: string;
   description: string;
   icon: string
   color: string
 }
+<<<<<<< HEAD
 
 =======
 
@@ -147,10 +219,19 @@ export interface CommunityUser {
 export interface UserBadge {;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+export interface UserBadge {
+=======
+
+export interface UserBadge {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   userId: string;
   badgeId: string
   awardedAt: string
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -160,11 +241,19 @@ export interface CommunityUser {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+export interface CommunityUser {
+=======
+
+export interface CommunityUser {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   id: string;
   name: string;
   avatar?: string;
   role: string;
   reputation: number;
+<<<<<<< HEAD
   post_count: number;
   reply_count: number;
   badges: Badge[];
@@ -173,6 +262,16 @@ export interface CommunityUser {;
   isModerator: boolean
 }
 
+=======
+  postCount: number;
+  replyCount: number;
+  badges: Badge[];
+  isVerified: boolean
+
+  isModerator: boolean
+}
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export type ForumCategory =;
   | 'getting-hired';
   | 'project-help';
@@ -251,8 +350,16 @@ export interface CommunityUser {;
   isModerator: boolean;
 }
 ;
+<<<<<<< HEAD
 
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

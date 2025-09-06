@@ -1,8 +1,24 @@
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/VideoCall.tsx
 
 
 <<<<<<< HEAD
 =======
 
+=======
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useState, useEffect  } from 'react';
+import { useParams, useNavigate  } from 'react-router-dom';
+import { Header  } from '@/components/Header';
+import { Footer  } from '@/components/Footer';
+import { SEO  } from '@/components/SEO';
+import { VideoCallRoom  } from '@/components/video/VideoCallRoom';
+import { Button  } from '@/components/ui/button';
+import { toast } from 'sonner';
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import {useState, useEffect} from 'react';
 import {useParams, useNavigate} from 'react-router-dom';
 import {Header} from '@/components/Header';
@@ -11,6 +27,7 @@ import {SEO} from '@/components/SEO';
 import {VideoCallRoom} from '@/components/video/VideoCallRoom';
 import {Button} from '@/components/ui/button';
 import {toast} from 'sonner';
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -20,6 +37,9 @@ export default function VideoCall() {
 =======
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+========
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/VideoCall.tsx
 import {useState, useEffect} from 'react';
 import {use_params, use_navigate} from 'react-router-dom';
 import {Header} from '@/components / Header';
@@ -28,7 +48,10 @@ import {SEO} from '@/components / SEO';
 import {VideoCallRoom} from '@/components / video / VideoCallRoom';
 import {Button} from '@/components / ui / button';
 import {toast} from 'sonner';
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/VideoCall.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/VideoCall.tsx
 export default /**
  * VideoCall - Function description
  */
@@ -42,7 +65,10 @@ function VideoCall() {
   const [participants, set_participants] = useState < Array<{
     id: string,
     name: string,
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/VideoCall.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/VideoCall.tsx
     avatar?: string;
     is_muted?: boolean;
     isVideoEnabled?: boolean;
@@ -50,14 +76,40 @@ function VideoCall() {
     is_host?: boolean;
   }>>([;
     {
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/VideoCall.tsx
 <<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default function VideoCall() {
+  // useParams is typed as `any` in this environment due to missing type
+  // definitions, so avoid passing a type argument to prevent TS2347.;
+  const { roomId } = useParams();
+
+  const navigate = useNavigate();
+  const [isJoining, setIsJoining] = useState(false);
+  const [hasJoined, setHasJoined] = useState(false);
+  const [participants, setParticipants] = useState<Array<{
+    id: string
+    name: string
+    avatar?: string;
+    isMuted?: boolean;
+    isVideoEnabled?: boolean;
+    isScreenSharing?: boolean;
+    isHost?: boolean
+  }>>([
+    {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       id: 'user-1'
       name: 'You'
       isVideoEnabled: true
       isMuted: false
     }
   ]);
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { useState, useEffect } from 'react',;
 import { useParams, useNavigate } from 'react-router-dom',;
 import { Header } from '@/components/Header',;
@@ -81,8 +133,11 @@ export default function VideoCall() {;
     isVideoEnabled?: boolean,;
     isScreenSharing?: boolean,;
     isHost?: boolean;
+<<<<<<< HEAD
 =======
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/VideoCall.tsx
     id: string,
     name: string,
     avatar?: string
@@ -91,6 +146,8 @@ export default function VideoCall() {;
     isScreenSharing?: boolean
     isHost?: boolean
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }>>([;
     {;
       id: 'user-1',;
@@ -99,8 +156,19 @@ export default function VideoCall() {;
       isMuted: false;
     }
 <<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/VideoCall.tsx
+<<<<<<< HEAD
   ]),
 
+=======
+  ]),
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const handleJoinCall = () => {
     setIsJoining(true),
     // Simulate connection delay
@@ -111,40 +179,58 @@ export default function VideoCall() {;
         description: `You have joined meeting room ${roomId}`
       })
     }, 1500)
+<<<<<<< HEAD
 
 =======
 
 
+========
+  ]);
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/VideoCall.tsx
   const handleJoinCall = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     setIsJoining(true);
     // Simulate connection delay;
     setTimeout(() => {;
       setHasJoined(true);
       setIsJoining(false);
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/VideoCall.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/VideoCall.tsx
       toast && toast.success("Call joined", {;
         description: `You have joined meeting room ${roomId}`;
       });
     }, 1500);
   };
-
   const handleLeaveCall = () => {;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/VideoCall.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/VideoCall.tsx
     setHasJoined(false);
     toast && toast.info("Call ended", {;
       description: "You have left the meeting";
     });
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/VideoCall.tsx
 
 
   },
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+  }
+=======
+  },
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const handleLeaveCall = () => {
     setHasJoined(false),
     toast.info("Call ended", {
       description: "You have left the meeting"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -153,10 +239,19 @@ export default function VideoCall() {;
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+    });
+=======
+    }),
+    
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     // Navigate back after a short delay
     setTimeout(() => {
       navigate(-1)
     }, 1500)
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   ]),;
@@ -179,6 +274,8 @@ export default function VideoCall() {;
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/VideoCall.tsx
     // Navigate back after a short delay;
     setTimeout(() => {;
       navigate(-1);
@@ -187,8 +284,11 @@ export default function VideoCall() {;
   },;
 =======
   };
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/VideoCall.tsx
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/VideoCall.tsx
   const simulateUserJoining = () => {;
     // This is just for demo purposes - in a real app, this would be handled by the video call service;
     const mockUsers = [;
@@ -205,17 +305,37 @@ export default function VideoCall() {;
   },
 =======
     ];
-
     const randomUser = mockUsers[Math && Math.floor(Math && Math.random() * mockUsers && mockUsers.length)];
-
     if (!participants && participants.find(p => p && p.id === randomUser && randomUser.id)) {;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/VideoCall.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/VideoCall.tsx
       setParticipants(prev => [...prev, randomUser]);
       toast(`${randomUser && randomUser.name} joined the call`);
     }
   }
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/VideoCall.tsx
 =======
 
+=======
+<<<<<<< HEAD
+  }
+  const simulateUserJoining = () => {
+    // This is just for demo purposes - in a real app, this would be handled by the video call service
+    const mockUsers = [
+      { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false }
+      { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true }
+      { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
+    ];
+    const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)];
+    if (!participants.find(p => p.id === randomUser.id)) {
+      setParticipants(prev => [...prev, randomUser]);
+      toast(`${randomUser.name} joined the call`)
+    }
+  }
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   },
   
   const simulateUserJoining = () => {
@@ -223,12 +343,112 @@ export default function VideoCall() {;
     const mockUsers = [
       { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },
       { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
   return (
 
+========
+  return (
+=======
+
+import { useState, useEffect } from 'react',;
+import { useParams, useNavigate } from 'react-router-dom',;
+import { Header } from '@/components/Header',;
+import { Footer } from '@/components/Footer',;
+import { SEO } from '@/components/SEO',;
+import { VideoCallRoom } from '@/components/video/VideoCallRoom',;
+import { Button } from '@/components/ui/button',;
+import { toast } from 'sonner',;
+;
+export default function VideoCall() {;
+  // useParams is typed as `any` in this environment due to missing type;
+  // definitions, so avoid passing a type argument to prevent TS2347.;
+  const { roomId } = useParams(),;
+  const navigate = useNavigate(),;
+  const [isJoining, setIsJoining] = useState(false),;
+  const [hasJoined, setHasJoined] = useState(false),;
+  const [participants, setParticipants] = useState<Array<{;
+    id:string,;
+    name:string,;
+    avatar?:string,;
+    isMuted?:boolean,;
+    isVideoEnabled?:boolean,;
+    isScreenSharing?:boolean,;
+    isHost?:boolean;
+  }>>([;
+    {;
+      id:'user-1',;
+      name:'You',;
+      isVideoEnabled:true,;
+      isMuted:false;
+    }
+  ]),;
+;
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
+    ];
+    
+    const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)];
+    
+    if (!participants.find(p => p.id === randomUser.id)) {
+      setParticipants(prev => [...prev, randomUser]);
+      toast(`${randomUser.name} joined the call`)
+    }
+  };
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  ]),;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+  const handleJoinCall = () => {;
+    setIsJoining(true),;
+    // Simulate connection delay;
+    setTimeout(() => {;
+      setHasJoined(true),;
+      setIsJoining(false),;
+      toast.success("Call joined", {;
+<<<<<<< HEAD
+        description:`You have joined meeting room ${roomId}`;
+      }),;
+    }, 1500),;
+  },;
+;
+  const handleLeaveCall = () => {;
+    setHasJoined(false),;
+    toast.info("Call ended", {;
+      description:"You have left the meeting";
+    }),;
+    ;
+    // Navigate back after a short delay;
+    setTimeout(() => {;
+      navigate(-1),;
+    }, 1500),;
+  },;
+  ;
+  const simulateUserJoining = () => {;
+    // This is just for demo purposes - in a real app, this would be handled by the video call service;
+    const mockUsers = [;
+      { id:'user-2', name:'Alex Chen', isVideoEnabled:true, isMuted:false },;
+      { id:'user-3', name:'Taylor Kim', isVideoEnabled:false, isMuted:true },;
+      { id:'user-4', name:'Jordan Smith', isVideoEnabled:true, isMuted:false, isScreenSharing:true }
+    ],;
+    ;
+    const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)],;
+    ;
+    if (!participants.find(p => p.id === randomUser.id)) {;
+      setParticipants(prev => [...prev, randomUser]),;
+      toast(`${randomUser.name} joined the call`),;
+    }
+  },;
+;
+  return (;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/VideoCall.tsx
     <>;
       <SEO title={`Video Call - Room ${roomId}`} description="Zion video call" />;
       <Header />;
@@ -236,19 +456,76 @@ export default function VideoCall() {;
         {!hasJoined ? (;
           <div className="flex flex-col items-center justify-center h-96 bg-zion-blue-dark/30 rounded-lg p-8">;
             <h1 className="text-3xl font-bold mb-6 text-white">Join Video Call</h1>;
+<<<<<<< HEAD
             <p className="text-zion-slate-light mb-8">Room ID: {roomId}</p>;
             <Button
               onClick={handleJoinCall} 
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/VideoCall.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/VideoCall.tsx
               disabled={isJoining}
               size="lg"
               className="bg-zion-purple hover:bg-zion-purple-light">;
               {isJoining ? "Connecting..." : "Join Call"}
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/VideoCall.tsx
 <<<<<<< HEAD
+=======
+        description: `You have joined meeting room ${roomId}`;
+      });
+    }, 1500);
+  },;
+  const handleLeaveCall = () => {;
+    setHasJoined(false),;
+    toast.info("Call ended", {;
+      description: "You have left the meeting";
+    }),;
+    // Navigate back after a short delay;
+    setTimeout(() => {;
+      navigate(-1);
+    }, 1500);
+  },;
+  const simulateUserJoining = () => {;
+    // This is just for demo purposes - in a real app, this would be handled by the video call service;
+    const mockUsers = [;
+      { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },;
+      { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },;
+      { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
+    ],;
+    const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)],;
+    if (!participants.find(p => p.id === randomUser.id)) {;
+      setParticipants(prev => [...prev, randomUser]);
+      toast(`${randomUser.name} joined the call`);
+    }
+  },
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+  return (
+    <>
+      <SEO title={`Video Call - Room ${roomId}`} description="Zion video call" />
+      <Header />
+      <main className="container mx-auto py-8 min-h-[calc(100vh-200px)]">
+        {!hasJoined ? (
+          <div className="flex flex-col items-center justify-center h-96 bg-zion-blue-dark/30 rounded-lg p-8">
+            <h1 className="text-3xl font-bold mb-6 text-white">Join Video Call</h1>
+            <p className="text-zion-slate-light mb-8">Room ID: {roomId}</p>
+            <Button
+              onClick={handleJoinCall}
+              disabled={isJoining}
+              size="lg"
+              className="bg-zion-purple hover:bg-zion-purple-light"
+            >
+              {isJoining ? "Connecting..." : "Join Call"}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             </Button>
           </div>
         ) : (
           <div className="space-y-4">
+<<<<<<< HEAD
 =======
 
 
@@ -261,6 +538,8 @@ export default function VideoCall() {;
               onLeave={handleLeaveCall}
             />
 =======
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/VideoCall.tsx
             </Button>;
           </div>;
         ) : (;
@@ -270,8 +549,25 @@ export default function VideoCall() {;
               participants={participants}
               onLeave={handleLeaveCall} 
             />;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+            <p className="text-zion-slate-light mb-8">Room ID:{roomId}</p>;
+            <Button ;
+              onClick={handleJoinCall} ;
+              disabled={isJoining}
+              size="lg";
+              className="bg-zion-purple hover:bg-zion-purple-light";
+            >;
+              {isJoining ? "Connecting..." :"Join Call"}
+            </Button>;
+          </div>;
+        ) :(;
+          <div className="space-y-4">;
+            <VideoCallRoom ;
+              roomId={roomId || ''} ;              participants={participants}
+              onLeave={handleLeaveCall} ;
+            />;
+            ;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             {/* This button is just for demo/testing purposes */}
             <div className="flex justify-center mt-4">;
               <Button variant="outline" onClick={simulateUserJoining} className="text-sm">;
@@ -280,18 +576,25 @@ export default function VideoCall() {;
             </div>;
           </div>;
         )}
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/VideoCall.tsx
 
 <<<<<<< HEAD
 =======
 =======
 
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/VideoCall.tsx
       </main>;
       <Footer />;
     </>;
+<<<<<<< HEAD
   );
 }
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/VideoCall.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/VideoCall.tsx
       id: 'user - 1',
       name: 'You',
       isVideoEnabled: true,
@@ -375,7 +678,34 @@ export default function VideoCall() {;
       </main>;
       <Footer />;
     </>);
+=======
+  ),; roomId 
+}` 
+}) 
+}, 1500) 
+};
+//Navigate back after a short delay setTimeout ( () => {
+  navigate (-1) 
+}, 1500) 
+};
+const simulateUserJoining = () => {
+  //This is just for demo purposes - in a real app, this would be handled by the video call service const mockUsers = [ {
+  id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false 
+};
+{
+  id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true 
+};
+{
+  id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true 
+}];
+const randomUser = mockUsers[Math.floor (Math.random () * mockUsers.length) ];
+if (!participants.find (p => p.id === randomUser.id) ) {
+  setParticipants (prev => [...prev, randomUser]);
+toast (`$ {
+  randomUser.name 
+}joined the call`) 
 }
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/VideoCall.tsx
 
 =======
 ;
@@ -387,3 +717,57 @@ export default function VideoCall() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+};
+return (<> </Button> </div>) : (<div className="space-y-4" > <VideoCallRoom roomId= {
+  roomId || '' 
+}participants= {
+  participants 
+}onLeave= {
+  handleLeaveCall 
+}/> Simulate user joining (demo only) </Button> </div> </div>) 
+}</main> <Footer /> </>) 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+}
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/VideoCall.tsx
+=======
+<<<<<<< HEAD
+            <VideoCallRoom
+              roomId={roomId |''}
+=======
+            <VideoCallRoom 
+              roomId={roomId || ''} 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+              participants={participants}
+              onLeave={handleLeaveCall}
+            />
+            {/* This button is just for demo/testing purposes */}
+            <div className="flex justify-center mt-4">
+              <Button variant="outline" onClick={simulateUserJoining} className="text-sm">
+                Simulate user joining (demo only)
+              </Button>
+            </div>
+          </div>
+        )}
+<<<<<<< HEAD
+      </main>
+      <Footer />
+    </>
+  )
+}
+<<<<<<< HEAD
+=======
+      </main>;
+      <Footer />;
+    </>;
+  );
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+=======
+;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

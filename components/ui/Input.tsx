@@ -1,17 +1,22 @@
+<<<<<<< HEAD
 
 import React from './react';
 ;
 
-interface InputProps {
 =======
-
+import React from './react';
+;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+interface InputProps {
 interface InputProps {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   type?: string;
   placeholder?: string;
   value?: string;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 const Input: React.FC<InputProps> = ({;
   type = "text",;
   placeholder,;
@@ -23,9 +28,11 @@ const Input: React.FC<InputProps> = ({;
   ...props;
 }) => {;
   const baseClasses =;
+<<<<<<< HEAD
 
-    "flex h-10 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50";
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+    "flex h-10 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50";
   on_change?: (e: React.ChangeEvent < HTMLInputElement>) => void;
   class_name?: string;
   disabled?: boolean;
@@ -44,7 +51,6 @@ const Input: React.FC < InputProps> = ({
   const base_classes =;
     "flex h - 10 w - full rounded - md border border - gray - 300 bg - white px - 3 py - 2 text - sm ring - offset - background file:border - 0 file:bg - transparent file:text - sm file:font - medium placeholder:text - gray - 500 focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - blue - 500 focus - visible:ring - offset - 2 disabled:cursor - not - allowed disabled:opacity - 50";
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <input;
       type={type}
@@ -55,10 +61,17 @@ const Input: React.FC < InputProps> = ({
       disabled={disabled}
       required={required}
       {...props}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     />);
 }
 ;
 export { Input }
+<<<<<<< HEAD
 ;
 
+=======
+;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

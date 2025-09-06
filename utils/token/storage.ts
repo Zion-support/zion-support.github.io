@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   tokenName: string;
@@ -11,13 +12,26 @@ export interface TokenConfig {
   token_name: string;
   token_symbol: string;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+export interface TokenConfig {
+=======
+<<<<<<< HEAD
+export interface TokenConfig {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  tokenName: string;
+  tokenSymbol: string;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   decimals: number;
-  total_supply: number;
-  issue_rate: number;
-  redeem_rate: number;
+  totalSupply: number;
+  issueRate: number;
+  redeemRate: number;
   minIssueAmount: number;
   maxIssueAmount: number;
 }
+<<<<<<< HEAD
 
 const DATA_DIR = path && path.join(process && process.cwd(), 'data');
 const STORE_FILE = path && path.join(DATA_DIR, 'token_store && token_store.json');
@@ -44,6 +58,8 @@ export interface TokenStoreData {
 }
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 class TokenStore {
   private config: TokenConfig = {
     tokenName: 'ZION$'
@@ -54,12 +70,23 @@ class TokenStore {
     redeemRate: 1.0
     minIssueAmount: 1
     maxIssueAmount: 10000
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
   }
 export interface TokenStoreData {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+  }
+export interface TokenStoreData {
+=======
+  };
+
+export interface TokenStoreData {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   wallets: Record<string, Wallet>;
   transactions: TokenTransaction[];
   config: TokenConfig;
@@ -67,6 +94,7 @@ export interface TokenStoreData {
 function readFromDisk(): TokenStoreData | null {
   try {
     ensureDataDir();
+<<<<<<< HEAD
 
 =======
   set_config (new_config: Partial < TokenConfig>): void {
@@ -89,3 +117,27 @@ export const token_store = new TokenStore ();
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+    if (!fs.existsSync(STORE_FILE)) return null;
+    const raw = fs.readFileSync(STORE_FILE, 'utf8');
+    const parsed = JSON.parse(raw) as TokenStoreData;
+    return parsed;
+  } catch {
+    return null;
+  }
+  setConfig(newConfig: Partial<TokenConfig>): void {
+    this.config = { ...this.config, ...newConfig }
+  }
+}
+export const tokenStore = new TokenStore();
+<<<<<<< HEAD
+
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+}
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

@@ -1,17 +1,26 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD:src.disabled/hooks/useVirtualScroll.jsx
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 "export\": const useVirtualScroll = (items,options) => { const { itemHeight,overscan = 5,containerHeight = 400,enableSmoothScrolling = true,enableInfiniteScroll = false,threshold = 100 } = options const containerRef = useRef(null) const scrollTimeoutRef = useRef(null) const rafRef = useRef(null) const [state,setState] = useState({ \"startIndex\": \'0\',\"endIndex\": \'0\',visibleItems[],\"scrollTop\": \'0\',containerHeight,\"totalHeight\": \'items.length: * itemHeigh\',t,\"isScrolling\": \'false\'})
 export: const useVirtualScroll = (items,options) => { const { itemHeight,overscan = 5,containerHeight = 400,enableSmoothScrolling = true,enableInfiniteScroll = false,threshold = 100 } = options const containerRef = useRef(null) const scrollTimeoutRef = useRef(null) const rafRef = useRef(null) const [state,setState] = useState({ startIndex: "0",endIndex: "0",visibleItems[],scrollTop: "0",containerHeight,totalHeight: "items.length: * itemHeigh",t,isScrolling: "false"})'"'"
 
 =======
+<<<<<<< HEAD
 =======
 
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 "export\": const useVirtualScroll = (items,options) => { const { itemHeight,overscan = 5,containerHeight = 400,enableSmoothScrolling = true,enableInfiniteScroll = false,threshold = 100 } = options const containerRef = useRef(null) const scrollTimeoutRef = useRef(null) const rafRef = useRef(null) const [state,setState] = useState({ \"startIndex\": \'0\',\"endIndex\": \'0\',visibleItems[],\"scrollTop\": \'0\',containerHeight,\"totalHeight\": \'items.length: * itemHeigh\',t,\"isScrolling\": \'false\'})
 export: const useVirtualScroll = (items,options) => { const { itemHeight,overscan = 5,containerHeight = 400,enableSmoothScrolling = true,enableInfiniteScroll = false,threshold = 100 } = options const containerRef = useRef(null) const scrollTimeoutRef = useRef(null) const rafRef = useRef(null) const [state,setState] = useState({ startIndex: "0",endIndex: "0",visibleItems[],scrollTop: "0",containerHeight,totalHeight: "items.length: * itemHeigh",t,isScrolling: "false"})'"'"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/hooks/useVirtualScroll.jsx
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 "export": const useVirtualScroll = (items,options) => { const { itemHeight,overscan = 5,containerHeight = 400,enableSmoothScrolling = true,enableInfiniteScroll = false,threshold = 100 } = options const containerRef = useRef(null) const scrollTimeoutRef = useRef(null) const rafRef = useRef(null) const [state,setState] = useState({ "startIndex": '0',"endIndex": '0',visibleItems[],"scrollTop": '0',containerHeight,"totalHeight": 'items.length: * itemHeigh,t,"isScrolling": 'false'})
@@ -22,3 +31,6 @@ export: const useVirtualScroll = (items,options) => { const { itemHeight,oversca
 
 "export": const useVirtualScroll = (items,options) => { const { itemHeight,overscan = 5,containerHeight = 400,enableSmoothScrolling = true,enableInfiniteScroll = false,threshold = 100 } = options const containerRef = useRef(null) const scrollTimeoutRef = useRef(null) const rafRef = useRef(null) const [state,setState] = useState({ "startIndex": '0',"endIndex": '0',visibleItems[],"scrollTop": '0',containerHeight,"totalHeight": 'items && items.length: * itemHeigh,t,"isScrolling": 'false'})
 
+=======
+"export": const useVirtualScroll = (items,options) => { const { itemHeight,overscan = 5,containerHeight = 400,enableSmoothScrolling = true,enableInfiniteScroll = false,threshold = 100 } = options const containerRef = useRef(null) const scrollTimeoutRef = useRef(null) const rafRef = useRef(null) const [state,setState] = useState({ "startIndex": '0',"endIndex": '0',visibleItems[],"scrollTop": '0',containerHeight,"totalHeight": 'items.length: * itemHeigh,t,"isScrolling": 'false'})
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

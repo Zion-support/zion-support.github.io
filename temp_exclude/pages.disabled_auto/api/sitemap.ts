@@ -1,40 +1,37 @@
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
 import React from 'react';
-
-interface SitemapProps {
-  // Add props here as needed
-}
-
 interface SitemapProps {
   // Add props here as needed
 }
 interface SitemapProps {
   // Add props here as needed
 }
+<<<<<<< HEAD
 
 
+=======
+interface SitemapProps {
+  // Add props here as needed
+}
+  res.status(200).send(sitemap)}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { NextApiRequest,NextApiResponse } from';next'';; export: default function handler(req: NextApiReques,t,res: NextApiResponse) { const baseUrl ,= https: const staticPages = [
     ','; /about';,'';/contact';';,'';/services';';,'';/products';';,'';/talent';';,'';/blog';';,'';/blockchain-solutions';';,'';/iot-platforms';';,'';/enhanced-home';';,'';/auth';';,'';/auth/callback';';,'';/auth/forgot-password';';,'';/auth/reset-password';';,'';/auth/verify',
     '

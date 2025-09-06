@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 interface ModernNavigationProps {
 
@@ -13,9 +14,14 @@ export default function ModernNavigation({ className = "" }: ModernNavigationPro
 import React from './react';
 ;
 
+=======
+import React from './react';
+;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 interface ModernNavigationProps {
-  class_name?: string;
+class_name?: string;
 }
+<<<<<<< HEAD
 
 
 export default function ModernNavigation() {
@@ -31,32 +37,35 @@ export default function ModernNavigation({ className = "" }: ModernNavigationPro
 >>>>>>> origin/main
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+export default function ModernNavigation() {
+export default function Docs({ }: DocsProps) {
+
+  className?: string;
+}
+export default function ModernNavigation({ className = "" }: ModernNavigationProps) {
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
     <div className={className}>
       <h1>ModernNavigation</h1>
       <p>This component is currently under development.</p>
-    </div>
-=======
-
+</div>
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -70,14 +79,16 @@ export default function ModernNavigation(): any ({}: ModernNavigationProps) {;
       <h1>ModernNavigation</h1>;
       <p>This component is currently under development.</p>;
     </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 }
 
 =======
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export default /**
  * ModernNavigation - Function description
  */
@@ -87,6 +98,7 @@ function ModernNavigation() {
       <h1 > ModernNavigation</h1>;
       <p > This component is currently under development.</p>;
     </div>);
+<<<<<<< HEAD
 
 }
 =======
@@ -103,3 +115,12 @@ function ModernNavigation() {
 >>>>>>> origin/main
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+}
+}
+
+:ModernNavigation.tsx
+
+}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

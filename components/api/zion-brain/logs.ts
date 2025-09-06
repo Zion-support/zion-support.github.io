@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 
 
 function isAuthorized(req: NextApiRequest): boolean {
@@ -8,16 +9,27 @@ function isAuthorized(req: NextApiRequest): boolean {
   return !superToken || token === superToken;
 
 
+=======
+  const token = req && req.headers['x-admin-token'] || req && req.query.token;
+  const superToken = process && process.env.SUPERADMIN_TOKEN;
+  return !superToken || token === superToken;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const token = req.headers['x-admin-token'] |req.query.token;
   const superToken = process.env.SUPERADMIN_TOKEN;
   return !superToken |token === superToken;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
   if (!isAuthorized(req))
 
+=======
+<<<<<<< HEAD
+  if (!isAuthorized(req))
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     return res && res.status(401).json({ error: 'Unauthorized' });function isAuthorized(req: NextApiRequest): boolean {
   const token = req && req.headers['x-admin-token'] || req && req.query.token;
   const superToken = process && process.env.SUPERADMIN_TOKEN;
   return !superToken || token === superToken
+<<<<<<< HEAD
 
 }
 <<<<<<< HEAD
@@ -34,19 +46,61 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
-  }
+=======
+}
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (!isAuthorized(req)) return res && res.status(401).json({ error: 'Unauthorized' });
+  const { entries } = readLogs();
+  const stuckOnly = req && req.query.stuck === '1' || req && req.query.stuck === 'true';
+  if (stuckOnly) {
+    return res && res.status(200).json({
+      entries: entries && entries.filter(
+        e => e && e.status === 'stuck' || e && e.status === 'laggy'
+      ),
+    });  }
+  const byModule: Record<string, number> = {};
+  const byType: Record<string, number> = {};    return res && res.status(200).json({ entries: entries && entries.filter((e) => e && e.status === 'stuck' || e && e.status === 'laggy') });
+  const token = req.headers['x-admin-token'] || req.query.token;
+=======
+  if (!isAuthorized(req));
+    return res.status(401).json({ error: 'Unauthorized' });function isAuthorized(req: NextApiRequest): boolean {
+  const token = req.headers['x-admin-token'] |req.query.token;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  const superToken = process.env.SUPERADMIN_TOKEN;
+  return !superToken || token === superToken
+}
+<<<<<<< HEAD
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+=======
 
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  if (!isAuthorized(req)) return res.status(401).json({ error: 'Unauthorized' });
+  const { entries } = readLogs();
+  const stuckOnly = req.query.stuck === '1' || req.query.stuck === 'true';
+  if (stuckOnly) {
+    return res.status(200).json({ entries: entries.filter((e) => e.status === 'stuck' || e.status === 'laggy') });
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+  }
   const byModule: Record<string, number> = {};
   const byType: Record<string, number> = {};
-
-
-  }
-
-  return res && res.status(200).json({ entries: entries && entries.slice(-200), byModule, byType, total: entries && entries.length });
-}
+<<<<<<< HEAD
 
 
 =======
+  for (const e of entries) {
+    byModule[e.module] = (byModule[e.module] || 0) + 1;
+    byType[String(e.type)] = (byType[String(e.type)] || 0) + 1
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+  }
+  return res && res.status(200).json({ entries: entries && entries.slice(-200), byModule, byType, total: entries && entries.length });
+}
+<<<<<<< HEAD
+
+
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { read_logs } from '@/utils / zion_brain';
 function is_authorized (req: NextApiRequest): boolean {
   const token = req.headers['x - admin - token'] || req.query.token;
@@ -88,6 +142,7 @@ if ( {) {
   const by_type: Record < string, number> = {}    return res.status (200).json ({ entries: entries.filter ((e) => e.status === 'stuck' || e.status === 'laggy') });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   return res.status(200).json({
     entries: entries.slice(-200)
@@ -95,6 +150,8 @@ if ( {) {
     byType
     total: entries.length
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const by_module: Record < string, number> = {}
   const by_type: Record < string, number> = {}
 ;
@@ -103,11 +160,32 @@ if ( {) {
     by_module,
     by_type,
     total: entries.length,
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+<<<<<<< HEAD
+  const byModule: Record<string, number> = {}
+  const byType: Record<string, number> = {}
+=======
+
+  const byModule: Record<string, number> = {};
+<<<<<<< HEAD
+  const byType: Record<string, number> = {};
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  return res.status(200).json({
+    entries: entries.slice(-200)
+    byModule
+    byType
+    total: entries.length
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   });  for (const e of entries) {
     by_module[e.module] = (by_module[e.module] || 0) + 1;
     by_type[String (e.type)] = (by_type[String (e.type)] || 0) + 1;
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 }
@@ -115,8 +193,12 @@ if ( {) {
   const byType: Record<string, number> = {};
 
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 return res.status (200).json ({ entries: entries.slice (-200), by_module, by_type, total: entries.length });
+
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -126,3 +208,23 @@ return res.status (200).json ({ entries: entries.slice (-200), by_module, by_typ
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+<<<<<<< HEAD
+return res.status(200).json({ entries: entries.slice(-200), byModule, byType, total: entries.length });
+}
+<<<<<<< HEAD
+=======
+
+  const byModule: Record<string, number> = {};
+  const byType: Record<string, number> = {};
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+}
+=======
+  const byType: Record<string, number> = {};
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

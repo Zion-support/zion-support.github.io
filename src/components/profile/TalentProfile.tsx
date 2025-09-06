@@ -1,8 +1,37 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import React from "react",
 
+=======
+import React from 'react'
+<<<<<<< HEAD
+=======
+import { Handshake, MessageSquare, Star } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { HireNowCTA } from './HireNowCTA'
+import { ProfileHero } from './ProfileHero'
+import { ProfileSkills } from './ProfileSkills'
+import { ProfileExperience } from './ProfileExperience'
+import { ProfileProjects } from './ProfileProjects'
+import { ProfileAvailability } from './ProfileAvailability'
+import { ProfileContact } from './ProfileContact'
+import { ProfileRatings } from './ProfileRatings'
+import { TalentProfile as TalentProfileType } from '@/types/talent'
+import { useAuth } from '@/hooks/useAuth'
+import { Availability } from '@/types/profile'
+interface TalentProfileProps {
+  profile: TalentProfileType
+  onRequestHire: () => void
+  onMessageTalent?: () => void
+export function TalentProfile({
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+import React from "react",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { Handshake, MessageSquare, Star } from 'lucide-react'
 =======
 import React from "react",
@@ -19,6 +48,7 @@ import { ProfileContact } from "./ProfileContact",
 import { ProfileRatings } from "./ProfileRatings",
 import { TalentProfile as TalentProfileType } from "@/types/talent",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   profile,
   onRequestHire,
@@ -30,6 +60,8 @@ import { TalentProfile as TalentProfileType } from "@/types/talent",
   const availability: Availability = {
 
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { useAuth } from "@/hooks/useAuth";
 import { Availability } from "@/types/profile";
 interface TalentProfileProps {
@@ -37,6 +69,12 @@ interface TalentProfileProps {
   onRequestHire: () => void;
   onMessageTalent?: () => void
 
+<<<<<<< HEAD
+=======
+export function TalentProfile({
+  profile
+  onRequestHire
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
 export function TalentProfile(): any ({;
   profile,;
@@ -48,8 +86,42 @@ export function TalentProfile(): any ({;
   onRequestHire,
   onMessageTalent
 }: TalentProfileProps) {
+<<<<<<< HEAD
   const { isAuthenticated } = useAuth(),
   
+=======
+  const { isAuthenticated } = useAuth();
+=======
+import { useAuth } from "@/hooks/useAuth",
+import { Availability } from "@/types/profile",
+interface TalentProfileProps {
+  profile: TalentProfileType,
+  onRequestHire: () => void,
+  onMessageTalent?: () => void
+}
+
+export function TalentProfile({ 
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  profile,
+  onRequestHire,
+  onMessageTalent
+}: TalentProfileProps) {
+<<<<<<< HEAD
+  const { isAuthenticated } = useAuth(),
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+  const { isAuthenticated } = useAuth()
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  // Create proper availability object from talent profile
+
+  const availability: Availability = {
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     status:
       profile.availability_type === 'full_time'
         ? 'available'
@@ -85,7 +157,18 @@ export function TalentProfile(): any ({;
         reviewCount={profile.rating_count}      />
       {/* Main content area */}
       <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8'>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+<<<<<<< HEAD
+=======
+  const { isAuthenticated } = useAuth(),
+  
+  // Create proper availability object from talent profile
+  const availability: Availability = {
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     status: profile.availability_type === 'full_time' ? 'available' : 
             profile.availability_type === 'part_time' ? 'limited' : 'unavailable',
     message: `${profile.professional_title} with ${profile.years_experience} years of experience`
@@ -165,17 +248,28 @@ export function TalentProfile({;
       {/* Main content area */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {/* Left Column - Skills & Info */}
         <div className="space-y-8">
           <ProfileSkills skills={skillsArray} />
           <ProfileAvailability availability={availability} />
+<<<<<<< HEAD
 
 =======
 >>>>>>>         {/* Left Column - Skills & Info */}
         <div className="space-y-8">
           <ProfileSkills skills={skillsArray} />
           <ProfileAvailability availability={availability} />
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <ProfileContact
             email={profile.user_id}
             profileName={profile.full_name}
@@ -207,10 +301,52 @@ export function TalentProfile({;
               averageRating={profile.average_rating}
               ratingCount={profile.rating_count}            />
           </div>
+<<<<<<< HEAD
 >>>>>>>           {/* Hire Now CTA */}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           {/* Hire Now CTA */}
 >>>>>>>           {isAuthenticated && (
+=======
+=======
+          <ProfileContact 
+            email={profile.user_id}
+            profileName={profile.full_name}
+            profileType="talent"
+          />
+        </div>
+        
+        {/* Right Column - Bio & Projects */}
+        <div className="lg:col-span-2 space-y-8">
+          {/* Bio Section */}
+          <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6">
+            <h2 className="text-xl font-bold text-white mb-4">About {profile.full_name}</h2>
+            <div className="prose prose-invert max-w-none">
+              <p className="text-zion-slate whitespace-pre-wrap">{profile.bio}</p>
+            </div>
+          </div>
+          
+          {/* Projects Section */}
+          <ProfileProjects projects={projectsArray} />;
+          {/* Ratings Section */}
+          <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6">
+            <h2 className="text-xl font-bold text-white mb-4 flex items-center">
+              <Star className="mr-2 h-5 w-5 text-yellow-400" />
+              Reviews & Ratings
+            </h2>
+            <ProfileRatings 
+              userId={profile.id}
+              averageRating={profile.average_rating}
+              ratingCount={profile.rating_count}
+            />;
+          </div>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          {/* Hire Now CTA */}
+          {isAuthenticated && (
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6 mb-8">
               <div className="flex flex-col items-center text-center">
                 <h3 className="text-xl font-bold text-white mb-2">Ready to collaborate?</h3>
@@ -219,8 +355,11 @@ export function TalentProfile({;
                   {profile.hourly_rate && ` Rate starts at $${profile.hourly_rate}/hour.`}
                 </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <div className='flex flex-wrap gap-4 justify-center'>
                   <Button
                     size='lg'
@@ -236,16 +375,47 @@ export function TalentProfile({;
                       className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'
                       onClick={onMessageTalent}                    >
                       <MessageSquare className='mr-2 h-5 w-5' />
+<<<<<<< HEAD
 >>>>>>>                       Message
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                       Message
 >>>>>>>                     </Button>
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+                
+                <div className="flex flex-wrap gap-4 justify-center">
+                  <Button 
+                    size="lg" 
+                    className="bg-zion-purple text-white hover:bg-zion-purple-dark"
+                    onClick={onRequestHire}
+                  >
+                    <Handshake className="mr-2 h-5 w-5" />
+                    Hire Now
+                  </Button>
+                  
+                  {onMessageTalent && (
+                    <Button 
+                      size="lg" 
+                      variant="outline"
+                      className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+                      onClick={onMessageTalent}
+                    >
+                      <MessageSquare className="mr-2 h-5 w-5" />
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                      Message
+                    </Button>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   )}
-                </div>;
-              </div>;
-            </div>;
+                </div>
+              </div>
+            </div>
           )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -255,9 +425,26 @@ export function TalentProfile({;
   );
 };
 }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+        </div>
+      </div>;
+    </div>;
+  );
+};
+}
+<<<<<<< HEAD
 >>>>>>> 
 ;
 
 >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

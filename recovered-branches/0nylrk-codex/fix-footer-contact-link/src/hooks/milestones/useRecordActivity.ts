@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 export const useRecordActivity = () => {;
@@ -7,27 +8,58 @@ export const useRecordActivity = () => {;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+
+import {useAuth} from '@/hooks/useAuth';
+import {supabase} from '@/integrations/supabase/client';
+import {MilestoneActivity} from './types';
+export const useRecordActivity = () => {
+  const { user } = useAuth();
+  const recordMilestoneActivity = async (
+    milestoneId: string
+    action: string
+    previousStatus: string | null
+    newStatus: string;
+=======
+import {useAuth} from '@/hooks/useAuth';
+import {supabase} from '@/integrations/supabase/client';
+import {MilestoneActivity} from './types';
+export const useRecordActivity = () => {;
+  const { user } = useAuth();
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { useAuth } from '@/hooks/useAuth',
 import { supabase } from '@/integrations/supabase/client',
 import { MilestoneActivity } from './types',
 export const useRecordActivity = () => {
   const { user } = useAuth(),
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
   
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const recordMilestoneActivity = async (
     milestoneId: string,
     action: string, 
     previousStatus: string | null, 
     newStatus: string,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     comment?: string
   ) => {
     if (!user) return null
@@ -35,15 +67,26 @@ export const useRecordActivity = () => {
       const { data, error } = await supabase
         .from('milestone_activities')
         .insert({
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
+=======
+<<<<<<< HEAD
+          milestone_id: milestoneId;
+          user_id: user.id;
+          action;
+          previous_status: previousStatus;
+          new_status: newStatus
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           milestone_id: milestoneId,
           user_id: user.id,
           action,
           previous_status: previousStatus,
           new_status: newStatus,
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -56,10 +99,23 @@ export const useRecordActivity = () => {
 <<<<<<< HEAD
 =======
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+          comment})
+        .select(`
+          *,
+          created_by_profile:profiles!user_id(display_name, avatar_url)
+        `)
+<<<<<<< HEAD
+        .single();
+      if (error) throw error;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         .single(),
       
       if (error) throw error,
       
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -121,14 +177,29 @@ if (throw error) {
 
 =======
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+      return data
+    } catch (err: any) {
+      console.error("Error recording activity:", err),
+      return null
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     }
   };
   
   return {
     recordMilestoneActivity
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { useAuth } from '@/hooks/useAuth',;
 import { supabase } from '@/integrations/supabase/client',;
 import { MilestoneActivity } from './types',;
@@ -163,6 +234,7 @@ export const useRecordActivity = () => {;
       console.error("Error recording activity:", err),;
       return null;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     }
 
@@ -183,3 +255,24 @@ export const useRecordActivity = () => {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+    }
+<<<<<<< HEAD
+=======
+  };
+  return {;
+    recordMilestoneActivity;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  }
+<<<<<<< HEAD
+  return {
+    recordMilestoneActivity
+  }
+}
+
+=======
+};
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

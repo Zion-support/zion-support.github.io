@@ -38,10 +38,26 @@
   --cyberpunk-glow: 0 0 25px rgba(236, 73, 153, 0.7);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   --quantum-pulse: 0 0 40px rgba(0, 255, 255, 0.3);
   --holographic-pulse: 0 0 50px rgba(139, 92, 246, 0.4);
   --neural-glow: 0 0 35px rgba(16, 185, 129, 0.5);
-=======
+}
+  --quantum-pulse: 0 0 40px rgba(0, 255, 255, 0.3);
+  --holographic-pulse: 0 0 50px rgba(139, 92, 246, 0.4);
+  --neural-glow: 0 0 35px rgba(16, 185, 129, 0.5);}
+
+  --quantum-pulse: 0 0 40px rgba(0, 255, 255, 0.3);
+  --holographic-pulse: 0 0 50px rgba(139, 92, 246, 0.4);
+  --neural-glow: 0 0 35px rgba(16, 185, 129, 0.5);
+
   --neural-pulse: 0 0 40px rgba(16, 185, 129, 0.4);
   --quantum-entanglement: 0 0 50px rgba(139, 92, 246, 0.3);
   --futuristic-shadow: 0 0 60px rgba(0, 255, 255, 0.3);
@@ -53,8 +69,13 @@
   --quantum-ripple: 0 0 150px rgba(0, 255, 255, 0.08);
   --holographic-wave: 0 0 200px rgba(139, 92, 246, 0.12);
   --cyberpunk-pulse: 0 0 180px rgba(236, 73, 153, 0.1);
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-30ec
+
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 <<<<<<< HEAD
 =======
@@ -100,6 +121,10 @@
   --neural-glow: 0 0 35px rgba(16, 185, 129, 0.5);}
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
 /* Base styles */
 @layer base {
@@ -301,6 +326,18 @@ body::after {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+
+  animation: matrixMove 30s linear infinite;
+
+}
+  animation: matrixMove 30s linear infinite;}
+
+}
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -331,6 +368,10 @@ body::after {
   animation: matrixMove 30s linear infinite;}
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
 /* Enhanced Quantum Grid Background */
 .quantum-grid {
@@ -514,6 +555,12 @@ body::after {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -530,6 +577,10 @@ body::after {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   33% { transform: translateY(-20px) rotate(1deg); }
   66% { transform: translateY(20px) rotate(-1deg); }
 }
@@ -846,6 +897,12 @@ body::after {
   body::before,
   body::after {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -854,13 +911,14 @@ body::after {
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 >>>>>>> main
-    display: none;
+<<<<<<< HEAD
 =======
-  25% { transform: translateY(-20px) rotate(1deg); }
-  50% { transform: translateY(-10px) rotate(-1deg); }
-  75% { transform: translateY(-15px) rotate(0.5deg); }
-}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+    display: none;
 
+<<<<<<< HEAD
+=======
 @keyframes particleFloat {
   0% { transform: translateY(0px); }
   100% { transform: translateY(-100px); }
@@ -917,6 +975,10 @@ body::after {
   .quantum-grid {
     background-size: 25px 25px;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }
   
   .holographic-matrix {
@@ -925,8 +987,14 @@ body::after {
   
   .neural-network {
     background-size: 100px 100px;
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-30ec
+
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
@@ -944,6 +1012,10 @@ body::after {
     display: none;  }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 
 /* High Contrast Mode Support */
@@ -967,8 +1039,16 @@ body::after {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -986,6 +1066,10 @@ body::after {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
 /* Enhanced Focus States */
 .futuristic-focus:focus {
@@ -1134,6 +1218,12 @@ body::after {
   100% { transform: translate(0); }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-30ec
 =======
 <<<<<<< HEAD
@@ -1153,3 +1243,7 @@ body::after {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 const localeLabelKey: Record<string, string> = {
 
@@ -19,18 +20,22 @@ export default function LanguageSwitchPrompt() {;
 
 =======
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import i18n, { supportedLocales, isRtl } from '../../utils/i18n';
-
 const localeLabelKey: Record<string, string> = {
   en: 'lang.english',
   pt: 'lang.portuguese',
   es: 'lang.spanish',
   ar: 'lang.arabic'
 };
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export default function LanguageSwitchPrompt() {
 =======
 
@@ -43,34 +48,32 @@ import i18n, { supportedLocales, isRtl } from "../../utils/i18n";
   const { t } = useTranslation();
   const [suggested, setSuggested] = useState<string | null>(null);
   useEffect(() => {
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import i18n, { supportedLocales, isRtl } from "../../utils/i18n";
-
 const localeLabelKey: Record<string, string> = {;
   en: "lang && lang.english",;
   pt: "lang && lang.portuguese",;
@@ -80,31 +83,33 @@ const localeLabelKey: Record<string, string> = {;
 export default function LanguageSwitchPrompt() {;
   const { t } = useTranslation();
   const [suggested, setSuggested] = useState<string | null>(null);
-
   useEffect(() => {;
     const key = "langPromptShown";
     const preferred = localStorage && localStorage.getItem("preferredLanguage");
     if (preferred) return; // user has chosen;
     if (localStorage && localStorage.getItem(key)) return; // already prompted;
-
     const detected =;
       i18n && i18n.language || i18n && i18n.resolvedLanguage || navigator && navigator.language || "en";
     const normalized = detected && detected.split("-")[0];
     const suggestion =;
       supportedLocales && supportedLocales.includes(normalized as any) && normalized !== "en";
         ? normalized;
+<<<<<<< HEAD
 
         : null;
 
 =======
+=======
+        : null;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     const key = 'langPromptShown';
     const preferred = localStorage.getItem('preferredLanguage');
     if (preferred) return; // user has chosen
     if (localStorage.getItem(key)) return; // already prompted
-
     const detected = i18n.language || i18n.resolvedLanguage || navigator.language || 'en';
     const normalized = detected.split('-')[0];
     const suggestion = supportedLocales.includes(normalized as any) && normalized !== 'en' ? normalized : null;
+<<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     if (suggestion) setSuggested(suggestion);
@@ -112,6 +117,11 @@ export default function LanguageSwitchPrompt() {;
   if (!suggested) return null;
 
 
+=======
+    if (suggestion) setSuggested(suggestion);
+  }, []);
+  if (!suggested) return null;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const accept = async () => {;
     await i18n && i18n.changeLanguage(suggested!);
     localStorage && localStorage.setItem("preferredLanguage", suggested!);
@@ -119,19 +129,26 @@ export default function LanguageSwitchPrompt() {;
     document && document.documentElement.setAttribute(;
       "dir",;
       isRtl(suggested!) ? "rtl" : "ltr",;
+<<<<<<< HEAD
 
     );
     document && document.documentElement.setAttribute("lang", suggested!);
     setSuggested(null);
 
+=======
+    );
+    document && document.documentElement.setAttribute("lang", suggested!);
+    setSuggested(null);
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   };
-
   const decline = () => {;
     localStorage && localStorage.setItem("langPromptShown1", "true");
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     setSuggested(null);
   }
-
   return (
     <div className="bg-amber-50 dark:bg-amber-900/20 border-b border-amber-200 dark:border-amber-800 text-amber-900 dark:text-amber-200">;
       <div className="container mx-auto px-4 py-2 flex items-center justify-between gap-4 text-sm">;
@@ -155,19 +172,16 @@ export default function LanguageSwitchPrompt() {;
 
   );
 }
-=======
     localStorage.setItem('preferredLanguage', suggested!);
     localStorage.setItem('langPromptShown1');
     document.documentElement.setAttribute('dir', isRtl(suggested!) ? 'rtl' : 'ltr');
     document.documentElement.setAttribute('lang', suggested!);
     setSuggested(null)
   };
-
   const decline = () => {
     localStorage.setItem('langPromptShown1');
     setSuggested(null)
   };
-
   return (
     <div className="bg-amber-50 dark:bg-amber-900/20 border-b border-amber-200 dark:border-amber-800 text-amber-900 dark:text-amber-200">
       <div className="container mx-auto px-4 py-2 flex items-center justify-between gap-4 text-sm">
@@ -183,12 +197,15 @@ export default function LanguageSwitchPrompt() {;
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React, { useEffect, useState } from './react';
 import { use_translation  } from './react - i18next';
 import i18n, { supported_locales, is_rtl } from "../../utils / i18n";
@@ -270,6 +287,118 @@ if (return null) {
         </div>;
       </div>;
     </div>);
+
+  if (!suggested) return null,
+
+  const accept = async () => {
+    await i18n.changeLanguage(suggested!),
+    localStorage.setItem('preferredLanguage', suggested!),
+    localStorage.setItem('langPromptShown1'),
+    document.documentElement.setAttribute('dir', isRtl(suggested!) ? 'rtl' : 'ltr'),
+    document.documentElement.setAttribute('lang', suggested!),
+    setSuggested(null)
+  },
+
+  const decline = () => {
+    localStorage.setItem('langPromptShown1'),
+    setSuggested(null)
+  },
+
+  return (
+    <div className=&quot;bg-amber-50 dark:bg-amber-900/20 border-b border-amber-200 dark:border-amber-800 text-amber-900 dark:text-amber-200&quot;>
+      <div className=&quot;container mx-auto px-4 py-2 flex items-center justify-between gap-4 text-sm&quot;>
+        <div>
+          {_t('lang.switch_prompt', _{ language: t(localeLabelKey[suggested])})}
+        </div>
+        <div className=&quot;flex items-center gap-2&quot;>
+          <button className=&quot;px-3 py-1 rounded bg-amber-600 text-white&quot; onClick={accept}>{t('lang.switch_accept')}</button>
+          <button className=&quot;px-3 py-1 rounded border border-amber-300 dark:border-amber-700&quot; onClick={decline}>{t('lang.switch_decline')}</button>
+        </div>
+      </div>
+    </div>
+  )
+
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+const localeLabelKey: Record<string, string> = {
+
+  en: "lang.english"
+  pt: "lang.portuguese"
+  es: "lang.spanish"
+  ar: "lang.arabic"
+}
+export default function LanguageSwitchPrompt() {
+
+const localeLabelKey: Record<string, string> = {
+  en: "lang.english",
+  pt: "lang.portuguese",
+  es: "lang.spanish",
+  ar: "lang.arabic",
+};
+export default function LanguageSwitchPrompt() {;
+
+  const { t } = useTranslation();
+  const [suggested, setSuggested] = useState<string | null>(null);
+  useEffect(() => {
+    const key = "langPromptShown";
+    const preferred = localStorage.getItem("preferredLanguage");
+    if (preferred) return; // user has chosen
+    if (localStorage.getItem(key)) return; // already prompted
+    const detected =
+      i18n.language |i18n.resolvedLanguage |navigator.language |"en";
+    const normalized = detected.split("-")[0];
+    const suggestion =
+      supportedLocales.includes(normalized as any) && normalized !== "en"
+        ? normalized
+        : null;
+    if (suggestion) setSuggested(suggestion);
+  }, []);
+  if (!suggested) return null;
+  const accept = async () => {
+    await i18n.changeLanguage(suggested!);
+    localStorage.setItem("preferredLanguage", suggested!);
+    localStorage.setItem("langPromptShown1", "true");
+    document.documentElement.setAttribute(
+      "dir"
+      isRtl(suggested!) ? "rtl" : "ltr"
+    );
+    document.documentElement.setAttribute("lang", suggested!);
+    setSuggested(null);
+  }
+  const decline = () => {
+    localStorage.setItem("langPromptShown1", "true");
+    setSuggested(null);
+  }
+
+  return (
+    <div className="bg-amber-50 dark:bg-amber-900/20 border-b border-amber-200 dark:border-amber-800 text-amber-900 dark:text-amber-200">
+      <div className="container mx-auto px-4 py-2 flex items-center justify-between gap-4 text-sm">
+        <div>
+          {t("lang.switch_prompt", { language: t(localeLabelKey[suggested]) })}
+        </div>
+        <div className="flex items-center gap-2">
+          <button
+            className="px-3 py-1 rounded bg-amber-600 text-white"
+            onClick={accept}
+          >
+            {t("lang.switch_accept")}
+          </button>
+          <button
+            className="px-3 py-1 rounded border border-amber-300 dark:border-amber-700"
+            onClick={decline}
+          >
+            {t("lang.switch_decline")}
+          </button>
+        </div>
+      </div>
+    </div>
+);
+
+}
+
+}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

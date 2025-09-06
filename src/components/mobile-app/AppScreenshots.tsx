@@ -3,10 +3,14 @@
 
 import React, { useRef } from "react",
 import { ChevronLeft, ChevronRight } from 'lucide-react'
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button",
 
 // These would be replaced with actual screenshots
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { Button } from "@/components/ui/button";
 // These would be replaced with actual screenshots
 
@@ -19,11 +23,26 @@ const mockScreenshots = [
 export const AppScreenshots: React.FC = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null)
   const scroll = (direction: "left" | "right",) => {
+<<<<<<< HEAD
 import React, { useRef } from "react",
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { Button } from "@/components/ui/button",
 >>>>>>> // These would be replaced with actual screenshots
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+import { Button } from "@/components/ui/button"
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import React, { useRef } from "react",
+import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { Button } from "@/components/ui/button",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+// These would be replaced with actual screenshots
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 const mockScreenshots = [
   { id: 1, alt: "Dashboard screen", src: "/placeholder.svg" },
   { id: 2, alt: "Talent matching screen", src: "/placeholder.svg" },
@@ -32,17 +51,33 @@ const mockScreenshots = [
   { id: 5, alt: "Profile screen", src: "/placeholder.svg" }],
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 export const AppScreenshots: React.FC = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null)
   const scroll = (direction: "left" | "right",) => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+export const AppScreenshots: React.FC = () => {
+  const scrollContainerRef = useRef<HTMLDivElement>(null)
+  const scroll = (direction: "left" | "right",) => {
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
 export const AppScreenshots: React.FC = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null),
 
   const scroll = (direction: "left" | "right") => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     if (scrollContainerRef.current) {
 =======
 >>>>>>>     if (scrollContainerRef.current) {
@@ -51,6 +86,7 @@ export const AppScreenshots: React.FC = () => {
       scrollContainerRef.current.scrollBy({
         left: direction === "left" ? -scrollAmount : scrollAmount
         behavior: "smooth"})
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
 
@@ -85,6 +121,20 @@ export const AppScreenshots: React.FC = () => {;
   }
 >>>>>>>   return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+    }
+<<<<<<< HEAD
+  }
+=======
+  },
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  return (
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <section className="py-16 bg-zion-blue-dark">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
@@ -93,6 +143,7 @@ export const AppScreenshots: React.FC = () => {;
             Take a visual tour through the Zion app's intuitive interface.
           </p>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         <div className="relative">
@@ -125,10 +176,26 @@ export const AppScreenshots: React.FC = () => {;
 
             onClick={() => scroll("left")}
 
+=======
+=======
+        
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        <div className="relative">
+          <Button
+            variant="ghost"
+            size="icon"
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white"
+            onClick={() => scroll("left")}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             aria-label="Scroll left"
           >
             <ChevronLeft className="h-6 w-6" />
           </Button>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           <div 
@@ -143,6 +210,23 @@ export const AppScreenshots: React.FC = () => {;
           
 >>>>>>>           <div 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+          <div
+            ref = {scrollContainerRef,}
+            className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory"
+            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+          >
+            {mockScreenshots.map((screenshot,) => (
+              <div
+                key = {screenshot.id,}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+          
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+          <div 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             ref={scrollContainerRef}
             className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
@@ -151,11 +235,16 @@ export const AppScreenshots: React.FC = () => {;
               <div 
                 key={screenshot.id} 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 className="flex-shrink-0 w-60 h-[500px] snap-center rounded-xl overflow-hidden border-2 border-zion-purple/30"
 =======
 >>>>>>>                 className="flex-shrink-0 w-60 h-[500px] snap-center rounded-xl overflow-hidden border-2 border-zion-purple/30"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+                className="flex-shrink-0 w-60 h-[500px] snap-center rounded-xl overflow-hidden border-2 border-zion-purple/30"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               >
                 <img
                   src={screenshot.src}
@@ -167,18 +256,32 @@ export const AppScreenshots: React.FC = () => {;
             ))}
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>>           <Button
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+          
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <Button
 >>>>>>>             variant="ghost"
             size="icon"
             className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white"
+<<<<<<< HEAD
 
             onClick={() => scroll("right")}
 
+=======
+            onClick={() => scroll("right")}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             aria-label="Scroll right"
           >
             <ChevronRight className="h-6 w-6" />
@@ -187,16 +290,32 @@ export const AppScreenshots: React.FC = () => {;
       </div>
     </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   );
 };
 '"};
 };
+<<<<<<< HEAD
+=======
+=======
+  )
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 '"}
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 },
 import React, { useRef } from "react",;
 import { ChevronLeft, ChevronRight } from 'lucide-react';
@@ -271,6 +390,7 @@ export const AppScreenshots: React.FC = () => {;
   );
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
@@ -279,3 +399,9 @@ export const AppScreenshots: React.FC = () => {;
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

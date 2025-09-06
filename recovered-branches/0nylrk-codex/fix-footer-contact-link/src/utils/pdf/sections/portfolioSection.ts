@@ -1,14 +1,29 @@
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/pdf/sections/portfolioSection.ts
 
 
 <<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { jsPDF  } from 'jspdf';
+import { PortfolioProject  } from '@/types/resume';
+import { PdfThemeColors } from '../themeConfig';
+export function addPortfolioSection(
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 import {jsPDF} from 'jspdf';
 import {PortfolioProject} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
 export function addPortfolioSection(;
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   doc: jsPDF;
   projects: PortfolioProject[];
   colors: PdfThemeColors;
@@ -16,6 +31,7 @@ export function addPortfolioSection(;
 
   maxProjects: number = 2
 ): number {
+<<<<<<< HEAD
 
   if (projects && projects.length === 0) return startY;
   
@@ -24,17 +40,23 @@ export function addPortfolioSection(;
   // Check if we need to add a new page
   if (yPos > 250) {
 
+========
+<<<<<<< HEAD
+if (projects && projects.length === 0) return startY;
+  let yPos = startY;
+  // Check if we need to add a new page
+  if (yPos > 250) {
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/pdf/sections/portfolioSection.ts
     doc && doc.addPage(),
     yPos = 20
   }
-  
   doc && doc.setFontSize(16);
   doc && doc.setTextColor(colors && colors.heading);
   doc && doc.text('Portfolio Projects', 20, yPos);
   yPos += 8;
-  
   doc && doc.setDrawColor(colors && colors.accent);
   doc && doc.line(20, yPos, 100, yPos);
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/pdf/sections/portfolioSection.ts
 
   yPos += 8;
   // Limit the number of projects shown based on maxProjects parameter
@@ -42,49 +64,117 @@ export function addPortfolioSection(;
   const displayProjects = projects && projects.slice(0, maxProjects);
   
 
+========
+  yPos += 8;
+  // Limit the number of projects shown based on maxProjects parameter
+  const displayProjects = projects && projects.slice(0, maxProjects);
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/pdf/sections/portfolioSection.ts
   for (const project of displayProjects) {
     // Check if we need to add a new page
     if (yPos > 260) {
       doc && doc.addPage();
       yPos = 20
     }
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/pdf/sections/portfolioSection.ts
 
     
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/pdf/sections/portfolioSection.ts
     doc && doc.setFontSize(14);
     doc && doc.setTextColor(colors && colors.subheading);
     doc && doc.text(project && project.title, 20, yPos);
     yPos += 6;
-    
     if (project && project.technologies && project && project.technologies.length > 0) {
       doc && doc.setFontSize(10);
       doc && doc.setTextColor(colors && colors.text);
       doc && doc.text(`Technologies: ${project && project.technologies.join()}`, 20, yPos);
       yPos += 5
     }
-    
     if (project && project.description) {
       doc && doc.setFontSize(10);
       const descriptionLines = doc && doc.splitTextToSize(project && project.description, 170);
       doc && doc.text(descriptionLines, 20, yPos);
       yPos += (descriptionLines && descriptionLines.length * 5)
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/pdf/sections/portfolioSection.ts
 
     }
     // Add links if available
 
+========
+    }
+    // Add links if available
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/pdf/sections/portfolioSection.ts
     if (project && project.github_url || project && project.demo_url) {
       yPos += 5;
       doc && doc.setFontSize(9);
       doc && doc.setTextColor(colors && colors.accent);
-      
       if (project && project.github_url) {
         doc && doc.text(`GitHub: ${project && project.github_url}`, 20, yPos);
         yPos += 4
       }
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/pdf/sections/portfolioSection.ts
 <<<<<<< HEAD
       if (project.demo_url) {
         doc.text(`Demo: ${project.demo_url}`, 20, yPos);
+========
+      if (project && project.demo_url) {
+        doc && doc.text(`Demo: ${project && project.demo_url}`, 20, yPos);
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/pdf/sections/portfolioSection.ts
         yPos += 4
 
+=======
+  if (projects.length === 0) return startY;
+  let yPos = startY;
+  // Check if we need to add a new page
+  if (yPos > 250) {
+    doc.addPage()
+    yPos = 20
+  }
+  doc.setFontSize(16);
+  doc.setTextColor(colors.heading);
+  doc.text('Portfolio Projects', 20, yPos);
+  yPos += 8;
+  doc.setDrawColor(colors.accent);
+  doc.line(20, yPos, 100, yPos);
+  yPos += 8;
+  // Limit the number of projects shown based on maxProjects parameter
+  const displayProjects = projects.slice(0, maxProjects);
+  for (const project of displayProjects) {
+    // Check if we need to add a new page
+    if (yPos > 260) {
+      doc.addPage();
+      yPos = 20
+    }
+    doc.setFontSize(14);
+    doc.setTextColor(colors.subheading);
+    doc.text(project.title, 20, yPos);
+    yPos += 6;
+    if (project.technologies && project.technologies.length > 0) {
+      doc.setFontSize(10);
+      doc.setTextColor(colors.text);
+      doc.text(`Technologies: ${project.technologies.join()}`, 20, yPos);
+      yPos += 5
+    }
+    if (project.description) {
+      doc.setFontSize(10);
+      const descriptionLines = doc.splitTextToSize(project.description, 170);
+      doc.text(descriptionLines, 20, yPos);
+      yPos += (descriptionLines.length * 5)
+    }
+    // Add links if available
+    if (project.github_url |project.demo_url) {
+      yPos += 5;
+      doc.setFontSize(9);
+      doc.setTextColor(colors.accent);
+      if (project.github_url) {
+        doc.text(`GitHub: ${project.github_url}`, 20, yPos);
+        yPos += 4
+      }
+      if (project.demo_url) {
+        doc.text(`Demo: ${project.demo_url}`, 20, yPos);
+        yPos += 4
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { jsPDF } from 'jspdf',;
 import { PortfolioProject } from '@/types/resume',;
 import { PdfThemeColors } from '../themeConfig',;
@@ -150,15 +240,25 @@ export function addPortfolioSection(;
       if (project.demo_url) {;
         doc.text(`Demo: ${project.demo_url}`, 20, yPos),;
         yPos += 4;
+<<<<<<< HEAD
 
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       }
     }
     yPos += 10, // Add space between projects
   }
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/pdf/sections/portfolioSection.ts
 
 <<<<<<< HEAD
 =======
@@ -169,15 +269,24 @@ export function addPortfolioSection(;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   // If there are more projects than we're displaying
 
+========
+  // If there are more projects than we're displaying
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/pdf/sections/portfolioSection.ts
   if (projects && projects.length > maxProjects) {
     doc && doc.setFontSize(10);
     doc && doc.setTextColor(colors && colors.text);
     doc && doc.text(`+ ${projects && projects.length - maxProjects} more projects not shown`, 20, yPos);
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/pdf/sections/portfolioSection.ts
 
     yPos += 6
 
 <<<<<<< HEAD
 =======
+========
+    yPos += 6
+  }
+  return yPos + 5
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/pdf/sections/portfolioSection.ts
 import {jsPDF} from 'jspdf';
 import {PortfolioProject} from '@/types / resume';
 import {PdfThemeColors} from '../theme_config';
@@ -205,6 +314,27 @@ if ( {) {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  // If there are more projects than we're displaying
+  if (projects.length > maxProjects) {
+    doc.setFontSize(10);
+    doc.setTextColor(colors.text);
+    doc.text(`+ ${projects.length - maxProjects} more projects not shown`, 20, yPos);
+
+    yPos += 6
+<<<<<<< HEAD
+  }
+  return yPos + 5
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 ;
   // If there are more projects than we're displaying;
   if (projects.length > maxProjects) {;
@@ -212,6 +342,7 @@ if ( {) {
     doc.setTextColor(colors.text);
     doc.text(`+ ${projects.length - maxProjects} more projects not shown`, 20, yPos);
     yPos += 6;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -304,6 +435,134 @@ if ( {) {
     y_pos += 6;
   }
   return y_pos + 5;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/pdf/sections/portfolioSection.ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+=======
+
+import { jsPDF } from 'jspdf',;
+import { PortfolioProject } from '@/types/resume',;
+import { PdfThemeColors } from '../themeConfig',;
+;
+export function addPortfolioSection(;
+  doc:jsPDF,;
+  projects:PortfolioProject[],;
+  colors:PdfThemeColors,;
+  startY:number,;
+  maxProjects:number = 2;
+):number {;
+  if (projects.length === 0) return startY,;
+  ;
+  let yPos = startY,;
+  ;
+  // Check if we need to add a new page;
+  if (yPos > 250) {;
+    doc.addPage(),;
+    yPos = 20;
+  }
+  ;
+  doc.setFontSize(16),;
+  doc.setTextColor(colors.heading),;
+  doc.text('Portfolio Projects', 20, yPos),;
+  yPos += 8,;
+  ;
+  doc.setDrawColor(colors.accent),;
+  doc.line(20, yPos, 100, yPos),;
+  yPos += 8,;
+  ;
+  // Limit the number of projects shown based on maxProjects parameter;
+  const displayProjects = projects.slice(0, maxProjects),;
+  ;
+  for (const project of displayProjects) {;
+    // Check if we need to add a new page;
+    if (yPos > 260) {;
+      doc.addPage(),;
+      yPos = 20,;
+    }
+    ;
+    doc.setFontSize(14),;
+    doc.setTextColor(colors.subheading),;
+    doc.text(project.title, 20, yPos),;
+    yPos += 6,;
+    ;
+    if (project.technologies && project.technologies.length > 0) {;
+      doc.setFontSize(10),;
+      doc.setTextColor(colors.text),;
+      doc.text(`Technologies:${project.technologies.join()}`, 20, yPos),;
+      yPos += 5,;
+    }
+    ;
+    if (project.description) {;
+      doc.setFontSize(10),;
+      const descriptionLines = doc.splitTextToSize(project.description, 170),;
+      doc.text(descriptionLines, 20, yPos),;
+      yPos += (descriptionLines.length * 5),;
+    }
+    ;
+    // Add links if available;
+    if (project.github_url || project.demo_url) {;
+      yPos += 5,;
+      doc.setFontSize(9),;
+      doc.setTextColor(colors.accent),;
+      ;
+      if (project.github_url) {;
+        doc.text(`GitHub:${project.github_url}`, 20, yPos),;
+        yPos += 4,;
+      }
+      ;
+      if (project.demo_url) {;
+        doc.text(`Demo:${project.demo_url}`, 20, yPos),;
+        yPos += 4,;
+      }    }
+    ;
+    yPos += 10, // Add space between projects;
+  }
+  ;
+  // If there are more projects than we're displaying;
+  if (projects.length > maxProjects) {;
+    doc.setFontSize(10),;
+    doc.setTextColor(colors.text),;
+    doc.text(`+ ${projects.length - maxProjects} more projects not shown`, 20, yPos),;
+    yPos += 6,;
+  }
+  ;
+  return yPos + 5,; doc.setFontSize (16);
+doc.setTextColor (colors.heading);
+doc.text ('Portfolio Projects', 20, yPos);
+yPos += 8;
+doc.setDrawColor (colors.accent);
+doc.line (20, yPos, 100, yPos);
+yPos += 8;
+// Limit the number of projects shown based on maxProjects parameter for (const project of displayProjects) {
+  // Check if we need to add a new page if (yPos > 260) {
+  doc.setFontSize (14);
+doc.setTextColor (colors.subheading);
+doc.text (project.title, 20, yPos);
+yPos += 6;
+if (project.github url) {
+  doc.text (`GitHub: $ {
+  project.github url 
+}`, 20, yPos);
+yPos += 4 
+}
+}
+}yPos += 10, // Add space between projects 
+}// If there are more projects than we're displaying 
+}return yPos + 5 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+}
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/utils/pdf/sections/portfolioSection.ts
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  }
+;
+  return yPos + 5;
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

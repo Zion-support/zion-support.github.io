@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import React from 'react';
@@ -7,28 +8,27 @@ import Layout from '../components/Layout';
 =======
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
+<<<<<<< HEAD
 
 import React from "react";
 import Layout from "../components/Layout";
@@ -36,6 +36,82 @@ import Layout from "../components/Layout";
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+import React from "react";
+import Layout from "../components/Layout";
+export default function ITServices() {;
+  return (
+    <Layout
+      title="IT Services - Zion Tech Group"
+      description="Comprehensive IT services including cloud solutions, cybersecurity, and digital transformation.">;
+      <div className="min-h-screen bg-gray-50 py-20">;
+        <div className="container mx-auto px-4">;
+          <div className="text-center mb-12">;
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">;
+              IT Services;
+            </h1>;
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
+              Complete IT solutions to power your digital transformation.;
+            </p>;
+          </div>;
+          <div className="text-center">;
+            <p className="text-gray-600">;
+import React from './react';
+import Layout from "../components / Layout";
+;
+export default /**
+ * ITServices - Function description
+ */
+function ITServices() {
+  return (
+    <Layout;
+      title="IT Services - Zion Tech Group";
+      description="Comprehensive IT services including cloud solutions, cybersecurity, and digital transformation.";
+    >;
+      <div className="min - h-screen bg - gray - 50 py - 20">;
+        <div className="container mx - auto px - 4">;
+          <div className="text - center mb - 12">;
+            <h1 className="text - 4xl font - bold text - gray - 900 mb - 4">;
+              IT Services;
+            </h1>;
+            <p className="text - xl text - gray - 600 max - w-3xl mx - auto">;
+              Complete IT solutions to power your digital transformation.;
+            </p>;
+          </div>;
+          <div className="text - center">;
+            <p className="text - gray - 600">;
+              IT Services page is under construction.;
+            </p>;
+          </div>;
+        </div>;
+      </div>;
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from "react";
+import Layout from "../components/Layout";
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+import React from 'react';
+import Layout from '../components/Layout';
+>>>>>>> origin/automation-improvements-final
+
+=======
+<<<<<<< HEAD
+import React from "react";
+import Layout from "../components/Layout";
+>>>>>>> origin/main
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export default function ITServices() {
   return (
     <Layout
@@ -74,6 +150,7 @@ export default function ITServices() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
     </Layout>
 =======
 export default function ITServices() {;
@@ -126,6 +203,18 @@ function ITServices() {
       </div>;
 
 =======
+    </Layout>;
+  );
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+}
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
 
 =======
 
@@ -133,6 +222,7 @@ function ITServices() {
 
 
 =======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import { Star } from 'lucide-react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -165,7 +255,6 @@ import {
   FileText,
   Cpu;
 } from 'lucide-react';
-
 const itServices = [
   {
     category: "Managed IT Services",
@@ -329,7 +418,6 @@ const itServices = [
     ]
   }
 ];
-
 const microSaaS = [
   {
     name: "IT Asset Management",
@@ -409,7 +497,6 @@ const microSaaS = [
     icon: Wifi
   }
 ];
-
 const processSteps = [
   {
     step: "01",
@@ -437,16 +524,13 @@ const processSteps = [
     description: "Ongoing optimization and updates to keep your IT infrastructure current."
   }
 ];
-
 const stats = [
   { number: "99.9%", label: "Uptime Guarantee" },
   { number: "15min", label: "Response Time" },
   { number: "500+", label: "IT Projects Completed" },
   { number: "24/7", label: "Support Available" }
 ];
-
 export default function ITServices() {
-  
     >
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white py-20">
@@ -481,7 +565,6 @@ export default function ITServices() {
           </motion.div>
         </div>
       </section>
-
       {/* IT Services Categories */}
       <section id="services" className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -499,7 +582,6 @@ export default function ITServices() {
               Complete IT solutions designed to support your business operations and drive growth.
             </p>
           </motion.div>
-
           {itServices.map((category, categoryIndex) => (
             <motion.div
               key={categoryIndex}
@@ -517,7 +599,6 @@ export default function ITServices() {
                   {category.category}
                 </h3>
               </div>
-
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 {category.services.map((service, serviceIndex) => (
                   <motion.div
@@ -531,7 +612,6 @@ export default function ITServices() {
                     <p className="text-gray-600 mb-4">
                       {service.description}
                     </p>
-                    
                     <ul className="space-y-2 mb-6">
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-sm text-gray-700">
@@ -540,7 +620,6 @@ export default function ITServices() {
                         </li>
                       ))}
                     </ul>
-
                     <div className="flex justify-between items-center">
                       <div>
                         <div className="text-lg font-bold text-blue-600">
@@ -564,7 +643,6 @@ export default function ITServices() {
           ))}
         </div>
       </section>
-
       {/* Micro SaaS Solutions */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -582,7 +660,6 @@ export default function ITServices() {
               Specialized IT management tools that can be deployed quickly and scaled with your business.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {microSaaS.map((solution, index) => (
               <motion.div
@@ -602,11 +679,9 @@ export default function ITServices() {
                     {solution.name}
                   </h3>
                 </div>
-                
                 <p className="text-gray-600 mb-4">
                   {solution.description}
                 </p>
-
                 <ul className="space-y-2 mb-6">
                   {solution.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-gray-700">
@@ -615,7 +690,6 @@ export default function ITServices() {
                     </li>
                   ))}
                 </ul>
-
                 <div className="flex justify-between items-center">
                   <div className="text-2xl font-bold text-green-600">
                     {solution.pricing}
@@ -632,7 +706,6 @@ export default function ITServices() {
           </div>
         </div>
       </section>
-
       {/* Process Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -650,7 +723,6 @@ export default function ITServices() {
               A proven methodology that ensures successful IT implementation and maximum value for your investment.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
             {processSteps.map((step, index) => (
               <motion.div
@@ -678,7 +750,6 @@ export default function ITServices() {
           </div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4">
@@ -703,7 +774,6 @@ export default function ITServices() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 text-center">
@@ -743,6 +813,7 @@ export default function ITServices() {
       </section>
     </Layout>
   );
+<<<<<<< HEAD
 
 
 
@@ -756,3 +827,20 @@ export default function ITServices() {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+}
+    </Layout>);
+}
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+=======
+}
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

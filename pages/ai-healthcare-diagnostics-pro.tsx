@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from 'react',
@@ -7,29 +8,29 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
   const features = [
 =======
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
 import React from 'react';
+<<<<<<< HEAD
 
 import Link from 'next/link';
 
@@ -76,9 +77,429 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {;
       description:;
         'Streamline diagnostic processes with intelligent automation, reducing diagnosis time by up to 80%.',;
       color: 'from-yellow-500 to-orange-500',;
+=======
+import Head from 'next / head';
+import Layout from '../components / layout / Layout';
+import {motion} from 'framer-motion';
+import {Stethoscope, Brain, Eye, Heart, Microscope, Shield, BarChart3, TrendingUp, Target, Users, CheckCircle, ArrowRight, Cpu, Network, Database, Lock, Clock, DollarSign, PieChart, Activity, Zap, Pill, Syringe, Hospital, Ambulance, } from 'lucide-react';
+import Link from 'next / link';
+const AIHealthcareDiagnosticsPro: React.FC = () => {
+  const features = [;
+    {
+      icon: Brain,
+      title: 'Advanced AI Diagnostics',
+      description:;
+        'Deep learning algorithms analyze medical images, lab results, and patient data with 99.2% accuracy for early disease detection.',
+      color: 'from - blue - 500 to - cyan - 500',
+    },
+    {
+      icon: Eye,
+      title: 'Multi - Modal Imaging',
+      description:;
+        'Process X - rays, CT scans, MRIs, ultrasounds, and pathology slides with specialized AI models for comprehensive analysis.',
+      color: 'from - purple - 500 to - pink - 500',
+    },
+    {
+      icon: Heart,
+      title: 'Predictive Analytics',
+      description:;
+        'AI - powered risk assessment and early warning systems for cardiovascular, cancer, and chronic disease prevention.',
+      color: 'from - red - 500 to - orange - 500',
+    },
+    {
+      icon: Shield,
+      title: 'HIPAA Compliant',
+      description:;
+        'Enterprise - grade security with end - to - end encryption, audit trails, and compliance with healthcare data regulations.',
+      color: 'from - green - 500 to - emerald - 500',
+    },
+    {
+      icon: BarChart3,
+      title: 'Real - time Monitoring',
+      description:;
+        'Continuous patient monitoring with instant alerts for critical changes and automated reporting to healthcare providers.',
+      color: 'from - indigo - 500 to - blue - 500',
+    },
+    {
+      icon: Zap,
+      title: 'Automated Workflows',
+      description:;
+        'Streamline diagnostic processes with intelligent automation, reducing diagnosis time by up to 80%.',
+      color: 'from - yellow - 500 to - orange - 500',
+    },  ];
+;
+  const use_cases = [;
+    {
+      icon: Microscope,
+      title: 'Radiology & Imaging',
+      description:;
+        'AI - powered analysis of X - rays, CT scans, MRIs, and ultrasounds for faster, more accurate diagnoses.',
+      benefits: [;
+        '95% accuracy rate',
+        '80% faster diagnosis',
+        'Reduced radiologist workload',
+      ],
+    },
+    {
+      icon: Heart,
+      title: 'Cardiology',
+      description:;
+        'Early detection of heart disease, arrhythmias, and cardiovascular risks through AI analysis of ECG and imaging data.',
+      benefits: [;
+        'Early disease detection',
+        'Risk stratification',
+        'Preventive care',
+      ],
+    },
+    {
+      icon: Brain,
+      title: 'Neurology',
+      description:;
+        "AI detection of brain tumors, strokes, Alzheimer's, and neurological disorders from imaging and clinical data.",
+      benefits: [;
+        'Early intervention',
+        'Treatment planning',
+        'Outcome prediction',
+      ],
+    },
+    {
+      icon: Microscope,
+      title: 'Pathology',
+      description:;
+        'Digital pathology analysis for cancer detection, grading, and personalized treatment recommendations.',
+      benefits: [;
+        'Precision medicine',
+        'Faster results',
+        'Standardized analysis',
+      ],
+    },  ];
+;
+  const pricing_plans = [;
+    {
+      name: 'Starter',
+      price: '$4, 999',
+      period: '/month',
+      description: 'Perfect for small clinics and practices',
+      features: [;
+        'Up to 1, 000 diagnostic scans / month',
+        'Basic AI diagnostic models',
+        'Standard reporting dashboard',
+        'Email support',
+        'HIPAA compliance',
+        'API access (5, 000 calls / month)',
+      ],
+      color: 'from - blue - 500 to - cyan - 500',
+      popular: false,
+    },
+    {
+      name: 'Professional',
+      price: '$12, 999',
+      period: '/month',
+      description: 'Ideal for hospitals and medical centers',
+      features: [;
+        'Up to 10, 000 diagnostic scans / month',
+        'Advanced AI diagnostic models',
+        'Multi - modal imaging support',
+        'Real - time monitoring & alerts',
+        'Priority support',
+        'API access (50, 000 calls / month)',
+        'Custom integrations',
+        'Training & certification',
+      ],
+      color: 'from - purple - 500 to - pink - 500',
+      popular: true,
+    },
+    {
+      name: 'Enterprise',
+      price: '$29, 999',
+      period: '/month',
+      description: 'For large healthcare networks',
+      features: [;
+        'Unlimited diagnostic scans',
+        'Custom AI model development',
+        'Full multi - modal support',
+        'Dedicated account manager',
+        '24 / 7 phone support',
+        'Unlimited API access',
+        'White - label solutions',
+        'On - premise deployment',
+        'Custom compliance features',
+      ],
+      color: 'from - green - 500 to - emerald - 500',
+      popular: false,
+    },  ];
+;
+  const integrations = [;
+    {
+      name: "PACS Systems",
+      icon: Database,
+      description: 'DICOM integration with major PACS vendors',
+      color: 'from - blue - 500 to - cyan - 500',
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+import {motion} from 'framer-motion';
+import {Stethoscope, Brain, Eye, Heart, Microscope, Shield, BarChart3, TrendingUp, Target, Users, CheckCircle, ArrowRight, Cpu, Network, Database, Lock, Clock, DollarSign, PieChart, Activity, Zap, Pill, Syringe, Hospital, Ambulance,} from 'lucide-react';
+import Link from 'next/link';
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React from 'react',
+import Head from 'next/head',
+<<<<<<< HEAD
+import Layout from '../components/layout/Layout';
+import { motion } from 'framer-motion';
+import { Stethoscope, Brain, Eye, Heart;
+  Microscope, Shield, BarChart3;
+  TrendingUp, Target, Users, CheckCircle;
+  ArrowRight, Cpu, Network, Database;
+  Lock, Clock, DollarSign, PieChart;
+  Activity, Zap, Pill, Syringe, Hospital, Ambulance
+ } from 'lucide-react';
+import Link from 'next/link';
+
+const AIHealthcareDiagnosticsPro: React.FC = () => {
+  const features = [
+    {
+      icon: Brain
+      title: 'Advanced AI Diagnostics'
+      description:
+        'Deep learning algorithms analyze medical images, lab results, and patient data with 99.2% accuracy for early disease detection.'
+      color: 'from-blue-500 to-cyan-500'
+    }
+    {
+      icon: Eye
+      title: 'Multi-Modal Imaging'
+      description:
+        'Process X-rays, CT scans, MRIs, ultrasounds, and pathology slides with specialized AI models for comprehensive analysis.'
+      color: 'from-purple-500 to-pink-500'
+    }
+    {
+      icon: Heart
+      title: 'Predictive Analytics'
+      description:
+        'AI-powered risk assessment and early warning systems for cardiovascular, cancer, and chronic disease prevention.'
+      color: 'from-red-500 to-orange-500'
+    }
+    {
+      icon: Shield
+      title: 'HIPAA Compliant'
+      description:
+        'Enterprise-grade security with end-to-end encryption, audit trails, and compliance with healthcare data regulations.'
+      color: 'from-green-500 to-emerald-500'
+    }
+    {
+      icon: BarChart3
+      title: 'Real-time Monitoring'
+      description:
+        'Continuous patient monitoring with instant alerts for critical changes and automated reporting to healthcare providers.'
+      color: 'from-indigo-500 to-blue-500'
+    }
+    {
+      icon: Zap
+      title: 'Automated Workflows'
+      description:
+        'Streamline diagnostic processes with intelligent automation, reducing diagnosis time by up to 80%.'
+      color: 'from-yellow-500 to-orange-500'
+    },  ];
+  const useCases = [
+    {
+      icon: Microscope
+      title: 'Radiology & Imaging'
+      description:
+        'AI-powered analysis of X-rays, CT scans, MRIs, and ultrasounds for faster, more accurate diagnoses.'
+      benefits: [
+        '95% accuracy rate'
+        '80% faster diagnosis'
+        'Reduced radiologist workload'
+      ]
+    }
+    {
+      icon: Heart
+      title: 'Cardiology'
+      description:
+        'Early detection of heart disease, arrhythmias, and cardiovascular risks through AI analysis of ECG and imaging data.'
+      benefits: [
+        'Early disease detection'
+        'Risk stratification'
+        'Preventive care'
+      ]
+    }
+    {
+      icon: Brain
+      title: 'Neurology'
+      description:
+        "AI detection of brain tumors, strokes, Alzheimer's, and neurological disorders from imaging and clinical data."
+      benefits: [
+        'Early intervention'
+        'Treatment planning'
+        'Outcome prediction'
+      ]
+    }
+    {
+      icon: Microscope
+      title: 'Pathology'
+      description:
+        'Digital pathology analysis for cancer detection, grading, and personalized treatment recommendations.'
+      benefits: [
+        'Precision medicine'
+        'Faster results'
+        'Standardized analysis'
+      ]
+    },  ];
+  const pricingPlans = [
+    {
+      name: 'Starter'
+      price: '$4,999'
+      period: '/month'
+      description: 'Perfect for small clinics and practices'
+      features: [
+        'Up to 1,000 diagnostic scans/month'
+        'Basic AI diagnostic models'
+        'Standard reporting dashboard'
+        'Email support'
+        'HIPAA compliance'
+        'API access (5,000 calls/month)'
+      ]
+      color: 'from-blue-500 to-cyan-500'
+      popular: false
+    }
+    {
+      name: 'Professional'
+      price: '$12,999'
+      period: '/month'
+      description: 'Ideal for hospitals and medical centers'
+      features: [
+        'Up to 10,000 diagnostic scans/month'
+        'Advanced AI diagnostic models'
+        'Multi-modal imaging support'
+        'Real-time monitoring & alerts'
+        'Priority support'
+        'API access (50,000 calls/month)'
+        'Custom integrations'
+        'Training & certification'
+      ]
+      color: 'from-purple-500 to-pink-500'
+      popular: true
+    }
+    {
+      name: 'Enterprise'
+      price: '$29,999'
+      period: '/month'
+      description: 'For large healthcare networks'
+      features: [
+        'Unlimited diagnostic scans'
+        'Custom AI model development'
+        'Full multi-modal support'
+        'Dedicated account manager'
+        '24/7 phone support'
+        'Unlimited API access'
+        'White-label solutions'
+        'On-premise deployment'
+        'Custom compliance features'
+      ]
+      color: 'from-green-500 to-emerald-500'
+      popular: false
+    },  ];
+  const integrations = [
+    {
+      name: 'PACS Systems'
+      icon: Database
+      description: 'DICOM integration with major PACS vendors'
+      color: 'from-blue-500 to-cyan-500'
+    }
+    {
+      name: 'EHR Platforms'
+      icon: Database
+      description: 'Epic, Cerner, Allscripts, athenahealth'
+      color: 'from-green-500 to-emerald-500'
+    }
+    {
+      name: 'LIS Systems'
+      icon: Microscope
+      description: 'Lab information systems integration'
+      color: 'from-purple-500 to-pink-500'
+    }
+    {
+      name: 'RIS Systems'
+      icon: BarChart3
+      description: 'Radiology information systems'
+      color: 'from-orange-500 to-red-500'
+    }
+    {
+      name: 'Medical Devices'
+      icon: Stethoscope
+      description: 'CT, MRI, X-ray, ultrasound machines'
+      color: 'from-indigo-500 to-blue-500'
+    }
+    {
+      name: 'Cloud Platforms'
+      icon: Cpu
+      description: 'AWS, Azure, Google Cloud, IBM Cloud'
+      color: 'from-yellow-500 to-orange-500'
+    },  ];
+  const specialties = [
+    {
+      icon: Heart
+      name: 'Cardiology'
+      description:
+        'Heart disease detection, ECG analysis, cardiovascular risk assessment'
+      accuracy: '99.1%'
+    }
+    {
+      icon: Brain
+      name: 'Neurology'
+      description:
+        'Brain tumor detection, stroke diagnosis, neurological disorder analysis'
+      accuracy: '98.9%'
+    }
+    {
+      icon: Activity
+      name: 'Pulmonology'
+      description:
+        'Lung cancer screening, pneumonia detection, respiratory disease analysis'
+      accuracy: '99.3%'
+    }
+    {
+      icon: Eye
+      name: 'Ophthalmology'
+      description:
+        'Retinal disease detection, glaucoma screening, diabetic retinopathy'
+      accuracy: '98.7%'
+    }
+    {
+      icon: Shield
+      name: 'Hepatology'
+      description:
+        'Liver disease detection, cirrhosis assessment, tumor identification'
+      accuracy: '99.0%'
+    }
+    {
+      icon: Microscope
+      name: 'Nephrology'
+      description:
+        'Kidney disease detection, renal function analysis, transplant assessment'
+      accuracy: '98.8%'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     },  ];
 =======
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
+import {
+  Stethoscope, Brain, Eye, Heart,
+  Microscope, Shield, BarChart3,
+  TrendingUp, Target, Users, CheckCircle,
+  ArrowRight, Cpu, Network, Database,
+  Lock, Clock, DollarSign, PieChart,
+  Activity, Zap, Pill, Syringe, Hospital, Ambulance
+} from 'lucide-react',
+import Link from 'next/link',
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
 import Head from 'next / head';
 import Layout from '../components / layout / Layout';
 import {motion} from 'framer-motion';
@@ -251,33 +672,219 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
       name: "EHR Platforms",
       icon: Database,
 
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+const AIHealthcareDiagnosticsPro: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: "Advanced AI Diagnostics",
+      description: "Deep learning algorithms analyze medical images, lab results, and patient data with 99.2% accuracy for early disease detection.",
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      icon: Eye,
+      title: "Multi-Modal Imaging",
+      description: "Process X-rays, CT scans, MRIs, ultrasounds, and pathology slides with specialized AI models for comprehensive analysis.",
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      icon: Heart,
+      title: "Predictive Analytics",
+      description: "AI-powered risk assessment and early warning systems for cardiovascular, cancer, and chronic disease prevention.",
+      color: "from-red-500 to-orange-500"
+    },
+    {
+      icon: Shield,
+      title: "HIPAA Compliant",
+      description: "Enterprise-grade security with end-to-end encryption, audit trails, and compliance with healthcare data regulations.",
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      icon: BarChart3,
+      title: "Real-time Monitoring",
+      description: "Continuous patient monitoring with instant alerts for critical changes and automated reporting to healthcare providers.",
+      color: "from-indigo-500 to-blue-500"
+    },
+    {
+      icon: Zap,
+      title: "Automated Workflows",
+      description: "Streamline diagnostic processes with intelligent automation, reducing diagnosis time by up to 80%.",
+      color: "from-yellow-500 to-orange-500"
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],
+  const useCases = [
+    {
+      icon: Microscope,
+      title: "Radiology & Imaging",
+      description: "AI-powered analysis of X-rays, CT scans, MRIs, and ultrasounds for faster, more accurate diagnoses.",
+      benefits: ["95% accuracy rate", "80% faster diagnosis", "Reduced radiologist workload"]
+    },
+    {
+      icon: Heart,
+      title: "Cardiology",
+      description: "Early detection of heart disease, arrhythmias, and cardiovascular risks through AI analysis of ECG and imaging data.",
+      benefits: ["Early disease detection", "Risk stratification", "Preventive care"]
+    },
+    {
+      icon: Brain,
+      title: "Neurology",
+      description: "AI detection of brain tumors, strokes, Alzheimer's, and neurological disorders from imaging and clinical data.",
+      benefits: ["Early intervention", "Treatment planning", "Outcome prediction"]
+    },
+    {
+      icon: Microscope,
+      title: "Pathology",
+      description: "Digital pathology analysis for cancer detection, grading, and personalized treatment recommendations.",
+      benefits: ["Precision medicine", "Faster results", "Standardized analysis"]
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],
+  const pricingPlans = [
+    {
+      name: "Starter",
+      price: "$4,999",
+      period: "/month",
+      description: "Perfect for small clinics and practices",
+      features: [
+        "Up to 1,000 diagnostic scans/month",
+        "Basic AI diagnostic models",
+        "Standard reporting dashboard",
+        "Email support",
+        "HIPAA compliance",
+        "API access (5,000 calls/month)"
+      ],
+      color: "from-blue-500 to-cyan-500",
+      popular: false
+    },
+    {
+      name: "Professional",
+      price: "$12,999",
+      period: "/month",
+      description: "Ideal for hospitals and medical centers",
+      features: [
+        "Up to 10,000 diagnostic scans/month",
+        "Advanced AI diagnostic models",
+        "Multi-modal imaging support",
+        "Real-time monitoring & alerts",
+        "Priority support",
+        "API access (50,000 calls/month)",
+        "Custom integrations",
+        "Training & certification"
+      ],
+      color: "from-purple-500 to-pink-500",
+      popular: true
+    },
+    {
+      name: "Enterprise",
+      price: "$29,999",
+      period: "/month",
+      description: "For large healthcare networks",
+      features: [
+        "Unlimited diagnostic scans",
+        "Custom AI model development",
+        "Full multi-modal support",
+        "Dedicated account manager",
+        "24/7 phone support",
+        "Unlimited API access",
+        "White-label solutions",
+        "On-premise deployment",
+        "Custom compliance features"
+      ],
+      color: "from-green-500 to-emerald-500",
+      popular: false
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],
+  const integrations = [
+    {
+      name: "PACS Systems",
+      icon: Database,
+      description: "DICOM integration with major PACS vendors",
+      color: "from-blue-500 to-cyan-500"
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+    },
+    {
+      name: "EHR Platforms",
+      icon: Database,
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       description: 'Epic, Cerner, Allscripts, athenahealth',
       color: 'from - green - 500 to - emerald - 500',
+=======
+      description: "Epic, Cerner, Allscripts, athenahealth",
+      color: "from-green-500 to-emerald-500"
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
+<<<<<<< HEAD
 
     {
       name: "LIS Systems",
       icon: Microscope,
 
+=======
+    {
+      name: "LIS Systems",
+      icon: Microscope,
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       description: 'Lab information systems integration',
       color: 'from - purple - 500 to - pink - 500',
+=======
+      description: "Lab information systems integration",
+      color: "from-purple-500 to-pink-500"
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
+<<<<<<< HEAD
 
     {
       name: "RIS Systems",
       icon: BarChart3,
 
+=======
+    {
+      name: "RIS Systems",
+      icon: BarChart3,
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       description: 'Radiology information systems',
       color: 'from - orange - 500 to - red - 500',
+=======
+      description: "Radiology information systems",
+      color: "from-orange-500 to-red-500"
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
+<<<<<<< HEAD
 
     {
       name: "Medical Devices",
       icon: Stethoscope,
 
+=======
+    {
+      name: "Medical Devices",
+      icon: Stethoscope,
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       description: 'CT, MRI, X - ray, ultrasound machines',
       color: 'from - indigo - 500 to - blue - 500',
+=======
+      description: "CT, MRI, X-ray, ultrasound machines",
+      color: "from-indigo-500 to-blue-500"
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
+<<<<<<< HEAD
 
     {
       name: "Cloud Platforms",
@@ -292,15 +899,25 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
       <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-black'>;
         {/* Background Effects */}
 
+=======
+    {
+      name: "Cloud Platforms",
+      icon: Cpu,
+<<<<<<< HEAD
+          href='https://ziontechgroup && ziontechgroup.com/ai-healthcare-diagnostics-pro'
+        />;
+      </Head>;
+      {/* Hero Section */}
+      <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-black'>;
+        {/* Background Effects */}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <div className='absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-900'></div>;
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(56,189,248,0 && 0.15),transparent_50%)]'></div>;
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0 && 0.1),transparent_50%)]'></div>;
-
         {/* Floating Elements */}
         <div className='absolute top-20 left-20 w-2 h-2 bg-cyan-400 rounded-full opacity-60 animate-pulse'></div>;
         <div className='absolute bottom-32 right-16 w-3 h-3 bg-purple-400 rounded-full opacity-60 animate-pulse delay-1000'></div>;
         <div className='absolute top-1/2 left-1/4 w-1 h-1 bg-green-400 rounded-full opacity-80 animate-pulse delay-500'></div>;
-
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -323,8 +940,11 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
               reduce diagnosis time by 80%, and save countless lives through;
               early intervention.;
             </p>;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             {/* Key Metrics */}
             <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto'>              <motion&& motion.div
                 initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -344,8 +964,11 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
                 <div className='text-gray-300'>Faster Diagnosis</div>              </motion && motion.div>;
               <motion&& motion.div
                 initial={{ opacity: 0, scale: 0 && 0.8 }}
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       description: 'AWS, Azure, Google Cloud, IBM Cloud',
       color: 'from - yellow - 500 to - orange - 500',
     },  ];
@@ -491,11 +1114,69 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
                 <div className='text - gray - 300'>Faster Diagnosis</div>              </motion.div>;
               <motion.div;
                 initial={{ opacity: 0, scale: 0.8 }}
+<<<<<<< HEAD
 
                 animate={{ opacity: 1, scale: 1 }}
 
 =======
 
+=======
+                animate={{ opacity: 1, scale: 1 }}
+=======
+      description: "AWS, Azure, Google Cloud, IBM Cloud",
+      color: "from-yellow-500 to-orange-500"
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],
+  const specialties = [
+    {
+      icon: Heart,
+      name: "Cardiology",
+      description: "Heart disease detection, ECG analysis, cardiovascular risk assessment",
+      accuracy: "99.1%"
+    },
+    {
+      icon: Brain,
+      name: "Neurology",
+      description: "Brain tumor detection, stroke diagnosis, neurological disorder analysis",
+      accuracy: "98.9%"
+    },
+    {
+      icon: Activity,
+      name: "Pulmonology",
+      description: "Lung cancer screening, pneumonia detection, respiratory disease analysis",
+      accuracy: "99.3%"
+    },
+    {
+      icon: Eye,
+      name: "Ophthalmology",
+      description: "Retinal disease detection, glaucoma screening, diabetic retinopathy",
+      accuracy: "98.7%"
+    },
+    {
+      icon: Shield,
+      name: "Hepatology",
+      description: "Liver disease detection, cirrhosis assessment, tumor identification",
+      accuracy: "99.0%"
+    },
+    {
+      icon: Microscope,
+      name: "Nephrology",
+      description: "Kidney disease detection, renal function analysis, transplant assessment",
+      accuracy: "98.8%"
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  return (
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <Layout>
       <Head>
         <title>AI Healthcare Diagnostics Pro - Zion Tech Group</title>
@@ -507,6 +1188,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
         <meta property="og:url" content="https://ziontechgroup.com/ai-healthcare-diagnostics-pro" />
         <link rel="canonical" href="https://ziontechgroup.com/ai-healthcare-diagnostics-pro" />
       </Head>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -517,28 +1199,123 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
   }
 }
 
+=======
+<<<<<<< HEAD
+      {/* Hero Section */}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
         {/* Background Effects */}
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-900"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(56,189,248,0.15),transparent_50%)]"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0.1),transparent_50%)]"></div>
-        
         {/* Floating Elements */}
+=======
+<<<<<<< HEAD
+      {/* Hero Section */}
+      <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-black'>
+        {/* Background Effects */}
+        <div className='absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-900'></div>
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(56,189,248,0.15),transparent_50%)]'></div>
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0.1),transparent_50%)]'></div>
+        {/* Floating Elements */}
+        <div className='absolute top-20 left-20 w-2 h-2 bg-cyan-400 rounded-full opacity-60 animate-pulse'></div>
+        <div className='absolute bottom-32 right-16 w-3 h-3 bg-purple-400 rounded-full opacity-60 animate-pulse delay-1000'></div>
+        <div className='absolute top-1/2 left-1/4 w-1 h-1 bg-green-400 rounded-full opacity-80 animate-pulse delay-500'></div>
+        <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className='mb-8'
+=======
+      {/* Hero Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+        {/* Background Effects */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-900"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(56,189,248,0.15),transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0.1),transparent_50%)]"></div>
+        {/* Floating Elements */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <div className="absolute top-20 left-20 w-2 h-2 bg-cyan-400 rounded-full opacity-60 animate-pulse"></div>
         <div className="absolute bottom-32 right-16 w-3 h-3 bg-purple-400 rounded-full opacity-60 animate-pulse delay-1000"></div>
         <div className="absolute top-1/2 left-1/4 w-1 h-1 bg-green-400 rounded-full opacity-80 animate-pulse delay-500"></div>
-        
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<<<<<<< HEAD
+
+  return (_<Layout>
+      <Head>
+        <title>AI Healthcare Diagnostics Pro - Zion Tech Group</title>
+        <meta name=&quot;description&quot; content=&quot;Revolutionize healthcare with AI-powered diagnostics. Achieve 99.2% accuracy in disease detection, reduce diagnosis time by 80%, and improve patient outcomes with our advanced AI platform.&quot; />
+        <meta name=&quot;keywords&quot; content=&quot;AI healthcare, medical diagnostics, medical imaging, disease detection, healthcare AI, medical AI, diagnostic accuracy&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;AI Healthcare Diagnostics Pro - Zion Tech Group&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;Revolutionize healthcare with AI-powered diagnostics. Achieve 99.2% accuracy in disease detection and reduce diagnosis time by 80%.&quot; />
+        <meta property=&quot;og:type&quot; content=&quot;website&quot; />
+        <meta property=&quot;og:url&quot; content=&quot;https://ziontechgroup.com/ai-healthcare-diagnostics-pro&quot; />
+        <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/ai-healthcare-diagnostics-pro&quot; />
+      </Head>
+
+      {/* Hero Section */}
+      <section className=&quot;relative min-h-screen flex items-center justify-center overflow-hidden bg-black&quot;>
+        {/* Background Effects */}
+        <div className=&quot;absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-900&quot;></div>
+        <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(56,189,248,0.15),transparent_50%)]&quot;></div>
+        <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0.1),transparent_50%)]&quot;></div>
+        
+        {/* Floating Elements */}
+        <div className=&quot;absolute top-20 left-20 w-2 h-2 bg-cyan-400 rounded-full opacity-60 animate-pulse&quot;></div>
+        <div className=&quot;absolute bottom-32 right-16 w-3 h-3 bg-purple-400 rounded-full opacity-60 animate-pulse delay-1000&quot;></div>
+        <div className=&quot;absolute top-1/2 left-1/4 w-1 h-1 bg-green-400 rounded-full opacity-80 animate-pulse delay-500&quot;></div>
+        
+        <div className=&quot;relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>
+
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+className="mb-8"
+=======
+          <motion.div
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             className="mb-8"
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           >
             <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-full text-green-400 text-sm font-medium mb-6">
               <Brain className="w-4 h-4" />
@@ -551,15 +1328,20 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
               <br />
               <span className="text-white">Diagnostics Pro</span>
             </h1>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
               Transform healthcare delivery with the world's most advanced AI diagnostic platform. 
               Achieve 99.2% accuracy in disease detection, reduce diagnosis time by 80%, and save countless lives through early intervention.
             </p>
+<<<<<<< HEAD
 
 
 
@@ -582,6 +1364,15 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-2xl p-6 backdrop-blur-sm"
+=======
+            {/* Key Metrics */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-2xl p-6 backdrop-blur-sm"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               >
                 <div className="text-3xl font-bold text-green-400 mb-2">99.2%</div>
                 <div className="text-gray-300">Diagnostic Accuracy</div>
@@ -590,26 +1381,136 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
+className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-2xl p-6 backdrop-blur-sm"
+              >
+=======
+<<<<<<< HEAD
+            <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed'>
+              Transform healthcare delivery with the world's most advanced AI
+              diagnostic platform. Achieve 99.2% accuracy in disease detection
+              reduce diagnosis time by 80%, and save countless lives through
+              early intervention.
+            </p>
+            {/* Key Metrics */}
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto'>              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className='bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-2xl p-6 backdrop-blur-sm'
+              >
+                <div className='text-3xl font-bold text-green-400 mb-2'>
+                  99.2%
+                </div>
+                <div className='text-gray-300'>Diagnostic Accuracy</div>              </motion.div>
+=======
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+              Transform healthcare delivery with the world's most advanced AI diagnostic platform.
+              Achieve 99.2% accuracy in disease detection, reduce diagnosis time by 80%, and save countless lives through early intervention.
+            </p>
+<<<<<<< HEAD
+            {/* Key Metrics */}
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto'>              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className='bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-2xl p-6 backdrop-blur-sm'
+              >
+                <div className='text-3xl font-bold text-green-400 mb-2'>
+                  99.2%
+                </div>
+                <div className='text-gray-300'>Diagnostic Accuracy</div>              </motion.div>
+=======
+            {/* Key Metrics */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                animate={{ opacity: 1, scale: 1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.6, delay: 0.2 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-2xl p-6 backdrop-blur-sm"
+              >
+                <div className="text-3xl font-bold text-green-400 mb-2">99.2%</div>
+                <div className="text-gray-300">Diagnostic Accuracy</div>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                animate={{ opacity: 1, scale: 1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.6, delay: 0.4 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-2xl p-6 backdrop-blur-sm"
               >
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <div className="text-3xl font-bold text-cyan-400 mb-2">80%</div>
                 <div className="text-gray-300">Faster Diagnosis</div>
               </motion.div>
               <motion.div
+<<<<<<< HEAD
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
+className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm"
+=======
+                initial={{ opacity: 0, scale: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                animate={{ opacity: 1, scale: 1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.6, delay: 0.6 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm"
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               >
                 <div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>
                 <div className="text-gray-300">Continuous Monitoring</div>
               </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.6 }}
                 className='bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm'>;
                 <div className='text-3xl font-bold text-purple-400 mb-2'>;
@@ -617,19 +1518,62 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
                 </div>;
                 <div className='text-gray-300'>Continuous Monitoring</div>              </motion && motion.div>;
             </div>;
+<<<<<<< HEAD
 
 
 
             {/* CTA Buttons */}
 
 =======
+            {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.8 }}
+className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25"
+              >
+                Schedule Demo
+              </motion.button>
+              <motion.button
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rounded-xl hover:bg-green-500/10 transition-all duration-300"
+=======
+<<<<<<< HEAD
+            {/* CTA Buttons */}
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>              <motion.button
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.8 }}
+                className='px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25'              >
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+            {/* CTA Buttons */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.6, delay: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25"
               >
+<<<<<<< HEAD
 =======
 
             {/* CTA Buttons */  } catch (error) {
@@ -667,25 +1611,60 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                Schedule Demo
+              </motion.button>
+              <motion.button
+                initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.6, delay: 1.0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rounded-xl hover:bg-green-500/10 transition-all duration-300"
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               >
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 Contact Sales
               </motion.button>
             </div>
           </motion.div>
         </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
                 transition={{ duration: 0 && 0.6, delay: 1 && 1.0 }}
+=======
+<<<<<<< HEAD
+transition={{ duration: 0 && 0.6, delay: 1 && 1.0 }}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 className='px-8 py-4 border border-green-500/50 text-green-400 font-semibold rounded-xl hover:bg-green-500/10 transition-all duration-300'>;
                 Contact Sales;
               </motion && motion.button>;
             </div>;
           </motion && motion.div>;
         </div>;
+<<<<<<< HEAD
 
 =======
 =======
@@ -697,18 +1676,77 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Features Section */}
 
+=======
+      </section>
+      {/* Features Section */}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <section className="py-20 bg-gray-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.05),transparent_50%)]"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
+<<<<<<< HEAD
 
+=======
+=======
+<<<<<<< HEAD
+      {/* Features Section */}
+      <section className='py-20 bg-gray-900 relative overflow-hidden'>
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.05),transparent_50%)]'></div>
+        <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+            className="text-center mb-16"
+=======
+            className='text-center mb-16'
+=======
+      </section>
+      {/* Features Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      <section className="py-20 bg-gray-900 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.05),transparent_50%)]"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            className="text-center mb-16"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Powered by <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Advanced AI</span>
@@ -717,12 +1755,23 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
               Our platform combines cutting-edge artificial intelligence with deep medical expertise to deliver unprecedented diagnostic accuracy and speed.
             </p>
           </motion.div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
 
+=======
+<<<<<<< HEAD
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+=======
+<<<<<<< HEAD
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {features.map((feature, index) => (
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+              <motion.div
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <span className='bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent'>;
                 Advanced AI;
               </span>;
@@ -733,54 +1782,182 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
               accuracy and speed.;
             </p>;
           </motion && motion.div>;
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {features && features.map((feature, index) => (;
               <motion&& motion.div
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+                className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm hover:border-green-500/30 transition-all duration-300 group"
+=======
+                className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm hover:border-green-500/30 transition-all duration-300 group'
+=======
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <motion.div
+                key={index  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.6, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm hover:border-green-500/30 transition-all duration-300 group"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                 <p className="text-gray-300 leading-relaxed">{feature.description}</p>
               </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             ))}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </div>;
         </div>;
-=======
       </section>
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Medical Specialties Section */}
 
+=======
+      {/* Medical Specialties Section */}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <section className="py-20 bg-black relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(139,92,246,0.08),transparent_50%)]"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
+<<<<<<< HEAD
 
+=======
+=======
+<<<<<<< HEAD
+                <h3 className='text-xl font-semibold text-white mb-4'>
+                  {feature.title}
+                </h3>
+                <p className='text-gray-300 leading-relaxed'>
+                  {feature.description}
+                </p>              </motion.div>
+            ))}
+          </div>
+        </div>
+      {/* Medical Specialties Section */}
+      <section className='py-20 bg-black relative overflow-hidden'>
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(139,92,246,0.08),transparent_50%)]'></div>
+        <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+            className="text-center mb-16"
+=======
+            className='text-center mb-16'
+=======
+                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
+                <p className="text-gray-300 leading-relaxed">{feature.description}</p>
+              </motion.div>
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </div>;
+        </div>;
+      </section>;
+      {/* Medical Specialties Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      <section className="py-20 bg-black relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(139,92,246,0.08),transparent_50%)]"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            className="text-center mb-16"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Medical <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Specialties</span>
@@ -788,17 +1965,28 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our AI platform covers all major medical specialties with specialized models trained on millions of cases for maximum accuracy.
             </p>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
+=======
+<<<<<<< HEAD
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {specialties.map((specialty, index) => (
+              <motion.div
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>;
                 Specialties;
               </span>;
             </h2>;
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 className='bg - gradient - to - r from - purple - 500 / 20 to - pink - 500 / 20 border border - purple - 500 / 30 rounded - 2xl p - 6 backdrop - blur - sm';
               >;
                 <div className='text - 3xl font - bold text - purple - 400 mb - 2'>;
@@ -885,19 +2073,28 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
               </span>;
             </h2>;
             <p className='text - xl text - gray - 300 max - w-3xl mx - auto'>;
+<<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               Our AI platform covers all major medical specialties with;
               specialized models trained on millions of cases for maximum;
               accuracy.;
             </p>;
+<<<<<<< HEAD
 
 
+=======
+            <ul className="text - sm text - gray - 500 space - y-2">;
+              <li>• X - ray analysis</li>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <li>• CT scan interpretation</li>;
               <li>• MRI diagnostics</li>;
               <li>• Ultrasound imaging</li>;
             </ul>;
           </div>;
+<<<<<<< HEAD
 
 
                 key={index}
@@ -908,6 +2105,9 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+                className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm hover:border-purple-500/30 transition-all duration-300"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               >
                 <div className="flex items-center justify-between mb-4">
                   <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center">
@@ -926,30 +2126,171 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">{specialty.name}</h3>
                 <p className="text-gray-300 leading-relaxed">{specialty.description}</p>
               </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             ))}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </div>;
         </div>;
-=======
       </section>
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Use Cases Section */}
 
+=======
+      {/* Use Cases Section */}
+=======
+<<<<<<< HEAD
+            <ul className="text-sm text-gray-500 space-y-2">
+              <li>• X-ray analysis</li>
+              <li>• CT scan interpretation</li>
+              <li>• MRI diagnostics</li>
+              <li>• Ultrasound imaging</li>
+            </ul>
+          </div>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {specialties.map((specialty, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm hover:border-purple-500/30 transition-all duration-300'
+=======
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {specialties.map((specialty, index) => (
+              <motion.div
+                key={index  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.6, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm hover:border-purple-500/30 transition-all duration-300"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              >
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center">
+                    <specialty.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="text-right">
+                    <div className="text-2xl font-bold text-green-400">{specialty.accuracy}</div>
+                    <div className="text-sm text-gray-400">Accuracy</div>
+                  </div>
+                </div>
+<<<<<<< HEAD
+                <h3 className='text-xl font-semibold text-white mb-3'>
+                  {specialty.name}
+                </h3>
+                <p className='text-gray-300 leading-relaxed'>
+                  {specialty.description}
+                </p>              </motion.div>
+            ))}
+          </div>
+        </div>
+      {/* Use Cases Section */}
+      <section className='py-20 bg-gray-900 relative overflow-hidden'>
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(236,73,153,0.06),transparent_50%)]'></div>
+        <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className='text-center mb-16'
+=======
+                <h3 className="text-xl font-semibold text-white mb-3">{specialty.name}</h3>
+                <p className="text-gray-300 leading-relaxed">{specialty.description}</p>
+              </motion.div>
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </div>;
+        </div>;
+      </section>;
+      {/* Use Cases Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <section className="py-20 bg-gray-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(236,73,153,0.06),transparent_50%)]"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+            className="text-center mb-16"
+=======
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            className="text-center mb-16"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Transform Your <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Practice</span>
@@ -958,6 +2299,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
               From radiology to pathology, our AI platform adapts to your specific medical specialty and workflow requirements.
             </p>
           </motion.div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -965,6 +2307,16 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
             {useCases.map((useCase, index) => (
 
 
+=======
+<<<<<<< HEAD
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {useCases.map((useCase, index) => (
+=======
+<<<<<<< HEAD
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>            {useCases.map((useCase, index) => (
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+              <motion.div
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <span className='bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent'>;
                 Practice;
               </span>;
@@ -974,20 +2326,65 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
               specific medical specialty and workflow requirements.;
             </p>;
           </motion && motion.div>;
-
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>            {useCases && useCases.map((useCase, index) => (;
               <motion&& motion.div
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+                className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm"
+=======
+                className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm'
+=======
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {useCases.map((useCase, index) => (
+              <motion.div
+                key={index  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                whileInView={{ opacity: 1, x: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.6, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               >
                 <div className="flex items-start space-x-4">
                   <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center flex-shrink-0">
@@ -998,49 +2395,152 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
                     <p className="text-gray-300 mb-4 leading-relaxed">{useCase.description}</p>
                     <div className="space-y-2">
                       {useCase.benefits.map((benefit, benefitIndex) => (
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                         <div key={benefitIndex} className="flex items-center space-x-2 text-sm">
                           <CheckCircle className="w-4 h-4 text-green-400" />
                           <span className="text-gray-300">{benefit}</span>
                         </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+=======
+<<<<<<< HEAD
+                        <div
+                          key={benefitIndex}
+                          className='flex items-center space-x-2 text-sm'
+                        >
+                          <CheckCircle className='w-4 h-4 text-green-400' />
+                          <span className='text-gray-300'>{benefit}</span>                        </div>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       ))}
                     </div>;
                   </div>;
                 </div>;
               </motion && motion.div>;
             ))}
+<<<<<<< HEAD
 
           </div>;
         </div>;
       </section>;
 
 
+=======
+<<<<<<< HEAD
+          </div>;
+        </div>;
+      </section>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       {/* Pricing Section */}
       <section className='py-20 bg-black relative overflow-hidden'>;
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0 && 0.05),transparent_50%)]'></div>;
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
+<<<<<<< HEAD
 
 =======
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       {/* Pricing Section */}
       <section className="py-20 bg-black relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.05),transparent_50%)]"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
+<<<<<<< HEAD
 
+=======
+=======
+          </div>
+        </div>
+      </section>
+      {/* Pricing Section */}
+      <section className='py-20 bg-black relative overflow-hidden'>
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.05),transparent_50%)]'></div>
+        <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+            className="text-center mb-16"
+=======
+            className='text-center mb-16'
+=======
+                        <div key={benefitIndex} className="flex items-center space-x-2 text-sm">
+                          <CheckCircle className="w-4 h-4 text-green-400" />
+                          <span className="text-gray-300">{benefit}</span>
+                        </div>
+                      ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    </div>;
+                  </div>;
+                </div>;
+              </motion.div>;
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </div>;
+        </div>;
+      </section>;
+      {/* Pricing Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      <section className="py-20 bg-black relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.05),transparent_50%)]"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            className="text-center mb-16"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Choose Your <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Plan</span>
@@ -1049,6 +2549,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
               Flexible pricing options designed to scale with your healthcare practice. Start with our Starter plan and upgrade as you grow.
             </p>
           </motion.div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1056,6 +2557,12 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
             {pricingPlans.map((plan, index) => (
 
 
+=======
+<<<<<<< HEAD
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricingPlans.map((plan, index) => (
+              <motion.div
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <span className='bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent'>;
                 Plan;
               </span>;
@@ -1065,22 +2572,242 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
               practice. Start with our Starter plan and upgrade as you grow.;
             </p>;
           </motion && motion.div>;
-
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingPlans && pricingPlans.map((plan, index) => (;
               <motion&& motion.div
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 border rounded-2xl p-8 backdrop-blur-sm ${
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>            {specialties.map ((specialty, index) => (
+              <motion.div;
+                key={index}
+                initial={{ opacity: 0, coordinate_y: 30 }}
+                whileInView={{ opacity: 1, coordinate_y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className='bg - gradient - to - br from - gray - 800 / 50 to - gray - 900 / 50 border border - gray - 700 / 50 rounded - 2xl p - 8 backdrop - blur - sm hover:border - purple - 500 / 30 transition - all duration - 300';
+              >;
+                <div className='flex items - center justify - between mb - 4'>;
+                  <div className='w - 16 h - 16 bg - gradient - to - r from - green - 500 to - emerald - 600 rounded - 2xl flex items - center justify - center'>;
+                    <specialty.icon className='w - 8 h - 8 text - white' />;
+                  </div>;
+                  <div className='text - right'>;
+                    <div className='text - 2xl font - bold text - green - 400'>;
+                      {specialty.accuracy}
+                    </div>;
+                    <div className='text - sm text - gray - 400'>Accuracy</div>;
+                  </div>;
+                </div>;
+                <h3 className='text - xl font - semibold text - white mb - 3'>;
+                  {specialty.name}
+                </h3>;
+                <p className='text - gray - 300 leading - relaxed'>;
+                  {specialty.description}
+                </p>              </motion.div>))}
+          </div>;
+        </div>;
+      {/* Use Cases Section */}
+      <section className='py - 20 bg - gray - 900 relative overflow - hidden'>;
+        <div className='absolute inset - 0 bg-[radial - gradient (circle_at_80%_20%, rgba (236, 73, 153, 0.06), transparent_50%)]'></div>;
+        <div className='relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className='text - center mb - 16';
+          >;
+            <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
+              Transform Your{' '}
+              <span className='bg - gradient - to - r from - green - 400 to - emerald - 400 bg - clip - text text - transparent'>;
+                Practice;
+              </span>;
+            </h2>;
+            <p className='text - xl text - gray - 300 max - w-3xl mx - auto'>;
+              From radiology to pathology, our AI platform adapts to your;
+              specific medical specialty and workflow requirements.;
+            </p>;
+          </motion.div>;
+          <div className='grid grid - cols - 1 lg:grid - cols - 2 gap - 8'>            {use_cases.map ((use_case, index) => (
+              <motion.div;
+                key={index}
+                initial={{ opacity: 0, coordinate_x: index % 2 === 0 ? -30 : 30 }}
+                whileInView={{ opacity: 1, coordinate_x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className='bg - gradient - to - br from - gray - 800 / 50 to - gray - 900 / 50 border border - gray - 700 / 50 rounded - 2xl p - 8 backdrop - blur - sm';
+              >;
+                <div className='flex items - start space - x-4'>;
+                  <div className='w - 16 h - 16 bg - gradient - to - r from - green - 500 to - emerald - 600 rounded - 2xl flex items - center justify - center flex - shrink - 0'>;
+                    <use_case.icon className='w - 8 h - 8 text - white' />;
+                  </div>;
+                  <div className='flex - 1'>;
+                    <h3 className='text - 2xl font - semibold text - white mb - 3'>;
+                      {use_case.title}
+                    </h3>;
+                    <p className='text - gray - 300 mb - 4 leading - relaxed'>;
+                      {use_case.description}
+                    </p>;
+                    <div className='space - y-2'>;
+                      {use_case.benefits.map ((benefit, benefit_index) => (
+                        <div;
+                          key={benefit_index}
+                          className='flex items - center space - x-2 text - sm';
+                        >;
+                          <CheckCircle className='w - 4 h - 4 text - green - 400' />;
+                          <span className='text - gray - 300'>{benefit}</span>                        </div>))}
+                    </div>;
+                  </div>;
+                </div>;
+              </motion.div>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* Pricing Section */}
+      <section className='py - 20 bg - black relative overflow - hidden'>;
+        <div className='absolute inset - 0 bg-[radial - gradient (circle_at_50%_50%, rgba (56, 189, 248, 0.05), transparent_50%)]'></div>;
+        <div className='relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className='text - center mb - 16';
+          >;
+            <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
+              Choose Your{' '}
+              <span className='bg - gradient - to - r from - green - 400 to - emerald - 400 bg - clip - text text - transparent'>;
+                Plan;
+              </span>;
+            </h2>;
+            <p className='text - xl text - gray - 300 max - w-3xl mx - auto'>;
+              Flexible pricing options designed to scale with your healthcare;
+              practice. Start with our Starter plan and upgrade as you grow.;
+            </p>;
+          </motion.div>;
+          <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8'>            {pricing_plans.map ((plan, index) => (
+              <motion.div;
+                key={index}
+                initial={{ opacity: 0, coordinate_y: 30 }}
+                whileInView={{ opacity: 1, coordinate_y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className={`relative bg - gradient - to - br from - gray - 800 / 50 to - gray - 900 / 50 border rounded - 2xl p - 8 backdrop - blur - sm ${
+                  plan.popular;
+                    ? 'border - green - 500 / 50 shadow - lg shadow - green - 500 / 25'                    : 'border - gray - 700 / 50';
+                }`}
+              >;
+                {plan.popular && (
+                  <div className='absolute -top - 4 left - 1/2 transform -translate - x-1 / 2'>;
+                    <div className='bg - gradient - to - r from - green - 500 to - emerald - 600 text - white px - 4 py - 2 rounded - full text - sm font - medium'>                      Most Popular;
+                    </div>;
+                  </div>)}
+                <div className='text - center mb - 8'>;
+                  <h3 className='text - 2xl font - bold text - white mb - 2'>;
+                    {plan.name}
+                  </h3>;
+                  <div className='flex items - baseline justify - center space - x-1 mb - 2'>;
+                    <span className='text - 4xl font - bold text - white'>;
+                      {plan.price}
+                <div className='text-center mb-8'>;
+                  <h3 className='text-2xl font-bold text-white mb-2'>;
+                    {plan && plan.name}
+                  </h3>;
+                  <div className='flex items-baseline justify-center space-x-1 mb-2'>;
+                    <span className='text-4xl font-bold text-white'>;
+                      {plan && plan.price}
+                    </span>;
+                    <span className='text-gray-400'>{plan && plan.period}</span>;
+                  </div>;
+                  <p className='text-gray-300'>{plan && plan.description}</p>;
+                </div>;
+                <ul className='space-y-4 mb-8'>;
+                  {plan && plan.features.map((feature, featureIndex) => (;
+                    <li
+                      key={featureIndex}
+                      className='flex items-center space-x-3'>;
+                      <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0' />;
+                      <span className='text-gray-300'>{feature}</span>                    </li>;
+                  ))}
+                </ul>;
+                <button
+                  className={`w-full py-3 px-6 bg-gradient-to-r ${plan && plan.color} text-white font-semibold rounded-xl hover:opacity-90 transition-all duration-300 transform hover:scale-105`}>                  Get Started;
+                </button>;
+              </motion && motion.div>;
+                  plan.popular 
+                    ? 'border-green-500/50 shadow-lg shadow-green-500/25' 
+                    : 'border-gray-700/50'
+                }`}
+=======
+<<<<<<< HEAD
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingPlans.map((plan, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className={`relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 border rounded-2xl p-8 backdrop-blur-sm ${
+                  plan.popular
+                    ? 'border-green-500/50 shadow-lg shadow-green-500/25'                    : 'border-gray-700/50'
+                }`}
+=======
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricingPlans.map((plan, index) => (
+              <motion.div
+                key={index  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.6, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className={`relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 border rounded-2xl p-8 backdrop-blur-sm ${;
+                  plan.popular;
+                    ? 'border-green-500/50 shadow-lg shadow-green-500/25';
+                    : 'border-gray-700/50';
+                }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -1088,21 +2815,45 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
                       Most Popular
                     </div>
                   </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
+=======
+<<<<<<< HEAD
+                )}
+<div className="text-center mb-8">
+=======
+<<<<<<< HEAD
+                )}
+                <div className='text-center mb-8'>
+                  <h3 className='text-2xl font-bold text-white mb-2'>
+                    {plan.name}
+                  </h3>
+                  <div className='flex items-baseline justify-center space-x-1 mb-2'>
+                    <span className='text-4xl font-bold text-white'>
+                      {plan.price}
+                    </span>
+                    <span className='text-gray-400'>{plan.period}</span>
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <div className="text-center mb-8">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="flex items-baseline justify-center space-x-1 mb-2">
                     <span className="text-4xl font-bold text-white">{plan.price}</span>
                     <span className="text-gray-400">{plan.period}</span>
+<<<<<<< HEAD
 
 
 
@@ -1113,21 +2864,70 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
 
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+                  </div>
+                  <p className="text-gray-300">{plan.description}</p>
+                </div>
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+                  </div>
+                  <p className="text-gray-300">{plan.description}</p>
+                </div>
+<<<<<<< HEAD
+                <ul className='space-y-4 mb-8'>
+                  {plan.features.map((feature, featureIndex) => (
+                    <li
+                      key={featureIndex}
+                      className='flex items-center space-x-3'
+                    >
+                      <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0' />
+                      <span className='text-gray-300'>{feature}</span>                    </li>
+                  ))}
+                </ul>
+                <button
+                  className={`w-full py-3 px-6 bg-gradient-to-r ${plan.color} text-white font-semibold rounded-xl hover:opacity-90 transition-all duration-300 transform hover:scale-105`}
+                >                  Get Started
+                </button>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Integrations Section */}
+      <section className='py-20 bg-gray-900 relative overflow-hidden'>
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(139,92,246,0.08),transparent_50%)]'></div>
+        <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className='text-center mb-16'
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center space-x-3">
                       <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
                     </li>
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
                 </ul>
 
 
+=======
+<<<<<<< HEAD
+                  ))}
+                </ul>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <button className={`w-full py-3 px-6 bg-gradient-to-r ${plan.color} text-white font-semibold rounded-xl hover:opacity-90 transition-all duration-300 transform hover:scale-105`}>
                   Get Started
                 </button>
               </motion.div>
+<<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
@@ -1137,26 +2937,97 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
       </section>;
 
 
+=======
+            ))}
+</div>;
+        </div>;
+      </section>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       {/* Integrations Section */}
       <section className='py-20 bg-gray-900 relative overflow-hidden'>;
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(139,92,246,0 && 0.08),transparent_50%)]'></div>;
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
+<<<<<<< HEAD
 
 =======
 
       {/* Integrations Section */}
+=======
+      {/* Integrations Section */}
+=======
+                  ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                </ul>;
+                <button className={`w-full py-3 px-6 bg-gradient-to-r ${plan.color} text-white font-semibold rounded-xl hover:opacity-90 transition-all duration-300 transform hover:scale-105`}>;
+                  Get Started;
+                </button>;
+              </motion.div>;
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </div>;
+        </div>;
+      </section>;
+      {/* Integrations Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <section className="py-20 bg-gray-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(139,92,246,0.08),transparent_50%)]"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+            className="text-center mb-16"
+=======
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            className="text-center mb-16"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Seamless <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Integrations</span>
@@ -1165,6 +3036,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
               Connect with your existing healthcare systems and workflows. Our platform integrates with all major EHR, PACS, and medical device platforms.
             </p>
           </motion.div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1172,13 +3044,22 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
             {integrations.map((integration, index) => (
 
 
+=======
+<<<<<<< HEAD
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {integrations.map((integration, index) => (
+              <motion.div
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <span className='bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent'>;
                 Integrations;
               </span>;
             </h2>;
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     </span>;
                     <span className='text - gray - 400'>{plan.period}</span>;
                   </div>;
@@ -1218,26 +3099,78 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
               </span>;
             </h2>;
             <p className='text - xl text - gray - 300 max - w-3xl mx - auto'>;
+<<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               Connect with your existing healthcare systems and workflows. Our;
               platform integrates with all major EHR, PACS, and medical device;
               platforms.;
             </p>;
+<<<<<<< HEAD
 
 
+=======
+                className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-6 backdrop-blur-sm text-center hover:border-green-500/30 transition-all duration-300"
+=======
+<<<<<<< HEAD
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {integrations.map((integration, index) => (
+              <motion.div
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+                className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-6 backdrop-blur-sm text-center hover:border-green-500/30 transition-all duration-300'
+=======
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {integrations.map((integration, index) => (
+              <motion.div
+                key={index  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.6, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-6 backdrop-blur-sm text-center hover:border-green-500/30 transition-all duration-300"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${integration.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
                   <integration.icon className="w-8 h-8 text-white" />
                 </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
           >
@@ -1301,6 +3234,44 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
             <div className='mt-8 text-sm text-gray-400'>;
               <p>;
 
+=======
+<<<<<<< HEAD
+                <h3 className="text-xl font-semibold text-white mb-2">{integration.name}</h3>
+                <p className="text-gray-300 text-sm">{integration.description}</p>
+              </motion.div>
+            ))}
+          </div>;
+        </div>;
+      </section>;
+      {/* CTA Section */}
+      <section className='py-20 bg-gradient-to-r from-green-900/20 via-emerald-900/20 to-cyan-900/20 relative overflow-hidden'>;
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0 && 0.1),transparent_50%)]'></div>;
+        <div className='relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion&& motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}>;
+            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
+              Ready to{' '}
+              <span className='bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent'>;
+                Transform;
+              </span>{' '}
+              Healthcare?;
+            </h2>;
+            <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>;
+              Join leading healthcare institutions worldwide who have already;
+              revolutionized patient care with AI-powered diagnostics.;
+            </p>;
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+              <button className='px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25'>;
+                Schedule Demo;
+              </button>;
+              <button className='px-8 py-4 border border-green-500/50 text-green-400 font-semibold rounded-xl hover:bg-green-500/10 transition-all duration-300'>;
+                Contact Sales;
+              </button>;
+            </div>;
+            <div className='mt-8 text-sm text-gray-400'>;
+              <p>;
                 Questions? Call us at{' '}
                 <a
                   href='tel:+13024640950'
@@ -1309,14 +3280,173 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
                 </a>{' '}
                 or email{' '}
                 <a
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-green-900/20 via-emerald-900/20 to-cyan-900/20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.1),transparent_50%)]"></div>
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+=======
+<<<<<<< HEAD
+                <h3 className='text-xl font-semibold text-white mb-2'>
+                  {integration.name}
+                </h3>
+                <p className='text-gray-300 text-sm'>
+                  {integration.description}
+                </p>              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* CTA Section */}
+      <section className='py-20 bg-gradient-to-r from-green-900/20 via-emerald-900/20 to-cyan-900/20 relative overflow-hidden'>
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.1),transparent_50%)]'></div>
+        <div className='relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+<<<<<<< HEAD
+=======
+=======
+                <h3 className="text-xl font-semibold text-white mb-2">{integration.name}</h3>
+                <p className="text-gray-300 text-sm">{integration.description}</p>
+              </motion.div>
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </div>;
+        </div>;
+      </section>;
+      {/* CTA Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      <section className="py-20 bg-gradient-to-r from-green-900/20 via-emerald-900/20 to-cyan-900/20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.1),transparent_50%)]"></div>
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+          >
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
+              Ready to <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Transform</span> Healthcare?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Join leading healthcare institutions worldwide who have already revolutionized patient care with AI-powered diagnostics.
+            </p>
+<<<<<<< HEAD
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25">
+=======
+<<<<<<< HEAD
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <button className='px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25'>
+=======
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+                Schedule Demo
+              </button>
+              <button className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rounded-xl hover:bg-green-500/10 transition-all duration-300">
+                Contact Sales
+              </button>
+            </div>
+<<<<<<< HEAD
+            <div className="mt-8 text-sm text-gray-400">
+              <p>Questions? Call us at <a href="tel:+13024640950" className="text-green-400 hover:text-green-300">+1 302 464 0950</a> or email <a href="mailto:kleber@ziontechgroup.com" className="text-green-400 hover:text-green-300">kleber@ziontechgroup.com</a></p>
+            </h2>
+            <p className=&quot;text-xl text-gray-300 mb-8 max-w-2xl mx-auto&quot;>
+              Join leading healthcare institutions worldwide who have already revolutionized patient care with AI-powered diagnostics.
+            </p>
+            
+            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
+              <button className=&quot;px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25&quot;>
+                Schedule Demo
+              </button>
+              <button className=&quot;px-8 py-4 border border-green-500/50 text-green-400 font-semibold rounded-xl hover:bg-green-500/10 transition-all duration-300&quot;>
+                Contact Sales
+              </button>
+            </div>
+            
+            <div className=&quot;mt-8 text-sm text-gray-400&quot;>
+              <p>Questions? Call us at <a href=&quot;tel:+13024640950&quot; className=&quot;text-green-400 hover:text-green-300&quot;>+1 302 464 0950</Link> or email <a href=&quot;mailto:kleber@ziontechgroup.com&quot; className=&quot;text-green-400 hover:text-green-300&quot;>kleber@ziontechgroup.com</Link></p>
+
+            </div>
+=======
+<<<<<<< HEAD
+            <div className='mt-8 text-sm text-gray-400'>
+              <p>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+                Questions? Call us at{' '}
+                <a
+                  href='tel:+13024640950'
+                  className='text-green-400 hover:text-green-300'
+                >
+                  +1 302 464 0950
+                </a>{' '}
+                or email{' '}
+                <a
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+                  href='mailto: kleber@ziontechgroup.com'
+                  className='text-green-400 hover:text-green-300'
+                >
+                  kleber@ziontechgroup.com
+                </a>
+              </p>            </div>
+=======
+            <div className="mt-8 text-sm text-gray-400">
+              <p>Questions? Call us at <a href="tel:+13024640950" className="text-green-400 hover:text-green-300">+1 302 464 0950</Link> or email <a href="mailto:kleber@ziontechgroup.com" className="text-green-400 hover:text-green-300">kleber@ziontechgroup.com</Link></p>
+            </div>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </motion.div>
         </div>
       </section>
     </Layout>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   )
@@ -1325,6 +3455,23 @@ export default AIHealthcareDiagnosticsPro;
 
 =======
 
+=======
+<<<<<<< HEAD
+  )
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  ),
+};
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  )
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   href='mailto: kleber@ziontechgroup && ziontechgroup.com'
                   className='text-green-400 hover:text-green-300'>;
                   kleber@ziontechgroup && ziontechgroup.com;
@@ -1336,6 +3483,7 @@ export default AIHealthcareDiagnosticsPro;
     </Layout>;
   ),;
 };
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
@@ -1346,6 +3494,10 @@ export default AIHealthcareDiagnosticsPro;
 
 
 =======
+=======
+export default AIHealthcareDiagnosticsPro;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </motion.div>;
           <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>            {integrations.map ((integration, index) => (
               <motion.div;
@@ -1423,5 +3575,44 @@ export default AIHealthcareDiagnosticsPro;
 ;
 export default AIHealthcareDiagnosticsPro;
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+
+=======
+},
+export default AIHealthcareDiagnosticsPro,
+          >;
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">;
+              Ready to <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Transform</span> Healthcare?;
+            </h2>;
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">;
+              Join leading healthcare institutions worldwide who have already revolutionized patient care with AI-powered diagnostics.;
+            </p>;
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+              <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25">;
+                Schedule Demo;
+              </button>;
+              <button className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rounded-xl hover:bg-green-500/10 transition-all duration-300">;
+                Contact Sales;
+              </button>;
+            </div>;
+            <div className="mt-8 text-sm text-gray-400">;
+              <p>Questions? Call us at <a href="tel:+13024640950" className="text-green-400 hover:text-green-300">+1 302 464 0950</a> or email <a href="mailto:kleber@ziontechgroup.com" className="text-green-400 hover:text-green-300">kleber@ziontechgroup.com</a></p>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </Layout>;
+  );
+},;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default AIHealthcareDiagnosticsPro;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

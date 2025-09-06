@@ -27,6 +27,7 @@
     "baseUrl": ".",
     "paths": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "@/*": ["./src/*"],
       "@/components/*": ["./src/components/*"],
       "@/lib/*": ["./src/lib/*"],
@@ -41,6 +42,8 @@
   "exclude": ["node_modules", "dist", "build"]
 }
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       "@/*": [
         "./*"
       ],
@@ -63,6 +66,7 @@
     "allowSyntheticDefaultImports": true
   },
   "include": [
+<<<<<<< HEAD
     "next-env.d.ts",
     ".next/types/**/*.ts",
     "**/*.ts",
@@ -73,3 +77,16 @@
   ]
 }
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-17cd
+=======
+    "**/*.ts",
+    "**/*.tsx",
+    "src/**/*.ts",
+    "src/**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build"
+  ]
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

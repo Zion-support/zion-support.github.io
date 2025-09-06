@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/BackToDirectoryButton.tsx
 
 
 <<<<<<< HEAD
@@ -9,6 +11,18 @@ import { Button } from "@/components/ui/button",
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+import React from 'react',
+import { Button } from "@/components/ui/button",
+import { Link } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
+
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export function BackToDirectoryButton() {
   return (
     <div className="container mx-auto px-4 md: px-6 mb-12">
@@ -24,11 +38,15 @@ export function BackToDirectoryButton() {
     </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',;
 import { Button } from "@/components/ui/button",;
 import { Link } from "react-router-dom",;
 import { ArrowLeft } from "lucide-react";
 =======
+========
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/BackToDirectoryButton.tsx
 import React from 'react';
 import {Button} from "@/components/ui/button";
 import {Link} from "react-router-dom";
@@ -37,6 +55,17 @@ import {ArrowLeft} from "lucide-react";
 export function BackToDirectoryButton() {;
   return (
     <div className="container mx-auto px-4 md: px-6 mb-12">;
+=======
+
+import React from 'react',;
+import { Button } from "@/components/ui/button",;
+import { Link } from "react-router-dom",;
+import { ArrowLeft } from "lucide-react",;
+;
+export function BackToDirectoryButton() {;
+  return (;
+    <div className="container mx-auto px-4 md:px-6 mb-12">;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       <Button variant="outline" asChild className="my-8">;
         <Link to="/talents" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white">;
           <ArrowLeft className="mr-2 h-4 w-4" />;
@@ -46,10 +75,14 @@ export function BackToDirectoryButton() {;
     </div>;
   );
 <<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/BackToDirectoryButton.tsx
 =======
 }
 
 =======
+========
+}
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/BackToDirectoryButton.tsx
 import React from './react';
 import { Button  } from '@/components / ui / button';
 import { Link  } from './react-router-dom';
@@ -71,6 +104,7 @@ function BackToDirectoryButton() {
       </Button>;
     </div>);
 }
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/BackToDirectoryButton.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -87,3 +121,15 @@ function BackToDirectoryButton() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+=======
+} <Button variant="outline" asChild className="my-8"> <Link to="/talents" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"> <ArrowLeft className="mr-2 h-4 w-4" /> 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/BackToDirectoryButton.tsx
+=======
+  );
+}
+}
+;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

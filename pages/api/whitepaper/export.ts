@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -6,6 +7,10 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 }
 
 =======
+=======
+<<<<<<< HEAD
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import type { NextApiRequest, NextApiResponse } from 'next',
 ;
 export default async /**
@@ -35,19 +40,90 @@ function escape_html() {
     .replace (/>/g, '&gt, ');
 }
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+}
+
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next',;
+;
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' }),
+  const { markdown, tokenName } = req.body || {},
+  if (!markdown || !tokenName) return res.status(400).json({ error: 'Missing markdown or tokenName' }),
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
+  const { markdown, tokenName } = req.body |{}
+  if (!markdown |!tokenName) return res.status(400).json({ error: 'Missing markdown or tokenName' })
+  // Placeholder export: return a data URL (clients will open it, allowing print->PDF)
+  const html = `<!doctype html><html><head><meta charset="utf-8"><title>${tokenName} Whitepaper</title></head><body><pre style="white-space: pre-wrap,font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace,">${escapeHtml(markdown)}</pre></body></html>`
+  const base64 = Buffer.from(html, 'utf-8').toString('base64')
+  const url = `data: text/html,base64,${base64}`
+
+  res.status(200).json({ url })
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+function escapeHtml(str: string) {
+  return String(str)
+    .replace(/&/g, '&amp,')
+    .replace(/</g, '&lt,')
+    .replace(/>/g, '&gt,')
+<<<<<<< HEAD
+}
+
+=======
+=======
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+import type { NextApiRequest, NextApiResponse } from 'next',
+export default async function handler(req, res) {
+  try {
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' }),
+  const { markdown, tokenName } = req.body || {},
+  if (!markdown || !tokenName) return res.status(400).json({ error: 'Missing markdown or tokenName' }),
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   // Placeholder export: return a data URL (clients will open it, allowing print->PDF)
   const html = `<!doctype html><html><head><meta charset="utf-8"><title>${tokenName} Whitepaper</title></head><body><pre style="white-space: pre-wrap,font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace,">${escapeHtml(markdown)}</pre></body></html>`,
   const base64 = Buffer.from(html, 'utf-8').toString('base64'),
   const url = `data: text/html,base64,${base64}`,
   res.status(200).json({ url })
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+
+function escapeHtml(str: string) {
+  return String(str)
+    .replace(/&/g, '&amp,')
+    .replace(/</g, '&lt,')
+    .replace(/>/g, '&gt,');
+};
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -90,8 +166,19 @@ function escapeHtml(str: string) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -17,6 +18,8 @@ export const metadata = { title: 'Contact | Zion Tech Group',description: 'Get i
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export const metadata = { 
   title: 'Contact | Zion Tech Group',
   description: 'Get in touch with Zion Tech Group for AI, micro SaaS, and IT services. We reply within one business day.',
@@ -134,6 +137,9 @@ export default function ContactPage() {
                   <option value="ai-services">AI Services</option>
                   <option value="micro-saas">Micro SaaS Development</option>
                   <option value="it-services">IT Services</option>
+                  <option value="blockchain">Blockchain Solutions</option>
+                  <option value="cybersecurity">Cybersecurity</option>
+                  <option value="data-analytics">Data Analytics</option>
                   <option value="consulting">General Consulting</option>
                 </select>
               </div>
@@ -175,4 +181,7 @@ export default function ContactPage() {
     </div>
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-17cd
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

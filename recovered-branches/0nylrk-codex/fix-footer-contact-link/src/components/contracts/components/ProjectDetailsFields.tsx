@@ -1,33 +1,123 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/ProjectDetailsFields.tsx
 
 
 import { format } from "date-fns",
 
 =======
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/ProjectDetailsFields.tsx
+=======
+=======
+<<<<<<< HEAD
+import { format } from "date-fns";
+import { CalendarIcon } from "lucide-react";
+import { UseFormReturn } from "react-hook-form";
+import {
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormDescription,
+  FormMessage,;
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,;
+} from "@/components/ui/popover";
+import { Calendar } from "@/components/ui/calendar";
+import { ContractFormValues } from "./ContractForm";
+interface ProjectDetailsFieldsProps {
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+import { format } from "date-fns",
+<<<<<<< HEAD
+import { CalendarIcon } from "lucide-react";
+import { UseFormReturn } from "react-hook-form";
+
+import {
+  FormField
+  FormItem
+  FormLabel
+  FormControl
+  FormDescription
+  FormMessage
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
+import {
+  Popover
+  PopoverContent
+  PopoverTrigger
+} from "@/components/ui/popover";
+
+import { Calendar } from "@/components/ui/calendar";
+import { ContractFormValues } from "./ContractForm";
+interface ProjectDetailsFieldsProps {
+=======
+import { CalendarIcon } from "lucide-react",
+import { UseFormReturn } from "react-hook-form",
+import { 
+  FormField,
+  FormItem, 
+  FormLabel, 
+  FormControl, 
+  FormDescription, 
+  FormMessage 
+} from "@/components/ui/form",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { Button } from "@/components/ui/button",
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
+import { Calendar } from "@/components/ui/calendar",
+import { ContractFormValues } from "./ContractForm",
+interface ProjectDetailsFieldsProps {
+  form: UseFormReturn<ContractFormValues>
+import { format } from "date-fns",;
+import { CalendarIcon } from "lucide-react",;
+import { UseFormReturn } from "react-hook-form",;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import {;
   FormField,;
   FormItem,;
   FormLabel,;
   FormControl,;
   FormDescription,;
+<<<<<<< HEAD
   FormMessage,;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/ProjectDetailsFields.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/ProjectDetailsFields.tsx
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/ProjectDetailsFields.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/ProjectDetailsFields.tsx
 import {;
   Popover,;
   PopoverContent,;
   PopoverTrigger,;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/ProjectDetailsFields.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/ProjectDetailsFields.tsx
 } from "@/components/ui/popover";
-
 import { Calendar } from "@/components/ui/calendar";
 import { ContractFormValues } from "./ContractForm";
 interface ProjectDetailsFieldsProps {;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/ProjectDetailsFields.tsx
 =======
 
 
@@ -40,12 +130,41 @@ interface ProjectDetailsFieldsProps {;
 
 export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps) {;
 
+========
+  form: UseFormReturn<ContractFormValues>;
+}
+export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps) {;
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/ProjectDetailsFields.tsx
   return (
     <>;
       <FormField
         control={form && form.control}
         name="projectName"
 <<<<<<< HEAD
+=======
+  FormMessage;
+} from "@/components/ui/form",;
+import { Input } from "@/components/ui/input",;
+import { Textarea } from "@/components/ui/textarea",;
+import { Button } from "@/components/ui/button",;
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",;
+import { Calendar } from "@/components/ui/calendar",;
+import { ContractFormValues } from "./ContractForm";
+interface ProjectDetailsFieldsProps {;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  form: UseFormReturn<ContractFormValues>;
+}
+export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
+  return (
+    <>
+      <FormField
+        control={form.control}
+        name="projectName"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         render={({ field }) => (
           <FormItem>
             <FormLabel>Project Name</FormLabel>
@@ -55,12 +174,12 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
             <FormMessage />
           </FormItem>
         )}
+<<<<<<< HEAD
 
 =======
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Project Name</FormLabel>;
-=======
 import { format  } from './date - fns';
 import { CalendarIcon  } from './lucide-react';
 import { UseFormReturn  } from './react - hook - form';
@@ -97,15 +216,18 @@ function ProjectDetailsFields() {
         render={({ field }) => (
           <FormItem>;
             <FormLabel > Project Name</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             <FormControl>;
               <Input placeholder="AI Website Development" {...field} />;
             </FormControl>;
             <FormMessage />;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/ProjectDetailsFields.tsx
 
       />;
 
 
+========
+      />;
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/ProjectDetailsFields.tsx
       <FormField
         control={form && form.control}
 =======
@@ -118,14 +240,62 @@ function ProjectDetailsFields() {
         control={form.control}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         name="scopeSummary"
+=======
+
+import { format } from "date-fns",;
+import { CalendarIcon } from "lucide-react",;
+import { UseFormReturn } from "react-hook-form",;
+import { ;
+  FormField,;
+  FormItem, ;
+  FormLabel, ;
+  FormControl, ;
+  FormDescription, ;
+  FormMessage ;
+} from "@/components/ui/form",;
+import { Input } from "@/components/ui/input",;
+import { Textarea } from "@/components/ui/textarea",;
+import { Button } from "@/components/ui/button",;
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",;
+import { Calendar } from "@/components/ui/calendar",;
+import { ContractFormValues } from "./ContractForm",;
+;
+interface ProjectDetailsFieldsProps {;
+  form:UseFormReturn<ContractFormValues>;
+}
+;
+export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
+  return (;
+    <>;
+      <FormField;
+        control={form.control}
+        name="projectName";
+        render={({ field }) => (;
+          <FormItem>;
+            <FormLabel>Project Name</FormLabel>;
+            <FormControl>;
+              <Input placeholder="AI Website Development" {...field} />;
+            </FormControl>;
+            <FormMessage />;
+          </FormItem>;        )}
+      />;
+      ;
+      <FormField;
+        control={form.control}
+        name="scopeSummary";
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Scope Summary</FormLabel>;
             <FormControl>;
+<<<<<<< HEAD
               <Textarea
                 placeholder="Describe the project scope, deliverables, and expectations..."
                 className="min-h-[120px]"
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/ProjectDetailsFields.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/ProjectDetailsFields.tsx
           </FormItem>)}
       />;
       <FormField;
@@ -138,7 +308,15 @@ function ProjectDetailsFields() {
               <Textarea;
                 placeholder="Describe the project scope, deliverables, and expectations...";
                 className="min - h-[120px]";
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/ProjectDetailsFields.tsx
 
+========
+=======
+              <Textarea;
+                placeholder="Describe the project scope, deliverables, and expectations...";
+                className="min-h-[120px]";
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/ProjectDetailsFields.tsx
                 {...field}
               />;
             </FormControl>;
@@ -146,7 +324,30 @@ function ProjectDetailsFields() {
               Be specific about what is included and any limitations;
             </FormDescription>;
             <FormMessage />;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/ProjectDetailsFields.tsx
 
+=======
+<<<<<<< HEAD
+      />
+      <FormField
+=======
+      />;
+      <FormField;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        control={form.control}
+        name="scopeSummary"
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel>Scope Summary</FormLabel>
+            <FormControl>
+              <Textarea
+                placeholder="Describe the project scope, deliverables, and expectations..."
+                className="min-h-[120px]"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 {...field}
               />
             </FormControl>
@@ -157,6 +358,7 @@ function ProjectDetailsFields() {
           </FormItem>
         )}
       />
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -166,25 +368,46 @@ function ProjectDetailsFields() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 =======
+========
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/ProjectDetailsFields.tsx
       />;
-
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <FormField
           control={form && form.control}
           name="startDate"
+=======
+          </FormItem>;
+        )}
+      />;
+      ;
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
+        <FormField;
+          control={form.control}
+          name="startDate";
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           render={({ field }) => (;
             <FormItem className="flex flex-col">;
               <FormLabel>Start Date</FormLabel>;
               <Popover>;
                 <PopoverTrigger asChild>;
                   <FormControl>;
+<<<<<<< HEAD
                     <Button
                       variant={"outline"}
                       className={`w-full pl-3 text-left font-normal ${!field && field.value && "text-muted-foreground"}`}>;
                       {field && field.value ? (;
                         format(field && field.value, "PPP");
                       ) : (;
+=======
+                    <Button;
+                      variant={"outline"}
+                      className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
+                    >;
+                      {field.value ? (;
+                        format(field.value, "PPP");
+                      ) :(;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                         <span>Pick a date</span>;
                       )}
                       <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />;
@@ -192,24 +415,36 @@ function ProjectDetailsFields() {
                   </FormControl>;
                 </PopoverTrigger>;
                 <PopoverContent className="w-auto p-0" align="start">;
+<<<<<<< HEAD
                   <Calendar
                     mode="single"
                     selected={field && field.value}
                     onSelect={field && field.onChange}
+=======
+                  <Calendar;
+                    mode="single";
+                    selected={field.value}
+                    onSelect={field.onChange}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     disabled={(date) => date < new Date()}
                     initialFocus;
                   />;
                 </PopoverContent>;
               </Popover>;
               <FormMessage />;
+<<<<<<< HEAD
             </FormItem>;
           )}
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/ProjectDetailsFields.tsx
 
 <<<<<<< HEAD
 =======
         />;
 
 
+========
+        />;
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/ProjectDetailsFields.tsx
         <FormField
           control={form && form.control}
 =======
@@ -222,18 +457,36 @@ function ProjectDetailsFields() {
           control={form.control}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           name="endDate"
+=======
+            </FormItem>;          )}
+        />;
+        ;
+        <FormField;
+          control={form.control}
+          name="endDate";
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           render={({ field }) => (;
             <FormItem className="flex flex-col">;
               <FormLabel>End Date (Optional)</FormLabel>;
               <Popover>;
                 <PopoverTrigger asChild>;
                   <FormControl>;
+<<<<<<< HEAD
                     <Button
                       variant={"outline"}
                       className={`w-full pl-3 text-left font-normal ${!field && field.value && "text-muted-foreground"}`}>;
                       {field && field.value ? (;
                         format(field && field.value, "PPP");
                       ) : (;
+=======
+                    <Button;
+                      variant={"outline"}
+                      className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
+                    >;
+                      {field.value ? (;
+                        format(field.value, "PPP");
+                      ) :(;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                         <span>Pick a date</span>;
                       )}
                       <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />;
@@ -241,9 +494,88 @@ function ProjectDetailsFields() {
                   </FormControl>;
                 </PopoverTrigger>;
                 <PopoverContent className="w-auto p-0" align="start">;
+<<<<<<< HEAD
                   <Calendar
                     mode="single"
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/ProjectDetailsFields.tsx
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+      
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <FormField
+          control={form.control}
+          name="startDate"
+          render={({ field }) => (
+            <FormItem className="flex flex-col">
+              <FormLabel>Start Date</FormLabel>
+              <Popover>
+                <PopoverTrigger asChild>
+                  <FormControl>
+                    <Button
+                      variant={"outline"}
+                      className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
+                    >
+                      {field.value ? (
+                        format(field.value, "PPP")
+                      ) : (
+                        <span>Pick a date</span>
+                      )}
+                      <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
+                    </Button>
+                  </FormControl>
+                </PopoverTrigger>
+                <PopoverContent className="w-auto p-0" align="start">
+                  <Calendar
+                    mode="single"
+                    selected={field.value}
+                    onSelect={field.onChange}
+                    disabled={(date) => date < new Date()}
+                    initialFocus
+                  />
+                </PopoverContent>
+              </Popover>
+              <FormMessage />
+            </FormItem>
+          )}
+<<<<<<< HEAD
+        />
+        <FormField
+=======
+        />;
+        <FormField;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          control={form.control}
+          name="endDate"
+          render={({ field }) => (
+            <FormItem className="flex flex-col">
+              <FormLabel>End Date (Optional)</FormLabel>
+              <Popover>
+                <PopoverTrigger asChild>
+                  <FormControl>
+                    <Button
+                      variant={"outline"}
+                      className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
+                    >
+                      {field.value ? (
+                        format(field.value, "PPP")
+                      ) : (
+                        <span>Pick a date</span>
+                      )}
+                      <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
+                    </Button>
+                  </FormControl>
+                </PopoverTrigger>
+                <PopoverContent className="w-auto p-0" align="start">
+                  <Calendar
+                    mode="single"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     selected={field.value |undefined}
                     onSelect={field.onChange}
                     disabled={(date) => date < form.getValues("startDate")}
@@ -257,6 +589,7 @@ function ProjectDetailsFields() {
               <FormMessage />
             </FormItem>
           )}
+<<<<<<< HEAD
 
         />;
       </div>;
@@ -265,11 +598,12 @@ function ProjectDetailsFields() {
 
 =======
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/ProjectDetailsFields.tsx
                     selected={field && field.value || undefined}
                     onSelect={field && field.onChange}
                     disabled={(date) => date < form && form.getValues("startDate")}
                     initialFocus;
-=======
           </FormItem>)}
       />;
       <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
@@ -333,7 +667,18 @@ function ProjectDetailsFields() {
                     on_select={field.on_change}
                     disabled={(date) => date < form.get_values ("start_date")}
                     initial_focus;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/ProjectDetailsFields.tsx
 
+========
+=======
+                  <Calendar;
+                    mode="single";
+                    selected={field.value || undefined}
+                    onSelect={field.onChange}
+                    disabled={(date) => date < form.getValues("startDate")}
+                    initialFocus;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/ProjectDetailsFields.tsx
                   />;
                 </PopoverContent>;
               </Popover>;
@@ -341,6 +686,7 @@ function ProjectDetailsFields() {
                 Leave empty if the end date is flexible;
               </FormDescription>;
               <FormMessage />;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/ProjectDetailsFields.tsx
 
 
 
@@ -356,9 +702,59 @@ function ProjectDetailsFields() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   );
 =======
+========
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/contracts/components/ProjectDetailsFields.tsx
             </FormItem>)}
         />;
       </div>;
     </>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
+=======
+            </FormItem>;
+          )}
+        />;
+      </div>;
+    </>;
+  ),;}
+ import {
+  FormField;
+FormItem;
+FormLabel;
+FormControl;
+FormDescription;
+FormMessage interface ProjectDetailsFieldsProps {
+  form: UseFormReturn<ContractFormValues> 
+}form 
+}: ProjectDetailsFieldsProps) {
+  return (<> <FormField control= {
+  form.control 
+}</FormControl> <FormMessage /> </FormItem>) 
+}/> <FormField <FormItem> <FormLabel>Scope Summary</FormLabel> <FormControl> <Textarea /> </FormControl> <FormDescription> Be specific about what is included and any limitations </FormDescription> <FormMessage /> </FormItem>) 
+}/> <div className="grid grid-cols-1 md:grid-cols-2 gap-6" > <FormField <FormLabel>Start Date</FormLabel> <Popover> <PopoverTrigger asChild> <FormControl> <Button) : (<span>Pick a date</span>) 
+}<CalendarIcon className="ml-auto h-4 w-4 opacity-50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start" > <Calendar initialFocus /> </PopoverContent> </Popover> <FormMessage /> </FormItem>) 
+}/> <FormField <FormLabel>End Date (Optional) </FormLabel> <Popover> <PopoverTrigger asChild> <FormControl> <Button) : (<span>Pick a date</span>) 
+}<CalendarIcon className="ml-auto h-4 w-4 opacity-50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start" > <Calendar initialFocus /> </PopoverContent> </Popover> <FormDescription> Leave empty if the end date is flexible </FormDescription> <FormMessage /> </FormItem>) 
+}/> </div> </>) 
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+<<<<<<< HEAD
+        />
+      </div>
+<<<<<<< HEAD
+    </>
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+        />;
+      </div>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+    </>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  );
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

@@ -194,6 +194,12 @@ h3 {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -210,6 +216,10 @@ h3 {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 
 /* Custom scrollbar */
@@ -317,34 +327,32 @@ h3 {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 >>>>>>> main
-.particle-bg::before {
+<<<<<<< HEAD
 =======
-  width: 100%;
-  height: 100%;
-  background: 
-    radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.2) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.2) 0%, transparent 50%),
-    radial-gradient(circle at 40% 40%, rgba(236, 73, 153, 0.2) 0%, transparent 50%),
-    radial-gradient(circle at 60% 60%, rgba(16, 185, 129, 0.2) 0%, transparent 50%),
-    radial-gradient(circle at 90% 10%, rgba(245, 158, 11, 0.2) 0%, transparent 50%),
-    radial-gradient(circle at 10% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 70% 70%, rgba(168, 85, 247, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 30% 70%, rgba(255, 0, 255, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 70% 30%, rgba(0, 255, 128, 0.1) 0%, transparent 50%);
-  pointer-events: none;
-  z-index: -1;
-  animation: backgroundFloat 30s ease-in-out infinite;
-}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+.particle-bg::before {
 
+<<<<<<< HEAD
+=======
 /* Futuristic Grid Pattern */
 body::after {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   content: '';
   position: fixed;
   top: 0;
@@ -362,8 +370,14 @@ body::after {
 
 /* Quantum Particle Effects */
 body::after {
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-98d9
+
   content: '';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
@@ -381,6 +395,10 @@ body::after {
 .particle-bg::before {  content: '';
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   position: absolute;
   top: 0;
   left: 0;
@@ -401,6 +419,11 @@ body::after {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -417,6 +440,10 @@ body::after {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 /* Futuristic Card Effects */
 .futuristic-card {
   background: rgba(255, 255, 255, 0.05);
@@ -424,6 +451,12 @@ body::after {
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -432,24 +465,19 @@ body::after {
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 >>>>>>> main
-  transition: all 0.3s ease;
+<<<<<<< HEAD
 =======
-/* Enhanced Animations */
-@keyframes backgroundFloat {
-  0%, 100% {
-    transform: translateY(0px) rotate(0deg);
-  }
-  25% {
-    transform: translateY(-20px) rotate(1deg);
-  }
-  50% {
-    transform: translateY(-10px) rotate(-1deg);
-  }
-  75% {
-    transform: translateY(-15px) rotate(0.5deg);
-  }
-}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+  transition: all 0.3s ease;
 
+<<<<<<< HEAD
+  position: relative;
+  transition: all 0.3s ease;  position: relative;
+
+  position: relative;
+
+=======
 @keyframes particleFloat {
   0% {
     transform: translateY(0px);
@@ -589,6 +617,10 @@ h3 {
   transition: all 0.3s ease;  position: relative;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   overflow: hidden;
 }
 
@@ -671,6 +703,12 @@ h3 {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 =======
@@ -689,6 +727,10 @@ h3 {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 
 /* Futuristic Utility Classes */
@@ -737,6 +779,12 @@ h3 {
   color: white;
   padding: 12px 24px;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-98d9
 =======
 <<<<<<< HEAD
@@ -756,6 +804,10 @@ h3 {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   border-radius: 12px;
   padding: 12px 24px;
   color: white;

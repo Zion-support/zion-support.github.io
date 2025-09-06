@@ -1,0 +1,11 @@
+import React from\';react\' \"export\": const UIEnhancer = ({ showFloatingActions = true,enableParticles = true,enableScrollEffects = true }) => { const [theme,setTheme] = useState(\'dark\') const [isParticleMode,setIsParticleMode] = useState(enableParticles) const [showScrollToTop,setShowScrollToTop] = useState(false) const [deviceType,setDeviceType] = useState(\'desktop\') useEffect(() => {\''\';
+const React from";react" export: const UIEnhancer = ({ showFloatingActions = true,enableParticles = true,enableScrollEffects = true }) => { const [theme,setTheme] = useState("dark") const [isParticleMode,setIsParticleMode] = useState(enableParticles) const [showScrollToTop,setShowScrollToTop] = useState(false) const [deviceType,setDeviceType] = useState("desktop") useEffect(() => {""";"""
+<<<<<<< HEAD:src.disabled/components/UIEnhancer.js.jsx
+import _React from';react' "export": const UIEnhancer = ({ showFloatingActions = true,enableParticles = true,enableScrollEffects = true }) => { const [theme,setTheme] = useState('dark') const [isParticleMode,setIsParticleMode] = useState(enableParticles) const [showScrollToTop,setShowScrollToTop] = useState(false) const [deviceType,setDeviceType] = useState('desktop') useEffect(() => {''';
+=======
+<<<<<<< HEAD:backup-problematic-files/src.disabled/components/UIEnhancer.js.jsx
+import _React from';react' "export": const UIEnhancer = ({ showFloatingActions = true,enableParticles = true,enableScrollEffects = true }) => { const [theme,setTheme] = useState('dark') const [isParticleMode,setIsParticleMode] = useState(enableParticles) const [showScrollToTop,setShowScrollToTop] = useState(false) const [deviceType,setDeviceType] = useState('desktop') useEffect(() => {''';
+=======
+import _React from';react' "export": const UIEnhancer = ({ showFloatingActions = true,enableParticles = true,enableScrollEffects = true }) => { const [theme,setTheme] = useState('dark') const [isParticleMode,setIsParticleMode] = useState(enableParticles) const [showScrollToTop,setShowScrollToTop] = useState(false) const [deviceType,setDeviceType] = useState('desktop') useEffect(() => {''';
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:src.disabled/components/UIEnhancer.js.jsx
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src.disabled/components/UIEnhancer.js.jsx

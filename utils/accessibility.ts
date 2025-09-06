@@ -1,8 +1,24 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+export const generateId = (prefix: string = 'id'): string => {
+  return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
+}
+export const announceToScreenReader = (message: string): void => {
+=======
+export const generateId = (prefix: string = 'id'): string => {;
+  return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
+};
+
+export const announceToScreenReader = (message: string): void => {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   if (typeof window === 'undefined') return;
   const announcement = document.createElement('div');
   announcement.setAttribute('aria-live', 'polite');
@@ -17,7 +33,11 @@
 }
 export const trapFocus = (element: HTMLElement): (() => void) => {
   const focusableElements = element.querySelectorAll(
+<<<<<<< HEAD
     'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+=======
+    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   );
   const firstElement = focusableElements[0] as HTMLElement;
   const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
@@ -27,63 +47,23 @@ export const trapFocus = (element: HTMLElement): (() => void) => {
       if (document.activeElement === firstElement) {
         lastElement.focus();
         e.preventDefault();
-=======
-export const generate_id = (prefix: string = 'id'): string => {
-  return `${prefix}-${Math.random ().to_string (36).substr (2, 9)}`;
-}
-;
-export const announceToScreenReader = (message: string): void => {
-  // Check condition
-if (return) {
-  $2
-}
-  const announcement = document.create_element ('div');
-  announcement.set_attribute ('aria - live', 'polite');
-  announcement.set_attribute ('aria - atomic', 'true');
-  announcement.class_name = 'sr - only';
-  announcement.text_content = message;
-  document.body.append_child (announcement);
-;
-  // Remove after announcement;
-  set_timeout (() => {
-    document.body.remove_child (announcement);
-  }, 1000);
-}
-;
-export const trap_focus = (element: HTMLElement): (() => void) => {
-  const focusable_elements = element.querySelectorAll (
-    'button, [href], input, select, textarea, [tabindex]:not ([tabindex="-1"])');
-  const first_element = focusable_elements[0] as HTMLElement;
-  const last_element = focusable_elements[focusable_elements.length - 1] as HTMLElement;
-;
-  const handleTabKey = (e: KeyboardEvent) =>: any {
-    // Check condition
-if (return) {
-  $2
-}
-    // Check condition
-if ( {) {
-  $2
-}
-      // Check condition
-if ( {) {
-  $2
-}
-        last_element.focus ();
-        e.prevent_default ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
     } else {
+<<<<<<< HEAD
       // Check condition
 if ( {) {
   $2
 }
         first_element.focus ();
         e.prevent_default ();
+=======
+      if (document.activeElement === lastElement) {
+        firstElement.focus();
+        e.preventDefault();
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       }
     }
   }
-<<<<<<< HEAD
   element.addEventListener('keydown', handleTabKey);
   // Focus first element
   firstElement?.focus();
@@ -106,10 +86,20 @@ export const getContrastRatio = (color1: string, color2: string): number => {
   const brightest = Math.max(lum1, lum2);
   const darkest = Math.min(lum1, lum2);
   return (brightest + 0.05) / (darkest + 0.05);
+<<<<<<< HEAD
 
 =======
 
 
+=======
+<<<<<<< HEAD
+}
+export const isHighContrast = (color1: string, color2: string): boolean => {
+  return getContrastRatio(color1, color2) >= 4.5;
+}
+export const validateAriaLabel = (element: HTMLElement): boolean => {
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 };
 
 export const isHighContrast = (color1: string, color2: string): boolean => {;
@@ -117,9 +107,13 @@ export const isHighContrast = (color1: string, color2: string): boolean => {;
 };
 
 export const validateAriaLabel = (element: HTMLElement): boolean => {;
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const hasAriaLabel = element.hasAttribute('aria-label');
   const hasAriaLabelledBy = element.hasAttribute('aria-labelledby');
   const hasVisibleText = element.textContent?.trim().length > 0;
@@ -127,6 +121,7 @@ export const validateAriaLabel = (element: HTMLElement): boolean => {;
 }
 export const getFocusableElements = (container: HTMLElement): HTMLElement[] => {
   const focusableSelectors = [
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   ].join(', ');
@@ -215,12 +210,41 @@ export const isElementInViewport = (element: HTMLElement): boolean => {;
   const rect = element.getBoundingClientRect();
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
+=======
 <<<<<<< HEAD
+    'button:not([disabled])'
+    'input:not([disabled])'
+    'select:not([disabled])'
+    'textarea:not([disabled])'
+    'a[href]'
+    '[tabindex]:not([tabindex="-1"])'
+=======
+    'button:not([disabled])',
+    'input:not([disabled])',
+    'select:not([disabled])',
+    'textarea:not([disabled])',
+    'a[href]',
+    '[tabindex]:not([tabindex="-1"])';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  ].join(', ');
+  return Array.from(container.querySelectorAll(focusableSelectors)) as HTMLElement[];
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+}
+export const isElementInViewport = (element: HTMLElement): boolean => {
+=======
+};
+
+export const isElementInViewport = (element: HTMLElement): boolean => {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const rect = element.getBoundingClientRect();
+  return (
     rect.top >= 0 &&
     rect.left >= 0 &&
     rect.bottom <= (window.innerHeight |document.documentElement.clientHeight) &&
     rect.right <= (window.innerWidth |document.documentElement.clientWidth)
   );
+<<<<<<< HEAD
 
 =======
 
@@ -235,6 +259,23 @@ export const createSkipLink = (targetId: string, text: string = 'Skip to main co
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+}
+export const scrollToElement = (element: HTMLElement, behavior: ScrollBehavior = 'smooth'): void => {
+  element.scrollIntoView({ behavior, block: 'start' });
+}
+export const createSkipLink = (targetId: string, text: string = 'Skip to main content'): HTMLElement => {
+=======
+};
+
+export const scrollToElement = (element: HTMLElement, behavior: ScrollBehavior = 'smooth'): void => {;
+  element.scrollIntoView({ behavior, block: 'start' });
+};
+
+export const createSkipLink = (targetId: string, text: string = 'Skip to main content'): HTMLElement => {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const skipLink = document.createElement('a');
   skipLink.href = `#${targetId}`;
   skipLink.textContent = text;
@@ -248,11 +289,21 @@ export const createSkipLink = (targetId: string, text: string = 'Skip to main co
     }
   });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+=======
+  
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return skipLink;
 }
 =======
 
+<<<<<<< HEAD
 
   
 =======
@@ -305,3 +356,8 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+  return skipLink;
+};
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

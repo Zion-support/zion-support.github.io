@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -11,8 +12,49 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from "@/components/ui/badge",
 import { useProjects } from "@/hooks/useProjects",
 import { Project } from "@/types/projects",
+=======
+import { useEffect, useState } from 'react'
+import Link from 'next/link'
+import { BriefcaseIcon, Clock } from 'lucide-react'
+
+import { Button } from '@/components/ui/button'
+import {
+  Card
+  CardContent
+  CardDescription
+  CardFooter
+  CardHeader
+  CardTitle
+} from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { useProjects } from '@/hooks/useProjects'
+import { Project } from '@/types/projects'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 
+=======
+export function ActiveProjectsCard() {
+  const { projects, isLoading } = useProjects()
+  const [activeProjects, setActiveProjects] = useState<Project[]>([]);
+  useEffect(() => {    if (projects && !isLoading) {;
+      const active = projects;
+        .filter(p => ['offer_accepted', 'in_progress'].includes(p.status));
+        .slice(0, 3); // Limit to 3 most recent projects
+      setActiveProjects(active)
+    }
+  }, [projects, isLoading])
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+import { useEffect, useState } from "react",
+import Link from "next/link",
+import { BriefcaseIcon, Clock } from 'lucide-react'
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { useProjects } from "@/hooks/useProjects",
+import { Project } from "@/types/projects",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export function ActiveProjectsCard() {
 =======
 xport function ActiveProjectsCard() {
@@ -23,11 +65,29 @@ xport function ActiveProjectsCard() {
   useEffect(() => {
     if (projects && !isLoading) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+      const active = null;
+=======
+      const active = projects.filter(p => 
+        ['offer_acceptedin_progress'].includes(p.status)
+      ).slice(0, 3), // Limit to 3 most recent projects
+      setActiveProjects(active)
+    }
+  }, [projects, isLoading]),
+  
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   if (isLoading) {
     return (
       <Card>
         <CardHeader>
+<<<<<<< HEAD
 =======
       const active = null;
 >>>>>>>   if (isLoading) {
@@ -74,6 +134,20 @@ export function ActiveProjectsCard() {;
 
             <BriefcaseIcon className="h-5 w-5 text-primary" />
 >>>>>>>             <span>Active Projects</span>
+=======
+<<<<<<< HEAD
+          <CardTitle className='flex items-center gap-2'>
+            <BriefcaseIcon className='h-5 w-5 text-primary' />            <span>Active Projects</span>          <CardTitle className="flex items-center gap-2">
+=======
+          <CardTitle className="flex items-center gap-2">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            <BriefcaseIcon className="h-5 w-5 text-primary" />
+            <span>Active Projects</span>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </CardTitle>
           <CardDescription>Your ongoing work</CardDescription>
         </CardHeader>
@@ -81,10 +155,36 @@ export function ActiveProjectsCard() {;
           <div className="space-y-2">
             {[1, 2].map(idx => (
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+              <div
+                key={idx}
+                className='h-16 animate-pulse bg-muted rounded'
+              ></div>            ))}
+          </div>
+        </CardContent>
+      </Card>
+    )
+  }          <div className="space-y-2">
+            {[1, 2].map(idx => (
+              <div key={idx} className="h-16 animate-pulse bg-muted rounded"></div>
+            ))}
+          </div>
+        </CardContent>
+      </Card>
+    )
+  }
+    )
+<<<<<<< HEAD
+  }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <div key={idx} className="h-16 animate-pulse bg-muted rounded"></div>
 import { useEffect, useState } from "react",;
 import Link from "next/link",;
@@ -117,7 +217,10 @@ export function ActiveProjectsCard() {;
         </CardHeader>;
         <CardContent>;
           <div className="space-y-2">;
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             {[1, 2].map(idx => (;
               <div key={idx} className="h-16 animate-pulse bg-muted rounded"></div>;
             ))}
@@ -135,6 +238,7 @@ export function ActiveProjectsCard() {;
         <CardHeader>
 
 =======
+<<<<<<< HEAD
 >>>>>>>   }
   
 >>>>>>>   if (activeProjects.length === 0) {
@@ -148,20 +252,32 @@ export function ActiveProjectsCard() {;
         </CardHeader>          <CardTitle className="flex items-center gap-2">
 >>>>>>>             <BriefcaseIcon className="h-5 w-5 text-primary" />
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }
   
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (activeProjects.length === 0) {
     return (
       <Card>
         <CardHeader>
 
           <CardTitle className="flex items-center gap-2">
+<<<<<<< HEAD
 
 
 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <BriefcaseIcon className="h-5 w-5 text-primary" />
 >>>>>>>             <span>Active Projects</span>
           </CardTitle>
@@ -184,6 +300,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           <p className="text-muted-foreground mb-2">You don't have any active projects at the moment.</p>
           <Button variant="outline" asChild>
             <Link href="/jobs">Find Opportunities</Link>
+<<<<<<< HEAD
 >>>>>>>         </CardContent>
       </Card>
     )
@@ -219,16 +336,72 @@ ursor/fix-website-loading-errors-and-merge-6662
           <div key={project && project.id} className='border rounded-md p-3'>;
             <div className='flex justify-between items-start mb-2'>;
               <h3 className='font-medium text-sm'>{project && project.job?.title}</h3>;
+=======
+=======
+        <CardContent className="text-center py-6">
+          <p className="text-muted-foreground mb-2">You don't have any active projects at the moment.</p>
+          <Button variant="outline" asChild>
+            <Link href="/jobs">Find Opportunities</Link>
+          </Button>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        </CardContent>
+      </Card>
+    )
+  }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  return (
+    <Card>
+      <CardHeader>
+        <CardTitle className='flex items-center gap-2'>
+          <BriefcaseIcon className='h-5 w-5 text-primary' />          <span>Active Projects</span>
+        </CardTitle>
+        <CardDescription>Your ongoing work</CardDescription>
+      </CardHeader>
+      <CardContent className='space-y-4'>
+  return (
+    <Card>
+      <CardHeader>
+        <CardTitle className="flex items-center gap-2">
+          <BriefcaseIcon className="h-5 w-5 text-primary" />
+        </CardTitle>
+        <CardDescription>Your ongoing work</CardDescription>
+      </CardHeader>
+      <CardContent className='space-y-4'>
+        {activeProjects.map(project => (
+          <div key={project.id} className='border rounded-md p-3'>
+            <div className='flex justify-between items-start mb-2'>
+              <h3 className='font-medium text-sm'>{project.job?.title}</h3>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <Badge
                 variant={
-                  project && project.status === 'in_progress' ? 'default' : 'outline'
+                  project.status === 'in_progress' ? 'default' : 'outline'
                 }
                 className={
-                  project && project.status === 'in_progress'
+                  project.status === 'in_progress'
                     ? 'bg-blue-100 text-blue-800 hover:bg-blue-100'
                     : ''
+<<<<<<< HEAD
 
 
+=======
+                }          <div key={project.id} className="border rounded-md p-3">
+            <div className="flex justify-between items-start mb-2">
+              <h3 className="font-medium text-sm">{project.job?.title}</h3>
+              <Badge
+                variant = {project.status === "in_progress" ? "default" : "outline",}
+                className = {project.status === "in_progress" ? "bg-blue-100 text-blue-800 hover:bg-blue-100" : "",}
+              >
+                {project.status === 'offer_accepted'
+                  ? 'Starting'
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   : 'In Progress'}
               </Badge>
             </div>
@@ -240,7 +413,10 @@ ursor/fix-website-loading-errors-and-merge-6662
             </div>
             <Button size='sm' variant='outline' className='w-full mt-2' asChild>              <Link href={`/project/${project.id}`}>View Project</Link>            <Button size="sm" variant="outline" className="w-full mt-2" asChild>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
   
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -271,17 +447,28 @@ ursor/fix-website-loading-errors-and-merge-6662
             </div>
             <Button size="sm" variant="outline" className="w-full mt-2" asChild>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <Link href={`/project/${project.id}`}>View Project</Link>
             </Button>
           </div>
         ))}
+<<<<<<< HEAD
 
 =======
 >>>>>>>               <Link href={`/project/${project.id}`}>View Project</Link>
             </Button>
           </div>
         ))}
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       </CardContent>
       {activeProjects.length > 2 && (
         <CardFooter>
@@ -302,24 +489,24 @@ return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <Br
   activeProjects.length > 2 && (<CardFooter> <Button variant="ghost" className="w-full" asChild> <Link href="/projects">View All Projects</Link> </Button> </CardFooter>)
 }</Card>)
 }'"}
+<<<<<<< HEAD
 >>>>>>> 
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       </CardContent>;
-      {active_projects.length > 2 && (
+      {activeProjects.length > 2 && (;
         <CardFooter>;
-          <Button variant='ghost' className='w - full' as_child>;
-            <Link href='/projects'>View All Projects</Link>          </Button>          <Button variant="ghost" className="w - full" as_child>;
+          <Button variant="ghost" className="w-full" asChild>;
             <Link href="/projects">View All Projects</Link>;
           </Button>;
-        </CardFooter>)}
-    </Card>);
-}, [projects, is_loading]);
-return (<Card> <CardHeader> <CardTitle className="flex items - center gap - 2" > <BriefcaseIcon className="h - 5 w - 5 text - primary" /> <span > Active Projects</span> </CardTitle> <CardDescription > Your ongoing work</CardDescription> </CardHeader> <CardContent>) );
-}</div> </CardContent> </Card>);
-}// Check condition
-if ( {'") {
-  $2
+        </CardFooter>;
+      )}
+    </Card>;
+  );
 }
+<<<<<<< HEAD
 
 ;
 
@@ -327,3 +514,11 @@ if ( {'") {
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

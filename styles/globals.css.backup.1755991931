@@ -897,6 +897,11 @@ body::after {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -913,6 +918,10 @@ body::after {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 .quantum-loader::before {
   top: 0;
   left: 0;
@@ -930,6 +939,14 @@ body::after {
   border-bottom-color: rgba(147, 51, 234, 0.8);
   animation-duration: 2s;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+  animation-direction: reverse;
+
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -956,6 +973,10 @@ body::after {
     box-shadow: none !important;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 
 /* New futuristic effects */
@@ -1056,8 +1077,13 @@ body::after {
     transparent
   );
   animation: quantumSpin 8s linear infinite;
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-bcf6
+
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
@@ -1075,6 +1101,10 @@ body::after {
   animation-direction: reverse;}
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
 @keyframes quantumSpin {
   0% { transform: rotate(0deg); }
@@ -1084,6 +1114,11 @@ body::after {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1100,6 +1135,10 @@ body::after {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 /* Enhanced Scrollbar */
 ::-webkit-scrollbar {
   width: 12px;
@@ -1167,6 +1206,14 @@ body::after {
   0% { background-position: 0 0, 0 10px, 10px -10px, -10px 0px; }
   100% { background-position: 20px 20px, 20px 30px, 30px 10px, 10px 20px; }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+}
+}
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 =======
 .biomedical-pulse {
@@ -1185,6 +1232,10 @@ body::after {
 }
 <<<<<<< HEAD
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
 @keyframes biomedicalPulse {
   0%, 100% { 
@@ -1267,6 +1318,9 @@ body::after {
     filter: hue-rotate(10deg);
   }
 }
+<<<<<<< HEAD
+
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-bcf6
 <<<<<<< HEAD
 =======
@@ -1282,3 +1336,7 @@ body::after {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

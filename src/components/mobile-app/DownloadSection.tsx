@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -17,6 +18,32 @@ export const DownloadSection: React.FC = () => {
 =======
 xport const DownloadSection: React.FC = () => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+}
+import React from "react"
+import { QrCodeIcon } from 'lucide-react'import { AppStoreButtons } from "./AppStoreButtons"
+import { logInfo } from '@/utils/productionLogger'
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React from "react",
+import { QrCodeIcon } from 'lucide-react'
+import { AppStoreButtons } from "./AppStoreButtons",
+import { logInfo } from '@/utils/productionLogger',
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export const DownloadSection: React.FC = () => {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   // These would typically come from environment variables or a config
   const appStoreUrl = "#", // Replace with actual App Store URL when available
   const googlePlayUrl = "#", // Replace with actual Google Play URL when available
@@ -31,9 +58,13 @@ xport const DownloadSection: React.FC = () => {
                 Download the Zion app now and take your tech career or hiring needs to the next level. Available on iOS and Android.
               </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               <AppStoreButtons 
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <AppStoreButtons
                 className="mb-8"
                 appStoreUrl = {appStoreUrl,}
@@ -41,15 +72,25 @@ xport const DownloadSection: React.FC = () => {
                 onAppStoreClick = {(,) => logInfo("App Store button clicked"),}
                 onGooglePlayClick = {() => logInfo("Google Play button clicked"),}
               />
+<<<<<<< HEAD
               
 >>>>>>>               <AppStoreButtons 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+              
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+              <AppStoreButtons 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 className="mb-8" 
                 appStoreUrl={appStoreUrl}
                 googlePlayUrl={googlePlayUrl}
                 onAppStoreClick={() => logInfo("App Store button clicked")}
                 onGooglePlayClick={() => logInfo("Google Play button clicked")}
               />
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -59,9 +100,16 @@ xport const DownloadSection: React.FC = () => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
               <div className="text-sm text-gray-400">
 >>>>>>>                 <p>Compatible with iOS 14+ and Android 8.0+</p>
+=======
+              
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+              <div className="text-sm text-gray-400">
+                <p>Compatible with iOS 14+ and Android 8.0+</p>
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <p>Free download, in-app purchases available</p>
               </div>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               <div className="w-36 h-36 flex items-center justify-center bg-white dark:bg-zion-blue rounded-lg">
@@ -69,6 +117,18 @@ xport const DownloadSection: React.FC = () => {
             <div className="flex-shrink-0 bg-white dark: bg-zion-blue-dark p-4 rounded-lg">
 >>>>>>>               <div className="w-36 h-36 flex items-center justify-center bg-white dark:bg-zion-blue rounded-lg">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+            <div className="flex-shrink-0 bg-white dark: bg-zion-blue-dark p-4 rounded-lg">
+=======
+            
+            <div className="flex-shrink-0 bg-white dark:bg-zion-blue-dark p-4 rounded-lg">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              <div className="w-36 h-36 flex items-center justify-center bg-white dark:bg-zion-blue rounded-lg">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <QrCodeIcon className="w-full h-full p-2" />
                 {/* This would be replaced with an actual QR code in production */}
               </div>
@@ -79,6 +139,7 @@ xport const DownloadSection: React.FC = () => {
       </div>
     </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   );
 };
@@ -87,6 +148,21 @@ xport const DownloadSection: React.FC = () => {
 "
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+  );
+};
+";
+=======
+  )
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+"
+
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 },
 import React from "react",;
 import { QrCodeIcon } from 'lucide-react';
@@ -96,6 +172,7 @@ export const DownloadSection: React.FC = () => {;
   // These would typically come from environment variables or a config;
   const appStoreUrl = "#", // Replace with actual App Store URL when available;
   const googlePlayUrl = "#", // Replace with actual Google Play URL when available;
+<<<<<<< HEAD
   return (
     <section className="py - 16 bg - gradient - to - b from - zion - blue to - zion - blue - dark">;
       <div className="container mx - auto px - 4">;
@@ -104,15 +181,26 @@ export const DownloadSection: React.FC = () => {;
             <div className="flex - 1">;
               <h2 className="text - 3xl md:text - 4xl font - bold mb - 4">Get The App Today</h2>;
               <p className="text - lg text - gray - 300 mb - 8">;
+=======
+  return (;
+    <section className="py-16 bg-gradient-to-b from-zion-blue to-zion-blue-dark">;
+      <div className="container mx-auto px-4">;
+        <div className="max-w-4xl mx-auto">;
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8">;
+            <div className="flex-1">;
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Get The App Today</h2>;
+              <p className="text-lg text-gray-300 mb-8">;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 Download the Zion app now and take your tech career or hiring needs to the next level. Available on iOS and Android.;
               </p>;
               <AppStoreButtons;
-                className="mb - 8";
-                appStoreUrl = {appStoreUrl, }
-                googlePlayUrl = {googlePlayUrl, }
-                onAppStoreClick = {(, ) => log_info ("App Store button clicked"), }
-                onGooglePlayClick = {() => log_info ("Google Play button clicked"), }
+                className="mb-8";
+                appStoreUrl={appStoreUrl}
+                googlePlayUrl={googlePlayUrl}
+                onAppStoreClick={() => logInfo("App Store button clicked")}
+                onGooglePlayClick={() => logInfo("Google Play button clicked")}
               />;
+<<<<<<< HEAD
               <div className="text - sm text - gray - 400">;
                 <p > Compatible with iOS 14+ and Android 8.0+</p>;
                 <p > Free download, in - app purchases available</p>;
@@ -134,13 +222,14 @@ export const DownloadSection: React.FC = () => {;
 
               />;
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <div className="text-sm text-gray-400">;
-                <p>Compatible with iOS 14+ and Android 8 && 8.0+</p>;
+                <p>Compatible with iOS 14+ and Android 8.0+</p>;
                 <p>Free download, in-app purchases available</p>;
               </div>;
             </div>;
-
-            <div className="flex-shrink-0 bg-white dark: bg-zion-blue-dark p-4 rounded-lg">;
+            <div className="flex-shrink-0 bg-white dark:bg-zion-blue-dark p-4 rounded-lg">;
               <div className="w-36 h-36 flex items-center justify-center bg-white dark:bg-zion-blue rounded-lg">;
                 <QrCodeIcon className="w-full h-full p-2" />;
                 {/* This would be replaced with an actual QR code in production */}
@@ -153,6 +242,7 @@ export const DownloadSection: React.FC = () => {;
     </section>;
   );
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -176,3 +266,9 @@ export const DownloadSection: React.FC = () => {;
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

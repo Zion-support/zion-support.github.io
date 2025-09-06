@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -51,11 +52,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 =======
 
   const section = String(req && req.query.section || "General");
+=======
+<<<<<<< HEAD
+const section = String(req && req.query.section || "General");
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const file = String(req && req.query.file || "");
   if (!file) return res && res.status(400).json({ error: "Missing file" });
   const fullPath = path && path.join(
     resolveDataPath(path && path.join("dataroom", section)),
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import fs from './fs';
 import path from './path';
@@ -76,11 +80,16 @@ function handler() {
 }
   const full_path = path.join (
     resolveDataPath (path.join ("dataroom", section)),
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     file,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     (mime && mime.lookup(fullPath) as string) || "application/octet-stream";
   res && res.setHeader("Content-Type", contentType);
   res && res.setHeader(
@@ -93,14 +102,15 @@ function handler() {
   res && res.setHeader(
     "Content-Disposition",
     `attachment, filename="${path && path.basename(fullPath)}"`,
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   );
   appendAuditLog({ type: "file_download", section, name: file });
   fs && fs.createReadStream(fullPath).pipe(res);
 
 }
-
-=======
   const section = String(req.query.section || 'General');
   const file = String(req.query.file || '');
   if (!file) return res.status(400).json({ error: 'Missing file' });
@@ -113,10 +123,87 @@ function handler() {
   fs.createReadStream(fullPath).pipe(res)
 
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   if ()) {
   $2
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next',
+import fs from 'fs',
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+import fs from "fs";
+import path from "path";
+import mime from "mime-types";
+import { appendAuditLog, resolveDataPath } from "../../../../utils/api/storage";
+import { requireSuperadminApi } from "../../../../utils/api/auth";
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+  if (!requireSuperadminApi(req, res)) return;
+  const section = String(req.query.section || "General");
+  const file = String(req.query.file || "");
+  if (!file) return res.status(400).json({ error: "Missing file" });
+  const fullPath = path.join(
+    resolveDataPath(path.join("dataroom", section)),
+    file,
+  );
+  if (!fs.existsSync(fullPath))
+    return res.status(404).json({ error: "Not found" });
+  const contentType =
+    (mime.lookup(fullPath) as string) || "application/octet-stream";
+  res.setHeader("Content-Type", contentType);
+  res.setHeader(
+    "Content-Disposition",
+    `attachment, filename="${path.basename(fullPath)}"`,
+  );
+  appendAuditLog({ type: "file_download", section, name: file });
+  fs.createReadStream(fullPath).pipe(res);
+  res.setHeader("Content-Type", contentType);
+  res.setHeader(
+    "Content-Disposition",
+    `attachment, filename="${path.basename(fullPath)}"`,
+  );
+  appendAuditLog({ type: "file_download", section, name: file });
+  fs.createReadStream(fullPath).pipe(res);
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+import path from 'path';
+import mime from 'mime-types';
+import { appendAuditLog, resolveDataPath } from '../../../../utils/api/storage';
+import { requireSuperadminApi } from '../../../../utils/api/auth';
+<<<<<<< HEAD
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (!requireSuperadminApi(req, res)) return;
+
+  const section = String(req.query.section |"General");
+  const file = String(req.query.file |"");
+  if (!file) return res.status(400).json({ error: "Missing file" });
+  const fullPath = path.join(
+    resolveDataPath(path.join("dataroom", section))
+    file
+  );
+  if (!fs.existsSync(fullPath))
+    return res.status(404).json({ error: "Not found" });
+  const contentType =
+    (mime.lookup(fullPath) as string) |"application/octet-stream";
+  res.setHeader("Content-Type", contentType);
+  res.setHeader(
+    "Content-Disposition"
+    `attachment, filename="${path.basename(fullPath)}"`
+  );
+  appendAuditLog({ type: "file_download", section, name: file });
+  fs.createReadStream(fullPath).pipe(res);
+  res.setHeader("Content-Type", contentType);
+  res.setHeader(
+    "Content-Disposition"
+    `attachment, filename="${path.basename(fullPath)}"`
+  );
+  appendAuditLog({ type: "file_download", section, name: file });
+  fs.createReadStream(fullPath).pipe(res);
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
     return res.status (404).json ({ error: "Not found" });
   const content_type =;
@@ -135,17 +222,33 @@ function handler() {
   );
   appendAuditLog ({ type: "file_download", section, name: file });
   fs.createReadStream (full_path).pipe (res);
+
+<<<<<<< HEAD
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
+=======
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
   const section = String(req.query.section || 'General');
   const file = String(req.query.file || '');
   if (!file) return res.status(400).json({ error: 'Missing file' });
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -18,6 +19,9 @@ export default async function handler(
     reason?: string;
     tag?: string;
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_json, write_json  } from '../../../utils / fs_db';
 import { tagOperatorSession  } from '../../../utils / operator';
@@ -31,6 +35,24 @@ function handler() {
 }
   const { session_id, reason, tag } = req.body as {
     session_id: string;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import type { NextApiRequest, NextApiResponse } from "next";
+import { readJson, writeJson } from "../../../utils/fsDb";
+import { tagOperatorSession } from "../../../utils/operator";
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  if (req.method !== "POST");
+    return res.status(405).json({ error: "Method not allowed" });
+  const { sessionId, reason, tag } = req.body as {
+    sessionId: string;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     reason?: string;
     tag?: string;
   }
@@ -39,7 +61,10 @@ function handler() {
 }
   const requests = read_json < any[]>("support / requests.json", []);
   const id = `sr_${Math.random ().to_string (36).slice (2)}_${Date.now ()}`;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const record = {
     id
     sessionId
@@ -50,6 +75,7 @@ function handler() {
   }
   requests.push(record);
   writeJson("support/requests.json", requests);
+<<<<<<< HEAD
 <<<<<<< HEAD
   await tagOperatorSession(sessionId, tag ?? "escalate");
   return res.status(200).json({ ok: true, id });
@@ -73,6 +99,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 =======
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   };
   if (!sessionId) return res && res.status(400).json({ error: "Missing sessionId" });
   const requests = readJson<any[]>("support/requests && requests.json", []);
@@ -83,9 +111,28 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     reason: reason ?? "User requested escalation",
     tag: tag ?? "escalate",
     status: "open",
+<<<<<<< HEAD
 
 }
 
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { readJson, writeJson } from '../../../utils/fsDb';
+import { tagOperatorSession } from '../../../utils/operator';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  const { sessionId, reason, tag } = req.body as { sessionId: string, reason?: string, tag?: string };
+  if (!sessionId) return res.status(400).json({ error: 'sessionId required' });
+  const requests = readJson<any[]>('support/requests.json', []);
+  const id = `sr_${Math.random().toString(36).slice(2)}_${Date.now()}`;
+  const record = { id, sessionId, reason: reason ?? 'User requested escalation', tag: tag ?? 'escalate', status: 'open', createdAt: Date.now() };
+  requests.push(record);
+  writeJson('support/requests.json', requests);
+  await tagOperatorSession(sessionId, tag ?? 'escalate');
+  return res.status(200).json({ ok: true, id })
+}
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     created_at: Date.now (),
 =======
 
@@ -98,9 +145,50 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   write_json ("support / requests.json", requests);
   await tagOperatorSession (session_id, tag ?? "escalate");
   return res.status (200).json ({ ok: true, id });
+
 }
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+<<<<<<< HEAD
+
+=======
+=======
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default async function handler(req, res) {
+  try {
+  res.status(200).json({ message: 'Session escalated' });
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { readJson, writeJson } from '../../../utils/fsDb';
+import { tagOperatorSession } from '../../../utils/operator';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') return res.status($1).json({$2});
+  const { sessionId, reason, tag } = req.body as { sessionId: string, reason?: string, tag?: string };
+  if (!sessionId) return res.status($1).json({$2});
+  const requests = readJson<any[]>('support/requests.json', []);
+  const id = `sr_${Math.random().toString(36).slice(2)}_${Date.now()}`;
+  const record = { id, sessionId, reason: reason ?? 'User requested escalation', tag: tag ?? 'escalate', status: 'open', createdAt: Date.now() };
+  requests.push(record);
+  writeJson('support/requests.json', requests);
+  await tagOperatorSession(sessionId, tag ?? 'escalate');
+  return res.status(200).json({ ok: true, id })
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

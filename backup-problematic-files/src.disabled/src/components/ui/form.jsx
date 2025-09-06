@@ -1,0 +1,11 @@
+import React from \'react\'; import React from \"react\"; export const Form = ({ children,...props }) => {} \"; export const FormControl = ({ children,className = }) => {};\"; \"; export const FormLabel = ({ children,className = }) => {};\"; \"; export const FormMessage = ({ className = }) => {}; return <div className=\"{className}\"> <div>Broken JSX</div>
+const React from "react"; import React from "react"; export const Form = ({ children,.props }) => {} "; export const FormControl = ({ children,className = }) => {};"; "; export const FormLabel = ({ children,className = }) => {};"; "; export const FormMessage = ({ className = }) => {}; return <div className="{className}"> <div>Broken JSX</div>'"'"
+<<<<<<< HEAD:src.disabled/src/components/ui/form.jsx
+import _React from 'react'; import _React from "react"; export const Form = ({ children,...props }) => {} "; export const FormControl = ({ children,className = }) => {};"; "; export const FormLabel = ({ children,className = }) => {};"; "; export const FormMessage = ({ className = }) => {}; return <div className="{className}"> <div>Broken JSX</div>
+=======
+<<<<<<< HEAD:backup-problematic-files/src.disabled/src/components/ui/form.jsx
+import _React from 'react'; import _React from "react"; export const Form = ({ children,...props }) => {} "; export const FormControl = ({ children,className = }) => {};"; "; export const FormLabel = ({ children,className = }) => {};"; "; export const FormMessage = ({ className = }) => {}; return <div className="{className}"> <div>Broken JSX</div>
+=======
+import _React from 'react'; import _React from "react"; export const Form = ({ children,...props }) => {} "; export const FormControl = ({ children,className = }) => {};"; "; export const FormLabel = ({ children,className = }) => {};"; "; export const FormMessage = ({ className = }) => {}; return <div className="{className}"> <div>Broken JSX</div>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:src.disabled/src/components/ui/form.jsx
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src.disabled/src/components/ui/form.jsx

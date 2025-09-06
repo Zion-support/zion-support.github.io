@@ -1,6 +1,43 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/HiringTracker.tsx
 
+=======
+import {useState} from "react";
+import {useParams} from "react-router-dom";
+import {AppHeader} from "@/layout/AppHeader";
+import {Footer} from "@/components/Footer";
+import {KanbanBoard} from "@/components/hiring-tracker/KanbanBoard";
+import {HiringAnalytics} from "@/components/hiring-tracker/HiringAnalytics";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {SEO} from "@/components/SEO";
+import {ProtectedRoute} from "@/components/ProtectedRoute";
+import {Briefcase} from "lucide-react";
+function HiringTrackerContent() {
+  const { jobId } = useParams() as { jobId?: string }
+  const [activeTab, setActiveTab] = useState<string>("kanban");
+=======
+import { useState } from "react",
+import { useParams } from "react-router-dom",
+import { AppHeader } from "@/layout/AppHeader",
+import { Footer } from "@/components/Footer",
+import { KanbanBoard } from "@/components/hiring-tracker/KanbanBoard",
+import { HiringAnalytics } from "@/components/hiring-tracker/HiringAnalytics",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { SEO } from "@/components/SEO",
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+import { Briefcase } from "lucide-react",
+function HiringTrackerContent() {
+  const { jobId } = useParams() as { jobId?: string },
+  const [activeTab, setActiveTab] = useState<string>("kanban"),
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
     <>
       <SEO
@@ -36,6 +73,7 @@
       <Footer />
     </>
   )
+<<<<<<< HEAD
 
 =======
 function HiringTrackerContent() {;
@@ -69,6 +107,21 @@ function HiringTrackerContent() {
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+export default function HiringTracker() {
+  return (
+    <ProtectedRoute>
+      <HiringTrackerContent />
+    </ProtectedRoute>
+  )
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { useState } from "react",;
 import { useParams } from "react-router-dom",;
 import { AppHeader } from "@/layout/AppHeader",;
@@ -83,11 +136,47 @@ function HiringTrackerContent() {;
   const { jobId } = useParams() as { jobId?: string },;
   const [activeTab, setActiveTab] = useState<string>("kanban");
   return (;
+<<<<<<< HEAD
 
+========
+function HiringTrackerContent() {;
+  const { jobId } = useParams() as { jobId?: string };
+  const [activeTab, setActiveTab] = useState<string>("kanban");
+  return (
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/HiringTracker.tsx
     <>;
       <SEO
         title="Hiring Tracker | Zion AI Marketplace" 
         description="Manage your candidate pipeline in the Zion AI Marketplace." 
+=======
+
+import { useState } from "react",;
+import { useParams } from "react-router-dom",;
+import { AppHeader } from "@/layout/AppHeader", ;
+import { Footer } from "@/components/Footer",;
+import { KanbanBoard } from "@/components/hiring-tracker/KanbanBoard",;
+import { HiringAnalytics } from "@/components/hiring-tracker/HiringAnalytics",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { SEO } from "@/components/SEO",;
+import { ProtectedRoute } from "@/components/ProtectedRoute",;
+import { Briefcase } from "lucide-react",;
+;
+function HiringTrackerContent() {;
+  const { jobId } = useParams() as { jobId?:string },;
+  const [activeTab, setActiveTab] = useState<string>("kanban"),;
+;
+  return (;
+    <>;
+      <SEO ;
+        title="Hiring Tracker | Zion AI Marketplace" ;
+        description="Manage your candidate pipeline in the Zion AI Marketplace." ;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+    <>;
+      <SEO;
+        title="Hiring Tracker | Zion AI Marketplace";
+        description="Manage your candidate pipeline in the Zion AI Marketplace.";
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       />;
       <AppHeader />;
       <main className="container mx-auto px-4 py-8">;
@@ -102,17 +191,35 @@ function HiringTrackerContent() {;
             </p>;
           </div>;
         </div>;
-
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <Tabs defaultValue="kanban" onValueChange={setActiveTab} className="mb-8">;
           <TabsList>;
             <TabsTrigger value="kanban">Kanban Board</TabsTrigger>;
             <TabsTrigger value="analytics">Analytics</TabsTrigger>;
           </TabsList>;
-
+<<<<<<< HEAD
+<<<<<<< HEAD
           <TabsContent value="kanban" className="mt-6">;
             <KanbanBoard jobId={jobId} />;
           </TabsContent>;
-
+=======
+          ;
+          <TabsContent value="kanban" className="mt-6">;
+            <KanbanBoard jobId={jobId} />;
+          </TabsContent>;
+          ;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+          <TabsContent value="kanban" className="mt-6">;
+            <KanbanBoard jobId={jobId} />;
+          </TabsContent>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <TabsContent value="analytics" className="mt-6">;
             <HiringAnalytics jobId={jobId} />;
           </TabsContent>;
@@ -120,10 +227,32 @@ function HiringTrackerContent() {;
       </main>;
       <Footer />;
     </>;
+<<<<<<< HEAD
+<<<<<<< HEAD
   );
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/HiringTracker.tsx
 
 <<<<<<< HEAD
 =======
+========
+}
+export default function HiringTracker() {;
+  return (
+=======
+  );
+<<<<<<< HEAD
+}
+;
+export default function HiringTracker() {;
+  return (;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+    <ProtectedRoute>;
+      <HiringTrackerContent />;
+    </ProtectedRoute>;
+  );
+}
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/HiringTracker.tsx
 import { useState } from './react';
 import { use_params } from './react-router-dom';
 import { AppHeader } from '@/layout / AppHeader';
@@ -144,6 +273,12 @@ function HiringTrackerContent() {
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 
 export default function HiringTracker() {
@@ -153,6 +288,7 @@ export default function HiringTracker() {
     </ProtectedRoute>
   )
 }
+<<<<<<< HEAD
 
 ;
 <<<<<<< HEAD
@@ -202,5 +338,26 @@ function HiringTracker() {
       <HiringTrackerContent />;
     </ProtectedRoute>);
 }
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/HiringTracker.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+=======
+  ),;
+}
+;
+export default function HiringTracker() {;
+  return (;
+    <ProtectedRoute>;
+      <HiringTrackerContent />;
+    </ProtectedRoute>;
+  ),;
+} Hiring Tracker | Zion AI Marketplace"description=" Manage your candidate pipeline in the Zion AI Marketplace."/> <AppHeader /> <main className=" container mx-auto px-4 py-8"> <div className=" flex justify-between items-center mb-8"> <div> <h1 className=" text-3xl font-bold flex items-center"> <Briefcase className=" mr-2 h-6 w-6 text-primary"/> Hiring Pipeline </h1> <p className=" text-muted-foreground mt-1"> Track and manage your candidates through the hiring process </p> </div> </div> <TabsList> <TabsTrigger value=" kanban">Kanban Board</TabsTrigger> <TabsTrigger value=" analytics" >Analytics</TabsTrigger> </TabsList> </TabsContent> </Tabs> </main> <Footer /> </>) 
+}export default function HiringTracker () {
+  return (<ProtectedRoute> <HiringTrackerContent /> </ProtectedRoute> 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/HiringTracker.tsx
+=======
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

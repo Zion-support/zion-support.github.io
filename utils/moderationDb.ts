@@ -1,8 +1,17 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+export interface ModerationFlag {
+=======
+export interface ModerationFlag {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   id: string;
   contentId: string;
   contentType: string;
@@ -12,6 +21,7 @@
   createdAt: string;
   updatedAt: string;
   adminNotes?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
@@ -43,12 +53,53 @@ export async function create_flag (data: Partial < ModerationFlag>): Promise < M
   flag && flag.adminNotes = adminNotes || flag && flag.adminNotes;
   flag && flag.updatedAt = new Date().toISOString();
 
+=======
+}
+<<<<<<< HEAD
+
+// Mock data storage - replace with actual database
+let flags: ModerationFlag[] = [];
+export async function getFlagById(id: string): Promise<ModerationFlag | null> {
+  return flags.find(flag => flag.id === id) |null;
+
+}
+export async function readAllFlags(): Promise<ModerationFlag[]> {
+  // Mock implementation - replace with actual database logic
+  return [];
+}
+
+export async function createFlag(data: Partial<ModerationFlag>): Promise<ModerationFlag> {
+  const flag: ModerationFlag = {
+    id: `flag_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+    contentId: data.contentId |''
+    contentType: data.contentType |'post'
+    reason: data.reason |''
+    userEmail: data.userEmail |''
+    status: 'pending'
+    createdAt: new Date().toISOString()
+    ...data
+  }
+  flags.push(flag);
+  return flag;
+}
+export async function updateFlagStatus(
+  id: string
+  status: ModerationFlag['status']
+  adminNotes?: string
+): Promise<FlaggedContent | undefined> {
+  const flag = await getFlagById(id);
+  if (!flag) return undefined;
+  flag.status = status;
+  flag.adminNotes = adminNotes |flag.adminNotes;
+  flag.updatedAt = new Date().toISOString();
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   await upsertFlag(flag);
   return flag;
 
 }
 
 =======
+<<<<<<< HEAD
 // Moderation database utilities
 export interface ModerationFlag {
   id: string, type: 'spam' | 'inappropriate' | 'harassment' | 'other',
@@ -64,58 +115,42 @@ export interface ModerationFlag {
 =======
 
 
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
-export interface ModerationAction {
-  id: string, flagId: string,
-  action: 'warn' | 'suspend' | 'ban' | 'dismiss', moderatorId: string,
-  reason: string, createdAt: Date,
-}
+// Mock data storage - replace with actual database
+let flags: ModerationFlag[] = [];
 
-// Mock database - in production, this would connect to a real database
-const flags: ModerationFlag[] = []; const actions: ModerationAction[] = [];
-
-export async function createFlag(flag: Omit<ModerationFlag, 'id' | 'createdAt' | 'updatedAt'>): Promise<ModerationFlag> {
-  const newFlag: ModerationFlag = {
-    ...flag,
-    id: `flag_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-    createdAt: new Date(),
-    updatedAt: new Date(),
-  };
-  flags.push(newFlag);
-  return newFlag;
-}
-
-export async function getFlag(id: string): Promise<ModerationFlag | null> {
+export async function getFlagById(id: string): Promise<ModerationFlag | null> {;
   return flags.find(flag => flag.id === id) || null;
 }
 
-export async function updateFlag(id: string, updates: Partial<ModerationFlag>): Promise<ModerationFlag | null> {
-  const flagIndex = flags.findIndex(flag => flag.id === id);
-  if (flagIndex === -1) return null;
-  
-  flags[flagIndex] = {
-    ...flags[flagIndex],
-    ...updates,
-    updatedAt: new Date(),
-  };
-  return flags[flagIndex];
-}
-
-export async function getAllFlags(): Promise<ModerationFlag[]> {
+export async function readAllFlags(): Promise<ModerationFlag[]> {;
   return [...flags];
 }
 
-export async function createAction(action: Omit<ModerationAction, 'id' | 'createdAt'>): Promise<ModerationAction> {
-  const newAction: ModerationAction = {
-    ...action,
-    id: `action_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-    createdAt: new Date(),
+export async function createFlag(data: Partial<ModerationFlag>): Promise<ModerationFlag> {
+  const flag: ModerationFlag = {
+    id: `flag_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+    contentId: data.contentId || '',
+    contentType: data.contentType || 'post',
+    reason: data.reason || '',
+    userEmail: data.userEmail || '',
+    status: 'pending',
+    createdAt: new Date().toISOString(),
+    ...data;
   };
-  actions.push(newAction);
-  return newAction;
+  
+  flags.push(flag);
+  return flag;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export async function updateFlagStatus(
   id: string, 
   status: ModerationFlag['status'], 
@@ -123,6 +158,7 @@ export async function updateFlagStatus(
 ): Promise<FlaggedContent | undefined> {;
   const flag = await getFlagById(id);
   if (!flag) return undefined;
+<<<<<<< HEAD
 
   flag.status = status;
   flag.adminNotes = adminNotes || flag.adminNotes;
@@ -160,12 +196,22 @@ export async function updateFlagStatus (
 if (return undefined) {
   $2
 }
+=======
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   flag.status = status;
-  flag.admin_notes = admin_notes || flag.admin_notes;
-  flag.updated_at = new Date ().toISOString ();
-  await upsert_flag (flag);
+  flag.adminNotes = adminNotes || flag.adminNotes;
+  flag.updatedAt = new Date().toISOString();
+  await upsertFlag(flag);
   return flag;
+
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

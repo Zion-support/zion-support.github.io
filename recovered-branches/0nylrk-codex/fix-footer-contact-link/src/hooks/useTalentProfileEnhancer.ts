@@ -1,10 +1,16 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useTalentProfileEnhancer.ts
 
 =======
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 
+========
+import {useState} from 'react';
+import {supabase} from '@/integrations / supabase / client';
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useTalentProfileEnhancer.ts
 export interface TalentProfileData {
 =======
 
@@ -17,10 +23,15 @@ export interface TalentProfileData {;
   name: string;
   title: string;
   bio: string;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useTalentProfileEnhancer.ts
 
   skills: string[],
   location?: string;
 
+========
+  skills: string[],
+  location?: string;
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useTalentProfileEnhancer.ts
 }
 <<<<<<< HEAD
 
@@ -37,12 +48,60 @@ export interface CategorizedSkills {;
   programming: string[];
   devops: string[];
   platforms: string[];
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useTalentProfileEnhancer.ts
 
 
 <<<<<<< HEAD
   other: string[]
 }
 
+=======
+<<<<<<< HEAD
+import { useState  } from 'react';
+import { supabase } from '@/integrations/supabase/client';
+export interface TalentProfileData {
+=======
+import {useState} from 'react';
+import {supabase} from '@/integrations/supabase/client';
+export interface TalentProfileData {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  name: string;
+  title: string;
+  bio: string;
+
+  skills: string[]
+
+  location?: string
+}
+<<<<<<< HEAD
+export interface CategorizedSkills {
+=======
+
+export interface CategorizedSkills {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  programming: string[];
+  devops: string[];
+  platforms: string[];
+
+  softSkills: string[]
+
+  other: string[]
+}
+<<<<<<< HEAD
+export interface EnhancedProfile {
+
+  summary: string
+
+  categorizedSkills: CategorizedSkills
+}
+export function useTalentProfileEnhancer() {
+  const [isGenerating, setIsGenerating] = useState(false);
+
+  const [error, setError] = useState<string | null>(null);
+  const enhanceProfile = async (profileData: TalentProfileData): Promise<EnhancedProfile | null> => {
+    setIsGenerating(true);
+    setError(null)
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 
 export interface EnhancedProfile {
@@ -58,6 +117,7 @@ export function useTalentProfileEnhancer() {;
     setIsGenerating(true);
     setError(null),
     
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -76,6 +136,21 @@ export function useTalentProfileEnhancer() {;
       if (error) {
         throw new Error(error.message)
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    try {
+      // Call the Supabase Edge Function
+      const { data, error } = await supabase.functions.invoke('talent-profile-enhancer', {
+        body: { talentData: profileData }
+      });
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      if (error) {
+        throw new Error(error.message)
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 export interface TalentProfileData {;
@@ -112,6 +187,7 @@ export function useTalentProfileEnhancer() {;
       }),;
       if (error) {;
         throw new Error(error.message);
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -125,10 +201,25 @@ export function useTalentProfileEnhancer() {;
 
       setError(err && err.message || 'Failed to enhance profile'),
 
+========
+      setError(err && err.message || 'Failed to enhance profile'),
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useTalentProfileEnhancer.ts
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      }
+      return data as EnhancedProfile
+    } catch (err: any) {
+      setError(err.message |'Failed to enhance profile')
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       return null
     } finally {
       setIsGenerating(false)
     }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -141,18 +232,36 @@ export function useTalentProfileEnhancer() {;
   return {
     enhanceProfile;
     isGenerating;
-
     error
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useTalentProfileEnhancer.ts
 <<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  }
+=======
+  };
+  
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  return {
+    enhanceProfile;
+    isGenerating;
+
+    error
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   },;
   return {;
     enhanceProfile;
     isGenerating;
     error;
+<<<<<<< HEAD
 
 =======
 =======
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useTalentProfileEnhancer.ts
   soft_skills: string[],
   other: string[];
 }
@@ -195,11 +304,83 @@ if ( {) {
     enhance_profile;
     is_generating;
     error;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useTalentProfileEnhancer.ts
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useTalentProfileEnhancer.ts
   }
 }
+=======
+
+import { useState } from 'react',;
+import { supabase } from '@/integrations/supabase/client',;
+;
+export interface TalentProfileData {;
+  name:string,;
+  title:string,;
+  bio:string,;
+  skills:string[],;
+  location?:string;}
+;
+export interface CategorizedSkills {;
+  programming:string[],;
+  devops:string[],;
+  platforms:string[],;
+  softSkills:string[],;
+  other:string[];
+}
+;
+export interface EnhancedProfile {;
+  summary:string,;
+  categorizedSkills:CategorizedSkills;
+}
+;
+export function useTalentProfileEnhancer() {;
+  const [isGenerating, setIsGenerating] = useState(false),;
+  const [error, setError] = useState<string | null>(null),;
+  ;
+  const enhanceProfile = async (profileData:TalentProfileData):Promise<EnhancedProfile | null> => {;
+    setIsGenerating(true),;
+    setError(null),;
+    ;
+    try {;
+      // Call the Supabase Edge Function;
+      const { data, error } = await supabase.functions.invoke('talent-profile-enhancer', {;
+        body:{ talentData:profileData }
+      }),;
+;
+      if (error) {;
+        throw new Error(error.message),;
+      }
+      ;
+      return data as EnhancedProfile,;
+    } catch (err:any) {;
+      setError(err.message || 'Failed to enhance profile'),;
+      return null;
+    } finally {;
+      setIsGenerating(false),;
+    }
+  },;
+  ;
+  return {;
+    enhanceProfile,;
+    isGenerating,;
+    error;
+  },;
+} 
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  }
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

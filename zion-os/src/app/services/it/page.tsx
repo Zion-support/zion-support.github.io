@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 export default function ITServicesPage() {;
@@ -9,13 +10,23 @@ export default function ITServicesPage() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export default /**
  * ITServicesPage - Function description
  */
 function ITServicesPage() {
   return (
     <div className="min - h-screen bg - gradient - to - br from - zinc - 900 via - zinc - 800 to - zinc - 900 text - white">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+<<<<<<< HEAD
+export default function ITServicesPage() {return (;
+=======
+export default function ITServicesPage() {;
+  return (;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Hero Section */}
       <div className="bg - gradient - to - r from - green - 600 to - blue - 600 py - 20">;
         <div className="container mx - auto px - 6 text - center">;
@@ -90,6 +101,7 @@ function ITServicesPage() {
               </a>;
             </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
             {/* DevOps & CI/CD */}
             <div className="bg-zinc-800 rounded-xl p-8 border border-zinc-700">;
               <div className="text-4xl mb-6">🚀</div>;
@@ -98,12 +110,15 @@ function ITServicesPage() {
 
 =======
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             {/* DevOps & CI / CD */}
             <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
               <div className="text - 4xl mb - 6">🚀</div>;
               <h2 className="text - 3xl font - bold mb - 4">DevOps & CI / CD</h2>;
               <p className="text - zinc - 300 mb - 6 text - lg">;
                 Accelerate your software delivery with automated deployment pipelines,
+<<<<<<< HEAD
 
 =======
 
@@ -111,6 +126,20 @@ function ITServicesPage() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+            {/* DevOps & CI/CD */}
+            <div className="bg-zinc-800 rounded-xl p-8 border border-zinc-700">;
+              <div className="text-4xl mb-6">🚀</div>;
+              <h2 className="text-3xl font-bold mb-4">DevOps & CI/CD</h2>;
+              <p className="text-zinc-300 mb-6 text-lg">;
+<<<<<<< HEAD
+                Accelerate your software delivery with automated deployment pipelines;
+=======
+                Accelerate your software delivery with automated deployment pipelines,;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 infrastructure as code, and DevOps culture implementation that drives innovation.;
               </p>;
               <div className="space - y-4 mb - 8">;
@@ -150,6 +179,7 @@ function ITServicesPage() {
             </div>;
             {/* Cybersecurity */}
 <<<<<<< HEAD
+<<<<<<< HEAD
             <div className="bg-zinc-800 rounded-xl p-8 border border-zinc-700">;
               <div className="text-4xl mb-6">🛡️</div>;
               <h2 className="text-3xl font-bold mb-4">Cybersecurity</h2>;
@@ -157,11 +187,14 @@ function ITServicesPage() {
 
 =======
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
               <div className="text - 4xl mb - 6">🛡️</div>;
               <h2 className="text - 3xl font - bold mb - 4">Cybersecurity</h2>;
               <p className="text - zinc - 300 mb - 6 text - lg">;
                 Protect your business with comprehensive cybersecurity solutions including security audits,
+<<<<<<< HEAD
 
 =======
 
@@ -169,6 +202,19 @@ function ITServicesPage() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+            <div className="bg-zinc-800 rounded-xl p-8 border border-zinc-700">;
+              <div className="text-4xl mb-6">🛡️</div>;
+              <h2 className="text-3xl font-bold mb-4">Cybersecurity</h2>;
+              <p className="text-zinc-300 mb-6 text-lg">;
+<<<<<<< HEAD
+                Protect your business with comprehensive cybersecurity solutions including security audits;
+=======
+                Protect your business with comprehensive cybersecurity solutions including security audits,;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 penetration testing, compliance frameworks, and incident response planning.;
               </p>;
               <div className="space - y-4 mb - 8">;
@@ -294,6 +340,7 @@ function ITServicesPage() {
             </div>;
             {/* Digital Transformation */}
 <<<<<<< HEAD
+<<<<<<< HEAD
             <div className="bg-zinc-800 rounded-xl p-8 border border-zinc-700">;
               <div className="text-4xl mb-6">🔄</div>;
               <h2 className="text-3xl font-bold mb-4">Digital Transformation</h2>;
@@ -301,11 +348,14 @@ function ITServicesPage() {
 
 =======
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
               <div className="text - 4xl mb - 6">🔄</div>;
               <h2 className="text - 3xl font - bold mb - 4">Digital Transformation</h2>;
               <p className="text - zinc - 300 mb - 6 text - lg">;
                 Guide your organization through end - to - end digital transformation with strategic consulting,
+<<<<<<< HEAD
 
 =======
 
@@ -313,6 +363,19 @@ function ITServicesPage() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+            <div className="bg-zinc-800 rounded-xl p-8 border border-zinc-700">;
+              <div className="text-4xl mb-6">🔄</div>;
+              <h2 className="text-3xl font-bold mb-4">Digital Transformation</h2>;
+              <p className="text-zinc-300 mb-6 text-lg">;
+<<<<<<< HEAD
+                Guide your organization through end-to-end digital transformation with strategic consulting;
+=======
+                Guide your organization through end-to-end digital transformation with strategic consulting,;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 legacy system modernization, and change management expertise.;
               </p>;
               <div className="space - y-4 mb - 8">;

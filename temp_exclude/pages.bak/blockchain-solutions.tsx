@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React from 'react';
 interface BlockchainsolutionsProps {;
   // Add props here as needed;
@@ -12,7 +15,10 @@ export default function Blockchainsolutions(): any ({ }: BlockchainsolutionsProp
     </div>;
   );
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 }

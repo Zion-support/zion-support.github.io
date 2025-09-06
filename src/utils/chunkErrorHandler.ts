@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -10,10 +11,39 @@
 
     this && this.initializeGlobalHandlers();
 
+=======
+<<<<<<< HEAD
+/**
+ * Chunk Error Handler - Comprehensive solution for ChunkLoadError recovery
+ * Handles automatic retry, cache clearing, and graceful degradation
+ */
+
+import { logErrorToProduction } from './productionLogger'
+
+interface ChunkErrorStats {
+  errorCount: number;
+  lastErrorTime: number;
+  userAgent: string;
+  url: string
+class ChunkErrorHandler {
+<<<<<<< HEAD
+
+  private errorStats: Map<string, ChunkErrorStats> = new Map()
+  private readonly MAX_RETRIES = 3
+=======
+  private errorStats: Map<string, ChunkErrorStats> = new Map();
+  private readonly MAX_RETRIES = 3;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  private readonly RETRY_DELAY = 1000; // 1 second
+  private readonly CACHE_CLEAR_THRESHOLD = 2
+  constructor() {
+    this.initializeGlobalHandlers()
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }
   private initializeGlobalHandlers(): void {
-    if (typeof window === 'undefined') return
+    if (typeof window === 'undefined') return;
     // Handle webpack chunk loading errors
+<<<<<<< HEAD
 
     window && window.addEventListener('error', event => {
       this && this.handleScriptError(event);
@@ -143,6 +173,70 @@ if (return false) {
     } else {
       this && this.showFatalErrorMessage();
 
+=======
+    window.addEventListener('error', event => {
+      this.handleScriptError(event)
+    })
+    // Handle unhandled promise rejections (async chunk loading)
+    window.addEventListener('unhandledrejection', event => {
+      this.handlePromiseRejection(event)
+    }) }
+  private handleScriptError(event: ErrorEvent): void {
+    const { error, filename } = event
+    if (this.isChunkError(error, filename)) {
+      event.preventDefault(); // Prevent the error from bubbling up
+      this.handleChunkError(error, { filename, source: 'script' })
+    }
+  }
+  private handlePromiseRejection(event: PromiseRejectionEvent): void {
+    const error = event.reason
+    if (this.isChunkError(error)) {
+      event.preventDefault(); // Prevent unhandled rejection
+      this.handleChunkError(error, { source: 'promise' })
+    }
+  }
+  private isChunkError(error: any, filename?: string): boolean {
+    if (!error) return false
+    const errorMessage = error.message |String(error)
+    const errorName = error.name |''
+    const chunkErrorPatterns = [
+      'ChunkLoadError'
+      'Loading chunk'
+      'Failed to fetch dynamically imported module'
+      'Failed to import'
+      'chunk-'
+      'vendors-'
+    ]
+    return chunkErrorPatterns.some(
+      pattern =>
+        errorMessage.includes(pattern) |
+        errorName.includes(pattern) |
+        (filename && filename.includes(pattern))
+    )
+  }
+  private async handleChunkError(
+    error: Error
+    context: { filename?: string; source: string }
+  ): Promise<void> {
+    const sessionKey = this.getSessionKey()
+    const stats = this.getOrCreateErrorStats(sessionKey)
+    stats.errorCount++
+    stats.lastErrorTime = Date.now()
+    logErrorToProduction('ChunkLoadError detected', error, {
+      context: 'chunkErrorHandler'
+      errorCount: stats.errorCount
+      retryAttempt: stats.errorCount
+      source: context.source
+      filename: context.filename
+      userAgent: navigator.userAgent
+      url: window.location.href
+    })
+    // Attempt recovery based on error count
+    if (stats.errorCount <= this.MAX_RETRIES) {
+      await this.attemptRecovery(stats.errorCount, context)
+    } else {
+      this.showFatalErrorMessage()
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     }
   }
   private async attemptRecovery(
@@ -152,6 +246,7 @@ if (return false) {
     logErrorToProduction(
       `Attempting ChunkLoadError recovery #${attemptNumber}`
       undefined
+<<<<<<< HEAD
     return chunkErrorPatterns.some (
       pattern =>;
         error_message.includes (pattern) ||;
@@ -197,16 +292,89 @@ if ( {) {
 
         context: 'chunkErrorRecovery',
 
+=======
+      {
+        context: 'chunkErrorRecovery'
+        attemptNumber
+        recoveryMethod: this.getRecoveryMethod(attemptNumber)
+      }
+    )
+    switch (attemptNumber) {
+      case 1:
+        // First attempt: Simple retry after short delay
+        await this.delay(this.RETRY_DELAY)
+        this.reloadPage()
+        break
+      case 2:
+        // Second attempt: Clear caches and retry
+        await this.clearCaches()
+        await this.delay(this.RETRY_DELAY * 2)
+        this.reloadPage()
+        break
+      case 3:
+        // Third attempt: Hard refresh with cache bypass
+        this.hardRefresh()
+        break
+      default:
+        this.showFatalErrorMessage()
+    }
+  }
+  private getRecoveryMethod(attemptNumber: number): string {
+    switch (attemptNumber) {
+      case 1:
+        return 'simple-retry'
+      case 2:
+        return 'cache-clear-retry'
+      case 3:
+        return 'hard-refresh'
+      default:
+        return 'fatal-error'
+    }
+  }
+  private async clearCaches(): Promise<void> {
+    try {
+      // Clear service worker caches
+      if ('caches' in window) {
+        const cacheNames = await caches.keys()
+        await Promise.all(
+          cacheNames.map(cacheName => caches.delete(cacheName))
+        )
+      }
+      // Clear localStorage items that might be stale
+      const keysToRemove = ['__NEXT_ROUTER_STATE__', '__NEXT_ROUTE_INFO__']
+      keysToRemove.forEach(key => {
+        try {
+          localStorage.removeItem(key)
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         } catch (e) {
-          // Ignore local_storage errors;
+          // Ignore localStorage errors
         }
+<<<<<<< HEAD
 
     window && window.location.replace(window && window.location.href);
 
+=======
+      })
+      logErrorToProduction('Caches cleared successfully', undefined, {
+        context: 'chunkErrorRecovery'
+        action: 'cache-clear'
+      })
+    } catch (error) {
+      logErrorToProduction('Failed to clear caches', error as Error, {
+        context: 'chunkErrorRecovery'
+        action: 'cache-clear-failed'
+      })
+    }
+  }
+  private reloadPage(): void {
+    // Use replace to avoid adding to history
+    window.location.replace(window.location.href)
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }
   private hardRefresh(): void {
     // Force a hard refresh bypassing all caches
     window.location.href = window.location.href + '?_t=' + Date.now()
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -214,6 +382,34 @@ if ( {) {
   private showFatalErrorMessage(): void {
     // Create a user-friendly error message
 
+=======
+  }
+  private showFatalErrorMessage(): void {
+    // Create a user-friendly error message
+    const errorDiv = document.createElement('div')
+    errorDiv.style.cssText = `
+      position: fixed
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background: rgba(0, 0, 0, 0.8)
+      color: white
+      display: flex
+      align-items: center
+      justify-content: center
+      z-index: 999999
+      font-family: system-ui, -apple-system, sans-serif
+    `
+    errorDiv.innerHTML = `
+      <div style="text-align: center; padding: 2rem; max-width: 500px;">
+        <h2 style="margin-bottom: 1rem;">Connection Issue</h2>
+        <p style="margin-bottom: 1.5rem; line-height: 1.5;">
+          We're having trouble loading some parts of the application.
+          This might be due to a poor network connection or a temporary server issue.
+        </p>
+        <button onclick="window.location.reload()" style="
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           background: #0070f3
           color: white
           border: none
@@ -222,7 +418,10 @@ if ( {) {
           font-size: 1rem
           cursor: pointer
           margin-right: 1rem;        ">
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           Try Again
         </button>
         <button onclick="window.location.href='/'" style="
@@ -233,7 +432,13 @@ if ( {) {
           border-radius: 0.5rem
           font-size: 1rem
           cursor: pointer
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 /**;
  * Chunk Error Handler - Comprehensive solution for ChunkLoadError recovery;
  * Handles automatic retry, cache clearing, and graceful degradation;
@@ -376,6 +581,7 @@ class ChunkErrorHandler {;
       logErrorToProduction('Caches cleared successfully', undefined, {;
         context: 'chunkErrorRecovery',;
         action: 'cache-clear';
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>       });
       logErrorToProduction ('Caches cleared successfully', undefined, {
@@ -386,15 +592,25 @@ ursor/fix-website-loading-errors-and-merge-6662
       logErrorToProduction ('Failed to clear caches', error as Error, {
         context: 'chunkErrorRecovery',
         action: 'cache - clear - failed',
+=======
+      });
+    } catch (error) {;
+      logErrorToProduction('Failed to clear caches', error as Error, {;
+        context: 'chunkErrorRecovery',;
+        action: 'cache-clear-failed';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       });
     }
   }
-  private reload_page (): void {
+;
+  private reloadPage(): void {;
     // Use replace to avoid adding to history;
-    window.location.replace (window.location.href);
+    window.location.replace(window.location.href);
   }
-  private hard_refresh (): void {
+;
+  private hardRefresh(): void {;
     // Force a hard refresh bypassing all caches;
+<<<<<<< HEAD
 
     window.location.href = window.location.href + '?_t=' + Date.now();
 <<<<<<< HEAD
@@ -464,6 +680,59 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     errorDiv.innerHTML = `
 >>>>>>>       <div style="text-align: center, padding: 2rem, max-width: 500px,">
+=======
+    window.location.href = window.location.href + '?_t=' + Date.now();
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  }
+
+  private showFatalErrorMessage(): void {
+    // Create a user-friendly error message
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    const errorDiv = document.createElement('div')
+    errorDiv.style.cssText = `
+      position: fixed
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background: rgba(0, 0, 0, 0.8)
+      color: white
+      display: flex
+      align-items: center
+      justify-content: center
+      z-index: 999999
+      font-family: system-ui, -apple-system, sans-serif
+    `
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    const errorDiv = document.createElement('div'),
+    errorDiv.style.cssText = `
+      position: fixed,
+      top: 0,
+      left: 0,
+      width: 100%,
+      height: 100%,
+      background: rgba(0, 0, 0, 0.8),
+      color: white,
+      display: flex,
+      align-items: center,
+      justify-content: center,
+      z-index: 999999,
+      font-family: system-ui, -apple-system, sans-serif,
+    `,
+
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    errorDiv.innerHTML = `
+      <div style="text-align: center, padding: 2rem, max-width: 500px,">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <h2 style="margin-bottom: 1rem,">Connection Issue</h2>
         <p style="margin-bottom: 1.5rem, line-height: 1.5,">
           We're having trouble loading some parts of the application. 
@@ -471,8 +740,13 @@ ursor/fix-website-loading-errors-and-merge-6662
         </p>
         <button onclick="window.location.reload()" style="
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           background: #0070f3
           color: white
           border: none
@@ -491,7 +765,12 @@ ursor/fix-website-loading-errors-and-merge-6662
           border-radius: 0.5rem
           font-size: 1rem
           cursor: pointer
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           background: #0070f3,
           color: white,
           border: none,
@@ -512,7 +791,14 @@ ursor/fix-website-loading-errors-and-merge-6662
           font-size: 1rem,
           cursor: pointer,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         ">
           Go Home
         </button>
@@ -530,9 +816,13 @@ ursor/fix-website-loading-errors-and-merge-6662
     return new Promise(resolve => setTimeout(resolve, ms))
   }
   private getSessionKey(): string {
+<<<<<<< HEAD
 
     return `${navigator && navigator.userAgent}_${window && window.location.origin}`;
 
+=======
+    return `${navigator.userAgent}_${window.location.origin}`
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }
   private getOrCreateErrorStats(sessionKey: string): ChunkErrorStats {
     if (!this.errorStats.has(sessionKey)) {
@@ -542,6 +832,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         userAgent: navigator.userAgent
         url: window.location.href
       })
+<<<<<<< HEAD
 >>>>>>>     }
     return this.errorStats.get(sessionKey)!
   }
@@ -588,6 +879,113 @@ ursor/fix-website-loading-errors-and-merge-6662
 export const chunkErrorHandler = new ChunkErrorHandler()
 // Export for manual usage
 
+=======
+=======
+    `,
+
+    document.body.appendChild(errorDiv)
+;
+  private showFatalErrorMessage(): void {;
+    // Create a user-friendly error message;
+    const errorDiv = document.createElement('div'),;
+    errorDiv.style.cssText = `;
+      position: fixed,;
+      top: 0,;
+      left: 0,;
+      width: 100%,;
+      height: 100%,;
+      background: rgba(0, 0, 0, 0.8),;
+      color: white,;
+      display: flex,;
+      align-items: center,;
+      justify-content: center,;
+      z-index: 999999,;
+      font-family: system-ui, -apple-system, sans-serif,;
+    `,;
+    errorDiv.innerHTML = `;
+      <div style="text-align: center, padding: 2rem, max-width: 500px,">;
+        <h2 style="margin-bottom: 1rem,">Connection Issue</h2>;
+        <p style="margin-bottom: 1.5rem, line-height: 1.5,">;
+          We're having trouble loading some parts of the application.;
+          This might be due to a poor network connection or a temporary server issue.;
+        </p>;
+        <button onclick="window.location.reload()" style=";
+          background: #0070f3,;
+          color: white,;
+          border: none,;
+          padding: 0.75rem 1.5rem,;
+          border-radius: 0.5rem,;
+          font-size: 1rem,;
+          cursor: pointer,;
+          margin-right: 1rem,;
+        ">;
+          Try Again;
+        </button>;
+        <button onclick="window.location.href='/'" style=";
+          background: #666,;
+          color: white,;
+          border: none,;
+          padding: 0.75rem 1.5rem,;
+          border-radius: 0.5rem,;
+          font-size: 1rem,;
+          cursor: pointer,;
+        ">;
+          Go Home;
+        </button>;
+      </div>;
+    `,;
+    document.body.appendChild(errorDiv);
+  }
+;
+  private delay(ms: number): Promise<void> {;
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+;
+  private getSessionKey(): string {;
+    return `${navigator.userAgent}_${window.location.origin}`;
+  }
+;
+  private getOrCreateErrorStats(sessionKey: string): ChunkErrorStats {;
+    if (!this.errorStats.has(sessionKey)) {;
+      this.errorStats.set(sessionKey, {;
+        errorCount: 0,;
+        lastErrorTime: 0,;
+        userAgent: navigator.userAgent,;
+        url: window.location.href;
+      });
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    }
+    return this.errorStats.get(sessionKey)!
+  }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  // Public method to manually trigger recovery
+  public triggerRecovery(): void {
+    this.clearCaches().then(() => {
+      this.reloadPage()
+    }) }
+  // Public method to check if we're in a chunk error state
+  public isInErrorState(): boolean {
+    const sessionKey = this.getSessionKey()
+    const stats = this.errorStats.get(sessionKey)
+    return stats ? stats.errorCount > 0 : false
+  }
+  // Public method to reset error state
+  public resetErrorState(): void {
+    const sessionKey = this.getSessionKey()
+    this.errorStats.delete(sessionKey)
+  }
+// Create and export singleton instance
+export const chunkErrorHandler = new ChunkErrorHandler()
+// Export for manual usage
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export default chunkErrorHandler
 export default chunkErrorHandler
         ">
@@ -600,13 +998,23 @@ export default chunkErrorHandler
         <button onclick="window.location.href='/'" style="
 export default chunkErrorHandler
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <button onclick="window.location.href='/'" style=";
 export default chunkErrorHandler;
 }
 }
+<<<<<<< HEAD
 
 >>>>>>> ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   // Public method to manually trigger recovery;
   public triggerRecovery(): void {;
     this.clearCaches().then(() => {;
@@ -633,9 +1041,16 @@ export const chunkErrorHandler = new ChunkErrorHandler();
 // Export for manual usage;
 export default chunkErrorHandler;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

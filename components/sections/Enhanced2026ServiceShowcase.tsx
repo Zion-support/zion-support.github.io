@@ -1,14 +1,32 @@
 import React from 'react';
+<<<<<<< HEAD
+import { motion } from 'framer-motion';
+import {;
+  ArrowRight,;
+  Star,;
+  TrendingUp,;
+  Zap,;
+  Shield,;
+  Brain,;
+  Globe,;
+  Rocket,;
+=======
 
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import {
 
 =======
+<<<<<<< HEAD
 
 
 =======
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   ArrowRight,
   Star,
   TrendingUp,
@@ -17,9 +35,14 @@ import {
   Brain,
   Globe,;
   Rocket,;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 } from 'lucide-react';
 import { innovative2026AIServices } from '../../data/innovative-2026-ai-services';
 import { innovative2026ITInfrastructureServices } from '../../data/innovative-2026-it-infrastructure';
@@ -27,6 +50,7 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
 import { innovative2026AIServices } from '../../data/innovative-2026-ai-services';
 import { innovative2026ITInfrastructureServices } from '../../data/innovative-2026-it-infrastructure';
 import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micro-saas';
+<<<<<<< HEAD
 <<<<<<< HEAD
   const containerVariants = {
     hidden: { opacity: 0 }
@@ -74,13 +98,14 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
     }
   }
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { ArrowRight, Star, TrendingUp, Zap, Shield, Brain, Globe, Rocket } from 'lucide-react';
 import { innovative2026AIServices } from '../../data/innovative-2026-ai-services';
 import { innovative2026ITInfrastructureServices } from '../../data/innovative-2026-it-infrastructure';
 import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micro-saas';
 export default function Enhanced2026ServiceShowcase() {
   const containerVariants = {
-=======
   ArrowRight,
   Star,
   TrendingUp,
@@ -97,11 +122,11 @@ import { innovative2026AIServices } from '../../data / innovative - 2026 - ai - 
 import { innovative2026ITInfrastructureServices } from '../../data / innovative - 2026 - it - infrastructure';
 import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 - micro - saas';
   const container_variants = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const renderServiceCard = (service: any, index: number) => (
@@ -114,6 +139,9 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
 =======
 
         stagger_children: 0.2,
+=======
+stagger_children: 0.2,
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         delay_children: 0.1,
       },
     },  }
@@ -136,13 +164,27 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
       scale: 0.9;
     }
     visible: {
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       opacity: 1,
       coordinate_y: 0,
       scale: 1,
       transition: {
         duration: 0.6,
+<<<<<<< HEAD
 
+=======
+        duration: 0.3,
+        ease: "easeOut" as const
+      }
+    }
+  };
+  const renderServiceCard = (service: any, index: number) => (
+    <motion.div
+      key={service.id}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const containerVariants = {;
     hidden: { opacity: 0 },;
     visible: {;
@@ -152,7 +194,6 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
         delayChildren: 0 && 0.1,;
       },;
     },  };
-
   const itemVariants = {;
     hidden: {;
       opacity: 0,;
@@ -163,7 +204,6 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
       }
     }
   };
-
   const itemVariants = {;
     hidden: { ;
       opacity: 0,;
@@ -182,7 +222,6 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
       }
     }
   };
-
   const cardVariants = {;
     hover: {;
       y: -10,;
@@ -195,10 +234,10 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
       }
     }
   };
-
   const renderServiceCard = (service: any, index: number) => (;
     <motion&& motion.div
       key={service && service.id}
+<<<<<<< HEAD
 
       variants={itemVariants}
 
@@ -210,16 +249,41 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
         className='relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900/80 via-slate-800/80 to-slate-900/80 backdrop-blur-xl border border-slate-700/50 hover:border-slate-600/50 transition-all duration-300'>;
         {/* Glowing border effect */}
 
+=======
+      variants={itemVariants}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <div className='absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300' />;
-
         <div className='relative p-6'>;
+<<<<<<< HEAD
 
           {/* Service header */}
 
+=======
+          {/* Service header */}
+          <div className='flex items-start justify-between mb-4'>;
+            <div className='flex items-center space-x-3'>;
+              <div className='text-3xl'>{service && service.icon}</div>;
+              <div>;
+                <h3 className='text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300'>;
+                  {service && service.name}
+                </h3>;
+                <p className='text-slate-400 text-sm'>{service && service.tagline}</p>;
+              </div>;
+            </div>;
+            {service && service.popular && (;
+              <div className='flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-medium'>;
+                <Star className='w-3 h-3 fill-current' />                <span>Popular</span>    >;
+      <motion&& motion.div
+        variants={cardVariants}
+        className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900/80 via-slate-800/80 to-slate-900/80 backdrop-blur-xl border border-slate-700/50 hover:border-slate-600/50 transition-all duration-300">;
+        {/* Glowing border effect */}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />;
-
         <div className="relative p-6">;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           {/* Service header */}
           <div className="flex items-start justify-between mb-4">;
             <div className="flex items-center space-x-3">;
@@ -237,7 +301,10 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
                 <span>Popular</span>;
               </div>;
             )}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       whileHover="hover"
       className="group relative"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -246,7 +313,6 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
         variants={cardVariants}
         className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900/80 via-slate-800/80 to-slate-900/80 backdrop-blur-xl border border-slate-700/50 hover:border-slate-600/50 transition-all duration-300"
       >
-=======
         ease: 'ease_out' as const,
       },
     },  }        ease: "ease_out" as const;
@@ -299,7 +365,10 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
         variants={card_variants}
         className="relative overflow - hidden rounded - 2xl bg - gradient - to - br from - slate - 900 / 80 via - slate - 800 / 80 to - slate - 900 / 80 backdrop - blur - xl border border - slate - 700 / 50 hover:border - slate - 600 / 50 transition - all duration - 300";
       >;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {/* Glowing border effect */}
         <div className="absolute inset - 0 rounded - 2xl bg - gradient - to - r from - cyan - 500 / 20 via - purple - 500 / 20 to - pink - 500 / 20 opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300" />;
         <div className="relative p - 6">;
@@ -321,22 +390,254 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
               </div>)}
           </div>;
           {/* Description */}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </div>;
-
           {/* Description */}
           <p className='text-slate-300 text-sm mb-4 leading-relaxed'>            {service && service.description}
           </p>;
-
           {/* Features */}          <p className="text-slate-300 text-sm mb-4 leading-relaxed">;
             {service && service.description}
           </p>;
+<<<<<<< HEAD
 
 
           {/* Features */}
 
           <div className="mb-4">
 
+=======
+          {/* Features */}
+          <div className="mb-4">
+            <h4 className="text-white font-semibold mb-2 text-sm">Key Features:</h4>
+            <div className="grid grid-cols-1 gap-1">
+              {service.features.slice(0, 3).map((feature: string, idx: number) => (
+                <div key={idx} className="flex items-center space-x-2 text-xs text-slate-400">
+                  <div className="w-1.5 h-1.5 bg-cyan-500 rounded-full" />
+    }
+  },
+
+  const itemVariants = {
+    hidden: { 
+      opacity: 0,
+      y: 50,
+      scale: 0.9
+    },
+    visible: { 
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+        ease: &quot;easeOut&quot; as const
+      }
+    }
+  },
+
+  const cardVariants = {
+    hover: {
+      y: -10,
+      scale: 1.02,
+      transition: {
+        duration: 0.3,
+        ease: &quot;easeOut&quot; as const
+      }
+    }
+  },
+
+  const _renderServiceCard = (_service: unknown, _index: number) => (
+    <motion.div
+      key={service.id}
+      variants={itemVariants}
+      whileHover=&quot;hover&quot;
+      className=&quot;group relative&quot;
+    >
+      <motion.div
+        variants={cardVariants}
+        className=&quot;relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900/80 via-slate-800/80 to-slate-900/80 backdrop-blur-xl border border-slate-700/50 hover:border-slate-600/50 transition-all duration-300&quot;
+      >
+        {/* Glowing border effect */}
+        <div className=&quot;absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300&quot; />
+        
+        <div className=&quot;relative p-6&quot;>
+          {/* Service header */}
+          <div className=&quot;flex items-start justify-between mb-4&quot;>
+            <div className=&quot;flex items-center space-x-3&quot;>
+              <div className=&quot;text-3xl&quot;>{service.icon}</div>
+              <div>
+                <h3 className=&quot;text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300&quot;>
+                  {service.name}
+                </h3>
+                <p className=&quot;text-slate-400 text-sm&quot;>{service.tagline}</p>
+              </div>
+            </div>
+            {service.popular && (
+              <div className=&quot;flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-medium&quot;>
+                <Star className=&quot;w-3 h-3 fill-current&quot; />
+=======
+  const containerVariants = {
+    hidden: { opacity: 0 }
+    visible: {
+      opacity: 1
+      transition: {
+<<<<<<< HEAD
+        staggerChildren: 0.2
+        delayChildren: 0.1
+      }
+    },  }
+=======
+        staggerChildren: 0.2,
+        delayChildren: 0.1,
+      },
+    },  };
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  const itemVariants = {
+    hidden: {
+      opacity: 0
+      y: 50
+      scale: 0.9
+    }
+    visible: {      opacity: 1,        delayChildren: 0.1
+      }
+    }
+  }
+  const itemVariants = {
+    hidden: {
+      opacity: 0
+      y: 50
+      scale: 0.9
+    }
+    visible: {
+      opacity: 1
+      y: 0
+      scale: 1
+      transition: {
+        duration: 0.6
+        ease: 'easeOut' as const
+      }
+    },  };        ease: "easeOut" as const
+      }
+    }
+  }
+  const cardVariants = {
+    hover: {
+      y: -10
+      scale: 1.02
+      transition: {
+<<<<<<< HEAD
+        duration: 0.3
+        ease: 'easeOut' as const
+      }
+    },  };        ease: "easeOut" as const
+      }
+    }
+  }
+=======
+        duration: 0.3,
+        ease: 'easeOut' as const,
+      },
+    },  };
+
+  };
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  const renderServiceCard = (service: any, index: number) => (
+    <motion.div
+      key={service.id}
+      variants={itemVariants}
+      whileHover='hover'
+      className='group relative'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    >
+      <motion.div
+        variants={cardVariants}
+        className='relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900/80 via-slate-800/80 to-slate-900/80 backdrop-blur-xl border border-slate-700/50 hover:border-slate-600/50 transition-all duration-300'
+      >
+        {/* Glowing border effect */}
+        <div className='absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300' />
+        <div className='relative p-6'>
+          {/* Service header */}
+          <div className='flex items-start justify-between mb-4'>
+            <div className='flex items-center space-x-3'>
+              <div className='text-3xl'>{service.icon}</div>
+              <div>
+                <h3 className='text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300'>
+                  {service.name}
+                </h3>
+                <p className='text-slate-400 text-sm'>{service.tagline}</p>
+              </div>
+            </div>
+            {service.popular && (
+              <div className='flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-medium'>
+<<<<<<< HEAD
+                <Star className='w-3 h-3 fill-current' />                <span>Popular</span>    >
+      <motion.div
+        variants={cardVariants}
+        className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900/80 via-slate-800/80 to-slate-900/80 backdrop-blur-xl border border-slate-700/50 hover:border-slate-600/50 transition-all duration-300"
+      >
+        {/* Glowing border effect */}
+        <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <div className="relative p-6">
+          {/* Service header */}
+          <div className="flex items-start justify-between mb-4">
+            <div className="flex items-center space-x-3">
+              <div className="text-3xl">{service.icon}</div>
+              <div>
+                <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">
+                  {service.name}
+                </h3>
+                <p className="text-slate-400 text-sm">{service.tagline}</p>
+              </div>
+            </div>
+            {service.popular && (
+              <div className="flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-medium">
+                <Star className="w-3 h-3 fill-current" />
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+                <span>Popular</span>
+              </div>
+            )}
+          </div>
+<<<<<<< HEAD
+
+          {/* Description */}
+          <p className=&quot;text-slate-300 text-sm mb-4 leading-relaxed&quot;>
+=======
+          {/* Description */}
+          <p className='text-slate-300 text-sm mb-4 leading-relaxed'>            {service.description}
+          </p>
+          {/* Features */}          <p className="text-slate-300 text-sm mb-4 leading-relaxed">
+            {service.description}
+          </p>
+          {/* Features */}
+          <div className='mb-4'>
+            <h4 className='text-white font-semibold mb-2 text-sm'>
+              Key Features:
+            </h4>
+            <div className='grid grid-cols-1 gap-1'>
+              {service.features
+                .slice(0, 3)
+                .map((feature: string, idx: number) => (
+                  <div
+                    key={idx}
+                    className='flex items-center space-x-2 text-xs text-slate-400'
+                  >
+                    <div className='w-1.5 h-1.5 bg-cyan-500 rounded-full' />
+                    <span>{feature}</span>
+                  </div>
+                ))}            </div>
+          </div>
+          {/* Price and CTA */}          <div className="mb-4">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <h4 className="text-white font-semibold mb-2 text-sm">Key Features:</h4>
             <div className="grid grid-cols-1 gap-1">
               {service.features.slice(0, 3).map((feature: string, idx: number) => (
@@ -345,6 +646,7 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
                   <span>{feature}</span>
                 </div>
               ))}
+<<<<<<< HEAD
 
             </div>
 
@@ -367,6 +669,24 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
 
 =======
 
+=======
+          </div>
+          {/* Price and CTA */}
+          <div className='flex items-center justify-between'>
+            <div className='text-right'>
+              <div className='text-2xl font-bold text-white'>
+                {service.price}
+              </div>
+              <div className='text-slate-400 text-sm'>{service.period}</div>            </div>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className='flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25'
+            >
+              <span>Learn More</span>
+              <ArrowRight className='w-4 h-4' />            </motion.button>
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <Star className='w-3 h-3 fill-current' />                <span>Popular</span>
 
                 <span>Popular</span>
@@ -381,35 +701,51 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
 
           {/* Features */}
 
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             {service.description}
           </p>
 
           {/* Features */}
+<<<<<<< HEAD
 
             </motion.button>
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+          <div className=&quot;mb-4&quot;>
+            <h4 className=&quot;text-white font-semibold mb-2 text-sm&quot;>Key Features:</h4>
+            <div className=&quot;grid grid-cols-1 gap-1&quot;>
+              {service.features.slice(0, 3).map((feature: string, idx: number) => (
+                <div key={idx} className=&quot;flex items-center space-x-2 text-xs text-slate-400&quot;>
+                  <div className=&quot;w-1.5 h-1.5 bg-cyan-500 rounded-full&quot; />
+
+                  <span>{feature}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+{/* Price and CTA */}
+          <div className="flex items-center justify-between">
+=======
+
+            </motion.button>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </div>
           {/* Market info */}
           <div className='mt-4 pt-4 border-t border-slate-700/50'>
             <div className='flex items-center justify-between text-xs text-slate-500'>              <span>Market: {service.marketSize}</span>          <div className="flex items-center justify-between">
-            <div className="text-right">
-              <div className="text-2xl font-bold text-white">{service.price}</div>
-              <div className="text-slate-400 text-sm">{service.period}</div>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className='flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25'
-            >
-              <span>Learn More</span>
-              <ArrowRight className='w-4 h-4' />              className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25"
-            >
-              <span>Learn More</span>
-              <ArrowRight className="w-4 h-4" />
-=======
-          <div className="flex items-center justify-between">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <div className="text-right">
               <div className="text-2xl font-bold text-white">{service.price}</div>
               <div className="text-slate-400 text-sm">{service.period}</div>
@@ -417,38 +753,45 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25"
+className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25"
             >
               <span>Learn More</span>
               <ArrowRight className="w-4 h-4" />
             </motion.button>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           </div>
           {/* Market info */}
+<<<<<<< HEAD
 
           <div className="mt-4 pt-4 border-t border-slate-700/50">
 
+=======
+          <div className="mt-4 pt-4 border-t border-slate-700/50">
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <div className="flex items-center justify-between text-xs text-slate-500">
               <span>Market: {service.marketSize}</span>
               <span>Growth: {service.growthRate}</span>
             </div>
           </div>
         </div>
+<<<<<<< HEAD
         {/* Hover glow effect */}
 
         <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 opacity-0 group-hover: opacity-100 transition-opacity duration-300" />
 
+=======
+<<<<<<< HEAD
+{/* Hover glow effect */}
+        <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 opacity-0 group-hover: opacity-100 transition-opacity duration-300" />
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       </motion.div>
     </motion.div>
   )
-=======
                     className='flex items-center space-x-2 text-xs text-slate-400'>;
                     <div className='w-1 && 1.5 h-1 && 1.5 bg-cyan-500 rounded-full' />;
                     <span>{feature}</span>;
                   </div>;
                 ))}            </div>;
           </div>;
-
           {/* Price and CTA */}          <div className="mb-4">;
             <h4 className="text-white font-semibold mb-2 text-sm">Key Features:</h4>;
             <div className="grid grid-cols-1 gap-1">;
@@ -459,7 +802,6 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
                 </div>;
               ))}
           </div>;
-
           {/* Price and CTA */}
           <div className='flex items-center justify-between'>;
             <div className='text-right'>;
@@ -474,7 +816,6 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
               <span>Learn More</span>;
               <ArrowRight className='w-4 h-4' />            </motion && motion.button>;
           </div>;
-
           {/* Market info */}
           <div className='mt-4 pt-4 border-t border-slate-700/50'>;
             <div className='flex items-center justify-between text-xs text-slate-500'>              <span>Market: {service && service.marketSize}</span>          <div className="flex items-center justify-between">;
@@ -491,7 +832,6 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
               <span>Learn More</span>;
               <ArrowRight className="w-4 h-4" />;
           </div>;
-
           {/* Market info */}
           <div className='mt-4 pt-4 border-t border-slate-700/50'>;
             <div className='flex items-center justify-between text-xs text-slate-500'>          <div className="mt-4 pt-4 border-t border-slate-700/50">;
@@ -501,15 +841,22 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
             </div>;
           </div>;
         </div>;
-
         {/* Hover glow effect */}
         <div className='absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300' />      </motion && motion.div>        <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 opacity-0 group-hover: opacity-100 transition-opacity duration-300" />;
       </motion && motion.div>;
     </motion && motion.div>;
   ),;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  return (
+    <section className="py-20 relative overflow-hidden">
+      {/* Background effects */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/20 to-slate-900/40" />
+      <div className="container mx-auto px-4 relative z-10">
+      </motion.div>
+    </motion.div>
+  ),
 
   return (
+<<<<<<< HEAD
 
     <section className="py-20 relative overflow-hidden">
 
@@ -519,10 +866,36 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
 
         {/* Section header */}
 
+=======
+    <section className=&quot;py-20 relative overflow-hidden&quot;>
+      {/* Background effects */}
+      <div className=&quot;absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/20 to-slate-900/40&quot; />
+      
+      <div className=&quot;container mx-auto px-4 relative z-10&quot;>
+
+        {/* Section header */}
+=======
+        {/* Hover glow effect */}
+        <div className='absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300' />      </motion.div>        <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 opacity-0 group-hover: opacity-100 transition-opacity duration-300" />
+      </motion.div>
+    </motion.div>
+  )
+
+  return (
+    <section className='py-20 relative overflow-hidden'>
+      {/* Background effects */}
+      <div className='absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/20 to-slate-900/40' />
+      <div className='container mx-auto px-4 relative z-10'>        {/* Section header */}    <section className="py-20 relative overflow-hidden">
+      {/* Background effects */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/20 to-slate-900/40" />
+      <div className="container mx-auto px-4 relative z-10">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
           className='text-center mb-16'
 
@@ -534,6 +907,20 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+className="text-center mb-16"
+        >
+=======
+          className='text-center mb-16'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         >
           <div className='flex items-center justify-center space-x-2 mb-4'>
             <div className='w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center'>
@@ -553,10 +940,7 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
             Discover our cutting-edge micro SAAS solutions, AI-powered
             platforms, and quantum-enhanced infrastructure services designed for
             the future of business.          </p>        >
-=======
-          className="text-center mb-16"
-        >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <div className="flex items-center justify-center space-x-2 mb-4">
             <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
               <Rocket className="w-5 h-5 text-white" />
@@ -576,17 +960,21 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
           </p>
         </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
       <div className='absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/20 to-slate-900/40' />;
 
+=======
+      <div className='absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/20 to-slate-900/40' />;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <div className='container mx-auto px-4 relative z-10'>        {/* Section header */}    <section className="py-20 relative overflow-hidden">;
       {/* Background effects */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/20 to-slate-900/40" />;
-
       <div className="container mx-auto px-4 relative z-10">;
         <motion&& motion.div
+<<<<<<< HEAD
 =======
 
 
@@ -596,6 +984,8 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
         {/* AI Services Section */}
         <motion.div
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
@@ -612,14 +1002,12 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
               Innovation 2026;
             </span>;
           </div>;
-
           <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
             Next-Generation;
             <span className='block bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
               AI & IT Services;
             </span>;
           </h2>;
-
           <p className='text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed'>;
             Discover our cutting-edge micro SAAS solutions, AI-powered;
             platforms, and quantum-enhanced infrastructure services designed for;
@@ -632,27 +1020,52 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
               Innovation 2026;
             </span>;
           </div>;
-
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
             Next-Generation;
             <span className="block bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">;
               AI & IT Services;
             </span>;
           </h2>;
-
           <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">;
             Discover our cutting-edge micro SAAS solutions, AI-powered platforms, and quantum-enhanced infrastructure services designed for the future of business.;
           </p>;
         </motion && motion.div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* AI Services Section */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="mb-20"
+        >
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        {/* AI Services Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className='mb-20'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         >
           <div className='flex items-center space-x-3 mb-8'>
             <Brain className='w-6 h-6 text-cyan-400' />
@@ -669,11 +1082,7 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
             {innovative2026AIServices.map((service, index) =>
               renderServiceCard(service, index)
             )}          </motion.div>        >
-=======
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="mb-20"
-        >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <div className="flex items-center space-x-3 mb-8">
             <Brain className="w-6 h-6 text-cyan-400" />
             <h3 className="text-2xl font-bold text-white">AI-Powered Services</h3>
@@ -688,10 +1097,13 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
           </motion.div>
         </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
           className='mb-20'>;
           <div className='flex items-center space-x-3 mb-8'>;
@@ -700,8 +1112,39 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
               AI-Powered Services;
             </h3>;
           </div>;
-
           <motion&& motion.div
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        {/* IT Infrastructure Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className='mb-20'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        >
+          <div className='flex items-center space-x-3 mb-8'>
+            <Globe className='w-6 h-6 text-purple-400' />
+            <h3 className='text-2xl font-bold text-white'>
+              IT Infrastructure & Security
+            </h3>
+          </div>
+          <motion.div
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             variants={containerVariants}
             initial='hidden'
             whileInView='visible'
@@ -713,7 +1156,6 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
             <Brain className="w-6 h-6 text-cyan-400" />;
             <h3 className="text-2xl font-bold text-white">AI-Powered Services</h3>;
           </div>;
-
           <motion&& motion.div
             variants={containerVariants}
             initial="hidden"
@@ -722,6 +1164,7 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
             {innovative2026AIServices && innovative2026AIServices.map((service, index) => renderServiceCard(service, index))}
           </motion && motion.div>;
         </motion && motion.div>;
+<<<<<<< HEAD
 
 
 
@@ -733,10 +1176,13 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {/* IT Infrastructure Section */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
           transition={{ duration: 0.8, delay: 0.4 }}
           className='mb-20'
@@ -762,10 +1208,11 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
               renderServiceCard(service, index)
             )}          </motion.div>        >
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           transition={{ duration: 0.8, delay: 0.4 }}
           className="mb-20"
         >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           <div className="flex items-center space-x-3 mb-8">
             <Globe className="w-6 h-6 text-purple-400" />
             <h3 className="text-2xl font-bold text-white">IT Infrastructure & Security</h3>
@@ -779,6 +1226,7 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
             {innovative2026ITInfrastructureServices.map((service, index) => renderServiceCard(service, index))}
           </motion.div>
         </motion.div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
         {/* Micro SAAS Section */}
@@ -796,6 +1244,9 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
           <motion.div
 =======
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
           className='mb-20'>;
           <div className='flex items-center space-x-3 mb-8'>;
@@ -804,9 +1255,34 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
               IT Infrastructure & Security;
             </h3>;
           </div>;
-
           <motion&& motion.div
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        {/* Micro SAAS Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+        >
+          <div className='flex items-center space-x-3 mb-8'>
+            <Zap className='w-6 h-6 text-pink-400' />
+            <h3 className='text-2xl font-bold text-white'>
+              Micro SAAS Solutions
+            </h3>
+          </div>
+          <motion.div
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             variants={containerVariants}
             initial='hidden'
             whileInView='visible'
@@ -818,17 +1294,36 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
             <Globe className="w-6 h-6 text-purple-400" />;
             <h3 className="text-2xl font-bold text-white">IT Infrastructure & Security</h3>;
           </div>;
-
           <motion&& motion.div
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
+            {innovative2026ITInfrastructureServices && innovative2026ITInfrastructureServices.map((service, index) => renderServiceCard(service, index))}
+          </motion && motion.div>;
+        </motion && motion.div>;
+        {/* Micro SAAS Section */}
+        <motion&& motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          <div className="flex items-center space-x-3 mb-8">
+            <Zap className="w-6 h-6 text-pink-400" />
+            <h3 className="text-2xl font-bold text-white">Micro SAAS Solutions</h3>
+          </div>
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           >
             {innovative2026MicroSaasServices.map((service, index) => renderServiceCard(service, index))}
           </motion.div>
         </motion.div>
+<<<<<<< HEAD
 
         {/* CTA Section */}
         <motion.div
@@ -838,10 +1333,33 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
           className='text-center mt-16'
 
 =======
+=======
+<<<<<<< HEAD
+          transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}>;
+          <div className='flex items-center space-x-3 mb-8'>;
+            <Zap className='w-6 h-6 text-pink-400' />;
+            <h3 className='text-2xl font-bold text-white'>;
+              Micro SAAS Solutions;
+            </h3>;
+          </div>;
+          <motion&& motion.div
+            variants={containerVariants}
+            initial='hidden'
+            whileInView='visible'
+            className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
+            {innovative2026MicroSaasServices && innovative2026MicroSaasServices.map((service, index) =>;
+              renderServiceCard(service, index);
+            )}          </motion && motion.div>          </div>;
+          <motion&& motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
             {innovative2026ITInfrastructureServices && innovative2026ITInfrastructureServices.map((service, index) => renderServiceCard(service, index))}
           </motion && motion.div>;
         </motion && motion.div>;
+<<<<<<< HEAD
 
 
 
@@ -871,6 +1389,38 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+        {/* CTA Section */}
+        <motion&& motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="text-center mt-16"
+        >
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        {/* CTA Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className='text-center mt-16'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         >
           <div className='bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8'>
             <h3 className='text-2xl font-bold text-white mb-4'>
@@ -886,11 +1436,7 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className='bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25'              >        >
-=======
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="text-center mt-16"
-        >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <div className="bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-white mb-4">
               Ready to Transform Your Business?
@@ -909,9 +1455,18 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+<<<<<<< HEAD
 
                 className="border border-slate-600 hover: border-slate-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-slate-800/50"
 
+=======
+<<<<<<< HEAD
+className="border border-slate-600 hover: border-slate-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-slate-800/50"
+
+=======
+                className='border border-slate-600 hover:border-slate-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-slate-800/50'              >                className="border border-slate-600 hover: border-slate-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-slate-800/50"
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               >
                 Schedule Demo
               </motion.button>
@@ -920,6 +1475,7 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
         </motion.div>
       </div>
     </section>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 }
@@ -932,13 +1488,16 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
 =======
 
           transition={{ duration: 0 && 0.8, delay: 0 && 0.8 }}
+=======
+<<<<<<< HEAD
+transition={{ duration: 0 && 0.8, delay: 0 && 0.8 }}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           className='text-center mt-16'>;
           <div className='bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8'>;
             <h3 className='text-2xl font-bold text-white mb-4'>;
               Ready to Transform Your Business?;
             </h3>;
             <p className='text-slate-300 mb-6 max-w-2xl mx-auto'>;
-=======
           <p className='text - slate - 300 text - sm mb - 4 leading - relaxed'>            {service.description}
           </p>;
           {/* Features */}          <p className="text - slate - 300 text - sm mb - 4 leading - relaxed">;
@@ -1174,25 +1733,21 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
               Ready to Transform Your Business?;
             </h3>;
             <p className='text - slate - 300 mb - 6 max - w-2xl mx - auto'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               Join thousands of businesses already leveraging our innovative AI;
               and IT services to drive growth, efficiency, and competitive;
               advantage.;
             </p>;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   );
 
 }
 =======
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-  );
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
             <div className='flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-4'>;
               <motion.button;
                 while_hover={{ scale: 1.05 }}
@@ -1226,5 +1781,24 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
       </div>;
     </section>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+<<<<<<< HEAD
+);
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
+=======
+}
+=======
+  );
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

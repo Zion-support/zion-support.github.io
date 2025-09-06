@@ -1,12 +1,29 @@
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/onboarding/OnboardingWizard.tsx
 
 
 <<<<<<< HEAD
 =======
+========
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/onboarding/OnboardingWizard.tsx
+=======
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useState, useEffect  } from 'react';
+import { useNavigate  } from 'react-router-dom';
+import { useAuth  } from '@/hooks/useAuth';
+import { Button  } from '@/components/ui/button';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from '@/components/ui/card';
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import {useState, useEffect} from 'react';
 import {useNavigate} from 'react-router-dom';
 import {useAuth} from '@/hooks/useAuth';
 import {Button} from '@/components/ui/button';
 import {Card, CardContent, CardFooter, CardHeader, CardTitle} from '@/components/ui/card';
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -20,12 +37,20 @@ import {Card, CardContent, CardFooter, CardHeader, CardTitle} from '@/components
 import Rocket from 'lucide-react / dist / esm / icons / rocket';
 import {FileText, Users, Calendar, Eye, MessageSquare} from 'lucide-react';
 import {cn} from '@/lib / utils';
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/onboarding/OnboardingWizard.tsx
 
 interface WizardStep {
 <<<<<<< HEAD
 
 =======
 
+========
+interface WizardStep {
+  title: string
+  description: string
+  icon: React.ReactNode
+  action: {
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/onboarding/OnboardingWizard.tsx
 import {FileText, Users, Calendar, Eye, MessageSquare} from 'lucide-react';
 import {cn} from '@/lib/utils';
 interface WizardStep {;
@@ -38,22 +63,32 @@ interface WizardStep {;
   };
   skipText?: string;
 }
-
 interface OnboardingWizardProps {;
   type: 'client' | 'talent',;
   onComplete: () => void,;
   onSkip: () => void,;
   className?: string;
 }
-
 export function OnboardingWizard(): any ({ type, onComplete, onSkip, className }: OnboardingWizardProps) {;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/onboarding/OnboardingWizard.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/onboarding/OnboardingWizard.tsx
   const [currentStep, setCurrentStep] = useState(0);
-
   const navigate = useNavigate();
   const { user } = useAuth();
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/onboarding/OnboardingWizard.tsx
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import Rocket from 'lucide-react/dist/esm/icons/rocket';
+import { FileText, Users, Calendar, Eye, MessageSquare  } from 'lucide-react';
+import { cn } from '@/lib/utils';
+interface WizardStep {
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   title: string,
   description: string,
   icon: React.ReactNode,
@@ -75,9 +110,14 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
   const [currentStep, setCurrentStep] = useState(0);
   const navigate = useNavigate();
   const { user } = useAuth();
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { useState, useEffect } from 'react',;
 import { useNavigate } from 'react-router-dom',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -102,6 +142,7 @@ interface OnboardingWizardProps {;
   onComplete: () => void,;
   onSkip: () => void,;
   className?: string;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 }
@@ -120,6 +161,45 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+  title: string
+  description: string
+  icon: React.ReactNode
+  action: {
+    text: string
+
+    url: string
+  }
+  skipText?: string
+}
+interface OnboardingWizardProps {
+
+  type: 'client' | 'talent'
+  onComplete: () => void
+  onSkip: () => void
+
+  className?: string
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+export function OnboardingWizard({ type, onComplete, onSkip, className }: OnboardingWizardProps) {
+<<<<<<< HEAD
+  const [currentStep, setCurrentStep] = useState(0);
+
+  const navigate = useNavigate();
+  const { user } = useAuth();
+=======
+  const [currentStep, setCurrentStep] = useState(0),
+  const navigate = useNavigate(),
+  const { user } = useAuth(),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   // Define steps based on user type
   const clientSteps: WizardStep[] = [
     {
@@ -129,6 +209,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       action: {
         text: "Post a Job"
         url: "/post-job"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -139,6 +220,17 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+      }
+      skipText: "I'll do this later"
+    }
+=======
+      },
+      skipText: "I'll do this later"
+    },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     {
       title: "View suggested matches"
       description: "Our AI system will find the best talent matches"
@@ -146,6 +238,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       action: {
         text: "View Matches"
         url: "/talent"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -156,6 +249,17 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+      }
+      skipText: "Skip for now"
+    }
+=======
+      },
+      skipText: "Skip for now"
+    },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     {
       title: "Contact talent"
       description: "Reach out to the talent that fits your needs"
@@ -166,9 +270,12 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       }
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/onboarding/OnboardingWizard.tsx
     text: string,
     url: string;
   }
@@ -222,12 +329,22 @@ function OnboardingWizard() {
   ];
 ;
   const talent_steps: WizardStep[] = [;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/onboarding/OnboardingWizard.tsx
 
     {
       title: "Complete your profile"
       description: "Add your skills, experience, and preferences";
 
 
+=======
+  ];
+  const talentSteps: WizardStep[] = [
+    {
+      title: "Complete your profile"
+      description: "Add your skills, experience, and preferences";
+      icon: <FileText className="h-6 w-6 text-zion-purple" />
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   ],
 
   const talentSteps: WizardStep[] = [
@@ -235,6 +352,7 @@ function OnboardingWizard() {
       title: "Complete your profile",
       description: "Add your skills, experience, and preferences",
       icon: <FileText className="h-6 w-6 text-zion-purple" />,
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       action: {
@@ -243,12 +361,26 @@ function OnboardingWizard() {
 
 <<<<<<< HEAD
 =======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+      action: {
+        text: "Edit Profile"
+        url: "/profile"
+<<<<<<< HEAD
+      }
+      skipText: "I'll do this later"
+    }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
       },
       skipText: "I'll do this later"
     },
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     {
       title: "Define skills & availability"
       description: "Let clients know when you're available and what you can do"
@@ -256,6 +388,7 @@ function OnboardingWizard() {
       action: {
         text: "Set Availability"
         url: "/profile?tab=skills"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -266,6 +399,17 @@ function OnboardingWizard() {
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+      }
+      skipText: "Skip for now"
+    }
+=======
+      },
+      skipText: "Skip for now"
+    },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     {
       title: "Preview your profile"
       description: "See how clients will view your profile"
@@ -273,6 +417,7 @@ function OnboardingWizard() {
       action: {
         text: "Preview Profile"
         url: `/talent/${user?.id}`
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -283,13 +428,36 @@ function OnboardingWizard() {
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+      }
+      skipText: "Skip for now"
+    }
+=======
+      },
+      skipText: "Skip for now"
+    },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     {
       title: "Enable AI matchmaking"
       description: "Let our AI find the perfect opportunities for you"
       icon: <Rocket className="h-6 w-6 text-zion-cyan" />
       action: {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        text: "Enable Matchmaking"
+        url: "/talent-dashboard"
+      }
+    }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   ];
   const steps = type === 'client' ? clientSteps : talentSteps;
   // Navigate to the specified URL
@@ -311,7 +479,21 @@ function OnboardingWizard() {
       // Last step
       onSkip()
     }
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+  }
+=======
+        text: "Enable Matchmaking",
+        url: "/talent-dashboard"
+      }
+    }
+=======
+  };
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   ],;
   const steps = type === 'client' ? clientSteps : talentSteps,;
   // Navigate to the specified URL;
@@ -334,6 +516,7 @@ function OnboardingWizard() {
       onSkip();
     }
   },
+<<<<<<< HEAD
 
 =======
 
@@ -342,14 +525,28 @@ function OnboardingWizard() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
     <Card className={cn("border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md", className)}>
       <CardHeader>
         <CardTitle className="text-center text-white">
           {type === 'client' ?
             "Ready to find top IT talent?" :
+<<<<<<< HEAD
 =======
 
+========
+    {
+      title: "Complete your profile"
+      description: "Add your skills, experience, and preferences";
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/onboarding/OnboardingWizard.tsx
   // Define steps based on user type;
   const clientSteps: WizardStep[] = [;
     {;
@@ -382,7 +579,6 @@ function OnboardingWizard() {
       }
     }
   ];
-
   const talentSteps: WizardStep[] = [;
     {;
       title: "Complete your profile",;
@@ -424,9 +620,7 @@ function OnboardingWizard() {
       }
     }
   ];
-
   const steps = type === 'client' ? clientSteps : talentSteps;
-
   // Navigate to the specified URL;
   const handleAction = () => {;
     if (currentStep < steps && steps.length - 1) {;
@@ -438,7 +632,6 @@ function OnboardingWizard() {
       onComplete();
     }
   };
-
   // Skip the current step;
   const handleSkip = () => {;
     if (currentStep < steps && steps.length - 1) {;
@@ -448,14 +641,150 @@ function OnboardingWizard() {
       onSkip();
     }
   };
-
   return (
+=======
+
+import { useState, useEffect } from 'react',;
+import { useNavigate } from 'react-router-dom',;
+import { useAuth } from '@/hooks/useAuth',;
+import { Button } from '@/components/ui/button',;
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card',;
+import Rocket from 'lucide-react/dist/esm/icons/rocket',;
+import { FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react',;
+import { cn } from '@/lib/utils',;
+;
+interface WizardStep {;
+  title:string,;
+  description:string,;
+  icon:React.ReactNode,;
+  action:{;
+    text:string,;
+    url:string;
+  },;
+  skipText?:string,;}
+;
+interface OnboardingWizardProps {;
+  type:'client' | 'talent',;
+  onComplete:() => void,;
+  onSkip:() => void,;
+  className?:string;
+}
+;
+export function OnboardingWizard({ type, onComplete, onSkip, className } OnboardingWizardProps) {;
+  const [currentStep, setCurrentStep] = useState(0),;
+  const navigate = useNavigate(),;
+  const { user } = useAuth(),;
+  ;
+  // Define steps based on user type;
+  const clientSteps:WizardStep[] = [;
+    {;
+      title:"Post your first job",;
+      description:"Describe the talent you need for your project",;
+      icon:<FileText className="h-6 w-6 text-zion-purple" />,;
+      action:{;
+        text:"Post a Job",;
+        url:"/post-job";
+      },;
+      skipText:"I'll do this later";
+    },;
+    {;
+      title:"View suggested matches",;
+      description:"Our AI system will find the best talent matches",;
+      icon:<Users className="h-6 w-6 text-zion-cyan" />,;
+      action:{;
+        text:"View Matches",;
+        url:"/talent";
+      },;
+      skipText:"Skip for now";
+    },;
+    {;
+      title:"Contact talent",;
+      description:"Reach out to the talent that fits your needs",;
+      icon:<MessageSquare className="h-6 w-6 text-zion-purple" />,;
+      action:{;
+        text:"Browse Talent",;
+        url:"/talent";
+      }
+    }
+  ],;
+;
+  const talentSteps:WizardStep[] = [;
+    {;
+      title:"Complete your profile",;
+      description:"Add your skills, experience, and preferences",;
+      icon:<FileText className="h-6 w-6 text-zion-purple" />,;
+      action:{;
+        text:"Edit Profile",;
+        url:"/profile";
+      },;
+      skipText:"I'll do this later";
+    },;
+    {;
+      title:"Define skills & availability",;
+      description:"Let clients know when you're available and what you can do",;
+      icon:<Calendar className="h-6 w-6 text-zion-cyan" />,;
+      action:{;
+        text:"Set Availability",;
+        url:"/profile?tab=skills";
+      },;
+      skipText:"Skip for now";
+    },;
+    {;
+      title:"Preview your profile",;
+      description:"See how clients will view your profile",;
+      icon:<Eye className="h-6 w-6 text-zion-purple" />,;
+      action:{;
+        text:"Preview Profile",;
+        url:`/talent/${user?.id}`;
+      },;
+      skipText:"Skip for now";
+    },;
+    {;
+      title:"Enable AI matchmaking",;
+      description:"Let our AI find the perfect opportunities for you",;
+      icon:<Rocket className="h-6 w-6 text-zion-cyan" />,;
+      action:{;
+        text:"Enable Matchmaking",;
+        url:"/talent-dashboard";
+      }
+    }
+  ],;
+  ;
+  const steps = type === 'client' ? clientSteps :talentSteps,;
+;
+  // Navigate to the specified URL;
+  const handleAction = () => {;
+    if (currentStep < steps.length - 1) {;
+      navigate(steps[currentStep].action.url),;
+      setCurrentStep(currentStep + 1),;
+    } else {;
+      // Last step;
+      navigate(steps[currentStep].action.url),;
+      onComplete(),;
+    }
+  },;
+  ;
+  // Skip the current step;
+  const handleSkip = () => {;
+    if (currentStep < steps.length - 1) {;
+      setCurrentStep(currentStep + 1),;
+    } else {;
+      // Last step;
+      onSkip(),;
+    }
+  },;
+  ;
+  return (;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     <Card className={cn("border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md", className)}>;
       <CardHeader>;
         <CardTitle className="text-center text-white">;
           {type === 'client' ? ;
+<<<<<<< HEAD
             "Ready to find top IT talent?" : ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+            "Ready to find top IT talent?" :;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             "Let's build your professional profile"}
         </CardTitle>;
       </CardHeader>;
@@ -463,10 +792,12 @@ function OnboardingWizard() {
         <div className="flex items-center mb-6">;
           {/* Step dots */}
           <div className="flex items-center justify-center flex-1">;
+<<<<<<< HEAD
             {steps && steps.map((_, index) => (;
               <div
                 key={index}
                 className={cn(
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/onboarding/OnboardingWizard.tsx
 <<<<<<< HEAD
 
 =======
@@ -479,21 +810,65 @@ function OnboardingWizard() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+                  "h-2 w-2 rounded-full mx-1"
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/onboarding/OnboardingWizard.tsx
+=======
+            "Let's build your professional profile"}
+        </CardTitle>
+      </CardHeader>
+      <CardContent>
+        <div className="flex items-center mb-6">
+          {/* Step dots */}
+          <div className="flex items-center justify-center flex-1">
+            {steps.map((_, index) => (
+              <div
+                key={index}
+                className={cn(
+<<<<<<< HEAD
+                  "h-2 w-2 rounded-full mx-1";
+
+=======
+                  "h-2 w-2 rounded-full mx-1",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   index === currentStep
                     ? "bg-zion-purple scale-125"
                     : index < currentStep
                     ? "bg-zion-cyan"
                     : "bg-zion-blue-light"
                 )}
+<<<<<<< HEAD
+=======
+            {steps.map((_, index) => (;
+              <div;
+                key={index}
+                className={cn(;
+                  "h-2 w-2 rounded-full mx-1",;
+                  index === currentStep;
+                    ? "bg-zion-purple scale-125";
+                    :index < currentStep;
+                    ? "bg-zion-cyan";
+                    :"bg-zion-blue-light";                )}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               />;
             ))}
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/onboarding/OnboardingWizard.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/onboarding/OnboardingWizard.tsx
           </div>;
         </div>;
-
+<<<<<<< HEAD
+=======
+;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <div className="flex flex-col items-center text-center p-4">;
           <div className="bg-gradient-to-br from-zion-blue to-zion-purple/20 p-4 rounded-full mb-4">;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/onboarding/OnboardingWizard.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/onboarding/OnboardingWizard.tsx
             {steps[currentStep].icon}
           </div>;
           <h3 className="text-xl font-bold text-white mb-2">{steps[currentStep].title}</h3>;
@@ -501,29 +876,57 @@ function OnboardingWizard() {
         </div>;
       </CardContent>;
       <CardFooter className="flex flex-col space-y-2">;
+<<<<<<< HEAD
         <Button
           className="w-full bg-zion-purple hover:bg-zion-purple-light"
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/onboarding/OnboardingWizard.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/onboarding/OnboardingWizard.tsx
           onClick={handleAction}>;
           {steps[currentStep].action && action.text}
         </Button>;
-
         {steps[currentStep].skipText && (;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/onboarding/OnboardingWizard.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/onboarding/OnboardingWizard.tsx
           <Button
             variant="ghost"
             className="text-zion-slate-light hover:text-white"
             onClick={handleSkip}>;
+=======
+        <Button;
+          className="w-full bg-zion-purple hover:bg-zion-purple-light";
+          onClick={handleAction}
+        >;
+          {steps[currentStep].action.text}
+        </Button>;
+        ;
+        {steps[currentStep].skipText && (;
+          <Button;
+            variant="ghost";
+            className="text-zion-slate-light hover:text-white";
+            onClick={handleSkip}
+          >;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             {steps[currentStep].skipText}
           </Button>;
         )}
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/onboarding/OnboardingWizard.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/onboarding/OnboardingWizard.tsx
       </CardFooter>;
     </Card>;
+<<<<<<< HEAD
   );
 }
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/onboarding/OnboardingWizard.tsx
 
 =======
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/onboarding/OnboardingWizard.tsx
       icon: <FileText className="h - 6 w - 6 text - zion - purple" />,
       action: {
         text: "Edit Profile",
@@ -644,4 +1047,59 @@ if ( {) {
       </CardFooter>;
     </Card>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+  ),;}
+ 
+}];
+const talentSteps: WizardStep[] = [ 
+};
+skipText: "Skip for now" 
+};
+}];
+: index < currentStep ? "bg-zion-cyan" : "bg-zion-blue-light") 
+}/>) ) 
+}</div> </div> </div> </CardContent> <CardFooter className="flex flex-col space-y-2" > <Button > {
+  steps[currentStep].action.text 
+}</Button> {
+  steps[currentStep].skipText && (<Button variant="ghost" className="text-zion-slate-light hover:text-white" onClick= {
+  handleSkip 
+}> {
+  steps[currentStep].skipText 
+}</Button>) 
+}</CardFooter> </Card>) 
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+              />
+            ))}
+          </div>
+        </div>
+        <div className="flex flex-col items-center text-center p-4">
+          <div className="bg-gradient-to-br from-zion-blue to-zion-purple/20 p-4 rounded-full mb-4">
+            {steps[currentStep].icon}
+          </div>
+          <h3 className="text-xl font-bold text-white mb-2">{steps[currentStep].title}</h3>
+          <p className="text-zion-slate-light mb-6">{steps[currentStep].description}</p>
+        </div>
+      </CardContent>
+      <CardFooter className="flex flex-col space-y-2">
+        <Button
+          className="w-full bg-zion-purple hover:bg-zion-purple-light"
+          onClick={handleAction}
+        >
+          {steps[currentStep].action.text}
+        </Button>
+        {steps[currentStep].skipText && (
+          <Button
+            variant="ghost"
+            className="text-zion-slate-light hover:text-white"
+            onClick={handleSkip}
+          >
+            {steps[currentStep].skipText}
+          </Button>
+        )}
+      </CardFooter>
+    </Card>
+  )
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

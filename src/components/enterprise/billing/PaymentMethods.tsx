@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React from 'react'
 import {
   Card
@@ -11,13 +19,23 @@ import {
   CardTitle
 } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+import React from "react",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { CreditCard, Plus, Trash } from 'lucide-react'
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
 import { CreditCard, Plus, Trash } from 'lucide-react'
 import React from "react"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -26,12 +44,30 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 export function PaymentMethods() {
 >>>>>>>   // Mock payment methods
+=======
+=======
+=======
+
+import React from "react",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { CreditCard, Plus, Trash } from 'lucide-react'
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export function PaymentMethods() {
+  // Mock payment methods
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
   const paymentMethods = [
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       id: 'pm-1'
       type: 'credit_card'
       brand: 'Visa'
@@ -49,12 +85,23 @@ export function PaymentMethods() {
       isDefault: false
     }
   ]
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+      id: 'pm-1',
+      type: 'credit_card',
+      brand: 'Visa',
+      last4: '4242',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       id: "pm-1",
       type: "credit_card",
       brand: "Visa",
       last4: "4242",
       expMonth: 12,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -63,6 +110,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       expYear: 2025,
 >>>>>>>       isDefault: true},
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      expYear: 2025,
+      isDefault: true},
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     {
       id: "pm-2",
       type: "credit_card",
@@ -70,6 +124,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       last4: "8888",
       expMonth: 4,
       expYear: 2026,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       isDefault: false}
@@ -91,20 +146,49 @@ ursor/fix-website-loading-errors-and-merge-6662
         </CardDescription>
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+<<<<<<< HEAD
+      isDefault: false,
+    },
+  ]
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      isDefault: false}
+  ],
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
     <Card>
       <CardHeader>
         <CardTitle>Payment Methods</CardTitle>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
         <CardDescription>Manage your payment methods for automatic billing</CardDescription>
 >>>>>>>       </CardHeader>
 
+=======
+<<<<<<< HEAD
+        <CardDescription>
+          Manage your payment methods for automatic billing
+        </CardDescription>
+      </CardHeader>
+      <CardContent className='space-y-4'>
+        {paymentMethods.map(method => (
+          <div            key={method.id}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <CardContent className="space-y-4">
         {paymentMethods.map((method,) => (
           <div
             key = {method.id,}
+<<<<<<< HEAD
 >>>>>>>             className={`flex items-center justify-between p-4 rounded-lg border ${
               method.isDefault ? "bg-muted border-primary" : "border-border"
 import React from 'react';
@@ -161,12 +245,16 @@ export function PaymentMethods() {;
           <div
             key = {method && method.id,}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <CardDescription>Manage your payment methods for automatic billing</CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
         {paymentMethods.map((method) => (
           <div 
             key={method.id}
+<<<<<<< HEAD
 
 >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -174,6 +262,16 @@ export function PaymentMethods() {;
 
               method.isDefault ? "bg-muted border-primary" : "border-border";
 >>>>>>>             }`}
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            className={`flex items-center justify-between p-4 rounded-lg border ${
+              method.isDefault ? "bg-muted border-primary" : "border-border"
+            }`}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           >
             <div className="flex items-center space-x-4">
               <div className="h-10 w-10 rounded-md border border-border flex items-center justify-center bg-background">
@@ -183,6 +281,7 @@ export function PaymentMethods() {;
                 <p className="font-medium">
                   {method.brand} •••• {method.last4}
                   {method.isDefault && (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                       Default
@@ -196,6 +295,8 @@ export function PaymentMethods() {;
             </div>
 
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     <span className='ml-2 text-xs rounded-full bg-primary/20 text-primary px-2 py-0.5'>                      Default
                     </span>
                   )}
@@ -205,6 +306,7 @@ export function PaymentMethods() {;
               </div>
             </div>
             <div className='flex gap-2'>                    <span className="ml-2 text-xs rounded-full bg-primary/20 text-primary px-2 py-0.5">
+<<<<<<< HEAD
 >>>>>>>                       Default
                     </span>
                   )}
@@ -214,6 +316,33 @@ export function PaymentMethods() {;
                 </p>
               </div>
             </div>
+=======
+=======
+                    <span className="ml-2 text-xs rounded-full bg-primary/20 text-primary px-2 py-0.5">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                      Default
+                    </span>
+                  )}
+                </p>
+<<<<<<< HEAD
+                <p className='text-sm text-muted-foreground'>                <p className="text-sm text-muted-foreground">
+=======
+                <p className="text-sm text-muted-foreground">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                  Expires {method.expMonth}/{method.expYear}
+                </p>
+              </div>
+            </div>
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <div className='flex gap-2'>
               {!method.isDefault && (
                 <Button size='sm' variant='ghost'>
@@ -222,6 +351,7 @@ export function PaymentMethods() {;
               )}
               <Button size='sm' variant='ghost' className='text-destructive'>
                 <Trash className='h-4 w-4' />              </Button>              {!method.isDefault && (
+<<<<<<< HEAD
 >>>>>>>                 <Button size="sm" variant="ghost">Set Default</Button>
 ursor/fix-website-loading-errors-and-merge-6662
                   Expires {method.expMonth}/{method.expYear}
@@ -238,19 +368,44 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                 <Button size="sm" variant="ghost">Set Default</Button>
 >>>>>>>               )}
+=======
+=======
+            <div className="flex gap-2">
+              {!method.isDefault && (
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                <Button size="sm" variant="ghost">Set Default</Button>
+              )}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <Button size="sm" variant="ghost" className="text-destructive">
                 <Trash className="h-4 w-4" />
               </Button>
             </div>
           </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         ))}
       </CardContent>
       <CardFooter>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+        <Button className='gap-1'>
+          <Plus className='h-4 w-4' />          Add Payment Method        <Button className="gap-1">
+<<<<<<< HEAD
+=======
+        <Button className="gap-1">
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <Plus className="h-4 w-4" />
           Add Payment Method
         </Button>
@@ -258,6 +413,7 @@ ursor/fix-website-loading-errors-and-merge-6662
     </Card>;
   );
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         <Button className="gap-1">
@@ -269,15 +425,30 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           <Plus className="h-4 w-4" />
 >>>>>>>           Add Payment Method
+=======
+=======
+        <Button className="gap-1">
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          <Plus className="h-4 w-4" />
+          Add Payment Method
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         </Button>
       </CardFooter>
     </Card>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+}
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React from "react",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -349,11 +520,17 @@ export function PaymentMethods() {;
             </div>
           </div>
         ))}
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
       </CardContent>;
       <CardFooter>;
         <Button className='gap-1'>;
           <Plus className='h-4 w-4' />          Add Payment Method        <Button className="gap-1">;
+=======
+      </CardContent>;
+      <CardFooter>;
+        <Button className="gap-1">;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <Plus className="h-4 w-4" />;
           Add Payment Method;
         </Button>;
@@ -363,9 +540,16 @@ export function PaymentMethods() {;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

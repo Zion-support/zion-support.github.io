@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }; ]; const socialLinks = ['] { name: 'LinkedIn', href: 'https: //linkedin.com/company/zion-tech-group', icon: 'LinkedIn' },'' { name: 'Twitter', href: 'https: //twitter.com/ziontechgroup', icon: 'Twitter' },'' { name: 'GitHub', href: 'https: //github.com/zion-tech-group', icon: 'GitHub' }']; ]; return (') <footer className = "bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">"
 </footer>" <div className = "absolute inset-0 opacity-30">"
 </div>" <div className = "absolute inset-0 bg-gradient-to-br from-slate-800/20 to-slate-900/20"></div>"" <div className = "absolute top-20 left-10 w-4 h-4 bg-cyan-400 rounded-full opacity-60 animate-pulse"></div>"" <div className = "absolute top-40 right-20 w-3 h-3 bg-blue-400 rounded-full opacity-60 animate-pulse"></div>"" <div className = "absolute bottom-40 left-20 w-2 h-2 bg-purple-400 rounded-full opacity-60 animate-pulse"></div>" </div>
@@ -167,6 +170,7 @@
         </div>
       </div>
     </footer>"
+<<<<<<< HEAD
 >>>>>>> 
 ursor/fix-website-loading-errors-and-merge-6662
   ],
@@ -175,6 +179,26 @@ ursor/fix-website-loading-errors-and-merge-6662
     { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: 'LinkedIn' },'',
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: 'Twitter' },'',
     { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: 'GitHub' }'],
+=======
+=======
+import React from 'react';
+
+export default function FuturisticFooter() {
+  return (
+    <footer className="bg-gray-900 text-white p-4">
+      <div className="container mx-auto text-center">
+        <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
+      </div>
+    </footer>
+  );
+}
+  ],
+
+  const socialLinks = ['],
+    { nam: e: 'LinkedIn', hre: f: 'http: s://linkedin.com/company/zion-tech-group', ico: n: 'LinkedIn' },'',
+    { nam: e: 'Twitter', hre: f: 'http: s://twitter.com/ziontechgroup', ico: n: 'Twitter' },'',
+    { nam: e: 'GitHub', hre: f: 'http: s://github.com/zion-tech-group', ico: n: 'GitHub' }']
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   ],
 ,
   return ('),
@@ -193,20 +217,39 @@ ursor/fix-website-loading-errors-and-merge-6662
         <div className="container mx-auto px-4 py-16">",
 </div>,
           <motion.div,",
+<<<<<<< HEAD
             className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16"",
             initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }};
             viewport={{ once: true }};
             transition={{ duration: 0.6, staggerChildren: 0.1 }};
+=======
+            className="grid grid-cols-2: md: grid-cols-4 gap-8 mb-16"",
+
+            initial={{ opacit: y: 0, y: 20 }},
+            whileInView={{ opacit: y: 1, y: 0 }},
+            viewport={{ onc: e: true }},
+            transition={{ duratio: n: 0.6, staggerChildre: n: 0.1 }},
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           >,
 </motion>,
               <motion.div,
                 key={stat.label}",
                 className="text-center"",
+<<<<<<< HEAD
                 initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }};
                 viewport={{ once: true }};
                 transition={{ duration: 0.6, delay: index * 0.1 }};
+=======
+
+                initial={{ opacit: y: 0, y: 20 }},
+                whileInView={{ opacit: y: 1, y: 0 }},
+                viewport={{ onc: e: true }},
+                transition={{ duratio: n: 0.6, dela: y: index * 0.1 }},
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               >,
 </motion>",
                 <div className="flex justify-center mb-3">",
@@ -217,6 +260,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 </stat>,
                   </div>,
           {/* Main Footer Content */}",
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8 mb-12">",
 </div>",
             <div className="lg: col-span-2">",
@@ -225,6 +269,16 @@ ursor/fix-website-loading-errors-and-merge-6662
                 initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }};
                 transition={{ duration: 0.6 }}",
+=======
+          <div className="grid grid-cols-1: md: grid-cols-2: lg:grid-cols-3: xl:grid-cols-6 gap-8 mb-12">",
+</div>",
+            <div className="l: g: col-span-2">",
+</div>,
+              <motion.div,
+                initial={{ opacit: y: 0, y: 20 }},
+                whileInView={{ opacit: y: 1, y: 0 }},
+                transition={{ duratio: n: 0.6 }}",
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 className="flex items-center space-x-3 mb-6"",
               >,
 </motion>",
@@ -254,7 +308,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 </div>",
                   <Phone className="w-4 h-4 text-cyan-400" />",
 </Phone>",
+<<<<<<< HEAD
                   <a href="tel: +13024640950" className="hover:text-cyan-400 transition-colors">",
+=======
+                  <a href="te: l: +13024640950" className="hove: r:text-cyan-400 transition-colors">",
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 </a>,
                   </a>,
                 </div>",
@@ -262,7 +320,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 </div>",
                   <Mail className="w-4 h-4 text-cyan-400" />",
 </Mail>",
+<<<<<<< HEAD
                   <a href="mailto: kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">",
+=======
+                  <a href="mailt: o: kleber@ziontechgroup.com" className="hove: r:text-cyan-400 transition-colors">",
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 </a>,
                   </a>,
                 </div>",
@@ -286,11 +348,19 @@ ursor/fix-website-loading-errors-and-merge-6662
 </li>,
                       <Link,
                         href={link.href}",
+<<<<<<< HEAD
                         className="flex items-center text-slate-400 hover: text-cyan-400 transition-colors duration-200 group"",
                       >,
 </Link>",
                         <div className="w-1 h-1 bg-slate-600 rounded-full mr-3 group-hover: bg-cyan-400 transition-colors duration-200"></div>"",
                         <ArrowRight className="w-3 h-3 ml-2 opacity-0 group-hover: opacity-100 group-hover:translate-x-1 transition-all duration-200" />",
+=======
+                        className="flex items-center text-slate-400: hover: text-cyan-400 transition-colors duration-200 group"",
+                      >,
+</Link>",
+                        <div className="w-1 h-1 bg-slate-600 rounded-full mr-3 group-hove: r: bg-cyan-400 transition-colors duration-200"></div>"",
+                        <ArrowRight className="w-3 h-3 ml-2 opacity-0 group-hove: r: opacity-100 group-hove: r:translate-x-1 transition-all duration-200" />",
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 </ArrowRight>,
                       </Link>,
                     </li>,
@@ -299,7 +369,11 @@ ursor/fix-website-loading-errors-and-merge-6662
           </div>",
           <div className="pt-8 border-t border-slate-800/50">",
 </div>",
+<<<<<<< HEAD
             <div className="flex flex-col md: flex-row justify-between items-center space-y-4 md:space-y-0">",
+=======
+            <div className="flex flex-col: md: flex-row justify-between items-center space-y-4: md:space-y-0">",
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 </div>",
               <div className="text-slate-400 text-sm">",
 </div>,
@@ -328,9 +402,13 @@ ursor/fix-website-loading-errors-and-merge-6662
       </div>,
     </footer>",
 
+<<<<<<< HEAD
     </footer>";
 
 >>>>>>>   ],;
+=======
+  ],;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 ,;
   const socialLinks = ['],;
     { nam: e: 'LinkedIn', hre: f: 'http: s://linkedin.com/company/zion-tech-group', ico: n: 'LinkedIn' },'',;
@@ -488,7 +566,15 @@ ursor/fix-website-loading-errors-and-merge-6662
         </div>,;
       </div>,;
     </footer>",;
+<<<<<<< HEAD
 
 >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

@@ -1,16 +1,46 @@
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/dashboard/TalentDashboard.tsx
 
 
 <<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from "react";
+import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {Badge} from "@/components/ui/badge";
+import {ChevronRight, FileText, Image, Clock, Zap, BookOpen} from "lucide-react";
+import {Link} from "react-router-dom";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React from "react",
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
+<<<<<<< HEAD
 
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from "lucide-react";
+import { Link } from "react-router-dom";
+=======
+import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from "lucide-react",
+import { Link } from "react-router-dom",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export function TalentDashboard() {
   return (
     <div className="space-y-6 px-4 pb-24">
@@ -146,9 +176,13 @@ export function TalentDashboard() {
       </section>
     </div>
   )
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+========
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/dashboard/TalentDashboard.tsx
 import React from "react";
 import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -160,15 +194,40 @@ import {Link} from "react-router-dom";
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React from "react",;
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { Badge } from "@/components/ui/badge",;
 import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from "lucide-react",;
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
 
 export function TalentDashboard() {;
   return (
+=======
+
+import React from "react",;
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+import { Badge } from "@/components/ui/badge",;
+import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from "lucide-react",;
+import { Link } from "react-router-dom",;
+;
+export function TalentDashboard() {;
+  return (;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+export function TalentDashboard() {;
+  return (;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="space-y-6 px-4 pb-24">;
       <section>;
         <div className="flex items-center justify-between mb-4">;
@@ -179,7 +238,13 @@ export function TalentDashboard() {;
             </Button>;
           </Link>;
         </div>;
-
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        ;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <div className="space-y-3">;
           <Card>;
             <CardContent className="p-4">;
@@ -200,7 +265,8 @@ export function TalentDashboard() {;
                 </div>;
               </div>;
               <div className="flex gap-2 mt-3">;
-=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 import React from './react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
@@ -242,13 +308,21 @@ function TalentDashboard() {
                 </div>;
               </div>;
               <div className="flex gap - 2 mt - 3">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <Button size="sm">Apply Now</Button>;
                 <Button size="sm" variant="outline">View Details</Button>;
               </div>;
             </CardContent>;
           </Card>;
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/dashboard/TalentDashboard.tsx
 
+========
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/dashboard/TalentDashboard.tsx
           <Card>;
             <CardContent className="p - 4">;
               <div className="flex justify - between items - start">;
@@ -268,7 +342,37 @@ function TalentDashboard() {
                 </div>;
               </div>;
               <div className="flex gap - 2 mt - 3">;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/dashboard/TalentDashboard.tsx
 
+========
+=======
+          ;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+          <Card>;
+            <CardContent className="p-4">;
+              <div className="flex justify-between items-start">;
+                <div className="space-y-1">;
+                  <h3 className="font-medium">UX/UI Designer</h3>;
+                  <div className="text-sm text-muted-foreground">Creative Studios</div>;
+                  <div className="flex items-center gap-1 mt-1">;
+                    <Badge variant="secondary" className="text-xs">Hybrid</Badge>;
+                    <Badge variant="secondary" className="text-xs">Contract</Badge>;
+                  </div>;
+                </div>;
+                <div className="flex flex-col items-end">;
+                  <div className="bg-primary/10 text-primary font-medium rounded-full px-2 py-1 text-xs">;
+                    87% match;
+                  </div>;
+                  <span className="text-xs text-muted-foreground mt-1">4 hours ago</span>;
+                </div>;
+              </div>;
+              <div className="flex gap-2 mt-3">;
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/dashboard/TalentDashboard.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <Button size="sm">Apply Now</Button>;
                 <Button size="sm" variant="outline">View Details</Button>;
               </div>;
@@ -276,7 +380,12 @@ function TalentDashboard() {
           </Card>;
         </div>;
       </section>;
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/dashboard/TalentDashboard.tsx
 
+========
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/dashboard/TalentDashboard.tsx
       <section>;
         <h2 className="text - lg font - medium mb - 4">Application Tracker</h2>;
         <Card>;
@@ -300,13 +409,52 @@ function TalentDashboard() {
               </div>;
             </div>;
             <Button variant="outline" className="w - full mt - 4">;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/dashboard/TalentDashboard.tsx
 
+========
+=======
+      ;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+      <section>;
+        <h2 className="text-lg font-medium mb-4">Application Tracker</h2>;
+        <Card>;
+          <CardContent className="p-4">;
+            <div className="grid grid-cols-2 gap-4">;
+              <div className="text-center p-3 bg-primary/5 rounded-lg">;
+                <div className="text-2xl font-bold text-primary">3</div>;
+                <div className="text-xs text-muted-foreground">Active Applications</div>;
+              </div>;
+              <div className="text-center p-3 bg-primary/5 rounded-lg">;
+                <div className="text-2xl font-bold text-primary">2</div>;
+                <div className="text-xs text-muted-foreground">Interviews Scheduled</div>;
+              </div>;
+              <div className="text-center p-3 bg-primary/5 rounded-lg">;
+                <div className="text-2xl font-bold text-primary">5</div>;
+                <div className="text-xs text-muted-foreground">Jobs Saved</div>;
+              </div>;
+              <div className="text-center p-3 bg-primary/5 rounded-lg">;
+                <div className="text-2xl font-bold text-primary">12</div>;
+                <div className="text-xs text-muted-foreground">Jobs Viewed</div>;
+              </div>;
+            </div>;
+            <Button variant="outline" className="w-full mt-4">;
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/dashboard/TalentDashboard.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               View All Applications;
             </Button>;
           </CardContent>;
         </Card>;
       </section>;
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/dashboard/TalentDashboard.tsx
 
+========
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/dashboard/TalentDashboard.tsx
       <section>;
         <h2 className="text - lg font - medium mb - 4">Quick Actions</h2>;
         <div className="grid grid - cols - 2 gap - 4">;
@@ -332,12 +480,57 @@ function TalentDashboard() {
         <div className="flex items - center justify - between mb - 4">;
           <h2 className="text - lg font - medium">Learning Hub</h2>;
           <Button variant="ghost" size="sm" className="h - 8">;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/dashboard/TalentDashboard.tsx
 
+========
+=======
+      ;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+      <section>;
+        <h2 className="text-lg font-medium mb-4">Quick Actions</h2>;
+        <div className="grid grid-cols-2 gap-4">;
+          <Button variant="outline" className="h-auto py-4 flex flex-col gap-1">;
+            <FileText className="h-5 w-5 mb-1" />;
+            <span>Update Resume</span>;
+          </Button>;
+          <Button variant="outline" className="h-auto py-4 flex flex-col gap-1">;
+            <Image className="h-5 w-5 mb-1" />;
+            <span>Portfolio</span>;
+          </Button>;
+          <Button variant="outline" className="h-auto py-4 flex flex-col gap-1">;
+            <Clock className="h-5 w-5 mb-1" />;
+            <span>Availability</span>;
+          </Button>;
+          <Button variant="outline" className="h-auto py-4 flex flex-col gap-1">;
+            <Zap className="h-5 w-5 mb-1" />;
+            <span>AI Resume Boost</span>;
+          </Button>;
+        </div>;
+      </section>;
+<<<<<<< HEAD
+      ;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+      <section>;
+        <div className="flex items-center justify-between mb-4">;
+          <h2 className="text-lg font-medium">Learning Hub</h2>;
+          <Button variant="ghost" size="sm" className="h-8">;
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/dashboard/TalentDashboard.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             View all;
           </Button>;
         </div>;
         <Card>;
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/dashboard/TalentDashboard.tsx
 
+========
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/dashboard/TalentDashboard.tsx
           <CardContent className="p - 4">;
             <div className="flex items - center gap - 3">;
               <div className="bg - primary / 10 p - 3 rounded - full">;
@@ -346,13 +539,33 @@ function TalentDashboard() {
               <div>;
                 <h3 className="font - medium">Improve your profile visibility</h3>;
                 <p className="text - sm text - muted - foreground">5 tips for getting noticed by clients</p>;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/dashboard/TalentDashboard.tsx
 
+========
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+          <CardContent className="p-4">;
+            <div className="flex items-center gap-3">;
+              <div className="bg-primary/10 p-3 rounded-full">;
+                <BookOpen className="h-6 w-6 text-primary" />;
+              </div>;
+              <div>;
+                <h3 className="font-medium">Improve your profile visibility</h3>;
+                <p className="text-sm text-muted-foreground">5 tips for getting noticed by clients</p>;
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/dashboard/TalentDashboard.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </div>;
             </div>;
           </CardContent>;
         </Card>;
       </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/dashboard/TalentDashboard.tsx
     </div>;
   );
 
@@ -370,3 +583,24 @@ function TalentDashboard() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+    </div>);
+}
+=======
+    </div>;
+  ),;
+} export function TalentDashboard () {
+  return (<div className="space-y-6 px-4 pb-24" > flex items-center justify-between mb-4"> <h2 className=" text-lg font-medium">New Job Matches</h2> <Link to=" /mobile/browse"> <Button variant=" ghost"size=" sm"className=" h-8 gap-1"> View all <ChevronRight className=" h-4 w-4"/> </Button> </Link> </div> <div className=" space-y-3"> <Card> <CardContent className=" p-4"> <div className=" flex justify-between items-start"> <div className=" space-y-1"> <h3 className=" font-medium">Senior React Developer</h3> <div className=" text-sm text-muted-foreground">TechCorp Inc.</div> <div className=" flex items-center gap-1 mt-1"> <Badge variant=" secondary"className=" text-xs">Remote</Badge> <Badge variant=" secondary"className=" text-xs">Full-time</Badge> </div> </div> <div className=" flex flex-col items-end"> <div className=" bg-primary/10 text-primary font-medium rounded-full px-2 py-1 text-xs"> 92% match </div> <span className=" text-xs text-muted-foreground mt-1">2 days ago</span> </div> </div> <div className=" flex gap-2 mt-3"> <Button size=" sm">Apply Now</Button> <Button size=" sm"variant=" outline">View Details</Button> </div> </CardContent> </Card> <Card> <CardContent className=" p-4"> <div className=" flex justify-between items-start"> <div className=" space-y-1"> <h3 className=" font-medium">UX/UI Designer</h3> <div className=" text-sm text-muted-foreground">Creative Studios</div> <div className=" flex items-center gap-1 mt-1"> <Badge variant=" secondary"className=" text-xs">Hybrid</Badge> <Badge variant=" secondary"className=" text-xs">Contract</Badge> </div> </div> <div className=" flex flex-col items-end"> <div className=" bg-primary/10 text-primary font-medium rounded-full px-2 py-1 text-xs"> 87% match </div> <span className=" text-xs text-muted-foreground mt-1">4 hours ago</span> </div> </div> <div className=" flex gap-2 mt-3"> <Button size=" sm">Apply Now</Button> <Button size=" sm"variant=" outline">View Details</Button> </div> </CardContent> </Card> </div> </section> <section> <h2 className=" text-lg font-medium mb-4">Application Tracker</h2> <Card> <CardContent className=" p-4"> <div className=" grid grid-cols-2 gap-4"> <div className=" text-center p-3 bg-primary/5 rounded-lg"> <div className=" text-2xl font-bold text-primary">3</div> <div className=" text-xs text-muted-foreground">Active Applications</div> </div> <div className=" text-center p-3 bg-primary/5 rounded-lg"> <div className=" text-2xl font-bold text-primary">2</div> <div className=" text-xs text-muted-foreground">Interviews Scheduled</div> </div> <div className=" text-center p-3 bg-primary/5 rounded-lg"> <div className=" text-2xl font-bold text-primary">5</div> <div className=" text-xs text-muted-foreground">Jobs Saved</div> </div> <div className=" text-center p-3 bg-primary/5 rounded-lg"> <div className=" text-2xl font-bold text-primary">12</div> <div className=" text-xs text-muted-foreground">Jobs Viewed</div> </div> </div> <Button variant=" outline"className=" w-full mt-4"> View All Applications </Button> </CardContent> </Card> </section> <section> <h2 className=" text-lg font-medium mb-4">Quick Actions</h2> <div className=" grid grid-cols-2 gap-4"> <Button variant=" outline"className=" h-auto py-4 flex flex-col gap-1"> <FileText className=" h-5 w-5 mb-1"/> <span>Update Resume</span> </Button> <Button variant=" outline"className=" h-auto py-4 flex flex-col gap-1"> <Image className=" h-5 w-5 mb-1"/> <span>Portfolio</span> </Button> <Button variant=" outline"className=" h-auto py-4 flex flex-col gap-1"> <Clock className=" h-5 w-5 mb-1"/> <span>Availability</span> </Button> <Button variant=" outline"className=" h-auto py-4 flex flex-col gap-1"> <Zap className=" h-5 w-5 mb-1"/> <span>AI Resume Boost</span> </Button> </div> </section> <section> <div className=" flex items-center justify-between mb-4"> <h2 className=" text-lg font-medium">Learning Hub</h2> <Button variant=" ghost"size=" sm"className=" h-8"> View all </Button> </div> <Card> <CardContent className=" p-4"> <div className=" flex items-center gap-3"> <div className=" bg-primary/10 p-3 rounded-full"> <BookOpen className=" h-6 w-6 text-primary"/> </div> <div> <h3 className=" font-medium">Improve your profile visibility</h3> <p className=" text-sm text-muted-foreground" >5 tips for getting noticed by clients</p> </div> </div> </CardContent> </Card> </section> </div> 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/mobile/components/dashboard/TalentDashboard.tsx
+=======
+    </div>;
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+}
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

@@ -1,6 +1,33 @@
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/QuoteManager.tsx
 
 <<<<<<< HEAD
 
+=======
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React, { useState } from "react";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {useAdminQuotes} from "@/hooks/useAdminQuotes";
+import {useAuth} from "@/hooks/useAuth";
+import {Card, CardContent} from "@/components/ui/card";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {Navigate} from "react-router-dom";
+import type { QuoteRequest } from "@/types/quotes";
+import {ProtectedRoute} from "@/components/ProtectedRoute";
+import {QuoteDetails} from "@/components/quotes/QuoteDetails";
+import {ExportToCSV} from "@/components/quotes/ExportToCSV";
+import {QuoteStatusCards, QuotesFilter, QuotesTable} from "@/components/admin/quotes";
+
+export default function QuoteManager() {;
+  const { user } = useAuth();
+  const isAdmin = user?.userType === 'admin';
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React, { useState } from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -12,33 +39,32 @@ import {
 } from "@/components/ui/card",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { Navigate } from "react-router-dom",
+<<<<<<< HEAD
 
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),
   const [showDetails, setShowDetails] = useState(false),
 =======
+========
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/QuoteManager.tsx
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
-
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -47,25 +73,41 @@ import {useAuth} from "@/hooks/useAuth";
 import {Card, CardContent} from "@/components/ui/card";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {Navigate} from "react-router-dom";
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/QuoteManager.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/QuoteManager.tsx
+import type { QuoteRequest } from "@/types/quotes";
+=======
+<<<<<<< HEAD
 import type { QuoteRequest } from "@/types/quotes";
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import {ProtectedRoute} from "@/components/ProtectedRoute";
 import {QuoteDetails} from "@/components/quotes/QuoteDetails";
 import {ExportToCSV} from "@/components/quotes/ExportToCSV";
 import {QuoteStatusCards, QuotesFilter, QuotesTable} from "@/components/admin/quotes";
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/QuoteManager.tsx
 
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/QuoteManager.tsx
 export default function QuoteManager() {;
+=======
+export default function QuoteManager() {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const { user } = useAuth();
   const isAdmin = user?.userType === 'admin';
-
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
   const [showDetails, setShowDetails] = useState(false);
-
+<<<<<<< HEAD
   const {;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/QuoteManager.tsx
 
 =======
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/QuoteManager.tsx
 import React, { useState } from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -91,7 +133,6 @@ function QuoteManager() {
   const [show_details, setShowDetails] = useState (false);
 ;
   const {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     quotes;
     is_loading;
     error;
@@ -103,10 +144,33 @@ function QuoteManager() {
     setSearchQuery;
     date_range;
     setDateRange;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/QuoteManager.tsx
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+=======
+import type { QuoteRequest } from "@/types/quotes",
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+import { QuoteDetails } from "@/components/quotes/QuoteDetails",
+import { ExportToCSV } from "@/components/quotes/ExportToCSV",
+import {
+  QuoteStatusCards,
+  QuotesFilter,
+  QuotesTable
+} from "@/components/admin/quotes",
+
+export default function QuoteManager() {
+  const { user } = useAuth(),
+  const isAdmin = user?.userType === 'admin',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  
+  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),
+  const [showDetails, setShowDetails] = useState(false),
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const {
     quotes,
     isLoading,
@@ -123,6 +187,7 @@ function QuoteManager() {
     toggleArchive,
     deleteQuote
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -131,6 +196,13 @@ function QuoteManager() {
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+  } = useAdminQuotes();
+=======
+  } = useAdminQuotes(),
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   // Count quotes by status
   const statusCounts = {
     new: quotes.filter(q => q.status === 'new').length
@@ -138,6 +210,7 @@ function QuoteManager() {
     accepted: quotes.filter(q => q.status === 'accepted').length
     responded: quotes.filter(q => q.status === 'responded').length
     closed: quotes.filter(q => q.status === 'closed').length
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const handleViewDetails = (quote: QuoteRequest) => {
@@ -178,6 +251,8 @@ function QuoteManager() {
     return <Navigate to="/unauthorized" replace />
 =======
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/QuoteManager.tsx
   // Count quotes by status;
   const statusCounts = {;
     new: quotes && quotes.filter(q => q && q.status === 'new').length,;
@@ -186,25 +261,53 @@ function QuoteManager() {
     responded: quotes && quotes.filter(q => q && q.status === 'responded').length,;
     closed: quotes && quotes.filter(q => q && q.status === 'closed').length;
   };
-
   const handleViewDetails = (quote: QuoteRequest) => {;
     setSelectedQuote(quote),;
     setShowDetails(true);
   };
-
   const handleResetFilters = () => {;
     setStatusFilter('all');
     setArchiveFilter('all');
     setSearchQuery('');
     setDateRange({ from: undefined, to: undefined });
   };
-
   if (!isAdmin) {;
     return <Navigate to="/unauthorized" replace />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   return (
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/QuoteManager.tsx
 <<<<<<< HEAD
+=======
+  }
+=======
+  },
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  const handleViewDetails = (quote: QuoteRequest) => {
+    setSelectedQuote(quote)
+    setShowDetails(true)
+<<<<<<< HEAD
+  }
+=======
+  },
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  const handleResetFilters = () => {
+    setStatusFilter('all'),
+    setArchiveFilter('all'),
+    setSearchQuery(''),
+    setDateRange({ from: undefined, to: undefined })
+<<<<<<< HEAD
+  }
+=======
+  },
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  if (!isAdmin) {
+    return <Navigate to="/unauthorized" replace />
+  }
+  return (
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <ProtectedRoute adminOnly>
       <div>
         <Header />
@@ -217,18 +320,36 @@ function QuoteManager() {
               </div>
               <ExportToCSV quotes={quotes} filename="zion-quote-requests" />
             </div>
+<<<<<<< HEAD
 
 =======
 
 =======
 
             
+========
+=======
+
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/QuoteManager.tsx
+=======
+<<<<<<< HEAD
+=======
+            
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
 import { useAdminQuotes } from "@/hooks/useAdminQuotes",;
 import { useAuth } from "@/hooks/useAuth",;
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/QuoteManager.tsx
 import {;
+========
+import { ;
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/QuoteManager.tsx
+=======
+import {;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   Card,;
   CardContent;
 } from "@/components/ui/card",;
@@ -243,11 +364,28 @@ import {;
   QuotesFilter,;
   QuotesTable;
 } from "@/components/admin/quotes",;
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/QuoteManager.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export default function QuoteManager() {;
   const { user } = useAuth(),;
   const isAdmin = user?.userType === 'admin',;
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),;
   const [showDetails, setShowDetails] = useState(false),;
+<<<<<<< HEAD
+========
+;
+export default function QuoteManager() {;
+  const { user } = useAuth(),;
+  const isAdmin = user?.userType === 'admin',;
+  ;
+  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),;
+  const [showDetails, setShowDetails] = useState(false),;
+;
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/QuoteManager.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const {;
     quotes,;
     isLoading,;
@@ -264,6 +402,10 @@ export default function QuoteManager() {;
     toggleArchive,;
     deleteQuote;
   } = useAdminQuotes(),;
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/QuoteManager.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   // Count quotes by status;
   const statusCounts = {;
     new: quotes.filter(q => q.status === 'new').length,;
@@ -276,10 +418,34 @@ export default function QuoteManager() {;
     setSelectedQuote(quote),;
     setShowDetails(true);
   },;
+<<<<<<< HEAD
+========
+;
+  // Count quotes by status;
+  const statusCounts = {;
+    new:quotes.filter(q => q.status === 'new').length,;
+    in_review:quotes.filter(q => q.status === 'in_review').length,;
+    accepted:quotes.filter(q => q.status === 'accepted').length,;
+    responded:quotes.filter(q => q.status === 'responded').length,;
+    closed:quotes.filter(q => q.status === 'closed').length;
+  },;
+;
+  const handleViewDetails = (quote:QuoteRequest) => {;
+    setSelectedQuote(quote),;
+    setShowDetails(true);
+  },;
+;
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/QuoteManager.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const handleResetFilters = () => {;
     setStatusFilter('all'),;
     setArchiveFilter('all'),;
     setSearchQuery(''),;
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/QuoteManager.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     setDateRange({ from: undefined, to: undefined });
   };
   if (!isAdmin) {;
@@ -287,7 +453,21 @@ export default function QuoteManager() {;
   }
 ;
   return (;
+<<<<<<< HEAD
 
+========
+    setDateRange({ from:undefined, to:undefined }),;
+  },;
+;
+  if (!isAdmin) {;
+    return <Navigate to="/unauthorized" replace />,;
+  }
+;
+  return (;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/QuoteManager.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <ProtectedRoute adminOnly>;
       <div>;
         <Header />;
@@ -300,19 +480,40 @@ export default function QuoteManager() {;
               </div>;
               <ExportToCSV quotes={quotes} filename="zion-quote-requests" />;
             </div>;
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/QuoteManager.tsx
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/QuoteManager.tsx
             {/* Status Summary Cards */}
             <QuoteStatusCards statusCounts={statusCounts} />;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+            ;
+            {/* Status Summary Cards */}
+            <QuoteStatusCards statusCounts={statusCounts} />;
+            ;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+            {/* Filters */}
+            <QuotesFilter;
+              searchQuery={searchQuery}              setSearchQuery={setSearchQuery}
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            {/* Status Summary Cards */}
+            <QuoteStatusCards statusCounts={statusCounts} />
             {/* Filters */}
             <QuotesFilter
               searchQuery={searchQuery}
               setSearchQuery={setSearchQuery}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               statusFilter={statusFilter}
               setStatusFilter={setStatusFilter}
               archiveFilter={archiveFilter}
@@ -320,34 +521,83 @@ export default function QuoteManager() {;
               dateRange={dateRange}
               setDateRange={setDateRange}
               onReset={handleResetFilters}
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/QuoteManager.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/QuoteManager.tsx
             />;
-
+<<<<<<< HEAD
+=======
+            ;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             {/* Tabs for Active/Archived */}
             <Tabs defaultValue="active" className="mb-6">;
               <TabsList className="bg-zion-blue-dark border border-zion-blue-light">;
                 <TabsTrigger value="active">Active Quotes</TabsTrigger>;
                 <TabsTrigger value="archived">Archived Quotes</TabsTrigger>;
               </TabsList>;
-
+<<<<<<< HEAD
               <TabsContent value="active">;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/QuoteManager.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/QuoteManager.tsx
                 {/* Quotes Table */}
                 <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
                   <QuotesTable
                     quotes={quotes && quotes.filter(quote => !quote && quote.is_archived)}
+=======
+              ;
+              <TabsContent value="active">;
+                {/* Quotes Table */}
+                <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
+                  <QuotesTable;
+                    quotes={quotes.filter(quote => !quote.is_archived)}                    isLoading={isLoading}
+                    updateStatus={updateStatus}
+                    toggleArchive={toggleArchive}
+                    deleteQuote={deleteQuote}
+                    onViewDetails={handleViewDetails}
+                  />;
+                </Card>;
+              </TabsContent>;
+              ;
+              <TabsContent value="archived">;
+                <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
+                  <QuotesTable;
+                    quotes={quotes.filter(quote => quote.is_archived)}                    isArchived={true}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+            />
+            {/* Tabs for Active/Archived */}
+            <Tabs defaultValue="active" className="mb-6">
+              <TabsList className="bg-zion-blue-dark border border-zion-blue-light">
+                <TabsTrigger value="active">Active Quotes</TabsTrigger>
+                <TabsTrigger value="archived">Archived Quotes</TabsTrigger>
+              </TabsList>
+              <TabsContent value="active">
+                {/* Quotes Table */}
+                <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
+                  <QuotesTable
+                    quotes={quotes.filter(quote => !quote.is_archived)}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     isLoading={isLoading}
                     updateStatus={updateStatus}
                     toggleArchive={toggleArchive}
                     deleteQuote={deleteQuote}
                     onViewDetails={handleViewDetails}
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/QuoteManager.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/QuoteManager.tsx
                   />;
                 </Card>;
               </TabsContent>;
-
+<<<<<<< HEAD
               <TabsContent value="archived">;
                 <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/QuoteManager.tsx
 
                   <QuotesTable
                     quotes={quotes && quotes.filter(quote => quote && quote.is_archived)}
@@ -355,12 +605,35 @@ export default function QuoteManager() {;
 
 <<<<<<< HEAD
 =======
+========
+                  <QuotesTable
+                    quotes={quotes && quotes.filter(quote => quote && quote.is_archived)}
+                    isArchived={true}
+=======
+                  />
+                </Card>
+              </TabsContent>
+              <TabsContent value="archived">
+                <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
+                  <QuotesTable
+                    quotes={quotes.filter(quote => quote.is_archived)}
+                    isArchived={true}
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+                    isLoading={isLoading}
+                    updateStatus={updateStatus}
+                    toggleArchive={toggleArchive}
+                    deleteQuote={deleteQuote}
+                    onViewDetails={handleViewDetails}
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/QuoteManager.tsx
                   />;
                 </Card>;
               </TabsContent>;
             </Tabs>;
           </div>;
         </div>;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/QuoteManager.tsx
 
 
 =======
@@ -369,8 +642,16 @@ export default function QuoteManager() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+=======
+            </Tabs>;
+          </div>;
+        </div>;
+        ;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/QuoteManager.tsx
         {/* Quote Details Modal */}
-        <QuoteDetails
+        <QuoteDetails;
           quote={selectedQuote}
           isOpen={showDetails}
 
@@ -378,31 +659,66 @@ export default function QuoteManager() {;
 =======
 
           onClose={() => {;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/QuoteManager.tsx
             setShowDetails(false);
             setSelectedQuote(null);
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+                  />
+                </Card>
+              </TabsContent>
+            </Tabs>
+          </div>
+        </div>
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        {/* Quote Details Modal */}
+        <QuoteDetails
+          quote={selectedQuote}
+          isOpen={showDetails}
+<<<<<<< HEAD
+          onClose={() => {
+            setShowDetails(false);
+
+            setSelectedQuote(null)
+=======
+          onClose={() => {;
+            setShowDetails(false);
+            setSelectedQuote(null);
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           }}
         />
         <Footer />
       </div>
     </ProtectedRoute>
   )
+<<<<<<< HEAD
 }
 =======
+========
+<<<<<<< HEAD
+            setShowDetails(false);
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/pages/admin/QuoteManager.tsx
             setSelectedQuote(null);
           }}
         />;
-
         <Footer />;
       </div>;
     </ProtectedRoute>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     update_status;
     toggle_archive;
     delete_quote;
@@ -510,4 +826,80 @@ if ( {) {
       </div>;
     </ProtectedRoute>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+            setShowDetails(false),;
+            setSelectedQuote(null),;
+          }}
+        />;
+        ;
+        <Footer />;
+      </div>;
+    </ProtectedRoute>;
+  ),;}
+ import {
+  QuoteStatusCards;
+QuotesFilter;
+QuotesTable export default function QuoteManager () {
+  const {
+  user 
+}= useAuth ();
+const isAdmin = user?.userType === 'admin';
+const [showDetails, setShowDetails] = useState (false);
+}min-h-screen bg-zion-blue px-4 py-8"> <div className=" container mx-auto"> <div className=" flex flex-col md:flex-row justify-between items-start md:items-center mb-8"> <div> <h1 className=" text-3xl font-bold text-white mb-2">Quote Request Manager</h1> <p className=" text-zion-slate-light">Manage and respond to all talent hire requests</p> </div> </div> {
+  /* Status Summary Cards */ 
+}<QuoteStatusCards statusCounts= {
+  statusCounts 
+}/> {
+  /* Filters */ 
+}<QuotesFilter searchQuery= {
+  searchQuery 
+}setSearchQuery= {
+  setSearchQuery 
+}statusFilter= {
+  statusFilter 
+}setStatusFilter= {
+  setStatusFilter 
+}archiveFilter= {
+  archiveFilter 
+}setArchiveFilter= {
+  setArchiveFilter 
+}dateRange= {
+  dateRange 
+}setDateRange= {
+  setDateRange 
+}onReset= {
+  handleResetFilters 
+}/> <QuotesTable quotes= {
+  quotes.filter (quote => !quote.is archived) 
+}isLoading= {
+  isLoading 
+}updateStatus= {
+  updateStatus 
+}toggleArchive= {
+  toggleArchive 
+}deleteQuote= {
+  deleteQuote 
+}onViewDetails= {
+  handleViewDetails 
+}/> </Card> </TabsContent> <TabsContent value=" archived"> <Card className=" bg-zion-blue-dark border border-zion-blue-light overflow-hidden" > <QuotesTable quotes= {
+  quotes.filter (quote => quote.is archived) 
+}isArchived= {
+  true 
+}isLoading= {
+  isLoading 
+}updateStatus= {
+  updateStatus 
+}toggleArchive= {
+  toggleArchive 
+}deleteQuote= {
+  deleteQuote 
+}onViewDetails= {
+  handleViewDetails 
+}/> </Card> </TabsContent> </Tabs> </div> </div> {
+  /* Quote Details Modal */ 
+}<QuoteDetails /> <Footer /> </div> </ProtectedRoute>) 
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

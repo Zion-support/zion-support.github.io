@@ -1,5 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 ;
 const LoadingSpinner.dynamic = () => {
   return (
@@ -8,5 +11,8 @@ const LoadingSpinner.dynamic = () => {
     </div>);
 }
 ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export default LoadingSpinner.dynamic;

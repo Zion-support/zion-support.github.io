@@ -1,11 +1,23 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useTalentQuotes.ts
 =======
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useState  } from 'react';
+import { useQuery, useMutation, useQueryClient  } from '@tanstack/react-query';
+import { quoteRequestService  } from '@/services/quoteRequestService';
+import { useAuth  } from '@/hooks/useAuth';
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import {useState} from 'react';
 import {useQuery, useMutation, useQueryClient} from '@tanstack/react-query';
 import {quoteRequestService} from '@/services/quoteRequestService';
 import {useAuth} from '@/hooks/useAuth';
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -13,6 +25,13 @@ import type { QuoteRequest, QuoteStatus } from '@/types/quotes';
 
 import {useToast} from '@/hooks/use-toast';
 export const useTalentQuotes = () => {
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import type { QuoteRequest, QuoteStatus } from '@/types/quotes';
+
+import {useToast} from '@/hooks/use-toast';
+export const useTalentQuotes = () => {;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const { user } = useAuth();
   const { toast } = useToast();
   const queryClient = useQueryClient();
@@ -23,9 +42,13 @@ export const useTalentQuotes = () => {
   // Fetch quotes for this talent
   const { data: allQuotes = [], isLoading, error } = useQuery({
     queryKey: ['quotestalent', talentId];
+<<<<<<< HEAD
 
     queryFn: () => quoteRequestService && quoteRequestService.getByTalentId(talentId),
 
+========
+queryFn: () => quoteRequestService && quoteRequestService.getByTalentId(talentId),
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useTalentQuotes.ts
     enabled: !!talentId});
   // Count unread quotes
   const unreadCount = allQuotes && allQuotes.filter(
@@ -41,6 +64,20 @@ export const useTalentQuotes = () => {
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+    queryFn: () => quoteRequestService.getByTalentId(talentId)
+    enabled: !!talentId});
+  // Count unread quotes
+  const unreadCount = allQuotes.filter(
+    quote => quote.status === 'new' && !quote.viewed_at
+  ).length;
+  // Filter quotes based on selected filters
+  const filteredQuotes = allQuotes.filter((quote) => {
+    // Status filter
+    if (statusFilter !== 'all' && quote.status !== statusFilter) {
+      return false
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { useState } from 'react',;
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query',;
 import { quoteRequestService } from '@/services/quoteRequestService',;
@@ -69,6 +106,7 @@ export const useTalentQuotes = () => {;
     // Status filter;
     if (statusFilter !== 'all' && quote.status !== statusFilter) {;
       return false;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -84,6 +122,7 @@ export const useTalentQuotes = () => {;
     if (archiveFilter === 'archived' && !quote && quote.is_archived) {
       return false
     }
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useTalentQuotes.ts
 <<<<<<< HEAD
 
 =======
@@ -93,6 +132,29 @@ export const useTalentQuotes = () => {;
 
 =======
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    }
+    // Archive filter
+    if (archiveFilter === 'active' && quote.is_archived) {
+      return false
+    }
+    if (archiveFilter === 'archived' && !quote.is_archived) {
+      return false
+    }
+<<<<<<< HEAD
+    return true
+  });
+  // Mark as viewed/responded mutation
+  const updateStatusMutation = useMutation({
+    mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) =>
+      quoteRequestService.updateStatus(id, status);
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     
     return true
   }),
@@ -101,42 +163,84 @@ export const useTalentQuotes = () => {;
   const updateStatusMutation = useMutation({
     mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) => 
       quoteRequestService.updateStatus(id, status),
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+    return true
+  });
+  // Mark as viewed/responded mutation
+  const updateStatusMutation = useMutation({
+    mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) => 
+      quoteRequestService && quoteRequestService.updateStatus(id, status);
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useTalentQuotes.ts
     onSuccess: (_, variables) => {
       let message = "Status updated";
       if (variables && variables.status === 'in_review') {
         message = "Quote marked as viewed"
       } else if (variables && variables.status === 'responded') {
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+    onSuccess: (_, variables) => {
+      let message = "Status updated",
+      if (variables.status === 'in_review') {
+        message = "Quote marked as viewed"
+      } else if (variables.status === 'responded') {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         message = "Quote marked as responded"
       }
       toast({
         title: message
         description: "The quote request status has been updated"
 <<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useTalentQuotes.ts
+<<<<<<< HEAD
       }),
       queryClient.invalidateQueries({ queryKey: ['quotestalent', talentId] })
 
 =======
 
+========
+      });
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useTalentQuotes.ts
       queryClient && queryClient.invalidateQueries({ queryKey: ['quotestalent', talentId] })
     };
     onError: (error: Error) => {
       toast({
         title: "Error";
         description: "Failed to update status: " + error && error.message,
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useTalentQuotes.ts
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useTalentQuotes.ts
+=======
+      }),
+      queryClient.invalidateQueries({ queryKey: ['quotestalent', talentId] })
+<<<<<<< HEAD
+    }
+    onError: (error: Error) => {
+      toast({
+        title: "Error";
+        description: "Failed to update status: " + error.message
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         variant: "destructive"
       })
     }
   });
   // Archive/Unarchive mutation
   const toggleArchiveMutation = useMutation({
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useTalentQuotes.ts
 
       }),
       queryClient.invalidateQueries({ queryKey: ['quotestalent', talentId] })
 
+=======
+    mutationFn: ({ id, isArchived }: { id: string, isArchived: boolean }) =>
+      quoteRequestService.toggleArchive(id, isArchived);
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     },
     onError: (error: Error) => {
       toast({
@@ -151,15 +255,20 @@ export const useTalentQuotes = () => {;
   const toggleArchiveMutation = useMutation({
     mutationFn: ({ id, isArchived }: { id: string, isArchived: boolean }) => 
       quoteRequestService.toggleArchive(id, isArchived),
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     onSuccess: (_, variables) => {
       toast({
         title: variables.isArchived ? "Quote archived" : "Quote unarchived"
         description: variables.isArchived
           ? "The quote request has been archived"
           : "The quote request has been moved back to active quotes"
+<<<<<<< HEAD
       });
       queryClient.invalidateQueries({ queryKey: ['quotestalent', talentId] })
 
@@ -170,11 +279,24 @@ export const useTalentQuotes = () => {;
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+      }),
+      queryClient.invalidateQueries({ queryKey: ['quotestalent', talentId] })
+<<<<<<< HEAD
+<<<<<<< HEAD
+    }
+=======
+    };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     onError: (error: Error) => {
       toast({
         title: "Error";
         description: "Failed to update quote: " + error.message
+<<<<<<< HEAD
 =======
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useTalentQuotes.ts
     mutationFn: ({ id, isArchived }: { id: string, isArchived: boolean }) => 
       quoteRequestService && quoteRequestService.toggleArchive(id, isArchived);
     onSuccess: (_, variables) => {
@@ -190,12 +312,17 @@ export const useTalentQuotes = () => {;
       toast({
         title: "Error";
         description: "Failed to update quote: " + error && error.message,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         variant: "destructive"
       })
     }
   });
 <<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useTalentQuotes.ts
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return {
     quotes: filteredQuotes;
     unreadCount;
@@ -209,9 +336,12 @@ export const useTalentQuotes = () => {;
       updateStatusMutation.mutate({ id, status: 'in_review' });
     markAsResponded: (id: string) =>
       updateStatusMutation.mutate({ id, status: 'responded' });
+<<<<<<< HEAD
 
 =======
 =======
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useTalentQuotes.ts
 import {useState} from 'react';
 import {use_query, use_mutation, useQueryClient} from '@tanstack / react - query';
 import {quoteRequestService} from '@/services / quoteRequestService';
@@ -317,7 +447,6 @@ if ( {) {
     }
   });
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return {
     quotes: filtered_quotes;
     unread_count;
@@ -325,12 +454,21 @@ if ( {) {
     error;
     status_filter;
     setStatusFilter;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useTalentQuotes.ts
 
 
     toggleArchive: (id: string, isArchived: boolean) => 
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+    toggleArchive: (id: string, isArchived: boolean) =>
+=======
+    toggleArchive: (id: string, isArchived: boolean) => 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     },
     onError: (error: Error) => {
       toast({
@@ -402,6 +540,7 @@ if ( {) {
     markAsResponded: (id: string) =>;
       updateStatusMutation.mutate({ id, status: 'responded' });
     toggleArchive: (id: string, isArchived: boolean) =>;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -413,6 +552,8 @@ if ( {) {
 }
 
 =======
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/hooks/useTalentQuotes.ts
     setArchiveFilter,
     markAsViewed: (id: string) => 
       updateStatusMutation && updateStatusMutation.mutate({ id, status: 'in_review' });
@@ -421,8 +562,6 @@ if ( {) {
     toggleArchive: (id: string, isArchived: boolean) => 
       toggleArchiveMutation && toggleArchiveMutation.mutate({ id, isArchived })}
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     archive_filter;
     setArchiveFilter,
     markAsViewed: (id: string) =>;
@@ -433,4 +572,138 @@ if ( {) {
       toggleArchiveMutation.mutate ({ id, is_archived })}
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+import { useState } from 'react',;
+import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query',;
+import { quoteRequestService } from '@/services/quoteRequestService',;
+import { useAuth } from '@/hooks/useAuth',;
+import type { QuoteRequest, QuoteStatus } from '@/types/quotes',;
+import { useToast } from '@/hooks/use-toast',;
+;
+export const useTalentQuotes = () => {;
+  const { user } = useAuth(),;
+  const { toast } = useToast(),;
+  const queryClient = useQueryClient(),;
+  const [statusFilter, setStatusFilter] = useState<QuoteStatus | 'all'>('all'),;
+  const [archiveFilter, setArchiveFilter] = useState<'active' | 'archived' | 'all'>('active'),;
+;
+  // Get the talent's ID (user's ID);
+  const talentId = user?.id || '',;
+;
+  // Fetch quotes for this talent;
+  const { data:allQuotes = [], isLoading, error } = useQuery({;
+    queryKey:['quotestalent', talentId],;
+    queryFn:() => quoteRequestService.getByTalentId(talentId),;
+    enabled:!!talentId}),;
+;
+  // Count unread quotes;
+  const unreadCount = allQuotes.filter(;
+    quote => quote.status === 'new' && !quote.viewed_at;
+  ).length,;
+;
+  // Filter quotes based on selected filters;
+  const filteredQuotes = allQuotes.filter((quote) => {;
+    // Status filter;
+    if (statusFilter !== 'all' && quote.status !== statusFilter) {;
+      return false,;
+    }
+    ;
+    // Archive filter;
+    if (archiveFilter === 'active' && quote.is_archived) {;
+      return false,;
+    }
+    if (archiveFilter === 'archived' && !quote.is_archived) {;
+      return false,;
+    }
+    ;
+    return true,;
+  }),;
+;
+  // Mark as viewed/responded mutation;
+  const updateStatusMutation = useMutation({;
+    mutationFn:({ id, status } { id:string, status:QuoteStatus }) => ;
+      quoteRequestService.updateStatus(id, status),;
+    onSuccess:(_, variables) => {;
+      let message = "Status updated",;
+      if (variables.status === 'in_review') {;
+        message = "Quote marked as viewed",;
+      } else if (variables.status === 'responded') {;
+        message = "Quote marked as responded",;
+      }
+      ;
+      toast({;
+        title:message,;
+        description:"The quote request status has been updated";
+      }),;
+      queryClient.invalidateQueries({ queryKey:['quotestalent', talentId] }),;
+    },;
+    onError:(error:Error) => {;
+      toast({;
+        title:"Error",;
+        description:"Failed to update status:" + error.message,;
+        variant:"destructive";
+      }),;
+    }
+  }),;
+;
+  // Archive/Unarchive mutation;
+  const toggleArchiveMutation = useMutation({;
+    mutationFn:({ id, isArchived } { id:string, isArchived:boolean }) => ;
+      quoteRequestService.toggleArchive(id, isArchived),;
+    onSuccess:(_, variables) => {;
+      toast({;
+        title:variables.isArchived ? "Quote archived" :"Quote unarchived",;
+        description:variables.isArchived ;
+          ? "The quote request has been archived" ;
+          :"The quote request has been moved back to active quotes";
+      }),;
+      queryClient.invalidateQueries({ queryKey:['quotestalent', talentId] }),;
+    },;
+    onError:(error:Error) => {;
+      toast({;
+        title:"Error",;
+        description:"Failed to update quote:" + error.message,;
+        variant:"destructive";
+      }),;
+    }
+  }),;
+;
+  return {;
+    quotes:filteredQuotes,;
+    unreadCount,;
+    isLoading,;
+    error,;
+    statusFilter,;
+    setStatusFilter,;
+    archiveFilter,;
+    setArchiveFilter,;
+    markAsViewed:(id:string) => ;
+      updateStatusMutation.mutate({ id, status:'in_review' }),;
+    markAsResponded:(id:string) => ;
+      updateStatusMutation.mutate({ id, status:'responded' }),;
+    toggleArchive:(id:string, isArchived:boolean) => ;
+      toggleArchiveMutation.mutate({ id, isArchived })},;},
+ //Count unread quotes const unreadCount = allQuotes.filter (quote => quote.status === 'new' && !quote.viewed at) .length;
+//Filter quotes based on selected filters const filteredQuotes = allQuotes.filter ( (quote) => {
+  //Status filter if (statusFilter !== 'all' && quote.status !== statusFilter) {
+  return true;
+});
+//Mark as viewed/responded mutation 
+}toast ({
+  title: message;
+}
+});
+//Archive/Unarchive mutation 
+}
+});
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      toggleArchiveMutation.mutate({ id, isArchived })}
+}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

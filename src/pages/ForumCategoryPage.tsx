@@ -1,9 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import { logInfo } from '@/utils/productionLogger'
 import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+<<<<<<< HEAD
+import { logInfo } from '@/utils/productionLogger'
+import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react'
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { useState, useEffect } from "react",
 import Link from "next/link",
 import { useRouter } from "next/router",
@@ -24,37 +33,70 @@ import { useFollowedCategories } from "@/hooks/useFollowedCategories";
 import { logInfo } from '@/utils/productionLogger';
 import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 // Mock category data
 const categoriesInfo: Record<string ForumCategoryInfo> = {
   "getting-hired": {
+<<<<<<< HEAD
 
 =======
 
     id: "getting-hired"
     name: "Getting Hired"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 // Mock category data
 const categoriesInfo: Record<string ForumCategoryInfo> = {
   "getting-hired": {
     id: "getting-hired",
     name: "Getting Hired",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     description: "Tips, strategies, and questions about getting hired on the platform."
     adminOnly: false
     icon: "Briefcase"
   }
+<<<<<<< HEAD
     id: "getting-hired",
     name: "Getting Hired",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+<<<<<<< HEAD
+    id: "getting-hired",
+    name: "Getting Hired",
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     description: "Tips, strategies, and questions about getting hired on the platform.",
     adminOnly: false,
     icon: "Briefcase"
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   "project-help": {
 =======
 >>>>>>>   "project-help": {
@@ -65,9 +107,12 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {
     adminOnly: false
     icon: "MessageSquare"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   "feedback": {
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }
   "ai-tools": {
     id: "ai-tools"
@@ -76,13 +121,32 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {
     adminOnly: false
     icon: "Code"
   }
+<<<<<<< HEAD
 >>>>>>>   "feedback": {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+  },
+  "ai-tools": {
+    id: "ai-tools",
+    name: "AI Tools Discussion",
+    description: "Discuss AI tools, frameworks, and best practices.",
+    adminOnly: false,
+    icon: "Code"
+  },
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  "feedback": {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     id: "feedback"
     name: "Feedback & Feature Requests"
     description: "Share your feedback and suggest new features."
     adminOnly: false
     icon: "FileText"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -90,6 +154,16 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {
 >>>>>>>   "announcements": {
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+  }
+=======
+  },
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   "announcements": {
 >>>>>>>     id: "announcements"
     name: "Announcements"
@@ -98,8 +172,11 @@ ursor/fix-website-loading-errors-and-merge-6662
     icon: "Megaphone"
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 const iconMap = {
   "Briefcase": Briefcase
@@ -112,9 +189,32 @@ function CategoryContent({
   categoryId
   category
   IconComponent
+<<<<<<< HEAD
 >>>>>>>   user}: {
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+},
+
+const iconMap = {
+  "Briefcase": Briefcase,
+  "MessageSquare": MessageSquare,
+  "Code": Code,
+  "FileText": FileText,
+  "Megaphone": Megaphone
+},
+
+function CategoryContent({
+  categoryId,
+  category,
+  IconComponent,
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   user}: {
 >>>>>>>   categoryId: string
   category: ForumCategoryInfo
@@ -122,14 +222,29 @@ ursor/fix-website-loading-errors-and-merge-6662
   user: any
 }) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+  const [searchQuery, setSearchQuery] = useState("")
+  const { featuredPosts, recentPosts } = useCommunity()
+  // Filter posts by category from context data
+  const categoryPosts = [
+    ...featuredPosts.filter(post => post.categoryId === categoryId)
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     ...recentPosts.filter(post => post.categoryId === categoryId)
   ].filter((post, index, self,) =>
     // Remove duplicates by id
     index === self.findIndex(p => p.id === post.id)
   )
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const [searchQuery, setSearchQuery] = useState(""),
   const { featuredPosts, recentPosts } = useCommunity(),
 
@@ -137,11 +252,18 @@ ursor/fix-website-loading-errors-and-merge-6662
   const categoryPosts = [
     ...featuredPosts.filter(post => post.categoryId === categoryId),
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     ...recentPosts.filter(post => post.categoryId === categoryId)
   ].filter((post, index, self) => 
     // Remove duplicates by id
     index === self.findIndex(p => p.id === post.id)
+<<<<<<< HEAD
 
 =======
 >>>>>>>     ...recentPosts.filter(post => post.categoryId === categoryId)
@@ -154,6 +276,20 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>   // Apply search filter
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+  ),
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+  )
+=======
+  ),
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   // Apply search filter
 >>>>>>>   const filteredPosts = searchQuery
     ? categoryPosts.filter(post =>
@@ -162,23 +298,51 @@ ursor/fix-website-loading-errors-and-merge-6662
         post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
       )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+    : categoryPosts
+  const canCreatePost = user && (!category.adminOnly |user.userType === 'admin' |user.role === 'admin')
+  const { isFollowed, follow, unfollow } = useFollowedCategories()
+  const { toast } = useToast()
+<<<<<<< HEAD
+=======
+  const handleFollow = () => {
+    if (!user) {
+      toast({ title: 'Login required', description: 'Please sign in to follow this category' }),
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     : categoryPosts,
 
   const canCreatePost = user && (!category.adminOnly || user.userType === 'admin' || user.role === 'admin'),
   const { isFollowed, follow, unfollow } = useFollowedCategories(),
   const { toast } = useToast(),
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const handleFollow = () => {
     if (!user) {
       toast({ title: 'Login required', description: 'Please sign in to follow this category' })
       return
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { useState, useEffect } from "react",;
 import Link from "next/link",;
 import { useRouter } from "next/router",;
@@ -197,38 +361,41 @@ import { useCommunity } from "@/context",;
 import { useToast } from "@/hooks/use-toast",;
 import { useFollowedCategories } from "@/hooks/useFollowedCategories",;
 import { logInfo } from '@/utils/productionLogger',;
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react';
 // Mock category data;
-const categoriesInfo: Record<string, ForumCategoryInfo> = {;
+const categoriesInfo: Record<string ForumCategoryInfo> = {;
   "getting-hired": {;
     id: "getting-hired",;
     name: "Getting Hired",;
-    description: "Tips, strategies, and questions about getting hired on the platform.";
+    description: "Tips, strategies, and questions about getting hired on the platform.",;
     adminOnly: false,;
     icon: "Briefcase";
-  };
+  },;
   "project-help": {;
     id: "project-help",;
     name: "Project Help",;
     description: "Get help with your ongoing projects and collaboration.",;
     adminOnly: false,;
     icon: "MessageSquare";
-  };
+  },;
   "ai-tools": {;
     id: "ai-tools",;
     name: "AI Tools Discussion",;
-    description: "Discuss AI tools, frameworks, and best practices.";
+    description: "Discuss AI tools, frameworks, and best practices.",;
     adminOnly: false,;
     icon: "Code";
-  };
+  },;
   "feedback": {;
     id: "feedback",;
     name: "Feedback & Feature Requests",;
     description: "Share your feedback and suggest new features.",;
     adminOnly: false,;
     icon: "FileText";
-  };
+  },;
   "announcements": {;
     id: "announcements",;
     name: "Announcements",;
@@ -236,54 +403,49 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {;
     adminOnly: true,;
     icon: "Megaphone";
   }
-};
-
+},;
 const iconMap = {;
-  "Briefcase": Briefcase;
-  "MessageSquare": MessageSquare;
-  "Code": Code;
-  "FileText": FileText;
+  "Briefcase": Briefcase,;
+  "MessageSquare": MessageSquare,;
+  "Code": Code,;
+  "FileText": FileText,;
   "Megaphone": Megaphone;
-};
-
-function CategoryContent(): any ({;
-  categoryId;
-  category;
-  IconComponent;
+},;
+function CategoryContent({;
+  categoryId,;
+  category,;
+  IconComponent,;
   user}: {;
   categoryId: string,;
   category: ForumCategoryInfo,;
-  IconComponent: React && React.ComponentType<any>,;
+  IconComponent: React.ComponentType<any>,;
   user: any;
 }) {;
-  const [searchQuery, setSearchQuery] = useState("");
-  const { featuredPosts, recentPosts } = useCommunity();
-
+  const [searchQuery, setSearchQuery] = useState(""),;
+  const { featuredPosts, recentPosts } = useCommunity(),;
   // Filter posts by category from context data;
   const categoryPosts = [;
-    ...featuredPosts && featuredPosts.filter(post => post && post.categoryId === categoryId);
-    ...recentPosts && recentPosts.filter(post => post && post.categoryId === categoryId);
-  ].filter((post, index, self,) => ;
+    ...featuredPosts.filter(post => post.categoryId === categoryId),;
+    ...recentPosts.filter(post => post.categoryId === categoryId);
+  ].filter((post, index, self) =>;
     // Remove duplicates by id;
-    index === self && self.findIndex(p => p && p.id === post && post.id);
-  );
-
+    index === self.findIndex(p => p.id === post.id);
+  ),;
   // Apply search filter;
-  const filteredPosts = searchQuery ;
-    ? categoryPosts && categoryPosts.filter(post => ;
-        post && post.title.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
-        post && post.content.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
-        post && post.tags.some(tag => tag && tag.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()));
+  const filteredPosts = searchQuery;
+    ? categoryPosts.filter(post =>;
+        post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+        post.content.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+        post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
       );
-    : categoryPosts;
-
-  const canCreatePost = user && (!category && category.adminOnly || user && user.userType === 'admin' || user && user.role === 'admin');
-  const { isFollowed, follow, unfollow } = useFollowedCategories();
-  const { toast } = useToast();
-
+    : categoryPosts,;
+  const canCreatePost = user && (!category.adminOnly || user.userType === 'admin' || user.role === 'admin'),;
+  const { isFollowed, follow, unfollow } = useFollowedCategories(),;
+  const { toast } = useToast(),;
   const handleFollow = () => {;
     if (!user) {;
       toast({ title: 'Login required', description: 'Please sign in to follow this category' }),;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       return;
@@ -291,18 +453,46 @@ function CategoryContent(): any ({;
 =======
 >>>>>>>       return;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+      return;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     }
-    if (isFollowed(categoryId)) {;
-      unfollow(categoryId);
-    } else {;
-      follow(categoryId);
+    if (isFollowed(categoryId)) {
+      unfollow(categoryId)
+    } else {
+      follow(categoryId)
     }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
   )
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+  }
+  logInfo('CategoryContent - categoryId:', { data: categoryId })
+  logInfo('CategoryContent - categoryPosts:', { data: categoryPosts })
+  logInfo('CategoryContent - filteredPosts:', { data: filteredPosts })
+  const category = categoryId ? categoriesInfo[categoryId] : null
+  const IconComponent = category ? iconMap[category.icon as keyof typeof iconMap] : null
+}
+<<<<<<< HEAD
+
+  )
+}
+=======
+  );
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   },;
   logInfo('CategoryContent - categoryId:', { data: categoryId }),;
   logInfo('CategoryContent - categoryPosts:', { data: categoryPosts }),;
@@ -381,6 +571,7 @@ function CategoryContent(): any ({;
         )}
       </div>;
     </div>;
+<<<<<<< HEAD
   );
 ursor/fix-website-loading-errors-and-merge-6662
 /**
@@ -439,3 +630,73 @@ if ( {) {
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+  );
+}
+;
+export default function ForumCategoryPage() {;
+  const router = useRouter(),;
+  const { categoryId } = router.query as { categoryId: string },;
+  const { user } = useAuth(),;
+  // Check if the category exists and user has access;
+  const category = categoryId ? categoriesInfo[categoryId] : null,;
+  const IconComponent = category ? iconMap[category.icon as keyof typeof iconMap] : null,;
+  // Check access for admin-only categories;
+  const hasAccess = category && (;
+    !category.adminOnly ||;
+    (user && (user.userType === 'admin' || user.role === 'admin'));
+  );
+  useEffect(() => {;
+    // Add a small delay to ensure router is ready;
+    if (categoryId && category) {;
+      logInfo('ForumCategoryPage - categoryId changed:', { data: categoryId });
+    }
+  }, [categoryId, category]);
+  if (!categoryId || !category) {;
+    return <NotFound />;
+  }
+
+  if (!hasAccess) {
+    return (
+      <div className="container py-8">
+        <div className="text-center py-12">
+          <h1 className="text-2xl font-bold mb-4">Access Restricted</h1>
+          <p className="text-muted-foreground mb-4">
+            This category is only accessible to administrators.
+          </p>
+          <Button asChild>
+            <Link href="/community">Back to Community</Link>
+          </Button>
+        </div>
+      </div>
+    )
+  }
+;
+  if (!IconComponent) {;
+    return <NotFound />;
+  }
+;
+  return (;
+    <>;
+      <SEO;
+        title={`${category.name} | Community Forum | Zion AI Marketplace`}
+        description={category.description}
+        keywords={`community, forum, ${category.name.toLowerCase()}, discussion`}
+        canonical={`https://app.ziontechgroup.com/community/category/${categoryId}`}
+      />;
+      <CategoryContent;
+        categoryId={categoryId}
+        category={category}
+        IconComponent={IconComponent}
+        user={user}
+      />;
+    </>;
+  );
+}
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

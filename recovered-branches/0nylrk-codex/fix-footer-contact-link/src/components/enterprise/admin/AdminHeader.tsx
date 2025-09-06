@@ -1,10 +1,35 @@
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/admin/AdminHeader.tsx
 
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/admin/AdminHeader.tsx
 
 <<<<<<< HEAD
+========
+<<<<<<< HEAD
+export function AdminHeader() {;
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/admin/AdminHeader.tsx
   const { user } = useAuth();
   const { company } = useCompanyWorkspace();
 
+=======
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/admin/AdminHeader.tsx
+
+<<<<<<< HEAD
+import React from "react";
+import {useAuth} from "@/hooks/useAuth";
+import {Button} from "@/components/ui/button";
+import {Download, Settings} from "lucide-react";
+import {useCompanyWorkspace} from "@/hooks/useCompanyWorkspace";
+<<<<<<< HEAD
+
+export function AdminHeader() {
+=======
+export function AdminHeader() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const { user } = useAuth();
+  const { company } = useCompanyWorkspace();
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { Button } from "@/components/ui/button",
@@ -13,8 +38,16 @@ import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace",
 export function AdminHeader() {
   const { user } = useAuth(),
   const { company } = useCompanyWorkspace(),
+<<<<<<< HEAD
 
   return (
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/admin/AdminHeader.tsx
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  return (
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="space-y-4">
       <div className="flex items-center justify-between">
         <div>
@@ -68,6 +101,7 @@ export function AdminHeader() {
       </div>
     </div>
   )
+<<<<<<< HEAD
 
 =======
 
@@ -82,16 +116,41 @@ export function AdminHeader() {;
 
 =======
 
+========
+=======
+
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/admin/AdminHeader.tsx
+=======
+<<<<<<< HEAD
+}
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React from "react",;
 import { useAuth } from "@/hooks/useAuth",;
 import { Button } from "@/components/ui/button",;
 import { Download, Settings } from "lucide-react",;
 import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace",;
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/admin/AdminHeader.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export function AdminHeader() {;
   const { user } = useAuth();
   const { company } = useCompanyWorkspace();
   return (;
+<<<<<<< HEAD
 
+========
+;
+export function AdminHeader() {;
+  const { user } = useAuth(),;
+  const { company } = useCompanyWorkspace(),;
+;
+  return (;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/admin/AdminHeader.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="space-y-4">;
       <div className="flex items-center justify-between">;
         <div>;
@@ -107,7 +166,8 @@ export function AdminHeader() {;
           </Button>;
           <Button variant="outline" size="sm" className="gap-2">;
             <Download className="h-4 w-4" />;
-=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 :recovered - branches / 0nylrk - codex / fix - footer - contact - link / src / components / enterprise / admin / AdminHeader.tsx;
 import React from './react';
 import { use_auth } from '@/hooks / use_auth';
@@ -137,12 +197,20 @@ function AdminHeader() {
           </Button>;
           <Button variant="outline" size="sm" className="gap - 2">;
             <Download className="h - 4 w - 4" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             Export Data;
           </Button>;
         </div>;
       </div>;
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/admin/AdminHeader.tsx
 
+========
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/admin/AdminHeader.tsx
       <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 4">;
         <div className="bg - card rounded - lg p - 4 border border - border">;
           <div className="text - sm text - muted - foreground">Subscription Plan</div>;
@@ -176,6 +244,7 @@ function AdminHeader() {
         <Button > Customize Workspace</Button>;
       </div>;
     </div>);
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/admin/AdminHeader.tsx
 
 }
 =======
@@ -185,3 +254,77 @@ function AdminHeader() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+}
+=======
+      ;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">;
+        <div className="bg-card rounded-lg p-4 border border-border">;
+          <div className="text-sm text-muted-foreground">Subscription Plan</div>;
+          <div className="text-xl font-medium">{company?.plan || "Enterprise"}</div>;
+        </div>;
+        <div className="bg-card rounded-lg p-4 border border-border">;
+          <div className="text-sm text-muted-foreground">Team Members</div>;
+          <div className="text-xl font-medium">{company?.teamSize || "Loading..."} / {company?.teamLimit || "∞"}</div>;
+        </div>;
+        <div className="bg-card rounded-lg p-4 border border-border">;
+          <div className="text-sm text-muted-foreground">Billing Cycle</div>;
+          <div className="text-xl font-medium">{company?.billingCycle || "Annual"}</div>;
+        </div>;
+      </div>;
+<<<<<<< HEAD
+      ;
+      <div className="bg-muted/50 rounded-lg p-4 flex items-center justify-between">;
+        <div className="flex items-center gap-4">;
+          <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center">;
+            <img ;
+=======
+      <div className="bg-muted/50 rounded-lg p-4 flex items-center justify-between">;
+        <div className="flex items-center gap-4">;
+          <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center">;
+            <img;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+              src={company?.logoUrl || "/placeholder.svg"} ;
+              alt={company?.name || "Company"} ;
+              className="max-h-10 max-w-10";
+            />;
+          </div>;
+          <div>;
+            <h2 className="font-medium">{company?.name || "Company Name"}</h2>;
+            <p className="text-sm text-muted-foreground">;
+<<<<<<< HEAD
+              Workspace URL:{company?.workspaceUrl || "loading..."}
+=======
+              Workspace URL: {company?.workspaceUrl || "loading..."}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+            </p>;
+          </div>;
+        </div>;
+        <Button>Customize Workspace</Button>;
+      </div>;
+    </div>;
+<<<<<<< HEAD
+  ),;}
+ export function AdminHeader () {
+  const {
+  user 
+}= useAuth ();
+const {
+  company 
+}= useCompanyWorkspace ();
+space-y-4"> <div className=" flex items-center justify-between"> <div> <h1 className=" text-3xl font-bold tracking-tight">Enterprise Admin Dashboard</h1> <p className=" text-muted-foreground mt-1"> Manage your company's account, team members, and subscription </p> </div> <div className=" flex items-center gap-2"> <Button variant=" outline"size=" sm"className=" gap-2"> <Settings className=" h-4 w-4"/> Settings </Button> <Button variant=" outline"size=" sm"className=" gap-2"> <Download className=" h-4 w-4"/> Export Data </Button> </div> </div> </div> </div> <div className=" bg-muted/50 rounded-lg p-4 flex items-center justify-between"> <div className=" flex items-center gap-4"> <div className=" h-12 w-12 rounded-lg bg-card flex items-center justify-center" > <img </p> </div> </div> <Button>Customize Workspace</Button> </div> </div>) 
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/admin/AdminHeader.tsx
+=======
+  );
+}
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

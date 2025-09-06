@@ -1,14 +1,22 @@
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/VideoCall/VideoCallRoom.tsx
 
 <<<<<<< HEAD
 
 import React from 'react',
 
 =======
+========
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/VideoCall/VideoCallRoom.tsx
 import React from 'react';
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 interface VideoCallRoomProps {;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/VideoCall/VideoCallRoom.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/VideoCall/VideoCallRoom.tsx
   room?: string;
   token?: string;
   serverUrl?: string;
@@ -19,19 +27,49 @@ interface VideoCallRoomProps {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from 'react';
+import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React from 'react',
+<<<<<<< HEAD
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+=======
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 interface VideoCallRoomProps {
   room?: string,
   token?: string,
   serverUrl?: string,
   onDisconnect?: () => void,
   className?: string
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/VideoCall/VideoCallRoom.tsx
 
 
 export function VideoCallRoom(): any ({ room, token, serverUrl, onDisconnect, className }: VideoCallRoomProps) {;
   return (
 <<<<<<< HEAD
+=======
+}
+export function VideoCallRoom({ room, token, serverUrl, onDisconnect, className }: VideoCallRoomProps) {
+  return (
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <Card className={className |"w-full max-w-3xl mx-auto"}>
       <CardHeader>
         <CardTitle>Video Call</CardTitle>
@@ -47,6 +85,7 @@ export function VideoCallRoom(): any ({ room, token, serverUrl, onDisconnect, cl
       </CardContent>
     </Card>
   )
+<<<<<<< HEAD
 
 =======
 =======
@@ -54,6 +93,14 @@ export function VideoCallRoom(): any ({ room, token, serverUrl, onDisconnect, cl
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React from 'react',;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -67,7 +114,14 @@ interface VideoCallRoomProps {;
 ;
 export function VideoCallRoom({ room, token, serverUrl, onDisconnect, className }: VideoCallRoomProps) {;
   return (;
+<<<<<<< HEAD
 
+========
+export function VideoCallRoom(): any ({ room, token, serverUrl, onDisconnect, className }: VideoCallRoomProps) {;
+  return (
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/VideoCall/VideoCallRoom.tsx
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <Card className={className || "w-full max-w-3xl mx-auto"}>;
       <CardHeader>;
         <CardTitle>Video Call</CardTitle>;
@@ -84,12 +138,16 @@ export function VideoCallRoom({ room, token, serverUrl, onDisconnect, className 
     </Card>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/VideoCall/VideoCallRoom.tsx
 
 =======
 }
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/VideoCall/VideoCallRoom.tsx
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
@@ -120,6 +178,7 @@ function VideoCallRoom() {
       </CardContent>;
     </Card>);
 }
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/VideoCall/VideoCallRoom.tsx
 
 =======
 
@@ -127,3 +186,60 @@ function VideoCallRoom() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+=======
+
+import React from 'react',;
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+;
+interface VideoCallRoomProps {;
+  room?:string,;
+  token?:string,;
+  serverUrl?:string,;
+  onDisconnect?:() => void,;
+  className?:string,;
+}
+;
+export function VideoCallRoom({ room, token, serverUrl, onDisconnect, className } VideoCallRoomProps) {;
+  return (;
+    <Card className={className || "w-full max-w-3xl mx-auto"}>;
+      <CardHeader>;
+        <CardTitle>Video Call</CardTitle>;
+      </CardHeader>;
+      <CardContent className="flex flex-col items-center justify-center p-8">;
+        <p className="text-center mb-4">;
+          Video calling functionality is currently unavailable.;
+          Please check back later or use an alternative communication method.;
+        </p>;
+        <div className="flex gap-2">;
+          <Button onClick={onDisconnect}>Close</Button>;
+        </div>;
+      </CardContent>;
+    </Card>;
+  ),;}
+ interface VideoCallRoomProps {
+  room?: string;
+token?: string;
+serverUrl?: string;
+onDisconnect?: () => void;
+className?: string 
+}export function VideoCallRoom ({
+  room, token, serverUrl, onDisconnect, className 
+}: VideoCallRoomProps) {
+  return (<Card className= {
+  className || "w-full max-w-3xl mx-auto" 
+}> flex flex-col items-center justify-center p-8"> <p className=" text-center mb-4" > Video calling functionality is currently unavailable. Please check back later or use an alternative communication method. </p> </div> </CardContent> </Card>) 
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/VideoCall/VideoCallRoom.tsx
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+}
+<<<<<<< HEAD
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

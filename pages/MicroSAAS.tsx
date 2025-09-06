@@ -1,11 +1,13 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { Star } from 'lucide-react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '../components/Layout';
-
 export default function MicroSAAS() {
   const microSAASServices = [
     {
@@ -57,10 +59,13 @@ export default function MicroSAAS() {
       category: "Productivity"
     }
   ];
+<<<<<<< HEAD
 
   
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     >
       <div className="min-h-screen bg-gray-50 py-20">
         <div className="container mx-auto px-4">
@@ -76,9 +81,13 @@ export default function MicroSAAS() {
         </div>
       </div>
     </Layout>
+<<<<<<< HEAD
   );
 
 <<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+  );
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

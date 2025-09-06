@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 
 import { render, screen } from '@testing - library / react';
 import '@testing - library / jest - dom';
@@ -14,3 +15,12 @@ describe ('Simple Test', () => {
 
   });
 });
+=======
+import { render, screen } from '@testing-library/react';
+
+describe('Basic Test', () => {
+  it('should work', () => {
+    expect(true).toBe(true);
+  });
+});
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

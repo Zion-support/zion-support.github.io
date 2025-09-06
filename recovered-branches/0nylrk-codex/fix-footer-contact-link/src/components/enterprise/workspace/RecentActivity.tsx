@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/workspace/RecentActivity.tsx
 
 
 <<<<<<< HEAD
@@ -8,26 +10,77 @@ import React from "react",
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from "react";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Badge} from "@/components/ui/badge";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React from "react",
+<<<<<<< HEAD
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+=======
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export function RecentActivity() {
   // Mock activity data
 
   const activities = [
     {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
       type: "job"
 
 =======
 
+=======
+<<<<<<< HEAD
+      id: "act-1"
+      user: "Michael Chen"
+      action: "posted a new job"
+      target: "Senior React Developer"
+      timestamp: "1h ago"
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       id: "act-1",
       user: "Michael Chen",
       action: "posted a new job",
       target: "Senior React Developer",
       timestamp: "1h ago",
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+      type: "job";
+    };
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      type: "job"
+<<<<<<< HEAD
+    }
+=======
+    },
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     {
       id: "act-2"
       user: "Sarah Wilson"
@@ -35,6 +88,7 @@ export function RecentActivity() {
       target: "5 candidates for UI/UX Designer"
       timestamp: "3h ago"
       type: "candidate"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -43,6 +97,13 @@ export function RecentActivity() {
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+    }
+=======
+    },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     {
       id: "act-3"
       user: "David Johnson"
@@ -50,6 +111,7 @@ export function RecentActivity() {
       target: "Alex Morgan"
       timestamp: "Yesterday"
       type: "interview"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -58,6 +120,13 @@ export function RecentActivity() {
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+    }
+=======
+    },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     {
       id: "act-4"
       user: "Emily Davis"
@@ -67,18 +136,30 @@ export function RecentActivity() {
       type: "comment"
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
+========
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/workspace/RecentActivity.tsx
 import React from "react";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
 =======
 
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/workspace/RecentActivity.tsx
   ],
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+  ];
+=======
+  ],
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const getBadgeForType = (type: string) => {
     switch (type) {
       case "job": return <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">Job</Badge>,
@@ -92,11 +173,18 @@ import {Badge} from "@/components/ui/badge";
         return <Badge variant="outline">Activity</Badge>
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
   },
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+  }
+=======
+  },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
   return (
     <Card>
@@ -135,6 +223,7 @@ import {Badge} from "@/components/ui/badge";
       </CardContent>
     </Card>
   )
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -145,17 +234,43 @@ import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
 
+========
+import React from "react",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",;
+;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/workspace/RecentActivity.tsx
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import React from "react",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export function RecentActivity() {;
   // Mock activity data;
   const activities = [;
     {;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       id: "act-1",;
       user: "Michael Chen",;
       action: "posted a new job",;
       target: "Senior React Developer",;
       timestamp: "1h ago",;
       type: "job";
+<<<<<<< HEAD
     };
+=======
+    },;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     {;
       id: "act-2",;
       user: "Sarah Wilson",;
@@ -163,7 +278,11 @@ export function RecentActivity() {;
       target: "5 candidates for UI/UX Designer",;
       timestamp: "3h ago",;
       type: "candidate";
+<<<<<<< HEAD
     };
+=======
+    },;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     {;
       id: "act-3",;
       user: "David Johnson",;
@@ -171,7 +290,11 @@ export function RecentActivity() {;
       target: "Alex Morgan",;
       timestamp: "Yesterday",;
       type: "interview";
+<<<<<<< HEAD
     };
+=======
+    },;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     {;
       id: "act-4",;
       user: "Emily Davis",;
@@ -180,26 +303,94 @@ export function RecentActivity() {;
       timestamp: "2d ago",;
       type: "comment";
     }
+<<<<<<< HEAD
   ];
-
   const getBadgeForType = (type: string) => {;
     switch (type) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       case "job": return <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">Job</Badge>;
       case "candidate":;
         return <Badge variant="outline" className="bg-green-100 text-green-800 border-green-200">Candidate</Badge>;
       case "interview":;
         return <Badge variant="outline" className="bg-purple-100 text-purple-800 border-purple-200">Interview</Badge>;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/workspace/RecentActivity.tsx
 
+========
+=======
+      id:"act-1",;
+      user:"Michael Chen",;
+      action:"posted a new job",;
+      target:"Senior React Developer",;
+      timestamp:"1h ago",;
+      type:"job";
+    },;
+    {;
+      id:"act-2",;
+      user:"Sarah Wilson",;
+      action:"shortlisted",;
+      target:"5 candidates for UI/UX Designer",;
+      timestamp:"3h ago",;
+      type:"candidate";
+    },;
+    {;
+      id:"act-3",;
+      user:"David Johnson",;
+      action:"scheduled an interview with",;
+      target:"Alex Morgan",;
+      timestamp:"Yesterday",;
+      type:"interview";
+    },;
+    {;
+      id:"act-4",;
+      user:"Emily Davis",;
+      action:"added comments to",;
+      target:"Frontend Developer application",;
+      timestamp:"2d ago",;
+      type:"comment";
+    }
+  ],;
+;
+  const getBadgeForType = (type:string) => {;
+    switch (type) {;
+      case "job":return <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">Job</Badge>,;
+=======
+  ],;
+  const getBadgeForType = (type: string) => {;
+    switch (type) {;
+      case "job": return <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">Job</Badge>,;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+      case "candidate":;
+        return <Badge variant="outline" className="bg-green-100 text-green-800 border-green-200">Candidate</Badge>,;
+      case "interview":;
+        return <Badge variant="outline" className="bg-purple-100 text-purple-800 border-purple-200">Interview</Badge>,;
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/workspace/RecentActivity.tsx
       case "comment":;
         return <Badge variant="outline" className="bg-amber-100 text-amber-800 border-amber-200">Comment</Badge>,;
       default:;
         return <Badge variant="outline">Activity</Badge>;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/workspace/RecentActivity.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/workspace/RecentActivity.tsx
     }
+<<<<<<< HEAD
   }
-
   return (
+=======
+  },;
+;
+  return (;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+      case "comment":;
+        return <Badge variant="outline" className="bg-amber-100 text-amber-800 border-amber-200">Comment</Badge>;
+      default:;
+        return <Badge variant="outline">Activity</Badge>;
+    }
+  };
+  return (;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <Card>;
       <CardHeader>;
         <CardTitle>Recent Activity</CardTitle>;
@@ -207,14 +398,26 @@ export function RecentActivity() {;
       </CardHeader>;
       <CardContent className="p-0">;
         <div className="divide-y divide-border">;
+<<<<<<< HEAD
+<<<<<<< HEAD
           {activities && activities.map((activity) => (;
             <div key={activity && activity.id} className="p-4 flex items-start gap-3">;
               <div className="w-8 h-8 rounded-full bg-muted flex items-center justify-center">;
                 {activity && activity.user.charAt(0)}
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+          {activities.map((activity) => (;
+            <div key={activity.id} className="p-4 flex items-start gap-3">;
+              <div className="w-8 h-8 rounded-full bg-muted flex items-center justify-center">;
+                {activity.user.charAt(0)}
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </div>;
               <div className="flex-1">;
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">;
                   <p className="text-sm">;
+<<<<<<< HEAD
                     <span className="font-medium">{activity && activity.user}</span>{" "}
                     {activity && activity.action}{" "}
                     <span className="font-medium">{activity && activity.target}</span>;
@@ -222,17 +425,28 @@ export function RecentActivity() {;
                   <div className="flex items-center gap-2 mt-1 sm:mt-0">;
                     {getBadgeForType(activity && activity.type)}
                     <span className="text-xs text-muted-foreground">{activity && activity.timestamp}</span>;
+=======
+                    <span className="font-medium">{activity.user}</span>{" "}
+                    {activity.action}{" "}
+                    <span className="font-medium">{activity.target}</span>;
+                  </p>;
+                  <div className="flex items-center gap-2 mt-1 sm:mt-0">;
+                    {getBadgeForType(activity.type)}
+                    <span className="text-xs text-muted-foreground">{activity.timestamp}</span>;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   </div>;
                 </div>;
               </div>;
             </div>;
           ))}
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/workspace/RecentActivity.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/workspace/RecentActivity.tsx
         </div>;
-
+<<<<<<< HEAD
         <div className="p-3 text-center border-t border-border">;
           <button className="text-sm text-blue-500 font-medium hover: text-blue-700">;
-=======
 import React from './react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
 import { Badge } from '@/components / ui / badge';
@@ -320,12 +534,43 @@ function RecentActivity() {
         </div>;
         <div className="p - 3 text - center border - t border - border">;
           <button className="text - sm text - blue - 500 font - medium hover: text - blue - 700">;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/workspace/RecentActivity.tsx
 
+========
+=======
+        ;
+        <div className="p-3 text-center border-t border-border">;
+          <button className="text-sm text-blue-500 font-medium hover:text-blue-700">;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/workspace/RecentActivity.tsx
+=======
+              </div>
+              <div className="flex-1">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+                  <p className="text-sm">
+                    <span className="font-medium">{activity.user}</span>{" "}
+                    {activity.action}{" "}
+                    <span className="font-medium">{activity.target}</span>
+                  </p>
+                  <div className="flex items-center gap-2 mt-1 sm:mt-0">
+                    {getBadgeForType(activity.type)}
+                    <span className="text-xs text-muted-foreground">{activity.timestamp}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>;
+        <div className="p-3 text-center border-t border-border">;
+          <button className="text-sm text-blue-500 font-medium hover: text-blue-700">;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             View All Activity;
           </button>;
         </div>;
       </CardContent>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/workspace/RecentActivity.tsx
     </Card>;
   );
 
@@ -341,7 +586,68 @@ function RecentActivity() {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/workspace/RecentActivity.tsx
     </Card>);
+=======
+    </Card>;
+  ); export function RecentActivity () {
+  //Mock activity data const activities = [ {
+  id: "act-1";
+user: "Michael Chen";
+action: "posted a new job";
+target: "Senior React Developer";
+timestamp: "1h ago";
+type: "job" 
+};
+{
+  id: "act-2";
+user: "Sarah Wilson";
+action: "shortlisted";
+target: "5 candidates for UI/UX Designer";
+timestamp: "3h ago";
+type: "candidate" 
+};
+{
+  id: "act-3";
+user: "David Johnson";
+action: "scheduled an interview with";
+target: "Alex Morgan";
+timestamp: "Yesterday";
+type: "interview" 
+};
+{
+  id: "act-4";
+user: "Emily Davis";
+action: "added comments to";
+target: "Frontend Developer application";
+timestamp: "2d ago";
+type: "comment" 
+}];
+const getBadgeForType = (type: string) => {
+  switch (type) {
+  case "candidate": return <Badge variant="outline" className="bg-green-100 text-green-800 border-green-200">Candidate</Badge>;
+case "interview": return <Badge variant="outline" className="bg-purple-100 text-purple-800 border-purple-200">Interview</Badge>;
+case "comment": return <Badge variant="outline" className="bg-amber-100 text-amber-800 border-amber-200">Comment</Badge>;
+default: 
 }
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/workspace/RecentActivity.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+};
+}</div> View All Activity </button> </div> </CardContent> </Card>) 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+}
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/workspace/RecentActivity.tsx
+=======
+    </Card>;
+  );
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

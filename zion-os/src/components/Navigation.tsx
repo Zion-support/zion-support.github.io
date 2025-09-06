@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 "use client",;
@@ -15,6 +16,8 @@ export function Navigation() {;
   const [isScrolled, setIsScrolled] = useState(false);
   return (;
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 "use client",
 import { useState, useEffect, useRef  } from './react';,
 import Link from './next / link';,
@@ -27,7 +30,25 @@ function Navigation() {
   const [isServicesOpen, setIsServicesOpen] = useState (false);
   const [is_scrolled, setIsScrolled] = useState (false);
   return (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+<<<<<<< HEAD
+"use client";
+import { useState, useEffect, useRef } from "react";
+import Link from "next/link";
+export function Navigation() {const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+=======
+"use client",;
+import { useState, useEffect, useRef } from "react",;
+import Link from "next/link",;
+export function Navigation() {;
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false),;
+  const [isSearchOpen, setIsSearchOpen] = useState(false),;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  return (;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     <nav;
       className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${
         is_scrolled;
@@ -204,8 +225,11 @@ function Navigation() {
               </svg>;
             </div>;
 <<<<<<< HEAD
+          </div>)}
+=======
           </div>;
         )}
+<<<<<<< HEAD
 
 =======
 
@@ -217,6 +241,13 @@ function Navigation() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+=======
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="lg:hidden animate - fade - in">;
@@ -293,6 +324,7 @@ function Navigation() {
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
 
     </nav>;
   );
@@ -304,3 +336,16 @@ function Navigation() {
 }
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+    </nav>);
+=======
+    </nav>;
+  );
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

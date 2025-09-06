@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 
@@ -11,39 +12,787 @@ import {
 
 =======
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
+<<<<<<< HEAD
 
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Layout from "./components/Layout";
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+import React from 'react';
+import Head from 'next/head';
+import {;
+  BookOpen,;
+  Clock,;
+  User,;
+  ArrowRight,;
+  CheckCircle,;
+  Star,;
+  Play,;
+  Download,;
+  ExternalLink,;
+  Code,;
+  Database,;
+  Cloud,;
+  Shield,;
+  Zap,;
+  Brain,;
+  Globe,;
+  Smartphone,;
+  Monitor,;
+  Server,;
+  Bot,;
+  Microscope,;
+  Layers,;
+  Workflow,;
+  FileText,;
+  Image,;
+  Video,;
+  Music,;
+  Palette,;
+  Search,;
+  Filter,;
+  Settings,;
+  Wrench,;
+  Cog,;
+  Activity,;
+  PieChart,;
+  BarChart,;
+  TrendingUp,;
+  DollarSign,;
+  ShoppingCart,;
+  Home,;
+  Trash2,;
+  Camera,;
+  Heart,;
+  ClipboardList,;
+  TreePine,;
+  Droplets,;
+  Award,;
+  Building,;
+  Rocket,;
+  Lightbulb,;
+  Target,;
+  Users,;
+  Phone,;
+  Mail,;
+  MapPin,;
+  MessageSquare,;
+  HelpCircle,;
+  Info,;
+  AlertCircle,;
+  CheckCircle2,;
+  XCircle,;
+  Plus,;
+  Minus,;
+  ChevronUp,;
+  ChevronRight,;
+  ChevronLeft,;
+  ChevronDown,;
+  ArrowUp,;
+  ArrowDown,;
+  ArrowLeft,;
+  Pause,;
+  Stop,;
+  SkipForward,;
+  SkipBack,;
+  Volume2,;
+  VolumeX,;
+  Maximize,;
+  Minimize,;
+  RotateCcw,;
+  RotateCw,;
+  RefreshCw,;
+  Upload,;
+  Share,;
+  Copy,;
+  Edit,;
+  Trash,;
+  Save,;
+  Lock,;
+  Unlock,;
+  EyeOff,;
+  Bell,;
+  BellOff,;
+  Star as StarIcon,;
+  Heart as HeartIcon,;
+  ThumbsUp,;
+  ThumbsDown,;
+  MessageCircle,;
+  Send,;
+  Paperclip,;
+  Smile,;
+  Frown,;
+  Meh,;
+  Laugh,;
+  Angry,;
+  Sad,;
+  Surprised,;
+  Wink,;
+  Kiss,;
+  Tongue,;
+  Wink2,;
+  KissWinkHeart,;
+  KissClosedEyes,;
+  StuckOutTongue,;
+  StuckOutTongueWinkingEye,;
+  StuckOutTongueClosedEyes,;
+  Disappointed,;
+  Worried,;
+  Angry2,;
+  Rage,;
+  Cry,;
+  Scream,;
+  Confounded,;
+  Hugging,;
+  Smirk,;
+  NoMouth,;
+  NeutralFace,;
+  Expressionless,;
+  Unamused,;
+  RollingEyes,;
+  Thinking,;
+  LyingFace,;
+  HandOverMouth,;
+  ShushingFace,;
+  ExplodingHead,;
+  CowboyHatFace,;
+  DisguisedFace,;
+  Sunglasses,;
+  NerdFace,;
+  MonocleFace,;
+  Confused,;
+  WorriedFace,;
+  SlightlyFrowningFace,;
+  OpenMouth,;
+  Hushed,;
+  Astonished,;
+  Flushed,;
+  PleadingFace,;
+  FrowningFace,;
+  AnguishedFace,;
+  FearfulFace,;
+  ColdSweat,;
+  DisappointedRelieved,;
+  CryFace,;
+  LoudlyCryingFace,;
+  ScreamFace,;
+  StuckOutTongueFace,;
+  DroolingFace,;
+  UnamusedFace,;
+  SweatSmile,;
+  Sweat,;
+  WearyFace,;
+  TiredFace,;
+  SleepyFace,;
+  YawningFace,;
+  DizzyFace,;
+  ExplodingHeadFace,;
+  CowboyHatFace2,;
+  DisguisedFace2,;
+  SunglassesFace,;
+  NerdFace2,;
+  MonocleFace2,;
+  ConfusedFace,;
+  WorriedFace2,;
+  SlightlyFrowningFace2,;
+  OpenMouthFace,;
+  HushedFace,;
+  AstonishedFace,;
+  FlushedFace,;
+  PleadingFace2,;
+  FrowningFace2,;
+  AnguishedFace2,;
+  FearfulFace2,;
+  ColdSweatFace,;
+  DisappointedRelievedFace,;
+  CryFace2,;
+  LoudlyCryingFace2,;
+  ScreamFace2,;
+  StuckOutTongueFace2,;
+  DroolingFace2,;
+  UnamusedFace2,;
+  SweatSmileFace,;
+  SweatFace,;
+  WearyFace2,;
+  TiredFace2,;
+  SleepyFace2,;
+  YawningFace2,;
+  DizzyFace2,;
+=======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+import React from 'react';
+import Head from 'next/head';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import Layout from './components/Layout';
+<<<<<<< HEAD
+=======
+import React from "react";
+import Head from "next/head";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import Layout from "./components/Layout";
+>>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+import {
+<<<<<<< HEAD
+  BookOpen
+  Clock
+  User
+  ArrowRight
+  CheckCircle
+  Star
+  Play
+  Download
+  ExternalLink
+  Code
+  Database
+  Cloud
+  Shield
+  Zap
+  Brain
+  Globe
+  Smartphone
+  Monitor
+  Server
+  Bot
+  Microscope
+  Layers
+  Workflow
+  FileText
+  Image
+  Video
+  Music
+  Palette
+  Search
+  Filter
+  Settings
+  Wrench
+  Cog
+  Activity
+  PieChart
+  BarChart
+  TrendingUp
+  DollarSign
+  ShoppingCart
+  Home
+  Trash2
+  Camera
+  Heart
+  ClipboardList
+  TreePine
+  Droplets
+  Award
+  Building
+  Rocket
+  Lightbulb
+  Target
+  Users
+  Phone
+  Mail
+  MapPin
+  MessageSquare
+  HelpCircle
+  Info
+  AlertCircle
+  CheckCircle2
+  XCircle
+  Plus
+  Minus
+  ChevronUp
+  ChevronRight
+  ChevronLeft
+  ChevronDown
+  ArrowUp
+  ArrowDown
+  ArrowLeft
+  Pause
+  Stop
+  SkipForward
+  SkipBack
+  Volume2
+  VolumeX
+  Maximize
+  Minimize
+  RotateCcw
+  RotateCw
+  RefreshCw
+  Upload
+  Share
+  Copy
+  Edit
+  Trash
+  Save
+  Lock
+  Unlock
+  EyeOff
+  Bell
+  BellOff
+  Star as StarIcon
+  Heart as HeartIcon
+  ThumbsUp
+  ThumbsDown
+  MessageCircle
+  Send
+  Paperclip
+  Smile
+  Frown
+  Meh
+  Laugh
+  Angry
+  Sad
+  Surprised
+  Wink
+  Kiss
+  Tongue
+  Wink2
+  KissWinkHeart
+  KissClosedEyes
+  StuckOutTongue
+  StuckOutTongueWinkingEye
+  StuckOutTongueClosedEyes
+  Disappointed
+  Worried
+  Angry2
+  Rage
+  Cry
+  Scream
+  Confounded
+  Hugging
+  Smirk
+  NoMouth
+  NeutralFace
+  Expressionless
+  Unamused
+  RollingEyes
+  Thinking
+  LyingFace
+  HandOverMouth
+  ShushingFace
+  ExplodingHead
+  CowboyHatFace
+  DisguisedFace
+  Sunglasses
+  NerdFace
+  MonocleFace
+  Confused
+  WorriedFace
+  SlightlyFrowningFace
+  OpenMouth
+  Hushed
+  Astonished
+  Flushed
+  PleadingFace
+  FrowningFace
+  AnguishedFace
+  FearfulFace
+  ColdSweat
+  DisappointedRelieved
+  CryFace
+  LoudlyCryingFace
+  ScreamFace
+  StuckOutTongueFace
+  DroolingFace
+  UnamusedFace
+  SweatSmile
+  Sweat
+  WearyFace
+  TiredFace
+  SleepyFace
+  YawningFace
+  DizzyFace
+  ExplodingHeadFace
+  CowboyHatFace2
+  DisguisedFace2
+  SunglassesFace
+  NerdFace2
+  MonocleFace2
+  ConfusedFace
+  WorriedFace2
+  SlightlyFrowningFace2
+  OpenMouthFace
+  HushedFace
+  AstonishedFace
+  FlushedFace
+  PleadingFace2
+  FrowningFace2
+  AnguishedFace2
+  FearfulFace2
+  ColdSweatFace
+  DisappointedRelievedFace
+  CryFace2
+  LoudlyCryingFace2
+  ScreamFace2
+  StuckOutTongueFace2
+  DroolingFace2
+  UnamusedFace2
+  SweatSmileFace
+  SweatFace
+  WearyFace2
+  TiredFace2
+  SleepyFace2
+  YawningFace2
+  DizzyFace2
+=======
+  BookOpen,
+  Clock,
+  User,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Play,
+  Download,
+  ExternalLink,
+  Code,
+  Database,
+  Cloud,
+  Shield,
+  Zap,
+  Brain,
+  Globe,
+  Smartphone,
+  Monitor,
+  Server,
+  Bot,
+  Microscope,
+  Layers,
+  Workflow,
+  FileText,
+  Image,
+  Video,
+  Music,
+  Palette,
+  Search,
+  Filter,
+  Settings,
+  Wrench,
+  Cog,
+  Activity,
+  PieChart,
+  BarChart,
+  TrendingUp,
+  DollarSign,
+  ShoppingCart,
+  Home,
+  Trash2,
+  Camera,
+  Heart,
+  ClipboardList,
+  TreePine,
+  Droplets,
+  Award,
+  Building,
+  Rocket,
+  Lightbulb,
+  Target,
+  Users,
+  Phone,
+  Mail,
+  MapPin,
+  MessageSquare,
+  HelpCircle,
+  Info,
+  AlertCircle,
+  CheckCircle2,
+  XCircle,
+  Plus,
+  Minus,
+  ChevronUp,
+  ChevronRight,
+  ChevronLeft,
+  ChevronDown,
+  ArrowUp,
+  ArrowDown,
+  ArrowLeft,
+  Pause,
+  Stop,
+  SkipForward,
+  SkipBack,
+  Volume2,
+  VolumeX,
+  Maximize,
+  Minimize,
+  RotateCcw,
+  RotateCw,
+  RefreshCw,
+  Upload,
+  Share,
+  Copy,
+  Edit,
+  Trash,
+  Save,
+  Lock,
+  Unlock,
+  EyeOff,
+  Bell,
+  BellOff,
+  Star as StarIcon,
+  Heart as HeartIcon,
+  ThumbsUp,
+  ThumbsDown,
+  MessageCircle,
+  Send,
+  Paperclip,
+  Smile,
+  Frown,
+  Meh,
+  Laugh,
+  Angry,
+  Sad,
+  Surprised,
+  Wink,
+  Kiss,
+  Tongue,
+  Wink2,
+  KissWinkHeart,
+  KissClosedEyes,
+  StuckOutTongue,
+  StuckOutTongueWinkingEye,
+  StuckOutTongueClosedEyes,
+  Disappointed,
+  Worried,
+  Angry2,
+  Rage,
+  Cry,
+  Scream,
+  Confounded,
+  Hugging,
+  Smirk,
+  NoMouth,
+  NeutralFace,
+  Expressionless,
+  Unamused,
+  RollingEyes,
+  Thinking,
+  LyingFace,
+  HandOverMouth,
+  ShushingFace,
+  ExplodingHead,
+  CowboyHatFace,
+  DisguisedFace,
+  Sunglasses,
+  NerdFace,
+  MonocleFace,
+  Confused,
+  WorriedFace,
+  SlightlyFrowningFace,
+  OpenMouth,
+  Hushed,
+  Astonished,
+  Flushed,
+  PleadingFace,
+  FrowningFace,
+  AnguishedFace,
+  FearfulFace,
+  ColdSweat,
+  DisappointedRelieved,
+  CryFace,
+  LoudlyCryingFace,
+  ScreamFace,
+  StuckOutTongueFace,
+  DroolingFace,
+  UnamusedFace,
+  SweatSmile,
+  Sweat,
+  WearyFace,
+  TiredFace,
+  SleepyFace,
+  YawningFace,
+  DizzyFace,
+  ExplodingHeadFace,
+  CowboyHatFace2,
+  DisguisedFace2,
+  SunglassesFace,
+  NerdFace2,
+  MonocleFace2,
+  ConfusedFace,
+  WorriedFace2,
+  SlightlyFrowningFace2,
+  OpenMouthFace,
+  HushedFace,
+  AstonishedFace,
+  FlushedFace,
+  PleadingFace2,
+  FrowningFace2,
+  AnguishedFace2,
+  FearfulFace2,
+  ColdSweatFace,
+  DisappointedRelievedFace,
+  CryFace2,
+  LoudlyCryingFace2,
+  ScreamFace2,
+  StuckOutTongueFace2,
+  DroolingFace2,
+  UnamusedFace2,
+  SweatSmileFace,
+  SweatFace,
+  WearyFace2,
+  TiredFace2,
+  SleepyFace2,
+  YawningFace2,
+  DizzyFace2,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+} from "lucide-react";
+const guides = [;
+  {;
+    id: 1,;
+    title: "Getting Started with AI Development",;
+    description:;
+      "Learn the fundamentals of AI development and how to build your first AI application.",;
+    category: "AI Development",;
+    difficulty: "Beginner",;
+    readTime: "15 min read",;
+    author: "Zion Tech Team",;
+    rating: 4 && 4.8,;
+    students: 1250,;
+    image: "/images/guides/ai-development && development.jpg",;
+    icon: Brain,;
+    tags: ["AI", "Machine Learning", "Python", "TensorFlow"],;
+  },;
+  {;
+    id: 2,;
+    title: "Cloud Infrastructure Setup",;
+    description:;
+      "Complete guide to setting up scalable cloud infrastructure for your applications.",;
+    category: "Cloud Computing",;
+    difficulty: "Intermediate",;
+    readTime: "25 min read",;
+    author: "Cloud Experts",;
+    rating: 4 && 4.9,;
+    students: 980,;
+    image: "/images/guides/cloud-infrastructure && infrastructure.jpg",;
+    icon: Cloud,;
+    tags: ["AWS", "Docker", "Kubernetes", "DevOps"],;
+  },;
+  {;
+    id: 3,;
+    title: "Cybersecurity Best Practices",;
+    description:;
+      "Essential cybersecurity practices to protect your applications and data.",;
+    category: "Security",;
+    difficulty: "Advanced",;
+    readTime: "30 min read",;
+    author: "Security Team",;
+    rating: 4 && 4.7,;
+    students: 750,;
+    image: "/images/guides/cybersecurity && cybersecurity.jpg",;
+    icon: Shield,;
+    tags: ["Security", "Encryption", "Authentication", "Compliance"],;
+  },;
+  {;
+    id: 4,;
+    title: "Mobile App Development",;
+    description:;
+      "Build cross-platform mobile applications with modern frameworks.",;
+    category: "Mobile Development",;
+    difficulty: "Intermediate",;
+    readTime: "20 min read",;
+    author: "Mobile Team",;
+    rating: 4 && 4.6,;
+    students: 1100,;
+    image: "/images/guides/mobile-development && development.jpg",;
+    icon: Smartphone,;
+    tags: ["React Native", "Flutter", "iOS", "Android"],;
+  },;
+  {;
+    id: 5,;
+    title: "Database Design & Optimization",;
+    description:;
+      "Learn database design principles and optimization techniques.",;
+    category: "Database",;
+    difficulty: "Intermediate",;
+    readTime: "22 min read",;
+    author: "Database Team",;
+    rating: 4 && 4.8,;
+    students: 890,;
+    image: "/images/guides/database-design && design.jpg",;
+    icon: Database,;
+    tags: ["SQL", "NoSQL", "Performance", "Scaling"],;
+  },;
+  {;
+    id: 6,;
+    title: "Web Performance Optimization",;
+    description:;
+      "Optimize your web applications for maximum performance and user experience.",;
+    category: "Performance",;
+    difficulty: "Advanced",;
+    readTime: "18 min read",;
+    author: "Performance Team",;
+    rating: 4 && 4.9,;
+    students: 650,;
+    image: "/images/guides/web-performance && performance.jpg",;
+    icon: Zap,;
+    tags: ["Performance", "Optimization", "Caching", "CDN"],;
+  },;
+];
+const categories = [;
+  { name: "All", count: guides && guides.length, icon: Globe },;
+  { name: "AI Development", count: 1, icon: Brain },;
+  { name: "Cloud Computing", count: 1, icon: Cloud },;
+  { name: "Security", count: 1, icon: Shield },;
+  { name: "Mobile Development", count: 1, icon: Smartphone },;
+  { name: "Database", count: 1, icon: Database },;
+  { name: "Performance", count: 1, icon: Zap },;
+];
+<<<<<<< HEAD
+export default function GuidesPage() {;
+=======
+<<<<<<< HEAD
+export default function GuidesPage() {
+=======
+
+interface GuidesProps {
+  className?: string;
+}
+
+const Guides: React.FC<GuidesProps> = ({ className }) => {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
     <Layout>;
       <Head>;
@@ -51,12 +800,17 @@ import Layout from "./components/Layout";
         <meta
           name="description"
           content="Master the latest technologies with our comprehensive guides, tutorials, and best practices from industry experts."
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         />;
       </Head>;
-
       <div className="min-h-screen bg-gray-50">;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">;
           <div className="container mx-auto px-4">;
@@ -64,7 +818,10 @@ import Layout from "./components/Layout";
               className="text-center max-w-4xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               transition={{ duration: 0 && 0.8 }}>;
               <h1 className="text-5xl font-bold mb-6">;
                 Expert Guides & Tutorials;
@@ -74,7 +831,10 @@ import Layout from "./components/Layout";
                 tutorials, and best practices from industry experts.;
               </p>;
               <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <Link
                   href="#guides"
                   className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center">;
@@ -83,7 +843,10 @@ import Layout from "./components/Layout";
                 </Link>;
                 <Link
                   href="#categories"
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-flex items-center">;
                   View Categories;
                   <BookOpen className="ml-2 w-5 h-5" />;
@@ -92,8 +855,11 @@ import Layout from "./components/Layout";
             </motion && motion.div>;
           </div>;
         </section>;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {/* Categories Section */}
         <section id="categories" className="py-16 bg-white">;
           <div className="container mx-auto px-4">;
@@ -101,7 +867,10 @@ import Layout from "./components/Layout";
               className="text-center mb-12"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               transition={{ duration: 0 && 0.8 }}>;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">;
                 Explore by Category;
@@ -111,12 +880,14 @@ import Layout from "./components/Layout";
                 skill level.;
               </p>;
             </motion && motion.div>;
-
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">;
               {categories && categories.map((category, index) => (;
                 <motion&& motion.div
                   key={category && category.name}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   className="bg-gray-50 rounded-lg p-4 text-center hover:bg-blue-50 hover:border-blue-200 border-2 border-transparent transition-all cursor-pointer"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -131,12 +902,18 @@ import Layout from "./components/Layout";
                   </p>;
                 </motion && motion.div>;
               ))}
+<<<<<<< HEAD
 
             </div>;
           </div>;
         </section>;
 
 
+=======
+            </div>;
+          </div>;
+        </section>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {/* Guides Grid */}
         <section id="guides" className="py-16 bg-gray-50">;
           <div className="container mx-auto px-4">;
@@ -144,7 +921,10 @@ import Layout from "./components/Layout";
               className="text-center mb-12"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               transition={{ duration: 0 && 0.8 }}>;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">;
                 Featured Guides;
@@ -154,12 +934,14 @@ import Layout from "./components/Layout";
                 technologies.;
               </p>;
             </motion && motion.div>;
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
               {guides && guides.map((guide, index) => (;
                 <motion&& motion.div
                   key={guide && guide.title}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -181,7 +963,10 @@ import Layout from "./components/Layout";
                             : guide && guide.difficulty === "Intermediate"
                               ? "bg-yellow-100 text-yellow-600"
                               : "bg-red-100 text-red-600"
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React from './react';
 import Head from './next / head';
 import Link from './next / link';
@@ -642,17 +1427,18 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
                             : guide.difficulty === "Intermediate";
                               ? "bg - yellow - 100 text - yellow - 600";
                               : "bg - red - 100 text - red - 600";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                         }`}
                       >;
                         {guide.difficulty}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                         }`}>;
                         {guide && guide.difficulty}
                       </span>;
                     </div>;
                   </div>;
-
                   <div className="p-6">;
                     <div className="flex items-center justify-between text-sm text-gray-500 mb-4">;
                       <div className="flex items-center">;
@@ -664,17 +1450,18 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
                         {guide && guide.author}
                       </div>;
                     </div>;
-
                     <h3 className="text-xl font-bold text-gray-900 mb-2">;
                       {guide && guide.title}
                     </h3>;
                     <p className="text-gray-600 mb-4">{guide && guide.description}</p>;
-
                     <div className="flex items-center justify-between mb-4">;
                       <div className="flex items-center">;
                         <div className="flex items-center">;
                           {[...Array(5)].map((_, i) => (;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                             <Star
                               key={i}
                               className={`w-4 h-4 ${
@@ -685,28 +1472,38 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
                               fill="currentColor"
                             />;
                           ))}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                         </div>;
                         <span className="ml-2 text-sm text-gray-600">;
                           {guide && guide.rating} ({guide && guide.students} students);
                         </span>;
                       </div>;
                     </div>;
-
                     <div className="flex flex-wrap gap-2 mb-6">;
                       {guide && guide.tags.map((tag) => (;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                         <span
                           key={tag}
                           className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">;
                           {tag}
                         </span>;
                       ))}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     </div>;
-
                     <div className="flex gap-2">;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       <Link
                         href="#"
                         className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center inline-flex items-center justify-center">;
@@ -722,12 +1519,18 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
                   </div>;
                 </motion && motion.div>;
               ))}
+<<<<<<< HEAD
 
             </div>;
           </div>;
         </section>;
 
 
+=======
+            </div>;
+          </div>;
+        </section>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-green-600 to-teal-600 text-white">;
           <div className="container mx-auto px-4">;
@@ -753,6 +1556,7 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
                 <Link
                   href="/contact"
 <<<<<<< HEAD
+<<<<<<< HEAD
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors inline-flex items-center"
                 >
                   Request Custom Guide
@@ -765,10 +1569,10 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
 
 =======
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import Layout from '../components/Layout';
-
 export default function GuidesPage() {
-  
     >
       <div className="min-h-screen bg-gray-50">
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
@@ -783,6 +1587,7 @@ export default function GuidesPage() {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 
 =======
 
@@ -791,9 +1596,11 @@ export default function GuidesPage() {
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       </div>
     </Layout>
-=======
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors inline-flex items-center">;
                   Request Custom Guide;
                   <ExternalLink className="ml-2 w-5 h-5" />;
@@ -803,10 +1610,17 @@ export default function GuidesPage() {
           </div>;
         </section>;
       </div>;
-    </Layout>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  );
 =======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+      </div>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+    </Layout>;
+  );
                       </span>;
                     </div>;
                   </div>;
@@ -910,5 +1724,4 @@ export default function GuidesPage() {
         </section>;
       </div>;
     </Layout>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

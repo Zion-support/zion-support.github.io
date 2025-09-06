@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 /* eslint-env node */
@@ -9,8 +10,20 @@ module.exports = {
 export default {
   extends: ['next/core-web-vitals', 'next/typescript'],
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 /* eslint - env node */;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+/* eslint-env node */
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 module.exports = {
+<<<<<<< HEAD
 
 =======
 
@@ -19,13 +32,28 @@ module.exports = {
 module.exports = {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   env: {
     node: true,
     es2021: true
   },
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+  },
+  ignore_patterns: [;
+=======
+  extends: ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
+  parser: "@typescript-eslint/parser",
+  plugins: ["@typescript-eslint"],
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -67,27 +95,32 @@ module.exports = {
   },
 
 =======
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   env: {
     node: true,
     es2021: true
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   },
-  extends: ['next/core-web-vitals', 'plugin:@typescript-eslint/recommended'],
-  parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint'],
+  extends: ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
+  parser: "@typescript-eslint/parser",
+  plugins: ["@typescript-eslint"],
   rules: {
-    '@typescript-eslint/no-unused-vars': 'off',
-    '@typescript-eslint/no-explicit-any': 'off',
-    'react-hooks/exhaustive-deps': 'warn',
-    'react/react-in-jsx-scope': 'off',
-    'no-undef': 'off',
-    'react/no-unescaped-entities': 'off',
-    '@next/next/no-html-link-for-pages': 'off',
-    '@next/next/no-img-element': 'off'
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/react-in-jsx-scope": "off",
+    "no-undef": "off",
+    "react/no-unescaped-entities": "off",
+    "@next/next/no-html-link-for-pages": "off",
+    "@next/next/no-img-element": "off"
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
   env: {
     browser: true,
@@ -122,6 +155,13 @@ module.exports = {
 
 
 
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   ignorePatterns: [
     'node_modules/',
     '.next/',
@@ -297,21 +337,8 @@ module.exports = {
     "react/no-unescaped-entities": "off",
     "@next/next/no-html-link-for-pages": "off",
     "@next/next/no-img-element": "off"
-=======
-  extends: ["next / core - web - vitals", "plugin:@typescript - eslint / recommended"],
-  parser: "@typescript - eslint / parser",
-  plugins: ["@typescript - eslint"],
-  rules: {
-    "@typescript - eslint / no - unused - vars": "off",
-    "@typescript - eslint / no - explicit - any": "off",
-    "react - hooks / exhaustive - deps": "warn",
-    "react / react - in - jsx - scope": "off",
-    "no - undef": "off",
-    "react / no - unescaped - entities": "off",
-    "@next / next / no - html - link - for - pages": "off",
-    "@next / next / no - img - element": "off",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   ignore_patterns: [;
@@ -320,18 +347,29 @@ module.exports = {
 
   ignorePatterns: [
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+  ignorePatterns: [
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     "node_modules/",
     ".next/",
     "out/",
     "dist/",
     "build/",
     "coverage/",
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     "*.config.js",
     "*.config.cjs",
     "*.config.mjs",
     "fix - critical - files.js",
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     "fix-*.js",
     "fix-*.cjs",
     "*-fix*.cjs",
@@ -351,7 +389,10 @@ module.exports = {
     "api - backup/",
     "temp_backup/",
     "corrupted_files_backup_2/",
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     "ai - optimization - backups/",
     "optimization - reports/",
     "test - generation - reports/",
@@ -361,7 +402,10 @@ module.exports = {
     "pages.__backup/",
     "pages - disabled/",
     "pages.disabled_auto/",
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     "zion_academy/",
     "pm2 - automation/",
     "scripts/",
@@ -369,7 +413,10 @@ module.exports = {
     "temp_*/",
     "temp_exclude/",
     "test_build/",
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     "tests.disabled/",
     "pages.disabled/",
     "src.disabled/",
@@ -379,12 +426,18 @@ module.exports = {
     "contracts.disabled/",
     "solutions.disabled/",
     "zion - os.disabled/",
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     "src_backup_temp/",
     "temp - backup/",
     "tests/",
     "supabase/",
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     "*.test.js",
     "*.test.ts",
     "*.test.tsx",
@@ -419,19 +472,26 @@ module.exports = {
     "setup_tests.ts",
     "simple - test.js",
     "src / components / layout/",
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     "types/",
     "utils/",
     "pages_backup/",
     "pages_backup_before_cleanup/",
     "services/",
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     "components.disabled_full/",
     "comprehensive - automation - runner.js",
     "comprehensive - automation.js",
     "comprehensive - merge - resolver.js",
     "corrupted - files - backup/",
     "cypress.config.ts",
+<<<<<<< HEAD
 
     "cypress_backup/",
     "data && data.disabled/",
@@ -493,10 +553,16 @@ module.exports = {
 };
 =======
 
+=======
+    "cypress_backup/",
+    "data && data.disabled/",
+    "database/",
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     "build-verification && verification.js",
     "check-syntax && syntax.js",
     "clean-conflicts && conflicts.js",
     "commit-and-push && push.js",
+<<<<<<< HEAD
 
   ],
 };
@@ -517,11 +583,14 @@ module.exports = {
 
 >>>>>>> origin/automation-improvements-final
 =======
+=======
+  ],
+};
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     "commit-and-push.js"
   ]
 };
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
     "ecosystem.simple.js",
     "ecosystem.working.js",
     "execute - automation.js",
@@ -567,6 +636,7 @@ module.exports = {
     "automation - runner.js",
     "basic - test.js",
     "broken_files_backup/",
+<<<<<<< HEAD
     "build - verification.js",
     "check - syntax.js",
     "clean - conflicts.js",
@@ -575,7 +645,51 @@ module.exports = {
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 ;
+<<<<<<< HEAD
 
+=======
+=======
+    "build-verification.js",
+    "check-syntax.js",
+    "clean-conflicts.js",
+<<<<<<< HEAD
+    "commit-and-push.js"
+  ]
+<<<<<<< HEAD
+<<<<<<< HEAD
+};
+=======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+    "commit-and-push.js",
+  ],
+};
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+};
+>>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+=======
+    "commit-and-push.js"
+  ]
+};
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+};
+;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 ;
 /* eslint-env node */;
 /* eslint-disable no-undef */;
@@ -608,6 +722,7 @@ module.exports = {;
     'automation/netlify/src/apps/';
   ];
 },;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -615,3 +730,11 @@ module.exports = {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

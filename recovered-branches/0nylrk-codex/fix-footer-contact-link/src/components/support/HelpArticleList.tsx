@@ -1,5 +1,7 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/HelpArticleList.tsx
 
 =======
 
@@ -18,12 +20,43 @@ import { HELP_CATEGORIES } from "./help-content",
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+import React from "react";
+
+import {
+  Card
+  CardContent
+  CardDescription
+  CardHeader
+  CardTitle
+} from "@/components/ui/card";
+
+import { HELP_CATEGORIES } from "./help-content";
+interface HelpArticleListProps {
+  categoryId: string;
+  onArticleSelect: (articleId: string) => void;
+  searchQuery: string
+}
+
+export function HelpArticleList({
+  categoryId
+  onArticleSelect
+  searchQuery
+}: HelpArticleListProps) {
+  const category = HELP_CATEGORIES.find((cat) => cat.id === categoryId);
+  if (!category) {
+    return <div>Category not found</div>;
+  }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 interface HelpArticleListProps {
   categoryId: string,
   onArticleSelect: (articleId: string) => void,
   searchQuery: string
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { HELP_CATEGORIES } from "./help-content",;
@@ -40,6 +73,7 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: He
 
   }
 
+<<<<<<< HEAD
 =======
 
   }
@@ -47,10 +81,39 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: He
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+import React from "react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { HELP_CATEGORIES } from "./help-content";
+interface HelpArticleListProps {
+  categoryId: string;
+  onArticleSelect: (articleId: string) => void;
+  searchQuery: string;
+}
+
+export function HelpArticleList({
+  categoryId,
+  onArticleSelect,
+  searchQuery,
+}: HelpArticleListProps) {
+  const category = HELP_CATEGORIES.find((cat) => cat.id === categoryId);
+
+  if (!category) {
+    return <div>Category not found</div>;
+  }
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   // Filter articles based on search query
   const filteredArticles = searchQuery
     ? category.articles.filter(
         (article) =>
+<<<<<<< HEAD
           article.title.toLowerCase().includes(searchQuery.toLowerCase()) |
           article.content.toLowerCase().includes(searchQuery.toLowerCase())
       )
@@ -63,12 +126,23 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: He
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+article.title.toLowerCase().includes(searchQuery.toLowerCase()) |
+          article.content.toLowerCase().includes(searchQuery.toLowerCase())
+      )
+: category.articles;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
     <div>
       <div className="mb-6">
         <h2 className="text-2xl font-bold mb-2">{category.name}</h2>
         <p className="text-zion-slate-light">{category.description}</p>
       </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       {filteredArticles.length === 0 ? (
         <div className="text-center py-8">
           <h3 className="text-lg font-medium mb-2">No articles found</h3>
@@ -80,6 +154,9 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: He
         <div className="space-y-4">
           {filteredArticles.map((article) => (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <Card
               key={article.id}
               className="cursor-pointer hover:border-zion-purple/50 transition-colors"
@@ -103,8 +180,11 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: He
     </div>
   );
 }
+<<<<<<< HEAD
 =======
 =======
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/HelpArticleList.tsx
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {HELP_CATEGORIES} from "./help-content";
 interface HelpArticleListProps {;
@@ -112,14 +192,11 @@ interface HelpArticleListProps {;
   onArticleSelect: (articleId: string) => void,;
   searchQuery: string;
 }
-
 export function HelpArticleList(): any ({ categoryId, onArticleSelect, searchQuery }: HelpArticleListProps) {;
   const category = HELP_CATEGORIES && HELP_CATEGORIES.find(cat => cat && cat.id === categoryId);
-
   if (!category) {;
     return <div>Category not found</div>;
   }
-
   // Filter articles based on search query;
   const filteredArticles = searchQuery;
     ? category && category.articles.filter(;
@@ -128,25 +205,60 @@ export function HelpArticleList(): any ({ categoryId, onArticleSelect, searchQue
           article && article.content.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
       );
     : category && category.articles;
-
   return (
     <div>;
       <div className="mb-6">;
         <h2 className="text-2xl font-bold mb-2">{category && category.name}</h2>;
         <p className="text-zion-slate-light">{category && category.description}</p>;
       </div>;
-
       {filteredArticles && filteredArticles.length === 0 ? (;
+=======
+
+import React from "react",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { HELP_CATEGORIES } from "./help-content",;
+;
+interface HelpArticleListProps {;
+  categoryId:string,;
+  onArticleSelect:(articleId:string) => void,;
+  searchQuery:string;
+}
+;
+export function HelpArticleList({ categoryId, onArticleSelect, searchQuery } HelpArticleListProps) {;
+  const category = HELP_CATEGORIES.find(cat => cat.id === categoryId),;
+  ;
+  if (!category) {;
+    return <div>Category not found</div>,;
+  }
+  ;
+  // Filter articles based on search query;
+  const filteredArticles = searchQuery;
+    ? category.articles.filter(;
+        article =>;
+          article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+          article.content.toLowerCase().includes(searchQuery.toLowerCase());
+      );
+    :category.articles,;
+  ;
+  return (;
+    <div>;
+      <div className="mb-6">;
+        <h2 className="text-2xl font-bold mb-2">{category.name}</h2>;
+        <p className="text-zion-slate-light">{category.description}</p>;
+      </div>;
+      ;
+      {filteredArticles.length === 0 ? (;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <div className="text-center py-8">;
           <h3 className="text-lg font-medium mb-2">No articles found</h3>;
           <p className="text-zion-slate-light">;
             Try adjusting your search query or browse another category.;
           </p>;
         </div>;
+<<<<<<< HEAD
       ) : (;
         <div className="space-y-4">;
           {filteredArticles && filteredArticles.map(article => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <Card
               key={article && article.id}
               className="cursor-pointer hover:border-zion-purple/50 transition-colors"
@@ -156,10 +268,25 @@ export function HelpArticleList(): any ({ categoryId, onArticleSelect, searchQue
                 <CardTitle className="text-lg">{article && article.title}</CardTitle>;
                 <CardDescription className="text-zion-slate-light text-sm">;
                   Last updated: {formatDate(article && article.lastUpdated)}
+=======
+      ) :(;
+        <div className="space-y-4">;
+          {filteredArticles.map(article => (;
+            <Card;
+              key={article.id}
+              className="cursor-pointer hover:border-zion-purple/50 transition-colors";
+              onClick={() => onArticleSelect(article.id)}
+            >;
+              <CardHeader className="pb-2">;
+                <CardTitle className="text-lg">{article.title}</CardTitle>;
+                <CardDescription className="text-zion-slate-light text-sm">;
+                  Last updated:{formatDate(article.lastUpdated)}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 </CardDescription>;
               </CardHeader>;
               <CardContent>;
                 <p className="text-sm text-zion-slate-light truncate">;
+<<<<<<< HEAD
                   {article && article.content.substring(0, 120)}...;
                 </p>;
               </CardContent>;
@@ -167,6 +294,7 @@ export function HelpArticleList(): any ({ categoryId, onArticleSelect, searchQue
           ))}
         </div>;
       )}
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/HelpArticleList.tsx
 
 
 
@@ -182,20 +310,22 @@ function formatDate(date: string): string {
 
 =======
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/HelpArticleList.tsx
     </div>;
   );
 }
-
 function formatDate(): any (date: string): string {;
   return new Date(date).toLocaleDateString("en-US", {;
     year: "numeric",;
     month: "long",;
     day: "numeric";
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/HelpArticleList.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/HelpArticleList.tsx
   });
 }
-
-=======
 import React from './react';
 import {
   Card,
@@ -273,7 +403,17 @@ function format_date (date: string): string {
     month: "long",
     day: "numeric",
   });
+=======
+                  {article.content.substring(0, 120)}...;
+                </p>;
+              </CardContent>;
+            </Card>;          ))}
+        </div>;
+      )}
+    </div>;
+  ),;
 }
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/HelpArticleList.tsx
 <<<<<<< HEAD
 ;
 
@@ -287,3 +427,39 @@ function format_date (date: string): string {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+========
+;
+function formatDate(date:string):string {;
+  return new Date(date).toLocaleDateString("en-US", {;
+    year:"numeric",;
+    month:"long",;
+    day:"numeric";
+  }),; interface HelpArticleListProps {
+  categoryId: string;
+onArticleSelect: (articleId: string) => void;
+searchQuery: string 
+}export function HelpArticleList ({
+  categoryId, onArticleSelect, searchQuery 
+}: HelpArticleListProps) {
+  const category = HELP CATEGORIES.find (cat => cat.id === categoryId);
+if (!category) {
+  return <div>Category not found</div> 
+}return (<div> </p> </CardContent> </Card>) ) 
+}</div>) 
+}</div>) 
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+}
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/HelpArticleList.tsx
+=======
+
+function formatDate(date: string): string {
+  return new Date(date).toLocaleDateString("en-US", {
+year: "numeric"
+    month: "long"
+    day: "numeric"
+
+  });
+}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export type JobStatus = 'new' | 'in_progress' | 'filled' | 'closed';
 ;
@@ -20,6 +21,22 @@ export interface JobBudget {
 }
 export interface Job {
 =======
+=======
+<<<<<<< HEAD
+
+export type JobStatus = 'new' | 'in_progress' | 'filled' | 'closed';
+export type JobCategory =
+  | 'development'
+  | 'design'
+  | 'marketing'
+  | 'content'
+  | 'data'
+  | 'business'
+  | 'other';
+export interface JobBudget {
+=======
+export type JobStatus = 'new' | 'in_progress' | 'filled' | 'closed';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
 export type JobCategory = 
   | 'development' 
@@ -31,12 +48,17 @@ export type JobCategory =
   | 'other';
 
 export interface JobBudget {;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   min: number;
   max: number
   currency: string
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -46,6 +68,13 @@ export interface Job {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+export interface Job {
+=======
+
+export interface Job {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   id: string;
   client_id: string;
   title: string;
@@ -55,6 +84,7 @@ export interface Job {;
   budget: JobBudget;
   deadline: string;
   status: JobStatus;
+<<<<<<< HEAD
 <<<<<<< HEAD
   created_at: string
   updated_at: string
@@ -75,10 +105,22 @@ export interface JobFormData {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+  created_at: string
+  updated_at: string
+}
+<<<<<<< HEAD
+export interface JobFormData {
+=======
+
+export interface JobFormData {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   title: string;
   description: string;
   category: JobCategory;
   skills: string;
+<<<<<<< HEAD
 
   budget_min: number;
   budget_max: number,
@@ -87,6 +129,14 @@ export interface JobFormData {;
 // Add JobMatch interface to be shared across components;
 
 export interface JobMatch {
+=======
+  budgetMin: number;
+  budgetMax: number
+  deadline: Date
+}
+// Add JobMatch interface to be shared across components
+export interface JobMatch {;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   id: string;
   job_id: string;
   talent_id: string;
@@ -108,6 +158,7 @@ export interface JobMatch {
     key_projects: any[];
     skills: string[];
     location?: string;
+<<<<<<< HEAD
 
     category?: string,
     company_name?: string;
@@ -124,11 +175,24 @@ export interface ResumeAttachment {;
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+    category?: string
+    company_name?: string
+  }
+}
+<<<<<<< HEAD
+export interface ResumeAttachment {
+=======
+
+export interface ResumeAttachment {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   id: string;
   title: string;
   type: 'ai_resume' | 'custom_upload';
   file_url?: string;
   resume_id?: string;
+<<<<<<< HEAD
 
   summary?: string,
   skills?: string[];
@@ -147,6 +211,18 @@ export interface JobApplication {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+  summary?: string
+  skills?: string[]
+}
+export type ApplicationStatus = 'new' | 'viewed' | 'shortlisted' | 'interview' | 'hired' | 'rejected';
+<<<<<<< HEAD
+export interface JobApplication {
+=======
+
+export interface JobApplication {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   id: string;
   job_id: string;
   talent_id: string;
@@ -163,6 +239,7 @@ export interface JobApplication {;
     full_name: string;
     professional_title: string;
     profile_picture_url?: string;
+<<<<<<< HEAD
 
     bio: string,
     skills: string[];
@@ -170,11 +247,19 @@ export interface JobApplication {;
   }
   resume?: ResumeAttachment;
   // New fields for resume scoring;
+=======
+    bio: string
+    skills: string[]
+  }
+  resume?: ResumeAttachment;
+  // New fields for resume scoring
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   match_score?: number;
   match_summary?: string;
   match_breakdown?: {
     skills_match?: {
       score: number;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   notes?: string,  // New field for client notes
@@ -186,6 +271,29 @@ export interface JobApplication {;
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+      matching: string[]
+      missing: string[]
+    }
+    experience_match?: {
+      score: number
+      analysis: string
+    }
+    education_match?: {
+      score: number
+      analysis: string
+    }
+  }
+  match_suggestion?: string;
+  scored_at?: string;
+
+  notes?: string,  // New field for client notes
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export type JobStatus = 'new' | 'in_progress' | 'filled' | 'closed',;
 export type JobCategory =;
   | 'development';
@@ -292,6 +400,7 @@ export interface JobApplication {;
     skills_match?: {;
       score: number,;
       matching: string[],;
+<<<<<<< HEAD
 
       missing: string[];
     }
@@ -321,3 +430,26 @@ export interface JobApplication {;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+      missing: string[];
+    },;
+    experience_match?: {;
+      score: number,;
+      analysis: string;
+    },;
+    education_match?: {;
+      score: number,;
+      analysis: string;
+    }
+  },;
+  match_suggestion?: string,;
+  scored_at?: string;
+  notes?: string,  // New field for client notes;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

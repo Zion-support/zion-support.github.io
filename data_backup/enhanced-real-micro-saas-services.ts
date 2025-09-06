@@ -1,8 +1,22 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+=======
+<<<<<<< HEAD
 
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -13,6 +27,21 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 module.exports = type EnhancedRealMicroSaasService = {; id: string; name: string; category?: string; description?: string; tagline?: string; price?: string | number; period?: string; features?: string[]; popular?: boolean; icon?: string; color?: string; textColor?: string; link?: string; marketPosition?: string; targetAudience?: string; trialDays?: number; setupTime?: string; realService?: boolean; technology?: string[]; integrations?: string[]; useCases?: string[]; roi?: string; competitors?: string[]; marketSize?: string; growthRate?: string; variant?: string; contactInfo?: { mobile: string; email: string; address: string; website: string}; realImplementation?: boolean; implementationDetails?: string; launchDate?: string; customers?: number; rating?: number; reviews?: number}; import { additionalEnhancedServices } from "./additional-real-services"; import { realMarketServices } from "./real-market-services"; const mapToEnhanced = (items: any[]): EnhancedRealMicroSaasService[] => (items | []).map((s) => ({ .s })); export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [.mapToEnhanced(realMarketServices as unknown as []),.mapToEnhanced(additionalEnhancedServices as unknown as []),]; export const serviceCategories: string[] = Array.from( new Set( enhancedRealMicroSaasServices .map((s) => s.category) .filter((v): v is string = > Boolean(v)); ); ).sort(); export const getServicesByCategory = (category: string) => {; if (!category | category === "All") return enhancedRealMicroSaasServices; return enhancedRealMicroSaasServices.filter((s) => s.category === category)}; export const getPopularServices = () => enhancedRealMicroSaasServices .filter((s) => !s.popular);.sort((a,b) => (b.rating | 0) - (a.rating | 0));'"'"
 import React from 'react';
 interface EnhancedrealmicrosaasservicesProps {
@@ -20,12 +49,30 @@ interface EnhancedrealmicrosaasservicesProps {
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export default function Enhancedrealmicrosaasservices({ }: EnhancedrealmicrosaasservicesProps) {
   return (
     <div>
@@ -34,7 +81,24 @@ export default function Enhancedrealmicrosaasservices({ }: Enhancedrealmicrosaas
     </div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+}
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 
 =======
@@ -45,14 +109,30 @@ export default function Enhancedrealmicrosaasservices({ }: Enhancedrealmicrosaas
 }
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+<<<<<<< HEAD
 
 =======
 
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

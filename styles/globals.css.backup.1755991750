@@ -177,9 +177,23 @@ h3 {
   left: 0;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   right: 0;
   bottom: 0;
-=======
+  background: 
+  right: 0;
+  bottom: 0;  background: 
+
+  right: 0;
+  bottom: 0;
+
 }
 
 /* Custom scrollbar */
@@ -313,8 +327,14 @@ h3 {
 
 /* Enhanced futuristic backgrounds */
 .futuristic-bg {
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-648a
+
   background: 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 <<<<<<< HEAD
 =======
@@ -478,6 +498,10 @@ h3 {
   bottom: 0;  background: 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
     radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.2) 0%, transparent 50%);
@@ -1259,6 +1283,12 @@ h3 {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1276,6 +1306,7 @@ h3 {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
   
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   .particle-bg::before {
     display: none;
   }
@@ -1475,6 +1506,12 @@ h3 {
 
 /* Enhanced Quantum Effects */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1483,10 +1520,14 @@ h3 {
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 >>>>>>> main
-.quantum-field {
+<<<<<<< HEAD
 =======
-}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+.quantum-field {
 
+<<<<<<< HEAD
+=======
 /* Enhanced Utility Classes */
 .hover-glow:hover {
   animation: glow 2s ease-in-out infinite alternate;
@@ -1573,11 +1614,23 @@ h3 {
 =======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   position: relative;
   overflow: hidden;
 }
 
 .quantum-field {  position: relative;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> main
   overflow: hidden;
 }
@@ -1598,6 +1651,10 @@ h3 {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 .quantum-field::before {
   content: '';
   position: absolute;
@@ -1626,6 +1683,18 @@ h3 {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+.holographic::before {
+
+  content: '';
+.holographic::before {  content: '';
+
+  content: '';
+
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1657,12 +1726,22 @@ h3 {
 .holographic::before {  content: '';
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1681,6 +1760,10 @@ h3 {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.3), transparent);
   animation: holographic-shimmer 4s ease-in-out infinite;
 }
@@ -1821,6 +1904,14 @@ h3 {
     animation: none;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+}
+}
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }
 =======
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
@@ -1839,6 +1930,10 @@ h3 {
 }
 <<<<<<< HEAD
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
 .btn-futuristic:hover::before {
   left: 100%;
@@ -2032,6 +2127,9 @@ h3 {
     0 0 10px rgba(59, 130, 246, 0.3),
     0 0 15px rgba(59, 130, 246, 0.1);
 }
+<<<<<<< HEAD
+
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-648a
 <<<<<<< HEAD
 =======
@@ -2047,3 +2145,7 @@ h3 {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7

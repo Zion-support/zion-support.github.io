@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/EnhancedSearchInput.tsx
 
 
 <<<<<<< HEAD
@@ -8,33 +10,88 @@ import { Input } from "@/components/ui/input",
 
 
 
+========
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/EnhancedSearchInput.tsx
+=======
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React, { useState, useEffect, useRef } from "react";
 import {Search, X} from "lucide-react";
 import {Input} from "@/components/ui/input";
 import {AutocompleteSuggestions} from "@/components/search/AutocompleteSuggestions";
 import {SearchSuggestion} from "@/types/search";
+<<<<<<< HEAD
 interface EnhancedSearchInputProps {;
   value: string,;
   onChange: (value: string) => void,;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/EnhancedSearchInput.tsx
 
   placeholder?: string;
   searchSuggestions: SearchSuggestion[];
 }
 
 
+========
+  placeholder?: string;
+  searchSuggestions: SearchSuggestion[];
+}
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/EnhancedSearchInput.tsx
 export function EnhancedSearchInput(): any ({ ;
   value;
   onChange, ;
   placeholder = "Search...", ;
   searchSuggestions ;
 }: EnhancedSearchInputProps) {;
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/EnhancedSearchInput.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/EnhancedSearchInput.tsx
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React, { useState, useEffect, useRef } from "react",
+import { Search, X } from "lucide-react",
+import { Input } from "@/components/ui/input",
+<<<<<<< HEAD
+import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions";
+import { SearchSuggestion } from "@/types/search";
+interface EnhancedSearchInputProps {
+
+  value: string
+  onChange: (value: string) => void
+
+  placeholder?: string;
+  searchSuggestions: SearchSuggestion[]
+}
+export function EnhancedSearchInput({
+  value;
+
+  onChange
+  placeholder = "Search..."
+  searchSuggestions
+}: EnhancedSearchInputProps) {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   const [isFocused, setIsFocused] = useState(false);
   const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]);
   const inputRef = useRef<HTMLInputElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/EnhancedSearchInput.tsx
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+=======
+import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions",
+import { SearchSuggestion } from "@/types/search",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 interface EnhancedSearchInputProps {
   value: string,
   onChange: (value: string) => void,
@@ -43,12 +100,21 @@ interface EnhancedSearchInputProps {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 export function EnhancedSearchInput({ 
   value,
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+export function EnhancedSearchInput({ ;
+  value;
+=======
+export function EnhancedSearchInput({ 
+  value,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   onChange, 
   placeholder = "Search...", 
   searchSuggestions 
@@ -59,14 +125,19 @@ export function EnhancedSearchInput({
   const containerRef = useRef<HTMLDivElement>(null),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   // Filter suggestions based on input value
   useEffect(() => {
     if (!value) {
       // Show recent searches when input is empty
+<<<<<<< HEAD
       setFilteredSuggestions(searchSuggestions.filter(s => s.type === 'recent'));
       return
 
@@ -76,6 +147,43 @@ export function EnhancedSearchInput({
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+      setFilteredSuggestions(searchSuggestions.filter(s => s.type === 'recent')),
+      return
+<<<<<<< HEAD
+    }
+    const filtered = searchSuggestions.filter(suggestion =>
+      suggestion.text.toLowerCase().includes(value.toLowerCase())
+    );
+    // Sort suggestions to prioritize those that start with the search term
+    filtered.sort((a, b) => {
+      const aStartsWith = a.text.toLowerCase().startsWith(value.toLowerCase()) ? -1 : 0;
+      const bStartsWith = b.text.toLowerCase().startsWith(value.toLowerCase()) ? -1 : 0;
+      return aStartsWith - bStartsWith
+    });
+    setFilteredSuggestions(filtered.slice(0, 8)), // Limit to 8 suggestions
+  }, [value, searchSuggestions]);
+  // Handle clicks outside the component to close suggestions
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
+        setIsFocused(false)
+<<<<<<< HEAD
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside)
+  }, []);
+  const handleSelectSuggestion = (suggestion: string) => {
+    onChange(suggestion);
+    setIsFocused(false)
+    inputRef.current?.blur()
+  }
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React, { useState, useEffect, useRef } from "react",;
 import { Search, X } from "lucide-react",;
 import { Input } from "@/components/ui/input",;
@@ -122,12 +230,19 @@ export function EnhancedSearchInput({;
     function handleClickOutside(event: MouseEvent) {;
       if (containerRef.current && !containerRef.current.contains(event.target as Node)) {;
         setIsFocused(false);
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       }
     }
     
@@ -141,42 +256,72 @@ export function EnhancedSearchInput({;
     inputRef.current?.blur()
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
     <div className="relative w-full" ref={containerRef}>
       <div className="relative">
         <Search
           className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate"
         />
+<<<<<<< HEAD
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/EnhancedSearchInput.tsx
 =======
 
+import React, { useState, useEffect, useRef } from "react",;
+import { Search, X } from "lucide-react",;
+import { Input } from "@/components/ui/input",;
+import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions", ;
+import { SearchSuggestion } from "@/types/search",;
+;
+interface EnhancedSearchInputProps {;
+  value:string,;
+  onChange:(value:string) => void,;
+  placeholder?:string,;
+  searchSuggestions:SearchSuggestion[];
+}
+;
+export function EnhancedSearchInput({ ;
+  value,;
+  onChange, ;
+  placeholder = "Search...", ;
+  searchSuggestions ;
+} EnhancedSearchInputProps) {;
+  const [isFocused, setIsFocused] = useState(false),;
+  const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]),;
+  const inputRef = useRef<HTMLInputElement>(null),;
+  const containerRef = useRef<HTMLDivElement>(null),;
+;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   // Filter suggestions based on input value;
   useEffect(() => {;
     if (!value) {;
       // Show recent searches when input is empty;
+<<<<<<< HEAD
       setFilteredSuggestions(searchSuggestions && searchSuggestions.filter(s => s && s.type === 'recent'));
       return;
     }
-
     const filtered = searchSuggestions && searchSuggestions.filter(suggestion => ;
       suggestion && suggestion.text.toLowerCase().includes(value && value.toLowerCase());
     );
-
     // Sort suggestions to prioritize those that start with the search term;
     filtered && filtered.sort((a, b) => {;
       const aStartsWith = a && a.text.toLowerCase().startsWith(value && value.toLowerCase()) ? -1 : 0;
       const bStartsWith = b && b.text.toLowerCase().startsWith(value && value.toLowerCase()) ? -1 : 0;
       return aStartsWith - bStartsWith;
     });
-
     setFilteredSuggestions(filtered && filtered.slice(0, 8)), // Limit to 8 suggestions;
   }, [value, searchSuggestions]);
-
   // Handle clicks outside the component to close suggestions;
   useEffect(() => {;
     function handleClickOutside(): any (event: MouseEvent) {;
@@ -184,24 +329,20 @@ export function EnhancedSearchInput({;
         setIsFocused(false);
       }
     }
-
     document && document.addEventListener("mousedown", handleClickOutside);
     return () => document && document.removeEventListener("mousedown", handleClickOutside);
   }, []);
-
   const handleSelectSuggestion = (suggestion: string) => {;
     onChange(suggestion);
     setIsFocused(false),;
     inputRef && inputRef.current?.blur();
   };
-
   return (
     <div className="relative w-full" ref={containerRef}>;
       <div className="relative">;
         <Search
           className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" 
         />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <Input
           ref={inputRef}
           type="text"
@@ -209,6 +350,13 @@ export function EnhancedSearchInput({;
 <<<<<<< HEAD
 =======
 
+=======
+        <Input
+          ref={inputRef}
+          type="text"
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 ;
     document.addEventListener("mousedown", handleClickOutside),;
     return () => document.removeEventListener("mousedown", handleClickOutside);
@@ -227,42 +375,142 @@ export function EnhancedSearchInput({;
         <Input;
           ref={inputRef}
           type="text";
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           value={value}
           onChange={(e) => onChange(e && e.target.value)}
+=======
+      setFilteredSuggestions(searchSuggestions.filter(s => s.type === 'recent')),;
+      return,;
+    }
+    ;
+    const filtered = searchSuggestions.filter(suggestion => ;
+      suggestion.text.toLowerCase().includes(value.toLowerCase());
+    ),;
+    ;
+    // Sort suggestions to prioritize those that start with the search term;
+    filtered.sort((a, b) => {;
+      const aStartsWith = a.text.toLowerCase().startsWith(value.toLowerCase()) ? -1 :0,;
+      const bStartsWith = b.text.toLowerCase().startsWith(value.toLowerCase()) ? -1 :0,;
+      return aStartsWith - bStartsWith,;
+    }),;
+    ;
+    setFilteredSuggestions(filtered.slice(0, 8)), // Limit to 8 suggestions;
+  }, [value, searchSuggestions]),;
+;
+  // Handle clicks outside the component to close suggestions;
+  useEffect(() => {;
+    function handleClickOutside(event:MouseEvent) {;
+      if (containerRef.current && !containerRef.current.contains(event.target as Node)) {;
+        setIsFocused(false);
+      }
+    }
+    ;
+    document.addEventListener("mousedown", handleClickOutside),;
+    return () => document.removeEventListener("mousedown", handleClickOutside),;
+  }, []),;
+;
+  const handleSelectSuggestion = (suggestion:string) => {;
+    onChange(suggestion),;
+    setIsFocused(false),;
+    inputRef.current?.blur();
+  },;
+  ;
+  return (;
+    <div className="relative w-full" ref={containerRef}>;
+      <div className="relative">;
+        <Search ;
+          className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" ;
+        />;
+        <Input;
+          ref={inputRef}
+          type="text";          value={value}
+          onChange={(e) => onChange(e.target.value)}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           onFocus={() => setIsFocused(true)}
           placeholder={placeholder}
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/EnhancedSearchInput.tsx
 
           className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate";
         />;
         {value && (;
 
+========
+          className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate";
+        />;
+        {value && (;
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/EnhancedSearchInput.tsx
           <button
             className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"
+=======
+          <button ;
+            className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white";
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             onClick={() => onChange('')}
           >;
             <X className="h-4 w-4" />;
           </button>;
         )}
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/EnhancedSearchInput.tsx
 
       </div>;
 
 
+========
+      </div>;
+<<<<<<< HEAD
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/EnhancedSearchInput.tsx
       <AutocompleteSuggestions
+=======
+      ;
+      <AutocompleteSuggestions;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
+          onFocus={() => setIsFocused(true)}
+          placeholder={placeholder}
+          className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate"
+        />
+        {value && (
+          <button
+            className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"
+            onClick={() => onChange('')}
+          >
+            <X className="h-4 w-4" />
+          </button>
+        )}
+      </div>
+      <AutocompleteSuggestions
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         suggestions={filteredSuggestions}
         searchTerm={value}
         onSelectSuggestion={handleSelectSuggestion}
         visible={isFocused}
+<<<<<<< HEAD
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/EnhancedSearchInput.tsx
 
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/EnhancedSearchInput.tsx
       />;
     </div>;
+<<<<<<< HEAD
   );
 }
+<<<<<<<< HEAD:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/EnhancedSearchInput.tsx
 
 =======
+========
+>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/search/EnhancedSearchInput.tsx
 import React, { useState, useEffect, useRef } from './react';
 import { Search, X } from './lucide-react';
 import { Input } from '@/components / ui / input';
@@ -359,4 +607,48 @@ function handleClickOutside() {
       />;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+  ),;}
+ interface EnhancedSearchInputProps {
+  value: string;
+onChange: (value: string) => void;
+placeholder?: string;
+searchSuggestions: SearchSuggestion[] 
+}export function EnhancedSearchInput ({
+  value;
+onChange;
+placeholder = "Search...";
+searchSuggestions 
+}: EnhancedSearchInputProps) {
+  const [isFocused, setIsFocused] = useState (false);
+const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]> ([]);
+const inputRef = useRef<HTMLInputElement> (null);
+const containerRef = useRef<HTMLDivElement> (null);
+if (!value) {
+  //Show recent searches when input is empty const filtered = searchSuggestions.filter (suggestion => suggestion.text.toLowerCase () .includes (value.toLowerCase () ) );
+//Sort suggestions to prioritize those that start with the search term setFilteredSuggestions (filtered.slice (0, 8) ), //Limit to 8 suggestions 
+}, [value, searchSuggestions]);
+//Handle clicks outside the component to close suggestions useEffect ( () => {
+  function handleClickOutside (event: MouseEvent) {
+  if (containerRef.current && !containerRef.current.contains (event.target as Node) ) {
+  
+}<Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" /> <Input onClick= {
+  () => onChange ('') 
+}> <X className="h-4 w-4" /> </button>) 
+}</div> <AutocompleteSuggestions suggestions= {
+  filteredSuggestions 
+}searchTerm= {
+  value 
+}onSelectSuggestion= {
+  handleSelectSuggestion 
+}visible= {
+  isFocused 
+}/> </div>) 
+}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+      />
+    </div>
+  )
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
