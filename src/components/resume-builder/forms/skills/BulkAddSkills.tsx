@@ -1,12 +1,12 @@
 
-import { useState } from 'react',
-import { Button } from '@/components/ui/button',
+import { useState } from 'react';
+import { Button } from '@/components/ui/button';
 import { Loader2, Sparkles } from 'lucide-react'
-import { useResumeEnhancer } from '@/hooks/useResumeEnhancer',
-import { useResume } from '@/hooks/useResume',
-import { BulkAddSkillsProps } from './types',
-import { Alert, AlertDescription } from '@/components/ui/alert',
-import { Textarea } from '@/components/ui/textarea',
+import { useResumeEnhancer } from '@/hooks/useResumeEnhancer';
+import { useResume } from '@/hooks/useResume';
+import { BulkAddSkillsProps } from './types';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import { Textarea } from '@/components/ui/textarea';
 export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
   const [bulkSkills, setBulkSkills] = useState(''),
   const [error, setError] = useState<string | null>(null),
@@ -53,7 +53,7 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
         }
       }
     } catch (err: any) {
-      setError(err.message || 'Failed to categorize skills')
+      setError(err.message || 'Failed to categorize skills'),
     }
   },
 
@@ -93,3 +93,4 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
     </div>
   )
 },
+;

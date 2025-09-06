@@ -6,16 +6,16 @@ import { Loader2, AlertTriangle, Wifi, WifiOff, RefreshCw } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { cn } from '@/lib/utils'
-import {logErrorToProduction} from '@/utils/productionLogger',
+import {logErrorToProduction} from '@/utils/productionLogger';
 interface LoadingState {
   isLoading: boolean
   error: Error | null
-  retryCount: number
-  isOnline: boolean
+  retryCount: number;
+  isOnline: boolean,
 }
 
 interface DynamicLoaderProps {
-  importFn: () => Promise<{ default: ComponentType<any> }>
+  importFn: () => Promise<{ default: ComponentType<any> };>
   fallback?: React.ReactNode
   errorFallback?: React.ComponentType<{ error: Error, retry: () => void }>
   loadingComponent?: React.ComponentType
@@ -24,14 +24,14 @@ interface DynamicLoaderProps {
   prefetch?: boolean
   className?: string
   children?: React.ReactNode
-  [key: string]: any
+  [key: string]: any,
 }
 
 // Enhanced Loading Component
 const EnhancedLoading: React.FC<{ 
   progress?: number
   message?: string
-  showProgress?: boolean
+  showProgress?: boolean,
 }> = ({ 
   progress = 0,
   message = 'Loading component...', 
@@ -73,7 +73,7 @@ const EnhancedError: React.FC<{
   retry: () => void
   isOnline: boolean
   retryCount: number
-  maxRetries: number
+  maxRetries: number,
 }> = ({ error, retry, isOnline, retryCount, maxRetries }) => (
   <Card className="w-full max-w-md mx-auto border-red-200 bg-red-50 dark:bg-red-900/10">
     <CardContent className="p-6">
@@ -82,21 +82,21 @@ const EnhancedError: React.FC<{
           {isOnline ? (
             <AlertTriangle className="h-6 w-6 text-red-600" />
           ) : (
-            <WifiOff className="h-6 w-6 text-red-600" />
+            <WifiOff className="h-6 w-6 text-red-600" />,
           )}
         </div>
         <div className="text-center">
-          <h3 className="font-semibold text-red-900 dark:text-red-100">
+          <h3 className="font-semibold text-red-900 dark:text-red-100">,
             {isOnline ? 'Loading Failed' : 'Offline'}
           </h3>
           <p className="text-sm text-red-700 dark:text-red-200 mt-1">
             {isOnline 
               ? error.message || 'Failed to load component'
-              : 'Please check your internet connection'
+              : 'Please check your internet connection',
             }
           </p>
           {retryCount > 0 && (
-            <p className="text-xs text-red-600 dark:text-red-300 mt-2">
+            <p className="text-xs text-red-600 dark:text-red-300 mt-2">,
               Retry {retryCount}/{maxRetries}
             </p>
           )}
@@ -110,7 +110,7 @@ const EnhancedError: React.FC<{
           >
             <RefreshCw className="h-4 w-4 mr-2" />
             Try Again
-          </Button>
+          </Button>,
         )}
       </div>
     </CardContent>
@@ -124,12 +124,12 @@ const useNetworkStatus = () => {
   useEffect(() => {
     const updateOnlineStatus = () => setIsOnline(navigator.onLine)
     
-    window.addEventListener('online', updateOnlineStatus)
+    window.addEventListener('online', updateOnlineStatus);
     window.addEventListener('offline', updateOnlineStatus)
-    
+    ;
     return () => {
-      window.removeEventListener('online', updateOnlineStatus)
-      window.removeEventListener('offline', updateOnlineStatus)
+      window.removeEventListener('online', updateOnlineStatus);
+      window.removeEventListener('offline', updateOnlineStatus);
     }
   }, [])
 
@@ -137,7 +137,7 @@ const useNetworkStatus = () => {
 }
 
 // Advanced Dynamic Component Loader
-export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
+export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
   importFn,
   fallback,
   errorFallback,
@@ -153,7 +153,7 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
     isLoading: true,
     error: null,
     retryCount: 0,
-    isOnline: true
+    isOnline: true,
   })
   const [progress, setProgress] = useState(0)
   const [DynamicComponent, setDynamicComponent] = useState<ComponentType<any> | null>(null)
@@ -315,15 +315,15 @@ export const createDynamicComponent = <T extends ComponentType<any>>(
 // Predefined dynamic loaders for common heavy components
 // Note: These are examples - uncomment and install types as needed
 
-// export const DynamicChartComponent = createDynamicComponent(
+// export const DynamicChartComponent = createDynamicComponent(,
 //   () => import('recharts').then(module => ({ default: module.LineChart })),
 //   {
 //     loadingComponent: () => (
 //       <div className="w-full h-64 bg-muted animate-pulse rounded-lg flex items-center justify-center">
 //         <span className="text-muted-foreground">Loading chart...</span>
-//       </div>
+//       </div>,
 //     ),
-//     prefetch: true
+//     prefetch: true,
 //   }
 // )
 
@@ -334,8 +334,8 @@ export const createDynamicComponent = <T extends ComponentType<any>>(
 //       <div className="w-full h-96 bg-muted animate-pulse rounded-lg flex items-center justify-center">
 //         <span className="text-muted-foreground">Loading 3D renderer...</span>
 //       </div>
-//     )
+//     ),
 //   }
 // )
 
-export default DynamicComponentLoader 
+export default DynamicComponentLoader ;

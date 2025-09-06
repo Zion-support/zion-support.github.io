@@ -1,6 +1,6 @@
 
-import React from "react",
-import { format } from "date-fns",
+import React from "react";
+import { format } from "date-fns";
 import { 
   Card,
   CardContent, 
@@ -8,18 +8,18 @@ import {
   CardTitle, 
   CardDescription
 } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge",
+import { Button } from "@/components/ui/button";
+import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge";
 import { Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon } from 'lucide-react'
-import type { QuoteRequest } from "@/types/quotes",
+import type { QuoteRequest } from "@/types/quotes";
 type QuoteRequestCardProps = {
-  quote: QuoteRequest,
-  onViewDetails: (quote: QuoteRequest) => void,
-  onMarkAsResponded?: (id: string) => void,
-  onToggleArchive: (id: string, isArchived: boolean) => void
+  quote: QuoteRequest;
+  onViewDetails: (quote: QuoteRequest) => void;
+  onMarkAsResponded?: (id: string) => void;
+  onToggleArchive: (id: string, isArchived: boolean) => void,
 },
 
-export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
+export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
   quote,
   onViewDetails,
   onMarkAsResponded,
@@ -27,7 +27,7 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
 }) => {
   // Format date for display
   const formatDate = (dateString: string) => {
-    try {
+    try {,
       return format(new Date(dateString), 'PP')
     } catch (e) {
       return dateString
@@ -49,7 +49,7 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
       </CardHeader>
       <CardContent>
         <div className="text-sm text-zion-slate-light mb-3">
-          <span className="text-white font-medium">From: </span>
+          <span className="text-white font-medium">From: </span>,
           {quote.requester_name}
         </div>
         
@@ -102,3 +102,4 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
     </Card>
   )
 },
+;

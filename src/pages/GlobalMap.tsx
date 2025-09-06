@@ -1,23 +1,22 @@
-import React, { useEffect, useState } from 'react',
-import { Header } from '@/components/Header',
-import { NextSeo } from '@/components/NextSeo',
+import React, { useEffect, useState } from 'react';
+import { Header } from '@/components/Header';
+import { NextSeo } from '@/components/NextSeo';
 import { Globe, MapPin } from 'lucide-react'
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip',
-
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 interface Instance {
-  id: number,
-  name: string,
-  lat: number,
-  lng: number,
-  talent: number,
-  governance: 'admin' | 'hybrid' | 'vote',
-  votesPassed: number,
-  votesPending: number,
-  region: string
+  id: number;
+  name: string;
+  lat: number;
+  lng: number;
+  talent: number;
+  governance: 'admin' | 'hybrid' | 'vote';
+  votesPassed: number;
+  votesPending: number;
+  region: string,
 }
 
 const INSTANCES: Instance[] = [
-  {
+  {,
     id: 1,
     name: 'Zion LATAM',
     lat: -15,
@@ -48,9 +47,9 @@ const INSTANCES: Instance[] = [
     votesPending: 3,
     region: 'Europe'}],
 
-interface FeedItem {
-  id: number,
-  text: string
+interface FeedItem {;
+  id: number;
+  text: string,
 }
 
 export default function GlobalMapPage() {
@@ -69,7 +68,7 @@ export default function GlobalMapPage() {
 
   const width = 800,
   const height = 400,
-  function project(lat: number, lng: number) {
+  function project(lat: number, lng: number) {,
     const x = ((lng + 180) / 360) * width,
     const y = ((90 - lat) / 180) * height,
     return { x, y }
@@ -83,7 +82,7 @@ export default function GlobalMapPage() {
       <Header />
       <main className="py-10 container mx-auto space-y-8">
         <h1 className="text-3xl font-bold">Global Instances</h1>
-        <div className="flex flex-col lg:flex-row gap-8">
+        <div className="flex flex-col lg: flex-row gap-8">,
           <div className="relative" style={{ width, height }}>
             <Globe className="w-full h-full text-secondary" />
             {INSTANCES.map((i) => {
@@ -141,3 +140,4 @@ export default function GlobalMapPage() {
   )
 }
 
+;

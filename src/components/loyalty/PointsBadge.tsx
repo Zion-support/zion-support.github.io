@@ -1,12 +1,12 @@
-import React, { useState } from 'react',
+import React, { useState } from 'react';
 import { Gift, RefreshCw } from 'lucide-react'
-import { usePoints } from '@/hooks/usePoints',
-import { useAuth } from '@/hooks/useAuth',
-import Link from 'next/link',
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip',
-import { LoginModal } from '@/components/auth/LoginModal',
-import { Button } from '@/components/ui/button',
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { usePoints } from '@/hooks/usePoints';
+import { useAuth } from '@/hooks/useAuth';
+import Link from 'next/link';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+import { LoginModal } from '@/components/auth/LoginModal';
+import { Button } from '@/components/ui/button';
+import {logErrorToProduction} from '@/utils/productionLogger';
 export function PointsBadge() {
 
   const { isAuthenticated } = useAuth(),
@@ -27,13 +27,13 @@ export function PointsBadge() {
   ),
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (!isAuthenticated) {
+    if (!isAuthenticated) {,
       e.preventDefault(),
       setLoginOpen(true)
     }
   },
 
-  const handleRefresh = async (e: React.MouseEvent<HTMLButtonElement>) => {
+  const handleRefresh = async (e: React.MouseEvent<HTMLButtonElement>) => {,
     e.preventDefault(),
     e.stopPropagation(),
     if (!isAuthenticated) return,
@@ -59,7 +59,7 @@ export function PointsBadge() {
               title={isAuthenticated ? "View points" : "Earn points by participating"}
               className="flex items-center gap-1 text-xs text-muted-foreground transition-transform active:scale-95"
             >
-              <Gift className="h-4 w-4" aria-hidden="true" />
+              <Gift className="h-4 w-4" aria-hidden="true" />,
               <span>{`${points} pts`}</span>
             </Link>
           </TooltipTrigger>
@@ -93,7 +93,7 @@ export function PointsBadge() {
                 <p className="text-xs mt-2 text-muted-foreground border-t pt-1">
                   Click to learn more and join!
                 </p>
-              </>
+              </>,
             )}
           </TooltipContent>
         </Tooltip>
@@ -109,7 +109,7 @@ export function PointsBadge() {
                 className="p-1 h-6 w-6 text-muted-foreground hover:text-foreground"
                 aria-label="Refresh points"
               >
-                <RefreshCw
+                <RefreshCw,
                   className={`h-3 w-3 ${isRefreshing || loading ? 'animate-spin' : ''}`}
                   aria-hidden="true"
                 />
@@ -128,3 +128,4 @@ export function PointsBadge() {
     </TooltipProvider>
   )
 }
+;

@@ -1,7 +1,7 @@
-import React from 'react',
-import Link from 'next/link',
-import { useAuth } from '@/hooks/useAuth',
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar',
+import React from 'react';
+import Link from 'next/link';
+import { useAuth } from '@/hooks/useAuth';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -12,7 +12,7 @@ import {
 import { User as UserIcon, Package } from 'lucide-react'
 import { LogOut } from 'lucide-react', // Assuming lucide-react is used
 
-export const AvatarMenu: React.FC = () => {
+export const AvatarMenu: React.FC = () => {;
   const { user, logout, avatarUrl } = useAuth(),
 
   if (!user) return null,
@@ -27,7 +27,7 @@ export const AvatarMenu: React.FC = () => {
           aria-label="Open user menu"
         >
           <Avatar className="h-8 w-8">
-            {avatarUrl ? (
+            {avatarUrl ? (,
               <AvatarImage src={avatarUrl} alt={user.displayName || user.name || 'User avatar'} />
             ) : (
               <AvatarFallback>{initials}</AvatarFallback>
@@ -70,5 +70,5 @@ export const AvatarMenu: React.FC = () => {
     </DropdownMenu>
   )
 },
-
-export default AvatarMenu,
+;
+export default AvatarMenu;

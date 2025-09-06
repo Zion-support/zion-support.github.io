@@ -1,18 +1,18 @@
-import React, { useState } from 'react',
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',
-import { Switch } from '@/components/ui/switch',
-import { Button } from '@/components/ui/button',
-import { Label } from '@/components/ui/label',
+import React, { useState } from 'react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Switch } from '@/components/ui/switch';
+import { Button } from '@/components/ui/button';
+import { Label } from '@/components/ui/label';
 import { ShieldAlert, Info } from 'lucide-react'
-import {logErrorToProduction} from '@/utils/productionLogger',
+import {logErrorToProduction} from '@/utils/productionLogger';
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger} from "@/components/ui/accordion",
-import { toast } from '@/hooks/use-toast',
-import { supabase } from '@/integrations/supabase/client',
-import { useAuth } from '@/hooks/useAuth',
+import { toast } from '@/hooks/use-toast';
+import { supabase } from '@/integrations/supabase/client';
+import { useAuth } from '@/hooks/useAuth';
 export function FraudDetectionSettings() {
   const { user } = useAuth(),
   const [messageScanningEnabled, setMessageScanningEnabled] = useState(true),
@@ -126,7 +126,7 @@ export function FraudDetectionSettings() {
                   <li>AI-powered content analysis</li>
                   <li>Monitoring for suspicious account activities</li>
                 </ul>
-                <p>
+                <p>,
                   You can opt out of some of these protections, but this may limit your ability to use certain platform features. 
                   We prioritize keeping our marketplace safe while respecting your privacy.
                 </p>
@@ -139,7 +139,7 @@ export function FraudDetectionSettings() {
               onClick={handleSavePreferences}
               disabled={isSaving}
               className="bg-zion-purple hover:bg-zion-purple-light"
-            >
+            >,
               {isSaving ? "Saving..." : "Save Preferences"}
             </Button>
           </div>
@@ -148,3 +148,4 @@ export function FraudDetectionSettings() {
     </Card>
   )
 }
+;

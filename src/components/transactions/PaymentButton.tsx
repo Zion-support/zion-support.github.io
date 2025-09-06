@@ -1,16 +1,16 @@
-import { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { cn } from "@/lib/utils",
-import { useAuth } from "@/hooks/useAuth",
-import { toast } from "@/hooks/use-toast",
-import { supabase } from "@/integrations/supabase/client",
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import { useAuth } from "@/hooks/useAuth";
+import { toast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 import { Loader2 } from 'lucide-react'
-import { useRouter } from 'next/router',
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { useRouter } from 'next/router';
+import {logErrorToProduction} from '@/utils/productionLogger';
 interface PaymentButtonProps {
-  amount: number,
-  serviceId: string,
-  providerId: string,
+  amount: number;
+  serviceId: string;
+  providerId: string;
   buttonText?: string,
   className?: string,
   onPaymentInitiated?: () => void,
@@ -49,7 +49,7 @@ export function PaymentButton({
       
       // Call the create-checkout edge function
       const { data, error } = await supabase.functions.invoke("create-checkout", {
-        body: {
+        body: {,
           amount,
           serviceId,
           providerId,
@@ -103,3 +103,4 @@ export function PaymentButton({
     </Button>
   )
 }
+;

@@ -1,9 +1,9 @@
 
-import React from 'react',
-import { Button } from '@/components/ui/button',
+import React from 'react';
+import { Button } from '@/components/ui/button';
 import { useRouter } from 'next/router', // Changed from useNavigate
 import { CheckCircle2 } from 'lucide-react'
-import { useTranslation } from 'react-i18next',
+import { useTranslation } from 'react-i18next';
 export default function PaymentSuccess() {
   const router = useRouter(), // Changed from navigate
   const { t } = useTranslation(),
@@ -25,7 +25,7 @@ export default function PaymentSuccess() {
           <Button 
             onClick={() => router.push('/dashboard')} // Changed to router.push
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
-          >
+          >,
             {t('errors.go_to_dashboard')}
           </Button>
           
@@ -33,7 +33,7 @@ export default function PaymentSuccess() {
             variant="outline"
             onClick={() => router.push('/')} // Changed to router.push
             className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
-          >
+          >,
             {t('errors.return_home')}
           </Button>
         </div>
@@ -41,3 +41,4 @@ export default function PaymentSuccess() {
     </div>
   )
 }
+;

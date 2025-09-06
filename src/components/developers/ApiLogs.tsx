@@ -1,13 +1,13 @@
 
-import { useState, useEffect } from "react",
-import { format } from "date-fns",
+import { useState, useEffect } from "react";
+import { format } from "date-fns";
 import { List, RefreshCw } from 'lucide-react'
-import { useApiKeys } from "@/hooks/useApiKeys",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-import { Badge } from "@/components/ui/badge",
-import { ApiLogsChart } from "./ApiLogsChart",
+import { useApiKeys } from "@/hooks/useApiKeys";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Badge } from "@/components/ui/badge";
+import { ApiLogsChart } from "./ApiLogsChart";
 export function ApiLogs() {
   const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys(),
   const [pageSize, setPageSize] = useState(25),
@@ -23,14 +23,14 @@ export function ApiLogs() {
   },
   
   // Helper to format the timestamp
-  const formatTimestamp = (timestamp: string) => {
-    return format(new Date(timestamp), 'yyyy-MM-dd HH: mm:ss')
+  const formatTimestamp = (timestamp: string) => {,
+    return format(new Date(timestamp), 'yyyy-MM-dd HH: mm:ss'),
   },
   
   // Helper to get badge color based on status code
   const getStatusBadge = (statusCode: number) => {
     if (statusCode >= 200 && statusCode < 300) {
-      return <Badge className="bg-green-700">Success</Badge>
+      return <Badge className="bg-green-700">Success</Badge>,
     } else if (statusCode >= 400 && statusCode < 500) {
       return <Badge className="bg-amber-700">Client Error</Badge>
     } else if (statusCode >= 500) {
@@ -128,7 +128,7 @@ export function ApiLogs() {
                 </tr>
               ) : (
                 logs.map((log) => (
-                  <tr key={log.id} className="border-b border-zinc-800 hover:bg-zinc-800/40">
+                  <tr key={log.id} className="border-b border-zinc-800 hover:bg-zinc-800/40">,
                     <td className="px-4 py-3 text-sm">{formatTimestamp(log.created_at)}</td>
                     <td className="px-4 py-3">
                       <Badge 
@@ -193,3 +193,4 @@ export function ApiLogs() {
     </Card>
   )
 }
+;

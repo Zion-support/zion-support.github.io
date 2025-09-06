@@ -1,21 +1,21 @@
 
-import { useState } from "react",
-import { useAuth } from "@/hooks/useAuth",
-import { ChatWidget } from "@/components/ChatWidget",
-import { useRouter } from "next/router",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import Skeleton from "@/components/ui/skeleton",
-import ImageWithRetry from '@/components/ui/ImageWithRetry',
+import { useState } from "react";
+import { useAuth } from "@/hooks/useAuth";
+import { ChatWidget } from "@/components/ChatWidget";
+import { useRouter } from "next/router";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import Skeleton from "@/components/ui/skeleton";
+import ImageWithRetry from '@/components/ui/ImageWithRetry';
 import { Star, MessageSquare, Brain, Shield } from 'lucide-react'
-import { cn } from "@/lib/utils",
-import Link from 'next/link',
-import { MARKETPLACE_LISTINGS } from "@/data/marketplaceData",
-import { toast } from "@/hooks/use-toast",
-import { PaymentButton } from "@/components/transactions/PaymentButton",
-import { ProfileContact } from "@/components/profile/ProfileContact",
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
-import { useCurrency } from '@/hooks/useCurrency',
+import { cn } from "@/lib/utils";
+import Link from 'next/link';
+import { MARKETPLACE_LISTINGS } from "@/data/marketplaceData";
+import { toast } from "@/hooks/use-toast";
+import { PaymentButton } from "@/components/transactions/PaymentButton";
+import { ProfileContact } from "@/components/profile/ProfileContact";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { useCurrency } from '@/hooks/useCurrency';
 export default function ListingDetail() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
@@ -59,13 +59,13 @@ export default function ListingDetail() {
     <>
       <div className="min-h-screen bg-zion-blue py-12 px-4">
         <div className="container mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">,
             {/* Left Column - Images */}
             <div className="lg:col-span-2">
               <div className="bg-zion-blue-dark rounded-lg overflow-hidden border border-zion-blue-light">
                 <div className="aspect-[16/9] w-full relative">
                   {listing.images && listing.images.length > 0 ? (
-                    <ImageWithRetry
+                    <ImageWithRetry,
                       src={listing.images[selectedImageIndex] || listing.images[0] || "/placeholder.svg"}
                       alt={listing.title}
                       className="object-cover"
@@ -129,8 +129,7 @@ export default function ListingDetail() {
                       </div>
                     </div>
                   </div>
-                </div>
-                
+                </div>,
                 {/* Tags */}
                 <div className="mt-8">
                   <h3 className="text-xl font-bold text-white mb-4">Tags</h3>
@@ -149,7 +148,7 @@ export default function ListingDetail() {
             <div className="lg:col-span-1">
               <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6">
                 <div className="mb-2">
-                  <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan hover:bg-zion-purple/30">
+                  <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan hover:bg-zion-purple/30">,
                     {listing.category}
                   </Badge>
                   {listing.featured && (
@@ -201,11 +200,11 @@ export default function ListingDetail() {
                       serviceId={listing.id}
                       providerId={listing.author.id}
                       buttonText="Buy Now"
-                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
+                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white py-6",
                       onPaymentInitiated={() => {
-                        toast({
+                        toast({,
                           title: "Payment Processing",
-                          description: "Redirecting to secure checkout..."
+                          description: "Redirecting to secure checkout...",
                         })
                       }}
                     />
@@ -214,7 +213,7 @@ export default function ListingDetail() {
                       onClick={handleContact}
                       disabled={isLoading}
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
-                    >
+                    >,
                       {isLoading ? "Processing..." : "Request Quote"}
                     </Button>
                   )}
@@ -228,8 +227,7 @@ export default function ListingDetail() {
                     <MessageSquare className="h-4 w-4 mr-2" />
                     Contact Publisher
                   </Button>
-                </div>
-                
+                </div>,
                 {/* Publisher Info */}
                 <div className="border-t border-zion-blue-light pt-6">
                   <h3 className="text-lg font-bold text-white mb-3">Publisher</h3>
@@ -242,7 +240,7 @@ export default function ListingDetail() {
                           className="object-cover"
                           onError={(e) => {
                             const target = e.target as HTMLImageElement,
-                            target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
+                            target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name),
                           }}
                         />
                       </div>
@@ -288,7 +286,7 @@ export default function ListingDetail() {
           <DialogHeader>
             <DialogTitle className="text-xl font-bold text-white">Contact Publisher</DialogTitle>
           </DialogHeader>
-          <ProfileContact 
+          <ProfileContact,
             email={listing.author.email} // TypeScript now knows this might be undefined
             profileName={listing.author.name}
             profileType="service"
@@ -298,3 +296,4 @@ export default function ListingDetail() {
     </>
   )
 }
+;

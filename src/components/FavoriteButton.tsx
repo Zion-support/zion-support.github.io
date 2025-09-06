@@ -1,10 +1,10 @@
-import React from 'react',
+import React from 'react';
 import { Heart } from 'lucide-react'
-import { cn } from '@/lib/utils',
-import { useWishlist } from '@/hooks/useWishlist',
-import { useAuth } from '@/hooks/useAuth',
-import { toast } from '@/hooks/use-toast',
-import { LoginModal } from '@/components/auth/LoginModal',
+import { cn } from '@/lib/utils';
+import { useWishlist } from '@/hooks/useWishlist';
+import { useAuth } from '@/hooks/useAuth';
+import { toast } from '@/hooks/use-toast';
+import { LoginModal } from '@/components/auth/LoginModal';
 import {
   Tooltip,
   TooltipContent,
@@ -12,8 +12,8 @@ import {
   TooltipTrigger} from '@/components/ui/tooltip',
 
 interface FavoriteButtonProps {
-  itemId: string,
-  className?: string
+  itemId: string;
+  className?: string,
 }
 
 export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
@@ -21,7 +21,7 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
   const { isAuthenticated } = useAuth(),
   const [loginOpen, setLoginOpen] = React.useState(false),
 
-  const handleClick = (e: React.MouseEvent) => {
+  const handleClick = (e: React.MouseEvent) => {,
     e.stopPropagation(),
     if (!isAuthenticated) {
       setLoginOpen(true),
@@ -35,7 +35,7 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
     toast({
       title: wasWishlisted ? "Removed from wishlist" : "Added to wishlist",
       description: wasWishlisted 
-        ? "Item has been removed from your wishlist" 
+        ? "Item has been removed from your wishlist",
         : "Item has been added to your wishlist"})
   },
 
@@ -48,8 +48,7 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
           <TooltipTrigger asChild>
             <button
               className={cn(
-                'absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-blue-light/30 transition-colors',
-                className
+                'absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover: bg-zion-blue-light/30 transition-colors', className
               )}
               onClick={handleClick}
               aria-label={active ? 'Remove from favorites' : 'Save to favorites'}
@@ -69,3 +68,4 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
     </>
   )
 }
+;

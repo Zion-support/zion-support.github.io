@@ -1,8 +1,8 @@
 
-import React, { forwardRef } from "react",
+import React, { forwardRef } from "react";
 import { ChevronDown } from 'lucide-react'
-import { cn } from "@/lib/utils",
-import { SafeRef } from "@/types/ref-types",
+import { cn } from "@/lib/utils";
+import { SafeRef } from "@/types/ref-types";
 interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
   icon?: React.ReactNode,
   active?: boolean,
@@ -20,8 +20,7 @@ const SidebarMenuItem = forwardRef<HTMLButtonElement, SidebarMenuItemProps>(
           target={target}
           rel={target === "_blank" ? "noopener noreferrer" : undefined}
           className={cn(
-            "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-accent",
-            active && "bg-accent font-medium text-accent-foreground",
+            "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover: bg-accent", active && "bg-accent font-medium text-accent-foreground",
             className
           )}
         >
@@ -39,8 +38,7 @@ const SidebarMenuItem = forwardRef<HTMLButtonElement, SidebarMenuItemProps>(
         ref={ref}
         type="button"
         className={cn(
-          "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-accent",
-          active && "bg-accent font-medium text-accent-foreground",
+          "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover: bg-accent", active && "bg-accent font-medium text-accent-foreground",
           className
         )}
         {...props}
@@ -59,7 +57,7 @@ SidebarMenuItem.displayName = "SidebarMenuItem",
 
 interface SidebarMenuGroupProps extends React.HTMLAttributes<HTMLDivElement> {
   title: string,
-  children: React.ReactNode
+  children: React.ReactNode,
 }
 
 const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, children, ...props }) => {
@@ -70,5 +68,5 @@ const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, children, ..
     </div>
   )
 },
-
-export { SidebarMenuItem, SidebarMenuGroup },
+;
+export { SidebarMenuItem, SidebarMenuGroup };

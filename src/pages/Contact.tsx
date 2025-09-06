@@ -1,24 +1,23 @@
-import { useState } from 'react',
-import { Header } from '@/components/Header',
-import { SEO } from '@/components/SEO',
-import { GradientHeading } from '@/components/GradientHeading',
-import { Button } from '@/components/ui/button',
-import { Input } from '@/components/ui/input',
-import { Textarea } from '@/components/ui/textarea',
-import { Card } from '@/components/ui/card',
-import { toast } from '@/components/ui/use-toast',
-import { logInfo, logWarn, logErrorToProduction } from '@/utils/productionLogger',
+import { useState } from 'react';
+import { Header } from '@/components/Header';
+import { SEO } from '@/components/SEO';
+import { GradientHeading } from '@/components/GradientHeading';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Card } from '@/components/ui/card';
+import { toast } from '@/components/ui/use-toast';
+import { logInfo, logWarn, logErrorToProduction } from '@/utils/productionLogger';
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger} from '@/components/ui/tooltip',
-import z from 'zod',
-import { ChatAssistant } from '@/components/ChatAssistant',
+import z from 'zod';
+import { ChatAssistant } from '@/components/ChatAssistant';
 import { Mail, MessageSquare, MapPin, Phone } from 'lucide-react'
-import Link from 'next/link',
-import { motion, AnimatePresence } from 'framer-motion',
-
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
@@ -33,13 +32,13 @@ export default function Contact() {
   const [isChatOpen, setIsChatOpen] = useState(false),
   const [submitted, setSubmitted] = useState(false),
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {,
     const { name, value } = e.target,
     setFormData((prev) => ({ ...prev, [name]: value })),
     setErrors((prev) => ({ ...prev, [name]: undefined }))
   },
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {,
     e.preventDefault(),
     logInfo('[ContactForm] handleSubmit triggered.'),
     logInfo('[ContactForm] formData:', { data: formData }),
@@ -83,7 +82,7 @@ export default function Contact() {
           const responseBody = await res.text(), // Read as text first to avoid JSON parse error if not JSON
           logInfo('[ContactForm] API response body:', { data: responseBody }),
 
-          // Note: setIsSubmitting(false) is called within then/catch of the promise.
+          // Note: setIsSubmitting(false) is called within then/catch of the promise.,
           // If fetch itself or .then/.catch structure has a synchronous error,
           // the outer try/catch will handle it.
 
@@ -133,13 +132,13 @@ export default function Contact() {
   // Handle sending messages to the AI chat assistant
   const handleSendMessage = async (message: string): Promise<void> => {
     try {
-      const response = await fetch(
+      const response = await fetch(,
         'https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat',
         {
           method: 'POST',
-          headers: {
+          headers: {,
             'Content-Type': 'application/json'},
-          body: JSON.stringify({
+          body: JSON.stringify({,
             messages: [{ role: 'user', content: message }]})},
       ),
 
@@ -193,7 +192,7 @@ export default function Contact() {
               <h2 className="text-3xl font-bold text-white mb-6">
                 Get in Touch
               </h2>
-              <p className="text-zion-slate-light text-lg mb-8">
+              <p className="text-zion-slate-light text-lg mb-8">,
                 Whether you have a question about our platform, pricing, or
                 anything else, our team is ready to answer all your questions.
               </p>
@@ -206,7 +205,7 @@ export default function Contact() {
                     </label>
                     <Input
                       id="name"
-                      name="name"
+                      name="name",
                       value={formData.name}
                       onChange={handleChange}
                       className={`bg-zion-blue-dark border-zion-blue-light text-white ${errors.name ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
@@ -261,7 +260,7 @@ export default function Contact() {
 
                 <Button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
+                  className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple",
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? 'Sending...' : 'Send Message'}
@@ -329,7 +328,7 @@ export default function Contact() {
                         <a
                           href={`mailto:${office.email}`}
                           className="text-zion-cyan hover:underline"
-                        >
+                        >,
                           {office.email}
                         </a>
                       </div>
@@ -342,7 +341,7 @@ export default function Contact() {
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12615.297199052566!2d-122.41941455!3d37.7749295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858080b9b0a169%3A0x1ac94fe0532d9e81!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2suk!4v1651234567890!5m2!1sen!2suk"
                   width="100%"
-                  height="300"
+                  height="300",
                   style={{ border: 0 }}
                   allowFullScreen={true}
                   loading="lazy"
@@ -386,7 +385,7 @@ export default function Contact() {
               questions.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Button
+              <Button,
                 onClick={() => setIsChatOpen(true)}
                 className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
               >
@@ -407,7 +406,7 @@ export default function Contact() {
           </div>
 
           <div className="mt-12 text-center">
-            <p className="text-zion-slate-light text-lg">
+            <p className="text-zion-slate-light text-lg">,
               Looking for more details about our platform? Visit our{' '}
               <Link href="/services" className="text-zion-cyan underline">
                 services page
@@ -440,3 +439,4 @@ export default function Contact() {
     </>
   )
 }
+;

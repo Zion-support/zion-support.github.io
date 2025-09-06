@@ -1,12 +1,12 @@
-import { useState, useEffect } from 'react',
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
-import { Badge } from "@/components/ui/badge",
+import { useState, useEffect } from 'react';
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { Badge } from "@/components/ui/badge";
 import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from 'lucide-react'
-import { supabase } from '@/integrations/supabase/client',
-import { ModelConfig } from '@/utils/zion-gpt',
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { supabase } from '@/integrations/supabase/client';
+import { ModelConfig } from '@/utils/zion-gpt';
+import {logErrorToProduction} from '@/utils/productionLogger';
 interface ModelVersionData extends ModelConfig {
   trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed',
   errorMessage?: string
@@ -33,7 +33,7 @@ export function ZionGPTModelManager() {
       if (error) throw error,
       
       // Map the data to our component state
-      setModels(data.map((model: any) => ({
+      setModels(data.map((model: any) => ({,
         id: model.id,
         version: model.version,
         createdAt: model.created_at,
@@ -41,7 +41,7 @@ export function ZionGPTModelManager() {
         purpose: model.purpose,
         active: model.active,
         trainingStatus: model.training_status,
-        errorMessage: model.error_message
+        errorMessage: model.error_message,
       })))
     } catch (error) {
       logErrorToProduction('Error fetching models:', { data: error })
@@ -51,7 +51,7 @@ export function ZionGPTModelManager() {
   },
 
   const checkTrainingStatus = async (modelId: string) => {
-    try {
+    try {,
       setActiveJobs(prev => ({ ...prev, [modelId]: true })),
       
       // Call an edge function that checks the OpenAI fine-tuning job status
@@ -89,7 +89,7 @@ export function ZionGPTModelManager() {
   },
 
   const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string) => {
-    try {
+    try {,
       // If activating, deactivate all other models with the same purpose
       if (!currentActive) {
         await supabase
@@ -213,3 +213,4 @@ export function ZionGPTModelManager() {
     </Card>
   )
 }
+;

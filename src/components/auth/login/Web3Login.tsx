@@ -1,11 +1,11 @@
 
-import { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { useAuth } from "@/hooks/useAuth",
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { useAuth } from "@/hooks/useAuth";
 import { useWallet as useAppWallet } from "../../../context/WalletContext.tsx", // Renamed to avoid conflict if useWallet hook is defined locally
 import { Wallet } from 'lucide-react'
-import { toast } from "sonner",
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { toast } from "sonner";
+import {logErrorToProduction} from '@/utils/productionLogger';
 export function Web3Login() {
 
   const { loginWithWeb3 } = useAuth(),
@@ -32,7 +32,7 @@ export function Web3Login() {
       
       await loginWithWeb3(), // This is from useAuth, assumed to be a separate flow
       
-    } catch (error: any) {
+    } catch (error: any) {,
       toast("Login failed", {
         description: error.message || "Failed to connect wallet. Please try again."}),
       logErrorToProduction('Web3 login error:', { data: error })
@@ -62,7 +62,7 @@ export function Web3Login() {
         </svg>
         Connecting...
       </span>
-    )
+    ),
   } else {
     buttonContent = (
       <>
@@ -76,7 +76,7 @@ export function Web3Login() {
     <Button
       type="button"
       variant="outline"
-      className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
+      className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan",
       onClick={handleWeb3Login}
       disabled={buttonDisabled}
       title={buttonTitle || undefined} // Ensure title is not an empty string if not needed
@@ -85,3 +85,4 @@ export function Web3Login() {
     </Button>
   )
 }
+;

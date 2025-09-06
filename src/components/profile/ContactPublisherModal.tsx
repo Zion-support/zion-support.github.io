@@ -1,13 +1,13 @@
-import React from 'react',
-import FocusLock from 'react-focus-lock',
+import React from 'react';
+import FocusLock from 'react-focus-lock';
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle} from '@/components/ui/dialog',
-import { Button } from '@/components/ui/button',
-import { Input } from '@/components/ui/input',
-import { Textarea } from '@/components/ui/textarea',
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
 import {
   Form,
   FormField,
@@ -15,35 +15,35 @@ import {
   FormLabel,
   FormControl,
   FormMessage} from '@/components/ui/form',
-import { useForm, type Resolver } from 'react-hook-form',
-import { yupResolver } from '@hookform/resolvers/yup',
-import * as yup from 'yup',
+import { useForm, type Resolver } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from 'yup';
 import { SendIcon, Mail } from 'lucide-react'
-import api from '@/services/apiClient',
-import { toast } from '@/hooks/use-toast',
-import { useAuth } from '@/hooks/useAuth',
-import { LoginModal } from '@/components/auth/LoginModal',
+import api from '@/services/apiClient';
+import { toast } from '@/hooks/use-toast';
+import { useAuth } from '@/hooks/useAuth';
+import { LoginModal } from '@/components/auth/LoginModal';
 interface ContactPublisherModalProps {
-  isOpen: boolean,
-  onClose: () => void,
-  publisherName: string,
+  isOpen: boolean;
+  onClose: () => void;
+  publisherName: string;
   publisherEmail?: string,
   productId?: string
 }
 
 type FormValues = {
-  subject: string,
-  message: string
+  subject: string;
+  message: string,
 },
 
 const schema: yup.ObjectSchema<FormValues> = yup
   .object({
     subject: yup
-      .string()
+      .string(),
       .min(5, 'Subject must be at least 5 characters')
       .required('Subject is required'),
     message: yup
-      .string()
+      .string(),
       .min(20, 'Message must be at least 20 characters')
       .required('Message is required')})
   .required(),
@@ -87,7 +87,7 @@ export function ContactPublisherModal({
   },
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === 'Escape') {
+    if (e.key === 'Escape') {,
       e.stopPropagation(),
       onClose()
     }
@@ -98,7 +98,7 @@ export function ContactPublisherModal({
     <Dialog open={isOpen} onOpenChange={onClose}>
       <FocusLock disabled={!isOpen} returnFocus>
         <DialogContent
-          className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md"
+          className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md",
           onKeyDown={handleKeyDown}
           aria-modal="true"
           aria-labelledby="contact-publisher-title"
@@ -112,8 +112,8 @@ export function ContactPublisherModal({
           {error && <p className="text-red-500 mb-2">{error}</p>}
           {publisherEmail && (
             <div className="mb-4 text-zion-slate-light">
-            <span className="block">Email:</span>
-            <a href={`mailto:${publisherEmail}`} className="text-zion-cyan hover:underline truncate block">
+            <span className="block">Email:</span>,
+            <a href={`mailto:${publisherEmail}`} className="text-zion-cyan hover:underline truncate block">,
               {publisherEmail}
             </a>
           </div>
@@ -171,3 +171,4 @@ export function ContactPublisherModal({
     </>
   )
 }
+;

@@ -1,11 +1,11 @@
 
-import React, { useState } from "react",
-import { MobileHeader } from "@/mobile/components/common/MobileHeader",
-import { BottomNavigation } from "@/mobile/components/common/BottomNavigation",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Label } from "@/components/ui/label",
+import React, { useState } from "react";
+import { MobileHeader } from "@/mobile/components/common/MobileHeader";
+import { BottomNavigation } from "@/mobile/components/common/BottomNavigation";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
 import { 
   Select,
   SelectContent,
@@ -14,9 +14,8 @@ import {
   SelectValue 
 } from "@/components/ui/select",
 import { Zap, ChevronLeft, ChevronRight } from 'lucide-react'
-import { Badge } from "@/components/ui/badge",
-import { Card, CardContent } from "@/components/ui/card",
-
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent } from "@/components/ui/card";
 type JobPostStep = "details" | "requirements" | "budget" | "preview",
 
 export function MobileJobPost() {
@@ -52,7 +51,7 @@ export function MobileJobPost() {
       case "preview":
         return <PreviewStep />,
       default:
-        return <DetailsStep />
+        return <DetailsStep />,
     }
   },
   
@@ -175,7 +174,7 @@ function RequirementsStep() {
   },
   
   const removeSkill = (skill: string) => {
-    setSkills(skills.filter(s => s !== skill))
+    setSkills(skills.filter(s => s !== skill)),
   },
   
   return (
@@ -225,7 +224,7 @@ function RequirementsStep() {
             >
               {skill}
               <button 
-                className="ml-1 rounded-full hover:bg-background/20 p-1"
+                className="ml-1 rounded-full hover:bg-background/20 p-1",
                 onClick={() => removeSkill(skill)}
               >
                 ×
@@ -359,7 +358,7 @@ function PreviewStep() {
           </div>
           
           <div className="space-y-1 text-sm mt-4">
-            <p className="font-medium">Salary Range:</p>
+            <p className="font-medium">Salary Range:</p>,
             <p>$80,000 - $120,000 USD / year</p>
           </div>
           
@@ -369,7 +368,7 @@ function PreviewStep() {
           </div>
           
           <div className="space-y-1 text-sm mt-3">
-            <p className="font-medium">Application Deadline:</p>
+            <p className="font-medium">Application Deadline:</p>,
             <p>December 15, 2023</p>
           </div>
           
@@ -384,3 +383,4 @@ function PreviewStep() {
     </div>
   )
 }
+;

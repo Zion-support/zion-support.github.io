@@ -1,10 +1,10 @@
-import Image from 'next/image',
+import Image from 'next/image';
 import { Loader2 } from 'lucide-react'
-import { useState } from 'react',
+import { useState } from 'react';
 interface YoutubeEmbedProps {
-  videoId: string,
-  title: string,
-  poster: string
+  videoId: string;
+  title: string;
+  poster: string,
 }
 
 export default function YoutubeEmbed({ videoId, title, poster }: YoutubeEmbedProps) {
@@ -33,3 +33,4 @@ export default function YoutubeEmbed({ videoId, title, poster }: YoutubeEmbedPro
     </div>
   )
 }
+;

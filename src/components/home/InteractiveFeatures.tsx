@@ -1,9 +1,9 @@
-import React from "react",
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
+import React from "react";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { ArrowRight, Search, Users, Zap, Settings } from 'lucide-react'
-import Link from "next/link",
-import { cn } from "@/lib/utils",
+import Link from "next/link";
+import { cn } from "@/lib/utils";
 interface InteractiveFeaturesProps {
   className?: string,
   style?: React.CSSProperties
@@ -43,7 +43,7 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
       link: "/equipment"}],
 
   const handleToggle = (index: number) => {
-    setOpenIndex((prev) => (prev === index ? null : index))
+    setOpenIndex((prev) => (prev === index ? null : index)),
   },
 
   return (
@@ -57,7 +57,7 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
             Hover or click a card to learn more about what Zion offers
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">,
           {features.map((feature, index) => (
             <Card
               key={index}
@@ -66,7 +66,7 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
               onClick={() => handleToggle(index)}
               className="cursor-pointer overflow-hidden transition-all duration-300 hover:shadow-lg"
             >
-              <CardHeader className="flex flex-row items-start space-x-3">
+              <CardHeader className="flex flex-row items-start space-x-3">,
                 {feature.icon}
                 <div>
                   <CardTitle className="text-lg text-white">{feature.title}</CardTitle>
@@ -97,5 +97,5 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
     </section>
   )
 }
-
-export default InteractiveFeatures,
+;
+export default InteractiveFeatures;

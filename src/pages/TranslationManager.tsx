@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from 'react',
-import { Header } from "@/components/Header",
-import { SEO } from "@/components/SEO",
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Input } from "@/components/ui/input",
-import { Button } from "@/components/ui/button",
-import { Textarea } from "@/components/ui/textarea",
-import { toast } from "@/components/ui/use-toast",
-import { useTranslation } from "react-i18next",
+import React, { useState, useEffect } from 'react';
+import { Header } from "@/components/Header";
+import { SEO } from "@/components/SEO";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import { toast } from "@/components/ui/use-toast";
+import { useTranslation } from "react-i18next";
 import { AlertTriangle, Check, Globe, Search, Loader2 } from 'lucide-react'
-import { useIsMobile } from "@/hooks/use-mobile",
-import { useLanguage, SupportedLanguage } from "@/context/LanguageContext",
-import { useTranslationService } from "@/hooks/useTranslationService",
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { useIsMobile } from "@/hooks/use-mobile";
+import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
+import { useTranslationService } from "@/hooks/useTranslationService";
+import {logErrorToProduction} from '@/utils/productionLogger';
 export default function TranslationManager() {
 
   const { t, i18n } = useTranslation(),
@@ -86,7 +86,7 @@ export default function TranslationManager() {
           key.toLowerCase().includes(query) || 
           (typeof value === 'string' && value.toLowerCase().includes(query))
         ) {
-          filtered.push(key)
+          filtered.push(key);
         }
       })
     }),
@@ -94,7 +94,7 @@ export default function TranslationManager() {
     setFilteredKeys([...new Set(filtered)])
   }, [searchQuery, translations]),
   
-  const handleEdit = (key: string) => {
+  const handleEdit = (key: string) => {,
     setEditingKey(key),
     
     // Initialize edited translations for this key
@@ -109,7 +109,7 @@ export default function TranslationManager() {
     })
   },
   
-  const handleSave = (key: string) => {
+  const handleSave = (key: string) => {,
     setIsSaving(true),
     
     // In a real application, you would save these to your backend
@@ -135,7 +135,7 @@ export default function TranslationManager() {
   },
   
   const handleTranslateKey = async (key: string) => {
-    // Find first non-empty translation to use as source
+    // Find first non-empty translation to use as source,
     let sourceLanguage: SupportedLanguage = 'en',
     let sourceText = '',
     
@@ -193,7 +193,7 @@ export default function TranslationManager() {
   },
   
   const handleChange = (lang: SupportedLanguage, key: string, value: string) => {
-    setEditedTranslations({
+    setEditedTranslations({,
       ...editedTranslations,
       [key]: {
         ...(editedTranslations[key] || {} as Record<SupportedLanguage, string>),
@@ -205,7 +205,7 @@ export default function TranslationManager() {
   const getMissingLanguages = (key: string): SupportedLanguage[] => {
     return supportedLanguages
       .map(lang => lang.code)
-      .filter(lang => !translations[lang]?.[key])
+      .filter(lang => !translations[lang]?.[key]),
   },
   
   return (
@@ -228,7 +228,7 @@ export default function TranslationManager() {
                   <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
                   <Input
                     type="search"
-                    className="pl-8"
+                    className="pl-8",
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                   />
@@ -244,11 +244,10 @@ export default function TranslationManager() {
                     <TabsTrigger value="admin">Admin</TabsTrigger>
                   </TabsList>
                 </Tabs>
-              </div>
-              
+              </div>,
               {/* Translations table */}
               <div className="border rounded-md">
-                <div className="grid grid-cols-[1fr_2fr] sm:grid-cols-[1fr_2fr_auto] border-b">
+                <div className="grid grid-cols-[1fr_2fr] sm:grid-cols-[1fr_2fr_auto] border-b">,
                   <div className="p-3 font-medium">{t('translation.key')}</div>
                   <div className="p-3 font-medium">{t('translation.translations')}</div>
                   <div className="hidden sm:block p-3 font-medium">{t('translation.actions')}</div>
@@ -261,7 +260,7 @@ export default function TranslationManager() {
                 ) : (
                   <div className="divide-y">
                     {filteredKeys.map((key) => (
-                      <div key={key} className="grid grid-cols-[1fr_2fr] sm:grid-cols-[1fr_2fr_auto]">
+                      <div key={key} className="grid grid-cols-[1fr_2fr] sm:grid-cols-[1fr_2fr_auto]">,
                         <div className="p-3 break-words">{key}</div>
                         {editingKey === key ? (
                           <div className="p-3">
@@ -357,7 +356,7 @@ export default function TranslationManager() {
                           {editingKey === key ? null : (
                             <Button
                               size="sm"
-                              variant="outline"
+                              variant="outline",
                               onClick={() => handleEdit(key)}
                             >
                               {t('translation.edit')}
@@ -376,3 +375,4 @@ export default function TranslationManager() {
     </>
   )
 }
+;

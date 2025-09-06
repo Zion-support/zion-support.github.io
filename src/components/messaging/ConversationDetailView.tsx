@@ -1,14 +1,14 @@
 
-import React, { useState, useEffect, useRef } from 'react',
-import { format } from 'date-fns',
+import React, { useState, useEffect, useRef } from 'react';
+import { format } from 'date-fns';
 import { MessageSquare } from 'lucide-react'
-import { useMessaging } from '@/context/MessagingContext',
-import { Button } from '@/components/ui/button',
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar',
-import { AspectRatio } from '@/components/ui/aspect-ratio',
-import { useAuth } from '@/hooks/useAuth',
-import { MessageBubble } from './MessageBubble',
-import { DateDivider } from './DateDivider',
+import { useMessaging } from '@/context/MessagingContext';
+import { Button } from '@/components/ui/button';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
+import { useAuth } from '@/hooks/useAuth';
+import { MessageBubble } from './MessageBubble';
+import { DateDivider } from './DateDivider';
 export function ConversationDetailView() {
   const { user } = useAuth(),
   const { 
@@ -44,13 +44,13 @@ export function ConversationDetailView() {
     inputRef.current?.focus()
   },
 
-  const handleSendMessage = async (e: React.FormEvent) => {
+  const handleSendMessage = async (e: React.FormEvent) => {,
     e.preventDefault(),
     await send()
   },
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
-    if (e.key === 'Enter' && !e.shiftKey) {
+    if (e.key === 'Enter' && !e.shiftKey) {,
       e.preventDefault(),
       send()
     }
@@ -80,8 +80,8 @@ export function ConversationDetailView() {
     } else {
       groupedMessages.push({
         date: messageDate,
-        messages: [message]
-      })
+        messages: [message],
+      });
     }
   }),
   
@@ -134,7 +134,7 @@ export function ConversationDetailView() {
             <div>
               <div className="font-medium text-white mb-1">
                 {activeConversation.context_type === 'job' ? 'Regarding Job:' :
-                 activeConversation.context_type === 'talent' ? 'Regarding Talent:' :
+                 activeConversation.context_type === 'talent' ? 'Regarding Talent:' :,
                  'Regarding:'}
               </div>
               <div className="text-zion-cyan font-medium">
@@ -183,7 +183,7 @@ export function ConversationDetailView() {
             onChange={(e) => setMessageText(e.target.value)}
             onKeyDown={handleKeyDown}
             placeholder="Type a message..."
-            className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-black focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+            className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-black focus:outline-none focus:ring-2 focus:ring-zion-cyan",
             ref={inputRef}
           />
           <Button 
@@ -195,5 +195,6 @@ export function ConversationDetailView() {
         </form>
       </div>
     </div>
-  )
+  ),
 }
+;

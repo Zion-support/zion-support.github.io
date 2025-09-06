@@ -1,22 +1,20 @@
 
-import { useState, useEffect } from "react",
-import { format } from "date-fns",
+import { useState, useEffect } from "react";
+import { format } from "date-fns";
 import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X } from 'lucide-react'
-import { useWebhooks, type WebhookEventType } from "@/hooks/useWebhooks",
-
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",
-import { Input } from "@/components/ui/input",
-import { Checkbox } from "@/components/ui/checkbox",
-import { Label } from "@/components/ui/label",
-import { Badge } from "@/components/ui/badge",
-import { Switch } from "@/components/ui/switch",
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu",
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog",
-import { ScrollArea } from "@/components/ui/scroll-area",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-
+import { useWebhooks, type WebhookEventType } from "@/hooks/useWebhooks";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Label } from "@/components/ui/label";
+import { Badge } from "@/components/ui/badge";
+import { Switch } from "@/components/ui/switch";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 export function WebhooksManager() {
   const {
     webhooks,
@@ -54,23 +52,23 @@ export function WebhooksManager() {
       webhookName, 
       webhookUrl, 
       selectedEvents, 
-      webhookSecret.trim() === "" ? undefined : webhookSecret
+      webhookSecret.trim() === "" ? undefined : webhookSecret,
     ),
     
     setShowCreateDialog(false),
     resetWebhookForm()
   },
 
-  const handleToggleStatus = async (webhookId: string, currentStatus: boolean) => {
+  const handleToggleStatus = async (webhookId: string, currentStatus: boolean) => {,
     await toggleWebhook(webhookId, !currentStatus)
   },
 
-  const handleDeleteWebhook = async (webhookId: string) => {
+  const handleDeleteWebhook = async (webhookId: string) => {,
     await deleteWebhook(webhookId),
     setShowDeleteConfirm(null)
   },
 
-  const handleTestWebhook = async (webhookId: string) => {
+  const handleTestWebhook = async (webhookId: string) => {,
     await testWebhook(webhookId, testEventType),
     setShowTestResult(true)
   },
@@ -92,8 +90,8 @@ export function WebhooksManager() {
   // Toggle an event selection
   const toggleEvent = (event: WebhookEventType) => {
     setSelectedEvents(prev => 
-      prev.includes(event) 
-        ? prev.filter(e => e !== event) 
+      prev.includes(event) ;
+        ? prev.filter(e => e !== event),
         : [...prev, event]
     )
   },
@@ -159,7 +157,7 @@ export function WebhooksManager() {
                   <Label htmlFor="webhook-secret">Secret Key (Optional)</Label>
                   <Input
                     id="webhook-secret"
-                    type="password"
+                    type="password",
                     value={webhookSecret}
                     onChange={(e) => setWebhookSecret(e.target.value)}
                     placeholder="Enter secret key"
@@ -184,7 +182,7 @@ export function WebhooksManager() {
                         <Label
                           htmlFor={event.value}
                           className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                        >
+                        >,
                           {event.label}
                           <span className="block text-xs text-zinc-400 mt-1">{event.description}</span>
                         </Label>
@@ -273,11 +271,11 @@ export function WebhooksManager() {
                 
                 <div className="mt-3 flex flex-wrap gap-2">
                   {webhook.event_types.map((event: WebhookEventType) => (
-                    <Badge 
+                    <Badge,
                       key={event} 
                       variant="secondary"
                       className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800"
-                    >
+                    >,
                       {event}
                     </Badge>
                   ))}
@@ -426,7 +424,7 @@ export function WebhooksManager() {
             <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700">
               Cancel
             </AlertDialogCancel>
-            <AlertDialogAction 
+            <AlertDialogAction,
               onClick={() => showDeleteConfirm && handleDeleteWebhook(showDeleteConfirm)}
               className="bg-red-600 hover: bg-red-700"
             >
@@ -436,5 +434,6 @@ export function WebhooksManager() {
         </AlertDialogContent>
       </AlertDialog>
     </Card>
-  )
+  ),
 }
+;

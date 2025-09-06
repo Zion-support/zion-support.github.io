@@ -1,24 +1,24 @@
-import { useState } from 'react',
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-import { Label } from "@/components/ui/label",
-import { Slider } from "@/components/ui/slider",
-import { Calendar } from "@/components/ui/calendar",
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
-import { format } from "date-fns",
+import { useState } from 'react';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Label } from "@/components/ui/label";
+import { Slider } from "@/components/ui/slider";
+import { Calendar } from "@/components/ui/calendar";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { format } from "date-fns";
 import { CalendarIcon } from 'lucide-react'
-import { cn } from "@/lib/utils",
-import { ProductListing } from "@/types/listings",
-import { toast } from '@/hooks/use-toast',
-import { supabase } from "@/integrations/supabase/client",
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { cn } from "@/lib/utils";
+import { ProductListing } from "@/types/listings";
+import { toast } from '@/hooks/use-toast';
+import { supabase } from "@/integrations/supabase/client";
+import {logErrorToProduction} from '@/utils/productionLogger';
 interface ServiceQuoteModalProps {
-  open: boolean,
-  onOpenChange: (open: boolean) => void,
-  service: ProductListing | null
+  open: boolean;
+  onOpenChange: (open: boolean) => void;
+  service: ProductListing | null,
 }
 
 const BUDGET_RANGES = [
@@ -45,12 +45,12 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
   const [currentStep, setCurrentStep] = useState<'details' | 'timeline' | 'contact'>('details'),
   const [isSubmitting, setIsSubmitting] = useState(false),
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {,
     const { name, value } = e.target,
     setFormData(prev => ({ ...prev, [name]: value }))
   },
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {,
     e.preventDefault(),
     setIsSubmitting(true),
 
@@ -58,11 +58,11 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
       // Call Supabase function to process the quote
       const { data, error } = await supabase.functions.invoke('process-quote', {
         body: {
-          service: service ? {
+          service: service ? {,
             id: service.id,
             title: service.title,
             category: service.category} : null,
-          quoteDetails: {
+          quoteDetails: {,
             ...formData,
             startDate: startDate?.toISOString(),
             endDate: endDate?.toISOString()}
@@ -109,13 +109,12 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="bg-zion-blue border-zion-blue-light text-white sm:max-w-[600px]">
+      <DialogContent className="bg-zion-blue border-zion-blue-light text-white sm: max-w-[600px]">
         <DialogHeader>
           <DialogTitle className="text-2xl font-semibold text-white">
             Request Service Quote
-          </DialogTitle>
-        </DialogHeader>
-
+          </DialogTitle>,
+        </DialogHeader>,
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* Step 1: Service Details */}
           {currentStep === 'details' && (
@@ -142,7 +141,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
               <div className="space-y-2">
                 <Label htmlFor="budget" className="text-white">Estimated Budget</Label>
                 <Select 
-                  value={formData.budget} 
+                  value={formData.budget} ,
                   onValueChange={(value) => setFormData(prev => ({ ...prev, budget: value }))}
                 >
                   <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white">
@@ -150,7 +149,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                   </SelectTrigger>
                   <SelectContent className="bg-zion-blue-dark border-zion-blue-light">
                     {BUDGET_RANGES.map((range) => (
-                      <SelectItem key={range.value} value={range.value} className="text-white hover:bg-zion-blue-light">
+                      <SelectItem key={range.value} value={range.value} className="text-white hover:bg-zion-blue-light">,
                         {range.label}
                       </SelectItem>
                     ))}
@@ -174,7 +173,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                   </SelectTrigger>
                   <SelectContent className="bg-zion-blue-dark border-zion-blue-light">
                     {TIMELINE_OPTIONS.map((option) => (
-                      <SelectItem key={option.value} value={option.value} className="text-white hover:bg-zion-blue-light">
+                      <SelectItem key={option.value} value={option.value} className="text-white hover:bg-zion-blue-light">,
                         {option.label}
                       </SelectItem>
                     ))}
@@ -262,26 +261,26 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                 <h3 className="font-medium text-zion-cyan mb-2">Quote Summary</h3>
                 <div className="space-y-2 text-sm">
                   <div className="flex justify-between">
-                    <span className="text-zion-slate-light">Service:</span>
+                    <span className="text-zion-slate-light">Service:</span>,
                     <span className="text-white">{service?.title || "Custom Service"}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-zion-slate-light">Budget:</span>
+                    <span className="text-zion-slate-light">Budget:</span>,
                     <span className="text-white">{BUDGET_RANGES.find(b => b.value === formData.budget)?.label}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-zion-slate-light">Timeline:</span>
+                    <span className="text-zion-slate-light">Timeline:</span>,
                     <span className="text-white">{TIMELINE_OPTIONS.find(t => t.value === formData.timeframe)?.label}</span>
                   </div>
                   {startDate && (
                     <div className="flex justify-between">
-                      <span className="text-zion-slate-light">Start Date:</span>
+                      <span className="text-zion-slate-light">Start Date:</span>,
                       <span className="text-white">{format(startDate, "PPP")}</span>
                     </div>
                   )}
                   {endDate && (
                     <div className="flex justify-between">
-                      <span className="text-zion-slate-light">End Date:</span>
+                      <span className="text-zion-slate-light">End Date:</span>,
                       <span className="text-white">{format(endDate, "PPP")}</span>
                     </div>
                   )}
@@ -294,12 +293,12 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
             {currentStep !== 'details' && (
               <Button
                 type="button"
-                variant="outline"
+                variant="outline",
                 onClick={prevStep}
                 className="border-zion-blue-light text-white hover:bg-zion-blue-light"
               >
                 Previous
-              </Button>
+              </Button>,
             )}
             
             <div className={cn("flex gap-2", currentStep === 'details' && "ml-auto")}>
@@ -314,7 +313,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
               
               {currentStep !== 'contact' ? (
                 <Button 
-                  type="button" 
+                  type="button",
                   onClick={nextStep}
                   className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
                 >
@@ -322,10 +321,10 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                 </Button>
               ) : (
                 <Button 
-                  type="submit"
+                  type="submit",
                   disabled={isSubmitting}
                   className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
-                >
+                >,
                   {isSubmitting ? "Submitting..." : "Submit Request"}
                 </Button>
               )}
@@ -336,3 +335,4 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
     </Dialog>
   )
 }
+;

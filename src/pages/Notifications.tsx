@@ -1,21 +1,20 @@
-import React, { useState } from 'react',
-import { useNotifications } from '@/context/notifications/NotificationContext',
+import React, { useState } from 'react';
+import { useNotifications } from '@/context/notifications/NotificationContext';
 import {
   NotificationType,
   NotificationContextType} from '@/context/notifications',
-import { formatDistanceToNow } from 'date-fns',
+import { formatDistanceToNow } from 'date-fns';
 import { Bell, Check, Trash2, ChevronRight, CheckCircle, AlertCircle, MessageCircle, Briefcase, UserCheck, Settings, Package } from 'lucide-react'
-import { Button } from '@/components/ui/button',
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs',
-import { Badge } from '@/components/ui/badge',
-import Skeleton from '@/components/ui/skeleton',
-import { SEO } from '@/components/SEO',
-import { useRouter } from 'next/router',
-import { cn } from '@/lib/utils',
-const getNotificationIcon = (type: NotificationType,
-  className: string = 'h-5 w-5') => {
+import { Button } from '@/components/ui/button';
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
+import { Badge } from '@/components/ui/badge';
+import Skeleton from '@/components/ui/skeleton';
+import { SEO } from '@/components/SEO';
+import { useRouter } from 'next/router';
+import { cn } from '@/lib/utils';
+const getNotificationIcon = (type: NotificationType, className: string = 'h-5 w-5') => {
   switch (type) {
-    case 'message':
+    case 'message':,
       return <MessageCircle className={cn(className, 'text-blue-500')} />,
     case 'quote_request':
       return <Briefcase className={cn(className, 'text-purple-500')} />,
@@ -40,7 +39,7 @@ const getNotificationIcon = (type: NotificationType,
 
 const getNotificationTypeBadge = (type: NotificationType) => {
   switch (type) {
-    case 'message':
+    case 'message':,
       return <Badge className="bg-blue-500">Message</Badge>,
     case 'quote_request':
       return <Badge className="bg-purple-500">Quote Request</Badge>,
@@ -59,23 +58,17 @@ const getNotificationTypeBadge = (type: NotificationType) => {
     case 'order_status':
       return <Badge className="bg-orange-500">Order</Badge>,
     default:
-      return <Badge variant="outline">Notification</Badge>
+      return <Badge variant="outline">Notification</Badge>,
   }
 },
 
 const NotificationCard: React.FC<{
-  notification: {
-    id: string,
-    title: string,
-    message: string,
-    type: NotificationType,
-    read: boolean,
-    created_at: string,
-    action_url?: string,
+  notification: {,
+    id: string, title: string, message: string, type: NotificationType, read: boolean, created_at: string, action_url?: string,
     action_text?: string
   },
   onMarkAsRead: (id: string) => Promise<void>,
-  onDismiss: (id: string) => Promise<void>
+  onDismiss: (id: string) => Promise<void>,
 }> = ({ notification, onMarkAsRead, onDismiss }) => {
   const router = useRouter(),
 
@@ -151,7 +144,7 @@ const NotificationCard: React.FC<{
             <Button
               variant="outline"
               size="sm"
-              className="mt-1 text-zion-cyan border-zion-cyan hover:bg-zion-cyan hover:text-black"
+              className="mt-1 text-zion-cyan border-zion-cyan hover:bg-zion-cyan hover:text-black",
               onClick={handleAction}
             >
               {notification.action_text}
@@ -256,3 +249,4 @@ export default function NotificationsPage() {
     </>
   )
 }
+;

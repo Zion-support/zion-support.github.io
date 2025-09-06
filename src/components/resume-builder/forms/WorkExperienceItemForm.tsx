@@ -1,25 +1,25 @@
-import { useState } from 'react',
-import { zodResolver } from "@hookform/resolvers/zod",
-import { useForm } from "react-hook-form",
-import { z } from "zod",
-import { WorkExperience } from "@/types/resume",
-import { Button } from "@/components/ui/button",
-import { Calendar } from "@/components/ui/calendar",
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
-import { Input } from "@/components/ui/input",
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
-import { Textarea } from "@/components/ui/textarea",
-import { cn } from "@/lib/utils",
-import { Switch } from "@/components/ui/switch",
-import { format } from "date-fns",
+import { useState } from 'react';
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { WorkExperience } from "@/types/resume";
+import { Button } from "@/components/ui/button";
+import { Calendar } from "@/components/ui/calendar";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { Textarea } from "@/components/ui/textarea";
+import { cn } from "@/lib/utils";
+import { Switch } from "@/components/ui/switch";
+import { format } from "date-fns";
 import { CalendarIcon, Loader2 } from 'lucide-react'
-import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton",
-import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog",
+import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton";
+import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog";
 // Define form schema
 const formSchema = z.object({
   company_name: z.string().min(1, "Company name is required"),
   role_title: z.string().min(1, "Role title is required"),
-  start_date: z.date({
+  start_date: z.date({,
     required_error: "Start date is required"}),
   end_date: z.date().optional(),
   is_current: z.boolean().default(false),
@@ -29,9 +29,9 @@ const formSchema = z.object({
 type FormValues = z.infer<typeof formSchema>,
 
 interface WorkExperienceItemFormProps {
-  initialData?: WorkExperience,
-  onSubmit: (data: WorkExperience) => Promise<void>,
-  onCancel: () => void
+  initialData?: WorkExperience,;
+  onSubmit: (data: WorkExperience) => Promise<void>;
+  onCancel: () => void,
 }
 
 export function WorkExperienceItemForm({
@@ -43,7 +43,7 @@ export function WorkExperienceItemForm({
   // Set up form
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
-    defaultValues: {
+    defaultValues: {,
       company_name: initialData?.company_name || "",
       role_title: initialData?.role_title || "",
       start_date: initialData?.start_date ? new Date(initialData.start_date) : new Date(),
@@ -59,7 +59,7 @@ export function WorkExperienceItemForm({
 
   const handleFormSubmit = async (values: FormValues) => {
     // Create a properly typed WorkExperience object with all required fields
-    const workExperience: WorkExperience = {
+    const workExperience: WorkExperience = {,
       id: initialData?.id,
       company_name: values.company_name,  // Required
       role_title: values.role_title,      // Required
@@ -73,7 +73,7 @@ export function WorkExperienceItemForm({
     await onSubmit(workExperience)
   },
 
-  const handleAIEnhancement = (content: string) => {
+  const handleAIEnhancement = (content: string) => {,
     form.setValue("description", content, { shouldDirty: true }),
     setIsEnhancementDialogOpen(false)
   },
@@ -83,7 +83,7 @@ export function WorkExperienceItemForm({
       <Form {...form}>
         <form onSubmit={form.handleSubmit(handleFormSubmit)} className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <FormField
+            <FormField,
               control={form.control}
               name="company_name"
               render={({ field }: { field: any }) => (
@@ -113,7 +113,7 @@ export function WorkExperienceItemForm({
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <FormField
+            <FormField,
               control={form.control}
               name="location"
               render={({ field }: { field: any }) => (
@@ -151,7 +151,7 @@ export function WorkExperienceItemForm({
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <FormField
+            <FormField,
               control={form.control}
               name="start_date"
               render={({ field }: { field: any }) => (
@@ -249,10 +249,8 @@ export function WorkExperienceItemForm({
                   <div className="flex gap-2">
                     <AIEnhancementButton
                       options={{
-                        enhancementType: "work-description",
-                        content: field.value || "",
-                        context: `${watchRoleTitle} at ${watchCompanyName}`
-                      }}
+                        enhancementType: "work-description", content: field.value || "", context: `${watchRoleTitle} at ${watchCompanyName}`
+                      }},
                       onEnhanced={(content) => form.setValue("description", content, { shouldDirty: true })}
                       buttonText="Enhance with AI"
                     />
@@ -311,3 +309,4 @@ export function WorkExperienceItemForm({
     </>
   )
 }
+;

@@ -1,15 +1,14 @@
 
-import React, { useEffect, useState } from "react",
-import { useInterviews } from "@/hooks/useInterviews",
-import { Interview } from "@/types/interview",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { SEO } from "@/components/SEO",
-import { ProtectedRoute } from "@/components/ProtectedRoute",
-import { InterviewCard } from "@/components/interviews/InterviewCard",
-import { Button } from "@/components/ui/button",
+import React, { useEffect, useState } from "react";
+import { useInterviews } from "@/hooks/useInterviews";
+import { Interview } from "@/types/interview";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { SEO } from "@/components/SEO";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { InterviewCard } from "@/components/interviews/InterviewCard";
+import { Button } from "@/components/ui/button";
 import { Calendar, Clock, Video } from 'lucide-react'
-import { format, isAfter, parseISO, startOfDay } from "date-fns",
-
+import { format, isAfter, parseISO, startOfDay } from "date-fns";
 function InterviewsContent() {
   const { interviews, isLoading, fetchInterviews } = useInterviews(),
   const [activeTab, setActiveTab] = useState("upcoming"),
@@ -48,7 +47,7 @@ function InterviewsContent() {
   }),
 
   // Group interviews by date
-  const groupInterviewsByDate = (interviews: Interview[]) => {
+  const groupInterviewsByDate = (interviews: Interview[]) => {,
     const grouped: Record<string, Interview[]> = {},
     
     interviews.forEach((interview) => {
@@ -79,7 +78,7 @@ function InterviewsContent() {
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {interviews.map((interview) => (
-              <InterviewCard 
+              <InterviewCard,
                 key={interview.id} 
                 interview={interview}
                 onRefresh={async () => {
@@ -188,3 +187,4 @@ export default function Interviews() {
     </ProtectedRoute>
   )
 }
+;

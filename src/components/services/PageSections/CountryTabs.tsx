@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react',
+import { useState, useEffect } from 'react';
 import { Search } from 'lucide-react'
-import { Input } from '@/components/ui/input',
-import { Button } from '@/components/ui/button',
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
 import {
   Pagination,
   PaginationContent,
@@ -9,16 +9,16 @@ import {
   PaginationButton,
   PaginationNext,
   PaginationPrevious} from '@/components/ui/pagination',
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',
-import { CountryServiceCard } from '@/components/services/CountryServiceCard',
-import { CountryPricing } from '@/data/onsiteServicePricing',
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { CountryServiceCard } from '@/components/services/CountryServiceCard';
+import { CountryPricing } from '@/data/onsiteServicePricing';
 interface CountryTabsProps {
-  popularCountries: string[],
-  filteredCountries: CountryPricing[],
-  handleCountrySelect: (country: CountryPricing) => void,
-  onQuote?: (country: CountryPricing) => void,
-  searchQuery: string,
-  setSearchQuery: (query: string) => void
+  popularCountries: string[];
+  filteredCountries: CountryPricing[];
+  handleCountrySelect: (country: CountryPricing) => void;
+  onQuote?: (country: CountryPricing) => void;
+  searchQuery: string;
+  setSearchQuery: (query: string) => void,
 }
 
 export function CountryTabs({
@@ -64,11 +64,11 @@ export function CountryTabs({
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredCountries
+        <div className="grid grid-cols-1 sm: grid-cols-2 lg:grid-cols-3 gap-6">
+          {filteredCountries,
             .filter((country) => popularCountries.includes(country.country))
             .map((country) => (
-              <CountryServiceCard
+              <CountryServiceCard,
                 key={country.country}
                 country={country}
                 onSelect={handleCountrySelect}
@@ -95,7 +95,7 @@ export function CountryTabs({
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           {paginatedCountries.map((country) => (
-            <CountryServiceCard
+            <CountryServiceCard,
               key={country.country}
               country={country}
               onSelect={handleCountrySelect}
@@ -149,3 +149,4 @@ export function CountryTabs({
     </Tabs>
   )
 }
+;

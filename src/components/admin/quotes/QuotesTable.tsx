@@ -1,5 +1,5 @@
 
-import React from "react",
+import React from "react";
 import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react'
 import { 
   Table,
@@ -9,27 +9,27 @@ import {
   TableHeader, 
   TableRow 
 } from "@/components/ui/table",
-import { Button } from "@/components/ui/button",
+import { Button } from "@/components/ui/button";
 import { 
   DropdownMenu,
   DropdownMenuContent, 
   DropdownMenuItem, 
   DropdownMenuTrigger 
 } from "@/components/ui/dropdown-menu",
-import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge",
-import type { QuoteRequest, QuoteStatus } from "@/types/quotes",
-import { formatDate } from "@/utils/dateUtils",
+import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge";
+import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
+import { formatDate } from "@/utils/dateUtils";
 interface QuotesTableProps {
-  quotes: QuoteRequest[],
+  quotes: QuoteRequest[];
   isArchived?: boolean,
-  isLoading: boolean,
-  updateStatus: (id: string, status: QuoteStatus) => void,
-  toggleArchive: (id: string, isArchived: boolean) => void,
-  deleteQuote: (id: string) => void,
-  onViewDetails: (quote: QuoteRequest) => void
+  isLoading: boolean;
+  updateStatus: (id: string, status: QuoteStatus) => void;
+  toggleArchive: (id: string, isArchived: boolean) => void;
+  deleteQuote: (id: string) => void;
+  onViewDetails: (quote: QuoteRequest) => void,
 }
 
-export const QuotesTable: React.FC<QuotesTableProps> = ({
+export const QuotesTable: React.FC<QuotesTableProps> = ({;
   quotes,
   isArchived = false,
   isLoading,
@@ -54,7 +54,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
         </TableHeader>
         <TableBody>
           {isLoading ? (
-            <TableRow>
+            <TableRow>,
               <TableCell colSpan={7} className="text-center py-10 text-zion-slate-light">
                 Loading quote requests...
               </TableCell>
@@ -73,7 +73,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                 key={quote.id}
                 className="border-zion-blue-light hover:bg-zion-blue"
               >
-                <TableCell className="text-white">
+                <TableCell className="text-white">,
                   {quote.talent_name || 'Unknown Talent'}
                 </TableCell>
                 <TableCell className="text-white">

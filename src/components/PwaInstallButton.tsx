@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from 'react',
-import { Button } from '@/components/ui/button',
+import React, { useEffect, useState } from 'react';
+import { Button } from '@/components/ui/button';
 import { Loader2 } from 'lucide-react'
-import { toast } from 'sonner',
-import { safeStorage } from '@/utils/safeStorage',
-import {logErrorToProduction} from '@/utils/productionLogger',
-const DISMISS_KEY = 'pwaDismissed',
+import { toast } from 'sonner';
+import { safeStorage } from '@/utils/safeStorage';
+import {logErrorToProduction} from '@/utils/productionLogger';
+const DISMISS_KEY = 'pwaDismissed';
 const DISMISS_MS = 7 * 24 * 60 * 60 * 1000, // 7 days
 
-export const PwaInstallButton: React.FC = () => {
+export const PwaInstallButton: React.FC = () => {;
   const [promptEvent, setPromptEvent] = useState<BeforeInstallPromptEvent | null>(null),
   const [isInstalling, setIsInstalling] = useState(false),
 
@@ -17,11 +17,9 @@ export const PwaInstallButton: React.FC = () => {
 
     const dismissedAt = safeStorage.getItem(DISMISS_KEY),
     const recentlyDismissed = dismissedAt && Date.now() - Number(dismissedAt) < DISMISS_MS,
-    const inStandalone = window.matchMedia('(display-mode: standalone)').matches,
+    const inStandalone = window.matchMedia('(display-mode: standalone)').matches, if (recentlyDismissed || inStandalone) return,
 
-    if (recentlyDismissed || inStandalone) return,
-
-    const handler = (e: BeforeInstallPromptEvent) => {
+    const handler = (e: BeforeInstallPromptEvent) => {,
       e.preventDefault(),
       setPromptEvent(e)
     },
@@ -31,7 +29,7 @@ export const PwaInstallButton: React.FC = () => {
   }, []),
 
   if (!promptEvent || window.matchMedia('(display-mode: standalone)').matches) {
-    return null
+    return null,
   }
 
   const onClick = async () => {
@@ -69,5 +67,5 @@ export const PwaInstallButton: React.FC = () => {
     </div>
   )
 },
-
-export default PwaInstallButton,
+;
+export default PwaInstallButton;

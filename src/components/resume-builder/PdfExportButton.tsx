@@ -1,6 +1,6 @@
-import { useState } from 'react',
-import { Button } from '@/components/ui/button',
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import {logErrorToProduction} from '@/utils/productionLogger';
 import { 
   DropdownMenu,
   DropdownMenuContent,
@@ -13,12 +13,12 @@ import {
   DropdownMenuCheckboxItem} from '@/components/ui/dropdown-menu',
 // Use the centralized icon wrapper to avoid missing icon issues
 import { FileText, ChevronDown, Loader2, Download } from 'lucide-react'
-import { Resume } from '@/types/resume',
-import { exportResumeToPDF, ExportOptions } from '@/utils/pdfExport',
-import { toast } from '@/hooks/use-toast',
-import { FontFamily } from '@/utils/pdf/fontConfig',
+import { Resume } from '@/types/resume';
+import { exportResumeToPDF, ExportOptions } from '@/utils/pdfExport';
+import { toast } from '@/hooks/use-toast';
+import { FontFamily } from '@/utils/pdf/fontConfig';
 interface PdfExportButtonProps {
-  resume: Resume
+  resume: Resume,
 }
 
 export function PdfExportButton({ resume }: PdfExportButtonProps) {
@@ -33,7 +33,7 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {
     setIsExporting(true),
     
     try {
-      const options: ExportOptions = {
+      const options: ExportOptions = {,
         theme,
         includePortfolio,
         maxProjects: 3,
@@ -62,7 +62,7 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {
       toast({
         title: "Export failed",
         description: "There was an error exporting your resume to PDF.",
-        variant: "destructive"
+        variant: "destructive",
       })
     } finally {
       setIsExporting(false)
@@ -122,3 +122,4 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {
     </DropdownMenu>
   )
 }
+;

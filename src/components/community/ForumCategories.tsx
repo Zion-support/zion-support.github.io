@@ -1,43 +1,43 @@
-import Link from "next/link",
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
-import { useAuth } from "@/hooks/useAuth",
+import Link from "next/link";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { useAuth } from "@/hooks/useAuth";
 import { MessageSquare, Briefcase, Code, FileText, Megaphone } from 'lucide-react'
-import { ForumCategoryInfo } from "@/types/community",
+import { ForumCategoryInfo } from "@/types/community";
 const categories: ForumCategoryInfo[] = [
-  {
+  {,
     id: "getting-hired",
     name: "Getting Hired",
     description: "Tips, strategies, and questions about getting hired on the platform.",
     adminOnly: false,
-    icon: "Briefcase"
+    icon: "Briefcase",
   },
   {
     id: "project-help",
     name: "Project Help",
     description: "Get help with your ongoing projects and collaboration.",
     adminOnly: false,
-    icon: "MessageSquare"
+    icon: "MessageSquare",
   },
   {
     id: "ai-tools",
     name: "AI Tools Discussion",
     description: "Discuss AI tools, frameworks, and best practices.",
     adminOnly: false,
-    icon: "Code"
+    icon: "Code",
   },
   {
     id: "feedback",
     name: "Feedback & Feature Requests",
     description: "Share your feedback and suggest new features.",
     adminOnly: false,
-    icon: "FileText"
+    icon: "FileText",
   },
   {
     id: "announcements",
     name: "Announcements",
     description: "Official announcements from the Zion team.",
     adminOnly: true,
-    icon: "Megaphone"
+    icon: "Megaphone",
   }
 ],
 
@@ -58,8 +58,8 @@ export const ForumCategories = () => {
   ),
 
   return (
-    <div className="grid gap-4 md: grid-cols-2 lg:grid-cols-3">
-      {visibleCategories.map((category) => {
+    <div className="grid gap-4 md: grid-cols-2 lg:grid-cols-3">,
+      {visibleCategories.map((category) => {,
         const Icon = iconMap[category.icon as keyof typeof iconMap],
         return (
           <Link key={category.id} href={`/community/category/${category.id}`}>
@@ -67,7 +67,7 @@ export const ForumCategories = () => {
               <CardHeader className="flex flex-row items-center gap-4">
                 <div className="p-2 bg-zion-purple/10 rounded-full">
                   <Icon className="h-6 w-6 text-zion-purple" />
-                </div>
+                </div>,
                 <CardTitle className="text-xl">{category.name}</CardTitle>
               </CardHeader>
               <CardContent>
@@ -80,5 +80,5 @@ export const ForumCategories = () => {
     </div>
   )
 },
-
-export default ForumCategories,
+;
+export default ForumCategories;

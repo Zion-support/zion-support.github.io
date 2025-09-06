@@ -1,14 +1,13 @@
-import { useRef, useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Input } from "@/components/ui/input",
+import { useRef, useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
 import { Copy, Download, Link, Plus } from 'lucide-react'
-import { toast } from "@/hooks/use-toast",
-import { useReferrals } from "@/hooks/useReferrals",
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",
-import { Label } from "@/components/ui/label",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-
+import { toast } from "@/hooks/use-toast";
+import { useReferrals } from "@/hooks/useReferrals";
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Label } from "@/components/ui/label";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 export function PartnerReferralLinks() {
   const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals(),
   const [isDialogOpen, setIsDialogOpen] = useState(false),
@@ -19,12 +18,12 @@ export function PartnerReferralLinks() {
   // Get the base referral link
   const baseLink = getReferralLink(),
   
-  const handleCopyLink = (link: string) => {
+  const handleCopyLink = (link: string) => {,
     navigator.clipboard.writeText(link),
     toast({
       title: "Link copied!",
       description: "The referral link has been copied to your clipboard",
-      variant: "default"
+      variant: "default",
     })
   },
   
@@ -44,7 +43,7 @@ export function PartnerReferralLinks() {
       
       const newLink = {
         name: `${selectedCampaign}${customParam ? `-${customParam}` : ""}`,
-        link: url.toString()
+        link: url.toString(),
       },
       
       setGeneratedLinks(prev => [...prev, newLink]),
@@ -127,7 +126,7 @@ export function PartnerReferralLinks() {
             <div className="grid gap-4 py-4">
               <div className="grid gap-2">
                 <Label htmlFor="campaign">Campaign Type</Label>
-                <Select 
+                <Select,
                   value={selectedCampaign}
                   onValueChange={setSelectedCampaign}
                 >
@@ -175,7 +174,7 @@ export function PartnerReferralLinks() {
       </div>
 
       <div className="grid gap-4">
-        {generatedLinks.length > 0 ? (
+        {generatedLinks.length > 0 ? (,
           generatedLinks.map((item, index) => (
             <Card key={index} className="bg-zion-blue-dark border-zion-blue-light">
               <CardHeader className="pb-2">
@@ -225,4 +224,4 @@ export function PartnerReferralLinks() {
       </div>
     </div>
   )
-}
+};

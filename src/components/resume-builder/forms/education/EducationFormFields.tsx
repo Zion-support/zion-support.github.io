@@ -1,14 +1,14 @@
 
-import { useForm } from 'react-hook-form',
-import { zodResolver } from '@hookform/resolvers/zod',
-import { z } from 'zod',
-import { format } from 'date-fns',
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+import { format } from 'date-fns';
 import { Loader2 } from 'lucide-react'
-import { Button } from '@/components/ui/button',
-import { Textarea } from '@/components/ui/textarea',
-import { Input } from '@/components/ui/input',
-import { Checkbox } from '@/components/ui/checkbox',
-import { Alert, AlertDescription } from '@/components/ui/alert',
+import { Button } from '@/components/ui/button';
+import { Textarea } from '@/components/ui/textarea';
+import { Input } from '@/components/ui/input';
+import { Checkbox } from '@/components/ui/checkbox';
+import { Alert, AlertDescription } from '@/components/ui/alert';
 import {
   Form,
   FormControl,
@@ -16,9 +16,9 @@ import {
   FormItem,
   FormLabel,
   FormMessage} from '@/components/ui/form',
-import { useState } from 'react',
-import { EducationFormFieldsProps } from './types',
-import { Education } from '@/types/resume',
+import { useState } from 'react';
+import { EducationFormFieldsProps } from './types';
+import { Education } from '@/types/resume';
 // Define schema for form validation
 const educationSchema = z.object({
   institution: z.string().min(1, 'Institution is required'),
@@ -42,7 +42,7 @@ export function EducationFormFields({
 
   const form = useForm<EducationFormValues>({
     resolver: zodResolver(educationSchema),
-    defaultValues: {
+    defaultValues: {,
       institution: '',
       degree: '',
       field_of_study: '',
@@ -51,13 +51,13 @@ export function EducationFormFields({
       description: '',
       location: ''}}),
 
-  const handleSubmit = async (data: EducationFormValues) => {
+  const handleSubmit = async (data: EducationFormValues) => {,
     setIsLoading(true),
     setError(null),
     try {
       await onSubmit(data)
     } catch (err: any) {
-      setError(err.message || 'An error occurred')
+      setError(err.message || 'An error occurred'),
     } finally {
       setIsLoading(false)
     }
@@ -67,7 +67,7 @@ export function EducationFormFields({
     <Form {...form}>
       <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <FormField
+          <FormField,
             control={form.control}
             name="institution"
             render={({ field }: { field: any }) => (
@@ -111,7 +111,7 @@ export function EducationFormFields({
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <FormField
+          <FormField,
             control={form.control}
             name="start_date"
             render={({ field }: { field: any }) => (
@@ -222,3 +222,4 @@ export function EducationFormFields({
     </Form>
   )
 }
+;

@@ -1,21 +1,20 @@
-import React from 'react',
+import React from 'react';
 // Use the centralized icon wrapper to avoid missing icons
 import { Check, Trash2, ChevronRight } from 'lucide-react'
-import { Button } from '@/components/ui/button',
-import { Badge } from '@/components/ui/badge',
-import { formatDistanceToNow } from 'date-fns',
-import { cn } from '@/lib/utils',
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { formatDistanceToNow } from 'date-fns';
+import { cn } from '@/lib/utils';
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger} from '@/components/ui/tooltip',
-import { useRouter } from 'next/router',
-import { Notification, NotificationType } from '@/context/notifications',
-
+import { useRouter } from 'next/router';
+import { Notification, NotificationType } from '@/context/notifications';
 export const getTypeIcon = (type: NotificationType) => {
   switch (type) {
-    case 'message':
+    case 'message':,
       return <span className="text-blue-500">💬</span>,
     case 'quote_request':
       return <span className="text-purple-500">📝</span>,
@@ -34,17 +33,17 @@ export const getTypeIcon = (type: NotificationType) => {
     case 'order_status':
       return <span className="text-orange-500">📦</span>,
     default:
-      return <span className="text-gray-500">📣</span>
+      return <span className="text-gray-500">📣</span>,
   }
 },
 
 interface NotificationItemProps {
-  notification: Notification,
-  onMarkAsRead: (id: string) => Promise<void>,
-  onDismiss: (id: string) => Promise<void>
+  notification: Notification;
+  onMarkAsRead: (id: string) => Promise<void>;
+  onDismiss: (id: string) => Promise<void>,
 }
 
-export const NotificationItem: React.FC<NotificationItemProps> = ({
+export const NotificationItem: React.FC<NotificationItemProps> = ({;
   notification,
   onMarkAsRead,
   onDismiss}) => {
@@ -111,7 +110,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
                 variant="ghost"
                 size="icon"
                 className="h-6 w-6"
-                onClick={(e) => {
+                onClick={(e) => {,
                   e.stopPropagation(),
                   onMarkAsRead(notification.id)
                 }}
@@ -151,3 +150,4 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
     </div>
   )
 },
+;

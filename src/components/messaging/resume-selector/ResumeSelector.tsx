@@ -1,17 +1,17 @@
 
-import React, { useState, useEffect } from 'react',
-import { Button } from "@/components/ui/button",
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",
-import { Label } from "@/components/ui/label",
+import React, { useState, useEffect } from 'react';
+import { Button } from "@/components/ui/button";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Label } from "@/components/ui/label";
 import { Plus, Loader2 } from 'lucide-react'
-import { useResume } from "@/hooks/useResume",
-import { exportResumeToPDF } from "@/utils/pdfExport",
-import { toast } from "@/components/ui/use-toast",
-import { ResumePreviewCard } from './ResumePreviewCard',
-import { UploadSection } from './UploadSection',
-import { SelectResumeSection } from './SelectResumeSection',
-import { ResumeOption, ResumeSelectorProps } from './types',
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { useResume } from "@/hooks/useResume";
+import { exportResumeToPDF } from "@/utils/pdfExport";
+import { toast } from "@/components/ui/use-toast";
+import { ResumePreviewCard } from './ResumePreviewCard';
+import { UploadSection } from './UploadSection';
+import { SelectResumeSection } from './SelectResumeSection';
+import { ResumeOption, ResumeSelectorProps } from './types';
+import {logErrorToProduction} from '@/utils/productionLogger';
 export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
 
   const [selectedOption, setSelectedOption] = useState<'recent' | 'select' | 'upload'>('recent'),
@@ -41,11 +41,11 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
   // Update resume options when resume data changes
   useEffect(() => {
     if (resume) {
-      const options: ResumeOption[] = [{
+      const options: ResumeOption[] = [{,
         id: resume.id || 'current',
         title: resume.basic_info.title,
         type: 'ai_resume',
-        resume: resume
+        resume: resume,
       }],
       
       setResumeOptions(options),
@@ -59,7 +59,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
   }, [resume, selectedOption, onResumeSelected]),
   
   // Handle radio option change
-  const handleOptionChange = (value: 'recent' | 'select' | 'upload') => {
+  const handleOptionChange = (value: 'recent' | 'select' | 'upload') => {,
     setSelectedOption(value),
     
     if (value === 'recent' && resumeOptions.length > 0 && resumeOptions[0]) {
@@ -74,7 +74,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
   },
   
   // Handle resume selection change
-  const handleResumeSelect = (resumeId: string) => {
+  const handleResumeSelect = (resumeId: string) => {,
     const selected = resumeOptions.find(opt => opt.id === resumeId),
     if (selected) {
       setSelectedResume(selected),
@@ -84,7 +84,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
   
   // Handle custom file upload
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files && e.target.files[0]) {
+    if (e.target.files && e.target.files[0]) {,
       const file = e.target.files[0],
       
       // Check if it's a PDF file
@@ -92,17 +92,17 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
         toast({
           title: "Invalid file type",
           description: "Please upload a PDF file",
-          variant: "destructive"
+          variant: "destructive",
         }),
         return
       }
       
       // Create a custom resume option
-      const customOption: ResumeOption = {
+      const customOption: ResumeOption = {,
         id: 'custom-upload',
         title: file.name,
         type: 'custom_upload',
-        file: file
+        file: file,
       },
       
       setCustomFile(file),
@@ -141,7 +141,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
       toast({
         title: "Download failed",
         description: "There was an error downloading your resume.",
-        variant: "destructive"
+        variant: "destructive",
       })
     } finally {
       setIsLoading(false)
@@ -150,7 +150,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
   
   // Handle "Generate Resume Now" button
   const handleGenerateResume = () => {
-    window.open('/dashboard/talent/portfolio_blank')
+    window.open('/dashboard/talent/portfolio_blank');
   },
   
   return (
@@ -218,3 +218,4 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
     </div>
   )
 }
+;

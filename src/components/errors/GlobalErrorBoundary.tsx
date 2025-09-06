@@ -7,25 +7,25 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import * as Sentry from '@sentry/nextjs'
-import {logErrorToProduction} from '@/utils/productionLogger',
+import {logErrorToProduction} from '@/utils/productionLogger';
 interface ErrorBoundaryState {
   hasError: boolean
   error: Error | null
   errorInfo: ErrorInfo | null
   errorId: string | null
   retryCount: number
-  userFeedback: string
-  showDetails: boolean
+  userFeedback: string;
+  showDetails: boolean,
 }
 
 interface ErrorBoundaryProps {
-  children: ReactNode
-  fallback?: ReactNode
+  children: ReactNode;
+  fallback?: ReactNode,
   onError?: (error: Error, errorInfo: ErrorInfo) => void
   enableRetry?: boolean
   maxRetries?: number
-  showReportButton?: boolean
-  context?: string
+  showReportButton?: boolean;
+  context?: string,
 }
 
 export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
@@ -34,19 +34,19 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
   constructor(props: ErrorBoundaryProps) {
     super(props)
 
-    this.state = {
+    this.state = {,
       hasError: false,
       error: null,
       errorInfo: null,
       errorId: null,
       retryCount: 0,
       userFeedback: '',
-      showDetails: false
+      showDetails: false,
     }
   }
 
   static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
-    return {
+    return {,
       hasError: true,
       error
     }
@@ -56,36 +56,36 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
     const errorId = this.generateErrorId()
     
     // Enhanced error logging
-    const enhancedError = {
-      ...error,
-      componentStack: errorInfo.componentStack,
-      errorBoundary: this.props.context || 'GlobalErrorBoundary',
-      timestamp: new Date().toISOString(),
-      userAgent: typeof window !== 'undefined' ? navigator.userAgent : 'SSR',
-      url: typeof window !== 'undefined' ? window.location.href : 'SSR',
-      userId: this.getUserId(),
-      buildInfo: this.getBuildInfo()
+    const enhancedError = {,
+      ...error,;
+      componentStack: errorInfo.componentStack;
+      errorBoundary: this.props.context || 'GlobalErrorBoundary';
+      timestamp: new Date().toISOString();
+      userAgent: typeof window !== 'undefined' ? navigator.userAgent : 'SSR';
+      url: typeof window !== 'undefined' ? window.location.href : 'SSR';
+      userId: this.getUserId();
+      buildInfo: this.getBuildInfo(),
     }
 
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.group('🚨 Error Boundary Caught Error')
+      console.group('🚨 Error Boundary Caught Error');
       logErrorToProduction('Error:', { data: error })
       logErrorToProduction('Error Info:', { data: errorInfo })
       logErrorToProduction('Enhanced Error:', { data: enhancedError })
-      console.groupEnd()
+      console.groupEnd();
     }
 
     // Report to Sentry
     Sentry.withScope((scope) => {
-      scope.setTag('errorBoundary', this.props.context || 'GlobalErrorBoundary')
-      scope.setLevel('error')
+      scope.setTag('errorBoundary', this.props.context || 'GlobalErrorBoundary');
+      scope.setLevel('error');
       scope.setContext('errorInfo', {
         componentStack: errorInfo.componentStack,
-        retryCount: this.state.retryCount
+        retryCount: this.state.retryCount,
       })
-      
-      Sentry.captureException(error)
+      ;
+      Sentry.captureException(error);
     })
 
     // Custom error handler
@@ -96,7 +96,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
     this.setState({
       errorInfo,
       errorId
-    })
+    });
   }
 
   componentWillUnmount() {
@@ -127,7 +127,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
     return {
       version: process.env.NEXT_PUBLIC_APP_VERSION || 'unknown',
       environment: process.env.NODE_ENV,
-      buildTime: process.env.NEXT_PUBLIC_BUILD_TIME || 'unknown'
+      buildTime: process.env.NEXT_PUBLIC_BUILD_TIME || 'unknown',
     }
   }
 
@@ -137,7 +137,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
 
     // Critical errors
     if (message.includes('network') || message.includes('fetch')) {
-      return 'medium'
+      return 'medium',
     }
     
     if (message.includes('chunk') || message.includes('loading')) {
@@ -159,7 +159,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
     const message = error.message.toLowerCase()
 
     if (message.includes('network') || message.includes('fetch')) {
-      return 'Please check your internet connection and try again.'
+      return 'Please check your internet connection and try again.',
     }
     
     if (message.includes('chunk')) {
@@ -187,22 +187,22 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
         errorInfo: null,
         errorId: null,
         retryCount: this.state.retryCount + 1,
-        showDetails: false
-      })
+        showDetails: false,
+      });
     }, retryDelay)
 
     this.retryTimeouts.push(timeout)
   }
 
   private copyErrorDetails = async () => {
-    const errorDetails = {
-      errorId: this.state.errorId,
-      message: this.state.error?.message,
-      stack: this.state.error?.stack,
-      componentStack: this.state.errorInfo?.componentStack,
-      timestamp: new Date().toISOString(),
-      url: typeof window !== 'undefined' ? window.location.href : 'unknown',
-      userAgent: typeof window !== 'undefined' ? navigator.userAgent : 'unknown'
+    const errorDetails = {;
+      errorId: this.state.errorId;
+      message: this.state.error?.message;
+      stack: this.state.error?.stack;
+      componentStack: this.state.errorInfo?.componentStack;
+      timestamp: new Date().toISOString();
+      url: typeof window !== 'undefined' ? window.location.href : 'unknown';
+      userAgent: typeof window !== 'undefined' ? navigator.userAgent : 'unknown',
     }
 
     try {
@@ -221,19 +221,19 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
       const response = await fetch('/api/error-report', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
+        body: JSON.stringify({,
           errorId: this.state.errorId,
-          error: {
+          error: {,
             message: this.state.error.message,
             stack: this.state.error.stack,
-            name: this.state.error.name
+            name: this.state.error.name,
           },
           errorInfo: this.state.errorInfo,
           userFeedback: this.state.userFeedback,
           context: this.props.context,
-          timestamp: new Date().toISOString()
+          timestamp: new Date().toISOString(),
         })
       })
 
@@ -265,7 +265,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
 
       return (
         <div className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-950/20 dark:to-orange-950/20">
-          <motion.div
+          <motion.div,
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.3 }}
@@ -279,7 +279,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
                   Oops! Something went wrong
                 </CardTitle>
                 <div className="flex items-center justify-center gap-2 mt-2">
-                  <Badge 
+                  <Badge,
                     variant={severity === 'critical' ? 'destructive' : severity === 'high' ? 'destructive' : 'secondary'}
                   >
                     {severity.toUpperCase()}
@@ -294,12 +294,12 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
 
               <CardContent className="space-y-6">
                 <div className="text-center">
-                  <p className="text-gray-600 dark:text-gray-300 mb-4">
+                  <p className="text-gray-600 dark:text-gray-300 mb-4">,
                     {suggestion}
                   </p>
                   
                   {this.state.retryCount > 0 && (
-                    <p className="text-sm text-orange-600 dark:text-orange-400">
+                    <p className="text-sm text-orange-600 dark:text-orange-400">,
                       Retry attempt: {this.state.retryCount}/{this.props.maxRetries || 3}
                     </p>
                   )}
@@ -307,7 +307,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
 
                 {/* Action Buttons */}
                 <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                  {canRetry && (
+                  {canRetry && (,
                     <Button onClick={this.retry} className="flex items-center gap-2">
                       <RefreshCw className="h-4 w-4" />
                       Try Again
@@ -342,7 +342,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
                       <div className="space-y-4">
                         <div>
                           <h4 className="font-semibold text-sm mb-2">Error Message:</h4>
-                          <code className="block p-3 bg-red-50 dark:bg-red-900/10 rounded text-sm text-red-800 dark:text-red-200 overflow-auto">
+                          <code className="block p-3 bg-red-50 dark:bg-red-900/10 rounded text-sm text-red-800 dark:text-red-200 overflow-auto">,
                             {this.state.error.message}
                           </code>
                         </div>
@@ -350,7 +350,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
                         {process.env.NODE_ENV === 'development' && this.state.error.stack && (
                           <div>
                             <h4 className="font-semibold text-sm mb-2">Stack Trace:</h4>
-                            <pre className="p-3 bg-gray-50 dark:bg-gray-800 rounded text-xs overflow-auto max-h-32">
+                            <pre className="p-3 bg-gray-50 dark:bg-gray-800 rounded text-xs overflow-auto max-h-32">,
                               {this.state.error.stack}
                             </pre>
                           </div>
@@ -395,7 +395,7 @@ export const useErrorBoundary = () => {
   }, [error])
 
   const captureError = React.useCallback((error: Error) => {
-    setError(error)
+    setError(error),
   }, [])
 
   return { captureError }
@@ -403,10 +403,9 @@ export const useErrorBoundary = () => {
 
 // Higher-order component for adding error boundaries
 export const withErrorBoundary = <P extends object>(
-  Component: React.ComponentType<P>,
-  errorBoundaryProps?: Omit<ErrorBoundaryProps, 'children'>
+  Component: React.ComponentType<P>, errorBoundaryProps?: Omit<ErrorBoundaryProps, 'children'>
 ) => {
-  const WrappedComponent = (props: P) => (
+  const WrappedComponent = (props: P) => (,
     <GlobalErrorBoundary {...errorBoundaryProps}>
       <Component {...props} />
     </GlobalErrorBoundary>
@@ -417,4 +416,4 @@ export const withErrorBoundary = <P extends object>(
   return WrappedComponent
 }
 
-export default GlobalErrorBoundary 
+export default GlobalErrorBoundary ;

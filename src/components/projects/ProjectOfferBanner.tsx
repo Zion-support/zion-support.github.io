@@ -1,11 +1,11 @@
 
-import { useEffect, useState } from "react",
-import { useRouter } from 'next/router',
+import { useEffect, useState } from "react";
+import { useRouter } from 'next/router';
 import { Bell, Calendar, X } from 'lucide-react'
-import { Button } from "@/components/ui/button",
-import { Card, CardContent } from "@/components/ui/card",
-import { useProjects } from "@/hooks/useProjects",
-import { Project } from "@/types/projects",
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { useProjects } from "@/hooks/useProjects";
+import { Project } from "@/types/projects";
 export function ProjectOfferBanner() {
   const router = useRouter(),
   const { projects, isLoading } = useProjects(),
@@ -19,7 +19,7 @@ export function ProjectOfferBanner() {
     }
   }, [projects, isLoading]),
   
-  const handleDismiss = (projectId: string, e: React.MouseEvent) => {
+  const handleDismiss = (projectId: string, e: React.MouseEvent) => {,
     e.stopPropagation(),
     setDismissed(prev => {
       const updated = new Set(prev),
@@ -28,8 +28,8 @@ export function ProjectOfferBanner() {
     })
   },
   
-  const handleViewOffer = (projectId: string) => {
-    router.push(`/project/${projectId}`)
+  const handleViewOffer = (projectId: string) => {,
+    router.push(`/project/${projectId}`);
   },
   
   if (isLoading || pendingOffers.length === 0 || pendingOffers.every(p => dismissed.has(p.id))) {
@@ -77,3 +77,4 @@ export function ProjectOfferBanner() {
     </div>
   )
 }
+;

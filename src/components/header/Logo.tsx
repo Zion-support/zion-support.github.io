@@ -1,7 +1,7 @@
 
-import React from 'react',
-import Link from 'next/link',
-import { useWhitelabel } from '@/context/WhitelabelContext',
+import React from 'react';
+import Link from 'next/link';
+import { useWhitelabel } from '@/context/WhitelabelContext';
 interface LogoProps {
   customLogo?: string
   
@@ -29,3 +29,4 @@ export function Logo({ customLogo }: LogoProps) {
     </Link>
   )
 }
+;

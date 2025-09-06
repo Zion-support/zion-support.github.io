@@ -1,5 +1,5 @@
 
-import React from "react",
+import React from "react";
 import {
   Table,
   TableBody,
@@ -7,10 +7,10 @@ import {
   TableHead,
   TableHeader,
   TableRow} from "@/components/ui/table",
-import { Badge } from "@/components/ui/badge",
+import { Badge } from "@/components/ui/badge";
 import { CalendarIcon, Search } from 'lucide-react'
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 export function TeamActivity() {
   // Mock activity data
   const activities = [
@@ -58,7 +58,7 @@ export function TeamActivity() {
       category: "billing"}],
 
   // Function to format the date in a readable way
-  const formatDate = (date: Date) => {
+  const formatDate = (date: Date) => {,
     const now = new Date(),
     const diffMs = now.getTime() - date.getTime(),
     const diffMins = Math.floor(diffMs / (1000 * 60)),
@@ -76,7 +76,7 @@ export function TeamActivity() {
     }
   },
 
-  const getCategoryBadge = (category: string) => {
+  const getCategoryBadge = (category: string) => {,
     const categoryStyles: Record<string, { variant: "default" | "outline" | "secondary" | "destructive" }> = {
       jobs: { variant: "default" },
       candidates: { variant: "outline" },
@@ -97,7 +97,7 @@ export function TeamActivity() {
             <Input
               type="search"
               placeholder="Search activities..."
-              className="w-[200px] md:w-[300px] pl-9"
+              className="w-[200px] md: w-[300px] pl-9"
             />
           </div>
           <Button variant="outline" size="icon" className="h-10 w-10" aria-label="Filter by date">
@@ -117,8 +117,8 @@ export function TeamActivity() {
               <TableHead>Time</TableHead>
             </TableRow>
           </TableHeader>
-          <TableBody>
-            {activities.map((activity) => (
+          <TableBody>,
+            {activities.map((activity) => (,
               <TableRow key={activity.id}>
                 <TableCell className="font-medium">{activity.user}</TableCell>
                 <TableCell>{activity.action}</TableCell>
@@ -149,3 +149,4 @@ export function TeamActivity() {
     </div>
   )
 }
+;

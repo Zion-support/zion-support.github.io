@@ -1,23 +1,22 @@
-import React, { useState, useEffect, useMemo } from 'react',
-import { useRouter } from 'next/router',
+import React, { useState, useEffect, useMemo } from 'react';
+import { useRouter } from 'next/router';
 import { Search, Filter, X, SortAsc, SortDesc, GridIcon, List, Loader2 } from 'lucide-react'
-import { Button } from '@/components/ui/button',
-import { Input } from '@/components/ui/input',
-import { Badge } from '@/components/ui/badge',
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select',
-import { Checkbox } from '@/components/ui/checkbox',
-import { Slider } from '@/components/ui/slider',
-import { Separator } from '@/components/ui/separator',
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet',
-import { EnhancedSearchInput } from './EnhancedSearchInput',
-import { generateSearchSuggestions } from '@/data/marketplaceData',
-import { logErrorToProduction, logInfo } from '@/utils/productionLogger',
-
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Badge } from '@/components/ui/badge';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Checkbox } from '@/components/ui/checkbox';
+import { Slider } from '@/components/ui/slider';
+import { Separator } from '@/components/ui/separator';
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
+import { EnhancedSearchInput } from './EnhancedSearchInput';
+import { generateSearchSuggestions } from '@/data/marketplaceData';
+import { logErrorToProduction, logInfo } from '@/utils/productionLogger';
 interface SearchResult {
-  id: string,
-  title: string,
-  description: string,
-  type: 'product' | 'talent' | 'blog' | 'service',
+  id: string;
+  title: string;
+  description: string;
+  type: 'product' | 'talent' | 'blog' | 'service';
   category?: string,
   url?: string,
   image?: string,
@@ -29,21 +28,21 @@ interface SearchResult {
 }
 
 interface SearchFilters {
-  types: string[],
-  category: string,
-  minPrice: number,
-  maxPrice: number,
-  minRating: number,
-  sort: string
+  types: string[];
+  category: string;
+  minPrice: number;
+  maxPrice: number;
+  minRating: number;
+  sort: string,
 }
 
 interface SearchResponse {
-  results: SearchResult[],
-  totalCount: number,
-  page: number,
-  limit: number,
-  query: string,
-  hasMore: boolean
+  results: SearchResult[];
+  totalCount: number;
+  page: number;
+  limit: number;
+  query: string;
+  hasMore: boolean,
 }
 
 // Highlight search terms in text
@@ -74,21 +73,19 @@ const HighlightText: React.FC<{ text: string, searchTerm: string, className?: st
 },
 
 // Search Result Card Component
-const SearchResultCard: React.FC<{ 
-  result: SearchResult, 
-  searchTerm: string, 
-  viewMode: 'grid' | 'list' 
+const SearchResultCard: React.FC<{,
+  result: SearchResult, searchTerm: string, viewMode: 'grid' | 'list',
 }> = ({ result, searchTerm, viewMode }) => {
   const router = useRouter(),
 
   const handleClick = () => {
     if (result.url) {
-      router.push(result.url)
+      router.push(result.url);
     }
   },
 
   const cardClass = viewMode === 'grid' 
-    ? "bg-card border rounded-lg p-4 hover: shadow-lg transition-shadow cursor-pointer"
+    ? "bg-card border rounded-lg p-4 hover: shadow-lg transition-shadow cursor-pointer",
     : "bg-card border rounded-lg p-4 hover:shadow-lg transition-shadow cursor-pointer flex gap-4",
 
   return (
@@ -154,10 +151,9 @@ const SearchResultCard: React.FC<{
 },
 
 // Filter Sidebar Component
-const FilterSidebar: React.FC<{
-  filters: SearchFilters,
-  onFiltersChange: (filters: SearchFilters) => void,
-  availableCategories: string[]
+const FilterSidebar: React.FC<{,
+  filters: SearchFilters, onFiltersChange: (filters: SearchFilters) => void,
+  availableCategories: string[],
 }> = ({ filters, onFiltersChange, availableCategories }) => {
   const typeOptions = [
     { id: 'product', label: 'Products' },
@@ -167,7 +163,7 @@ const FilterSidebar: React.FC<{
   ],
 
   const handleTypeChange = (typeId: string, checked: boolean) => {
-    const newTypes = checked 
+    const newTypes = checked,
       ? [...filters.types, typeId]
       : filters.types.filter(t => t !== typeId),
     
@@ -175,10 +171,10 @@ const FilterSidebar: React.FC<{
   },
 
   const handlePriceChange = (values: number[]) => {
-    onFiltersChange({ 
+    onFiltersChange({,
       ...filters, 
       minPrice: values[0] ?? 0, 
-      maxPrice: values[1] ?? 10000 
+      maxPrice: values[1] ?? 10000,
     })
   },
 
@@ -293,8 +289,8 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
 
       <div className="max-w-md mx-auto space-y-4">
         <div>
-          <h3 className="font-semibold mb-3">Search Suggestions:</h3>
-          <div className="flex flex-wrap gap-2 justify-center">
+          <h3 className="font-semibold mb-3">Search Suggestions: </h3>,
+          <div className="flex flex-wrap gap-2 justify-center">,
             {suggestions.map((suggestion, index) => (
               <Button
                 key={index}
@@ -319,11 +315,11 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
         </div>
       </div>
     </div>
-  )
+  ),
 },
 
 // Main Search Results Page Component
-export const SearchResultsPage: React.FC = () => {
+export const SearchResultsPage: React.FC = () => {;
   const router = useRouter(),
   const [searchTerm, setSearchTerm] = useState(''),
   const [results, setResults] = useState<SearchResult[]>([]),
@@ -340,7 +336,7 @@ export const SearchResultsPage: React.FC = () => {
     minPrice: 0,
     maxPrice: 10000,
     minRating: 0,
-    sort: 'relevance'
+    sort: 'relevance',
   }),
 
   const suggestions = generateSearchSuggestions(),
@@ -376,14 +372,14 @@ export const SearchResultsPage: React.FC = () => {
       const params = new URLSearchParams({
         query: term,
         page: page.toString(),
-        limit: '20'
+        limit: '20',
       }),
 
       if (searchFilters.types.length > 0) {
         params.append('type', searchFilters.types.join())
       }
       if (searchFilters.category) {
-        params.append('category', searchFilters.category)
+        params.append('category', searchFilters.category);
       }
       if (searchFilters.minPrice > 0) {
         params.append('minPrice', searchFilters.minPrice.toString())
@@ -395,7 +391,7 @@ export const SearchResultsPage: React.FC = () => {
         params.append('minRating', searchFilters.minRating.toString())
       }
       if (searchFilters.sort !== 'relevance') {
-        params.append('sort', searchFilters.sort)
+        params.append('sort', searchFilters.sort);
       }
 
       const response = await fetch(`/api/search?${params}`),
@@ -414,7 +410,7 @@ export const SearchResultsPage: React.FC = () => {
       logInfo('Search completed', { 
         term, 
         resultCount: data.results.length, 
-        totalCount: data.totalCount 
+        totalCount: data.totalCount,
       })
     } catch (error) {
       logErrorToProduction('Search failed', { data: error }),
@@ -434,14 +430,14 @@ export const SearchResultsPage: React.FC = () => {
   }, [searchTerm, filters]),
 
   // Handle search input
-  const handleSearch = (term: string) => {
+  const handleSearch = (term: string) => {,
     setSearchTerm(term),
     router.push(`/search?q=${encodeURIComponent(term)}`, undefined, { shallow: true })
   },
 
   // Handle filter changes
   const handleFiltersChange = (newFilters: SearchFilters) => {
-    setFilters(newFilters)
+    setFilters(newFilters),
   },
 
   // Load more results
@@ -454,7 +450,7 @@ export const SearchResultsPage: React.FC = () => {
   // Active filters count
   const activeFiltersCount = filters.types.length + 
     (filters.category ? 1 : 0) + 
-    (filters.minPrice > 0 || filters.maxPrice < 10000 ? 1 : 0) +
+    (filters.minPrice > 0 || filters.maxPrice < 10000 ? 1 : 0) +,
     (filters.minRating > 0 ? 1 : 0),
 
   return (
@@ -499,8 +495,7 @@ export const SearchResultsPage: React.FC = () => {
                   <SelectItem value="price_desc">Price: High to Low</SelectItem>
                   <SelectItem value="rating">Highest Rated</SelectItem>
                 </SelectContent>
-              </Select>
-
+              </Select>,
               {/* View Mode Toggle */}
               <div className="flex border rounded-md">
                 <Button
@@ -523,7 +518,7 @@ export const SearchResultsPage: React.FC = () => {
               <Sheet open={showFilters} onOpenChange={setShowFilters}>
                 <SheetTrigger asChild>
                   <Button variant="outline" className="lg:hidden">
-                    <Filter className="h-4 w-4 mr-2" />
+                    <Filter className="h-4 w-4 mr-2" />,
                     Filters {activeFiltersCount > 0 && `(${activeFiltersCount})`}
                   </Button>
                 </SheetTrigger>
@@ -548,21 +543,21 @@ export const SearchResultsPage: React.FC = () => {
       {searchTerm && (
         <div className="flex gap-6">
           {/* Desktop Filters Sidebar */}
-          <div className="hidden lg:block w-64 flex-shrink-0">
+          <div className="hidden lg: block w-64 flex-shrink-0">
             <div className="bg-card border rounded-lg p-4 sticky top-4">
               <div className="flex items-center justify-between mb-4">
                 <h2 className="font-semibold">Filters</h2>
                 {activeFiltersCount > 0 && (
                   <Button
                     variant="ghost"
-                    size="sm"
-                    onClick={() => setFilters({
+                    size="sm",
+                    onClick={() => setFilters({,
                       types: [],
                       category: '',
                       minPrice: 0,
                       maxPrice: 10000,
                       minRating: 0,
-                      sort: 'relevance'
+                      sort: 'relevance',
                     })}
                   >
                     Clear All
@@ -592,8 +587,8 @@ export const SearchResultsPage: React.FC = () => {
               <>
                 {/* Results Grid/List */}
                 <div className={viewMode === 'grid' 
-                  ? "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mb-6"
-                  : "space-y-4 mb-6"
+                  ? "grid grid-cols-1 md: grid-cols-2 xl:grid-cols-3 gap-4 mb-6",
+                  : "space-y-4 mb-6",
                 }>
                   {results.map((result) => (
                     <SearchResultCard
@@ -632,5 +627,5 @@ export const SearchResultsPage: React.FC = () => {
     </div>
   )
 },
-
-export default SearchResultsPage, 
+;
+export default SearchResultsPage;

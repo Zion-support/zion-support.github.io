@@ -1,13 +1,13 @@
-import React from "react",
-import { useForm, ControllerRenderProps } from "react-hook-form",
-import { zodResolver } from "@hookform/resolvers/zod",
-import z from "zod",
-import { supabase } from "@/integrations/supabase/client",
-import { useAuth } from "@/hooks/useAuth",
-import { useToast } from "@/hooks/use-toast",
-import { useRouter } from "next/router",
+import React from "react";
+import { useForm, ControllerRenderProps } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import z from "zod";
+import { supabase } from "@/integrations/supabase/client";
+import { useAuth } from "@/hooks/useAuth";
+import { useToast } from "@/hooks/use-toast";
+import { useRouter } from "next/router";
 import Image from 'next/image', // Import next/image
-import {logErrorToProduction} from '@/utils/productionLogger',
+import {logErrorToProduction} from '@/utils/productionLogger';
 import {
   Form,
   FormControl,
@@ -16,12 +16,12 @@ import {
   FormItem,
   FormLabel,
   FormMessage} from "@/components/ui/form",
-import { Input } from "@/components/ui/input",
-import { Button } from "@/components/ui/button",
-import { Textarea } from "@/components/ui/textarea",
-import { AspectRatio } from "@/components/ui/aspect-ratio",
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
-import { AIListingGenerator } from "@/components/listing/AIListingGenerator",
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { AIListingGenerator } from "@/components/listing/AIListingGenerator";
 import { Sparkles } from 'lucide-react'
 
 // Define the form schema with zod
@@ -29,7 +29,7 @@ const productSchema = z.object({
   title: z.string().min(3, "Title must be at least 3 characters"),
   description: z.string().min(10, "Description must be at least 10 characters"),
   price: z
-    .string()
+    .string(),
     .refine((val) => !isNaN(parseFloat(val)) && parseFloat(val) >= 0, {
       message: "Price must be a valid number"}),
   category: z.string().min(1, "Please select a category"),
@@ -52,7 +52,7 @@ export function ProductSubmissionForm() {
   // Initialize the form
   const form = useForm<ProductFormValues>({
     resolver: zodResolver(productSchema),
-    defaultValues: {
+    defaultValues: {,
       title: "",
       description: "",
       price: "",
@@ -62,7 +62,7 @@ export function ProductSubmissionForm() {
       tags: ""}}),
   
   // Handle image upload preview
-  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {,
     const file = e.target.files?.[0],
     if (file) {
       form.setValue("image", file),
@@ -70,18 +70,18 @@ export function ProductSubmissionForm() {
       reader.onloadend = () => {
         setImagePreview(reader.result as string)
       },
-      reader.readAsDataURL(file)
+      reader.readAsDataURL(file);
     }
   },
 
-  const handleVideoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleVideoChange = (e: React.ChangeEvent<HTMLInputElement>) => {,
     const file = e.target.files?.[0],
     if (file) {
       form.setValue("video", file)
     }
   },
 
-  const handleModelChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleModelChange = (e: React.ChangeEvent<HTMLInputElement>) => {,
     const file = e.target.files?.[0],
     if (file) {
       form.setValue("model", file)
@@ -89,7 +89,7 @@ export function ProductSubmissionForm() {
   },
 
   // Apply AI-generated content to the form
-  const handleApplyGenerated = (content: any) => {
+  const handleApplyGenerated = (content: any) => {,
     form.setValue("description", content.description),
     form.setValue("tags", content.tags.join(", ")),
     
@@ -104,7 +104,7 @@ export function ProductSubmissionForm() {
   // Handle form submission
   const onSubmit = async (values: ProductFormValues) => {
     if (!user) {
-      toast({
+      toast({,
         title: "Authentication Required",
         description: "You must be logged in to publish products",
         variant: "destructive"}),
@@ -115,15 +115,15 @@ export function ProductSubmissionForm() {
     
     try {
       // Create the product listing
-      const productData = {
-        title: values.title,
-        description: values.description,
-        price: parseFloat(values.price),
-        category: values.category,
+      const productData = {;
+        title: values.title;
+        description: values.description;
+        price: parseFloat(values.price);
+        category: values.category;
         currency: "USD", // Default currency
-        tags: values.tags ? values.tags.split().map(tag => tag.trim()) : [],
+        tags: values.tags ? values.tags.split().map(tag => tag.trim()) : [];
         author: {
-          name: user.displayName || "Anonymous Creator",
+          name: user.displayName || "Anonymous Creator";
           id: user.id},
         createdAt: new Date().toISOString()},
       
@@ -160,7 +160,7 @@ export function ProductSubmissionForm() {
         const { error: updateError } = await supabase
           .from('product_listings')
           .update({
-            images: [imagePublicUrl]
+            images: [imagePublicUrl],
           })
           .eq('id', productRecord.id),
           
@@ -222,7 +222,7 @@ export function ProductSubmissionForm() {
       // Send listing to moderation service
       try {
         await supabase.functions.invoke('moderate-listing', {
-          body: {
+          body: {,
             listingId: productRecord.id,
             listingType: 'product',
             description: values.description,
@@ -239,7 +239,7 @@ export function ProductSubmissionForm() {
         description: "Your product has been successfully published on Zion."}),
       
       // Redirect to product page
-      router.push(`/marketplace/listing/${productRecord.id}`)
+      router.push(`/marketplace/listing/${productRecord.id}`);
     } catch (error) {
       toast({
         title: "Publication Failed",
@@ -313,7 +313,7 @@ export function ProductSubmissionForm() {
             />
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <FormField
+              <FormField,
                 control={form.control}
                 name="price"
                 render={({ field }: { field: ControllerRenderProps<ProductFormValues, "price"> }) => (
@@ -338,7 +338,7 @@ export function ProductSubmissionForm() {
                     <FormLabel>Category</FormLabel>
                     <FormControl>
                       <select
-                        className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+                        className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
                         {...field}
                       >
                         <option value="">Select a category</option>
@@ -393,7 +393,7 @@ export function ProductSubmissionForm() {
                   <FormMessage />
                   
                   {imagePreview && (
-                    <div className="mt-2 w-full max-w-md border rounded overflow-hidden">
+                    <div className="mt-2 w-full max-w-md border rounded overflow-hidden">,
                       <AspectRatio ratio={3/2}>
                         <Image
                           src={imagePreview}
@@ -452,7 +452,7 @@ export function ProductSubmissionForm() {
                 type="submit" 
                 disabled={isSubmitting}
                 className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-              >
+              >,
                 {isSubmitting ? "Publishing..." : "Publish Product"}
               </Button>
             </div>
@@ -464,11 +464,10 @@ export function ProductSubmissionForm() {
         <AIListingGenerator 
           onApplyGenerated={handleApplyGenerated}
           initialValues={{
-            title: form.getValues("title"),
-            category: form.getValues("category")
+            title: form.getValues("title"), category: form.getValues("category"),
           }}
         />
       </TabsContent>
     </Tabs>
   )
-}
+};

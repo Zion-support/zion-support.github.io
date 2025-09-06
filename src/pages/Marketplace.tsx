@@ -1,27 +1,25 @@
-import { useRouter } from 'next/router',
-import { useApiErrorHandling } from '@/hooks/useApiErrorHandling',
-import ProductCard from '@/components/ProductCard',
-import { useState, useEffect, useCallback, useMemo, useRef } from 'react',
-import { useTranslation } from 'react-i18next',
-import { motion, AnimatePresence } from 'framer-motion',
-import { AuthModal } from '@/components/auth/AuthModal',
+import { useRouter } from 'next/router';
+import { useApiErrorHandling } from '@/hooks/useApiErrorHandling';
+import ProductCard from '@/components/ProductCard';
+import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
+import { motion, AnimatePresence } from 'framer-motion';
+import { AuthModal } from '@/components/auth/AuthModal';
 import { ArrowUp, Filter, SortAsc, Sparkles, TrendingUp, Star } from 'lucide-react'
-import { SkeletonCard } from '@/components/ui/skeleton',
-import { ErrorState } from '@/components/jobs/applications/ErrorState',
-import { ProductsEmptyState } from '@/components/marketplace/EmptyState',
-import { Button } from '@/components/ui/button',
-import { Badge } from '@/components/ui/badge',
-import { Card, CardContent } from '@/components/ui/card',
-import Spinner from '@/components/ui/spinner',
-import { ProductListing } from '@/types/listings',
-import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll',
-import { useToast } from '@/hooks/use-toast',
-import { useAuth } from '@/context/auth/AuthProvider',
-import { MARKETPLACE_LISTINGS } from '@/data/listingData',
-import { MAX_PRICE, MIN_PRICE } from '@/data/marketplaceData',
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
-
-
+import { SkeletonCard } from '@/components/ui/skeleton';
+import { ErrorState } from '@/components/jobs/applications/ErrorState';
+import { ProductsEmptyState } from '@/components/marketplace/EmptyState';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent } from '@/components/ui/card';
+import Spinner from '@/components/ui/spinner';
+import { ProductListing } from '@/types/listings';
+import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll';
+import { useToast } from '@/hooks/use-toast';
+import { useAuth } from '@/context/auth/AuthProvider';
+import { MARKETPLACE_LISTINGS } from '@/data/listingData';
+import { MAX_PRICE, MIN_PRICE } from '@/data/marketplaceData';
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 /**
  * Marketplace component props
  */
@@ -38,7 +36,7 @@ const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
         <h3 className="text-lg font-semibold">Market Insights</h3>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="text-center">
+        <div className="text-center">,
           <div className="text-2xl font-bold text-blue-400">${Math.round(stats.averagePrice)}</div>
           <div className="text-sm text-muted-foreground">Avg Price</div>
         </div>
@@ -60,9 +58,8 @@ const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
 ),
 
 // Filter and sort controls
-const FilterControls: React.FC<{
-  sortBy: string,
-  setSortBy: (sort: string) => void,
+const FilterControls: React.FC<{,
+  sortBy: string, setSortBy: (sort: string) => void,
   filterCategory: string,
   setFilterCategory: (category: string) => void,
   categories: string[],
@@ -80,7 +77,7 @@ const FilterControls: React.FC<{
   locations: string[],
   showRecommended: boolean,
   setShowRecommended: (show: boolean) => void,
-  loading: boolean
+  loading: boolean,
 }> = ({
   sortBy,
   setSortBy,
@@ -138,7 +135,7 @@ const FilterControls: React.FC<{
     <div className="flex items-center gap-2">
       <span className="text-sm">$</span>
       <input
-        type="number"
+        type="number",
         value={priceRange[0]}
         min={MIN_PRICE}
         max={priceRange[1]}
@@ -263,11 +260,11 @@ export default function Marketplace() {
     }
 
     // Navigate to admin products page
-    router.push('/admin/products')
+    router.push('/admin/products');
   }, [isAuthenticated, user, router, toast]),
 
   // Fetch function for infinite scroll with AI product generation
-  const fetchProducts = useCallback(async (page: number, limit: number) => {
+  const fetchProducts = useCallback(async (page: number, limit: number) => {,
     await new Promise((resolve) => setTimeout(resolve, 200)),
 
     try {
@@ -276,7 +273,7 @@ export default function Marketplace() {
         page,
         limit,
         ...(filterCategory && { category: filterCategory }),
-        sort: sortBy
+        sort: sortBy,
       },
 
       logInfo('Marketplace.tsx: Fetching products using static data with params:', { data: params }),
@@ -324,7 +321,7 @@ export default function Marketplace() {
           case 'ai-score':
             return (b.aiScore || 0) - (a.aiScore || 0),
           case 'newest':
-          default: // Ensure createdAt exists and is a valid date string before parsing
+          default: // Ensure createdAt exists and is a valid date string before parsing,
             const timeA = a.createdAt ? new Date(a.createdAt).getTime() : 0,
             const timeB = b.createdAt ? new Date(b.createdAt).getTime() : 0,
 
@@ -345,22 +342,18 @@ export default function Marketplace() {
       return {
         items: paginatedItems,
         hasMore: endIndex < items.length,
-        total: items.length
+        total: items.length,
       }
     } catch (err: any) {
-      // Log the error and allow useInfiniteScrollPagination to handle it
-      logErrorToProduction('Error in Marketplace fetchProducts:', { data: err }),
-      
-      // Show more specific error messages based on the error type
+      // Log the error and allow useInfiniteScrollPagination to handle it,
+      logErrorToProduction('Error in Marketplace fetchProducts:', { data: err }), // Show more specific error messages based on the error type
       if (err.response?.status === 403) {
         logErrorToProduction("403 Forbidden error - authentication issue"),
         // Don't show toast here, let the AuthModal handle it or rely on ProductCard's tooltip
       } else if (err.response?.status === 500) {
         logErrorToProduction("500 Server error"),
         toast({
-          title: "Server Error", 
-          description: "The marketplace is temporarily unavailable. Please try again later.",
-          variant: "destructive"})
+          title: "Server Error", description: "The marketplace is temporarily unavailable. Please try again later.", variant: "destructive"})
       } else {
         handleApiError(err), // This might show a toast or log to Sentry
       }
@@ -424,7 +417,7 @@ export default function Marketplace() {
       averagePrice: products.reduce((sum, p) => sum + (p.price || 0), 0) / products.length,
       averageRating: products.reduce((sum, p) => sum + (p.rating || 0), 0) / products.length,
       totalProducts: products.length,
-      categoriesCount: Array.from(new Set(products.map(p => p.category))).length
+      categoriesCount: Array.from(new Set(products.map(p => p.category))).length,
     }
   }, [products]),
 
@@ -465,7 +458,7 @@ export default function Marketplace() {
             {t('marketplace.hero_subtitle')}
           </p>
         </motion.div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">,
           {Array.from({ length: 12 }).map((_, i) => (
             <SkeletonCard key={i} />
           ))}
@@ -524,7 +517,7 @@ export default function Marketplace() {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">,
           {t('marketplace.hero_title')}
         </h1>
         <p className="text-muted-foreground text-lg">
@@ -575,7 +568,7 @@ export default function Marketplace() {
 
       {/* Product Grid */}
       <motion.div
-        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6",
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.4 }}
@@ -584,7 +577,7 @@ export default function Marketplace() {
           {products.map((product, index) => (
             <motion.div
               key={product.id}
-              ref={index === products.length - 1 ? lastElementRef : null}
+              ref={index === products.length - 1 ? lastElementRef: null}
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
@@ -594,21 +587,8 @@ export default function Marketplace() {
             >
               <ProductCard
                 product={{
-                  id: product.id,
-                  name: product.title,
-                  title: product.title,
-                  description: product.description || '',
-                  price: product.price || 0,
-                  currency: product.currency,
-                  category: product.category,
-                  tags: product.tags,
-                  images: product.images,
-                  rating: product.rating || 0,
-                  reviewCount: product.reviewCount || 0,
-                  created_at: product.createdAt,
-                  updated_at: product.createdAt, // Use createdAt for both
-                  stock: product.stock,
-                  in_stock: (product.stock || 0) > 0
+                  id: product.id, name: product.title, title: product.title, description: product.description || '', price: product.price || 0, currency: product.currency, category: product.category, tags: product.tags, images: product.images, rating: product.rating || 0, reviewCount: product.reviewCount || 0, created_at: product.createdAt, updated_at: product.createdAt, // Use createdAt for both
+                  stock: product.stock, in_stock: (product.stock || 0) > 0,
                 }}
                 onBuy={async () => {
                   if (!isAuthenticated) {
@@ -658,7 +638,7 @@ export default function Marketplace() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
         >
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">,
             {Array.from({ length: 4 }).map((_, i) => (
               <SkeletonCard key={`loading-${i}`} />
             ))}
@@ -687,7 +667,7 @@ export default function Marketplace() {
         {showScrollTop && (
           <motion.button
             onClick={scrollToTop}
-            className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50"
+            className="fixed bottom-8 right-8 p-3 bg-primary hover: bg-primary/90 rounded-full shadow-lg z-50",
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0 }}
@@ -701,3 +681,4 @@ export default function Marketplace() {
     </div>
   )
 }
+;

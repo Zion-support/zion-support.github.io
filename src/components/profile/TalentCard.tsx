@@ -1,18 +1,18 @@
-import { Button } from "@/components/ui/button",
-import { Card } from "@/components/ui/card",
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react'
-import Link from "next/link",
-import { TalentProfile } from "@/types/talent",
+import Link from "next/link";
+import { TalentProfile } from "@/types/talent";
 import Image from 'next/image', // Import next/image
 import React, { useState } from 'react', // Import React and useState
 
 export interface TalentCardProps {
-  talent: TalentProfile,
-  onViewProfile: (id: string) => void,
-  onRequestHire: (talent: TalentProfile) => void,
-  isSaved: boolean,
-  onToggleSave: (id: string, isSaved: boolean) => void,
-  isAuthenticated: boolean
+  talent: TalentProfile;
+  onViewProfile: (id: string) => void;
+  onRequestHire: (talent: TalentProfile) => void;
+  isSaved: boolean;
+  onToggleSave: (id: string, isSaved: boolean) => void;
+  isAuthenticated: boolean,
 }
 
 export function TalentCard({
@@ -31,7 +31,7 @@ export function TalentCard({
     }
   },
 
-  const handleRequestHire = (e: React.MouseEvent) => {
+  const handleRequestHire = (e: React.MouseEvent) => {,
     e.preventDefault(),
     e.stopPropagation(),
     if (onRequestHire) {
@@ -39,7 +39,7 @@ export function TalentCard({
     }
   },
 
-  const handleToggleSave = (e: React.MouseEvent) => {
+  const handleToggleSave = (e: React.MouseEvent) => {,
     e.preventDefault(),
     e.stopPropagation(),
     if (onToggleSave) {
@@ -51,7 +51,7 @@ export function TalentCard({
   const talentNameInitial = talent.full_name?.charAt(0) || "T",
 
   return (
-    <Card className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer" onClick={handleViewProfile}>
+    <Card className="overflow-hidden transition-all hover: shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer" onClick={handleViewProfile}>
       <div className="p-6">
         <div className="flex items-start">
           <div className="relative mr-4">
@@ -62,7 +62,7 @@ export function TalentCard({
                   alt={talent.full_name || 'Talent Avatar'}
                   fill={true}
                   style={{ objectFit: 'cover' }}
-                  className="rounded-full" // Make sure image itself is rounded if fill is used in a rounded container
+                  className="rounded-full" // Make sure image itself is rounded if fill is used in a rounded container,
                   onError={() => setAvatarError(true)}
                   priority={false}
                 />
@@ -85,7 +85,7 @@ export function TalentCard({
               <Button
                 variant="ghost"
                 size="sm"
-                className="p-1 h-auto text-zion-slate-light hover:text-zion-cyan"
+                className="p-1 h-auto text-zion-slate-light hover:text-zion-cyan",
                 onClick={handleToggleSave}
               >
                 <Star className={`h-5 w-5 ${isSaved ? "fill-yellow-400 text-yellow-400" : ""}`} />
@@ -152,7 +152,7 @@ export function TalentCard({
                 className="bg-zion-purple hover:bg-zion-purple-light text-white"
               >
                 Hire
-              </Button>
+              </Button>,
             )}
             <Button
               size="sm"
@@ -166,5 +166,6 @@ export function TalentCard({
         </div>
       </div>
     </Card>
-  )
+  ),
 }
+;

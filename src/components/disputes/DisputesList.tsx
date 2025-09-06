@@ -1,8 +1,8 @@
 
-import React, { useState } from "react",
-import { Dispute, DisputeStatus } from "@/types/disputes",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
+import React, { useState } from "react";
+import { Dispute, DisputeStatus } from "@/types/disputes";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import {
   Table,
   TableBody,
@@ -10,13 +10,13 @@ import {
   TableHead,
   TableHeader,
   TableRow} from "@/components/ui/table",
-import Skeleton from "@/components/ui/skeleton",
-import { formatDistanceToNow } from "date-fns",
+import Skeleton from "@/components/ui/skeleton";
+import { formatDistanceToNow } from "date-fns";
 import { ShieldAlert } from 'lucide-react'
-import Link from "next/link",
+import Link from "next/link";
 type DisputesListProps = {
-  disputes: Dispute[],
-  isLoading: boolean
+  disputes: Dispute[];
+  isLoading: boolean,
 },
 
 export function DisputesList({ disputes, isLoading }: DisputesListProps) {
@@ -27,7 +27,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
     : disputes.filter(dispute => dispute.status === statusFilter),
 
   const getStatusBadgeVariant = (status: DisputeStatus) => {
-    switch (status) {
+    switch (status) {,
       case "open": return "default",
       case "under_review":
         return "secondary",
@@ -36,7 +36,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
       case "closed":
         return "outline",
       default:
-        return "default"
+        return "default",
     }
   },
 
@@ -182,3 +182,4 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
     </div>
   )
 }
+;

@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react',
-import { useRouter } from 'next/router',
-import { useAuth } from '@/hooks/useAuth',
-import { toast } from '@/hooks/use-toast',
+import React, { useEffect } from 'react';
+import { useRouter } from 'next/router';
+import { useAuth } from '@/hooks/useAuth';
+import { toast } from '@/hooks/use-toast';
 import { Loader2, Shield } from 'lucide-react'
 
 interface AuthGuardProps {
-  children: React.ReactNode,
+  children: React.ReactNode;
   requireAuth?: boolean,
   requireRole?: string[],
   redirectTo?: string,
@@ -118,7 +118,7 @@ export function withAuthGuard<P extends object>(
   guardOptions?: Omit<AuthGuardProps, 'children'>
 ) {
   return function AuthGuardedComponent(props: P) {
-    return (
+    return (,
       <AuthGuard {...guardOptions}>
         <Component {...props} />
       </AuthGuard>
@@ -180,7 +180,7 @@ export function useAuthGuard() {
     return true
   },
 
-  const checkPermission = (permission: string): boolean => {
+  const checkPermission = (permission: string): boolean => {,
     if (!isAuthenticated || !user) return false,
     
     // Simple permission check - can be extended based on your permission system
@@ -197,3 +197,4 @@ export function useAuthGuard() {
     user,
     isLoading}
 }
+;

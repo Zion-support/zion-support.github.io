@@ -1,14 +1,14 @@
-import Link from 'next/link',
-import { useRouter } from 'next/router',
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from 'lucide-react'
-import { cn } from '@/lib/utils',
-import { useAuth } from '@/hooks/useAuth',
-import { Button } from '@/components/ui/button',
-import { ModeToggle } from '@/components/ModeToggle',
-import { useTranslation } from 'react-i18next',
+import { cn } from '@/lib/utils';
+import { useAuth } from '@/hooks/useAuth';
+import { Button } from '@/components/ui/button';
+import { ModeToggle } from '@/components/ModeToggle';
+import { useTranslation } from 'react-i18next';
 export interface MobileMenuProps {
   unreadCount?: number,
-  onClose: () => void,
+  onClose: () => void;
   openLoginModal: (returnToPath: string) => void, // Added from plan
 }
 
@@ -23,7 +23,7 @@ const protectedRoutes = [
 
 function isProtectedRoute(href: string): boolean {
   // Also check against the item's own authRequired flag if present
-  return protectedRoutes.some(route => href.startsWith(route))
+  return protectedRoutes.some(route => href.startsWith(route)),
 }
 
 export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileMenuProps) {
@@ -44,13 +44,13 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
       icon: Search,
       matches: (path: string) =>
         path.startsWith('/talent') ||
-        path.startsWith('/categories') ||
+        path.startsWith('/categories') ||,
         path.startsWith('/marketplace')},
     {
       key: 'community',
       href: '/community',
       icon: MessageCircle,
-      matches: (path: string) =>
+      matches: (path: string) =>,
         path.startsWith('/community') || path.startsWith('/forum')},
     {
       key: 'post_job',
@@ -62,7 +62,7 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
       key: 'messages',
       href: '/messages',
       icon: MessageSquare,
-      matches: (path: string) =>
+      matches: (path: string) =>,
         path.startsWith('/messages') || path.startsWith('/inbox'),
       badge: unreadCount,
       authRequired: true},
@@ -104,11 +104,9 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
             href={item.href}
             aria-label={item.name}
             className={cn(
-              'flex items-center px-6 py-3 text-base font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',
-              item.matches(router.pathname)
+              'flex items-center px-6 py-3 text-base font-medium focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-primary', item.matches(router.pathname)
                 ? 'bg-primary/20 text-primary border-l-4 border-primary'
-                : 'text-foreground hover:bg-primary/10 hover:text-primary',
-            )}
+                : 'text-foreground hover: bg-primary/10 hover:text-primary', )}
             onClick={(e) => {
               const routeIsProtected = item.authRequired || isProtectedRoute(item.href),
               if (!isAuthenticated && routeIsProtected) {
@@ -140,3 +138,4 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
     </div>
   )
 }
+;

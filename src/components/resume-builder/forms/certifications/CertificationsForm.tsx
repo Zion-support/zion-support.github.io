@@ -1,23 +1,22 @@
 
-import { useState } from 'react',
-import { useForm } from 'react-hook-form',
-import { Button } from '@/components/ui/button',
-import { Form } from '@/components/ui/form',
-import { Certification } from '@/types/resume',
+import { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { Button } from '@/components/ui/button';
+import { Form } from '@/components/ui/form';
+import { Certification } from '@/types/resume';
 import { Loader2 } from 'lucide-react'
-import { useResume } from '@/hooks/useResume',
-import { Alert, AlertDescription } from '@/components/ui/alert',
-import { zodResolver } from '@hookform/resolvers/zod',
-import { format } from 'date-fns',
-import { CertificationsList } from './CertificationsList',
-import { CertificationFormFields } from './CertificationFormFields',
-import { CertificationFormValues, certificationSchema } from './types',
-
+import { useResume } from '@/hooks/useResume';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { format } from 'date-fns';
+import { CertificationsList } from './CertificationsList';
+import { CertificationFormFields } from './CertificationFormFields';
+import { CertificationFormValues, certificationSchema } from './types';
 interface CertificationsFormProps {
-  resumeId: string,
-  certifications: Certification[],
-  onComplete: () => void,
-  onBack: () => void
+  resumeId: string;
+  certifications: Certification[];
+  onComplete: () => void;
+  onBack: () => void,
 }
 
 export function CertificationsForm({ resumeId, certifications, onComplete, onBack }: CertificationsFormProps) {
@@ -26,7 +25,7 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
   const [error, setError] = useState<string | null>(null),
 
   // Helper function to format dates as strings for form inputs
-  const formatDateValue = (dateValue: string | Date | undefined): string => {
+  const formatDateValue = (dateValue: string | Date | undefined): string => {,
     if (!dateValue) return '',
     if (typeof dateValue === 'string') return dateValue,
     return format(dateValue, 'yyyy-MM-dd')
@@ -34,7 +33,7 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
 
   const form = useForm<CertificationFormValues>({
     resolver: zodResolver(certificationSchema),
-    defaultValues: {
+    defaultValues: {,
       name: '',
       issuing_organization: '',
       issue_date: '',
@@ -43,11 +42,11 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
       credential_url: ''}}),
 
   const handleAddOrUpdate = async (data: CertificationFormValues) => {
-    try {
+    try {,
       setError(null),
       let success,
 
-      const certData: Certification = {
+      const certData: Certification = {,
         name: data.name,
         issuing_organization: data.issuing_organization,
         issue_date: data.issue_date || undefined,
@@ -72,11 +71,11 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
         setEditingId(null)
       }
     } catch (err: any) {
-      setError(err.message || 'An error occurred')
+      setError(err.message || 'An error occurred'),
     }
   },
 
-  const handleEdit = (cert: Certification) => {
+  const handleEdit = (cert: Certification) => {,
     setEditingId(cert.id!),
     form.reset({
       ...cert,
@@ -86,7 +85,7 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
 
   const handleDelete = async (id: string) => {
     if (confirm('Are you sure you want to delete this certification?')) {
-      await deleteCertification(id)
+      await deleteCertification(id),
     }
   },
 
@@ -157,3 +156,4 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
     </div>
   )
 }
+;

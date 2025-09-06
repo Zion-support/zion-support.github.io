@@ -1,5 +1,5 @@
 
-import React from "react",
+import React from "react";
 import { Quote } from 'lucide-react'
 import {
   Carousel,
@@ -30,7 +30,7 @@ const testimonials = [
 
 export function EnterpriseTestimonials() {
   return (
-    <section id="testimonials" className="py-20 px-4 md:px-6">
+    <section id="testimonials" className="py-20 px-4 md: px-6">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -41,13 +41,13 @@ export function EnterpriseTestimonials() {
           </p>
         </div>
 
-        <Carousel className="w-full">
-          <CarouselContent>
+        <Carousel className="w-full">,
+          <CarouselContent>,
             {testimonials.map((testimonial, index) => (
               <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">
                 <div className="bg-card rounded-xl p-8 border border-border h-full">
                   <Quote className="h-10 w-10 text-primary/20 mb-4" />
-                  <blockquote className="text-xl mb-6 italic">
+                  <blockquote className="text-xl mb-6 italic">,
                     "{testimonial.quote}"
                   </blockquote>
                   <div className="flex items-center gap-4">
@@ -79,3 +79,4 @@ export function EnterpriseTestimonials() {
     </section>
   )
 }
+;

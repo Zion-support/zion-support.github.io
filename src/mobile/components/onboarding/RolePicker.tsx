@@ -1,19 +1,19 @@
 
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent } from "@/components/ui/card",
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 import { Briefcase, Users, Check } from 'lucide-react'
 
 type UserRole = "talent" | "client" | null,
 
 interface RolePickerProps {
-  onSelect: (role: UserRole) => void
+  onSelect: (role: UserRole) => void,
 }
 
 export function RolePicker({ onSelect }: RolePickerProps) {
   const [selectedRole, setSelectedRole] = useState<UserRole>(null),
 
-  const handleSelect = (role: UserRole) => {
+  const handleSelect = (role: UserRole) => {,
     setSelectedRole(role),
     onSelect(role)
   },
@@ -28,7 +28,7 @@ export function RolePicker({ onSelect }: RolePickerProps) {
           className={`cursor-pointer transition-all ${
             selectedRole === 'talent' 
               ? "border-primary bg-primary/5" 
-              : "border-border hover:border-primary/40"
+              : "border-border hover:border-primary/40",
           }`}
           onClick={() => handleSelect('talent')}
         >
@@ -52,7 +52,7 @@ export function RolePicker({ onSelect }: RolePickerProps) {
           className={`cursor-pointer transition-all ${
             selectedRole === 'client' 
               ? "border-primary bg-primary/5" 
-              : "border-border hover:border-primary/40"
+              : "border-border hover:border-primary/40",
           }`}
           onClick={() => handleSelect('client')}
         >
@@ -75,3 +75,4 @@ export function RolePicker({ onSelect }: RolePickerProps) {
     </div>
   )
 }
+;

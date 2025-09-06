@@ -1,19 +1,19 @@
 
-import React, { useState } from "react",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",
-import { Label } from "@/components/ui/label",
-import { Input } from "@/components/ui/input",
-import { Switch } from "@/components/ui/switch",
-import { BlockchainNetwork, DeploymentOptions } from "@/types/smart-contracts",
+import React, { useState } from "react";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
+import { Switch } from "@/components/ui/switch";
+import { BlockchainNetwork, DeploymentOptions } from "@/types/smart-contracts";
 import { Loader2, ShieldCheck, Download } from 'lucide-react'
-import { toast } from "sonner",
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { toast } from "sonner";
+import {logErrorToProduction} from '@/utils/productionLogger';
 interface SmartContractDeploymentProps {
-  solidityCode: string,
-  onDeploy: (options: DeploymentOptions) => Promise<void>,
-  isDeploying: boolean
+  solidityCode: string;
+  onDeploy: (options: DeploymentOptions) => Promise<void>;
+  isDeploying: boolean,
 }
 
 export function SmartContractDeployment({ 
@@ -25,7 +25,7 @@ export function SmartContractDeployment({
     network: 'none',
     useEscrow: true,
     deployToChain: false,
-    walletAddress: ''
+    walletAddress: '',
   }),
 
   const handleDeployContract = async () => {
@@ -57,7 +57,7 @@ export function SmartContractDeployment({
     URL.revokeObjectURL(url),
     document.body.removeChild(a),
     
-    toast.success("Solidity contract downloaded")
+    toast.success("Solidity contract downloaded");
   },
 
   return (
@@ -81,7 +81,7 @@ export function SmartContractDeployment({
               checked={deploymentOptions.deployToChain}
               onCheckedChange={(checked) => setDeploymentOptions({
                 ...deploymentOptions,
-                deployToChain: checked
+                deployToChain: checked,
               })}
             />
             <Label htmlFor="deploy-blockchain">Deploy to blockchain</Label>
@@ -95,7 +95,7 @@ export function SmartContractDeployment({
                   defaultValue={deploymentOptions.network}
                   onValueChange={(value) => setDeploymentOptions({
                     ...deploymentOptions,
-                    network: value as BlockchainNetwork
+                    network: value as BlockchainNetwork,
                   })}
                   className="flex flex-col space-y-1"
                 >
@@ -118,7 +118,7 @@ export function SmartContractDeployment({
                   value={deploymentOptions.walletAddress || ''}
                   onChange={(e) => setDeploymentOptions({
                     ...deploymentOptions,
-                    walletAddress: e.target.value
+                    walletAddress: e.target.value,
                   })}
                 />
               </div>
@@ -130,7 +130,7 @@ export function SmartContractDeployment({
                   checked={deploymentOptions.useEscrow}
                   onCheckedChange={(checked) => setDeploymentOptions({
                     ...deploymentOptions,
-                    useEscrow: checked
+                    useEscrow: checked,
                   })}
                 />
                 <Label htmlFor="use-escrow">Use escrow for payments</Label>
@@ -167,3 +167,4 @@ export function SmartContractDeployment({
     </Card>
   )
 }
+;

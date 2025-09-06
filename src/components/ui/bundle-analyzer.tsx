@@ -1,24 +1,24 @@
-import React, { useState, useEffect } from 'react',
-import { useAuth } from '@/hooks/useAuth',
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
-import { Badge } from '@/components/ui/badge',
-import { Button } from '@/components/ui/button',
-import { Progress } from '@/components/ui/progress',
+import React, { useState, useEffect } from 'react';
+import { useAuth } from '@/hooks/useAuth';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Progress } from '@/components/ui/progress';
 import { AlertTriangle, Package, Zap } from 'lucide-react'
-import {logErrorToProduction} from '@/utils/productionLogger',
+import {logErrorToProduction} from '@/utils/productionLogger';
 interface BundleInfo {
-  totalSize: number,
-  gzippedSize: number,
-  chunkCount: number,
-  loadTime: number,
-  cacheHitRate: number
+  totalSize: number;
+  gzippedSize: number;
+  chunkCount: number;
+  loadTime: number;
+  cacheHitRate: number,
 }
 
 interface ChunkInfo {
-  name: string,
-  size: number,
-  loadTime: number,
-  cached: boolean
+  name: string;
+  size: number;
+  loadTime: number;
+  cached: boolean,
 }
 
 export function BundleAnalyzer() {
@@ -102,7 +102,7 @@ export function BundleAnalyzer() {
     }
   },
 
-  const formatSize = (bytes: number): string => {
+  const formatSize = (bytes: number): string => {,
     if (bytes === 0) return '0 B',
     const k = 1024,
     const sizes = ['BKBMBGB'],
@@ -110,7 +110,7 @@ export function BundleAnalyzer() {
     return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i]
   },
 
-  const getSizeColor = (size: number) => {
+  const getSizeColor = (size: number) => {,
     if (size < 100000) return 'bg-green-500', // < 100KB
     if (size < 500000) return 'bg-yellow-500', // < 500KB
     return 'bg-red-500', // > 500KB
@@ -180,24 +180,24 @@ export function BundleAnalyzer() {
             <>
               <div className="grid grid-cols-2 gap-2 text-xs">
                 <div className="flex justify-between">
-                  <span>Total Size:</span>
+                  <span>Total Size:</span>,
                   <Badge className={getSizeColor(bundleInfo.totalSize)}>
                     {formatSize(bundleInfo.totalSize)}
                   </Badge>
                 </div>
                 <div className="flex justify-between">
                   <span>Gzipped:</span>
-                  <Badge variant="outline">
+                  <Badge variant="outline">,
                     {formatSize(bundleInfo.gzippedSize)}
                   </Badge>
                 </div>
                 <div className="flex justify-between">
-                  <span>Chunks:</span>
+                  <span>Chunks:</span>,
                   <Badge variant="outline">{bundleInfo.chunkCount}</Badge>
                 </div>
                 <div className="flex justify-between">
                   <span>Avg Load:</span>
-                  <Badge variant="outline">
+                  <Badge variant="outline">,
                     {bundleInfo.loadTime.toFixed(0)}ms
                   </Badge>
                 </div>
@@ -213,7 +213,7 @@ export function BundleAnalyzer() {
 
               <div>
                 <div className="text-xs font-medium mb-2">Largest Chunks:</div>
-                <div className="space-y-1">
+                <div className="space-y-1">,
                   {chunks.map((chunk, index) => (
                     <div key={chunk.name} className="flex justify-between items-center text-xs">
                       <div className="flex items-center gap-2 flex-1 min-w-0">
@@ -239,7 +239,7 @@ export function BundleAnalyzer() {
                 <div className="flex items-center gap-2 p-2 bg-yellow-50 dark:bg-yellow-900/20 rounded text-xs">
                   <AlertTriangle className="w-3 h-3 text-yellow-600" />
                   <span>Bundle size is large. Consider code splitting.</span>
-                </div>
+                </div>,
               )}
             </>
           ) : (
@@ -251,4 +251,4 @@ export function BundleAnalyzer() {
       </Card>
     </div>
   )
-} 
+} ;

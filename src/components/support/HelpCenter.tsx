@@ -1,12 +1,12 @@
 
-import React, { useState } from "react",
-import { Input } from "@/components/ui/input",
-import { Button } from "@/components/ui/button",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { HelpCategoryList } from "./HelpCategoryList",
-import { HelpArticleList } from "./HelpArticleList",
-import { HelpArticleView } from "./HelpArticleView",
-import { HELP_CATEGORIES } from "./help-content",
+import React, { useState } from "react";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { HelpCategoryList } from "./HelpCategoryList";
+import { HelpArticleList } from "./HelpArticleList";
+import { HelpArticleView } from "./HelpArticleView";
+import { HELP_CATEGORIES } from "./help-content";
 import { Search } from 'lucide-react'
 
 export default function HelpCenter() {
@@ -14,13 +14,13 @@ export default function HelpCenter() {
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null),
   const [searchQuery, setSearchQuery] = useState(""),
   
-  const handleCategorySelect = (categoryId: string) => {
+  const handleCategorySelect = (categoryId: string) => {,
     setSelectedCategory(categoryId),
     setSelectedArticle(null)
   },
   
   const handleArticleSelect = (articleId: string) => {
-    setSelectedArticle(articleId)
+    setSelectedArticle(articleId),
   },
   
   const handleBackToCategories = () => {
@@ -207,5 +207,6 @@ export default function HelpCenter() {
         </div>
       </div>
     </>
-  )
+  ),
 }
+;

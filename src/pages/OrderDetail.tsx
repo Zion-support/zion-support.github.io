@@ -1,14 +1,14 @@
-import Link from 'next/link',
-import { useRouter } from 'next/router',
-import { Button } from '@/components/ui/button',
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { Button } from '@/components/ui/button';
 import { Clipboard } from 'lucide-react'
-import Skeleton from '@/components/ui/skeleton',
-import { useGetOrderQuery } from '@/hooks/useOrder',
-import { generateInvoicePdf } from '@/utils/generateInvoicePdf',
-import { useAuth } from '@/hooks/useAuth',
-import { supabase } from '@/integrations/supabase/client',
-import { toast } from '@/hooks/use-toast',
-import { OrderTimeline } from '@/components/orders/OrderTimeline',
+import Skeleton from '@/components/ui/skeleton';
+import { useGetOrderQuery } from '@/hooks/useOrder';
+import { generateInvoicePdf } from '@/utils/generateInvoicePdf';
+import { useAuth } from '@/hooks/useAuth';
+import { supabase } from '@/integrations/supabase/client';
+import { toast } from '@/hooks/use-toast';
+import { OrderTimeline } from '@/components/orders/OrderTimeline';
 export default function OrderDetailPage() {
   const router = useRouter(),
   const { orderId } = router.query as { orderId?: string },
@@ -25,14 +25,14 @@ export default function OrderDetailPage() {
     document.body.appendChild(link),
     link.click(),
     document.body.removeChild(link),
-    URL.revokeObjectURL(url)
+    URL.revokeObjectURL(url);
   },
 
   const handleResend = async () => {
     if (!order || !user?.email) return,
     try {
       await supabase.functions.invoke('send-email', {
-        body: {
+        body: {,
           to: user.email,
           subject: `Receipt for order ${order.orderId}`,
           html: `<p>Thank you for your purchase. Total ${order.total}.</p>`
@@ -61,7 +61,7 @@ export default function OrderDetailPage() {
       `${order.shippingAddress.city}, ${order.shippingAddress.state} ${order.shippingAddress.zip}`].join('\n'),
 
     await navigator.clipboard.writeText(summary),
-    toast.success('Order summary copied to clipboard')
+    toast.success('Order summary copied to clipboard');
   },
 
   if (isLoading || !order) {
@@ -114,3 +114,4 @@ export default function OrderDetailPage() {
     </div>
   )
 }
+;

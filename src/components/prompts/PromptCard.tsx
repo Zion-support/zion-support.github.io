@@ -1,9 +1,9 @@
-import { useState } from 'react',
+import { useState } from 'react';
 import { Copy, Send } from 'lucide-react'
-import { Button } from '@/components/ui/button',
-import type { Prompt } from '@/types/prompts',
+import { Button } from '@/components/ui/button';
+import type { Prompt } from '@/types/prompts';
 interface PromptCardProps {
-  prompt: Prompt
+  prompt: Prompt,
 }
 
 export function PromptCard({ prompt }: PromptCardProps) {
@@ -17,7 +17,7 @@ export function PromptCard({ prompt }: PromptCardProps) {
 
   const handleSend = () => {
     const encoded = encodeURIComponent(prompt.text),
-    window.open(`/zion-gpt?prompt=${encoded}`, '_blank')
+    window.open(`/zion-gpt?prompt=${encoded}`, '_blank');
   },
 
   return (
@@ -34,3 +34,4 @@ export function PromptCard({ prompt }: PromptCardProps) {
     </div>
   )
 }
+;

@@ -1,11 +1,9 @@
-import React from 'react',
-import Link from 'next/link',
-import { ErrorBoundary, FallbackProps } from 'react-error-boundary',
+import React from 'react';
+import Link from 'next/link';
+import { ErrorBoundary, FallbackProps } from 'react-error-boundary';
 import { AlertTriangle, Home, RefreshCw, Settings } from 'lucide-react'
-import {logErrorToProduction} from '@/utils/productionLogger',
-import { logInfo, logErrorToProduction as prodLogError } from '@/utils/productionLogger',
-
-
+import {logErrorToProduction} from '@/utils/productionLogger';
+import { logInfo, logErrorToProduction as prodLogError } from '@/utils/productionLogger';
 interface PageErrorFallbackProps extends FallbackProps {
   pageName?: string
 }
@@ -72,7 +70,7 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName }: PageErrorFal
 
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 mb-6">
-            <button 
+            <button,
               onClick={handleRefresh}
               className="flex-1 bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors"
             >
@@ -87,8 +85,7 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName }: PageErrorFal
               <Home className="w-4 h-4 mr-2" />
               Go Home
             </Link>
-          </div>
-
+          </div>,
           {/* Navigation Options */}
           <div className="border-t pt-6">
             <h3 className="font-semibold text-gray-900 mb-3">You can also visit:</h3>
@@ -107,8 +104,7 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName }: PageErrorFal
               </Link>
             </div>
           </div>
-        </div>
-
+        </div>,
         {/* Support Information */}
         <div className="bg-gray-800 text-white rounded-lg p-6 text-center">
           <p className="mb-3">Need help? Contact our support team</p>
@@ -126,11 +122,11 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName }: PageErrorFal
         </div>
       </div>
     </div>
-  )
+  ),
 }
 
-interface PageErrorBoundaryProps {
-  children: React.ReactNode,
+interface PageErrorBoundaryProps {;
+  children: React.ReactNode;
   pageName?: string,
   fallback?: React.ComponentType<FallbackProps>
 }
@@ -140,18 +136,18 @@ export default function PageErrorBoundary({
   pageName, 
   fallback 
 }: PageErrorBoundaryProps) {
-  const handleError = (error: Error, errorInfo: React.ErrorInfo) => {
+  const handleError = (error: Error, errorInfo: React.ErrorInfo) => {,
     prodLogError(`PageErrorBoundary caught error on ${pageName || 'unknown page'}:`, error),
     
     logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, {
       page: pageName || 'unknown',
       componentStack: errorInfo.componentStack || undefined,
       errorBoundary: 'PageErrorBoundary',
-      timestamp: new Date().toISOString()
+      timestamp: new Date().toISOString(),
     })
   },
 
-  const FallbackComponent = fallback || ((props: FallbackProps) => (
+  const FallbackComponent = fallback || ((props: FallbackProps) => (,
     <PageErrorFallback {...props} pageName={pageName} />
   )),
 
@@ -167,4 +163,4 @@ export default function PageErrorBoundary({
       {children}
     </ErrorBoundary>
   )
-} 
+} ;

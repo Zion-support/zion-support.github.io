@@ -1,18 +1,18 @@
 
-import { SearchSuggestion } from "@/types/search",
-import React, { useState } from "react",
-import Link from 'next/link',
-import { useRouter } from 'next/router',
+import { SearchSuggestion } from "@/types/search";
+import React, { useState } from "react";
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { Search } from 'lucide-react'
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
-import { cn } from "@/lib/utils",
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
+import { cn } from "@/lib/utils";
 import {
  getDocsSearchPath,
  docsSearchSuggestions
 } from "@/data/docsSearchData",
 
 interface ApiDocsLayoutProps {
-  children: React.ReactNode
+  children: React.ReactNode,
 }
 
 export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
@@ -27,7 +27,7 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
     { title: "Sample Code", path: "/docs/sample-code" },
     { title: "Error Codes & Rate Limits", path: "/developers/docs/errors" }],
 
-  const handleSelectSuggestion = (suggestion: SearchSuggestion) => {
+  const handleSelectSuggestion = (suggestion: SearchSuggestion) => {,
     const path = getDocsSearchPath(suggestion.text),
     if (path) {
       router.push(path),
@@ -35,7 +35,7 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
     }
   },
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {,
     e.preventDefault(),
     const path = getDocsSearchPath(searchValue),
     if (path) {
@@ -47,15 +47,15 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
   return (
     <div className="flex min-h-screen bg-zinc-950">
      {/* Sidebar */}
-     <div className="hidden md:block w-64 border-r border-zinc-800 p-6 sticky top-0 h-screen overflow-y-auto">
+     <div className="hidden md: block w-64 border-r border-zinc-800 p-6 sticky top-0 h-screen overflow-y-auto">
       <Link href="/developers/docs" className="flex items-center mb-8">
        <div className="bg-gradient-to-r from-zion-purple to-zion-cyan rounded-md w-8 h-8 mr-3 flex items-center justify-center">
         <span className="text-white font-bold">Z</span>
        </div>
        <span className="font-bold text-white">API Docs</span>
       </Link>
-
-      <div className="mb-6">
+,
+      <div className="mb-6">,
        <form onSubmit={handleSubmit} className="relative">
         <Search className="absolute left-2 top-2.5 h-4 w-4 text-zinc-500" />
         <EnhancedSearchInput
@@ -77,7 +77,7 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
           "block px-3 py-2 rounded-md text-sm",
           currentPath === item.path
            ? "bg-zion-purple/20 text-zion-cyan"
-           : "text-zinc-400 hover:text-white hover:bg-zinc-900"
+           : "text-zinc-400 hover:text-white hover:bg-zinc-900",
          )}
         >
          {item.title}
@@ -87,11 +87,11 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
      </div>
 
      {/* Main content */}
-     <div className="flex-grow max-w-5xl mx-auto px-4 py-8 md:px-8 md:py-12">
+     <div className="flex-grow max-w-5xl mx-auto px-4 py-8 md:px-8 md:py-12">,
       {children}
      </div>
     </div>
   )
 }
-
-export default ApiDocsLayout,
+;
+export default ApiDocsLayout;

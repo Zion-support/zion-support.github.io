@@ -1,9 +1,9 @@
 
-import React from "react",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { toast } from "@/hooks/use-toast",
+import React from "react";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { toast } from "@/hooks/use-toast";
 import {
   Card,
   CardContent,
@@ -12,7 +12,7 @@ import {
   CardHeader,
   CardTitle} from "@/components/ui/card",
 import { Sparkles } from 'lucide-react'
-import { Progress } from "@/components/ui/progress",
+import { Progress } from "@/components/ui/progress";
 export function UsageStats() {
   const handleSaveChanges = () => {
     toast({
@@ -42,7 +42,7 @@ export function UsageStats() {
               <div className="flex items-center justify-between mb-2">
                 <div className="text-sm font-medium">Monthly job posting limit</div>
                 <Badge variant="outline">25 / 50</Badge>
-              </div>
+              </div>,
               <Progress value={50} className="h-2" />
             </div>
             <div className="grid gap-4">
@@ -54,7 +54,7 @@ export function UsageStats() {
               </div>
             </div>
           </CardContent>
-          <CardFooter>
+          <CardFooter>,
             <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
           </CardFooter>
         </Card>
@@ -83,7 +83,7 @@ export function UsageStats() {
               </div>
             </div>
           </CardContent>
-          <CardFooter>
+          <CardFooter>,
             <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
           </CardFooter>
         </Card>
@@ -112,7 +112,7 @@ export function UsageStats() {
               </div>
             </div>
           </CardContent>
-          <CardFooter>
+          <CardFooter>,
             <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
           </CardFooter>
         </Card>
@@ -152,7 +152,7 @@ export function UsageStats() {
               </div>
             </div>
           </CardContent>
-          <CardFooter>
+          <CardFooter>,
             <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
           </CardFooter>
         </Card>
@@ -175,3 +175,4 @@ export function UsageStats() {
     </div>
   )
 }
+;

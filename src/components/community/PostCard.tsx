@@ -1,18 +1,18 @@
 
-import React from 'react',
-import { formatDistanceToNow } from "date-fns",
-import Link from "next/link",
+import React from 'react';
+import { formatDistanceToNow } from "date-fns";
+import Link from "next/link";
 import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from 'lucide-react'
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Button } from "@/components/ui/button",
-import { cn } from "@/lib/utils",
-import { ForumPost } from "@/types/community",
-import { logInfo } from '@/utils/productionLogger',
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import { ForumPost } from "@/types/community";
+import { logInfo } from '@/utils/productionLogger';
 interface PostCardProps {
-  post: ForumPost,
-  compact?: boolean
+  post: ForumPost;
+  compact?: boolean,
 }
 
 const PostCardComponent = ({ post, compact = false }: PostCardProps) => {
@@ -21,8 +21,7 @@ const PostCardComponent = ({ post, compact = false }: PostCardProps) => {
 
   return (
     <Card data-testid="post-card" className={cn(
-      "transition-shadow hover:shadow-md",
-      post.isPinned && "border-zion-purple/50",
+      "transition-shadow hover: shadow-md", post.isPinned && "border-zion-purple/50",
       post.isFeatured && "bg-zion-purple/5"
     )}>
       <p>DEBUG: PostCard ID: {post?.id}</p>
@@ -33,7 +32,7 @@ const PostCardComponent = ({ post, compact = false }: PostCardProps) => {
         </Avatar>
         <div className="flex-1">
           <div className="flex items-center">
-            <Link href={`/community/post/${post.id}`} className="font-semibold text-lg hover:text-zion-purple transition-colors">
+            <Link href={`/community/post/${post.id}`} className="font-semibold text-lg hover:text-zion-purple transition-colors">,
               {post.title}
             </Link>
             {post.isAnswered && (
@@ -52,7 +51,7 @@ const PostCardComponent = ({ post, compact = false }: PostCardProps) => {
           
           <div className="flex flex-wrap gap-2 mt-2">
             {post.tags?.map(tag => (
-              <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">
+              <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">,
                 {tag}
               </Badge>
             ))}
@@ -93,8 +92,8 @@ const PostCardComponent = ({ post, compact = false }: PostCardProps) => {
     </Card>
   )
 },
-
-export const PostCard = React.memo(PostCardComponent),
+;
+export const PostCard = React.memo(PostCardComponent);
 PostCard.displayName = 'PostCard',
 
-export default PostCard,
+export default PostCard;

@@ -1,10 +1,10 @@
 
-import React, { useState } from "react",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
-import { Input } from "@/components/ui/input",
-import { toast } from "sonner",
+import React, { useState } from "react";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { toast } from "sonner";
 import { Check, Copy, ExternalLink } from 'lucide-react'
 
 export function ZapierIntegration() {
@@ -15,7 +15,7 @@ export function ZapierIntegration() {
     navigator.clipboard.writeText(apiKey),
     setCopied(true),
     setTimeout(() => setCopied(false), 2000),
-    toast.success("API key copied to clipboard")
+    toast.success("API key copied to clipboard");
   },
   
   return (
@@ -29,7 +29,7 @@ export function ZapierIntegration() {
             </div>
           </CardHeader>
           <CardContent>
-            <p className="text-sm text-muted-foreground mb-4">
+            <p className="text-sm text-muted-foreground mb-4">,
               Connect Zion with 3,000+ apps via Zapier. Use your API key below to set up integrations.
             </p>
             
@@ -127,5 +127,6 @@ export function ZapierIntegration() {
         </CardContent>
       </Card>
     </div>
-  )
+  ),
 }
+;

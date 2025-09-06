@@ -1,13 +1,13 @@
-import React, { useState, useRef, useEffect } from 'react',
-import Image from 'next/image',
-import { motion, AnimatePresence } from 'framer-motion',
+import React, { useState, useRef, useEffect } from 'react';
+import Image from 'next/image';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ImageIcon, AlertTriangle } from 'lucide-react'
-import { cn } from '@/lib/utils',
-import { imageOptimization } from '@/utils/performance',
-import { logWarn } from '@/utils/productionLogger',
+import { cn } from '@/lib/utils';
+import { imageOptimization } from '@/utils/performance';
+import { logWarn } from '@/utils/productionLogger';
 interface OptimizedImageProps {
-  src: string,
-  alt: string,
+  src: string;
+  alt: string;
   width?: number,
   height?: number,
   className?: string,
@@ -32,13 +32,13 @@ interface OptimizedImageProps {
 }
 
 interface ImageMetrics {
-  loadTime: number,
-  fileSize: number,
-  format: string,
-  wasOptimized: boolean
+  loadTime: number;
+  fileSize: number;
+  format: string;
+  wasOptimized: boolean,
 }
 
-export const OptimizedImage: React.FC<OptimizedImageProps> = ({
+export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
   src,
   alt,
   width,
@@ -89,7 +89,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
       },
       {
         rootMargin: '50px', // Start loading 50px before image comes into view
-        threshold: 0.1
+        threshold: 0.1,
       }
     ),
 
@@ -122,7 +122,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
               loadTime,
               fileSize,
               format: src.includes('.webp') ? 'webp' : src.includes('.avif') ? 'avif' : 'other',
-              wasOptimized: src.includes('/_next/image')
+              wasOptimized: src.includes('/_next/image'),
             }),
 
             // Log slow or large images
@@ -228,7 +228,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   },
 
   // Container styles
-  const containerStyle: React.CSSProperties = {
+  const containerStyle: React.CSSProperties = {,
     aspectRatio: aspectRatio || (width && height ? `${width}/${height}` : undefined),
     width: width ? `${width}px` : undefined,
     height: height ? `${height}px` : undefined},
@@ -305,18 +305,18 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
 // Gallery component with optimized loading
 interface ImageGalleryProps {
-  images: Array<{
-    src: string,
-    alt: string,
-    caption?: string
+  images: Array<{;
+    src: string;
+    alt: string;
+    caption?: string,
   }>,
   columns?: number,
   aspectRatio?: string,
   className?: string,
-  onImageClick?: (index: number) => void
+  onImageClick?: (index: number) => void,
 }
 
-export const ImageGallery: React.FC<ImageGalleryProps> = ({
+export const ImageGallery: React.FC<ImageGalleryProps> = ({;
   images,
   columns = 3,
   aspectRatio = '16/9',
@@ -347,10 +347,10 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
         {images.map((image, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }},
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
-            className="group cursor-pointer"
+            className="group cursor-pointer",
             onClick={() => onImageClick?.(index)}
           >
             <div className="relative">
@@ -358,7 +358,7 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
                 src={image.src}
                 alt={image.alt}
                 aspectRatio={aspectRatio}
-                className="rounded-lg group-hover:scale-105 transition-transform duration-300"
+                className="rounded-lg group-hover:scale-105 transition-transform duration-300",
                 onLoad={handleImageLoad}
                 priority={index < 3} // Prioritize first 3 images
               />
@@ -378,25 +378,25 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
 
 // Avatar component with optimized loading
 interface OptimizedAvatarProps {
-  src?: string,
-  alt: string,
+  src?: string,;
+  alt: string;
   size?: 'sm' | 'md' | 'lg' | 'xl',
   fallback?: string,
   className?: string
 }
 
-export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({
+export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({;
   src,
   alt,
   size = 'md',
   fallback,
   className
 }) => {
-  const sizeClasses = {
-    sm: 'h-8 w-8',
-    md: 'h-10 w-10',
-    lg: 'h-12 w-12',
-    xl: 'h-16 w-16'
+  const sizeClasses = {;
+    sm: 'h-8 w-8';
+    md: 'h-10 w-10';
+    lg: 'h-12 w-12';
+    xl: 'h-16 w-16',
   },
 
   const initials = fallback || alt.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2),
@@ -422,4 +422,4 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({
       )}
     </div>
   )
-}, 
+}, ;

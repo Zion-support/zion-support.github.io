@@ -1,7 +1,7 @@
 
-import React from "react",
-import { Button } from "@/components/ui/button",
-import { SORT_OPTIONS } from "@/data/sortOptions",
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { SORT_OPTIONS } from "@/data/sortOptions";
 import { SortDesc, ChevronDown } from 'lucide-react'
 import {
   DropdownMenu,
@@ -10,8 +10,8 @@ import {
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
 
 interface SortDropdownProps {
-  sortOption: string,
-  setSortOption: (option: string) => void
+  sortOption: string;
+  setSortOption: (option: string) => void,
 }
 
 export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
@@ -38,7 +38,7 @@ export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
             key={option.value}
             onClick={() => setSortOption(option.value)}
             className={`text-white hover:bg-zion-blue-light/30 cursor-pointer ${
-              sortOption === option.value ? "bg-zion-purple/20 text-zion-purple" : ""
+              sortOption === option.value ? "bg-zion-purple/20 text-zion-purple" : "",
             }`}
           >
             {option.label}

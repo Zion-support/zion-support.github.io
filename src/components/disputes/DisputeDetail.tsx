@@ -1,24 +1,24 @@
 
-import React, { useState, useEffect } from "react",
-import { useRouter } from 'next/router',
-import { useDisputes } from "@/hooks/useDisputes",
-import {logErrorToProduction} from '@/utils/productionLogger',
+import React, { useState, useEffect } from "react";
+import { useRouter } from 'next/router';
+import { useDisputes } from "@/hooks/useDisputes";
+import {logErrorToProduction} from '@/utils/productionLogger';
 import {
  Dispute, disputeReasonLabels, DisputeMessage, DisputeStatus, ResolutionType
 } from "@/types/disputes",
 
-import { Button } from "@/components/ui/button",
-import { Textarea } from "@/components/ui/textarea",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { Separator } from "@/components/ui/separator",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { format, formatDistanceToNow } from "date-fns",
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Separator } from "@/components/ui/separator";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { format, formatDistanceToNow } from "date-fns";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { ArrowDown, Check, MessageSquare, Download } from 'lucide-react'
-import { useAuth } from "@/hooks/useAuth",
-import { toast } from "sonner",
+import { useAuth } from "@/hooks/useAuth";
+import { toast } from "sonner";
 export function DisputeDetail() {
   const router = useRouter(),
   const { disputeId } = router.query as { disputeId?: string },
@@ -58,7 +58,7 @@ export function DisputeDetail() {
         setMessages(messagesData)
       } catch (error) {
         logErrorToProduction('Error loading dispute data:', { data: error }),
-        toast.error("Failed to load dispute")
+        toast.error("Failed to load dispute");
       } finally {
         setIsLoading(false)
       }
@@ -67,7 +67,7 @@ export function DisputeDetail() {
     loadDisputeData()
   }, [disputeId, getDisputeById, getDisputeMessages, router]),
 
-  const handleStatusChange = async (status: DisputeStatus) => {
+  const handleStatusChange = async (status: DisputeStatus) => {,
     if (!disputeId) return,
 
     const success = await updateDisputeStatus(disputeId, status),
@@ -75,7 +75,7 @@ export function DisputeDetail() {
       // Update the dispute object with the new status
       setDispute({ ...dispute!, status: status })
     } else {
-      toast.error("Failed to update dispute status")
+      toast.error("Failed to update dispute status");
     }
   },
 
@@ -97,7 +97,7 @@ export function DisputeDetail() {
         resolution_type: resolution.resolution_type,
         resolved_at: new Date().toISOString()})
     } else {
-      toast.error("Failed to resolve dispute")
+      toast.error("Failed to resolve dispute");
     }
   },
 
@@ -141,12 +141,12 @@ export function DisputeDetail() {
   }
 
   const getStatusBadgeVariant = (status: DisputeStatus) => {
-    switch (status) {
+    switch (status) {,
       case "open": return "default",
       case "under_review": return "secondary",
       case "resolved": return "outline", // Changed from "success" to "outline"
       case "closed": return "outline",
-      default: return "default"
+      default: return "default",
     }
   },
 
@@ -181,14 +181,14 @@ export function DisputeDetail() {
         <Alert className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-900">
           <Check className="h-4 w-4" />
           <AlertTitle>This dispute has been resolved</AlertTitle>
-          <AlertDescription>
+          <AlertDescription>,
             {dispute.resolution_summary}
           </AlertDescription>
         </Alert>
       )}
       
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        <div className="lg:col-span-2">
+        <div className="lg:col-span-2">,
           <Tabs value={activeTab} onValueChange={setActiveTab}>
             <TabsList className="mb-6">
               <TabsTrigger value="overview">Overview</TabsTrigger>
@@ -441,7 +441,7 @@ export function DisputeDetail() {
                           <div key={msg.id} className="bg-yellow-50 border-l-4 border-yellow-200 p-4 dark:bg-yellow-900/20 dark:border-yellow-900">
                             <div className="flex items-center justify-between mb-2">
                               <div className="flex items-center gap-2">
-                                <Avatar className="h-6 w-6">
+                                <Avatar className="h-6 w-6">,
                                   <AvatarImage src={msg.user_profile?.avatar_url} alt={msg.user_profile?.display_name || "Admin avatar"} />
                                   <AvatarFallback>
                                     {msg.user_profile?.display_name?.[0] || 'A'}
@@ -538,21 +538,21 @@ export function DisputeDetail() {
             </CardHeader>
             <CardContent className="space-y-4 text-sm">
               <div className="flex justify-between">
-                <span className="font-medium">Case ID:</span>
+                <span className="font-medium">Case ID:</span>,
                 <span className="font-mono">{dispute.id}</span>
               </div>
               <div className="flex justify-between">
-                <span className="font-medium">Created:</span>
+                <span className="font-medium">Created:</span>,
                 <span>{format(new Date(dispute.created_at), "MMM d, yyyy")}</span>
               </div>
               <div className="flex justify-between">
-                <span className="font-medium">Status:</span>
+                <span className="font-medium">Status:</span>,
                 <Badge variant={getStatusBadgeVariant(dispute.status)}>
                   {dispute.status.replace('_ ')}
                 </Badge>
               </div>
               <div className="flex justify-between">
-                <span className="font-medium">Raised by:</span>
+                <span className="font-medium">Raised by:</span>,
                 <span>{dispute.client_profile && dispute.talent_profile && dispute.raised_by === (dispute.client_profile as any).id ? "Client" : dispute.talent_profile && dispute.raised_by === (dispute.talent_profile as any).id ? "Talent" : "Unknown"}</span>
               </div>
             </CardContent>
@@ -562,3 +562,4 @@ export function DisputeDetail() {
     </div>
   )
 }
+;

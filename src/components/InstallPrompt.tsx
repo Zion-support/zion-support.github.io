@@ -1,31 +1,30 @@
-import React, { useEffect, useState } from 'react',
+import React, { useEffect, useState } from 'react';
 import { X } from 'lucide-react', // X is imported but not used, consider removing if not needed.
-import { Button } from '@/components/ui/button',
-import { safeSessionStorage } from '@/utils/safeStorage',
-const SHOWN_KEY = 'pwaInstallShown',
-const DISMISS_KEY = 'pwaInstallDismissUntil',
+import { Button } from '@/components/ui/button';
+import { safeSessionStorage } from '@/utils/safeStorage';
+const SHOWN_KEY = 'pwaInstallShown';
+const DISMISS_KEY = 'pwaInstallDismissUntil';
 const DISMISS_MS = 24 * 60 * 60 * 1000, // 24 hours
 
 // Define BeforeInstallPromptEvent interface
 interface BeforeInstallPromptEvent extends Event {
   readonly platforms: string[],
-  readonly userChoice: Promise<{
-    outcome: 'accepted' | 'dismissed',
-    platform: string
+  readonly userChoice: Promise<{,
+    outcome: 'accepted' | 'dismissed', platform: string,
   }>,
   prompt(): Promise<void>
 }
 
 // Augment the WindowEventMap to include 'beforeinstallprompt'
 declare global {
-  interface WindowEventMap {
-    beforeinstallprompt: BeforeInstallPromptEvent,
+  interface WindowEventMap {;
+    beforeinstallprompt: BeforeInstallPromptEvent;
     // appinstalled event is standard, but if issues arise, it can be augmented too
-    // appinstalled: Event
+    // appinstalled: Event,
   }
 }
 
-export const InstallPrompt: React.FC = () => {
+export const InstallPrompt: React.FC = () => {;
   const [promptEvent, setPromptEvent] = useState<BeforeInstallPromptEvent | null>(null),
   const [visible, setVisible] = useState(false),
 
@@ -38,10 +37,10 @@ export const InstallPrompt: React.FC = () => {
 
     // Do not show prompt if already installed (standalone mode)
     if (isDismissed || hasShown || window.matchMedia('(display-mode: standalone)').matches) {
-      return
+      return,
     }
 
-    const handler = (e: BeforeInstallPromptEvent) => {
+    const handler = (e: BeforeInstallPromptEvent) => {,
       e.preventDefault(),
       safeSessionStorage.setItem(SHOWN_KEY, 'true'),
       setPromptEvent(e),
@@ -62,7 +61,7 @@ export const InstallPrompt: React.FC = () => {
 
     return () => {
       window.removeEventListener('beforeinstallprompt', handler as EventListener),
-      window.removeEventListener('appinstalled', handleAppInstalled as EventListener)
+      window.removeEventListener('appinstalled', handleAppInstalled as EventListener);
     }
   }, []),
 
@@ -101,9 +100,9 @@ export const InstallPrompt: React.FC = () => {
       <style>
         {`
           @media(max-width: 600px){
-            .pwa-install-button-container { /* Target a container for better transform control */
+            .pwa-install-button-container { /* Target a container for better transform control */,
               transform: scale(0.9), /* Slightly less aggressive scaling */
-              transform-origin: bottom right
+              transform-origin: bottom right,
             }
           }
         `}
@@ -120,5 +119,5 @@ export const InstallPrompt: React.FC = () => {
     </>
   )
 },
-
-export default InstallPrompt,
+;
+export default InstallPrompt;

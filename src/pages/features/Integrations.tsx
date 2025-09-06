@@ -1,17 +1,17 @@
-import React, { useEffect } from "react",
-import { Header } from "@/components/Header",
-import { SEO } from "@/components/SEO",
-import { GradientHeading } from "@/components/GradientHeading",
-import { Button } from "@/components/ui/button",
-import Link from 'next/link',
-import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus",
+import React, { useEffect } from "react";
+import { Header } from "@/components/Header";
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
+import Link from 'next/link';
+import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus";
 export default function IntegrationsFeature() {
-  const schema = {
-    "@context": "https://schema.org",
+  const schema = {;
+    "@context": "https: //schema.org";
     "@type": "WebPage",
     "name": "API & Integrations",
     "description": "Connect Zion with Slack, your website and other tools via our API and widgets.",
-    "url": "https://app.ziontechgroup.com/features/integrations"
+    "url": "https://app.ziontechgroup.com/features/integrations",
   },
 
   const { markSlackConnected } = useAdvancedOnboardingStatus(),
@@ -27,7 +27,7 @@ export default function IntegrationsFeature() {
         description="Extend Zion by embedding widgets or using our REST API for custom workflows."
         keywords="Zion API, Slack integration, embed widget"
         canonical="https://app.ziontechgroup.com/features/integrations"
-      />
+      />,
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
@@ -46,7 +46,7 @@ export default function IntegrationsFeature() {
               alt="Screenshot showing integrations"
               className="object-cover"
             />
-          </div>
+          </div>,
           <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
           <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
             <li>Trigger Slack notifications for new orders or messages.</li>
@@ -74,3 +74,4 @@ export default function IntegrationsFeature() {
     </>
   )
 }
+;

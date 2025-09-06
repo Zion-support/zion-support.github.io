@@ -1,7 +1,7 @@
 
-import React from 'react',
-import { Button } from "@/components/ui/button",
-import Link from "next/link",
+import React from 'react';
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import { ArrowLeft } from 'lucide-react'
 
 export function BackToDirectoryButton() {
@@ -14,5 +14,5 @@ export function BackToDirectoryButton() {
         </Link>
       </Button>
     </div>
-  )
+  ),
 }

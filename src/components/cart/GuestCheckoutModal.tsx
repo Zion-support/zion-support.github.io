@@ -1,8 +1,8 @@
-import { useState } from 'react',
-import { Button } from '@/components/ui/button',
-import { Input } from '@/components/ui/input',
-import { Label } from '@/components/ui/label',
-import { Textarea } from '@/components/ui/textarea',
+import { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Textarea } from '@/components/ui/textarea';
 import {
   Dialog,
   DialogContent,
@@ -11,11 +11,11 @@ import {
   DialogHeader,
   DialogTitle} from '@/components/ui/dialog',
 import { User, Mail, MapPin, CreditCard } from 'lucide-react'
-import { isProdDomain } from '@/utils/getStripe',
+import { isProdDomain } from '@/utils/getStripe';
 interface GuestCheckoutModalProps {
-  open: boolean,
-  onOpenChange: (open: boolean) => void,
-  onSubmit: (details: { email: string, address: string }) => void
+  open: boolean;
+  onOpenChange: (open: boolean) => void;
+  onSubmit: (details: { email: string, address: string };) => void
 }
 
 export default function GuestCheckoutModal({
@@ -26,7 +26,7 @@ export default function GuestCheckoutModal({
   const [address, setAddress] = useState(''),
   const [isSubmitting, setIsSubmitting] = useState(false),
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {,
     e.preventDefault(),
     
     if (!email || !address) {
@@ -84,7 +84,7 @@ export default function GuestCheckoutModal({
               Shipping Address
             </Label>
             <Textarea
-              id="guest-address"
+              id="guest-address",
               value={address || ''}
               onChange={(e) => setAddress(e.target.value || '')}
               placeholder="Enter your full shipping address..."
@@ -102,14 +102,14 @@ export default function GuestCheckoutModal({
           <DialogFooter className="space-x-2">
             <Button
               type="button"
-              variant="outline"
+              variant="outline",
               onClick={() => onOpenChange(false)}
               className="border-zion-cyan/30 text-zion-slate-light hover:bg-zion-cyan/10"
             >
               Cancel
             </Button>
             <Button
-              type="submit"
+              type="submit",
               disabled={isSubmitting || !email || !address}
               className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue"
             >
@@ -119,7 +119,7 @@ export default function GuestCheckoutModal({
                 <>
                   <CreditCard className="h-4 w-4 mr-2" />
                   Continue to Payment
-                </>
+                </>,
               )}
             </Button>
           </DialogFooter>
@@ -128,3 +128,4 @@ export default function GuestCheckoutModal({
     </Dialog>
   )
 }
+;

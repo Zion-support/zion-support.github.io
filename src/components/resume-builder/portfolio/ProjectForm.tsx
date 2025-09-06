@@ -1,11 +1,11 @@
-import { useState } from 'react',
-import { useForm } from 'react-hook-form',
-import { zodResolver } from '@hookform/resolvers/zod',
-import { z } from 'zod',
-import { Button } from '@/components/ui/button',
-import { Input } from '@/components/ui/input',
-import { Textarea } from '@/components/ui/textarea',
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import {logErrorToProduction} from '@/utils/productionLogger';
 import {
   Form,
   FormControl,
@@ -14,19 +14,19 @@ import {
   FormLabel,
   FormMessage} from '@/components/ui/form',
 import { Loader2, Link, FileImage, Github, Edit } from 'lucide-react'
-import { PortfolioProject } from '@/types/resume',
-import { usePortfolio } from '@/hooks/usePortfolio',
-import { useAuth } from '@/hooks/useAuth',
+import { PortfolioProject } from '@/types/resume';
+import { usePortfolio } from '@/hooks/usePortfolio';
+import { useAuth } from '@/hooks/useAuth';
 // Define schema for form validation
 const projectSchema = z.object({
   title: z.string().min(1, 'Project title is required'),
   description: z.string().optional(),
   technologies: z.string().optional(),
   image_url: z.string().optional(),
-  github_url: z
+  github_url: z,
     .union([z.string().url('Please enter a valid URL'), z.literal('')])
     .optional(),
-  demo_url: z
+  demo_url: z,
     .union([z.string().url('Please enter a valid URL'), z.literal('')])
     .optional(),
   pdf_url: z.string().optional()}),
@@ -34,9 +34,9 @@ const projectSchema = z.object({
 type ProjectFormValues = z.infer<typeof projectSchema>,
 
 interface ProjectFormProps {
-  project?: PortfolioProject,
-  onSuccess: () => void,
-  onCancel: () => void
+  project?: PortfolioProject,;
+  onSuccess: () => void;
+  onCancel: () => void,
 }
 
 export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) {
@@ -47,7 +47,7 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
   
   const form = useForm<ProjectFormValues>({
     resolver: zodResolver(projectSchema),
-    defaultValues: {
+    defaultValues: {,
       title: project?.title || '',
       description: project?.description || '',
       technologies: project?.technologies ? project.technologies.join() : '',
@@ -57,16 +57,16 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
       pdf_url: project?.pdf_url || ''}
   }),
   
-  const onSubmit = async (data: ProjectFormValues) => {
+  const onSubmit = async (data: ProjectFormValues) => {,
     if (!user) return,
     
     setIsLoading(true),
     
     try {
-      const projectData: PortfolioProject = {
+      const projectData: PortfolioProject = {,
         title: data.title,
         description: data.description,
-        technologies: data.technologies ? 
+        technologies: data.technologies ?,
           data.technologies.split().map(tech => tech.trim()) : [],
         image_url: data.image_url,
         github_url: data.github_url || undefined,
@@ -143,7 +143,7 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
         />
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <FormField
+          <FormField,
             control={form.control}
             name="github_url"
             render={({ field }: { field: any }) => (
@@ -210,3 +210,4 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
     </Form>
   )
 }
+;

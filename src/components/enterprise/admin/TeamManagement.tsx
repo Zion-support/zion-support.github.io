@@ -1,5 +1,5 @@
 
-import React, { useState } from "react",
+import React, { useState } from "react";
 import {
   Table,
   TableBody,
@@ -15,12 +15,12 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger} from "@/components/ui/dialog",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Label } from "@/components/ui/label",
-import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Badge } from "@/components/ui/badge";
 import { Trash, Mail, UserPlus } from 'lucide-react'
-import { toast } from "@/hooks/use-toast",
+import { toast } from "@/hooks/use-toast";
 export function TeamManagement() {
   const [isAddingMember, setIsAddingMember] = useState(false),
   const [newMemberEmail, setNewMemberEmail] = useState(""),
@@ -74,14 +74,14 @@ export function TeamManagement() {
     setIsAddingMember(false)
   },
 
-  const handleRemoveMember = (_memberId: number) => {
+  const handleRemoveMember = (_memberId: number) => {,
     // In a real app, this would make an API call to remove the member
     toast({
       title: "Team member removed",
       description: "The team member has been removed from your workspace."})
   },
 
-  const handleResendInvite = (memberEmail: string) => {
+  const handleResendInvite = (memberEmail: string) => {,
     // In a real app, this would make an API call to resend the invitation
     toast({
       title: "Invitation resent",
@@ -135,7 +135,7 @@ export function TeamManagement() {
                 </select>
               </div>
             </div>
-            <DialogFooter>
+            <DialogFooter>,
               <Button variant="outline" onClick={() => setIsAddingMember(false)}>
                 Cancel
               </Button>
@@ -201,7 +201,7 @@ export function TeamManagement() {
                       <Button
                         variant="ghost"
                         size="sm"
-                        className="text-destructive hover:text-destructive"
+                        className="text-destructive hover:text-destructive",
                         onClick={() => handleRemoveMember(member.id)}
                       >
                         <Trash className="h-4 w-4" />
@@ -217,3 +217,4 @@ export function TeamManagement() {
     </div>
   )
 }
+;

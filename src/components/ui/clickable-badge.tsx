@@ -1,8 +1,8 @@
 
-import React from "react",
+import React from "react";
 import { X } from 'lucide-react'
-import { cn } from "@/lib/utils",
-import { badgeVariants } from "@/components/ui/badge-variants",
+import { cn } from "@/lib/utils";
+import { badgeVariants } from "@/components/ui/badge-variants";
 export interface ClickableBadgeProps extends React.HTMLAttributes<HTMLDivElement> {
   onRemove?: () => void,
   variant?: "default" | "secondary" | "destructive" | "outline"
@@ -37,7 +37,7 @@ export function ClickableBadge({
           aria-label="Remove"
         >
           <X className="h-3 w-3" />
-        </button>
+        </button>,
       )}
     </div>
   )

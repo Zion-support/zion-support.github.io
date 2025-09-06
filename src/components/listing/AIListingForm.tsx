@@ -1,17 +1,17 @@
 
-import React, { useState } from "react",
-import { useToast } from "@/hooks/use-toast",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
+import React, { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import { Sparkles } from 'lucide-react'
 
 interface AIListingFormProps {
-  onSubmit: (formData: {
-    title: string,
-    category: string,
-    keyFeatures: string,
-    targetAudience: string
+  onSubmit: (formData: {;
+    title: string;
+    category: string;
+    keyFeatures: string;,
+    targetAudience: string,
   }) => void,
   isLoading: boolean,
   initialValues?: {
@@ -34,7 +34,7 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
       toast({
         title: "Missing required fields",
         description: "Please provide at least a title and category.",
-        variant: "destructive"
+        variant: "destructive",
       }),
       return
     }
@@ -104,9 +104,10 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
           <>
             <Sparkles className="h-4 w-4 mr-2" />
             Generate Optimized Content
-          </>
+          </>,
         )}
       </Button>
     </div>
   )
 }
+;

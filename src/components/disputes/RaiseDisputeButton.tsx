@@ -1,18 +1,18 @@
 
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
 import { 
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
   DialogDescription} from "@/components/ui/dialog",
-import { DisputeForm } from "./DisputeForm",
-import { useRouter } from 'next/router',
+import { DisputeForm } from "./DisputeForm";
+import { useRouter } from 'next/router';
 import { ShieldAlert } from 'lucide-react'
 
 interface RaiseDisputeButtonProps {
-  projectId: string,
+  projectId: string;
   milestoneId?: string,
   variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link",
   size?: "default" | "sm" | "lg" | "icon",
@@ -29,9 +29,9 @@ export function RaiseDisputeButton({
   const [isDialogOpen, setIsDialogOpen] = useState(false),
   const router = useRouter(),
   
-  const handleDisputeCreated = (disputeId: string) => {
+  const handleDisputeCreated = (disputeId: string) => {,
     setIsDialogOpen(false),
-    router.push(`/dashboard/disputes/${disputeId}`)
+    router.push(`/dashboard/disputes/${disputeId}`);
   },
   
   return (
@@ -55,7 +55,7 @@ export function RaiseDisputeButton({
             </DialogDescription>
           </DialogHeader>
           
-          <DisputeForm 
+          <DisputeForm,
             projectId={projectId}
             milestoneId={milestoneId}
             onDisputeCreated={handleDisputeCreated}
@@ -66,3 +66,4 @@ export function RaiseDisputeButton({
     </>
   )
 }
+;

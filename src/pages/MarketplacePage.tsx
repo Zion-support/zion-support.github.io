@@ -1,20 +1,20 @@
-import { useRouter } from 'next/router',
-import { useState, useEffect, useCallback, useMemo } from 'react',
-import { useTranslation } from 'react-i18next',
-import { motion, AnimatePresence } from 'framer-motion',
+import { useRouter } from 'next/router';
+import { useState, useEffect, useCallback, useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowUp, Filter, SortAsc, Sparkles, TrendingUp, Star, ShoppingCart, AlertTriangle, RefreshCw } from 'lucide-react'
-import { NextSeo } from '@/components/NextSeo',
-import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll',
-import { ProductListing } from '@/types/listings',
-import { SkeletonCard } from '@/components/ui/skeleton',
-import { Button } from '@/components/ui/button',
-import { Badge } from '@/components/ui/badge',
-import { Card, CardContent, CardHeader } from '@/components/ui/card',
-import Spinner from '@/components/ui/spinner',
-import { MARKETPLACE_LISTINGS } from '@/data/listingData',
-import { INITIAL_MARKETPLACE_PRODUCTS } from '@/data/initialMarketplaceProducts',
-import { useCurrency } from '@/hooks/useCurrency',
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { NextSeo } from '@/components/NextSeo';
+import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll';
+import { ProductListing } from '@/types/listings';
+import { SkeletonCard } from '@/components/ui/skeleton';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
+import Spinner from '@/components/ui/spinner';
+import { MARKETPLACE_LISTINGS } from '@/data/listingData';
+import { INITIAL_MARKETPLACE_PRODUCTS } from '@/data/initialMarketplaceProducts';
+import { useCurrency } from '@/hooks/useCurrency';
+import {logErrorToProduction} from '@/utils/productionLogger';
 // Market insights component
 const MarketplaceInsights = ({ stats }: { stats: any }) => (
   <Card className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border-blue-700/30 mb-6">
@@ -24,7 +24,7 @@ const MarketplaceInsights = ({ stats }: { stats: any }) => (
         <h3 className="text-lg font-semibold">Marketplace Insights</h3>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="text-center">
+        <div className="text-center">,
           <div className="text-2xl font-bold text-blue-400">${Math.round(stats.averagePrice / 1000)}k</div>
           <div className="text-sm text-muted-foreground">Avg Price</div>
         </div>
@@ -68,19 +68,19 @@ const MarketplaceFilterControls = ({
         <option value="popular">Most Popular</option>
         <option value="ai-score">AI Score</option>
       </select>
-    </div>
+    </div>,
     <Button variant={showRecommended ? "default" : "outline"} size="sm" onClick={() => setShowRecommended(!showRecommended)}>
       <Sparkles className="h-4 w-4 mr-1" />
       {showRecommended ? "All Products" : "Recommended"}
     </Button>
   </div>
 ),
-
-import { useDispatch } from 'react-redux',
-import type { AppDispatch } from '@/store',
-import { addItem } from '@/store/cartSlice',
-import { useAuth } from '@/context/auth/AuthProvider',
-import { toast } from '@/hooks/use-toast',
+;
+import { useDispatch } from 'react-redux';
+import type { AppDispatch } from '@/store';
+import { addItem } from '@/store/cartSlice';
+import { useAuth } from '@/context/auth/AuthProvider';
+import { toast } from '@/hooks/use-toast';
 // Product card
 const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: ProductListing, onViewDetails: () => void, onAddToCart: () => void }) => {
   const { formatPrice } = useCurrency(),
@@ -88,7 +88,7 @@ const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: Pro
   <Card className="h-full hover:shadow-lg transition-shadow">
     <CardHeader className="pb-3">
       <div className="flex items-start justify-between">
-        <div className="flex-1 min-w-0">
+        <div className="flex-1 min-w-0">,
           <h3 className="font-semibold text-lg truncate">{product.title}</h3>
           <p className="text-sm text-muted-foreground">{product.category}</p>
           <div className="flex items-center gap-2 mt-2">
@@ -138,7 +138,7 @@ const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: Pro
 
 // Loading grid
 const MarketplaceLoadingGrid = ({ count = 8 }: { count?: number }) => (
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">,
     {Array.from({ length: count }).map((_, i) => <SkeletonCard key={i} />)}
   </div>
 ),
@@ -154,7 +154,7 @@ function MarketplacePageContent() {
   const [showRecommended, setShowRecommended] = useState(false),
 
   const fetchProducts = useCallback(async (page: number, limit: number) => {
-    // Simulate API delay
+    // Simulate API delay,
     await new Promise(resolve => setTimeout(resolve, 300)),
 
     try {
@@ -186,7 +186,7 @@ function MarketplacePageContent() {
           case 'ai-score':
             return (b.aiScore || 0) - (a.aiScore || 0),
           default: // 'newest'
-            return new Date(b.createdAt || '').getTime() - new Date(a.createdAt || '').getTime()
+            return new Date(b.createdAt || '').getTime() - new Date(a.createdAt || '').getTime(),
         }
       }),
 
@@ -198,17 +198,15 @@ function MarketplacePageContent() {
       return {
         items,
         hasMore: endIndex < processedDataset.length,
-        total: processedDataset.length
+        total: processedDataset.length,
       }
     } catch (error) {
-      logErrorToProduction('Error in fetchProducts:', { data: error }),
-      throw new Error('Failed to load marketplace data. Please try again.')
+      logErrorToProduction('Error in fetchProducts:', { data: error }), throw new Error('Failed to load marketplace data. Please try again.')
     }
   }, [sortBy, filterCategory, showRecommended]),
 
   const {
-    items: products,
-    loading,
+    items: products, loading,
     error,
     hasMore,
     total,
@@ -234,7 +232,7 @@ function MarketplacePageContent() {
       averagePrice: products.reduce((sum, p) => sum + (p.price || 0), 0) / products.length,
       averageRating: products.reduce((sum, p) => sum + (p.rating || 0), 0) / products.length,
       totalProducts: products.length,
-      availableCount: products.filter(p => p.availability === "Available").length
+      availableCount: products.filter(p => p.availability === "Available").length,
     }
   }, [products]),
 
@@ -289,7 +287,7 @@ function MarketplacePageContent() {
             <Button onClick={refresh} variant="outline">
               <RefreshCw className="h-4 w-4 mr-2" />
               Try Again
-            </Button>
+            </Button>,
             <Button onClick={() => window.location.reload()}>
               Refresh Page
             </Button>
@@ -309,7 +307,7 @@ function MarketplacePageContent() {
       />
     <div className="container py-8">
       <motion.div className="text-center mb-8" initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }}>
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">,
           {t('marketplace.hero_title')}
         </h1>
         <p className="text-muted-foreground text-lg">{t('marketplace.hero_subtitle')}</p>
@@ -339,7 +337,7 @@ function MarketplacePageContent() {
           {products.map((item, index) => (
             <motion.div
               key={item.id} 
-              ref={index === products.length - 1 ? lastElementRef : null}
+              ref={index === products.length - 1 ? lastElementRef: null}
               initial={{ opacity: 0, scale: 0.9 }} 
               animate={{ opacity: 1, scale: 1 }} 
               exit={{ opacity: 0, scale: 0.9 }}
@@ -356,16 +354,13 @@ function MarketplacePageContent() {
                       // ignore storage errors
                     }
                   }
-                  router.push(`/marketplace/listing/${item.id}`)
+                  router.push(`/marketplace/listing/${item.id}`);
                 }}
                 onAddToCart={() => {
                   dispatch(addItem({ id: item.id, title: item.title, price: item.price ?? 0 })),
                   toast({
-                    title: 'Added to cart',
-                    description: `${item.title} has been added to your cart`,
-                    action: {
-                      label: 'View Cart',
-                      onClick: () => router.push('/cart')}})
+                    title: 'Added to cart', description: `${item.title} has been added to your cart`, action: {,
+                      label: 'View Cart', onClick: () => router.push('/cart')}})
                 }}
               />
             </motion.div>
@@ -407,7 +402,7 @@ function MarketplacePageContent() {
         {showScrollTop && (
           <motion.button 
             onClick={scrollToTop} 
-            className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50"
+            className="fixed bottom-8 right-8 p-3 bg-primary hover: bg-primary/90 rounded-full shadow-lg z-50",
             initial={{ opacity: 0, scale: 0 }} 
             animate={{ opacity: 1, scale: 1 }} 
             exit={{ opacity: 0, scale: 0 }}
@@ -427,3 +422,4 @@ function MarketplacePageContent() {
 export default function MarketplacePage() {
   return <MarketplacePageContent />
 }
+;

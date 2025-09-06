@@ -1,9 +1,9 @@
 
 import { Facebook, Twitter, Loader2 } from 'lucide-react'
-import { Button } from "@/components/ui/button",
-import { Web3Login } from "./Web3Login",
-import { useState } from "react",
-import { openAuthPopup } from "@/api/authSocial",
+import { Button } from "@/components/ui/button";
+import { Web3Login } from "./Web3Login";
+import { useState } from "react";
+import { openAuthPopup } from "@/api/authSocial";
 export function SocialLogin() {
   const [isLoading, setIsLoading] = useState(false),
 
@@ -27,7 +27,7 @@ export function SocialLogin() {
         <Button
           type="button"
           variant="outline"
-          className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
+          className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan",
           onClick={handleGoogle}
           disabled={isLoading}
         >
@@ -46,7 +46,7 @@ export function SocialLogin() {
         <Button
           type="button"
           variant="outline"
-          className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
+          className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan",
           onClick={() => openAuthPopup('facebook')}
           disabled={isLoading}
         >
@@ -56,7 +56,7 @@ export function SocialLogin() {
         <Button
           type="button"
           variant="outline"
-          className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
+          className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan",
           onClick={() => openAuthPopup('twitter')}
           disabled={isLoading}
         >
@@ -68,3 +68,4 @@ export function SocialLogin() {
     </div>
   )
 }
+;

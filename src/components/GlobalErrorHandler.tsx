@@ -1,21 +1,20 @@
-import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react',
-import { toast } from '@/hooks/use-toast',
-import { Button } from '@/components/ui/button',
+import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react';
+import { toast } from '@/hooks/use-toast';
+import { Button } from '@/components/ui/button';
 import { RefreshCw, AlertTriangle, Wifi, WifiOff, Shield } from 'lucide-react'
-import * as Sentry from '@sentry/nextjs',
-import {logErrorToProduction} from '@/utils/productionLogger',
+import * as Sentry from '@sentry/nextjs';
+import {logErrorToProduction} from '@/utils/productionLogger';
 interface ErrorContextType {
   reportError: (error: Error, context?: any) => void,
   showRetryableError: (error: Error, retryAction?: () => void) => void,
-  showNetworkError: (retryAction?: () => void) => void,
-  showAuthError: (loginAction?: () => void) => void,
-  clearAllErrors: () => void
+  showNetworkError: (retryAction?: () => void) => void;
+  showAuthError: (loginAction?: () => void) => void;
+  clearAllErrors: () => void,
 }
 
-const ErrorContext = createContext<ErrorContextType | null>(null),
-
+const ErrorContext = createContext<ErrorContextType | null>(null);
 interface GlobalErrorHandlerProps {
-  children: ReactNode
+  children: ReactNode,
 }
 
 export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
@@ -31,10 +30,10 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
     if (process.env.NODE_ENV === 'production') {
       Sentry.withScope((scope) => {
         if (context) {
-          scope.setContext('errorContext', context)
+          scope.setContext('errorContext', context);
         }
         scope.setLevel('error'),
-        Sentry.captureException(error)
+        Sentry.captureException(error);
       })
     }
   }, []),
@@ -50,10 +49,10 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
       title: "Something went wrong",
       description: getErrorMessage(error),
       variant: "destructive",
-      action: retryAction ? {
+      action: retryAction ? {,
         label: "Try Again",
         onClick: () => {
-          setRetryCount(prev => ({
+          setRetryCount(prev => ({,
             ...prev,
             [errorKey]: currentRetryCount + 1
           })),
@@ -68,12 +67,12 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
     toast({
       title: isOnline ? "Connection Issue" : "No Internet Connection",
       description: isOnline 
-        ? "Unable to connect to our servers. Please check your connection and try again."
+        ? "Unable to connect to our servers. Please check your connection and try again.",
         : "You appear to be offline. Please check your internet connection.",
       variant: "destructive",
-      action: retryAction ? {
+      action: retryAction ? {,
         label: "Retry",
-        onClick: retryAction
+        onClick: retryAction,
       } : undefined})
   }, []),
 
@@ -82,9 +81,9 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
       title: "Authentication Required",
       description: "Please log in to continue with this action.",
       variant: "destructive",
-      action: loginAction ? {
+      action: loginAction ? {,
         label: "Log In",
-        onClick: loginAction
+        onClick: loginAction,
       } : undefined})
   }, []),
 
@@ -93,7 +92,7 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
     // Clear any active toasts would go here if the toast system supports it
   }, []),
 
-  const contextValue: ErrorContextType = {
+  const contextValue: ErrorContextType = {,
     reportError,
     showRetryableError,
     showNetworkError,
@@ -116,7 +115,7 @@ export function useGlobalErrorHandler(): ErrorContextType {
 }
 
 // Helper function to convert technical errors to user-friendly messages
-function getErrorMessage(error: Error): string {
+function getErrorMessage(error: Error): string {,
   const message = error.message.toLowerCase(),
 
   if (message.includes('fetch') || message.includes('network') || message.includes('connection')) {
@@ -183,11 +182,11 @@ export function useErrorHandler() {
       }
       
       return result
-    } catch (error: any) {
+    } catch (error: any) {,
       reportError(error),
       
       if (options?.onError) {
-        options.onError(error)
+        options.onError(error);
       } else {
         handleApiError(error, options?.retryAction)
       }
@@ -200,4 +199,4 @@ export function useErrorHandler() {
     reportError,
     handleApiError,
     handleAsyncOperation}
-} 
+} ;

@@ -1,19 +1,19 @@
-import { useState, useEffect } from "react",
-import { useRouter } from 'next/router',
-import Link from 'next/link',
-import { SEO } from "@/components/SEO",
-import JsonLd from "@/components/JsonLd",
-import { Button } from "@/components/ui/button",
-import ImageWithRetry from '@/components/ui/ImageWithRetry',
+import { useState, useEffect } from "react";
+import { useRouter } from 'next/router';
+import Link from 'next/link';
+import { SEO } from "@/components/SEO";
+import JsonLd from "@/components/JsonLd";
+import { Button } from "@/components/ui/button";
+import ImageWithRetry from '@/components/ui/ImageWithRetry';
 import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin } from 'lucide-react'
-import type { BlogPost as BlogPostType } from "@/types/blog",
-import { Separator } from "@/components/ui/separator",
-import ReactMarkdown from 'react-markdown',
-import {logErrorToProduction} from '@/utils/productionLogger',
+import type { BlogPost as BlogPostType } from "@/types/blog";
+import { Separator } from "@/components/ui/separator";
+import ReactMarkdown from 'react-markdown';
+import {logErrorToProduction} from '@/utils/productionLogger';
 // Importing the sample blog posts - in a real app, you would fetch this from an API
-import { BLOG_POSTS } from "@/data/blog-posts",
-import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout',
-import { fetchWithRetry } from '@/utils/fetchWithRetry',
+import { BLOG_POSTS } from "@/data/blog-posts";
+import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout';
+import { fetchWithRetry } from '@/utils/fetchWithRetry';
 export default function BlogPost() {
 
   const router = useRouter(),
@@ -57,13 +57,13 @@ export default function BlogPost() {
         ).slice(0, 3),
         setRelatedPosts(related)
       } else {
-        router.replace('/blog')
+        router.replace('/blog');
       }
       setIsLoading(false)
     },
 
     fetchPost(),
-    window.scrollTo({ top: 0, behavior: 'smooth' })
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [slug, router]),
   
   if (isLoading && !timedOut) {
@@ -94,7 +94,7 @@ export default function BlogPost() {
   }
 
   // Helper function to get share URL
-  const getShareUrl = (platform: string) => {
+  const getShareUrl = (platform: string) => {,
     if (!post) return '',
     
     const url = encodeURIComponent(window.location.href),
@@ -107,19 +107,19 @@ export default function BlogPost() {
         return `https://twitter.com/intent/tweet?url=${url}&text=${title}`,
       case 'linkedin':
         return `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}`,
-      default: return '#'
+      default: return '#',
     }
   },
 
-  const articleLd = {
-    "@context": "https://schema.org",
+  const articleLd = {;
+    "@context": "https: //schema.org";
     "@type": "BlogPosting",
-    headline: post.title,
-    description: post.excerpt,
-    image: post.featuredImage,
-    datePublished: post.publishedDate,
+    headline: post.title;
+    description: post.excerpt;
+    image: post.featuredImage;
+    datePublished: post.publishedDate;
     author: {
-      "@type": "Person",
+      "@type": "Person";
       name: post.author.name}},
   
   return (
@@ -146,14 +146,13 @@ export default function BlogPost() {
                 Back to all articles
               </Link>
             </Button>
-          </div>
-          
+          </div>,
           {/* Article header */}
           <div className="mb-8 max-w-4xl mx-auto">
             <span className="text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-4">
               {post.category}
             </span>
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">,
               {post.title}
             </h1>
             <p className="text-xl text-zion-slate-light mb-8">
@@ -163,7 +162,7 @@ export default function BlogPost() {
             {/* Author and metadata */}
             <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8">
               <div className="flex items-center mb-4 sm:mb-0">
-                <ImageWithRetry
+                <ImageWithRetry,
                   src={post.author.avatarUrl}
                   alt={post.author.name}
                   className="w-12 h-12 rounded-full mr-3"
@@ -188,7 +187,7 @@ export default function BlogPost() {
                   <Button 
                     variant="ghost" 
                     size="sm"
-                    className="text-zion-slate-light hover:text-white hover:bg-zion-blue-dark"
+                    className="text-zion-slate-light hover:text-white hover:bg-zion-blue-dark",
                     onClick={() => setShowShareMenu(!showShareMenu)}
                   >
                     <Share2 className="h-4 w-4 mr-1" />
@@ -208,7 +207,7 @@ export default function BlogPost() {
                         <Facebook className="h-4 w-4 mr-2" />
                         <span>Facebook</span>
                       </a>
-                      <a
+                      <a,
                         href={getShareUrl('twitter')}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -219,7 +218,7 @@ export default function BlogPost() {
                         <Twitter className="h-4 w-4 mr-2" />
                         <span>Twitter</span>
                       </a>
-                      <a
+                      <a,
                         href={getShareUrl('linkedin')}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -230,7 +229,7 @@ export default function BlogPost() {
                         <Linkedin className="h-4 w-4 mr-2" />
                         <span>LinkedIn</span>
                       </a>
-                    </div>
+                    </div>,
                   )}
                 </div>
               </div>
@@ -277,13 +276,13 @@ export default function BlogPost() {
                 <h3 className="text-2xl font-bold text-white mb-6">Related Articles</h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   {relatedPosts.map(relatedPost => (
-                    <Link 
+                    <Link,
                       key={relatedPost.id}
                       href={`/blog/${relatedPost.slug}`}
                       className="bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden hover:border-zion-purple transition-all duration-300"
                     >
                       <div className="aspect-[16/9] relative">
-                        <ImageWithRetry
+                        <ImageWithRetry,
                           src={relatedPost.featuredImage}
                           alt={relatedPost.featuredImageAlt || relatedPost.title}
                           className="object-cover w-full h-full"
@@ -326,5 +325,5 @@ export default function BlogPost() {
         </div>
       </div>
     </>
-  )
+  ),
 }

@@ -151,16 +151,14 @@ export default [
       }
     },
     plugins: {
-      '@typescript-eslint': typescript,
+      '@typescript-eslint': tseslint,
       'react': react,
-      'react-hooks': reactHooks,
-      '@next/next': next
+      'react-hooks': reactHooks
     },
     rules: {
-      ...typescript.configs.recommended.rules,
+      ...tseslint.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
-      ...next.configs.recommended.rules,
       'no-unused-vars': 'warn',
       'no-console': 'warn',
       'prefer-const': 'error',

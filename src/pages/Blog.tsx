@@ -1,21 +1,19 @@
-import { useState, useEffect } from "react",
-import Link from "next/link",
-import { useRouter } from "next/router",
-import { useDebounce } from "@/hooks/useDebounce",
-import { GradientHeading } from "@/components/GradientHeading",
-import { SEO } from "@/components/SEO",
-import { Card, CardContent, CardFooter } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",
-import { BlogPost } from "@/types/blog",
-import { generateRandomBlogPost } from "@/utils/generateRandomBlogPost",
-import { BLOG_POSTS } from "@/data/blog-posts",
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { useDebounce } from "@/hooks/useDebounce";
+import { GradientHeading } from "@/components/GradientHeading";
+import { SEO } from "@/components/SEO";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
+import { BlogPost } from "@/types/blog";
+import { generateRandomBlogPost } from "@/utils/generateRandomBlogPost";
+import { BLOG_POSTS } from "@/data/blog-posts";
 import { Search } from 'lucide-react'
-import { fetchWithRetry } from '@/utils/fetchWithRetry',
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
-
-
+import { fetchWithRetry } from '@/utils/fetchWithRetry';
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 // Categories for filtering
 const CATEGORIES = [
   "All Categories",
@@ -60,7 +58,7 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
     const fetchPosts = async () => {
       setIsLoading(true),
       try {
-        const data: BlogPost[] = await fetchWithRetry(
+        const data: BlogPost[] = await fetchWithRetry(,
           `/api/blog?query=${encodeURIComponent(query)}`
         ),
         setPosts(data)
@@ -94,14 +92,14 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
         title="Blog - Latest from Zion Tech Marketplace"
         description="Read expert insights and news on the Zion Tech Marketplace blog. Stay informed about trends, tips, and stories that help you succeed. Sign up for updates and never miss a breakthrough."
         keywords="AI blog, tech trends, IT services blog, artificial intelligence news, technology innovation, digital transformation, sustainable IT"
-        canonical="https://app.ziontechgroup.com/blog"
+        canonical="https: //app.ziontechgroup.com/blog"
       />
       <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
         <h1>Blog</h1>
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <GradientHeading>AI & Tech Insights</GradientHeading>
-            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
+            <GradientHeading>AI & Tech Insights</GradientHeading>,
+            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">,
               Expert perspectives on artificial intelligence, tech innovation, and digital transformation
             </p>
           </div>
@@ -114,13 +112,13 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
             return (
             <div className="mb-16">
               <h2 className="text-2xl font-bold text-white mb-6">Featured Article</h2>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div className="aspect-video overflow-hidden rounded-lg">
-                  <img
+              <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
+                <div className="aspect-video overflow-hidden rounded-lg">,
+                  <img,
                     src={featuredPost.featuredImage}
                     alt={featuredPost.featuredImageAlt || featuredPost.title}
-                    className="object-cover w-full h-full hover: scale-105 transition-transform duration-300"
-                    onError={(e) => {
+                    className="object-cover w-full h-full hover: scale-105 transition-transform duration-300",
+                    onError={(e) => {,
                       const target = e.currentTarget as HTMLImageElement,
                       target.src = "/images/blog-placeholder.svg"
                     }}
@@ -156,7 +154,7 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                   <Button 
                     asChild
                     className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple w-fit"
-                  >
+                  >,
                     <Link href={`/blog/${featuredPost.slug}`}>
                       Read Article
                     </Link>
@@ -174,7 +172,7 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate" />
                 <Input
                   type="text"
-                  placeholder="Search articles..."
+                  placeholder="Search articles...",
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="pl-10 bg-zion-blue border border-zion-blue-light text-white"
@@ -203,20 +201,20 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
 
           {/* Blog Posts Grid */}
           {!isLoading && filteredPosts.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
               {filteredPosts.map((post) => (
-                <Card
+                <Card,
                   key={post.id}
                   asChild
-                  className="bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-all duration-300 group-hover:shadow-lg"
-                >
+                  className="bg-zion-blue-dark border border-zion-blue-light hover: border-zion-purple transition-all duration-300 group-hover:shadow-lg",
+                >,
                   <Link href={`/blog/${post.slug}`} className="block group">
                   <div className="aspect-[16/9] relative overflow-hidden">
                     <img
                       src={post.featuredImage}
                       alt={post.featuredImageAlt || post.title}
-                      className="object-cover w-full h-full hover: scale-105 transition-transform duration-300"
-                      onError={(e) => {
+                      className="object-cover w-full h-full hover: scale-105 transition-transform duration-300",
+                      onError={(e) => {,
                         const target = e.currentTarget as HTMLImageElement,
                         target.src = "/images/blog-placeholder.svg"
                       }}
@@ -254,7 +252,7 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                     <span className="text-zion-cyan group-hover:text-zion-purple">Read More →</span>
                   </CardFooter>
                   </Link>
-                </Card>
+                </Card>,
               ))}
             </div>
           ) : null}
@@ -274,10 +272,11 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
               >
                 Clear all filters
               </Button>
-            </div>
+            </div>,
           )}
         </div>
       </div>
     </>
   )
 }
+;

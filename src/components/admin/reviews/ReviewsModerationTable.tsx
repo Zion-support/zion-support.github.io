@@ -1,11 +1,10 @@
-import { useState } from "react",
-import { useMutation } from "@tanstack/react-query",
+import { useState } from "react";
+import { useMutation } from "@tanstack/react-query";
 import { Check, X, User, Star, MoreHorizontal } from 'lucide-react'
-import { format } from "date-fns",
-import { toast } from "@/hooks/use-toast",
-import { supabase } from "@/integrations/supabase/client",
-import { Review, ReviewStatus } from "@/types/reviews",
-
+import { format } from "date-fns";
+import { toast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
+import { Review, ReviewStatus } from "@/types/reviews";
 import {
   Table,
   TableBody,
@@ -13,7 +12,7 @@ import {
   TableHead,
   TableHeader,
   TableRow} from "@/components/ui/table",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   Dialog,
   DialogContent,
@@ -26,12 +25,12 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 interface ReviewsModerationTableProps {
-  reviews: Review[],
-  isLoading: boolean,
-  onRefresh: () => void
+  reviews: Review[];
+  isLoading: boolean;
+  onRefresh: () => void,
 }
 
 export function ReviewsModerationTable({
@@ -42,11 +41,9 @@ export function ReviewsModerationTable({
   const [viewDetailsOpen, setViewDetailsOpen] = useState(false),
 
   const { mutate: updateReviewStatus, isPending } = useMutation({
-    mutationFn: async ({
-      reviewId,
-      status}: {
-      reviewId: string,
-      status: ReviewStatus
+    mutationFn: async ({,
+      reviewId, status}: {
+      reviewId: string, status: ReviewStatus,
     }) => {
       const { error } = await supabase
         .from("reviews")
@@ -57,14 +54,14 @@ export function ReviewsModerationTable({
       return { reviewId, status }
     },
     onSuccess: (data) => {
-      toast({
+      toast({,
         title: "Review updated",
         description: `Review has been ${data.status}.`}),
       onRefresh(),
       setViewDetailsOpen(false)
     },
     onError: (error: Error) => {
-      toast({
+      toast({,
         title: "Error",
         description: `Failed to update review: ${error.message}`,
         variant: "destructive"})
@@ -76,7 +73,7 @@ export function ReviewsModerationTable({
       .split(" ")
       .map((n) => n[0])
       .join("")
-      .toUpperCase()
+      .toUpperCase(),
   },
 
   if (isLoading) {
@@ -101,22 +98,22 @@ export function ReviewsModerationTable({
     )
   }
 
-  const handleApprove = (reviewId: string) => {
+  const handleApprove = (reviewId: string) => {,
     updateReviewStatus({ reviewId, status: "approved" })
   },
 
-  const handleReject = (reviewId: string) => {
+  const handleReject = (reviewId: string) => {,
     updateReviewStatus({ reviewId, status: "rejected" })
   },
 
-  const handleViewDetails = (review: Review) => {
+  const handleViewDetails = (review: Review) => {,
     setSelectedReview(review),
     setViewDetailsOpen(true)
   },
 
   const renderStars = (rating: number) => {
     return (
-      <div className="flex">
+      <div className="flex">,
         {[1, 2, 3, 4, 5].map((star) => (
           <Star
             key={star}
@@ -370,4 +367,4 @@ export function ReviewsModerationTable({
       )}
     </>
   )
-}
+};

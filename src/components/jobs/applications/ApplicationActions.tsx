@@ -1,20 +1,19 @@
 
-import Link from "next/link",
+import Link from "next/link";
 import { 
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu",
-import { Button } from "@/components/ui/button",
+import { Button } from "@/components/ui/button";
 import { Eye, ChevronDown, Loader2 } from 'lucide-react'
-import { JobApplication, ApplicationStatus } from "@/types/jobs",
-
+import { JobApplication, ApplicationStatus } from "@/types/jobs";
 interface ApplicationActionsProps {
-  application: JobApplication,
-  processingId: string | null,
-  onViewApplication: (applicationId: string) => Promise<void>,
-  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
+  application: JobApplication;
+  processingId: string | null;
+  onViewApplication: (applicationId: string) => Promise<void>;
+  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>,
 }
 
 export function ApplicationActions({

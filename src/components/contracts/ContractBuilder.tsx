@@ -1,19 +1,19 @@
-import { useState } from "react",
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
-import { Button } from "@/components/ui/button",
+import { useState } from "react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { Button } from "@/components/ui/button";
 import { Save } from 'lucide-react'
-import { TalentProfile } from "@/types/talent",
-import { ContractForm, ContractFormValues } from "./components/ContractForm",
-import { ContractPreview } from "./components/ContractPreview",
-import { TemplateManager } from "./templates/TemplateManager",
-import { SmartContractBuilder } from "./SmartContractBuilder",
+import { TalentProfile } from "@/types/talent";
+import { ContractForm, ContractFormValues } from "./components/ContractForm";
+import { ContractPreview } from "./components/ContractPreview";
+import { TemplateManager } from "./templates/TemplateManager";
+import { SmartContractBuilder } from "./SmartContractBuilder";
 interface ContractBuilderProps {
-  isOpen: boolean,
-  onClose: () => void,
-  talent: TalentProfile,
-  clientName: string,
-  onContractGenerated?: (contractContent: string) => void
+  isOpen: boolean;
+  onClose: () => void;
+  talent: TalentProfile;
+  clientName: string;
+  onContractGenerated?: (contractContent: string) => void,
 }
 
 export function ContractBuilder({
@@ -32,10 +32,10 @@ export function ContractBuilder({
   const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false),
 
   const handleLoadTemplate = (templateData: ContractFormValues) => {
-    setFormValues(templateData)
+    setFormValues(templateData),
   },
 
-  const handleContractGenerated = (contract: string) => {
+  const handleContractGenerated = (contract: string) => {,
     setGeneratedContract(contract),
     setActiveTab("preview"),
     if (onContractGenerated) {
@@ -124,3 +124,4 @@ export function ContractBuilder({
     </Dialog>
   )
 }
+;

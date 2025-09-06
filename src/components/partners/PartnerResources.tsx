@@ -1,25 +1,25 @@
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { Download, FileImage, FileText, FileType, FileVideo, Link } from 'lucide-react'
-import { toast } from "@/hooks/use-toast",
+import { toast } from "@/hooks/use-toast";
 interface ResourceItem {
-  id: string,
-  title: string,
-  description: string,
-  type: 'image' | 'video' | 'document' | 'link',
-  icon: JSX.Element,
-  url: string
+  id: string;
+  title: string;
+  description: string;
+  type: 'image' | 'video' | 'document' | 'link';
+  icon: JSX.Element;
+  url: string,
 }
 
 export function PartnerResources() {
   const resources: ResourceItem[] = [
-    {
+    {,
       id: 'logo-pack',
       title: 'Zion AI Logo Pack',
       description: 'Official logos in various formats (PNG, SVG, JPG)',
       type: 'image',
       icon: <FileImage className="h-10 w-10 text-zion-purple" />,
-      url: '#'
+      url: '#',
     },
     {
       id: 'brand-guidelines',
@@ -27,7 +27,7 @@ export function PartnerResources() {
       description: 'How to properly use our brand assets in your content',
       type: 'document',
       icon: <FileText className="h-10 w-10 text-zion-cyan" />,
-      url: '#'
+      url: '#',
     },
     {
       id: 'banner-templates',
@@ -35,7 +35,7 @@ export function PartnerResources() {
       description: 'Pre-designed graphics for your social channels',
       type: 'image',
       icon: <FileImage className="h-10 w-10 text-zion-purple" />,
-      url: '#'
+      url: '#',
     },
     {
       id: 'promotional-video',
@@ -43,7 +43,7 @@ export function PartnerResources() {
       description: 'Short explainer video about Zion AI Marketplace',
       type: 'video',
       icon: <FileVideo className="h-10 w-10 text-red-500" />,
-      url: '#'
+      url: '#',
     },
     {
       id: 'email-templates',
@@ -51,7 +51,7 @@ export function PartnerResources() {
       description: 'Ready-to-use email templates for your audience',
       type: 'document',
       icon: <FileText className="h-10 w-10 text-zion-cyan" />,
-      url: '#'
+      url: '#',
     },
     {
       id: 'talking-points',
@@ -59,11 +59,11 @@ export function PartnerResources() {
       description: 'Key messages and benefits to highlight',
       type: 'document',
       icon: <FileText className="h-10 w-10 text-zion-cyan" />,
-      url: '#'
+      url: '#',
     }
   ],
 
-  const handleDownload = (resource: ResourceItem) => {
+  const handleDownload = (resource: ResourceItem) => {,
     // In a real app, this would download the actual resource
     toast({
       title: "Download started",
@@ -81,8 +81,8 @@ export function PartnerResources() {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {resources.map((resource) => (
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-4">,
+            {resources.map((resource) => (,
               <Card key={resource.id} className="bg-zion-blue border-zion-blue-light overflow-hidden">
                 <CardContent className="p-6 flex flex-col items-center text-center">
                   <div className="mb-4">
@@ -156,5 +156,5 @@ export function PartnerResources() {
         </CardContent>
       </Card>
     </div>
-  )
-}
+  ),
+};

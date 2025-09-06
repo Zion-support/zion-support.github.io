@@ -1,35 +1,35 @@
-import { useState, useEffect } from "react",
-import { useRouter } from 'next/router',
-import { GradientHeading } from "@/components/GradientHeading",
-import { ProductListingCard } from "@/components/ProductListingCard",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
+import { useState, useEffect } from "react";
+import { useRouter } from 'next/router';
+import { GradientHeading } from "@/components/GradientHeading";
+import { ProductListingCard } from "@/components/ProductListingCard";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 import {
   Select,
   SelectValue,
   SelectTrigger,
   SelectContent,
   SelectItem} from "@/components/ui/select",
-import { Checkbox } from "@/components/ui/checkbox",
-import Skeleton from "react-loading-skeleton",
-import "react-loading-skeleton/dist/skeleton.css",
-import { Slider } from "@/components/ui/slider",
-import { ProductListing, ListingView } from "@/types/listings",
+import { Checkbox } from "@/components/ui/checkbox";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
+import { Slider } from "@/components/ui/slider";
+import { ProductListing, ListingView } from "@/types/listings";
 import { Search, Filter, LayoutGrid, List, Star } from 'lucide-react'
-import { toast } from "@/hooks/use-toast",
-import { captureException } from "@/utils/sentry",
+import { toast } from "@/hooks/use-toast";
+import { captureException } from "@/utils/sentry";
 interface PriceRange {
-  min: number,
-  max: number
+  min: number;
+  max: number,
 }
 
 interface DynamicListingPageProps {
-  title: string,
-  description: string,
-  categorySlug: string,
-  listings: ProductListing[],
-  categoryFilters: { label: string, value: string }[],
+  title: string;
+  description: string;
+  categorySlug: string;
+  listings: ProductListing[];
+  categoryFilters: { label: string, value: string };[],
   initialPrice?: PriceRange,
   /**
    * Base path for listing detail pages. Defaults to `/marketplace/listing`.
@@ -41,17 +41,15 @@ export function DynamicListingPage({
   title,
   description,
   categorySlug,
-  listings: allListings,
-  categoryFilters,
-  initialPrice = { min: 0, max: 10000 },
-  detailBasePath = "/marketplace/listing"}: DynamicListingPageProps) {
+  listings: allListings, categoryFilters,
+  initialPrice = { min: 0, max: 10000 }, detailBasePath = "/marketplace/listing"}: DynamicListingPageProps) {
   const router = useRouter(),
   const [searchQuery, setSearchQuery] = useState(""),
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]),
   const toggleCategory = (category: string) => {
     setSelectedCategories(prev =>
-      prev.includes(category)
-        ? prev.filter(c => c !== category)
+      prev.includes(category);
+        ? prev.filter(c => c !== category),
         : [...prev, category]
     )
   },
@@ -95,7 +93,7 @@ export function DynamicListingPage({
     [number, number]
   >([0, initialPrice.max]),
 
-  const handleSliderChange = (values: number[]) => {
+  const handleSliderChange = (values: number[]) => {,
     const [min, max] = values.map(Number),
     if (min == null || max == null || isNaN(min) || isNaN(max)) return,
     setCurrentPriceFilter([min, max])
@@ -109,7 +107,7 @@ export function DynamicListingPage({
         listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         (listing.tags &&
-          listing.tags.some((tag: string) =>
+          listing.tags.some((tag: string) =>,
             tag.toLowerCase().includes(searchQuery.toLowerCase()),
           )),
 
@@ -167,7 +165,7 @@ export function DynamicListingPage({
           return (
             new Date(b.createdAt).getTime() -
             new Date(a.createdAt).getTime()
-          )
+          ),
       }
     })
   } catch (error) {
@@ -175,7 +173,7 @@ export function DynamicListingPage({
     logErrorToProduction('Listing filter error:', { data: error })
   }
 
-  const handleRequestQuote = (listingId: string) => {
+  const handleRequestQuote = (listingId: string) => {,
     setIsLoading(true),
 
     const listing = allListings.find((item) => item.id === listingId),
@@ -188,19 +186,19 @@ export function DynamicListingPage({
           description: `Your quote request for ${listing.title} has been sent.`}),
 
         // Store quote data in sessionStorage for the request-quote page
-        const quoteData = {
-          serviceType: categorySlug,
+        const quoteData = {;
+          serviceType: categorySlug;
           specificItem: {
-            id: listing.id,
-            title: listing.title,
-            category: listing.category,
+            id: listing.id;
+            title: listing.title;
+            category: listing.category;
             image: listing.images?.[0]}},
         
         if (typeof window !== 'undefined') {
           sessionStorage.setItem('quoteRequestData', JSON.stringify(quoteData))
         }
 
-        router.push("/request-quote")
+        router.push("/request-quote");
       }
     }, 500)
   },
@@ -227,7 +225,7 @@ export function DynamicListingPage({
                   Categories
                 </label>
                 <div className="space-y-2">
-                  {categoryFilters.map(filter => (
+                  {categoryFilters.map(filter => (,
                     <div key={filter.value} className="flex items-center">
                       <Checkbox
                         id={`cat-${filter.value}`}
@@ -281,7 +279,7 @@ export function DynamicListingPage({
                   placeholder="Search specifications..."
                   value={specQuery}
                   onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                    setSpecQuery(e.target.value)
+                    setSpecQuery(e.target.value),
                   }
                   className="bg-zion-blue border border-zion-blue-light text-white"
                 />
@@ -295,7 +293,7 @@ export function DynamicListingPage({
                   <Select
                     value={selectedAvailability}
                     onValueChange={(value: string) =>
-                      setSelectedAvailability(value)
+                      setSelectedAvailability(value),
                     }
                   >
                     <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">
@@ -379,7 +377,7 @@ export function DynamicListingPage({
               <Button
                 variant="outline"
                 className="w-full border-zion-purple text-zion-purple hover: bg-zion-purple/10"
-                onClick={() => {
+                onClick={() => {,
                   logInfo("Clearing filters"),
                   setSearchQuery(""),
                   clearCategories(),
@@ -402,9 +400,9 @@ export function DynamicListingPage({
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
                   <Input
                     type="text"
-                    placeholder="Search listings..."
+                    placeholder="Search listings...",
                     value={searchQuery}
-                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => {,
                       logInfo('Search query:', { data: e.target.value }),
                       setSearchQuery(e.target.value)
                     }}
@@ -426,12 +424,12 @@ export function DynamicListingPage({
                   </Select>
                   <Button
                     variant="outline"
-                    size="icon"
+                    size="icon",
                     onClick={() => setView(isGrid ? "list" : "grid")}
                     aria-label={isGrid ? "List view" : "Grid view"}
                     title={isGrid ? "List view" : "Grid view"}
                     className="border-zion-blue-light text-zion-slate-light focus-visible:ring-zion-purple"
-                  >
+                  >,
                     {ToggleViewIcon}
                     <span className="sr-only">
                       {isGrid ? "List view" : "Grid view"}
@@ -454,8 +452,8 @@ export function DynamicListingPage({
               <div
                 className={
                   view === "grid"
-                    ? "grid grid-cols-1 md:grid-cols-2 gap-6"
-                    : "flex flex-col gap-6"
+                    ? "grid grid-cols-1 md: grid-cols-2 gap-6",
+                    : "flex flex-col gap-6",
                 }
               >
                 {[1, 2, 3, 4].map((i) => (
@@ -481,8 +479,8 @@ export function DynamicListingPage({
               <div
                 className={
                   view === "grid"
-                    ? "grid grid-cols-1 md:grid-cols-2 gap-6"
-                    : "flex flex-col gap-6"
+                    ? "grid grid-cols-1 md: grid-cols-2 gap-6",
+                    : "flex flex-col gap-6",
                 }
               >
                 {filteredListings.map((listing) => (
@@ -518,7 +516,7 @@ export function DynamicListingPage({
                 >
                   Clear All
                 </Button>
-              </div>
+              </div>,
             )}
           </div>
         </div>

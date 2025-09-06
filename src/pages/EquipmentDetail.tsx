@@ -1,49 +1,49 @@
-import { useState, useEffect } from "react",
-import { useRouter } from 'next/router',
-import { NextSeo } from '@/components/NextSeo',
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { AspectRatio } from "@/components/ui/aspect-ratio",
+import { useState, useEffect } from "react";
+import { useRouter } from 'next/router';
+import { NextSeo } from '@/components/NextSeo';
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock, AlertTriangle, ArrowLeft } from 'lucide-react'
-import { toast } from "@/hooks/use-toast",
-import { useAuth } from "@/hooks/useAuth",
-import { getStripe } from "@/utils/getStripe",
-import { useCart } from '@/context/CartContext',
-import { ImageWithRetry } from '@/components/ui/ImageWithRetry',
-import { equipmentListings } from '@/data/equipmentData',
-import { ProductListing } from '@/types/listings',
-import { motion } from 'framer-motion',
-import { useCurrency } from '@/hooks/useCurrency',
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { toast } from "@/hooks/use-toast";
+import { useAuth } from "@/hooks/useAuth";
+import { getStripe } from "@/utils/getStripe";
+import { useCart } from '@/context/CartContext';
+import { ImageWithRetry } from '@/components/ui/ImageWithRetry';
+import { equipmentListings } from '@/data/equipmentData';
+import { ProductListing } from '@/types/listings';
+import { motion } from 'framer-motion';
+import { useCurrency } from '@/hooks/useCurrency';
+import {logErrorToProduction} from '@/utils/productionLogger';
 interface EquipmentSpecification {
-  name: string,
-  value: string
+  name: string;
+  value: string,
 }
 
 interface EquipmentDetails {
-  id: string,
-  name: string,
-  description: string,
-  brand: string,
-  category: string,
+  id: string;
+  name: string;
+  description: string;
+  brand: string;
+  category: string;
   subcategory?: string,
-  images: string[],
-  price: number,
-  currency: string,
+  images: string[];
+  price: number;
+  currency: string;
   rating?: number,
   reviewCount?: number,
-  inStock: boolean,
+  inStock: boolean;
   expectedShipping?: string,
-  specifications: EquipmentSpecification[],
-  features: string[],
+  specifications: EquipmentSpecification[];
+  features: string[];
   warranty?: string,
   returnPolicy?: string
 }
 
 // Convert ProductListing to EquipmentDetails format
 function convertProductListingToEquipmentDetails(item: ProductListing): EquipmentDetails {
-  return {
+  return {,
     id: item.id,
     name: item.title,
     description: item.description,
@@ -57,13 +57,13 @@ function convertProductListingToEquipmentDetails(item: ProductListing): Equipmen
     reviewCount: item.reviewCount,
     inStock: item.availability === 'In Stock' || !item.availability,
     expectedShipping: item.availability || 'In Stock',
-    specifications: (item.specifications || []).map((spec) => ({ 
+    specifications: (item.specifications || []).map((spec) => ({,
       name: spec, 
-      value: '' 
+      value: '',
     })),
     features: item.tags || [],
     warranty: '1 Year Manufacturer Warranty',
-    returnPolicy: '30-day return policy'
+    returnPolicy: '30-day return policy',
   }
 }
 
@@ -160,7 +160,7 @@ export default function EquipmentDetail() {
     try {
       dispatch({
         type: 'ADD_ITEM',
-        payload: {
+        payload: {,
           id: equipment.id,
           name: equipment.name,
           price: equipment.price,
@@ -210,7 +210,7 @@ export default function EquipmentDetail() {
           <div className="container mx-auto">
             <motion.div 
               className="text-center py-20"
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20 }},
               animate={{ opacity: 1, y: 0 }}
             >
               <AlertTriangle className="mx-auto h-16 w-16 text-red-500 mb-6" />
@@ -224,7 +224,7 @@ export default function EquipmentDetail() {
                 }
               </p>
               <div className="space-x-4">
-                <Button 
+                <Button ,
                   onClick={() => router.back()} 
                   variant="outline"
                   className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue"
@@ -232,7 +232,7 @@ export default function EquipmentDetail() {
                   <ArrowLeft className="h-4 w-4 mr-2" />
                   Go Back
                 </Button>
-                <Button 
+                <Button,
                   onClick={() => router.push('/equipment')}
                   className="bg-zion-cyan hover: bg-zion-cyan/90 text-zion-blue"
                 >
@@ -243,7 +243,7 @@ export default function EquipmentDetail() {
           </div>
         </div>
       </>
-    )
+    ),
   }
 
   return (
@@ -252,30 +252,28 @@ export default function EquipmentDetail() {
         title={`${equipment.name} - Zion Marketplace`}
         description={equipment.description}
         openGraph={{
-          title: `${equipment.name} - Zion Marketplace`,
-          description: equipment.description,
-          images: equipment.images.length > 0 && equipment.images[0] ? [{ url: equipment.images[0] }] : undefined
+          title: `${equipment.name} - Zion Marketplace`, description: equipment.description, images: equipment.images.length > 0 && equipment.images[0] ? [{ url: equipment.images[0] }] : undefined
         }}
       />
       <div className="min-h-screen bg-zion-blue py-8 px-4">
         <div className="container mx-auto">
           {/* Breadcrumb */}
           <motion.nav 
-            className="flex mb-8"
-            initial={{ opacity: 0, y: -20 }}
+            className="flex mb-8",
+            initial={{ opacity: 0, y: -20 }},
             animate={{ opacity: 1, y: 0 }}
           >
-            <button
+            <button,
               onClick={() => router.push('/equipment')}
               className="text-zion-cyan hover:text-white transition-colors"
             >
               Equipment
             </button>
-            <span className="mx-2 text-zion-slate-light">/</span>
+            <span className="mx-2 text-zion-slate-light">/</span>,
             <span className="text-zion-slate-light">{equipment.name}</span>
           </motion.nav>
 
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-2 gap-12">,
             {/* Images */}
             <motion.div 
               className="space-y-4"
@@ -300,7 +298,7 @@ export default function EquipmentDetail() {
                       className={`aspect-square rounded-md overflow-hidden border-2 transition-all ${
                         selectedImageIndex === index
                           ? 'border-zion-cyan'
-                          : 'border-transparent hover:border-zion-slate-light'
+                          : 'border-transparent hover:border-zion-slate-light',
                       }`}
                     >
                       <ImageWithRetry
@@ -396,7 +394,7 @@ export default function EquipmentDetail() {
                   <div className="flex items-center gap-2">
                     <Button
                       variant="outline"
-                      size="sm"
+                      size="sm",
                       onClick={() => setQuantity(Math.max(1, quantity - 1))}
                       className="h-8 w-8 p-0"
                     >
@@ -422,7 +420,7 @@ export default function EquipmentDetail() {
                   className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10"
                   data-testid="add-to-cart-button"
                 >
-                  <ShoppingCart className="h-4 w-4 mr-2" />
+                  <ShoppingCart className="h-4 w-4 mr-2" />,
                   {isAdding ? 'Adding...' : inCart ? 'In Cart' : 'Add to Cart'}
                 </Button>
               </div>
@@ -468,3 +466,4 @@ export default function EquipmentDetail() {
   )
 }
 
+;

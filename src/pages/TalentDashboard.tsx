@@ -1,22 +1,22 @@
 
-import { useState, useEffect } from "react",
-import { Button } from "@/components/ui/button",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import Link from "next/link",
-import { SEO } from "@/components/SEO",
+import { useState, useEffect } from "react";
+import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import Link from "next/link";
+import { SEO } from "@/components/SEO";
 import { BriefcaseIcon, UserIcon, MessageSquare, Star, PlusCircle, FileText, Inbox, Video } from 'lucide-react'
-import { ProtectedRoute } from "@/components/ProtectedRoute",
-import { SuggestedJobs } from "@/components/jobs/SuggestedJobs",
-import { useAuth } from "@/hooks/useAuth",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Avatar } from "@/components/ui/avatar",
-import { Badge } from "@/components/ui/badge",
-import { TalentOnboardingSteps } from "@/components/onboarding/TalentOnboardingSteps",
-import { AdvancedOnboardingSteps } from "@/components/onboarding/AdvancedOnboardingSteps",
-import { useOnboardingStatus } from "@/hooks/useOnboardingStatus",
-import { MyApplications } from "@/components/jobs/MyApplications",
-import { ProjectOfferBanner } from "@/components/projects/ProjectOfferBanner",
-import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard",
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { SuggestedJobs } from "@/components/jobs/SuggestedJobs";
+import { useAuth } from "@/hooks/useAuth";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Avatar } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
+import { TalentOnboardingSteps } from "@/components/onboarding/TalentOnboardingSteps";
+import { AdvancedOnboardingSteps } from "@/components/onboarding/AdvancedOnboardingSteps";
+import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
+import { MyApplications } from "@/components/jobs/MyApplications";
+import { ProjectOfferBanner } from "@/components/projects/ProjectOfferBanner";
+import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard";
 function TalentDashboardContent() {
   const { user } = useAuth(),
   const [activeTab, setActiveTab] = useState("job-matches"),
@@ -52,8 +52,7 @@ function TalentDashboardContent() {
               </Link>
             </Button>
           </div>
-        </div>
-
+        </div>,
         {/* Project Offer Banner - Show pending offers */}
         <ProjectOfferBanner />
 
@@ -64,7 +63,7 @@ function TalentDashboardContent() {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     <Avatar className="h-12 w-12 border">
-                      {user?.avatarUrl ? (
+                      {user?.avatarUrl ? (,
                         <img src={user.avatarUrl} alt={user.displayName || "User"} loading="lazy" />
                       ) : (
                         <div className="flex h-full w-full items-center justify-center bg-muted text-lg font-medium uppercase">
@@ -146,7 +145,7 @@ function TalentDashboardContent() {
             </Card>
           </div>
           
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2">,
             <Tabs defaultValue="job-matches" onValueChange={setActiveTab}>
               <TabsList className="mb-6">
                 <TabsTrigger value="job-matches" className="flex items-center">
@@ -199,3 +198,4 @@ export default function TalentDashboard() {
     </ProtectedRoute>
   )
 }
+;

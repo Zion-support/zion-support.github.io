@@ -1,21 +1,21 @@
-import { useRouter } from 'next/router',
-import { useState, useEffect, useCallback, useMemo } from 'react',
-import { motion, AnimatePresence } from 'framer-motion',
+import { useRouter } from 'next/router';
+import { useState, useEffect, useCallback, useMemo } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowUp, Filter, SortAsc, Zap, TrendingUp, Star, ShoppingCart, MapPin, Package, AlertTriangle, RefreshCw } from 'lucide-react'
-import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll',
-import { generateDatacenterEquipment, getEquipmentMarketStats, getRecommendedEquipment } from '@/utils/equipmentAutoFeedAlgorithm',
-import { ProductListing } from '@/types/listings',
-import { SkeletonCard } from '@/components/ui/skeleton',
-import { Button } from '@/components/ui/button',
-import { Badge } from '@/components/ui/badge',
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
-import Spinner from '@/components/ui/spinner',
-import { EquipmentErrorBoundary } from '@/components/EquipmentErrorBoundary',
-import { useCurrency } from '@/hooks/useCurrency',
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll';
+import { generateDatacenterEquipment, getEquipmentMarketStats, getRecommendedEquipment } from '@/utils/equipmentAutoFeedAlgorithm';
+import { ProductListing } from '@/types/listings';
+import { SkeletonCard } from '@/components/ui/skeleton';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import Spinner from '@/components/ui/spinner';
+import { EquipmentErrorBoundary } from '@/components/EquipmentErrorBoundary';
+import { useCurrency } from '@/hooks/useCurrency';
+import {logErrorToProduction} from '@/utils/productionLogger';
 // Enhanced initial equipment with more variety
 const INITIAL_EQUIPMENT: ProductListing[] = [
-  {
+  {,
     id: "nvidia-a100-server",
     title: "NVIDIA A100 GPU Training Server",
     description: "High-performance AI training server with 8x A100 GPUs, designed for demanding machine learning workloads.",
@@ -31,7 +31,7 @@ const INITIAL_EQUIPMENT: ProductListing[] = [
     rating: 4.9,
     reviewCount: 27,
     location: "Santa Clara, CA",
-    availability: "In Stock"
+    availability: "In Stock",
   },
   {
     id: "dell-poweredge-r750",
@@ -49,7 +49,7 @@ const INITIAL_EQUIPMENT: ProductListing[] = [
     rating: 4.7,
     reviewCount: 34,
     location: "Austin, TX",
-    availability: "In Stock"
+    availability: "In Stock",
   },
   {
     id: "cisco-nexus-9k",
@@ -67,7 +67,7 @@ const INITIAL_EQUIPMENT: ProductListing[] = [
     rating: 4.8,
     reviewCount: 19,
     location: "San Jose, CA",
-    availability: "In Stock"
+    availability: "In Stock",
   },
   {
     id: "hpe-proliant-dl380",
@@ -85,7 +85,7 @@ const INITIAL_EQUIPMENT: ProductListing[] = [
     rating: 4.6,
     reviewCount: 21,
     location: "Houston, TX",
-    availability: "In Stock"
+    availability: "In Stock",
   },
   {
     id: "netapp-aff-a250",
@@ -103,7 +103,7 @@ const INITIAL_EQUIPMENT: ProductListing[] = [
     rating: 4.7,
     reviewCount: 18,
     location: "Chicago, IL",
-    availability: "2-3 Weeks"
+    availability: "2-3 Weeks",
   },
   {
     id: "arista-7050x",
@@ -121,7 +121,7 @@ const INITIAL_EQUIPMENT: ProductListing[] = [
     rating: 4.5,
     reviewCount: 16,
     location: "Sunnyvale, CA",
-    availability: "In Stock"
+    availability: "In Stock",
   }
 ],
 
@@ -134,7 +134,7 @@ const EquipmentMarketInsights = ({ stats }: { stats: any }) => (
         <h3 className="text-lg font-semibold">Equipment Market Insights</h3>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="text-center">
+        <div className="text-center">,
           <div className="text-2xl font-bold text-blue-400">${Math.round(stats.averagePrice / 1000)}k</div>
           <div className="text-sm text-muted-foreground">Avg Price</div>
         </div>
@@ -176,7 +176,7 @@ const EquipmentFilterControls = ({
         <option value="price-high">Price: High to Low</option>
         <option value="rating">Highest Rated</option>
       </select>
-    </div>
+    </div>,
     <Button variant={showRecommended ? "default" : "outline"} size="sm" onClick={() => setShowRecommended(!showRecommended)}>
       <Star className="h-4 w-4 mr-1" />
       {showRecommended ? "All Equipment" : "Recommended"}
@@ -191,7 +191,7 @@ const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing
     <Card className="h-full hover:shadow-lg transition-shadow">
       <CardHeader className="pb-3">
         <div className="flex items-start justify-between">
-          <div className="flex-1 min-w-0">
+          <div className="flex-1 min-w-0">,
             <h3 className="font-semibold text-lg truncate">{equipment.title}</h3>
             <p className="text-sm text-muted-foreground">{equipment.category}</p>
             <div className="flex items-center gap-2 mt-2">
@@ -229,7 +229,7 @@ const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing
 
 // Loading grid
 const EquipmentLoadingGrid = ({ count = 8 }: { count?: number }) => (
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">,
     {Array.from({ length: count }).map((_, i) => <SkeletonCard key={i} />)}
   </div>
 ),
@@ -273,7 +273,7 @@ function EquipmentPageContent() {
   }, [filterCategory, showRecommended]),
 
   const fetchEquipment = useCallback(async (page: number, limit: number) => {
-    // Simulate realistic API delay
+    // Simulate realistic API delay,
     await new Promise(resolve => setTimeout(resolve, 300)),
 
     try {
@@ -284,7 +284,7 @@ function EquipmentPageContent() {
         INITIAL_EQUIPMENT.length,
         dataSeed
       ),
-      let fullVirtualDataset: ProductListing[] = [
+      let fullVirtualDataset: ProductListing[] = [,
         ...INITIAL_EQUIPMENT,
         ...baseVirtualEquipment
       ],
@@ -293,7 +293,7 @@ function EquipmentPageContent() {
       const dedupMap = new Map<string, ProductListing>(),
       for (const item of fullVirtualDataset) {
         if (!dedupMap.has(item.id)) {
-          dedupMap.set(item.id, item)
+          dedupMap.set(item.id, item);
         }
       }
       fullVirtualDataset = Array.from(dedupMap.values()),
@@ -319,7 +319,7 @@ function EquipmentPageContent() {
           case 'rating':
             return (b.rating || 0) - (a.rating || 0),
           default: // 'newest'
-            return new Date(b.createdAt || '').getTime() - new Date(a.createdAt || '').getTime()
+            return new Date(b.createdAt || '').getTime() - new Date(a.createdAt || '').getTime(),
         }
       }),
 
@@ -331,17 +331,15 @@ function EquipmentPageContent() {
       return {
         items,
         hasMore: endIndex < processedDataset.length,
-        total: processedDataset.length
+        total: processedDataset.length,
       }
     } catch (error) {
-      logErrorToProduction('Error in fetchEquipment:', { data: error }),
-      throw new Error('Failed to load equipment data. Please try again.')
+      logErrorToProduction('Error in fetchEquipment:', { data: error }), throw new Error('Failed to load equipment data. Please try again.')
     }
   }, [sortBy, filterCategory, showRecommended, dataSeed]),
 
   const {
-    items: equipment,
-    loading,
+    items: equipment, loading,
     error,
     hasMore,
     total,
@@ -424,7 +422,7 @@ function EquipmentPageContent() {
         <p className="text-muted-foreground text-lg">Professional hardware for modern IT infrastructure and AI workloads</p>
       </motion.div>
 
-      {marketStats && (
+      {marketStats && (,
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
           <EquipmentMarketInsights stats={marketStats} />
         </motion.div>
@@ -448,7 +446,7 @@ function EquipmentPageContent() {
           {equipment.map((item, index) => (
             <motion.div
               key={item.id} 
-              ref={index === equipment.length - 1 ? lastElementRef : null}
+              ref={index === equipment.length - 1 ? lastElementRef: null}
               initial={{ opacity: 0, scale: 0.9 }} 
               animate={{ opacity: 1, scale: 1 }} 
               exit={{ opacity: 0, scale: 0.9 }}
@@ -465,7 +463,7 @@ function EquipmentPageContent() {
                       // ignore storage errors
                     }
                   }
-                  router.push(`/equipment/${item.id}`)
+                  router.push(`/equipment/${item.id}`);
                 }}
               />
             </motion.div>
@@ -507,7 +505,7 @@ function EquipmentPageContent() {
         {showScrollTop && (
           <motion.button 
             onClick={scrollToTop} 
-            className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50"
+            className="fixed bottom-8 right-8 p-3 bg-primary hover: bg-primary/90 rounded-full shadow-lg z-50",
             initial={{ opacity: 0, scale: 0 }} 
             animate={{ opacity: 1, scale: 1 }} 
             exit={{ opacity: 0, scale: 0 }}
@@ -530,3 +528,4 @@ export default function EquipmentPage() {
     </EquipmentErrorBoundary>
   )
 }
+;

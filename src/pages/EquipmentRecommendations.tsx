@@ -1,13 +1,13 @@
-import { useEffect, useState } from 'react',
-import { ProductListingCard } from '@/components/ProductListingCard',
-import { useAuth } from '@/hooks/useAuth',
-import { fetchRecommendations } from '@/api/recommendations',
-import type { ProductListing } from '@/types/listings',
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog',
-import { Button } from '@/components/ui/button',
+import { useEffect, useState } from 'react';
+import { ProductListingCard } from '@/components/ProductListingCard';
+import { useAuth } from '@/hooks/useAuth';
+import { fetchRecommendations } from '@/api/recommendations';
+import type { ProductListing } from '@/types/listings';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { Button } from '@/components/ui/button';
 import { Loader2 } from 'lucide-react'
-import Link from 'next/link',
-import { ErrorState } from '@/components/jobs/applications',
+import Link from 'next/link';
+import { ErrorState } from '@/components/jobs/applications';
 export default function EquipmentRecommendations() {
   const { isAuthenticated, user } = useAuth(),
   const [listings, setListings] = useState<ProductListing[]>([]),
@@ -50,7 +50,7 @@ export default function EquipmentRecommendations() {
       )}
       {error && <ErrorState error="Failed to load recommendations." />}
       <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
-        {listings.map((listing) => (
+        {listings.map((listing) => (,
           <div key={listing.id} className="break-inside-avoid mb-4">
             <ProductListingCard listing={listing} />
           </div>
@@ -59,3 +59,4 @@ export default function EquipmentRecommendations() {
     </div>
   )
 }
+;

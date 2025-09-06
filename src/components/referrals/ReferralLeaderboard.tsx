@@ -1,17 +1,17 @@
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Award } from 'lucide-react'
 
 interface LeaderboardEntry {
-  rank: number,
-  name: string,
-  referrals: number
+  rank: number;
+  name: string;
+  referrals: number,
 }
 
 export function ReferralLeaderboard() {
   // This would typically be fetched from the server
   // For now, we'll use mock data
-  const leaderboardData: LeaderboardEntry[] = [
+  const leaderboardData: LeaderboardEntry[] = [,
     { rank: 1, name: "Alex Johnson", referrals: 24 },
     { rank: 2, name: "Jamie Smith", referrals: 18 },
     { rank: 3, name: "Taylor Wong", referrals: 15 },
@@ -43,7 +43,7 @@ export function ReferralLeaderboard() {
                       ? "bg-slate-200 text-slate-800"
                       : entry.rank === 3
                       ? "bg-amber-200 text-amber-800"
-                      : "bg-muted text-muted-foreground"
+                      : "bg-muted text-muted-foreground",
                   }`}
                 >
                   {entry.rank}
@@ -60,3 +60,4 @@ export function ReferralLeaderboard() {
     </Card>
   )
 }
+;

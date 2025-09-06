@@ -1,19 +1,19 @@
 
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Card, CardContent } from "@/components/ui/card",
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Card, CardContent } from "@/components/ui/card";
 import { Loader2, Globe } from 'lucide-react'
-import { useTranslation } from "react-i18next",
-import { useTranslationService } from "@/hooks/useTranslationService",
-import { useLanguage, SupportedLanguage } from "@/context/LanguageContext",
-import { toast } from "@/components/ui/use-toast",
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { useTranslation } from "react-i18next";
+import { useTranslationService } from "@/hooks/useTranslationService";
+import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
+import { toast } from "@/components/ui/use-toast";
+import {logErrorToProduction} from '@/utils/productionLogger';
 interface TranslatableJobFormProps {
-  onSubmit: (formData: any) => void,
-  isSubmitting?: boolean
+  onSubmit: (formData: any) => void;
+  isSubmitting?: boolean,
 }
 
 export function TranslatableJobForm({ onSubmit, isSubmitting = false }: TranslatableJobFormProps) {
@@ -49,20 +49,20 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
   const [deadline, setDeadline] = useState(""),
   
   // Handle text changes
-  const handleTitleChange = (value: string) => {
+  const handleTitleChange = (value: string) => {,
     setTitle({ ...title, [activeTab]: value })
   },
   
-  const handleDescriptionChange = (value: string) => {
+  const handleDescriptionChange = (value: string) => {,
     setDescription({ ...description, [activeTab]: value })
   },
   
-  const handleRequirementsChange = (value: string) => {
+  const handleRequirementsChange = (value: string) => {,
     setRequirements({ ...requirements, [activeTab]: value })
   },
   
   // Handle form submission
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {,
     e.preventDefault(),
     
     // Complete any missing translations with auto-translation
@@ -77,7 +77,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
   },
   
   // Auto translate content when language tab changes
-  const handleTabChange = async (tab: string) => {
+  const handleTabChange = async (tab: string) => {,
     const selectedLanguage = tab as SupportedLanguage,
     if (selectedLanguage !== activeTab) {
       setActiveTab(selectedLanguage)
@@ -85,7 +85,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
   },
   
   // Auto translate function
-  const autoTranslate = async (field: 'title' | 'description' | 'requirements') => {
+  const autoTranslate = async (field: 'title' | 'description' | 'requirements') => {,
     let sourceLanguage: SupportedLanguage = 'en',
     let content = '',
     
@@ -321,7 +321,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="space-y-1">
-            <label htmlFor="budget" className="text-lg font-medium">
+            <label htmlFor="budget" className="text-lg font-medium">,
               {t('jobs.budget')}
             </label>
             <Input
@@ -350,7 +350,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
       <div className="pt-4">
         <Button
           type="submit"
-          className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan"
+          className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan",
           disabled={isSubmitting || isTranslating}
         >
           {isSubmitting ? (
@@ -366,3 +366,4 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
     </form>
   )
 }
+;

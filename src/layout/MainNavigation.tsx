@@ -1,16 +1,16 @@
-import Link from "next/link",
-import { useRouter } from "next/router",
-import { useState } from "react",
-import { cn } from "@/lib/utils",
-import { useAuth } from "@/hooks/useAuth",
-import { useTranslation } from "react-i18next",
-import { useFavorites } from "@/hooks/useFavorites",
-import { useCart } from "@/context/CartContext",
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { useState } from "react";
+import { cn } from "@/lib/utils";
+import { useAuth } from "@/hooks/useAuth";
+import { useTranslation } from "react-i18next";
+import { useFavorites } from "@/hooks/useFavorites";
+import { useCart } from "@/context/CartContext";
 import { Heart, MessageSquare, CreditCard, ShoppingCart, Wallet } from 'lucide-react'
-import { LanguageSelector } from '@/components/header/LanguageSelector',
-import { HoverCard, HoverCardTrigger, HoverCardContent } from '@/components/ui/hover-card',
-import { MiniCartPreview } from '@/components/cart/MiniCartPreview',
-import { LoginModal } from '@/components/auth/LoginModal',
+import { LanguageSelector } from '@/components/header/LanguageSelector';
+import { HoverCard, HoverCardTrigger, HoverCardContent } from '@/components/ui/hover-card';
+import { MiniCartPreview } from '@/components/cart/MiniCartPreview';
+import { LoginModal } from '@/components/auth/LoginModal';
 interface MainNavigationProps {
   isAdmin?: boolean,
   unreadCount?: number,
@@ -29,7 +29,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   const { t } = useTranslation(),
 
   const handleCartClick = (e: React.MouseEvent) => {
-    if (!isAuthenticated) {
+    if (!isAuthenticated) {,
       e.preventDefault(),
       setLoginOpen(true),
       return
@@ -41,32 +41,32 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     {
       key: 'home',
       href: '/',
-      matches: (path: string) => path === '/'
+      matches: (path: string) => path === '/',
     },
     {
       key: 'marketplace',
       href: '/marketplace',
-      matches: (path: string) => path.startsWith('/marketplace')
+      matches: (path: string) => path.startsWith('/marketplace'),
     },
     {
       key: 'categories',
       href: '/categories',
-      matches: (path: string) => path.startsWith('/categories')
+      matches: (path: string) => path.startsWith('/categories'),
     },
     {
       key: 'talent',
       href: '/talent',
-      matches: (path: string) => path.startsWith('/talent') && !path.includes('/talent-dashboard')
+      matches: (path: string) => path.startsWith('/talent') && !path.includes('/talent-dashboard'),
     },
     {
       key: 'equipment',
       href: '/equipment',
-      matches: (path: string) => path.startsWith('/equipment')
+      matches: (path: string) => path.startsWith('/equipment'),
     },
     {
       key: 'community',
       href: '/community',
-      matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum')
+      matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum'),
     }
   ],
 
@@ -78,7 +78,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       key: 'dashboard',
       name: t('nav.dashboard'),
       href: '/dashboard',
-      matches: (path: string) => path === '/dashboard' || path === '/client-dashboard' || path === '/talent-dashboard'
+      matches: (path: string) => path === '/dashboard' || path === '/client-dashboard' || path === '/talent-dashboard',
     })
   }
   
@@ -88,14 +88,14 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       key: 'analytics',
       name: t('nav.analytics'),
       href: '/analytics',
-      matches: (path: string) => path.startsWith('/analytics')
+      matches: (path: string) => path.startsWith('/analytics'),
     })
   }
   
   return (
     <>
       <button
-        className="navbar-toggler md:hidden ml-auto mr-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" // Added ml-auto and mr-4 for positioning
+        className="navbar-toggler md:hidden ml-auto mr-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" // Added ml-auto and mr-4 for positioning,
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         aria-expanded={isMobileMenuOpen}
         aria-controls="main-navbar-collapse"
@@ -113,7 +113,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
           className={cn(
             "navbar-collapse",
             { "open": isMobileMenuOpen },
-            "w-full md:flex md:w-auto", // Handles visibility and desktop layout
+            "w-full md: flex md:w-auto", // Handles visibility and desktop layout
             !isMobileMenuOpen && "hidden" // Explicitly hide when not open and on mobile
           )}
         >
@@ -127,9 +127,9 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                   className={cn(
                     "nav-link",
                     "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary",
-                    link.matches(router.pathname)
+                    link.matches(router.pathname);
                       ? "bg-zion-purple/20 text-zion-cyan"
-                      : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+                      : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan",
                   )}
                 >
                   {link.name}
@@ -149,7 +149,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                     "relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary",
                     router.pathname === "/wishlist"
                       ? "bg-zion-purple/20 text-zion-cyan"
-                      : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+                      : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan",
                   )}
                 >
                   <Heart className="w-4 h-4" />
@@ -174,7 +174,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                     "relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary",
                     router.pathname === "/wallet"
                       ? "bg-zion-purple/20 text-zion-cyan"
-                      : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+                      : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan",
                   )}
                 >
                   <Wallet className="w-4 h-4" />
@@ -194,7 +194,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                     "relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary",
                     router.pathname === "/messages"
                       ? "bg-zion-purple/20 text-zion-cyan"
-                      : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+                      : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan",
                   )}
                 >
                   <MessageSquare className="w-4 h-4" />
@@ -216,10 +216,9 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                     aria-label={t('nav.cart')}
                     onClick={handleCartClick}
                     className={cn(
-                      'nav-linkinline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',
-                      router.pathname.startsWith('/cart')
+                      'nav-linkinline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-primary', router.pathname.startsWith('/cart')
                         ? 'bg-zion-purple/20 text-zion-cyan'
-                        : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan'
+                        : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan',
                     )}
                   >
                     <ShoppingCart className="w-4 h-4 mr-1" />
@@ -241,8 +240,9 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
             <LanguageSelector />
           </div>
         </div>
-      </nav>
+      </nav>,
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
   )
 }
+;

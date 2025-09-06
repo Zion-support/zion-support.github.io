@@ -1,19 +1,19 @@
-import React from 'react',
-import { useRouter } from 'next/router',
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardFooter } from "@/components/ui/card",
+import React from 'react';
+import { useRouter } from 'next/router';
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react'
-import { FavoriteButton } from "@/components/FavoriteButton",
-import { TalentProfile } from "@/types/talent",
-import { RatingStars } from '@/components/RatingStars',
-import { useAuth } from '@/context/auth/AuthProvider',
-import { useCart } from '@/context/CartContext',
+import { FavoriteButton } from "@/components/FavoriteButton";
+import { TalentProfile } from "@/types/talent";
+import { RatingStars } from '@/components/RatingStars';
+import { useAuth } from '@/context/auth/AuthProvider';
+import { useCart } from '@/context/CartContext';
 export interface TalentCardProps {
-  talent: TalentProfile,
-  onViewProfile: (id: string) => void,
-  onRequestHire: (talent: TalentProfile) => void,
-  isAuthenticated: boolean
+  talent: TalentProfile;
+  onViewProfile: (id: string) => void;
+  onRequestHire: (talent: TalentProfile) => void;
+  isAuthenticated: boolean,
 }
 
 const TalentCardComponent = ({
@@ -34,7 +34,7 @@ const TalentCardComponent = ({
     }
   },
 
-  const handleRequestHire = (e: React.MouseEvent) => {
+  const handleRequestHire = (e: React.MouseEvent) => {,
     e.preventDefault(),
     e.stopPropagation(),
     if (onRequestHire) {
@@ -48,7 +48,7 @@ const TalentCardComponent = ({
 
   return (
     <Card
-      className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple"
+      className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple",
       onClick={handleViewProfile}
       tabIndex={0}
     >
@@ -146,7 +146,7 @@ const TalentCardComponent = ({
                 className="bg-zion-purple hover:bg-zion-purple-light text-white"
               >
                 Hire
-              </Button>
+              </Button>,
             )}
             <Button
               size="sm"
@@ -163,8 +163,8 @@ const TalentCardComponent = ({
         </div>
       </div>
     </Card>
-  )
+  ),
 },
-
-export const TalentCard = React.memo(TalentCardComponent),
+;
+export const TalentCard = React.memo(TalentCardComponent);
 TalentCard.displayName = 'TalentCard',

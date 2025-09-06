@@ -1,9 +1,9 @@
-import React, { useState, useRef, useEffect } from 'react',
-import Image from 'next/image',
-import { cn } from '@/lib/utils',
+import React, { useState, useRef, useEffect } from 'react';
+import Image from 'next/image';
+import { cn } from '@/lib/utils';
 interface OptimizedImageProps {
-  src: string,
-  alt: string,
+  src: string;
+  alt: string;
   width?: number,
   height?: number,
   className?: string,
@@ -48,7 +48,7 @@ export function OptimizedImage({
       ([entry]) => {
         if (entry && entry.isIntersecting) {
           setIsInView(true),
-          observer.disconnect()
+          observer.disconnect();
         }
       },
       {
@@ -57,14 +57,14 @@ export function OptimizedImage({
     ),
 
     if (imgRef.current) {
-      observer.observe(imgRef.current)
+      observer.observe(imgRef.current);
     }
 
     return () => observer.disconnect()
   }, [lazy, priority, isInView]),
 
   // Generate WebP-compatible src
-  const getOptimizedSrc = (originalSrc: string) => {
+  const getOptimizedSrc = (originalSrc: string) => {,
     // If it's already optimized or external, return as-is
     if (originalSrc.startsWith('http') || originalSrc.includes('/_next/image')) {
       return originalSrc
@@ -93,13 +93,13 @@ export function OptimizedImage({
     return `data: image/svg+xml,base64,${Buffer.from(
       `<svg width="${width || 400}" height="${height || 300}" xmlns="http: //www.w3.org/2000/svg">
         <defs>
-          <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style="stop-color:#f3f4f6,stop-opacity:1" />
-            <stop offset="100%" style="stop-color:#e5e7eb,stop-opacity:1" />
+          <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">,
+            <stop offset="0%" style="stop-color: #f3f4f6, stop-opacity:1" />,
+            <stop offset="100%" style="stop-color: #e5e7eb, stop-opacity:1" />
           </linearGradient>
         </defs>
         <rect width="100%" height="100%" fill="url(#grad)" />
-      </svg>`
+      </svg>`,
     ).toString('base64')}`
   },
 
@@ -129,14 +129,14 @@ export function OptimizedImage({
 
       {/* Loading placeholder */}
       {(isLoading && isInView) && (
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 animate-pulse" />
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 animate-pulse" />,
       )}
 
       {/* Error fallback */}
       {hasError && (
         <div className="absolute inset-0 bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
           {fallbackSrc ? (
-            <img
+            <img,
               src={fallbackSrc}
               alt={alt}
               className="max-w-full max-h-full object-contain"
@@ -163,7 +163,7 @@ export function OptimizedImage({
 
       {/* Lazy loading placeholder */}
       {!isInView && lazy && !priority && (
-        <div className="absolute inset-0 bg-gray-100 dark:bg-gray-800" />
+        <div className="absolute inset-0 bg-gray-100 dark:bg-gray-800" />,
       )}
     </div>
   )
@@ -173,7 +173,7 @@ export function OptimizedImage({
 export function withImageOptimization<P extends { src: string, alt: string }>(
   Component: React.ComponentType<P>
 ) {
-  return function OptimizedComponent(props: P) {
+  return function OptimizedComponent(props: P) {,
     const { src, alt, ...otherProps } = props,
     
     return (
@@ -187,7 +187,7 @@ export function withImageOptimization<P extends { src: string, alt: string }>(
 }
 
 // Utility to preload critical images
-export function preloadImage(src: string): Promise<void> {
+export function preloadImage(src: string): Promise<void> {;
   return new Promise((resolve, reject) => {
     const img = new window.Image(),
     img.onload = () => resolve(),
@@ -204,4 +204,4 @@ export function getImageDimensions(src: string): Promise<{ width: number, height
     img.onerror = reject,
     img.src = src
   })
-} 
+} ;

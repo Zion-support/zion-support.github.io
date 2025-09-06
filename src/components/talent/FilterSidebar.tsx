@@ -1,15 +1,15 @@
 
-import React from "react",
-import { Button } from "@/components/ui/button",
+import React from "react";
+import { Button } from "@/components/ui/button";
 import { Filter } from 'lucide-react'
-import { SearchFilter } from "./filters/SearchFilter",
-import { SortFilter } from "./filters/SortFilter",
-import { SkillsFilter } from "./filters/SkillsFilter",
-import { AvailabilityFilter } from "./filters/AvailabilityFilter",
-import { RegionFilter } from "./filters/RegionFilter",
-import { ExperienceFilter } from "./filters/ExperienceFilter",
-import { PriceFilter } from "./filters/PriceFilter",
-import { FilterSidebarProps } from "@/types/filters",
+import { SearchFilter } from "./filters/SearchFilter";
+import { SortFilter } from "./filters/SortFilter";
+import { SkillsFilter } from "./filters/SkillsFilter";
+import { AvailabilityFilter } from "./filters/AvailabilityFilter";
+import { RegionFilter } from "./filters/RegionFilter";
+import { ExperienceFilter } from "./filters/ExperienceFilter";
+import { PriceFilter } from "./filters/PriceFilter";
+import { FilterSidebarProps } from "@/types/filters";
 export function FilterSidebar({
   searchTerm,
   setSearchTerm,
@@ -42,12 +42,11 @@ export function FilterSidebar({
           variant="ghost" 
           size="sm" 
           onClick={clearFilters}
-          className="h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent"
+          className="h-7 text-xs text-zion-purple hover: text-zion-purple-light hover:bg-transparent"
         >
           Clear All
-        </Button>
-      </div>
-      
+        </Button>,
+      </div>,
       {/* Search */}
       <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       
@@ -105,7 +104,7 @@ export function FilterSidebar({
           className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4"
         >
           Apply Filters
-        </Button>
+        </Button>,
       )}
     </>
   )

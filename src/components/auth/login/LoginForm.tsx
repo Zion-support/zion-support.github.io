@@ -1,14 +1,14 @@
 
-import { useState } from "react",
-import { useRouter } from 'next/router',
-import { useForm, ControllerRenderProps } from "react-hook-form",
-import { zodResolver } from "@hookform/resolvers/zod",
-import { z } from "zod",
+import { useState } from "react";
+import { useRouter } from 'next/router';
+import { useForm, ControllerRenderProps } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
 import { LogIn, User, Eye, EyeOff } from 'lucide-react'
-import { fireEvent } from '@/lib/analytics',
-import { useAuth } from "@/context/auth/AuthProvider",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
+import { fireEvent } from '@/lib/analytics';
+import { useAuth } from "@/context/auth/AuthProvider";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import {
   Form,
   FormControl,
@@ -16,9 +16,9 @@ import {
   FormItem,
   FormLabel,
   FormMessage} from "@/components/ui/form",
-import { Alert, AlertDescription } from "@/components/ui/alert",
-import Link from "next/link",
-import { Checkbox } from "@/components/ui/checkbox",
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import Link from "next/link";
+import { Checkbox } from "@/components/ui/checkbox";
 // Form validation schema
 const loginSchema = z.object({
   email: z.string().email("Please enter a valid email").min(1, "Email is required"),
@@ -38,12 +38,12 @@ export function LoginForm() {
   
   const form = useForm<LoginFormValues>({
     resolver: zodResolver(loginSchema) as any,
-    defaultValues: {
+    defaultValues: {,
       email: "",
       password: "",
       rememberMe: false}}),
 
-  const onSubmit = async (data: LoginFormValues) => {
+  const onSubmit = async (data: LoginFormValues) => {,
     if (isSubmitting) return,
 
     try {
@@ -132,7 +132,7 @@ export function LoginForm() {
                     placeholder="you@example.com"
                     aria-label="Email address"
                     aria-invalid={!!form.formState.errors.email}
-                    className="bg-zion-blue pl-10 text-white placeholder:text-zion-blue-light border-zion-blue-light focus:border-zion-purple"
+                    className="bg-zion-blue pl-10 text-white placeholder:text-zion-blue-light border-zion-blue-light focus:border-zion-purple",
                     {...field}
                   />
                   <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
@@ -155,7 +155,7 @@ export function LoginForm() {
                     placeholder="Enter password"
                     aria-label="Password"
                     aria-invalid={!!form.formState.errors.password}
-                    className="bg-zion-blue pl-10 text-white placeholder:text-zion-blue-light border-zion-blue-light focus:border-zion-purple"
+                    className="bg-zion-blue pl-10 text-white placeholder:text-zion-blue-light border-zion-blue-light focus:border-zion-purple",
                     {...field}
                   />
                   <LogIn className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
@@ -163,7 +163,7 @@ export function LoginForm() {
                     type="button"
                     variant="ghost"
                     size="sm"
-                    className="absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan"
+                    className="absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan",
                     onClick={() => setShowPassword(!showPassword)}
                   >
                     {showPassword ? (
@@ -213,7 +213,7 @@ export function LoginForm() {
         </div>
         <Button
           type="submit"
-          className="w-full inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-zion-purple-light visible"
+          className="w-full inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-zion-purple-light visible",
           disabled={isLoading || isSubmitting}
         >
           {isLoading || isSubmitting ? "Logging in..." : "Login"}
@@ -249,5 +249,6 @@ export function LoginForm() {
         </p>
       </form>
     </Form>
-  )
+  ),
 }
+;

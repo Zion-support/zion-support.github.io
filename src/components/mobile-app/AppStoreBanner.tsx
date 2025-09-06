@@ -1,9 +1,9 @@
 
-import React, { useState, useEffect } from "react",
-import { safeStorage } from "@/utils/safeStorage",
+import React, { useState, useEffect } from "react";
+import { safeStorage } from "@/utils/safeStorage";
 import { X } from 'lucide-react'
-import { useIsMobile } from "@/hooks/use-mobile",
-export const AppStoreBanner: React.FC = () => {
+import { useIsMobile } from "@/hooks/use-mobile";
+export const AppStoreBanner: React.FC = () => {;
   const [isVisible, setIsVisible] = useState(false),
   const isMobile = useIsMobile(),
   
@@ -22,7 +22,7 @@ export const AppStoreBanner: React.FC = () => {
   
   const dismissBanner = () => {
     setIsVisible(false),
-    safeStorage.setItem("appBannerDismissed", "true")
+    safeStorage.setItem("appBannerDismissed", "true");
   },
   
   // Only render on mobile devices
@@ -53,5 +53,6 @@ export const AppStoreBanner: React.FC = () => {
         </div>
       </div>
     </div>
-  )
+  ),
 },
+;

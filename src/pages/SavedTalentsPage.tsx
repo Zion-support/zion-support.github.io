@@ -1,16 +1,15 @@
-import { useState, useEffect } from "react",
-import { SEO } from "@/components/SEO",
-import { TalentCard } from "@/components/talent/TalentCard",
-import { useAuth } from "@/hooks/useAuth",
-import { supabase } from "@/integrations/supabase/client",
-import { TalentProfile } from "@/types/talent",
-import { toast } from "@/components/ui/use-toast",
-import { useRouter } from 'next/router',
-import { logErrorToProduction } from '@/utils/productionLogger',
-import { EmptyState } from "@/components/ui/empty-state",
+import { useState, useEffect } from "react";
+import { SEO } from "@/components/SEO";
+import { TalentCard } from "@/components/talent/TalentCard";
+import { useAuth } from "@/hooks/useAuth";
+import { supabase } from "@/integrations/supabase/client";
+import { TalentProfile } from "@/types/talent";
+import { toast } from "@/components/ui/use-toast";
+import { useRouter } from 'next/router';
+import { logErrorToProduction } from '@/utils/productionLogger';
+import { EmptyState } from "@/components/ui/empty-state";
 import { Heart } from 'lucide-react'
-import { logInfo, logWarn } from '@/utils/productionLogger',
-
+import { logInfo, logWarn } from '@/utils/productionLogger';
 export default function SavedTalentsPage() {
 
   const { user } = useAuth(),
@@ -64,7 +63,7 @@ export default function SavedTalentsPage() {
         if (data) {
           // Extract talent profiles and convert to TalentProfile type
           const talentProfiles = data.map(
-            (item: any) => item.talent_profile as unknown as TalentProfile
+            (item: any) => item.talent_profile as unknown as TalentProfile,
           ),
           setSavedTalents(talentProfiles)
         }
@@ -82,11 +81,11 @@ export default function SavedTalentsPage() {
     fetchSavedTalents()
   }, [user]),
 
-  const handleViewProfile = (talentId: string) => {
-    router.push(`/talent/${talentId}`)
+  const handleViewProfile = (talentId: string) => {,
+    router.push(`/talent/${talentId}`);
   },
 
-  const handleRequestHire = (talent: TalentProfile) => {
+  const handleRequestHire = (talent: TalentProfile) => {,
     logInfo('Request to hire:', { data: talent }),
     toast({
       title: "Hire Request Sent",
@@ -95,7 +94,7 @@ export default function SavedTalentsPage() {
 
   const handleToggleSave = async (talentId: string, isCurrentlySaved: boolean) => {
     try {
-      if (!user) {
+      if (!user) {,
         logWarn("User not authenticated."),
         return
       }
@@ -113,7 +112,7 @@ export default function SavedTalentsPage() {
         }
   
         setSavedTalents(prevTalents =>
-          prevTalents.filter(talent => talent.id !== talentId)
+          prevTalents.filter(talent => talent.id !== talentId);
         ),
         toast({
           title: "Talent Removed",
@@ -185,9 +184,9 @@ export default function SavedTalentsPage() {
             />
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6 mt-8">,
             {savedTalents.map((talent) => (
-              <TalentCard
+              <TalentCard,
                 key={talent.id}
                 talent={talent}
                 onViewProfile={handleViewProfile}
@@ -201,3 +200,4 @@ export default function SavedTalentsPage() {
     </>
   )
 }
+;

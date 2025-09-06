@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react',
+import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router', // Changed from useParams
-import { supabase } from '@/integrations/supabase/client',
+import { supabase } from '@/integrations/supabase/client';
 import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel', // Re-use the preview panel
-import { Button } from '@/components/ui/button',
+import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react'
 import Link from 'next/link', // For a back button, changed from react-router-dom
-import {logErrorToProduction} from '@/utils/productionLogger',
+import {logErrorToProduction} from '@/utils/productionLogger';
 // Placeholder for user context/role checking
 // In a real app, this would come from an auth context
 const useAuth = () => {
@@ -15,18 +15,18 @@ const useAuth = () => {
 },
 
 interface SharedWhitepaper {
-  whitepaper_data: {
-    tokenName: string,
-    tokenSupply: string,
-    sections: Array<{ id: string, title: string, content: string }>,
+  whitepaper_data: {;
+    tokenName: string;
+    tokenSupply: string;
+    sections: Array<{ id: string, title: string, content: string };>,
     distributionChartData: Array<{ name: string, value: number }>,
     distributionBreakdown?: string
   },
   created_at: string,
-  is_public: boolean
+  is_public: boolean,
 }
 
-const WhitepaperViewPage: React.FC = () => {
+const WhitepaperViewPage: React.FC = () => {,
   const router = useRouter(),
   const { id: rawId } = router.query,
   const id = typeof rawId === 'string' ? rawId : undefined,
@@ -56,7 +56,7 @@ const WhitepaperViewPage: React.FC = () => {
 
         setSharedData(responseData as SharedWhitepaper)
 
-      } catch (e: any) {
+      } catch (e: any) {,
         logErrorToProduction('Error fetching shared whitepaper:', { data:  e }),
         setError(e.message || 'An unexpected error occurred.')
       } finally {
@@ -110,7 +110,7 @@ const WhitepaperViewPage: React.FC = () => {
   return (
     <div className="container mx-auto p-4 md:p-8 bg-gray-50 min-h-screen">
         <div className="mb-6 flex justify-between items-center">
-            <Button asChild variant="outline">
+            <Button asChild variant="outline">,
                  <Link href={isAdmin ? "/admin/whitepaper-generator" : "/"}> {/* Sensible back link */}
                     <ArrowLeft className="mr-2 h-4 w-4" /> Back
                  </Link>
@@ -130,5 +130,5 @@ const WhitepaperViewPage: React.FC = () => {
     </div>
   )
 },
-
-export default WhitepaperViewPage,
+;
+export default WhitepaperViewPage;

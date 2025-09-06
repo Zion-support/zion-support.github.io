@@ -1,13 +1,13 @@
-import React, { useState, useEffect, useRef } from 'react',
-import { useRouter } from 'next/router',
+import React, { useState, useEffect, useRef } from 'react';
+import { useRouter } from 'next/router';
 import { Search, X } from 'lucide-react'
-import { Input } from '@/components/ui/input',
-import { AutocompleteSuggestions } from '@/components/search/AutocompleteSuggestions',
-import { fireEvent } from '@/lib/analytics',
-import { SearchSuggestion } from '@/types/search',
-import { slugify } from '@/lib/slugify',
-import { useDebounce } from '@/hooks/useDebounce',
-import { useOnClickOutside } from '@/hooks/useOnClickOutside',
+import { Input } from '@/components/ui/input';
+import { AutocompleteSuggestions } from '@/components/search/AutocompleteSuggestions';
+import { fireEvent } from '@/lib/analytics';
+import { SearchSuggestion } from '@/types/search';
+import { slugify } from '@/lib/slugify';
+import { useDebounce } from '@/hooks/useDebounce';
+import { useOnClickOutside } from '@/hooks/useOnClickOutside';
 /**
  * SearchBar component props
  */
@@ -15,9 +15,9 @@ interface SearchBarProps {
   /**
    * The current value of the search input
    */
-  value: string,
+  value: string;
   /**
-   * Function to call when the search input changes
+   * Function to call when the search input changes,
    * @param {string} val - The new value of the search input
    */
   onChange: (val: string) => void,
@@ -74,7 +74,7 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
     setHighlightedIndex(-1)
   }),
 
-  const handleSelect = (suggestion: SearchSuggestion) => {
+  const handleSelect = (suggestion: SearchSuggestion) => {,
     onChange(suggestion.text),
     if (onSelectSuggestion) onSelectSuggestion(suggestion),
 
@@ -119,7 +119,7 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
             }
           }}
           className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate"
-          aria-autocomplete="list"
+          aria-autocomplete="list",
           aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
           autoComplete="search"
           onKeyDown={(e) => {
@@ -170,13 +170,13 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
                 setHighlightedIndex(-1),
                 inputRef.current?.blur(),
                 break,
-              default: break
+              default: break,
             }
           }}
         />
         {value && (
           <button
-            className="absolute right-3 top-1/2 -translate-y-1/2 text-zion-slate hover:text-white"
+            className="absolute right-3 top-1/2 -translate-y-1/2 text-zion-slate hover:text-white",
             onClick={() => onChange('')}
             aria-label="Clear search"
           >
@@ -195,3 +195,4 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
     </div>
   )
 }
+;

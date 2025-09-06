@@ -1,18 +1,18 @@
-import { useState } from "react",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Button } from "@/components/ui/button",
-import CodeBlock from "./CodeBlock",
+import { useState } from "react";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
+import CodeBlock from "./CodeBlock";
 interface Param {
-  name: string,
-  type: string,
-  required?: boolean
+  name: string;
+  type: string;
+  required?: boolean,
 }
 
 interface ApiPlaygroundProps {
-  method: string,
-  path: string,
-  params?: Param[]
+  method: string;
+  path: string;
+  params?: Param[],
 }
 
 export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps) {
@@ -22,7 +22,7 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
   const [response, setResponse] = useState<string | null>(null),
   const [loading, setLoading] = useState(false),
 
-  const handleParamChange = (name: string, value: string) => {
+  const handleParamChange = (name: string, value: string) => {,
     setParamValues((prev) => ({ ...prev, [name]: value }))
   },
 
@@ -41,9 +41,9 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
       if (query) url += `?${query}`
     }
 
-    const options: RequestInit = {
+    const options: RequestInit = {,
       method,
-      headers: {
+      headers: {,
         Authorization: `Bearer ${apiKey}`,
         "Content-Type": "application/json"},
       // Add timeout to prevent hanging
@@ -79,7 +79,7 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
       // Format the response with status information
       const statusInfo = `HTTP ${res.status} ${res.statusText}\n\n`,
       setResponse(statusInfo + responseText)
-    } catch (err: any) {
+    } catch (err: any) {,
       let errorMessage = 'Request failed',
       
       if (err.name === 'AbortError') {
@@ -90,7 +90,7 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
         errorMessage = err.message || 'Unknown error occurred'
       }
       
-      setResponse(`Error: ${errorMessage}\n\nAttempted URL: ${url}\n\nTroubleshooting: \n- Ensure the API endpoint exists\n- Check CORS configuration\n- Verify API key is valid\n- Check network connectivity`)
+      setResponse(`Error: ${errorMessage}\n\nAttempted URL: ${url}\n\nTroubleshooting: \n- Ensure the API endpoint exists\n- Check CORS configuration\n- Verify API key is valid\n- Check network connectivity`),
     } finally {
       setLoading(false)
     }
@@ -124,5 +124,5 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
     </div>
   )
 }
-
-export default ApiPlayground,
+;
+export default ApiPlayground;

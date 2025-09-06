@@ -1,23 +1,23 @@
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Badge } from "@/components/ui/badge",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
 import { Crown, Medal, Trophy } from 'lucide-react'
 
 interface LeaderboardEntry {
-  id: string,
-  rank: number,
-  name: string,
+  id: string;
+  rank: number;
+  name: string;
   avatar?: string,
-  referrals: number,
-  earnings: number,
-  badges: string[]
+  referrals: number;
+  earnings: number;
+  badges: string[],
 }
 
 export function PartnerLeaderboard() {
   // Placeholder data - would come from API in real implementation
   const leaderboard: LeaderboardEntry[] = [
-    {
+    {,
       id: "1",
       rank: 1,
       name: "AI Tech Guru",
@@ -33,7 +33,7 @@ export function PartnerLeaderboard() {
       avatar: "",
       referrals: 145,
       earnings: 3625,
-      badges: ["silver"]
+      badges: ["silver"],
     },
     {
       id: "3",
@@ -42,7 +42,7 @@ export function PartnerLeaderboard() {
       avatar: "",
       referrals: 124,
       earnings: 3100,
-      badges: ["bronze"]
+      badges: ["bronze"],
     },
     {
       id: "4",
@@ -51,7 +51,7 @@ export function PartnerLeaderboard() {
       avatar: "",
       referrals: 98,
       earnings: 2450,
-      badges: []
+      badges: [],
     },
     {
       id: "5",
@@ -60,14 +60,14 @@ export function PartnerLeaderboard() {
       avatar: "",
       referrals: 87,
       earnings: 2175,
-      badges: ["newcomer"]
+      badges: ["newcomer"],
     }
   ],
   
   // Function to render rank badge
   const renderRankBadge = (rank: number) => {
     switch(rank) {
-      case 1:
+      case 1:,
         return <Trophy className="h-5 w-5 text-yellow-500" />,
       case 2:
         return <Medal className="h-5 w-5 text-gray-400" />,
@@ -203,3 +203,4 @@ export function PartnerLeaderboard() {
     </div>
   )
 }
+;

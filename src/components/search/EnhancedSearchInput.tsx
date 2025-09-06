@@ -1,24 +1,22 @@
-import React, { useState, useEffect, useRef, useMemo } from "react",
-import { useTranslation } from "react-i18next",
+import React, { useState, useEffect, useRef, useMemo } from "react";
+import { useTranslation } from "react-i18next";
 import { Search, X } from 'lucide-react'
-import { Input } from "@/components/ui/input",
-import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions",
-import { SearchSuggestion } from "@/types/search",
-import { useDebounce } from "@/hooks/useDebounce",
-import { useRouter } from "next/router",
-import { slugify } from "@/lib/slugify",
-import { debounce } from "lodash",
-import { logInfo, logWarn } from '@/utils/productionLogger',
-
-
+import { Input } from "@/components/ui/input";
+import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions";
+import { SearchSuggestion } from "@/types/search";
+import { useDebounce } from "@/hooks/useDebounce";
+import { useRouter } from "next/router";
+import { slugify } from "@/lib/slugify";
+import { debounce } from "lodash";
+import { logInfo, logWarn } from '@/utils/productionLogger';
 interface EnhancedSearchInputProps {
-  value: string,
-  onChange: (value: string) => void,
+  value: string;
+  onChange: (value: string) => void;
   /**
    * Optional callback when a suggestion is selected. This allows parent
    * components to perform actions such as navigation.
    */
-  onSelectSuggestion?: (suggestion: SearchSuggestion) => void,
+  onSelectSuggestion?: (suggestion: SearchSuggestion) => void;
   placeholder?: string,
   /**
    * Optional list of fallback suggestions (e.g. recent searches).
@@ -50,7 +48,7 @@ export function EnhancedSearchInput({
   const debouncedFetchSuggestions = useMemo(
     () =>
       debounce(async (query: string) => {
-        if (!query.trim()) {
+        if (!query.trim()) {,
           setApiSuggestions([]),
           return
         }
@@ -58,7 +56,7 @@ export function EnhancedSearchInput({
         setLoading(true),
         try {
           const response = await fetch(`/api/search/suggest?q=${encodeURIComponent(query)}`, {
-            signal: AbortSignal.timeout(5000) // 5 second timeout
+            signal: AbortSignal.timeout(5000) // 5 second timeout,
           }),
           
           if (response.ok) {
@@ -95,7 +93,7 @@ export function EnhancedSearchInput({
 
     const controller = new AbortController(),
     fetch(`/api/search/suggest?q=${encodeURIComponent(debounced)}`, {
-      signal: controller.signal
+      signal: controller.signal,
     })
       .then(res => {
         if (!res.ok) throw new Error('Failed to fetch suggestions'),
@@ -117,7 +115,7 @@ export function EnhancedSearchInput({
   // Handle clicks outside the component to close suggestions
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
-      if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
+      if (containerRef.current && !containerRef.current.contains(event.target as Node)) {,
         setIsFocused(false),
         // setHighlightedIndex(-1), // Already handled in onBlur generally
       }
@@ -129,7 +127,7 @@ export function EnhancedSearchInput({
 
   const router = useRouter(),
 
-  const handleSelectSuggestion = (suggestionObj: SearchSuggestion) => {
+  const handleSelectSuggestion = (suggestionObj: SearchSuggestion) => {,
     logInfo('EnhancedSearchInput handleSelectSuggestion called:', { data: suggestionObj }),
     onChange(suggestionObj.text),
     if (onSelectSuggestion) {
@@ -139,11 +137,11 @@ export function EnhancedSearchInput({
       // Provide a sensible default navigation if the parent did not supply a handler
       logWarn('onSelectSuggestion callback not provided'),
       if (suggestionObj.id) {
-        router.push(`/marketplace/listing/${suggestionObj.id}`)
+        router.push(`/marketplace/listing/${suggestionObj.id}`);
       } else if (suggestionObj.type === 'doc' && suggestionObj.slug?.startsWith('/')) {
-        router.push(suggestionObj.slug)
+        router.push(suggestionObj.slug);
       } else if (suggestionObj.type === 'blog' && suggestionObj.slug) {
-        router.push(`/blog/${suggestionObj.slug}`)
+        router.push(`/blog/${suggestionObj.slug}`);
       } else {
         router.push(`/search/${suggestionObj.slug || slugify(suggestionObj.text)}`)
       }
@@ -156,7 +154,7 @@ export function EnhancedSearchInput({
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     switch (e.key) {
       case 'ArrowDown':
-        if (isFocused && filteredSuggestions.length > 0) {
+        if (isFocused && filteredSuggestions.length > 0) {,
           e.preventDefault(),
           setHighlightedIndex(prev => (prev + 1) % filteredSuggestions.length)
         }
@@ -181,7 +179,7 @@ export function EnhancedSearchInput({
           inputRef.current?.blur()
         } else {
           // Prevent empty form submission
-          e.preventDefault()
+          e.preventDefault();
         }
         break,
       case 'Escape':
@@ -241,13 +239,13 @@ export function EnhancedSearchInput({
           onKeyDown={handleKeyDown}
           aria-label={t('general.search')}
           className="pl-10 bg-zion-blue border border-zion-blue-light text-gray-800 placeholder:text-zion-slate h-auto py-0 min-w-0"
-          aria-autocomplete="list"
+          aria-autocomplete="list",
           aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
           autoComplete="off"
         />
         {value && (
           <button
-            className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"
+            className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white",
             onClick={() => onChange('')}
             aria-label="Clear search"
           >
@@ -267,3 +265,4 @@ export function EnhancedSearchInput({
     </div>
   )
 }
+;

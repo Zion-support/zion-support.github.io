@@ -1,24 +1,24 @@
-import React, { useState } from 'react',
-import { logDebug, logErrorToProduction } from '@/utils/productionLogger',
-import { useRouter } from 'next/router',
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { ProductListing } from "@/types/listings",
+import React, { useState } from 'react';
+import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
+import { useRouter } from 'next/router';
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { ProductListing } from "@/types/listings";
 import { DollarSign } from 'lucide-react'
-import { RatingStars } from "@/components/RatingStars",
-import { FavoriteButton } from "@/components/FavoriteButton",
-import { useDispatch } from 'react-redux',
-import type { AppDispatch } from '@/store',
-import { addItem } from '@/store/cartSlice',
-import { toast } from '@/hooks/use-toast',
-import { useCurrency } from '@/hooks/useCurrency',
+import { RatingStars } from "@/components/RatingStars";
+import { FavoriteButton } from "@/components/FavoriteButton";
+import { useDispatch } from 'react-redux';
+import type { AppDispatch } from '@/store';
+import { addItem } from '@/store/cartSlice';
+import { toast } from '@/hooks/use-toast';
+import { useCurrency } from '@/hooks/useCurrency';
 import Image from 'next/image', // Import next/image
 
 interface ProductListingCardProps {
-  listing: ProductListing,
+  listing: ProductListing;
   view?: 'grid' | 'list',
-  onRequestQuote?: (id: string) => void,
-  detailBasePath?: string
+  onRequestQuote?: (id: string) => void;
+  detailBasePath?: string,
 }
 
 const ProductListingCardComponent = ({
@@ -87,7 +87,7 @@ const ProductListingCardComponent = ({
       return
     }
     
-    router.push(`${detailBasePath}/${listing.id}`)
+    router.push(`${detailBasePath}/${listing.id}`);
   },
 
   const dispatch = useDispatch<AppDispatch>(),
@@ -98,20 +98,19 @@ const ProductListingCardComponent = ({
       addItem({ id: listing.id, title: listing.title, price: listing.price ?? 0 })
     ),
     toast.success(`1× ${listing.title} added`, {
-      action: {
-        label: 'View Cart',
-        onClick: () => router.push('/cart')}}),
+      action: {,
+        label: 'View Cart', onClick: () => router.push('/cart')}}),
     setLoading(false)
   },
   
-  const handleRequestQuote = (e: React.MouseEvent) => {
+  const handleRequestQuote = (e: React.MouseEvent) => {,
     e.preventDefault(),
     e.stopPropagation(),
     
     if (onRequestQuote) {
       onRequestQuote(listing.id)
     } else {
-      router.push(`/request-quote?listing=${listing.id}`)
+      router.push(`/request-quote?listing=${listing.id}`);
     }
   },
   
@@ -120,10 +119,10 @@ const ProductListingCardComponent = ({
   return (
     <div
       data-testid="equipment-link"
-      className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`}
+      className={`bg-card/70 backdrop-blur-md border border-primary/10 sm: border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`}
       onClick={handleViewListing}
       tabIndex={0}
-      role="button"
+      role="button",
       onKeyDown={(e) => {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault(),
@@ -191,7 +190,7 @@ const ProductListingCardComponent = ({
                 {listing.uspHeadline}
               </p>
             )}
-            <h3 className="font-semibold text-foreground mb-2 hover:text-primary transition-colors text-[clamp(1rem,2.5vw,1.125rem)]">
+            <h3 className="font-semibold text-foreground mb-2 hover: text-primary transition-colors text-[clamp(1rem, 2.5vw,1.125rem)]">
               {listing.title}
             </h3>
           </div>
@@ -219,7 +218,7 @@ const ProductListingCardComponent = ({
           <div className="text-sm font-medium">
             {listing.price !== null ? (
               <div className="flex items-center text-primary">
-                <DollarSign className="h-4 w-4 mr-1" />
+                <DollarSign className="h-4 w-4 mr-1" />,
                 {getPrice()}
               </div>
             ) : (
@@ -233,7 +232,7 @@ const ProductListingCardComponent = ({
             <Button
               size="sm"
               className="bg-primary hover: bg-primary/80 text-primary-foreground"
-              onClick={(e) => {
+              onClick={(e) => {,
                 e.stopPropagation(), // Prevent card click event
                 addToCart()
               }}
@@ -248,7 +247,7 @@ const ProductListingCardComponent = ({
                   Loading...
                 </>
               ) : (
-                "Add to Cart"
+                "Add to Cart",
               )}
             </Button>
             
@@ -256,13 +255,13 @@ const ProductListingCardComponent = ({
               size="sm"
               variant="default"
               className="bg-green-600 hover: bg-green-700 text-white"
-              onClick={(e) => {
+              onClick={(e) => {,
                 e.stopPropagation(), // Prevent card click event
                 // Add to cart first, then redirect to checkout
                 dispatch(
                   addItem({ id: listing.id, title: listing.title, price: listing.price ?? 0 })
                 ),
-                router.push('/checkout')
+                router.push('/checkout');
               }}
               disabled={loading}
             >
@@ -277,7 +276,7 @@ const ProductListingCardComponent = ({
                 className="border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground"
               >
                 Request Quote
-              </Button>
+              </Button>,
             )}
           </div>
         </div>
@@ -285,6 +284,6 @@ const ProductListingCardComponent = ({
     </div>
   )
 },
-
-export const ProductListingCard = React.memo(ProductListingCardComponent),
+;
+export const ProductListingCard = React.memo(ProductListingCardComponent);
 ProductListingCard.displayName = 'ProductListingCard',

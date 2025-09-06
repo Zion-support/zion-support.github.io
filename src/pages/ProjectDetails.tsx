@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from "react",
-import Link from 'next/link',
-import { useRouter } from 'next/router',
-import { format } from "date-fns",
-import { useAuth } from "@/hooks/useAuth",
-import { useProjects } from "@/hooks/useProjects",
-import { SEO } from "@/components/SEO",
-import { ProtectedRoute } from "@/components/ProtectedRoute",
-import { Project, ProjectStatus } from "@/types/projects",
-import { Button } from "@/components/ui/button",
-import {logErrorToProduction} from '@/utils/productionLogger',
+import React, { useState, useEffect } from "react";
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { format } from "date-fns";
+import { useAuth } from "@/hooks/useAuth";
+import { useProjects } from "@/hooks/useProjects";
+import { SEO } from "@/components/SEO";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { Project, ProjectStatus } from "@/types/projects";
+import { Button } from "@/components/ui/button";
+import {logErrorToProduction} from '@/utils/productionLogger';
 import {
   Card,
   CardContent,
@@ -31,12 +31,12 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger} from "@/components/ui/alert-dialog",
-import { Avatar } from "@/components/ui/avatar",
-import { Badge } from "@/components/ui/badge",
-import { Textarea } from "@/components/ui/textarea",
-import { toast } from "@/hooks/use-toast",
-import { supabase } from "@/integrations/supabase/client",
-import { ProjectReviewSection } from "@/components/projects/reviews/ProjectReviewSection",
+import { Avatar } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
+import { Textarea } from "@/components/ui/textarea";
+import { toast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
+import { ProjectReviewSection } from "@/components/projects/reviews/ProjectReviewSection";
 import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle } from 'lucide-react'
 
 function ProjectDetailsContent() {
@@ -71,7 +71,7 @@ function ProjectDetailsContent() {
           title: "Project not found",
           description: "The requested project could not be found.",
           variant: "destructive"}),
-        router.push("/dashboard")
+        router.push("/dashboard");
       }
       
       setIsLoading(false)
@@ -81,7 +81,7 @@ function ProjectDetailsContent() {
   }, [projectId]),
   
   const fetchProjectNotes = async (projectId: string) => {
-    try {
+    try {,
       const { data, error } = await supabase
         .from("project_notes")
         .select(`
@@ -94,7 +94,7 @@ function ProjectDetailsContent() {
       if (error) throw error,
       
       setNotes(data || [])
-    } catch (err: any) {
+    } catch (err: any) {,
       logErrorToProduction('Error fetching project notes:', { data: err }),
       toast({
         title: "Failed to load notes",
@@ -126,7 +126,7 @@ function ProjectDetailsContent() {
       toast({
         title: "Note added",
         description: "Your note has been added to the project."})
-    } catch (err: any) {
+    } catch (err: any) {,
       logErrorToProduction('Error adding note:', { data: err }),
       toast({
         title: "Failed to add note",
@@ -137,7 +137,7 @@ function ProjectDetailsContent() {
     }
   },
   
-  const handleStatusChange = async (newStatus: ProjectStatus) => {
+  const handleStatusChange = async (newStatus: ProjectStatus) => {,
     if (!project) return,
     
     const success = await updateProjectStatus(project.id, newStatus),
@@ -157,7 +157,7 @@ function ProjectDetailsContent() {
   },
   
   const getStatusBadge = (status: ProjectStatus) => {
-    switch (status) {
+    switch (status) {,
       case "offer_sent": return <Badge variant="outline">Offer Sent</Badge>,
       case "offer_accepted":
         return <Badge className="bg-green-100 text-green-800">Offer Accepted</Badge>,
@@ -228,7 +228,7 @@ function ProjectDetailsContent() {
       <main className="container mx-auto px-4 py-8">
         <div className="mb-6">
           <div className="flex flex-col md:flex-row justify-between md:items-center gap-4 mb-2">
-            <div>
+            <div>,
               <h1 className="text-3xl font-bold">{project.job?.title || "Project"}</h1>
               <div className="flex items-center gap-2 mt-1">
                 {getStatusBadge(project.status)}
@@ -325,7 +325,7 @@ function ProjectDetailsContent() {
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div className="order-2 lg:order-1 lg:col-span-2">
+          <div className="order-2 lg:order-1 lg:col-span-2">,
             <Tabs defaultValue="details" value={activeTab} onValueChange={setActiveTab}>
               <TabsList className="mb-6">
                 <TabsTrigger value="details">Project Details</TabsTrigger>
@@ -526,7 +526,7 @@ function ProjectDetailsContent() {
                   <div className="flex items-start gap-4">
                     <Avatar className="h-10 w-10">
                       {project.talent_profile?.profile_picture_url ? (
-                        <img
+                        <img,
                           src={project.talent_profile.profile_picture_url}
                           alt={project.talent_profile.full_name}
                           loading="lazy"
@@ -596,20 +596,20 @@ function ProjectDetailsContent() {
               <CardContent>
                 <div className="space-y-2">
                   <div className="flex justify-between items-center">
-                    <span className="text-sm font-medium">Current Status:</span>
+                    <span className="text-sm font-medium">Current Status:</span>,
                     <div>{getStatusBadge(project.status)}</div>
                   </div>
                   
                   <div className="flex justify-between items-center">
                     <span className="text-sm font-medium">Creation Date:</span>
-                    <span className="text-sm">
+                    <span className="text-sm">,
                       {format(new Date(project.created_at), "PPP")}
                     </span>
                   </div>
                   
                   <div className="flex justify-between items-center">
                     <span className="text-sm font-medium">Start Date:</span>
-                    <span className="text-sm">
+                    <span className="text-sm">,
                       {format(new Date(project.start_date), "PPP")}
                     </span>
                   </div>
@@ -670,3 +670,4 @@ export default function ProjectDetails() {
     </ProtectedRoute>
   )
 }
+;

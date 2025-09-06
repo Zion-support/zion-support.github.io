@@ -1,7 +1,6 @@
-import { useState, useEffect } from 'react',
+import { useState, useEffect } from 'react';
 import { WifiOff, Wifi } from 'lucide-react'
-import { Alert, AlertDescription } from '@/components/ui/alert',
-
+import { Alert, AlertDescription } from '@/components/ui/alert';
 export const OfflineIndicator = () => {
   const [isOnline, setIsOnline] = useState(true),
   const [showOfflineAlert, setShowOfflineAlert] = useState(false),
@@ -28,7 +27,7 @@ export const OfflineIndicator = () => {
 
     return () => {
       window.removeEventListener('online', updateOnlineStatus),
-      window.removeEventListener('offline', updateOnlineStatus)
+      window.removeEventListener('offline', updateOnlineStatus);
     }
   }, [showOfflineAlert]),
 
@@ -54,4 +53,4 @@ export const OfflineIndicator = () => {
       </Alert>
     </div>
   )
-}, 
+}, ;

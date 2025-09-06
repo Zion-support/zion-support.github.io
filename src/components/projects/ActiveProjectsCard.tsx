@@ -1,12 +1,12 @@
 
-import { useEffect, useState } from "react",
-import Link from "next/link",
+import { useEffect, useState } from "react";
+import Link from "next/link";
 import { BriefcaseIcon, Clock } from 'lucide-react'
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { useProjects } from "@/hooks/useProjects",
-import { Project } from "@/types/projects",
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { useProjects } from "@/hooks/useProjects";
+import { Project } from "@/types/projects";
 export function ActiveProjectsCard() {
   const { projects, isLoading } = useProjects(),
   const [activeProjects, setActiveProjects] = useState<Project[]>([]),
@@ -102,3 +102,4 @@ export function ActiveProjectsCard() {
     </Card>
   )
 }
+;

@@ -1,9 +1,9 @@
-import React, { useState } from "react",
-import { useForm, ControllerRenderProps } from "react-hook-form",
-import { zodResolver } from "@hookform/resolvers/zod",
-import { z } from "zod",
-import { Button } from "@/components/ui/button",
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
+import React, { useState } from "react";
+import { useForm, ControllerRenderProps } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { Button } from "@/components/ui/button";
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 import {
   Form,
   FormControl,
@@ -11,31 +11,31 @@ import {
   FormItem,
   FormLabel,
   FormMessage} from "@/components/ui/form",
-import { Textarea } from "@/components/ui/textarea",
+import { Textarea } from "@/components/ui/textarea";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue} from "@/components/ui/select",
-import { Input } from "@/components/ui/input",
-import { disputeReasonLabels } from "@/types/disputes",
-import { useDisputes } from "@/hooks/useDisputes",
-import { toast } from "sonner",
+import { Input } from "@/components/ui/input";
+import { disputeReasonLabels } from "@/types/disputes";
+import { useDisputes } from "@/hooks/useDisputes";
+import { toast } from "sonner";
 import { FileText } from 'lucide-react'
 
 const formSchema = z.object({
-  reason_code: z.string()
+  reason_code: z.string(),
     .min(1, { message: "Please select a reason for the dispute" }),
-  description: z.string()
+  description: z.string(),
     .min(20, { message: "Description must be at least 20 characters" }),
   attachments: z.array(z.any()).optional()}),
 
-type DisputeFormProps = {
-  projectId: string,
+type DisputeFormProps = {;
+  projectId: string;
   milestoneId?: string,
-  onDisputeCreated?: (disputeId: string) => void,
-  onCancel?: () => void
+  onDisputeCreated?: (disputeId: string) => void;
+  onCancel?: () => void,
 },
 
 export function DisputeForm({ 
@@ -50,20 +50,20 @@ export function DisputeForm({
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
-    defaultValues: {
+    defaultValues: {,
       reason_code: "",
       description: "",
       attachments: []}}),
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files) {
+    if (e.target.files) {,
       const newFiles = Array.from(e.target.files),
       setFiles(prev => [...prev, ...newFiles]),
       form.setValue("attachments", [...files, ...newFiles])
     }
   },
 
-  const removeFile = (index: number) => {
+  const removeFile = (index: number) => {,
     const newFiles = [...files],
     newFiles.splice(index, 1),
     setFiles(newFiles),
@@ -71,7 +71,7 @@ export function DisputeForm({
   },
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
-    try {
+    try {,
       setIsSubmitting(true),
       
       const dispute = await createDispute({
@@ -83,7 +83,7 @@ export function DisputeForm({
       if (dispute && dispute.id) {
         // Future enhancement: Upload attachments
         // For now we just log the files that would be uploaded
-        if (files.length > 0) {
+        if (files.length > 0) {,
           // logInfo(`Would upload ${files.length} files for dispute ${dispute.id}`)
         }
         
@@ -95,7 +95,7 @@ export function DisputeForm({
       }
     } catch (error) {
       logErrorToProduction('Error submitting dispute:', { data: error }),
-      toast.error("Failed to submit dispute. Please try again.")
+      toast.error("Failed to submit dispute. Please try again.");
     } finally {
       setIsSubmitting(false)
     }
@@ -164,8 +164,8 @@ export function DisputeForm({
                 
                 {files.length > 0 && (
                   <div className="space-y-2">
-                    <p className="text-sm font-medium">Selected files:</p>
-                    <ul className="space-y-1">
+                    <p className="text-sm font-medium">Selected files: </p>,
+                    <ul className="space-y-1">,
                       {files.map((file, index) => (
                         <li key={index} className="flex items-center justify-between text-sm bg-muted/30 p-2 rounded">
                           <span>{file.name} ({(file.size / 1024).toFixed(1)} KB)</span>
@@ -201,4 +201,4 @@ export function DisputeForm({
       </Form>
     </div>
   )
-}
+};

@@ -1,10 +1,9 @@
 
-import { Badge } from "@/components/ui/badge",
+import { Badge } from "@/components/ui/badge";
 import { ShieldAlert } from 'lucide-react'
-import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip",
-
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 interface DisputeStatusBadgeProps {
-  status: 'open' | 'under_review' | 'resolved' | 'closed'
+  status: 'open' | 'under_review' | 'resolved' | 'closed',
 }
 
 export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
@@ -25,7 +24,7 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
       message = "This dispute has been closed",
       break,
     default:
-      break
+      break,
   }
   
   return (
@@ -42,3 +41,4 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
     </Tooltip>
   )
 }
+;

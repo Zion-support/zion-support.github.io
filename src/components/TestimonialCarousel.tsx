@@ -5,15 +5,14 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious} from "@/components/ui/carousel",
-import { Card, CardContent, CardFooter } from "@/components/ui/card",
-import { Avatar } from "@/components/ui/avatar",
-import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Avatar } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
 import { Quote } from 'lucide-react'
-import Link from "next/link",
-import Image from "next/image",
-import { CASE_STUDIES } from "@/data/case-studies",
-const testimonials = CASE_STUDIES,
-
+import Link from "next/link";
+import Image from "next/image";
+import { CASE_STUDIES } from "@/data/case-studies";
+const testimonials = CASE_STUDIES;
 export function TestimonialCarousel() {
   return (
     <section className="py-20 bg-zion-blue-dark">
@@ -26,20 +25,19 @@ export function TestimonialCarousel() {
         </div>
         
         <div className="max-w-5xl mx-auto px-8">
-          <Carousel
-            opts={{
-              align: "start",
-              loop: true}}
+          <Carousel,
+            opts={{,
+              align: "start", loop: true}}
             className="w-full"
           >
-            <CarouselContent>
+            <CarouselContent>,
               {testimonials.map((testimonial, index) => (
                 <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">
                   <Card className="bg-zion-blue-light border border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300 flex flex-col">
                     <CardContent className="p-8 flex flex-col md:flex-row gap-6 flex-1">
                       <div className="flex-shrink-0 flex flex-col items-center">
                         <Avatar className="h-20 w-20 border-2 border-zion-cyan mb-3">
-                          <Image
+                          <Image,
                             src={testimonial.avatar}
                             alt={testimonial.author}
                             width={80}
@@ -47,7 +45,7 @@ export function TestimonialCarousel() {
                             loading="lazy"
                           />
                         </Avatar>
-                        <div className="text-center md:text-left">
+                        <div className="text-center md:text-left">,
                           <p className="font-bold text-zion-cyan">{testimonial.author}</p>
                           <p className="text-zion-slate-light text-sm">{testimonial.role}</p>
                         </div>
@@ -85,5 +83,5 @@ export function TestimonialCarousel() {
         </div>
       </div>
     </section>
-  )
+  ),
 }

@@ -1,12 +1,12 @@
 
-import { useState } from "react",
-import { zodResolver } from "@hookform/resolvers/zod",
-import { useForm } from "react-hook-form",
-import { z } from "zod",
+import { useState } from "react";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
 import { User, Mail, AtSign, GraduationCap } from 'lucide-react'
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import {
   Form,
   FormControl,
@@ -22,15 +22,15 @@ const profileSchema = z.object({
 
 type ProfileFormValues = z.infer<typeof profileSchema>,
 
-interface ProfileSetupProps {
-  onComplete: (data: ProfileFormValues) => void,
-  userType: string
+interface ProfileSetupProps {;
+  onComplete: (data: ProfileFormValues) => void;
+  userType: string,
 }
 
 export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
   const form = useForm<ProfileFormValues>({
     resolver: zodResolver(profileSchema),
-    defaultValues: {
+    defaultValues: {,
       displayName: "",
       bio: "",
       headline: ""}}),
@@ -43,7 +43,7 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
       case "client":
         return "Client",
       default:
-        return "User"
+        return "User",
     }
   },
 
@@ -68,7 +68,7 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
                   <div className="relative">
                     <Input
                       placeholder="Your full name"
-                      className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
+                      className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple",
                       {...field}
                     />
                     <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
@@ -93,7 +93,7 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
                         userType === "talent" ? "Senior Motion Designer specialized in 3D Animation" :
                         "Creative Director at XYZ Studios"
                       }`}
-                      className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
+                      className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple",
                       {...field}
                     />
                     <GraduationCap className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
@@ -117,7 +117,7 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
                       userType === "talent" ? "skills and experience" :
                       "business and needs"
                     }`}
-                    className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple min-h-[120px]"
+                    className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple min-h-[120px]",
                     {...field}
                   />
                 </FormControl>
@@ -135,5 +135,6 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
         </form>
       </Form>
     </div>
-  )
+  ),
 }
+;

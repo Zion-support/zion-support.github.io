@@ -56,9 +56,9 @@ const BreadcrumbLink = React.forwardRef<
   const Comp = asChild ? Slot : "a"
  
   return (
-    <Comp
+    <Comp,
       ref={ref}
-      className={cn("transition-colors hover:text-zion-cyan", className)}
+      className={cn("transition-colors hover: text-zion-cyan", className)}
       {...props}
     />
   )
@@ -103,3 +103,4 @@ export {
   BreadcrumbLink,
   BreadcrumbSeparator,
   BreadcrumbEllipsis}
+;

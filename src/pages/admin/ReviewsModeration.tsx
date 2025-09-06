@@ -1,13 +1,13 @@
 
-import { SEO } from "@/components/SEO",
-import { ReviewsModerationTable } from "@/components/admin/reviews/ReviewsModerationTable",
-import { ProtectedRoute } from "@/components/ProtectedRoute",
-import { useState, useEffect } from "react",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { SEO } from "@/components/SEO";
+import { ReviewsModerationTable } from "@/components/admin/reviews/ReviewsModerationTable";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { useState, useEffect } from "react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Star, AlertTriangle } from 'lucide-react'
-import { toast } from "@/components/ui/use-toast",
-import { logErrorToProduction } from '@/utils/productionLogger',
+import { toast } from "@/components/ui/use-toast";
+import { logErrorToProduction } from '@/utils/productionLogger';
 function ReviewsModerationContent() {
   const [activeTab, setActiveTab] = useState("pending"),
   const [reviews, setReviews] = useState([]),
@@ -102,3 +102,4 @@ export default function ReviewsModeration() {
     </ProtectedRoute>
   )
 }
+;

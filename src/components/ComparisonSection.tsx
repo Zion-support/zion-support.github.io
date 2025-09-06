@@ -1,13 +1,12 @@
 
-import { GradientHeading } from "./GradientHeading",
-import { Button } from "./ui/button",
+import { GradientHeading } from "./GradientHeading";
+import { Button } from "./ui/button";
 import { CheckCircle2 } from 'lucide-react'
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "./ui/table",
-
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "./ui/table";
 export function ComparisonSection() {
   return (
     <section className="py-20 bg-zion-blue-dark">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 sm: px-6 lg:px-8">
         <div className="text-center mb-12">
           <GradientHeading>Compare & Save</GradientHeading>
           <p className="mt-4 text-zion-slate-light text-xl max-w-2xl mx-auto">
@@ -26,13 +25,9 @@ export function ComparisonSection() {
                   <TableHead className="text-white text-center">Savings</TableHead>
                 </TableRow>
               </TableHeader>
-              <TableBody>
-                {[
-                  { service: "Server Hosting", traditional: "$1,200/mo", zion: "$650/mo", savings: "45%" },
-                  { service: "IT Equipment", traditional: "Full Purchase", zion: "Flexible Rental", savings: "60%" },
-                  { service: "24/7 Support", traditional: "$2,500/mo", zion: "$950/mo", savings: "62%" },
-                  { service: "Storage Solutions", traditional: "$800/mo", zion: "$350/mo", savings: "56%" },
-                  { service: "Marketplace Listings", traditional: "$99/mo", zion: "Free", savings: "100%" }].map((item, index) => (
+              <TableBody>,
+                {[,
+                  { service: "Server Hosting", traditional: "$1, 200/mo", zion: "$650/mo", savings: "45%" }, { service: "IT Equipment", traditional: "Full Purchase", zion: "Flexible Rental", savings: "60%" }, { service: "24/7 Support", traditional: "$2, 500/mo", zion: "$950/mo", savings: "62%" }, { service: "Storage Solutions", traditional: "$800/mo", zion: "$350/mo", savings: "56%" }, { service: "Marketplace Listings", traditional: "$99/mo", zion: "Free", savings: "100%" }].map((item, index) => (
                   <TableRow key={index} className="border-b border-zion-blue">
                     <TableCell className="font-medium text-white">{item.service}</TableCell>
                     <TableCell className="text-center text-zion-slate-light">{item.traditional}</TableCell>
@@ -61,5 +56,5 @@ export function ComparisonSection() {
         </div>
       </div>
     </section>
-  )
+  ),
 }

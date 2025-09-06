@@ -1,24 +1,24 @@
-import React, { useState, useEffect } from 'react',
+import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router', // Changed from useParams, useNavigate
-import { Header } from '@/components/Header',
-import { Button } from '@/components/ui/button',
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
-import { Badge } from '@/components/ui/badge',
+import { Header } from '@/components/Header';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 import { Calendar, Clock, DollarSign, Tag, Users, Briefcase } from 'lucide-react'
-import { formatDistanceToNow } from 'date-fns',
-import { toast } from 'sonner',
-import { useAuth } from '@/hooks/useAuth',
-import useJobDetails from '@/hooks/useJobDetails',
-import { ApplyToJobModal } from '@/components/messaging/job-application',
-import { SEO } from '@/components/SEO',
-import { useWhitelabel } from '@/context/WhitelabelContext',
-import { JobDetailsSkeleton } from '@/components/jobs',
+import { formatDistanceToNow } from 'date-fns';
+import { toast } from 'sonner';
+import { useAuth } from '@/hooks/useAuth';
+import useJobDetails from '@/hooks/useJobDetails';
+import { ApplyToJobModal } from '@/components/messaging/job-application';
+import { SEO } from '@/components/SEO';
+import { useWhitelabel } from '@/context/WhitelabelContext';
+import { JobDetailsSkeleton } from '@/components/jobs';
 interface Job {
-  id: string,
-  title: string,
-  description: string,
+  id: string;
+  title: string;
+  description: string;
   company_name?: string,
-  budget: { min: number, max: number },
+  budget: { min: number, max: number };,
   client_id: string,
   skills?: string[],
   created_at: string,
@@ -37,7 +37,7 @@ export default function JobDetails() {
   
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),
 
-  const formatBudget = (budget: any) => {
+  const formatBudget = (budget: any) => {,
     if (!budget) return "Not specified",
     return `$${budget.min} - $${budget.max}`
   },
@@ -74,7 +74,7 @@ export default function JobDetails() {
     setIsApplyModalOpen(true)
   },
 
-  const handleApplySuccess = async (appliedJobId: string) => {
+  const handleApplySuccess = async (appliedJobId: string) => {,
     toast.success("Application submitted successfully!"),
     setIsApplyModalOpen(false)
   },
@@ -85,7 +85,7 @@ export default function JobDetails() {
   return (
     <>
       <SEO 
-        title={`${job.title} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
+        title={`${job.title} - ${isWhitelabel ? brandName: 'Zion AI Marketplace'}`}
         description={job.description.substring(0, 160)}
       />
       <Header />
@@ -105,7 +105,7 @@ export default function JobDetails() {
             <Card>
               <CardHeader>
                 <div className="flex justify-between items-start">
-                  <div>
+                  <div>,
                     <CardTitle className="text-2xl mb-2">{job.title}</CardTitle>
                     <div className="flex items-center text-muted-foreground">
                       <Calendar className="mr-2 h-4 w-4" />
@@ -126,7 +126,7 @@ export default function JobDetails() {
                 <div>
                   <h3 className="font-semibold text-lg mb-3">Required Skills</h3>
                   <div className="flex flex-wrap gap-2">
-                    {job.skills?.map((skill: string, i: number) => (
+                    {job.skills?.map((skill: string, i: number) => (,
                       <Badge key={i} variant="secondary">
                         {skill}
                       </Badge>
@@ -191,12 +191,7 @@ export default function JobDetails() {
       {job && (
         <ApplyToJobModal
           job={{
-            id: job.id,
-            title: job.title,
-            description: job.description,
-            company_name: job.company_name ?? "Company",
-            budget: formatBudget(job.budget),
-            client_id: job.client_id}}
+            id: job.id, title: job.title, description: job.description, company_name: job.company_name ?? "Company", budget: formatBudget(job.budget), client_id: job.client_id}}
           isOpen={isApplyModalOpen}
           onClose={() => setIsApplyModalOpen(false)}
         />
@@ -204,3 +199,4 @@ export default function JobDetails() {
     </>
   )
 }
+;

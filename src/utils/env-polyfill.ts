@@ -7,9 +7,9 @@
 
 // Define safe defaults for environment variables
 const defaultEnv = {
-  NODE_ENV: 'production', // Default to production for safety
-  NEXT_PUBLIC_APP_URL: '',
-  NEXT_PUBLIC_SUPABASE_URL: '',
+  NODE_ENV: 'production', // Default to production for safety;
+  NEXT_PUBLIC_APP_URL: '';
+  NEXT_PUBLIC_SUPABASE_URL: '';
   NEXT_PUBLIC_SUPABASE_ANON_KEY: ''},
 
 // Create a safe process object
@@ -45,10 +45,10 @@ if (typeof (globalThis as any).process === 'undefined') {
 }
 
 // Export a safe environment accessor
-export const safeEnv = {
-  NODE_ENV: (typeof (globalThis as any).process !== 'undefined' && (globalThis as any).process.env?.NODE_ENV) || 'production',
-  NEXT_PUBLIC_APP_URL: (typeof (globalThis as any).process !== 'undefined' && (globalThis as any).process.env?.NEXT_PUBLIC_APP_URL) || '',
-  NEXT_PUBLIC_SUPABASE_URL: (typeof (globalThis as any).process !== 'undefined' && (globalThis as any).process.env?.NEXT_PUBLIC_SUPABASE_URL) || '',
+export const safeEnv = {;
+  NODE_ENV: (typeof (globalThis as any).process !== 'undefined' && (globalThis as any).process.env?.NODE_ENV) || 'production';
+  NEXT_PUBLIC_APP_URL: (typeof (globalThis as any).process !== 'undefined' && (globalThis as any).process.env?.NEXT_PUBLIC_APP_URL) || '';
+  NEXT_PUBLIC_SUPABASE_URL: (typeof (globalThis as any).process !== 'undefined' && (globalThis as any).process.env?.NEXT_PUBLIC_SUPABASE_URL) || '';
   NEXT_PUBLIC_SUPABASE_ANON_KEY: (typeof (globalThis as any).process !== 'undefined' && (globalThis as any).process.env?.NEXT_PUBLIC_SUPABASE_ANON_KEY) || ''} as const,
 
 // Safe environment getter function
@@ -70,7 +70,7 @@ export function isProduction(): boolean {
 }
 
 // Export the polyfilled process object
-export const processEnv = typeof (globalThis as any).process !== 'undefined' ? (globalThis as any).process.env : {
+export const processEnv = typeof (globalThis as any).process !== 'undefined' ? (globalThis as any).process.env : {;
   NODE_ENV: 'production',
   NEXT_PUBLIC_APP_URL: '',
   NEXT_PUBLIC_SUPABASE_URL: '',
@@ -78,4 +78,4 @@ export const processEnv = typeof (globalThis as any).process !== 'undefined' ? (
 
 console.log('✅ Environment polyfill loaded successfully'),
 
-export default safeEnv,
+export default safeEnv;

@@ -1,17 +1,17 @@
-import React, { useMemo } from "react",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { cn } from "@/lib/utils",
-import { format } from "date-fns",
+import React, { useMemo } from "react";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { cn } from "@/lib/utils";
+import { format } from "date-fns";
 // Use the wrapper hook so TypeScript properly infers the return type
 // from the ThemeProvider context
-import { useTheme } from "@/hooks/useTheme",
+import { useTheme } from "@/hooks/useTheme";
 interface ChatMessageProps {
-  message: string,
-  isUser: boolean,
-  timestamp: Date
+  message: string;
+  isUser: boolean;
+  timestamp: Date,
 }
 
-export const ChatMessage: React.FC<ChatMessageProps> = ({
+export const ChatMessage: React.FC<ChatMessageProps> = ({;
   message,
   isUser,
   timestamp}: ChatMessageProps) => {
@@ -39,7 +39,7 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
               alt="Zion Support"
             />
             <AvatarFallback className="bg-zion-purple text-white">Z</AvatarFallback>
-          </>
+          </>,
         )}
       </Avatar>
       
@@ -72,7 +72,7 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
 // characters. This ensures any user-supplied string is rendered harmless
 // before we perform our link replacements below.
 function escapeHtml(unsafe: string): string {
-  return unsafe
+  return unsafe,
     .replace(/&/g, "&amp,")
     .replace(/</g, "&lt,")
     .replace(/>/g, "&gt,")
@@ -80,7 +80,7 @@ function escapeHtml(unsafe: string): string {
     .replace(/'/g, "&#039,")
 }
 
-function formatMessageWithLinks(message: string): string {
+function formatMessageWithLinks(message: string): string {,
   // First, escape any HTML so that user input cannot break out of the intended
   // markup.
   const safeText = escapeHtml(message),
@@ -89,15 +89,16 @@ function formatMessageWithLinks(message: string): string {
   const urlRegex = /(https?:\/\/[^\s]+)/g,
   let formattedMessage = safeText.replace(
     urlRegex,
-    '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>'
+    '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>',
   ),
 
   // Replace help-center references like [Getting Started]
   const helpCenterRegex = /\[([^\]]+)\]/g,
   formattedMessage = formattedMessage.replace(
     helpCenterRegex,
-    '<a href="/help/$1" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>'
+    '<a href="/help/$1" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>',
   ),
 
   return formattedMessage
 }
+;

@@ -1,28 +1,28 @@
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Slider } from "@/components/ui/slider",
-import { Switch } from "@/components/ui/switch",
-import { Input } from "@/components/ui/input",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Slider } from "@/components/ui/slider";
+import { Switch } from "@/components/ui/switch";
+import { Input } from "@/components/ui/input";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { X, Filter } from 'lucide-react'
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet",
-import { Badge } from "@/components/ui/badge",
-import { Label } from "@/components/ui/label",
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet";
+import { Badge } from "@/components/ui/badge";
+import { Label } from "@/components/ui/label";
 interface BrowseFiltersProps {
-  type: "jobs" | "talents"
+  type: "jobs" | "talents",
 }
 
 export function BrowseFilters({ type }: BrowseFiltersProps) {
   const [activeFilters, setActiveFilters] = useState<string[]>([]),
   
   const addFilter = (filter: string) => {
-    if (!activeFilters.includes(filter)) {
+    if (!activeFilters.includes(filter)) {,
       setActiveFilters([...activeFilters, filter])
     }
   },
   
   const removeFilter = (filter: string) => {
-    setActiveFilters(activeFilters.filter(f => f !== filter))
+    setActiveFilters(activeFilters.filter(f => f !== filter)),
   },
   
   return (
@@ -78,7 +78,7 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
                     <div className="space-y-2">
                       <Label>Experience (years)</Label>
                       <Slider
-                        aria-label="Years of experience"
+                        aria-label="Years of experience",
                         defaultValue={[0, 10]}
                         max={20}
                         step={1}
@@ -135,7 +135,7 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
               </div>
               
               <SheetFooter>
-                <Button variant="outline" className="w-full">Reset</Button>
+                <Button variant="outline" className="w-full">Reset</Button>,
                 <Button className="w-full" onClick={() => addFilter("Experience: 3+ years")}>Apply Filters</Button>
               </SheetFooter>
             </SheetContent>
@@ -170,3 +170,4 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
     </div>
   )
 }
+;

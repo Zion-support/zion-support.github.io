@@ -1,14 +1,14 @@
 
-import { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Input } from "@/components/ui/input",
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
 import { Copy, Facebook, Link, Share, Twitter } from 'lucide-react'
 
 interface ReferralLinkProps {
-  referralLink: string,
-  onCopy: () => void,
-  onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void
+  referralLink: string;
+  onCopy: () => void;
+  onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void,
 }
 
 export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {
@@ -48,7 +48,7 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
           {copied && (
             <p className="text-sm text-green-600 dark:text-green-500">
               Copied to clipboard!
-            </p>
+            </p>,
           )}
         </div>
       </CardContent>
@@ -59,7 +59,7 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
             <Button 
               variant="outline" 
               size="sm"
-              className="flex items-center gap-2"
+              className="flex items-center gap-2",
               onClick={() => onShare('twitter')}
             >
               <Twitter className="h-4 w-4" />
@@ -89,3 +89,4 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
     </Card>
   )
 }
+;

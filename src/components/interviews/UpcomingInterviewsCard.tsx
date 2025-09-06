@@ -1,14 +1,14 @@
 
-import React, { useEffect, useState } from "react",
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { useInterviews } from "@/hooks/useInterviews",
-import { Interview } from "@/types/interview",
-import { format, isPast, parseISO } from "date-fns",
-import Link from "next/link",
+import React, { useEffect, useState } from "react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { useInterviews } from "@/hooks/useInterviews";
+import { Interview } from "@/types/interview";
+import { format, isPast, parseISO } from "date-fns";
+import Link from "next/link";
 import { Calendar, Clock, Video } from 'lucide-react'
-import { Avatar } from "@/components/ui/avatar",
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { Avatar } from "@/components/ui/avatar";
+import {logErrorToProduction} from '@/utils/productionLogger';
 export function UpcomingInterviewsCard() {
 
   const { fetchInterviews } = useInterviews(),
@@ -159,3 +159,4 @@ export function UpcomingInterviewsCard() {
     </Card>
   )
 }
+;

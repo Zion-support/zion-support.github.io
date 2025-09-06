@@ -1,21 +1,21 @@
 
-import React from "react",
-import { ClickableBadge } from "@/components/ui/clickable-badge",
-import { Button } from "@/components/ui/button",
+import React from "react";
+import { ClickableBadge } from "@/components/ui/clickable-badge";
+import { Button } from "@/components/ui/button";
 import { X } from 'lucide-react'
 
 interface ActiveFiltersProps {
-  selectedSkills: string[],
-  toggleSkill: (skill: string) => void,
-  selectedAvailability: string[],
-  toggleAvailability: (status: string) => void,
-  selectedRegions: string[],
-  toggleRegion: (region: string) => void,
+  selectedSkills: string[];
+  toggleSkill: (skill: string) => void;
+  selectedAvailability: string[];
+  toggleAvailability: (status: string) => void;
+  selectedRegions: string[];
+  toggleRegion: (region: string) => void;
   priceRange: [number, number],
   setPriceRange: (range: [number, number]) => void,
   experienceRange: [number, number],
   setExperienceRange: (range: [number, number]) => void,
-  clearFilters: () => void
+  clearFilters: () => void,
 }
 
 export function ActiveFilters({
@@ -45,12 +45,12 @@ export function ActiveFilters({
 
   return (
     <div className="mb-6 flex flex-wrap gap-2 items-center">
-      <span className="text-zion-slate-light text-sm">Active filters:</span>
+      <span className="text-zion-slate-light text-sm">Active filters: </span>
       
-      {selectedSkills.map(skill => (
-        <ClickableBadge 
+      {selectedSkills.map(skill => (,
+        <ClickableBadge,
           key={skill}
-          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2",
           onClick={() => toggleSkill(skill)}
         >
           {skill}
@@ -61,7 +61,7 @@ export function ActiveFilters({
       {selectedAvailability.map(status => (
         <ClickableBadge 
           key={status}
-          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2",
           onClick={() => toggleAvailability(status)}
         >
           {status === 'full-time' ? 'Full-time' :
@@ -74,7 +74,7 @@ export function ActiveFilters({
       {selectedRegions.map(region => (
         <ClickableBadge 
           key={region}
-          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2",
           onClick={() => toggleRegion(region)}
         >
           {region}
@@ -84,7 +84,7 @@ export function ActiveFilters({
       
       {(priceRange[0] !== 50 || priceRange[1] !== 200) && (
         <ClickableBadge 
-          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2",
           onClick={() => setPriceRange([50, 200])}
         >
           ${priceRange[0]}-${priceRange[1]}/hr
@@ -94,7 +94,7 @@ export function ActiveFilters({
       
       {(experienceRange[0] !== 0 || experienceRange[1] !== 15) && (
         <ClickableBadge 
-          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2",
           onClick={() => setExperienceRange([0, 15])}
         >
           {experienceRange[0]}-{experienceRange[1]} years
@@ -111,5 +111,6 @@ export function ActiveFilters({
         Clear All
       </Button>
     </div>
-  )
+  ),
 }
+;

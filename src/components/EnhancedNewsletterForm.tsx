@@ -1,9 +1,9 @@
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { useState, useRef } from "react",
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { useState, useRef } from "react";
 import { Mail } from 'lucide-react'
-import { useToast } from "@/hooks/use-toast",
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { useToast } from "@/hooks/use-toast";
+import {logErrorToProduction} from '@/utils/productionLogger';
 export function EnhancedNewsletterForm() {
 
   const [email, setEmail] = useState(""),
@@ -14,7 +14,7 @@ export function EnhancedNewsletterForm() {
 
   const lastSubmit = useRef(0),
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {,
     e.preventDefault(),
     const now = Date.now(),
     if (now - lastSubmit.current < 1000) return,
@@ -29,16 +29,12 @@ export function EnhancedNewsletterForm() {
     setIsSubmitting(true),
     try {
       const res = await fetch("/api/newsletter", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: trimmed })}),
-
-      const data = await res.json().catch(() => ({})),
+        method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ email: trimmed })}), const data = await res.json().catch(() => ({})),
 
       if (res.ok) {
         // Handle different success statuses
         if (data.status === 'already_subscribed') {
-          toast.success(data.message || "You're already subscribed!")
+          toast.success(data.message || "You're already subscribed!");
         } else {
           toast.success(data.message || "Thanks for subscribing!")
         }
@@ -47,11 +43,11 @@ export function EnhancedNewsletterForm() {
       } else {
         // Handle error responses
         logErrorToProduction('Newsletter subscription failed:', { data: data }),
-        toast.error(data.error || "Subscription failed. Please try again.")
+        toast.error(data.error || "Subscription failed. Please try again.");
       }
-    } catch (err: any) {
+    } catch (err: any) {,
       logErrorToProduction('Newsletter subscription error:', { data: err }),
-      toast.error("Unable to subscribe right now. Please try again later.")
+      toast.error("Unable to subscribe right now. Please try again later.");
     } finally {
       setIsSubmitting(false)
     }
@@ -75,7 +71,7 @@ export function EnhancedNewsletterForm() {
           <p className="text-zion-slate-light mt-1">We&apos,ll keep you updated with the latest from Zion.</p>
         </div>
       ) : (
-        <form onSubmit={handleSubmit} className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2">
+        <form onSubmit={handleSubmit} className="flex flex-col space-y-3 sm: flex-row sm:space-y-0 sm:space-x-2">
           <label htmlFor="enhanced-newsletter-email" className="sr-only">
             Email address for newsletter subscription
           </label>
@@ -83,8 +79,8 @@ export function EnhancedNewsletterForm() {
             type="email"
             id="enhanced-newsletter-email"
             name="email"
-            placeholder="Enter your email"
-            className="flex-grow bg-zion-blue-dark text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple"
+            placeholder="Enter your email",
+            className="flex-grow bg-zion-blue-dark text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple",
             value={email}
             onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
             autoComplete="email"
@@ -94,7 +90,7 @@ export function EnhancedNewsletterForm() {
             type="submit" 
             disabled={isSubmitting}
             className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple"
-          >
+          >,
             {isSubmitting ? "Subscribing..." : "Subscribe"}
           </Button>
         </form>
@@ -112,4 +108,4 @@ export function EnhancedNewsletterForm() {
       </div>
     </div>
   )
-}
+};

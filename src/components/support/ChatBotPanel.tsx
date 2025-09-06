@@ -1,27 +1,27 @@
 
-import React, { useState, useRef, useEffect } from "react",
-import { logDebug, logErrorToProduction } from '@/utils/productionLogger',
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { ScrollArea } from "@/components/ui/scroll-area",
-import { Separator } from "@/components/ui/separator",
-import { toast } from "@/components/ui/use-toast",
-import { cn } from "@/lib/utils",
-import { ChatMessage } from "./ChatMessage",
-import { QuickReplyButton } from "./QuickReplyButton",
+import React, { useState, useRef, useEffect } from "react";
+import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { Separator } from "@/components/ui/separator";
+import { toast } from "@/components/ui/use-toast";
+import { cn } from "@/lib/utils";
+import { ChatMessage } from "./ChatMessage";
+import { QuickReplyButton } from "./QuickReplyButton";
 import { Send, Loader2 } from 'lucide-react'
-import { useTheme } from "@/hooks/useTheme",
+import { useTheme } from "@/hooks/useTheme";
 // Define suggested quick replies
 const QUICK_REPLIES = [
   { id: "hire", text: "How do I hire?" },
   { id: "match", text: "How do I get matched?" },
   { id: "billing", text: "Billing help" }],
 
-type Message = {
-  id: string,
-  content: string,
-  sender: "user" | "bot",
-  timestamp: Date
+type Message = {;
+  id: string;
+  content: string;
+  sender: "user" | "bot";
+  timestamp: Date,
 },
 
 export function ChatBotPanel() {
@@ -52,10 +52,10 @@ export function ChatBotPanel() {
     }
   }, []),
 
-  const handleSendMessage = async (text: string = inputValue) => {
+  const handleSendMessage = async (text: string = inputValue) => {,
     if (!text.trim()) return,
     
-    const userMessage: Message = {
+    const userMessage: Message = {,
       id: `user-${Date.now()}`,
       content: text,
       sender: "user",
@@ -69,7 +69,7 @@ export function ChatBotPanel() {
       // Call the OpenAI-powered support function
       const response = await sendToAIAssistant(text),
       
-      const botMessage: Message = {
+      const botMessage: Message = {,
         id: `bot-${Date.now()}`,
         content: response.message || "Sorry, I couldn't process your request. Please try again.",
         sender: "bot",
@@ -106,40 +106,40 @@ export function ChatBotPanel() {
   },
 
   const sendToAIAssistant = async (message: string) => {
-    try {
+    try {,
       const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
         method: "POST",
-        headers: {
+        headers: {,
           "Content-Type": "application/json"},
-        body: JSON.stringify({ 
+        body: JSON.stringify({,
           messages: [{ role: "user", content: message }] 
         })}),
       
       if (!response.ok) {
         return {
           success: false,
-          message: "I'm having trouble connecting to my knowledge base right now."
+          message: "I'm having trouble connecting to my knowledge base right now.",
         }
       }
       
       const data = await response.json(),
       return {
         success: true,
-        message: data.message
+        message: data.message,
       }
     } catch (error) {
       logErrorToProduction("Error calling Supabase AI chat function", error as Error, { component: 'ChatBotPanel', functionName: 'ai-chat' }),
       return {
         success: false,
-        message: "I'm experiencing technical difficulties. Please try again later."
+        message: "I'm experiencing technical difficulties. Please try again later.",
       }
     }
   },
 
   const suggestEscalation = () => {
-    const escalationMessage: Message = {
+    const escalationMessage: Message = {,
       id: `bot-escalation-${Date.now()}`,
-      content: 
+      content:,
         "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?",
       sender: "bot",
       timestamp: new Date()},
@@ -155,12 +155,12 @@ export function ChatBotPanel() {
       // Send the conversation to the backend for logging
       // This would be implemented in a real system
       logDebug("Support escalation triggered", {
-        conversationHistory: messages.map(m => ({
+        conversationHistory: messages.map(m => ({,
           content: m.content,
           sender: m.sender,
-          timestamp: m.timestamp
+          timestamp: m.timestamp,
         })),
-        component: 'ChatBotPanel'
+        component: 'ChatBotPanel',
       })
     } catch (error) {
       logErrorToProduction("Failed to log support escalation", error as Error, { component: 'ChatBotPanel' })
@@ -168,7 +168,7 @@ export function ChatBotPanel() {
   },
 
   const handleQuickReply = (text: string) => {
-    handleSendMessage(text)
+    handleSendMessage(text),
   },
 
   const handleEscalateToLiveAgent = () => {
@@ -178,13 +178,13 @@ export function ChatBotPanel() {
         id: `user-${Date.now()}`,
         content: "I'd like to speak with a human agent",
         sender: "user",
-        timestamp: new Date()
+        timestamp: new Date(),
       },
       {
         id: `bot-${Date.now()}`,
         content: "I'm connecting you with a support agent. Please note that our support hours are Monday to Friday, 9AM to 6PM EST. If you're messaging outside these hours, a team member will follow up with you as soon as possible.",
         sender: "bot",
-        timestamp: new Date()
+        timestamp: new Date(),
       }
     ]),
     
@@ -201,13 +201,13 @@ export function ChatBotPanel() {
         id: `user-${Date.now()}`,
         content: "I'd like to email support",
         sender: "user",
-        timestamp: new Date()
+        timestamp: new Date(),
       },
       {
         id: `bot-${Date.now()}`,
         content: "Please send your question to support@ziontechgroup.com. Our team will get back to you within 24 hours.",
         sender: "bot",
-        timestamp: new Date()
+        timestamp: new Date(),
       }
     ])
   },
@@ -240,7 +240,7 @@ export function ChatBotPanel() {
           </p>
           <div className="flex flex-wrap gap-2">
             {QUICK_REPLIES.map((reply) => (
-              <QuickReplyButton
+              <QuickReplyButton,
                 key={reply.id}
                 text={reply.text}
                 onClick={() => handleQuickReply(reply.text)}
@@ -263,7 +263,7 @@ export function ChatBotPanel() {
             >
               Chat with Live Agent
             </Button>
-            <Button 
+            <Button,
               onClick={handleEmailSupport}
               size="sm"
               variant="outline"
@@ -294,7 +294,7 @@ export function ChatBotPanel() {
               "flex-1",
               theme === "dark" 
                 ? "bg-zion-blue border-zion-blue-light focus-visible:ring-zion-purple" 
-                : "bg-white border-gray-200"
+                : "bg-white border-gray-200",
             )}
           />
           <Button
@@ -309,5 +309,6 @@ export function ChatBotPanel() {
         </form>
       </div>
     </div>
-  )
+  ),
 }
+;

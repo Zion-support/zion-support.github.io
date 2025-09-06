@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react',
-import { motion, AnimatePresence } from 'framer-motion',
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Loader2, AlertTriangle, RefreshCw, Wifi, WifiOff, Clock, Zap } from 'lucide-react'
-import { Button } from '@/components/ui/button',
-import { Card, CardContent } from '@/components/ui/card',
-import { Badge } from '@/components/ui/badge',
-import { cn } from '@/lib/utils',
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { cn } from '@/lib/utils';
 // Enhanced loading spinner with different variants
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl',
@@ -14,26 +14,26 @@ interface LoadingSpinnerProps {
   text?: string
 }
 
-export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
+export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({;
   size = 'md',
   variant = 'default',
   className,
   showText = false,
   text = 'Loading...'
 }) => {
-  const sizeClasses = {
-    sm: 'h-4 w-4',
-    md: 'h-6 w-6',
-    lg: 'h-8 w-8',
-    xl: 'h-12 w-12'
+  const sizeClasses = {;
+    sm: 'h-4 w-4';
+    md: 'h-6 w-6';
+    lg: 'h-8 w-8';
+    xl: 'h-12 w-12',
   },
 
-  const variantClasses = {
-    default: 'text-muted-foreground',
-    primary: 'text-primary',
-    success: 'text-green-500',
-    warning: 'text-yellow-500',
-    error: 'text-red-500'
+  const variantClasses = {;
+    default: 'text-muted-foreground';
+    primary: 'text-primary';
+    success: 'text-green-500';
+    warning: 'text-yellow-500';
+    error: 'text-red-500',
   },
 
   return (
@@ -52,7 +52,7 @@ interface ProgressiveLoadingProps {
   onComplete?: () => void
 }
 
-export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({
+export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({;
   steps,
   currentStep = 0,
   showProgress = true,
@@ -123,7 +123,7 @@ interface SkeletonProps {
   lines?: number
 }
 
-export const Skeleton: React.FC<SkeletonProps> = ({
+export const Skeleton: React.FC<SkeletonProps> = ({;
   className,
   variant = 'rectangular',
   animation = 'pulse',
@@ -131,17 +131,17 @@ export const Skeleton: React.FC<SkeletonProps> = ({
 }) => {
   const baseClasses = 'bg-muted rounded',
   
-  const variantClasses = {
-    text: 'h-4 w-full',
-    circular: 'h-12 w-12 rounded-full',
-    rectangular: 'h-6 w-full',
-    card: 'h-48 w-full'
+  const variantClasses = {;
+    text: 'h-4 w-full';
+    circular: 'h-12 w-12 rounded-full';
+    rectangular: 'h-6 w-full';
+    card: 'h-48 w-full',
   },
 
-  const animationClasses = {
-    pulse: 'animate-pulse',
-    wave: 'animate-bounce',
-    none: ''
+  const animationClasses = {;
+    pulse: 'animate-pulse';
+    wave: 'animate-bounce';
+    none: '',
   },
 
   if (variant === 'text' && lines > 1) {
@@ -181,12 +181,12 @@ interface ErrorStateProps {
   title?: string,
   description?: string,
   action?: {
-    label: string,
-    onClick: () => void
+    label: string;
+    onClick: () => void,
   },
   secondaryAction?: {
     label: string,
-    onClick: () => void
+    onClick: () => void,
   },
   variant?: 'network' | 'generic' | 'timeout' | 'permission',
   showRetry?: boolean,
@@ -196,7 +196,7 @@ interface ErrorStateProps {
   className?: string
 }
 
-export const ErrorState: React.FC<ErrorStateProps> = ({
+export const ErrorState: React.FC<ErrorStateProps> = ({;
   error,
   title,
   description,
@@ -222,7 +222,7 @@ export const ErrorState: React.FC<ErrorStateProps> = ({
 
       return () => {
         window.removeEventListener('online', handleOnline),
-        window.removeEventListener('offline', handleOffline)
+        window.removeEventListener('offline', handleOffline);
       }
     }
     
@@ -237,30 +237,30 @@ export const ErrorState: React.FC<ErrorStateProps> = ({
           title: title || (isOnline ? 'Connection Error' : 'No Internet Connection'),
           description: description || (isOnline 
             ? 'Unable to connect to our servers. Please check your connection.'
-            : 'You appear to be offline. Please check your internet connection.'
+            : 'You appear to be offline. Please check your internet connection.',
           ),
-          color: 'text-orange-500'
+          color: 'text-orange-500',
         },
       case 'timeout':
         return {
           icon: Clock,
           title: title || 'Request Timeout',
           description: description || 'The request took too long to complete. Please try again.',
-          color: 'text-yellow-500'
+          color: 'text-yellow-500',
         },
       case 'permission':
         return {
           icon: AlertTriangle,
           title: title || 'Access Denied',
           description: description || 'You don\'t have permission to access this resource.',
-          color: 'text-red-500'
+          color: 'text-red-500',
         },
       default:
-        return {
+        return {,
           icon: AlertTriangle,
           title: title || 'Something went wrong',
           description: description || 'An unexpected error occurred. Please try again.',
-          color: 'text-red-500'
+          color: 'text-red-500',
         }
     }
   },
@@ -295,7 +295,7 @@ export const ErrorState: React.FC<ErrorStateProps> = ({
           )}
 
           <div className="flex flex-col sm:flex-row gap-2 justify-center">
-            {canRetry && (
+            {canRetry && (,
               <Button onClick={onRetry} variant="default">
                 <RefreshCw className="h-4 w-4 mr-2" />
                 Try Again {retryCount > 0 && `(${retryCount}/${maxRetries})`}
@@ -335,7 +335,7 @@ interface LoadingGridProps {
   className?: string
 }
 
-export const LoadingGrid: React.FC<LoadingGridProps> = ({
+export const LoadingGrid: React.FC<LoadingGridProps> = ({;
   count = 8,
   columns = 4,
   variant = 'card',
@@ -344,13 +344,13 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
   const gridClasses = {
     card: `grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-${columns} gap-6`,
     list: 'space-y-4',
-    table: 'space-y-2'
+    table: 'space-y-2',
   },
 
-  const itemClasses = {
-    card: 'p-6 space-y-4',
-    list: 'p-4 space-y-3',
-    table: 'p-3 space-y-2'
+  const itemClasses = {;
+    card: 'p-6 space-y-4';
+    list: 'p-4 space-y-3';
+    table: 'p-3 space-y-2',
   },
 
   return (
@@ -405,13 +405,13 @@ interface PerformanceIndicatorProps {
   className?: string
 }
 
-export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
+export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({;
   isLoading = false,
   loadTime,
   itemCount,
   className
 }) => {
-  const getPerformanceColor = (time: number) => {
+  const getPerformanceColor = (time: number) => {,
     if (time < 100) return 'text-green-500',
     if (time < 300) return 'text-yellow-500',
     return 'text-red-500'
@@ -439,4 +439,4 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
       )}
     </div>
   )
-}, 
+}, ;

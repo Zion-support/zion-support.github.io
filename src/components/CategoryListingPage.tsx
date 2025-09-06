@@ -1,18 +1,18 @@
-import { useState, useEffect } from "react",
-import { GradientHeading } from "@/components/GradientHeading",
-import { ListingScoreCard } from "@/components/ListingScoreCard",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",
+import { useState, useEffect } from "react";
+import { GradientHeading } from "@/components/GradientHeading";
+import { ListingScoreCard } from "@/components/ListingScoreCard";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
 import { Search, Filter, ArrowDownAZ, ArrowUpZA } from 'lucide-react'
-import ListingGridSkeleton from "@/components/skeletons/ListingGridSkeleton",
-import { safeStorage } from "@/utils/safeStorage",
+import ListingGridSkeleton from "@/components/skeletons/ListingGridSkeleton";
+import { safeStorage } from "@/utils/safeStorage";
 // Example listing type
 interface Listing {
-  id: string,
-  title: string,
-  description: string,
-  category: string,
+  id: string;
+  title: string;
+  description: string;
+  category: string;
   subcategory?: string,
   image?: string,
   tags?: string[],
@@ -22,32 +22,23 @@ interface Listing {
   rating?: number,
   reviewCount?: number,
   price?: number | null,
-  createdAt: string
+  createdAt: string,
 }
 
 interface CategoryListingPageProps {
-  title: string,
-  description: string,
-  listings: Listing[],
-  sortOptions?: { label: string, value: string }[],
+  title: string;
+  description: string;
+  listings: Listing[];
+  sortOptions?: { label: string, value: string };[],
   filterOptions?: { label: string, value: string }[]
 }
 
 export function CategoryListingPage({ 
   title,
   description,
-  listings: initialListings,
-  sortOptions = [
-    { label: 'Newest First', value: 'newest' },
-    { label: 'Oldest First', value: 'oldest' },
-    { label: 'Highest Rating', value: 'rating-high' },
-    { label: 'Highest AI Match', value: 'ai-match' },
-    { label: 'A-Z', value: 'a-z' },
-    { label: 'Z-A', value: 'z-a' }],
-  filterOptions = [
-    { label: 'All', value: 'all' },
-    { label: 'Highly Rated', value: 'high-rating' },
-    { label: 'Best AI Match', value: 'best-match' }]
+  listings: initialListings, sortOptions = [
+    { label: 'Newest First', value: 'newest' }, { label: 'Oldest First', value: 'oldest' }, { label: 'Highest Rating', value: 'rating-high' }, { label: 'Highest AI Match', value: 'ai-match' }, { label: 'A-Z', value: 'a-z' }, { label: 'Z-A', value: 'z-a' }], filterOptions = [
+    { label: 'All', value: 'all' }, { label: 'Highly Rated', value: 'high-rating' }, { label: 'Best AI Match', value: 'best-match' }]
 }: CategoryListingPageProps) {
   const [searchQuery, setSearchQuery] = useState(""),
   const [selectedSort, setSelectedSort] = useState(
@@ -59,11 +50,11 @@ export function CategoryListingPage({
   const [isLoading, setIsLoading] = useState(false),
 
   useEffect(() => {
-    safeStorage.setItem('category_selected_sort', selectedSort)
+    safeStorage.setItem('category_selected_sort', selectedSort);
   }, [selectedSort]),
 
   useEffect(() => {
-    safeStorage.setItem('category_selected_filter', selectedFilter)
+    safeStorage.setItem('category_selected_filter', selectedFilter);
   }, [selectedFilter]),
 
   useEffect(() => {
@@ -111,7 +102,7 @@ export function CategoryListingPage({
           return a.title.localeCompare(b.title),
         case 'z-a':
           return b.title.localeCompare(a.title),
-        default: return 0
+        default: return 0,
       }
     }),
 
@@ -128,12 +119,12 @@ export function CategoryListingPage({
 
           {/* Filters and Search */}
           <div className="bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-4">
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate" />
                 <Input
-                  type="text"
-                  placeholder="Search listings..."
+                  type="text",
+                  placeholder="Search listings...",
                   value={searchQuery}
                   onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSearchQuery(e.target.value)}
                   className="pl-10 bg-zion-blue border border-zion-blue-light text-white"
@@ -195,9 +186,9 @@ export function CategoryListingPage({
             {isLoading ? (
               <ListingGridSkeleton />
             ) : processedListings.length > 0 ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">,
                 {processedListings.map((listing) => (
-                  <ListingScoreCard
+                  <ListingScoreCard,
                     key={listing.id}
                     title={listing.title}
                     description={listing.description}
@@ -226,11 +217,11 @@ export function CategoryListingPage({
                 >
                   Clear all filters
                 </Button>
-              </div>
+              </div>,
             )}
           </div>
         </div>
       </div>
     </>
   )
-}
+};

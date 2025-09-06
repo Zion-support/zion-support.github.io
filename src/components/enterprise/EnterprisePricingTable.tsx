@@ -1,6 +1,6 @@
 
-import React from "react",
-import { Button } from "@/components/ui/button",
+import React from "react";
+import { Button } from "@/components/ui/button";
 import { Check, X } from 'lucide-react'
 import {
   Table,
@@ -9,7 +9,7 @@ import {
   TableHead,
   TableHeader,
   TableRow} from "@/components/ui/table",
-import { Badge } from "@/components/ui/badge",
+import { Badge } from "@/components/ui/badge";
 export function EnterprisePricingTable() {
   const plans = [
     {
@@ -19,7 +19,7 @@ export function EnterprisePricingTable() {
       description: "Perfect for small teams",
       users: "Up to 10 users",
       popular: false,
-      features: [
+      features: [,
         { name: "Private hiring portal", included: true },
         { name: "Dedicated talent pool", included: true },
         { name: "Standard SLA (24h)", included: true },
@@ -36,7 +36,7 @@ export function EnterprisePricingTable() {
       description: "Ideal for growing companies",
       users: "Up to 50 users",
       popular: true,
-      features: [
+      features: [,
         { name: "Private hiring portal", included: true },
         { name: "Dedicated talent pool", included: true },
         { name: "Enhanced SLA (8h)", included: true },
@@ -53,7 +53,7 @@ export function EnterprisePricingTable() {
       description: "For large organizations",
       users: "Unlimited users",
       popular: false,
-      features: [
+      features: [,
         { name: "Private hiring portal", included: true },
         { name: "Dedicated talent pool", included: true },
         { name: "Premium SLA (1h)", included: true },
@@ -65,7 +65,7 @@ export function EnterprisePricingTable() {
         { name: "Dedicated success manager", included: true }]}],
 
   return (
-    <section id="pricing" className="py-20 px-4 md:px-6">
+    <section id="pricing" className="py-20 px-4 md: px-6">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Enterprise Plans</h2>
@@ -78,8 +78,8 @@ export function EnterprisePricingTable() {
           <Table className="border rounded-lg">
             <TableHeader>
               <TableRow>
-                <TableHead className="w-[200px]">Plan Features</TableHead>
-                {plans.map((plan) => (
+                <TableHead className="w-[200px]">Plan Features</TableHead>,
+                {plans.map((plan) => (,
                   <TableHead key={plan.name} className="text-center">
                     <div className="flex flex-col items-center">
                       {plan.popular && (
@@ -133,3 +133,4 @@ export function EnterprisePricingTable() {
     </section>
   )
 }
+;

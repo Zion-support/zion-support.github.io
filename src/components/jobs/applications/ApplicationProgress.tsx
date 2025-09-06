@@ -1,11 +1,11 @@
 
-import { ApplicationStatus } from "@/types/jobs",
-import { Progress } from "@/components/ui/progress",
+import { ApplicationStatus } from "@/types/jobs";
+import { Progress } from "@/components/ui/progress";
 import { CheckCircle2, Circle, CircleDot } from 'lucide-react'
-import { cn } from "@/lib/utils",
+import { cn } from "@/lib/utils";
 interface ApplicationProgressProps {
-  status: ApplicationStatus,
-  className?: string
+  status: ApplicationStatus;
+  className?: string,
 }
 
 export function ApplicationProgress({ status, className }: ApplicationProgressProps) {
@@ -18,7 +18,7 @@ export function ApplicationProgress({ status, className }: ApplicationProgressPr
       case "interview": return 80,
       case "hired": return 100,
       case "rejected": return 100,
-      default: return 0
+      default: return 0,
     }
   },
 
@@ -78,3 +78,4 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
     return <Circle className="h-4 w-4 text-muted-foreground/50" />
   }
 }
+;

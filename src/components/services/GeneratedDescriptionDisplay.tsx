@@ -1,14 +1,14 @@
 
-import React, { useState } from "react",
-import { useToast } from "@/hooks/use-toast",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card",
-import { Textarea } from "@/components/ui/textarea",
+import React, { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
+import { Textarea } from "@/components/ui/textarea";
 import { Check, Pencil } from 'lucide-react'
 
 interface GeneratedDescriptionDisplayProps {
-  description: string,
-  onSave: (editedDescription: string) => void
+  description: string;
+  onSave: (editedDescription: string) => void,
 }
 
 export function GeneratedDescriptionDisplay({ 
@@ -24,7 +24,7 @@ export function GeneratedDescriptionDisplay({
     setIsEditing(false),
     toast({
       title: "Description Saved",
-      description: "Your edited description has been saved."
+      description: "Your edited description has been saved.",
     })
   },
 
@@ -48,7 +48,7 @@ export function GeneratedDescriptionDisplay({
               <>
                 <Pencil className="h-4 w-4 mr-1" />
                 Edit
-              </>
+              </>,
             )}
           </Button>
         </CardTitle>
@@ -74,8 +74,9 @@ export function GeneratedDescriptionDisplay({
           >
             Save Changes
           </Button>
-        </CardFooter>
+        </CardFooter>,
       )}
     </Card>
   )
 }
+;

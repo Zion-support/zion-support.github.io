@@ -1,21 +1,19 @@
 
-import { useState } from "react",
+import { useState } from "react";
 import { Check, Clock, Key, MoreVertical, RefreshCw, X } from 'lucide-react'
-import { format } from "date-fns",
-import { useApiKeys, type ApiKeyScope } from "@/hooks/useApiKeys",
-
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",
-import { Input } from "@/components/ui/input",
-import { Checkbox } from "@/components/ui/checkbox",
-import { Label } from "@/components/ui/label",
-import { Badge } from "@/components/ui/badge",
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu",
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog",
-
-import CodeBlock from "./CodeBlock",
+import { format } from "date-fns";
+import { useApiKeys, type ApiKeyScope } from "@/hooks/useApiKeys";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Label } from "@/components/ui/label";
+import { Badge } from "@/components/ui/badge";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";
+import CodeBlock from "./CodeBlock";
 export function ApiKeysManager() {
   const { 
     keys,
@@ -50,12 +48,12 @@ export function ApiKeysManager() {
     setSelectedScopes([])
   },
 
-  const handleRegenerateKey = async (keyId: string) => {
+  const handleRegenerateKey = async (keyId: string) => {,
     await regenerateApiKey(keyId),
     setShowRegenerateConfirm(null)
   },
   
-  const handleRevokeKey = async (keyId: string) => {
+  const handleRevokeKey = async (keyId: string) => {,
     await revokeApiKey(keyId),
     setShowDeleteConfirm(null)
   },
@@ -71,16 +69,16 @@ export function ApiKeysManager() {
   // Toggle a scope selection
   const toggleScope = (scope: ApiKeyScope) => {
     setSelectedScopes(prev => 
-      prev.includes(scope) 
-        ? prev.filter(s => s !== scope) 
+      prev.includes(scope) ;
+        ? prev.filter(s => s !== scope),
         : [...prev, scope]
     )
   },
   
   const getExampleCode = (key: string) => {
-    return `curl -X GET "https://api.ziontechgroup.com/v1/jobs" \\
+    return `curl -X GET "https://api.ziontechgroup.com/v1/jobs" \\,
   -H "Authorization: Bearer ${key}" \\
-  -H "Content-Type: application/json"`
+  -H "Content-Type: application/json"`,
   },
 
   // Reset form when dialog closes
@@ -144,7 +142,7 @@ export function ApiKeysManager() {
                         <Label
                           htmlFor={scope.value}
                           className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                        >
+                        >,
                           {scope.label}
                           <span className="block text-xs text-zinc-400 mt-1">{scope.description}</span>
                         </Label>
@@ -186,7 +184,7 @@ export function ApiKeysManager() {
             <CodeBlock code={newApiKey} className="mb-3" />
             <div className="text-sm text-zinc-400">
               <span className="font-medium">Example usage:</span>
-            </div>
+            </div>,
             <CodeBlock code={getExampleCode(newApiKey)} language="bash" />
           </div>
         )}
@@ -250,7 +248,7 @@ export function ApiKeysManager() {
                       key={scope} 
                       variant="secondary"
                       className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800"
-                    >
+                    >,
                       {scope}
                     </Badge>
                   ))}
@@ -259,9 +257,9 @@ export function ApiKeysManager() {
                 <div className="mt-3 text-xs text-zinc-500 flex items-center space-x-4">
                   <span>Created: {format(new Date(key.created_at), 'MMM d, yyyy')}</span>
                   <Popover>
-                    <PopoverTrigger className="flex items-center hover:text-zinc-300">
+                    <PopoverTrigger className="flex items-center hover:text-zinc-300">,
                       <Clock size={12} className="mr-1" />
-                      Last used: {key.last_used_at 
+                      Last used: {key.last_used_at,
                         ? format(new Date(key.last_used_at), 'MMM d, yyyy') 
                         : 'Never'}
                     </PopoverTrigger>
@@ -269,7 +267,7 @@ export function ApiKeysManager() {
                       <p className="text-sm mb-1">Last Used</p>
                       <p className="text-xs text-zinc-400">
                         {key.last_used_at 
-                          ? format(new Date(key.last_used_at), 'MMM d, yyyy HH:mm:ss')
+                          ? format(new Date(key.last_used_at), 'MMM d, yyyy HH:mm:ss'),
                           : 'This API key has never been used'}
                       </p>
                     </PopoverContent>
@@ -310,7 +308,7 @@ export function ApiKeysManager() {
             <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700">
               Cancel
             </AlertDialogCancel>
-            <AlertDialogAction 
+            <AlertDialogAction,
               onClick={() => showRegenerateConfirm && handleRegenerateKey(showRegenerateConfirm)}
               className="bg-blue-600 hover:bg-blue-700"
             >
@@ -318,8 +316,7 @@ export function ApiKeysManager() {
             </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
-      </AlertDialog>
-
+      </AlertDialog>,
       {/* Delete Key Confirmation Dialog */}
       <AlertDialog 
         open={showDeleteConfirm !== null} 
@@ -337,7 +334,7 @@ export function ApiKeysManager() {
             <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700">
               Cancel
             </AlertDialogCancel>
-            <AlertDialogAction 
+            <AlertDialogAction,
               onClick={() => showDeleteConfirm && handleRevokeKey(showDeleteConfirm)}
               className="bg-red-600 hover: bg-red-700"
             >
@@ -347,5 +344,6 @@ export function ApiKeysManager() {
         </AlertDialogContent>
       </AlertDialog>
     </Card>
-  )
+  ),
 }
+;

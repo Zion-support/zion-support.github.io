@@ -1,41 +1,41 @@
-import React, { useState } from 'react',
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',
-import { Badge } from '@/components/ui/badge',
-import { Button } from '@/components/ui/button',
+import React, { useState } from 'react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 import { CheckCircle, AlertCircle, TrendingUp, Zap, Shield, Search } from 'lucide-react'
 
 interface PerformanceMetrics {
-  buildSize: string,
-  pageCount: number,
-  loadTime: number,
-  healthStatus: 'healthy' | 'warning' | 'error'
+  buildSize: string;
+  pageCount: number;
+  loadTime: number;
+  healthStatus: 'healthy' | 'warning' | 'error',
 }
 
 interface Improvement {
-  id: string,
-  title: string,
-  description: string,
-  status: 'completed' | 'in-progress' | 'planned',
-  impact: 'high' | 'medium' | 'low',
-  category: 'performance' | 'security' | 'ux' | 'build'
+  id: string;
+  title: string;
+  description: string;
+  status: 'completed' | 'in-progress' | 'planned';
+  impact: 'high' | 'medium' | 'low';
+  category: 'performance' | 'security' | 'ux' | 'build',
 }
 
 const PerformanceDashboard: React.FC = () => {
-  const [metrics] = useState<PerformanceMetrics>({
+  const [metrics] = useState<PerformanceMetrics>({,
     buildSize: '959 MB',
     pageCount: 166,
     loadTime: 1.2,
-    healthStatus: 'healthy'
+    healthStatus: 'healthy',
   }),
 
   const improvements: Improvement[] = [
-    {
+    {,
       id: '1',
       title: 'Fixed Search Bar Issues',
       description: 'Resolved first keystrokes ignored, suggestion clicks, and Enter key search problems',
       status: 'completed',
       impact: 'high',
-      category: 'ux'
+      category: 'ux',
     },
     {
       id: '2', 
@@ -43,7 +43,7 @@ const PerformanceDashboard: React.FC = () => {
       description: 'Added comprehensive pre-build checks to prevent deployment with missing environment variables',
       status: 'completed',
       impact: 'high',
-      category: 'build'
+      category: 'build',
     },
     {
       id: '3',
@@ -51,7 +51,7 @@ const PerformanceDashboard: React.FC = () => {
       description: 'Fixed Microsoft Azure AD provider configuration and resolved TypeScript compilation errors',
       status: 'completed',
       impact: 'medium',
-      category: 'security'
+      category: 'security',
     },
     {
       id: '4',
@@ -59,7 +59,7 @@ const PerformanceDashboard: React.FC = () => {
       description: 'Improved global error handling with better retry logic and user feedback',
       status: 'completed',
       impact: 'medium',
-      category: 'ux'
+      category: 'ux',
     },
     {
       id: '5',
@@ -67,7 +67,7 @@ const PerformanceDashboard: React.FC = () => {
       description: 'Added bundle analysis tools to identify and optimize large dependencies',
       status: 'completed',
       impact: 'medium',
-      category: 'performance'
+      category: 'performance',
     },
     {
       id: '6',
@@ -75,35 +75,35 @@ const PerformanceDashboard: React.FC = () => {
       description: 'Created production monitoring endpoint for environment and service health',
       status: 'completed',
       impact: 'medium',
-      category: 'security'
+      category: 'security',
     }
   ],
 
   const getStatusIcon = (status: string) => {
-    switch (status) {
+    switch (status) {,
       case 'completed': return <CheckCircle className="h-4 w-4 text-green-500" />,
       case 'in-progress': return <AlertCircle className="h-4 w-4 text-yellow-500" />,
       case 'planned': return <TrendingUp className="h-4 w-4 text-blue-500" />,
-      default: return <AlertCircle className="h-4 w-4 text-gray-500" />
+      default: return <AlertCircle className="h-4 w-4 text-gray-500" />,
     }
   },
 
   const getImpactColor = (impact: string) => {
-    switch (impact) {
+    switch (impact) {,
       case 'high': return 'bg-red-100 text-red-800',
       case 'medium': return 'bg-yellow-100 text-yellow-800',
       case 'low': return 'bg-green-100 text-green-800',
-      default: return 'bg-gray-100 text-gray-800'
+      default: return 'bg-gray-100 text-gray-800',
     }
   },
 
   const getCategoryIcon = (category: string) => {
-    switch (category) {
+    switch (category) {,
       case 'performance': return <Zap className="h-4 w-4" />,
       case 'security': return <Shield className="h-4 w-4" />,
       case 'ux': return <Search className="h-4 w-4" />,
       case 'build': return <TrendingUp className="h-4 w-4" />,
-      default: return <CheckCircle className="h-4 w-4" />
+      default: return <CheckCircle className="h-4 w-4" />,
     }
   },
 
@@ -119,12 +119,12 @@ const PerformanceDashboard: React.FC = () => {
       </div>
 
       {/* Metrics Overview */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
+      <div className="grid grid-cols-1 md: grid-cols-4 gap-4 mb-6">
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Build Size</CardTitle>
-          </CardHeader>
-          <CardContent>
+          </CardHeader>,
+          <CardContent>,
             <div className="text-2xl font-bold">{metrics.buildSize}</div>
             <p className="text-xs text-gray-500">Total build output</p>
           </CardContent>
@@ -217,5 +217,5 @@ const PerformanceDashboard: React.FC = () => {
     </div>
   )
 },
-
-export default PerformanceDashboard, 
+;
+export default PerformanceDashboard;

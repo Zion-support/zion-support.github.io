@@ -1,7 +1,7 @@
 
 import { ChevronDown, ChevronUp } from 'lucide-react'
-import { Checkbox } from "@/components/ui/checkbox",
-import { RegionFilterProps } from "@/types/filters",
+import { Checkbox } from "@/components/ui/checkbox";
+import { RegionFilterProps } from "@/types/filters";
 const REGION_OPTIONS = [
   { id: "North America", label: "North America" },
   { id: "Europe", label: "Europe" },
@@ -49,3 +49,4 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
     </div>
   )
 }
+;

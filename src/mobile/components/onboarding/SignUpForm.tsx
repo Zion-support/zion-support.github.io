@@ -1,15 +1,15 @@
-import React, { useState } from "react",
-import { Label } from "@/components/ui/label",
-import { Input } from "@/components/ui/input",
-import { Button } from "@/components/ui/button",
-import { LoadingSpinner } from "@/components/ui/enhanced-loading-states",
-import { useRouter } from 'next/router',
-import Link from 'next/link',
-import { useAuth } from "@/context/auth/AuthProvider",
+import React, { useState } from "react";
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { LoadingSpinner } from "@/components/ui/enhanced-loading-states";
+import { useRouter } from 'next/router';
+import Link from 'next/link';
+import { useAuth } from "@/context/auth/AuthProvider";
 import { AlertCircle } from 'lucide-react'
-import { Alert, AlertDescription } from "@/components/ui/alert",
-import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter",
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
+import {logErrorToProduction} from '@/utils/productionLogger';
 export function SignUpForm() {
 
   const router = useRouter(),
@@ -25,14 +25,14 @@ export function SignUpForm() {
   const [fieldErrors, setFieldErrors] = useState<{ email?: string, password?: string, name?: string }>({}),
   const [showVerificationMessage, setShowVerificationMessage] = useState(false),
   
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {,
     const { name, value } = e.target,
     setFormData(prev => ({ ...prev, [name]: value })),
     setError(""),
     setFieldErrors(prev => ({ ...prev, [name]: "" }))
   },
   
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {,
     e.preventDefault(),
     setError(""),
     setFieldErrors({}),
@@ -78,7 +78,7 @@ export function SignUpForm() {
           setShowVerificationMessage(true)
         } else {
           // Only navigate if email verification is not required
-          router.push("/mobile")
+          router.push("/mobile");
         }
       } else {
         const { error } = await login(formData.email, formData.password),
@@ -87,9 +87,9 @@ export function SignUpForm() {
           throw new Error(error)
         }
         
-        router.push("/mobile")
+        router.push("/mobile");
       }
-    } catch (err: any) {
+    } catch (err: any) {,
       logErrorToProduction('Signup/Login error:', { data: err }),
       setError(err.message || 'An unexpected error occurred. Please try again.')
     } finally {
@@ -101,7 +101,7 @@ export function SignUpForm() {
     try {
       await loginWithGoogle()
     } catch (err: any) {
-      setError(err.message)
+      setError(err.message),
     }
   },
   
@@ -141,8 +141,7 @@ export function SignUpForm() {
         <div className="flex-grow border-t border-border"></div>
         <span className="mx-2 text-xs text-muted-foreground">OR</span>
         <div className="flex-grow border-t border-border"></div>
-      </div>
-      
+      </div>,
       {/* Error Alert */}
       {error && (
         <Alert variant="destructive" className="mb-4">
@@ -244,5 +243,6 @@ export function SignUpForm() {
         </Link>
       </p>
     </div>
-  )
+  ),
 }
+;

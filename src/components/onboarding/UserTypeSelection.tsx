@@ -1,38 +1,38 @@
 
-import { useState } from "react",
+import { useState } from "react";
 import { Briefcase, Star, User } from 'lucide-react'
-import { Button } from "@/components/ui/button",
+import { Button } from "@/components/ui/button";
 interface UserTypeOption {
-  id: "serviceProvider" | "talent" | "client",
-  name: string,
-  description: string,
-  icon: React.ElementType
+  id: "serviceProvider" | "talent" | "client";
+  name: string;
+  description: string;
+  icon: React.ElementType,
 }
 
 interface UserTypeSelectionProps {
-  onSelect: (userType: "serviceProvider" | "talent" | "client") => void,
-  selectedType: string | null
+  onSelect: (userType: "serviceProvider" | "talent" | "client") => void;
+  selectedType: string | null,
 }
 
 export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionProps) {
   const userTypes: UserTypeOption[] = [
-    {
+    {,
       id: "serviceProvider",
       name: "Service Provider",
       description: "I want to offer services on the platform",
-      icon: Briefcase
+      icon: Briefcase,
     },
     {
       id: "talent",
       name: "Talent",
       description: "I want to showcase my skills and find opportunities",
-      icon: Star
+      icon: Star,
     },
     {
       id: "client",
       name: "Client",
       description: "I want to discover and hire talent or services",
-      icon: User
+      icon: User,
     }
   ],
 
@@ -45,8 +45,8 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
         </p>
       </div>
       
-      <div className="grid gap-4 md: grid-cols-3">
-        {userTypes.map((type) => {
+      <div className="grid gap-4 md: grid-cols-3">,
+        {userTypes.map((type) => {,
           const Icon = type.icon,
           const isSelected = selectedType === type.id,
           
@@ -58,7 +58,7 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
               className={`h-auto flex flex-col items-center justify-center p-6 space-y-3 border ${
                 isSelected 
                   ? "border-zion-purple bg-zion-purple/10 text-zion-purple" 
-                  : "border-zion-blue-light hover:border-zion-cyan/50 text-white"
+                  : "border-zion-blue-light hover:border-zion-cyan/50 text-white",
               }`}
             >
               <div className={`p-3 rounded-full ${isSelected ? "bg-zion-purple" : "bg-zion-blue"}`}>
@@ -77,3 +77,4 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
     </div>
   )
 }
+;

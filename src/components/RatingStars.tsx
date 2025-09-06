@@ -1,4 +1,4 @@
-import React from 'react',
+import React from 'react';
 import { Star, StarHalf } from 'lucide-react'
 
 export function RatingStars({ value = 0, count }: { value?: number, count?: number }) {
@@ -33,3 +33,4 @@ export function RatingStars({ value = 0, count }: { value?: number, count?: numb
     </div>
   )
 }
+;

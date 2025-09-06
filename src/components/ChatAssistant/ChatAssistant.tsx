@@ -4,29 +4,29 @@ import React, {
   useRef,
   ReactNode,
   useContext} from 'react',
-import { AuthContext } from '../../context/auth/AuthContext',
-import { useDebounce } from '../../hooks/useDebounce',
-import { useLocalStorage } from '../../hooks/useLocalStorage',
-import { ChatMessage } from './ChatMessage',
-import { ChatInput } from './ChatInput',
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar',
-import { Button } from '@/components/ui/button',
+import { AuthContext } from '../../context/auth/AuthContext';
+import { useDebounce } from '../../hooks/useDebounce';
+import { useLocalStorage } from '../../hooks/useLocalStorage';
+import { ChatMessage } from './ChatMessage';
+import { ChatInput } from './ChatInput';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Button } from '@/components/ui/button';
 import { X } from 'lucide-react'
 
 export interface Message {
-  id: string,
-  role: 'user' | 'assistant',
-  message: string,
-  timestamp: Date,
-  read?: boolean
+  id: string;
+  role: 'user' | 'assistant';
+  message: string;
+  timestamp: Date;
+  read?: boolean,
 }
 
 export interface ChatAssistantProps {
-  isOpen: boolean,
-  onClose: () => void,
-  recipient: {
-    id: string,
-    name: string,
+  isOpen: boolean;
+  onClose: () => void;
+  recipient: {;
+    id: string;
+    name: string;
     avatarUrl?: string,
     role?: string
   },
@@ -62,8 +62,7 @@ export function ChatAssistant({
 
   const messagesEndRef = useRef<HTMLDivElement | null>(null),
   const [pendingApiCallParams, setPendingApiCallParams] = useState<{
-    message: string,
-    conversationId?: string
+    message: string, conversationId?: string
   } | null>(null),
   const [showGuestModal, setShowGuestModal] = useState(false),
   const [guestMessage, setGuestMessage] = useState<string | null>(null),
@@ -72,7 +71,7 @@ export function ChatAssistant({
   useEffect(() => {
     if (isGuest) {
       // Priority: initialMessages prop > localStorage > empty array
-      if (initialMessages && initialMessages.length > 0) {
+      if (initialMessages && initialMessages.length > 0) {,
         setDisplayGuestMessages(initialMessages),
         setStoredGuestMessages(initialMessages), // Persist if initialMessages are provided
       } else {
@@ -130,12 +129,12 @@ export function ChatAssistant({
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
   },
 
-  const handleSendMessage = async (messageContent: string) => {
+  const handleSendMessage = async (messageContent: string) => {,
     if (!messageContent.trim()) return,
 
     if (!isGuest) {
       // Logged-in user
-      const newMessage: Message = {
+      const newMessage: Message = {,
         id: Date.now().toString(),
         role: 'user',
         message: messageContent,
@@ -152,7 +151,7 @@ export function ChatAssistant({
   const handleModalSendConfirm = () => {
     if (!guestMessage) return,
 
-    const newMessage: Message = {
+    const newMessage: Message = {,
       id: Date.now().toString(),
       role: 'user',
       message: guestMessage,
@@ -172,7 +171,7 @@ export function ChatAssistant({
   useEffect(() => {
     if (!isOpen) return,
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
+      if (e.key === 'Escape') {,
         e.preventDefault(),
         onClose()
       }
@@ -212,7 +211,7 @@ export function ChatAssistant({
           <Button
             variant="ghost"
             size="icon"
-            className="text-white hover:bg-zion-purple/10 rounded-full"
+            className="text-white hover:bg-zion-purple/10 rounded-full",
             onClick={onClose}
             aria-label="Close chat"
           >
@@ -289,7 +288,7 @@ export function ChatAssistant({
               >
                 Cancel
               </Button>
-              <Button
+              <Button,
                 onClick={handleModalSendConfirm}
                 className="bg-zion-purple hover:bg-zion-purple-dark text-white"
               >
@@ -297,8 +296,9 @@ export function ChatAssistant({
               </Button>
             </div>
           </div>
-        </div>
+        </div>,
       )}
     </div>
   )
 }
+;

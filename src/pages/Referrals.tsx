@@ -1,17 +1,17 @@
 
-import { useEffect } from 'react',
-import { useAuth } from '@/hooks/useAuth',
-import { useReferrals } from '@/hooks/useReferrals',
-import { ReferralStats } from '@/components/referrals/ReferralStats',
-import { ReferralLink } from '@/components/referrals/ReferralLink',
-import { ReferralTable } from '@/components/referrals/ReferralTable',
-import { RewardsCard } from '@/components/referrals/RewardsCard',
-import { ReferralGuide } from '@/components/referrals/ReferralGuide',
-import { ReferralLeaderboard } from '@/components/referrals/ReferralLeaderboard',
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Button } from '@/components/ui/button',
-import { toast } from '@/hooks/use-toast',
+import { useEffect } from 'react';
+import { useAuth } from '@/hooks/useAuth';
+import { useReferrals } from '@/hooks/useReferrals';
+import { ReferralStats } from '@/components/referrals/ReferralStats';
+import { ReferralLink } from '@/components/referrals/ReferralLink';
+import { ReferralTable } from '@/components/referrals/ReferralTable';
+import { RewardsCard } from '@/components/referrals/RewardsCard';
+import { ReferralGuide } from '@/components/referrals/ReferralGuide';
+import { ReferralLeaderboard } from '@/components/referrals/ReferralLeaderboard';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Button } from '@/components/ui/button';
+import { toast } from '@/hooks/use-toast';
 import { Share, Users } from 'lucide-react'
 import { useRouter } from 'next/router', // Changed from useNavigate
 
@@ -48,7 +48,7 @@ export default function ReferralsPage() {
           <p className="text-muted-foreground mt-1">
             Invite others to Zion AI Marketplace and earn rewards
           </p>
-        </div>
+        </div>,
         <Button className="flex items-center gap-2" onClick={copyReferralLink}>
           <Share className="h-4 w-4" />
           Share Referral Link
@@ -59,7 +59,7 @@ export default function ReferralsPage() {
       
       <div className="grid gap-6 mt-6 lg:grid-cols-3">
         <div className="lg:col-span-2 space-y-6">
-          <ReferralLink 
+          <ReferralLink,
             referralLink={referralLink} 
             onCopy={copyReferralLink} 
             onShare={shareOnSocialMedia}
@@ -93,3 +93,4 @@ export default function ReferralsPage() {
     </div>
   )
 }
+;

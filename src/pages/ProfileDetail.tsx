@@ -1,15 +1,15 @@
-import { useState, useEffect } from "react",
-import { useRouter } from "next/router",
-import { supabase } from "@/integrations/supabase/client",
-import { toast } from "@/hooks/use-toast",
-import { SEO } from "@/components/SEO",
-import { Header } from "@/components/Header",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
+import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "@/hooks/use-toast";
+import { SEO } from "@/components/SEO";
+import { Header } from "@/components/Header";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2, Mail, Phone, Globe } from 'lucide-react'
-import { HireNowCTA } from "@/components/profile/HireNowCTA",
+import { HireNowCTA } from "@/components/profile/HireNowCTA";
 export default function ProfileDetail() {
   // useParams is typed as `any` in this environment due to missing type
   // definitions, so avoid passing a type argument to prevent TS2347.
@@ -45,7 +45,7 @@ export default function ProfileDetail() {
         }
 
         setProfileData(data)
-      } catch (err: any) {
+      } catch (err: any) {,
         setError(err.message || "Failed to fetch profile."),
         toast({
           title: "Error",
@@ -93,7 +93,7 @@ export default function ProfileDetail() {
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-12 gap-6">
           {/* Main Content */}
-          <div className="col-span-12 lg:col-span-8">
+          <div className="col-span-12 lg:col-span-8">,
             {/* Profile Header */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">
               <CardHeader>
@@ -157,7 +157,7 @@ export default function ProfileDetail() {
               </CardHeader>
               <CardContent>
                 <div className="flex flex-wrap gap-2">
-                  {profileData.skills?.map((skill: string, index: number) => (
+                  {profileData.skills?.map((skill: string, index: number) => (,
                     <Badge key={index} className="bg-zion-blue-light text-zion-slate-light border-none">{skill}</Badge>
                   )) || <p className="text-zion-slate-light">No skills provided.</p>}
                 </div>
@@ -171,7 +171,7 @@ export default function ProfileDetail() {
               </CardHeader>
               <CardContent>
                 {profileData.experience ? (
-                  profileData.experience.map((exp: any, index: number) => (
+                  profileData.experience.map((exp: any, index: number) => (,
                     <div key={index} className="mb-4">
                       <h4 className="font-bold text-white">{exp.title}</h4>
                       <p className="text-zion-cyan">{exp.company}</p>
@@ -194,14 +194,14 @@ export default function ProfileDetail() {
                 {profileData.portfolio_links ? (
                   <div className="flex flex-col gap-3">
                     {profileData.portfolio_links.map((link: any, index: number) => (
-                      <a
+                      <a,
                         key={index}
                         href={link.url}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-zion-cyan hover:text-white flex items-center gap-2"
                       >
-                        <LinkIcon className="h-4 w-4" />
+                        <LinkIcon className="h-4 w-4" />,
                         {link.title || link.url}
                       </a>
                     ))}
@@ -216,11 +216,8 @@ export default function ProfileDetail() {
           {/* Sidebar with HireNowCTA */}
           <div className="col-span-4 lg:col-span-1">
             <HireNowCTA
-              talentProfile={{
-                id: profileData?.id || '',
-                full_name: profileData?.full_name || '',
-                professional_title: profileData?.professional_title || '',
-                hourly_rate: profileData?.hourly_rate || 0
+              talentProfile={{,
+                id: profileData?.id || '', full_name: profileData?.full_name || '', professional_title: profileData?.professional_title || '', hourly_rate: profileData?.hourly_rate || 0,
               }}
             />
             {/* Contact Information */}
@@ -245,7 +242,7 @@ export default function ProfileDetail() {
                     <a href={profileData.website} target="_blank" rel="noopener noreferrer" className="hover:text-zion-cyan">
                       Website
                     </a>
-                  </div>
+                  </div>,
                 )}
               </div>
             </div>
@@ -265,7 +262,7 @@ export default function ProfileDetail() {
                   >
                     <Github className="h-4 w-4" />
                     GitHub
-                  </a>
+                  </a>,
                 )}
                 {profileData.twitter_url && (
                   <a
@@ -278,7 +275,7 @@ export default function ProfileDetail() {
                   >
                     <Twitter className="h-4 w-4" />
                     Twitter
-                  </a>
+                  </a>,
                 )}
                 {profileData.linkedin_url && (
                   <a
@@ -291,7 +288,7 @@ export default function ProfileDetail() {
                   >
                     <Linkedin className="h-4 w-4" />
                     LinkedIn
-                  </a>
+                  </a>,
                 )}
               </div>
             </div>
@@ -301,3 +298,4 @@ export default function ProfileDetail() {
     </>
   )
 }
+;

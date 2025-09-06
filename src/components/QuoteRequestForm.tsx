@@ -1,23 +1,22 @@
 
-import { useState } from "react",
-import { logDebug, logErrorToProduction } from '@/utils/productionLogger',
-import { useToast } from "@/hooks/use-toast",
-import { useRouter } from 'next/router',
-import { Button } from "@/components/ui/button",
-import { Card, CardContent } from "@/components/ui/card",
-import { GradientHeading } from "@/components/GradientHeading",
-import { StepProgress } from "@/components/QuoteRequestForm/StepProgress",
-import { ServiceTypeStep } from "@/components/QuoteRequestForm/ServiceTypeStep",
-import { ProjectDetailsStep } from "@/components/QuoteRequestForm/ProjectDetailsStep",
-import { TimelineStep } from "@/components/QuoteRequestForm/TimelineStep",
-import { BudgetStep } from "@/components/QuoteRequestForm/BudgetStep",
-import { SummaryStep } from "@/components/QuoteRequestForm/SummaryStep",
-import { AutoFillModal } from "@/components/QuoteRequestForm/AutoFillModal",
-import { QuoteFormData } from "@/types/quotes",
+import { useState } from "react";
+import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
+import { useToast } from "@/hooks/use-toast";
+import { useRouter } from 'next/router';
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { GradientHeading } from "@/components/GradientHeading";
+import { StepProgress } from "@/components/QuoteRequestForm/StepProgress";
+import { ServiceTypeStep } from "@/components/QuoteRequestForm/ServiceTypeStep";
+import { ProjectDetailsStep } from "@/components/QuoteRequestForm/ProjectDetailsStep";
+import { TimelineStep } from "@/components/QuoteRequestForm/TimelineStep";
+import { BudgetStep } from "@/components/QuoteRequestForm/BudgetStep";
+import { SummaryStep } from "@/components/QuoteRequestForm/SummaryStep";
+import { AutoFillModal } from "@/components/QuoteRequestForm/AutoFillModal";
+import { QuoteFormData } from "@/types/quotes";
 import { Sparkles, Loader2 } from 'lucide-react'
-import { z } from "zod",
-export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | "summary",
-
+import { z } from "zod";
+export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | "summary";
 const serviceStepSchema = z.object({
   serviceType: z.string().min(1),
   specificItem: z.object({ id: z.string() })}),
@@ -39,20 +38,20 @@ export function QuoteRequestForm() {
     startDate: undefined,
     endDate: undefined,
     timeline: "flexible",
-    budget: {
+    budget: {,
       amount: 0,
-      type: "fixed"
+      type: "fixed",
     },
-    contactInfo: {
+    contactInfo: {,
       name: "",
       email: "",
       phone: "",
-      company: ""
+      company: "",
     }
   }),
   
   const updateFormData = (data: Partial<QuoteFormData>) => {
-    setFormData(prev => ({
+    setFormData(prev => ({,
       ...prev,
       ...data
     }))
@@ -83,7 +82,7 @@ export function QuoteRequestForm() {
         setCurrentStep("summary"),
         break,
       default:
-        break
+        break,
     }
   },
   
@@ -101,7 +100,7 @@ export function QuoteRequestForm() {
         setCurrentStep("budget"),
         break,
       default:
-        break
+        break,
     }
   },
   
@@ -120,7 +119,7 @@ export function QuoteRequestForm() {
         description: "We've received your request and will get back to you soon."}),
       
       // Redirect to confirmation page or homepage
-      router.push("/")
+      router.push("/");
     } catch (error) {
       toast({
         title: "Submission Failed",
@@ -131,7 +130,7 @@ export function QuoteRequestForm() {
     }
   },
 
-  const handleAutoFill = async (description: string) => {
+  const handleAutoFill = async (description: string) => {,
     setAutoFillLoading(true),
     try {
       const res = await fetch("/api/openai/match", {
@@ -144,7 +143,7 @@ export function QuoteRequestForm() {
         projectDescription: description,
         serviceType: category,
         serviceCategory: category,
-        specificItem: itemId
+        specificItem: itemId,
           ? { id: itemId, title: "AI Selected Item", category }
           : formData.specificItem,
         timeline: timeline || formData.timeline,
@@ -174,7 +173,7 @@ export function QuoteRequestForm() {
         return <BudgetStep formData={formData} updateFormData={updateFormData} />,
       case "summary":
         return <SummaryStep formData={formData} updateFormData={updateFormData} />,
-      default: return null
+      default: return null,
     }
   },
   
@@ -219,7 +218,7 @@ export function QuoteRequestForm() {
                   className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10"
                 >
                   Back
-                </Button>
+                </Button>,
               )}
               
               {currentStep !== "summary" ? (
@@ -230,11 +229,11 @@ export function QuoteRequestForm() {
                   Continue
                 </Button>
               ) : (
-                <Button 
+                <Button,
                   onClick={handleSubmit}
                   disabled={isSubmitting}
                   className="ml-auto bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-                >
+                >,
                   {isSubmitting ? "Submitting..." : "Submit Request"}
                 </Button>
               )}
@@ -251,3 +250,4 @@ export function QuoteRequestForm() {
     </div>
   )
 }
+;

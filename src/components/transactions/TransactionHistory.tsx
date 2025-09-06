@@ -1,27 +1,27 @@
-import React, { useState, useEffect } from "react",
-import { useQuery } from "@tanstack/react-query",
-import { supabase } from "@/integrations/supabase/client",
-import { useAuth } from "@/hooks/useAuth",
-import { useToast } from "@/hooks/use-toast",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import Skeleton from "@/components/ui/skeleton",
+import React, { useState, useEffect } from "react";
+import { useQuery } from "@tanstack/react-query";
+import { supabase } from "@/integrations/supabase/client";
+import { useAuth } from "@/hooks/useAuth";
+import { useToast } from "@/hooks/use-toast";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import Skeleton from "@/components/ui/skeleton";
 import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle, ShieldAlert } from 'lucide-react'
-import { formatDistanceToNow } from "date-fns",
-import { safeStorage } from "@/utils/safeStorage",
-import { useCurrency } from '@/hooks/useCurrency',
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { formatDistanceToNow } from "date-fns";
+import { safeStorage } from "@/utils/safeStorage";
+import { useCurrency } from '@/hooks/useCurrency';
+import {logErrorToProduction} from '@/utils/productionLogger';
 interface Transaction {
-  id: string,
-  user_id: string,
-  provider_id: string,
-  service_id: string,
-  amount: number,
-  currency: string,
-  status: 'pending' | 'in_escrow' | 'released' | 'disputed' | 'refunded' | 'cancelled',
-  in_escrow: boolean,
-  created_at: string,
+  id: string;
+  user_id: string;
+  provider_id: string;
+  service_id: string;
+  amount: number;
+  currency: string;
+  status: 'pending' | 'in_escrow' | 'released' | 'disputed' | 'refunded' | 'cancelled';
+  in_escrow: boolean;
+  created_at: string;
   completed_at?: string,
   refunded_at?: string,
   cancelled_at?: string,
@@ -41,12 +41,12 @@ export function TransactionHistory() {
   ),
 
   useEffect(() => {
-    safeStorage.setItem('transaction_filter', filter)
+    safeStorage.setItem('transaction_filter', filter);
   }, [filter]),
   
   const { data: transactions, isLoading, error, refetch } = useQuery({
     queryKey: ['transactions', user?.id, filter],
-    queryFn: async () => {
+    queryFn: async () => {,
       if (!user) return [],
       
       // Build the query based on filters
@@ -56,7 +56,7 @@ export function TransactionHistory() {
           *,
           provider:profiles!provider_id(display_name),
           service:services(title)
-        `)
+        `),
         .or(`user_id.eq.${user.id},provider_id.eq.${user.id}`),
       
       if (filter === 'pending') {
@@ -77,7 +77,7 @@ export function TransactionHistory() {
     enabled: !!user}),
 
   const handleManageTransaction = async (transactionId: string, action: 'release' | 'refund' | 'cancel') => {
-    try {
+    try {,
       const { data, error } = await supabase.functions.invoke('manage-transaction', {
         body: { transactionId, action }
       }),
@@ -104,7 +104,7 @@ export function TransactionHistory() {
         return (
           <Badge variant="outline" className="bg-yellow-500/20 text-yellow-500 border-yellow-500">
             <Clock className="w-3 h-3 mr-1" /> In Escrow
-          </Badge>
+          </Badge>,
         ),
       case 'pending':
         return inEscrow ? (
@@ -151,14 +151,14 @@ export function TransactionHistory() {
           <Badge variant="outline" className="bg-gray-500/20 text-gray-500 border-gray-500">
             <AlertCircle className="w-3 h-3 mr-1" /> Unknown
           </Badge>
-        )
+        ),
     }
   }, 
 
   const { formatPrice } = useCurrency(),
 
   const formatCurrency = (amount: number) => {
-    return formatPrice(amount)
+    return formatPrice(amount),
   },
 
   if (error) {
@@ -278,14 +278,14 @@ export function TransactionHistory() {
                   <CardContent className="pb-3">
                     <div className="flex justify-between items-center mb-1">
                       <span className="text-zion-slate-light">Amount:</span>
-                      <span className="text-white font-medium text-lg">
+                      <span className="text-white font-medium text-lg">,
                         {formatCurrency(transaction.amount)}
                       </span>
                     </div>
                     
                     <div className="flex justify-between items-center text-sm">
                       <span className="text-zion-slate-light">Date:</span>
-                      <span className="text-zion-slate-light">
+                      <span className="text-zion-slate-light">,
                         {new Date(transaction.created_at).toLocaleDateString()} 
                         ({formatDistanceToNow(new Date(transaction.created_at), { addSuffix: true })})
                       </span>
@@ -294,7 +294,7 @@ export function TransactionHistory() {
                     {(transaction.completed_at || transaction.refunded_at || transaction.cancelled_at) && (
                       <div className="flex justify-between items-center text-sm mt-1">
                         <span className="text-zion-slate-light">
-                          {transaction.completed_at ? 'Completed:' : 
+                          {transaction.completed_at ? 'Completed:' :,
                            transaction.refunded_at ? 'Refunded:' : 'Cancelled:'}
                         </span>
                         <span className="text-zion-slate-light">
@@ -315,7 +315,7 @@ export function TransactionHistory() {
                         className="bg-green-600 hover:bg-green-700 text-white"
                       >
                         <CheckCircle2 className="mr-1 h-4 w-4" /> Release Funds
-                      </Button>
+                      </Button>,
                     )}
                     
                     {canRefund && (
@@ -337,7 +337,7 @@ export function TransactionHistory() {
                         className="text-red-400 border-red-400/30 hover:bg-red-400/10"
                       >
                         <XCircle className="mr-1 h-4 w-4" /> Cancel
-                      </Button>
+                      </Button>,
                     )}
                   </CardFooter>
                 </Card>
@@ -362,3 +362,4 @@ export function TransactionHistory() {
     </div>
   )
 }
+;

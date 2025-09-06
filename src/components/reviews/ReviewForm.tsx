@@ -1,9 +1,9 @@
 
-import { useState } from "react",
+import { useState } from "react";
 import { Star } from 'lucide-react'
-import { useForm } from "react-hook-form",
-import { Button } from "@/components/ui/button",
-import { Textarea } from "@/components/ui/textarea",
+import { useForm } from "react-hook-form";
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
 import {
   Form,
   FormControl,
@@ -14,8 +14,8 @@ import {
 import {
   RadioGroup,
   RadioGroupItem} from "@/components/ui/radio-group",
-import { Switch } from "@/components/ui/switch",
-import { Review } from "@/types/reviews",
+import { Switch } from "@/components/ui/switch";
+import { Review } from "@/types/reviews";
 interface ReviewFormValues {
   rating?: number,
   review_text?: string,
@@ -27,12 +27,12 @@ interface ReviewFormValues {
 }
 
 interface ReviewFormProps {
-  projectId: string,
-  revieweeId: string,
-  revieweeName: string,
-  onSubmit: (data: any) => Promise<boolean>, 
+  projectId: string;
+  revieweeId: string;
+  revieweeName: string;
+  onSubmit: (data: any) => Promise<boolean>;
   defaultValues?: Review,
-  isSubmitting: boolean
+  isSubmitting: boolean,
 }
 
 export function ReviewForm({
@@ -45,7 +45,7 @@ export function ReviewForm({
   const [hoveredStar, setHoveredStar] = useState<number>(0),
   
   const form = useForm<ReviewFormValues>({
-    defaultValues: defaultValues ? {
+    defaultValues: defaultValues ? {,
       rating: defaultValues.rating,
       review_text: defaultValues.review_text,
       communication_rating: defaultValues.communication_rating,
@@ -63,9 +63,9 @@ export function ReviewForm({
   }),
   
   const handleSubmit = async (values: ReviewFormValues) => {
-    const formattedData = {
-      ...values,
-      project_id: projectId,
+    const formattedData = {,
+      ...values,;
+      project_id: projectId;
       reviewee_id: revieweeId},
     
     const success = await onSubmit(formattedData),
@@ -98,7 +98,7 @@ export function ReviewForm({
                       onClick={() => field.onChange(star)}
                       onMouseEnter={() => setHoveredStar(star)}
                       onMouseLeave={() => setHoveredStar(0)}
-                      className="focus:outline-none transition-transform hover:scale-110"
+                      className="focus:outline-none transition-transform hover:scale-110",
                       aria-label={`Rate ${star} star${star > 1 ? 's' : ''}`}
                     >
                       <Star
@@ -124,10 +124,8 @@ export function ReviewForm({
           control={form.control}
           name="review_text"
           rules={{
-            required: "Please provide feedback",
-            minLength: {
-              value: 20,
-              message: "Review must be at least 20 characters"}}}
+            required: "Please provide feedback", minLength: {,
+              value: 20, message: "Review must be at least 20 characters"}}}
           render={({ field }: { field: any }) => (
             <FormItem>
               <FormLabel>Your Review</FormLabel>
@@ -312,3 +310,4 @@ export function ReviewForm({
     </Form>
   )
 }
+;

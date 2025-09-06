@@ -1,16 +1,16 @@
-import React from 'react',
-import dynamic from 'next/dynamic',
-import { useAuth } from "@/hooks/useAuth",
-import { useRequireAuth } from "@/hooks/useAuthGuard",
-import { Button } from "@/components/ui/button",
-import { Header } from "@/components/Header",
-import { Badge } from "@/components/ui/badge",
+import React from 'react';
+import dynamic from 'next/dynamic';
+import { useAuth } from "@/hooks/useAuth";
+import { useRequireAuth } from "@/hooks/useAuthGuard";
+import { Button } from "@/components/ui/button";
+import { Header } from "@/components/Header";
+import { Badge } from "@/components/ui/badge";
 import { UserCheck, Bell, MessageSquare, LogOut, Send, Settings, FileText, Heart, Key, ShoppingBag } from 'lucide-react'
-import { useGetOrdersQuery } from '@/hooks/useOrders',
-import { useFavorites } from '@/hooks/useFavorites',
-import { useToast } from "@/hooks/use-toast",
-import { EmptyState } from "@/components/ui/empty-state",
-import Link from 'next/link',
+import { useGetOrdersQuery } from '@/hooks/useOrders';
+import { useFavorites } from '@/hooks/useFavorites';
+import { useToast } from "@/hooks/use-toast";
+import { EmptyState } from "@/components/ui/empty-state";
+import Link from 'next/link';
 // Lazy load heavy components to prevent router abort
 const CommunityDiscussion = dynamic(() => import("@/components/CommunityDiscussion").then(mod => ({ default: mod.CommunityDiscussion })), {
   loading: () => <div className="h-32 bg-zion-blue-light rounded animate-pulse" />,
@@ -31,9 +31,8 @@ const NotificationBell = dynamic(() => import("@/components/NotificationBell").t
 const GuidedTour = dynamic(() => import("@/components/onboarding/GuidedTour").then(mod => ({ default: mod.GuidedTour })), {
   ssr: false}),
 
-// Lazy load notification functions
-const loadNotificationFunctions = () => import("@/utils/notifications"),
-
+// Lazy load notification functions;
+const loadNotificationFunctions = () => import("@/utils/notifications");
 export default function Dashboard() {
   const { logout } = useAuth(),
   const { user, loading } = useRequireAuth(), // This will handle authentication and redirects
@@ -99,12 +98,12 @@ export default function Dashboard() {
       <Header />
       <div className="min-h-screen bg-zion-blue">
         <div className="container mx-auto px-4 py-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">,
             {/* Left Sidebar - User Profile */}
             <div className="lg:col-span-1">
               <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">
                 <div className="flex flex-col items-center text-center">
-                  <div className="w-24 h-24 rounded-full bg-zion-purple flex items-center justify-center text-2xl font-bold text-white mb-4">
+                  <div className="w-24 h-24 rounded-full bg-zion-purple flex items-center justify-center text-2xl font-bold text-white mb-4">,
                     {userWithExtendedProps?.displayName?.split(' ').map((name: string) => name[0]).join('') || userWithExtendedProps?.email?.charAt(0).toUpperCase()}
                   </div>
                   <h2 className="text-xl font-bold text-white">{userWithExtendedProps?.displayName || userWithExtendedProps?.email}</h2>
@@ -118,7 +117,7 @@ export default function Dashboard() {
                   
                   <Button
                     id="profile-link"
-                    className="w-full flex items-center gap-2 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
+                    className="w-full flex items-center gap-2 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white",
                     onClick={() => window.location.href = "/profile"}
                   >
                     <UserCheck size={16} />
@@ -153,8 +152,7 @@ export default function Dashboard() {
                   <div className="flex justify-between items-center">
                     <span className="text-zion-slate-light">Badges Earned</span>
                     <span className="text-zion-cyan font-medium">3/12</span>
-                  </div>
-                  
+                  </div>,
                   {/* Test notification buttons */}
                   <div className="flex flex-col gap-2 mt-4">
                     <Button 
@@ -175,11 +173,11 @@ export default function Dashboard() {
                           await createOnboardingNotification({
                             userId: user?.id ?? "",
                             missingMilestone: 'profile_completed',
-                            userRole: roleForTour
+                            userRole: roleForTour,
                           }),
                           toast({
                             title: "Onboarding notification sent",
-                            description: "Check your notification center"
+                            description: "Check your notification center",
                           })
                         } catch (error) {
                           toast({
@@ -204,11 +202,11 @@ export default function Dashboard() {
                             title: "New Feature Available!",
                             message: "We've added a new notification center to help you stay updated with important information.",
                             actionUrl: "/notifications",
-                            actionText: "Explore Now"
+                            actionText: "Explore Now",
                           }),
                           toast({
                             title: "System notification sent",
-                            description: "Check your notification center"
+                            description: "Check your notification center",
                           })
                         } catch (error) {
                           toast({
@@ -251,7 +249,7 @@ export default function Dashboard() {
                     <NotificationBell />
                     <Button 
                       variant="outline" 
-                      className="text-zion-slate-light border-zion-blue-light hover:bg-zion-blue hover:text-white"
+                      className="text-zion-slate-light border-zion-blue-light hover:bg-zion-blue hover:text-white",
                       onClick={logout}
                     >
                       <LogOut size={16} className="mr-2" />
@@ -261,7 +259,7 @@ export default function Dashboard() {
                 </div>
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 mb-6">
-                  <div className="p-4 rounded-lg bg-gradient-to-br from-zion-blue to-zion-purple/30 border border-zion-blue-light">
+                  <div className="p-4 rounded-lg bg-gradient-to-br from-zion-blue to-zion-purple/30 border border-zion-blue-light">,
                     <h3 className="text-lg font-medium text-white">Welcome, {userWithExtendedProps?.displayName?.split(' ')[0] || 'User'}</h3>
                     <p className="text-zion-slate-light mt-1">Your journey on Zion has just begun!</p>
                   </div>
@@ -276,7 +274,7 @@ export default function Dashboard() {
                   <h3 className="text-lg font-bold text-white mb-4">Your Badges</h3>
                   <div className="grid grid-cols-3 sm:grid-cols-4 gap-4">
                     <div className="flex flex-col items-center">
-                      <div className="w-16 h-16 rounded-full bg-gradient-to-br from-zion-purple to-zion-cyan flex items-center justify-center mb-2">
+                      <div className="w-16 h-16 rounded-full bg-gradient-to-br from-zion-purple to-zion-cyan flex items-center justify-center mb-2">,
                         <UserCheck size={24} className="text-white" />
                       </div>
                       <span className="text-xs text-center text-zion-slate-light">Newcomer</span>
@@ -373,3 +371,4 @@ export default function Dashboard() {
     </>
   )
 }
+;

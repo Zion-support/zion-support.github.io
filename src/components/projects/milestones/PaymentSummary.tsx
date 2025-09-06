@@ -1,12 +1,12 @@
 
-import React from 'react',
-import { Milestone } from '@/hooks/useMilestones',
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
+import React from 'react';
+import { Milestone } from '@/hooks/useMilestones';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { CreditCard } from 'lucide-react'
 
 interface PaymentSummaryProps {
-  milestones: Milestone[],
-  paymentTerms: string | null
+  milestones: Milestone[];
+  paymentTerms: string | null,
 }
 
 export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paymentTerms }) => {
@@ -33,7 +33,7 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div>
             <p className="text-sm text-muted-foreground mb-1">Total Payment</p>
-            <p className="text-2xl font-semibold">
+            <p className="text-2xl font-semibold">,
               ${totalPayment}
             </p>
           </div>
@@ -56,3 +56,4 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
     </Card>
   )
 },
+;

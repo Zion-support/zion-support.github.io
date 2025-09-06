@@ -1,15 +1,15 @@
 
-import React, { useState } from "react",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
+import React, { useState } from "react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from 'lucide-react'
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger} from "@/components/ui/tooltip",
-import { useToast } from "@/hooks/use-toast",
-import { useAuth } from "@/hooks/useAuth",
+import { useToast } from "@/hooks/use-toast";
+import { useAuth } from "@/hooks/useAuth";
 export function OnChainExport() {
   const [isConnected, setIsConnected] = useState(false),
   const [isExporting, setIsExporting] = useState(false),
@@ -25,7 +25,7 @@ export function OnChainExport() {
         toast({
           title: "Wallet not detected",
           description: "Please install MetaMask or another Ethereum wallet to use this feature",
-          variant: "destructive"
+          variant: "destructive",
         }),
         return
       }
@@ -46,10 +46,10 @@ export function OnChainExport() {
         title: "Wallet connected",
         description: `Wallet ${address.slice(0, 6)}...${address.slice(-4)} connected successfully`})
     } catch (error: any) {
-      toast({
+      toast({,
         title: "Connection failed",
         description: error.message || "Could not connect to wallet",
-        variant: "destructive"
+        variant: "destructive",
       })
     }
   },
@@ -66,12 +66,12 @@ export function OnChainExport() {
       toast({
         title: "Tokens exported",
         description: "Your ZION$ tokens have been exported to your wallet"})
-    } catch (error: any) {
+    } catch (error: any) {,
       setExportStatus('error'),
       toast({
         title: "Export failed",
         description: error.message || "Could not export tokens",
-        variant: "destructive"
+        variant: "destructive",
       })
     } finally {
       setIsExporting(false)
@@ -115,7 +115,7 @@ export function OnChainExport() {
               </Button>
             ) : (
               <Button 
-                className="w-full" 
+                className="w-full",
                 onClick={handleExportTokens} 
                 disabled={isExporting}
               >
@@ -138,3 +138,4 @@ export function OnChainExport() {
     </Card>
   )
 }
+;

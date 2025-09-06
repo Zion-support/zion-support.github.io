@@ -1,18 +1,18 @@
 
-import React, { useState, useRef } from "react",
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
+import React, { useState, useRef } from "react";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { Upload, Trash2, Plus } from 'lucide-react'
-import { AppPlatform } from "./MetadataManager",
-import { toast } from "sonner",
+import { AppPlatform } from "./MetadataManager";
+import { toast } from "sonner";
 interface ScreenshotManagerProps {
-  platform: AppPlatform
+  platform: AppPlatform,
 }
 
 type Screenshot = {
-  id: string,
-  url: string,
-  file: File
+  id: string;
+  url: string;
+  file: File,
 },
 
 export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }) => {
@@ -22,12 +22,12 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
   
   const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
-      addScreenshots(Array.from(e.target.files))
+      addScreenshots(Array.from(e.target.files)),
     }
   },
   
   const addScreenshots = (files: File[]) => {
-    // Filter for image files only
+    // Filter for image files only,
     const imageFiles = files.filter(file => file.type.startsWith('image/')),
     
     if (imageFiles.length === 0) {
@@ -55,25 +55,25 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     setScreenshots(prev => [...prev, ...newScreenshots]),
     
     if (filesToAdd.length < imageFiles.length) {
-      toast.warning(`Only added ${filesToAdd.length} screenshots. Maximum is ${maxScreenshots}.`)
+      toast.warning(`Only added ${filesToAdd.length} screenshots. Maximum is ${maxScreenshots}.`);
     }
   },
   
   const removeScreenshot = (id: string) => {
-    setScreenshots(prev => {
+    setScreenshots(prev => {,
       const filtered = prev.filter(screenshot => screenshot.id !== id),
       
       // Revoke object URL to avoid memory leaks
       const removed = prev.find(screenshot => screenshot.id === id),
       if (removed) {
-        URL.revokeObjectURL(removed.url)
+        URL.revokeObjectURL(removed.url);
       }
       
       return filtered
     })
   },
   
-  const handleDragOver = (e: React.DragEvent) => {
+  const handleDragOver = (e: React.DragEvent) => {,
     e.preventDefault(),
     setIsDragging(true)
   },
@@ -82,7 +82,7 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     setIsDragging(false)
   },
   
-  const handleDrop = (e: React.DragEvent) => {
+  const handleDrop = (e: React.DragEvent) => {,
     e.preventDefault(),
     setIsDragging(false),
     
@@ -130,7 +130,7 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
         <div className="text-xs text-gray-300 mb-4">
           {platform === "ios" 
             ? "Recommended size: 1290x2796 pixels for iPhone. Max 10 screenshots."
-            : "Vary by device. Include phone and tablet screenshots. Max 8 per device type."
+            : "Vary by device. Include phone and tablet screenshots. Max 8 per device type.",
           }
         </div>
         
@@ -150,10 +150,11 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
               >
                 <Trash2 className="h-3 w-3" />
               </button>
-            </div>
+            </div>,
           ))}
         </div>
       </CardContent>
     </Card>
   )
 },
+;

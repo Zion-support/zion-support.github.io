@@ -1,13 +1,12 @@
 
-import React from "react",
-import Link from "next/link",
+import React from "react";
+import Link from "next/link";
 import { ArrowRight, Smartphone } from 'lucide-react'
-import { Button } from "@/components/ui/button",
-import { AppStoreButtons } from "./AppStoreButtons",
-import { Card, CardContent } from "@/components/ui/card",
-
+import { Button } from "@/components/ui/button";
+import { AppStoreButtons } from "./AppStoreButtons";
+import { Card, CardContent } from "@/components/ui/card";
 export const MobileLaunchHero: React.FC = () => {
-  // App store links - these would come from environment variables in production
+  // App store links - these would come from environment variables in production,
   const appStoreUrl = "#", // Replace with actual App Store URL
   const googlePlayUrl = "#", // Replace with actual Google Play URL
 
@@ -21,7 +20,7 @@ export const MobileLaunchHero: React.FC = () => {
               In Your Pocket
             </h1>
             
-            <p className="text-lg md:text-xl opacity-90 mb-8">
+            <p className="text-lg md:text-xl opacity-90 mb-8">,
               Find top AI talent or global IT jobs on the go. Track projects, message candidates, and get AI-powered matches instantly with our mobile app.
             </p>
             
@@ -35,7 +34,7 @@ export const MobileLaunchHero: React.FC = () => {
             <div className="flex flex-wrap gap-4">
               <Link href="/open-app">
                 <Button variant="outline" size="lg" className="flex gap-2 border-white text-white hover:bg-white/10">
-                  Open App
+                  Open App,
                   <ArrowRight size={20} />
                 </Button>
               </Link>
@@ -49,7 +48,7 @@ export const MobileLaunchHero: React.FC = () => {
           </div>
           
           <div className="flex-1 flex justify-center md:justify-end">
-            <div className="relative">
+            <div className="relative">,
               {/* Phone mockup with glow effect */}
               <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl transform translate-y-2"></div>
               
@@ -68,3 +67,4 @@ export const MobileLaunchHero: React.FC = () => {
     </section>
   )
 },
+;

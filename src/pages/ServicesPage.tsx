@@ -1,26 +1,25 @@
-import { useState, useEffect, useCallback, useMemo } from 'react',
-import { motion, AnimatePresence } from 'framer-motion',
-import { useRouter } from 'next/router',
+import { useState, useEffect, useCallback, useMemo } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useRouter } from 'next/router';
 import { ArrowUp, Filter, SortAsc, Zap, TrendingUp, Star, ShoppingCart, Clock, Award } from 'lucide-react'
-import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll',
-import { generateITServices, getServicesMarketStats, getRecommendedServices } from '@/utils/servicesAutoFeedAlgorithm',
-import { ProductListing } from '@/types/listings',
-import { SkeletonCard } from '@/components/ui/skeleton',
-import { Button } from '@/components/ui/button',
-import { Badge } from '@/components/ui/badge',
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
-import Spinner from '@/components/ui/spinner',
-import { SERVICES } from '@/data/servicesData',
-import { useCurrency } from '@/hooks/useCurrency',
+import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll';
+import { generateITServices, getServicesMarketStats, getRecommendedServices } from '@/utils/servicesAutoFeedAlgorithm';
+import { ProductListing } from '@/types/listings';
+import { SkeletonCard } from '@/components/ui/skeleton';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import Spinner from '@/components/ui/spinner';
+import { SERVICES } from '@/data/servicesData';
+import { useCurrency } from '@/hooks/useCurrency';
 // Initial services from existing data
-const INITIAL_SERVICES: ProductListing[] = SERVICES,
-
-// Market insights component
+const INITIAL_SERVICES: ProductListing[] = SERVICES;
+// Market insights component,
 const ServicesMarketInsights = ({ stats }: { stats: any }) => (
   <Card className="bg-gradient-to-r from-green-900/20 to-blue-900/20 border-green-700/30 mb-6">
     <CardContent className="p-6">
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="text-center">
+        <div className="text-center">,
           <div className="text-2xl font-bold text-green-400">${(stats.averagePrice / 1000).toFixed(1)}k</div>
           <div className="text-sm text-muted-foreground">Avg Price</div>
         </div>
@@ -73,7 +72,7 @@ const ServiceFilterControls = ({
         <option value="rating">Highest Rated</option>
         <option value="ai-score">AI Score</option>
       </select>
-    </div>
+    </div>,
     <Button variant={showRecommended ? "default" : "outline"} size="sm" onClick={() => setShowRecommended(!showRecommended)}>
       <Star className="h-4 w-4 mr-1" />
       {showRecommended ? "All Services" : "Recommended"}
@@ -88,7 +87,7 @@ const ServiceCard = ({ service, onViewDetails }: { service: ProductListing, onVi
   <Card className="h-full hover:shadow-lg transition-shadow">
     <CardHeader className="pb-3">
       <div className="flex items-start justify-between">
-        <div className="flex-1 min-w-0">
+        <div className="flex-1 min-w-0">,
           <h3 className="font-semibold text-lg mb-1 line-clamp-1">{service.title}</h3>
           <div className="flex items-center gap-2 mb-2">
             <div className="flex items-center gap-1">
@@ -128,7 +127,7 @@ const ServiceCard = ({ service, onViewDetails }: { service: ProductListing, onVi
 
 // Loading grid
 const ServicesLoadingGrid = ({ count = 8 }: { count?: number }) => (
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">,
     {Array.from({ length: count }).map((_, i) => <SkeletonCard key={i} />)}
   </div>
 ),
@@ -141,7 +140,7 @@ export default function ServicesPage() {
   const [showRecommended, setShowRecommended] = useState(false),
   const [totalGenerated, setTotalGenerated] = useState(0),
 
-  const fetchServices = useCallback(async (page: number, limit: number) => {
+  const fetchServices = useCallback(async (page: number, limit: number) => {,
     await new Promise(resolve => setTimeout(resolve, 400)),
 
     let allServices: ProductListing[] = [],
@@ -175,7 +174,7 @@ export default function ServicesPage() {
           return (b.rating || 0) - (a.rating || 0),
         case 'ai-score':
           return (b.aiScore || 0) - (a.aiScore || 0),
-        default: return new Date(b.createdAt || '').getTime() - new Date(a.createdAt || '').getTime()
+        default: return new Date(b.createdAt || '').getTime() - new Date(a.createdAt || '').getTime(),
       }
     }),
     
@@ -186,13 +185,12 @@ export default function ServicesPage() {
     return {
       items,
       hasMore: endIndex < filteredServices.length || page < 10,
-      total: filteredServices.length
+      total: filteredServices.length,
     }
   }, [sortBy, filterCategory, showRecommended, totalGenerated]),
 
   const {
-    items: services,
-    loading,
+    items: services, loading,
     error,
     hasMore,
     isFetching,
@@ -256,7 +254,7 @@ export default function ServicesPage() {
         <p className="text-muted-foreground text-lg">Professional services for digital transformation and technology innovation</p>
       </motion.div>
 
-      {marketStats && (
+      {marketStats && (,
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
           <ServicesMarketInsights stats={marketStats} />
         </motion.div>
@@ -279,7 +277,7 @@ export default function ServicesPage() {
         <AnimatePresence mode="popLayout">
           {services.map((item, index) => (
             <motion.div
-              key={item.id} ref={index === services.length - 1 ? lastElementRef : null}
+              key={item.id} ref={index === services.length - 1 ? lastElementRef: null}
               initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }}
               transition={{ delay: Math.min(index * 0.03, 0.5) }} whileHover={{ scale: 1.02 }}
             >
@@ -304,7 +302,7 @@ export default function ServicesPage() {
 
       <AnimatePresence>
         {showScrollTop && (
-          <motion.button onClick={scrollToTop} className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50"
+          <motion.button onClick={scrollToTop} className="fixed bottom-8 right-8 p-3 bg-primary hover: bg-primary/90 rounded-full shadow-lg z-50",
             initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0 }}
             whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}
           >
@@ -315,3 +313,4 @@ export default function ServicesPage() {
     </div>
   )
 }
+;

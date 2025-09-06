@@ -1,14 +1,14 @@
-import React, { useState } from 'react',
+import React, { useState } from 'react';
 import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react'
-import { useAuth } from '@/hooks/useAuth',
-import { usePoints } from '@/hooks/usePoints',
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',
-import { Button } from '@/components/ui/button',
-import { Badge } from '@/components/ui/badge',
-import { ScrollArea } from '@/components/ui/scroll-area',
-import { formatDistanceToNow } from 'date-fns',
-import Link from 'next/link',
-import { LoginModal } from '@/components/auth/LoginModal',
+import { useAuth } from '@/hooks/useAuth';
+import { usePoints } from '@/hooks/usePoints';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { ScrollArea } from '@/components/ui/scroll-area';
+import { formatDistanceToNow } from 'date-fns';
+import Link from 'next/link';
+import { LoginModal } from '@/components/auth/LoginModal';
 export default function PointsPage() {
   const { isAuthenticated, user } = useAuth(),
   const { ledger, balance, loading, fetchLedger } = usePoints(),
@@ -36,28 +36,28 @@ export default function PointsPage() {
       title: "Sign Up & Profile Setup",
       description: "Complete your profile and verify your email",
       points: "50 pts",
-      action: isAuthenticated ? "✓ Completed" : "Get Started"
+      action: isAuthenticated ? "✓ Completed" : "Get Started",
     },
     {
       icon: <ShoppingBag className="h-5 w-5" />,
       title: "First Purchase",
       description: "Make your first purchase on the marketplace",
       points: "100 pts",
-      action: "Browse Marketplace"
+      action: "Browse Marketplace",
     },
     {
       icon: <MessageSquare className="h-5 w-5" />,
       title: "Community Engagement",
       description: "Post in the community or comment on discussions",
       points: "25 pts per post",
-      action: "Join Community"
+      action: "Join Community",
     },
     {
       icon: <Users className="h-5 w-5" />,
       title: "Refer Friends",
       description: "Invite friends to join Zion marketplace",
       points: "200 pts per referral",
-      action: "Share Referral Link"
+      action: "Share Referral Link",
     }
   ],
 
@@ -95,7 +95,7 @@ export default function PointsPage() {
                   Multiple ways to accumulate rewards
                 </CardDescription>
               </CardHeader>
-              <CardContent className="space-y-4">
+              <CardContent className="space-y-4">,
                 {earningOpportunities.map((opportunity, index) => (
                   <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
                     <div className="text-primary mt-1">{opportunity.icon}</div>
@@ -179,7 +179,7 @@ export default function PointsPage() {
               More ways to boost your point balance
             </CardDescription>
           </CardHeader>
-          <CardContent className="space-y-4">
+          <CardContent className="space-y-4">,
             {earningOpportunities.map((opportunity, index) => (
               <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
                 <div className="text-primary mt-1">{opportunity.icon}</div>
@@ -286,3 +286,4 @@ export default function PointsPage() {
     </div>
   )
 }
+;

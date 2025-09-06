@@ -1,16 +1,16 @@
 
-import { useState } from "react",
-import { formatDistanceToNow } from "date-fns",
-import { JobApplication } from "@/types/jobs",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { useState } from "react";
+import { formatDistanceToNow } from "date-fns";
+import { JobApplication } from "@/types/jobs";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { FileText, MessageSquare, HelpCircle, Calendar, ExternalLink, Download } from 'lucide-react'
-import Link from "next/link",
-import { StatusBadge } from "./StatusBadge",
-import { ApplicationProgress } from "./ApplicationProgress",
-import { toast } from "sonner",
+import Link from "next/link";
+import { StatusBadge } from "./StatusBadge";
+import { ApplicationProgress } from "./ApplicationProgress";
+import { toast } from "sonner";
 interface ApplicationCardProps {
-  application: JobApplication
+  application: JobApplication,
 }
 
 export function ApplicationCard({ application }: ApplicationCardProps) {
@@ -18,7 +18,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
 
   const handleDownloadResume = () => {
     // This would typically download the resume file
-    toast.info("Resume download functionality will be implemented soon")
+    toast.info("Resume download functionality will be implemented soon");
   },
 
   const renderActionButtons = () => {
@@ -38,7 +38,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
         return (
           <Button variant="secondary" size="sm" className="bg-green-100 text-green-800 hover: bg-green-200 hover:text-green-900">
             <FileText className="h-4 w-4 mr-1" /> View Offer
-          </Button>
+          </Button>,
         ),
       case "rejected":
         return (
@@ -47,7 +47,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
           </Button>
         ),
       default:
-        return null
+        return null,
     }
   },
 
@@ -139,3 +139,4 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
     </Card>
   )
 }
+;

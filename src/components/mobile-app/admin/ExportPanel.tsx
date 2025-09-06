@@ -1,21 +1,19 @@
 
-import React from "react",
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
+import React from "react";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { Download } from 'lucide-react'
-import { AppPlatform, AppMetadataValues } from "./MetadataManager",
-import { toast } from "sonner",
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
-
-
+import { AppPlatform, AppMetadataValues } from "./MetadataManager";
+import { toast } from "sonner";
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 interface ExportPanelProps {
-  platform: AppPlatform,
-  metadata: AppMetadataValues
+  platform: AppPlatform;
+  metadata: AppMetadataValues,
 }
 
 export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) => {
   const handleExport = (format: 'json' | 'csv') => {
-    try {
+    try {,
       let content: string,
       let fileName: string,
       
@@ -61,7 +59,7 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
   
   const trackAnalytics = () => {
     logInfo("Tracking app installation analytics..."),
-    toast.success("Analytics tracking enabled")
+    toast.success("Analytics tracking enabled");
   },
   
   return (
@@ -76,7 +74,7 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
             <p className="text-sm text-gray-400 mb-3">
               Export your app metadata for submission to app stores
             </p>
-            <div className="flex flex-col sm:flex-row gap-2">
+            <div className="flex flex-col sm:flex-row gap-2">,
               <Button variant="outline" onClick={() => handleExport('json')} className="flex-1">
                 <Download className="mr-2 h-4 w-4" />
                 JSON
@@ -102,3 +100,4 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
     </Card>
   )
 },
+;

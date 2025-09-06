@@ -1,31 +1,29 @@
-import { useState, useEffect } from 'react',
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router', // Changed from react-router-dom
-import { useFormik } from 'formik',
-import * as Yup from 'yup',
-import axios from 'axios',
-import Link from 'next/link',
-import { Input } from '@/components/ui/input',
-import { Button } from '@/components/ui/button',
-import { LoadingSpinner } from '@/components/ui/enhanced-loading-states',
-import { Alert, AlertDescription } from '@/components/ui/alert',
-import { PasswordStrengthMeter } from '@/components/PasswordStrengthMeter',
-import { AuthButtons } from '@/components/AuthButtons',
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
+import axios from 'axios';
+import Link from 'next/link';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
+import { LoadingSpinner } from '@/components/ui/enhanced-loading-states';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import { PasswordStrengthMeter } from '@/components/PasswordStrengthMeter';
+import { AuthButtons } from '@/components/AuthButtons';
 import { AlertCircle, CheckCircle, Mail } from 'lucide-react'
-import { toast } from '@/hooks/use-toast',
-import { AuthLayout } from '@/layout',
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
-
-
+import { toast } from '@/hooks/use-toast';
+import { AuthLayout } from '@/layout';
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 const SignupSchema = Yup.object({
   name: Yup.string().required('Name is required'),
   email: Yup.string().email('Invalid email').required('Email is required'),
-  password: Yup.string()
+  password: Yup.string(),
     .min(8, 'Password must be at least 8 characters')
     .matches(/[A-Z]/, 'Password must include an uppercase letter')
     .matches(/[a-z]/, 'Password must include a lowercase letter')
     .matches(/[0-9]/, 'Password must include a number')
     .required('Password is required'),
-  confirm: Yup.string()
+  confirm: Yup.string(),
     .oneOf([Yup.ref('password')], 'Passwords must match')
     .required('Confirm password is required'),
   terms: Yup.boolean().oneOf([true], 'You must accept the terms and conditions')
@@ -54,7 +52,7 @@ export default function Signup() {
       if (res.status !== 200) {
         setHealthCheckError('Authentication service is experiencing issues')
       }
-    } catch (err: any) {
+    } catch (err: any) {,
       logErrorToProduction('Auth service health check failed', { data: err }),
       setAuthServiceAvailable(false),
       // Set a more specific error message based on the error type
@@ -75,15 +73,9 @@ export default function Signup() {
   }, []),
 
   const formik = useFormik({
-    initialValues: {
-      name: '',
-      email: '',
-      password: '',
-      confirm: '',
-      terms: false
-    },
-    validationSchema: SignupSchema,
-    onSubmit: async (values, { setErrors }) => {
+    initialValues: {,
+      name: '', email: '', password: '', confirm: '', terms: false,
+    }, validationSchema: SignupSchema, onSubmit: async (values, { setErrors }) => {
       logInfo('Form submission started with:', { 
         name: values.name, 
         email: values.email,
@@ -97,30 +89,30 @@ export default function Signup() {
       setEmailVerificationRequired(false),
       
       try {
-        const requestData = {
-          name: values.name,
-          email: values.email,
-          password: values.password,
+        const requestData = {;
+          name: values.name;
+          email: values.email;
+          password: values.password;
           ...(isPartnerSignup && {
-            userType: 'partner',
-            source: signupSource,
+            userType: 'partner';
+            source: signupSource;
             metadata: {
-              partnerProgram: true,
-              signupType: 'partner'
+              partnerProgram: true;
+              signupType: 'partner',
             }
           })
         },
         
         logInfo('Making API request to /api/auth/register with:', { 
           ...requestData, 
-          password: '[REDACTED]' 
+          password: '[REDACTED]',
         }),
         
         const res = await axios.post('/api/auth/register', requestData),
         
         logInfo('API response received:', { 
           status: res.status, 
-          data: res.data 
+          data: res.data,
         }),
         
         if (res.status === 201) {
@@ -137,7 +129,7 @@ export default function Signup() {
             toast({
               title: isPartnerSignup ? 'Partner application submitted!' : 'Account created!',
               description: isPartnerSignup 
-                ? 'Please verify your email. Your partner application will be reviewed after verification.'
+                ? 'Please verify your email. Your partner application will be reviewed after verification.',
                 : 'Please check your email to verify your account before logging in.'})
           } else {
             // Account created and ready to use
@@ -149,27 +141,27 @@ export default function Signup() {
             toast({
               title: isPartnerSignup ? 'Partner application submitted!' : 'Account created successfully!',
               description: isPartnerSignup 
-                ? 'Welcome to the partner program. You can now log in.'
+                ? 'Welcome to the partner program. You can now log in.',
                 : 'Welcome to the platform. You can now log in.'}),
             
             // Redirect to appropriate page after a short delay
             setTimeout(() => {
-              router.push(isPartnerSignup ? '/partners' : '/login')
+              router.push(isPartnerSignup ? '/partners' : '/login');
             }, 2000)
           }
         }
-      } catch (err: any) {
+      } catch (err: any) {,
         logErrorToProduction('Signup error details:', {
           message: err.message,
-          response: err.response ? {
+          response: err.response ? {,
             status: err.response.status,
             statusText: err.response.statusText,
-            data: err.response.data
+            data: err.response.data,
           } : 'No response',
           request: err.request ? 'Request made but no response' : 'No request',
-          config: err.config ? {
+          config: err.config ? {,
             url: err.config.url,
-            method: err.config.method
+            method: err.config.method,
           } : 'No config'
         }),
         
@@ -222,14 +214,14 @@ export default function Signup() {
     }
   }),
 
-  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {,
     e.preventDefault(),
     formik.setTouched({
       name: true,
       email: true,
       password: true,
       confirm: true,
-      terms: true
+      terms: true,
     }),
     await formik.handleSubmit(e)
   },
@@ -477,3 +469,4 @@ export default function Signup() {
     </AuthLayout>
   )
 }
+;

@@ -1,10 +1,10 @@
-import React from 'react',
+import React from 'react';
 interface FilterSidebarProps {
   className?: string,
   children?: React.ReactNode
 }
 
-export const FilterSidebar: React.FC<FilterSidebarProps> = ({ 
+export const FilterSidebar: React.FC<FilterSidebarProps> = ({;
   className,
   children 
 }) => {
@@ -15,4 +15,4 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({
   )
 },
 
-export default FilterSidebar,
+export default FilterSidebar;

@@ -1,15 +1,15 @@
-import { useState } from "react",
-import { MatchResultItem } from "@/lib/ai-matchmaking",
-import { Card, CardContent } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { useState } from "react";
+import { MatchResultItem } from "@/lib/ai-matchmaking";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { BarChart3, BriefcaseIcon, Monitor, User } from 'lucide-react'
-import Skeleton from "@/components/ui/skeleton",
-import { cn } from "@/lib/utils",
+import Skeleton from "@/components/ui/skeleton";
+import { cn } from "@/lib/utils";
 interface AIMatchingResultsProps {
-  matches: MatchResultItem[],
-  onSelectMatch?: (match: MatchResultItem) => void,
+  matches: MatchResultItem[];
+  onSelectMatch?: (match: MatchResultItem) => void;
   isLoading?: boolean,
   projectDescription?: string,
   serviceType?: string
@@ -20,20 +20,20 @@ export function AIMatchingResults({
   onSelectMatch,
   isLoading = false,
   projectDescription = "",
-  serviceType: _serviceType = ""
+  serviceType: _serviceType = "",
 }: AIMatchingResultsProps) {
   const [activeTab, setActiveTab] = useState("all"),
   
   // Group matches by category
-  const categories = {
-    all: matches,
-    talent: matches.filter(match => match.category.toLowerCase().includes("talent")),
-    services: matches.filter(match => match.category.toLowerCase().includes("service")),
-    equipment: matches.filter(match => match.category.toLowerCase().includes("equipment"))
+  const categories = {;
+    all: matches;
+    talent: matches.filter(match => match.category.toLowerCase().includes("talent"));
+    services: matches.filter(match => match.category.toLowerCase().includes("service"));
+    equipment: matches.filter(match => match.category.toLowerCase().includes("equipment")),
   },
   
   // Get the icon for a category
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (category: string) => {,
     const lowerCategory = category.toLowerCase(),
     if (lowerCategory.includes("talent")) return User,
     if (lowerCategory.includes("equipment")) return Monitor,
@@ -64,7 +64,7 @@ export function AIMatchingResults({
           </p>
           {projectDescription && (
             <div className="bg-zion-blue-light/20 p-3 rounded-md text-left">
-              <p className="text-xs text-zion-slate-light">Your search:</p>
+              <p className="text-xs text-zion-slate-light">Your search:</p>,
               <p className="text-sm text-white">{projectDescription}</p>
             </div>
           )}
@@ -99,7 +99,7 @@ export function AIMatchingResults({
                 return (
                   <Card 
                     key={match.id}
-                    className="bg-zion-blue-dark border-zion-blue-light overflow-hidden transition-all hover:border-zion-purple/50 cursor-pointer"
+                    className="bg-zion-blue-dark border-zion-blue-light overflow-hidden transition-all hover:border-zion-purple/50 cursor-pointer",
                     onClick={() => onSelectMatch && onSelectMatch(match)}
                   >
                     <div className="flex">
@@ -141,7 +141,7 @@ export function AIMatchingResults({
                               <Badge variant="outline">
                                 {match.category}
                               </Badge>
-                              {match.skills && match.skills.slice(0, 3).map((skill: string, i: number) => (
+                              {match.skills && match.skills.slice(0, 3).map((skill: string, i: number) => (,
                                 <Badge key={i} variant="outline">
                                   {skill}
                                 </Badge>
@@ -164,4 +164,4 @@ export function AIMatchingResults({
       </Tabs>
     </div>
   )
-}
+};

@@ -1,14 +1,14 @@
 
-import React, { useState } from 'react',
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import React, { useState } from 'react';
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX } from 'lucide-react'
-import './video-call.css',
+import './video-call.css';
 interface Participant {
-  id: string,
-  name: string,
+  id: string;
+  name: string;
   avatar?: string,
   isMuted?: boolean,
   isVideoEnabled?: boolean,
@@ -17,16 +17,16 @@ interface Participant {
 }
 
 interface VideoCallRoomProps {
-  roomId: string,
+  roomId: string;
   participants?: Participant[],
   onLeave?: () => void,
-  onToggleMute?: (isMuted: boolean) => void,
-  onToggleVideo?: (isEnabled: boolean) => void,
-  onToggleScreenShare?: (isSharing: boolean) => void,
-  className?: string
+  onToggleMute?: (isMuted: boolean) => void;
+  onToggleVideo?: (isEnabled: boolean) => void;
+  onToggleScreenShare?: (isSharing: boolean) => void;
+  className?: string,
 }
 
-export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({ 
+export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
   roomId,
   participants = [], 
   onLeave,
@@ -50,7 +50,7 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
     return () => clearInterval(timer)
   }, []),
 
-  const formatDuration = (seconds: number) => {
+  const formatDuration = (seconds: number) => {,
     const hrs = Math.floor(seconds / 3600),
     const mins = Math.floor((seconds % 3600) / 60),
     const secs = seconds % 60,
@@ -125,7 +125,7 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
       <CardContent className="p-0">
         <div className="video-container p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {participants.length > 0 ? (
-            participants.map((participant) => (
+            participants.map((participant) => (,
               <div key={participant.id} className="video-participant bg-zion-blue-dark rounded-lg overflow-hidden relative">
                 {participant.isVideoEnabled && !participant.isScreenSharing ? (
                   <div className="bg-zion-blue-light h-full w-full flex items-center justify-center text-white">
@@ -221,3 +221,4 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
     </Card>
   )
 },
+;

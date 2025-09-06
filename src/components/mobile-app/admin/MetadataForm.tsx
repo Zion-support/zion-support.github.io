@@ -1,16 +1,16 @@
 
-import React from "react",
-import { UseFormReturn } from "react-hook-form",
-import { AppMetadataValues } from "./MetadataManager",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
-import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
-import { Badge } from "@/components/ui/badge",
+import React from "react";
+import { UseFormReturn } from "react-hook-form";
+import { AppMetadataValues } from "./MetadataManager";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { Badge } from "@/components/ui/badge";
 import { X } from 'lucide-react'
 
 interface MetadataFormProps {
-  form: UseFormReturn<AppMetadataValues>
+  form: UseFormReturn<AppMetadataValues>,
 }
 
 export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
@@ -18,7 +18,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
   const keywords = watch("keywords"),
   const platform = watch("platform"),
   
-  const addKeyword = (e: React.KeyboardEvent<HTMLInputElement>) => {
+  const addKeyword = (e: React.KeyboardEvent<HTMLInputElement>) => {,
     if (e.key === "Enter" || e.key === ",") {
       e.preventDefault(),
       const value = e.currentTarget.value.trim(),
@@ -31,7 +31,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
   },
   
   const removeKeyword = (keyword: string) => {
-    setValue(
+    setValue(,
       "keywords",
       keywords.filter((k) => k !== keyword)
     )
@@ -120,7 +120,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
               
               <div className="flex flex-wrap gap-2 mt-2">
                 {keywords.map((keyword, index) => (
-                  <Badge key={index} className="bg-zion-purple/60 hover:bg-zion-purple">
+                  <Badge key={index} className="bg-zion-purple/60 hover:bg-zion-purple">,
                     {keyword}
                     <button
                       type="button"
@@ -130,7 +130,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
                     >
                       <X className="h-3 w-3" />
                     </button>
-                  </Badge>
+                  </Badge>,
                 ))}
               </div>
               <FormDescription className="mt-2">
@@ -159,3 +159,4 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
     </Card>
   )
 },
+;

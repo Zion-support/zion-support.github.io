@@ -1,26 +1,25 @@
-import { useEffect, useState } from "react",
-import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes",
-import { Input } from "@/components/ui/input",
-import { Card } from "@/components/ui/card",
+import { useEffect, useState } from "react";
+import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes";
+import { Input } from "@/components/ui/input";
+import { Card } from "@/components/ui/card";
 import { Search } from 'lucide-react'
-import { ListingScoreCard } from "@/components/ListingScoreCard",
-import { captureException } from "@/utils/sentry",
-import Skeleton from "@/components/ui/skeleton",
-import { useDebounce } from "@/hooks/useDebounce",
-import { useIsMounted } from "@/hooks/useIsMounted",
-import { z } from "zod",
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { ListingScoreCard } from "@/components/ListingScoreCard";
+import { captureException } from "@/utils/sentry";
+import Skeleton from "@/components/ui/skeleton";
+import { useDebounce } from "@/hooks/useDebounce";
+import { useIsMounted } from "@/hooks/useIsMounted";
+import { z } from "zod";
+import {logErrorToProduction} from '@/utils/productionLogger';
 const listingSchema = z.object({
   id: z.string(),
   title: z.string(),
   category: z.string(),
   image: z.string().optional()}),
-
-const listingsSchema = z.array(listingSchema),
-
+;
+const listingsSchema = z.array(listingSchema);
 interface ServiceTypeStepProps {
-  formData: QuoteFormData,
-  updateFormData: (data: Partial<QuoteFormData>) => void
+  formData: QuoteFormData;
+  updateFormData: (data: Partial<QuoteFormData>) => void,
 }
 
 
@@ -62,13 +61,12 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
         } catch (err) {
           if (attempt === maxRetries - 1) {
             if (process.env.NODE_ENV === 'development') {
-              logErrorToProduction('Failed to load services:', { data: err })
+              logErrorToProduction('Failed to load services: ', { data: err })
             } else {
               captureException(err)
             }
             if (isMounted.current) {
-              setListings([]),
-              setError('Failed to load services')
+              setListings([]), setError('Failed to load services')
             }
           } else {
             await new Promise((res) => setTimeout(res, Math.pow(2, attempt) * 500))
@@ -82,15 +80,15 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
     fetchServices()
   }, [formData.serviceType, debouncedQuery, isMounted]),
   
-  const handleTypeSelect = (type: ServiceType) => {
+  const handleTypeSelect = (type: ServiceType) => {,
     updateFormData({ serviceType: type })
   },
   
   const handleItemSelect = (item: ListingItem) => {
-    updateFormData({ 
+    updateFormData({,
       specificItem: item,
       serviceCategory: item.category,
-      serviceType: item.category.toLowerCase() as ServiceType
+      serviceType: item.category.toLowerCase() as ServiceType,
     })
   },
   
@@ -112,12 +110,12 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
     <div className="space-y-6">
       <div>
         <h3 className="text-xl font-semibold text-white mb-4">What are you looking for?</h3>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md: grid-cols-3 gap-4">
           <Card 
             className={`p-4 cursor-pointer border-2 transition-colors ${
               formData.serviceType === "service" 
-                ? "bg-zion-purple/20 border-zion-purple" 
-                : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
+                ? "bg-zion-purple/20 border-zion-purple" ,
+                : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50",
             }`}
             onClick={() => handleTypeSelect("service")}
           >
@@ -129,7 +127,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
             className={`p-4 cursor-pointer border-2 transition-colors ${
               formData.serviceType === "talent" 
                 ? "bg-zion-purple/20 border-zion-purple" 
-                : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
+                : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50",
             }`}
             onClick={() => handleTypeSelect("talent")}
           >
@@ -141,7 +139,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
             className={`p-4 cursor-pointer border-2 transition-colors ${
               formData.serviceType === "equipment" 
                 ? "bg-zion-purple/20 border-zion-purple" 
-                : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
+                : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50",
             }`}
             onClick={() => handleTypeSelect("equipment")}
           >
@@ -165,7 +163,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
             />
           </div>
 
-          {error && (
+          {error && (,
             <div className="text-center text-red-400 text-sm">{error}</div>
           )}
           
@@ -207,3 +205,4 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
     </div>
   )
 }
+;

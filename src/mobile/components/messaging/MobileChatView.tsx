@@ -1,32 +1,32 @@
 
-import React, { useState } from "react",
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
+import React, { useState } from "react";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from 'lucide-react'
-import { cn } from "@/lib/utils",
-import { useRouter } from 'next/router',
-import { toast } from "sonner",
+import { cn } from "@/lib/utils";
+import { useRouter } from 'next/router';
+import { toast } from "sonner";
 interface Message {
-  id: string,
-  content: string,
-  timestamp: string,
-  isMe: boolean,
+  id: string;
+  content: string;
+  timestamp: string;
+  isMe: boolean;
   sender?: string,
   avatar?: string,
   status?: 'sent' | 'delivered' | 'read'
 }
 
 interface MobileChatViewProps {
-  contact: {
-    id: string,
-    name: string,
+  contact: {;
+    id: string;
+    name: string;
     avatar?: string,
     status?: string
   },
   messages: Message[],
   onBack: () => void,
-  onSendMessage: (content: string) => void
+  onSendMessage: (content: string) => void,
 }
 
 export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {
@@ -41,7 +41,7 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
   },
   
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === 'Enter' && !e.shiftKey) {
+    if (e.key === 'Enter' && !e.shiftKey) {,
       e.preventDefault(),
       handleSend()
     }
@@ -54,7 +54,7 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
     }),
     
     // Navigate to video call page
-    router.push(`/call/${roomId}`)
+    router.push(`/call/${roomId}`);
   },
   
   const startAudioCall = () => {
@@ -64,7 +64,7 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
     }),
     
     // Navigate to video call page with audio-only flag
-    router.push(`/call/${roomId}?audioOnly=true`)
+    router.push(`/call/${roomId}?audioOnly=true`);
   },
   
   return (
@@ -181,3 +181,4 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
     </div>
   )
 }
+;

@@ -1,9 +1,9 @@
 
-import { useState } from 'react',
+import { useState } from 'react';
 import { Check, Copy } from 'lucide-react'
-import { cn } from "@/lib/utils",
+import { cn } from "@/lib/utils";
 interface CodeBlockProps {
-  code: string,
+  code: string;
   language?: string,
   showLineNumbers?: boolean,
   className?: string
@@ -46,7 +46,7 @@ export function CodeBlock({
         <code className="language-javascript">{code}</code>
       </pre>
       <button
-        className="absolute top-2 right-2 p-2 rounded-md hover:bg-zinc-800 transition-colors"
+        className="absolute top-2 right-2 p-2 rounded-md hover:bg-zinc-800 transition-colors",
         onClick={handleCopyClick}
         aria-label="Copy code"
       >
@@ -60,5 +60,5 @@ export function CodeBlock({
     </div>
   )
 }
-
-export default CodeBlock,
+;
+export default CodeBlock;
