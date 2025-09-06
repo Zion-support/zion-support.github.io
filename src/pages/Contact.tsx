@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { useToast } from '../components/ui/use-toast';
+import { useNotifications } from '../context/NotificationContext';
+import { motion } from 'framer-motion';
 
 const Contact: React.FC = () => {
   const { toast } = useToast();
+  const { addNotification } = useNotifications();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -56,6 +59,18 @@ const Contact: React.FC = () => {
       // Simulate form submission
       await new Promise(resolve => setTimeout(resolve, 2000));
       
+      // Show success notification
+      addNotification({
+        type: 'success',
+        title: 'Message sent successfully!',
+        message: 'Thank you for your message. We\'ll get back to you within 24 hours.',
+        duration: 5000,
+        action: {
+          label: 'View Services',
+          onClick: () => window.location.href = '/services'
+        }
+      });
+      
       toast({
         title: "Message sent successfully!",
         description: "Thank you for your message. We'll get back to you within 24 hours.",
@@ -69,6 +84,14 @@ const Contact: React.FC = () => {
         message: ''
       });
     } catch (error) {
+      // Show error notification
+      addNotification({
+        type: 'error',
+        title: 'Error sending message',
+        message: 'There was an error sending your message. Please try again.',
+        duration: 7000
+      });
+      
       toast({
         title: "Error",
         description: "There was an error sending your message. Please try again.",
