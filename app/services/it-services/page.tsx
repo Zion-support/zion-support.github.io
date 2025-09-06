@@ -1,9 +1,11 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import React from 'react';
 
 export const metadata: Metadata = {
-import React from 'react';
-import Link from 'next/link';
+  title: 'IT Services | Zion Tech Group',
+  description: 'Comprehensive IT services including cloud migration, system administration, network management, and technical support for businesses of all sizes.'
+};
 
 interface ITServiceProps {
   title: string;
