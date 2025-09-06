@@ -1,301 +1,128 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Services | Zion Tech Group',
-  description: 'Explore our comprehensive range of AI, micro SaaS, and IT services designed to transform your business.',
+  title: 'Services | Zion Tech Group - AI, Micro SaaS, FinTech, HealthTech & EdTech Solutions',
+  description: 'Comprehensive technology services including AI solutions, micro SaaS development, IT services, and specialized industry solutions.',
+  keywords: 'AI services, micro SaaS, IT services, blockchain, cloud solutions, enterprise technology'
 };
 
-export default function ServicesPage() {
+export default function ServicesOverviewPage() {
+  const serviceCategories = [
+    {
+      title: 'AI Solutions',
+      description: 'Transform your business with cutting-edge artificial intelligence technologies.',
+      href: '/services/ai-solutions',
+      icon: '🤖',
+      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'AI Agents']
+    },
+    {
+      title: 'Micro SaaS Development',
+      description: 'Build and launch your own micro SaaS products with our full-stack expertise.',
+      href: '/services/micro-saas',
+      icon: '💼',
+      features: ['Full-Stack Development', 'API Integration', 'Payment Processing', 'User Management']
+    },
+    {
+      title: 'IT Services',
+      description: 'Comprehensive IT solutions including cloud migration and cybersecurity.',
+      href: '/services/it-solutions',
+      icon: '⚙️',
+      features: ['Cloud Migration', 'Cybersecurity', 'Infrastructure Management', 'Technical Support']
+    },
+    {
+      title: 'Blockchain Solutions',
+      description: 'Leverage blockchain technology for secure and transparent applications.',
+      href: '/services/blockchain',
+      icon: '⛓️',
+      features: ['Smart Contracts', 'DeFi Applications', 'NFT Marketplaces', 'Blockchain Integration']
+    }
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Our Services
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Comprehensive AI, micro SaaS, and IT solutions designed to transform your business.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Comprehensive technology solutions designed to transform your business and drive real results.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-slate-800 p-6 rounded-lg">
-            <h3 className="text-xl font-semibold text-white mb-4">AI Solutions</h3>
-            <p className="text-gray-300 mb-4">
-              Custom AI models, automation, and intelligent systems that transform your business operations.
-            </p>
-            <a href="/services/ai-services" className="text-blue-400 hover:text-blue-300">Learn More →</a>
-          </div>
-          <div className="bg-slate-800 p-6 rounded-lg">
-            <h3 className="text-xl font-semibold text-white mb-4">Micro SaaS</h3>
-            <p className="text-gray-300 mb-4">
-              Scalable software-as-a-service solutions that help you build and grow your business.
-            </p>
-            <a href="/services/micro-saas" className="text-blue-400 hover:text-blue-300">Learn More →</a>
-          </div>
-          <div className="bg-slate-800 p-6 rounded-lg">
-            <h3 className="text-xl font-semibold text-white mb-4">IT Services</h3>
-            <p className="text-gray-300 mb-4">
-              Complete IT infrastructure management, cloud migration, and technical support services.
-            </p>
-            <a href="/services/it-services" className="text-blue-400 hover:text-blue-300">Learn More →</a>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          {serviceCategories.map((service, index) => (
+            <Link
+              key={index}
+              href={service.href}
+              className="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-blue-300"
+            >
+              <div className="text-4xl mb-4">{service.icon}</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
+              <p className="text-gray-600 mb-4">{service.description}</p>
+              <ul className="space-y-2">
+                {service.features.map((feature, featureIndex) => (
+                  <li key={featureIndex} className="text-sm text-gray-600 flex items-center">
+                    <span className="text-green-500 mr-2">✓</span>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+            </Link>
+          ))}
+        </div>
+
+        <div className="bg-white p-8 rounded-lg shadow-md mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Why Choose Zion Tech Group?</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🎯</span>
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Focused Solutions</h3>
+              <p className="text-gray-600">We specialize in delivering targeted solutions that address your specific business challenges.</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">⚡</span>
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Fast Delivery</h3>
+              <p className="text-gray-600">We deliver high-quality solutions quickly without compromising on performance or security.</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🤝</span>
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Partnership</h3>
+              <p className="text-gray-600">We work closely with you as a trusted technology partner for long-term success.</p>
+            </div>
           </div>
         </div>
-=======
-import Link from "next/link";
-  title: "Services | Zion Tech Group - AI, Micro SaaS, FinTech, HealthTech & EdTech Solutions",
-  description:
 
-};
-export default function ServicesOverviewPage() {
-  return (
-    <div className="animate - fade - in">;
-      {" "}
-      <div className="text - center mb - 16">;
-        {" "}
-        <h1 className="text - 4xl font - bold text - gray - 900 mb - 6">;
-          Our Services;
-        </h1>{" "}
-        <p className="text - xl text - gray - 600 max - w-3xl mx - auto">;
-          {" "}
-          Transform your business with cutting-edge technology solutions. From AI-powered micro SaaS to enterprise FinTech platforms, 
-          we deliver measurable outcomes with 99.9% uptime, bank-grade security, and 24/7 expert support.{" "}
-        </p>{" "}
-      </div>{" "}
-      <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8 mb - 16">;
-        {" "}
-        <ServiceCard;
-          href="/services / micro - saas";
-          title="Micro SaaS";
-          description="End - to - end product development with billing, auth, and analytics";
-          bullets={[;
-            "Foundational architecture",
-            "Billing + subscriptions",
-            "Growth analytics",
-          ]}
-  title: "Services | Zion Tech Group - AI, Micro SaaS, FinTech, HealthTech & EdTech Solutions",
-  description:
-    "Comprehensive technology services including AI solutions, micro SaaS development, FinTech platforms, HealthTech systems, EdTech solutions, and IT infrastructure. Expert solutions for modern enterprises with 500+ successful projects and $2B+ in combined market value.",
-};
-
-export default function ServicesOverviewPage() {
-  return (
-    <div className="animate-fade-in">
-      <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">
-          Our Services
-        </h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Transform your business with cutting-edge technology solutions. From AI-powered micro SaaS to enterprise FinTech platforms, 
-          we deliver measurable outcomes with 99.9% uptime, bank-grade security, and 24/7 expert support.
-        </p>
-      </div>
-
-      {/* Statistics Section */}
-      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 mb-16">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          <StatCard 
-            number="500+" 
-            label="Successful Projects" 
-            description="Delivered worldwide" 
-          />
-          <StatCard 
-            number="$2B+" 
-            label="Combined Market Value" 
-            description="Generated for clients" 
-          />
-          <StatCard 
-            number="99.9%" 
-            label="Uptime Guarantee" 
-            description="Enterprise reliability" 
-          />
-          <StatCard 
-            number="300%" 
-            label="Average ROI" 
-            description="Client return on investment" 
-          />
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Ready to Get Started?</h2>
+          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            Let's discuss your project and discover how our solutions can accelerate your business growth.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+            >
+              Get a Quote
+            </Link>
+            <Link
+              href="/about"
+              className="border border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
+            >
+              Learn More About Us
+            </Link>
+          </div>
         </div>
-      </div>
-
-export const metadata = {
-  title: "Services | Zion Tech Group",
-  description:
-    "Comprehensive AI, micro SaaS, and IT services to help your business scale and succeed.",
-};
-export default function ServicesOverviewPage() {
-  return (
-    <div className="animate-fade-in">
-      {" "}
-      <div className="text-center mb-16">
-        {" "}
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">
-          Our Services
-        </h1>{" "}
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          {" "}
-          Product engineering and AI-first consulting to deliver measurable
-          outcomes for your business.{" "}
-        </p>{" "}
-      </div>{" "}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-        <ServiceCard
-          href="/services/micro-saas"
-          title="Micro SaaS Solutions"
-          description="Complete micro SaaS development from MVP to scale with billing, analytics, and growth optimization"
-          bullets={[
-            "Foundational architecture",
-            "Billing + subscriptions", 
-            "Growth analytics"
-          ]}
-          icon="🚀"
-          pricing="From $2,999/month"
-        />
-        <ServiceCard
-          href="/services/ai-services"
-          title="AI Services"
-          description="LLM applications, RAG systems, and MLOps pipelines"
-          bullets={["RAG and agents", "Evals + guardrails", "MLOps pipelines"]}
-          icon="🤖"
-          pricing="From $5,000/project"
-        />
-        <ServiceCard
-          href="/services/it-services"
-          title="IT Services"
-          description="Cloud migration, DevOps, and security solutions"
-          bullets={["Cloud migration", "DevOps + SRE", "Security"]}
-          icon="⚙️"
-        />
-        <ServiceCard
-          href="/services/blockchain-solutions"
-          title="Blockchain Solutions"
-          description="DeFi, NFTs, smart contracts, and Web3 applications with enterprise-grade security"
-          bullets={["Smart contracts", "DeFi protocols", "Web3 apps"]}
-          icon="⛓️"
-          pricing="From $15,000/project"
-        />
-        <ServiceCard
-          href="/services/automation-solutions"
-          title="Automation Solutions"
-          description="RPA, workflow automation, and AI-powered automation for maximum efficiency"
-          bullets={["Process automation", "Workflow optimization", "AI automation"]}
-          icon="⚡"
-        />
-        <ServiceCard
-          href="/services/data-analytics"
-          title="Data Analytics"
-      <CTA />
-          description="Business intelligence, predictive analytics, and data engineering"
-          bullets={["BI dashboards", "Predictive analytics", "Data engineering"]}
-          icon="📊"
-        />
-        <ServiceCard
-          href="/services/digital-transformation"
-          title="Digital Transformation"
-          description="Complete digital transformation solutions and legacy modernization"
-          bullets={["Process automation", "Legacy modernization", "Digital strategy"]}
-          icon="🔄"
-        />
-        <ServiceCard
-          href="/services/cybersecurity"
-          title="Cybersecurity"
-          description="Comprehensive security solutions and compliance management"
-          bullets={["Security assessment", "Threat detection", "Compliance"]}
-          icon="🔒"
-        />
-        <ServiceCard
-          href="/services/cloud-services"
-          title="Cloud Services"
-          description="Cloud migration, architecture, and optimization solutions"
-          bullets={["Cloud migration", "Multi-cloud", "Cost optimization"]}
-          icon="☁️"
-        />
-      </div>
-      <CTA />{" "}
-    </div>
-  );
-}
-
-function ServiceCard({
-  href,
-  title,
-  description,
-  bullets,
-  icon
-}: {
-  href: string;
-  title: string;
-  description: string;
-  bullets: string[];
-  icon: string;
-  pricing: string;
-}) {
-  return (
-    <Link
-      href={href}
-      className="group border border-gray-200 rounded-xl p-8 block hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white"
-    >
-
-function StatCard({ 
-  number, 
-  label, 
-  description 
-}: { 
-  number: string; 
-  label: string; 
-  description: string; 
-}) {
-  return (
-    <div className="text-center">
-      <div className="text-4xl font-bold text-blue-600 mb-2">{number}</div>
-      <div className="text-lg font-semibold text-gray-900 mb-1">{label}</div>
-      <div className="text-sm text-gray-600">{description}</div>
-    </div>
-      {" "}
-      <div className="text-4xl mb-4">{icon}</div>{" "}
-      <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-        {title}
-      </h3>{" "}
-      <p className="text-gray-600 mb-4 leading-relaxed">{description}</p>{" "}
-      <ul className="text-gray-600 space-y-2">
-        {" "}
-        {bullets.map((bullet) => (
-          <li key={bullet} className="flex items-center">
-            {" "}
-            <span className="text-blue-500 mr-2">•</span> {bullet}{" "}
-          </li>
-        ))}{" "}
-      </ul>{" "}
-    </Link>
-  );
-}
-
-function CTA() {
-  return (
-    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 text-center">
-      <h3 className="text-2xl font-bold text-gray-900 mb-4">
-        Ready to Get Started?
-      </h3>
-      <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-        {" "}
-        Talk to our experts about your project. We&apos;ll help you choose the right
-        service and create a custom solution for your business needs.{" "}
-      </p>{" "}
-      <div className="flex flex-col sm:flex-row gap-4 justify-center">
-        <a
-          href="tel:+13024640950"
-          className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-        >
-          Call +1 302 464 0950
-        </a>
-        <a
-          href="mailto:kleber@ziontechgroup.com"
-          className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
-        >
-          Email Us
-        </a>
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
       </div>
     </div>
   );

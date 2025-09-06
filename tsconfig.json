@@ -3,17 +3,7 @@
     "lib": [
       "dom",
       "dom.iterable",
-<<<<<<< HEAD
       "esnext"
-=======
-      "es6",
-      "es2017",
-      "es2018",
-      "es2019",
-      "es2020",
-      "es2021",
-      "es2022"
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     ],
     "allowJs": true,
     "skipLibCheck": true,
@@ -33,53 +23,69 @@
     ],
     "baseUrl": ".",
     "paths": {
-<<<<<<< HEAD
-      "@/*": [
-        "./*"
-      ],
-      "@/components/*": [
-        "./components/*"
-      ],
-      "@/pages/*": [
-        "./pages/*"
-      ],
-      "@/styles/*": [
-        "./styles/*"
-      ],
-      "@/utils/*": [
-        "./utils/*"
-      ],
-      "@/types/*": [
-        "./types/*"
-      ]
+      "@/*": ["./*"],
+      "@/components/*": ["./components/*"],
+      "@/utils/*": ["./utils/*"],
+      "@/types/*": ["./types/*"],
+      "@/lib/*": ["./lib/*"],
+      "@/hooks/*": ["./hooks/*"],
+      "@/styles/*": ["./styles/*"]
     },
+    "target": "es5",
+    "forceConsistentCasingInFileNames": true,
     "allowSyntheticDefaultImports": true,
-    "strictNullChecks": true,
-    "target": "ES2017"
+    "sourceMap": true,
+    "declaration": false,
+    "declarationMap": false,
+    "removeComments": true,
+    "noImplicitAny": false,
+    "noImplicitReturns": false,
+    "noImplicitThis": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "exactOptionalPropertyTypes": false,
+    "noImplicitOverride": false,
+    "noPropertyAccessFromIndexSignature": false,
+    "noUncheckedIndexedAccess": false,
+    "noFallthroughCasesInSwitch": false
   },
   "include": [
     "next-env.d.ts",
-    ".next/types/**/*.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    ".next/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    ".next",
+    "out",
+    "dist",
+    "build",
+    "pages_backup*",
+    "pages.*",
+    "pages-*",
+    "pages_disabled*",
+    "pages.disabled*",
+    "pages.broken*",
+    "pages.corrupted*",
+    "pages.old*",
+    "pages._*",
+    "pages.__*",
+    "backup-pages",
+    "src.pages.disabled",
+    "lib_backup*",
+    "src_backup*",
+    "corrupted-files-backup*",
+    "performance-reports*",
+    "log-analysis-reports*",
+    "link-reports*",
+    "lint-target*",
+    "monitoring*",
+    "pm2-automation*",
+    "automation/logs*",
+    "automation/backup*",
+    "api-backup",
+    "contracts",
+    "hardhat"
   ]
 }
-=======
-      "@/*": ["./src/*"],
-      "@/components/*": ["./src/components/*"],
-      "@/pages/*": ["./src/pages/*"],
-      "@/utils/*": ["./src/utils/*"],
-      "@/hooks/*": ["./src/hooks/*"],
-      "@/types/*": ["./src/types/*"],
-      "@/styles/*": ["./src/styles/*"],
-      "@/assets/*": ["./src/assets/*"]
-    },
-    "allowSyntheticDefaultImports": true
-  },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
-}
->>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
