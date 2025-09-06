@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
+import ThemeToggle from './ThemeToggle';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,7 +28,7 @@ export function Header() {
           </Link>
           
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-6">
+          <nav className="hidden md:flex space-x-6 items-center">
             {navigation.map((item) => (
               <Link
                 key={item.name}
@@ -41,6 +42,7 @@ export function Header() {
                 {item.name}
               </Link>
             ))}
+            <ThemeToggle />
           </nav>
           
           {/* Mobile menu button */}
