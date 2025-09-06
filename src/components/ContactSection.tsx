@@ -1,4 +1,8 @@
 
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+
 fetch("/api/contact", {
       method: "POST"
       headers: { "Content-Type": "application/json" }
