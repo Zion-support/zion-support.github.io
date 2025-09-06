@@ -1,6 +1,11 @@
 /// <reference types="next" />
 /// <reference types="next/image-types/global" />
 <<<<<<< HEAD
+
+// NOTE: This file should not be edited
+// see https://nextjs.org/docs/app/building-your-application/configuring/typescript for more information.
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -34,3 +39,4 @@
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+>>>>>>> 3355446c491e527b29697d580cc54457b0d965fc
