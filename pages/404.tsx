@@ -1,7 +1,15 @@
+import React from 'react';
+import MainLayout from '../components/layout/MainLayout';
+
+        </div>
+      </div>
+    </MainLayout>
+  );
+}
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
-const Custom404: NextPage = () => {
+const NotFoundPage: NextPage = () => {
   return (
     <div>
       <Head>
@@ -17,4 +25,3 @@ const Custom404: NextPage = () => {
   );
 };
 
-export default Custom404;

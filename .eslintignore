@@ -1,0 +1,9 @@
+node_modules/
+zion-os/
+apps.backup/
+zion-website/
+automation/
+app-optimizer.js
+advanced-automation-improvements.cjs
+analyze_links.cjs
+app-enhancement-suite.cjs

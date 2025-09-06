@@ -1,0 +1,196 @@
+import { NextResponse } from "next/server";
+import type { NextRequest } from "next/server";
+
+const publicRoutes = [
+  "/",
+  "/about",
+  "/contact",
+  "/blog",
+  "/services",
+  "/solutions",
+  "/industries",
+  "/resources",
+  "/talent",
+  "/team",
+  "/partners",
+  "/news",
+  "/careers",
+  "/privacy",
+  "/terms",
+  "/cookies",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  "/accessibility",
+  "/compliance",
+  "/gdpr",
+  "/security",
+  "/support",
+  "/help",
+  "/faq",
+  "/guides",
+  "/tutorials",
+  "/webinars",
+  "/white-papers",
+  "/case-studies",
+  "/press",
+  "/events",
+  "/newsletter",
+=======
+<<<<<<< HEAD
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+  "/sitemap",
+  "/api-docs",
+  "/docs",
+  "/api",
+  "/login",
+  "/register",
+  "/forgot-password",
+  "/pricing",
+  "/company",
+  "/community",
+  "/status",
+  "/search",
+  "/micro-saas",
+  "/it-services",
+<<<<<<< HEAD
+  "/micro-saas"];
+=======
+<<<<<<< HEAD
+=======
+  "/micro-saas"
+=======
+  "/accessibility",
+  "/compliance",
+  "/gdpr",
+  "/security",
+  "/support",
+  "/help",
+  "/faq",
+  "/guides",
+  "/tutorials",
+  "/webinars",
+  "/white-papers",
+  "/case-studies",
+  "/press",
+  "/events",
+  "/newsletter",
+  "/sitemap",
+  "/api-docs",
+  "/docs",
+  "/api",
+  "/login",
+  "/register",
+  "/forgot-password",
+  "/pricing",
+  "/company",
+  "/community",
+  "/status",
+  "/search",
+  "/micro-saas",
+  "/it-services",
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+  "/ai-services",
+  "/services-overview",
+  "/solutions/cloud-migration",
+  "/solutions/custom",
+  "/solutions/digital-transformation",
+  "/solutions/education",
+  "/solutions/enterprise",
+  "/solutions/finance",
+  "/solutions/government",
+  "/solutions/healthcare",
+  "/solutions/industry",
+  "/solutions/retail",
+  "/solutions/smb",
+  "/solutions/startup",
+  "/services/cloud",
+  "/services/cloud-devops",
+  "/services/cybersecurity",
+  "/services/data-analytics",
+  "/services/quantum-computing",
+  "/industries/education",
+  "/industries/finance",
+  "/industries/government",
+  "/industries/healthcare",
+  "/industries/manufacturing",
+  "/industries/retail"
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+];
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+
+export function middleware(request: NextRequest) {
+  const { pathname } = request.nextUrl;
+  
+<<<<<<< HEAD
+  // Check if the route is public
+=======
+<<<<<<< HEAD
+  // Check if the route is public
+=======
+<<<<<<< HEAD
+=======
+  // Check if the route is public
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+  if (publicRoutes.includes(pathname)) {
+    return NextResponse.next();
+  }
+  
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  // For protected routes, you can add authentication logic here
+  // For now, we'll just allow all requests
+=======
+<<<<<<< HEAD
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+  const authCookie = request.cookies.get("auth-token");
+  if (!authCookie) {
+    return NextResponse.redirect(new URL("/auth/login", request.url));
+  }
+<<<<<<< HEAD
+    return NextResponse.next();
+=======
+  
+=======
+  // For protected routes, you can add authentication logic here
+  // For now, we'll just allow all requests
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+  return NextResponse.next();
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+}
+
+export const config = {
+  matcher: [
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+    /*
+     * Match all request paths except for the ones starting with:
+     * - api (API routes)
+     * - _next/static (static files)
+     * - _next/image (image optimization files)
+     * - favicon.ico (favicon file)
+     */
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
+    "/((?!api|_next/static|_next/image|favicon.ico).*)",
+  ],
+};
