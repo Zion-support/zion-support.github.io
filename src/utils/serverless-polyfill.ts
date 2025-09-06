@@ -25,6 +25,7 @@ declare global {
   var __rest: any;
   var __decorate: any;
   var __awaiter: any;
+}
 
 // CRITICAL: Self polyfill - must be first
 if (typeof self === 'undefined') {
@@ -41,6 +42,7 @@ if (typeof self === 'undefined') {
     // Last resort - create minimal self object
     (globalThis as any).self = {};
   }
+}
 
 // Ensure self is properly referenced
 const selfRef: any =
@@ -57,10 +59,12 @@ const selfRef: any =
 // CRITICAL: Webpack chunk array polyfill
 if (!selfRef.webpackChunk_N_E) {
   selfRef.webpackChunk_N_E = [];
+}
 
 // Ensure webpack chunk array is properly initialized
 if (typeof webpackChunk_N_E === 'undefined') {
   (globalThis as any).webpackChunk_N_E = selfRef.webpackChunk_N_E;
+}
 
 // TypeScript helper polyfills for runtime
 const tsHelpers = {
@@ -173,18 +177,12 @@ const tsHelpers = {
     });
   },
 };
-//CRITICAL: Webpack chunk array polyfill if (typeof b !== "function" && b !== null) throw new TypeError ("Class extends value " + String (b) + "is not a constructor or null");
 
-}return t;
-};
-};
-awaiter: function (thisArg: any, arguments: any, P: any, generator: any) {;
-  function adopt (value: any) {;
-  return value instanceof P ? value : new P (function (resolve: any) {;
-  resolve (value) ;
-}) ;
-}return new (P || (P = Promise) ) (function (resolve: any, reject: any) {;
-  step ( (generator = generator.apply (thisArg, arguments || []) ) .next () );
+// Inject TypeScript helpers into global scope
+Object.keys(tsHelpers).forEach(helper => {
+  if (typeof (globalThis as any)[helper] === 'undefined') {
+    (globalThis as any)[helper] = (tsHelpers as any)[helper];
+  }
 });
 
 // Error prevention for common webpack issues
@@ -206,6 +204,7 @@ try {
   }
 } catch (e) {
   // Silently handle any errors in error prevention setup
+}
 
 // Global error suppression for common serverless issues
 if (typeof window !== 'undefined') {
@@ -254,6 +253,7 @@ if (typeof window !== 'undefined') {
       return originalOnUnhandledRejection.call(this, event);
     }
   };
+}
 
 // Node.js environment polyfills (for SSR/build time)
 if (typeof global !== 'undefined' && typeof window === 'undefined') {
@@ -272,6 +272,7 @@ if (typeof global !== 'undefined' && typeof window === 'undefined') {
       (global as any)[helper] = (tsHelpers as any)[helper];
     }
   });
+}
 
 // Export a verification function for testing
 export const verifyPolyfills = () => {
@@ -288,18 +289,11 @@ export const verifyPolyfills = () => {
 
   console.log('Serverless polyfill verification:', checks);
   return Object.values(checks).every(Boolean);
-
 };
-//Inject TypeScript helpers into global scope //Error prevention for common webpack issues try {';
-  //Prevent webpack chunk loading errors if (selfRef.webpackChunk N E && typeof selfRef.webpackChunk N E.push === 'function') {;
-  ;
 
-export default {}; // Ensure this can be imported as a module
-  ;
-}, // Ensure this can be imported as a module'"
 // Auto-verify in development
 if (process.env.NODE_ENV === 'development') {
-  setTimeout((,) => verifyPolyfills(), 100)
+  setTimeout(() => verifyPolyfills(), 100);
 }
 
-export default {}, // Ensure this can be imported as a module
+export default {}; // Ensure this can be imported as a module

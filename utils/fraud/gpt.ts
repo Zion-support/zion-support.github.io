@@ -63,10 +63,13 @@ export async function classifyWithGPT(
       reason: 'Invalid JSON from GPT',
       confidence: 0.5,
     };
-  }export interface GptResult {
+  }
+}
+
+export interface GptResult {
   label: string;
   confidence: number;
-  reasoning: string,
+  reasoning: string;
 }
 
 export async function analyzeWithGpt(data: any): Promise<GptResult> {

@@ -1,4 +1,17 @@
 import { NextApiRequest } from 'next';
+
+export interface User {
+  id: string;
+  email: string;
+  role: 'client' | 'talent' | 'admin';
+  name: string;
+  talentSlug?: string;
+}
+
+export interface DemoUser extends User {
+  talentSlug?: string;
+}
+
 export function getUserFromRequest(req: any): User | null {
   // Mock implementation - in production, this would extract user from JWT or session
   const authHeader = req.headers.authorization;
@@ -19,6 +32,17 @@ export function getUserFromRequest(req: any): User | null {
   return null;
 }
 
+export function getDemoUser(req: any): DemoUser {
+  // Mock implementation - in production, this would extract user from JWT or session
+  return {
+    id: 'user-1',
+    email: 'user@example.com',
+    role: 'client',
+    name: 'Test User',
+    talentSlug: 'test-talent'
+  };
+}
+
 export function assertTalentOrClientForOffer(
   req: NextApiRequest,
   offer: { clientId: string; talentSlug: string },
@@ -34,10 +58,13 @@ export function assertTalentOrClientForOffer(
   const err = new Error('Not authorized for this offer');
   // @ts-ignore
   err.statusCode = 403;
-  throw err;export function requireAuth(req: any): User {
+  throw err;
+}
+
+export function requireAuth(req: any): User {
   const user = getUserFromRequest(req);
   if (!user) {
-    throw new Error('Authentication required'),
+    throw new Error('Authentication required');
   }
   return user;
 }

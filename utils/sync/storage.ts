@@ -1,6 +1,12 @@
 import fs from 'fs';
 import path from 'path';
 import { MultiverseState, InstanceConfig, SyncEvent } from './types';
+
+interface SyncState {
+  config: InstanceConfig;
+  lastSyncedAt: string;
+}
+
 const defaultState: SyncState = {
   config: {
     instanceId: 'default-instance',
@@ -44,6 +50,7 @@ export function upsertEvent(
   state.seenEventIds[event.eventId] = true;
   state.lastSyncedAt = Math.max(state.lastSyncedAt || 0, event.timestamp || 0);
   return state;
+}
 
 export function getEntityId(event: SyncEvent): string {
   switch (event.type) {
@@ -64,6 +71,7 @@ export function getEntityId(event: SyncEvent): string {
     default:
       return (event.payload as any).id || event.eventId;
   }
+}
 
 export function filterEventsByScope(
   events: SyncEvent[],
@@ -83,6 +91,9 @@ export function filterEventsByScope(
         e.type === 'leaderboard_entry'
     );
   }
-  return events;export function resetState(): void {
+  return events;
+}
+
+export function resetState(): void {
   state = { ...defaultState };
 }

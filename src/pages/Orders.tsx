@@ -1,5 +1,5 @@
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react';
-import Link from 'next/link'; // Changed from react-router-dom
+import Link from 'next/link';
 import { useAuth } from '@/hooks/useAuth';
 import { useGetOrdersQuery } from '@/hooks/useOrders';
 import {
@@ -8,7 +8,7 @@ import {
   TableCell,
   TableHead,
   TableHeader,
-  TableRow,;
+  TableRow,
 } from '@/components/ui/table';
 import { Badge } from '@/components/ui/badge';
 import Skeleton from '@/components/ui/skeleton';
@@ -19,7 +19,8 @@ export default function OrdersPage() {
   const { data: orders, isLoading } = useGetOrdersQuery(user?.id);
 
   const formatDate = (date: string) => new Date(date).toLocaleDateString();
-  const getStatusBadge = (status: string,) => {
+  
+  const getStatusBadge = (status: string) => {
     switch (status) {
       case 'in_escrow':
         return (
@@ -39,7 +40,7 @@ export default function OrdersPage() {
           <Badge variant='destructive' className='flex items-center gap-1'>
             <ShieldAlert className='h-3 w-3' /> Disputed
           </Badge>
-        ),
+        );
       default:
         return status;
     }
@@ -60,7 +61,7 @@ export default function OrdersPage() {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {Array.from({ length: 3 }).map((_, i,) => (
+            {Array.from({ length: 3 }).map((_, i) => (
               <TableRow key={i}>
                 <TableCell>
                   <Skeleton className='h-4 w-20' />
@@ -84,7 +85,8 @@ export default function OrdersPage() {
       ) : orders.length === 0 ? (
         <EmptyState
           icon={<FileText className='h-10 w-10' />}
-          title='No Orders'          description="You haven't purchased anything yet."
+          title='No Orders'
+          description="You haven't purchased anything yet."
         />
       ) : (
         <Table>
@@ -98,14 +100,15 @@ export default function OrdersPage() {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {orders.map(order => (              <TableRow key={order.orderId}>
+            {orders.map(order => (
+              <TableRow key={order.orderId}>
                 <TableCell className='font-medium'>{order.orderId}</TableCell>
                 <TableCell>{formatDate(order.date)}</TableCell>
                 <TableCell>{order.total}</TableCell>
                 <TableCell>{getStatusBadge(order.status)}</TableCell>
                 <TableCell>
                   <Link
-                    href={`/orders/${order.orderId}`} // Changed to href
+                    href={`/orders/${order.orderId}`}
                     className='text-zion-purple underline'
                   >
                     View

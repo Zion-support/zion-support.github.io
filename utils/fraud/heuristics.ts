@@ -44,17 +44,25 @@ const vagueScammyJobPhrases = [
 function containsSuspiciousHost(text: string): boolean {
   const lower = text.toLowerCase();
   return suspiciousLinkHosts.some(host => lower.includes(host));
+}
 
 function containsSuspiciousPhrase(text: string): string[] {
   const lower = text.toLowerCase();
   return suspiciousPhrases.filter(p => lower.includes(p));
+}
 
 function containsVagueJobClaims(text: string): string[] {
   const lower = text.toLowerCase();
   const reasons: string[] = [];
-  "`);
-  }
+  
+  vagueScammyJobPhrases.forEach(phrase => {
+    if (lower.includes(phrase)) {
+      reasons.push(`vague_job_claim:"${phrase}"`);
+    }
+  });
+  
   return reasons;
+}
 
 export interface HeuristicDeps {
   countEventsByIp: (
@@ -62,6 +70,7 @@ export interface HeuristicDeps {
     source: MonitoredSource,
     withinMinutes: number
   ) => Promise<number>;
+}
 
 export async function evaluateHeuristics(
   event: FraudEvent,
@@ -105,6 +114,20 @@ export async function evaluateHeuristics(
       if (severity === 'low') severity = 'medium';
     }
   }
+
+  return {
+    flagged: reasons.length > 0,
+    reasons,
+    severity,
+  };
+}
+
+export interface HeuristicResult {
+  flagged: boolean;
+  reasons: string[];
+  severity: 'low' | 'medium' | 'high';
+}
+
 export function runHeuristics(data: any): HeuristicResult {
   // Mock implementation - in production, this would run actual fraud detection heuristics
   const flags = new Set<string>();
@@ -118,8 +141,8 @@ export function runHeuristics(data: any): HeuristicResult {
   const label = flags.size > 0 ? 'SUSPICIOUS' : 'SAFE';
   
   return {
-    flagged: reasons.length > 0,
-    reasons,
-    severity,
+    flagged: flags.size > 0,
+    reasons: Array.from(flags),
+    severity: flags.size > 0 ? 'medium' : 'low',
   };
 }

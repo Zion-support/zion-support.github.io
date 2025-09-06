@@ -6,7 +6,7 @@ import {
   ShoppingBag,
   MessageSquare,
   TrendingUp,
-  History,;
+  History,
 } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 import { usePoints } from '@/hooks/usePoints';
@@ -15,21 +15,15 @@ import {
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,;
-} from '@/components/ui/card';import { Button } from '@/components/ui/button';import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react'
-import { useAuth } from '@/hooks/useAuth';
-import { usePoints } from '@/hooks/usePoints';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react';
-import { useAuth } from '@/hooks/useAuth';
-import { usePoints } from '@/hooks/usePoints';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+  CardTitle,
+} from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { formatDistanceToNow } from 'date-fns';
 import Link from 'next/link';
 import { LoginModal } from '@/components/auth/LoginModal';
+
 export default function PointsPage() {
   const { isAuthenticated, user } = useAuth();
   const { ledger, balance, loading, fetchLedger } = usePoints();
@@ -40,7 +34,7 @@ export default function PointsPage() {
     id: string;
     cost: number;
     title: string;
-  }) {    if (!user?.id) return;  async function handleRedeem(reward: { id: string, cost: number, title: string }) {
+  }) {
     if (!user?.id) return;
     setRedeeming(true);
     try {
@@ -55,10 +49,7 @@ export default function PointsPage() {
       });
       await fetchLedger();
     } finally {
-      setRedeeming(false);    }      });
-      await fetchLedger()
-    } finally {
-      setRedeeming(false)
+      setRedeeming(false);
     }
   }
 
@@ -70,6 +61,7 @@ export default function PointsPage() {
       points: '50 pts',
       action: isAuthenticated ? '✓ Completed' : 'Get Started',
     },
+    {
       icon: <ShoppingBag className='h-5 w-5' />,
       title: 'First Purchase',
       description: 'Make your first purchase on the marketplace',
@@ -89,14 +81,8 @@ export default function PointsPage() {
       description: 'Invite friends to join Zion marketplace',
       points: '200 pts per referral',
       action: 'Share Referral Link',
-    },  ];
-
-  const upcomingRewards = [
-    { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },      title: "Refer Friends",
-      description: "Invite friends to join Zion marketplace",
-      points: "200 pts per referral",
-      action: "Share Referral Link"
-    }
+    },
+  ];
 
   const upcomingRewards = [
     { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },
@@ -119,6 +105,7 @@ export default function PointsPage() {
       category: 'Discount',
     },
     { id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service' },
+  ];
 
   if (!isAuthenticated) {
     return (
@@ -131,11 +118,7 @@ export default function PointsPage() {
               Earn points for every action you take and redeem them for
               exclusive rewards!
             </p>
-            <Button onClick={() => setLoginOpen(true)} size='lg'>              Join Now to Start Earning
-            </Button>
-          </div>
-            <Button onClick={(,) => setLoginOpen(true)} size="lg">
-            <Button onClick={() => setLoginOpen(true)} size="lg">
+            <Button onClick={() => setLoginOpen(true)} size='lg'>
               Join Now to Start Earning
             </Button>
           </div>
@@ -144,11 +127,8 @@ export default function PointsPage() {
             <Card>
               <CardHeader>
                 <CardTitle className='flex items-center gap-2'>
-                  <TrendingUp className='h-5 w-5' />                  How to Earn Points          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <TrendingUp className="h-5 w-5" />
+                  <TrendingUp className='h-5 w-5' />
+                  How to Earn Points
                 </CardTitle>
                 <CardDescription>
                   Multiple ways to accumulate rewards
@@ -165,14 +145,9 @@ export default function PointsPage() {
                       <h4 className='font-medium'>{opportunity.title}</h4>
                       <p className='text-sm text-muted-foreground'>
                         {opportunity.description}
-                      </p>                  <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
-                    <div className="text-primary mt-1">{opportunity.icon}</div>
-                    <div className="flex-1">
-                      <h4 className="font-medium">{opportunity.title}</h4>
-                      <p className="text-sm text-muted-foreground">{opportunity.description}</p>
+                      </p>
                     </div>
-                    <Badge variant='secondary'>{opportunity.points}</Badge>                  </div>                    </div>
-                    <Badge variant="secondary">{opportunity.points}</Badge>
+                    <Badge variant='secondary'>{opportunity.points}</Badge>
                   </div>
                 ))}
               </CardContent>
@@ -181,8 +156,7 @@ export default function PointsPage() {
             <Card>
               <CardHeader>
                 <CardTitle className='flex items-center gap-2'>
-                  <Gift className='h-5 w-5' />                  Upcoming Rewards                <CardTitle className="flex items-center gap-2">
-                  <Gift className="h-5 w-5" />
+                  <Gift className='h-5 w-5' />
                   Upcoming Rewards
                 </CardTitle>
                 <CardDescription>
@@ -194,21 +168,14 @@ export default function PointsPage() {
                   <div
                     key={index}
                     className='flex items-center justify-between p-3 rounded-lg border'
-                  >                    <div>
+                  >
+                    <div>
                       <h4 className='font-medium'>{reward.title}</h4>
                       <p className='text-sm text-muted-foreground'>
                         {reward.category}
                       </p>
                     </div>
-                    <Badge variant='outline'>{reward.cost}</Badge>                  </div>
-                    <Badge variant="outline">{reward.cost}</Badge>
-                {upcomingRewards.map((reward, index) => (
-                  <div key={index} className="flex items-center justify-between p-3 rounded-lg border">
-                    <div>
-                      <h4 className="font-medium">{reward.title}</h4>
-                      <p className="text-sm text-muted-foreground">{reward.category}</p>
-                    </div>
-                    <Badge variant="outline">{reward.cost}</Badge>
+                    <Badge variant='outline'>{reward.cost}</Badge>
                   </div>
                 ))}
               </CardContent>
@@ -223,16 +190,8 @@ export default function PointsPage() {
                 Our full rewards system is launching soon! Sign up now to start
                 earning points immediately.
               </p>
-              <Button onClick={() => setLoginOpen(true)}>Create Account</Button>            </CardContent>          <Card className="text-center">
-            <CardContent className="pt-6">
-              <Star className="h-12 w-12 text-primary mx-auto mb-4" />
-              <h3 className="text-2xl font-bold mb-2">Coming Soon</h3>
-              <p className="text-muted-foreground mb-4">
-                Our full rewards system is launching soon! Sign up now to start earning points immediately.
-              </p>
-              <Button onClick={() => setLoginOpen(true)}>
-                Create Account
-              </Button>
+              <Button onClick={() => setLoginOpen(true)}>Create Account</Button>
+            </CardContent>
           </Card>
         </div>
         <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
@@ -250,10 +209,7 @@ export default function PointsPage() {
         </div>
         <p className='text-xl text-muted-foreground'>Points Available</p>
         {!loading && balance === 0 && (
-          <p className='text-sm text-muted-foreground mt-2'>            You haven't earned any points yet. Complete the tasks below to start        </div>
-        <p className="text-xl text-muted-foreground">Points Available</p>
-        {!loading && balance === 0 && (
-          <p className="text-sm text-muted-foreground mt-2">
+          <p className='text-sm text-muted-foreground mt-2'>
             You haven't earned any points yet. Complete the tasks below to start
             earning and redeem rewards.
           </p>
@@ -264,11 +220,8 @@ export default function PointsPage() {
         <Card>
           <CardHeader>
             <CardTitle className='flex items-center gap-2'>
-              <TrendingUp className='h-5 w-5' />              Keep Earning      <div className="grid md:grid-cols-2 gap-8 mb-12">
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <TrendingUp className="h-5 w-5" />
+              <TrendingUp className='h-5 w-5' />
+              Keep Earning
             </CardTitle>
             <CardDescription>
               More ways to boost your point balance
@@ -285,11 +238,7 @@ export default function PointsPage() {
                   <h4 className='font-medium'>{opportunity.title}</h4>
                   <p className='text-sm text-muted-foreground'>
                     {opportunity.description}
-                  </p>              <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
-                <div className="text-primary mt-1">{opportunity.icon}</div>
-                <div className="flex-1">
-                  <h4 className="font-medium">{opportunity.title}</h4>
-                  <p className="text-sm text-muted-foreground">{opportunity.description}</p>
+                  </p>
                 </div>
                 <div className='text-right'>
                   <Badge variant='secondary' className='mb-1'>
@@ -297,10 +246,7 @@ export default function PointsPage() {
                   </Badge>
                   <p className='text-xs text-muted-foreground'>
                     {opportunity.action}
-                  </p>                </div>                </div>
-                <div className="text-right">
-                  <Badge variant="secondary" className="mb-1">{opportunity.points}</Badge>
-                  <p className="text-xs text-muted-foreground">{opportunity.action}</p>
+                  </p>
                 </div>
               </div>
             ))}
@@ -310,8 +256,7 @@ export default function PointsPage() {
         <Card>
           <CardHeader>
             <CardTitle className='flex items-center gap-2'>
-              <Gift className='h-5 w-5' />              Available Rewards            <CardTitle className="flex items-center gap-2">
-              <Gift className="h-5 w-5" />
+              <Gift className='h-5 w-5' />
               Available Rewards
             </CardTitle>
             <CardDescription>
@@ -324,6 +269,7 @@ export default function PointsPage() {
                 key={reward.id}
                 className='flex items-center justify-between p-3 rounded-lg border'
               >
+                <div>
                   <h4 className='font-medium'>{reward.title}</h4>
                   <p className='text-sm text-muted-foreground'>
                     {reward.category}
@@ -338,25 +284,13 @@ export default function PointsPage() {
                       size='sm'
                       onClick={() => handleRedeem(reward)}
                       disabled={redeeming}
-                    >                      {redeeming ? 'Processing...' : 'Redeem'}
+                    >
+                      {redeeming ? 'Processing...' : 'Redeem'}
                     </Button>
                   ) : (
                     <p className='text-xs text-muted-foreground'>
                       Need more points
-                    </p>                  )}
-                    <p className="text-xs text-muted-foreground">Need more points</p>
-                <div>
-                  <h4 className="font-medium">{reward.title}</h4>
-                  <p className="text-sm text-muted-foreground">{reward.category}</p>
-                </div>
-                <div className="text-right space-y-1">
-                  <Badge variant="outline" className="mb-1">{reward.cost} pts</Badge>
-                  {balance >= reward.cost ? (
-                    <Button size="sm" onClick={() => handleRedeem(reward)} disabled={redeeming}>
-                      {redeeming ? 'Processing...' : 'Redeem'}
-                    </Button>
-                  ) : (
-                    <p className="text-xs text-muted-foreground">Need more points</p>
+                    </p>
                   )}
                 </div>
               </div>
@@ -368,8 +302,7 @@ export default function PointsPage() {
       <Card>
         <CardHeader>
           <CardTitle className='flex items-center gap-2'>
-            <History className='h-5 w-5' />            Points History          <CardTitle className="flex items-center gap-2">
-            <History className="h-5 w-5" />
+            <History className='h-5 w-5' />
             Points History
           </CardTitle>
           <CardDescription>Your recent points activity</CardDescription>
@@ -379,6 +312,7 @@ export default function PointsPage() {
             <p className='text-center py-8 text-muted-foreground'>
               No points activity yet.
             </p>
+          ) : (
             <ScrollArea className='h-64'>
               <div className='space-y-2 mt-2'>
                 {ledger.map(entry => (
@@ -402,10 +336,10 @@ export default function PointsPage() {
                         entry.delta >= 0
                           ? 'bg-green-100 text-green-800'
                           : 'bg-red-100 text-red-800'
-                      }                      variant="outline"
-                      className = {entry.delta >= 0 ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800',}
+                      }
                     >
-                      {entry.delta >= 0 ? '+' : ''}                      {entry.delta} pts                    </Badge>
+                      {entry.delta >= 0 ? '+' : ''}{entry.delta} pts
+                    </Badge>
                   </div>
                 ))}
               </div>
@@ -426,17 +360,11 @@ export default function PointsPage() {
           </p>
           <div className='flex gap-4 justify-center'>
             <Button variant='outline' asChild>
-              <Link href='/marketplace'>Browse Marketplace</Link>          </p>
-          <div className="flex gap-4 justify-center">
-            <Button variant="outline" asChild>
-              <Link href="/marketplace">Browse Marketplace</Link>
+              <Link href='/marketplace'>Browse Marketplace</Link>
             </Button>
             <Button variant='outline' asChild>
-              <Link href='/community'>Join Community</Link>            <Button variant="outline" asChild>
-              <Link href="/community">Join Community</Link>
+              <Link href='/community'>Join Community</Link>
             </Button>
-            <Button variant='outline' asChild>
-              <Link href='/community'>Join Community</Link>            </Button>
           </div>
         </CardContent>
       </Card>

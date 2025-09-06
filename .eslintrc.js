@@ -172,5 +172,6 @@ module.exports = {
     "check-syntax.js",
     "clean-conflicts.js",
     "commit-and-push.js",
+    "temp_exclude/",
   ],
 };

@@ -7,17 +7,15 @@ import {
   CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle,;
+  CardTitle,
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { Clock, Briefcase } from 'lucide-react';
 
-
-function ProjectsContent() { const { projects, isLoading  } = useProjects(),
 function ProjectsContent() {
-  const { projects, isLoading } = useProjects(),
+  const { projects, isLoading } = useProjects();
 
   return (
     <>
@@ -30,11 +28,9 @@ function ProjectsContent() {
           <h1 className='text-3xl font-bold'>My Projects</h1>
           <p className='text-muted-foreground mt-1'>
             All of your current and past projects
-          </p>        </div>      <SEO title="My Projects | Zion AI Marketplace" description="View and manage your projects." />
-      <main className="container mx-auto px-4 py-8">
-        <div className="mb-8">
-          <h1 className="text-3xl font-bold">My Projects</h1>
-          <p className="text-muted-foreground mt-1">All of your current and past projects</p>
+          </p>
+        </div>
+
         {isLoading ? (
           <p>Loading projects...</p>
         ) : projects.length === 0 ? (
@@ -53,14 +49,8 @@ function ProjectsContent() {
                     <span className='flex items-center gap-1 text-xs text-muted-foreground'>
                       <Clock className='h-3 w-3' />
                       Started{' '}
-                      {new Date(project.start_date).toLocaleDateString()}                    </span>
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>                  <CardDescription className="flex items-center gap-2 mt-1">
-                    <Badge variant="outline">{project.status}</Badge>
-                    <span className="flex items-center gap-1 text-xs text-muted-foreground">
-                      <Clock className="h-3 w-3" />
-                      Started {new Date(project.start_date).toLocaleDateString()}
+                      {new Date(project.start_date).toLocaleDateString()}
+                    </span>
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -69,12 +59,8 @@ function ProjectsContent() {
                   </p>
                 </CardContent>
                 <CardFooter>
-                  <Button asChild variant='outline' className='w-full'>                    <Link href={`/project/${project.id}`}>View Details</Link>                  <p className="text-sm text-muted-foreground line-clamp-2">
-                    {project.job?.description || "Project details"}
-                  </p>
-                </CardContent>
-                <CardFooter>
-                  <Button asChild variant="outline" className="w-full">
+                  <Button asChild variant='outline' className='w-full'>
+                    <Link href={`/project/${project.id}`}>View Details</Link>
                   </Button>
                 </CardFooter>
               </Card>
@@ -84,9 +70,7 @@ function ProjectsContent() {
       </main>
     </>
   );
-
-export default function Projects() {
-  return <ProjectsContent />;}
+}
 
 export default function Projects() {
   return <ProjectsContent />;

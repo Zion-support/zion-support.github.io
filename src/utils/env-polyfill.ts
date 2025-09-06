@@ -28,12 +28,18 @@ if (typeof globalThis !== 'undefined') {
   if (typeof (globalThis as any).process === 'undefined') {
     (globalThis as any).process = createProcessObject();
   } else if (typeof (globalThis as any).process.env === 'undefined') {
-    (globalThis as any).process.env = { ...defaultEnv };  }
+    (globalThis as any).process.env = { ...defaultEnv };
+  }
+}
 
-}//Ensure process is available on window ;
-// Ensure process is available globally
-if (typeof (globalThis as any).process === 'undefined') {
-  (globalThis as any).process = createProcessObject();
+// Ensure process is available on window
+if (typeof window !== 'undefined') {
+  if (typeof (window as any).process === 'undefined') {
+    (window as any).process = createProcessObject();
+  } else if (typeof (window as any).process.env === 'undefined') {
+    (window as any).process.env = { ...defaultEnv };
+  }
+}
 
 // Export a safe environment accessor
 export const safeEnv = {
@@ -65,14 +71,17 @@ export function getEnv(key: string, defaultValue = ''): string {
     return (globalThis as any).process.env[key];
   }
   return defaultValue;
+}
 
 // Check if we're in development mode safely
 export function isDevelopment(): boolean {
   return getEnv('NODE_ENV') === 'development';
+}
 
 // Check if we're in production mode safely
 export function isProduction(): boolean {
   return getEnv('NODE_ENV') === 'production';
+}
 
 // Export the polyfilled process object
 export const processEnv =
@@ -87,6 +96,4 @@ export const processEnv =
 
 console.log('✅ Environment polyfill loaded successfully');
 
-export default safeEnv;
-export default safeEnv;
 export default safeEnv;

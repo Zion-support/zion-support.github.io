@@ -1,9 +1,23 @@
 export type MediaBundle = 'general' | 'web3' | 'institutional';
 export type PressReleaseType = 'seed-round' | 'launch' | 'token-sale';
+
+export interface MediaAsset {
+  path: string;
+  filename: string;
+  type: 'text' | 'image' | 'video';
+  content: string;
+}
+
+export interface MediaGenerationRequest {
+  type: string;
+  companyName: string;
+  date: string;
+}
+
 export interface MediaGenerationResponse {
   ok: boolean;
   text?: string;
-  error?: string,
+  error?: string;
 }
 
 export async function generateMediaContent(request: MediaGenerationRequest): Promise<MediaGenerationResponse> {
@@ -12,6 +26,7 @@ export async function generateMediaContent(request: MediaGenerationRequest): Pro
     ok: true,
     text: `Mock ${request.type} for ${request.companyName} on ${request.date}`
   };
+}
 
 export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
   const base: MediaAsset[] = [
@@ -52,6 +67,7 @@ export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
 
   if (kind === 'web3') return [...base, ...web3Extras];
   return base;
+}
 
 export function buildPressRelease(
   type: PressReleaseType,
@@ -73,6 +89,7 @@ export function buildPressRelease(
     return `FOR IMMEDIATE RELEASE\nDate: ${params.date}\n\n${header}\n\n${params.companyName} announces the ${params.tokenName ?? '[Token]'} token sale. This is not an offer of securities. See legal notices.\n\nDistribution:\n- Community: 40%\n- Treasury: 20%\n\nAbout ${params.companyName}:\n${boilerplate}`;
   }
   return `FOR IMMEDIATE RELEASE\nDate: ${params.date}\n\n${header}\n\n${params.companyName} launches ZionGPT Core, an intelligent operations layer. Key benefits include automation, compliance, and insight.\n\nAbout ${params.companyName}:\n${boilerplate}`;
+}
 
 export function buildTimeline(startDate: Date) {
   const addDays = (d: Date, days: number) =>
@@ -87,9 +104,11 @@ export function buildTimeline(startDate: Date) {
     },
     { label: 'Week 4: Zion Global Summit', date: fmt(addDays(startDate, 21)) },
   ];
+}
 
 function titleCase(s: string) {
   return s.replace(
     /\w\S*/g,
     w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()
-  );}
+  );
+}
