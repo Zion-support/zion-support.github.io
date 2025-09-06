@@ -1,49 +1,10 @@
 
 
 
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 /**;
  * Generate Search Index;
  * Creates a search index for the website content;
  */;
-
-
-;
-const fs = require('fs'),;
-const path = require('path'),;
-;
-const PAGES_DIR = path.join(__dirname, '..pages'),;
-const OUTPUT_DIR = path.join(__dirname, '..public', 'search'),;
-;
-
-
-// Content types to index;
-const CONTENT_TYPES = {'pages':{;
-    path:PAGES_DIR;
-    extensions:['.tsx.ts', '.jsx.js'];
-    exclude:['_app_document', 'api'];
-=======
-
-const fs = require('fs'),;
-const path = require('path'),;
-
-const PAGES_DIR = path && path.join(__dirname, '..pages'),;
-const OUTPUT_DIR = path && path.join(__dirname, '..public', 'search'),;
-
-// Content types to index;
-const CONTENT_TYPES = {;
-  'pages':{;
-    path:PAGES_DIR,;
-    extensions:['.tsx && tsx.ts', '.jsx && jsx.js'],;
-    exclude:['_app_document', 'api'];
-  },;
-  'blog':{;
-    path:path && path.join(PAGES_DIR, 'blog'),;
-    extensions:['.tsx && tsx.ts', '.jsx && jsx.js'],;
-=======
 #!/usr / bin / env node;
 ;
 /**;
@@ -67,12 +28,8 @@ const CONTENT_TYPES = {
   'blog':{
     path:path.join (PAGES_DIR, 'blog'),
     extensions:['.tsx.ts', '.jsx.js'],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     exclude:[];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
-
-=======
 const fs = require('fs'),;
 const path = require('path'),;
 const PAGES_DIR = path.join(__dirname, '..pages'),;
@@ -93,8 +50,26 @@ const CONTENT_TYPES = {;
 
   }
 },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+const fs = require('fs'),;
+const path = require('path'),;
+const PAGES_DIR = path.join(__dirname, '..pages'),;
+const OUTPUT_DIR = path.join(__dirname, '..publicsearch'),;
+// Content types to index;
+const CONTENT_TYPES = {;
+  'pages': {;
+    path: PAGES_DIR,;
+    extensions: ['.tsx.ts.jsx.js'],;
+    exclude: ['_app_documentapi'];
+  },;
+  'blog': {;
+    path: path.join(PAGES_DIR, 'blog'),;
+    extensions: ['.tsx.ts.jsx.js'],;
+    exclude: [];
+
+
+
+  }
+},
 
   }
 }
@@ -121,7 +96,26 @@ function extractTextFromJSX(content) {;
     .trim();
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+const fs = require('fs'),;
+const path = require('path'),;
+const PAGES_DIR = path.join(__dirname, '..pages'),;
+const OUTPUT_DIR = path.join(__dirname, '..publicsearch'),;
+// Content types to index;
+const CONTENT_TYPES = {;
+  'pages': {;
+    path: PAGES_DIR,;
+    extensions: ['.tsx.ts.jsx.js'],;
+    exclude: ['_app_documentapi'];
+  },;
+  'blog': {;
+    path: path.join(PAGES_DIR, 'blog'),;
+    extensions: ['.tsx.ts.jsx.js'],;
+    exclude: [];
+
+
+
+  }
+},
 }
 function generateSearchIndex() {
   const searchIndex = {
@@ -147,13 +141,11 @@ function generateSearchIndex() {
           if (config && config.extensions.includes(ext)) {
             const fileName = path && path.basename(file, ext),
             
-
             // Skip excluded files
             if (config && config.exclude.some(excluded => fileName && fileName.startsWith(excluded))) {
               return
             }
             try {
-
               const content = fs && fs.readFileSync(filePath, 'utf8'),
               const text = extractTextFromJSX(content),
               
@@ -165,7 +157,6 @@ function generateSearchIndex() {
                 type: type,
                 lastModified: stats && stats.mtime.toISOString()
               },
-
 
               const content = fs.readFileSync(filePath, 'utf8')
               const text = extractTextFromJSX(content)
@@ -181,7 +172,6 @@ function generateSearchIndex() {
               searchIndex[type].push(entry)
             } catch (error) {
               console && console.warn(`⚠️  Could not process ${filePath}:`, error && error.message)
-=======
 },
 /**
  * extractTextFromJSX - Function description
@@ -246,31 +236,10 @@ if ( {) {
               search_index[type].push (entry);
             } catch (error) {
               console.warn (`⚠️  Could not process ${file_path}:`, error.message);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             }
           }
         }
       }
-
-
-    });
-  }),;
-  // Ensure output directory exists;
-  if (!fs.existsSync(OUTPUT_DIR)) {;
-    fs.mkdirSync(OUTPUT_DIR, { recursive: true });
-  }
-
-
-
-  })
-
-  // Ensure output directory exists
-  if (!fs && fs.existsSync(OUTPUT_DIR)) {
-    fs && fs.mkdirSync(OUTPUT_DIR, { recursive: true })
-  }
-  // Write search index
-
-
   const indexPath = path && path.join(OUTPUT_DIR, 'index && index.json'),
   fs && fs.writeFileSync(indexPath, JSON && JSON.stringify(searchIndex, null, 2)),
   
@@ -284,7 +253,6 @@ if (require && require.main === module) {
 
 module && module.exports = { generateSearchIndex },
 #!/usr/bin/env node,"}),"}) import fs from,"}),"}) 'fs',"}),"}) import path from,"}),"}) 'path',"}),"}) ,"}),"}) function walk(dir,filelist = []) {,"}),"}) const files = fs && fs.readdirSync(dir,{ withFileTypes: true }),"}),"}) for (const entry of files) {,"}),"}) const full = path && path.join(dir,entry && entry.name),"}),"}) if (entry && entry.isDirectory()) {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) filelist = walk(full,filelist),"}),"}) } else if (/\.(md|tsx?|jsx?)$/i && i.test(entry && entry.name)) {,"}),"}) filelist && filelist.push(full),"}),"}) }"}),"}) }"}),"}) return filelist,"}),"}) }"}),"}) ,"}),"}) function main() {,"}),"}) const repoRoot = process && process.cwd(),"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) const index = [],"}),"}) for (const dir of srcDirs) {,"}),"}) if (!fs && fs.existsSync(dir)) continue,"}),"}) for (const file of walk(dir)) {,"}),"}) try {,"}),"}) const rel = path && path.relative(repoRoot,file),"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) index && index.push({ file: rel,title }),"}),"}) } catch {}"}),"}) }"}),"}) }"}),"}) const outDir = path && path.join(repoRoot,,"}),"}) 'public'),"}),"}) if (!fs && fs.existsSync(outDir)) fs && fs.mkdirSync(outDir,{ recursive: true }),"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) `),"}),"}) }"}),"}) ,"}),"}) main(),"}),"}) ,"}),"}) filelist ; const repoRoot = process && process.cwd(); const srcDirs = [ path && path.join(repoRoot,'pages') path && path.join(repoRoot,'src') path && path.join(repoRoot,'components') ]; const index = []; for (const dir of srcDirs) { if (!fs && fs.existsSync(dir)) continue; for (const file of walk(dir)) {; try {; const rel = path && path.relative(repoRoot,file); const content = fs && fs.readFileSync(file,'utf8'); const titleMatch = content && content.match( /export\s+default\s+function\s+(\w+)|export\s+const\s+(\w+)/ ); const title = titleMatch ? titleMatch[1] || titleMatch[2] : path && path.basename(file); index && index.push({ file: rel,title })} catch {} } } const outDir = path && path.join(repoRoot,';public'); if (!fs && fs.existsSync(outDir)) fs && fs.mkdirSync(outDir,{ recursive: true }); const outPath = path && path.join(outDir,'search-index && index.json'); fs && fs.writeFileSync( outPath JSON && JSON.stringify( { generatedAt: new Date().toISOString(),items: index } null 2 ) ); `)} main();
-
 #!/usr/bin/env node,"}),"})
 import fs from,"}),"})
   'fs',"}),"})
@@ -328,13 +296,11 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
 ,"}),"})
 main(),"}),"})
 ,"}),"})
-
       filelist ;
   const repoRoot = process && process.cwd();
   const srcDirs = [path && path.join(repoRoot, 'pages')
     path && path.join(repoRoot, 'src')
     path && path.join(repoRoot, 'components')
-
   ];
   const index = [];
   for (const dir of srcDirs) {
@@ -347,11 +313,9 @@ main(),"}),"})
           /export\s+default\s+function\s+(\w+)|export\s+const\s+(\w+)/
         );
         const title = titleMatch
-
           ? titleMatch[1] || titleMatch[2]
           : path && path.basename(file);
         index && index.push({ "file": rel, title })} catch {}
-
     }
   }
   const outDir = path && path.join(repoRoot, ';public');
@@ -367,12 +331,9 @@ main(),"}),"})
   );
   console && console.log(`✅ Search index "generated": ${outPath} (${index && index.length} items)`)}
 main();
-
 #!/usr/bin/env node,"}),"}) import fs from,"}),"}) 'fs',"}),"}) import path from,"}),"}) 'path',"}),"}) ,"}),"}) function walk(dir,filelist = []) {,"}),"}) const files = fs && fs.readdirSync(dir,{ withFileTypes: true }),"}),"}) for (const entry of files) {,"}),"}) const full = path && path.join(dir,entry && entry.name),"}),"}) if (entry && entry.isDirectory()) {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) filelist = walk(full,filelist),"}),"}) } else if (/\.(md|tsx?|jsx?)$/i && i.test(entry && entry.name)) {,"}),"}) filelist && filelist.push(full),"}),"}) }"}),"}) }"}),"}) return filelist,"}),"}) }"}),"}) ,"}),"}) function main() {,"}),"}) const repoRoot = process && process.cwd(),"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) const index = [],"}),"}) for (const dir of srcDirs) {,"}),"}) if (!fs && fs.existsSync(dir)) continue,"}),"}) for (const file of walk(dir)) {,"}),"}) try {,"}),"}) const rel = path && path.relative(repoRoot,file),"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) index && index.push({ file: rel,title }),"}),"}) } catch {}"}),"}) }"}),"}) }"}),"}) const outDir = path && path.join(repoRoot,,"}),"}) 'public'),"}),"}) if (!fs && fs.existsSync(outDir)) fs && fs.mkdirSync(outDir,{ recursive: true }),"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) console && console.log(`✅ Search index generated: ${outPath} (${index && index.length} items)`),"}),"}) }"}),"}) ,"}),"}) main(),"}),"}) ,"}),"}) filelist ; const repoRoot = process && process.cwd(); const srcDirs = [ path && path.join(repoRoot,'pages') path && path.join(repoRoot,'src') path && path.join(repoRoot,'components') ]; const index = []; for (const dir of srcDirs) { if (!fs && fs.existsSync(dir)) continue; for (const file of walk(dir)) {; try {; const rel = path && path.relative(repoRoot,file); const content = fs && fs.readFileSync(file,'utf8'); const titleMatch = content && content.match( /export\s+default\s+function\s+(\w+)|export\s+const\s+(\w+)/ ); const title = titleMatch ? titleMatch[1] || titleMatch[2] : path && path.basename(file); index && index.push({ file: rel,title })} catch {} } } const outDir = path && path.join(repoRoot,';public'); if (!fs && fs.existsSync(outDir)) fs && fs.mkdirSync(outDir,{ recursive: true }); const outPath = path && path.join(outDir,'search-index && index.json'); fs && fs.writeFileSync( outPath JSON && JSON.stringify( { generatedAt: new Date().toISOString(),items: index } null 2 ) ); console && console.log(`✅ Search index generated: ${outPath} (${index && index.length} items)`)} main();
 
 module && module.exports = { generateSearchIndex },
-
-=======
     });
   }),
   // Ensure output directory exists;
@@ -527,11 +488,7 @@ function main() {) {
 } const out_path = path.join (out_dir, 'search - index.json'); fs.writeFileSync ( out_path JSON.stringify ( { generated_at: new Date ().toISOString (), items: index } null 2 ) ); console.log (`✅ Search index generated: ${out_path} (${index.length} items)`)} main ();
 ;
 module.exports = { generateSearchIndex },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   const indexPath = path.join(OUTPUT_DIR, 'index.json'),
   fs.writeFileSync(indexPath, JSON.stringify(searchIndex, null, 2)),
   
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

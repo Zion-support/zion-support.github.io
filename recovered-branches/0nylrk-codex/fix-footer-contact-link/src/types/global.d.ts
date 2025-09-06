@@ -1,27 +1,16 @@
-
-
-import {ReactNode} from 'react';
-
-
-// Extend FeatureCardProps to include key for mapping
-declare module '@/components/FeatureCard' {
-=======
 import {ReactNode} from 'react';
 // Extend FeatureCardProps to include key for mapping;
 declare module '@/components / FeatureCard' {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   export interface FeatureCardProps {
     title: string;
     description: string;
     icon: ReactNode;
-
     class_name?: string,
     key?: number | string;
   }
 }
 // Extend ListingScoreCardProps to include key for mapping;
 declare module '@/components / ListingScoreCard' {
-
   export interface ListingScoreCardProps {
     title: string;
     description: string;
@@ -32,7 +21,6 @@ declare module '@/components / ListingScoreCard' {
     author_image?: string;
     ai_score?: number;
     rating?: number;
-
     review_count?: number;
     key?: string | number,
     variant?: string;
@@ -54,7 +42,5 @@ declare module '@/components / ProductListingCard' {
     view: any;
     onRequestQuote: (listing_id: string) => void,
     key?: string | number;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }

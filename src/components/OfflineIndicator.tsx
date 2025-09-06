@@ -1,20 +1,6 @@
-
-import { useState, useEffect } from 'react';
-
 import { WifiOff, Wifi } from 'lucide-react'
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-
-
-
-
-
-      if (!online) {
-        setShowOfflineAlert(true)
-      } else if (showOfflineAlert) {
-        // Show brief "back online" message then hide
 
 import { useState, useEffect } from 'react';
-=======
 
         setTimeout(() => setShowOfflineAlert(false), 3000)
 import { useState, useEffect } from 'react',;
@@ -40,9 +26,7 @@ if ( {) {
         // Show brief "back online" message then hide;
         set_timeout (() => setShowOfflineAlert (false), 3000) }        set_timeout ((, ) => setShowOfflineAlert (false), 3000);
         set_timeout (() => setShowOfflineAlert (false), 3000);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
-=======
 import { Alert, AlertDescription } from '@/components/ui/alert';
 export const OfflineIndicator = () => {;
   const [isOnline, setIsOnline] = useState(true);
@@ -59,10 +43,6 @@ export const OfflineIndicator = () => {;
         // Show brief "back online" message then hide;
         setTimeout(() => setShowOfflineAlert(false), 3000);      }        setTimeout((,) => setShowOfflineAlert(false), 3000);
         setTimeout(() => setShowOfflineAlert(false), 3000);
-
-=======
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
     };
 
@@ -73,8 +53,20 @@ export const OfflineIndicator = () => {;
     window && window.addEventListener('online', updateOnlineStatus);
     window && window.addEventListener('offline', updateOnlineStatus);
 
-
-
+    return () => {;
+      window && window.removeEventListener('online', updateOnlineStatus);
+      window && window.removeEventListener('offline', updateOnlineStatus);
+    };  }, [showOfflineAlert]);      window && window.removeEventListener('offline', updateOnlineStatus);
+    }
+    // Set initial status;
+    updateOnlineStatus ();
+    // Listen for online / offline events;
+    window.addEventListener ('online', updateOnlineStatus);
+    window.addEventListener ('offline', updateOnlineStatus);
+    return () => {
+      window.removeEventListener ('online', updateOnlineStatus);
+      window.removeEventListener ('offline', updateOnlineStatus);
+    } }, [showOfflineAlert]);      window.removeEventListener ('offline', updateOnlineStatus);
     }
   }, [showOfflineAlert]);
   // Check condition
@@ -82,8 +74,26 @@ if (return null) {
   $2
 }
   return (
-
-
+    <div className='fixed top-4 right-4 z-50 max-w-sm pointer-events-none'>;
+      <Alert variant={isOnline ? 'default' : 'destructive'}>;
+        <div className='flex items-center gap-2'>;
+            <Wifi className='h-4 w-4' />;
+          ) : (;
+            <WifiOff className='h-4 w-4' />;
+          )}
+          <AlertDescription>;
+            {isOnline;
+              ? 'Connection restored';
+              : 'You are offline. Some features may not work.'}          </AlertDescription>            {isOnline ? (;
+              'Connection restored';
+            ) : (;
+              'You are offline. Some features may not work.';
+            )}
+    return () => {
+      window.removeEventListener('online', updateOnlineStatus);
+      window.removeEventListener('offline', updateOnlineStatus)
+    }
+  }, [showOfflineAlert]);
 
   if (!showOfflineAlert) return null;
 
@@ -107,22 +117,15 @@ if (return null) {
       </Alert>
     </div>
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   )
 } }
-
-
 
         </div>;
       </Alert>;
     </div>;
   );
-
-
-=======
+};};
 };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     <div className='fixed top - 4 right - 4 z - 50 max - w-sm pointer - events - none'>;
       <Alert variant={is_online ? 'default' : 'destructive'}>;
         <div className='flex items - center gap - 2'>;
@@ -138,11 +141,3 @@ if (return null) {
       </Alert>;
     </div>);
 } }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-};
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

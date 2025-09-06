@@ -1,4 +1,3 @@
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -40,8 +39,6 @@ export default function RequestsPanel() {;
   const [showDetails, setShowDetails] = useState(false);
 
   const {;
-
-=======
 import React, { useState } from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -63,7 +60,6 @@ function RequestsPanel() {
   const [show_details, setShowDetails] = useState (false);
 ;
   const {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     quotes;
     unread_count;
     is_loading;
@@ -73,36 +69,6 @@ function RequestsPanel() {
     setArchiveFilter;
     markAsViewed;
     markAsResponded;
-
-
-
-  const {
-    quotes,
-    unreadCount,
-    isLoading,
-    statusFilter,
-    setStatusFilter,
-    archiveFilter,
-    setArchiveFilter,
-    markAsViewed,
-    markAsResponded,
-    toggleArchive
-
-  } = useTalentQuotes(),
-
-  const handleViewDetails = (quote: QuoteRequest) => {
-    setSelectedQuote(quote),
-    setShowDetails(true),
-    
-
-
-    // If status is new, mark as viewed
-    if (quote.status === 'new') {
-      markAsViewed(quote.id)
-    }
-
-
-=======
 
   },
 
@@ -164,7 +130,6 @@ export default function RequestsPanel() {;
   const activeQuotes = quotes && quotes.filter(q => !q && q.is_archived);
   const archivedQuotes = quotes && quotes.filter(q => q && q.is_archived);
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <ProtectedRoute>;
       <div>;
@@ -175,13 +140,11 @@ export default function RequestsPanel() {;
             <RequestsHeader;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               unreadCount={unreadCount}
               statusFilter={statusFilter}
               setStatusFilter={setStatusFilter}
               archiveFilter={archiveFilter}
               setArchiveFilter={setArchiveFilter}
-
             />;
 
             {/* Main Content */}
@@ -192,7 +155,6 @@ export default function RequestsPanel() {;
               </TabsList>;
 
               <TabsContent value="active">;
-
                 <QuoteRequestsList
                   quotes={activeQuotes}
                   isLoading={isLoading}
@@ -200,12 +162,10 @@ export default function RequestsPanel() {;
                   onViewDetails={handleViewDetails}
                   onMarkAsResponded={markAsResponded}
                   onToggleArchive={toggleArchive}
-
                 />;
               </TabsContent>;
 
               <TabsContent value="archived">;
-
                 <QuoteRequestsList
                   quotes={archivedQuotes}
                   isLoading={isLoading}
@@ -213,13 +173,11 @@ export default function RequestsPanel() {;
                   onViewDetails={handleViewDetails}
                   onMarkAsResponded={markAsResponded}
                   onToggleArchive={toggleArchive}
-
                 />;
               </TabsContent>;
             </Tabs>;
           </div>;
         </div>;
-
 
         {/* Quote Details Modal */}
         <QuoteDetails
@@ -229,10 +187,6 @@ export default function RequestsPanel() {;
 
           onClose={() => {;
             setShowDetails(false);
-            setSelectedQuote(null);
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           }}
         />
         <Footer />
@@ -240,7 +194,6 @@ export default function RequestsPanel() {;
     </ProtectedRoute>
   )
 }
-=======
             setSelectedQuote(null);
           }}
         />;
@@ -250,8 +203,6 @@ export default function RequestsPanel() {;
     </ProtectedRoute>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     toggle_archive;
   } = useTalentQuotes ();
 ;
@@ -326,4 +277,3 @@ if ( {) {
       </div>;
     </ProtectedRoute>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -131,7 +131,5 @@ export function ProjectCard({ project, onEdit, onDelete } ProjectCardProps) {;
   deleteDialogOpen ;
 }onOpenChange= {;
   setDeleteDialogOpen ;
-
 }> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Delete Project</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this project? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </Card>) ;
 }"
-

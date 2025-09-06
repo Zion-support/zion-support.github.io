@@ -1,23 +1,4 @@
 
-
-import React from 'react'
-import Link from 'next/link'
-
-
-import { MessageSquare } from 'lucide-react'
-
-import { Button } from '@/components/ui/button'
-import {
-  Tooltip
-  TooltipContent
-  TooltipProvider
-  TooltipTrigger
-} from '@/components/ui/tooltip'
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
-
-interface EmptyStateProps {
-=======
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -53,8 +34,6 @@ import {;
 import { Button } from '@/components/ui/button';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 interface EmptyStateProps {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React from 'react';
 import Link from 'next / link';
 import { MessageSquare } from 'lucide-react';
@@ -67,12 +46,10 @@ import {
 } from '@/components / ui / tooltip';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components / ui / tooltip';
 interface EmptyStateProps {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   title: string;
   subtitle: string;
   cta: string;
   href: string;
-
 import React from 'react';
 import Link from 'next/link';
 import { MessageSquare } from 'lucide-react'
@@ -84,9 +61,7 @@ interface EmptyStateProps {
   subtitle: string,
   cta: string,
   href: string,
-
   hasSession: boolean
-
 
 const EmptyState: React.FC<EmptyStateProps> = ({;
   title,;
@@ -94,7 +69,6 @@ const EmptyState: React.FC<EmptyStateProps> = ({;
   cta,;
   href,;
   hasSession,;
-
 }) => {  return (
     <div className='text-center py-16'>;
       <div className='bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex'>;
@@ -112,8 +86,6 @@ const EmptyState: React.FC<EmptyStateProps> = ({;
               </Button>;
             ) : (;
               <Button disabled>{cta}</Button>;
-
-=======
 const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, hasSession }) => {
   return (
     <div className="text-center py-16">
@@ -132,32 +104,20 @@ const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, has
               </Button>
             ) : (
               <Button disabled>{cta}</Button>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             )}
           </TooltipTrigger>;
           {!hasSession && <TooltipContent>Login required</TooltipContent>}
-
-
-=======
-
-
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         </Tooltip>;
       </TooltipProvider>;
     </div>;
   );
-
+};
 export default EmptyState;
-
-=======
 };
 
 
 export default EmptyState;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   has_session: boolean;
 const EmptyState: React.FC < EmptyStateProps> = ({
   title,
@@ -188,12 +148,3 @@ const EmptyState: React.FC < EmptyStateProps> = ({
     </div>);
 }
 export default EmptyState;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-},;
-export default EmptyState;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

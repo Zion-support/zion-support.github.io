@@ -1,6 +1,5 @@
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
 export default function DocsPage() {
 	return (
 		<Layout>
@@ -14,11 +13,7 @@ export default function DocsPage() {
 			</section>
 		</Layout>
 	)
-
-=======
 }
-
-=======
 import React from 'react',
 import Head from 'next / head',
 import Layout from '../components / layout / Layout',
@@ -38,9 +33,6 @@ return (
   </section>;
   </Layout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
   } catch (error) {
     console.error("Error:", error);
@@ -49,4 +41,3 @@ return (
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

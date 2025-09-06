@@ -1,6 +1,3 @@
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 type ProposalListItem = {
   id: string
   title: string
@@ -10,11 +7,11 @@ type ProposalListItem = {
   status: 'Draft' | 'Submitted' | 'Under Review' | 'Accepted'
   createdAt: string
 
-=======
 import React, { useEffect, useState } from 'react',
 import EnhancedLayout from '../../components / layout / EnhancedLayout',
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+import React, { useEffect, useState } from 'react',
+import EnhancedLayout from '../../components / layout / EnhancedLayout',
 type ProposalListItem = {
   id: string,
   title: string,
@@ -22,16 +19,12 @@ type ProposalListItem = {
   regional_scope: string,
   type: string,
   status: 'Draft' | 'Submitted' | 'Under Review' | 'Accepted',
-
-
-},
 export default function InternationalProposalsPage() {
   const [items, setItems] = useState<ProposalListItem[]>([]),
   const [filter, setFilter] = useState('All'),
 
   useEffect__(() => {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     fetch('/api/proposals')
       .then((r) => r.json())
       .then((d) => setItems(d.items |[]))
@@ -86,16 +79,12 @@ export default function InternationalProposalsPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         </div>
         <div className="text-sm text-gray-600">Community commentary per region coming next. For now, proposals expose a comments API endpoint.</div>
       </div>
     </EnhancedLayout>
-
-=======
+  )
 }
-
-=======
   created_at: string;
 },
 export default /**
@@ -147,9 +136,5 @@ function InternationalProposalsPage() {
       </div>;
     </EnhancedLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,4 +1,3 @@
-
 import { LoginCard  } from './LoginCard';
 export /**
  * LoginContent - Function description
@@ -17,7 +16,6 @@ function LoginContent() {
                 Join the Zion Community;
               </h3>;
               <p className="text - lg text - white / 80">;
-
                 Connect with thousands of AI professionals, discover new;
                 opportunities, and showcase your services to a global audience.;
               </p>;
@@ -26,13 +24,7 @@ function LoginContent() {
         </div>;
       </div>;
 
-    </div>);
 
-}
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function LoginContent() {
   return (
     <div className="flex min-h-screen bg-zion-blue">
@@ -52,6 +44,6 @@ export function LoginContent() {
         </div>
       </div>
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    </div>);
+}

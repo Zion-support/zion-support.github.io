@@ -1,8 +1,3 @@
-
-
-
-
-
 import React from "react";
 import {useNavigate} from "react-router-dom";
 import {ChevronLeft, Bell, Settings} from "lucide-react";
@@ -10,7 +5,6 @@ import {cn} from "@/lib/utils";
 import {Button} from "@/components/ui/button";
 interface MobileHeaderProps {;
   title: string,;
-
   showBack?: boolean;
   showNotifications?: boolean;
   showSettings?: boolean;
@@ -19,9 +13,7 @@ interface MobileHeaderProps {;
   onSettingsClick?: () => void;
 }
 
-
 export function MobileHeader(): any ({;
-
   title;
 
   showBack = false;
@@ -32,20 +24,6 @@ export function MobileHeader(): any ({;
   onSettingsClick}: MobileHeaderProps) {;
   const navigate = useNavigate();
   return (
-
-interface MobileHeaderProps {
-  title: string,
-  showBack?: boolean,
-  showNotifications?: boolean,
-  showSettings?: boolean,
-  className?: string,
-  onNotificationsClick?: () => void,
-
-  onSettingsClick?: () => void
-}
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
       className
     )}>
@@ -60,7 +38,6 @@ interface MobileHeaderProps {
     <headerclassName={cn(
       "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border"
       className
-=======
               onClick={() => navigate(-1)}
             >
               <ChevronLeft className="h-5 w-5" />
@@ -93,7 +70,6 @@ interface MobileHeaderProps {
             </Button>
 
 
-=======
 import React from "react",;
 import { useNavigate } from "react-router-dom",;
 import { ChevronLeft, Bell, Settings } from "lucide-react",;
@@ -131,7 +107,6 @@ export function MobileHeader({;
               variant="ghost" 
               size="icon" 
               className="mr-2" 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               onClick={() => navigate(-1)}
             >;
               <ChevronLeft className="h-5 w-5" />;
@@ -140,40 +115,33 @@ export function MobileHeader({;
           )}
           <h1 className="text-lg font-medium leading-none truncate">;
             {title}
-
           </h1>;
         </div>;
         <div className="flex items-center space-x-2">;
           {showNotifications && (;
             <Button
               variant="ghost" 
-
               size="icon"
               onClick={onNotificationsClick}>;
               <Bell className="h-5 w-5" />;
               <span className="sr-only">Notifications</span>;
             </Button>;
           )}
-
           {showSettings && (;
             <Button
               variant="ghost" 
-
               size="icon"
               onClick={onSettingsClick}>;
               <Settings className="h-5 w-5" />;
               <span className="sr-only">Settings</span>;
             </Button>;
           )}
-
         </div>;
       </div>;
     </header>;
   );
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React from './react';
 import { use_navigate } from './react-router-dom';
 import { ChevronLeft, Bell, Settings } from './lucide-react';
@@ -237,4 +205,3 @@ function MobileHeader() {
       </div>;
     </header>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

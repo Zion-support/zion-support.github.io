@@ -1,8 +1,3 @@
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export function ClientDashboard() {
   return (
     <div className="space-y-6 px-4 pb-24">
@@ -161,10 +156,8 @@ import {Button} from "@/components/ui/button";
 import {Badge} from "@/components/ui/badge";
 import {ChevronRight, Plus, UserCheck, FileText, Bell} from "lucide-react";
 import {Link} from "react-router-dom";
-=======
 
 
-=======
 import React from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -219,7 +212,6 @@ export function ClientDashboard() {;
                   </div>;
                   <div className="w-7 h-7 rounded-full bg-secondary/20 border-2 border-background flex items-center justify-center">;
                     <UserCheck className="h-4 w-4" />;
-=======
 import React from './react';
 import { Card, CardContent } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
@@ -272,7 +264,6 @@ function ClientDashboard() {
                   </div>;
                   <div className="w - 7 h - 7 rounded - full bg - secondary / 20 border - 2 border - background flex items - center justify - center">;
                     <UserCheck className="h - 4 w - 4" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   </div>;
                 </div>;
                 <Button size="sm" variant="outline">View Details</Button>;
@@ -281,7 +272,6 @@ function ClientDashboard() {
           </CardContent>;
         </Card>;
       </section>;
-
       <section>;
         <div className="flex items - center justify - between mb - 4">;
           <h2 className="text - lg font - medium">Suggested Talents</h2>;
@@ -314,13 +304,11 @@ function ClientDashboard() {
                 <Badge variant="outline" className="text - xs">User Testing</Badge>;
               </div>;
               <div className="flex gap - 2 mt - 3">;
-
                 <Button size="sm">View Profile</Button>;
                 <Button size="sm" variant="outline">Message</Button>;
               </div>;
             </CardContent>;
           </Card>;
-
           <Card>;
             <CardContent className="p - 4">;
               <div className="flex justify - between">;
@@ -343,7 +331,6 @@ function ClientDashboard() {
                 <Badge variant="outline" className="text - xs">AWS</Badge>;
               </div>;
               <div className="flex gap - 2 mt - 3">;
-
                 <Button size="sm">View Profile</Button>;
                 <Button size="sm" variant="outline">Message</Button>;
               </div>;
@@ -351,7 +338,6 @@ function ClientDashboard() {
           </Card>;
         </div>;
       </section>;
-
       <section>;
         <div className="flex items - center justify - between mb - 4">;
           <h2 className="text - lg font - medium">Recent Updates</h2>;
@@ -386,9 +372,6 @@ function ClientDashboard() {
       </section>;
     </div>);
 }
-
-=======
 ;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

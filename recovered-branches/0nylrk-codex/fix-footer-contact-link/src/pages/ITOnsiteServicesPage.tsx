@@ -1,4 +1,3 @@
-
 import {useState, useEffect} from "react";
 import {useSearchParams} from "react-router-dom";
 import {AppLayout} from "@/layout/AppLayout";
@@ -15,16 +14,6 @@ import {ServiceProcessSteps} from "@/components/services/PageSections/ServicePro
 import {ServiceIncludes} from "@/components/services/PageSections/ServiceIncludes";
 import {EnterpriseCallToAction} from "@/components/services/PageSections/EnterpriseCallToAction";
 export default function ITOnsiteServicesPage() {;
-
-  const [searchParams] = useSearchParams();
-  const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null),
-  const [searchQuery, setSearchQuery] = useState("");
-
-
-
-  
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Show success toast if redirected from successful payment
   useEffect(() => {
     if (success === "true") {
@@ -70,7 +59,9 @@ export default function ITOnsiteServicesPage() {;
     }, 100)
 
 
-=======
+  const [searchParams] = useSearchParams();
+  const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null),
+  const [searchQuery, setSearchQuery] = useState("");
 
   },
   
@@ -140,7 +131,6 @@ export default function ITOnsiteServicesPage() {;
       document && document.getElementById('service-details')?.scrollIntoView({ behavior: 'smooth' });
     }, 100);
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
     <AppLayout>;
@@ -149,35 +139,27 @@ export default function ITOnsiteServicesPage() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Hero Section with Features */}
-
           <PageHero />;
 
           {/* Country Selection Tabs */}
           <div className="mb-12">;
-
             <CountryTabs
-=======
 
             <CountryTabs 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               popularCountries={popularCountries}
               filteredCountries={filteredCountries}
               handleCountrySelect={handleCountrySelect}
               searchQuery={searchQuery}
               setSearchQuery={setSearchQuery}
-
             />;
           </div>;
-
 
           {/* Service Details Section */}
           <ServiceDetailsSection
             selectedCountry={selectedCountry}
             setSelectedCountry={setSelectedCountry}
-
           />;
 
           {/* How It Works Section */}
@@ -209,8 +191,6 @@ export default function ITOnsiteServicesPage() {;
     </AppLayout>;
   );
 }
-
-=======
 import { useState, useEffect } from './react';
 import { useSearchParams } from './react-router-dom';
 import { AppLayout } from '@/layout / AppLayout';
@@ -325,9 +305,6 @@ if (return 1) {
       <QuoteFormSection />;
     </AppLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

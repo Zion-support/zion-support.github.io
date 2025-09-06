@@ -1,23 +1,3 @@
-
-
-import React from 'react',;
-import Head from 'next/head',;
-import Link from 'next/link',;
-import { useRouter } from 'next/router',;
-export default function CaseStudyPage() {
-  const router = useRouter(),
-  const { id } = router.query,
-
-
-
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-
-      id: 'ai-automation-manufacturing',
-      title: 'AI-Powered Manufacturing Automation',
-=======
 import React from 'react',
 import Head from 'next / head',
 import Link from 'next / link',
@@ -33,7 +13,6 @@ function CaseStudyPage() {
     {
       id: 'ai - automation - manufacturing',
       title: 'AI - Powered Manufacturing Automation',
-
       company: 'Global Manufacturing Corp',
       industry: 'Manufacturing',
       challenge: 'Traditional manufacturing processes were inefficient with high downtime and low production rates.',
@@ -41,8 +20,6 @@ function CaseStudyPage() {
       results: ['40% increase in production efficiency60% reduction in downtime25% improvement in quality control'],
       duration: '6 months',
       description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.',
-
-
       fullContent: `
         <h2>Background</h2>
         <p>Global Manufacturing Corp was facing significant challenges with their traditional manufacturing processes.
@@ -70,8 +47,45 @@ function CaseStudyPage() {
         <p>The project was completed in 6 months with minimal disruption to ongoing operations.
         The system was deployed in phases, allowing for gradual adoption and optimization.</p>
       `
-
-
+    {
+      id: 'content-generation-scale'
+      title: 'Scaling Content Generation 10x'
+      company: 'Digital Marketing Agency'
+      industry: 'Marketing'
+      challenge: 'Manual content creation was limiting growth and unable to meet client demands.'
+      solution: 'Deployed autonomous AI content generation systems with human oversight.'
+      results: ['10x increase in content output85% improvement in engagement70% reduction in production time']
+      duration: '4 months'
+      description: 'Transforming content creation through autonomous AI systems.'
+    };
+      full_content: `;
+        <h2 > Background</h2>;
+        <p > Global Manufacturing Corp was facing significant challenges with their traditional manufacturing processes.;
+        High downtime, inefficient production scheduling, and quality control issues were impacting their bottom line.</p>;
+        <h2 > Challenge</h2>;
+        <p > The company needed to modernize their manufacturing operations while maintaining high quality standards;
+        and reducing operational costs. They required a solution that could adapt to changing production demands;
+        and minimize human intervention.</p>;
+        <h2 > Solution</h2>;
+        <p > We implemented a comprehensive AI automation system that included:</p>;
+        <ul>;
+          <li > Predictive maintenance algorithms</li>;
+          <li > Real - time production optimization</li>;
+          <li > Automated quality control systems</li>;
+          <li > Intelligent scheduling and resource allocation</li>;
+        </ul>;
+        <h2 > Results</h2>;
+        <p > The implementation delivered exceptional results:</p>;
+        <ul>;
+          <li><strong > 40% increase in production efficiency</strong> - Streamlined processes and reduced bottlenecks</li>;
+          <li><strong > 60% reduction in downtime</strong> - Predictive maintenance prevented equipment failures</li>;
+          <li><strong > 25% improvement in quality control</strong> - AI - powered inspection systems caught defects early</li>;
+        </ul>;
+        <h2 > Implementation Timeline</h2>;
+        <p > The project was completed in 6 months with minimal disruption to ongoing operations.;
+        The system was deployed in phases, allowing for gradual adoption and optimization.</p>;
+      `;
+    },
     {
       id: 'content - generation - scale',
       title: 'Scaling Content Generation 10x',
@@ -82,8 +96,6 @@ function CaseStudyPage() {
       results: ['10x increase in content output85% improvement in engagement70% reduction in production time'],
       duration: '4 months',
       description: 'Transforming content creation through autonomous AI systems.',
-
-
       fullContent: `
         <h2>Background</h2>
         <p>A leading digital marketing agency was struggling to scale their content creation capabilities.
@@ -111,13 +123,40 @@ function CaseStudyPage() {
         <p>The system was deployed in 4 months with comprehensive training for the creative team.
         The AI systems learned from human feedback and continuously improved over time.</p>
       `
-
-
+      full_content: `;
+        <h2 > Background</h2>;
+        <p > A leading digital marketing agency was struggling to scale their content creation capabilities.;
+        Their manual processes were limiting growth and preventing them from taking on new clients.</p>;
+        <h2 > Challenge</h2>;
+        <p > The agency needed to dramatically increase their content production capacity while maintaining;
+        high quality standards and creative excellence. They required a solution that could handle multiple;
+        content types and formats.</p>;
+        <h2 > Solution</h2>;
+        <p > We implemented an autonomous content generation system that included:</p>;
+        <ul>;
+          <li > AI - powered content creation engines</li>;
+          <li > Automated research and fact - checking</li>;
+          <li > Intelligent content optimization</li>;
+          <li > Human oversight and quality control</li>;
+        </ul>;
+        <h2 > Results</h2>;
+        <p > The transformation was remarkable:</p>;
+        <ul>;
+          <li><strong > 10x increase in content output</strong> - From 50 to 500 pieces per month</li>;
+          <li><strong > 85% improvement in engagement</strong> - AI - optimized content performed significantly better</li>;
+          <li><strong > 70% reduction in production time</strong> - Automated workflows accelerated delivery</li>;
+        </ul>;
+        <h2 > Implementation Timeline</h2>;
+        <p > The system was deployed in 4 months with comprehensive training for the creative team.;
+        The AI systems learned from human feedback and continuously improved over time.</p>;
+      `;
+    },
+    {
+      id: 'cloud - infrastructure - optimization',
+      title: 'Cloud Infrastructure Optimization',
+      company: 'E - commerce Platform',
       industry: 'Technology',
       challenge: 'Cloud costs were spiraling out of control with poor resource utilization.',
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         <h2>Background</h2>
         <p>A growing e-commerce platform was experiencing skyrocketing cloud costs and frequent outages.
         Their infrastructure was not scaling efficiently with their business growth.</p>
@@ -126,9 +165,6 @@ function CaseStudyPage() {
         They required a solution that could automatically adapt to traffic patterns and prevent outages.</p>
         <h2>Solution</h2>
         <p>We designed and implemented a comprehensive cloud optimization system: </p>
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         <ul>
           <li>Auto-scaling infrastructure with intelligent resource allocation</li>
           <li>Self-healing systems with automatic failure recovery</li>
@@ -147,13 +183,12 @@ function CaseStudyPage() {
         The new infrastructure was deployed alongside the existing system and gradually migrated traffic.</p>
       `
     }
+  ];
+
+  const caseStudy = caseStudies.find(study => study.id === id);
 
 
 
-=======
-
-=======
-=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -284,11 +319,8 @@ export default function CaseStudyPage(req, res) {
 }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ],
   const caseStudy = caseStudies.find(study => study.id === id),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (!caseStudy) {
     return (
       <>
@@ -350,7 +382,6 @@ export default function CaseStudyPage(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </span>
               </div>
               <h1 className="text-4xl font-bold mb-4 text-white">{caseStudy.title}</h1>
@@ -373,8 +404,7 @@ export default function CaseStudyPage(req, res) {
                   </div>
                 </div>
               </div>
-
-
+              
               <div className="space-y-6">
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
                   <h3 className="font-semibold text-green-400 text-lg mb-4">Key Results</h3>
@@ -482,11 +512,10 @@ export default function CaseStudyPage(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              
                   </ul>
                 </div>
-
-
+                
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
                   <h3 className="font-semibold text-blue-400 text-lg mb-4">Project Details</h3>
                   <div className="space-y-3">
@@ -502,8 +531,7 @@ export default function CaseStudyPage(req, res) {
                 </div>
               </div>
             </div>
-
-
+            
             <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 mb-12">
 
 
@@ -519,11 +547,8 @@ export default function CaseStudyPage(req, res) {
         </main>
       </div>
     </>
-
-=======
+  )
 }
-
-=======
       solution: 'Built self - healing, auto - scaling cloud infrastructure with intelligent cost optimization.',
       results: ['50% reduction in cloud costs99.9% uptime achieved3x improvement in performance'],
       duration: '8 months',
@@ -671,9 +696,5 @@ if ( {) {
       </div>;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

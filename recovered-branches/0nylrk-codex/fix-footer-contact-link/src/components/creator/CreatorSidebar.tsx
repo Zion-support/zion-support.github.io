@@ -1,9 +1,3 @@
-
-
-
-
-import {
-
 import {;
   Bell,;
   FileText,;
@@ -11,7 +5,6 @@ import {;
   Mail,;
   Search,;
   Settings,;
-=======
 
   Bell,
   FileText,
@@ -31,19 +24,10 @@ import {;
   SidebarMenuButton,;
   SidebarGroupLabel,;
   SidebarGroupContent,;
-
-
-
 } from "@/components/ui/sidebar";
 
 export function AppSidebar() {;
   return (
-
-
-        
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <SidebarGroup>
           <SidebarGroupLabel>Content</SidebarGroupLabel>
           <SidebarGroupContent>
@@ -72,7 +56,6 @@ export function AppSidebar() {;
         
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <SidebarGroup>
           <SidebarGroupLabel>Settings</SidebarGroupLabel>
           <SidebarGroupContent>
@@ -109,7 +92,6 @@ export function AppSidebar() {;
                   <a href="/creator-dashboard">;
                     <Home size={16} />;
                     <span>Home</span>;
-=======
   Bell,
   FileText,
   Home,
@@ -145,34 +127,28 @@ function AppSidebar() {
                   <a href="/creator - dashboard">;
                     <Home size={16} />;
                     <span > Home</span>;
-
                   </a>;
                 </SidebarMenuButton>;
               </SidebarMenuItem>;
               <SidebarMenuItem>;
-
                 <SidebarMenuButton as_child>;
                   <a href="/messaging">;
                     <Mail size={16} />;
                     <span > Messages</span>;
-
                   </a>;
                 </SidebarMenuButton>;
               </SidebarMenuItem>;
               <SidebarMenuItem>;
-
                 <SidebarMenuButton as_child>;
                   <a href="/notifications">;
                     <Bell size={16} />;
                     <span > Notifications</span>;
-
                   </a>;
                 </SidebarMenuButton>;
               </SidebarMenuItem>;
             </SidebarMenu>;
           </SidebarGroupContent>;
         </SidebarGroup>;
-
         <SidebarGroup>;
           <SidebarGroupLabel > Content</SidebarGroupLabel>;
           <SidebarGroupContent>;
@@ -182,24 +158,20 @@ function AppSidebar() {
                   <a href="/publish">;
                     <FileText size={16} />;
                     <span > My Content</span>;
-
                   </a>;
                 </SidebarMenuButton>;
               </SidebarMenuItem>;
               <SidebarMenuItem>;
-
                 <SidebarMenuButton as_child>;
                   <a href="/analytics">;
                     <Search size={16} />;
                     <span > Analytics</span>;
-
                   </a>;
                 </SidebarMenuButton>;
               </SidebarMenuItem>;
             </SidebarMenu>;
           </SidebarGroupContent>;
         </SidebarGroup>;
-
         <SidebarGroup>;
           <SidebarGroupLabel > Settings</SidebarGroupLabel>;
           <SidebarGroupContent>;
@@ -209,17 +181,14 @@ function AppSidebar() {
                   <a href="/profile">;
                     <Users size={16} />;
                     <span > Profile</span>;
-
                   </a>;
                 </SidebarMenuButton>;
               </SidebarMenuItem>;
               <SidebarMenuItem>;
-
                 <SidebarMenuButton as_child>;
                   <a href="/settings">;
                     <Settings size={16} />;
                     <span > Settings</span>;
-
                   </a>;
                 </SidebarMenuButton>;
               </SidebarMenuItem>;
@@ -227,15 +196,6 @@ function AppSidebar() {
           </SidebarGroupContent>;
         </SidebarGroup>;
       </SidebarContent>;
-
-
-    </Sidebar>
-
-
-    </Sidebar>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
-=======
     </Sidebar>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

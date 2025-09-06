@@ -1,18 +1,14 @@
-
 import {useState} from 'react';
 import {Check, Copy} from 'lucide-react';
 import {cn} from "@/lib/utils";
 interface CodeBlockProps {;
   code: string,;
-
   language?: string;
   showLineNumbers?: boolean;
   className?: string;
 }
 
-
 export function CodeBlock(): any ({ ;
-
   code;
 
   language = 'bash';
@@ -20,14 +16,6 @@ export function CodeBlock(): any ({ ;
   className;
 }: CodeBlockProps) {;
   const [copied, setCopied] = useState(false);
-
-
-
-import {useState} from 'react';
-import {Check, Copy} from 'lucide-react';
-import {cn} from "@/lib/utils";
-
-=======
 import { useState } from 'react',
 import { Check, Copy } from 'lucide-react',
 import { cn } from "@/lib/utils",
@@ -51,8 +39,29 @@ export function CodeBlock({
 }: CodeBlockProps) {
   const [copied, setCopied] = useState(false),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import { useState } from 'react',
+import { Check, Copy } from 'lucide-react',
+import { cn } from "@/lib/utils",
+
+
+
+interface CodeBlockProps {
+  code: string,
+  language?: string,
+  showLineNumbers?: boolean,
+  className?: string
+}
+
+
+export function CodeBlock({ 
+  code,
+  language = 'bash',
+  showLineNumbers = false,
+
+  className
+}: CodeBlockProps) {
+  const [copied, setCopied] = useState(false),
+
   const handleCopyClick = async () => {
     await navigator.clipboard.writeText(code);
     setCopied(true);
@@ -61,7 +70,6 @@ export function CodeBlock({
     }, 2000)
 
 
-=======
 
   },
 
@@ -106,7 +114,6 @@ export function CodeBlock({;
     }, 2000);
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <divclassName={cn(
       "relative rounded-md bg-zinc-900 text-zinc-50 font-mono text-sm overflow-x-auto"
@@ -123,7 +130,6 @@ export function CodeBlock({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {i + 1}
               </div>;
             ))}
@@ -148,14 +154,11 @@ export function CodeBlock({;
 
 
 
-=======
 ;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default CodeBlock;
 
-=======
 import {useState} from 'react';
 import {Check, Copy} from 'lucide-react';
 import { cn } from '@/lib / utils';
@@ -210,4 +213,3 @@ function CodeBlock() {
 }
 export default CodeBlock;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

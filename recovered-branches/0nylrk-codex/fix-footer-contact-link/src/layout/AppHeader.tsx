@@ -1,23 +1,14 @@
 
-=======
 
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import {useState} from 'react';
 import {use_messaging} from '@/context / MessagingContext';
 import {MainNavigation} from './MainNavigation';
 import {Logo} from '@/components / header / Logo';
 import {ModeToggle} from '@/components / ModeToggle';
 import {Menu, X} from 'lucide-react';
-
-
-
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const isMobile = useIsMobile();
-
 import {MobileMenu} from '@/components / header / MobileMenu';
 import {useIsMobile} from '@/hooks / use - mobile';
 import {MobileBottomNav} from '@/components / header / MobileBottomNav';
@@ -33,15 +24,12 @@ function AppHeader() {
   try {
     const { unread_count: count } = use_messaging (),
     unread_count = count;
-
   } catch (error) {
     console.warn ('Messaging context not available');
-=======
   } catch (error) {
     console.warn('Messaging context not available')
 
 
-=======
 import { useState } from 'react',;
 import { useMessaging } from '@/context/MessagingContext',;
 import { MainNavigation } from './MainNavigation',;
@@ -63,11 +51,8 @@ export function AppHeader() {;
     console.warn('Messaging context not available');
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   return (
-
 
   // Try to access the messaging context, but provide a fallback value if it's not available;
   let unreadCount = 0;
@@ -87,7 +72,6 @@ export function AppHeader() {;
             <MainNavigation unreadCount={unreadCount} />;
           </div>;
 
-
           {/* Mobile menu button */}
           <div className="md:hidden ml-auto mr-4">;
             <button
@@ -102,7 +86,6 @@ export function AppHeader() {;
               ) : (;
                 <Menu className="block h-6 w-6" aria-hidden="true" />;
               )}
-
             </button>;
           </div>;
 
@@ -125,22 +108,16 @@ export function AppHeader() {;
             />;
           </div>;
         </div>;
-
       )}
-=======
       )}
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Mobile Bottom Navigation */}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
-
     </>;
   );
 }
-
-=======
     <>;
       <header className="sticky top - 0 z - 50 w - full border - b border - zion - purple / 20 bg - zion - blue - dark / 90 backdrop - blur - md">;
         <div className="container flex h - 16 items - center px - 4 sm:px - 6">;
@@ -184,4 +161,3 @@ export function AppHeader() {;
       {is_mobile && <MobileBottomNav unread_count={unread_count} />}
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

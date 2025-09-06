@@ -1,13 +1,9 @@
-
-
 import {;
   Card,;
   CardContent,;
   CardDescription,;
   CardHeader,;
   CardTitle,;
-
-=======
 
 import React from "react";
 import {
@@ -18,38 +14,11 @@ import {
   CardHeader,
   CardTitle,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 } from "@/components/ui/card";
 
 import { Progress } from "@/components/ui/progress";
 export function TeamStats() {;
   return (
-
-
-
-import React from "react",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Progress } from "@/components/ui/progress",
-export function TeamStats() {
-  return (
-    <Card>
-      <CardHeader>
-        <CardTitle>Team Stats</CardTitle>
-        <CardDescription>Performance metrics for your team</CardDescription>
-      </CardHeader>
-      <CardContent className="space-y-4">
-        <div className="space-y-1.5">
-          <div className="flex items-center justify-between text-sm">
-            <span>Team capacity</span>
-            <span className="font-medium">32 / 50 seats used</span>
-          </div>
-          <Progress value={64} className="h-2" />
-          <p className="text-xs text-muted-foreground">18 seats available</p>
-        </div>
-        
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <p className="text-xl font-bold">24</p>
             </div>
           </div>
@@ -59,7 +28,6 @@ export function TeamStats() {
         
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div className="pt-4 text-center border-t border-border mt-4">
           <button className="text-sm text-blue-500 font-medium hover: text-blue-700">
             View Full Analytics
@@ -107,7 +75,6 @@ export function TeamStats() {
 
         <div className="pt-4 text-center border-t border-border mt-4">;
           <button className="text-sm text-blue-500 font-medium hover: text-blue-700">;
-=======
 import React from './react';
 import {
   Card,
@@ -160,20 +127,10 @@ function TeamStats() {
         </div>;
         <div className="pt - 4 text - center border - t border - border mt - 4">;
           <button className="text - sm text - blue - 500 font - medium hover: text - blue - 700">;
-
             View Full Analytics;
           </button>;
         </div>;
       </CardContent>;
-
-
-    </Card>
-
-
-    </Card>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
-=======
     </Card>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

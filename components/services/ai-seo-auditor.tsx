@@ -1,9 +1,6 @@
-
-
 import Link from 'next/link';
 export default function Placeholder() {;
   return (
-
     <main className="min-h-screen p-8">;
       <Head>;
         <title>Services • Ai-seo-auditor - Placeholder</title>;
@@ -17,18 +14,16 @@ export default function Placeholder() {;
       </main>;
     </div>;
 
-=======
-
     </div>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   );
 
 }
 
 }
 
-=======
+  );
+}
 import Link from 'next / link';
 export default /**
  * Placeholder - Function description
@@ -47,7 +42,4 @@ function Placeholder() {
       </main>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

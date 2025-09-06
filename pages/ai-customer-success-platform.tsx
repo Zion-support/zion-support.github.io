@@ -1,6 +1,4 @@
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
 export default function AICustomerSuccessPlatform() {
 	return (
 		<ServiceLanding
@@ -10,10 +8,13 @@ export default function AICustomerSuccessPlatform() {
 			description="Predict churn, orchestrate proactive outreach, and increase lifetime value. Our AI monitors accounts across product usage, tickets, billing, and NPS to trigger playbooks that prevent churn and expand revenue."
 			subtitle="Reduce churn by 20–45% and grow NRR with automated, data-driven customer health."
 
-=======
+				"Integrations: HubSpot, Salesforce, Zendesk, Intercom, Segment"
+			]}
+			industries={["SaaS", "Fintech", "Media", "E‑commerce"]}
+			canonical="https: //ziontechgroup.com/ai-customer-success-platform"
+		/>
+	)
 }
-
-=======
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
 ;
 export default /**
@@ -41,12 +42,8 @@ return (
     canonical="https: //ziontechgroup.com / ai - customer - success - platform";
   />);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
-=======
 			pricePerMonthUSD={1999  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -54,7 +51,6 @@ return (
 }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 			implementationWeeks="Implementation: 2–4 weeks"
 			roiNote="Average ROI 4–10x within 90 days"
 			features={[
@@ -66,4 +62,3 @@ return (
 				"Integrations: HubSpot, Salesforce, Zendesk, Intercom, Segment"
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

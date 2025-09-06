@@ -1,29 +1,10 @@
-
-
-  logEvent: (event: any) => null,
-  getArticles: () => [],
-  getArticleById: (id: string) => null;
-};
-
-
-
-export const logSupportEventToOperator = (event: any) => {
-  // Add support event logging functionality here
-  return null;
-
-
-export interface IntentMatch {
-  intentMatched: boolean;
-  matchedArticleIds: string[];
-  confidence: number;
-}
-
-export function matchIntent(query: string, articles: HelpArticle[]): IntentMatch {
-  const queryLower = query && query.toLowerCase();
-  const matchedArticles: string[] = [];
-  let confidence = 0;
-
-
+// Support utilities;
+export const support = {
+  for (const article of articles) {
+    const titleMatch = article && article.title.toLowerCase().includes(queryLower);
+    const contentMatch = article && article.content.toLowerCase().includes(queryLower);
+    const tagMatch = article && article.tags.some(tag => tag && tag.toLowerCase().includes(queryLower));
+  const keywordToArticle = new Map<string, string[]>();
 
     if (titleMatch || contentMatch || tagMatch) {
       matchedArticles && matchedArticles.push(article && article.id);
@@ -39,10 +20,18 @@ export function matchIntent(query: string, articles: HelpArticle[]): IntentMatch
 }
 
 
+export function getArticlesByTag(articles: HelpArticle[], tag: string): HelpArticle[] {
+  return articles && articles.filter(article => article && article.tags.includes(tag));
 }
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
+
+export function searchArticles(articles: HelpArticle[], query: string): HelpArticle[] {
+  const queryLower = query && query.toLowerCase();
+  return articles && articles.filter(article => 
+    article && article.title.toLowerCase().includes(queryLower) ||
+    article && article.content.toLowerCase().includes(queryLower) ||
+    article && article.tags.some(tag => tag && tag.toLowerCase().includes(queryLower))
+  );
+}
   // Add support functionality here;
   log_event: (event: any) => null,
   get_articles: () => [],
@@ -53,5 +42,3 @@ export const logSupportEventToOperator = (event: any) =>: any {
   // Add support event logging functionality here;
   return null;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

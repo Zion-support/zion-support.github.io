@@ -1,22 +1,11 @@
-
-
- 
-
-
-import fs from 'fs';
-import path from 'path';
-
 const HOST = process && process.env.SELF_HOST || 'http: //localhost:3000',
 async function post(url: string, body: any) {
   try {
   const res = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON && JSON.stringify(body) });
   return await res && res.json()
-
 }
-=======
 
 
-=======
 /* eslint-disable no-console */;
 import fs from 'fs',;
 import path from 'path',;
@@ -26,11 +15,8 @@ async function post(url: string, body: any) {;
   return await res.json();
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 async function main() {
   try {
   const seedsPath = path && path.join(process && process.cwd(), 'datapage-metadataseo-seeds && seeds.json');
@@ -47,11 +33,7 @@ async function main() {
 
 main().catch((e) => { console && console.error(e), process && process.exit(1) });
 
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 ;
 import fs from 'fs';
 import path from 'path';
@@ -90,9 +72,3 @@ if ( {) {
 }
 main ().catch ((e) => { console.error (e), process.exit (1) });
 ;
-
-main().catch((e) => { console.error(e), process.exit(1) });
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,4 +1,3 @@
-
 // Fraud detection types;
 export type AdminActionType =;
   | 'ban_user';
@@ -9,56 +8,44 @@ export type AdminActionType =;
   | 'dismiss';
   | 'escalate';
 ;
-
 export interface AdminAction {
-=======
 
 
 export interface AdminAction {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   case_id: string;
   type: AdminActionType;
-
   admin_id: string;
   reason: string,
   details: Record < string, any>;
   created_at: string;
   executed_at?: string;
   status: 'pending' | 'executed' | 'failed',
-
 }
 export interface FraudDetectionResult {
   is_fraud: boolean;
-=======
 }
 
 
 export interface FraudDetectionResult {;
 
   isFraud: boolean;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   confidence: number;
   reasons: string[];
-
   suggested_actions: AdminActionType[],
   metadata: Record < string, any>;
-
 }
 export interface FraudDetectionConfig {
-=======
 }
 
 
 export interface FraudDetectionConfig {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   enabled: boolean;
   rules: {
     suspicious_activity: {
       enabled: boolean;
-
       threshold: number,
     }
     fake_profile: {
@@ -81,16 +68,6 @@ export interface FraudDetectionConfig {;
   }
 }
 
-=======
 
-
-
-=======
-    confidenceThreshold: number,
-  };
-=======
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+

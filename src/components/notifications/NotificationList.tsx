@@ -1,8 +1,8 @@
-
-
-  onRetry
-},) => {
-=======
+import Skeleton from '@/components/ui/skeleton';
+import { Button  } from '@/components/ui/button';
+import { NotificationItem  } from './NotificationItem';
+import { Notification  } from '@/context/notifications';
+import { EmptyState } from '@/components/ui/empty-state';
 } import React from 'react';
 import { ScrollArea } from '@/components / ui / scroll - area';
 import Skeleton from '@/components / ui / skeleton';
@@ -27,11 +27,9 @@ export const NotificationList: React.FC < NotificationListProps> = ({
   on_dismiss,
   on_retry;
 }, ) => {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <ScrollArea className="flex - 1 overflow - y-auto max - h-[350px]">;
       {error ? (
-
 import { Bell } from 'lucide-react';
 interface NotificationListProps {;
   loading: boolean,;
@@ -58,7 +56,6 @@ export const NotificationList: React.FC<NotificationListProps> = ({;
           <Button
             variant="outline" 
             size="sm" 
-
             className="mt-2"
             onClick = {onRetry,}>;
             Try Again;
@@ -83,12 +80,14 @@ export const NotificationList: React.FC<NotificationListProps> = ({;
       ) : (;
         notifications && notifications.map((notification,) => (;
           <NotificationItem
-
-    </ScrollArea>;
-  );
-};
-
-=======
+            key = {notification && notification.id,}
+            notification = {notification,}
+            onMarkAsRead = {onMarkAsRead,}
+            onDismiss = {onDismiss,}
+          />;
+        ));
+      )}
+"
         <div className="p - 8 text - center text - amber - 500">;
           <p>{error}</p>;
           <Button;
@@ -124,26 +123,3 @@ export const NotificationList: React.FC<NotificationListProps> = ({;
     </ScrollArea>);
 }
 ";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-  );
-};
-";
-
-=======
-            key={notification.id}
-            notification={notification}
-            onMarkAsRead={onMarkAsRead}
-            onDismiss={onDismiss}
-          />;
-        ));
-      )}
-    </ScrollArea>;
-  );
-};
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

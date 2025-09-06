@@ -189,7 +189,6 @@ isAuthenticated ;
   (talent.skills?.length || 0) - 5 ;
 }more </span>) ;
 }</div> </div>) ;
-
 }$ {;
   talent.hourly rate ";
 }<span className="text-zion-slate-light font-normal" >/hr</span> </div>) : (<div className="text-zion-slate-light" >Rate not specified</div>) ";
@@ -199,4 +198,3 @@ isAuthenticated ;
 }<Button ml-1 h-4 w-4" /> </Button> </div> </div> </div> </Card>) ;
 };
 "
-

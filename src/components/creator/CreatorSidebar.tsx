@@ -1,19 +1,23 @@
 
+import {
 
+  Bell
+  FileText
+  Home
+  Mail
+  Search
+  Settings
+  Users
 } from 'lucide-react'; import {
-
 } from "@/components/ui/sidebar";
-
 
 export function AppSidebar() {
   return (
     <Sidebar>
       <SidebarContent>
-
         <SidebarGroup title="Dashboard">
           <SidebarMenuItem href="/creator-dashboard" icon={<Home size={16} />}>
             <span>Home</span>
-
           </SidebarMenuItem>
           <SidebarMenuItem href="/messaging" icon={<Mail size={16} />}>
             <span>Messages</span>
@@ -39,8 +43,7 @@ export function AppSidebar() {
           </SidebarMenuItem>
         </SidebarGroup>
       </SidebarContent>
-
-
+    </Sidebar>
 import {;
   Bell,;
   FileText,;
@@ -129,21 +132,14 @@ export function AppSidebar() {;
           </SidebarMenuItem>;
         </SidebarGroup>;
       </SidebarContent>;
-=======
 
 import { Bell, FileText, Home, Mail, Search, Settings, Users } from 'lucide-react'
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     </Sidebar>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   Sidebar,
   SidebarContent,
   SidebarGroup,
@@ -222,4 +218,3 @@ function AppSidebar() {
       </SidebarContent>;
     </Sidebar>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

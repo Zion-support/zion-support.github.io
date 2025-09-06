@@ -1,4 +1,3 @@
-
 export type UserType = 'freelancer' | 'b2b' | 'hiring_manager' | 'guest',
 export type TrackEventPayload = {
   name: string,
@@ -19,10 +18,8 @@ function track_event() {
       keepalive: true as any});
   } catch (e) {
     // swallow;
-
   }
 }
-=======
 
 
     await fetch('/api/analytics/events/track', {;
@@ -34,4 +31,3 @@ function track_event() {
 
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

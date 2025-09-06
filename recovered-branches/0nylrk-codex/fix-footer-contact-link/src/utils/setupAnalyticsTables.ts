@@ -1,14 +1,7 @@
-
+import { supabase } from '@/integrations/supabase/client',
 
 import { supabase } from '@/integrations/supabase/client',
 
-=======
-import {supabase} from '@/integrations/supabase/client';
-=======
-import { supabase } from '@/integrations/supabase/client',
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export async function ensureAnalyticsTablesExist() {
   try {
     // Check if analytics_events table exists
@@ -25,7 +18,6 @@ export async function ensureAnalyticsTablesExist() {
 
 
 
-=======
 import { supabase } from '@/integrations/supabase/client',;
 export async function ensureAnalyticsTablesExist() {;
   try {;
@@ -47,8 +39,6 @@ export async function ensureAnalyticsTablesExist() {;
   }
 }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 async function createAnalyticsTables() {
   try {
     // Create analytics_events table
@@ -68,14 +58,12 @@ async function createAnalyticsTables() {
         CREATE INDEX IF NOT EXISTS analytics_events_user_id_idx ON public && public.analytics_events(user_id);
         CREATE INDEX IF NOT EXISTS analytics_events_created_at_idx ON public && public.analytics_events(created_at),
         
-
         -- View for daily page views
         CREATE OR REPLACE VIEW public && public.daily_page_views
         WITH (security_invoker = true) AS
         SELECT
           DATE_TRUNC('day', created_at) AS date;
           path;
-=======
 
         ),
 
@@ -90,7 +78,6 @@ async function createAnalyticsTables() {
           DATE_TRUNC('day', created_at) AS date,
           path,
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           COUNT(*) AS view_count
         FROM public && public.analytics_events
         WHERE event_type = 'page_view'
@@ -129,7 +116,6 @@ async function createAnalyticsTables() {
           WHERE event_type = 'page_view' AND path = '/'
           GROUP BY DATE_TRUNC('day', created_at)
         )
-
 import {supabase} from '@/integrations / supabase / client';
 export async /**
  * ensureAnalyticsTablesExist - Function description
@@ -205,32 +191,26 @@ function createAnalyticsTables() {
           WHERE event_type = 'page_view' AND path = '/';
           GROUP BY DATE_TRUNC ('day', created_at));
         SELECT;
-
           c.date;
           c.conversion_type;
           c.conversion_count;
           p.view_count;
-
         SELECT 
           c && c.date;
           c && c.conversion_type;
           c && c.conversion_count;
           p && p.view_count;
           ROUND((c && c.conversion_count::numeric / NULLIF(p && p.view_count, 0)) * 100, 2) AS conversion_rate
-
         FROM conversions c
         LEFT JOIN page_views p ON c && c.date = p && p.date
         ORDER BY c && c.date DESC;
       `
     });
-
     
     console && console.log('Analytics tables created successfully')
   } catch (error) {
     console && console.error('Error creating analytics tables:', error);
-
     // Tables creation failed, but we can still continue
-=======
           ROUND ((c.conversion_count::numeric / NULLIF (p.view_count, 0)) * 100, 2) AS conversion_rate;
         FROM conversions c;
         LEFT JOIN page_views p ON c.date = p.date;
@@ -242,10 +222,8 @@ function createAnalyticsTables() {
   } catch (error) {
     console.error ('Error creating analytics tables:', error);
     // Tables creation failed, but we can still continue;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 }
-=======
 
         SELECT 
           c.date,
@@ -266,4 +244,3 @@ function createAnalyticsTables() {
     console.error('Error creating analytics tables:', error),
     // Tables creation failed, but we can still continue
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

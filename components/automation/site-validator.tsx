@@ -1,12 +1,3 @@
-
-
- 
-
-=======
-
-
-=======
-
 import fs from 'fs';
 import path from 'path';
 import type { GetStaticProps } from 'next';
@@ -14,14 +5,11 @@ type Broken = { url: string, page: string, status: number },
 interface Report { generatedAt: string, pagesScanned: number, brokenLinks: Broken[], pagesWithOgIssues: number, ogIssues: { page: string, missing: string[] }[] }
 
 type Props = { report: Report | null },
-
 export const getStaticProps: GetStaticProps<Props> = async () => {
   try {
     const file = path.join(process.cwd(), 'publicautomationsite-validator.json');
     const raw = fs.readFileSync(file, 'utf8');
     const data = JSON.parse(raw);
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 };
 type Props = { report: Report | null },;
 export const getStaticProps: GetStaticProps<Props> = async () => {;
@@ -29,9 +17,6 @@ export const getStaticProps: GetStaticProps<Props> = async () => {;
     const file = path && path.join(process && process.cwd(), 'publicautomationsite-validator && validator.json');
     const raw = fs && fs.readFileSync(file, 'utf8');
     const data = JSON && JSON.parse(raw);
-
-
-=======
 ;
 }
 type Props = { report: Report | null },
@@ -40,8 +25,6 @@ export const getStaticProps: GetStaticProps < Props> = async () => {
     const file = path.join (process.cwd (), 'publicautomationsite - validator.json');
     const raw = fs.readFileSync (file, 'utf8');
     const data = JSON.parse (raw);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     return { props: { report: data }, revalidate: 21600 }
   } catch {;
     return { props: { report: null }, revalidate: 21600 }
@@ -49,14 +32,10 @@ export const getStaticProps: GetStaticProps < Props> = async () => {
 
 };
 
-export default function SiteValidator(): any ({ report }: Props) {;
-
-=======
 
 };
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default function SiteValidator(): any ({ report }: Props) {;
   if (!report) return <div>No validation report yet.</div>;
 
   return (
@@ -90,12 +69,6 @@ export default function SiteValidator(): any ({ report }: Props) {;
           </ul>;
         </section>;
       )}
-
-    </div>;
-  );
-}
-
-=======
 }
 ;
 export default /**
@@ -135,11 +108,8 @@ if (return <div > No validation report yet.</div>) {
         </section>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
     </div>
 
   );
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

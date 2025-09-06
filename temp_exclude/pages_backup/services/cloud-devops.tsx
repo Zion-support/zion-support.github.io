@@ -1,11 +1,8 @@
-
-
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Cloud, Server, Database, Shield, Zap, ArrowRight, CheckCircle } from 'lucide-react';
-
 
 const features = [
   {
@@ -38,7 +35,6 @@ const features = [
   }
 ];
 
-
 const tools = [
   { name: 'AWS', description: 'Amazon Web Services cloud platform' },
   { name: 'Azure', description: 'Microsoft Azure cloud services' },
@@ -50,9 +46,7 @@ const tools = [
   { name: 'Prometheus', description: 'Monitoring and alerting' }
 ];
 
-
 export default function CloudDevOpsPage() {
-
   return (
     <Layout
       title="Cloud & DevOps Services - Zion Tech Group"
@@ -84,7 +78,6 @@ export default function CloudDevOpsPage() {
         </section>
 
         {/* Features Section */}
-
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -114,7 +107,6 @@ export default function CloudDevOpsPage() {
             </div>
           </div>
         </section>
-
 
         {/* Tools Section */}
         <section className="py-16 bg-white">
@@ -182,7 +174,6 @@ export default function CloudDevOpsPage() {
                   <p className="text-gray-600">{phase.description}</p>
                 </motion.div>
               ))}
-
             </div>
           </div>
         </section>
@@ -210,6 +201,5 @@ export default function CloudDevOpsPage() {
       </div>
     </>
     </>
-
   );
 }

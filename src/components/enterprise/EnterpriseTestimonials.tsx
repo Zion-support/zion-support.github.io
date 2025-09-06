@@ -1,15 +1,12 @@
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React from "react";
+import { Quote } from 'lucide-react'
 import {
-
   Carousel;
   CarouselContent;
   CarouselItem;
   CarouselNext;
   CarouselPrevious} from "@/components/ui/carousel";
-=======
 
         <Carousel className='w-full'>    quote: "The dedicated talent pool makes finding specialized AI engineers much faster than our previous solutions. The ROI has been tremendous.",
     author: "Elena Rodriguez",
@@ -56,7 +53,6 @@ export function EnterpriseTestimonials() {
 };
 }
 
-=======
 
                       />
                     </div>
@@ -94,7 +90,6 @@ const testimonials = [
     company: "FutureTech Systems",
 
     image: "/placeholder.svg"}];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 export function EnterpriseTestimonials() {
   return (
@@ -109,19 +104,15 @@ export function EnterpriseTestimonials() {
           </p>
         </div>
 
-
         <Carousel className="w-full">
           <CarouselContent>
             {testimonials.map((testimonial, index) => (
-
               <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">
                 <div className="bg-card rounded-xl p-8 border border-border h-full">
                   <Quote className="h-10 w-10 text-primary/20 mb-4" />
                   <blockquote className="text-xl mb-6 italic">
                     "{testimonial.quote}"
                   </blockquote>
-
-
 import React from 'react';
 import { Quote } from 'lucide-react';
 import {;
@@ -205,7 +196,6 @@ export function EnterpriseTestimonials() {;
                   </blockquote>;
                   <div className='flex items-center gap-4'>;
                     <div className='h-12 w-12 rounded-full overflow-hidden bg-muted'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                       <img
                         src={testimonial && testimonial.image}
                         alt={testimonial && testimonial.author}
@@ -223,17 +213,33 @@ export function EnterpriseTestimonials() {;
                 </div>;
               </CarouselItem>;
             ))}
-
-
+                  <div className="flex items-center gap-4">
+                    <div className="h-12 w-12 rounded-full overflow-hidden bg-muted">
+                      <img
+                        src={testimonial.image}
+                        alt={testimonial.author}
+                        className="h-full w-full object-cover"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div>
+                      <p className="font-bold">{testimonial.author}</p>
+                      <p className="text-sm text-muted-foreground">
+                        {testimonial.title}, {testimonial.company}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <div className="flex justify-center gap-2 mt-8">
+            <CarouselPrevious />
             <CarouselNext />
           </div>
         </Carousel>
       </div>
     </section>
-
-          </CarouselContent>;
-          <div className='flex justify-center gap-2 mt-8'>            <CarouselPrevious />          <div className="flex justify-center gap-2 mt-8">;
-=======
 import React from 'react';
 import { Quote } from 'lucide-react';
 import {
@@ -337,27 +343,15 @@ function EnterpriseTestimonials() {
               </CarouselItem>))}
           </CarouselContent>;
           <div className='flex justify - center gap - 2 mt - 8'>            <CarouselPrevious />          <div className="flex justify - center gap - 2 mt - 8">;
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             <CarouselPrevious />;
             <CarouselNext />;
           </div>;
         </Carousel>;
       </div>;
-
-
-=======
+    </section>;
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
+  );
+}
     </section>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-}
-;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

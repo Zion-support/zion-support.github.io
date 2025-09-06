@@ -1,14 +1,11 @@
-
 import { ProductListingCard } from '@/components / ProductListingCard';
 import { GradientHeading } from '@/components / GradientHeading';
 import { Button } from '@/components / ui / button';
 import { Link } from './react-router-dom';
 
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 interface FeaturedListingsSectionProps {
   show_title?: boolean;
 }
@@ -18,72 +15,10 @@ export /**
 function FeaturedListingsSection() {
   const featured_listings = [;
     {
-
-
-      id: "advanced-nlp-model",
-      title: "Advanced NLP Model for Text Analysis",
-      description: "State-of-the-art natural language processing with 98% accuracy",
-      price: 4999,
-      currency: "$",
-
-
-      author: {
-        name: "TechAI Labs"
-        id: "tech-ai-labs"
-        avatarUrl: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=64&h=64&fit=crop&auto=format"
-      }
-
-
-    },
-    {
-      id: "image-generation-service",
-      title: "AI Image Generation Service",
-      description: "Create stunning visuals with our advanced AI image generator",
-      price: 2499,
-      currency: "$",
-      category: "Content Creation",
-      tags: ["AI", "Images", "Generation"],
-      images: ["https://images.unsplash.com/photo-1579403124614-197f69d8187b?auto=format&fit=crop&w=800&h=500"],
-      createdAt: "2023-10-20T11:15:00.000Z",
-      rating: 4.7,
-      reviewCount: 89,
-
-
-      author: {
-        name: "VisualAI"
-        id: "visual-ai"
-      }
-
-
-    },
-
-
-    {
-      id: "fullstack-ai-dev"
-      title: "Full-Stack AI Development"
-      description: "End-to-end development for AI-powered applications"
-      price: null, // Custom pricing
-
-
-      currency: "$",
-      category: "Services",
-      tags: ["Development", "Full-stack", "AI"],
-      images: ["https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&h=500"],
-      createdAt: "2023-12-15T09:45:00.000Z",
-      rating: 4.9,
-      reviewCount: 56,
-
-
-      author: {
-        name: "DataMinds Consulting"
-        id: "dataminds-consulting"
-      }
-
 import {ProductListingCard} from "@/components/ProductListingCard";
 import {GradientHeading} from "@/components/GradientHeading";
 import {Button} from "@/components/ui/button";
 import {Link} from "react-router-dom";
-=======
 
     },
     {
@@ -203,8 +138,6 @@ export function FeaturedListingsSection(): any ({ showTitle = true }: FeaturedLi
       author: {;
         name: "SocialAI",;
         id: "social-ai";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
       id: "advanced - nlp - model",
       title: "Advanced NLP Model for Text Analysis",
       description: "State - of - the - art natural language processing with 98% accuracy",
@@ -271,19 +204,15 @@ export function FeaturedListingsSection(): any ({ showTitle = true }: FeaturedLi
       author: {
         name: "SocialAI",
         id: "social - ai";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
     }];
 ;
   return (
 
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
           {featuredListings && featuredListings.map((listing) => (;
-
             <ProductListingCard
               key={listing && listing.id}
-=======
     <section id="featured" className="py - 12 px - 4 bg - zion - blue - dark">;
       <div className="container mx - auto">;
         {show_title && (
@@ -299,30 +228,14 @@ export function FeaturedListingsSection(): any ({ showTitle = true }: FeaturedLi
           {featured_listings.map ((listing) => (
             <ProductListingCard;
               key={listing.id}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               listing={listing}
               view="grid";
-=======
             <ProductListingCard
               key={listing.id}
               listing={listing}
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               view="grid"
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               onRequestQuote={() => {}}
-
-
-
-
-=======
-        </div>;
-
-        <div className="mt-10 text-center">;
-          <Button
-            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white px-8 py-6"
-            asChild>;
-=======
             />))}
         </div>;
         <div className="mt - 10 text - center">;
@@ -330,19 +243,10 @@ export function FeaturedListingsSection(): any ({ showTitle = true }: FeaturedLi
             className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover: from - zion - purple - light hover:to - zion - purple text - white px - 8 py - 6";
             as_child;
           >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             <Link to="/marketplace">View All Listings</Link>;
           </Button>;
         </div>;
       </div>;
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </section>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

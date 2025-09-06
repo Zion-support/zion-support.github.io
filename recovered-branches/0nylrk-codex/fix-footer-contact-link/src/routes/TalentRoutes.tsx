@@ -1,16 +1,8 @@
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const TalentRoutes = () => {
-=======
 const TalentRoutes = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Routes>;
       {/* Talent Routes */}
-
       <Route path="/talent" element={<TalentDirectory />} />;
       <Route path="/talents" element={<TalentsPage />} />;
       <Route path="/talent/:id" element={<TalentProfilePage />} />;
@@ -35,8 +27,6 @@ const TalentRoutes = () => {;
   );
 };
 
-
-=======
 import { Route, Routes } from './react-router-dom';
 import { ProtectedRoute } from '../components / ProtectedRoute';
 import TalentDirectory from "../pages / TalentDirectory";
@@ -72,12 +62,9 @@ const TalentRoutes = () =>: any {
     </Routes>);
 }
 ;
-=======
 
 },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default TalentRoutes;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

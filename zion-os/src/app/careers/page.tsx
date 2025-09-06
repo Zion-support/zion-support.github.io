@@ -1,4 +1,3 @@
-
 export const metadata = {
   title: 'Careers - Zion Tech Group',
   description: 'Join our team of AI innovators and help shape the future of autonomous business operations and digital economies.',
@@ -14,7 +13,6 @@ function CareersPage() {
       location: 'Remote / Global',
       type: 'Full - time',
       description: 'Lead cutting - edge research in AI consciousness, autonomous systems, and quantum neural networks.',
-=======
 
 export const metadata = {;
   title: 'Careers - Zion Tech Group',;
@@ -56,32 +54,29 @@ export default function CareersPage() {;
       requirements: [;
         '5+ years experience in cybersecurity_expertise in threat detection and prevention_knowledge of AI security and adversarial attacks_relevant certifications (CISSP, CEH, etc.)']}],
   const benefits = [;
-
-    {;
-      title: 'Remote First',;
-      description: 'Work from anywhere in the world with our distributed team.',;
-      icon: '🌍'},;
-    {;
-      title: 'Cutting-Edge Technology',;
-      description: 'Work with the latest AI, quantum computing, and blockchain technologies.',;
-      icon: '🚀'},;
-    {;
-      title: 'Flexible Hours',;
-      description: 'Work when you\'re most productive with flexible scheduling.',;
-      icon: '⏰'},;
-    {;
-      title: 'Learning & Development',;
-      description: 'Continuous learning opportunities and professional development.',;
-      icon: '📚'},;
-    {;
-      title: 'Competitive Compensation',;
-      description: 'Attractive salary packages with equity options.',;
-      icon: '💰'},;
-    {;
-      title: 'Health & Wellness',;
-      description: 'Comprehensive health coverage and wellness programs.',;
-
-
+    {
+      title: 'Remote First',
+      description: 'Work from anywhere in the world with our distributed team.',
+      icon: '🌍'},
+    {
+      title: 'Cutting - Edge Technology',
+      description: 'Work with the latest AI, quantum computing, and blockchain technologies.',
+      icon: '🚀'},
+    {
+      title: 'Flexible Hours',
+      description: 'Work when you're most productive with flexible scheduling.',
+      icon: '⏰'},
+    {
+      title: 'Learning & Development',
+      description: 'Continuous learning opportunities and professional development.',
+      icon: '📚'},
+    {
+      title: 'Competitive Compensation',
+      description: 'Attractive salary packages with equity options.',
+      icon: '💰'},
+    {
+      title: 'Health & Wellness',
+      description: 'Comprehensive health coverage and wellness programs.',
       icon: '🏥'}];
   return (
     <div className="space - y-16">;

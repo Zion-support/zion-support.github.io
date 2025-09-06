@@ -1,4 +1,3 @@
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -30,14 +29,12 @@ import {useAuth} from "@/hooks/useAuth";
 import {Card, CardContent} from "@/components/ui/card";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {Navigate} from "react-router-dom";
-
 import type { QuoteRequest } from "@/types/quotes";
 
 import {ProtectedRoute} from "@/components/ProtectedRoute";
 import {QuoteDetails} from "@/components/quotes/QuoteDetails";
 import {ExportToCSV} from "@/components/quotes/ExportToCSV";
 import {QuoteStatusCards, QuotesFilter, QuotesTable} from "@/components/admin/quotes";
-
 
 export default function QuoteManager() {;
   const { user } = useAuth();
@@ -47,8 +44,6 @@ export default function QuoteManager() {;
   const [showDetails, setShowDetails] = useState(false);
 
   const {;
-
-=======
 import React, { useState } from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -74,7 +69,6 @@ function QuoteManager() {
   const [show_details, setShowDetails] = useState (false);
 ;
   const {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     quotes;
     is_loading;
     error;
@@ -86,63 +80,6 @@ function QuoteManager() {
     setSearchQuery;
     date_range;
     setDateRange;
-
-
-
-  const {
-    quotes,
-    isLoading,
-    error,
-    statusFilter,
-    setStatusFilter,
-    archiveFilter,
-    setArchiveFilter,
-    searchQuery,
-    setSearchQuery,
-    dateRange,
-    setDateRange,
-    updateStatus,
-    toggleArchive,
-    deleteQuote
-
-  } = useAdminQuotes(),
-
-
-
-  // Count quotes by status
-  const statusCounts = {
-    new: quotes.filter(q => q.status === 'new').length
-    in_review: quotes.filter(q => q.status === 'in_review').length
-    accepted: quotes.filter(q => q.status === 'accepted').length
-    responded: quotes.filter(q => q.status === 'responded').length
-    closed: quotes.filter(q => q.status === 'closed').length
-
-
-  },
-
-
-  const handleViewDetails = (quote: QuoteRequest) => {
-    setSelectedQuote(quote)
-    setShowDetails(true)
-
-  },
-
-
-
-  const handleResetFilters = () => {
-    setStatusFilter('all');
-    setArchiveFilter('all');
-    setSearchQuery('');
-    setDateRange({ from: undefined, to: undefined })
-
-
-  },
-
-
-
-  if (!isAdmin) {
-    return <Navigate to="/unauthorized" replace />
-=======
 
   // Count quotes by status;
   const statusCounts = {;
@@ -167,78 +104,8 @@ function QuoteManager() {
 
   if (!isAdmin) {;
     return <Navigate to="/unauthorized" replace />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   return (
-
-=======
-
-            
-import React, { useState } from "react",;
-import { Header } from "@/components/Header",;
-import { Footer } from "@/components/Footer",;
-import { useAdminQuotes } from "@/hooks/useAdminQuotes",;
-import { useAuth } from "@/hooks/useAuth",;
-import {;
-  Card,;
-  CardContent;
-} from "@/components/ui/card",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { Navigate } from "react-router-dom",;
-import type { QuoteRequest } from "@/types/quotes",;
-import { ProtectedRoute } from "@/components/ProtectedRoute",;
-import { QuoteDetails } from "@/components/quotes/QuoteDetails",;
-import { ExportToCSV } from "@/components/quotes/ExportToCSV",;
-import {;
-  QuoteStatusCards,;
-  QuotesFilter,;
-  QuotesTable;
-} from "@/components/admin/quotes",;
-export default function QuoteManager() {;
-  const { user } = useAuth(),;
-  const isAdmin = user?.userType === 'admin',;
-  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),;
-  const [showDetails, setShowDetails] = useState(false),;
-  const {;
-    quotes,;
-    isLoading,;
-    error,;
-    statusFilter,;
-    setStatusFilter,;
-    archiveFilter,;
-    setArchiveFilter,;
-    searchQuery,;
-    setSearchQuery,;
-    dateRange,;
-    setDateRange,;
-    updateStatus,;
-    toggleArchive,;
-    deleteQuote;
-  } = useAdminQuotes(),;
-  // Count quotes by status;
-  const statusCounts = {;
-    new: quotes.filter(q => q.status === 'new').length,;
-    in_review: quotes.filter(q => q.status === 'in_review').length,;
-    accepted: quotes.filter(q => q.status === 'accepted').length,;
-    responded: quotes.filter(q => q.status === 'responded').length,;
-    closed: quotes.filter(q => q.status === 'closed').length;
-  },;
-  const handleViewDetails = (quote: QuoteRequest) => {;
-    setSelectedQuote(quote),;
-    setShowDetails(true);
-  },;
-  const handleResetFilters = () => {;
-    setStatusFilter('all'),;
-    setArchiveFilter('all'),;
-    setSearchQuery(''),;
-    setDateRange({ from: undefined, to: undefined });
-  };
-  if (!isAdmin) {;
-    return <Navigate to="/unauthorized" replace />;
-  }
-;
-  return (;
-
     <ProtectedRoute adminOnly>;
       <div>;
         <Header />;
@@ -254,11 +121,9 @@ export default function QuoteManager() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Status Summary Cards */}
             <QuoteStatusCards statusCounts={statusCounts} />;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* Filters */}
             <QuotesFilter
               searchQuery={searchQuery}
@@ -270,7 +135,6 @@ export default function QuoteManager() {;
               dateRange={dateRange}
               setDateRange={setDateRange}
               onReset={handleResetFilters}
-
             />;
 
             {/* Tabs for Active/Archived */}
@@ -281,7 +145,6 @@ export default function QuoteManager() {;
               </TabsList>;
 
               <TabsContent value="active">;
-
                 {/* Quotes Table */}
                 <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
                   <QuotesTable
@@ -291,18 +154,20 @@ export default function QuoteManager() {;
                     toggleArchive={toggleArchive}
                     deleteQuote={deleteQuote}
                     onViewDetails={handleViewDetails}
-
                   />;
                 </Card>;
               </TabsContent>;
 
               <TabsContent value="archived">;
                 <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
-
                   <QuotesTable
                     quotes={quotes && quotes.filter(quote => quote && quote.is_archived)}
                     isArchived={true}
-
+                    isLoading={isLoading}
+                    updateStatus={updateStatus}
+                    toggleArchive={toggleArchive}
+                    deleteQuote={deleteQuote}
+                    onViewDetails={handleViewDetails}
                   />;
                 </Card>;
               </TabsContent>;
@@ -311,11 +176,9 @@ export default function QuoteManager() {;
         </div>;
 
 
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
         {/* Quote Details Modal */}
         <QuoteDetails
           quote={selectedQuote}
@@ -324,10 +187,6 @@ export default function QuoteManager() {;
 
           onClose={() => {;
             setShowDetails(false);
-            setSelectedQuote(null);
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           }}
         />
         <Footer />
@@ -335,7 +194,6 @@ export default function QuoteManager() {;
     </ProtectedRoute>
   )
 }
-=======
             setSelectedQuote(null);
           }}
         />;
@@ -345,8 +203,6 @@ export default function QuoteManager() {;
     </ProtectedRoute>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     update_status;
     toggle_archive;
     delete_quote;
@@ -454,4 +310,3 @@ if ( {) {
       </div>;
     </ProtectedRoute>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

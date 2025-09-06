@@ -1,8 +1,4 @@
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -28,11 +24,13 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
   const currentPath = router && router.pathname;
 export default ApiDocsLayout;
-
 import Link from 'next/link';
 import { useRouter  } from 'next/router';
 import { Search } from 'lucide-react'
-
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
+import { cn } from "@/lib/utils";
+import {;
+ getDocsSearchPath;
   const current_path = router.pathname;
 export default ApiDocsLayout;
 import Link from 'next / link';
@@ -45,65 +43,9 @@ import {
 getDocsSearchPath;
 docsSearchSuggestions;
 } from '@/data / docsSearchData';
-
-=======
-
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
-import { cn } from "@/lib/utils",
-
-import {
- getDocsSearchPath,
- docsSearchSuggestions
-
-} from "@/data/docsSearchData",
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ApiDocsLayoutProps {
   children: React.ReactNode;
 }
-
-=======
-
-  const router = useRouter()
-  const currentPath = router.pathname
-  const [searchValue, setSearchValue] = useState("")
-  const navigationItems = [
-   { title: "Getting Started", path: "/developers/docs/getting-started" },
-    { title: "API Reference", path: "/developers/docs/reference" },
-
-=======
-  const router = useRouter(),
-  const currentPath = router.pathname,
-  const [searchValue, setSearchValue] = useState(""),
-
-
-
-=======
-  const navigationItems = [
-
-   { title: "Getting Started", path: "/developers/docs/getting-started" },
-    { title: "API Reference", path: "/developers/docs/reference" },
-    { title: "Webhooks", path: "/developers/docs/webhooks" },
-    { title: "Sample Code", path: "/docs/sample-code" },
-    { title: "Error Codes & Rate Limits", path: "/developers/docs/errors" }],
-
-  const handleSelectSuggestion = (suggestion: SearchSuggestion) => {
-    const path = getDocsSearchPath(suggestion.text),
-    if (path) {
-      router.push(path),
-      setSearchValue("")
-import { SearchSuggestion } from "@/types/search",;
-import React, { useState } from "react",;
-import Link from 'next/link',;
-import { useRouter } from 'next/router',;
-import { Search } from 'lucide-react';
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",;
-import { cn } from "@/lib/utils",;
-import {;
- getDocsSearchPath,;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
  docsSearchSuggestions;
 } from "@/data/docsSearchData";
 
@@ -142,20 +84,6 @@ export function ApiDocsLayout(): any ({ children }: ApiDocsLayoutProps) {;
   return (;
     <div className="flex min-h-screen bg-zinc-950">;
      {/* Sidebar */}
-     <div className="hidden md:block w-64 border-r border-zinc-800 p-6 sticky top-0 h-screen overflow-y-auto">
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-      <Link href="/developers/docs" className="flex items-center mb-8">
-       <div className="bg-gradient-to-r from-zion-purple to-zion-cyan rounded-md w-8 h-8 mr-3 flex items-center justify-center">
-        <span className="text-white font-bold">Z</span>
-       </div>
-       <span className="font-bold text-white">API Docs</span>
-      </Link>
-      <div className="mb-6">
-       <form onSubmit={handleSubmit} className="relative">
-        <Search className="absolute left-2 top-2.5 h-4 w-4 text-zinc-500" />
-=======
      <div className="hidden md: block w-64 border-r border-zinc-800 p-6 sticky top-0 h-screen overflow-y-auto">;
       <Link href="/developers/docs" className="flex items-center mb-8">;
        <div className="bg-gradient-to-r from-zion-purple to-zion-cyan rounded-md w-8 h-8 mr-3 flex items-center justify-center">;
@@ -167,7 +95,6 @@ export function ApiDocsLayout(): any ({ children }: ApiDocsLayoutProps) {;
       <div className="mb-6">;
        <form onSubmit={handleSubmit} className="relative">;
         <Search className="absolute left-2 top-2 && 2.5 h-4 w-4 text-zinc-500" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <EnhancedSearchInput
 
 
@@ -177,29 +104,24 @@ export function ApiDocsLayout(): any ({ children }: ApiDocsLayoutProps) {;
          searchSuggestions={docsSearchSuggestions}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
          placeholder="Search documentation"
-
         />;
        </form>;
       </div>;
 
       <nav role="navigation" aria-label="Main" className="flex flex-col space-y-1">;
        {navigationItems && navigationItems.map((item,) => (;
-
         <Link
          key={item && item.path}
          href={item && item.path}
          className={cn(
-
+          "block px-3 py-2 rounded-md text-sm"
           currentPath === item && item.path
-
            ? "bg-zion-purple/20 text-zion-cyan"
            : "text-zinc-400 hover: text-white hover:bg-zinc-900"
          )}>;
          {item && item.title}
         </Link>;
-=======
 
           "block px-3 py-2 rounded-md text-sm",
           currentPath === item.path
@@ -208,24 +130,18 @@ export function ApiDocsLayout(): any ({ children }: ApiDocsLayoutProps) {;
          )}
         >;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
          {item.title}
         </Link>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
        ))}
-
       </nav>;
      </div>;
-
 
      {/* Main content */}
      <div className="flex-grow max-w-5xl mx-auto px-4 py-8 md:px-8 md:py-12">;
       {children}
-
      </div>;
     </div>;
   );
-
 }
 }
 /* Sidebar */ "
@@ -241,22 +157,6 @@ export function ApiDocsLayout(): any ({ children }: ApiDocsLayoutProps) {;
 }export default ApiDocsLayout
 "export default ApiDocsLayout
 
-
-};
-/* Sidebar */ ";
-}<div className="hidden md:block w-64 border-r border-zinc-800 p-6 sticky top-0 h-screen overflow-y-auto"> <Link href="/developers/docs"className="flex items-center mb-8"> <div className="bg-gradient-to-r from-zion-purple to-zion-cyan rounded-md w-8 h-8 mr-3 flex items-center justify-center"> <span className="text-white font-bold">Z</span> </div> <span className="font-bold text-white">API Docs</span> </Link> <div className="mb-6"> /> </form> </div>) ;
-}> {;
-  item && item.title ;
-}</Link>) ) ;
-}</nav> </div> {;
-  /* Main content */ ";
-}<div className="flex-grow max-w-5xl mx-auto px-4 py-8 md:px-8 md:py-12"> {;
-  children ;
-}</div> </div>) ;
-}export default ApiDocsLayout;
-"export default ApiDocsLayout;
-
-=======
 export /**
  * ApiDocsLayout - Function description
  */
@@ -344,23 +244,3 @@ if ( {) {
 }</div> </div>);
 }export default ApiDocsLayout;
 "export default ApiDocsLayout;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-  children 
-}</div> </div>) 
-}export default ApiDocsLayout;
-"export default ApiDocsLayout;
-
-=======
-     </div>;
-    </div>;
-  );
-}
-;
-export default ApiDocsLayout;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

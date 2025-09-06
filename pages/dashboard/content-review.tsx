@@ -1,44 +1,141 @@
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import type { GetServerSideProps } from 'next';
+import ModerationModal from '../../components/admin/ModerationModal';
 
+const fetcher = (url: string) => fetch(url).then(r => r && r.json()),;
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
+export const getServerSideProps: GetServerSideProps = async ({ req }) => {;
+  const cookies = (req && req.headers.cookie || '').split(';').reduce(;
+    (acc: any, part: string) => {;
+      const [k, v] = part && part.trim().split('=');
+      if (k) acc[k] = decodeURIComponent(v || '');
+      return acc;
+    },;
+    {} as Record<string, string>;
+  );
+  let role = 'guest';
+  try {;
+    role = cookies['x-user'] ? JSON && JSON.parse(cookies['x-user']).role : 'guest';
+  } catch {}
+  if (role !== 'admin');
+    return { redirect: { destination: '/', permanent: false } };
+  return { props: {} };
+};
+
+export default function ContentReviewPage() {;
+  const [filters, setFilters] = useState<{;
+    status?: string;
+    reason?: string;
+    userEmail?: string;
+    contentType?: string;
+  }>({ status: 'pending' });  const query = useMemo(() => {;
+    const p = new URLSearchParams();
+    if (filters && filters.status) p && p.set('status', filters && filters.status);
+    if (filters && filters.reason) p && p.set('reason', filters && filters.reason);
+    if (filters && filters.userEmail) p && p.set('userEmail', filters && filters.userEmail);
+    if (filters && filters.contentType) p && p.set('contentType', filters && filters.contentType);
+    return p && p.toString();
+  }, [filters]);
+  const { data, mutate } = useSWR(;
+    `/api/admin/moderation/flags${query ? `?${query}` : ''}`,;
+    fetcher;
+  );  const flags = data?.flags || [];
+
+  const [selected, setSelected] = useState<any | null>(null);
+
+  async function handleAction(): any (;
+    action: 'approve' | 'remove' | 'warn' | 'ban',;
+    adminNotes?: string;
+  ) {;
+    if (!selected) return;
+    await fetch(;
+      `/api/admin/moderation/flags/${encodeURIComponent(selected && selected.id)}/action`,;
+      {;
+        method: 'POST',;
+        headers: { 'Content-Type': 'application/json' },;
+        body: JSON && JSON.stringify({ action, adminNotes }),;
+import EnhancedLayout from '../../components / layout / EnhancedLayout';
+import type { GetServerSideProps } from 'next';
+import ModerationModal from '../../components / admin / ModerationModal';
+const fetcher = (url: string) =>: any fetch (url).then (r => r.json ()),
+export const getServerSideProps: GetServerSideProps = async ({ req }) => {
+  const cookies = (req.headers.cookie || '').split (';').reduce (
+    (acc: any, part: string) => {
+      const [k, v] = part.trim ().split ('=');
+      if (acc[k] = decodeURIComponent (v || '')) {
+  $2
 }
-import useSWR from 'swr';
-import React, { useMemo, useState } from 'react';
-
+      return acc;
+    },
+    {} as Record < string, string>);
+  let role = 'guest';
+  try {
+    role = cookies['x - user'] ? JSON.parse (cookies['x - user']).role : 'guest';
+  } catch {}
+  // Check condition
+if (
+    return { redirect: { destination: '/', permanent: false } }) {
+  $2
+}
+  return { props: {} }
+}
+;
+export default /**
+ * ContentReviewPage - Function description
+ */
+function ContentReviewPage() {
+  const [filters, set_filters] = useState<{
+    status?: string;
+    reason?: string;
+    user_email?: string;
+    content_type?: string;
+  }>({ status: 'pending' });  const query = useMemo (() => {
+    const p = new URLSearchParams ();
+    if (p.set ('status', filters.status)) {
+  $2
+}
+    if (p.set ('reason', filters.reason)) {
+  $2
+}
+    if (p.set ('user_email', filters.user_email)) {
+  $2
+}
+    if (p.set ('content_type', filters.content_type)) {
+  $2
+}
+    return p.to_string ();
+  }, [filters]);
+  const { data, mutate } = useSWR (
+    `/api / admin / moderation / flags${query ? `?${query}` : ''}`,
+    fetcher);  const flags = data?.flags || [];
+;
+  const [selected, set_selected] = useState < any | null>(null);
+;
+  async /**
+ * handle_action - Function description
+ */
+function handle_action() {
+    // Check condition
+if (return) {
+  $2
+}
+    await fetch (
+      `/api / admin / moderation / flags/${encodeURIComponent (selected.id)}/action`,
+      {
+        method: 'POST',
+        headers: { 'Content - Type': 'application / json' },
+        body: JSON.stringify ({ action, admin_notes }),
       }
     );
     set_selected (null);
     mutate ();  }
   return (
     <EnhancedLayout>;
-
             value={filters && filters.status || ''}
             onChange={e =>;
               setFilters(f => ({ ...f, status: e && e.target.value || undefined }));
-
             }
             className='border rounded px-2 py-1';
-=======
       <div className='max - w-7xl mx - auto'>;
         <div className='flex items - center justify - between mb - 4'>;
           <h1 className='text - 2xl font - semibold'>Admin Content Review</h1>;
@@ -50,7 +147,6 @@ import React, { useMemo, useState } from 'react';
               set_filters (function => ({ ...f, status: e.target.value || undefined }));
             }
             className='border rounded px - 2 py - 1';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           >;
             <option value=''>All Statuses</option>;
             <option value='pending'>Pending</option>;
@@ -59,17 +155,14 @@ import React, { useMemo, useState } from 'react';
             <option value='warned'>Warned</option>;
             <option value='banned'>Banned</option>;
           </select>;
-
             value={filters && filters.contentType || ''}
             onChange={e =>;
               setFilters(f => ({;
                 ...f,;
                 contentType: e && e.target.value || undefined,;
               }));
-
             }
             className='border rounded px-2 py-1';
-=======
           <select;
             value={filters.content_type || ''}
             on_change={e =>;
@@ -79,7 +172,6 @@ import React, { useMemo, useState } from 'react';
               }));
             }
             className='border rounded px - 2 py - 1';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           >;
             <option value=''>All Types</option>;
             <option value='listing'>Listing</option>;
@@ -87,31 +179,26 @@ import React, { useMemo, useState } from 'react';
             <option value='cv'>CV</option>;
             <option value='job'>Job Post</option>;
           </select>;
-
             value={filters && filters.reason || ''}
             onChange={e =>;
               setFilters(f => ({ ...f, reason: e && e.target.value || undefined }));
-
             }
             className='border rounded px-2 py-1';
           />;
           <input
             placeholder='User email'
-
             value={filters && filters.userEmail || ''}
             onChange={e =>;
               setFilters(f => ({;
                 ...f,;
                 userEmail: e && e.target.value || undefined,;
               }));
-
             }
             className='border rounded px-2 py-1';
           />;
           <button
             onClick={() => setFilters({ status: 'pending' })}
             className='border rounded px-2 py-1';
-=======
           <input;
             placeholder='Reason contains...';
             value={filters.reason || ''}
@@ -134,11 +221,22 @@ import React, { useMemo, useState } from 'react';
           <button;
             on_click={() => set_filters ({ status: 'pending' })}
             className='border rounded px - 2 py - 1';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           >;
             Reset;
           </button>;
         </div>;
+const fetcher = (url: string) => fetch(url).then(r => r.json()),
+export const getServerSideProps: GetServerSideProps = async ({ req }) => {
+  const cookies = (req.headers.cookie || '').split().reduce((acc: any, part: string) => {
+    const [k, v] = part.trim().split('=');
+    if (k) acc[k] = decodeURIComponent(v || '');
+    return acc
+  }, {} as Record<string, string>);
+  let role = 'guest';
+  try { role = cookies['x-user'] ? JSON.parse(cookies['x-user']).role : 'guest' } catch {}
+  if (role !== 'admin') return { redirect: { destination: '/', permanent: false } },
+  return { props: {} }
+};
 
 
     <EnhancedLayout>
@@ -202,37 +300,36 @@ import React, { useMemo, useState } from 'react';
                 </tr>
               ))}
               {flags.length === 0 && (
-
-
-=======
-
-
-}
-
-=======
                 <tr><td colSpan={8} className="px-3 py-6 text-center text-gray-500">No results</td></tr>
               )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                <tr><td colSpan={8} className="px-3 py-6 text-center text-gray-500">No results</td></tr>
+              )}
+            </tbody>
+          </table>
+        </div>
+      </div>
+      {selected && (
             </tbody>;
           </table>;
         </div>;
       </div>;
 
       {selected && (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <ModerationModal
           flag={selected}
           onClose={() => setSelected(null)}
           onAction={handleAction}
         />;
       )}
-
-
-=======
+    </EnhancedLayout>;
+  );
+    </EnhancedLayout>
+  )
+}
         <div className='overflow - auto border rounded'>;
           <table className='min - w-full text - sm'>;
             <thead className='bg - gray - 50 dark:bg - gray - 900'>;
@@ -293,9 +390,6 @@ import React, { useMemo, useState } from 'react';
         />)}
     </EnhancedLayout>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -303,5 +397,3 @@ import React, { useMemo, useState } from 'react';
 }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

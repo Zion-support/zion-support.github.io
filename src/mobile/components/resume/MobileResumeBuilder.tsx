@@ -1,5 +1,3 @@
-
-
 import {;
   Select;
   SelectContent;
@@ -46,7 +44,6 @@ export function MobileResumeBuilder() {;
     }
   },;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className="space-y-6 px-4 pb-24">;
       <div className="flex justify-between px-1 py-2 overflow-x-auto hide-scrollbar">;
@@ -67,7 +64,6 @@ export function MobileResumeBuilder() {;
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("experience")}
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           Experience
         </Button>
@@ -77,7 +73,6 @@ export function MobileResumeBuilder() {;
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("education")}
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           Education
         </Button>
@@ -85,57 +80,7 @@ export function MobileResumeBuilder() {;
 
           variant={currentStep === "skills" ? "default" : "outline"}
           className="flex-1 rounded-full"
-          onClick={() => setCurrentStep("skills")}
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-        >
-          Skills
-        </Button>
-      </div>
-      {renderStepContent()}
-
-
-      
-      <Button className="w-full flex gap-2" size="lg">
-        <Zap className="h-5 w-5" /> Enhance with AI
-      </Button>
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-      <Button variant="default" className="w-full" size="lg">
-        Save & Preview
-      </Button>
-    </div>
-  )
-}
-function BasicsStep() {
-  return (
-    <Card>
-      <CardContent className="p-4 space-y-4">
-        <div className="space-y-2">
-          <Label htmlFor="title">Resume Title</Label>
-          <Input id="title" name="title" placeholder="e.g. Senior Frontend Developer" />
-        </div>
-        <div className="space-y-2">
-          <Label htmlFor="fullName">Full Name</Label>
-          <Input id="fullName" name="fullName" placeholder="Your full name" autoComplete="name" />
-        </div>
-        <div className="space-y-2">
-          <Label htmlFor="email">Email Address</Label>
-          <Input id="email" name="email" type="email" placeholder="you@example.com" autoComplete="email" />
-        </div>
-        <div className="space-y-2">
-          <Label htmlFor="phone">Phone Number</Label>
-          <Input id="phone" name="phone" placeholder="Your phone number" autoComplete="tel" />
-        </div>
-        <div className="space-y-2">
-          <Label htmlFor="location">Location</Label>
-          <Input id="location" name="location" placeholder="City, Country" autoComplete="address-level2" />
-        </div>
-        <div className="space-y-2">
-          <Label htmlFor="summary">Professional Summary</Label>
-
+          onClick = {() => setCurrentStep("skills"),}
         >;
           Skills;
         </Button>;
@@ -183,7 +128,6 @@ function BasicsStep() {;
           <Textarea
             id="summary" 
             placeholder="Write a brief summary about yourself" 
-
             rows = {4,}
           />;
         </div>;
@@ -191,32 +135,6 @@ function BasicsStep() {;
     </Card>;
   );
 }
-
-
-          <Textarea 
-            id="summary" 
-            placeholder="Write a brief summary about yourself" 
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-function ExperienceStep() {
-  const [experiences, setExperiences] = useState([{ id: '1' }])
-  const addExperience = () => {
-    const newId = (experiences.length + 1).toString()
-    setExperiences([...experiences, { id: newId }])
-  }
-  const removeExperience = (id: string,) => {
-    setExperiences(experiences.filter(exp => exp.id !== id))
-
-
-  };
-};
-  );
-};
-
-
-=======
   Select;
   SelectContent;
   SelectItem;
@@ -347,7 +265,6 @@ function ExperienceStep() {
   },
   const remove_experience = (id: string, ) =>: any {
     set_experiences (experiences.filter (exp => exp.id !== id));
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   const remove_education = (id: string, ) =>: any {
     set_educations (educations.filter (edu => edu.id !== id));
@@ -355,7 +272,6 @@ function ExperienceStep() {
   const remove_skill = (id: string, ) =>: any {
     set_skills (skills.filter (skill => skill.id !== id));
   }
-=======
 
 function ExperienceStep() {;
   const [experiences, setExperiences] = useState([{ id: '1' }]),;
@@ -380,20 +296,7 @@ function ExperienceStep() {;
     setSkills(skills && skills.filter(skill => skill && skill.id !== id));
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
-
-
-=======
   );
 }
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

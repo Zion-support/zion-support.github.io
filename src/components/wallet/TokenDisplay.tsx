@@ -1,7 +1,27 @@
-
-
+import React from 'react';
+import { BadgeDollarSign } from 'lucide-react';
+import { useWallet } from '@/hooks/useWallet';
+import {;
+  Card,;
+  CardContent,;
+  CardDescription,;
+  CardHeader,;
+  CardTitle,;
+} from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import Skeleton from '@/components/ui/skeleton';
+export function TokenDisplay() {;
   const { wallet, loading } = useWallet();
   return (
+
+import React from "react";
+import { BadgeDollarSign } from 'lucide-react'
+import { useWallet } from "@/hooks/useWallet";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import Skeleton from "@/components/ui/skeleton";
+
+export function TokenDisplay() { const { wallet, loading  } = useWallet(),
 
 
   return (
@@ -34,30 +54,14 @@
 
 
             <div className="mt-2">
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <Button variant="outline" size="sm">
                 View Wallet
               </Button>
             </div>
           </div>
-
-
-=======
-
-
-=======
-import React from "react",;
-import { BadgeDollarSign } from 'lucide-react';
-import { useWallet } from "@/hooks/useWallet",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Button } from "@/components/ui/button",;
-import Skeleton from "@/components/ui/skeleton",;
-export function TokenDisplay() {;
-  const { wallet, loading } = useWallet();
-  return (;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        )}
+      </CardContent>
+    </Card>
     <Card>;
       <CardHeader className='flex flex-row items-center justify-between pb-2'>;
         <div>;
@@ -81,8 +85,6 @@ export function TokenDisplay() {;
             </p>;
             <div className='mt-2'>;
               <Button variant='outline' size='sm'>                View Wallet            <div className="mt-2">;
-
-=======
 import React from 'react';
 import { BadgeDollarSign } from 'lucide-react';
 import { use_wallet } from '@/hooks / use_wallet';
@@ -123,18 +125,19 @@ function TokenDisplay() {
             </p>;
             <div className='mt - 2'>;
               <Button variant='outline' size='sm'>                View Wallet            <div className="mt - 2">;
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               <Button variant="outline" size="sm">;
                 View Wallet;
               </Button>;
             </div>;
-
-
-=======
-
+          </div>;
+        )}
+      </CardContent>;
+    </Card>;
+  );
 }
-;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  );
+}
+          </div>)}
+      </CardContent>;
+    </Card>);
+}

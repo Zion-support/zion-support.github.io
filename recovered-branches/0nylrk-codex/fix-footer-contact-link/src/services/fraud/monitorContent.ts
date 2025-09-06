@@ -1,17 +1,3 @@
-
-
-
-export const monitorContent = async (;
-
-
-  userId: string;
-  userEmail: string | undefined;
-  contentType: FraudFlag['content_type'];
-  contentId: string;
-  content: string
-): Promise<void> => {
-  const analysis = analyzeContent(content);
-
   
   if (analysis && analysis.isSuspicious) {
     let severity: FraudSeverity = analysis && analysis.reasons.length > 2 ? 'dangerous' : 'suspicious',
@@ -21,13 +7,11 @@ export const monitorContent = async (;
       r && r.includes('payment') || 
       r && r.includes('external') || 
       r && r.includes('bypass')
-
     )) {
       severity = 'dangerous'
 
 
 
-=======
 // Content monitoring functionality;
 import { FraudFlag, FraudSeverity } from '@/types/fraud',;
 import { analyzeContent } from './analyzeContent',;
@@ -57,8 +41,6 @@ export const monitorContent = async (;
 
     }
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     await flagContent(
       userId;
       userEmail;
@@ -118,10 +100,8 @@ if (||) {
       severity;
       analysis.reasons.join ();
       undefined // IP address would be added in a real implementation);
-=======
 
 
-=======
 
 ;
     // If this is a 'dangerous' flag, automatically hide content;
@@ -136,9 +116,7 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
   }
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

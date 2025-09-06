@@ -1,5 +1,4 @@
 import React from 'react';
-
 ;
 const PerformanceOptimizer.dynamic = () => {
   return (
@@ -8,5 +7,4 @@ const PerformanceOptimizer.dynamic = () => {
     </div>);
 }
 ;
-
 export default PerformanceOptimizer.dynamic;

@@ -1,37 +1,14 @@
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default /**
+ * ServicesIndexPage - Function description
+ */
+function ServicesIndexPage() {
   const all = (enhancedRealMicroSaasServices as unknown[]) .concat (
 }React.useEffect ( () => {
   const next = services.filter ( (s) => {
   //Category const handle_submit = async (values: QuoteFormValues) => {
   const res = await fetch ('/api / quote - request', {
   method: 'POST', headers: {
-
-
-  'Content-Type': 'application/json' ;
-};
-
-
-body: JSON.stringify ({
-  service: values.serviceTitle, description: values.projectDescription, timeline: {
-  start: values.timelineStart, end: values.timelineEnd
-}
-budgetRange: values.budgetRange;
-}
-<Head> <title>Zion AI Marketplace - Services</title> <meta name="description" content="Discover curated IT services. Request quotes with AI-assisted summaries." /> </Head>) )
-}</div> </div> </div> </div> <QuoteRequestModal open= {
-  modalOpen
-}onClose= {
-  () => setModalOpen (false)
-}service= {
-  selected
-}onSubmit= {
-  handleSubmit
-}/> </div>)
-};export default ServicesPage;
-=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import React from 'react';
@@ -54,7 +31,6 @@ import { realServicesQ12025 } from '../../data/real-services-q1-2025'
 import { newVerifiedServicesQ22025 } from '../../data/real-verified-services-q2-2025'
 import { Star } from 'lucide-react';
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 const mapLocalToServiceItem = (item: any): ServiceItem => ({
   slug: item.slug
   title: item.name
@@ -72,7 +48,6 @@ const ServicesPage: NextPage = () => {
 export default function ServicesIndexPage() {
   const all = (enhancedRealMicroSaasServices as unknown[])
     .concat(
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -141,9 +116,7 @@ const ServicesPage: NextPage = () => {;
 export default function ServicesIndexPage() {;
   const all = (enhancedRealMicroSaasServices as unknown[]);
     .concat(;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       extraServices as any[];
-=======
   'Content - Type': 'application / json';
 }
 body: JSON.stringify ({
@@ -186,7 +159,6 @@ function ServicesIndexPage() {
   const all = (enhancedRealMicroSaasServices as unknown[]);
     .concat (
       extra_services as any[];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       additionalEnhancedServices as any[];
       newlyAddedServices as any[];
       curatedMarketServices as any[];
@@ -197,7 +169,6 @@ function ServicesIndexPage() {
       realOperationalServices as any[];
       verified2025Additions as any[];
       realServicesQ12025 as any[];
-
   // Normalize various category labels into our main buckets;
   const categoryAliases: Record<string, string> = {;
     'AI & Data': 'AI & DataAI & Machine Learning': 'AI & DataGenAI': 'AI & DataCloud & FinOps': 'Cloud & FinOpsCloud & Data': 'Cloud & FinOpsPlatform Engineering': 'Cloud & FinOpsObservability': 'ObservabilityObservability & Telemetry': 'ObservabilityQuality & Monitoring': 'Quality & MonitoringSecurity & Reliability': 'Quality & MonitoringSecurity & Compliance': 'Quality & MonitoringDeveloper Tools': 'Developer ToolsGrowth & Marketing': 'Developer Tools';
@@ -222,19 +193,15 @@ function ServicesIndexPage() {
       if (filters && filters.ratingMin !== undefined && (s && s.rating ?? 0) < filters && filters.ratingMin) return false;
       // Delivery time (not available in data, simulate pass-through);
       return true;
-
     });
     setFiltered(next);
   }, [filters, services]);
 
-
   const availableCategories = React && React.useMemo(() => {;
-
     const set = new Set<string>();
     services && services.forEach((s) => s && s.categories.forEach((c) => set && set.add(c)));
     return Array && Array.from(set);
   }, [services]);
-
 
   const handleRequestQuote = (service: ServiceItem) => {;
     setSelected(service);
@@ -254,47 +221,14 @@ function ServicesIndexPage() {
     if (!res && res.ok) {;
       const err = await res && res.json().catch(() => ({}));
       throw new Error(err?.message || 'Failed to submit');
-
     }
   }
-=======
     }
 
   };
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
-
-
-                <EnhancedMarketplaceCard key={service.slug || service.id} service={service} onRequestQuote={handleRequestQuote} />
-
-
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-
-    <UltraFuturisticBackground variant="quantum" intensity={1 && 1.5}>;
-      <Head>;
-        <title>Zion AI Marketplace - Services</title>;
-        <meta name="description" content="Discover curated IT services. Request quotes with AI-assisted summaries." />;
-      </Head>;
-      <div className="relative">;
-        <div className="absolute -z-10 -top-40 -left-40 w-96 h-96 rounded-full blur-3xl opacity-40 bg-gradient-to-tr from-cyan-400 via-blue-500 to-purple-500" />;
-        <div className="flex flex-col sm: flex-row gap-6">;
-          <MarketplaceFilters availableCategories={availableCategories} value={filters} onChange={setFilters} />;
-          <div className="flex-1">;
-            <div className="mb-4 flex items-center justify-between">;
-              <h1 className="text-2xl font-semibold text-white">Services</h1>;
-              <div className="text-sm text-white/70">{filtered && filtered.length} results</div>;
-            </div>;
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">;
-              {filtered && filtered.map((service) => (;
-                <EnhancedMarketplaceCard key={service && service.slug || service && service.id} service={service} onRequestQuote={handleRequestQuote} />;
-              ))}
-=======
       newVerifiedServicesQ22025 as any[]);
   const by_category: Record < string, unknown[]> = {}
   for (const c of categories) by_category[c] = [];
@@ -381,36 +315,19 @@ if ( {) {
             <div className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 gap - 5">;
               {filtered.map ((service) => (
                 <EnhancedMarketplaceCard key={service.slug || service.id} service={service} onRequestQuote={handleRequestQuote} />))}
-
             </div>;
           </div>;
         </div>;
       </div>;
-
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <QuoteRequestModal
         open={modalOpen}
         onClose={() => setModalOpen(false)}
         service={selected}
         onSubmit={handleSubmit}
-
-      />;
-    </div>;
-  );
-};
-
-
 export default ServicesPage;
-=======
 export default ServicesPage;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
-=======
       <QuoteRequestModal;
         open={modal_open}
         on_close={() => setModalOpen (false)}
@@ -422,4 +339,3 @@ export default ServicesPage;
 ;
 export default ServicesPage;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

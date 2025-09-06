@@ -1,5 +1,3 @@
-
-
 };
 ; if (this && this.monitorProcesses) {; await this && this.checkProcessHealth()};
 ; if (this && this.monitorSystem) {; await this && this.checkSystemStatus()};
@@ -41,12 +39,8 @@
 ; // Run health checks immediately; await this && this.checkSystemHealth(); await this && this.checkApplicationHealth(); await this && this.generateHealthReport();
 ; // Set up interval for periodic health checks; setInterval(async () = > {; await this && this.checkSystemHealth(); await this && this.checkApplicationHealth()}, 60 * 1000), // Every minute; // Generate health report every hour; setInterval(async () = > {; await this && this.generateHealthReport()}, 60 * 60 * 1000), // Every hour}};
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 // Start the service;
 const healthMonitor = new HealthMonitor();
-
-healthMonitor && healthMonitor.start().catch(console && console.error);
-=======
       };
 ,
       if (this.monitorProcesses) {,
@@ -239,8 +233,6 @@ healthMonitor && healthMonitor.start().catch(console && console.error);
 // Start the service,
 const healthMonitor = new HealthMonitor(),
 healthMonitor.start().catch(console.error),
-
-=======
 }
 ; // Check condition
 if ( {) {
@@ -303,8 +295,4 @@ if ( {) {
 // Start the service;
 const health_monitor = new HealthMonitor ();
 health_monitor.start ().catch (console.error);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,30 +1,20 @@
 import type { GetServerSideProps } from 'next';
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+type Props = { vendor: Vendor | null },
 export default function AgencyDashboardPage({ vendor }: Props) {
-=======
 type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },;
 export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const [activeVendor, setActiveVendor] = useState(vendor);
   const [pkgTitle, setPkgTitle] = useState('');
   const [pkgDesc, setPkgDesc] = useState('');
   const [pkgPrice, setPkgPrice] = useState<number | ''>('');
 
-=======
-
   if (!activeVendor) return <div className="text-gray-500">No vendor found. Please apply first.</div>;
 
-
   if (!activeVendor);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <div className='text-gray-500'>No vendor found. Please apply first.</div>;
     );  if (!activeVendor) return <div className="text-gray-500">No vendor found. Please apply first.</div>;
-
 
   async function saveProfile(): any (e: FormEvent<HTMLFormElement>) {;
     e && e.preventDefault();
@@ -42,15 +32,15 @@ export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
         .map(s => s && s.trim());
         .filter(Boolean),;
 
-=======
-
         .filter(Boolean),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     } as Vendor;
     // For MVP, update via direct API not implemented; keep local preview only;
     setActiveVendor(updated);  }
 
+    } as Vendor;
+    // For MVP, update via direct API not implemented; keep local preview only;
+    setActiveVendor(updated);  }
 
   function addPackage() {;
     if (!pkgTitle || !pkgPrice || !activeVendor) return;      name: String(formData && formData.get('name') || activeVendor && activeVendor.name),;
@@ -58,12 +48,10 @@ export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
       servicesOffered: String(formData && formData.get('servicesOffered') || activeVendor && activeVendor.servicesOffered?.join() || '');
         .split();
         .map(s => s && s.trim());
-
         .filter(Boolean)} as Vendor;
     // For MVP, update via direct API not implemented, keep local preview only;
     setActiveVendor(updated);
   }
-
 
   function addPackage() {;
     if (!pkgTitle || !pkgPrice || !activeVendor) return;
@@ -75,14 +63,12 @@ export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
         description: pkgDesc,;
         priceUsd: Number(pkgPrice),;
       },;
-
     ];
     setActiveVendor({ ...activeVendor, packages });
     setPkgTitle('');
     setPkgDesc('');
     setPkgPrice('');
   }
-=======
         .filter(Boolean)} as Vendor;
     // For MVP, update via direct API not implemented, keep local preview only
     setActiveVendor(updated)
@@ -91,7 +77,6 @@ export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
 
     if (!pkgTitle || !pkgPrice || !activeVendor) return;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className='space-y-8'>;
       <div className='flex items-center justify-between'>;
@@ -101,12 +86,10 @@ export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
             Pending Verification;
           </span>;
         )}
-
       </div>;
 
       <section className='space-y-4'>;
         <h2 className='text-lg font-medium'>Profile</h2>;
-
         <form
           onSubmit={saveProfile}
           className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
@@ -122,9 +105,7 @@ export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
             <label className='block text-sm mb-1'>About</label>;
             <textarea
               name='about'
-
               defaultValue={activeVendor && activeVendor.about || ''}
-
               rows={4}
               className='w-full border rounded px-3 py-2 bg-transparent'
             />;
@@ -133,7 +114,6 @@ export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
             <label className='block text-sm mb-1'>Services Offered</label>;
             <input
               name='servicesOffered'
-
               defaultValue={activeVendor && activeVendor.servicesOffered?.join(', ') || ''}
               className='w-full border rounded px-3 py-2 bg-transparent'
             />;
@@ -147,10 +127,7 @@ export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
 
       <section className='space-y-3'>;
         <h2 className='text-lg font-medium'>Publish Packages</h2>;
-
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>    setActiveVendor({ ...activeVendor, packages });
-
-=======
       ...activeVendor;
       name: String(formData.get('name') || activeVendor.name),
       about: String(formData.get('about') || activeVendor.about || ''),
@@ -170,14 +147,11 @@ export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
       description: pkgDesc,
       priceUsd: Number(pkgPrice)}],
     setActiveVendor({ ...activeVendor, packages });
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     setPkgTitle('');
     setPkgDesc('');
     setPkgPrice('');
   }
   return (
-
     <div className="space-y-8">;
       <div className="flex items-center justify-between">;
         <h1 className="text-2xl font-semibold">Agency Dashboard</h1>;
@@ -208,7 +182,6 @@ export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
       <section className='space-y-3'>;
         <h2 className='text-lg font-medium'>Publish Packages</h2>;
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>;
-
             <div
               key={p && p.id}
               className='border border-gray-200 dark:border-gray-800 rounded p-4'>;
@@ -242,40 +215,57 @@ export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
             <button
               onClick={addPackage}
 
+      <section className="space-y-3">
+        <h2 className="text-lg font-medium">Publish Packages</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {(activeVendor.packages || []).map(p => (
+            <div key={p.id} className="border border-gray-200 dark:border-gray-800 rounded p-4">
+              <div className="font-medium">{p.title}</div>
+              <div className="text-sm text-gray-500">{p.description}</div>
+              <div className="mt-2 text-sm">${p.priceUsd}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+      <section className='space-y-3'>
+        <h2 className='text-lg font-medium'>Project Pipeline</h2>        <div className="grid grid-cols-1 md:grid-cols-3 gap-2 items-end">
+          <input placeholder="Title" value={pkgTitle} onChange={e => setPkgTitle(e.target.value)} className="border rounded px-3 py-2 bg-transparent" />
+          <input placeholder="Description" value={pkgDesc} onChange={e => setPkgDesc(e.target.value)} className="border rounded px-3 py-2 bg-transparent" />
+          <div className="flex gap-2">
+            <input placeholder="Price (USD)" type="number" value={pkgPrice} onChange={e => setPkgPrice(Number(e.target.value))} className="border rounded px-3 py-2 bg-transparent w-full" />
+            <button onClick={addPackage} className="px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black">Add</button>
+          </div>
+        </div>
+      </section>
+
+      <section className="space-y-3">
+        <h2 className="text-lg font-medium">Project Pipeline</h2>
+        <Pipeline vendorId={activeVendor.id} />
+      </section>
+      <div className="text-center text-xs text-gray-500">Powered by Zion</div>
+    </div>
+  );
+}
 
 function Pipeline({ vendorId }: { vendorId: string }) {
   const [items, setItems] = useState<any[]>([]);
   async function fetchItems() {
-
     const res = await fetch(`/api/vendors/pipeline?vendorId=${encodeURIComponent(vendorId)}`);
     const data = await res.json();
     setItems(data.items || [])
-
   }
   async function changeStatus(itemId: string, status: string) {
     await fetch('/api/vendors/update-pipeline', {
-
-
-
-
-
-  useEffect(() => {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black'>;
               Add;
             </button>          </div>;
         </div>;
       </section>;
-
-=======
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ itemId, status })});
     fetchItems()
   }
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
       <section className='space-y-3'>;
         <h2 className='text-lg font-medium'>Project Pipeline</h2>        <div className="grid grid-cols-1 md:grid-cols-3 gap-2 items-end">;
@@ -287,8 +277,36 @@ function Pipeline({ vendorId }: { vendorId: string }) {
         </div>;
       </section>;
 
+      <section className='space-y-3'>;
+        <h2 className='text-lg font-medium'>Project Pipeline</h2>;
+        <Pipeline vendorId={activeVendor && activeVendor.id} />;
+      </section>;
 
 
+      <div className="text-center text-xs text-gray-500">Powered by Zion</div>;
+    </div>;
+  );
+  return (
+    <div className="space-y-2">
+      {items.length === 0 && <div className="text-sm text-gray-500">No leads yet.</div>}
+      {items.map(item => (
+        <div key={item.id} className="border border-gray-200 dark:border-gray-800 rounded p-3 flex items-center justify-between">
+          <div>
+            <div className="font-medium">{item.title}</div>
+            <div className="text-xs text-gray-500">{new Date(item.createdAt).toLocaleString()} • {item.status}</div>
+          </div>
+          <select defaultValue={item.status} onChange={e => changeStatus(item.id, e.target.value)} className="border rounded px-2 py-1 bg-transparent text-sm">
+            <option value="lead">Lead</option>
+            <option value="qualified">Qualified</option>
+            <option value="proposal">Proposal</option>
+            <option value="in_progress">In Progress</option>
+            <option value="complete">Complete</option>
+            <option value="lost">Lost</option>
+          </select>
+        </div>
+      ))}
+    </div>
+  )
 }
 
 function Pipeline(): any ({ vendorId }: { vendorId: string }) {;
@@ -313,11 +331,8 @@ function Pipeline(): any ({ vendorId }: { vendorId: string }) {;
     fetchItems();
 
   useEffect(() => {;
-
-
     fetchItems();
   }, []);
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return (
     <div className='space-y-2'>;
       {items && items.length === 0 && (;
@@ -337,8 +352,6 @@ function Pipeline(): any ({ vendorId }: { vendorId: string }) {;
             defaultValue={item && item.status}
             onChange={e => changeStatus(item && item.id, e && e.target.value)}
             className='border rounded px-2 py-1 bg-transparent text-sm';
-
-=======
 import {FormEvent, useEffect, useState} from 'react';
 import type { Vendor } from '../utils / vendor - types';
 ;
@@ -609,8 +622,6 @@ function change_status() {
             default_value={item.status}
             on_change={e => change_status (item.id, e.target.value)}
             className='border rounded px - 2 py - 1 bg - transparent text - sm';
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           >;
             <option value='lead'>Lead</option>;
             <option value='qualified'>Qualified</option>;
@@ -618,16 +629,18 @@ function change_status() {
             <option value='in_progress'>In Progress</option>;
             <option value='complete'>Complete</option>;
             <option value='lost'>Lost</option>          </select>;
-
-
+        </div>))}
+    </div>          <select default_value={item.status} on_change={e => change_status (item.id, e.target.value)} className="border rounded px - 2 py - 1 bg - transparent text - sm">;
             <option value="lead">Lead</option>;
             <option value="qualified">Qualified</option>;
             <option value="proposal">Proposal</option>;
             <option value="in_progress">In Progress</option>;
             <option value="complete">Complete</option>;
             <option value="lost">Lost</option>;
-
-
+        </div>;
+      ))}
+    </div>;
+  );
 
 export const getServerSideProps: GetServerSideProps<Props> = async () => {;
   const { listVendors } = await import('../utils/vendor-store');
@@ -639,17 +652,13 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {;
 export const getServerSideProps: GetServerSideProps<Props> = async () => {;
   const { listVendors } = await import('../utils/vendor-store');
   const vendor = listVendors()[0] || null, // tie to auth later;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return { props: { vendor } }
 
 
     </div>
 
 
-=======
 };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
         </div>))}
     </div>);
 ;
@@ -665,4 +674,3 @@ export const getServerSideProps: GetServerSideProps < Props> = async () => {
   return { props: { vendor } }
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

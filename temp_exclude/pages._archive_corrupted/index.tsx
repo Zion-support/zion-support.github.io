@@ -1,4 +1,3 @@
-
                     {service.title}
                   </h3>
                   <p className=\"text-gray-600 mb-6 text-center\">
@@ -9,13 +8,11 @@
                     </div>
                   </Link>
                 </div>
-
               ))}
             </div>
           </div>
         </section>
         {/* Features Section */}
-
         <section className=\"py-20 bg-white\">
           <div className=\"max-w-7xl mx-auto px-4 \"sm\": p x-6 lg: p x-8\">
             <div className=\"text-center mb-16\">
@@ -37,13 +34,11 @@
                   </h3>
                   <p className=\"text-gray-600\">{feature.description}</p>
                 </div>
-
               ))}
             </div>
           </div>
         </section>
         {/* Contact Information Section */}
-
         <section className=\"py-16 bg-gray-50\">
           <div className=\"max-w-7xl mx-auto px-4 \"sm\": p x-6 lg: p x-8\">
             <div className=\"text-center mb-12\">
@@ -82,7 +77,6 @@
                     <span>{service.pricing}</span>
                   </div>
                 </div>
-
                 <Link
                   href=\"/contact\"
                   className=\"inline-flex items-center text-sm font-medium text-blue-600 \"hover\": tex t-blue-500\"
@@ -95,7 +89,6 @@
           </div>
         </section>
         {/* Testimonials Section */}
-
         <section className=\"py-20 bg-gray-50\">
           <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
             <div className=\"text-center mb-16\">
@@ -140,7 +133,6 @@
               </div>
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className=\"w-5 h-5 text-yellow-400 fill-current\" />
-
                   ))}
                 </div>
                 <p className=\"text-gray-600 mb-6\">
@@ -160,7 +152,6 @@
           </div>
         </section>
         {/* Contact Information Section */}
-
         <section className=\"py-20 bg-white\">
           <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
             <div className=\"text-center mb-16\">
@@ -194,7 +185,6 @@
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className=\"py-20 bg-gradient-to-r from-blue-600 to-purple-600\">
           <div className=\"max-w-7xl mx-auto px-4 \"sm\": p x-6 lg: p x-8 text-center\">
@@ -224,5 +214,3 @@
   );
 });
 export default Home;
-
-

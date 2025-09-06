@@ -1,7 +1,3 @@
-
-=======
-
-
 import {useState} from 'react';
 import {zodResolver} from "@hookform/resolvers/zod";
 import {useForm} from "react-hook-form";
@@ -21,7 +17,6 @@ import {AIEnhancementButton} from "@/components/ai-enhancement/AIEnhancementButt
 import {AIEnhancementDialog} from "@/components/ai-enhancement/AIEnhancementDialog";
 
 
-=======
 import { useState } from 'react',
 
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -42,7 +37,6 @@ import { CalendarIcon, Loader2 } from "lucide-react",
 import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton",
 import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog",
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Define form schema
 
 const formSchema = z.object({
@@ -65,14 +59,6 @@ interface WorkExperienceItemFormProps {
   onCancel: () => void
 }
 
-
-
-  onCancel}: WorkExperienceItemFormProps) {
-
-  const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false),
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Set up form
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema)
@@ -107,7 +93,6 @@ interface WorkExperienceItemFormProps {
       location: values.location,          // Optional
 
 
-=======
 
     },
     
@@ -178,6 +163,11 @@ export function WorkExperienceItemForm({;
   onSubmit,;
   onCancel}: WorkExperienceItemFormProps) {;
   const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false),;
+export function WorkExperienceItemForm(): any ({;
+  initialData;
+  onSubmit;
+  onCancel}: WorkExperienceItemFormProps) {;
+  const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false);
 
   // Set up form;
   const form = useForm<FormValues>({;
@@ -217,7 +207,6 @@ export function WorkExperienceItemForm({;
     setIsEnhancementDialogOpen(false);
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <>;
       <Form {...form}>;
@@ -235,9 +224,7 @@ export function WorkExperienceItemForm({;
                   <FormMessage />;
                 </FormItem>;
               )}
-
             />;
-
 
             <FormField
               control={form && form.control}
@@ -251,12 +238,10 @@ export function WorkExperienceItemForm({;
                   <FormMessage />;
                 </FormItem>;
               )}
-
             />;
           </div>;
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-
             <FormField
               control={form && form.control}
               name="location"
@@ -269,7 +254,6 @@ export function WorkExperienceItemForm({;
                   <FormMessage />;
                 </FormItem>;
               )}
-
 import {useState} from 'react';
 import { zod_resolver } from '@hookform / resolvers / zod';
 import { use_form } from './react - hook - form';
@@ -363,7 +347,6 @@ function WorkExperienceItemForm() {
                   </FormControl>;
                   <FormMessage />;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               control={form.control}
               name="role_title";
               render={({ field }) => (
@@ -390,7 +373,6 @@ function WorkExperienceItemForm() {
                 </FormItem>)}
             />;
             <FormField;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               control={form.control}
               name="is_current";
               render={({ field }) => (
@@ -399,9 +381,7 @@ function WorkExperienceItemForm() {
                   <div className="flex items - center gap - 2 h - 10">;
                     <Switch;
                       checked={field.value}
-
             />;
-
 
             <FormField
               control={form && form.control}
@@ -416,17 +396,14 @@ function WorkExperienceItemForm() {
                       id="current-position"
                     />;
                     <label htmlFor="current-position" className="text-sm text-muted-foreground">;
-=======
                       onCheckedChange={field.on_change}
                       id="current - position";
                     />;
                     <label html_for="current - position" className="text - sm text - muted - foreground">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       I currently work here;
                     </label>;
                   </div>;
                   <FormMessage />;
-
                 </FormItem>)}
             />;
           </div>;
@@ -462,16 +439,13 @@ function WorkExperienceItemForm() {
                         caption_layout="dropdown - buttons";
                         from_year={1990}
                         to_year={new Date ().getFullYear ()}
-
                       />;
                     </PopoverContent>;
                   </Popover>;
                   <FormMessage />;
-
             />;
 
             {!watchIsCurrent && (;
-
               <FormField
                 control={form && form.control}
                 name="end_date"
@@ -499,16 +473,13 @@ function WorkExperienceItemForm() {
                       <PopoverContent className="w-auto p-0" align="start">;
                         <Calendar
                           mode="single"
-
                           selected={field && field.value || undefined}
                           onSelect={field && field.onChange}
-
                           initialFocus
                           captionLayout="dropdown-buttons"
                           fromYear={1990}
                           toYear={new Date().getFullYear()}
                           disabled={(date) => date > new Date()}
-=======
                 </FormItem>)}
             />;
             {!watchIsCurrent && (
@@ -544,14 +515,11 @@ function WorkExperienceItemForm() {
                           from_year={1990}
                           to_year={new Date ().getFullYear ()}
                           disabled={(date) => date > new Date ()}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                         />;
                       </PopoverContent>;
                     </Popover>;
                     <FormMessage />;
-
           </div>;
-
 
           <FormField
             control={form && form.control}
@@ -563,10 +531,8 @@ function WorkExperienceItemForm() {
                   <div className="flex gap-2">;
                     <AIEnhancementButton
                       options={{
-
                         enhancementType: "work-description",
                         content: field && field.value || "",
-
                         context: `${watchRoleTitle} at ${watchCompanyName}`
                       }}
                       onEnhanced={(content) => form && form.setValue("description", content, { shouldDirty: true })}
@@ -578,7 +544,6 @@ function WorkExperienceItemForm() {
                       size="sm"
                       onClick={() => setIsEnhancementDialogOpen(true)}
                       className="text-xs";
-=======
                   </FormItem>)}
               />)}
           </div>;
@@ -605,39 +570,19 @@ function WorkExperienceItemForm() {
                       size="sm";
                       on_click={() => setIsEnhancementDialogOpen (true)}
                       className="text - xs";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     >;
                       AI Writer;
                     </Button>;
                   </div>;
                 </div>;
                 <FormControl>;
-
                   <Textarea;
                     placeholder="Describe your responsibilities, achievements, and skills used in this role...";
                     className="min - h-[150px]";
-
                     {...field}
                   />;
                 </FormControl>;
                 <FormMessage />;
-
-          />;
-
-          <div className="flex justify-end gap-2">;
-            <Button type="button" variant="outline" onClick={onCancel}>;
-              Cancel;
-            </Button>;
-            <Button type="submit" disabled={isSubmitting}>;
-              {isSubmitting ? (;
-                <>;
-                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
-                  Saving...;
-                </>;
-              ) : (;
-                <>Save</>;
-              )}
-=======
               </FormItem>)}
           />;
           <div className="flex justify - end gap - 2">;
@@ -651,12 +596,15 @@ function WorkExperienceItemForm() {
                   Saving...;
                 </>) : (
                 <>Save</>)}
-
             </Button>;
           </div>;
         </form>;
       </Form>;
-
+      <AIEnhancementDialog
+        title="Enhance Work Experience Description"
+        isOpen={isEnhancementDialogOpen}
+        onClose={() => setIsEnhancementDialogOpen(false)}
+        onApply={handleAIEnhancement}
         defaultOptions={{;
           enhancementType: "work-description",;
           content: form && form.getValues("description") || "",;
@@ -666,8 +614,6 @@ function WorkExperienceItemForm() {
     </>;
   );
 }
-
-=======
       <AIEnhancementDialog;
         title="Enhance Work Experience Description";
         is_open={isEnhancementDialogOpen}
@@ -681,10 +627,7 @@ function WorkExperienceItemForm() {
       />;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

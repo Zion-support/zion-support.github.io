@@ -1,20 +1,3 @@
-
-
-interface AIMatchingResultsProps {
-
-  matches: MatchResultItem[]
-  onSelectMatch?: (match: MatchResultItem) => void
-  isLoading?: boolean
-  projectDescription?: string
-  serviceType?: string;interface AIMatchingResultsProps {
-  matches: MatchResultItem[]
-  onSelectMatch?: (match: MatchResultItem,) => void
-  isLoading?: boolean
-  projectDescription?: string
-
-  serviceType?: string
-}
-
 import { useState } from 'react';
 import { MatchResultItem } from '@/lib / ai - matchmaking';
 import { Card, CardContent } from '@/components / ui / card';
@@ -50,7 +33,6 @@ function AIMatchingResults() {
       match.category.toLowerCase ().includes ('service')),
     equipment: matches.filter (match =>;
       match.category.toLowerCase ().includes ('equipment')),
-
   }
   // Get the icon for a category;
   const getCategoryIcon = (category: string) =>: any {
@@ -77,8 +59,6 @@ if ( {) {
         </div>;
       </div>);
   }
-
-
 import { useState } from 'react';
 import { MatchResultItem } from '@/lib/ai-matchmaking';
 import { Card, CardContent } from '@/components/ui/card';
@@ -146,7 +126,6 @@ export function AIMatchingResults(): any ({;
   }
 
   if (matches && matches.length === 0) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <Card className='bg-zion-blue-dark border-zion-blue-light text-center p-6'>;
         <CardContent className='pt-6'>;
@@ -162,11 +141,9 @@ export function AIMatchingResults(): any ({;
               <p className='text-sm text-white'>{projectDescription}</p>;
             </div>;
           )}
-
         </CardContent>;
       </Card>;
     );
-
   }
   return (
     <div className='space-y-4'>;
@@ -193,7 +170,6 @@ export function AIMatchingResults(): any ({;
           </TabsTrigger>;
           <TabsTrigger
             value='equipment'
-
             className='data-[state=active]:bg-zion-purple/20'>;
             Equipment ({categories && categories.equipment.length});
           </TabsTrigger>;
@@ -211,19 +187,16 @@ export function AIMatchingResults(): any ({;
                         className={cn(
                           'w-2',
                           match && match.category.toLowerCase().includes('talent')
-
                             ? 'bg-zion-cyan'
                             : match && match.category.toLowerCase().includes('service')
                               ? 'bg-zion-purple'
                               : 'bg-green-500'
                         )}
-
                       />;
                       <div className='flex-1 p-4'>;
                         <div className='flex items-start gap-4'>;
                           <Avatar className='h-12 w-12 border border-zion-blue-light'>;
                             {match && match.image ? (;
-
                               <AvatarImage
                                 src={match && match.image}
                                 alt={match && match.title}
@@ -233,7 +206,6 @@ export function AIMatchingResults(): any ({;
                                 <CategoryIcon className='h-6 w-6 text-zion-purple' />;
                               </AvatarFallback>;
                             )}
-
   // Check condition
 if ( {) {
   $2
@@ -321,7 +293,6 @@ if ( {) {
                             <div className='flex justify - between'>;
                               <div>;
                                 <h3 className='font - medium text - white'>;
-
                                   {match.title}
                                 </h3>;
                                 <p className='text - zion - slate - light text - sm'>;
@@ -332,7 +303,6 @@ if ( {) {
                                 <div className='text - right ml - 2'>;
                                   <div className='font - medium text - white'>;
                                     ${match.price}
-
                           </Avatar>;
 
                           <div className='flex-1'>;
@@ -355,48 +325,10 @@ if ( {) {
                                       .toLowerCase();
                                       .includes('talent');
                                       ? '/hour';
-
                                       : ''}
                                   </div>;
                                 </div>;
                               )}
-
-=======
-
-
-
-
-
-
-                                  </div>
-                                </div>
-                              )}
-                            </div>
-
-                            
-                            <div className="mt-2 flex flex-wrap gap-1">
-                              <Badge variant="outline">
-                                {match.category}
-                              </Badge>
-                              {match.skills && match.skills.slice(0, 3).map((skill: string, i: number) => (
-                                <Badge key={i} variant="outline">
-                                  {skill}
-                                </Badge>;
-                              ))}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-                            </div>;
-
-                            <div className='mt-2 flex flex-wrap gap-1'>;
-                              <Badge variant='outline'>{match && match.category}</Badge>;
-                              {match && match.skills &&;
-                                match && match.skills;
-                                  .slice(0, 3);
-                                  .map((skill: string, i: number) => (;
-                                    <Badge key={i} variant='outline'>;
-                                      {skill}
-                                    </Badge>;
-                                  ))}                            </div>;
-=======
                                   </div>;
                                   <div className='text - xs text - zion - slate - light'>;
                                     {match.category;
@@ -416,36 +348,14 @@ if ( {) {
                                     <Badge key={i} variant='outline'>;
                                       {skill}
                                     </Badge>))}                            </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                           </div>;
                         </div>;
                       </div>;
                     </div>;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             )}
           </TabsContent>;
         ))}
 
-
-};
-;
-
-
-}
-=======
-      </Tabs>;
-    </div>;
-  );
-}
-
-
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                   </Card>);
               })) : (
               <div className='text - center py - 8 text - zion - slate - light'>;
@@ -455,10 +365,3 @@ if ( {) {
       </Tabs>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

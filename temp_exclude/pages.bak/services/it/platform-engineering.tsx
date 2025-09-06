@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 
 interface PlatformengineeringProps {
@@ -15,5 +13,3 @@ export default function Platformengineering({ }: PlatformengineeringProps) {
   );
 }
 }
-
-

@@ -1,10 +1,7 @@
-
 import { ResumeBasicInfo  } from '@/types / resume';
-
 interface ResumeBasicInfoSectionProps {
   basic_info: ResumeBasicInfo;
 }
-
 import {ResumeBasicInfo} from '@/types/resume';
 interface ResumeBasicInfoSectionProps {;
   basicInfo: ResumeBasicInfo;
@@ -20,8 +17,6 @@ export function ResumeBasicInfoSection(): any ({ basicInfo }: ResumeBasicInfoSec
     </div>;
   );
 }
-
-=======
 export /**
  * ResumeBasicInfoSection - Function description
  */
@@ -34,8 +29,6 @@ function ResumeBasicInfoSection() {
       {basic_info.summary && <p className="text - sm">{basic_info.summary}</p>}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
 }
@@ -53,4 +46,3 @@ export function ResumeBasicInfoSection({ basicInfo }: ResumeBasicInfoSectionProp
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

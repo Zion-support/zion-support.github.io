@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 
 interface AidevelopmentProps {
@@ -15,5 +13,3 @@ export default function Aidevelopment({ }: AidevelopmentProps) {
   );
 }
 }
-
-

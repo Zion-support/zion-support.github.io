@@ -22,7 +22,6 @@ export const resources: Record<string, {_translation: Record<string, _string>}> 
   pt: {_translation: {} },
   es: {_translation: {} },
   ar: {_translation: {} }};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
 if (!i18n.isInitialized) {_i18n
     .use(Backend)

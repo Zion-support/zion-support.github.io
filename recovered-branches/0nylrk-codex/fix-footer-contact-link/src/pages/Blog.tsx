@@ -1,82 +1,3 @@
-
-
-
-// Sample blog data - in a real app this would come from an API or CMS
-const BLOG_POSTS: BlogPost[] = [
-  {
-    id: "ai-trends-2025",
-    title: "10 Emerging AI Trends to Watch in 2025",
-    slug: "ai-trends-2025",
-    excerpt: "From multimodal AI to neuromorphic computing, discover the technologies that will shape the artificial intelligence landscape in 2025.",
-    content: `<p>As we move further into 2025, artificial intelligence continues to evolve at an unprecedented pace. This article explores the most significant trends that are reshaping the AI landscape this year.</p>
-
-
-
-
-
-<h2>1. Multimodal AI Systems</h2>
-<p>Unlike traditional AI models that process single data types (text, images, or audio), multimodal systems can handle and interpret multiple data formats simultaneously. This creates more human-like understanding capabilities and enables more sophisticated applications across industries.</p>
-<h2>2. Neuromorphic Computing</h2>
-<p>Taking inspiration from the human brain's neural structure, neuromorphic computing represents a fundamental shift in how AI processes information. These systems consume significantly less power while delivering enhanced performance for complex tasks.</p>
-<h2>3. Federated Learning at Scale</h2>
-<p>Privacy concerns continue to drive adoption of federated learning approaches, where models are trained across multiple devices without exchanging raw data. In 2025, we're seeing enterprise-scale deployments that maintain privacy while delivering powerful insights.</p>
-<h2>4. Quantum AI</h2>
-<p>The convergence of quantum computing and AI is beginning to yield practical applications. While still in early stages, quantum-enhanced machine learning algorithms are demonstrating superior performance for specific optimization and pattern recognition problems.</p>
-<h2>5. AI for Climate Solutions</h2>
-<p>AI systems designed specifically to address climate challenges are gaining traction. From optimizing energy networks to modeling climate scenarios, these specialized tools are becoming essential in sustainability efforts.</p>`;
-    author: {
-
-
-      name: "Dr. Alicia Zhang",
-      title: "AI Research Director",
-      avatarUrl: "https://images.unsplash.com/photo-1589386417686-0d34b5903d23?auto=format&fit=crop&w=200&h=200"
-    },
-    publishedDate: "Apr 15, 2025",
-    readTime: "5 min read",
-    category: "Trends",
-    tags: ["AI", "Technology Trends", "Machine Learning", "Future Tech"],
-    featuredImage: "https://images.unsplash.com/photo-1677442135026-f00ef565c4be?auto=format&fit=crop&w=1200&h=630",
-    isFeatured: true
-  },
-  {
-    id: "optimize-ai-listings",
-    title: "How to Optimize Your AI Service Listings for Maximum Visibility",
-    slug: "optimize-ai-listings",
-    excerpt: "Learn the key strategies for optimizing your AI products and services on Zion marketplace to attract more potential clients.",
-    content: `<p>In the competitive AI marketplace, standing out is essential. This comprehensive guide shares proven strategies to optimize your AI service listings and attract more qualified leads.</p>
-
-
-<h2>Crafting an Irresistible Service Title</h2>
-<p>Your title is the first element potential clients see. It should be specific, include relevant keywords, and clearly communicate your unique value proposition. Avoid generic terms and focus on the specific problems you solve or results you deliver.</p>
-<h2>Compelling Service Descriptions That Convert</h2>
-<p>Beyond explaining features, your description should emphasize benefits and outcomes. Use client-centered language, incorporate relevant technical terms for searchability, and structure your content with headers and bullet points for easy scanning.</p>
-<h2>Showcase Your Expertise with Case Studies</h2>
-<p>Nothing builds credibility like proven results. Include mini case studies that highlight specific problems you've solved, the approach you took, and quantifiable outcomes you achieved. This transforms abstract services into concrete value.</p>
-<h2>Strategic Pricing and Package Structure</h2>
-<p>Consider offering tiered packages that cater to different client needs and budgets. Clearly differentiate what's included in each tier, and consider adding value-based pricing elements that tie your compensation to client results.</p>
-<h2>Leveraging Reviews and Testimonials</h2>
-<p>Social proof is powerful. Actively request detailed reviews from satisfied clients, and feature the most compelling testimonials prominently in your listing. Respond professionally to all feedback, including any critical reviews.</p>`;
-    author: {
-      name: "Marcus Johnson"
-      title: "Marketing Strategist"
-      avatarUrl: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&h=200"
-
-
-    },
-    publishedDate: "Apr 10, 2025",
-    readTime: "8 min read",
-    category: "Marketing",
-    tags: ["Marketing", "AI Services", "Visibility", "SEO"],
-    featuredImage: "https://images.unsplash.com/photo-1508921340878-ba53e1f016ec?auto=format&fit=crop&w=1200&h=630"
-  },
-  {
-    id: "green-it",
-    title: "Green IT: Reducing Your Data Center's Carbon Footprint",
-    slug: "green-it",
-    excerpt: "Practical steps for implementing sustainable practices in your IT infrastructure while maintaining performance and reliability.",
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <h2>Energy-Efficient Hardware Selection</h2>
 <p>The foundation of any green IT strategy begins with your hardware choices. Modern processors, storage solutions, and networking equipment can deliver significant performance improvements while consuming less power. Look for Energy Star ratings and power usage effectiveness (PUE) metrics when evaluating options.</p>
 <h2>Optimizing Cooling Systems</h2>
@@ -389,17 +310,13 @@ const BLOG_POSTS: BlogPost[] = [;
     publishedDate: "Mar 15, 2025";
     readTime: "6 min read",;
     category: "Infrastructure",;
-
     tags: ["AI Infrastructure", "Cost Optimization", "Machine Learning", "Computing"];
     featuredImage: "https://images && images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&h=630";
   }
 ];
 
-
 // Categories for filtering;
 const CATEGORIES = [;
-
-=======
 import { useState } from './react';
 import { Link } from './react-router-dom';
 import { Header } from '@/components / Header';
@@ -581,7 +498,6 @@ const BLOG_POSTS: BlogPost[] = [;
 ;
 // Categories for filtering;
 const CATEGORIES = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   "All Categories";
   "Trends";
   "Marketing";
@@ -590,52 +506,6 @@ const CATEGORIES = [;
   "Recruitment";
   "Infrastructure";
 ];
-
-
-    },
-    publishedDate: "Mar 15, 2025",
-    readTime: "6 min read",
-    category: "Infrastructure",
-    tags: ["AI Infrastructure", "Cost Optimization", "Machine Learning", "Computing"],
-    featuredImage: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&h=630"
-  }
-],
-
-
-// Categories for filtering
-const CATEGORIES = [
-  "All Categories",
-  "Trends",
-  "Marketing",
-  "Sustainability",
-  "Ethics",
-  "Recruitment",
-  "Infrastructure"
-
-],
-
-
-
-  return (
-    <>
-      <SEO
-        title="Blog - AI & Tech Insights"
-        description="Stay updated with the latest trends in AI technology, marketplace strategies, and IT services. Expert articles on innovation, sustainability, and digital transformation."
-        keywords="AI blog, tech trends, IT services blog, artificial intelligence news, technology innovation, digital transformation, sustainable IT"
-        canonical="https://app.ziontechgroup.com/blog"
-      />
-      <Header />
-      <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <GradientHeading>AI & Tech Insights</GradientHeading>
-            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
-              Expert perspectives on artificial intelligence, tech innovation, and digital transformation
-            </p>
-          </div>
-
-
-=======
 
           
 import { useState } from "react",;
@@ -866,7 +736,6 @@ export default function Blog() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Featured Post Section - Only show if there are featured posts */}
           {featuredPosts && featuredPosts.length > 0 && (;
             <div className="mb-16">;
@@ -875,7 +744,6 @@ export default function Blog() {;
                 <div className="aspect-video overflow-hidden rounded-lg">;
                   <img
                     src={featuredPosts[0].featuredImage} 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     alt={featuredPosts[0].title}
                     className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
                   />;
@@ -889,29 +757,24 @@ export default function Blog() {;
                   </h3>;
                   <p className="text-zion-slate-light mb-6">;
                     {featuredPosts[0].excerpt}
-
                   </p>;
                   <div className="flex items-center mb-6">;
                     <img
                       src={featuredPosts[0].author && author.avatarUrl} 
                       alt={featuredPosts[0].author && author.name}
-
                       className="w-10 h-10 rounded-full mr-3"
                     />;
                     <div>;
                       <p className="text-white font-medium">{featuredPosts[0].author && author.name}</p>;
                       <p className="text-sm text-zion-slate-light">;
                         {featuredPosts[0].publishedDate} • {featuredPosts[0].readTime}
-
                       </p>;
                     </div>;
                   </div>;
-
                   <Button
                     asChild
                     className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple w-fit">;
                     <Link to={`/blog/${featuredPosts[0].slug}`}>;
-=======
 ;
 export default /**
  * Blog - Function description
@@ -992,14 +855,11 @@ function Blog() {
                     className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple w - fit";
                   >;
                     <Link to={`/blog/${featured_posts[0].slug}`}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       Read Article;
                     </Link>;
                   </Button>;
                 </div>;
               </div>;
-
-
 
           {/* Filters and Search */}
           <div className="bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light">;
@@ -1010,7 +870,6 @@ function Blog() {
                   type="text"
                   placeholder="Search articles..."
                   value={searchQuery}
-
                   onChange={(e) => setSearchQuery(e && e.target.value)}
                   className="pl-10 bg-zion-blue border border-zion-blue-light text-white";
                 />;
@@ -1023,11 +882,9 @@ function Blog() {
                 <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">;
                   {CATEGORIES && CATEGORIES.map((category) => (;
                     <SelectItem key={category} value={category} className="text-white">;
-
                       {category}
                     </SelectItem>;
                   ))}
-
             </div>)}
           {/* Filters and Search */}
           <div className="bg - zion - blue - dark rounded - lg p - 6 mb - 8 border border - zion - blue - light">;
@@ -1073,7 +930,6 @@ function Blog() {
                   <CardContent className="p - 6">;
                     <div className="flex items - center justify - between mb - 3">;
                       <span className="text - xs text - zion - cyan bg - zion - blue px - 3 py - 1 rounded - full">;
-
                         {post.category}
                       </span>;
                       <div className="text - xs text - zion - slate - light">;
@@ -1085,7 +941,6 @@ function Blog() {
                     </h3>;
                     <p className="text - zion - slate - light mb - 4 line - clamp - 3">;
                       {post.excerpt}
-
                 </SelectContent>;
               </Select>;
             </div>;
@@ -1132,11 +987,9 @@ function Blog() {
                   <CardFooter className="p-6 pt-0">;
                     <Button
                       variant="link" 
-
                       className="text-zion-cyan p-0 hover:text-zion-purple"
                       asChild>;
                       <Link to={`/blog/${post && post.slug}`}>;
-=======
                     </p>;
                     <div className="flex items - center">;
                       <img;
@@ -1154,18 +1007,10 @@ function Blog() {
                       as_child;
                     >;
                       <Link to={`/blog/${post.slug}`}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                         Read More →;
                       </Link>;
                     </Button>;
                   </CardFooter>;
-
-
-                  setSearchQuery(""),
-
-
-                  setSelectedCategory("All Categories")
-=======
             </div>;
           ) : (;
             <div className="text-center py-16">;
@@ -1176,18 +1021,7 @@ function Blog() {
                 onClick={() => {;
                   setSearchQuery("");
                   setSelectedCategory("All Categories");
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 }}
-
-=======
-                className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-              >
-                Clear all filters
-              </Button>
-            </div>
-
-
-=======
                     </p>;
                     <div className="flex items-center">;
                       <img;
@@ -1231,15 +1065,18 @@ function Blog() {
 
 
           )}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
+              >;
+                Clear all filters;
+              </Button>;
+            </div>;
+          )}
         </div>;
       </div>;
       <Footer />;
     </>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
                 </Card>))}
             </div>) : (
             <div className="text - center py - 16">;
@@ -1261,4 +1098,3 @@ function Blog() {
       <Footer />;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

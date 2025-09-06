@@ -1,41 +1,23 @@
-
-export type ForumCategory = 
-
-
-  | 'getting-hired'
-  | 'project-help'
-  | 'ai-tools'
-  | 'feedback'
-  | 'announcements';
-=======
 export type ForumCategory =;
   | 'getting - hired';
   | 'project - help';
   | 'ai - tools';
   | 'feedback';
   | 'announcements';
-
-
-
-export interface ForumCategoryInfo {;
-
-
+;
+export interface ForumCategoryInfo {
   id: ForumCategory;
   name: string;
   description: string;
-
   admin_only: boolean,
   icon: string;
-
 }
 export interface ForumPost {
-=======
 }
 
 
 export interface ForumPost {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   title: string;
   content: string;
@@ -49,22 +31,18 @@ export interface ForumPost {;
   updated_at: string;
   upvotes: number;
   downvotes: number;
-
   reply_count: number;
   is_answered?: boolean;
   is_pinned?: boolean;
   is_locked?: boolean,
   is_featured?: boolean;
-
 }
 export interface ForumReply {
-=======
 }
 
 
 export interface ForumReply {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   post_id: string;
   parentReplyId?: string;
@@ -76,23 +54,18 @@ export interface ForumReply {;
   created_at: string;
   updated_at: string;
   upvotes: number;
-
   downvotes: number,
   is_answer?: boolean;
-
 }
 export interface Badge {
-=======
 }
 
 
 export interface Badge {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   name: string;
   description: string;
-
   icon: string,
   color: string;
 }
@@ -100,10 +73,8 @@ export interface UserBadge {
   user_id: string;
   badge_id: string,
   awarded_at: string;
-
 }
 export interface CommunityUser {
-=======
 
 
 export interface UserBadge {;
@@ -116,7 +87,6 @@ export interface UserBadge {;
 
 export interface CommunityUser {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   name: string;
   avatar?: string;
@@ -125,6 +95,6 @@ export interface CommunityUser {;
   post_count: number;
   reply_count: number;
   badges: Badge[];
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  is_verified: boolean,
+  is_moderator: boolean;
+}

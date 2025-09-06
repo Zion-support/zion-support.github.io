@@ -1,33 +1,68 @@
-
-
+import { useState } from 'react';
+import {import { useState } from 'react';
+import { ;
+  DropdownMenu,;
+  DropdownMenuContent,;
+  DropdownMenuItem,;
+  DropdownMenuSeparator,;
+  DropdownMenuTrigger,;
+} from '@/components/ui/dropdown-menu';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import {;
+  Dialog,;
+  DialogContent,;
+  DialogFooter,;
+  DialogHeader,;
+  DialogTitle,;
+} from '@/components/ui/dialog';
+import { Save, ChevronDown, Plus, Loader2 } from 'lucide-react';
+import { Resume } from '@/types/resume';
 import { useResume } from '@/hooks/useResume';
 interface ResumeVersionSelectorProps {;
   currentResume: Resume;
   onResumeChange: (resumeId: string) => void
 
 
-export function ResumeVersionSelector(): any ({;
-  currentResume,;
-  onResumeChange,;
-}: ResumeVersionSelectorProps) {;
-  const { createResume, fetchResume } = useResume();
-  const [saveDialogOpen, setSaveDialogOpen] = useState(false);
-  const [newResumeTitle, setNewResumeTitle] = useState('');
-  const [existingResumes, setExistingResumes] = useState<Resume[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
+import { useState } from 'react';
+import { 
+  DropdownMenu;
+  DropdownMenuContent, 
+  DropdownMenuItem, 
+  DropdownMenuSeparator;
+  DropdownMenuTrigger 
 
-  const handleCreateNewVersion = async () => {;
-    if (newResumeTitle && newResumeTitle.trim()) {;
+} from '@/components/ui/dropdown-menu',
 
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { Save, ChevronDown, Plus, Loader2 } from 'lucide-react'
+import { Resume } from '@/types/resume';
+import { useResume } from '@/hooks/useResume';
+interface ResumeVersionSelectorProps {
+  currentResume: Resume,
+  onResumeChange: (resumeId: string) => void
+}
+
+
+export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeVersionSelectorProps) { const { createResume, fetchResume  } = useResume(),
+  const [ saveDialogOpen, setSaveDialogOpen ] = useState(false),
+  const [ newResumeTitle, setNewResumeTitle ] = useState(''),
+  const [ existingResumes, setExistingResumes ] = useState<Resume[]>([]),
+  const [ isLoading, setIsLoading ] = useState(false),
+
+  
+  const handleCreateNewVersion = async () => {
+    if (newResumeTitle.trim()) {
       setIsLoading(true);
       const resumeId = await createResume({ title: newResumeTitle && newResumeTitle.trim() });
       if (resumeId) {;
         await fetchResume(resumeId);
         onResumeChange(resumeId);
         setSaveDialogOpen(false);
-
-
-=======
+        setNewResumeTitle('');
+      setIsLoading(false);
 import { useState } from 'react';
 import {import { useState } from 'react';
 import {
@@ -75,11 +110,9 @@ if ( {) {
         setSaveDialogOpen (false);
         setNewResumeTitle ('');
       setIsLoading (false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   }
 
-=======
 
 
 
@@ -87,10 +120,7 @@ if ( {) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
-
         setNewResumeTitle('')
       }
       setIsLoading(false)
@@ -108,11 +138,9 @@ if ( {) {
             <ChevronDown className="h-4 w-4" />
           </Button>
         </DropdownMenuTrigger>
-
         <DropdownMenuContent align="end">
           {existingResumes.map((resume) => (
             <DropdownMenuItem
-=======
     <div className='flex items - center gap - 2'>;
       <span className='text - sm text - muted - foreground'>Resume:</span>;
       <DropdownMenu>;
@@ -131,19 +159,15 @@ if ( {) {
         <DropdownMenuContent align="end">;
           {existing_resumes.map ((resume) => (
             <DropdownMenuItem;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               key={resume.id}
               on_click={() => onResumeChange (resume.id!)}
               className="cursor - pointer";
             >;
-=======
 
 
               className="cursor-pointer"
             >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {resume.basic_info.title}
-
     <div className='flex items-center gap-2'>;
       <span className='text-sm text-muted-foreground'>Resume:</span>;
       <DropdownMenu>;
@@ -168,19 +192,9 @@ if ( {) {
             >;
               {resume && resume.basic_info.title}
             </DropdownMenuItem>;
-
           ))}
-
           <DropdownMenuSeparator />
           <DropdownMenuItem 
-
-=======
-
-          <DropdownMenuSeparator />;
-          <DropdownMenuItem;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             onClick={() => setSaveDialogOpen(true)}
             className="cursor-pointer"
           >
@@ -189,19 +203,6 @@ if ( {) {
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
-
-            className='cursor-pointer'          >;
-            <Plus className='h-4 w-4 mr-2' />            Save as new version;
-          </DropdownMenuItem>;
-        </DropdownMenuContent>;
-      </DropdownMenu>;
-
-            <Plus className="h-4 w-4 mr-2" />;
-            onClick={() => setSaveDialogOpen(true)}
-            className="cursor-pointer";
-          >;
-            <Plus className="h-4 w-4 mr-2" />;
-=======
             </DropdownMenuItem>))}
           <DropdownMenuSeparator />;
           <DropdownMenuItem;
@@ -216,16 +217,22 @@ if ( {) {
             className="cursor - pointer";
           >;
             <Plus className="h - 4 w - 4 mr - 2" />;
-
             Save as new version;
           </DropdownMenuItem>;
         </DropdownMenuContent>;
       </DropdownMenu>;
-
-
-
-
-=======
+            <Input
+              value={newResumeTitle}
+              onChange={e => setNewResumeTitle(e && e.target.value)}
+              placeholder='Enter resume title (e && e.g. DevOps Resume)';
+            />;
+          </div>;
+          <DialogFooter>;
+            <Button variant='outline' onClick={() => setSaveDialogOpen(false)}>;
+              Cancel;
+            </Button>;
+            <Button
+              onClick={handleCreateNewVersion}
       
       <Dialog open={saveDialogOpen} onOpenChange={setSaveDialogOpen}>
         <DialogContent className="sm:max-w-md">
@@ -236,11 +243,6 @@ if ( {) {
             <Input
               value={newResumeTitle}
               onChange={(e) => setNewResumeTitle(e.target.value)}
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               placeholder="Enter resume title (e.g. DevOps Resume)"
             />
           </div>
@@ -259,7 +261,6 @@ if ( {) {
       </Dialog>
     </div>
   )
-=======
               disabled={!newResumeTitle && newResumeTitle.trim() || isLoading}
               className='gap-2'
               value = {newResumeTitle,}
@@ -281,7 +282,6 @@ if ( {) {
               {isLoading && <Loader2 className='h-4 w-4 animate-spin' />}
               <Save className='h-4 w-4' />              Save              {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}
               <Save className="h-4 w-4" />;
-=======
       <Dialog open={saveDialogOpen} onOpenChange={setSaveDialogOpen}>;
         <DialogContent className='sm:max - w-md'>;
           <DialogHeader>;
@@ -322,25 +322,15 @@ if ( {) {
               {is_loading && <Loader2 className='h - 4 w - 4 animate - spin' />}
               <Save className='h - 4 w - 4' />              Save              {is_loading && <Loader2 className="h - 4 w - 4 animate - spin" />}
               <Save className="h - 4 w - 4" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               Save;
             </Button>;
           </DialogFooter>;
         </DialogContent>;
       </Dialog>;
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
 }
-
-=======
-
-;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
+}
     </div>);
 }
 > {
@@ -349,4 +339,3 @@ if ( {) {
 }<DropdownMenuSeparator /> <DropdownMenuItem > <Plus className="h - 4 w - 4 mr - 2" /> Save as new version </DropdownMenuItem> </DropdownMenuContent> </DropdownMenu> <DialogHeader> <DialogTitle > Save as new resume version</DialogTitle> </DialogHeader> <div className="py - 4" > <Input /> </div> <DialogFooter> <Button > Cancel </Button> <Button Save </Button> </DialogFooter> </DialogContent> </Dialog> </div>);
 }";
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,25 +1,20 @@
 
 
-=======
-
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { readState, writeState } from "../../../utils/sync/storage",;
 import { InstanceConfig, Peer, SyncScope } from "../../../utils/sync/types",;
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
-=======
   if (req.method === "GET") {
 
     return res.status(200).json({ config: state.config })
   }
 
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
@@ -46,12 +41,12 @@ import { readState, writeState } from "../../../utils/sync/storage",
 import { InstanceConfig, Peer, SyncScope } from "../../../utils/sync/types",
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const state = readState(),
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+
   if (req.method === "GET") {
     return res.status(200).json({ config: state.config })
   }
 
-=======
 }
   } catch (error) {
     console.error("Error:", error);
@@ -76,7 +71,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
     writeState(state),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     return res.status(200).json({ config: state.config })
     } catch (error) {
     console.error("Error:", error);
@@ -85,16 +79,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
-
-  return res.status(405).json({ error: "Method not allowed" });
-};
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
+  return res.status(405).json({ error: "Method not allowed" })
+}
 import type { NextApiRequest, NextApiResponse } from './next';,
 import { read_state, write_state  } from '../../../utils / sync / storage';,
 import { InstanceConfig, Peer, SyncScope  } from '../../../utils / sync / types';,
@@ -151,22 +138,3 @@ if (state.config.instance_id = instance_id, ) {
   return res.status (405).json ({ error: "Method not allowed" });
 }
 ;
-
-  return res.status(405).json({ error: "Method not allowed" });
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-
-}
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

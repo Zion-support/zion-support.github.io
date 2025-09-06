@@ -2,7 +2,6 @@
 export const supabase = {
   // Add supabase functionality here;
   auth: {
-
     getUser: () => Promise<any>;
     signIn: (credentials: any) => Promise<any>;
     signOut: () => Promise<any>;
@@ -52,8 +51,6 @@ const supabaseConfig: SupabaseConfig = {
 };
 
 export const supabase = createSupabaseClient(supabaseConfig);
-
-=======
     sign_in: (email: string, password: string) => null,
     sign_out: () => null,
     get_user: () => null;
@@ -71,10 +68,7 @@ export const supabase = createSupabaseClient(supabaseConfig);
     });
   });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   });
 };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

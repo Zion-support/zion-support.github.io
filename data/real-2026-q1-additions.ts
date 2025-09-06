@@ -1,8 +1,65 @@
 
-
+import { EnhancedRealMicroSaasService } from './enhanced - real - micro - saas - services';
+;
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup && ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
   {
-
-=======
+    id: 'affiliate-analytics-starter'
+    name: 'Affiliate Analytics Starter'
+    tagline: 'Attribution, fraud detection and automated payouts for SMBs'
+    price: '$129'
+    period: '/month'
+    description:
+      'Lightweight affiliate tracking with UTM/coupon support, heuristic fraud signals, and one-click Stripe/PayPal payouts.'
+    features: [
+  website: 'https://ziontechgroup.com',
+}
+;
+export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [;
+  {
+    id: 'affiliate - analytics - starter',
+    name: 'Affiliate Analytics Starter',
+    tagline: 'Attribution, fraud detection and automated payouts for SMBs',
+    price: '$129',
+    period: '/month',
+    description:;
+      'Lightweight affiliate tracking with UTM / coupon support, heuristic fraud signals, and one - click Stripe / PayPal payouts.',
+    features: [;
+      'UTM and coupon attribution',
+      'Fraud heuristics',
+      'Stripe / PayPal payouts',
+      'Partner portal and reporting',
+    ],
+    popular: false,
+    icon: '🤝',
+    color: 'from - emerald - 600 to - teal - 700',
+    text_color: 'text - emerald - 300',
+    link: 'https://ziontechgroup.com / services / affiliate - analytics - starter',
+    category: 'Developer Tools',
+    real_service: true,
+    market_position: 'Focused alternative to heavy affiliate platforms',
+    target_audience: 'SaaS and e_commerce',
+    trial_days: 14,
+    setup_time: '1 day',
+    technology: ['Next.js, Stripe, Webhooks'],
+    integrations: ['Stripe', 'PayPal', 'Google Analytics'],
+    use_cases: ['Partner growth', 'Automated payouts'],
+    roi: 'Grow partner revenue by 10–25%',
+    competitors: ['Impact', 'PartnerStack'],
+    market_size: '$5B+',
+    growth_rate: '12% YoY',
+    variant: 'neural - quantum',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: 'Event ingestion, attribution, payout jobs',
+    launch_date: '2026 - 01 - 10',
+    customers: 12,
+    rating: 4 && 4.6,
+    reviews: 7,
+  },
+  {
     id: 'customer - feedback - intelligence',
     name: 'Customer Feedback Intelligence',
     tagline: 'Summarize NPS / CSAT and reviews into prioritized insights',
@@ -11,7 +68,6 @@
     description:;
       'Aggregate surveys, tickets and reviews, cluster themes with LLMs, and generate prioritized roadmaps with impact scores.',
     features: [;
-
       'Multichannel ingestion',
       'LLM clustering and themes',
       'Impact scoring',
@@ -19,7 +75,6 @@
     ],
     popular: true,
     icon: '💬',
-
     color: 'from - cyan - 600 to - blue - 700',
     text_color: 'text - cyan - 300',
     link: 'https://ziontechgroup.com / services / customer - feedback - intelligence',
@@ -30,7 +85,6 @@
     trial_days: 14,
     setup_time: '1 hour',
     technology: ['Embeddings, Vector DB, Next.js'],
-
     integrations: ['Zendesk', 'Intercom', 'G2', 'Capterra'],
     use_cases: ['Prioritize roadmap', 'Reduce churn'],
     roi: 'Ship high - impact features faster',
@@ -46,10 +100,7 @@
     rating: 4 && 4.7,
     reviews: 5,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
-
-=======
     id: 'api - security - posture - monitor',
     name: 'API Security Posture Monitor',
     tagline: 'Detect OWASP API risks and auth gaps with CI annotations',
@@ -58,7 +109,6 @@
     description:;
       'Continuously scan OpenAPI specs and staging endpoints for auth gaps, rate - limits, and common vulnerabilities with pull request annotations.',
     features: [;
-
       'OpenAPI scanning',
       'Auth / rate limit tests',
       'OWASP API checks',
@@ -66,11 +116,9 @@
     ],
     popular: true,
     icon: '🛡️',
-
     color: 'from - rose - 600 to - pink - 700',
     text_color: 'text - rose - 300',
     link: 'https://ziontechgroup.com / services / api - security - posture - monitor',
-
     category: 'Quality & Monitoring',
     real_service: true,
     market_position: 'Developer - first API security posture',
@@ -93,11 +141,7 @@
     rating: 4 && 4.5,
     reviews: 6,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
-
-      'Flexible cron/rate',
-=======
     id: 'edge - cron - orchestrator',
     name: 'Edge Cron Orchestrator',
     tagline: 'Reliable schedules with retries, jitter and DLQs',
@@ -107,18 +151,15 @@
       'Define schedules across providers with idempotency, exponential backoff, and run history with alerting.',
     features: [;
       'Flexible cron / rate',
-
       'Idempotency and retries',
       'Run history',
       'Alerting and webhooks',
     ],
     popular: false,
     icon: '⏰',
-
     color: 'from - amber - 500 to - orange - 600',
     text_color: 'text - amber - 300',
     link: 'https://ziontechgroup.com / services / edge - cron - orchestrator',
-
     category: 'Developer Tools',
     real_service: true,
     market_position: 'Unified schedules across clouds',
@@ -141,10 +182,7 @@
     rating: 4 && 4.5,
     reviews: 4,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
-
-=======
     id: 'email - parsing - routing - api',
     name: 'Email Parsing & Routing API',
     tagline: 'Inbound email to structured events with attachments',
@@ -153,7 +191,6 @@
     description:;
       'Parse inbound email, normalize signatures, extract attachments, and deliver to your webhooks with retries and dead - letter queues.',
     features: [;
-
       'Signature stripping',
       'Attachment handling',
       'Webhook retries / DLQ',
@@ -161,11 +198,9 @@
     ],
     popular: false,
     icon: '📨',
-
     color: 'from - indigo - 600 to - blue - 700',
     text_color: 'text - indigo - 300',
     link: 'https://ziontechgroup.com / services / email - parsing - routing - api',
-
     category: 'Developer Tools',
     real_service: true,
     market_position: 'Developer - friendly email ingestion',
@@ -177,7 +212,6 @@
     use_cases: ['Ticket intake', 'CRM capture'],
     roi: 'Automate manual email triage',
     competitors: ['Mailparser', 'Integromat'],
-
     market_size: '$0.8B',
     growth_rate: '10% CAGR',
     variant: 'neural - quantum',
@@ -185,16 +219,11 @@
     real_implementation: true,
     implementation_details: 'Inbound parsers, queueing, UI',
     launch_date: '2026 - 01 - 20',
-
     customers: 8,
     rating: 4 && 4.6,
     reviews: 5,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
-
-      'Brand/tone controls',
-=======
     id: 'ai - marketing - content - studio',
     name: 'AI Marketing Content Studio',
     tagline: 'Campaign - ready blogs, emails and ads with brand guardrails',
@@ -204,18 +233,15 @@
       'Generate on - brand content with templates, tone control, compliance checks, and multi - channel export.',
     features: [;
       'Brand / tone controls',
-
       'Templates and briefs',
       'Compliance checks',
       'Multi - channel export',
     ],
     popular: true,
     icon: '📝',
-
     color: 'from - fuchsia - 600 to - pink - 700',
     text_color: 'text - fuchsia - 300',
     link: 'https://ziontechgroup.com / services / ai - marketing - content - studio',
-
     category: 'AI & Data',
     real_service: true,
     market_position: 'On - brand AI content for teams',
@@ -238,11 +264,7 @@
     rating: 4 && 4.6,
     reviews: 9,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
-
-      'CSP/HSTS checks',
-=======
     id: 'security - headers - scanner',
     name: 'Security Headers Scanner',
     tagline: 'Continuous CSP / HSTS / cookie flag auditing with diffs',
@@ -252,18 +274,15 @@
       'Audit security headers across environments and get pull request annotations, weekly reports and diffs.',
     features: [;
       'CSP / HSTS checks',
-
       'Cookie flags',
       'PR annotations',
       'Weekly reports',
     ],
     popular: false,
     icon: '🔐',
-
     color: 'from - sky - 600 to - blue - 700',
     text_color: 'text - sky - 300',
     link: 'https://ziontechgroup.com / services / security - headers - scanner',
-
     category: 'Quality & Monitoring',
     real_service: true,
     market_position: 'Simple posture checks for web apps',
@@ -275,10 +294,8 @@
     use_cases: ['Header hardening', 'Compliance reports'],
     roi: 'Reduce risk and review toil',
     competitors: ['Mozilla Observatory'],
-
     market_size: '$0.5B',
     growth_rate: '8% CAGR',
-
     variant: 'holographic',
     contact_info: contact,
     real_implementation: true,
@@ -288,10 +305,7 @@
     rating: 4 && 4.5,
     reviews: 10,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
-
-=======
     id: 'ml - feature - store - starter',
     name: 'ML Feature Store Starter',
     tagline: 'Versioned features, validation and online serving',
@@ -300,7 +314,6 @@
     description:;
       'Ship ML features faster with versioning, validation rules, lineage, and low - latency serving APIs.',
     features: [;
-
       'Feature versioning',
       'Validation rules',
       'Lineage tracking',
@@ -308,11 +321,9 @@
     ],
     popular: false,
     icon: '📦',
-
     color: 'from - emerald - 600 to - teal - 700',
     text_color: 'text - emerald - 300',
     link: 'https://ziontechgroup.com / services / ml - feature - store - starter',
-
     category: 'AI & Data',
     real_service: true,
     market_position: 'Lean feature store for teams',
@@ -335,10 +346,7 @@
     rating: 4 && 4.5,
     reviews: 3,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
-
-=======
     id: 'slo - burn - rate - coach',
     name: 'SLO Burn Rate Coach',
     tagline: 'Compute SLOs and coach on burn - rate risks',
@@ -347,7 +355,6 @@
     description:;
       'Define SLOs, compute error budgets and get proactive coaching with burn - rate alerts tied to runbooks.',
     features: [;
-
       'SLO editor',
       'Burn - rate alerts',
       'Runbook hints',
@@ -355,11 +362,9 @@
     ],
     popular: false,
     icon: '📈',
-
     color: 'from - lime - 500 to - emerald - 600',
     text_color: 'text - lime - 300',
     link: 'https://ziontechgroup.com / services / slo - burn - rate - coach',
-
     category: 'Observability',
     real_service: true,
     market_position: 'SLOs without the complexity',
@@ -371,7 +376,6 @@
     use_cases: ['Error budgets', 'Coaching'],
     roi: 'Fewer incidents',
     competitors: ['Nobl9'],
-
     market_size: '$0.8B',
     growth_rate: '14% CAGR',
     variant: 'holographic - matrix',
@@ -379,15 +383,11 @@
     real_implementation: true,
     implementation_details: 'SLO calc, alerting, UI',
     launch_date: '2026 - 02 - 01',
-
     customers: 10,
     rating: 4 && 4.5,
     reviews: 6,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
-
-=======
     id: 'browser - performance - optimizer',
     name: 'Browser Performance Optimizer',
     tagline: 'Budget - driven CWV with hints and PR annotations',
@@ -396,7 +396,6 @@
     description:;
       'Improve Core Web Vitals with RUM / synthetic insights, performance budgets, and PR annotations for bundle changes.',
     features: [;
-
       'RUM + synthetic',
       'Budgets and alerts',
       'Bundle diff and PR notes',
@@ -404,11 +403,9 @@
     ],
     popular: false,
     icon: '⚡',
-
     color: 'from - cyan - 600 to - purple - 700',
     text_color: 'text - cyan - 300',
     link: 'https://ziontechgroup.com / services / browser - performance - optimizer',
-
     category: 'Quality & Monitoring',
     real_service: true,
     market_position: 'Developer - first CWV improvements',
@@ -420,7 +417,6 @@
     use_cases: ['CWV, bundle size'],
     roi: '+20 LCP, fewer regressions',
     competitors: ['SpeedCurve', 'Calibre'],
-
     market_size: '$0.5B',
     growth_rate: '12% CAGR',
     variant: 'neural - quantum - cyberpunk',
@@ -428,15 +424,11 @@
     real_implementation: true,
     implementation_details: 'RUM SDK, CI checks, UI',
     launch_date: '2026 - 02 - 05',
-
     customers: 5,
     rating: 4 && 4.5,
     reviews: 3,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
-
-=======
     id: 'cloud - cost - governance - suite',
     name: 'Cloud Cost Governance Suite',
     tagline: 'Budgets, owners, and policy guardrails across clouds',
@@ -445,7 +437,6 @@
     description:;
       'Enforce budgets with owners, detect anomalies and apply policy guardrails with IaC exports for approvals.',
     features: [;
-
       'Budgets and owners',
       'Anomaly detection',
       'Policy guardrails',
@@ -453,11 +444,9 @@
     ],
     popular: true,
     icon: '💸',
-
     color: 'from - amber - 600 to - orange - 700',
     text_color: 'text - amber - 300',
     link: 'https://ziontechgroup.com / services / cloud - cost - governance - suite',
-
     category: 'Cloud & FinOps',
     real_service: true,
     market_position: 'Governance overlay for FinOps',
@@ -480,10 +469,7 @@
     rating: 4 && 4.6,
     reviews: 4,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
-
-=======
     id: 'api - changelog - sdk - publisher',
     name: 'API Changelog & SDK Publisher',
     tagline: 'Generate docs, changelogs and SDKs from schemas',
@@ -492,7 +478,6 @@
     description:;
       'Turn OpenAPI / GraphQL schemas into versioned docs, changelogs and typed SDKs with a searchable portal.',
     features: [;
-
       'Docs from schemas',
       'SDK generation',
       'Changelogs',
@@ -500,11 +485,9 @@
     ],
     popular: false,
     icon: '📘',
-
     color: 'from - cyan - 600 to - blue - 700',
     text_color: 'text - cyan - 300',
     link: 'https://ziontechgroup.com / services / api - changelog - sdk - publisher',
-
     category: 'Developer Tools',
     real_service: true,
     market_position: 'Ship API portals faster',
@@ -516,7 +499,6 @@
     use_cases: ['Dev portals', 'SDKs'],
     roi: 'Docs / SDKs 5× faster',
     competitors: ['ReadMe', 'Redocly'],
-
     market_size: '$1.5B',
     growth_rate: '18% CAGR',
     variant: 'neural - quantum',
@@ -524,15 +506,32 @@
     real_implementation: true,
     implementation_details: 'Schema importers, generators, UI',
     launch_date: '2026 - 02 - 12',
-
     customers: 9,
     rating: 4 && 4.7,
     reviews: 6,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ];	{
+const contact = {
+	mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+	address: '364 E Main St STE 1008 Middletown DE 19709',
+	website: 'https://ziontechgroup.com'
+};
 
-
+export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
+	{
+		id: 'affiliate-analytics-starter', name: 'Affiliate Analytics Starter',
+		tagline: 'Attribution, fraud detection and automated payouts for SMBs',
+    price: '$129', period: '/month',
+		description: 'Lightweight affiliate tracking with UTM/coupon support, heuristic fraud signals, and one-click Stripe/PayPal payouts.',
+    features: ['UTM and coupon attributionFraud heuristicsStripe/PayPal payoutsPartner portal and reporting'], popular: false,
+		icon: '🤝', color: 'from-emerald-600 to-teal-700',
+		textColor: 'text-emerald-300', link: 'https://ziontechgroup.com/services/affiliate-analytics-starter',
+		category: 'Developer Tools', realService: true,
+		marketPosition: 'Focused alternative to heavy affiliate platforms', targetAudience: 'SaaS and eCommerce',
+		trialDays: 14, setupTime: '1 day',
+		technology: ['Next.js, Stripe, Webhooks'];
+		setupTime: '1 day',
+		technology: ['Next && Next.js, Stripe, Webhooks'];
 		integrations: ['StripePayPalGoogle Analytics'];
 		useCases: ['Partner growthAutomated payouts'];
 		roi: 'Grow partner revenue by 10–25%';
@@ -541,15 +540,11 @@
 		growthRate: '12% YoY';
 		variant: 'neural-quantum';
 		contactInfo: contact;
-
 		realImplementation: true
-
 		implementationDetails: 'Event ingestion, attribution, payout jobs';
 		launchDate: '2026-01-10';
 		customers: 12;
-
 		rating: 4 && 4.6,
-
 		reviews: 7
 	}
 	{
@@ -570,10 +565,8 @@
 		marketPosition: 'Actionable product feedback without heavy BI';
 		targetAudience: 'Product and CX teams';
 		trialDays: 14;
-
 		setupTime: '1 hour',
 		technology: ['Embeddings, Vector DB, Next && Next.js'];
-
 		integrations: ['ZendeskIntercomG2Capterra'];
 		useCases: ['Prioritize roadmapReduce churn'];
 		roi: 'Ship high-impact features faster';
@@ -586,9 +579,7 @@
 		implementationDetails: 'Connectors, clustering, scoring models';
 		launchDate: '2026-01-12';
 		customers: 9;
-
 		rating: 4 && 4.7,
-
 		reviews: 5
 	}
 	{
@@ -623,9 +614,7 @@
 		implementationDetails: 'Spec analyzers, runners, annotations';
 		launchDate: '2026-01-14';
 		customers: 11;
-
 		rating: 4 && 4.5,
-
 		reviews: 6
 	}
 	{
@@ -660,9 +649,7 @@
 		implementationDetails: 'Scheduler API, dashboard, webhooks';
 		launchDate: '2026-01-18';
 		customers: 7;
-
 		rating: 4 && 4.5,
-
 		reviews: 4
 	}
 	{
@@ -697,9 +684,7 @@
 		implementationDetails: 'Inbound parsers, queueing, UI';
 		launchDate: '2026-01-20';
 		customers: 8;
-
 		rating: 4 && 4.6,
-
 		reviews: 5
 	}
 	{
@@ -734,9 +719,7 @@
 		implementationDetails: 'Template engine, tone guardrails';
 		launchDate: '2026-01-22';
 		customers: 15;
-
 		rating: 4 && 4.6,
-
 		reviews: 9
 	}
 	{
@@ -771,9 +754,7 @@
 		implementationDetails: 'Scanners, CI annotations, reports';
 		launchDate: '2026-01-25';
 		customers: 20;
-
 		rating: 4 && 4.5,
-
 		reviews: 10
 	}
 	{
@@ -808,9 +789,7 @@
 		implementationDetails: 'Schemas, validators, API';
 		launchDate: '2026-01-28';
 		customers: 6;
-
 		rating: 4 && 4.5,
-
 		reviews: 3
 	}
 	{
@@ -845,9 +824,7 @@
 		implementationDetails: 'SLO calc, alerting, UI';
 		launchDate: '2026-02-01';
 		customers: 10;
-
 		rating: 4 && 4.5,
-
 		reviews: 6
 	}
 	{
@@ -882,9 +859,7 @@
 		implementationDetails: 'RUM SDK, CI checks, UI';
 		launchDate: '2026-02-05';
 		customers: 5;
-
 		rating: 4 && 4.5,
-
 		reviews: 3
 	}
 	{
@@ -919,9 +894,7 @@
 		implementationDetails: 'Connectors, policies, exporters';
 		launchDate: '2026-02-08';
 		customers: 6;
-
 		rating: 4 && 4.6,
-
 		reviews: 4
 	}
 	{
@@ -956,15 +929,10 @@
 		implementationDetails: 'Schema importers, generators, UI';
 		launchDate: '2026-02-12';
 		customers: 9;
-
 		rating: 4 && 4.7,
-
 		reviews: 6
 	}
 ];
-
-
-=======
   id: 'affiliate - analytics - starter';
   name: 'Affiliate Analytics Starter',
   tagline: 'Attribution, fraud detection and automated payouts for SMBs';
@@ -1386,7 +1354,4 @@
 }
 ];
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,28 +1,191 @@
+export type ProjectParticipantRole = 'client' | 'talent';
+// Milestone type definitions
+export interface Milestone {
+  id: string;
+  projectId: string;
+  title: string;
+  description?: string;
+  amount: number;
+  dueDate?: string;
+  status: 'PENDING' | 'IN_PROGRESS' | 'COMPLETED' | 'OVERDUE' | 'SUBMITTED' | 'APPROVED' | 'PAID';
+  createdAt: string;
+  updatedAt: string;
+  submittedAt?: string;
+  approvedAt?: string;
+  paidAt?: string;
+  notes?: string;
+  attachments?: Array<{
+    id: string;
+    name: string;
+    url: string;
+    uploadedAt: string;
+  }>;
+}
 
+export interface MilestoneUpdate {
+  title?: string;
+  description?: string;
+  amount?: number;
+  dueDate?: string;
+  status?: Milestone['status'];
+  notes?: string;
+}
 
+export interface MilestoneSubmission {
+  milestoneId: string;
+  notes?: string;
+  attachments?: Array<{
+    name: string;
+    url: string;
+  }>;
+}
+
+export interface MilestoneApproval {
+  milestoneId: string;
+  approved: boolean;
+  notes?: string;
+}
+
+export interface MilestonePayment {
+  milestoneId: string;
+  amount: number;
+  paymentMethod: string;
+  transactionId?: string;
+  notes?: string;
+}
+
+export interface MilestoneStats {
+  total: number;
+  pending: number;
+  inProgress: number;
+  completed: number;
+  overdue: number;
+  submitted: number;
+  approved: number;
+  paid: number;
+  totalAmount: number;
+  completedAmount: number;
+  pendingAmount: number;
+}
+
+export interface MilestoneTimeline {
+  id: string;
+  milestoneId: string;
+  action: 'created' | 'updated' | 'submitted' | 'approved' | 'rejected' | 'paid';
+  timestamp: string;
+  userId: string;
+  notes?: string;
+}
+
+export interface MilestoneTemplate {
+  id: string;
+  name: string;
+  description?: string;
+  milestones: Array<{
+    title: string;
+    description?: string;
+    amount: number;
+    dueDate?: string;
+  }>;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface MilestoneFilter {
+  status?: Milestone['status'];
+  projectId?: string;
+  dueDateFrom?: string;
+  dueDateTo?: string;
+  amountMin?: number;
+  amountMax?: number;
+}
+
+export interface MilestoneSort {
+  field: 'title' | 'amount' | 'dueDate' | 'status' | 'createdAt' | 'updatedAt';
+  direction: 'asc' | 'desc';
+}
+
+export interface MilestoneSearch {
+  query: string;
+  fields?: Array<'title' | 'description' | 'notes'>;
+}
+
+export interface MilestoneBulkUpdate {
+  milestoneIds: string[];
+  updates: MilestoneUpdate;
+}
+
+export interface MilestoneBulkAction {
+  milestoneIds: string[];
+  action: 'approve' | 'reject' | 'pay' | 'delete';
+  notes?: string;
+}
+
+export interface MilestoneExport {
+  format: 'csv' | 'json' | 'pdf';
+  filters?: MilestoneFilter;
+  sort?: MilestoneSort;
+  includeTimeline?: boolean;
+}
+
+export interface MilestoneReport {
+  projectId: string;
+  period: {
+    start: string;
+    end: string;
+  };
+  stats: MilestoneStats;
+  milestones: Milestone[];
+  timeline: MilestoneTimeline[];
+}
+
+export interface MilestoneNotification {
+  id: string;
+  milestoneId: string;
+  userId: string;
+  type: 'due_soon' | 'overdue' | 'submitted' | 'approved' | 'rejected' | 'paid';
+  message: string;
+  read: boolean;
+  createdAt: string;
+}
+
+export interface MilestoneComment {
+  id: string;
+  milestoneId: string;
+  userId: string;
+  content: string;
+  createdAt: string;
+  updatedAt: string;
+  parentId?: string;
+  replies?: MilestoneComment[];
+}
+
+export interface MilestoneFile {
+  id: string;
+  milestoneId: string;
+  name: string;
+  url: string;
+  type: string;
+  size: number;
+  uploadedAt: string;
+}
+
+export interface Milestone {
+  id: string;
+}
+;
+export type ProjectParticipants = {
   clientUserId: string;
   talentUserId: string;
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export type Project = {  id: string;
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
   title: string;
   description?: string;
   due_date: string;
   amount_usd: number;
   status: 'pending' | 'completed' | 'cancelled';
   attachments?: MilestoneAttachment[];
-
-  updatedAt: string
-
-}
-export function isMilestoneStatus(value: string): value is MilestoneStatus {
-  return (
-
-  );export interface MilestoneAttachment {
-
-=======
 
     value === 'Pending' ||
     value === 'In Progress' ||
@@ -31,57 +194,58 @@ export function isMilestoneStatus(value: string): value is MilestoneStatus {
     value === 'Paid';
   );export interface MilestoneAttachment {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  updatedAt: string
+}
+export function isMilestoneStatus(value: string): value is MilestoneStatus {
+  return (
+    value === 'Pending' |
+    value === 'In Progress' |
+    value === 'Submitted' |
+    value === 'Approved' |
+    value === 'Paid'
+  created_at: string;
+  updated_at: string,
+}
+export function isMilestoneStatus (value: string): value is MilestoneStatus {
+  return (
+    value === 'Pending' ||;
+    value === 'In Progress' ||;
+    value === 'Submitted' ||;
+    value === 'Approved' ||;
+    value === 'Paid');export interface MilestoneAttachment {
   id: string;
   name: string;
   url: string;
   type: string;
   size: number;
-
   uploaded_at: string,
-
 }
 export interface CreateMilestoneRequest {
-=======
   uploadedAt: string
 }
 
 
 export interface CreateMilestoneRequest {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   title: string;
   description?: string;
-
   attachments?: MilestoneAttachment[]
-
 }
-
   due_date: string;
   amount_usd: number;
   attachments?: MilestoneAttachment[],
 }
-
 export interface UpdateMilestoneRequest {
-=======
 
 
 export interface UpdateMilestoneRequest {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   title?: string;
   description?: string;
   due_date?: string;
   amount_usd?: number;
   status?: 'pending' | 'completed' | 'cancelled';
   attachments?: MilestoneAttachment[];
-
-=======
-
-
-
-
-=======
 
 export function isOverdue(milestone: Milestone): boolean {
   if (!milestone.dueDate || milestone.status === 'COMPLETED' || milestone.status === 'PAID') {
@@ -207,8 +371,4 @@ export function createMilestoneFile(
     uploadedAt: new Date().toISOString()
   };
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

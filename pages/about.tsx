@@ -1,21 +1,36 @@
 
-
-import React from "react";
-import Layout from "../components/Layout";
-
-=======
-import React from 'react';
-
-=======
-
-
-=======
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Brain, Zap, Shield, Users, Target, Globe, Heart, CheckCircle } from 'lucide-react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import { Brain, Zap, Shield, Users, Target, Globe, Heart, CheckCircle } from 'lucide-react';
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from "react";
+import Layout from "../components/Layout";
 const AboutPage: React.FC = () => {
   const values = [
     {
@@ -98,7 +113,6 @@ const AboutPage: React.FC = () => {
 import SmartHeader from '../components/SmartHeader';
 import SmartFooter from '../components/SmartFooter';
 
-=======
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -176,15 +190,11 @@ export default function AboutPage() {
     { name: 'Space Technology', icon: Rocket, description: 'AI-powered space exploration solutions', color: 'from-indigo-500 to-purple-500' },
 
 
-
-=======
-
->>>>>>> origin/automation-improvements-final
-
-=======
+  const team = [
+    {
 
 
-=======
+
     { name: 'Biotechnology', icon: ZapIcon, description: 'Neural interfaces and biomedical innovations', color: 'from-pink-500 to-rose-500'   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -317,26 +327,31 @@ export default function AboutPage() {
   )
 },
 export default AboutPage,
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import React from "react";
 import Layout from "../components/Layout";
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 export default function About() {
-=======
 export default function About() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     <Layout
       title="About Us - Zion Tech Group"
 
 
+    <Layout
+      title="About Us - Zion Tech Group"
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">About Zion Tech Group</h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Leading technology solutions provider specializing in AI, cybersecurity, and digital transformation.
+            </p>
+          </div>
+          <div className="text-center">
+            <p className="text-gray-600">About page is under construction.</p>
+          </div>
+        </div>
+      </div>
+    </Layout>
       description="Learn about Zion Tech Group, our mission, team, and commitment to delivering cutting-edge technology solutions.">;
       <div className="min-h-screen bg-gray-50 py-20">;
         <div className="container mx-auto px-4">;
@@ -355,187 +370,8 @@ export default function About() {;
         </div>;
       </div>;
     </Layout>;
-
-
   );
 }
-
-=======
-
-
-=======
-    <>
-      <Head>
-        <title>About Us - Zion Tech Group</title>
-        <meta name="description" content="Learn about Zion Tech Group's mission, values, and team of experts delivering cutting-edge technology solutions." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
-
-      <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */}
-        <section className="relative pt-20 pb-16 bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="text-4xl md:text-6xl font-bold text-white mb-6"
-              >
-                About Zion Tech Group
-              </motion.h1>
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 }}
-                className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto"
-              >
-                We're a team of passionate technologists dedicated to transforming businesses through innovative software solutions and cutting-edge technology.
-              </motion.p>
-            </div>
-          </div>
-        </section>
-
-        {/* Mission Section */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
-                Our Mission
-              </h2>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                To empower businesses with technology solutions that drive growth, efficiency, and innovation. 
-                We believe in the transformative power of technology and are committed to delivering solutions 
-                that not only meet today's needs but anticipate tomorrow's challenges.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Values Section */}
-        <section className="py-16 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
-                Our Values
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {values.map((value, index) => (
-                  <motion.div
-                    key={value.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.1 }}
-                    className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow"
-                  >
-                    <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${value.color} flex items-center justify-center mb-4`}>
-                      <value.icon className="w-6 h-6 text-white" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                      {value.title}
-                    </h3>
-                    <p className="text-gray-600">
-                      {value.description}
-                    </p>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Stats Section */}
-        <section className="py-16 bg-blue-900">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-12">
-                By the Numbers
-              </h2>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                {stats.map((stat, index) => (
-                  <motion.div
-                    key={stat.label}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: index * 0.1 }}
-                    className="text-center"
-                  >
-                    <div className="text-4xl md:text-5xl font-bold text-white mb-2">
-                      {stat.number}
-                    </div>
-                    <div className="text-blue-200">
-                      {stat.label}
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Team Section */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
-                Meet Our Team
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {team.map((member, index) => (
-                  <motion.div
-                    key={member.name}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.1 }}
-                    className="text-center"
-                  >
-                    <div className="w-32 h-32 mx-auto mb-4 bg-gray-200 rounded-full flex items-center justify-center">
-                      <span className="text-4xl font-bold text-gray-600">
-                        {member.name.split(' ').map(n => n[0]).join('')}
-                      </span>
-                    </div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                      {member.name}
-                    </h3>
-                    <p className="text-blue-600 font-medium mb-2">
-                      {member.role}
-                    </p>
-                    <p className="text-gray-600 text-sm">
-                      {member.bio}
-                    </p>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Work With Us?
-              </h2>
-              <p className="text-xl text-blue-100 mb-8">
-                Let's discuss how we can help transform your business with technology.
-              </p>
-              <motion.a
-                href="/contact"
-                className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Get Started Today
-              </motion.a>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
-  );
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       name: 'Kleber',
       role: 'Founder & CEO',
       description: 'Visionary leader driving innovation in AI and quantum technologies',
@@ -661,18 +497,12 @@ export default function AboutPage() {
 };
 
 export default AboutPage;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
 
 
-=======
 
->>>>>>> origin/automation-improvements-final
-=======
 
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
 import React from './react';
 import Layout from "../components / Layout";
 ;
@@ -703,5 +533,3 @@ function About() {
       </div>;
     </Layout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

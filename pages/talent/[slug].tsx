@@ -1,4 +1,3 @@
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -23,28 +22,22 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import type { NextPage } from "next";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import EnhancedButton from "../../components/ui/EnhancedButton";
 import { TrustBadge, MicroTestimonial } from "../../components/ui/Badges";
-
 import type { NextPage } from './next';
 import Head from './next / head';
 import { use_router  } from './next / router';
 import { useState  } from './react';
 import EnhancedButton from "../../components / ui / EnhancedButton";
 import { TrustBadge, MicroTestimonial  } from '../../components / ui / Badges';
-
 const TalentProfile: NextPage = () => {
   const router = use_router ();
   const { slug } = router.query;
-
 
 const TalentProfile: NextPage = () => {;
   const router = useRouter();
@@ -58,7 +51,6 @@ const TalentProfile: NextPage = () => {;
     setResponseLog((prev) => [;
       ...prev,;
       { action, at: new Date().toISOString() },;
-
     ]);
   }
   return (
@@ -89,9 +81,6 @@ const TalentProfile: NextPage = () => {;
           <EnhancedButton
             variant="ghost"
             onClick={() => handleRespond("Negotiate")}
-
-
-
   const [responseLog, setResponseLog] = useState<Array<{ action: 'Accept' | 'Decline' | 'Negotiate', at: string }>>([]),
   const handleRespond = (action: 'Accept' | 'Decline' | 'Negotiate') => {
     setResponseLog((prev) => [...prev, { action, at: new Date().toISOString() }])
@@ -119,7 +108,6 @@ const TalentProfile: NextPage = () => {;
         </div>
       </header>
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       <section className="grid md:grid-cols-3 gap-6">
         <div className="md:col-span-2 space-y-4">
           <div className="border rounded-md p-4">
@@ -140,8 +128,6 @@ const TalentProfile: NextPage = () => {;
           <div className="border rounded-md p-4">
             <h3 className="font-semibold mb-2">Response Log</h3>
             <ul className="space-y-1 text-sm">
-
-=======
 ;
   const [response_log, setResponseLog] = useState<;
     Array<{ action: "Accept" | "Decline" | "Negotiate"; at: string }>;
@@ -182,20 +168,25 @@ const TalentProfile: NextPage = () => {;
           <EnhancedButton;
             variant="ghost";
             on_click={() => handle_respond ("Negotiate")}
-
           >;
             Negotiate;
           </EnhancedButton>;
         </div>;
       </header>;
-
               {responseLog.length === 0 && <li className="opacity-70">No responses yet.</li>}
               {responseLog.map((r, idx) => (
                 <li key={idx} className="flex items-center justify-between">
                   <span>{r.action}</span>
                   <span className="opacity-70">{new Date(r.at).toLocaleString()}</span>
                 </li>
-
+              ))}
+            </ul>
+          </div>
+        </aside>
+      </section>
+    </div>
+  )
+};
 
           <div className="border rounded-md p-4">;
             <h2 className="font-semibold mb-2">Testimonials</h2>;
@@ -212,7 +203,6 @@ const TalentProfile: NextPage = () => {;
             <ul className="space-y-1 text-sm">;
               {responseLog && responseLog.length === 0 && (;
                 <li className="opacity-70">No responses yet.</li>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               )}
               {responseLog && responseLog.map((r, idx) => (;
                 <li key={idx} className="flex items-center justify-between">;
@@ -222,7 +212,6 @@ const TalentProfile: NextPage = () => {;
                   </span>{" "}
                 </li>;
               ))}
-=======
       <section className="grid md:grid - cols - 3 gap - 6">;
         <div className="md:col - span - 2 space - y-4">;
           <div className="border rounded - md p - 4">;
@@ -252,30 +241,18 @@ const TalentProfile: NextPage = () => {;
                     {new Date (r.at).toLocaleString ()}
                   </span>{" "}
                 </li>))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </ul>;
           </div>;
         </aside>;
       </section>;
-
-},;
-
-
-export default TalentProfile;
-
-
-=======
     </div>);
 }
 ;
 export default TalentProfile;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

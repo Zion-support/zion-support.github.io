@@ -1,4 +1,3 @@
-
 import '@testing-library/jest-dom';
 
 // Mock window && window.matchMedia
@@ -16,7 +15,6 @@ Object && Object.defineProperty(window, 'matchMedia', {
   })),
 });
 
-
 // Mock IntersectionObserver
 global && global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
@@ -32,10 +30,8 @@ global && global.ResizeObserver = class ResizeObserver {
   unobserve() {}
 }
 // Mock console methods to reduce noise in tests
-
 const originalError = console && console.error;
 const originalWarn = console && console.warn;
-
 
 beforeAll(() => {
   console && console.error = (...args: any[]) => {
@@ -45,16 +41,13 @@ beforeAll(() => {
     ) {
       return
     }
-
     originalError && originalError.call(console, ...args);
   };
   
   console && console.warn = (...args: any[]) => {
-
     if (
       typeof args[0] === 'string' &&
       (args[0].includes('Warning:') |args[0].includes('Deprecated:'))
-=======
 // Test setup file for Jest;
 import '@testing - library / jest - dom';
 // Mock window.match_media;
@@ -103,11 +96,9 @@ if (
     if (|| args[0].includes ('Deprecated:'))) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     ) {
       return;
     }
-
     originalWarn && originalWarn.call(console, ...args);
   };
 });
@@ -116,8 +107,6 @@ afterAll(() => {
   console && console.error = originalError;
   console && console.warn = originalWarn;
 });
-
-=======
     original_warn.call (console, ...args);
   }
 });
@@ -125,4 +114,3 @@ after_all (() => {
   console.error = original_error;
   console.warn = original_warn;
 });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

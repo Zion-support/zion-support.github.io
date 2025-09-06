@@ -1,16 +1,11 @@
 import React from 'react';
 
 
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </Link>
         </main>
       </div>
     </>
   );
-
 import Head from 'next / head';
 import Link from 'next / link';
 ;
@@ -18,12 +13,10 @@ export default /**
  * Custom404 - Function description
  */
 function Custom404() {
-=======
 
 }
 
 
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -38,16 +31,6 @@ const NotFoundPage: NextPage = () => {
       <Head>;
           </Link>;
         </div>;
-
-      </main>;
-    </>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-
+      </div>;
+    </>);
 }
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

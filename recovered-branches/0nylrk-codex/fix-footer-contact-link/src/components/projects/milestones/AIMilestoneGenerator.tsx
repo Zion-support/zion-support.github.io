@@ -1,4 +1,4 @@
-
+import React, { useState } from 'react';
 import {Button} from '@/components/ui/button';
 import {Card, CardContent} from '@/components/ui/card';
 import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from '@/components/ui/accordion';
@@ -17,13 +17,10 @@ interface AIMilestoneGeneratorProps {;
 
 export function AIMilestoneGenerator(): any ({;
 
-=======
-
 
 
 export function AIMilestoneGenerator({;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   scope;
   startDate;
   endDate;
@@ -32,45 +29,6 @@ export function AIMilestoneGenerator({;
   onAddMilestone;
 }: AIMilestoneGeneratorProps) {;
   const { generateMilestones, generatedMilestones, isGenerating, clearGeneratedMilestones } = useMilestoneGenerator();
-
-
-=======
-    }
-
-  };
-
-=======
-import React, { useState } from 'react',;
-import { Button } from '@/components/ui/button',;
-import { Card, CardContent } from '@/components/ui/card',;
-import {;
-  Accordion,;
-  AccordionContent,;
-  AccordionItem,;
-  AccordionTrigger} from '@/components/ui/accordion',;
-import { Loader2, Sparkles, Plus, Calendar } from 'lucide-react',;
-import { format, parseISO } from 'date-fns',;
-import { MilestoneInput, GeneratedMilestone, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator',;
-import { Badge } from '@/components/ui/badge',;
-interface AIMilestoneGeneratorProps {;
-  scope: string,;
-  startDate: string,;
-  endDate: string | null,;
-  projectType: string,;
-  onAddMilestones: (milestones: GeneratedMilestone[]) => void,;
-  onAddMilestone: (milestone: GeneratedMilestone) => void;
-}
-;
-export function AIMilestoneGenerator({;
-  scope,;
-  startDate,;
-  endDate,;
-  projectType,;
-  onAddMilestones,;
-  onAddMilestone;
-}: AIMilestoneGeneratorProps) {;
-  const { generateMilestones, generatedMilestones, isGenerating, clearGeneratedMilestones } = useMilestoneGenerator(),;
-  const [selectedMilestones, setSelectedMilestones] = useState<Record<string boolean>>({}),;
 
   const handleGenerateMilestones = async () => {;
     if (!scope || !startDate || !projectType) {;
@@ -119,7 +77,6 @@ export function AIMilestoneGenerator({;
       return format(parseISO(dateString), 'MMM dd, yyyy');
     } catch (error) {;
       return dateString;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
 
   },
@@ -127,8 +84,6 @@ export function AIMilestoneGenerator({;
 
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="space-y-4">;
       <div className="flex items-center justify-between">;
@@ -139,7 +94,6 @@ export function AIMilestoneGenerator({;
         <Button
           variant="outline"
           onClick={handleGenerateMilestones}
-
           disabled={isGenerating || !scope || !startDate || !projectType}>;
           {isGenerating ? (;
             <>;
@@ -174,7 +128,6 @@ export function AIMilestoneGenerator({;
                 <AccordionItem value={`item-${index}`} key={index} className="border p-2 rounded-md mb-2">;
                   <div className="flex items-center justify-between">;
                     <div className="flex items-center flex-1">;
-
                       <input
                         type="checkbox"
                         id={`milestone-${index}`}
@@ -187,7 +140,6 @@ export function AIMilestoneGenerator({;
                           <span className="font-medium">{milestone && milestone.title}</span>;
                           <Badge variant="secondary" className="ml-2 flex items-center">;
                             <Sparkles className="w-3 h-3 mr-1" />;
-=======
 import {Button} from '@/components / ui / button';
 import {Card, CardContent} from '@/components / ui / card';
 import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from '@/components / ui / accordion';
@@ -315,24 +267,14 @@ if ( {) {
                           <span className="font - medium">{milestone.title}</span>;
                           <Badge variant="secondary" className="ml - 2 flex items - center">;
                             <Sparkles className="w - 3 h - 3 mr - 1" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                             AI Suggested;
                           </Badge>;
                         </div>;
                       </AccordionTrigger>;
                     </div>;
-
-                      onClick={(e) => {
-
-                        e.stopPropagation(),
-
-
-                        handleAddSingleMilestone(milestone)
-=======
                       onClick={(e) => {;
                         e && e.stopPropagation();
                         handleAddSingleMilestone(milestone);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                       }}
                       className="mr-2";
                     >;
@@ -357,12 +299,9 @@ if ( {) {
           </CardContent>;
         </Card>;
       )}
-
     </div>;
   );
 }
-
-=======
                     <Button;
                       variant="ghost";
                       size="sm";
@@ -393,4 +332,3 @@ if ( {) {
         </Card>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

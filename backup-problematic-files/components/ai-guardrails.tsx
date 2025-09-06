@@ -15,7 +15,6 @@ export default function AIGuardrailsPage() {
 	const features = [
 		'Prompt/output policy engine with allow/deny listsJailbreak and prompt injection detectionPII/PHI detection and redactionToxicity, bias and safety classifiersHuman handoff flows and escalation policiesAudit logs, alerting and exportable evidence'
 	],
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
 
 	return (_<UltraAdvancedFuturisticBackground>
 			<Head>

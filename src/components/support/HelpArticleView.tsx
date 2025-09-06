@@ -1,36 +1,11 @@
-
-
-interface HelpArticleViewProps {
-  articleId: string
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import { HELP_CATEGORIES } from "./help-content";
+interface HelpArticleViewProps {;
+  articleId: string;
 }
-
-
-  const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null)
-
-
-  // Find the article in all categories
-  let article = null;
-  for (const category of HELP_CATEGORIES) {
-
-    const found = category.articles.find(a => a.id === articleId)
-    if (found) {
-      article = found
-      break
-    }
-  }
-  if (!article) {
-    return <div>Article not found</div>
-  }
-  const handleFeedback = (type: "helpful" | "not-helpful") => {
-    setFeedbackGiven(type)
-  return new Date(date).toLocaleDateString("en-US", {
-
 
 export function HelpArticleView(): any ({ articleId }: HelpArticleViewProps) {;
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null);
 
-=======
 
     year: "numeric",;
     month: "long",;
@@ -38,7 +13,6 @@ export function HelpArticleView(): any ({ articleId }: HelpArticleViewProps) {;
 };
 }
 
-=======
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null),
   
   // Find the article in all categories
@@ -82,13 +56,7 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {;
     year: "numeric",;
     month: "long",;
     day: "numeric", });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
-
-
-=======
-
-=======
 import React, { useState } from './react';
 import { Button  } from '@/components / ui / button';
 import { Card  } from '@/components / ui / card';
@@ -127,9 +95,3 @@ if ( {) {
     month: "long",
     day: "numeric", });
 }
-
-;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

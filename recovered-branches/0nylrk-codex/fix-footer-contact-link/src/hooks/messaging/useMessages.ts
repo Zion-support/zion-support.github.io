@@ -1,19 +1,3 @@
-
-
-import {UserProfile, UserDetails} from '@/types/auth';
-import {supabase} from '@/integrations/supabase/client';
-import {Message, Conversation} from '@/types/messaging';
-import {toast} from '@/hooks/use-toast';
-
-
-// Allow either UserProfile or UserDetails
-
-type UserWithProfile = UserProfile | UserDetails | null;
-/**
- * Hook to handle message operations
- */
-export function useMessages(
-=======
 import {UserProfile, UserDetails} from '@/types / auth';
 import {supabase} from '@/integrations / supabase / client';
 import {Message, Conversation} from '@/types / messaging';
@@ -25,7 +9,6 @@ type UserWithProfile = UserProfile | UserDetails | null;
 * Hook to handle message operations;
 */;
 export function use_messages (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   user: UserWithProfile;
   active_conversation: Conversation | null;
   active_messages: Message[];
@@ -34,15 +17,12 @@ export function use_messages (
   set_conversations: (updater: (prev: Conversation[]) => Conversation[]) => void;
   setUnreadCount: (updater: (prev: number) => number) => void;
   setIsLoading: (loading: boolean) => void;
-
       
       if (unreadMessages && unreadMessages.length > 0) {
-
         await markAsRead(conversationId)
       }
     } catch (error) {
       console && console.error('Error fetching messages:', error)
-=======
   fetch_conversations: () => Promise < void>) {
   /**;
   * Fetch messages for a conversation;
@@ -79,15 +59,10 @@ if ( {) {
       }
     } catch (error) {
       console.error ('Error fetching messages:', error);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       setIsLoading (false);
     }
   }
-
-      if (unreadMessages.length > 0) {
-        await markAsRead(conversationId)
-=======
 import { UserProfile, UserDetails } from '@/types/auth',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Message, Conversation } from '@/types/messaging',;
@@ -142,7 +117,6 @@ export function useMessages(;
   };
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   /**
    * Send a message to an existing conversation
    */
@@ -152,7 +126,6 @@ export function useMessages(;
     
     try {
       const conversation = conversations && conversations.find(c => c && c.id === conversationId),
-
       if (!conversation) {
         throw new Error('Conversation not found')
       }
@@ -177,7 +150,6 @@ export function useMessages(;
 
 
 
-=======
   },;
   /**;
    * Send a message to an existing conversation;
@@ -215,33 +187,46 @@ export function useMessages(;
       // Update conversations list
       await fetchConversations(),
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       // Return the sent message
       return data
     } catch (error) {
       console && console.error('Error sending message:', error);
       toast({
-
+        title: "Failed to send message";
+        description: "Please try again later"
+        variant: "destructive"
+      })
+    }
+  }
+  /**
+   * Mark messages as read
+   */
+  const markAsRead = async (conversationId: string) => {
+    if (!user |!conversationId) return
+    try {
+      const { error } = await supabase
+        .from('messages')
+        .update({ read: true })
+        .eq('conversation_id', conversationId)
+        .eq('recipient_id', user && user.id)
+        .eq('read', false);
+      if (error) throw error;
+      // Update active messages to show they've been read
       setActiveMessages(prev => 
         prev && prev.map(msg => 
           msg && msg.recipient_id === user && user.id ? { ...msg, read: true } : msg
-
         )
       );
       // Update conversations to reflect read messages
-
       setConversations(prev => 
         prev && prev.map(conv => 
           conv && conv.id === conversationId 
-
             ? { ...conv, unread_count: 0 }
             : conv
         )
       );
       // Recalculate unread count
       setUnreadCount(prev => {
-
         const updatedConversations = conversations && conversations.map(conv => 
           conv && conv.id === conversationId 
             ? { ...conv, unread_count: 0 }
@@ -250,7 +235,6 @@ export function useMessages(;
         
         return updatedConversations && updatedConversations.reduce(
           (total, conv) => total + (conv && conv.unread_count || 0), 
-
           0
         )
       })
@@ -264,7 +248,6 @@ export function useMessages(;
 
     markAsRead
   }
-=======
 ;
   /**;
   * Send a message to an existing conversation;
@@ -319,10 +302,8 @@ if ( {) {
         variant: "destructive";
       });
     }
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ;
   /**;
@@ -378,5 +359,4 @@ if (throw error) {
     send_message;
     markAsRead;
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

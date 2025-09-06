@@ -1,32 +1,14 @@
-
-export type EnterpriseRole = 'admin' | 'manager' | 'recruiter' | 'viewer';
-
-export interface CompanyUsageLimits {;
-  monthlyJobPosts: number;
-  budgetCapUsd: number;
-
-
-  companyId: string;
-  number: string;
-  amountUsd: number;
-  periodStartIso: string;
-  periodEndIso: string;
-  status: 'paid' | 'open' | 'void' | 'past_due';
-
 export type EnterpriseRole = 'admin' | 'manager' | 'recruiter' | 'viewer',
 export interface CompanyUsageLimits {
   monthlyJobPosts: number,
   budgetCapUsd: number;
-=======
 
 
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 export interface CompanyPlan {
   tier: 'teams' | 'business' | 'enterprise - custom',
@@ -60,12 +42,10 @@ export interface CompanyRecord {
   id: string,
   name: string,
   slug: string, // e.g. acme;
-
-
-  logoUrl?: string,;
-  brandColor?: string,;
-  plan: CompanyPlan,;
-  members: CompanyMember[];
+  logo_url?: string,
+  brand_color?: string,
+  plan: CompanyPlan,
+  members: CompanyMember[],
   activity: CompanyActivityEvent[];
   invoices: InvoiceRecord[];
   } catch (error) {
@@ -75,4 +55,7 @@ export interface CompanyRecord {
 
 
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  logo_url?: string,
+  brand_color?: string,
+  plan: CompanyPlan,
+  members: CompanyMember[],

@@ -11,5 +11,10 @@ export default function DeveloperPortal({ }: DeveloperPortalProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
-
+}
+}
+}
+}
+}
+}
+}

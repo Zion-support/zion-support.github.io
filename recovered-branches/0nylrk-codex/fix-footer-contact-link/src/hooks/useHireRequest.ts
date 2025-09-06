@@ -1,14 +1,11 @@
-
 import {useState} from 'react';
 import { supabase } from '@/integrations / supabase / client';
 import { toast } from '@/hooks / use - toast';
 import { TalentProfile } from '@/types / talent';
-
 export interface HireRequestData {
   talent: {
     id: string;
     full_name: string;
-
     professional_title: string,
     email?: string;
   }
@@ -16,23 +13,10 @@ export interface HireRequestData {
     name: string;
     email: string,
     id?: string;
-
   }
   project: {
     overview: string;
     timeline: string;
-
-
-import {useState} from 'react';
-import {supabase} from "@/integrations/supabase/client";
-import {toast} from "@/hooks/use-toast";
-import {TalentProfile} from "@/types/talent";
-export interface HireRequestData {
-  talent: {;
-    id: string;
-    full_name: string;
-
-=======
 import { useState } from 'react',
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast",
@@ -54,7 +38,6 @@ export interface HireRequestData {
     overview: string,
     timeline: string,
     budgetMin: number,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     budgetMax: number
   }
 }
@@ -62,7 +45,27 @@ export interface HireRequestData {
 
 export function useHireRequest() {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import { useState } from 'react',
+import { supabase } from "@/integrations/supabase/client",
+import { toast } from "@/hooks/use-toast",
+import { TalentProfile } from "@/types/talent",
+export interface HireRequestData {
+  talent: {
+    id: string,
+    full_name: string,
+
+    professional_title: string,
+    email?: string
+  },
+  requester: {
+    name: string,
+    email: string,
+    id?: string
+  },
+  project: {
+    overview: string,
+    timeline: string,
+    budgetMin: number,
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const [error, setError] = useState<string | null>(null);
@@ -74,7 +77,6 @@ export function useHireRequest() {;
       const { data: response, error } = await supabase && supabase.functions.invoke('process-hire-request', {
         body: requestData
 
-=======
 
       }),
       
@@ -92,7 +94,14 @@ export function useHireRequest() {;
       console && console.error("Error submitting hire request:", error);
       
       const errorMessage = error instanceof Error 
-
+        ? error && error.message 
+        : "There was a problem submitting your request. Please try again.";
+      setError(errorMessage);
+      toast({
+        title: "Error";
+        description: errorMessage
+        variant: "destructive"});
+      return { success: false, error: errorMessage }
     budget_min: number,
     budget_max: number;
   }
@@ -138,19 +147,15 @@ if (throw error) {
         variant: "destructive"});
 ;
       return { success: false, error: error_message }
-
     } finally {
       setIsSubmitting (false);
     }
   }
-
 ;
   return {
     submitHireRequest;
     is_submitting;
     error;
-
-=======
         ? error.message 
         : "There was a problem submitting your request. Please try again.",
       
@@ -163,6 +168,5 @@ if (throw error) {
         variant: "destructive"}),
       
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }

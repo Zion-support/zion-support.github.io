@@ -1,8 +1,3 @@
-
-
-
-
-
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
@@ -13,18 +8,15 @@ interface IntegrationCardProps {;
   title: string,;
   description: string,;
   icon: React && React.ReactNode,;
-
   status?: "connected" | "disconnected" | "pending";
   href?: string;
   onConnect?: () => void;
 }
 
-
 export function IntegrationCard(): any ({;
   title;
   description;
   icon;
-=======
 interface IntegrationCardProps {
   title: string,
   description: string,
@@ -37,7 +29,6 @@ interface IntegrationCardProps {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   onConnect}: IntegrationCardProps) {
   return (
     <Card className="overflow-hidden">
@@ -98,11 +89,9 @@ export function IntegrationCard({;
   title,;
   description,;
   icon,;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   status = "disconnected";
   href;
   onConnect}: IntegrationCardProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Card className="overflow-hidden">;
       <CardHeader className="pb-2">;
@@ -146,7 +135,6 @@ export function IntegrationCard({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         )}
       </CardFooter>;
     </Card>;
@@ -154,14 +142,8 @@ export function IntegrationCard({;
 }
 
 
-export function IntegrationCards() {;
-
-=======
-
-
 
 export function IntegrationCards() {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="grid md:grid-cols-3 gap-6">;
       {/* Integration cards would go here */}
@@ -170,7 +152,14 @@ export function IntegrationCards() {
   );
 }
 
-=======
+
+export function IntegrationCards() {;
+  return (
+    <div className="grid md:grid-cols-3 gap-6">;
+      {/* Integration cards would go here */}
+    </div>;
+  );
+}
 import React from './react';
 import { Button } from '@/components / ui / button';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components / ui / card';
@@ -236,10 +225,7 @@ function IntegrationCards() {
       {/* Integration cards would go here */}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

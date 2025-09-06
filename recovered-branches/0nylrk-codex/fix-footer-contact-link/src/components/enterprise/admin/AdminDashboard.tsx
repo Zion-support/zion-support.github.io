@@ -1,33 +1,3 @@
-
-
-import React from "react";
-import { AdminHeader } from "./AdminHeader";
-import { TeamManagement } from "./TeamManagement";
-import { UsageStats } from "./UsageStats";
-
-
-import { RoleManagement } from "./RoleManagement";
-import { TeamActivity } from "./TeamActivity";
-
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-
-
-
-import React from "react",
-import { AdminHeader } from "./AdminHeader",
-import { TeamManagement } from "./TeamManagement",
-import { UsageStats } from "./UsageStats",
-import { RoleManagement } from "./RoleManagement",
-import { TeamActivity } from "./TeamActivity",
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger} from "@/components/ui/tabs",
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <Tabs defaultValue="team" className="mt-8">
         <TabsList className="grid w-full grid-cols-4 mb-8">
           <TabsTrigger value="team">Team Management</TabsTrigger>
@@ -52,7 +22,6 @@ import {
         
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <TabsContent value="activity" className="space-y-8">
           <TeamActivity />
         </TabsContent>
@@ -63,7 +32,6 @@ import {
 
       <Tabs defaultValue="team" className="mt-8">;
         <TabsList className="grid w-full grid-cols-4 mb-8">;
-=======
 import React from './react';
 import { AdminHeader  } from './AdminHeader';
 import { TeamManagement  } from './TeamManagement';
@@ -81,13 +49,12 @@ function AdminDashboard() {
       <AdminHeader />;
       <Tabs default_value="team" className="mt - 8">;
         <TabsList className="grid w - full grid - cols - 4 mb - 8">;
-
           <TabsTrigger value="team">Team Management</TabsTrigger>;
           <TabsTrigger value="roles">Role Assignment</TabsTrigger>;
           <TabsTrigger value="usage">Usage Limits</TabsTrigger>;
           <TabsTrigger value="activity">Team Activity</TabsTrigger>;
         </TabsList>;
-
+  );
         <TabsContent value="team" className="space - y-8">;
           <TeamManagement />;
         </TabsContent>;
@@ -104,8 +71,3 @@ function AdminDashboard() {
     </div>);
 
 }
-=======
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

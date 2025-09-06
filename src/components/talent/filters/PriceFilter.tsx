@@ -1,7 +1,26 @@
 
+import { ChevronDown, ChevronUp } from 'lucide-react';
+import { Slider } from '@/components / ui / slider';
+import { PriceFilterProps } from '@/types / filters';
+export /**
+ * PriceFilter - Function description
+ */
+function PriceFilter() {
+  const handle_change = (values: number[]) =>: any {
+    setPriceRange ([values[0] || 0, values[1] || 500]);
+  }
+export function PriceFilter(): any ({;
+  priceRange,;
+  setPriceRange,;
+  expanded,;
+  toggleSection,;
+  isMobileFilterOpen,;
+}: PriceFilterProps) {;
+  const handleChange = (values: number[]) => {;
+    setPriceRange([values[0] || 0, values[1] || 500]);
+  };
 
   return (
-
     <div className='mb - 6 border - b border - zion - blue - light pb - 6'>;
       <button;
         on_click={toggle_section}
@@ -28,9 +47,7 @@ export /**
 function PriceFilter() {
   const handle_change = (values: number[]) =>: any {
     setPriceRange ([values[0] || 0, values[1] || 500]);
-
   }
-=======
       </button>;
 
       {expanded && (;
@@ -43,7 +60,6 @@ function PriceFilter() {
         <div className="mt-6">;
           <div className="flex justify-between text-sm text-zion-slate-light mb-2">;
 
-=======
 
 
 import { ChevronDown, ChevronUp } from 'lucide-react'
@@ -55,7 +71,6 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
   },
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
@@ -64,7 +79,6 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
         className="flex w-full items-center justify-between text-white font-medium"
       >
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <span>Hourly Rate</span>
         {expanded ? (
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />
@@ -76,7 +90,6 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
       
       {expanded && (
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <div className="mt-6">
           <div className="flex justify-between text-sm text-zion-slate-light mb-2">
             <span>${priceRange[0]}/hr</span>
@@ -85,7 +98,6 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
           <Slider
 
             aria-label="Hourly rate range"
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { Slider } from "@/components/ui/slider";
 import { PriceFilterProps } from "@/types/filters";
@@ -93,7 +105,6 @@ export function PriceFilter(): any ({ priceRange, setPriceRange, expanded, toggl
   const handleChange = (values: number[]) => {;
     setPriceRange([values[0] || 0, values[1] || 500]);
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">;
@@ -106,26 +117,29 @@ export function PriceFilter(): any ({ priceRange, setPriceRange, expanded, toggl
         ) : (;
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />;
         )}
+      </button>;
 
-
-=======
-          <Slider;
-            aria-label="Hourly rate range";
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      {expanded && (;
+        <div className="mt-6">;
+          <div className="flex justify-between text-sm text-zion-slate-light mb-2">;
+            <span>${priceRange[0]}/hr</span>;
+            <span>${priceRange[1]}/hr</span>;
+          </div>;
+          <Slider
+            aria-label='Hourly rate range'            aria-label="Hourly rate range"
             value={[priceRange[0], priceRange[1]]}
             min={50}
             max={200}
             step={5}
             onValueChange={handleChange}
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            className='mt-6'          />            className="mt-6";
+            className="mt-6";
+          />;
+        </div>;
+      )}
     </div>;
   );
 }
-
             className="mt-6"
           />
         </div>
@@ -133,8 +147,6 @@ export function PriceFilter(): any ({ priceRange, setPriceRange, expanded, toggl
     </div>
   );
 }
-
-=======
         <div className="mt - 6">;
           <div className="flex justify - between text - sm text - zion - slate - light mb - 2">;
             <span>${price_range[0]}/hr</span>;
@@ -153,10 +165,3 @@ export function PriceFilter(): any ({ priceRange, setPriceRange, expanded, toggl
         </div>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,18 +1,9 @@
-
-
+import { Trophy } from "lucide-react",
+import { Progress } from "@/components/ui/progress",
 
 import { Trophy } from "lucide-react",
 import { Progress } from "@/components/ui/progress",
 
-=======
-import {Trophy} from "lucide-react";
-import {Progress} from "@/components/ui/progress";
-=======
-import { Trophy } from "lucide-react",
-import { Progress } from "@/components/ui/progress",
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ReputationDisplayProps {
 
   reputation: number
@@ -115,15 +106,11 @@ export const ReputationDisplay = ({ ;
 };
 
 
-=======
-
 },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default ReputationDisplay;
 
-=======
 import { Trophy } from './lucide-react';
 import { Progress } from '@/components / ui / progress';
 interface ReputationDisplayProps {
@@ -174,4 +161,3 @@ export const ReputationDisplay = ({
 ;
 export default ReputationDisplay;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

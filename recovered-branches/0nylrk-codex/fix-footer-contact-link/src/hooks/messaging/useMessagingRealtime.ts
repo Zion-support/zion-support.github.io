@@ -1,4 +1,3 @@
-
 import {useEffect} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {UserProfile, UserDetails} from '@/types / auth';
@@ -8,8 +7,6 @@ import {toast} from '@/hooks / use - toast';
 type UserWithProfile = UserProfile | UserDetails | null;
 ;
 export function useMessagingRealtime (
-
-=======
 
 import {useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
@@ -22,11 +19,13 @@ import {toast} from '@/hooks/use-toast';
 
 export function useMessagingRealtime(;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   user: UserWithProfile;
   active_conversation: Conversation | null;
   setActiveMessages: (updater: (prev: Message[]) => Message[]) => void;
 
+  user: UserWithProfile;
+  active_conversation: Conversation | null;
+  setActiveMessages: (updater: (prev: Message[]) => Message[]) => void;
         'postgres_changes', 
         { 
           event: 'INSERT', 
@@ -34,7 +33,6 @@ export function useMessagingRealtime(;
           table: 'messages', 
           filter: `recipient_id=eq.${user && user.id}` 
         }, 
-
         (payload) => {
           // Update messages if the conversation is selected
           if (activeConversation && payload && payload.new.sender_id === activeConversation && activeConversation.other_user.id) {
@@ -44,10 +42,8 @@ export function useMessagingRealtime(;
           fetchConversations();
           // Show toast notification for new message
           toast({
-
             title: `New message from ${payload && payload.new.sender_name || 'Someone'}`;
             description: payload && payload.new.content && content.substring(0, 50) + (payload && payload.new.content && content.length > 50 ? '...' : '')
-
           })
         }
       )
@@ -57,7 +53,6 @@ export function useMessagingRealtime(;
       supabase && supabase.removeChannel(subscription)
     }
   }, [user, activeConversation, fetchConversations, setActiveMessages])
-=======
   fetch_conversations: () => Promise < void>) {
   // Setup real - time subscription when user is logged in;
   useEffect (() => {
@@ -101,8 +96,8 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            title: `New message from ${payload && payload.new.sender_name || 'Someone'}`;
+            description: payload && payload.new.content && content.substring(0, 50) + (payload && payload.new.content && content.length > 50 ? '...' : '')
     }
   }, [user, active_conversation, fetch_conversations, setActiveMessages]);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

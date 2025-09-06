@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useMemo } from 'react',
 import {
   Search, Filter, Calendar, Tag, TrendingUp, Shield, Code,
@@ -257,7 +256,6 @@ const ContentCategorizer: React.FC = () => {
     setSelectedDateRange ('all'),
     setSelectedRelevance ('all');
   },
-
   return (
     <div className=&quot;space - y-6 & quot;>;
       {/* Search and Advanced Filters */}
@@ -268,17 +266,14 @@ const ContentCategorizer: React.FC = () => {
           <input;
             type=&quot;text & quot;
             placeholder=&quot;Search content by title, description, tags, or keywords...&quot;
-
             value={search_term}
             on_change={(e) => setSearchTerm (e.target.value)}
             className=&quot;w - full pl - 10 pr - 4 py - 3 bg - white / 5 border border - white / 10 rounded - xl text - white placeholder - white / 50 focus:outline - none focus:ring - 2 focus:ring - cyan - 500 / 50 focus:border - cyan - 500 / 50 transition - all duration - 200 & quot;
           />;
         </div>;
-
         {/* Advanced Filter Controls */}
         <div className=&quot;grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 4&quot;>;
           {/* Category Filter */}
-
           <div>;
             <label className=&quot;block text - sm font - medium text - white / 70 mb - 2&quot;>Category</label>;
             <select;
@@ -286,7 +281,6 @@ const ContentCategorizer: React.FC = () => {
               on_change={(e) => {
                 setSelectedCategory (e.target.value),
                 setSelectedSubcategory ('all');
-
               }}
 className=&quot;w - full px - 3 py - 2 bg - white / 5 border border - white / 10 rounded - lg text - white focus:outline - none focus:ring - 2 focus:ring - cyan - 500 / 50 focus:border - cyan - 500 / 50 transition - all duration - 200 & quot;
             >;
@@ -363,7 +357,6 @@ className=&quot;w - full px - 3 py - 2 bg - white / 5 border border - white / 10
             </div>;
           </div>;
           <button;
-
             on_click={clearAllFilters}
 className=&quot;px - 4 py - 2 bg - white / 5 border border - white / 10 rounded - lg text - white / 70 hover:text - white hover:bg - white / 10 transition - all duration - 200 & quot;
           >;
@@ -371,20 +364,17 @@ className=&quot;px - 4 py - 2 bg - white / 5 border border - white / 10 rounded 
           </button>;
         </div>;
       </div>;
-
       {/* Category Pills */}
       <div>;
         <div className=&quot;flex flex - wrap gap - 2&quot;>;
           {categories.map (category => (
             <button;
               key={category.id}
-
               on_click={() => setSelectedCategory (category.id)}
               className={`flex items - center gap - 2 px - 4 py - 2 rounded - full border transition - all duration - 200 ${
                 selected_category === category.id;
                   ? 'border - cyan - 500 bg - cyan - 500 / 20 text - cyan - 300';
                   : 'border - white / 10 bg - white / 5 text - white / 70 hover:border - white / 20 hover:bg - white / 10';
-
               }`}
 >;
               <category.icon className=&quot;w - 4 h - 4&quot; />;
@@ -429,27 +419,22 @@ className=&quot;px - 4 py - 2 bg - white / 5 border border - white / 10 rounded 
                 <span className=&quot;flex items - center gap - 1&quot;>;
                   <Calendar className=&quot;w - 3 h - 3&quot; />;
                   {item.date}
-
                 </span>;
                 <span className={`flex items - center gap - 1 ${getRelevanceColor (item.relevance)}`}>;
                   <TrendingUp className=&quot;w - 3 h - 3&quot; />;
                   {item.relevance} priority;
                 </span>;
               </div>;
-
               {/* Source and Action */}
               <div className=&quot;flex items - center justify - between & quot;>;
                 <span className=&quot;text - xs text - white / 40 & quot;>;
                   Source: {item.source}
-
                 </span>;
                 <a;
-
                   href={item.href}
         })}
       </div>;
       {/* No Results */}
-
 {filtered_items.length === 0 && (
         <div className=&quot;text - center py - 12 & quot;>;
           <div className=&quot;text - white / 40 text - 6xl mb - 4&quot;>🔍</div>;
@@ -466,5 +451,4 @@ className=&quot;px - 4 py - 2 bg - white / 5 border border - white / 10 rounded 
         </div>)}
     </div>);
 },
-
 export default ContentCategorizer;

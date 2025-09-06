@@ -1,4 +1,10 @@
-
+import React from 'react';
+interface EmailautomationProps {
+  // Add props here as needed
+}
+import React from 'react';
+interface EmailautomationProps {
+  // Add props here as needed
 
 export default function Emailautomation({ }: EmailautomationProps) {
   return (
@@ -7,10 +13,5 @@ export default function Emailautomation({ }: EmailautomationProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
 }
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

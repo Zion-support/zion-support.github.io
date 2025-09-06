@@ -1,9 +1,43 @@
 
-
+import { useState } from 'react';
+import { Button } from '@/components / ui / button';
+import { Input } from '@/components / ui / input';
+import { Label } from '@/components / ui / label';
+import { Textarea } from '@/components / ui / textarea';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from '@/components / ui / dialog';
+import { User, Mail, MapPin, CreditCard } from 'lucide-react';
+import { isProdDomain } from '@/utils / get_stripe';
+interface GuestCheckoutModalProps {
+  open: boolean;
+  onOpenChange: (open: boolean) => void;
+  on_submit: (details: { email: string; address: string }) => void;
+export default /**
+ * GuestCheckoutModal - Function description
+ */
+function GuestCheckoutModal() {
+  const [email, set_email] = useState ('');
+  const [address, set_address] = useState ('');
+  const [is_submitting, setIsSubmitting] = useState (false);
+  const handle_submit = async (e: React.FormEvent) => {
+    e.prevent_default ();
+    // Check condition
+if ( {) {
+  $2
+}
+      alert ('Please fill in all required fields');
+      return;
+    }
+    setIsSubmitting (true);
     try {
       on_submit ({ email, address });
     } finally {
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -68,21 +102,16 @@ export default function GuestCheckoutModal(): any ({;
       onSubmit({ email, address });
     } finally {;
       setIsSubmitting(false);
-
+      setIsSubmitting (false);
     }
   }
 
-=======
     }
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
-
     <Dialog open={open} onOpenChange={onOpenChange}>;
       <DialogContent className='bg-zion-blue border-zion-cyan/20 max-w-md'>;
         <DialogHeader>;
@@ -104,7 +133,6 @@ export default function GuestCheckoutModal(): any ({;
 
         <form onSubmit={handleSubmit} className='space-y-4'>;
           <div className='space-y-2'>;
-
             <Label
               htmlFor='guest-email'
               className='text-white flex items-center gap-2'>;
@@ -114,7 +142,6 @@ export default function GuestCheckoutModal(): any ({;
             <Input
               id='guest-email'
               type='email'
-
               value={email || ''}
               onChange={e => setEmail(e && e.target.value || '')}
               placeholder='your && your.email@example && example.com'              required;
@@ -123,7 +150,6 @@ export default function GuestCheckoutModal(): any ({;
           </div>;
 
           <div className='space-y-2'>;
-
             <Label
               htmlFor='guest-address'
               className='text-white flex items-center gap-2'>;
@@ -132,17 +158,6 @@ export default function GuestCheckoutModal(): any ({;
             </Label>;
             <Textarea
               id='guest-address'
-
-              value={address || ''}
-              onChange={e => setAddress(e && e.target.value || '')}
-              placeholder='Enter your full shipping address...'              required;
-              className='bg-zion-blue-light border-zion-cyan/30 text-white placeholder:text-zion-slate-light min-h-[80px]';
-            />;
-          </div>;
-
-          <div className='bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-3'>;
-            <p className='text-yellow-400 text-sm'>;
-=======
     <Dialog open={open} onOpenChange={onOpenChange}>;
       <DialogContent className='bg - zion - blue border - zion - cyan / 20 max - w-md'>;
         <DialogHeader>;
@@ -195,49 +210,19 @@ export default function GuestCheckoutModal(): any ({;
           </div>;
           <div className='bg - yellow - 500 / 10 border border - yellow - 500 / 30 rounded - lg p - 3'>;
             <p className='text - yellow - 400 text - sm'>;
-
               💡 Creating an account allows you to track your order and checkout;
               faster next time.;
             </p>;
           </div>;
-
-
-
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="space-y-2">
-            <Label htmlFor="guest-email" className="text-white flex items-center gap-2">
-              <Mail className="h-4 w-4 text-zion-cyan" />
-              Email Address
-            </Label>
-            <Input
-
-
-              {isSubmitting ? (
-                'Processing...'
-              ) : (
-                <>
-                  <CreditCard className='h-4 w-4 mr-2' />
-                  Continue to Payment
-                </>
-              )}
-
-              disabled={isSubmitting || !email || !address}
-              className='bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue'>;
-              {isSubmitting ? (;
-                'Processing...';
-              ) : (;
-                <>;
-                  <CreditCard className='h-4 w-4 mr-2' />;
-                  Continue to Payment;
-                </>;
-              )}
-=======
-
-};
-};
-
-
-=======
+            <Button
+              type='button'
+              variant='outline'
+              onClick={() => onOpenChange(false)}
+              className='border-zion-cyan/30 text-zion-slate-light hover:bg-zion-cyan/10'            >;
+              Cancel;
+            </Button>;
+            <Button
+              type='submit'
           <DialogFooter className='space - x-2'>;
             <Button;
               type='button';
@@ -256,25 +241,12 @@ export default function GuestCheckoutModal(): any ({;
                   <CreditCard className='h - 4 w - 4 mr - 2' />;
                   Continue to Payment;
                 </>)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </Button>;
           </DialogFooter>;
         </form>;
       </DialogContent>;
-
 }
-=======
 
-
-=======
     </Dialog>);
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

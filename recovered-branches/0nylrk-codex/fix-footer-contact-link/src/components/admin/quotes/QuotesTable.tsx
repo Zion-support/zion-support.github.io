@@ -1,4 +1,3 @@
-
 import {formatDate} from "@/utils/dateUtils";
 interface QuotesTableProps {;
   quotes: QuoteRequest[],;
@@ -11,19 +10,12 @@ interface QuotesTableProps {;
 }
 
 export const QuotesTable: React.FC<QuotesTableProps> = ({;
-
   quotes;
 
   isArchived = false;
   isLoading;
   updateStatus;
   toggleArchive;
-
-
-
-import {formatDate} from "@/utils/dateUtils";
-
-=======
 import React from "react",
 import { Eye, MoreHorizontal, Archive, Trash2 } from "lucide-react",
 import { 
@@ -54,13 +46,41 @@ interface QuotesTableProps {
   updateStatus: (id: string, status: QuoteStatus) => void,
   toggleArchive: (id: string, isArchived: boolean) => void,
   deleteQuote: (id: string) => void,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   onViewDetails: (quote: QuoteRequest) => void
 }
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React from "react",
+import { Eye, MoreHorizontal, Archive, Trash2 } from "lucide-react",
+import { 
+  Table,
+  TableBody, 
+  TableCell, 
+  TableHead, 
+  TableHeader, 
+  TableRow 
+} from "@/components/ui/table",
+import { Button } from "@/components/ui/button",
+import { 
+  DropdownMenu,
+  DropdownMenuContent, 
+  DropdownMenuItem, 
+  DropdownMenuTrigger 
+} from "@/components/ui/dropdown-menu",
+import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge",
+import type { QuoteRequest, QuoteStatus } from "@/types/quotes",
+import { formatDate } from "@/utils/dateUtils",
+
+
+
+interface QuotesTableProps {
+  quotes: QuoteRequest[],
+  isArchived?: boolean,
+  isLoading: boolean,
+  updateStatus: (id: string, status: QuoteStatus) => void,
+  toggleArchive: (id: string, isArchived: boolean) => void,
+  deleteQuote: (id: string) => void,
   onViewDetails
 }) => {
   return (
@@ -102,7 +122,6 @@ interface QuotesTableProps {
                   {quote.talent_name |'Unknown Talent'}
                 </TableCell>
                 <TableCell className="text-white">
-=======
 import React from './react';
 import { Eye, MoreHorizontal, Archive, Trash2 } from './lucide-react';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';
@@ -166,14 +185,12 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({
                   {quote.talent_name || 'Unknown Talent'}
                 </TableCell>;
                 <TableCell className="text - white">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   {quote.requester_name}
                 </TableCell>;
                 <TableCell className="text - white">;
                   <div className="font - medium">{quote.project_name}</div>;
                   <div className="text - sm text - zion - slate - light truncate max - w-[200px]">;
                     {quote.project_summary}
-
   deleteQuote,;
   onViewDetails;
 }) => {;
@@ -260,7 +277,6 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({
                         </Button>;
                         <Button
                           variant="ghost" 
-
                           size="icon"
                           className="text-red-500"
                           onClick={() => {;
@@ -268,148 +284,6 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({
                               deleteQuote(quote && quote.id);
                             }
                           }}
-
-=======
-                              }
-                            }}
-                            className="text-red-500"
-                          >
-                            <Trash2 className="h-4 w-4 mr-2" />
-                            Delete
-                          </DropdownMenuItem>
-                        </DropdownMenuContent>
-                      </DropdownMenu>
-
-import React from "react",;
-import { Eye, MoreHorizontal, Archive, Trash2 } from "lucide-react",;
-import {;
-  Table,;
-  TableBody,;
-  TableCell,;
-  TableHead,;
-  TableHeader,;
-  TableRow;
-} from "@/components/ui/table",;
-import { Button } from "@/components/ui/button",;
-import {;
-  DropdownMenu,;
-  DropdownMenuContent,;
-  DropdownMenuItem,;
-  DropdownMenuTrigger;
-} from "@/components/ui/dropdown-menu",;
-import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge",;
-import type { QuoteRequest, QuoteStatus } from "@/types/quotes",;
-import { formatDate } from "@/utils/dateUtils",;
-interface QuotesTableProps {;
-  quotes: QuoteRequest[],;
-  isArchived?: boolean,;
-  isLoading: boolean,;
-  updateStatus: (id: string, status: QuoteStatus) => void,;
-  toggleArchive: (id: string, isArchived: boolean) => void,;
-  deleteQuote: (id: string) => void,;
-  onViewDetails: (quote: QuoteRequest) => void;
-}
-;
-export const QuotesTable: React.FC<QuotesTableProps> = ({;
-  quotes,;
-  isArchived = false,;
-  isLoading,;
-  updateStatus,;
-  toggleArchive,;
-  deleteQuote;
-  onViewDetails;
-}) => {;
-  return (;
-    <div className="overflow-x-auto">;
-      <Table>;
-        <TableHeader>;
-          <TableRow className="border-zion-blue-light hover:bg-zion-blue">;
-            <TableHead className="text-zion-slate-light">Talent</TableHead>;
-            <TableHead className="text-zion-slate-light">Requester</TableHead>;
-            <TableHead className="text-zion-slate-light">Project</TableHead>;
-            <TableHead className="text-zion-slate-light">Budget</TableHead>;
-            <TableHead className="text-zion-slate-light">Date</TableHead>;
-            <TableHead className="text-zion-slate-light">Status</TableHead>;
-            <TableHead className="text-zion-slate-light">Actions</TableHead>;
-          </TableRow>;
-        </TableHeader>;
-        <TableBody>;
-          {isLoading ? (;
-            <TableRow>;
-              <TableCell colSpan={7} className="text-center py-10 text-zion-slate-light">;
-                Loading quote requests...;
-              </TableCell>;
-            </TableRow>;
-          ) : quotes.length === 0 ? (;
-            <TableRow>;
-              <TableCell colSpan={7} className="text-center py-10 text-zion-slate-light">;
-                {isArchived;
-                  ? "No archived quote requests found.";
-                  : "No quote requests found."}
-              </TableCell>;
-            </TableRow>;
-          ) : (;
-            quotes.map(quote => (;
-              <TableRow;
-                key={quote.id}
-                className="border-zion-blue-light hover:bg-zion-blue"
-              >
-                <TableCell className="text-white">
-                  {quote.talent_name || 'Unknown Talent'}
-                </TableCell>
-                <TableCell className="text-white">
-                  {quote.requester_name}
-                </TableCell>
-                <TableCell className="text-white">
-                  <div className="font-medium">{quote.project_name}</div>
-                  <div className="text-sm text-zion-slate-light truncate max-w-[200px]">
-                    {quote.project_summary}
-                  </div>;
-                </TableCell>;
-                <TableCell className="text-white">;
-                  {quote.budget_display ||;
-                  (quote.budget_min && quote.budget_max;
-                   ? `$${quote.budget_min} - $${quote.budget_max}`;
-                   : quote.budget_min;
-                     ? `$${quote.budget_min}`;
-                     : 'Not specified')}
-                </TableCell>;
-                <TableCell className="text-white">;
-                  {formatDate(quote.created_at)}
-                </TableCell>;
-                <TableCell>;
-                  <QuoteStatusBadge status={quote.status} />;
-                </TableCell>;
-                <TableCell>;
-                  <div className="flex items-center gap-2">;
-                    <Button;
-                      variant="ghost";
-                      size="icon";
-                      onClick={() => onViewDetails(quote)}
-                    >;
-                      <Eye className="h-4 w-4" />;
-                      <span className="sr-only">View Details</span>;
-                    </Button>;
-                    {isArchived ? (;
-                      <>;
-                        <Button;
-                          variant="ghost";
-                          size="icon";
-                          onClick={() => toggleArchive(quote.id, false)}
-                        >;
-                          <Archive className="h-4 w-4" />;
-                          <span className="sr-only">Unarchive</span>;
-                        </Button>;
-                        <Button;
-                          variant="ghost";
-                          size="icon";
-                          className="text-red-500";
-                          onClick={() => {;
-                            if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {;
-                              deleteQuote(quote.id);
-                            }
-                          }}
-
                         >;
                           <Trash2 className="h-4 w-4" />;
                           <span className="sr-only">Delete</span>;
@@ -447,7 +321,6 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                             onClick={() => {;
                               if (window && window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {;
                                 deleteQuote(quote && quote.id);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                               }
                             }}
                             className="text-red-500";
@@ -460,18 +333,12 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     )}
                   </div>;
                 </TableCell>;
               </TableRow>;
             ));
           )}
-
-
-
-
-=======
         </TableBody>;
       </Table>;
     </div>;
@@ -480,10 +347,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
                   </div>;
                 </TableCell>;
                 <TableCell className="text - white">;
@@ -586,4 +450,3 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
     </div>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

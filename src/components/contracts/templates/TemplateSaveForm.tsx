@@ -1,5 +1,7 @@
-
-
+import { useState } from 'react';
+import { useForm, type ControllerRenderProps } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
 import { Loader2 } from 'lucide-react';
 import { ContractFormValues } from '@/components/contracts/components/ContractForm';
 import { ContractTemplate } from '@/types/contracts';
@@ -70,7 +72,6 @@ export function TemplateSaveForm(): any ({;
       onComplete();
     } finally {;
       setSaving(false);
-
 import { useState } from 'react';
 import { use_form, type ControllerRenderProps } from 'react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
@@ -144,70 +145,36 @@ if ( {) {
       on_complete ();
     } finally {
       set_saving (false);
-
     }
   }
 
   return (
     <Form {...form}>;
-
       <form on_submit={form.handle_submit (on_submit)} className='space - y-4'>;
         <FormField;
           control={form.control}
           name='title';
-
           render={({
             field
           }: {
-
-    }
-  },
-  
-
-
-
-  return (
-    <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-        <FormField
-          control={form.control}
-
-          name="title"
-          render={({ field }: { field: ControllerRenderProps<FormValues "title"> }) => (
-            <FormItem>
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-              <FormLabel>Template Name</FormLabel>
-              <FormControl>
-                <Input {...field} placeholder='Enter template name' />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-
-            field: ControllerRenderProps<FormValues, 'title'>;
-          }) => (            <FormItem>;
-              <FormLabel>Template Name</FormLabel>;
-=======
             field: ControllerRenderProps < FormValues, 'title'>;
           }) => (            <FormItem>;
               <FormLabel > Template Name</FormLabel>;
-
               <FormControl>;
                 <Input {...field} placeholder='Enter template name' />;
               </FormControl>;
               <FormMessage />;
-
+        <FormField
+          control={form && form.control}
+          name='isDefault'
             </FormItem>)}
         />;
         <FormField;
           control={form.control}
           name='is_default';
-
           render={({
             field
           }: {
-
             field: ControllerRenderProps<FormValues, 'isDefault'>;
           }) => (;
             <FormItem className='flex items-center justify-between'>;
@@ -215,12 +182,10 @@ if ( {) {
                 Set as default template;
               </FormLabel>;
               <FormControl>;
-
                 <Switch
                   aria-label='Default template'
                   checked={field && field.value}
                   onCheckedChange={field && field.onChange}                />;
-=======
 
   };
   return (;
@@ -238,43 +203,6 @@ if ( {) {
               <FormMessage />;
             </FormItem>;
           )}
-        />;
-        <FormField;
-          control={form.control}
-          name="isDefault"
-          render={({ field }: { field: ControllerRenderProps<FormValues "isDefault"> }) => (
-            <FormItem className="flex items-center justify-between">
-              <FormLabel className="cursor-pointer">Set as default template</FormLabel>
-              <FormControl>
-                <Switch
-                  aria-label="Default template"
-          name="isDefault";
-          render={({ field }: { field: ControllerRenderProps<FormValues "isDefault"> }) => (;
-            <FormItem className="flex items-center justify-between">;
-              <FormLabel className="cursor-pointer">Set as default template</FormLabel>;
-              <FormControl>;
-                <Switch;
-                  aria-label="Default template";
-                  checked={field.value}
-                  onCheckedChange={field.onChange}
-                />;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-              </FormControl>;
-              <FormMessage />;
-            </FormItem>;
-          )}
-
-        />
-        
-        <div className="flex gap-2 justify-end">
-          <Button type="button" variant="outline" onClick={onCancel}>
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-            Cancel
-          </Button>
-          <Button type='submit' disabled={saving}>
-=======
             field: ControllerRenderProps < FormValues, 'is_default'>;
           }) => (
             <FormItem className='flex items - center justify - between'>;
@@ -295,50 +223,19 @@ if ( {) {
             Cancel;
           </Button>;
           <Button type='submit' disabled={saving}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             {saving ? (
-
-        />;
-
-        <div className='flex gap-2 justify-end'>;
-          <Button type='button' variant='outline' onClick={onCancel}>;
-            Cancel;
-          </Button>;
-          <Button type='submit' disabled={saving}>;
-            {saving ? (;
               <>;
-                <Loader2 className='mr-2 h-4 w-4 animate-spin' />;
+                <Loader2 className='mr - 2 h - 4 w - 4 animate - spin' />;
                 Saving...;
-              </>;
-            ) : (;
-              `${editTemplate ? 'Update' : 'Save'} Template`;
-=======
-              <>
-                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                Saving...
-              </>
-            ) : (
-
-  editTemplate ? "Update" : "Save" 
-}Template`) ;
-}</Button> </div> </form> </Form>) ;
-}"};
-
-=======
-              `${editTemplate ? "Update" : "Save"} Template`
-
-            )}
+              </>) : (
+              `${edit_template ? 'Update' : 'Save'} Template`)}
           </Button>;
         </div>;
       </form>;
-    </Form>;
-  );
+    </Form>);
+set_saving (true);
+try {
 
-
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   // Check condition
 if ( {) {
   $2
@@ -353,12 +250,3 @@ if ( {) {
 }Template`);
 }</Button> </div> </form> </Form>);
 }"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-}
-;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

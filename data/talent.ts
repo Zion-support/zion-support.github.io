@@ -1,13 +1,31 @@
-
 // Stub talent data - placeholder for missing functionality;
 export const TALENT_PROFILES = [;
-
   {
-
-
+    id: '1',
+    slug: 'sample - talent',
+    name: 'Sample Talent',
+    title: 'Full Stack Developer',
+    category: 'Development',
+    location: 'Remote',
+    timezone: 'UTC',
+    region: 'Global',
+    skills: ['React', 'Node && Node.js', 'TypeScript'],
+    summary: 'Experienced developer with expertise in modern web technologies.',
+    bio: 'Passionate about creating innovative solutions.',
+    hourlyRateUsd: 75,
+    request_quote: true,
+    availability: 'Open',
+    profileImageUrl: null,
+    video_url: null,
+    portfolio: null,
+    verified: false,
+    rating: 0,
+    reviews_count: 0,
+    created_at: new Date ().toISOString (),
+    original_language: 'en',
+translations: {},
+  },
 ];
-
-
     id: '1', slug: 'sample-talent',
     name: 'Sample Talent', title: 'Full Stack Developer',
     category: 'Development', location: 'Remote',
@@ -21,13 +39,6 @@ export const TALENT_PROFILES = [;
     createdAt: new Date().toISOString(), originalLanguage: 'en',
     translations: {}
   }
-
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

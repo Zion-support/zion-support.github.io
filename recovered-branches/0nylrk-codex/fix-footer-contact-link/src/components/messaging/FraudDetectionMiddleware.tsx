@@ -1,17 +1,8 @@
-
+import React, { useCallback } from 'react';
 import {check_message, monitor_content} from '@/services / fraud';
 import {toast} from '@/hooks / use - toast';
 import {supabase} from '@/integrations / supabase / client';
 // Props for the middleware component;
-
-interface FraudDetectionMiddlewareProps {
-  children: React.ReactNode;
-}
-
-
-
-
-=======
 import React, { useCallback } from 'react',;
 import { checkMessage, monitorContent } from '@/services/fraud',;
 import { toast } from '@/hooks/use-toast',;
@@ -36,8 +27,30 @@ interface FraudDetectionContextType {;
     explanation?: string;
   }>;
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React, { useCallback } from 'react',;
+import { checkMessage, monitorContent } from '@/services/fraud',;
+import { toast } from '@/hooks/use-toast',;
+import { supabase } from '@/integrations/supabase/client',;
+// Props for the middleware component;
+interface FraudDetectionMiddlewareProps {;
+  children: React.ReactNode;
+
+
+
+}
+;
+// Interface for the context;
+interface FraudDetectionContextType {;
+  scanMessageContent: (;
+    userId: string,;
+    messageId: string,;
+    content: string,;
+    userEmail?: string;
+  ) => Promise<{;
+    isSafe: boolean,;
+    explanation?: string;
+  }>;
+}
 
     userId: string
     messageId: string
@@ -78,6 +91,9 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
         // Flag the content for review
         await monitorContent(
 
+interface FraudDetectionMiddlewareProps {
+  children: React.ReactNode;
+}
 import {checkMessage, monitorContent} from '@/services/fraud';
 import {toast} from '@/hooks/use-toast';
 import {supabase} from '@/integrations/supabase/client';
@@ -122,7 +138,6 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
       if (quickCheck && quickCheck.isSuspicious) {;
         // Flag the content for review;
         await monitorContent(;
-
           userId;
           userEmail;
           'message';
@@ -130,62 +145,13 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
           content;
         );
 
-          userId,
-          userEmail,
-          'message',
-          messageId,
-          content
-
-        ),
-        
-
-
-        // If it's dangerous, show a warning to the user
-        if (quickCheck.severity === 'dangerous') {
-          toast({
-            title: "Message Flagged"
-            description: "Your message contains content that may violate our terms of service."
-            variant: "destructive"
-            duration: 5000
-
-
-          }),
-          
-          return { 
-            isSafe: false,
-
-
-            explanation: "Message contains prohibited content. Please review our communication guidelines."
-          }
-        }
-      }
 
 
       
 
 
-      // For suspicious but not dangerous content, log but let it pass through
-      if (quickCheck.severity === 'suspicious') {
-        console.log('Suspicious content detected but allowed:', content)
-      }
-      // For more complex analysis (in a real app), we would call the edge function
-      // This is disabled in this example to avoid unnecessary API calls
-      /*
-      const { data, error } = await supabase.functions.invoke('analyze-content-fraud', {
-        body: { content, contentType: 'message' }
-      });
-      if (error) {
-        console.error('Error analyzing message:', error);
-        return { isSafe: true }, // Default to safe on error
-      }
-
-=======
-
-
 
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       if (data.classification === 'dangerous') {
         toast({
           title: "Message Blocked"
@@ -203,7 +169,6 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
       }
       */
       // Message is considered safe
-=======
 
         // If it's dangerous, show a warning to the user;
         if (quickCheck && quickCheck.severity === 'dangerous') {;
@@ -252,38 +217,22 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
       */;
 
       // Message is considered safe;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       return { isSafe: true }
-
+    } catch (error) {;
+      console && console.error('Error in fraud detection:', error);
+      // On error, let the message pass through but log the error;
+      return { isSafe: true }
+    }
+  }, []);
 
   // Create the context value;
   const contextValue: FraudDetectionContextType = {;
     scanMessageContent};
 
-
   return (
     <FraudDetectionContext && FraudDetectionContext.Provider value={contextValue}>;
       {children}
-
     </FraudDetectionContext && FraudDetectionContext.Provider>;
-=======
-
-
-=======
-    } catch (error) {;
-      console.error('Error in fraud detection:', error),;
-      // On error, let the message pass through but log the error;
-      return { isSafe: true }
-    }
-  }, []),;
-  // Create the context value;
-  const contextValue: FraudDetectionContextType = {;
-    scanMessageContent},;
-  return (;
-    <FraudDetectionContext.Provider value={contextValue}>;
-      {children}
-    </FraudDetectionContext.Provider>;
-
   );
 };
 
@@ -298,10 +247,11 @@ export const useFraudDetection = () => {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  return (
+    <FraudDetectionContext && FraudDetectionContext.Provider value={contextValue}>;
+      {children}
+    </FraudDetectionContext && FraudDetectionContext.Provider>;
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 // Interface for the context;
 interface FraudDetectionContextType {
   scanMessageContent: (
@@ -428,4 +378,3 @@ if ( {) {
   return context;
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,8 +1,3 @@
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ServiceTypeStepProps {
   formData: QuoteFormData;
   updateFormData: (data: Partial<QuoteFormData>) => void
@@ -15,7 +10,6 @@ const SAMPLE_LISTINGS: ListingItem[] = [
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {;
   const [searchQuery, setSearchQuery] = useState("");
 
-=======
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {
   const [searchQuery, setSearchQuery] = useState(""),
 
@@ -24,8 +18,6 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
     updateFormData({ serviceType: type })
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const handleItemSelect = (item: ListingItem) => {
     updateFormData({
       specificItem: item
@@ -50,7 +42,6 @@ const SAMPLE_LISTINGS: ListingItem[] = [;
     category: "Services",
     image:;
       "https://images.unsplash.com / photo - 1516192518150 - 0d8fee5425e3?w = 800 & auto = format",
-=======
 
     })
 
@@ -123,15 +114,14 @@ if (return false) {
   $2
 }
     }
-
-    
-    if (searchQuery.trim() === "") return true,
-    return item.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
-           item.category.toLowerCase().includes(searchQuery.toLowerCase())
-  }),
-
-
-
+    if (=== "") return true) {
+  $2
+}
+    return (
+      item.title.toLowerCase ().includes (search_query.toLowerCase ()) ||;
+      item.category.toLowerCase ().includes (search_query.toLowerCase ()));
+  });
+;
   return (
     <div className="space - y-6">;
       <div>;
@@ -145,52 +135,12 @@ if (return false) {
                 ? "bg - zion - purple / 20 border - zion - purple";
                 : "bg - zion - blue - light / 20 border - zion - blue - light hover:border - zion - purple / 50";
             }`}
-
-
-          <Card 
-
-
-            className={`p-4 cursor-pointer border-2 transition-colors ${
-              formData.serviceType === "talent"
-                ? "bg-zion-purple/20 border-zion-purple"
-                : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
-            }`}
-            onClick={() => handleTypeSelect("talent")}
-          >
-            <h4 className="font-medium text-white">Talent</h4>
-            <p className="text-sm text-zion-slate-light">
-              AI specialists, developers, consultants
-            </p>
-          </Card>
-
-
-          <Card 
-
-
-            className={`p-4 cursor-pointer border-2 transition-colors ${
-              formData.serviceType === "equipment"
-                ? "bg-zion-purple/20 border-zion-purple"
-                : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
-            }`}
-            onClick={() => handleTypeSelect("equipment")}
-          >
-            <h4 className="font-medium text-white">Equipment</h4>
-            <p className="text-sm text-zion-slate-light">
-              Servers, workstations, specialized hardware
-            </p>
-          </Card>
-        </div>
-      </div>
-      {formData.serviceType && (
-        <div className="space-y-4">
-
 import {useState} from "react";
 import {QuoteFormData, ListingItem, ServiceType} from "@/types/quotes";
 import {Input} from "@/components/ui/input";
 import {Card} from "@/components/ui/card";
 import {Search} from "lucide-react";
 import {ListingScoreCard} from "@/components/ListingScoreCard";
-=======
 
           <h3 className="text-xl font-semibold text-white">Select a specific {formData.serviceType}</h3>
 
@@ -295,14 +245,11 @@ export function ServiceTypeStep(): any ({ formData, updateFormData }: ServiceTyp
 
           <div className="relative">;
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />;
-
-            <Input;
-
-
-              placeholder={`Search ${formData.serviceType}...`}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               value={searchQuery}
 
+            <Input
+              placeholder={`Search ${formData && formData.serviceType}...`}
+              value={searchQuery}
               onChange={(e) => setSearchQuery(e && e.target.value)}
               className="pl-10 bg-zion-blue border border-zion-blue-light focus:border-zion-purple";
             />;
@@ -317,11 +264,8 @@ export function ServiceTypeStep(): any ({ formData, updateFormData }: ServiceTyp
                   className={`cursor-pointer transition-all ${;
                     formData && formData.specificItem?.id === item && item.id ? "ring-2 ring-zion-purple rounded-lg" : "";
 
-=======
-
                     formData.specificItem?.id === item.id ? "ring-2 ring-zion-purple rounded-lg" : ""
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   }`}
                 >;
                   <ListingScoreCard
@@ -343,11 +287,8 @@ export function ServiceTypeStep(): any ({ formData, updateFormData }: ServiceTyp
           </div>;
         </div>;
       )}
-
     </div>;
-
   );
-=======
             on_click={() => handleTypeSelect ("service")}
           >;
             <h4 className="font - medium text - white">Services</h4>;
@@ -425,5 +366,4 @@ export function ServiceTypeStep(): any ({ formData, updateFormData }: ServiceTyp
           </div>;
         </div>)}
     </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

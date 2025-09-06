@@ -1,24 +1,3 @@
-
-
-
-  redirectUrl?: string
-}
-export function PaymentButton({
-
-
-
-
-  amount
-  serviceId
-  providerId
-  buttonText = "Purchase"
-  className
-  onPaymentInitiated
-  redirectUrl}: PaymentButtonProps) {
-  const [isProcessing, setIsProcessing] = useState(false)
-  const { isAuthenticated, user } = useAuth()
-  const router = useRouter()
-
         description: "Please sign in to make a purchase."}),
 import { use_router } from 'next / router';
 import {logErrorToProduction} from '@/utils / production_logger';
@@ -49,7 +28,6 @@ if ( {) {
       const return_to = encodeURIComponent (`/checkout?sku=${service_id}`);
       router.push (`/auth / login?return_to=${return_to}`);
       return;
-
     }
     try {
       setIsProcessing (true);
@@ -59,55 +37,6 @@ if ( {) {
 }
         onPaymentInitiated ();
       }
-
-
-
-=======
-  amount,
-  serviceId,
-  providerId,
-  buttonText = "Purchase",
-  className,
-  onPaymentInitiated,
-  redirectUrl}: PaymentButtonProps) {
-  const [isProcessing, setIsProcessing] = useState(false),
-  const { isAuthenticated, user } = useAuth(),
-  const router = useRouter(),
-  
-
-
-
-  const handlePaymentClick = async () => {
-    if (!isAuthenticated) {
-      toast({
-        title: "Authentication required",
-        description: "Please sign in to make a purchase."}),
-
-
-
-      }
-      
-      // Call the create-checkout edge function
-      const { data, error } = await supabase.functions.invoke("create-checkout", {
-        body: {
-
-
-          providerId,
-          userId: user?.id,
-          successUrl: redirectUrl || window.location.href,
-          cancelUrl: window.location.href}}),
-      
-      if (error) {
-        throw error
-      }
-      
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-      // Type assertion needed for mock Supabase client compatibility
-      if ((data as any)?.url) {
-        // Open Stripe checkout in a new tab
-        window.open((data as any).url, '_blank')
-
       // Call the create - checkout edge function;
       const { data, error } = await supabase.functions.invoke ("create - checkout", {
         body: {
@@ -130,29 +59,28 @@ if (?.url) {) {
 }
         // Open Stripe checkout in a new tab;
         window.open ((data as any).url, '_blank');
-
       } else {
         throw new Error ("No checkout URL returned");
       }
-=======
       } else {
         throw new Error("No checkout URL returned")
       }
 
       
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     } catch (error) {
-
       logErrorToProduction ('Payment error:', { data: error }),
       toast ({
         title: "Payment error",
         description: "There was a problem initiating your payment. Please try again.",
         variant: "destructive"});
-
     } finally {
-
-
+      // Reset button state after a short delay;
+      set_timeout ((, ) => {
+        setIsProcessing (false);
+      }, 1500);
+    }
+  }
         description: "Please sign in to make a purchase."}),;
 import { useRouter } from 'next/router';
 import {logErrorToProduction} from '@/utils/productionLogger';
@@ -196,16 +124,13 @@ export function PaymentButton(): any ({;
         onPaymentInitiated();
       }
 
-=======
       // Reset button state after a short delay
       setTimeout(() => {
         setIsProcessing(false)
       }, 1500)
 
 
-=======
 ;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       // Call the create-checkout edge function;
       const { data, error } = await supabase && supabase.functions.invoke("create-checkout", {;
         body: {;
@@ -241,26 +166,7 @@ export function PaymentButton(): any ({;
     }
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
-
-        "relative min-w-[120px]",
-        className
-      )}
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-    >
-      {isProcessing ? (
-        <>
-          <Loader2 className="h-4 w-4 mr-2 animate-spin" />
-          Processing...
-        </>
-      ) : (
-        buttonText
-      )}
-
         "relative min-w-[120px]"        className
       ),}>;
       {isProcessing ? (;
@@ -291,23 +197,8 @@ toast ({;
   isProcessing ? (<> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Processing... </>) : (buttonText) ;
 }</Button>) ;
 }'"  );
-
 }
 
-}> {"
-  isProcessing ? (<> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Processing... </>) : (buttonText)
-}</Button>)
-}'"  )
-}
-=======
-
-
-=======
-
-;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     <Button;
       on_click={handlePaymentClick}
       disabled={is_processing}
@@ -331,9 +222,8 @@ toast ({
   setIsProcessing (false);
 }, 1500);
 }
-
-;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}> {";
+  is_processing ? (<> <Loader2 className="h - 4 w - 4 mr - 2 animate - spin" /> Processing... </>) : (button_text);
+}</Button>);
+}'"  );
+}

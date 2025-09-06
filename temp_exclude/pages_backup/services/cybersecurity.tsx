@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -31,7 +30,6 @@ const securityServices = [
 export default function CybersecurityPage() {
 
 export default function CybersecurityPage() {
-
   return (
     <Layout
       title="Cybersecurity Services - Zion Tech Group"
@@ -40,7 +38,6 @@ export default function CybersecurityPage() {
     >
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
-
         <section className="bg-gradient-to-r from-red-600 to-orange-700 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
@@ -63,7 +60,6 @@ export default function CybersecurityPage() {
           </div>
         </section>
 
-
         {/* Services Grid */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -73,7 +69,6 @@ export default function CybersecurityPage() {
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6"
                 >
@@ -93,9 +88,7 @@ export default function CybersecurityPage() {
         </section>
 
 
-
         {/* CTA Section */}
-
         <section className="py-20 bg-gray-900 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -118,6 +111,5 @@ export default function CybersecurityPage() {
       </div>
     </>
     </>
-
   );
 }

@@ -1,5 +1,4 @@
-
-
+// Common skills for filtering
 
 export const COMMON_SKILLS = [
   'Machine Learning'
@@ -14,14 +13,11 @@ export const COMMON_SKILLS = [
   'Cloud Architecture'
   'TensorFlow',];
 // Regions
-=======
 // Common skills for filtering;
 export const COMMON_SKILLS = [;
-=======
 // Common skills for filtering
 
 export const COMMON_SKILLS = [
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   'Machine Learning',
   'Python',
   'JavaScript',
@@ -31,12 +27,10 @@ export const COMMON_SKILLS = [
   'Docker',
   'Kubernetes',
   'DevOps',
-
+  'Cloud Architecture',
   'TensorFlow', ];
 ;
 // Regions;
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export const REGIONS = [  "Machine Learning";
   "Python";
   "JavaScript";
@@ -47,17 +41,32 @@ export const REGIONS = [  "Machine Learning";
   "Kubernetes";
   "DevOps";
   "Cloud Architecture";
+// Regions
+export const REGIONS = [
+  'North America'
+  'Europe'
+  'Asia Pacific'
+  'South America'
+  'Middle East'
+  'Africa',];  "North America";
+];
 
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+// Regions
+export const REGIONS = [
+  "North America";
+  "TensorFlow";
+// Regions;
+export const REGIONS = [;
+  'North America',
+  'Europe',
+  'Asia Pacific',
+  'South America',
+  'Middle East',
+  'Africa', ];  "North America";
   "Europe";
   "Asia Pacific";
   "South America";
   "Middle East";
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
   'Cloud Architecture',;
   'TensorFlow',];
 
@@ -77,4 +86,5 @@ export const COMMON_SKILLS = [
   "Cloud Architecture",
   "TensorFlow"
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+];
+  "Africa";

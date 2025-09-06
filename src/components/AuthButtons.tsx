@@ -1,7 +1,4 @@
 
-
-
-
 import { useState } from 'react';
 import { Button } from '@/components / ui / button';
 import { Facebook } from 'lucide-react';
@@ -14,12 +11,10 @@ export /**
  */
 function AuthButtons() {
   const [loading_provider, setLoadingProvider] = useState < string | null>(null);
-
   const handleSignIn = async (provider: Provider) => {
     setLoadingProvider (provider);
     await sign_in (provider);
   }
-
 type Provider = 'google' | 'github' | 'facebook' | 'credentials';
 interface AuthButtonsProps {;
   providers?: Provider[];
@@ -35,15 +30,6 @@ export function AuthButtons(): any ({;
   };
   const gridCols = `grid-cols-${providers && providers.length}`;
 
-
-
-  const gridCols = `grid-cols-${providers.length}`,
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className={`mt-6 grid ${gridCols} gap-3`}>;
       {providers && providers.includes('google') && (;
@@ -68,7 +54,6 @@ export function AuthButtons(): any ({;
 
 
             </svg>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           )}
         </Button>;
       )}
@@ -91,7 +76,6 @@ export function AuthButtons(): any ({;
 
 
             </svg>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           )}
         </Button>;
       )}
@@ -112,18 +96,24 @@ export function AuthButtons(): any ({;
             <Facebook className="h-5 w-5" />
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           )}
         </Button>;
       )}
       {providers && providers.includes('credentials') && (;
         <Button
+          type='button'
+          variant='outline'
+          className='col-span-2 border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan'
+          onClick={() => handleSignIn('credentials')}
+          disabled={loadingProvider !== null}        >;
+          {loadingProvider === 'credentials' ? (;
+            <svg className='h-5 w-5 animate-spin' viewBox='0 0 24 24' />;
+          ) : (;
+            <>Email Login</>;
+          )}
+        </Button>;
+      )}
 
-    </div>;
-  );
-}
-
-=======
   const grid_cols = `grid - cols-${providers.length}`;
   return (
     <div className={`mt - 6 grid ${grid_cols} gap - 3`}>;
@@ -204,44 +194,3 @@ export function AuthButtons(): any ({;
         </Button>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-          ) : (
-            <>Email Login</>
-          )}
-        </Button>
-      )};
-    </div>;
-  );
-};
-}
-
-=======
-          type="button"
-          variant="outline"
-          className="col-span-2 border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
-          onClick={() => handleSignIn('credentials')}
-          disabled={loadingProvider !== null}
-        >
-          {loadingProvider === 'credentials' ? (
-            <svg className="h-5 w-5 animate-spin" viewBox="0 0 24 24" />
-
-
-          ) : (
-            <>Email Login</>
-          )}
-        </Button>;
-      )}
-
-=======
-
-    </div>;
-  );
-}
-;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

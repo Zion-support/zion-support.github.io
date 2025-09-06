@@ -1,5 +1,3 @@
-
-
 import React, { useState } from 'react';
 import {;
   Card,;
@@ -17,7 +15,6 @@ import {;
   useAIContentEnhancer,;
   AIEnhancementOptions,;
 } from '@/hooks/useAIContentEnhancer';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 interface AIEnhancementPanelProps {;
   title: string;
@@ -25,7 +22,6 @@ interface AIEnhancementPanelProps {;
   onApply: (content: string) => void;
   onClose?: () => void;
   showInstructions?: boolean;
-
 import React, { useState } from 'react';
 import {
   Card,
@@ -77,7 +73,6 @@ if ( {) {
       ...options,
       [field]: e.target.value,
     });
-
   }
   const handle_apply = () =>: any {
     on_apply (generated_content);
@@ -91,7 +86,6 @@ if ( {) {
     set_timeout (() => set_copied (false), 2000);
   }
 
-=======
   initialContent?: string;
 export function AIEnhancementPanel(): any ({;
   title,;
@@ -117,10 +111,20 @@ export function AIEnhancementPanel(): any ({;
   };
 
 
+  const handleApply = () => {;
+    onApply(generatedContent);
+    if (onClose) onClose();
+  };
+
+  const handleCopy = () => {;
+    navigator && navigator.clipboard.writeText(generatedContent);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+  return (
             value={options && options.content}
             onChange={e => handleInputChange(e, 'content')}          />;
         </div>;
-
 
         {/* Context input */}
         <div className='space-y-2'>;
@@ -128,61 +132,10 @@ export function AIEnhancementPanel(): any ({;
           <Textarea
             placeholder='Add any relevant context to guide the AI...'
             className='min-h-[60px]'
-
             value={options && options.context}
             onChange={e => handleInputChange(e, 'context')}          />;
         </div>;
 
-
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-    field: keyof AIEnhancementOptions
-  ) => {
-    setOptions({
-
-      ...options,
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  return (
-    <Card className="w-full max-w-2xl mx-auto">
-      <CardHeader>
-        <CardTitle className="flex items-center gap-2">
-          <Sparkles className="h-5 w-5 text-primary" />
-          {title}
-        </CardTitle>
-      </CardHeader>
-      <CardContent className="space-y-4">
-        {/* Input area */}
-        <div className="space-y-2">
-          <label className="text-sm font-medium">Content to enhance</label>
-          <Textarea
-
-            placeholder="Enter your content to enhance..."
-            className="min-h-[100px]"
-            value={options.content}
-            onChange={(e) => handleInputChange(e, 'content')}
-          />;
-        </div>;
-        {/* Context input */}
-        <div className="space-y-2">
-          <label className="text-sm font-medium">Context (optional)</label>
-          <Textarea
-            placeholder="Add any relevant context to guide the AI..."
-            className="min-h-[60px]"
-            value={options.context}
-            onChange={(e) => handleInputChange(e, 'context')}
-          />;
-        </div>;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Instructions input (optional) */}
         {showInstructions && (;
           <div className='space-y-2'>;
@@ -196,35 +149,15 @@ export function AIEnhancementPanel(): any ({;
 
           disabled={isEnhancing || (!options.content && !options.context)}        >
 
-=======
               onChange={(e) => handleInputChange(e, 'instructions')}
             />;
           </div>;
         )}
 
         {/* Generate button */}
-        <Button 
-          onClick={handleGenerate} 
-          className="w-full" 
-          disabled={isEnhancing || !options.content && !options.context}
-        >
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-          {isEnhancing ? (
-            <>
-              <Loader2 className='mr-2 h-4 w-4 animate-spin' />
-              Enhancing...
-            </>
-          ) : (
-            <>
-              <Sparkles className='mr-2 h-4 w-4' />
-              Generate Enhanced Content
-            </>
-          )}
-        </Button>
-=======
+        <Button
+          onClick={handleGenerate}
+          className='w-full'
           disabled={isEnhancing || (!options && options.content && !options && options.context)}>;
           {isEnhancing ? (;
             <>;
@@ -239,7 +172,6 @@ export function AIEnhancementPanel(): any ({;
           )}
         </Button>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Output area */}
 
         {generatedContent && (
@@ -259,7 +191,6 @@ export function AIEnhancementPanel(): any ({;
                   <><Check className="h-4 w-4 mr-1" /> Copied</>
                 ) : (
                   <><Copy className="h-4 w-4 mr-1" /> Copy</>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 )}
               </Button>;
             </div>;
@@ -275,21 +206,7 @@ export function AIEnhancementPanel(): any ({;
 
             </div>
           </div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         )}
-
-
-      
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-      {generatedContent && (
-        <CardFooter className='flex justify-between'>
-          {onClose && (
-            <Button variant='outline' onClick={onClose}>
-              Cancel
-            </Button>
-=======
       </CardContent>;
 
       {generatedContent && (;
@@ -298,14 +215,11 @@ export function AIEnhancementPanel(): any ({;
             <Button variant='outline' onClick={onClose}>;
               Cancel;
             </Button>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           )}
+          <Button onClick={handleApply}>Apply to Form</Button>;
+        </CardFooter>;
+      )}
 
-    </Card>;
-  );
-}
-
-=======
     <Card className='w - full max - w-2xl mx - auto'>;
       <CardHeader>;
         <CardTitle className='flex items - center gap - 2'>;
@@ -395,26 +309,3 @@ export function AIEnhancementPanel(): any ({;
         </CardFooter>)}
     </Card>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-      )};
-    </Card>;
-  );
-};
-
-=======
-          <Button onClick={handleApply}>;
-            Apply to Form;
-          </Button>;
-        </CardFooter>;
-      )}
-    </Card>;
-  );
-}
-;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

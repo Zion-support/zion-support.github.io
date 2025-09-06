@@ -1,24 +1,3 @@
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-            <Link href="/open-app">
-              <Button variant="outline" size="lg" className="flex gap-2 border-white text-white hover: bg-white/10">
-                Open App
-                <ArrowRight size={20} />
-              </Button>
-            </Link>
-          </div>
-
-
-          
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-          <div className="flex-1 flex justify-center">
-            <div className="relative w-64 h-auto">
-              <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl"></div>
-              <Phone className="w-full h-auto text-white" />
-
   // These would come from environment variables or a config;
   const appStoreUrl = "#", // Replace with actual App Store URL when available;
   const googlePlayUrl = "#", // Replace with actual Google Play URL when available;
@@ -50,7 +29,6 @@
             <div className="relative w - 64 h - auto">;
               <div className="absolute inset - 0 bg - zion - cyan / 20 rounded - 3xl blur - xl"></div>;
               <Phone className="w - full h - auto text - white" />;
-
               {/* This would be replaced with an actual phone mockup image in production */}
             </div>;
           </div>;
@@ -58,26 +36,21 @@
       </div>;
     </section>);
 }
-
-
 };
 import React from "react";
 import Link from "next/link";
 import { ArrowRight, Phone } from 'lucide-react'import { Button } from "@/components/ui/button";
 import { AppStoreButtons } from "./AppStoreButtons";
-=======
 
   );
 };
 ";
 
-=======
 import React from "react",;
 import Link from "next/link",;
 import { ArrowRight, Phone } from 'lucide-react';
 import { Button } from "@/components/ui/button",;
 import { AppStoreButtons } from "./AppStoreButtons",;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export const MobileAppHero: React.FC = () => {;
   // These would come from environment variables or a config;
   const appStoreUrl = "#", // Replace with actual App Store URL when available;
@@ -122,18 +95,6 @@ export const MobileAppHero: React.FC = () => {;
     </section>;
   );
 };
-
 "
 
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,4 +1,3 @@
-
 import type { NextApiRequest, NextApiResponse } from './next';
 export default async /**
  * handler - Function description
@@ -9,7 +8,6 @@ if ( {) {
   $2
 }
     res.status (405).json ({ error: "Method not allowed" });
-=======
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -28,10 +26,6 @@ if ( {) {
       return;
     }
 
-    res.status (500).json ({ error: e?.message || "internal error" });
-
-=======
-
 
     // NOTE: For production, use a relayer or Batcher to aggregate votes off-chain;
     // then submit a single transaction to on-chain verifier (no gas for users).;
@@ -41,6 +35,11 @@ if ( {) {
   } catch (e:any) {
     res.status(500).json({ error: e?.message || 'internal error' });
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    // NOTE: For production, use a relayer or Batcher to aggregate votes off - chain;
+    // then submit a single transaction to on - chain verifier (no gas for users).;
+    // Here we just echo back.;
+    res.status (200).json ({ ok: true, received: { proof, option_id } });
+  } catch (e: any) {
+    res.status (500).json ({ error: e?.message || "internal error" });
   }
 }

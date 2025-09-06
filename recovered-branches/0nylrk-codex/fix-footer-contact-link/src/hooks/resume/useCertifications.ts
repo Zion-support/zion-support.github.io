@@ -1,25 +1,3 @@
-
-
-import {useState} from 'react';
-import {supabase} from '@/integrations/supabase/client';
-import {Certification} from '@/types/resume';
-import {useAuth} from '@/hooks/useAuth';
-import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
-export function useCertifications() {;
-
-
-  const { user } = useAuth();
-  const [isLoading, setIsLoading] = useState(false);
-
-  const [error, setError] = useState<string | null>(null);
-  const addCertification = async (resumeId: string, cert: Certification): Promise<boolean> => {
-    if (!user) {
-      setError('You must be logged in to add certifications')
-      return false
-
-
-
-=======
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Certification } from '@/types/resume',;
@@ -41,8 +19,27 @@ export function useCertifications() {;
     setIsLoading(true),
     setError(null),
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import { useState } from 'react',;
+import { supabase } from '@/integrations/supabase/client',;
+import { Certification } from '@/types/resume',;
+import { useAuth } from '@/hooks/useAuth',;
+import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils',;
+export function useCertifications() {;
+  const { user } = useAuth(),;
+  const [isLoading, setIsLoading] = useState(false),;
+  const [error, setError] = useState<string | null>(null),;
+  const addCertification = async (resumeId: string, cert: Certification): Promise<boolean> => {;
+    if (!user) {;
+      setError('You must be logged in to add certifications'),;
+      return false;
+
+
+
+    }
+    
+    setIsLoading(true),
+    setError(null),
+    
     try {
       const { error } = await supabase
         .from('certifications')
@@ -54,10 +51,8 @@ export function useCertifications() {;
           expiration_date: cert && cert.expiration_date ? formatDateForDB(cert && cert.expiration_date) : null;
           credential_id: cert && cert.credential_id,
           credential_url: cert && cert.credential_url
-
         });
       if (error) throw error;
-=======
 
           resume_id: resumeId,
           name: cert.name,
@@ -71,7 +66,6 @@ export function useCertifications() {;
       if (error) throw error,
       
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       return showSuccessToast("Certification added", "Your certification has been added to your resume")
     } catch (e: any) {
       return handleResumeError(e, 'Could not add certification')
@@ -80,7 +74,6 @@ export function useCertifications() {;
 
 
 
-=======
 ;
     setIsLoading(true),;
     setError(null),;
@@ -116,24 +109,19 @@ export function useCertifications() {;
     setIsLoading(true),
     setError(null),
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     try {
       const { error } = await supabase
         .from('certifications')
         .update({
-
           name: cert && cert.name;
           issuing_organization: cert && cert.issuing_organization;
           issue_date: cert && cert.issue_date ? formatDateForDB(cert && cert.issue_date) : null;
           expiration_date: cert && cert.expiration_date ? formatDateForDB(cert && cert.expiration_date) : null;
           credential_id: cert && cert.credential_id,
           credential_url: cert && cert.credential_url
-
         })
         .eq('id', certId);
       if (error) throw error;
-=======
 
           name: cert.name,
           issuing_organization: cert.issuing_organization,
@@ -147,7 +135,6 @@ export function useCertifications() {;
       if (error) throw error,
       
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       return showSuccessToast("Certification updated", "Your certification has been updated")
     } catch (e: any) {
       return handleResumeError(e, 'Could not update certification')
@@ -156,7 +143,6 @@ export function useCertifications() {;
 
 
 
-=======
 ;
     setIsLoading(true),;
     setError(null),;
@@ -192,8 +178,6 @@ export function useCertifications() {;
     setIsLoading(true),
     setError(null),
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     try {
       const { error } = await supabase
         .from('certifications')
@@ -212,10 +196,7 @@ export function useCertifications() {;
     } finally {
       setIsLoading(false)
 
-
-
-
-=======
+    deleteCertification
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {Certification} from '@/types / resume';
@@ -250,7 +231,7 @@ if ( {) {
 
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    deleteCertification
 ;
     try {
       const { error } = await supabase;
@@ -348,6 +329,5 @@ if (throw error) {
     add_certification;
     update_certification;
     delete_certification;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 }

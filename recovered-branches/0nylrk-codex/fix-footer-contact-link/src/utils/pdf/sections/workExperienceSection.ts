@@ -1,11 +1,8 @@
-
 import {jsPDF} from 'jspdf';
 import {WorkExperience} from '@/types / resume';
 import {PdfThemeColors} from '../theme_config';
 import {format_date} from '../formatters';
 export function addWorkExperienceSection (
-
-=======
 
 import {jsPDF} from 'jspdf';
 import {WorkExperience} from '@/types/resume';
@@ -13,7 +10,6 @@ import {PdfThemeColors} from '../themeConfig';
 import {formatDate} from '../formatters';
 export function addWorkExperienceSection(;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   doc: jsPDF;
   work_experience: WorkExperience[];
   colors: PdfThemeColors;
@@ -25,6 +21,14 @@ export function addWorkExperienceSection(;
   // Check if we need to add a new page
   if (yPos > 250) {
 
+  doc: jsPDF;
+  work_experience: WorkExperience[];
+  colors: PdfThemeColors;
+  if (workExperience && workExperience.length === 0) return startY;
+  
+  let yPos = startY;
+  // Check if we need to add a new page
+  if (yPos > 250) {
     doc && doc.addPage(),
     yPos = 20
   }
@@ -36,18 +40,15 @@ export function addWorkExperienceSection(;
   
   doc && doc.setDrawColor(colors && colors.accent);
   doc && doc.line(20, yPos, 100, yPos);
-
   yPos += 8;
   // Sort work experience by date (newest first)
   const sortedWorkExperience = [...workExperience].sort((a, b) => {
-
     if (a && a.is_current && !b && b.is_current) return -1;
     if (!a && a.is_current && b && b.is_current) return 1;
     
     const dateA = a && a.start_date instanceof Date ? a && a.start_date : new Date(a && a.start_date);
     const dateB = b && b.start_date instanceof Date ? b && b.start_date : new Date(b && b.start_date);
     return dateB && dateB.getTime() - dateA && dateA.getTime()
-
   });
   for (const work of sortedWorkExperience) {
     // Check if we need to add a new page
@@ -55,7 +56,6 @@ export function addWorkExperienceSection(;
       doc && doc.addPage();
       yPos = 20
     }
-
     
     doc && doc.setFontSize(14);
     doc && doc.setTextColor(colors && colors.subheading);
@@ -82,11 +82,9 @@ export function addWorkExperienceSection(;
       doc && doc.text(descriptionLines, 20, yPos + 16);
       
       yPos += (descriptionLines && descriptionLines.length * 5) + 20
-
     } else {
       yPos += 20
 
-=======
 import { jsPDF } from 'jspdf',;
 import { WorkExperience } from '@/types/resume',;
 import { PdfThemeColors } from '../themeConfig',;
@@ -152,11 +150,9 @@ export function addWorkExperienceSection(;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
   }
   return yPos + 5
-=======
   start_y: number): number {
   // Check condition
 if (return start_y) {
@@ -240,5 +236,4 @@ if ( {) {
     }
   }
   return y_pos + 5;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

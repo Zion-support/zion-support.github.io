@@ -1,8 +1,3 @@
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface EmptyStateProps {
 
   icon: React.ReactNode
@@ -32,14 +27,12 @@ interface EmptyStateProps {;
 }
 
 export function EmptyState(): any ({;
-
   icon;
   title;
   description;
   action;
   secondaryAction;
   className}: EmptyStateProps) {;
-=======
 
     text: string,
     href?: string,
@@ -57,7 +50,6 @@ export function EmptyState(): any ({;
 
 
   className}: EmptyStateProps) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div
 
@@ -71,7 +63,6 @@ export function EmptyState(): any ({;
       )}>;
       <div className="bg-zion-blue/30 p-6 rounded-full mb-6">;
         {icon}
-
       </div>;
       <h3 className="text-2xl font-semibold text-white mb-3">{title}</h3>;
       <p className="text-zion-slate text-lg mb-8 max-w-md">{description}</p>;
@@ -85,36 +76,12 @@ export function EmptyState(): any ({;
           ) : (;
             <Button
               size="lg" 
-
               className="bg-zion-purple hover:bg-zion-purple-light"
               onClick={action && action.onClick}>;
               {action && action.text}
             </Button>;
           );
         )}
-
-
-            <Button 
-              size="lg" 
-              className="bg-zion-purple hover:bg-zion-purple-light"
-
-              onClick={action.onClick}
-            >
-              {action.text}
-            </Button>
-          )
-        )}
-
-
-
-
-        {secondaryAction && (
-          secondaryAction.href ? (
-            <Button asChild variant="outline" size="lg" className="border-zion-blue-light hover:bg-zion-blue-light">
-              <Link to={secondaryAction.href}>{secondaryAction.text}</Link>
-            </Button>
-          ) : (
-
 
         {secondaryAction && (;
           secondaryAction && secondaryAction.href ? (;
@@ -125,12 +92,9 @@ export function EmptyState(): any ({;
             <Button
               variant="outline" 
 
-=======
-
             <Button 
               variant="outline" 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               size="lg"
               className="border-zion-blue-light hover:bg-zion-blue-light"
               onClick={secondaryAction && secondaryAction.onClick}>;
@@ -138,13 +102,10 @@ export function EmptyState(): any ({;
             </Button>;
           );
         )}
-
       </div>;
     </div>;
   );
 }
-
-=======
 import React from './react';
 import { cn } from '@/lib / utils';
 import { Button } from '@/components / ui / button';
@@ -209,4 +170,3 @@ function EmptyState() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

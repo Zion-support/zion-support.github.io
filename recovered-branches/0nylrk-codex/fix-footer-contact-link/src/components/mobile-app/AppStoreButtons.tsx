@@ -1,36 +1,26 @@
-
 import React from "react";
 import {Apple, GithubIcon} from "lucide-react";
 import {cn} from "@/lib/utils";
 interface AppStoreButtonsProps {;
-
   className?: string;
-=======
 import React from './react';
 import { Apple, GithubIcon } from './lucide-react';
 import { cn } from '@/lib / utils';
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface AppStoreButtonsProps {
   class_name?: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   appStoreUrl?: string;
   googlePlayUrl?: string;
   onAppStoreClick?: () => void;
   onGooglePlayClick?: () => void;
 }
 
-
 export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ ;
-
   className;
 
   appStoreUrl = "#";
   googlePlayUrl = "#";
-
   onAppStoreClick,;
   onGooglePlayClick;
 }) => {;
@@ -47,26 +37,22 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ ;
       e && e.preventDefault();
       console && console.log("Google Play download clicked"),;
       onGooglePlayClick?.();
-
     }
   }
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
-
-
-
-=======
       </Link>
 
 
       <a 
         href={googlePlayUrl} 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      </Link>
+
+
+      <a 
+        href={googlePlayUrl} 
         className="flex items-center bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-900 transition-colors"
         onClick={handleGooglePlayClick}
         target="_blank"
@@ -90,11 +76,9 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ ;
     </div>
   )
 
-=======
 
 };
 
-=======
 },
 import React from "react",;
 import { Apple, GithubIcon } from "lucide-react",;
@@ -167,7 +151,6 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({;
     </div>;
   );
 };
-
 export const AppStoreButtons: React.FC < AppStoreButtonsProps> = ({
   class_name;
   appStoreUrl = "#";
@@ -238,10 +221,10 @@ if ( {) {
 }
 ;
 
-=======
+export default AppStoreButtons;
+
+
 
 export default AppStoreButtons;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,5 +1,3 @@
-
-
 import {;
   Form,;
   FormControl,;
@@ -10,17 +8,14 @@ import {;
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 
 interface ReplyFormProps {;
-
   onSubmit: (content: string) => Promise<void>;
   parentId?: string
 }
-
 import { useState  } from './react';
 import { use_form  } from './react - hook - form';
 import { Button  } from '@/components / ui / button';
 import { Textarea  } from '@/components / ui / textarea';
 import {
-=======
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 
@@ -33,23 +28,18 @@ import {
   FormControl,
   FormField,
   FormItem,
-
+  FormMessage,
+} from '@/components / ui / form';
+import { Card, CardContent, CardFooter  } from '@/components / ui / card';
+interface ReplyFormProps {
+  on_submit: (content: string) => Promise < void>;
+  parent_id?: string;
+}
+interface ReplyFormValues {
 
 interface ReplyFormValues {;
-
   content: string;
 }
-
-FormMessage,;
-
-} from "@/components/ui/form";
-
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-
-  };
-
-
-=======
 
   const form = useForm<ReplyFormValues>({;
     defaultValues: {;
@@ -58,7 +48,6 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
   });
 
   const handleSubmit = async (values: ReplyFormValues) => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     setIsSubmitting(true);
     try {;
       (await onSubmit(values && values.content), form && form.reset());
@@ -71,8 +60,30 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
 
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  FormMessage,
+} from '@/components / ui / form';
+import { Card, CardContent, CardFooter  } from '@/components / ui / card';
+interface ReplyFormProps {
+  on_submit: (content: string) => Promise < void>;
+  parent_id?: string;
+}
+interface ReplyFormValues {
+
+interface ReplyFormValues {;
+  content: string;
+}
+  FormMessage,
+} from '@/components / ui / form';
+import { Card, CardContent, CardFooter  } from '@/components / ui / card';
+interface ReplyFormProps {
+  on_submit: (content: string) => Promise < void>;
+  parent_id?: string;
+}
+interface ReplyFormValues {
+
+interface ReplyFormValues {;
+  content: string;
+}
   return (
     <Card>;
       <CardContent className="pt-6">;
@@ -85,7 +96,6 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
                 <FormItem>;
                   <FormControl>;
                     <Textarea
-
 export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
   const [is_submitting, setIsSubmitting] = useState (false);
 ;
@@ -116,7 +126,6 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
                 <FormItem>;
                   <FormControl>;
                     <Textarea;
-
                       placeholder={
                         parent_id;
                           ? "Write your reply...";
@@ -127,30 +136,24 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
                     />;
                   </FormControl>;
                   <FormMessage />;
-
                 </FormItem>)}
             />;
             <div className="mt - 4 flex justify - end">;
               <Button type="submit" disabled={is_submitting}>;
                 {is_submitting ? "Submitting..." : "Post Reply"}
-
               </Button>;
             </div>;
           </form>;
         </Form>;
       </CardContent>;
-
     </Card>);
 }
 ;
 export default ReplyForm;
 ;
 
-=======
-
                       placeholder={parentId ? "Write your reply..." : "Join the discussion..."}
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       className="min-h-[100px] resize-y"
                       {...field}
                     />
@@ -173,4 +176,6 @@ export default ReplyForm;
 },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+                      placeholder={parentId ? "Write your reply..." : "Join the discussion..."}
+

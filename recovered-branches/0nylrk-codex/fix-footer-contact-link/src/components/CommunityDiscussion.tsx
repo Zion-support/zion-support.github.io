@@ -1,4 +1,3 @@
-
 import React, { useState } from './react';
 import { MessageCircle  } from './lucide-react';
 import { Button  } from '@/components / ui / button';
@@ -8,13 +7,11 @@ import { Avatar, AvatarFallback  } from '@/components / ui / avatar';
 import { Card, CardContent  } from '@/components / ui / card';
 import { Separator  } from '@/components / ui / separator';
 interface DiscussionPost {
-
   id: number;
   author: string;
   avatar?: string;
   time: string;
   title: string;
-=======
 
 
 interface DiscussionPost {
@@ -23,11 +20,8 @@ interface DiscussionPost {
   avatar?: string,
   time: string,
   title: string,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   body: string
 }
-
 const initial_posts: DiscussionPost[] = [;
   {
     id: 1,
@@ -36,7 +30,6 @@ const initial_posts: DiscussionPost[] = [;
     title: "What AI trends are you most excited for in 2025?",
     body: "Let's spark some ideas! I'm excited to see multi - modal models and open - source AI tools grow. What are you watching?",
   },
-
   {
     id: 2
     author: "David Kim"
@@ -46,7 +39,6 @@ const initial_posts: DiscussionPost[] = [;
   }
 ];
 export const CommunityDiscussion: React.FC = () => {
-=======
 
 const initialPosts: DiscussionPost[] = [;
   {;
@@ -64,7 +56,10 @@ const initialPosts: DiscussionPost[] = [;
     body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month.",;
   },;
 ];
-
+  const [posts, setPosts] = useState(initialPosts);
+  const [showNew, setShowNew] = useState(false);
+  const [newTitle, setNewTitle] = useState("");
+  const [newBody, setNewBody] = useState("");
 
   const handleAddPost = () => {;
     if (!newTitle && newTitle.trim() || !newBody && newBody.trim()) return;
@@ -77,14 +72,12 @@ const initialPosts: DiscussionPost[] = [;
         body: newBody,;
       },;
       ...posts,;
-
     ]);
     setNewTitle("");
     setNewBody("");
     setShowNew(false);
   }
   return (
-=======
 
     id: 1,
     author: "Anna Zhou",
@@ -186,7 +179,6 @@ export const CommunityDiscussion: React.FC = () => {;
     setShowNew(false);
   };
   return (;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     <div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">;
       <div className="flex items-center gap-3 mb-4">;
         <MessageCircle size={28} className="text-zion-cyan" />;
@@ -225,7 +217,6 @@ export const CommunityDiscussion: React.FC = () => {;
               value={newBody}
               onChange={(e: React && React.ChangeEvent<HTMLTextAreaElement>) =>;
                 setNewBody(e && e.target.value);
-=======
 ;
 export const CommunityDiscussion: React.FC = () => {
   const [posts, set_posts] = useState (initial_posts);
@@ -287,14 +278,6 @@ export const CommunityDiscussion: React.FC = () => {
             />;
             <Textarea;
               placeholder="What's on your mind?";
-
-              className="mb-4 bg-zion-blue-light text-white placeholder:text-zion-slate min-h-[70px]";
-
-
-              value={newBody}
-              onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setNewBody(e.target.value)}
-              maxLength={400}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               rows={3}
             />;
 
@@ -308,9 +291,15 @@ export const CommunityDiscussion: React.FC = () => {
             </div>
           </CardContent>
         </Card>
-=======
                 disabled={!newTitle && newTitle.trim() || !newBody && newBody.trim()}>;
-=======
+              className="mb - 4 bg - zion - blue - light text - white placeholder:text - zion - slate min - h-[70px]";
+              value={new_body}
+              on_change={(e: React.ChangeEvent < HTMLTextAreaElement>) =>;
+                setNewBody (e.target.value);
+              }
+              max_length={400}
+              rows={3}
+            />;
             <div className="flex gap - 3 justify - end">;
               <Button;
                 variant="secondary";
@@ -326,17 +315,25 @@ export const CommunityDiscussion: React.FC = () => {
                 on_click={handleAddPost}
                 disabled={!new_title.trim () || !new_body.trim ()}
               >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 Post;
               </Button>;
             </div>;
           </CardContent>;
-
-
-);
-
-=======
-
+      )}
+      <div className="flex flex-col gap-6">;
+        {posts && posts.map((post) => (;
+          <Card
+            key={post && post.id}
+            className="bg-zion-blue border-zion-slate-dark shadow-lg">;
+            <CardContent className="py-4 flex gap-4">;
+              <Avatar>;
+                <AvatarFallback>;
+                  {post && post.author;
+                    .split(" ");
+                    .map((s) => s[0]);
+                    .join("");
+                    .toUpperCase();
+                    .slice(0, 2)}
                 </AvatarFallback>;
               </Avatar>;
               <div>;
@@ -411,10 +408,9 @@ export const CommunityDiscussion: React.FC = () => {
 }
 ;
 
-=======
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+

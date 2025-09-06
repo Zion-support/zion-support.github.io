@@ -1,13 +1,7 @@
-
-
-
-
-
-
+export interface ProfileSkill {
   name: string,
   level: number, // 1 - 5;
   endorsements?: number;
-
 }
 export interface ProfileProject {
   id: string;
@@ -15,17 +9,14 @@ export interface ProfileProject {
   description: string;
   image_url?: string;
   tags?: string[];
-
   url?: string,
   date: string;
-
 }
 export interface ProfileExperience {
   id: string;
   role: string;
   company: string;
   description: string;
-
   start_date: string;
   end_date?: string,
   current?: boolean;
@@ -35,7 +26,6 @@ export interface Availability {
   next_available?: string;
   message?: string,
   available_hours?: { day: string, hours: string }[];
-
 }
 export interface ProfileData {
   id: string;
@@ -53,10 +43,6 @@ export interface ProfileData {
   projects: ProfileProject[];
   experience: ProfileExperience[];
   availability: Availability;
-
   hourly_rate?: number,
   contact_email?: string;
-
 }
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

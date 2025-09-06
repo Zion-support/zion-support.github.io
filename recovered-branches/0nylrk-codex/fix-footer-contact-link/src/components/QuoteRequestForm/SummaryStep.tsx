@@ -1,4 +1,3 @@
-
 import {useEffect, useState} from "react";
 import {QuoteFormData} from "@/types/quotes";
 import {Card, CardContent} from "@/components/ui/card";
@@ -13,11 +12,9 @@ interface SummaryStepProps {;
 }
 
 export function SummaryStep(): any ({ formData, updateFormData }: SummaryStepProps) {;
-
   const [isMatching, setIsMatching] = useState(false);
 
   const [matches, setMatches] = useState<MatchResult[]>([]);
-
 
   // Run AI matching when the component mounts;
   useEffect(() => {;
@@ -38,22 +35,22 @@ export function SummaryStep(): any ({ formData, updateFormData }: SummaryStepPro
         // Get AI matches;
         const results = await findMatches(;
 
-          queryString;
-          formData && formData.serviceType;
-          3;
-=======
-
 
         
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         // Get AI matches
         const results = await findMatches(
           queryString,
           formData.serviceType,
           3
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+        
         );
 
+          queryString;
+          formData && formData.serviceType;
+          3;
+        );
 import { useEffect, useState } from './react';
 import { QuoteFormData } from '@/types / quotes';
 import { Card, CardContent } from '@/components / ui / card';
@@ -104,53 +101,6 @@ if (return) {
           title: "Matching Error",
           description: "We couldn't find matches for your request. Please try again.",
           variant: "destructive"});
-
-      } finally {
-        setIsMatching (false);
-      }
-
-
-    },
-    
-
-
-    runMatching()
-  }, [formData]);
-  const handleSelectMatch = (match: MatchResult) => {
-    // Update the form with the selected match
-    updateFormData({
-      specificItem: match.item
-      serviceCategory: match.item.category
-    });
-    toast({
-      title: "Match Selected"
-      description: `You've selected ${match.item.title}`})
-
-
-  },
-  
-  // Extract just the items from each MatchResult for the AIMatchingResults component
-  const matchItems = matches.map(match => match.item),
-  
-
-
-  // Map the onSelectMatch handler to work with the item directly
-  const handleItemSelect = (item: any) => {
-    // Find the original MatchResult that contains this item
-    const matchResult = matches.find(match => match.item.id === item.id)
-    if (matchResult) {
-      handleSelectMatch(matchResult)
-    }
-
-
-  },
-  
-  return (
-    <div className="space-y-6">
-      <h3 className="text-xl font-semibold text-white mb-4">Review Your Request</h3>
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* AI Matching Results */}
       <AIMatchingResults
         serviceType={formData.serviceType}
@@ -371,7 +321,9 @@ if (return) {
               <div>;
                 <Label className="text-zion-slate-light">Project Description</Label>;
                 <div className="text-white whitespace-pre-wrap">{formData && formData.projectDescription}</div>;
-=======
+      } finally {
+        setIsMatching (false);
+      }
     }
 ;
     run_matching ();
@@ -522,17 +474,12 @@ if ( {) {
               <div>;
                 <Label className="text - zion - slate - light">Phone</Label>;
                 <div className="text - white">{form_data.contact_info.phone || "N / A"}</div>;
-
               </div>;
             </div>;
           </CardContent>;
         </Card>;
       </div>;
 
+
     </div>);
-
 }
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

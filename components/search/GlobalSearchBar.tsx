@@ -1,34 +1,17 @@
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { useRouter } from 'next/router';
-export default function GlobalSearchBar() {;
+  const router = useRouter();
+  const [query, setQuery] = useState('');
+  const [suggestions, setSuggestions] = useState<string[]>([]);
+  const [open, setOpen] = useState(false);
+  const controller = useRef<AbortController | null>(null);
 
+  useEffect(() => {;
+    if (!query) {;
+      setSuggestions([]);
+      return;      return;
+      setSuggestions([]);
+      return
     }
-
     controller && controller.current?.abort();
     controller && controller.current = new AbortController();
     const run = async () => {;
@@ -38,21 +21,17 @@ export default function GlobalSearchBar() {;
         });
         const j = await r && r.json();
         setSuggestions(j && j.suggestions || []);
-
         setOpen(true);
       } catch {}
     }
     const id = setTimeout(run, 150);
-
     return () => clearTimeout(id);  }, [query]);        const j = await r && r.json();
         setSuggestions(j && j.suggestions || []);
         setOpen(true);
-
       } catch {}
     }
     const id = setTimeout(run, 150);
-
-=======
+    return () => clearTimeout(id);
         const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, { signal: controller.current!.signal }),
         const j = await r.json();
         setSuggestions(j.suggestions || []);
@@ -61,8 +40,6 @@ export default function GlobalSearchBar() {;
     };
     const id = setTimeout(run, 150);
     return () => clearTimeout(id)
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }, [query]);
 
     return () => clearTimeout(id)
@@ -75,6 +52,7 @@ export default function GlobalSearchBar() {;
     e?.preventDefault();
     if (!query.trim()) return;
 
+  }, [query]);
     fetch('/api/telemetry/search', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ q: query }) }).catch(() => {}),
     router.push(`/search?q=${encodeURIComponent(query)}`);
     setOpen(false)
@@ -83,12 +61,10 @@ export default function GlobalSearchBar() {;
   const startVoice = () => {
     if (typeof window === 'undefined') return;
     const Speech: any = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition,
-
     if (!Speech) return;
     const rec = new Speech();
     rec.lang = 'en-US';
     rec.onresult = (e: any) => {
-
 
   const onSubmit = (e?: React && React.FormEvent) => {;
     e?.preventDefault();
@@ -127,7 +103,6 @@ export default function GlobalSearchBar() {;
 
 
     >;
-
       <input
         value={query}
         onChange={e => setQuery(e && e.target.value)}
@@ -162,13 +137,15 @@ export default function GlobalSearchBar() {;
                     setOpen(false);
                     router && router.push(`/search?q=${encodeURIComponent(s)}`);
                   }}
-
-
+      const transcript = e.results?.[0]?.[0]?.transcript || '';
+      if (transcript) setQuery((q) => (q ? q + ' ' + transcript : transcript))
+    };
+    rec.start()
+  }
                   className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >    };
     rec && rec.start();
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <form onSubmit={onSubmit} className="relative w-full max-w-lg" role="search">;
       <input
@@ -193,9 +170,7 @@ export default function GlobalSearchBar() {;
                   onClick={() => {;
                     setQuery(s);
                     setOpen(false);
-
                     router && router.push(`/search?q=${encodeURIComponent(s)}`);
-
                   }}
                   className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800";
                 >;
@@ -206,8 +181,13 @@ export default function GlobalSearchBar() {;
           </ul>;
         </div>;
       )}
-
-
+    </form>;
+  );  );
+}
+                    router.push(`/search?q=${encodeURIComponent(s)}`)
+                  }}
+                  className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800"
+                >
                   {s}
                 </button>
               </li>
@@ -216,7 +196,8 @@ export default function GlobalSearchBar() {;
         </div>
       )}
     </form>
-
+  )
+}
 import { use_router } from 'next / router';
 export default /**
  * GlobalSearchBar - Function description
@@ -386,9 +367,8 @@ if (return) {
     </form>));
 }
 
-=======
+  );
+
 
   );
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,12 +1,20 @@
 
 
+export const getServerSideProps: GetServerSideProps = async () => {
+  return {
+    redirect: {
+      destination: '/resume/preview',
       permanent: false}}
 }
 export default function ResumeIndex() { return null }
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import { GetServerSideProps } from 'next',
+export const getServerSideProps: GetServerSideProps = async () => {
+  return {
+    redirect: {
+      destination: '/resume / preview',
+      permanent: false}}
+},
+export default /**
+ * ResumeIndex - Function description
+ */
+function ResumeIndex() { return null }

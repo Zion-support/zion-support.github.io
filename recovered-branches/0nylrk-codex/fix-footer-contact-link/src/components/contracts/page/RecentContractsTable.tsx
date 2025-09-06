@@ -1,8 +1,5 @@
-
-
 import { Button  } from '@/components / ui / button';
 interface Contract {
-
   id: string;
   title: string;
   client: string;
@@ -12,22 +9,17 @@ interface Contract {
 }
 
 
+
+
 interface RecentContractsTableProps {;
-
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   contracts: Contract[];
   onViewContract: (contractId: string) => void
 }
 
-
-
-export function RecentContractsTable({ contracts, onViewContract }: RecentContractsTableProps) {
-
-
+export function RecentContractsTable(): any ({;
+  contracts,;
+  onViewContract,;
+}: RecentContractsTableProps) {;
   return (
     <>;
       <h2 className="text-2xl font-bold mb-4">Recent Contracts</h2>;
@@ -96,7 +88,6 @@ export function RecentContractsTable({ contracts, onViewContract }: RecentContra
                     variant="ghost"
                     size="sm"
                     onClick={() => onViewContract(contract && contract.id)}
-=======
 interface RecentContractsTableProps {
   contracts: Contract[];
   onViewContract: (contract_id: string) => void;
@@ -176,30 +167,13 @@ function RecentContractsTable() {
                     variant="ghost";
                     size="sm";
                     on_click={() => onViewContract (contract.id)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   >;
                     View;
                   </Button>;
                 </td>;
-
-
-
-=======
-
-          </tbody>;
-        </table>;
-      </div>;
-    </>;
-
-
-
-
-  );
-=======
               </tr>))}
           </tbody>;
         </table>;
       </div>;
     </>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

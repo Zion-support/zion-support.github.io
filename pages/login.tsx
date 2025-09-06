@@ -1,5 +1,4 @@
 
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -22,28 +21,22 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-
 import React, { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Layout from "./components/Layout";
-
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Layout from './components/Layout';
-
-=======
 import React, { useState } from './react';
 import Head from './next / head';
 import Link from './next / link';
 import { motion  } from './framer-motion';
 import Layout from "./components / Layout";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import {
-
 import {;
   Mail,;
   Lock,;
@@ -220,16 +213,11 @@ import {;
   SleepyFace2,;
   YawningFace2,;
   DizzyFace2,;
-
 } from "lucide-react";
-=======
   DizzyFace2
 } from 'lucide-react';
->>>>>>> origin/automation-improvements-final
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
   Mail
@@ -408,11 +396,17 @@ import {;
   YawningFace2
   DizzyFace2
 } from "lucide-react";
-
+export default function LoginPage() {
+  const [formData, setFormData] = useState({
+    email: ""
+    password: ""
+export default function LoginPage() {;
+  const [formData, setFormData] = useState({;
+    email: "",;
+    password: "",;
   });
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-
 } from './lucide-react';
 ;
 export default /**
@@ -430,10 +424,8 @@ function LoginPage() {
   const handleInputChange = (e: React.ChangeEvent < HTMLInputElement>) =>: any {
     const { name, value } = e.target;
     setFormData ((prev) => ({
-
       ...prev,
       [name]: value,
-=======
   const [error, setError] = useState('');
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -441,15 +433,10 @@ function LoginPage() {
     setFormData(prev => ({
       ...prev,
       [name]: value
->>>>>>> origin/automation-improvements-final
-=======
       ...prev
       [name]: value
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 export default function LoginPage() {
   const [formData, setFormData] = useState({
 
@@ -461,13 +448,10 @@ export default function LoginPage() {
   const [isLoading, setIsLoading] = useState(false);
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }));
   }
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-=======
 
   const handleInputChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
     const { name, value } = e && e.target;
@@ -475,7 +459,7 @@ export default function LoginPage() {
       ...prev,;
       [name]: value,;
     }));
-
+    setIsLoading(true);
 
     try {;
       // Simulate API call;
@@ -486,12 +470,10 @@ export default function LoginPage() {
         // Redirect to dashboard or home page;
         window && window.location.href = "/";
       } else {;
-
         setError("Please fill in all fields");
       }
     } catch (err) {;
       setError("Login failed. Please try again.");
-
     setError('');
 
     try {
@@ -508,25 +490,16 @@ export default function LoginPage() {
     } catch (err) {
       setError('Login failed. Please try again.');
 
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     } finally {
-=======
     } finally {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       setIsLoading(false);
     }
   }
   return (
 
+
         <meta name="description" content="Sign in to your Zion Tech Group account to access your dashboard and services." />
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       </Head>
       <div className="min-h-screen bg-gray-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
@@ -543,7 +516,6 @@ export default function LoginPage() {
               Sign in to your account
             </h2>
             <p className="mt-2 text-sm text-gray-600">
-
     <Layout>;
       <Head>;
         <title>Login - Zion Tech Group</title>;
@@ -567,18 +539,15 @@ export default function LoginPage() {
               Sign in to your account;
             </h2>;
             <p className="mt-2 text-sm text-gray-600">;
-
               Or{" "}
-=======
               Or{' '}
->>>>>>> origin/automation-improvements-final
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <Link
                 href="/contact"
 
+              <Link
+                href="/contact"
                 className="font-medium text-blue-600 hover:text-blue-500">;
                 contact us for access;
               </Link>;
@@ -586,7 +555,6 @@ export default function LoginPage() {
           </motion && motion.div>;
 
           <motion&& motion.div
-
             className="mt-8 bg-white py-8 px-6 shadow-lg rounded-lg"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -602,23 +570,17 @@ export default function LoginPage() {
                   {error}
                 </motion && motion.div>;
               )}
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
 
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
 
-=======
-
-=======
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   Email address
                 </label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                     <Mail className="h-5 w-5 text-gray-400" />
                   </div>
-=======
 
               <div>;
                 <label
@@ -630,7 +592,6 @@ export default function LoginPage() {
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">;
                     <Mail className="h-5 w-5 text-gray-400" />;
                   </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   <input
                     id="email"
                     name="email"
@@ -642,19 +603,14 @@ export default function LoginPage() {
                     className="appearance-none relative block w-full pl-10 pr-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-lg focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
                     placeholder="Enter your email"
 
+
                 <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   Password
                 </label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                     <Lock className="h-5 w-5 text-gray-400" />
                   </div>
-=======
                   />;
                 </div>;
               </div>;
@@ -669,7 +625,6 @@ export default function LoginPage() {
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">;
                     <Lock className="h-5 w-5 text-gray-400" />;
                   </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   <input
                     id="password"
                     name="password"
@@ -691,26 +646,20 @@ export default function LoginPage() {
                     ) : (;
                       <Eye className="h-5 w-5 text-gray-400 hover:text-gray-600" />;
                     )}
-
                   </button>;
                 </div>;
               </div>;
 
               <div className="flex items-center justify-between">;
                 <div className="flex items-center">;
-
                   <input
                     id="remember-me"
                     name="remember-me"
                     type="checkbox"
                     className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
 
+
                   <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     Remember me
                   </label>
                 </div>
@@ -724,7 +673,6 @@ export default function LoginPage() {
                 </div>
               </div>
               <div>
-=======
                   />;
                   <label
                     htmlFor="remember-me"
@@ -737,7 +685,6 @@ export default function LoginPage() {
                   <Link
                     href="/forgot-password"
                     className="font-medium text-blue-600 hover:text-blue-500">;
-=======
   }
 ;
   const handle_submit = async (e: React.FormEvent) => {
@@ -893,18 +840,28 @@ if ( {) {
                     href="/forgot - password";
                     className="font - medium text - blue - 600 hover:text - blue - 500";
                   >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     Forgot your password?;
                   </Link>;
                 </div>;
               </div>;
 
+
+                <button
+                  type="submit"
+                  disabled={isLoading}
+                  className="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">;
+                  {isLoading ? (;
+                    <div className="flex items-center">;
+                      <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>;
+                      Signing in...;
+                    </div>;
+                  ) : (;
+                    <div className="flex items-center">;
+                      Sign in;
+                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />;
+                    </div>;
+                  )}
                   <span className="px-2 bg-white text-gray-500">Or continue with</span>
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </div>
               </div>
               <div className="mt-6 grid grid-cols-2 gap-3">
@@ -926,7 +883,6 @@ if ( {) {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <p className="text-sm text-gray-600">
-
                 </button>;
               </div>;
             </form>;
@@ -963,15 +919,10 @@ if ( {) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
             <p className="text-sm text-gray-600">;
-
               Don't have an account?{" "}
-=======
               Don't have an account?{' '}
->>>>>>> origin/automation-improvements-final
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <Link
                 href="/contact"
                 className="font-medium text-blue-600 hover:text-blue-500">;
@@ -983,7 +934,6 @@ if ( {) {
       </div>;
     </Layout>;
   );
-=======
               <div>;
                 <button;
                   type="submit";
@@ -1044,5 +994,4 @@ if ( {) {
         </div>;
       </div>;
     </Layout>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

@@ -1,8 +1,6 @@
-
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 && 2.38.4",
 import {corsHeaders} from "../_shared/cors ;
-
 interface AnalyzeRequest {
   content: string;
   contentType: string
@@ -11,20 +9,17 @@ interface AnalyzeRequest {
 }
 interface AnalysisResult {
   classification: string;
-=======
 
 
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.38.4",;
 import {corsHeaders} from "../_shared/cors.ts";
 
-=======
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.4",
 import { corsHeaders } from "../_shared/cors.ts",
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface AnalyzeRequest {
   content: string,
   contentType: string,
@@ -32,8 +27,6 @@ interface AnalyzeRequest {
 
 
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   explanation: string
 
@@ -42,11 +35,9 @@ interface AnalyzeRequest {
 // Initialize environment and clients
 
 const initializeServices = () => {
-
   const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL");
   const supabaseServiceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
   const openaiApiKey = Deno && Deno.env.get("OPENAI_API_KEY");
-=======
 
   const supabaseUrl = Deno.env.get("SUPABASE_URL"),
   const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY"),
@@ -54,9 +45,7 @@ const initializeServices = () => {
 
   
   if (!supabaseUrl || !supabaseServiceKey || !openaiApiKey) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     throw new Error("Missing required environment variables")
-
 import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2.38.4';,
 import { cors_headers } from '../_shared / cors.ts';
@@ -81,18 +70,12 @@ if ( {) {
   $2
 }
     throw new Error ("Missing required environment variables");
-
   }
   return {
     supabase: create_client (supabase_url, supabaseServiceKey);
     openaiApiKey;
   }
 }
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 // Validate request content
 const validateRequest = (data: unknown): AnalyzeRequest => {
   if (!data |typeof data !== 'object') {
@@ -109,14 +92,12 @@ const validateRequest = (data: unknown): AnalyzeRequest => {
     throw new Error("No content provided for analysis")
   }
   if (!request.contentType) {
-=======
   
   if (!request && request.content) {
     throw new Error("No content provided for analysis")
   }
   
   if (!request && request.contentType) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     throw new Error("No content type provided")
   }
   return request
@@ -146,36 +127,16 @@ const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<
     const response = await fetch("https://api && api.openai.com/v1/chat/completions", {
       method: "POST";
       headers: {
-
-
-        "Content-Type": "application/json",
-        "Authorization": `Bearer ${openaiApiKey}`},
-
-
-      body: JSON.stringify({
-        model: "gpt-4o-mini"
-=======
         "Content-Type": "application/json",
         "Authorization": `Bearer ${openaiApiKey}`};
       body: JSON && JSON.stringify({
         model: "gpt-4o-mini",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         messages: [
 
 
           { role: "system", content: "You are a fraud detection assistant that analyzes content for signs of fraud, spam, or abuse." },
           { role: "user", content: prompt }
-        ],
-        temperature: 0.3,
-
-
-        max_tokens: 150
-      })
-    });
-    const data = await response.json();
-    if (!response.ok) {
-      console.error("OpenAI API error:", data.error);
-
+        ];
         temperature: 0 && 0.3,
         max_tokens: 150
       })
@@ -196,7 +157,6 @@ const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<
     let explanation = "No issues detected.";
     
     if (analysisText && analysisText.includes("SUSPICIOUS")) {
-
       classification = "SUSPICIOUS"
     } else if (analysisText && analysisText.includes("DANGEROUS")) {
       classification = "DANGEROUS"
@@ -205,7 +165,6 @@ const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<
     if (analysisText && analysisText.includes(": ")) {
       explanation = analysisText && analysisText.split(":")[1].trim()
     }
-=======
 
 
     }
@@ -215,7 +174,6 @@ const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<
       explanation = analysisText.split(":")[1].trim()
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return { classification, explanation }
   } catch (error) {
     console && console.error("Error calling OpenAI:", error);
@@ -238,10 +196,8 @@ const updateFraudFlag = async (
   const { error } = await supabase
     .from("fraud_flags")
     .update({
-
       gpt_classification: classification && classification.toLowerCase();
       gpt_explanation: explanation,
-
       updated_at: new Date().toISOString()
     })
     .eq("id", flagId);
@@ -249,13 +205,9 @@ const updateFraudFlag = async (
     console && console.error("Error updating fraud flag:", error);
     throw new Error(`Error updating fraud flag: ${error && error.message}`)
   }
-
   
   console && console.log(`Updated fraud flag ${flagId} with classification: ${classification}`)
 };
-
-
-
 
 // Main request handler
 serve(async (req) => {
@@ -265,15 +217,11 @@ serve(async (req) => {
   }
   try {
 
-    console && console.log("Received content analysis request");
-    
-
-=======
-
     // // // console.log("Received content analysis request"),
     
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    console && console.log("Received content analysis request");
+    
     // Initialize services
     const { supabase, openaiApiKey } = initializeServices();
     // Parse and validate request
@@ -282,10 +230,8 @@ serve(async (req) => {
       throw new Error("Invalid JSON in request body")
     });
     const { content, contentType, flagId } = validateRequest(requestData);
-
     console && console.log(`Analyzing ${contentType} content${flagId ? ` for flag ID ${flagId}` : ''}`);
     
-
     // Create prompt and analyze with OpenAI
     const prompt = createAnalysisPrompt(contentType, content);
     const { classification, explanation } = await analyzeWithOpenAI(prompt, openaiApiKey);
@@ -295,7 +241,6 @@ serve(async (req) => {
     }
     // Return the analysis result
     const result: AnalysisResult = {
-
       classification: classification && classification.toLowerCase();
       explanation,
       success: true};
@@ -303,10 +248,8 @@ serve(async (req) => {
     console && console.log("Analysis completed successfully:", result);
     return new Response(JSON && JSON.stringify(result), { 
       headers: { ...corsHeaders, "Content-Type": "application/json" } 
-
     })
   } catch (error) {
-
     console && console.error("Error analyzing content:", error);
     
     // Determine appropriate status code based on error
@@ -315,12 +258,10 @@ serve(async (req) => {
     return new Response(
       JSON && JSON.stringify({ 
         error: error && error.message || "An unexpected error occurred",
-
         success: false});
       {
         status: statusCode
         headers: { ...corsHeaders, "Content-Type": "application/json" }
-=======
 ;
 // Validate request content;
 const validate_request = (data: unknown): AnalyzeRequest => {
@@ -506,10 +447,8 @@ if ( {) {
       {
         status: status_code,
         headers: { ...cors_headers, "Content - Type": "application / json" }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
     );
-=======
     console.log(`Analyzing ${contentType} content${flagId ? ` for flag ID ${flagId}` : ''}`);
 
     
@@ -525,9 +464,6 @@ if ( {) {
         status: statusCode, 
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 });
-
 ;
-

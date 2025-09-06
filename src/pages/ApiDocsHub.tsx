@@ -1,19 +1,3 @@
-
-
-
-  return (
-    <ApiDocsLayout>
-      <div className='max-w-4xl'>
-        <h1 className='text-4xl font-bold text-white mb-6'>
-          Zion AI Marketplace API
-        </h1>
-        <p className='text-zinc-400 text-lg mb-12'>
-          Welcome to the Zion AI Marketplace API documentation. Here you'll find
-          comprehensive guides and documentation to help you start working with
-          our API as quickly as possible.
-        </p>
-
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -93,7 +77,6 @@ export function ApiDocsHub() {;
           Zion AI Marketplace API;
         </h1>;
         <p className='text-zinc-400 text-lg mb-12'>;
-=======
 import React from 'react';
 import Link from 'next / link';
 import {
@@ -153,16 +136,10 @@ function ApiDocsHub() {
           Zion AI Marketplace API;
         </h1>;
         <p className='text - zinc - 400 text - lg mb - 12'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           Welcome to the Zion AI Marketplace API documentation. Here you'll find;
           comprehensive guides and documentation to help you start working with;
           our API as quickly as possible.;
         </p>;
-
-
-
-        <div className="grid gap-6 md:grid-cols-2">
-          {sections.map((section) => (
             <Link
               key={section.path}
               href={section.path}
@@ -181,27 +158,6 @@ function ApiDocsHub() {
               </div>
             </Link>
           ))}
-        </div>
-
-
-        <div className="mt-12 p-6 rounded-lg bg-zinc-900 border border-zinc-800">
-          <h2 className="text-xl font-semibold text-white mb-4">Ready to get started?</h2>
-          <p className="text-zinc-400 mb-6">
-            To use the Zion AI Marketplace API, you'll need an API key. Visit your developer portal to create one.
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-          </p>
-          <Link
-            href='/developers/portal'
-            className='inline-flex items-center px-4 py-2 rounded-md bg-zion-purple text-white hover:bg-zion-purple/90 transition-colors'
-          >
-            Go to Developer Portal
-            <ArrowRight className='ml-2 h-4 w-4' />
-          </Link>
-        </div>
-      </div>
-
         </div>;
 
         <div className='mt-12 p-6 rounded-lg bg-zinc-900 border border-zinc-800'>;
@@ -223,11 +179,6 @@ function ApiDocsHub() {
     </ApiDocsLayout>;
   );
 
-
-
-=======
-
-=======
         <div className='grid gap - 6 md:grid - cols - 2'>;
           {sections.map (section => (
             <Link;
@@ -268,11 +219,3 @@ function ApiDocsHub() {
       </div>;
     </ApiDocsLayout>);
 export default ApiDocsHub;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-    </ApiDocsLayout>
-  )
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

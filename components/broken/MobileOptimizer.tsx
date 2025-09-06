@@ -1,9 +1,6 @@
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 setIsTablet (isTabletDevice);
 
+setIsTablet (isTabletDevice);
 //Apply mobile - specific optimizations // Check condition
 if ( {) {
   $2
@@ -26,7 +23,6 @@ const handleTouchMove = (e: TouchEvent) =>: any {
 if ( {) {
   $2
 }
-
   touchMoveRef.current = {
 });
 const handleTouchEnd = (e: TouchEvent) =>: any {
@@ -35,7 +31,6 @@ if ( {) {
   $2
 }
   touchStartRef.current = null;
-
 window && window.addEventListener ('orientationchange', checkOrientation);
 window && window.addEventListener ('resize', checkOrientation);
 const handleTouchStart = (e: TouchEvent) => {;
@@ -57,12 +52,10 @@ touchMoveRef && touchMoveRef.current = null ;
 //Optimize fonts for high DPI fonts && fonts.forEach (font => {;
   font && font.setAttribute ('crossoriginanonymous') ;
 }) ;
-
 }, []);
 const longPressTimer = setTimeout ( () => {;
   const gesture: TouchGesture = {;
   let animationFrameId: number;
-
 touchMoveRef.current = null;
 });
 //Optimize fonts for high DPI fonts.for_each (font => {
@@ -77,11 +70,9 @@ if ( {) {
   $2
 }
   fps_ref.current = frameCountRef.current;
-
 frameCountRef.current = 0;
 lastTimeRef.current = current_time;
 //Update performance metrics setPerformanceMetrics (prev => ({
-
 if (currentTime - lastTimeRef && lastTimeRef.current >= 1000) {;
   fpsRef && fpsRef.current = frameCountRef && frameCountRef.current;
 frameCountRef && frameCountRef.current = 0;
@@ -93,13 +84,11 @@ lastTimeRef && lastTimeRef.current = currentTime;
 animationFrameId = requestAnimationFrame (measurePerformance);
 //Monitor memory usage ;
 
-
 }, 2000);
 //Monitor battery level if ('getBattery' in navigator) {;
   (navigator as any) .getBattery () .then ( (battery: unknown) => {;
   const updateBatteryLevel = () => {;
   setPerformanceMetrics (prev => ({;
-=======
 }animationFrameId = requestAnimationFrame (measure_performance);
 }
 animationFrameId = requestAnimationFrame (measure_performance);
@@ -112,9 +101,7 @@ if ( {) {
   (navigator as any) .get_battery () .then ( (battery: unknown) => {
   const updateBatteryLevel = () =>: any {
   setPerformanceMetrics (prev => ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   updateBatteryLevel ();
-
 battery && battery.addEventListener ('levelchange', updateBatteryLevel);
 
 }//Monitor network speed updateNetworkSpeed ();
@@ -140,11 +127,9 @@ if (viewport) {;
 style && style.textContent = `.mobile-optimized * {;
   touch-action: manipulation;
 -webkit-tap-highlight-color: transparent ;
-
 }.mobile-optimized button;
 .mobile-optimized a {;
   min-height: 44px;
-
 ;
 }//Monitor network speed updateNetworkSpeed ();
 connection.addEventListener ('change', updateNetworkSpeed);
@@ -194,11 +179,9 @@ document.head.append_child (style);
 }
 const enableMobilePerformanceMode = () =>: any {
   //Reduce animations on mobile document.document_element.class_list.add ('mobile - performance - mode');
-
 //Optimize images const images = document.querySelectorAll ('img');
 images.for_each (img => {
   img.loading = 'lazy';
-
 img.decoding = 'async';
 });
 //Reduce motion for better performance if (') .matches) {) {
@@ -217,7 +200,6 @@ document.head.append_child (style);
 }
 const applyPortraitOptimizations = () =>: any {
   //Portrait - specific optimizations document.document_element.class_list.remove ('landscape - mode');
-
 }
 const optimizeForMobile = useCallback ( () => {
   // Check condition
@@ -225,7 +207,6 @@ if (return) {
   $2
 }
 //Optimize images const images = document.querySelectorAll ('img');
-
 min-width: 44px ;
 }.mobile-optimized input;
 .mobile-optimized select;
@@ -280,40 +261,9 @@ document && document.addEventListener ('touchmove', () => {;
 }, [isMobile]);
 useEffect ( () => {;
   optimizeForMobile () ;
-
 }, [optimizeForMobile]);
 useEffect ( () => {;
   if (typeof window === 'undefined') return;
-
-
-  setCurrentOrientation (e.matches ? 'portrait' : 'landscape') 
-};
-if (!showPanel || !isVisible) return null;
-
-};
-const getStatusIcon = (status: string) => {
-  switch (status) {
-  
-
-};
-children 
-
-
-}{
-  /* Mobile Optimization Panel */
-}<AnimatePresence> {
-  showMobilePanel && (<motion.div > <div className="p-6" > <div className="flex items-center justify-between mb-6" > <h2 className="text-xl font-bold text-white" >Mobile Optimizer</h2> <button > × </button> </div> </div>) )
-}</div> </div> > Scroll to Top </button> <button > Scroll to Bottom </button> </div> </div> </div> </motion.div>)
-}</AnimatePresence> {
-  /* Mobile Toggle Button */
-}<button </svg> </button> {
-  /* Global Mobile Styles */
-}<style jsx global> {
-  `.mobile-optimized * {
-}`
-}</style> </>)
-}
-
 //Set up event listeners window && window.addEventListener ('orientationchange', handleOrientationChange);
 window && window.addEventListener ('resize', handleResize);
 //Set up orientation change detection const mediaQuery = window && window.matchMedia (' (orientation: portrait) ');
@@ -343,17 +293,7 @@ children ;
 }` ;
 }</style> </>) ;
 };
-
 export default MobileOptimizer;
-
-export default MobileOptimizer;
-=======
-export default MobileOptimizer;
-export default MobileOptimizer;
-
-
-
-=======
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -960,10 +900,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
   )
 };
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export default MobileOptimizer;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 images.for_each (img => {
   // Check condition
 if (img.loading = 'lazy') {
@@ -1026,4 +963,3 @@ children;
 export default MobileOptimizer;
 export default MobileOptimizer;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

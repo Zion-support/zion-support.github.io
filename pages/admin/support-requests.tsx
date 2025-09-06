@@ -1,15 +1,11 @@
-
-
 import { GetServerSideProps } from 'next';
 import { useState } from 'react';
 import { readJson } from '../../utils/fsDb';
-=======
 
 import { GetServerSideProps } from 'next',;
 import { useState } from 'react',;
 import { readJson } from '../../utils/fsDb',;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export const getServerSideProps: GetServerSideProps = async () => {
   const requests = readJson<any[]>('support/requests.json', [])
   return { props: { initialRequests: requests } }
@@ -20,7 +16,6 @@ export default function SupportRequests({ initialRequests }: { initialRequests: 
     await fetch('/api/support/resolve', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id }) })
 
     setRequests((prev: any[]) => prev.map((r) => (r.id === id ? { ...r, status: 'resolved', resolvedAt: Date.now() } : r)))
-
 import { GetServerSideProps } from 'next',
 import { useState } from 'react',
 import { read_json } from '../../utils / fs_db',
@@ -39,11 +34,6 @@ function SupportRequests() {
 function resolve() {
     await fetch ('/api / support / resolve', { method: 'POST', headers: { 'Content - Type': 'application / json' }, body: JSON.stringify ({ id }) }),
     set_requests ((prev: any[]) => prev.map ((r) => (r.id === id ? { ...r, status: 'resolved', resolved_at: Date.now () } : r)));
-
-=======
-
-
-=======
 import { GetServerSideProps } from 'next';
 import { useState } from 'react';
 import { readJson } from '../../utils/fsDb';
@@ -54,23 +44,43 @@ export const getServerSideProps: GetServerSideProps = async () => {;
     return res.status(500).json({ error: "Internal server error" });
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import { GetServerSideProps } from 'next';
+import { useState } from 'react';
+import { readJson } from '../../utils/fsDb';
+export const getServerSideProps: GetServerSideProps = async () => {;
+  const requests = readJson<any[]>('support/requests.json', []),;
+  return { props: { initialRequests: requests }   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+
+
   }
   return (
 
-=======
 }
 
-=======
+  }
+  return (
+    <div className="space - y-6">;
+      <h1 className="text - 2xl font - semibold">Support Requests</h1>;
+      <div className="grid gap - 3">;
+        {requests.length === 0 && <div className="opacity - 70">No requests found.</div>}
+        {requests.map ((r) => (
+          <div key={r.id} className="rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4 flex items - center justify - between">;
+            <div className="text - sm">;
+              <div className="font - medium">{r.id}</div>;
+              <div className="opacity - 80">Session: {r.session_id}</div>;
+              <div className="opacity - 80">Tag: {r.tag}</div>;
+              <div className="opacity - 80">Reason: {r.reason}</div>;
+              <div className="opacity - 80">Status: {r.status}</div>;
+            </div>;
+            {r.status !== 'resolved' && (
+}
               <button on_click={() => resolve (r.id)} className="enhanced - button enhanced - button - primary">Mark Resolved</button>)}
           </div>))}
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">Support Requests</h1>
       <div className="grid gap-3">
@@ -81,7 +91,6 @@ export const getServerSideProps: GetServerSideProps = async () => {;
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {requests.map((r) => (
           <div key={r.id} className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 flex items-center justify-between">
             <div className="text-sm">
@@ -97,7 +106,6 @@ export const getServerSideProps: GetServerSideProps = async () => {;
   );
 };
 
-=======
             )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -119,5 +127,3 @@ export const getServerSideProps: GetServerSideProps = async () => {;
 
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

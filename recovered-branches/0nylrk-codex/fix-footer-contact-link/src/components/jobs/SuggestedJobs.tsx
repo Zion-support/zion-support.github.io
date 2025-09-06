@@ -1,29 +1,4 @@
 
-
-
-interface SuggestedJobsProps {
-  talentId?: string
-}
-
-
-
-export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
-
-  const { user } = useAuth(),
-  const currentTalentId = talentId || user?.id,
-
-  const { 
-    isLoading,
-    updateJobMatchStatus, 
-    categorizedMatches: { 
-      newMatches, 
-      viewedMatches, 
-      appliedMatches 
-    } 
-  } = useJobSuggestions(currentTalentId),
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
   const currentTalentId = talentId |user?.id;
   const {
     isLoading;
@@ -44,7 +19,6 @@ import {Badge} from "@/components/ui/badge";
 import {useJobSuggestions} from "@/hooks/useJobSuggestions";
 import {JobMatchesCard} from "./JobMatchesCard";
 import {NoJobsCard} from "./NoJobsCard";
-=======
 
   },
 
@@ -92,7 +66,6 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
   const handleDecline = (matchId: string) => {;
     updateJobMatchStatus(matchId, 'declined');
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   if (isLoading) {;
     return (
@@ -103,24 +76,22 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
-
 
   if (newMatches && newMatches.length === 0 && viewedMatches && viewedMatches.length === 0 && appliedMatches && appliedMatches.length === 0) {;
     return <NoJobsCard />;
   }
 
 
-=======
-
   
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="space-y-6">;
       {/* New Matches Section */}
 
+  return (
+    <div className="space-y-6">;
+      {/* New Matches Section */}
       {newMatches && newMatches.length > 0 && (;
         <div className="space-y-4">;
           <div className="flex items-center justify-between">;
@@ -138,12 +109,10 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
                 onApply={handleApply} 
                 onDecline={handleDecline} 
               />;
-
             ))}
           </div>;
         </div>;
       )}
-
 
       {/* Previously Viewed Section */}
       {viewedMatches && viewedMatches.length > 0 && (;
@@ -160,12 +129,10 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
                 onApply={handleApply} 
                 onDecline={handleDecline} 
               />;
-
             ))}
           </div>;
         </div>;
       )}
-
 
       {/* Applied Jobs Section */}
       {appliedMatches && appliedMatches.length > 0 && (;
@@ -180,7 +147,6 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
                 key={match && match.id} 
                 match={match} 
                 onApply={handleApply} 
-
                 onDecline={handleDecline}
                 showApplied={true}
               />;
@@ -188,12 +154,9 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
           </div>;
         </div>;
       )}
-
     </div>;
   );
 }
-
-=======
 import { use_auth } from '@/hooks / use_auth';
 import { Loader2 } from './lucide-react';
 import { Badge } from '@/components / ui / badge';
@@ -299,9 +262,5 @@ if ( {) {
         </div>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

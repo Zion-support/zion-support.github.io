@@ -1,21 +1,72 @@
-
-
+import { useState } from 'react';
+import { Input } from '@/components / ui / input';
+import { Textarea } from '@/components / ui / textarea';
+import { Button } from '@/components / ui / button';
+import CodeBlock from './CodeBlock';
+interface Param {
+  name: string;
+type: string;
+required?: boolean;
+}interface ApiPlaygroundProps {
+  method: string;
+  path: string;
+  params?: Param[];
+export /**
+ * ApiPlayground - Function description
+ */
+function ApiPlayground() {
+  const [api_key, setApiKey] = useState ('demo_key_123');
+  const [param_values, setParamValues] = useState < Record < string, string>>({});
+  const [body, set_body] = useState ('{}');
+  const [response, set_response] = useState < string | null>(null);
+  const [loading, set_loading] = useState (false);
+  const handleParamChange = (name: string, value: string) =>: any {
+    setParamValues (prev => ({ ...prev, [name]: value }));
+  }
+  const send_request = async () => {
+    // For API documentation, use current domain if NEXT_PUBLIC_API_URL is not set;
+    const base_url =;
+      process.env.NEXT_PUBLIC_API_URL ||;
+      (typeof window !== 'undefined' ? window.location.origin : '');
+    let url = `${base_url}${path}`;
+    const search_params = new URLSearchParams ();
+    // Check condition
+if ( {) {
+  $2
+}
+      params.for_each (p => {
+        const val = param_values[p.name];
+        if (search_params.append (p.name, val)) {
+  $2
+}
+      });
+      const query = search_params.to_string ();
+      // Check condition
+if (url += `?${query}` }
+) {
+  $2
+}
     const options: RequestInit = {
       method
       headers: {
-
-        Authorization: `Bearer ${apiKey}`,
-        "Content-Type": "application/json"},
-      // Add timeout to prevent hanging
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        Authorization: `Bearer ${api_key}`,
+        'Content - Type': 'application / json',
+      },
+      // Add timeout to prevent hanging;
+      signal: AbortSignal.timeout (15000),
+    }
+    // Check condition
+if ( {) {
+  $2
+}
       try {
         options.body = JSON.stringify (JSON.parse (body));
       } catch {
-
+        options.body = body;
+      }
+    }
     set_loading (true);
     set_response (null);
-
     try {
       const res = await fetch (url, options);
       const content_type = res.headers.get ('content - type');
@@ -32,11 +83,9 @@
       } else {
         response_text = await res.text ();
       }
-
       // Format the response with status information;
       const status_info = `HTTP ${res.status} ${res.status_text}\n\n`;
       set_response (status_info + response_text);
-
     } catch (err: any) {
       let error_message = 'Request failed';
       // Check condition
@@ -50,8 +99,6 @@ if ( {) {
         error_message =;
           'Network error - check CORS configuration or API endpoint';
       } else {
-
-
 import { useState } from 'react';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -78,7 +125,6 @@ export function ApiPlayground(): any ({;
   const [response, setResponse] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
-=======
         options.body = body
 
 ;
@@ -88,7 +134,6 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
   const [body, setBody] = useState("{}"),;
   const [response, setResponse] = useState<string | null>(null),;
   const [loading, setLoading] = useState(false),;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const handleParamChange = (name: string, value: string) => {;
     setParamValues(prev => ({ ...prev, [name]: value }));
   };
@@ -165,14 +210,12 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
       );
     } finally {;
       setLoading(false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
 
   },
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className='space-y-4'>;
       <Input
@@ -185,19 +228,10 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
 
       />
       {params.map(p => (
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <Input
-
-
-          value={paramValues[p.name] || ''}
-
-
-          onChange={e => handleParamChange(p.name, e.target.value)}        />
-=======
           key={p && p.name}
           value={paramValues[p && p.name] || ''}
           onChange={e => handleParamChange(p && p.name, e && e.target.value)}        />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       ))}
       {method !== 'GET' && method !== 'DELETE' && (;
         <Textarea
@@ -209,7 +243,6 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
         {loading ? 'Sending...' : 'Send Request'}
       </Button>;
       {response && <CodeBlock code={response} language='json' />}
-
         error_message = err.message || 'Unknown error occurred';
       }
       set_response (
@@ -267,80 +300,13 @@ set_response (null);
 let response_text: string;
 if () {) {
   $2
-
 }
   try {
   /> {
   params.map ( (p) => (<Input key= {
+'"
 
-
-    </div>;
-  );
-
-export default ApiPlayground;
-  const val = paramValues[p && p.name];
-if (val) searchParams && searchParams.append (p && p.name, val) ;
-});
-const query = searchParams && searchParams.toString ();
-if (query) url += `?$ {;
-  query ;
-}` ;
-}const options: RequestInit = {;
-  method, headers: {;
-  Authorization: `Bearer $ {;
-  apiKey ;
-}`;
-"Content-Type" : "application/json" ;
-};
-//Add timeout to prevent hanging signal: AbortSignal && AbortSignal.timeout (15000) ;
-};
-}setLoading (true);
-setResponse (null);
-let responseText: string;
-if (contentType?.includes ('application/json') ) {;
-  try {;
-  /> {;
-  params && params.map ( (p) => (<Inputkey= {
-  p && p.name 
-}</div>) ;
-}export default ApiPlayground;
-
-=======
   p.name;
 }</div>);
 }export default ApiPlayground;
 '";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-  p.name 
-}</div>) ;
-}export default ApiPlayground;
-'";
-}
-
-=======
-          value={paramValues[p.name] || ""}
-          onChange={(e) => handleParamChange(p.name, e.target.value)}
-        />;
-      ))}
-      {method !== "GET" && method !== "DELETE" && (
-        <Textarea
-          value={body}
-          onChange={(e) => setBody(e.target.value)}
-          className="font-mono"
-        />
-      )}
-      <Button onClick={sendRequest} disabled={loading}>
-        {loading ? "Sending..." : "Send Request"}
-      </Button>
-      {response && <CodeBlock code={response} language="json" />}
-    </div>
-  )
-}
-;
-export default ApiPlayground;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

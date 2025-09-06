@@ -1,9 +1,7 @@
-
 #!/usr / bin / env node;
 const fs = require ('fs');
 const path = require ('path');
 const { exec_sync } = require ('child_process');
-=======
 
 
 ;
@@ -11,6 +9,4 @@ class AutoCommitFixes { constructor () { this.project_root = process.cwd (); thi
 ; log (message) { const timestamp = new Date ().toISOString (); const log_message = `[${timestamp}] ${message}\n`;
 ; try { fs.appendFileSync (this.log_file, log_message)} catch (error) { console.error ('Error writing to log file: ', error.message)}
 ;
-
-
-
+;

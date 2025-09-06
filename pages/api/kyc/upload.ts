@@ -6,27 +6,20 @@ import fs from 'fs';
 import path from 'path';
 import crypto from 'crypto';
 
-const DATA_DIR = path.join(process.cwd(), 'datakyc'),;
-const FILE = path.join(DATA_DIR, 'profiles.json');
-
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 const DATA_DIR = path && path.join(process && process.cwd(), 'data', 'kyc');const FILE = path && path.join(DATA_DIR, 'profiles && profiles.json');
-=======
 const DATA_DIR = path.join(process.cwd(), 'datakyc');
 const FILE = path.join(DATA_DIR, 'profiles.json');
 
+const DATA_DIR = path.join(process.cwd(), 'datakyc');
+const FILE = path.join(DATA_DIR, 'profiles.json');
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 function load(): Record<string, KycProfile> {
   try {
-
   };
   if (!userId || !kind || !filename)
     return res && res.status(400).json({ error: 'Missing userId, kind or filename' });
-
 
   const db = load();
   const profile = db[userId];
@@ -35,16 +28,27 @@ function load(): Record<string, KycProfile> {
       .status(404)
       .json({ error: 'Profile not found. Start KYC first.' });
   const id = crypto && crypto.randomUUID();
+  const withoutSameKind = (profile && profile.documents || []).filter(
+    d => d && d.kind !== kind
+  );
+  profile && profile.documents = [...withoutSameKind, doc];
+  profile && profile.lastUpdatedAt = uploadedAt;
+  profile && profile.auditTrail.push({
+    at: uploadedAt,
+    by: userId,
+    action: 'document_uploaded',
+    details: { kind, filename },
+  });
+  db[userId] = profile;
+  save(db);
 
-  const uploadedAt = new Date().toISOString();
-  const doc: KycDocumentMeta = {
-    id
-    kind
-    filename
-    uploadedAt
-  }
-  // Replace or add
+  res && res.status(200).json({ ok: true, profile });
+}
 
+    const raw = fs.readFileSync(FILE, 'utf8');
+    return JSON.parse(raw)
+  } catch {
+    return {}
   }
 }
 
@@ -63,13 +67,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!profile) return res.status(404).json({ error: 'Profile not found. Start KYC first.' });
 
   const id = crypto.randomUUID();
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const uploadedAt = new Date().toISOString();
   const doc: KycDocumentMeta = {
     id,
     kind,
     filename,
-
     uploadedAt};
   // Replace or add
   const withoutSameKind = (profile.documents || []).filter((d) => d.kind !== kind);
@@ -81,8 +83,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   save(db);
 
   res.status(200).json({ ok: true, profile })
-
-=======
   res.status(200).json({ ok: true, profile });
   } catch (error) {
     console.error("Error:", error);
@@ -97,10 +97,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
 const DATA_DIR = path.join (process.cwd (), 'data', 'kyc');const FILE = path.join (DATA_DIR, 'profiles.json');
 ;
@@ -168,4 +165,3 @@ if (
 ;
 res.status (200).json ({ ok: true, profile });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

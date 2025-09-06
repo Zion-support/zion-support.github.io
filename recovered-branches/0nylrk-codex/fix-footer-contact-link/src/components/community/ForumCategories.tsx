@@ -1,18 +1,3 @@
-
-
-
-
-
-const categories: ForumCategoryInfo[] = [
-  {
-    id: "getting-hired",
-    name: "Getting Hired",
-    description: "Tips, strategies, and questions about getting hired on the platform.",
-    adminOnly: false,
-    icon: "Briefcase"
-  },
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   {
 
     id: "project-help"
@@ -61,7 +46,6 @@ import {useAuth} from "@/hooks/useAuth";
 import {MessageSquare, Briefcase, Code, FileText, Megaphone} from "@/components/icons";
 import {ForumCategory, ForumCategoryInfo} from "@/types/community";
 
-=======
 
 ],
 
@@ -147,8 +131,6 @@ const categories: ForumCategoryInfo[] = [;
 ];
 
 const iconMap = {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import { Link } from './react-router-dom';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components / ui / card';
 import { use_auth } from '@/hooks / use_auth';
@@ -193,12 +175,10 @@ const categories: ForumCategoryInfo[] = [;
 ];
 ;
 const icon_map = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   Briefcase;
   MessageSquare;
   Code;
   FileText;
-
   Megaphone;
 };
 
@@ -208,14 +188,11 @@ export const ForumCategories = () => {;
 
   const visibleCategories = categories && categories.filter(;
     category => !category && category.adminOnly || isAdmin;
-
   );
   return (
-
     <div className="grid gap-4 md: grid-cols-2 lg:grid-cols-3">;
       {visibleCategories && visibleCategories.map((category) => {;
         const Icon = iconMap[category && category.icon as keyof typeof iconMap],;
-
         return (
           <Link key={category && category.id} to={`/community/category/${category && category.id}`}>;
             <Card className="h-full transition-all hover:shadow-md hover:border-zion-purple/50 cursor-pointer">;
@@ -232,15 +209,12 @@ export const ForumCategories = () => {;
           </Link>;
         );
       })}
-
     </div>;
   );
 };
 
-
 export default ForumCategories;
 
-=======
   Megaphone;
 }
 ;
@@ -275,4 +249,3 @@ export const ForumCategories = () =>: any {
 ;
 export default ForumCategories;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

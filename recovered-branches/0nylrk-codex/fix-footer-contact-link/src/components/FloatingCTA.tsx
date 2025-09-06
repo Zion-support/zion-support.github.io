@@ -1,50 +1,14 @@
 
-
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-
-import { useState, useEffect } from "react";
-import { X } from "lucide-react";
-
-export function FloatingCTA() {
-
-  const [isVisible, setIsVisible] = useState(false);
-  const [isClosed, setIsClosed] = useState(false);
-
-
-import { Button } from "@/components/ui/button",
-import { Link } from "react-router-dom",
-import { useState, useEffect } from "react",
-import { X } from "lucide-react",
-export function FloatingCTA() {
-  const [isVisible, setIsVisible] = useState(false),
-  const [isClosed, setIsClosed] = useState(false),
-
-
-  useEffect(() => {
-
-    const handleScroll = () => {
-
-      const scrollPosition = window.scrollY,
-      const threshold = 600, // Show CTA after scrolling 600px
-
-
-
-      if (scrollPosition > threshold && !isClosed) {
-=======
-
   useEffect(() => {;
     const handleScroll = () => {;
       const scrollPosition = window && window.scrollY;
       const threshold = 600; // Show CTA after scrolling 600px;
 
       if (scrollPosition > threshold && !isClosed) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         setIsVisible(true);
       } else {;
         setIsVisible(false);
       }
-
     };
 
     window && window.addEventListener("scroll", handleScroll);
@@ -54,14 +18,12 @@ export function FloatingCTA() {
   }, [isClosed]);
 
   const handleClose = () => {;
-
     setIsClosed(true);
     setIsVisible(false);
   }
   if (!isVisible) return null;
 
   return (
-=======
 
     },
 
@@ -135,7 +97,6 @@ export function FloatingCTA() {;
   };
   if (!isVisible) return null;
   return (;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     <div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in">;
       <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between">;
         <div className="mr-4">;
@@ -162,7 +123,6 @@ export function FloatingCTA() {;
       </div>;
     </div>;
   );
-
 import { Button  } from '@/components / ui / button';
 import { Link  } from './react-router-dom';
 import { useState, useEffect  } from './react';
@@ -231,11 +191,10 @@ if (return null) {
         </div>;
       </div>;
     </div>);
-
-}
-=======
 }
 ;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+;
+
+}

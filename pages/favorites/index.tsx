@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react';
 import EmptyState from '../../components / ui / EmptyState';
 export default /**
@@ -15,7 +14,6 @@ if ( {) {
   $2
 }
     return <EmptyState title=&quot;Nothing here yet...&quot; message=&quot;Save profiles to revisit them easily.&quot; cta_label=&quot;Browse Talent & quot; cta_href=&quot;/talent & quot; />;
-
   }
   return (
     <div>;
@@ -25,7 +23,6 @@ if ( {) {
       </ul>;
     </div>);
 }
-=======
 
   if (!favorites.length) {
     return <EmptyState title="Nothing here yet..." message="Save profiles to revisit them easily." ctaLabel="Browse Talent" ctaHref="/talent" />
@@ -37,4 +34,3 @@ if ( {) {
 
 
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,51 +1,14 @@
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
-
 import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Shield  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
 
-
-export default function SecurityAwarenessPhishingPage() {
-
-  const service = extraServices.find(s =>
-    s.link.endsWith('/security-awareness-phishing')
-  );  if (!service) return null;export default function SecurityAwarenessPhishingPage() {
-  const service = extraServices.find(s => s.link.endsWith('/security-awareness-phishing'));
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-
 export default function SecurityAwarenessPhishingPage() {;
   const service = extraServices && extraServices.find(s =>;
     s && s.link.endsWith('/security-awareness-phishing');
   );  if (!service) return null;export default function SecurityAwarenessPhishingPage() {;
   const service = extraServices && extraServices.find(s => s && s.link.endsWith('/security-awareness-phishing'));
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   if (!service) return null;
 
   return (
@@ -125,7 +88,6 @@ export default function SecurityAwarenessPhishingPage() {;
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service && service.contactInfo.mobile}</span></div>;
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service && service.contactInfo.email}</span></div>;
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service && service.contactInfo.address}</span></div>;
-=======
 import Head from 'next / head';
 import {Phone, Mail, MapPin, Check, ArrowRight, Shield} from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components / ui / UltraAdvancedFuturisticBackground';
@@ -226,16 +188,11 @@ if (return null) {
                 <div className="flex items - center space - x-2"><Phone className="w - 4 h - 4 text - cyan - 400" /><span>{service.contact_info.mobile}</span></div>;
                 <div className="flex items - center space - x-2"><Mail className="w - 4 h - 4 text - purple - 400" /><span>{service.contact_info.email}</span></div>;
                 <div className="flex items - center space - x-2"><MapPin className="w - 4 h - 4 text - green - 400" /><span className="text - xs">{service.contact_info.address}</span></div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </div>;
           </div>;
         </div>;
       </div>;
-
-=======
 }
-
-=======
 export default function SecurityAwarenessPhishingPage() {
   const service = extraServices.find(s => s.link.endsWith('/security-awareness-phishing'));
   if (!service) return null;
@@ -287,10 +244,6 @@ export default function SecurityAwarenessPhishingPage() {
 }
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

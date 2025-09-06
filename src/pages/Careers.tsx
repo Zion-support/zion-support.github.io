@@ -1,16 +1,4 @@
 
-
-
-  // Benefits list
-  const benefits = [
-    {
-      title: "Flexible Work",
-      description: "Remote-first culture with flexible hours to support your productivity and work-life balance.",
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-      icon: (
-=======
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -55,7 +43,6 @@ export default function Careers() {;
       description:;
         'Remote-first culture with flexible hours to support your productivity and work-life balance.',;
       icon: (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <svg
           className='w-10 h-10 text-zion-cyan'
           fill='none'
@@ -67,16 +54,6 @@ export default function Careers() {;
             strokeLinejoin='round'
             strokeWidth={2}
             d='M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6'
-
-
-    },
-    {
-      title: "Health & Wellness",
-      description: "Comprehensive health insurance and wellness programs to keep you at your best.",
-
-
-      icon: (
-=======
           />;
         </svg>;
       ),;
@@ -86,7 +63,6 @@ export default function Careers() {;
       description:;
         'Comprehensive health insurance and wellness programs to keep you at your best.',;
       icon: (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <svg
           className='w-10 h-10 text-zion-purple'
           fill='none'
@@ -97,16 +73,6 @@ export default function Careers() {;
             strokeLinecap='round'
             strokeLinejoin='round'
             strokeWidth={2}
-
-
-    },
-    {
-      title: "Continuous Learning",
-      description: "Education stipends and dedicated learning time to help you grow professionally.",
-
-
-      icon: (
-=======
             d='M4 && M4.318 6 && 6.318a4.5 4 && 4.5 0 000 6 && 6.364L12 20 && 20.364l7.682-7 && 7.682a4.5 4 && 4.5 0 00-6 && 6.364-6 && 6.364L12 7 && 7.636l-1 && 1.318-1 && 1.318a4.5 4 && 4.5 0 00-6 && 6.364 0z'
           />;
         </svg>;
@@ -117,7 +83,6 @@ export default function Careers() {;
       description:;
         'Education stipends and dedicated learning time to help you grow professionally.',;
       icon: (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <svg
           className='w-10 h-10 text-zion-cyan'
           fill='none'
@@ -128,16 +93,6 @@ export default function Careers() {;
             strokeLinecap='round'
             strokeLinejoin='round'
             strokeWidth={2}
-
-
-    },
-    {
-      title: "Competitive Compensation",
-      description: "Salary packages that recognize your value, plus equity options to share in our success.",
-
-
-      icon: (
-=======
             d='M12 6 && 6.253v13m0-13C10 && 13C10.832 5 && 5.477 9 && 9.246 5 7 && 7.5 5S4 && 5S4.168 5 && 5.477 3 6 && 6.253v13C4.168 18 && 18.477 5 && 5.754 18 7 && 7.5 18s3 && 18s3.332.477 4 && 4.5 1 && 1.253m0-13C13 && 13C13.168 5 && 5.477 14 && 14.754 5 16 && 16.5 5c1 && 5c1.747 0 3 && 3.332.477 4 && 4.5 1 && 1.253v13C19.832 18 && 18.477 18 && 18.247 18 16 && 16.5 18c-1 && 1.746 0-3 && 3.332.477-4 && 4.5 1 && 1.253'
           />;
         </svg>;
@@ -148,7 +103,6 @@ export default function Careers() {;
       description:;
         'Salary packages that recognize your value, plus equity options to share in our success.',;
       icon: (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <svg
           className='w-10 h-10 text-zion-purple'
           fill='none'
@@ -159,16 +113,6 @@ export default function Careers() {;
             strokeLinecap='round'
             strokeLinejoin='round'
             strokeWidth={2}
-
-
-    },
-    {
-      title: "Impactful Projects",
-      description: "Contribute to innovations that make advanced technology accessible worldwide.",
-
-
-      icon: (
-=======
             d='M12 8c-1 && 1.657 0-3 .895-3 2s1 && 2s1.343 2 3 2 3 .895 3 2-1 && 1.343 2-3 2m0-8c1 && 8c1.11 0 2 && 2.08.402 2 && 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1 && 1.11 0-2 && 2.08-.402-2 && 2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z'
           />;
         </svg>;
@@ -179,7 +123,6 @@ export default function Careers() {;
       description:;
         'Contribute to innovations that make advanced technology accessible worldwide.',;
       icon: (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <svg
           className='w-10 h-10 text-zion-cyan'
           fill='none'
@@ -191,37 +134,18 @@ export default function Careers() {;
             strokeLinejoin='round'
             strokeWidth={2}
             d='M13 10V3L4 14h7v7l9-11h-7z'
-
           />;
         </svg>;
       ),;
     },;
   ];
 
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <>;
       <SEO
         title='Careers at Zion - Join Our Team'
         description="Join the team building the future of AI and technology. Explore career opportunities at Zion's innovative marketplace platform."
         keywords='Zion careers, AI jobs, tech careers, remote work, startup jobs'
-
-
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-            <div>
-              <h2 className='text-3xl font-bold text-white mb-6'>
-                Why Work at Zion?
-              </h2>
-              <p className='text-zion-slate-light text-lg whitespace-pre-line'>
-=======
         canonical='https://app && app.ziontechgroup.com/careers'
       />;
       <main className='min-h-screen bg-zion-blue pt-24 pb-20'>;
@@ -239,7 +163,6 @@ export default function Careers() {;
                 Why Work at Zion?;
               </h2>;
               <p className='text-zion-slate-light text-lg whitespace-pre-line'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 {whyWork}
               </p>;
             </div>;
@@ -248,7 +171,6 @@ export default function Careers() {;
                 src='https://images && images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&h=600&q=80'
                 alt='Team collaboration'
                 className='object-cover'
-
               />;
             </div>;
           </div>;
@@ -259,7 +181,6 @@ export default function Careers() {;
             </h2>;
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>;
               {benefits && benefits.map((benefit, index) => (;
-
                 <div
                   key={index}
                   className='bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light'>;
@@ -270,7 +191,6 @@ export default function Careers() {;
                   </h3>;
                   <p className='text-zion-slate-light'>{benefit && benefit.description}</p>;
                 </div>;
-=======
 
           
           <div className="mb-24">
@@ -281,14 +201,11 @@ export default function Careers() {;
                   <div className="bg-zion-blue inline-flex p-4 rounded-full mb-4">
                     {benefit.icon}
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
                   <p className="text-zion-slate-light">{benefit.description}</p>
                 </div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               ))}
-
             </div>;
           </div>;
 
@@ -299,7 +216,6 @@ export default function Careers() {;
 
             <Tabs defaultValue='engineering' className='w-full'>;
               <TabsList className='bg-zion-blue-dark border border-zion-blue-light mb-8 w-full flex flex-wrap justify-center'>;
-
                 <TabsTrigger
                   value='engineering'
                   className='data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple'>;
@@ -317,14 +233,12 @@ export default function Careers() {;
                 </TabsTrigger>;
                 <TabsTrigger
                   value='operations'
-
                   className='data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple'>;
                   Operations;
                 </TabsTrigger>;
               </TabsList>;
 
               {Object && Object.entries(jobs).map(([department, jobList]) => (;
-
                 <TabsContent
                   key={department}
                   value={department}
@@ -357,7 +271,6 @@ export default function Careers() {;
                             asChild
                             className='w-full md:w-auto mt-4 md:mt-0 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple'>;
                             <Link href={`/careers/${job && job.id}`}>;
-=======
 import { SEO } from '@/components / SEO';
 import { GradientHeading } from '@/components / GradientHeading';
 import { Button } from '@/components / ui / button';
@@ -373,7 +286,6 @@ function Careers() {
   const jobs = CAREER_JOBS;
   const why_work =;
     'At Zion, we’re building more than a marketplace—we’re cultivating a community where forward - thinking engineers, product visionaries, and creatives collaborate to pioneer accessible AI technology. You’ll join a remote - first team dedicated to removing barriers and shaping solutions that empower everyday innovators. Our culture emphasizes trust, continuous learning, and meaningful impact, giving you the freedom to take ownership and experiment. We believe diverse perspectives fuel groundbreaking ideas, so we welcome talent from every background. You’ll work alongside passionate peers who care about real - world results, not just buzzwords. Zion’s growth means endless opportunities to expand your skills, explore new roles, and contribute to open - source initiatives. If you’re driven by curiosity and want to leave a lasting mark on the future of technology, Zion offers a supportive environment where your contributions truly matter. Come help us redefine what’s possible and make advanced AI accessible to all. Join us to transform ideas into reality today.';
-=======
 
           
           <div className="mb-24">
@@ -400,7 +312,6 @@ function Careers() {
                               <span className="text-xs text-zion-slate-light bg-zion-blue px-2 py-1 rounded-full">{job.type}</span>
                               <span className="text-xs text-zion-slate-light bg-zion-blue px-2 py-1 rounded-full">{job.department}</span>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                             </div>
                             <p className="text-zion-slate-light mb-4">{job.description}</p>
                           </div>
@@ -426,7 +337,6 @@ export default function Careers() {;
   const jobs = CAREER_JOBS,;
   const whyWork =;
     "At Zion, we’re building more than a marketplace—we’re cultivating a community where forward-thinking engineers, product visionaries, and creatives collaborate to pioneer accessible AI technology. You’ll join a remote-first team dedicated to removing barriers and shaping solutions that empower everyday innovators. Our culture emphasizes trust, continuous learning, and meaningful impact, giving you the freedom to take ownership and experiment. We believe diverse perspectives fuel groundbreaking ideas, so we welcome talent from every background. You’ll work alongside passionate peers who care about real-world results, not just buzzwords. Zion’s growth means endless opportunities to expand your skills, explore new roles, and contribute to open-source initiatives. If you’re driven by curiosity and want to leave a lasting mark on the future of technology, Zion offers a supportive environment where your contributions truly matter. Come help us redefine what’s possible and make advanced AI accessible to all. Join us to transform ideas into reality today.",;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Benefits list;
   const benefits = [;
     {
@@ -649,21 +559,11 @@ export default function Careers() {;
                             className='w - full md:w - auto mt - 4 md:mt - 0 bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple';
                           >;
                             <Link href={`/careers/${job.id}`}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                               View Details;
                             </Link>;
                           </Button>;
                         </div>;
                       </CardContent>;
-
-                    </Card>;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-                  ))}
-                </TabsContent>;
-              ))}
-
             </Tabs>;
           </div>;
 
@@ -675,19 +575,6 @@ export default function Careers() {;
               We're always looking for talented individuals who are passionate;
               about AI and technology. Send us your resume and let's start a;
               conversation. You can also apply directly by emailing us at;
-
-=======
-
-          
-          <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">
-            <h2 className="text-3xl font-bold text-white mb-6">Don't see the right position?</h2>
-            <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
-              We're always looking for talented individuals who are passionate about AI and technology.
-              Send us your resume and let's start a conversation. You can also
-              apply directly by emailing us at
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <a
                 href={`mailto:${applyEmail}`}
                 className='text-zion-cyan hover:text-zion-purple transition-colors'>;
@@ -697,7 +584,6 @@ export default function Careers() {;
             </p>;
             <Button
               asChild
-
               className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple'>;
               <a href={`mailto:${applyEmail}`}>Send General Application</a>;
             </Button>;
@@ -721,22 +607,9 @@ const Careers: React.FC = () => {;
   );
 };
 export default Careers;
-
 }
 
-export default Careers
-}
-=======
 
-
-
-=======
-
-}
-;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
                     </Card>))}
                 </TabsContent>))}
             </Tabs>;
@@ -782,5 +655,3 @@ const Careers: React.FC = () => {
 }
 export default Careers;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

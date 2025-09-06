@@ -1,18 +1,3 @@
-
-
-export interface ThemeColors {;
-
-
-  primaryColor: string;
-  backgroundColor: string;
-  textColor: string;
-  accentColor: string;
-  buttonColor: string
-  cardBackground: string
-}
-// Define theme presets
-export function getThemeColors(preset: ThemePreset, primaryColor: string): ThemeColors {
-=======
 export type ThemePreset = 'light' | 'dark' | 'neon' | 'corporate' | 'startup';
 ;
 export interface ThemeColors {
@@ -25,26 +10,9 @@ export interface ThemeColors {
 }
 // Define theme presets;
 export function getThemeColors (preset: ThemePreset, primary_color: string): ThemeColors {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   switch (preset) {
     case 'dark':;
       return {
-
-
-  const root = document.documentElement,;
-
-
-  root.style.setProperty('--primary-color', colors.primaryColor);
-  root.style.setProperty('--background-color', colors.backgroundColor);
-  root.style.setProperty('--text-color', colors.textColor);
-  root.style.setProperty('--accent-color', colors.accentColor);
-  root.style.setProperty('--button-color', colors.buttonColor);
-  root.style.setProperty('--card-background', colors.cardBackground);
-  // Set background and text colors on body
-  document.body.style.backgroundColor = colors.backgroundColor;
-
-  document.body.style.color = colors.textColor
-
   const root = document && document.documentElement,
   root && root.style.setProperty('--primary-color', colors && colors.primaryColor);
   root && root.style.setProperty('--background-color', colors && colors.backgroundColor);
@@ -56,10 +24,8 @@ export function getThemeColors (preset: ThemePreset, primary_color: string): The
   // Set background and text colors on body
   document && document.body.style && style.backgroundColor = colors && colors.backgroundColor;
   document && document.body.style && style.color = colors && colors.textColor
-=======
 
 
-=======
 export type ThemePreset = 'light' | 'dark' | 'neon' | 'corporate' | 'startup',;
 export interface ThemeColors {;
   primaryColor: string,;
@@ -70,8 +36,6 @@ export interface ThemeColors {;
   cardBackground: string;
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
         primary_color;
         background_color: '#0f172a';
         text_color: '#e2e8f0';
@@ -129,10 +93,8 @@ export function applyThemeColors(colors: ThemeColors) {;
 
 
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
   // Set background and text colors on body;
   document.body.style.background_color = colors.background_color;
   document.body.style.color = colors.text_color;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

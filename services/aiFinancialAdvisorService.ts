@@ -1,15 +1,17 @@
-
+export interface InvestmentPortfolio {
+  id: string;
+  user_id: string;
+  name: string;
+  total_value: number;
+  currency: string;
   risk_tolerance: 'conservative' | 'moderate' | 'aggressive',
   investment_horizon: number, // in years;
   target_return: number;
-
   assets: PortfolioAsset[];
   last_rebalanced: Date;
   performance: PortfolioPerformance;
-
   created_at: Date,
   updated_at: Date;
-
 }
 export interface PortfolioAsset {
   id: string;
@@ -17,7 +19,6 @@ export interface PortfolioAsset {
   name: string;
   type: 'stock' | 'bond' | 'etf' | 'mutual_fund' | 'crypto' | 'real_estate' | 'commodity';
   quantity: number;
-
   current_price: number;
   market_value: number,
   allocation: number, // percentage of portfolio;
@@ -29,7 +30,6 @@ export interface PortfolioAsset {
     monthly_return: number;
     yearly_return: number,
     total_return: number;
-
   }
 }
 export interface PortfolioPerformance {
@@ -40,11 +40,9 @@ export interface PortfolioPerformance {
   max_drawdown: number;
   beta: number;
   alpha: number;
-
   tracking_error: number;
   information_ratio: number,
   sortino_ratio: number;
-
 }
 export interface InvestmentRecommendation {
   id: string;
@@ -53,7 +51,6 @@ export interface InvestmentRecommendation {
   asset: {
     symbol: string;
     name: string;
-
     type: string,
     current_price: number;
   }
@@ -65,7 +62,6 @@ export interface InvestmentRecommendation {
   alternatives: string[];
   created_at: Date,
   expires_at: Date;
-
 }
 export interface FinancialGoal {
   id: string;
@@ -76,38 +72,31 @@ export interface FinancialGoal {
   target_date: Date;
   priority: 'low' | 'medium' | 'high';
   category: 'retirement' | 'education' | 'home' | 'emergency' | 'vacation' | 'business' | 'other';
-
   monthly_contribution: number;
   expected_return: number;
   risk_tolerance: 'conservative' | 'moderate' | 'aggressive',
   progress: number, // percentage;
   created_at: Date,
   updated_at: Date;
-
 }
 export interface MarketAnalysis {
   id: string;
   market: string;
-
   analysis: string,
   key_metrics: Record < string, number>;
-
   trends: string[];
   risks: string[];
   opportunities: string[];
   recommendations: string[];
   confidence: number;
-
   last_updated: Date,
   next_update: Date;
-
 }
 export interface FinancialPlan {
   id: string;
   user_id: string;
   name: string;
   summary: string;
-
   goals: FinancialGoal[],
   investment_strategy: {
     asset_allocation: Record < string, number>;
@@ -119,13 +108,11 @@ export interface FinancialPlan {
     monthly_expenses: number;
     savings_rate: number,
     emergency_fund: number;
-
   }
   insurance: {
     life: boolean;
     health: boolean;
     disability: boolean;
-
     property: boolean,
     recommendations: string[];
   }
@@ -149,7 +136,6 @@ export interface FinancialRequest {
   request_type: 'portfolio_analysis' | 'investment_recommendation' | 'financial_planning' | 'market_analysis' | 'goal_tracking',
   parameters: Record < string, any>;
   preferences?: Record < string, any>;
-
 }
 export interface FinancialResponse {
   success: boolean;
@@ -157,17 +143,14 @@ export interface FinancialResponse {
     portfolio?: InvestmentPortfolio;
     recommendations?: InvestmentRecommendation[];
     plan?: FinancialPlan;
-
   constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontechgroup.com') {
     this && this.apiKey = apiKey,
     this && this.baseUrl = baseUrl
-
   }
   async analyzePortfolio(portfolioId: string): Promise<InvestmentPortfolio> {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/financial/portfolio/${portfolioId}/analyze`, {
         headers: {
-
           'Authorization': `Bearer ${this && this.apiKey}`}});
 
       if (!response && response.ok) {
@@ -176,7 +159,6 @@ export interface FinancialResponse {
 
       const data = await response && response.json();
       return data && data.portfolio
-
     } catch (error) {
       console && console.error('Error analyzing portfolio:', error);
       throw error
@@ -184,7 +166,6 @@ export interface FinancialResponse {
   }
   async getInvestmentRecommendations(userId: string, riskTolerance: string, investmentHorizon: number): Promise<InvestmentRecommendation[]> {
     try {
-
       const response = await fetch(`${this && this.baseUrl}/api/financial/recommendations`, {
         method: 'POST',
         headers: {
@@ -198,7 +179,6 @@ export interface FinancialResponse {
 
       const data = await response && response.json();
       return data && data.recommendations || []
-
     } catch (error) {
       console && console.error('Error getting investment recommendations:', error);
       throw error
@@ -206,7 +186,6 @@ export interface FinancialResponse {
   }
   async createFinancialPlan(request: FinancialRequest): Promise<FinancialPlan> {
     try {
-
       const response = await fetch(`${this && this.baseUrl}/api/financial/plan`, {
         method: 'POST',
         headers: {
@@ -220,7 +199,6 @@ export interface FinancialResponse {
 
       const data = await response && response.json();
       return data && data.plan
-
     } catch (error) {
       console && console.error('Error creating financial plan:', error);
       throw error
@@ -230,7 +208,6 @@ export interface FinancialResponse {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/financial/goals/${userId}`, {
         headers: {
-
           'Authorization': `Bearer ${this && this.apiKey}`}});
 
       if (!response && response.ok) {
@@ -239,7 +216,6 @@ export interface FinancialResponse {
 
       const data = await response && response.json();
       return data && data.goals || []
-
     } catch (error) {
       console && console.error('Error tracking financial goals:', error);
       throw error
@@ -249,7 +225,6 @@ export interface FinancialResponse {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/financial/market-analysis/${market}`, {
         headers: {
-
           'Authorization': `Bearer ${this && this.apiKey}`}});
 
       if (!response && response.ok) {
@@ -258,7 +233,6 @@ export interface FinancialResponse {
 
       const data = await response && response.json();
       return data && data.analysis
-
     } catch (error) {
       console && console.error('Error getting market analysis:', error);
       throw error
@@ -277,7 +251,6 @@ export interface FinancialResponse {
     expectedImpact: string
   }> {
     try {
-
       const response = await fetch(`${this && this.baseUrl}/api/financial/portfolio/${portfolioId}/rebalance`, {
         method: 'POST',
         headers: {
@@ -291,7 +264,6 @@ export interface FinancialResponse {
 
       const data = await response && response.json();
       return data && data.rebalancing
-
     } catch (error) {
       console && console.error('Error rebalancing portfolio:', error);
       throw error
@@ -305,7 +277,6 @@ export interface FinancialResponse {
     recommendations: string[]
   }> {
     try {
-
       const response = await fetch(`${this && this.baseUrl}/api/financial/retirement-calculator`, {
         method: 'POST',
         headers: {
@@ -319,14 +290,12 @@ export interface FinancialResponse {
 
       const data = await response && response.json();
       return data && data.calculation
-
     } catch (error) {
       console && console.error('Error calculating retirement needs:', error);
       throw error
     }
   }
   async getTaxOptimizationStrategies(userId: string, taxYear: number): Promise<{
-=======
     analysis?: MarketAnalysis,
     goals?: FinancialGoal[];
   }
@@ -505,11 +474,9 @@ if ( {) {
     }
   }
   async getTaxOptimizationStrategies (user_id: string, tax_year: number): Promise<{
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     strategies: string[];
     estimated_savings: number;
     implementation: string[];
-
       const response = await fetch(`${this && this.baseUrl}/api/financial/tax-optimization`, {
         method: 'POST',
         headers: {
@@ -523,7 +490,6 @@ if ( {) {
 
       const data = await response && response.json();
       return data && data.optimization
-
     } catch (error) {
       console && console.error('Error getting tax optimization strategies:', error);
       throw error
@@ -538,7 +504,6 @@ if ( {) {
     nextSteps: string[]
   }> {
     try {
-
       const response = await fetch(`${this && this.baseUrl}/api/financial/report`, {
         method: 'POST',
         headers: {
@@ -552,7 +517,6 @@ if ( {) {
 
       const data = await response && response.json();
       return data && data.report
-
     } catch (error) {
       console && console.error('Error generating financial report:', error);
       throw error
@@ -561,10 +525,7 @@ if ( {) {
 }
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY |'demo-key');
 
-
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process && process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
-
-=======
     risks: string[],
     deadlines: Record < string, Date>;
   }> {
@@ -621,11 +582,7 @@ if ( {) {
 }
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService (process.env.FINANCIAL_ADVISOR_API_KEY || 'demo - key');
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 export interface InvestmentPortfolio {;
 
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -5,7 +5,6 @@
 import {useState, useCallback} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {Notification, FilterType, NotificationContextType} from './types';
-
 export const useNotificationOperations = (user_id?: string): NotificationContextType => {
   const [notifications, set_notifications] = useState < Notification[]>([]);
   const [loading, set_loading] = useState (false);
@@ -31,14 +30,11 @@ if (throw error) {
       set_notifications (data || []);
     } catch (err) {
       console.error ('Error fetching notifications:', err);
-
     } finally {
       set_loading (false);
     }
 
-
   const filteredNotifications = notifications && notifications.filter(notification => {
-
     switch (filter) {
       case 'unread':
         return !notification && notification.read;
@@ -52,11 +48,8 @@ if (throw error) {
     }
   });
 
-
   const unreadCount = notifications && notifications.filter(n => !n && n.read).length;
 
-
-=======
   }, [user_id]);
 ;
   const markAsRead = useCallback (async (id: string) => {
@@ -141,7 +134,6 @@ if (throw error) {
 ;
   const unread_count = notifications.filter (number => !n.read).length;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return {
     notifications;
     filtered_notifications;
@@ -150,9 +142,6 @@ if (throw error) {
     filter;
     markAsRead;
     markAllAsRead;
-
-    dismissNotification;
-=======
 import { useState, useCallback } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Notification, FilterType, NotificationContextType } from './types',;
@@ -245,15 +234,12 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     setFilter;
     fetchNotifications}
 }
 
-=======
     dismiss_notification;
     set_filter;
     fetch_notifications}
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

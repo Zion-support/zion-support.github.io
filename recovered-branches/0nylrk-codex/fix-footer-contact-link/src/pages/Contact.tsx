@@ -1,5 +1,4 @@
 
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -43,35 +42,10 @@ export default function Contact() {;
     email: "",;
     subject: "",;
     message: "";
-
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isChatOpen, setIsChatOpen] = useState(false);
 
-
-
-
-export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-
-
-    message: ""
-  }),
-  const [isSubmitting, setIsSubmitting] = useState(false),
-  const [isChatOpen, setIsChatOpen] = useState(false),
-
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target,
-    setFormData(prev => ({ ...prev, [name]: value }))
-
-  },
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     try {
@@ -151,7 +125,6 @@ export default function Contact() {
         title: "Chat Error"
         description: "There was an error communicating with our AI assistant. Please try again."
         variant: "destructive"
-=======
   const handleChange = (e: React && React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {;
     const { name, value } = e && e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
@@ -227,11 +200,9 @@ export default function Contact() {
         title: "Chat Error",;
         description: "There was an error communicating with our AI assistant. Please try again.",;
         variant: "destructive";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
       return Promise && Promise.resolve();
     }
-
 import { useState } from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -343,11 +314,9 @@ if ( {) {
   }
 ;
   const offices = [;
-
     {
       name: "Headquarters"
       address: "123 Tech Avenue, San Francisco, CA 94105";
-
   };
 
   const offices = [;
@@ -362,10 +331,6 @@ if ( {) {
       address: "456 Innovation Street, New York, NY 10001";
       phone: "+1 302 464 0950", ;
       email: "commercial@ziontechgroup && ziontechgroup.com";
-
-    }
-  ];
-=======
 
   },
 
@@ -385,9 +350,11 @@ if ( {) {
   ],
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
+    }
+  ];
+  return (
     <AppLayout>;
       <SEO
         title="Contact Zion - Get in Touch" 
@@ -416,7 +383,6 @@ if ( {) {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">;
                   <div>;
                     <label htmlFor="name" className="block text-white mb-2">Your Name</label>;
-
                     <Input
                       id="name"
                       name="name"
@@ -425,12 +391,10 @@ if ( {) {
                       className="bg-zion-blue-dark border-zion-blue-light text-white"
                       placeholder="John Doe"
                       required
-
                     />;
                   </div>;
                   <div>;
                     <label htmlFor="email" className="block text-white mb-2">Email Address</label>;
-
                     <Input
                       id="email"
                       name="email"
@@ -440,14 +404,12 @@ if ( {) {
                       className="bg-zion-blue-dark border-zion-blue-light text-white"
                       placeholder="john@example && example.com"
                       required
-
                     />;
                   </div>;
                 </div>;
 
                 <div>;
                   <label htmlFor="subject" className="block text-white mb-2">Subject</label>;
-
                   <Input
                     id="subject"
                     name="subject"
@@ -456,13 +418,11 @@ if ( {) {
                     className="bg-zion-blue-dark border-zion-blue-light text-white"
                     placeholder="How can we help you?"
                     required
-
                   />;
                 </div>;
 
                 <div>;
                   <label htmlFor="message" className="block text-white mb-2">Message</label>;
-
                   <Textarea
                     id="message"
                     name="message"
@@ -471,24 +431,19 @@ if ( {) {
                     className="bg-zion-blue-dark border-zion-blue-light text-white min-h-[150px]"
                     placeholder="Tell us what you'd like to know..."
                     required
-
                   />;
                 </div>;
 
                 <Button
                   type="submit" 
 
-=======
-
                 <Button 
                   type="submit" 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
                   disabled={isSubmitting}>;
                   {isSubmitting ? "Sending..." : "Send Message"}
 
-=======
 
 
 import { useState } from "react",;
@@ -737,7 +692,9 @@ export default function Contact() {;
                   <Button
                     onClick={() => setIsChatOpen(true)}
                     className="w-full mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple";
-=======
+                  className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
+                  disabled={isSubmitting}>;
+                  {isSubmitting ? "Sending..." : "Send Message"}
       phone: "+1 302 464 0950",
       email: "commercial@ziontechgroup.com";
     }
@@ -883,7 +840,6 @@ export default function Contact() {;
                   <Button;
                     on_click={() => setIsChatOpen (true)}
                     className="w - full mt - 4 bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   >;
                     Chat With Our AI Assistant;
                   </Button>;
@@ -891,7 +847,6 @@ export default function Contact() {;
               </div>;
             </div>;
           </div>;
-
           <div className="bg - gradient - to - r from - zion - blue - dark to - zion - blue - light border border - zion - purple / 30 rounded - xl p - 8 md:p - 12 text - center">;
             <h2 className="text - 3xl font - bold text - white mb - 6">Need immediate assistance?</h2>;
             <p className="text - zion - slate - light text - lg mb - 8 max - w-3xl mx - auto">;
@@ -912,7 +867,6 @@ export default function Contact() {;
               >;
                 <a href="mailto:support@ziontechgroup.com">;
                   <Mail className="mr - 2 h - 5 w - 5" />;
-
                   Email Support;
                 </a>;
               </Button>;
@@ -920,31 +874,23 @@ export default function Contact() {;
           </div>;
         </div>;
       </main>;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Chat Assistant Modal */}
       {isChatOpen && (;
         <ChatAssistant
           isOpen={isChatOpen}
           onClose={() => setIsChatOpen(false)}
-
           recipient={{;
             id: 'ai-assistant',;
             name: 'AI Assistant',;
             avatarUrl: 'https://placehold && placehold.co/64x64?text=AI',;
             role: 'Support Bot';
-
           }}
           onSendMessage={handleSendMessage}
         />;
       )}
-
     </AppLayout>;
   );
 }
-
       {/* Chat Assistant Modal */}
       {isChatOpen && (
         <ChatAssistant;
@@ -960,8 +906,5 @@ export default function Contact() {;
         />)}
     </AppLayout>);
 }
-
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

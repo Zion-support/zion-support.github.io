@@ -1,8 +1,3 @@
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface TemplateManagerProps {
 
   isOpen: boolean
@@ -45,29 +40,12 @@ export function TemplateManager(): any ({;
 }: TemplateManagerProps) {;
   const [mode, setMode] = useState<"list" | "save">("list");
   const [selectedTemplate, setSelectedTemplate] = useState<ContractTemplate | null>(null);
-
   const { templates, isLoading } = useContractTemplates();
   const { toast } = useToast();
 
   const handleSelectTemplate = (template: ContractTemplate) => {;
     if (template && template.template_data) {;
       onSelectTemplate(template.template_data);
-
-
-  const { templates, isLoading } = useContractTemplates(),
-  const { toast } = useToast(),
-
-  const handleSelectTemplate = (template: ContractTemplate) => {
-    if (template && template.template_data) {
-      onSelectTemplate(template.template_data),
-      onClose(),
-
-
-      toast({
-        title: "Template loaded"
-        description: `Template "${template.title}" has been loaded.`})
-    }
-
       onClose(),;
       toast({;
         title: "Template loaded",;
@@ -80,48 +58,12 @@ export function TemplateManager(): any ({;
     setSelectedTemplate(null);
   };
 
-
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>;
       <DialogContent className="sm:max-w-lg max-h-[90vh] overflow-y-auto">;
         <DialogHeader>;
           <DialogTitle>;
             {mode === "list" ? "Contract Templates" : "Save Template"}
-
-
-  },
-
-
-  const handleSaveComplete = () => {
-    setMode("list"),
-    setSelectedTemplate(null)
-
-  },
-
-
-  return (
-    <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-lg max-h-[90vh] overflow-y-auto">
-        <DialogHeader>
-          <DialogTitle>
-            {mode === "list" ? "Contract Templates" : "Save Template"}
-
-          </DialogTitle>
-        </DialogHeader>
-        {mode === "list" ? (
-          <div className="space-y-4">
-            <div className="flex justify-end">
-
-
-              <Button 
-                variant="outline" 
-                onClick={() => setMode("save")}
-
-                onClick={() => setMode("save")}
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 disabled={!currentValues}
               >
                 Save Current as Template
@@ -138,7 +80,6 @@ export function TemplateManager(): any ({;
                 variant="outline" 
                 onClick={() => setMode("save")}
                 disabled={!currentValues}
-=======
 import { useState } from './react';
 import { useContractTemplates } from '@/hooks / useContractTemplates';
 import { ContractTemplate } from '@/types / contracts';
@@ -196,16 +137,11 @@ if ( {) {
                 variant="outline";
                 on_click={() => set_mode ("save")}
                 disabled={!current_values}
-
               >;
                 Save Current as Template;
               </Button>;
             </div>;
-
-
-            <TemplateList 
-
-
+            <TemplateList
               templates={templates}
               isLoading={isLoading}
               onSelect={handleSelectTemplate}
@@ -213,7 +149,6 @@ if ( {) {
                 setSelectedTemplate(template);
                 setMode("save");
               }}
-
             />;
           </div>;
         ) : (;
@@ -222,24 +157,19 @@ if ( {) {
               setMode("list");
               setSelectedTemplate(null);
 
-=======
-
               setMode("list"),
               setSelectedTemplate(null)
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             }}
             onComplete={handleSaveComplete}
             editTemplate={selectedTemplate}
             currentValues={currentValues}
           />;
         )}
-
       </DialogContent>;
     </Dialog>;
   );
 }
-
             <TemplateList;
               templates={templates}
               is_loading={is_loading}
@@ -262,8 +192,5 @@ if ( {) {
       </DialogContent>;
     </Dialog>);
 }
-
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

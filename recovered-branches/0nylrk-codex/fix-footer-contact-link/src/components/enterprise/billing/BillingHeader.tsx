@@ -1,4 +1,3 @@
-
 import React from './react';
 import { Button  } from '@/components / ui / button';
 import { Download, FileText, Mail, BarChart3  } from './lucide-react';
@@ -25,24 +24,18 @@ function BillingHeader() {
           <Button variant="outline" size="sm" className="gap - 1" as_child>;
             <Link to="/dashboard / client / analytics">;
               <BarChart3 className="h - 4 w - 4" />;
-
               Analytics;
             </Link>;
           </Button>;
         </div>;
       </div>;
-
       <p className="text - muted - foreground">;
         Manage your subscription, view invoice history, and update payment;
         methods.;
       </p>;
     </div>);
 
-}
-=======
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function BillingHeader() {
   return (
     <div className="space-y-2">
@@ -69,6 +62,5 @@ export function BillingHeader() {
         Manage your subscription, view invoice history, and update payment methods.
       </p>
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}

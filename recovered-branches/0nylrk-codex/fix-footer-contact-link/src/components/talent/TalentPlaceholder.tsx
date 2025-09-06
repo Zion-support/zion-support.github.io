@@ -1,8 +1,3 @@
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export function TalentPlaceholder() {
   return (
     <div className="p-8 text-center">
@@ -34,8 +29,6 @@ export function TalentPlaceholder() {;
     </div>;
   );
 }
-
-=======
 import { Card  } from '@/components / ui / card';
 import { Skeleton  } from '@/components / ui / skeleton';
 import { Button  } from '@/components / ui / button';
@@ -57,15 +50,11 @@ function TalentPlaceholder() {
       </Button>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   )
-=======
   )
 
 }
 ;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

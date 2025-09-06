@@ -1,36 +1,10 @@
-
-
+'use client';
+import Image from 'next / image';
+import { useState } from 'react';
+import { ImageIcon } from 'lucide-react';
 interface SafeImageProps {
   src: string;
   alt: string;  width?: number;interface SafeImageProps {
-
-
-=======
-    }
-  }
-
-  // If we have an error and no fallback, show a placeholder
-  if (hasError && (!fallbackSrc |currentSrc === fallbackSrc)) {
-        return (
-      <div
-        className={`flex items-center justify-center bg-gray-100 text-gray-400 ${className}`}
-        style={{ width, height }}
-        role="img"
-        aria-label = {alt,}
-      >
-        <ImageIcon className='w-6 h-6' />      </div>
-    )
-  }
-
-;
-    />;
-
-  );        aria-label={alt}
-=======
-'use client',;
-import Image from 'next/image',;
-import { useState } from 'react',;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { ImageIcon } from 'lucide-react';
 
 interface SafeImageProps {;
@@ -43,37 +17,51 @@ import { ImageIcon } from 'lucide-react';
 interface SafeImageProps {;
   src: string,;
   alt: string,;
-
-=======
 import { ImageIcon } from 'lucide-react'
 
 interface SafeImageProps {
   src: string,
   alt: string,
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   width?: number;
   height?: number;
   className?: string;
   fallbackSrc?: string;
   priority?: boolean;
   sizes?: string;
-
-
+  quality?: number;
+export function SafeImage(): any ({;
+  src,;
+  alt,;
+  width,;
+  height,;
+  className = '',;
+  fallbackSrc,;
+  priority = false,;
+  sizes,;
+  quality = 75,;
+}: SafeImageProps) {;
+  const [hasError, setHasError] = useState(false);
+  const [currentSrc, setCurrentSrc] = useState(src);
+  const handleError = () => {;
+    if (!hasError && fallbackSrc && currentSrc !== fallbackSrc) {;
+      setCurrentSrc(fallbackSrc);
+      setHasError(true);
+      // Try serving the image directly through our custom API route;
+      const fallbackUrl = `/api/image${src}`;
+      setCurrentSrc(fallbackUrl);
+      setHasError(true);
+    } else if (!hasError) {;
+      setHasError(true);
     }
   }
 
-
   // If we have an error and no fallback, show a placeholder;
   if (hasError && (!fallbackSrc || currentSrc === fallbackSrc)) {;
-
         return (
       <div
         className={`flex items-center justify-center bg-gray-100 text-gray-400 ${className}`}
         style={{ width, height }}
         role="img"
-
-=======
   quality?: number
 }
 
@@ -116,7 +104,19 @@ export function SafeImage({
         role="img"
         aria-label={alt}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  return (
+    <Image
+      src={currentSrc}
+      alt={alt}
+      width={width}
+      height={height}
+      className={className}
+      onError={handleError}
+      priority={priority}
+      // Add unoptimized as fallback for problematic images
+      unoptimized={hasError}
+    />
+  );        aria-label={alt}
       >
         <ImageIcon className="w-6 h-6" />
       </div>
@@ -129,12 +129,10 @@ export function SafeImage({
 
     />
   ); return (
-=======
         aria-label = {alt,}>;
         <ImageIcon className='w-6 h-6' />      </div>;
     );
   }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 
     />;
@@ -148,9 +146,6 @@ export function SafeImage({
 
     />;
   );  return (
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     <Image
       src = {currentSrc,}
       alt = {alt,}
@@ -161,20 +156,7 @@ export function SafeImage({
       priority = {priority,}
       // Add unoptimized as fallback for problematic images
       unoptimized = {hasError,}
-
-
 } 
-
-}
-
-
-}
-=======
-    />;
-  );
-
-
-=======
   src: string,
   alt: string,
 interface SafeImageProps {
@@ -242,11 +224,3 @@ if ( {) {
       unoptimized = {has_error, }
     />);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-} ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

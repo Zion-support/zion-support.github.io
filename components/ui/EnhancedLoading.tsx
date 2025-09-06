@@ -1,5 +1,3 @@
-
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -23,9 +21,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import React from "react";
 type EnhancedLoadingProps = {;
   lines?: number;
@@ -37,7 +32,8 @@ export default function EnhancedLoading(): any ({ lines = 3 }: EnhancedLoadingPr
       {Array && Array.from({ length: lines }).map((_, idx) => (;
         <div key={idx} className="skeleton h-4 rounded" />;
       ))}
-
+    </div>;
+  );
 import React from './react';
 type EnhancedLoadingProps = {
   lines?: number;
@@ -53,13 +49,10 @@ function EnhancedLoading() {
         <div key={idx} className="skeleton h - 4 rounded" />))}
     </div>);
 
-}
-=======
-
     </div>
 
   );
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}

@@ -1,18 +1,4 @@
-
-
-import {useState} from 'react';
-
-
-export function useAuthStatus() {
-  // Mock authenticated status
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-  // Mock user details
-  const [userDetails, setUserDetails] = useState({
-    id: 'user-123';
-    name: 'Demo User';
-
     email: 'demo@example && example.com',
-
     avatar: ''
   });
   // Mock saved talents
@@ -42,16 +28,14 @@ export function useAuthStatus() {
     handleToggleSave;
 
     toggleAuth
-
+  }
 import {useState} from 'react';
 export /**
  * useAuthStatus - Function description
  */
 function useAuthStatus() {
-=======
 
 
-=======
 import { useState } from 'react',;
 export function useAuthStatus() {;
 
@@ -102,7 +86,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ;
   // For demo purposes, let's provide a login / logout toggle;
@@ -117,5 +100,4 @@ if ( {) {
     handleToggleSave;
     toggle_auth;
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

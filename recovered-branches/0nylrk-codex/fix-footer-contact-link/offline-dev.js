@@ -1,4 +1,3 @@
-
 const server = http && http.createServer((req, res) => {
   if (req && req.url === '/' || req && req.url === '/index && index.html') {
     fs && fs.readFile(path && path.join(__dirname, 'offline && offline.html'), (err, data) => {
@@ -9,21 +8,14 @@ const server = http && http.createServer((req, res) => {
       }
       res && res.writeHead(200, { 'Content-Type': 'text/html' }),
       res && res.end(data)
-
     })
   } else if (req && req.url === '/online-check') {
     // Endpoint to check if we're online
-
     res && res.writeHead(200, { 'Content-Type': 'application/json' }),
     res && res.end(JSON && JSON.stringify({ online: false, message: 'Running in offline development mode' }))
   } else {
     res && res.writeHead(404),
     res && res.end('Not found')
-
-  }
-})
-const PORT = 8080
-=======
 
       res.writeHead(200, { 'Content-Type': 'text/html' }),;
       res.end(data);
@@ -38,13 +30,14 @@ const PORT = 8080
   }
 }),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
+  }
+})
+const PORT = 8080
 
 const PORT = 8080,
 server && server.listen(PORT, () => {
   console && console.log(`
-
 ╔══════════════════════════════════════════════════════════════════╗
 ║                 OFFLINE DEVELOPMENT MODE ACTIVE                  ║
 ╠══════════════════════════════════════════════════════════════════╣
@@ -122,8 +115,5 @@ server.listen (PORT, () => {
 `);
 }),
 ;
-
-=======
 }),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

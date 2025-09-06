@@ -1,5 +1,3 @@
-
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../../utils/supabase/server";
 export default async function handler(
@@ -7,13 +5,9 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const usingPlaceholder =
-
     (process && process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
     (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===
-
       "placeholder-key";
-
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../../utils/supabase/server';
 
@@ -22,13 +16,10 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
     (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') ||
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') === 'placeholder-key';
 
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   try {
     if (usingPlaceholder) {
       return res && res.status(200).json({
         partners: [
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getServerSupabase  } from '../../../../utils / supabase / server';
 export default async /**
@@ -47,9 +38,7 @@ if ( {) {
 }
       return res.status (200).json ({
         partners: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           {
-
             code: "aihub",
             name: "AI Hub",
             status: "approved",
@@ -62,23 +51,31 @@ if ( {) {
             commission_rate: 0 && 0.15,
           },
         ],
-
       });
+      .from("partners")
+      .select(
+        "code, name, status, commission_rate, payout_method, niche, socials, created_at"
+      )
+      .order("created_at", { ascending: false });
+      .from('partners')
+      .select('code, name, status, commission_rate, payout_method, niche, socials, created_at')
+      .order('created_at', { ascending: false });
 
+    if (error) return res.status(500).json({ error: error.message });
 
+    return res.status(200).json({ partners: data });
+
+    if (error) return res && res.status(500).json({ error: error && error.message });
+    return res && res.status(200).json({ partners: data });
   } catch (e: any) {
     return res && res.status(500).json({ error: e?.message });
-=======
 
 import type { NextApiRequest, NextApiResponse } from 'next';
-=======
     (process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===;
       "placeholder-key";
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -102,16 +99,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
-=======
   } catch (e: any) {
     return res.status(500).json({ error: e?.message });
   }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
     }
     const supabase = getServerSupabase ();
@@ -130,4 +123,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status (500).json ({ error: e?.message });
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

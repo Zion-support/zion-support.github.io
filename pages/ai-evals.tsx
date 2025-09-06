@@ -1,12 +1,3 @@
-
-
-import React from 'react',;
-import Head from 'next/head',;
-import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground',;
-import { Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',;
-;
-
-=======
 import React from 'react'
 import Head from 'next/head'
 import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground'
@@ -14,7 +5,6 @@ import { Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function AIEvalsPage() {
 	const contactInfo = {
 		mobile: '+1 302 464 0950'
@@ -37,7 +27,13 @@ export default function AIEvalsPage() {_const _contactInfo = {
 
 	return (_<QuantumHolographicMatrixBackground intensity={_1.5}>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React from 'react'
+import Head from 'next/head'
+import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground'
+import { Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',
+
+
+
 			<Head>
 				<title>AI Evaluations Platform | Zion Tech Group</title>
 				<meta name="description" content="Automated LLM evaluation with accuracy, faithfulness, latency, and cost metrics. Integrate with CI and guardrails." />
@@ -54,7 +50,13 @@ export default function AIEvalsPage() {_const _contactInfo = {
 						<a href="/resources" className="border-gray-600 text-gray-200">Read Docs</Link>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React from 'react'
+import Head from 'next/head'
+import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground'
+import { Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',
+
+
+
 					</div>
 				</div>
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16">
@@ -81,7 +83,13 @@ export default function AIEvalsPage() {_const _contactInfo = {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React from 'react'
+import Head from 'next/head'
+import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground'
+import { Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',
+
+
+
 				</div>
 				<div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
 					<div className="bg-black/20 border border-gray-700/50 rounded-2xl p-6">
@@ -112,16 +120,21 @@ export default function AIEvalsPage() {_const _contactInfo = {
 						<a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl">Talk to Engineering</Link>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React from 'react'
+import Head from 'next/head'
+import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground'
+import { Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',
+
+
+
 					</div>
 				</div>
 			</div>
 		</QuantumHolographicMatrixBackground>
 
-=======
 }
 
-=======
+}
 import React from 'react',
 import Head from 'next / head',
 import QuantumHolographicMatrixBackground from '../components / ui / QuantumHolographicMatrixBackground',
@@ -198,9 +211,5 @@ return (
   </div>;
   </QuantumHolographicMatrixBackground>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

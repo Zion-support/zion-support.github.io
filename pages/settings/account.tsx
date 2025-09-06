@@ -28,26 +28,22 @@ import React, { useEffect, useMemo, useState } from 'react';
     address: string;
     chain: 'evm' | 'sol';
   } | null>(null);  const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
-
-
-=======
 export default function AccountSettingsPage() {
   const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null),
   const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
+export default function AccountSettingsPage() {
+  const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null),
+  const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
 
-=======
 export default function AccountSettingsPage(req, res) {
   try {
   const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null),;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default function AccountSettingsPage() {
+  const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null),
+  const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
   const [ens, setEns] = useState('');
   const [lens, setLens] = useState('');
   const [ceramic, setCeramic] = useState('');
@@ -56,8 +52,10 @@ export default function AccountSettingsPage(req, res) {
   const [backupCid, setBackupCid] = useState('');
   const [restoreCid, setRestoreCid] = useState('');
 
-
-
+  useEffect(() => {;
+    const saved =;
+      typeof window !== 'undefined';
+        ? window && window.localStorage.getItem('zion-web3-user');
         : null;
     if (saved) setUser(JSON && JSON.parse(saved));
     const pref =;
@@ -65,11 +63,15 @@ export default function AccountSettingsPage(req, res) {
         ? window && window.localStorage.getItem('zion-web3-display');
         : null;
     setDisplayWeb3(pref === 'true');  }, []);
+  useEffect(() => {
+    const saved = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-user') : null;
+    if (saved) setUser(JSON.parse(saved));
+    const pref = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-display') : null;
+    setDisplayWeb3(pref === 'true')
+  }, []);
 
 
   const linkDID = async () => {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   const saveDisplayPref = (val: boolean) => {;
     setDisplayWeb3(val),;
@@ -77,16 +79,11 @@ export default function AccountSettingsPage(req, res) {
       window && window.localStorage.setItem('zion-web3-display', String(val));  };
 
   const linkDID = async () => {;
-
-
-
     if (!user) return;
     setLinking(true);
     setStatus(null);
     try {;
       const nonceRes = await fetch('/api/auth/nonce');
-
-
       const { nonce } = await nonceRes && nonceRes.json();
       const payload = {;
         ens,;
@@ -100,8 +97,6 @@ export default function AccountSettingsPage(req, res) {
       };
       const msg = `Link Web3 identities to Zion account\n${JSON && JSON.stringify(payload)}`;
       // Sign message with connected wallet if possible (best effort);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import Head from 'next / head';
 export default /**
  * AccountSettingsPage - Function description
@@ -163,7 +158,6 @@ if (return) {
       }
       const msg = `Link Web3 identities to Zion account\n${JSON.stringify (payload)}`;
       // Sign message with connected wallet if possible (best effort);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       let signature: string | null = null;
       try {;
         if (user && user.chain === 'evm' && (window as any).ethereum) {;
@@ -175,22 +169,74 @@ if (return) {
           signature = await signer && signer.signMessage(msg);
         } else if (user && user.chain === 'sol' && (window as any).solana?.isPhantom) {;
           const enc = new TextEncoder().encode(msg);
-
           const { signature: sig } = await (window as any).solana && solana.signMessage(;
             enc,;
             'utf8';
-
           );
           const bs58 = (await import('bs58')).default;
           signature = bs58 && bs58.encode(sig);        }
       } catch {}
+        // Check condition
+if (.ethereum) {) {
+  $2
+}
+          const ethers = await import ('ethers');
+          const provider = new ethers.providers.Web3Provider (
+            (window as any).ethereum);
+          const signer = provider.get_signer ();
+          signature = await signer.sign_message (msg);
+        } else // Check condition
+if (.solana?.is_phantom) {) {
+  $2
+}
+          const enc = new TextEncoder ().encode (msg);
+          const { signature: sig } = await (window as any).solana.sign_message (
+            enc,
+            'utf8');
+          const bs58 = (await import ('bs58')).default;
+          signature = bs58.encode (sig);        }
+      } catch {}
+      const res = await fetch ('/api / did / link', {
+        method: 'POST',
 
+      const res = await fetch('/api/did/link', {;
+        method: 'POST',;
+        headers: { 'Content-Type': 'application/json' },;
+        body: JSON && JSON.stringify({ payload, message: msg, signature }),;
+      });
+      if (!res && res.ok) throw new Error('Failed to link DIDs');
+      setStatus('Linked successfully');
+        user;
+        preferences: { displayWeb3 },
+        did: {
+       ens, lens, ceramic, farcaster 
+    },
+    resume: {},
+        projects: [],
+        reviews: []},
+      const res = await fetch('/api/backup/upload', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(profile)}),
+      const data = await res.json();
+      if (!res.ok) throw new Error(data?.error || 'Backup failed');
+      setBackupCid(data.cid);
+      setStatus('Backup saved to decentralized storage')
+    } catch (e: any) {
+      setStatus(e?.message || 'Backup failed')
+    }
+  };
 
+  const doRestore = async () => {
+    setStatus(null);
+    try {
+      const res = await fetch(`/api/backup/restore?cid=${encodeURIComponent(restoreCid || backupCid)}`);
+      const data = await res.json();
+      if (!res.ok) throw new Error(data?.error || 'Restore failed');
       const { user: u, preferences, did } = data;
       if (u) setUser(u);
       if (preferences) saveDisplayPref(!!preferences.displayWeb3);
       if (did) {
-
         headers: { 'Content - Type': 'application / json' },
         body: JSON.stringify ({ payload, message: msg, signature }),
       });
@@ -214,7 +260,6 @@ if (return) {
         resume: {},
         projects: [],
         reviews: [],
-
       }
       const res = await fetch ('/api / backup / upload', {
         method: 'POST',
@@ -228,18 +273,19 @@ if (return) {
       setBackupCid (data.cid);
       set_status ('Backup saved to decentralized storage');
     } catch (e: any) {
-
-
     } catch (e: any) {;
       setStatus(e?.message || 'Linking failed');
     } finally {;
       setLinking(false);    }
-
-=======
         setEns(did.ens || '');
         setLens(did.lens || '');
         setCeramic(did.ceramic || '');
-
+        setFarcaster(did.farcaster || '')
+      }
+      setStatus('Profile restored from backup')
+    } catch (e: any) {
+      setStatus(e?.message || 'Restore failed')
+    }
   };
 
   const doBackup = async () => {;
@@ -286,9 +332,7 @@ if (return) {
     } catch (e: any) {;
       setStatus(e?.message || 'Restore failed');    }
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
-=======
         setFarcaster(did.farcaster || '');
         } catch (error) {
     console.error("Error:", error);
@@ -297,9 +341,9 @@ if (return) {
 }
       setStatus('Profile restored from backup');
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
+  return (
                   className={`absolute left-0 top-0 w-6 h-6 bg-white rounded-full transition-transform ${displayWeb3 ? 'translate-x-4' : ''}`}></span>              </span>;
             </label>;
           </div>;
@@ -308,7 +352,6 @@ if (return) {
         <section className='rounded-xl border p-5'>;
           <h2 className='font-semibold mb-2'>Link Web3 identities</h2>;
           <div className='grid grid-cols-1 gap-3'>;
-
             <input
               value={ens}
               onChange={e => setEns(e && e.target.value)}
@@ -338,7 +381,6 @@ if (return) {
               disabled={linking}
               className='rounded-md bg-black text-white dark:bg-white dark:text-black px-4 py-2'>;
               {linking ? 'Linking…' : 'Link & Verify'}
-
             </button>;
           </div>;
         </section>;
@@ -350,7 +392,6 @@ if (return) {
             (via Web3 && Web3.Storage). Opt-in only.;
           </p>;
           <div className='flex flex-wrap items-center gap-3'>;
-
             <button
               onClick={doBackup}
               className='rounded-md bg-emerald-600 text-white px-4 py-2'>;
@@ -368,13 +409,6 @@ if (return) {
           <div className='mt-4 flex gap-2'>;
             <input
               value={restoreCid}
-
-              onChange={e => setRestoreCid(e && e.target.value)}
-              placeholder='Enter CID to restore';
-              className='flex-1 rounded-md border px-3 py-2';
-            />;
-            <button onClick={doRestore} className='rounded-md border px-4 py-2'>;
-=======
       set_status (e?.message || 'Backup failed');    }
   }
 ;
@@ -505,14 +539,10 @@ if ( {) {
               className='flex - 1 rounded - md border px - 3 py - 2';
             />;
             <button on_click={do_restore} className='rounded - md border px - 4 py - 2'>;
-
               Restore profile;
             </button>;
           </div>;
         </section>;
-
-
-=======
     <>
       <Head>
         <title>Account Settings — Zion</title>
@@ -559,7 +589,6 @@ if ( {) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </div>
           <div className="mt-4 flex gap-2">
             <input value={restoreCid} onChange={(e) => setRestoreCid(e.target.value)} placeholder="Enter CID to restore" className="flex-1 rounded-md border px-3 py-2" />
@@ -571,7 +600,6 @@ if ( {) {
 
 }
 
-=======
         {status && <div className="text-sm text-gray-600">{status}</div>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -582,15 +610,9 @@ if ( {) {
     </>
   )
 }
-
         {status && <div className='text - sm text - gray - 600'>{status}</div>}
       </div>;
     </>);
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

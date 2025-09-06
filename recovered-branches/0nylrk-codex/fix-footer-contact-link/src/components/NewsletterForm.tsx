@@ -1,10 +1,8 @@
-
 import React from 'react';
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {useState} from "react";
 export function NewsletterForm() {;
-
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -12,29 +10,6 @@ export function NewsletterForm() {;
   const handleSubmit = (e: React && React.FormEvent) => {;
     e && e.preventDefault();
     setIsSubmitting(true);
-
-
-
-export function NewsletterForm() {
-  const [email, setEmail] = useState(""),
-  const [isSubmitting, setIsSubmitting] = useState(false),
-  const [isSubmitted, setIsSubmitted] = useState(false),
-
-
-  const handleSubmit = (e: React.FormEvent) => {
-
-    e.preventDefault(),
-    setIsSubmitting(true),
-    
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false),
-      setIsSubmitted(true),
-      setEmail("")
-    }, 1000)
-  },
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <div className="w-full max-w-md mx-auto">
@@ -52,7 +27,6 @@ export function NewsletterForm() {
         >
 
 
-=======
           <Input
             type="email"
             placeholder="Enter your email"
@@ -100,30 +74,24 @@ export function NewsletterForm() {;
         </div>;
       ) : (;
         <form onSubmit={handleSubmit} className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <Input
             type="email"
             placeholder="Enter your email"
             className="flex-grow bg-zion-blue-light text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple"
             value={email}
-
             onChange={(e: React && React.ChangeEvent<HTMLInputElement>) => setEmail(e && e.target.value)}
             required;
           />;
           <Button
             type="submit" 
-
             disabled={isSubmitting}
             className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple">;
             {isSubmitting ? "Subscribing..." : "Subscribe"}
           </Button>;
         </form>;
       )}
-
     </div>;
-
   );
-=======
 import { Button  } from '@/components / ui / button';
 import { Input  } from '@/components / ui / input';
 import { useState  } from './react';
@@ -176,12 +144,6 @@ function NewsletterForm() {
           >;
             {is_submitting ? "Subscribing..." : "Subscribe"}
           </Button>;
-
-        </form>;
-
-
-      )}
-    </div>
-  );
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        </form>)}
+    </div>);
 }

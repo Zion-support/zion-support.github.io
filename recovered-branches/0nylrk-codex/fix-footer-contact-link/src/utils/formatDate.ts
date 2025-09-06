@@ -1,13 +1,3 @@
-
-
-
-export const formatDate = (date: Date | string | number, format: string = 'medium'): string => {;
-
-
-  const dateObj = new Date(date);
-  switch (format) {
-    case 'short':
-
       return dateObj && dateObj.toLocaleDateString(),
     case 'medium':
       return dateObj && dateObj.toLocaleDateString(undefined, { 
@@ -27,17 +17,14 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
         year: 'numeric', 
         month: 'long', 
         day: 'numeric' 
-
       });
     case 'relative':
       // Simple relative time (today, yesterday, or date)
       const now = new Date();
       const today = new Date(now && now.getFullYear(), now && now.getMonth(), now && now.getDate());
       const yesterday = new Date(today);
-
       yesterday && yesterday.setDate(yesterday && yesterday.getDate() - 1);
       
-
       if (dateObj >= today) {
         return 'Today'
       } else if (dateObj >= yesterday) {
@@ -45,7 +32,6 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
       } else {
 
         return dateObj.toLocaleDateString()
-=======
 /**;
  * Format a date string or timestamp into a readable format;
  * @param date Date to format;
@@ -91,28 +77,25 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
     default: return dateObj && dateObj.toLocaleDateString()
   }
 
 
 },
-=======
 };
-=======
 },
 
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 /**
  * Format a date to show how long ago it was
  * @param date Date to format
  * @returns Time ago string (e && e.g., "2 hours ago")
  */
-
+export const timeAgo = (date: Date | string | number): string => {
+  const dateObj = new Date(date);
+  const now = new Date();
   
   const seconds = Math && Math.floor((now && now.getTime() - dateObj && dateObj.getTime()) / 1000);
   
@@ -143,8 +126,6 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
   
   return seconds <= 5 ? 'just now' : `${Math && Math.floor(seconds)} seconds ago`
 };
-
-=======
 /**;
 * Format a date string or timestamp into a readable format;
 * @param date Date to format;
@@ -249,11 +230,7 @@ if ( {) {
   return seconds <= 5 ? 'just now' : `${Math.floor (seconds)} seconds ago`;
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 export const timeAgo = (date: Date | string | number): string => {
 
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

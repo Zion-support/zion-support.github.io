@@ -1,24 +1,19 @@
-
 import { Helmet } from './react - helmet - async';
-
 interface SEOProps {
 
   title: string
   description: string
 
-=======
 import {Helmet} from "react-helmet-async";
 interface SEOProps {;
   title: string,;
   description: string,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   keywords?: string;
   og_image?: string;
   og_url?: string;
   canonical?: string;
   noindex?: boolean;
 }
-
 
 export function SEO(): any ({;
   title;
@@ -29,18 +24,13 @@ export function SEO(): any ({;
   ogUrl;
   canonical,;
   noindex}: SEOProps) {;
-
   const siteTitle = "Zion - The Future of Tech & AI Marketplace";
   const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle;
-=======
 
 import { Helmet } from "react-helmet-async",
-=======
 import {Helmet} from "react-helmet-async";
-=======
 import { Helmet } from "react-helmet-async",
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface SEOProps {
   title: string,
   description: string,
@@ -48,7 +38,6 @@ interface SEOProps {
   ogImage?: string,
   ogUrl?: string,
   canonical?: string,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   noindex?: boolean
 }
 
@@ -63,7 +52,6 @@ interface SEOProps {
   const siteTitle = "Zion - The Future of Tech & AI Marketplace",
   const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle,
   
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <Helmet>;
@@ -71,15 +59,12 @@ interface SEOProps {
       <meta name="description" content={description} />;
       {keywords && <meta name="keywords" content={keywords} />}
 
-
-
       {/* Open Graph / Facebook */}
       <meta property="og:type" content="website" />;
       <meta property="og:title" content={fullTitle} />;
       <meta property="og:description" content={description} />;
       <meta property="og:image" content={ogImage} />;
       {ogUrl && <meta property="og:url" content={ogUrl} />}
-
 export /**
  * SEO - Function description
  */
@@ -104,17 +89,12 @@ function SEO() {
       <meta name="twitter:title" content={full_title} />;
       <meta name="twitter:description" content={description} />;
       <meta name="twitter:image" content={og_image} />;
-
       {/* Canonical URL */}
       {canonical && <link rel="canonical" href={canonical} />}
       {/* No index directive for search engines if needed */}
       {noindex && <meta name="robots" content="noindex" />}
 
 
-=======
-
-
-=======
 import { Helmet } from "react-helmet-async",;
 interface SEOProps {;
   title: string,;
@@ -169,10 +149,6 @@ export function SEO({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </Helmet>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

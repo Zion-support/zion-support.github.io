@@ -1,24 +1,10 @@
 
-
-interface ReferralStatsProps {
-  stats: ReferralStatsType
-  isLoading: boolean
-
-
-=======
-
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
-import { ReferralStats as ReferralStatsType } from "@/types/referrals",
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { ReferralStats as ReferralStatsType } from "@/types/referrals";
 import { Award, Share, Star, TrendingUp } from 'lucide-react'
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ReferralStatsProps {
-
   stats: ReferralStatsType
   isLoading: boolean
-=======
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
 import { ReferralStats as ReferralStatsType } from '@/types / referrals';
 import { Award, Share, Star, TrendingUp } from 'lucide-react';
@@ -39,7 +25,6 @@ import { Star } from 'lucide-react';
 interface ReferralStatsProps {
   stats: ReferralStatsType,
   is_loading: boolean;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 export /**
  * ReferralStats - Function description
@@ -47,7 +32,6 @@ export /**
 function ReferralStats() {
   const stat_cards = [;
     {
-
 interface ReferralStatsProps {;
   stats: ReferralStatsType;
   isLoading: boolean;
@@ -92,7 +76,6 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
     },;
   ];
 
-
   return (
     <div className='grid gap-4 md:grid-cols-2 lg:grid-cols-4'>;
       {statCards && statCards.map((card, i) => (        <Card key={i}>;
@@ -123,11 +106,10 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
               <>;
                 <div className="text-2xl font-bold">{card && card.value}</div>;
                 <p className="text-xs text-muted-foreground">{card && card.description}</p>;
-
-            )}
-          </CardContent>;
-        </Card>;
-      ))}
+    </div>;
+  );
+}
+}
 
     <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
       {statCards.map((card, i) => (
@@ -143,12 +125,18 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
               <div className="h-6 w-20 bg-muted animate-pulse rounded" />
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ) : (
               <>
                 <div className="text-2xl font-bold">{card.value}</div>
                 <p className="text-xs text-muted-foreground">{card.description}</p>
-
+              </>
+            )}
+          </CardContent>
+        </Card>
+      ))}
+    </div>
+  );
+}
       title: 'Total Referrals',
       icon: <Share className='h - 5 w - 5 text - muted - foreground' />,
       description: "People you've invited",
@@ -184,14 +172,12 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
             <CardTitle className="text - sm font - medium">{card.title}</CardTitle>;
     <div className="grid gap - 4 md:grid - cols - 2 lg:grid - cols - 4">;
       {stat_cards.map ((card, i) => (
-=======
 
 }
 }
 }
 }
 
-=======
               </>
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { ReferralStats as ReferralStatsType } from "@/types/referrals",;
@@ -247,9 +233,3 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {;
         </Card>))}
     </div>);
 }
-
-;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,32 +1,15 @@
-
 import {useState} from "react";
 import {Button} from "@/components/ui/button";
 import {useAuth} from "@/hooks/useAuth";
 import {Wallet} from "@/components/icons";
 import {toast} from "sonner";
 export function Web3Login() {;
-
   const { loginWithWeb3 } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
   const handleWeb3Login = async () => {;
     try {;
       setIsLoading(true);
-
-
-
-export function Web3Login() {
-  const { loginWithWeb3 } = useAuth(),
-  const [isLoading, setIsLoading] = useState(false),
-
-
-  const handleWeb3Login = async () => {
-    try {
-
-      setIsLoading(true),
-      
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       // Check if wallet is available
       const ethereum = (window as any).ethereum;
       if (!ethereum) {
@@ -59,15 +42,12 @@ export function Web3Login() {
       console && console.error("Web3 login error:", error);
     } finally {;
       setIsLoading(false);
-
     }
   }
-=======
     }
 
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <Button
@@ -93,7 +73,6 @@ export function Web3Login() {
         </>
 
 
-=======
 import { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -148,14 +127,10 @@ export function Web3Login() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       )}
-
     </Button>;
   );
 }
-
-=======
 import { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { use_auth } from '@/hooks / use_auth';
@@ -214,4 +189,3 @@ if ( {) {
         </>)}
     </Button>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

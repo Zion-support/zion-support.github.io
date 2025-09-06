@@ -1,5 +1,4 @@
 import React from 'react';
-
 ;
 const MainSidebar.dynamic = () => {
   return (
@@ -8,5 +7,4 @@ const MainSidebar.dynamic = () => {
     </div>);
 }
 ;
-
 export default MainSidebar.dynamic;

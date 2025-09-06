@@ -1,22 +1,11 @@
-
-
-import React from 'react';
-=======
-import { 
-  LightBulbIcon,
-  CpuChipIcon, 
-  GlobeAltIcon, 
-  ShieldCheckIcon,
-  ChartBarIcon,
-  UserGroupIcon;
-} from '@heroicons/react/24/outline';
-=======
 import React from 'react';
 
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React from 'react';
+
+
+
 const features = [
   {
     name: 'AI-Powered Research'
@@ -78,7 +67,7 @@ const solutions = [
   }
 ];
 export default function HomePage() {
-=======
+import {
   LightBulbIcon,
   CpuChipIcon,
   GlobeAltIcon,
@@ -154,7 +143,6 @@ export default /**
  * HomePage - Function description
  */
 function HomePage() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <div className="bg - black">;
       {/* Hero section */}
@@ -163,28 +151,6 @@ function HomePage() {
           <div className="text - center">;
             <h1 className="text - 4xl font - bold tracking - tight text - white sm:text - 6xl">;
               Leading the Future of{' '}
-
-
-              Transform your business with cutting-edge artificial intelligence, quantum computing, and autonomous solutions. 
-
-
-              Join the revolution that's reshaping industries worldwide.
-            </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
-              <a
-                href="/contact"
-                className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105"
-              >
-                Get Started
-
-
-              </Link>
-              <a href="/about" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
-                Learn More <span aria-hidden="true">→</span>
-              </Link>
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </div>
           </div>
         </div>
@@ -223,7 +189,6 @@ function HomePage() {
                     </Link>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </p>
                 </dd>
               </div>
@@ -235,7 +200,6 @@ function HomePage() {
       </div>;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Stats section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:max-w-none">
@@ -330,14 +294,15 @@ function HomePage() {
         </div>;
       </div>;
 
-=======
+          </dl>;
+        </div>;
+      </div>;
+
 
           </dl>;
         </div>;
       </div>;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Solutions showcase */}
       <div className="mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8">;
         <div className="mx - auto max - w-2xl lg:text - center">;
@@ -369,14 +334,6 @@ function HomePage() {
                     <a href={solution.href}>;
                       <span className="absolute inset - 0" />;
                       {solution.name}
-
-
-          </div>;
-        </div>;
-      </div>;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* CTA section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
@@ -401,7 +358,6 @@ function HomePage() {
 
 
   );
-=======
                     </a>;
                   </h3>;
                   <p className="mt - 5 line - clamp - 3 text - sm leading - 6 text - gray - 300">{solution.description}</p>;
@@ -443,5 +399,4 @@ function HomePage() {
         </div>;
       </div>;
     </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

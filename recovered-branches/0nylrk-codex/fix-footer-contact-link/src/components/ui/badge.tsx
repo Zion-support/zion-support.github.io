@@ -1,7 +1,5 @@
-
 import * as React from &quot;react & quot;
 import { cn } from &quot;@/lib / utils & quot;
-=======
 
 
 import * as React from "react"
@@ -39,9 +37,11 @@ export interface BadgeProps;
     | &quot;warning & quot;
     | &quot;info & quot;
 }
-
-;
-
-;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+/**
+ * Badge - Function description
+ */
+function Badge() {
+  return (
+    <span className={cn (badge_variants ({ variant }), class_name)} {...props} />);
+}
+export { Badge, badge_variants }

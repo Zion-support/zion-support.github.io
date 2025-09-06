@@ -1,16 +1,8 @@
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const MarketplaceRoutes = () => {
-=======
 const MarketplaceRoutes = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Routes>;
       {/* Marketplace Routes */}
-
       <Route path="/marketplace" element={<Marketplace />} />;
       <Route path="/categories" element={<Categories />} />;
       <Route path="/category/:slug" element={<CategoryDetail />} />;
@@ -22,12 +14,10 @@ const MarketplaceRoutes = () => {;
       <Route path="/equipment" element={<EquipmentPage />} />;
       <Route path="/equipment/:id" element={<EquipmentDetail />} />;
 
-
       {/* Job Routes */}
       <Route
         path="/post-job"
         element={
-
           <ProtectedRoute>;
             <PostJob />;
           </ProtectedRoute>;
@@ -82,15 +72,11 @@ const MarketplaceRoutes = () => {;
 };
 
 
-=======
-
 },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default MarketplaceRoutes;
 
-=======
 import { Route, Routes } from './react-router-dom';
 import { ProtectedRoute } from '@/components / ProtectedRoute';
 import Marketplace from "@/pages / Marketplace";
@@ -176,4 +162,3 @@ const MarketplaceRoutes = () =>: any {
 ;
 export default MarketplaceRoutes;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

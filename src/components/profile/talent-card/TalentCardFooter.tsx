@@ -1,13 +1,55 @@
-
-
-=======
-
-
-    }
+import React from 'react';
+import { useRouter } from 'next/router';
+interface TalentCardFooterProps {;
+  profile: TalentProfile,;
+  onViewProfile: (id: string,) => void,;
+  onRequestHire?: (profile: TalentProfile,) => void;
+}
 
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  // Create a compatible UserProfile from UserDetails;
+  const userProfile: UserProfile = {;
+    id: userDetails?.id,;
+    name: userDetails?.name || '',;
+    email: userDetails?.email || '',;
+    userType: null,;
+    profileComplete: false,;
+    created_at: new Date().toISOString(),;
+    updated_at: new Date().toISOString(),;
+    role: userDetails?.userType || '',;
+    displayName: userDetails?.name || '',;
+    points: 0,;
+    avatarUrl: userDetails?.avatar || '';
+  };
+
+  // Handle request to hire;
+  const handleRequestHire = (e: React && React.MouseEvent) => {;
+    e && e.stopPropagation();
+
+      const handleRequestHire = (e: React && React.MouseEvent,) => {;
+    e && e.stopPropagation(),;
+
+    if (onRequestHire) {;
+      onRequestHire(profile);
+    } else {;
+      // Open hire modal directly if no handler provided;
+      setIsHireModalOpen(true);
+    }
+  },;
+
+  // Handle view profile;
+  const handleViewProfile = (e: React && React.MouseEvent,) => {;
+    e && e.stopPropagation(),;
+
+    // Navigate to the talent profile page;
+    router && router.push(`/talent/${profile && profile.id || ''}`),;
+
+    // Also call the onViewProfile callback if provided;
+    if (onViewProfile) {;
+      onViewProfile(profile && profile.id || '');
+    }
+  },;
 
   return (
     <>;
@@ -25,46 +67,6 @@
               <span className="text-zion-slate-light">{profile && profile.years_experience} years exp.</span>;
             </div>;
           )}
-
-
-
-        {/* Action Buttons */}
-        <div className="flex gap-2">
-
-          <Button 
-            variant="default" 
-            size="sm" 
-
-
-            className="bg-zion-purple hover:bg-zion-purple-dark text-white"
-          >
-            Hire
-          </Button>
-
-
-          <Button 
-            variant="outline" 
-            size="sm" 
-
-            onClick = {handleViewProfile,}
-=======
-          
-          <Button 
-            variant="outline" 
-            size="sm" 
-            onClick={handleViewProfile}
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-            className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-          >
-            View
-            <ExternalLink className="h-3 w-3 ml-1" />
-          </Button>
-        </div>
-      </div>
-
         </div>;
 
         {/* Action Buttons */}
@@ -88,7 +90,6 @@
         </div>;
       </div>;
 
-
       {/* Hire Request Modal */}
       <HireRequestModal
         talent = {profile,}
@@ -96,26 +97,6 @@
         onClose = {() => setIsHireModalOpen(false),}
         userDetails = {userProfile,}
 
-=======
-
-      
-      {/* Hire Request Modal */}
-      <HireRequestModal;
-        talent={profile}
-        isOpen={isHireModalOpen}
-        onClose={() => setIsHireModalOpen(false)}
-        userDetails={userProfile}
-
-      />;
-    </>;
-  );
-}
-
-
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import { use_router } from 'next / router';
 interface TalentCardFooterProps {
   profile: TalentProfile,
@@ -216,10 +197,3 @@ if ( {) {
       />;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

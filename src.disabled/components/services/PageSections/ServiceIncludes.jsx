@@ -25,8 +25,6 @@ import React from 'react';
 interface ServiceIncludesProps {
   // Add props here as needed
 
-
-
 export default function ServiceIncludes({ }: ServiceIncludesProps) {
   return (
     <div>
@@ -34,11 +32,6 @@ export default function ServiceIncludes({ }: ServiceIncludesProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
 }
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/services/PageSections/ServiceIncludes.jsx
+}

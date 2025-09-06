@@ -1,8 +1,3 @@
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface BudgetStepProps {
 
   formData: QuoteFormData
@@ -36,13 +31,11 @@ if ( {) {
           ...form_data.budget;
           type,
           max_amount: form_data.budget.amount + 5000;
-
         }
       });
     } else {
       updateFormData ({
         budget: {
-
 import {QuoteFormData} from "@/types/quotes";
 import {Label} from "@/components/ui/label";
 import {Slider} from "@/components/ui/slider";
@@ -59,12 +52,10 @@ export function BudgetStep(): any ({ formData, updateFormData }: BudgetStepProps
           ...formData && formData.budget;
           type,;
           maxAmount: formData && formData.budget.amount + 5000;
-=======
 
         budget: {
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         }
       });
     } else {;
@@ -72,22 +63,17 @@ export function BudgetStep(): any ({ formData, updateFormData }: BudgetStepProps
         budget: {;
           ...formData && formData.budget,;
           type;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         }
       });
     }
-
-
-  },
-=======
-  };
-=======
   },
 
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  },
+
+
+
   const formatCurrency = (value: number) => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency'
@@ -153,13 +139,15 @@ export function BudgetStep(): any ({ formData, updateFormData }: BudgetStepProps
           
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  },
+
+
+
           {formData.budget.type === "fixed" && (
             <div className="mt-6">
               <Label className="text-zion-slate-light mb-4 block">
                 Fixed Budget: {formatCurrency(formData.budget.amount)}
               </Label>
-=======
   };
 
   const formatCurrency = (value: number) => {;
@@ -219,7 +207,6 @@ export function BudgetStep(): any ({ formData, updateFormData }: BudgetStepProps
               <Label className="text-zion-slate-light mb-4 block">;
                 Fixed Budget: {formatCurrency(formData && formData.budget.amount)}
               </Label>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Slider
                 defaultValue={[formData && formData.budget.amount]}
                 max={50000}
@@ -236,13 +223,11 @@ export function BudgetStep(): any ({ formData, updateFormData }: BudgetStepProps
             </div>;
           )}
 
-
           {formData && formData.budget.type === "hourly" && (;
             <div className="mt-6">;
               <Label className="text-zion-slate-light mb-4 block">;
                 Hourly Rate: {formatCurrency(formData && formData.budget.amount)}/hour;
               </Label>;
-
               <Slider
                 defaultValue={[formData && formData.budget.amount]}
                 max={500}
@@ -259,22 +244,20 @@ export function BudgetStep(): any ({ formData, updateFormData }: BudgetStepProps
             </div>;
           )}
 
-
           {formData && formData.budget.type === "range" && (;
             <div className="mt-6 space-y-8">;
               <div>;
                 <Label className="text-zion-slate-light mb-4 block">;
                   Minimum Budget: {formatCurrency(formData && formData.budget.amount)}
                 </Label>;
-
                 <Slider
                   defaultValue={[formData && formData.budget.amount]}
                   max={50000}
                   step={500}
-
+                  onValueChange={(value) => {;
+                    const newAmount = value[0];
                     const maxAmount = formData && formData.budget.maxAmount || 50000;
 
-=======
 
                   onValueChange={(value) => {;
                     const newAmount = value[0],;
@@ -285,10 +268,6 @@ export function BudgetStep(): any ({ formData, updateFormData }: BudgetStepProps
                         ...formData && formData.budget, ;
                         amount: newAmount,;
                         maxAmount: newAmount >= maxAmount ? newAmount + 5000 : maxAmount;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       }
                     });
                   }}
@@ -301,7 +280,9 @@ export function BudgetStep(): any ({ formData, updateFormData }: BudgetStepProps
 
 
                   min={formData.budget.amount}
-=======
+                      }
+                    });
+                  }}
                   className="py-4";
                 />;
                 <div className="flex justify-between text-sm text-zion-slate-light mt-2">;
@@ -317,7 +298,6 @@ export function BudgetStep(): any ({ formData, updateFormData }: BudgetStepProps
                 <Slider
                   defaultValue={[formData && formData.budget.maxAmount || formData && formData.budget.amount + 5000]}
                   min={formData && formData.budget.amount}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   max={100000}
                   step={500}
                   onValueChange={(value) => updateFormData({;
@@ -336,7 +316,6 @@ export function BudgetStep(): any ({ formData, updateFormData }: BudgetStepProps
       </div>;
     </div>;
   );
-=======
           ...form_data.budget,
           type;
         }
@@ -482,5 +461,4 @@ export function BudgetStep(): any ({ formData, updateFormData }: BudgetStepProps
         </div>;
       </div>;
     </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

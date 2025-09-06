@@ -1,5 +1,3 @@
-
-
 import React from "react";
 import Head from "next/head";
 import Layout from "../components/layout/Layout";
@@ -10,7 +8,6 @@ return (
       <meta
         name="description"
         content="Space mission control, satellite operations, and secure communications consulting."
-
       />;
       <link rel="canonical" href="https://ziontechgroup && ziontechgroup.com/space-tech" />;
     </Head>;
@@ -43,7 +40,6 @@ return (
           </h2>;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
             {features && features.map((f) => (;
-
               <div
                 key={f}
                 className="flex items-start gap-3 p-4 rounded-xl bg-black/40 border border-gray-700/60">;
@@ -51,19 +47,14 @@ return (
                 <span className="text-gray-200">{f}</span>{" "}
               </div>;
             ))}
-
           </div>;
         </section>;
 
         <section className="text-center">;
-
           <a
             href="/space-technology"
             className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200">;
             <Globe2 className="w-4 h-4" />{" "}
-
-            <span>Explore detailed Space Technology offerings</span>;
-=======
 import React from './react';
 import Head from './next / head';
 import Layout from "../components / layout / Layout";
@@ -122,14 +113,10 @@ return (
           >;
             <Globe2 className="w - 4 h - 4" />{" "}
             <span > Explore detailed Space Technology offerings</span>;
-
           </a>;
         </section>;
       </div>;
     </div>;
-
-
-=======
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
@@ -183,12 +170,6 @@ export default function SpaceTechPage() {
     </Layout>
   )
 }
-
-  </Layout>);
-;
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
             </div>;
           </section>;
           <section className="text-center">;
@@ -208,5 +189,5 @@ export default function SpaceTechPage() {
 }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  </Layout>);
+;

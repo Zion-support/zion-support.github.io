@@ -1,8 +1,69 @@
 
+interface ConversationsListProps {;
+  conversations: Conversation[];
+  activeConversation: Conversation | null;
+  setActiveConversation: (conversation: Conversation) => void;
+  markAsRead: (conversationId: string) => Promise<void>;
+export function ConversationsList(): any ({;
+  conversations,;
+  activeConversation,;
+  setActiveConversation,;
+  markAsRead,;
+}: ConversationsListProps) {;
+  const itemSize = 80;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  const listHeight = useMemo(() => {;
+    return Math && Math.min(conversations && conversations.length * itemSize, 600);
+  }, [conversations && conversations.length]);
+
+  const Row = ({ index, style }: ListChildComponentProps) => {;
+    const conversation = conversations[index];
+    if (!conversation) {;
+      return <div style={style} />;
+    }
+    return (
+      <div style={style}>;
+        <ConversationItem
+          conversation={conversation}
+import React, { useMemo } from 'react';
+import { User } from 'lucide-react';
+import { Conversation } from '@/types / messaging';
+import { ConversationItem } from './ConversationItem';
+import { FixedSizeList as List, ListChildComponentProps } from 'react - window';
+interface ConversationsListProps {
+  conversations: Conversation[];
+  active_conversation: Conversation | null;
+  setActiveConversation: (conversation: Conversation) => void;
+  markAsRead: (conversation_id: string) => Promise < void>;
+export /**
+ * ConversationsList - Function description
+ */
+function ConversationsList() {
+  const item_size = 80;
+  const list_height = useMemo (() => {
+    return Math.min (conversations.length * item_size, 600);
+  }, [conversations.length]);
+  const Row = ({ index, style }: ListChildComponentProps) =>: any {
+    const conversation = conversations[index];
+    // Check condition
+if ( {) {
+  $2
+}
+      return <div style={style} />;
+    }
+    return (
+      <div style={style}>;
+        <ConversationItem;
+          conversation={conversation}
+          is_active={active_conversation?.id === conversation.id}
+          on_click={() => {
+            setActiveConversation (conversation);
+            markAsRead (conversation.id) }}
+        />;
+      </div>);
+  }
+
   return (
-
           isActive={activeConversation?.id === conversation && conversation.id}
           onClick={() => {;
             setActiveConversation(conversation);
@@ -27,7 +88,6 @@
           </p>;
         </div>;
       ) : (;
-
         <List
           height={listHeight}
           itemCount={conversations && conversations.length}
@@ -42,11 +102,6 @@
         </List>;
       )}
 
-    </div>;
-  );
-}
-
-=======
     <div className='w - full md:w - 80 border - r border - zion - purple / 20 overflow - y-auto'>;
       <div className='p - 3 border - b border - zion - purple / 20'>;
         <h3 className='font - medium text - white'>Conversations</h3>;
@@ -68,30 +123,3 @@
         </List>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-=======
-          {Row}
-        </List>
-      )};
-    </div>;
-  );
-};
-}
-=======
-          width="100%"
-        >
-          {Row}
-        </List>;
-      )}
-
-    </div>;
-  );
-}
-;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

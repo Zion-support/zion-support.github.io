@@ -1,32 +1,3 @@
-
-
-import {useState, useEffect} from 'react';
-import {supabase} from '@/integrations/supabase/client';
-export function useJobDetails(jobId: string | undefined) {;
-
-
-  const [job, setJob] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null);
-  async function loadJobDetails() {
-    if (!jobId) {
-      setIsLoading(false);
-      return
-    }
-    try {
-      setIsLoading(true);
-      const { data, error } = await supabase
-        .from('jobs')
-        .select('*')
-        .eq('id', jobId)
-        .single();
-      if (error) throw error;
-      setJob(data);
-      setError(null)
-    } catch (err) {
-      console && console.error('Error loading job details:', err);
-      setError(err && err.message)
-=======
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 export /**
@@ -65,18 +36,15 @@ if (throw error) {
     } catch (err) {
       console.error ('Error loading job details:', err);
       set_error (err.message);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       setIsLoading (false);
     }
   }
-
   // Load job details when component mounts or job_id changes;
   useEffect (() => {
     loadJobDetails ();
   }, [job_id]);
 ;
-
   return {
     job;
 
@@ -88,7 +56,6 @@ if (throw error) {
 
 
 
-=======
 import { useState, useEffect } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 export function useJobDetails(jobId: string | undefined) {;
@@ -131,14 +98,6 @@ export function useJobDetails(jobId: string | undefined) {;
     loadJobDetails;
   }
 }
-
-;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default useJobDetails;
-=======
 export default useJobDetails;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

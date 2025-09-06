@@ -1,11 +1,3 @@
-
-
-import { Loader2 } from 'lucide-react'
-import { TalentProfile } from "@/types/talent",
-import { PersonalInfoFields } from "./PersonalInfoFields",
-import { ProjectDetailsField } from "./ProjectDetailsField",
-
-
 import React from 'react';
 import { useHireRequestForm, FormValues } from './useHireRequestForm';
 import { Button } from '@/components/ui/button';
@@ -18,49 +10,12 @@ import { ProjectDetailsField } from './ProjectDetailsField';
 import { TimelineField } from './TimelineField';
 import { BudgetFields } from './BudgetFields';
 export interface HireRequestFormProps {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   talent: TalentProfile;
   onClose: () => void;
   initialJobTitle?: string;
   userDetails?: {;
     name?: string;
     email?: string;
-
-
-import { TimelineField } from "./TimelineField",
-import { BudgetFields } from "./BudgetFields",
-
-export interface HireRequestFormProps {
-  talent: TalentProfile,
-  onClose: () => void,
-  initialJobTitle?: string,
-  userDetails?: {
-
-    name?: string,
-    email?: string,
-    id?: string
-  },
-  onSubmitSuccess?: () => void
-}
-
-export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails, onSubmitSuccess }: HireRequestFormProps) {
-  const { form, isSubmitting, onSubmit } = useHireRequestForm({ 
-    talent, 
-    onClose: onSubmitSuccess || onClose, 
-    initialJobTitle,
-    userDetails 
-  }),
-  
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  return (
-    <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-6'>
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-          <PersonalInfoFields form={form} />
-        </div>
-
     id?: string;
   };
   onSubmitSuccess?: () => void;
@@ -94,7 +49,6 @@ export function HireRequestForm(): any ({;
         </div>;
 
         <DialogFooter className='pt-4'>;
-
           <Button
             type='button'
             variant='outline'
@@ -108,8 +62,6 @@ export function HireRequestForm(): any ({;
             {isSubmitting ? (;
               <>;
                 <Loader2 className='mr-2 h-4 w-4 animate-spin' />                Submitting...  onSubmitSuccess?: () => void;
-
-=======
 
 import React from "react";
 import { useHireRequestForm, FormValues } from "./useHireRequestForm";
@@ -131,36 +83,10 @@ export interface HireRequestFormProps {
     id?: string
   };
   onSubmitSuccess?: () => void
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
-
-
-export function HireRequestForm(): any ({ talent, onClose, initialJobTitle, userDetails, onSubmitSuccess }: HireRequestFormProps) {;
-  const { form, isSubmitting, onSubmit } = useHireRequestForm({ ;
-    talent, ;
-    onClose: onSubmitSuccess || onClose, ;
-    initialJobTitle;
-    userDetails ;
-  });
-
-  return (
-    <Form {...form}>;
-      <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-6">;
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-          <PersonalInfoFields form={form} />;
-        </div>;
-
-        <ProjectDetailsField form={form} />;
-        <TimelineField form={form} />;
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-          <BudgetFields form={form} talent={talent} />;
-        </div>;
 
         <DialogFooter className="pt-4">;
           <Button
-=======
 
         
         <ProjectDetailsField form={form} />
@@ -175,11 +101,6 @@ export function HireRequestForm(): any ({ talent, onClose, initialJobTitle, user
 
             type="button" 
             variant="outline" 
-            onClick={onClose}
-            className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-            disabled={isSubmitting}
-
-
             onClick = {onClose,}
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
             disabled = {isSubmitting,}>;
@@ -199,10 +120,6 @@ export function HireRequestForm(): any ({ talent, onClose, initialJobTitle, user
               </>;
             ) : (;
               'Submit Request';
-
-=======
-=======
-
           >
             Cancel
           </Button>
@@ -217,28 +134,19 @@ export function HireRequestForm(): any ({ talent, onClose, initialJobTitle, user
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 Submitting...
               </>
             ) : (
               'Submit Request'
-
-
-}
-
-
-=======
+            )}
           </Button>;
         </DialogFooter>;
       </form>;
     </Form>;
   );
 }
-
   );
 }
-
-=======
 import React from 'react';
 import { useHireRequestForm, FormValues } from './useHireRequestForm';
 import { Button } from '@/components / ui / button';
@@ -355,10 +263,3 @@ function HireRequestForm() {
       </form>;
     </Form>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,15 +1,11 @@
-
 export type ModelVersion = 'zion-job-generator-v1' | 'zion-resume-enhancer-v1' | 'zion-support-v1' | 'gpt-3 && 3.5-turbo';
 
-
 export type ZionGPTUsage = {
-=======
 
 
 
 export type ZionGPTUsage = {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   modelId: string;
   tokensUsed: number;
   cost: number
@@ -39,11 +35,9 @@ export async function getActiveModelId(purpose: 'job' | 'resume' | 'support'): P
       .order('version', { ascending: false })
       .limit(1)
       .single();
-
     
     if (error || !data) {
       console && console.warn('Failed to fetch active model, falling back to default', error);
-
       // Fallback to default models
       switch(purpose) {
         case 'job': return 'zion-job-generator-v1';
@@ -52,10 +46,8 @@ export async function getActiveModelId(purpose: 'job' | 'resume' | 'support'): P
         default: return 'gpt-3 && 3.5-turbo'
       }
     }
-
     
     return data && data.id as ModelVersion
-
   } catch (error) {
     console && console.error('Error fetching active model:', error);
     return 'gpt-3 && 3.5-turbo', // Fallback to base model
@@ -84,7 +76,6 @@ export async function logModelUsage(
     console && console.error('Error logging model usage:', error);
     // Non-blocking - we don't want to fail the main operation
 
-=======
 // ZionGPT Utility Functions;
 // This file handles interaction with the fine-tuned ZionGPT model;
 import { supabase } from '@/integrations/supabase/client',;
@@ -158,7 +149,6 @@ export async function logModelUsage(;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
 // Calculate approximate cost based on token usage
@@ -202,22 +192,17 @@ export async function callZionGPT({
     // Log usage for analytics
     if (data && data.tokensUsed) {
       await logModelUsage(
-
         modelId, 
         data && data.tokensUsed;
-
         `${purpose}-generation`;
         userId
       )
     }
-
     
     return data && data.completion
   } catch (error) {
     console && console.error('Error calling ZionGPT:', error);
-
     throw error
-=======
 // ZionGPT Utility Functions;
 // This file handles interaction with the fine - tuned ZionGPT model;
 import {supabase} from '@/integrations / supabase / client';
@@ -346,10 +331,5 @@ if ( {) {
   } catch (error) {
     console.error ('Error calling ZionGPT:', error);
     throw error;
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }

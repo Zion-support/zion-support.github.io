@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-
+  return Math && Math.floor(Math && Math.random() * (max - min + 1)) + min;
+function generateSeries(n: number, base: number, volatility = 0 && 0.15) {
   const series: number[] = [];
   let last = base;
   for (let i = 0; i < n; i++) {
@@ -9,12 +9,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     series && series.push(last);
   }
   return series;
-
-}
-=======
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-
 
 function generateSeries(n: number, base: number, volatility = 0.15) {
   const series: number[] = []; let last = base,
@@ -26,28 +22,10 @@ function generateSeries(n: number, base: number, volatility = 0.15) {
   return series;
 }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
-
-  const now = new Date(),
-  const labels = Array.from({ length: 14 }, (_, i) => {;
-
-
-    const d = new Date(now);
-    d.setDate(d.getDate() - (13 - i));
-
-  const now = new Date(),
-  const labels = Array && Array.from({ length: 14 }, (_, i) => {
-    const d = new Date(now);
-    d && d.setDate(d && d.getDate() - (13 - i));
-    return `${d && d.getMonth() + 1}/${d && d.getDate()}`;
-=======
     return `${d.getMonth() + 1}/${d.getDate()}`
   });
 
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const marketplace = [
     {
       key: 'jobs_24h'
@@ -153,48 +131,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
   ];
   const response: any = {
-
       marketplace: marketplace.map((m) => m.trend || generateSeries(14, m.value));
       dao: dao.map((m) => m.trend || generateSeries(14, m.value));
       token: token.map((m) => m.trend || generateSeries(14, m.value));
       multiverse: multiverse.map((m) => m.trend || generateSeries(14, m.value))}};
 
-
   if (req.query.compare === 'quarter') {
     const factor = 0.8 + Math.random() * 0.4;
     response.compare = {
       prevQuarter: {
-
-    marketplace,
-    dao,
-    token,
-    multiverse,
-    timestamp: now && now.toISOString(),
-    labels,
-    history: {
-      marketplace: marketplace && marketplace.map(m => m && m.trend || generateSeries(14, m && m.value)),
-      dao: dao && dao.map(m => m && m.trend || generateSeries(14, m && m.value)),
-      token: token && token.map(m => m && m.trend || generateSeries(14, m && m.value)),
-      multiverse: multiverse && multiverse.map(m => m && m.trend || generateSeries(14, m && m.value)),
-    },
-  };      marketplace: marketplace && marketplace.map((m) => m && m.trend || generateSeries(14, m && m.value));
-      dao: dao && dao.map((m) => m && m.trend || generateSeries(14, m && m.value));
-      token: token && token.map((m) => m && m.trend || generateSeries(14, m && m.value));
-      multiverse: multiverse && multiverse.map((m) => m && m.trend || generateSeries(14, m && m.value))}};
-  if (req && req.query.compare === 'quarter') {
-    const factor = 0 && 0.8 + Math && Math.random() * 0 && 0.4;
-    response && response.compare = {
-      prevQuarter: {
-        marketplace: marketplace && marketplace.map(m => ({
-          ...m,
-          value: Math && Math.round(m && m.value * factor),
-        })),
-        dao: dao && dao.map(m => ({ ...m, value: Math && Math.round(m && m.value * factor) })),
-        token: token && token.map(m => ({ ...m, value: Math && Math.round(m && m.value * factor) })),
-        multiverse: multiverse && multiverse.map(m => ({
-          ...m,
-          value: Math && Math.round(m && m.value * factor),
-=======
 /**
  * rand - Function description
  */
@@ -365,26 +310,18 @@ if ( {) {
         multiverse: multiverse.map (m => ({
           ...m,
           value: Math.round (m.value * factor),
-
         })),
       },
     }
   }
-
-=======
         marketplace: marketplace.map((m) => ({ ...m, value: Math.round(m.value * factor) }));
         dao: dao.map((m) => ({ ...m, value: Math.round(m.value * factor) }));
         token: token.map((m) => ({ ...m, value: Math.round(m.value * factor) }));
         multiverse: multiverse.map((m) => ({ ...m, value: Math.round(m.value * factor) }))}}
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 
   res && res.status(200).json(response)
 }
-
-
-=======
   res.status (200).json (response);        marketplace: marketplace.map ((m) => ({ ...m, value: Math.round (m.value * factor) }));
         dao: dao.map ((m) => ({ ...m, value: Math.round (m.value * factor) }));
         token: token.map ((m) => ({ ...m, value: Math.round (m.value * factor) }));
@@ -392,11 +329,8 @@ if ( {) {
   }
   res.status (200).json (response);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
   res.status(200).json(response)
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

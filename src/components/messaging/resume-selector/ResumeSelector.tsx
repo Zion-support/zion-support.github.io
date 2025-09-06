@@ -1,9 +1,4 @@
-
-
-  // Fetch resume data when component mounts
-  useEffect((,) => {
-    const loadResumes = async () => {
-
+import { toast } from "@/components/ui/use-toast";
 import React, { useState, useEffect } from 'react';
 import { Button  } from '@/components / ui / button';
 import { RadioGroup, RadioGroupItem  } from '@/components / ui / radio - group';
@@ -30,19 +25,16 @@ function ResumeSelector() {
   useEffect ((, ) => {
     const load_resumes = async () => {
       setIsLoading (true);
-
-=======
-
-      setIsLoading(true),
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       try {
         await fetch_resume ();
       } catch (error) {
         logErrorToProduction ('Error loading resumes:', { data: error });
       } finally {
-
+        setIsLoading (false);
+      }
+    }
+            return;
+      }
 import { ResumePreviewCard } from './ResumePreviewCard';
 import { UploadSection } from './UploadSection';
 import { SelectResumeSection } from './SelectResumeSection';
@@ -58,7 +50,6 @@ export function ResumeSelector(): any ({ onResumeSelected }: ResumeSelectorProps
 
   const { resume, fetchResume } = useResume();
 
-=======
         setIsLoading(false)
 
   ;
@@ -66,7 +57,6 @@ export function ResumeSelector(): any ({ onResumeSelected }: ResumeSelectorProps
   );
 };
 
-=======
 import React, { useState, useEffect } from 'react',;
 import { Button } from "@/components/ui/button",;
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",;
@@ -106,17 +96,8 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
 
 }
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
-
-  )
 }
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  );
+}

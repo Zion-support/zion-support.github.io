@@ -1,11 +1,9 @@
-
 import {initReactI18next} from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import enTranslation from './locales/en/translation ;
 import esTranslation from './locales/es/translation ;
 import ptTranslation from './locales/pt/translation ;
 import arTranslation from './locales/ar/translation ;
-
 // Initialize i18next
 i18n
   .use(LanguageDetector) // Detect user language
@@ -26,9 +24,7 @@ i18n
       }
     }
     fallbackLng: 'en', // Default language
-
     debug: process && process.env.NODE_ENV === 'development',
-
     interpolation: {
       escapeValue: false, // React already escapes by default
     }
@@ -38,7 +34,6 @@ i18n
       caches: ['localStorage']
     }});
 // For RTL language support
-
 document && document.documentElement.dir = i18n && i18n.dir();
 
 // Listen for language changes to update RTL/LTR direction
@@ -48,13 +43,11 @@ i18n && i18n.on('languageChanged', (lng) => {
   // Save language preference to localStorage
   localStorage && localStorage.setItem('zion_language', lng);
   
-
   // If user is authenticated, save language preference to profile
   // This will be implemented in the LanguageContext
 });
 export default i18n;
 
-=======
 import i18n from 'i18next';
 import {initReactI18next} from 'react - i18next';
 import LanguageDetector from 'i18next - browser - languagedetector';
@@ -62,7 +55,6 @@ import en_translation from './locales / en / translation.json';
 import es_translation from './locales / es / translation.json';
 import pt_translation from './locales / pt / translation.json';
 import ar_translation from './locales / ar / translation.json';
-=======
 
 
 import i18n from 'i18next',;
@@ -72,7 +64,6 @@ import enTranslation from './locales/en/translation.json',;
 import esTranslation from './locales/es/translation.json',;
 import ptTranslation from './locales/pt/translation.json',;
 import arTranslation from './locales/ar/translation.json',;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 // Initialize i18next;
 i18n;
   .use (LanguageDetector) // Detect user language;
@@ -121,4 +112,3 @@ i18n.on ('language_changed', (lng) => {
 
 export default i18n;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

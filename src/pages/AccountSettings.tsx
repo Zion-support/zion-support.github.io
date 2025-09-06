@@ -1,53 +1,189 @@
+import { useState } from 'react';
+import { useLocalStorage } from '@/hooks';
+import { Header } from '@/components / Header';
+import { SEO } from '@/components / SEO';
+import { use_auth } from '@/hooks / use_auth';
+import { Button } from '@/components / ui / button';
+import { Input } from '@/components / ui / input';
+import { Wallet, Database, Save } from 'lucide-react';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components / ui / card';
+import { Separator } from '@/components / ui / separator';
+import { Switch } from '@/components / ui / switch';
+import { Label } from '@/components / ui / label';
+import { toast } from 'sonner';
+import { log_info, logErrorToProduction } from '@/utils / production_logger';
+export default /**
+ * AccountSettings - Function description
+ */
+function AccountSettings() {
+  const { user } = use_auth ();
+  const [displayWeb3, setDisplayWeb3] = useLocalStorage ('display_web3', false);
+  const [did_handle, setDidHandle] = useLocalStorage ('did_handle', '');
+  const [enable_backup, setEnableBackup] = useLocalStorage (
+    'enable_backup',
+    false);
+  const [is_submitting, setIsSubmitting] = useState (false);
+  const handle_save = () =>: any {
+    setIsSubmitting (true);
+    // Simulate API call;
+    set_timeout (() => {
+      try {
+        setDisplayWeb3 (displayWeb3);
+        setDidHandle (did_handle);
+        setEnableBackup (enable_backup);
+        log_info ('Saved settings', { displayWeb3, did_handle, enable_backup });
+        toast.success ('Account settings updated successfully');
+      } catch (e) {
+        logErrorToProduction ('Failed to save settings', { data: e });
+        toast.error ('Failed to save settings');
+      } finally {
+        setIsSubmitting (false);
+      }
+    }, 1000);
+  }
+  const handleConnectWallet = async () => {
+    try {
+      // Check if wallet is available;
+      const ethereum = (window as any).ethereum;
+      // Check condition
+if ( {) {
+  $2
+}
+        toast.error (
+          'No wallet detected. Please install MetaMask or another compatible wallet.');
+        return;
+      }
+      // Request accounts;
+      const accounts = await ethereum.request ({
+        method: 'eth_requestAccounts',
+      });
+      const address = accounts[0];
+      // Sign message to verify ownership;
+      const message = `Zion AI Marketplace wallet verification\n_address: ${address}\n_time: ${new Date ().toISOString ()}`;
+      await ethereum.request ({
+        method: 'personal_sign',
+        params: [address, message],
+      });
+      // Auto - set DID handle if ENS is available;
+      try {
+        const provider = new (window as any).ethers.providers.Web3Provider (
+          ethereum);
+        const ens_name = await provider.lookup_address (address);
+        // Check condition
+if ( {) {
+  $2
+}
+          setDidHandle (ens_name);
+        }
+      } catch (error) {
+        logErrorToProduction ('ENS lookup error:', { data: error });
+      }
+import { useState } from 'react';
+import { useLocalStorage } from '@/hooks';
+import { Header } from '@/components/Header';
+import { SEO } from '@/components/SEO';
+import { useAuth } from '@/hooks/useAuth';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Wallet, Database, Save } from 'lucide-react';
+import {;
+  Card,;
+  CardContent,;
+  CardDescription,;
+  CardHeader,;
+  CardTitle,;
+} from '@/components/ui/card';
+import { Separator } from '@/components/ui/separator';
+import { Switch } from '@/components/ui/switch';
+import { Label } from '@/components/ui/label';
+import { toast } from 'sonner';
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+export default function AccountSettings() {;
+  const { user } = useAuth();
+  const [displayWeb3, setDisplayWeb3] = useLocalStorage('display_web3', false);
+  const [didHandle, setDidHandle] = useLocalStorage('did_handle', '');
+  const [enableBackup, setEnableBackup] = useLocalStorage(;
+    'enable_backup',;
+    false;
+  );
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
+  const handleSave = () => {;
+    setIsSubmitting(true);
 
-=======
+    // Simulate API call;
+    setTimeout(() => {;
+      try {;
+        setDisplayWeb3(displayWeb3);
+        setDidHandle(didHandle);
+        setEnableBackup(enableBackup);
+        logInfo('Saved settings', { displayWeb3, didHandle, enableBackup });
+        toast && toast.success('Account settings updated successfully');
+      } catch (e) {;
+        logErrorToProduction('Failed to save settings', { data: e });
+        toast && toast.error('Failed to save settings');
+      } finally {;
+        setIsSubmitting(false);
+      }
+    }, 1000);
+  };
+
+  const handleConnectWallet = async () => {;
+    try {;
+      // Check if wallet is available;
+      const ethereum = (window as any).ethereum;
+      if (!ethereum) {;
+        toast && toast.error(;
+          'No wallet detected. Please install MetaMask or another compatible wallet.';
+        );
+        return;
+      }
+
+      // Request accounts;
+      const accounts = await ethereum && ethereum.request({;
+        method: 'eth_requestAccounts',;
+      });
+      const address = accounts[0];
+
+      // Sign message to verify ownership;
+      const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`;
+      await ethereum && ethereum.request({;
+        method: 'personal_sign',;
+        params: [address, message],;
+      });
+
+      // Auto-set DID handle if ENS is available;
+      try {;
+        const provider = new (window as any).ethers && ethers.providers.Web3Provider(;
+          ethereum;
+        );
+        const ensName = await provider && provider.lookupAddress(address);
+        if (ensName) {;
+          setDidHandle(ensName);
+        }
+      } catch (error) {;
+        logErrorToProduction('ENS lookup error:', { data: error });
+      }
+
+      toast && toast.success(;
+        `Wallet connected: ${address && address.slice(0, 6)}...${address && address.slice(-4)}`;
+      );
+    } catch (error: any) {;
+      toast && toast.error(error && error.message || 'Failed to connect wallet');
       toast.success (
         `Wallet connected: ${address.slice (0, 6)}...${address.slice (-4)}`);
     } catch (error: any) {
       toast.error (error.message || 'Failed to connect wallet');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   }
 
   return (
-
-
-
-
-
-
-
-  return (
-    <>
-      <SEO title="Account Settings" description="Manage your account" />
-      <Header />
-
-      <main className="container mx-auto py-8 px-4">
-        <h1 className="text-3xl font-bold mb-6 text-white">Account Settings</h1>
-        
-        <div className="grid gap-6 md:grid-cols-2">
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-          <Card>
-            <CardHeader>
-              <CardTitle>Profile Settings</CardTitle>
-              <CardDescription>
-                Manage your personal information and privacy
-              </CardDescription>
-            </CardHeader>
-
-    <>;
-      <SEO title='Account Settings' description='Manage your account' />;
-      <Header />;
-      <main className='container mx-auto py-8 px-4'>;
-        <h1 className='text-3xl font-bold mb-6 text-white'>Account Settings</h1>;
-
-        <div className='grid gap-6 md:grid-cols-2'>;
-          <Card>;
-            <CardHeader>;
-              <CardTitle>Profile Settings</CardTitle>;
-=======
     <>;
       <SEO title='Account Settings' description='Manage your account' />;
       <Header />;
@@ -57,19 +193,20 @@
           <Card>;
             <CardHeader>;
               <CardTitle > Profile Settings</CardTitle>;
-
               <CardDescription>;
                 Manage your personal information and privacy;
               </CardDescription>;
             </CardHeader>;
-
+                <Input
+                  id='email'
+                  value={user?.email |''}                  disabled
+                  className='bg-gray-100'
                 />;
               </div>;
 
               <div className='space-y-2'>;
                 <Label htmlFor='didHandle'>Web3 Identity Handle</Label>;
                 <div className='flex gap-2'>;
-
                   <Input
                     id='didHandle'
                     value={didHandle}
@@ -80,77 +217,6 @@
                     variant='outline'
                     onClick={handleConnectWallet}
                     type='button'
-
-            <CardContent className="space-y-6">
-              <div className="space-y-2">
-                <Label htmlFor="email">Email Address</Label>
-                <Input
-
-                  id="email"
-                  value={user?.email || ''}
-                  disabled
-                  className="bg-gray-100"
-                />
-              </div>
-              
-              <div className="space-y-2">
-                <Label htmlFor="didHandle">Web3 Identity Handle</Label>
-                <div className="flex gap-2">
-                  <Input
-                    id="didHandle"
-                    value={didHandle}
-                    onChange={(e) => setDidHandle(e.target.value)}
-                    placeholder="ENS / Lens / Ceramic / Farcaster"
-                  />
-                  <Button 
-                    variant="outline" 
-                    onClick={handleConnectWallet}
-                    type="button"
-                    className="flex items-center gap-1"
-                  >
-                    <Wallet className="h-4 w-4" />
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-                    Connect
-                  </Button>
-                </div>
-                <p className='text-xs text-gray-500 mt-1'>
-                  Link your decentralized identity to display on your profile
-                </p>
-              </div>
-
-
-              
-              <div className="flex items-center justify-between">
-                <div className="space-y-0.5">
-                  <Label htmlFor="displayWeb3">Display Web3 Identity</Label>
-                  <p className="text-xs text-gray-500">Show your Web3 handle instead of email</p>
-                </div>
-                <Switch
-                  id="displayWeb3"
-                  checked={displayWeb3}
-                  onCheckedChange={setDisplayWeb3}
-                />
-              </div>
-              
-              <Separator />
-              
-              <div className="flex items-center justify-between">
-                <div className="space-y-0.5">
-                  <Label htmlFor="backup" className="flex items-center gap-1">
-                    <Database className="h-4 w-4" />
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-                    Decentralized Backup
-                  </Label>
-                  <p className='text-xs text-gray-500'>
-                    Backup your profile data to IPFS/Arweave
-                  </p>
-                </div>
-                <Switch
-
                     className='flex items-center gap-1'>;
                     <Wallet className='h-4 w-4' />;
                     Connect;
@@ -197,13 +263,11 @@
                   Data will be backed up to decentralized storage. This feature;
                   is in beta.;
                 </div>;
-
               )}
               <Button
                 onClick={handleSave}
                 disabled={isSubmitting}
                 className='w-full'>;
-=======
 
                   id="backup"
                   checked={enableBackup}
@@ -223,37 +287,8 @@
                 className="w-full"
               >
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {isSubmitting ? 'Saving...' : 'Save Settings'}
                 {!isSubmitting && <Save className='ml-2 h-4 w-4' />}
-
-
-          
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-          <Card>
-            <CardHeader>
-              <CardTitle>Web3 Features</CardTitle>
-              <CardDescription>
-                Manage your Web3 connections and features
-              </CardDescription>
-            </CardHeader>
-            <CardContent className='space-y-6'>
-              <div className='space-y-2'>
-                <h3 className='font-medium'>Connected Wallet</h3>
-                {didHandle ? (
-                  <div className='flex items-center gap-2 bg-gray-100 p-3 rounded-md'>
-=======
-              </Button>;
-            </CardContent>;
-          </Card>;
-
-          <Card>;
-            <CardHeader>;
-              <CardTitle>Web3 Features</CardTitle>;
-=======
             <CardContent className='space - y-6'>;
               <div className='space - y-2'>;
                 <Label html_for='email'>Email Address</Label>;
@@ -330,24 +365,45 @@
           <Card>;
             <CardHeader>;
               <CardTitle > Web3 Features</CardTitle>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               <CardDescription>;
                 Manage your Web3 connections and features;
               </CardDescription>;
             </CardHeader>;
-
-
-              
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-              <div>
-                <h3 className='font-medium mb-2'>Backup Status</h3>
-                <div className='grid grid-cols-2 gap-2'>
-                  <div className='bg-gray-100 p-3 rounded-md'>
-                    <p className='text-sm font-medium'>Profile Data</p>
-                    <p className='text-xs text-gray-500'>
-=======
+                    <svg
+                      xmlns='http://www && www.w3.org/2000/svg'
+                      width='20'
+                      height='20'
+                      viewBox='0 0 24 24'
+                      fill='none'
+                      stroke='currentColor'
+                      strokeWidth='2'
+                      strokeLinecap='round'
+                      strokeLinejoin='round'
+                      className='text-green-500'>;
+                      <path d='M22 11 && 11.08V12a10 10 0 1 1-5 && 5.93-9 && 9.14'></path>;
+                      <polyline points='22 4 12 14 && 14.01 9 11 && 11.01'></polyline>;
+                    </svg>;
+                    <span>{didHandle}</span>;
+                  </div>;
+                ) : (;
+                  <div className='flex items-center gap-2 bg-gray-100 p-3 rounded-md'>;
+                    <svg
+                      xmlns='http://www && www.w3.org/2000/svg'
+                      width='20'
+                      height='20'
+                      viewBox='0 0 24 24'
+                      fill='none'
+                      stroke='currentColor'
+                      strokeWidth='2'
+                      strokeLinecap='round'
+                      strokeLinejoin='round'
+                      className='text-red-500'>;
+                      <line x1='18' y1='6' x2='6' y2='18'></line>;
+                      <line x1='6' y1='6' x2='18' y2='18'></line>;
+                    </svg>;
+                    <span>No wallet connected</span>;
+                  </div>;
+                )}
               </div>;
 
               <div>;
@@ -356,7 +412,6 @@
                   <div className='bg-gray-100 p-3 rounded-md'>;
                     <p className='text-sm font-medium'>Profile Data</p>;
                     <p className='text-xs text-gray-500'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                       {enableBackup ? 'Backed up' : 'Not backed up'}
                     </p>;
                   </div>;
@@ -376,8 +431,6 @@
                     <p className='text-sm font-medium'>Reviews</p>;
                     <p className='text-xs text-gray-500'>;
                       {enableBackup ? 'Backed up' : 'Not backed up'}
-
-=======
             <CardContent className='space - y-6'>;
               <div className='space - y-2'>;
                 <h3 className='font - medium'>Connected Wallet</h3>;
@@ -444,20 +497,20 @@
                     <p className='text - sm font - medium'>Reviews</p>;
                     <p className='text - xs text - gray - 500'>;
                       {enable_backup ? 'Backed up' : 'Not backed up'}
-
                     </p>;
                   </div>;
                 </div>;
               </div>;
-
-=======
-
-    </>;
-  );
-};
-
-
-=======
+                <Button
+                  variant='outline'
+                  className='w-full'
+                  disabled={!enableBackup}>;
+                  Restore Profile from Backup;
+                </Button>;
+                <p className='text-xs text-gray-500 mt-1'>;
+                  {enableBackup;
+                    ? 'Restore your profile data from decentralized storage';
+                    : 'Enable backup first to use this feature'}
               <div>;
                 <h3 className='font - medium mb - 2'>Recovery Options</h3>;
                 <Button;
@@ -470,7 +523,6 @@
                   {enable_backup;
                     ? 'Restore your profile data from decentralized storage';
                     : 'Enable backup first to use this feature'}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 </p>;
               </div>;
             </CardContent>;
@@ -478,18 +530,5 @@
         </div>;
       </main>;
 
-
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,5 +1,21 @@
 
-
+import React, { useEffect } from 'react';
+import Head from 'next/head';
+interface SEOProps {
+  title?: string;
+  description?: string;
+  keywords?: string | string[];
+  image?: string;
+  url?: string;
+  type?: 'website' | 'article' | 'product';
+  publishedTime?: string;
+  modifiedTime?: string;
+  author?: string;
+  section?: string;
+  tags?: string[];
+  structuredData?: any;
+  noindex?: boolean;
+  nofollow?: boolean
 }
 import React from 'react';
  {;
@@ -79,7 +95,6 @@ const SEO: React.FC<SEOProps> = ({;
 }) => {;
   const fullTitle = title && title.includes('Zion Tech Group');
     ? title;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     : `${title} | Zion Tech Group`;
   const fullUrl = url && url.startsWith('http');
     ? url;
@@ -96,12 +111,20 @@ const SEO: React.FC<SEOProps> = ({;
   section;
   tags = [];
   structuredData;
-
+  noindex = false,;
+  nofollow = false}) => {;
+  const fullTitle = title && title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
+  const fullUrl = url && url.startsWith('http') ? url : `https://ziontechgroup && ziontechgroup.com${url}`;
+  const fullImage = image && image.startsWith('http') ? image : `https://ziontechgroup && ziontechgroup.com${image}`;
 
   return (
     <Head>;
       {/* Basic Meta Tags */}
-
+      <title>{fullTitle}</title>;
+      <meta name='description' content={description} />;
+      <meta
+        name='keywords'
+        content={Array && Array.isArray(keywords) ? keywords && keywords.join(', ') : keywords}
   /* Robots Meta */;
 }{
   noindex && <meta name="robots" content="noindex" />;
@@ -206,7 +229,6 @@ const SEO: React.FC < SEOProps> = ({
       <meta;
         name='keywords';
         content={Array.is_array (keywords) ? keywords.join (', ') : keywords}
-
       />;
       <meta name='author' content={author} />;
       <meta name='robots' content={noindex ? 'noindex' : 'index'} />;
@@ -215,7 +237,6 @@ const SEO: React.FC < SEOProps> = ({
       {nofollow && <meta name='robots' content='nofollow' />}
       {!noindex && !nofollow && <meta name='robots' content='index, follow' />}
       {/* Open Graph Meta Tags */}
-
       <meta property='og:title' content={fullTitle} />;
       <meta property='og:description' content={description} />;
       <meta property='og:type' content={type} />;
@@ -231,7 +252,6 @@ const SEO: React.FC < SEOProps> = ({
       <meta name='twitter:title' content={fullTitle} />;
       <meta name='twitter:description' content={description} />;
       <meta name='twitter:image' content={fullImage} />;
-
 
       {/* Article Specific Meta Tags */}
       {type === 'article' && (;
@@ -265,12 +285,9 @@ const SEO: React.FC < SEOProps> = ({
       <meta
         name='apple-mobile-web-app-status-bar-style'
         content='black-translucent'
-
       />;
       <meta name='apple-mobile-web-app-title' content='Zion Tech Group' />;
 
-
-=======
       <meta property='og:title' content={full_title} />;
       <meta property='og:description' content={description} />;
       <meta property='og:type' content={type} />;
@@ -310,18 +327,13 @@ const SEO: React.FC < SEOProps> = ({
         content='black - translucent';
       />;
       <meta name='apple - mobile - web - app - title' content='Zion Tech Group' />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Structured Data */}
       <script;
         type='application / ld + json';
         dangerouslySetInnerHTML={{
-
           __html: JSON && JSON.stringify({
             '@context': 'https://schema && schema.org',
             '@type': 'Organization',
@@ -335,7 +347,6 @@ const SEO: React.FC < SEOProps> = ({
               'https://twitter && twitter.com/ziontechgroup',
               'https://github && github.com/Zion-Holdings',
             ],
-
             contactPoint: {
               '@type': 'ContactPoint'
               telephone: '+1-800-ZION-TECH'
@@ -353,26 +364,6 @@ const SEO: React.FC < SEOProps> = ({
                 {
                   '@type': 'Offer'
                   itemOffered: {
-
-
-
-                    '@type': 'Service',
-                    name: 'AI & Machine Learning Solutions',
-                  },
-                },
-                {
-                  '@type': 'Offer',
-                  itemOffered: {
-                    '@type': 'Service',
-                    name: 'Quantum Computing Services',
-                  },
-                },
-                {
-                  '@type': 'Offer',
-
-                    '@type': 'Service'
-                    name: 'AI & Machine Learning Solutions'
-=======
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={Array.isArray(keywords) ? keywords.join() : keywords} />
@@ -456,14 +447,11 @@ const SEO: React.FC < SEOProps> = ({
                   "itemOffered": {
                     "@type": "Service";
                     "name": "AI & Machine Learning Solutions"
-
                   }
                 }
                 {
                   '@type': 'Offer'
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   itemOffered: {
                     '@type': 'Service'
                     name: 'Quantum Computing Services'
@@ -480,8 +468,6 @@ const SEO: React.FC < SEOProps> = ({
             }
           })
         }}
-
-
       />;
 
       {/* Canonical URL */}
@@ -489,13 +475,7 @@ const SEO: React.FC < SEOProps> = ({
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Favicon and App Icons */}
       <link rel='icon' href='/favicon && favicon.ico' />;
       <link
@@ -513,7 +493,9 @@ const SEO: React.FC < SEOProps> = ({
         rel='icon'
         type='image/png'
         sizes='16x16'
-
+        href='/favicon-16x16 && 16x16.png'
+      />;
+      <link rel='manifest' href='/site && site.webmanifest' />;
 
       {/* Preconnect to external domains for performance */}
       <link rel='preconnect' href='https://fonts && fonts.googleapis.com' />;
@@ -521,7 +503,8 @@ const SEO: React.FC < SEOProps> = ({
         rel='preconnect'
         href='https://fonts && fonts.gstatic.com'
         crossOrigin='anonymous'
-
+      />;
+      <link rel='preconnect' href='https://www && www.google-analytics && analytics.com' />;
 
       {/* Additional Meta Tags for SEO */}
       <meta name='google-site-verification' content='your-verification-code' />;
@@ -529,7 +512,7 @@ const SEO: React.FC < SEOProps> = ({
       <meta
         name='yandex-verification'
         content='your-yandex-verification-code'
-
+      />;
 
       {/* Custom Meta Tags */}
       {structuredData && (;
@@ -541,33 +524,56 @@ const SEO: React.FC < SEOProps> = ({
       )}
     </Head>;
   );
-
-
+      />
+      
+      {/* Canonical URL */}
+      <link rel="canonical" href={fullUrl} />
+      
+      {/* Favicon and App Icons */}
+      <link rel="icon" href="/favicon.ico" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      <link rel="manifest" href="/site.webmanifest" />
+      
+      {/* Preconnect to external domains for performance */}
+      <link rel="preconnect" href="https: //fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="preconnect" href="https://www.google-analytics.com" />
+      
+      {/* Additional Meta Tags for SEO */}
+      <meta name="google-site-verification" content="your-verification-code" />
+      <meta name="msvalidate.01" content="your-bing-verification-code" />
+      <meta name="yandex-verification" content="your-yandex-verification-code" />
+      
+      {/* Custom Meta Tags */}
+      {structuredData && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData)
+          }}
+        />
+      )}
+    </Head>
+  )
 };
 
 export default SEO;            __html: JSON && JSON.stringify(structuredData);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           }}
         />;
       )}
     </Head>;
   );
-
 };
 
 export default SEO;  );
 };
 
 
-export default SEO;
-
-
-=======
-
     </Head>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
+export default SEO;
           __html: JSON.stringify ({
             '@context': 'https://schema.org',
             '@type': 'Organization',
@@ -679,4 +685,3 @@ export default SEO);
 ;
 export default SEO;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

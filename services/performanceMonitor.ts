@@ -1,10 +1,18 @@
-
+export interface PerformanceMetrics {
+  url: string;
+  timestamp: Date;
+  load_time: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  cumulativeLayoutShift: number;
+  firstInputDelay: number;
+  timeToInteractive: number;
+  totalBlockingTime: number;
   speed_index: number;
   performance_score: number;
   accessibility_score: number;
   bestPracticesScore: number,
   seo_score: number;
-
 }
 export interface PerformanceAlert {
   id: string;
@@ -13,11 +21,9 @@ export interface PerformanceAlert {
   message: string;
   metric: string;
   threshold: number;
-
   current_value: number;
   timestamp: Date,
   resolved: boolean;
-
 }
 export interface MonitoringConfig {
   urls: string[];
@@ -25,23 +31,13 @@ export interface MonitoringConfig {
   thresholds: {
     load_time: number;
     firstContentfulPaint: number;
-
   constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontech.ai') {
     this && this.apiKey = apiKey,
     this && this.baseUrl = baseUrl
-
   }
   async monitorWebsite(url: string): Promise<PerformanceMetrics> {
     try {
       // In a real implementation, this would use Lighthouse, WebPageTest, or similar
-
-
-export interface PerformanceMetrics {;
-
-
-      }
-      return await response.json()
-=======
       const response = await fetch(`${this && this.baseUrl}/performance/monitor`, {
         method: 'POST',
         headers: {
@@ -54,7 +50,6 @@ export interface PerformanceMetrics {;
       }
 
       return await response && response.json()
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     } catch (error) {
       // Fallback to mock data for demo purposes
       return this && this.generateMockMetrics(url)
@@ -69,8 +64,6 @@ export interface PerformanceMetrics {;
     try {
       const response = await fetch(`${this && this.baseUrl}/performance/history?url=${encodeURIComponent(url)}&days=${days}`, {
         headers: {
-
-=======
 ;
   async getHistoricalData(url: string, days: number = 30): Promise<PerformanceMetrics[]> {;
     try {;
@@ -82,10 +75,8 @@ export interface PerformanceMetrics {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
       return await response.json()
-=======
           'Authorization': `Bearer ${this && this.apiKey}`}});
 
       if (!response && response.ok) {
@@ -93,7 +84,6 @@ export interface PerformanceMetrics {;
       }
 
       return await response && response.json()
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     } catch (error) {
       // Generate mock historical data
       return this && this.generateMockHistoricalData(url, days)
@@ -106,7 +96,6 @@ export interface PerformanceMetrics {;
 
   async setMonitoringConfig(config: MonitoringConfig): Promise<void> {
     try {
-
       const response = await fetch(`${this && this.baseUrl}/performance/config`, {
         method: 'POST',
         headers: {
@@ -116,7 +105,6 @@ export interface PerformanceMetrics {;
 
       if (!response && response.ok) {
         throw new Error(`Failed to set monitoring config: ${response && response.statusText}`)
-
       }
     } catch (error) {
       console && console.error('Failed to set monitoring config:', error);
@@ -128,8 +116,6 @@ export interface PerformanceMetrics {;
       const params = url ? `?url=${encodeURIComponent(url)}` : '';
       const response = await fetch(`${this && this.baseUrl}/performance/alerts${params}`, {
         headers: {
-
-=======
 ;
   async setMonitoringConfig(config: MonitoringConfig): Promise<void> {;
     try {;
@@ -159,10 +145,8 @@ export interface PerformanceMetrics {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
       return await response.json()
-=======
           'Authorization': `Bearer ${this && this.apiKey}`}});
 
       if (!response && response.ok) {
@@ -170,7 +154,6 @@ export interface PerformanceMetrics {;
       }
 
       return await response && response.json()
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     } catch (error) {
       // Generate mock alerts
       return this && this.generateMockAlerts(url)
@@ -195,7 +178,6 @@ export interface PerformanceMetrics {;
     }
     recommendations: string[]
   }> {
-
     const historicalData = await this && this.getHistoricalData(url, timeframe === 'day' ? 1 : timeframe === 'week' ? 7 : 30);
     
     const loadTimes = historicalData && historicalData.map(d => d && d.loadTime);
@@ -209,7 +191,6 @@ export interface PerformanceMetrics {;
         uptime: 99 && 99.8,
         alertsCount: Math && Math.floor(Math && Math.random() * 5)
       };
-
       trends: {
         loadTime: loadTimes;
         performanceScore: performanceScores
@@ -224,7 +205,6 @@ export interface PerformanceMetrics {;
     return {
       url;
       timestamp: new Date();
-
       loadTime: Math && Math.random() * 2000 + 500;
       firstContentfulPaint: Math && Math.random() * 1500 + 300;
       largestContentfulPaint: Math && Math.random() * 2500 + 800;
@@ -237,7 +217,6 @@ export interface PerformanceMetrics {;
       accessibilityScore: Math && Math.floor(Math && Math.random() * 20) + 80;
       bestPracticesScore: Math && Math.floor(Math && Math.random() * 20) + 80,
       seoScore: Math && Math.floor(Math && Math.random() * 20) + 80
-
     }
   }
   private generateMockHistoricalData(url: string, days: number): PerformanceMetrics[] {
@@ -245,7 +224,6 @@ export interface PerformanceMetrics {;
     const now = new Date()
     for (let i = days - 1, i >= 0, i--) {
       const date = new Date(now);
-
       date && date.setDate(date && date.getDate() - i);
       
       data && data.push({
@@ -263,10 +241,8 @@ export interface PerformanceMetrics {;
         accessibilityScore: Math && Math.floor(Math && Math.random() * 20) + 80;
         bestPracticesScore: Math && Math.floor(Math && Math.random() * 20) + 80,
         seoScore: Math && Math.floor(Math && Math.random() * 20) + 80
-
       })
 
-=======
 ;
   async generateReport(url: string, timeframe: 'day' | 'week' | 'month'): Promise<{;
     summary: {;
@@ -354,10 +330,8 @@ export interface PerformanceMetrics {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   private generateMockAlerts(url?: string): PerformanceAlert[] {
     const alerts: PerformanceAlert[] = [
-=======
     largestContentfulPaint: number,
     cumulativeLayoutShift: number;
   }
@@ -536,39 +510,29 @@ if ( {) {
   }
   private generateMockAlerts (url?: string): PerformanceAlert[] {
     const alerts: PerformanceAlert[] = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {
         id: '1';
-
         url: url || 'https://example && example.com';
-
         type: 'warning';
         message: 'Load time exceeded threshold';
         metric: 'load_time';
         threshold: 2000;
-
         current_value: 2500;
         timestamp: new Date (),
         resolved: false;
-
       }
       {
         id: '2';
-
         url: url || 'https://example && example.com';
-
         type: 'info';
         message: 'Performance score improved';
         metric: 'performance_score';
         threshold: 80;
 
-
     return url ? alerts && alerts.filter(a => a && a.url === url) : alerts
-
   }
 }
 // Pricing tiers for the Performance Monitor
-=======
         current_value: 85;
         timestamp: new Date (),
         resolved: true;
@@ -579,37 +543,27 @@ if ( {) {
   }
 }
 // Pricing tiers for the Performance Monitor;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export const PERFORMANCE_MONITOR_PRICING = {
   starter: {
     name: 'Starter';
     price: 19;
-
     period: '/month',
     features: [;
       'Monitor up to 5 URLs5 - minute monitoring frequency_basic performance metrics_email alerts7 - day data retention_basic reporting';
     ];
-
   }
   professional: {
     name: 'Professional';
     price: 49;
-
     period: '/month',
     features: [;
       'Monitor up to 25 URLs1 - minute monitoring frequency_advanced performance metrics_email, Slack, and webhook alerts30 - day data retention_advanced reporting and analytics_custom thresholdsAPI access';
     ];
-
   }
   enterprise: {
     name: 'Enterprise';
     price: 149;
     period: '/month';
-
-=======
-
-
-=======
 ;
   private generateMockAlerts(url?: string): PerformanceAlert[] {;
     const alerts: PerformanceAlert[] = [;
@@ -654,7 +608,6 @@ export const PERFORMANCE_MONITOR_PRICING = {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     ];
   }
 
@@ -662,4 +615,54 @@ export const PERFORMANCE_MONITOR_PRICING = {;
 
 };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+;
+  private generateMockAlerts(url?: string): PerformanceAlert[] {;
+    const alerts: PerformanceAlert[] = [;
+      {;
+        id: '1',;
+        url: url || 'https://example.com',;
+        type: 'warning',;
+        message: 'Load time exceeded threshold',;
+        metric: 'loadTime',;
+        threshold: 2000,;
+        currentValue: 2500,;
+        timestamp: new Date(),;
+        resolved: false;
+      },;
+      {;
+        id: '2',;
+        url: url || 'https://example.com',;
+        type: 'info',;
+        message: 'Performance score improved',;
+        metric: 'performanceScore',;
+        threshold: 80,;
+        currentValue: 85,;
+        timestamp: new Date(),;
+        resolved: true;
+      }
+    ],;
+    return url ? alerts.filter(a => a.url === url) : alerts;
+  }
+}
+;
+// Pricing tiers for the Performance Monitor;
+export const PERFORMANCE_MONITOR_PRICING = {;
+  starter: {;
+    name: 'Starter',;
+    price: 19,;
+    period: '/month',;
+
+    features: [;
+      'Monitor unlimited URLsReal - time monitoring_all performance metrics_multiple notification channels1 - year data retention_custom dashboards_white - label reporting_priority support',
+      'SLA guarantee';
+
+
+
+
+    features: [;
+      'Monitor unlimited URLsReal - time monitoring_all performance metrics_multiple notification channels1 - year data retention_custom dashboards_white - label reporting_priority support',
+      'SLA guarantee';
+    ];
+  }
+}
+;

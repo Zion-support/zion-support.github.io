@@ -1,5 +1,4 @@
-
-
+export interface ExtraService {
   id: string;
   name: string;
   tagline: string;
@@ -12,19 +11,6 @@
   contact_info: {
     mobile: string;
     email: string;
-
-
-    address: string;
-  };
-
-
-
-    address: string;
-  }
-export const extraServices: ExtraService[] = [
-  {
-
-=======
     address: string;
   }
 ;
@@ -47,26 +33,47 @@ export const extra_services: ExtraService[] = [;
     category: 'Cloud Services',
     real_implementation: true,
     contact_info: {
-
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+  id: string, name: string,
+  tagline: string, price: string,
+  description: string, features: string[],
+  link: string, category: string,
+  realImplementation: boolean,
+  contactInfo: {
+    mobile: string, email: string,
+    address: string
+  }
+];      mobile: "+1 302 464 0950";
 
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+      email: "kleber@ziontechgroup.com";
+    id: 'cybersecurity - audit',
+    name: 'Cybersecurity Audit Pro',
+    tagline: 'Comprehensive security assessment and protection',
+    price: '$199 / hour',
+    description:;
+      'Complete cybersecurity audit and vulnerability assessment for enterprise - level protection.',
+    features: [;
+      'Vulnerability assessment',
+      'Penetration testing',
+      'Security policy review',
+      'Compliance audit',
+      'Remediation guidance',
+    ],
+    link: '/services / cybersecurity - audit',
+    category: 'Security',
+    real_implementation: true,
+    contact_info: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
   },
 ];      mobile: "+1 302 464 0950";
-
-
-=======
 
     id: "cloud-migration-expert",
     name: "Cloud Migration Expert",
@@ -107,17 +114,10 @@ export const extra_services: ExtraService[] = [;
     realImplementation: true,
     contactInfo: {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       address: "364 E Main St STE 1008 Middletown DE 19709"
-=======
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   }
-
 ];
-
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

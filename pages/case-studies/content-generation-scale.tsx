@@ -1,6 +1,3 @@
-
-    id: 'content-generation-scale',
-=======
 import React from 'react',
 import Head from 'next / head',
 import Link from 'next / link',
@@ -11,19 +8,20 @@ function CaseStudyPage() {
   const case_study = {
     id: 'content - generation - scale',
 
+  },
     title: 'Scaling Content Generation 10x',
     company: 'Digital Marketing Agency',
     industry: 'Marketing',
-
     challenge: 'Unable to meet client demand for high - quality content at scale',
-
     solution: 'Deployed autonomous content generation systems with human oversight and quality control',
-
-
-=======
-
-  },
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    results: [
+      '10x increase in content output85% improvement in engagement metrics70% reduction in content creation time95% client satisfaction rate'
+    ]
+    technologies: ['Natural Language ProcessingContent OptimizationSEO AutomationAnalytics']
+    duration: '4 months'
+    teamSize: '5 engineers + 3 content specialists'
+    featured: false
+  };
 
   return (
     <>
@@ -44,7 +42,6 @@ function CaseStudyPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <nav className="mb-8">
               <Link href="/case-studies" className="text-cyan-400 hover:text-cyan-300 transition-colors">
                 ← Back to Case Studies
@@ -67,7 +64,6 @@ function CaseStudyPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </span>
               </div>
               <h1 className="text-4xl font-bold text-white mb-4">{caseStudy.title}</h1>
@@ -86,7 +82,6 @@ function CaseStudyPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-red-400">The Challenge</h2>
               <div className="bg-red-500/10 rounded-lg p-6 border border-red-500/20">
@@ -102,7 +97,6 @@ function CaseStudyPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-green-400">Our Solution</h2>
               <div className="bg-green-500/10 rounded-lg p-6 border border-green-500/20">
@@ -118,7 +112,6 @@ function CaseStudyPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-blue-400">Technologies Used</h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -142,7 +135,6 @@ function CaseStudyPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-yellow-400">Results Achieved</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -171,7 +163,6 @@ function CaseStudyPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <section className="text-center">
               <div className="bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-2xl p-8 border border-purple-500/20">
                 <h2 className="text-2xl font-bold mb-4 text-white">Ready to Scale Your Content?</h2>
@@ -201,11 +192,8 @@ function CaseStudyPage() {
         </main>
       </div>
     </>
-
-=======
+  )
 }
-
-=======
     results: [;
       '10x increase in content output85% improvement in engagement metrics70% reduction in content creation time95% client satisfaction rate';
     ],
@@ -312,9 +300,5 @@ function CaseStudyPage() {
       </div>;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

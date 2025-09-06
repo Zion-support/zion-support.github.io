@@ -1,4 +1,3 @@
-
 import React from "react";
 import {useWallet} from "@/hooks/useWallet";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
@@ -11,11 +10,8 @@ export function TransactionHistory() {;
 
   if (loading) {;
 
-=======
-
 
   if (loading) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return (
       <Card>;
         <CardHeader>;
@@ -30,33 +26,6 @@ export function TransactionHistory() {;
   const burnTransactions = transactions && transactions.filter(tx => tx && tx.transaction_type === 'burn');
 
   return (
-
-=======
-
-import React from "react",;
-import { useWallet } from "@/hooks/useWallet",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { ScrollArea } from "@/components/ui/scroll-area",;
-import { Badge } from "@/components/ui/badge",;
-import { formatDistanceToNow } from "date-fns",;
-export function TransactionHistory() {;
-  const { transactions, loading } = useWallet(),;
-  if (loading) {;
-    return (;
-      <Card>;
-        <CardHeader>;
-          <CardTitle>Transaction History</CardTitle>;
-          <CardDescription>Loading transactions...</CardDescription>;
-        </CardHeader>;
-      </Card>;
-    );
-  }
-;
-  const earnTransactions = transactions.filter(tx => tx.transaction_type === 'earn');
-  const burnTransactions = transactions.filter(tx => tx.transaction_type === 'burn');
-  return (;
-
     <Card>;
       <CardHeader>;
         <CardTitle>Transaction History</CardTitle>;
@@ -86,14 +55,13 @@ export function TransactionHistory() {;
                         +{tx && tx.amount} ZION$;
                       </Badge>;
                     </div>;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   ))}
                 </div>;
               )}
 
+                  ))}
+                </div>;
+              )}
             </ScrollArea>;
           </TabsContent>;
           <TabsContent value="spent">;
@@ -114,12 +82,9 @@ export function TransactionHistory() {;
                         -{tx && tx.amount} ZION$;
                       </Badge>;
                     </div>;
-
                   ))}
                 </div>;
               )}
-
-=======
 import React from './react';
 import { use_wallet } from '@/hooks / use_wallet';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
@@ -198,12 +163,9 @@ if ( {) {
                       </Badge>;
                     </div>))}
                 </div>)}
-
             </ScrollArea>;
           </TabsContent>;
         </Tabs>;
       </CardContent>;
-
     </Card>);
 }
-

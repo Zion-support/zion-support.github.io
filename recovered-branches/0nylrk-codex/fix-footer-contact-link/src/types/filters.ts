@@ -1,4 +1,6 @@
-
+export interface FilterSidebarProps {
+  search_term: string;
+  setSearchTerm: (term: string) => void;
   selected_skills: string[];
   toggle_skill: (skill: string) => void;
   selected_availability: string[];
@@ -8,13 +10,11 @@
   price_range: [number, number];
   setPriceRange: (range: [number, number]) => void;
   experience_range: [number, number];
-
   setExperienceRange: (range: [number, number]) => void;
   expanded_sections: {
     skills: boolean;
     availability: boolean;
     region: boolean;
-
     experience: boolean,
     price: boolean;
   }
@@ -40,7 +40,6 @@ export interface AvailabilityFilterProps extends FilterComponentProps {
 export interface RegionFilterProps extends FilterComponentProps {
   selected_regions: string[],
   toggle_region: (region: string) => void;
-
 }
 export interface ExperienceFilterProps extends FilterComponentProps {
   experience_range: [number, number];
@@ -49,33 +48,18 @@ export interface ExperienceFilterProps extends FilterComponentProps {
 export interface PriceFilterProps extends FilterComponentProps {
   price_range: [number, number];
   setPriceRange: (range: [number, number]) => void;
-=======
 
 
 export interface FilterSidebarProps {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 export interface SearchFilterProps {
-
   search_term: string,
   setSearchTerm: (term: string) => void;
 }
 export interface SortFilterProps {
   sort_option: string,
   setSortOption: (option: string) => void;
-
+;
+;
 }
-=======
-
-;
-export interface SortFilterProps {;
-  sortOption: string;
-  setSortOption: (option: string) => void;
-}
-;
-
-=======
-;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

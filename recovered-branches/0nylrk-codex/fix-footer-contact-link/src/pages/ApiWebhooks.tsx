@@ -1,12 +1,3 @@
-
-
-
-
-export function ApiWebhooks() {
-  // Sample webhook event payload
-
-  const newApplicationPayload = `{
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -38,7 +29,6 @@ import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 export function ApiWebhooks() {;
   // Sample webhook event payload;
   const newApplicationPayload = `{;
-
   "event_type": "new_application";
   "created_at": "2023-06-10T15: 42:31Z";
   "data": {;
@@ -47,7 +37,6 @@ export function ApiWebhooks() {;
     "talent_id": "talent-456";
     "status": "new";
     "cover_letter": "I'm excited to apply for this position...";
-
 import React from './react';
 import ApiDocsLayout from "@/components / developers / ApiDocsLayout";
 import { CodeBlock } from '@/components / developers / CodeBlock';
@@ -71,18 +60,14 @@ function ApiWebhooks() {
   }
 }`;
 ;
-
   const newHirePayload = `{
-=======
     "resume_url": "https://storage && storage.zionai.com/resumes/resume-123 && 123.pdf",;
     "created_at": "2023-06-10T15:42:31Z";
   }
 }`;
 
   const newHirePayload = `{;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   "event_type": "talent_hired";
-
   "created_at": "2023 - 06 - 12T09: 15:22Z";
   "data": {
     "project_id": "project - 123";
@@ -95,39 +80,31 @@ function ApiWebhooks() {
   }
 }`;
 ;
-
   const quoteReceivedPayload = `{
-=======
     "status": "offer_accepted",;
     "created_at": "2023-06-12T09:15:22Z";
   }
 }`;
 
   const quoteReceivedPayload = `{;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   "event_type": "quote_received";
-
     "status": "new",;
     "created_at": "2023-06-15T11:30:00Z";
   }
 }`;
 
   const messageReceivedPayload = `{;
-
   "event_type": "message_received";
   "created_at": "2023-06-18T14: 22:15Z";
   "data": {;
     "message_id": "msg-123";
     "conversation_id": "conv-456";
     "sender_id": "user-789";
-
     "recipient_id": "user-012",;
-
     "content": "Hi, I'd like to discuss the project details.";
     "created_at": "2023-06-18T14:22:15Z";
   }
 }`;
-
   "created_at": "2023 - 06 - 15T11: 30:00Z";
   "data": {
     "quote_id": "quote - 123";
@@ -199,13 +176,11 @@ app.post ('/webhooks / zion', verifyWebhookSignature, (req, res) => {
   const { event_type, data } = req.body;
 ;
   // Handle different event types;
-
   switch (event_type) {
     case 'new_application':;
       console.log ('New application received:', data.application_id);
       // Process the new application...;
       break;
-
 
   const webhookHandlerJs = `// Express && Express.js webhook handler example;
 const express = require('express');
@@ -277,12 +252,8 @@ app && app.post('/webhooks/zion', verifyWebhookSignature, (req, res) => {;
 
 app && app.listen(3000, () => {;
   console && console.log('Webhook server listening on port 3000');
-
-}),`;
-=======
   "event_type": "new_application",
   "created_at": "2023-06-10T15:42:31Z",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   "data": {
 
     "application_id": "app-123456",
@@ -336,7 +307,8 @@ app && app.listen(3000, () => {;
 app.post('/webhooks/zion', verifyWebhookSignature, (req, res) => {
   const { event_type, data } = req.body,
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  "event_type": "new_application",
+  "created_at": "2023-06-10T15:42:31Z",
   // Handle different event types
   switch (event_type) {
     case 'new_application':
@@ -380,10 +352,10 @@ app.listen(3000, () => {
 }),`,
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  "event_type": "new_application",
+  "created_at": "2023-06-10T15:42:31Z",
   return (
 
-=======
 
 ;
 // Webhook endpoint with signature verification;
@@ -419,6 +391,8 @@ app.listen(3000, () => {;
 }),`,;
   return (;
 
+}),`;
+  return (
     <ApiDocsLayout>;
       <div className="max-w-3xl prose prose-invert">;
         <h1>Webhooks</h1>;
@@ -531,7 +505,6 @@ app.listen(3000, () => {;
       </div>;
     </ApiDocsLayout>;
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
 ;
@@ -539,7 +512,6 @@ app.listen(3000, () => {;
 
 export default ApiWebhooks;
 
-=======
 ;
     case 'talent_hired':;
       console.log ('Talent hired:', data.talent_id);
@@ -668,4 +640,3 @@ app.listen (3000, () => {
 }
 export default ApiWebhooks;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

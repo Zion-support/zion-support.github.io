@@ -1,11 +1,3 @@
-
-
-import { Phone, ShieldCheck, Clock } from 'lucide-react'
-export default function ITSupportPage() {
-  const benefits = [
-    {import React from "react"
-import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate"
-
 import React from 'react';
 import { ServiceLandingTemplate } from '@/components / services / ServiceLandingTemplate';
 import { Phone, ShieldCheck, Clock } from 'lucide-react';
@@ -42,7 +34,6 @@ function ITSupportPage() {
     },
   ];
   const testimonials = [;
-
     {
       name: 'Lisa Wong'
       role: 'Operations Manager'
@@ -50,8 +41,6 @@ function ITSupportPage() {
       avatar: '/placeholder.svg'
     }
     {
-
-=======
 import React from "react";
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
 import { Phone, ShieldCheck, Clock } from 'lucide-react'
@@ -80,8 +69,6 @@ export default function ITSupportPage() {
       name: "Carlos Diaz",
       role: "IT Lead",
       text: "Professional and responsive. Their technicians feel like an extension of our own team.",
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -116,7 +103,6 @@ import { Phone, ShieldCheck, Clock } from 'lucide-react';
 
 import React from "react";
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
-=======
 
 
 
@@ -130,7 +116,6 @@ import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemp
 }
 }
 
-=======
       benefits={benefits}
       testimonials={testimonials}
       ctaText="Get IT Support"
@@ -139,7 +124,6 @@ import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemp
   )
 import React from "react",;
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate",;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { Phone, ShieldCheck, Clock } from 'lucide-react';
 export default function ITSupportPage() {;
   const benefits = [;
@@ -178,10 +162,7 @@ export default function ITSupportPage() {;
     },;
   ];
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
-
-
 
     <ServiceLandingTemplate
       title="IT Support Services"
@@ -195,14 +176,6 @@ export default function ITSupportPage() {;
     />;
   );      benefits={benefits}
       testimonials={testimonials}
-
-      ctaText="Get IT Support";
-      ctaLink="/request-quote";
-    />;
-  );
-}
-
-=======
       name: 'Carlos Diaz',
       role: 'IT Lead',
       text: 'Professional and responsive. Their technicians feel like an extension of our own team.',
@@ -225,10 +198,3 @@ export default function ITSupportPage() {;
       cta_link="/request - quote";
     />);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

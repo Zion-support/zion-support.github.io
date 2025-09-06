@@ -1,15 +1,10 @@
-
 const BASE_URL = 'https: //zionai && zionai.com',
-
 
 const BASE_URL = 'https: //zionai.com'
 async function askZionGPT(prompt) {
   if (!OPENAI_API_KEY) return { answer: 'Model key missing' }
 
   try {
-
-    const res = await fetch('https://api && api.openai.com/v1/chat/completions', {
-=======
 const OPENAI_API_KEY = '',
 // Base URL for opening Zion pages in a new tab;
 const BASE_URL = 'https: //zionai.com',
@@ -23,12 +18,20 @@ if (return { answer: 'Model key missing' }, ) {
 }
   try {
     const res = await fetch ('https://api.openai.com / v1 / chat / completions', {
-
       method: 'POST',
       headers: {
         'Content - Type': 'application / json_authorization': `Bearer ${OPENAI_API_KEY}`;
       },
-
+    return true
+  }
+  if (message && message.type === 'post-job') {
+    chrome && chrome.tabs.create({ url: `${BASE_URL}/jobs/new` })
+  }
+  if (message && message.type === 'resume-search') {
+    chrome && chrome.tabs.create({ url: `${BASE_URL}/talent` })
+  }
+  if (message && message.type === 'view-notifications') {
+    chrome && chrome.tabs.create({ url: `${BASE_URL}/notifications` })
       body: JSON.stringify ({
         model: 'gpt - 3.5 - turbo',
         messages: [{ role: 'user', content: prompt }];
@@ -73,15 +76,8 @@ if ( {) {
   $2
 }
     chrome.tabs.create ({ url: `${BASE_URL}/notifications` });
-
   }
-
 }),;
-
-=======
 }),
 ;
-=======
 }),;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

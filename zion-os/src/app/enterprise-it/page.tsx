@@ -1,16 +1,3 @@
-
-
-import Link from "next/link",;
-export const metadata = {;
-  title: "Enterprise IT Solutions - Zion Tech Group | Digital Transformation Services",;
-  description: "Transform your enterprise with Zion Tech Group's comprehensive IT solutions. From cloud migration to DevOps automation, we help organizations modernize their technology infrastructure.",;
-  keywords: "enterprise IT, digital transformation, cloud migration, DevOps, infrastructure, Zion Tech Group, enterprise solutions"},;
-export default function EnterpriseITPage() {;
-  return (;
-
-
-    <div className="min-h-screen">;
-=======
 import Link from './next / link';,
 export const metadata = {
   title: "Enterprise IT Solutions - Zion Tech Group | Digital Transformation Services",
@@ -22,7 +9,6 @@ export default /**
 function EnterpriseITPage() {
   return (
     <div className="min - h-screen">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Hero Section */}
       <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto text - center">;
@@ -45,16 +31,12 @@ function EnterpriseITPage() {
                 <h2 className="text - 3xl md:text - 4xl font - bold mb - 6">;
                   Modernize Your Enterprise Infrastructure;
                 </h2>;
-
-                <p className="text - gray - 300 text - lg mb - 6 leading - relaxed">;
-                  In today's digital - first world, enterprises need agile, scalable,
-
-=======
                 <p className="text-gray-300 text-lg mb-6 leading-relaxed">;
 
                   In today's digital-first world, enterprises need agile, scalable,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                <p className="text - gray - 300 text - lg mb - 6 leading - relaxed">;
+                  In today's digital - first world, enterprises need agile, scalable,
                   and secure IT infrastructure to compete and thrive. Our comprehensive;
                   solutions help organizations modernize their technology stack while;
                   maintaining operational excellence.;
@@ -112,15 +94,11 @@ function EnterpriseITPage() {
                 </svg>;
               </div>;
 
+                Seamless migration to cloud platforms with strategic planning,;
+
               <h3 className="text - xl font - semibold mb - 3">Cloud Migration & Strategy</h3>;
               <p className="text - gray - 400 mb - 4">;
                 Seamless migration to cloud platforms with strategic planning,
-
-=======
-
-                Seamless migration to cloud platforms with strategic planning,;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 cost optimization, and performance tuning.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
@@ -142,15 +120,11 @@ function EnterpriseITPage() {
                 </svg>;
               </div>;
 
+                Streamline development and operations with automated CI/CD pipelines,;
+
               <h3 className="text - xl font - semibold mb - 3">DevOps & Automation</h3>;
               <p className="text - gray - 400 mb - 4">;
                 Streamline development and operations with automated CI / CD pipelines,
-
-=======
-
-                Streamline development and operations with automated CI/CD pipelines,;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 infrastructure as code, and monitoring solutions.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
@@ -171,15 +145,11 @@ function EnterpriseITPage() {
                 </svg>;
               </div>;
 
+                Comprehensive infrastructure management including server provisioning,;
+
               <h3 className="text - xl font - semibold mb - 3">Infrastructure Management</h3>;
               <p className="text - gray - 400 mb - 4">;
                 Comprehensive infrastructure management including server provisioning,
-
-=======
-
-                Comprehensive infrastructure management including server provisioning,;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 network configuration, and performance optimization.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
@@ -200,15 +170,11 @@ function EnterpriseITPage() {
                 </svg>;
               </div>;
 
+                Enterprise data solutions including warehousing, analytics,;
+
               <h3 className="text - xl font - semibold mb - 3">Data Management</h3>;
               <p className="text - gray - 400 mb - 4">;
                 Enterprise data solutions including warehousing, analytics,
-
-=======
-
-                Enterprise data solutions including warehousing, analytics,;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 and business intelligence platforms.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
@@ -251,15 +217,11 @@ function EnterpriseITPage() {
                 </svg>;
               </div>;
 
+                24/7 managed IT services including monitoring, maintenance,;
+
               <h3 className="text - xl font - semibold mb - 3">Managed Services</h3>;
               <p className="text - gray - 400 mb - 4">;
                 24 / 7 managed IT services including monitoring, maintenance,
-
-=======
-
-                24/7 managed IT services including monitoring, maintenance,;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 and support for enterprise infrastructure.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
@@ -343,15 +305,11 @@ function EnterpriseITPage() {
                 <span className="text - 2xl font - bold text - blue - 400">1</span>;
               </div>;
 
+                Comprehensive evaluation of current infrastructure,;
+
               <h3 className="text - xl font - semibold mb - 3">Assessment</h3>;
               <p className="text - gray - 400">;
                 Comprehensive evaluation of current infrastructure,
-
-=======
-
-                Comprehensive evaluation of current infrastructure,;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 identifying opportunities and challenges.;
               </p>;
             </div>;

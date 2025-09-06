@@ -1,23 +1,7 @@
-
-
+<tr> <th className="text - left p - 2" >Route</th> <th className="text - left p - 2" >Last Modified</th> </tr> </thead> <tbody> </tr>) );
 }</tbody> </table> </div> </div>) import fs from 'fs';
-=======
 import fs from 'fs';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import path from 'path';
-
-
-    routes = json.routes || [];
-    generatedAt = json.generatedAt || ''
-  } catch {}
-  return { props: { routes, generatedAt } }
-}
-
-
-
-export default function SiteMapIntelPage({ routes, generatedAt }: { routes: RouteInfo[], generatedAt: string }) {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
  <tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) ) ;
 }</tbody> </table> </div> </div>) import fs from 'fs';
 import path from 'path';
@@ -30,7 +14,6 @@ export async function getServerSideProps() {;
     const json = JSON && JSON.parse(raw);
     routes = json && json.routes || [];
     generatedAt = json && json.generatedAt || '';
-=======
 type RouteInfo = { path: string, last_modified: string },
 export async /**
  * getServerSideProps - Function description
@@ -43,27 +26,28 @@ function getServerSideProps() {
     const json = JSON.parse (raw);
     routes = json.routes || [];
     generated_at = json.generated_at || '';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   } catch {}
   return { props: { routes, generated_at } }
 }
-
-
-    </div>;
-
-
-);
-}
-=======
-          </tbody>;
-        </table>;
-      </div>;
-    </div>;
-  );
-}
-
-
-=======
+  return (
+    <div className="space-y-6">;
+      <h1 className="text-2xl font-semibold">AI Automation: Site Map Intelligence</h1>;
+      <div className="text-xs text-gray-500">Last updated: {generatedAt ? new Date(generatedAt).toLocaleString() : '—'}</div>;
+      <div className="overflow-auto border rounded">;
+        <table className="min-w-full text-sm">;
+          <thead className="bg-gray-50">;
+            <tr>;
+              <th className="text-left p-2">Route</th>;
+              <th className="text-left p-2">Last Modified</th>;
+            </tr>;
+          </thead>;
+          <tbody>;
+            {routes && routes.map(r => (;
+              <tr key={r && r.path} className="border-t">;
+                <td className="p-2">{r && r.path}</td>;
+                <td className="p-2">{new Date(r && r.lastModified).toLocaleString()}</td>;
+              </tr>;
+            ))}
 export default /**
  * SiteMapIntelPage - Function description
  */
@@ -91,4 +75,3 @@ function SiteMapIntelPage() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

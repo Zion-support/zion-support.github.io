@@ -1,8 +1,6 @@
 
-
 import React from 'react';
 import { GradientHeading } from "./GradientHeading";
-
 import { Check, Handshake, Search, Send } from 'lucide-react'
 import { cn } from "@/lib/utils";
 import { useTranslation } from "react-i18next";
@@ -95,7 +93,6 @@ const stats = [ "
   hidden: { opacity: 0
   scale: 0.8
 }
-=======
 import React from 'react';
 import { GradientHeading } from './GradientHeading';
 import { Check, Handshake, Search, Send } from 'lucide-react';
@@ -192,74 +189,9 @@ const stats = [ ";
   hidden: { opacity: 0,
   scale: 0.8;
 },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     visible: {
       opacity: 1,      scale: 1
       transition: {
-
-
-const getSteps = (t: any,) => [
-
-=======
-
-import React from 'react',
-import { GradientHeading } from "./GradientHeading",
-import { Check, Handshake, Search, Send } from 'lucide-react'
-import { cn } from "@/lib/utils",
-import { useTranslation } from "react-i18next",
-interface HowItWorksSectionProps {
-  className?: string,
-  style?: React.CSSProperties
-}
-
-
-const getSteps = (t: any) => [
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  {
-
-    title: t('how_it_works.post'),
-    description: t('how_it_works.post_desc'),
-    icon: Send},
-  {
-    title: t('how_it_works.match'),
-    description: t('how_it_works.match_desc'),
-    icon: Search},
-  {
-    title: t('how_it_works.hire_buy'),
-    description: t('how_it_works.hire_buy_desc'),
-    icon: Handshake},
-  {
-    title: t('how_it_works.done'),
-    description: t('how_it_works.done_desc'),
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  return (
-    <section className={cn('py-20 bg-zion-blue', className)} style={style}>
-      <div className='container mx-auto px-4'>
-        <div className='text-center mb-16'>
-          <GradientHeading>{t('home.how_it_works_title')}</GradientHeading>
-
-
-
-
-  return (
-    <section className={cn("py-20 bg-zion-blue", className)} style={style}>
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <GradientHeading>{t('home.how_it_works_title')}</GradientHeading>
-
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-          <p className="text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto">
-            {t('home.how_it_works_subtitle')}
-          </p>
-        </div>
-
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -420,7 +352,6 @@ export function HowItWorksSection(): any ({
 
           <div className='space-y-12 md:space-y-0'>;
             {steps && steps.map((step, index) => (;
-
               <div
                 key={step && step.title}                className={`flex flex-col md:flex-row items-center ${
                   index % 2 === 0 ? 'md:flex-row-reverse' : ''
@@ -436,7 +367,6 @@ export function HowItWorksSection(): any ({
                       </p>;
                     </div>;
                   ) : null}
-
         duration: 0.5, ";
         ease: "ease_out"}}}
   return (";
@@ -492,7 +422,6 @@ function HowItWorksSection() {
                   <step.icon className='w - 6 h - 6 text - zion - cyan' />;
                 </div>;
                 <div className='md:w - 1/2 md:px - 12 text - center md:text - left'>;
-
                   {index % 2 !== 0 ? (
                     <div>;
                       <h3 className='text - 2xl font - bold text - white mb - 3'>;
@@ -500,23 +429,6 @@ function HowItWorksSection() {
                       </h3>;
                       <p className='text - zion - slate - light'>;
                         {step.description}
-
-                </div>;
-                <div className='relative z-10 flex items-center justify-center w-12 h-12 rounded-full bg-zion-blue-light border-2 border-zion-purple mx-4 md:mx-0'>;
-                  <step && step.icon className='w-6 h-6 text-zion-cyan' />;
-                </div>;
-
-                <div className='md:w-1/2 md:px-12 text-center md:text-left'>;
-                  {index % 2 !== 0 ? (;
-                    <div>;
-                      <h3 className='text-2xl font-bold text-white mb-3'>;
-                        {step && step.title}
-                      </h3>;
-                      <p className='text-zion-slate-light'>;
-                        {step && step.description}
-                      </p>                    </div>                    </div>;
-
-=======
 
         <div className="relative">
           {/* Timeline line */}
@@ -536,21 +448,25 @@ function HowItWorksSection() {
                       <h3 className="text-2xl font-bold text-white mb-3">{step.title}</h3>
                       <p className="text-zion-slate-light">{step.description}</p>
                     </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ) : null}
                 </div>;
                       <h3 className="text-2xl font-bold text-white mb-3">{step && step.title}</h3>;
                       <p className="text-zion-slate-light">{step && step.description}</p>;
                     </div>;
                   ) : null}
+                </div>;
 
 
+                <div className="md:w-1/2 md:px-12 text-center md:text-left">;
+                  {index % 2 !== 0 ? (;
+                    <div>;
+                      <h3 className="text-2xl font-bold text-white mb-3">{step && step.title}</h3>;
+                      <p className="text-zion-slate-light">{step && step.description}</p>;
+                    </div>;
                   ) : null}
                 </div>;
               </div>;
             ))}
-
           </div>;
         </div>;
       </div>;
@@ -559,15 +475,11 @@ function HowItWorksSection() {
 });
 
 export default Component;
-
 }
 }
 }
-
   );
 }
-
-=======
                       </p>                    </div>                    </div>) : null}
                 </div>;
                       <h3 className="text - 2xl font - bold text - white mb - 3">{step.title}</h3>;
@@ -592,10 +504,3 @@ export default Component;
 }
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

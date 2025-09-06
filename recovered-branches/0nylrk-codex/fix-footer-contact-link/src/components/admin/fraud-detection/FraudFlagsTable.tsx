@@ -1,8 +1,3 @@
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface FraudFlagsTableProps {
 
   flags: FraudFlag[]
@@ -34,7 +29,6 @@ import {FraudFlag} from "@/types/fraud";
 import {SeverityDisplay} from "./SeverityDisplay";
 import {ActionButtons} from "./ActionButtons";
 import {EmptyFraudState} from "./EmptyFraudState";
-=======
 
 import React from "react",;
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;
@@ -73,9 +67,6 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
     return <EmptyFraudState hasFilters={hasFilters} onResetFilters={resetFilters} />
   }
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
 
@@ -83,7 +74,10 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
 
 
                 <span className="text-muted-foreground text-xs">Not analyzed</span>
-=======
+  if (flags && flags.length === 0) {;
+    return <EmptyFraudState hasFilters={hasFilters} onResetFilters={resetFilters} />;
+  }
+  return (
     <Table>;
       <TableHeader>;
         <TableRow>;
@@ -117,7 +111,6 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
             <TableCell className="max-w-xs truncate">;
               {flag && flag.gpt_explanation || (;
                 <span className="text-muted-foreground text-xs">Not analyzed</span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               )}
             </TableCell>;
             <TableCell>;
@@ -132,7 +125,6 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
                   : flag && flag.status === 'ignored'
                   ? 'outline'
                   : 'default'
-
               }>;
                 {flag && flag.status}
               </Badge>;
@@ -149,20 +141,15 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
       </TableBody>;
     </Table>;
   );
-=======
 
 
-=======
       </TableBody>;
     </Table>;
   );
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React from './react';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';
 import { Badge } from '@/components / ui / badge';
@@ -262,4 +249,3 @@ if ( {) {
     </Table>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

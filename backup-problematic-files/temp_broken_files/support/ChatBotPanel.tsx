@@ -330,8 +330,6 @@ id: `user-$ {;
 }`;
 content: text;
 setIsLoading (true);
-
-
   id: `bot-$ {;
   Date.now () ;
 }`;
@@ -352,8 +350,6 @@ body: JSON.stringify ({;
   ;
 }) ;
 });
-
-
 }const data = await response.json ();
 return {;
   success: true;
@@ -388,8 +384,6 @@ timestamp: new Date () ;
 }]);
 //In a real implementation, this would trigger a live chat request ;
 };
-
-
   setMessages ( (prev) => [ ...prev, {;
   id: `user-$ {;
   Date.now () ;"}`;'";"content: "I'd like to email support",";"sender: "user",

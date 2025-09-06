@@ -4,18 +4,15 @@
 
 interface FraudItem {
 
-
 export default function FraudAdminPage() {
   const [items, setItems] = useState<FraudItem[]>([])
   const [adminToken, setAdminToken] = useState<string>('')
   const [loading, setLoading] = useState<boolean>(false)
   const [error, setError] = useState<string | null>(null)
   useEffect(() => {
-
     const saved = localStorage.getItem('admin-token') || '';
     setAdminToken(saved)
   }, []);
-
 
     const saved = localStorage.getItem('admin-token') |''
     setAdminToken(saved)
@@ -24,9 +21,12 @@ export default function FraudAdminPage() {
     setLoading(true)
     setError(null)
     try {
-
-
-=======
+      const res = await fetch('/api/fraud/admin/list', { headers: adminToken ? { 'x-admin-token': adminToken } : {} }),
+      const json = await res.json();
+      if (!res.ok) throw new Error(json.error || 'Failed to load');
+      setItems(json.items || [])
+    } catch (e: any) {
+      setError(e.message || 'Failed to load')
 export default /**
  * FraudAdminPage - Function description
  */
@@ -51,20 +51,9 @@ function FraudAdminPage() {
       set_items (json.items || []);
     } catch (e: any) {
       set_error (e.message || 'Failed to load');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
-
       set_loading (false);
-
     }
-
-    fetchItems();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [adminToken]);
-
-  const onSaveToken = () => {
-    localStorage.setItem('admin-token', adminToken);
-
     fetchItems()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [adminToken])
@@ -72,7 +61,6 @@ function FraudAdminPage() {
     localStorage.setItem('admin-token', adminToken)
     fetchItems()
   }
-=======
 export default function FraudAdminPage() {
 
   const [items, setItems] = useState<FraudItem[]>([]);
@@ -110,7 +98,6 @@ export default function FraudAdminPage() {
     fetchItems();
   };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const takeAction = async (id: string, action: 'SUSPEND' | 'WARN' | 'IGNORE') => {
     const res = await fetch('/api/fraud/admin/action', {
       method: 'POST'
@@ -149,7 +136,6 @@ export default function FraudAdminPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         />
         <button className="bg-blue-600 text-white px-3 py-1 rounded" onClick={onSaveToken}>Save</button>
         <button className="bg-gray-200 px-3 py-1 rounded" onClick={fetchItems}>Refresh</button>
@@ -158,7 +144,6 @@ export default function FraudAdminPage() {
 
 
 
-=======
       {loading && <div>Loading...</div>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -172,7 +157,6 @@ export default function FraudAdminPage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <div className="overflow-x-auto">
         <table className="min-w-full border">
           <thead>
@@ -209,7 +193,6 @@ export default function FraudAdminPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </div>
                 </td>
                 <td className="p-2 border">
@@ -236,11 +219,8 @@ export default function FraudAdminPage() {
         </table>
       </div>
     </div>
-
-=======
+  )
 }
-
-=======
   },
   useEffect (() => {
     fetch_items (),
@@ -323,9 +303,6 @@ export default function FraudAdminPage() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
   );
 
   } catch (error) {
@@ -333,4 +310,3 @@ export default function FraudAdminPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

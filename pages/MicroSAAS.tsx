@@ -1,4 +1,3 @@
-
 import { Star } from 'lucide-react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -57,7 +56,6 @@ export default function MicroSAAS() {
   ];
 
   
-
     >
       <div className="min-h-screen bg-gray-50 py-20">
         <div className="container mx-auto px-4">
@@ -74,5 +72,3 @@ export default function MicroSAAS() {
       </div>
     </Layout>
   );
-
-

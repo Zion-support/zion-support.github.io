@@ -1,5 +1,13 @@
 
-
+import React from "react";
+import { BadgeCheck, Star, Clock, Award } from 'lucide-react'
+import { cn } from '@/lib/utils'
+type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated'
+interface ProfileBadgeProps {
+  type: BadgeType
+  className?: string;  type: BadgeType
+  className?: string
+}
 import React from 'react';
 import { BadgeCheck, Star, Clock, Award } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -11,17 +19,24 @@ interface ProfileBadgeProps {;
 }
 
 
-=======
 interface ProfileBadgeProps {
   type: BadgeType,
 
 
 
-  className?: string
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  type, className ;
+}: ProfileBadgeProps) {;
+  const badgeConfig = {;
+  verified: {;
+  const {;
+  icon: Icon,  text, colors ;
+}= badgeConfig[type];
+
+}> <Icon className="w-3 h-3" /> <span> {;
+  text ;
+}</span> ;
+}'"  );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
 export function ProfileBadge({ type, className }: ProfileBadgeProps) {
   const badgeConfig = {
@@ -41,6 +56,21 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
     "top-rated": {
       icon: Award,
 
+
+  const { icon: Icon, text, colors  } = badgeConfig[type],
+
+
+  return (
+    <div className = {cn(
+      "flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium",
+      colors;
+      className
+    )}>
+      <Icon className="w-3 h-3" />
+      <span>{text}</span>
+    </div>
+  )
+}
 import React from 'react';
 import { BadgeCheck, Star, Clock, Award } from 'lucide-react';
 import { cn } from '@/lib / utils';
@@ -92,8 +122,3 @@ function ProfileBadge() {
 }</span>;
 }'"  );
 }
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

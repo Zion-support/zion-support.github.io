@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -46,7 +45,6 @@ const features = [
 ];
 
 export default function RetailSolutionsPage() {
-
   return (
     <Layout
       title="Retail Solutions - Zion Tech Group"
@@ -78,7 +76,6 @@ export default function RetailSolutionsPage() {
         </section>
 
         {/* Features Section */}
-
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -128,6 +125,5 @@ export default function RetailSolutionsPage() {
       </div>
     </>
     </>
-
   );
 }

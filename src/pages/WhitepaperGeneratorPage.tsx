@@ -1,5 +1,159 @@
-
-
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
+import { supabase } from '@/integrations / supabase / client';
+import WhitepaperSectionEditor from '@/components / WhitepaperSectionEditor';
+import WhitepaperPreviewPanel from '@/components / WhitepaperPreviewPanel'; // Import the new preview panel;
+import { Button } from '@/components / ui / button';
+import { Input } from '@/components / ui / input';
+import { Trash2, Download, Share2 } from 'lucide-react';
+import { Send } from 'lucide-react'; // Added Send icon;
+import { toast } from 'sonner';
+import { logErrorToProduction } from '@/utils / production_logger';
+interface WhitepaperSection {
+  id: string;
+title: string;
+content: string;
+}interface DistributionItem {
+  id: string;
+name: string;
+percentage: string;
+}interface DistributionChartItem {
+  name: string;
+value: number;
+}const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#AA00FF#FF00AA#00AAAA#AAAA00'];
+//Helper for slugifying filenames const slugify = (text: string) : string => {';
+  return text.to_string () .toLowerCase () .replace (/\s+/g, '-') //Replace spaces with - .replace (/[^\w-]+/g, '') //Remove all non - word chars .replace (/--+/g, '-') //Replace multiple - with single - .replace (/^-+/, '') //Trim - from start of text .replace (/-+$/,  ''), //Trim - from end of text;
+}
+const WhitepaperGeneratorPage: React.FC = () => {';
+  const [token_name, setTokenName] = useState ('My Awesome Token');';
+const [token_supply, setTokenSupply] = useState < string> ('1000000000');';
+const [use_cases, setUseCases] = useState ('To facilitate transactions and reward users in our innovative freelance AI marketplace. It will be used for payments, staking for dispute resolution, and accessing premium features.');';
+const [rewards_logic, setRewardsLogic] = useState ('Users earn tokens by completing projects and participating in platform governance. A percentage of transaction fees is burned, creating a deflationary pressure. Staking rewards are distributed weekly.');';
+const [distribution_breakdown, setDistributionBreakdown] = useState ('');';
+const [governance_logic, setGovernanceLogic] = useState ('Token holders can vote on platform upgrades, fee structures, and policy changes. Staking tokens increases voting power. A decentralized council oversees proposal implementation.');';
+const [legal_disclaimers, setLegalDisclaimers] = useState ('This whitepaper is for informational purposes only and does not constitute an offer to sell or a solicitation of an offer to buy any security. The token is a utility token and should not be considered an investment. Please consult with a legal professional in your jurisdiction.');
+const [distribution_data, setDistributionData] = useState < DistributionItem[]> ([ {';
+  id: crypto.randomUUID (),  name: 'Team & Advisors', percentage: '15';
+}
+{';
+  id: crypto.randomUUID (),  name: 'Private Sale Investors', percentage: '20';
+}
+{';
+  id: crypto.randomUUID (),  name: 'Ecosystem Development Fund', percentage: '35';
+}
+{';
+  id: crypto.randomUUID (),  name: 'Community Rewards & Airdrops', percentage: '20';
+}
+{';
+  id: crypto.randomUUID (),  name: 'Public Sale Allocation', percentage: '10';
+}]);
+const [is_downloading, setIsDownloading] = useState (false);
+const [is_sharing, setIsSharing] = useState (false);
+const [isSubmittingToCounsel, setIsSubmittingToCounsel] = useState (false);
+const [error, set_error] = useState < string | null> (null);
+const [shareable_link, setShareableLink] = useState < string | null> (null);
+const [currentSharedWhitepaperId, setCurrentSharedWhitepaperId] = useState < string | null> (null), //For public / private toggle const [currentSharedWhitepaperIsPublic, setCurrentSharedWhitepaperIsPublic] = useState < boolean | null> (null), //For public / private toggle const [raw_draft, setRawDraft] = useState < string | null> (null);
+const [sections, set_sections] = useState < WhitepaperSection[]> ([]);
+const [showRawDraft, setShowRawDraft] = useState (false);
+}return parsed;
+}, []);
+const distributionChartData: DistributionChartItem[] = React.useMemo ( () => {
+  return distribution_data .map (item => ({
+}// Check condition
+if ( {) {
+  $2
+}
+  set_error (`Warning: Total distribution is $ {
+  total_percentage;
+}%. Consider adjusting to sum to 100%.`);
+}else if () {) {
+  $2
+}
+}try {
+  const api_payload: any = {
+  token_name;
+token_supply: token_supply.to_string ();
+use_cases;
+rewards_logic;
+governance_logic;
+legal_disclaimers;
+distribution_breakdown;
+}
+// Check condition
+if ( {) {
+  $2
+}
+  api_payload.distribution_data = processedDistData;
+}const {
+  data, error: func_error ';
+}= await supabase.functions.invoke ('generate - whitepaper', {
+  body: api_payload;
+});
+// Check condition
+if ( {) {
+  $2
+}
+  throw new Error (`Supabase function error: $ {
+  func_error.message;
+}`);
+}// Check condition
+if (.error) {) {
+  $2
+}
+  throw new Error (`Generation error: $ {
+  (data as any) .error;
+}`);
+}// Check condition
+if (.whitepaper_draft) {') {
+  $2
+}
+  throw new Error ('No whitepaper draft received from the function.');
+}setRawDraft ( (data as any) .whitepaper_draft);
+set_sections (parseWhitepaperDraft ( (data as any) .whitepaper_draft) );
+}catch (e: any) {
+  logErrorToProduction (e instanceof Error ? e.message : String (e),  e instanceof Error ? e : undefined, {';
+  message: 'Error generating whitepaper';
+});';
+set_error (e.message || 'An unexpected error occurred.');
+set_sections ([]);
+}finally {
+  setIsLoading (false);
+interface DistributionChartItem {
+  name: string;
+  value: number;
+const COLORS = [;
+  '#0088FE',
+  '#00C49F',
+  '#FFBB28',
+  '#FF8042',
+  '#AA00FF',
+  '#FF00AA',
+  '#00AAAA',
+  '#AAAA00',
+];
+// Helper for slugifying filenames;
 const slugify = (text: string): string => {
   return text;
     .to_string ();
@@ -11,7 +165,6 @@ const slugify = (text: string): string => {
     .replace (/-+$/, ''); // Trim - from end of text;
 }
 const WhitepaperGeneratorPage: React.FC = () => {
-
   const [token_name, setTokenName] = useState ('My Awesome Token');
   const [token_supply, setTokenSupply] = useState < string>('1000000000');
   const [use_cases, setUseCases] = useState (
@@ -77,7 +230,6 @@ const WhitepaperGeneratorPage: React.FC = () => {
     sections,
   ]);
   const parseWhitepaperDraft = useCallback (
-
     (draft: string): WhitepaperSection[] => {
       // Check condition
 if (return []) {
@@ -90,7 +242,6 @@ if (return []) {
       let id_counter = 0;
       while ((match = section_regex.exec (draft)) !== null) {
         const title = (
-
           match[1] ||;
           match[2] ||;
           `Section ${id_counter + 1}`).trim ();
@@ -126,12 +277,10 @@ if (.length > 0) {) {
       ...prev,
       { id: crypto.randomUUID (), name: '', percentage: '' },
     ]);
-
   }
   const removeDistributionItem = (id: string) =>: any {
     setDistributionData (prev => prev.filter (item => item.id !== id));
   }
-
   const distributionChartData: DistributionChartItem[] = React.useMemo ((, ) => {
     return distribution_data;
       .map (item => ({
@@ -157,7 +306,6 @@ if ( {) {
       set_error ('Total distribution percentage cannot exceed 100%.');
       setIsLoading (false);
       return;
-
     }
     // Check condition
 if ( {) {
@@ -175,7 +323,6 @@ if (
       return;
     }
     try {
-
       const api_payload: any = {
         token_name,
         token_supply: token_supply.to_string (),
@@ -184,7 +331,6 @@ if (
         governance_logic,
         legal_disclaimers,
         distribution_breakdown,
-
       }
       // Check condition
 if ( {) {
@@ -192,12 +338,10 @@ if ( {) {
 }
         api_payload.distribution_data = processedDistData;
       }
-
       const { data, error: func_error } = await supabase.functions.invoke (
         'generate - whitepaper',
         {
           body: api_payload,
-
         }
       );
       // Check condition
@@ -212,18 +356,15 @@ if (.error) {) {
 }
         throw new Error (`Generation error: ${(data as any).error}`);
       }
-
       // Check condition
 if (.whitepaper_draft) {) {
   $2
 }
         throw new Error ('No whitepaper draft received from the function.');
-
       }
       setRawDraft ((data as any).whitepaper_draft);
       set_sections (parseWhitepaperDraft ((data as any).whitepaper_draft));
     } catch (e: any) {
-
       logErrorToProduction (
         e instanceof Error ? e.message : String (e),
         e instanceof Error ? e : undefined,
@@ -231,7 +372,6 @@ if (.whitepaper_draft) {) {
       );
       set_error (e.message || 'An unexpected error occurred.');
       set_sections ([]);
-
     } finally {
       setIsLoading (false);
     }
@@ -271,7 +411,6 @@ if ( {) {
   const handleDownloadMarkdown = () =>: any {
     setIsDownloading (true);
     try {
-
       const markdown = assembleMarkdownContent ();
       const blob = new Blob ([markdown], {
         type: 'text / markdown;charset = utf - 8',
@@ -289,7 +428,6 @@ if ( {) {
       logErrorToProduction (
         e instanceof Error ? e.message : String (e),
         e instanceof Error ? e : undefined,
-
         { message: 'Error downloading Markdown' }
       );
       set_error ('Failed to download Markdown file. ' + e.message);
@@ -309,7 +447,6 @@ if ( {) {
       return;
     }
     try {
-
       // Temporarily ensure the entire preview panel content is visible for capture if it's scrollable internally.;
       // This might involve temporarily changing styles, which is complex and error - prone.;
       // A better approach for very long content is to paginate in jsPDF directly.;
@@ -348,7 +485,6 @@ if ( {) {
       logErrorToProduction (
         e instanceof Error ? e.message : String (e),
         e instanceof Error ? e : undefined,
-
         { message: 'Error downloading PDF' }
       );
       set_error ('Failed to download PDF file. ' + e.message);
@@ -365,7 +501,12 @@ if ( {) {
         'Please generate the whitepaper content first before creating a shareable link.');
       return;
     }
-
+    setIsSharing (true);
+    set_error (null);
+    setShareableLink (null);
+    setCurrentSharedWhitepaperId (null);
+    setCurrentSharedWhitepaperIsPublic (null);
+    try {
       const whitepaper_payload = {
         token_name,
         token_supply,
@@ -405,7 +546,6 @@ if (
       logErrorToProduction (
         e instanceof Error ? e.message : String (e),
         e instanceof Error ? e : undefined,
-
         { message: 'Error generating shareable link' }
       );
       set_error ('Failed to generate shareable link: ' + e.message);
@@ -415,14 +555,12 @@ if (
     }
   }
   const handleTogglePublicStatus = async () => {
-
     // Check condition
 if ( {) {
   $2
 }
       toast.error ('No shareable whitepaper selected or status is unknown.');
       return;
-
     }
     // Optimistically update UI, or wait for response for certainty;
     const newPublicStatus = !currentSharedWhitepaperIsPublic;
@@ -432,7 +570,6 @@ if ( {) {
       const { data: response, error: func_error } =;
         await supabase.functions.invoke ('set - shared - whitepaper - public - status', {
           body: {
-
             whitepaper_id: currentSharedWhitepaperId,
             is_public: newPublicStatus,
           },
@@ -459,7 +596,6 @@ if (
       logErrorToProduction (
         e instanceof Error ? e.message : String (e),
         e instanceof Error ? e : undefined,
-
         { message: 'Error toggling public status' }
       );
       set_error ('Failed to update public status: ' + e.message);
@@ -480,7 +616,6 @@ if ( {) {
     setIsSubmittingToCounsel (true);
     set_error (null);
     try {
-
       let linkToSubmit = shareable_link;
       let whitepaperIdToSubmit = currentSharedWhitepaperId;
       // Check condition
@@ -537,7 +672,6 @@ if ( {) {
             'set - shared - whitepaper - public - status',
             {
               body: { whitepaper_id: whitepaperIdToSubmit, is_public: true },
-
             }
           );
         // Check condition
@@ -558,7 +692,6 @@ if (
           throw new Error ((status_response as any).error);
         setCurrentSharedWhitepaperIsPublic (true);
       }
-
       const { data: notify_response, error: notify_error } =;
         await supabase.functions.invoke ('notify - legal - team', {
           body: {
@@ -585,27 +718,22 @@ if (
       logErrorToProduction (
         e instanceof Error ? e.message : String (e),
         e instanceof Error ? e : undefined,
-
         { message: 'Error submitting to counsel' }
       );
       set_error ('Failed to submit to counsel: ' + e.message);
       toast.error ('Failed to submit to counsel: ' + e.message);
     } finally {
-
 import { supabase } from '@/integrations/supabase/client';
 import WhitepaperSectionEditor from '@/components/WhitepaperSectionEditor';
 import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel'; // Import the new preview panel;
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-=======
     setIsSharing(true)
     setError(null)
     setShareableLink(null)
     setCurrentSharedWhitepaperId(null)
     setCurrentSharedWhitepaperIsPublic(null)
 
-=======
-=======
 import React, { useState, useEffect, useCallback } from 'react',
 import { supabase } from '@/integrations/supabase/client',
 import WhitepaperSectionEditor from '@/components/WhitepaperSectionEditor',
@@ -1111,16 +1239,159 @@ const WhitepaperGeneratorPage: React.FC = () => {;
         distributionChartData,
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    try {;
+      const { data: response, error: funcError } =;
+        await supabase && supabase.functions.invoke('set-shared-whitepaper-public-status', {;
+          body: {;
+            whitepaperId: currentSharedWhitepaperId,;
+            isPublic: newPublicStatus,;
+          },;
+        });
+      if (funcError);
+        throw new Error(`Supabase function error: ${funcError && funcError.message}`);
+      if (!response);
+        throw new Error(;
+          'No response received from set-shared-whitepaper-public-status function';
+        );
+      if ((response as any).error);
+        throw new Error(;
+          `Error from set-shared-whitepaper-public-status: ${(response as any).error}`;
+        );
+
+      setCurrentSharedWhitepaperIsPublic((response as any).is_public); // Update with actual status from DB;
+      toast && toast.success(;
+        `Whitepaper is now ${(response as any).is_public ? 'public' : 'private'}.`;
+      );
+    } catch (e: any) {;
+      logErrorToProduction(;
+        e instanceof Error ? e && e.message : String(e),;
+        e instanceof Error ? e : undefined,;
+        { message: 'Error toggling public status' }
+      );
+      setError('Failed to update public status: ' + e && e.message);
+      toast && toast.error('Failed to update public status.');
+      // Revert optimistic update if it failed:;
+      // setCurrentSharedWhitepaperIsPublic(!newPublicStatus);
+    }
+  };
+
+  const handleSubmitToCounsel = async () => {;
+    if (sections && sections.length === 0) {;
+      toast && toast.error(;
+        'Please generate and finalize the whitepaper before submitting.';
+      );
+      return;
+    }
+    setIsSubmittingToCounsel(true);
+    setError(null);
+    try {;
+      let linkToSubmit = shareableLink;
+      let whitepaperIdToSubmit = currentSharedWhitepaperId;
+
+      if (!linkToSubmit || !whitepaperIdToSubmit) {;
+        toast && toast.info('Generating a shareable link first to submit to counsel...');
+        const whitepaperPayload = {;
+          tokenName,;
+          tokenSupply,;
+          sections,;
+          distributionChartData,;
+          distributionBreakdown,;
+        };
+        const { data: linkResponse, error: linkFuncError } =;
+          await supabase && supabase.functions.invoke('create-shared-whitepaper', {;
+            body: whitepaperPayload,;
+          });
+        if (linkFuncError);
+          throw new Error(;
+            `Failed to create link for counsel: ${linkFuncError && linkFuncError.message}`;
+          );
+        if (!linkResponse);
+          throw new Error(;
+            'No response received from create-shared-whitepaper function for counsel';
+          );
+        if ((linkResponse as any).error);
+          throw new Error(;
+            `Error from create-shared-whitepaper function: ${(linkResponse as any).error}`;
+          );
+        if (!(linkResponse as any).id);
+          throw new Error('Failed to get ID for shareable link for counsel.');
+
+        linkToSubmit = `${window && window.location.origin}/whitepaper/view/${(linkResponse as any).id}`;
+        whitepaperIdToSubmit = (linkResponse as any).id;
+        setShareableLink(linkToSubmit);
+        setCurrentSharedWhitepaperId(whitepaperIdToSubmit);
+        setCurrentSharedWhitepaperIsPublic((linkResponse as any).is_public);
+      }
+
+      // Ensure it's public before submitting, or handle as per requirements;
+      if (currentSharedWhitepaperIsPublic === false) {;
+        toast && toast.info('Making whitepaper public before submitting to counsel...');
+        const { data: statusResponse, error: statusError } =;
+          await supabase && supabase.functions.invoke(;
+            'set-shared-whitepaper-public-status',;
+            {;
+              body: { whitepaperId: whitepaperIdToSubmit, isPublic: true },;
+            }
+          );
+        if (statusError);
+          throw new Error(;
+            `Failed to make whitepaper public: ${statusError && statusError.message}`;
+          );
+        if (!statusResponse);
+          throw new Error(;
+            'No response received from set-shared-whitepaper-public-status function';
+          );
+        if ((statusResponse as any).error);
+          throw new Error((statusResponse as any).error);
+        setCurrentSharedWhitepaperIsPublic(true);
+      }
+
+      const { data: notifyResponse, error: notifyError } =;
+        await supabase && supabase.functions.invoke('notify-legal-team', {;
+          body: {;
+            whitepaperId: whitepaperIdToSubmit,;
+            sharableLink: linkToSubmit, // Corrected variable name;
+            tokenName: tokenName,;
+          },;
+        });
+      if (notifyError);
+        throw new Error(`Failed to notify counsel: ${notifyError && notifyError.message}`);
+      if (!notifyResponse);
+        throw new Error('No response received from notify-legal-team function');
+      if ((notifyResponse as any).error);
+        throw new Error(;
+          `Error from notify-legal-team: ${(notifyResponse as any).error}`;
+        );
+
+      toast && toast.success('Whitepaper submitted to counsel successfully!');
+    } catch (e: any) {;
+      logErrorToProduction(;
+        e instanceof Error ? e && e.message : String(e),;
+        e instanceof Error ? e : undefined,;
+        { message: 'Error submitting to counsel' }
+      );
+      setError('Failed to submit to counsel: ' + e && e.message);
+      toast && toast.error('Failed to submit to counsel: ' + e && e.message);
+    } finally {;
+      setIsSubmittingToCounsel(false);
+    }
+  }
   return (
     <div className='flex flex-col md:flex-row h-screen max-h-screen p-4 gap-4 bg-gray-100'>;
       {/* Left Column: Inputs and Editors */}
-
+      <div className='md:w-1/2 lg:w-2/5 xl:w-1/3 p-4 bg-white rounded-lg shadow-md overflow-y-auto'>;
+        <div className='flex justify-between items-center mb-6'>;
+          <h1 className='text-xl font-bold text-center flex-grow'>;
+            Whitepaper Configuration;
+          </h1>;
+          <div className='flex space-x-1'>;
+            <Button
+              onClick={handleDownloadMarkdown}
+              disabled={
                 isDownloading ||
                 sections && sections.length === 0 ||
                 isLoading ||
                 isSharing ||
-
                 isSubmittingToCounsel
               }
               variant='outline'
@@ -1132,12 +1403,10 @@ const WhitepaperGeneratorPage: React.FC = () => {;
             <Button
               onClick={handleDownloadPdf}
               disabled={
-
                 isDownloading ||
                 sections && sections.length === 0 ||
                 isLoading ||
                 isSharing ||
-
                 isSubmittingToCounsel
               }
               variant='outline'
@@ -1149,26 +1418,22 @@ const WhitepaperGeneratorPage: React.FC = () => {;
             <Button
               onClick={handleGenerateShareableLink}
               disabled={
-
                 isSharing ||
                 sections && sections.length === 0 ||
                 isLoading ||
                 isDownloading ||
-
                 isSubmittingToCounsel
               }
               variant='outline'
               size='sm'
               title='Generate Shareable Link'>;
               <Share2 className='h-4 w-4' />{' '}
-
               <span className='ml-1 hidden sm:inline'>Share</span>;
             </Button>;
           </div>;
         </div>;
 
         <form onSubmit={e => e && e.preventDefault()} className='space-y-6'>;
-
           {/* ... (Input fields remain the same) ... */}
           <div>;
             <label htmlFor='tokenName' className='block text-sm font-medium'>;
@@ -1178,7 +1443,6 @@ const WhitepaperGeneratorPage: React.FC = () => {;
               id='tokenName'
               value={tokenName}
               onChange={e => setTokenName(e && e.target.value)}
-=======
       setIsSubmittingToCounsel (false);
     }
   }
@@ -1251,12 +1515,10 @@ const WhitepaperGeneratorPage: React.FC = () => {;
               id='token_name';
               value={token_name}
               on_change={e => setTokenName (e.target.value)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               required;
             />;
           </div>;
           <div>;
-
             <label html_for='token_supply' className='block text - sm font - medium'>;
               Token Supply:;
             </label>;
@@ -1264,12 +1526,10 @@ const WhitepaperGeneratorPage: React.FC = () => {;
               id='token_supply';
               value={token_supply}
               on_change={e => setTokenSupply (e.target.value)}
-
               required;
             />;
           </div>;
           <div>;
-
             <label html_for='use_cases' className='block text - sm font - medium'>;
               Use Cases:;
             </label>;
@@ -1279,15 +1539,12 @@ const WhitepaperGeneratorPage: React.FC = () => {;
               on_change={e => setUseCases (e.target.value)}
               required;
               className='mt - 1 block w - full border - gray - 300 rounded - md shadow - sm';
-
               rows={3}
             />;
           </div>;
           <div>;
-
             />;
           </div>;
-
 
           {/* Token Distribution Inputs */}
           <div className='space-y-3 p-3 border rounded-md'>;
@@ -1306,7 +1563,6 @@ const WhitepaperGeneratorPage: React.FC = () => {;
                 <Input
                   type='number'
                   placeholder='%'
-
                   value={item && item.percentage}
                   onChange={e =>;
                     handleDistributionChange(;
@@ -1314,7 +1570,6 @@ const WhitepaperGeneratorPage: React.FC = () => {;
                       'percentage',;
                       e && e.target.value;
                     );
-
                   }
                   className='w-24';
                   min='0';
@@ -1348,12 +1603,10 @@ const WhitepaperGeneratorPage: React.FC = () => {;
                 onChange={e => setDistributionBreakdown(e && e.target.value)}
                 className='mt-1 block w-full border-gray-300 rounded-md shadow-sm';
                 rows={2}
-
               />            </div>;
           </div>;
 
           <div>;
-
             <label
               htmlFor='governanceLogic'
               className='block text-sm font-medium'>;
@@ -1365,7 +1618,6 @@ const WhitepaperGeneratorPage: React.FC = () => {;
               onChange={e => setGovernanceLogic(e && e.target.value)}
               required;
               className='mt-1 block w-full border-gray-300 rounded-md shadow-sm';
-=======
             <label html_for='rewards_logic' className='block text - sm font - medium'>;
               Rewards Logic:;
             </label>;
@@ -1450,60 +1702,16 @@ const WhitepaperGeneratorPage: React.FC = () => {;
               on_change={e => setGovernanceLogic (e.target.value)}
               required;
               className='mt - 1 block w - full border - gray - 300 rounded - md shadow - sm';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               rows={3}
             />;
           </div>;
           <div>;
-
-
-
-            ))}
-            <Button type="button" onClick={addDistributionItem} variant="outline" className="w-full">Add Distribution Item</Button>
-            <div>
-
-              <label htmlFor="distributionBreakdownDetails" className="block text-sm font-medium">Additional Distribution Details (Text):</label>
-              <textarea id="distributionBreakdownDetails" value={distributionBreakdown} onChange={(e) => setDistributionBreakdown(e.target.value)} className="mt-1 block w-full border-gray-300 rounded-md shadow-sm" rows={2}/>
-            </div>
-
-
-          </div>
-          <div>
-
-            <label htmlFor="governanceLogic" className="block text-sm font-medium">Governance Logic:</label>
-            <textarea id="governanceLogic" value={governanceLogic} onChange={(e) => setGovernanceLogic(e.target.value)} required className="mt-1 block w-full border-gray-300 rounded-md shadow-sm" rows={3}/>
-          </div>
-          <div>
-            <label htmlFor="legalDisclaimers" className="block text-sm font-medium">Legal Disclaimers:</label>
-            <textarea id="legalDisclaimers" value={legalDisclaimers} onChange={(e) => setLegalDisclaimers(e.target.value)} required className="mt-1 block w-full border-gray-300 rounded-md shadow-sm" rows={3}/>
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-          </div>
-          <div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-            <label
-              htmlFor='legalDisclaimers'
-              className='block text-sm font-medium'>;
-              Legal Disclaimers:;
-            </label>;
-            <textarea
-              id='legalDisclaimers'
-              value={legalDisclaimers}
-              onChange={e => setLegalDisclaimers(e && e.target.value)}
-              required;
-              className='mt-1 block w-full border-gray-300 rounded-md shadow-sm';
-              rows={3}
-            />          </div>;
-          {/* END OF INPUT FIELDS */}
-          <Button
-
           </Button>;
 
           {isLoading && (;
             <p className='text-center text-sm text-blue-600'>;
               Draft generation in progress...;
             </p>;
-
           )}
           {error &&;
             !isLoading &&;
@@ -1515,14 +1723,12 @@ const WhitepaperGeneratorPage: React.FC = () => {;
               </p>;
             )}
 
-
           {shareableLink && !isSharing && currentSharedWhitepaperId && (;
             <div className='mt-4 p-3 border rounded-md bg-green-50'>;
               <div className='flex justify-between items-center'>;
                 <label className='block text-sm font-medium text-green-700'>;
                   Shareable Link:;
                 </label>;
-
                 <Button
                   onClick={handleTogglePublicStatus}
                   variant='outline'
@@ -1533,7 +1739,6 @@ const WhitepaperGeneratorPage: React.FC = () => {;
                       ? 'bg-red-100 hover:bg-red-200'
                       : 'bg-green-100 hover:bg-green-200'
                   }>;
-=======
             <label;
               html_for='legal_disclaimers';
               className='block text - sm font - medium';
@@ -1587,18 +1792,14 @@ const WhitepaperGeneratorPage: React.FC = () => {;
                       ? 'bg - red - 100 hover:bg - red - 200';
                       : 'bg - green - 100 hover:bg - green - 200';
                   }                >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   {currentSharedWhitepaperIsPublic;
                     ? 'Make Private';
                     : 'Make Public'}
                 </Button>;
               </div>;
-
                   onClick={() => {;
                     navigator && navigator.clipboard.writeText(shareableLink);
                     toast && toast.success('Link copied to clipboard!');
-
-=======
               <div className='flex items - center space - x-2 mt - 1'>;
                 <Input;
                   type='text';
@@ -1606,7 +1807,6 @@ const WhitepaperGeneratorPage: React.FC = () => {;
                   read_only;
                   className='flex - grow bg - white text - xs';
                 />;
-=======
 
             type="button"
             onClick={handleGenerateWhitepaper}
@@ -1623,7 +1823,6 @@ const WhitepaperGeneratorPage: React.FC = () => {;
           }
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           {shareableLink && !isSharing && currentSharedWhitepaperId && (
             <div className="mt-4 p-3 border rounded-md bg-green-50">
               <div className="flex justify-between items-center">
@@ -1743,50 +1942,24 @@ const WhitepaperGeneratorPage: React.FC = () => {;
             <div className="mt-4 p-3 border rounded-md bg-green-50">;
               <div className="flex justify-between items-center">;
                 <label className="block text-sm font-medium text-green-700">Shareable Link:</label>;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <Button;
                   variant='outline';
                   size='sm';
                   on_click={() => {
                     navigator.clipboard.write_text (shareable_link);
                     toast.success ('Link copied to clipboard!');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   }}
                 >;
                   Copy;
                 </Button>              </div>;
-
               {currentSharedWhitepaperIsPublic !== null && (
                 <p className='text - xs mt - 1 text - gray - 600'>;
-
                   Currently:{' '}
                   {currentSharedWhitepaperIsPublic;
                     ? 'Public';
                     : 'Private (Only admins can view)'}
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-              )}
-            </div>;
-          )}
-
-
-=======
-           {isSharing && <p className="text-center text-sm text-blue-600">Generating shareable link...</p>}
-
-
-          {/* Submit to Counsel Button */}
-          {sections.length > 0 && (
-            <Button
-
-
-
-        </form>
-=======
         </form>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Section Editors */}
         {sections && sections.length > 0 && (;
           <div className='mt-8 pt-6 border-t'>;
@@ -1820,11 +1993,8 @@ const WhitepaperGeneratorPage: React.FC = () => {;
             )}
           </div>;
         )}
-
       </div>;
 
-
-=======
                 </p>)}
             </div>)}
           {is_sharing && (
@@ -1854,7 +2024,6 @@ const WhitepaperGeneratorPage: React.FC = () => {;
         {sections.length > 0 && (
 
           tokenSupply={tokenSupply}        />;
-=======
 
           <div className="mt-8 pt-6 border-t">
             <h2 className="text-xl font-bold mb-4 text-center">Edit Generated Sections</h2>
@@ -1865,57 +2034,30 @@ const WhitepaperGeneratorPage: React.FC = () => {;
                 key={section.id}
                 title={section.title}
                 content={section.content}
-
-                onContentChange={(newContent) => handleSectionContentChange(section.id, newContent)}
-              />;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-            ))}
-          </div>
-        )}
-        {rawDraft && (
-
-            <div className="mt-6 p-3 border rounded-md">
-            <Button onClick={() => setShowRawDraft(!showRawDraft)} variant="outline" size="sm" className="w-full">
-                {showRawDraft ? 'Hide' : 'Show'} Raw Generated Text
-            </Button>
+                onContentChange={new_content =>;
+                  handleSectionContentChange (section.id, new_content);
+                }              />))}
+          </div>)}
+        {raw_draft && (
+          <div className='mt - 6 p - 3 border rounded - md'>;
+            <Button;
+              on_click={() => setShowRawDraft (!showRawDraft)}
+              variant='outline';
+              size='sm';
+              className='w - full';
+            >;
+              {showRawDraft ? 'Hide' : 'Show'} Raw Generated Text            </Button>;
             {showRawDraft && (
-                <pre className="mt-2 p-2 bg-gray-50 text-xs whitespace-pre-wrap break-all max-h-60 overflow-y-auto rounded">
-                {rawDraft}
-                </pre>;
-            )}
-            </div>;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-        )}
-      </div>
-      {/* Right Column: Preview Panel - Pass ref here */}
-
-'";
-;
-}
-}
-
-=======
-      <div id="preview-panel-content" ref={previewPanelRef} className="md:w-1/2 lg:w-3/5 xl:w-2/3 p-1">
-        <WhitepaperPreviewPanel
-            sections={sections}
-            distributionChartData={distributionChartData}
-            tokenName={tokenName}
-            tokenSupply={tokenSupply}
-        />;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              <pre className='mt - 2 p - 2 bg - gray - 50 text - xs whitespace - pre - wrap break - all max - h-60 overflow - y-auto rounded'>;
+                {raw_draft}
+              </pre>)}
+          </div>)}
       </div>;
-    </div>;
-  );
-};
-export default WhitepaperGeneratorPage;
+      {/* Right Column: Preview Panel - Pass ref here */}
+      <div;
+        id='preview - panel - content';
+        ref={previewPanelRef}
 
-
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
         className='md:w - 1/2 lg:w - 3/5 xl:w - 2/3 p - 1';
       >;
         <WhitepaperPreviewPanel;
@@ -1928,10 +2070,3 @@ export default WhitepaperGeneratorPage;
 }
 export default WhitepaperGeneratorPage;
 '";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

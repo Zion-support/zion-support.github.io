@@ -1,26 +1,3 @@
-
-
-
-
-
-import {useState, useEffect} from "react";
-import {useForm} from "react-hook-form";
-import {zodResolver} from "@hookform/resolvers/zod";
-import {z} from "zod";
-import {Loader2} from "lucide-react";
-import {Button} from "@/components/ui/button";
-import {Form} from "@/components/ui/form";
-import {DialogDescription, DialogFooter, DialogHeader, DialogTitle} from "@/components/ui/dialog";
-import {useToast} from "@/hooks/use-toast";
-import {TalentProfile} from "@/types/talent";
-import {GeneratedMilestone} from "@/hooks/useMilestoneGenerator";
-import {generateContract} from "../utils/contractUtils";
-import {ProjectDetailsFields} from "./ProjectDetailsFields";
-import {PaymentTermsFields} from "./PaymentTermsFields";
-import {AdditionalClausesFields} from "./AdditionalClausesFields";
-import {DeploymentOptions} from "@/types/smart-contracts";
-
-=======
 import { useState, useEffect } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -40,7 +17,6 @@ import { DeploymentOptions } from "@/types/smart-contracts",
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const formSchema = z.object({
   projectName: z.string().min(1, "Project name is required");
   scopeSummary: z.string().min(10, "Scope summary should be at least 10 characters");
@@ -55,7 +31,6 @@ const formSchema = z && z.object({;
   paymentTerms: z && z.enum(["hourly", "fixed", "milestone"]);
   paymentAmount: z && z.string().min(1, "Payment amount is required");
   additionalClauses: z && z.array(z && z.string()).default([])}),;
-=======
 
     required_error: "Start date is required"}),
   endDate: z.date().optional(),
@@ -66,10 +41,17 @@ const formSchema = z && z.object({;
 
 export type ContractFormValues = z && z.infer<typeof formSchema>;
 
-
+interface ContractFormProps {;
+  talent: TalentProfile,;
+  clientName: string,;
+  initialValues?: ContractFormValues;
+  onFormValuesChange?: (values: ContractFormValues) => void,;
+  onContractGenerated: (contractContent: string) => void,;
+  deployOptions?: DeploymentOptions;
+  onDeployOptionsChange?: (options: DeploymentOptions) => void;
+}
 
 export function ContractForm(): any ({;
-
   talent;
   clientName;
   initialValues;
@@ -81,98 +63,6 @@ export function ContractForm(): any ({;
   const [isGenerating, setIsGenerating] = useState(false);
   const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]);
   const { toast } = useToast();
-
-interface ContractFormProps {
-  talent: TalentProfile,
-  clientName: string,
-  initialValues?: ContractFormValues,
-  onFormValuesChange?: (values: ContractFormValues) => void,
-  onContractGenerated: (contractContent: string) => void,
-  deployOptions?: DeploymentOptions,
-
-  onDeployOptionsChange?: (options: DeploymentOptions) => void
-}
-
-
-
-  onDeployOptionsChange
-}: ContractFormProps) {
-
-  const [isGenerating, setIsGenerating] = useState(false),
-  const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]),
-  const { toast } = useToast(),
-
-  const form = useForm<ContractFormValues>({
-    resolver: zodResolver(formSchema),
-    defaultValues: initialValues || {
-      projectName: "",
-      scopeSummary: "",
-      startDate: new Date(),
-      paymentTerms: talent.hourly_rate ? "hourly" : "fixed",
-      paymentAmount: talent.hourly_rate ? `$${talent.hourly_rate}/hour` : "",
-      additionalClauses: ["nda", "ip"]}}),
-  
-
-
-  // Update form when initialValues change
-  useEffect(() => {
-    if (initialValues) {
-      Object.keys(initialValues).forEach((key) => {
-
-
-=======
-        const typedKey = key as keyof ContractFormValues,
-        form.setValue(typedKey, initialValues[typedKey])
-      })
-
-import { useState, useEffect } from "react",;
-import { useForm } from "react-hook-form",;
-import { zodResolver } from "@hookform/resolvers/zod",;
-import { z } from "zod",;
-import { Loader2 } from "lucide-react",;
-import { Button } from "@/components/ui/button",;
-import { Form } from "@/components/ui/form",;
-import { DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog",;
-import { useToast } from "@/hooks/use-toast",;
-import { TalentProfile } from "@/types/talent",;
-import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",;
-import { generateContract } from "../utils/contractUtils",;
-import { ProjectDetailsFields } from "./ProjectDetailsFields",;
-import { PaymentTermsFields } from "./PaymentTermsFields",;
-import { AdditionalClausesFields } from "./AdditionalClausesFields",;
-import { DeploymentOptions } from "@/types/smart-contracts",;
-const formSchema = z.object({;
-  projectName: z.string().min(1, "Project name is required"),;
-  scopeSummary: z.string().min(10, "Scope summary should be at least 10 characters"),;
-  startDate: z.date({;
-    required_error: "Start date is required"}),;
-  endDate: z.date().optional(),;
-  paymentTerms: z.enum(["hourly", "fixed", "milestone"]),;
-  paymentAmount: z.string().min(1, "Payment amount is required"),;
-  additionalClauses: z.array(z.string()).default([])}),;
-export type ContractFormValues = z.infer<typeof formSchema>,;
-interface ContractFormProps {;
-  talent: TalentProfile,;
-  clientName: string,;
-  initialValues?: ContractFormValues,;
-  onFormValuesChange?: (values: ContractFormValues) => void,;
-  onContractGenerated: (contractContent: string) => void,;
-  deployOptions?: DeploymentOptions,;
-  onDeployOptionsChange?: (options: DeploymentOptions) => void;
-}
-;
-export function ContractForm({;
-  talent,;
-  clientName,;
-  initialValues,;
-  onFormValuesChange,;
-  onContractGenerated,;
-  deployOptions,;
-  onDeployOptionsChange;
-}: ContractFormProps) {;
-  const [isGenerating, setIsGenerating] = useState(false),;
-  const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]),;
-  const { toast } = useToast(),;
 
   const form = useForm<ContractFormValues>({;
     resolver: zodResolver(formSchema),;
@@ -187,25 +77,6 @@ export function ContractForm({;
   // Update form when initialValues change;
   useEffect(() => {;
     if (initialValues) {;
-      Object.keys(initialValues).forEach((key) => {;
-        const typedKey = key as keyof ContractFormValues,;
-        form.setValue(typedKey, initialValues[typedKey]);
-      });
-    }
-  }, [initialValues, form]),;
-  // Track form values for template saving;
-  useEffect(() => {;
-    if (onFormValuesChange) {;
-      const subscription = form.watch((value) => {;
-        onFormValuesChange(value as ContractFormValues);
-      }),;
-      return () => subscription.unsubscribe();
-    }
-  }, [form, onFormValuesChange]),
-
-  
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const handleMilestonesGenerated = (milestones: GeneratedMilestone[]) => {
     setGeneratedMilestones(milestones)
     // If payment terms isn't already set to milestone, update it
@@ -242,7 +113,12 @@ export function ContractForm({;
         title: "Contract Generation Failed"
         description: error instanceof Error ? error.message : "Something went wrong. Please try again."
         variant: "destructive"})
-=======
+      Object && Object.keys(initialValues).forEach((key) => {;
+        const typedKey = key as keyof ContractFormValues;
+        form && form.setValue(typedKey, initialValues[typedKey]);
+      });
+    }
+  }, [initialValues, form]);
 import { useState, useEffect } from './react';
 import { use_form } from './react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
@@ -354,22 +230,11 @@ if (!== "milestone") {) {
         title: "Contract Generation Failed",
         description: error instanceof Error ? error.message : "Something went wrong. Please try again.",
         variant: "destructive"});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
-
-=======
-      setIsGenerating(false)
-
-  }, [form, onFormValuesChange]),;
-  const handleMilestonesGenerated = (milestones: GeneratedMilestone[]) => {;
-    setGeneratedMilestones(milestones),;
-    // If payment terms isn't already set to milestone, update it;
-    if (form.getValues("paymentTerms") !== "milestone") {;
-      form.setValue("paymentTerms", "milestone");
+      setIsGenerating (false);
     }
-
+  }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <>;
       <DialogHeader>;
@@ -378,9 +243,10 @@ if (!== "milestone") {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      setIsGenerating (false);
+    }
+  }
           Create a professional contract for your project with {talent.full_name}
-
 
   // Track form values for template saving;
   useEffect(() => {;
@@ -443,12 +309,10 @@ if (!== "milestone") {) {
             form={form} 
           />;
 
-
           <PaymentTermsFields
             form={form}
             talent={talent}
             handleMilestonesGenerated={handleMilestonesGenerated}
-
           />;
 
           <AdditionalClausesFields
@@ -458,18 +322,12 @@ if (!== "milestone") {) {
           <Button
             type="submit" 
 
-=======
-
-          
-=======
-
           <PaymentTermsFields 
             form={form}
             talent={talent}
             handleMilestonesGenerated={handleMilestonesGenerated}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             className="w-full bg-zion-purple hover:bg-zion-purple-dark"
             disabled={isGenerating}>;
             {isGenerating ? (;
@@ -480,21 +338,6 @@ if (!== "milestone") {) {
             ) : (;
               "Generate Contract";
             )}
-
-          </Button>;
-        </form>;
-      </Form>;
-
-      <DialogFooter className="gap-2 flex-wrap mt-4">;
-        <Button
-=======
-
-        <Button 
-
-          variant="outline" 
-          onClick={() => form && form.reset()}
-          disabled={isGenerating}
-=======
         </DialogDescription>;
       </DialogHeader>;
       <Form {...form}>;
@@ -529,16 +372,11 @@ if (!== "milestone") {) {
           variant="outline";
           on_click={() => form.reset ()}
           disabled={is_generating}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         >;
           Reset Form;
         </Button>;
       </DialogFooter>;
+;
 
     </>);
 }
-
-=======
-;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

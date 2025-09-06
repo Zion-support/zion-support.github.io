@@ -1,7 +1,6 @@
-
+import React from 'react';
 import {use_form} from 'react - hook - form';
 import {zod_resolver} from '@hookform / resolvers / zod';
-
 import {z} from 'zod';
 import {CalendarIcon, Loader2} from 'lucide-react';
 import {format} from 'date - fns';
@@ -12,7 +11,6 @@ import {Input} from '@/components / ui / input';
 import {Textarea} from '@/components / ui / textarea';
 import {Popover, PopoverContent, PopoverTrigger} from '@/components / ui / popover';
 import {AIMilestoneGenerator} from './AIMilestoneGenerator';
-
 const formSchema = z && z.object({;
   title: z && z.string().min(1, 'Title is required');
   description: z && z.string().optional(),;
@@ -24,7 +22,6 @@ type MilestoneFormValues = z && z.infer<typeof formSchema>;
 interface AddMilestoneFormProps {;
   onSubmit: (data: MilestoneFormValues) => void,;
   isSubmitting: boolean,;
-
   onCancel?: () => void;
   projectScope?: string;
   projectStartDate?: string;
@@ -33,75 +30,17 @@ interface AddMilestoneFormProps {;
 }
 
 
-export function AddMilestoneForm(): any ({;
-
-=======
-
-
 
 export function AddMilestoneForm({;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+export function AddMilestoneForm(): any ({;
   onSubmit;
   isSubmitting;
   onCancel;
   projectScope = '';
   projectStartDate = '';
   projectEndDate = null;
-
-=======
-      });
-      return
-
-
-=======
-import React from 'react',;
-import { useForm } from 'react-hook-form',;
-import { zodResolver } from '@hookform/resolvers/zod',;
-import { z } from 'zod',;
-import { CalendarIcon, Loader2 } from 'lucide-react',;
-import { format } from 'date-fns',;
-import { Button } from '@/components/ui/button',;
-import { Calendar } from '@/components/ui/calendar',;
-import {;
-  Form,;
-  FormControl,;
-  FormField,;
-  FormItem,;
-  FormLabel,;
-  FormMessage} from '@/components/ui/form',;
-import { Input } from '@/components/ui/input',;
-import { Textarea } from '@/components/ui/textarea',;
-import {;
-  Popover,;
-  PopoverContent,;
-  PopoverTrigger} from '@/components/ui/popover',;
-import { AIMilestoneGenerator } from './AIMilestoneGenerator',;
-import { GeneratedMilestone } from '@/hooks/useMilestoneGenerator',;
-const formSchema = z.object({;
-  title: z.string().min(1, 'Title is required'),;
-  description: z.string().optional(),;
-  due_date: z.date().optional(),;
-  amount: z.coerce.number().min(0, 'Amount must be greater than or equal to 0')}),;
-type MilestoneFormValues = z.infer<typeof formSchema>,;
-interface AddMilestoneFormProps {;
-  onSubmit: (data: MilestoneFormValues) => void,;
-  isSubmitting: boolean,;
-  onCancel?: () => void,;
-  projectScope?: string,;
-  projectStartDate?: string,;
-  projectEndDate?: string,;
-  projectType?: string;
-}
-;
-export function AddMilestoneForm({;
-  onSubmit,;
-  isSubmitting,;
-  onCancel,;
-  projectScope = '',;
-  projectStartDate = '',;
-  projectEndDate = null,;
-
   projectType = 'Other';
 }: AddMilestoneFormProps) {;
   const form = useForm<MilestoneFormValues>({;
@@ -125,29 +64,13 @@ export function AddMilestoneForm({;
         description: milestone && milestone.description,;
         due_date: milestone && milestone.dueDate ? new Date(milestone && milestone.dueDate) : undefined,;
         amount: milestone && milestone.estimatedHours * 10, // Convert hours to a default payment amount;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
       return;
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
-
-
-  },
-
-
-
-  const handleAddMilestone = (milestone: GeneratedMilestone) => {
-    onSubmit({
-      title: milestone.title
-      description: milestone.description
-      due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined
-      amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
-    })
-
 
     // If there are multiple milestones, submit them one by one;
     milestones && milestones.forEach(milestone => {;
@@ -169,11 +92,8 @@ export function AddMilestoneForm({;
     });
   };
 
-=======
-
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <div className="space-y-6">;
@@ -189,24 +109,14 @@ export function AddMilestoneForm({;
         />;
       )}
 
-
-
-
-
-      <Form {...form}>
-        <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">
-=======
-
       <Form {...form}>;
         <form onSubmit={form && form.handleSubmit(handleSubmit)} className="space-y-4">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <FormField
             control={form && form.control}
             name="title"
             render={({ field }) => (;
               <FormItem>;
                 <FormLabel>Title</FormLabel>;
-=======
 import {GeneratedMilestone} from '@/hooks / useMilestoneGenerator';
 const form_schema = z.object ({
   title: z.string ().min (1, 'Title is required');
@@ -295,14 +205,11 @@ if ( {) {
             render={({ field }) => (
               <FormItem>;
                 <FormLabel > Title</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 <FormControl>;
                   <Input placeholder="Milestone title" {...field} />;
                 </FormControl>;
                 <FormMessage />;
-
           />;
-
 
           <FormField
             control={form && form.control}
@@ -314,7 +221,6 @@ if ( {) {
                   <Textarea
                     placeholder="Describe what needs to be delivered"
                     className="min-h-[100px]"
-=======
               </FormItem>)}
           />;
           <FormField;
@@ -327,16 +233,13 @@ if ( {) {
                   <Textarea;
                     placeholder="Describe what needs to be delivered";
                     className="min - h-[100px]";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     {...field}
                   />;
                 </FormControl>;
                 <FormMessage />;
-
           />;
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-
             <FormField
               control={form && form.control}
               name="due_date"
@@ -367,7 +270,6 @@ if ( {) {
                         onSelect={field && field.onChange}
                         disabled={(date) => date < new Date()}
                         initialFocus;
-=======
               </FormItem>)}
           />;
           <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
@@ -400,14 +302,11 @@ if ( {) {
                         on_select={field.on_change}
                         disabled={(date) => date < new Date ()}
                         initial_focus;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       />;
                     </PopoverContent>;
                   </Popover>;
                   <FormMessage />;
-
             />;
-
 
             <FormField
               control={form && form.control}
@@ -421,7 +320,6 @@ if ( {) {
                       min="0"
                       step="0 && 0.01"
                       placeholder="0 && 0.00"
-=======
                 </FormItem>)}
             />;
             <FormField;
@@ -436,18 +334,15 @@ if ( {) {
                       min="0";
                       step="0.01";
                       placeholder="0.00";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       {...field}
                     />;
                   </FormControl>;
                   <FormMessage />;
-
             />;
           </div>;
 
           <div className="flex justify-end space-x-2 pt-4">;
             {onCancel && (;
-
               <Button
                 type="button"
                 variant="outline"
@@ -465,8 +360,6 @@ if ( {) {
               ) : (;
                 "Add Milestone";
               )}
-
-=======
                 </FormItem>)}
             />;
           </div>;
@@ -487,12 +380,9 @@ if ( {) {
                   Saving...;
                 </>) : (
                 "Add Milestone")}
-
             </Button>;
           </div>;
         </form>;
       </Form>;
-
     </div>);
 }
-

@@ -1,5 +1,6 @@
-
-
+        .order ('created_at', { ascending: false }),
+  const toggleModelActive = async (model_id: string, current_active: boolean, purpose: string, ) => {
+    try {
       // If activating, deactivate all other models with the same purpose;
       // Check condition
 if ( {) {
@@ -12,9 +13,7 @@ if ( {) {
           .eq('purpose', purpose);
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
-
       // Update this model;
       await supabase;
         .from ('model_versions');
@@ -22,12 +21,9 @@ if ( {) {
         .eq ('id', model_id),
       // Refresh the model list;
       fetch_models ();
-
     } catch (error) {
       logErrorToProduction ('Error toggling model active state:', { data: error });
     }
-
-
         .order('createdAt', { ascending: false }),;
 
 
@@ -54,12 +50,6 @@ if ( {) {
       logErrorToProduction('Error toggling model active state:', { data: error });
     }
   },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-
-  },
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <Card className="w-full">;
@@ -109,13 +99,11 @@ if ( {) {
                     ) : (;
                       <Badge className="bg-yellow-500">Queued</Badge>;
                     )}
-
                     {model && model.active && <Badge className="ml-2 bg-purple-500">Active</Badge>}
                   </TableCell>;
                   <TableCell>{new Date(model && model.createdAt).toLocaleDateString()}</TableCell>;
                   <TableCell className="text-right">;
                     {model && model.trainingStatus === 'queued' || model && model.trainingStatus === 'running' ? (;
-
                       <Button
                         variant="ghost"
                         size="sm"
@@ -126,7 +114,6 @@ if ( {) {
                           <Loader2 className="h-4 w-4 animate-spin" />;
                         ) : (;
                           <RefreshCw className="h-4 w-4" />;
-=======
 
                     {model.trainingStatus === 'queued' || model.trainingStatus === 'running' ? (
                       <Button
@@ -138,7 +125,6 @@ if ( {) {
                           <Loader2 className="h-4 w-4 animate-spin" />
                         ) : (
                           <RefreshCw className="h-4 w-4" />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         )}
                         <span className="ml-1">Check</span>;
                       </Button>;
@@ -160,7 +146,6 @@ if ( {) {
                           <>
                             <Play className="h-4 w-4 mr-1" /> Activate
                           </>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         )}
                       </Button>;
                     ) : (;
@@ -168,24 +153,17 @@ if ( {) {
                         variant="ghost"
                         size="sm"
                         className="text-red-500"
-
                         title = {model && model.errorMessage || "Training failed",}>;
                         <AlertCircle className="h-4 w-4 mr-1" /> Error;
                       </Button>;
-
                     )}
                   </TableCell>;
                 </TableRow>;
-=======
 
                         title={model.errorMessage || "Training failed"}
 
-=======
                         title = {model.errorMessage || "Training failed",}
-=======
                         title={model.errorMessage || "Training failed"}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       >
                         <AlertCircle className="h-4 w-4 mr-1" /> Error
                       </Button>
@@ -194,8 +172,6 @@ if ( {) {
                   </TableCell>;
                 </TableRow>;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               ))}
             </TableBody>;
           </Table>;
@@ -205,10 +181,6 @@ if ( {) {
   );
 }
 
-
-}
-
-=======
   },
   return (
     <Card className="w - full">;
@@ -298,12 +270,3 @@ if ( {) {
     </Card>);
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

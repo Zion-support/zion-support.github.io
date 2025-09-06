@@ -1,8 +1,11 @@
-
-
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
+
+import { PROVIDERS } from '../../../lib/integrations/registry';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') return res.status(405).json({ error: 'Method not allowed' });
+  res.status(200).json({ providers: PROVIDERS })
+}
 import type { NextApiRequest, NextApiResponse } from './next';
 import { PROVIDERS  } from '../../../lib / integrations / registry';
 export default /**
@@ -15,9 +18,5 @@ function handler() {
 }
   res.status (200).json ({ providers: PROVIDERS });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

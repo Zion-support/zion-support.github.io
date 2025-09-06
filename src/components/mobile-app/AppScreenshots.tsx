@@ -1,12 +1,3 @@
-
-
-    if (scrollContainerRef.current) {
-      const scrollAmount = 300
-      scrollContainerRef.current.scrollBy({
-        left: direction === "left" ? -scrollAmount : scrollAmount
-        behavior: "smooth"})
-
-
 };
 import React, { useRef } from "react";
 import { ChevronLeft, ChevronRight } from 'lucide-react';
@@ -29,19 +20,14 @@ export const AppScreenshots: React.FC = () => {;
       scrollContainerRef && scrollContainerRef.current.scrollBy({;
         left: direction === "left" ? -scrollAmount : scrollAmount,;
         behavior: "smooth"});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
   }
-=======
     }
 
   },
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
-
     <section className="py-16 bg-zion-blue-dark">;
       <div className="container mx-auto px-4">;
         <div className="text-center mb-12">;
@@ -52,26 +38,11 @@ export const AppScreenshots: React.FC = () => {;
         </div>;
 
         <div className="relative">;
-
-=======
-
-        
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-        <div className="relative">
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <Button
             variant="ghost"
             size="icon"
             className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white"
-
-            onClick={() => scroll("left")}
-
-            aria-label="Scroll left"
-          >
-            <ChevronLeft className="h-6 w-6" />
-          </Button>
-
+            onClick = {(,) => scroll("left"),}
             aria-label="Scroll left";
           >;
             <ChevronLeft className="h-6 w-6" />;
@@ -85,7 +56,6 @@ export const AppScreenshots: React.FC = () => {;
               <div
                 key = {screenshot && screenshot.id,}
                 className="flex-shrink-0 w-60 h-[500px] snap-center rounded-xl overflow-hidden border-2 border-zion-purple/30">;
-
                 <img
                   src = {screenshot && screenshot.src,}
                   alt = {screenshot && screenshot.alt,}
@@ -94,70 +64,14 @@ export const AppScreenshots: React.FC = () => {;
                 />;
               </div>;
             ))}
-
           </div>;
 
-
-=======
-
-
-=======
-          
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-          <div 
-            ref={scrollContainerRef}
-            className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory"
-            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-          >
-            {mockScreenshots.map((screenshot) => (
-              <div 
-                key={screenshot.id} 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-                className="flex-shrink-0 w-60 h-[500px] snap-center rounded-xl overflow-hidden border-2 border-zion-purple/30"
-              >
-                <img
-                  src={screenshot.src}
-                  alt={screenshot.alt}
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
-              </div>
-            ))}
-          </div>
-
-          
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <Button
             variant="ghost"
             size="icon"
             className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white"
+            onClick = {() => scroll("right"),}
 
-            onClick={() => scroll("right")}
-
-            aria-label="Scroll right"
-          >
-            <ChevronRight className="h-6 w-6" />
-          </Button>
-        </div>
-      </div>
-    </section>
-
-            aria-label="Scroll right";
-          >;
-            <ChevronRight className="h-6 w-6" />;
-          </Button>;
-        </div>;
-      </div>;
-    </section>;
-  );
-};
-'"},;
-
-};
-
-=======
 ;
 }
 import React, { useRef } from './react';
@@ -235,10 +149,3 @@ if ( {) {
 }
 '"},
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-  )
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

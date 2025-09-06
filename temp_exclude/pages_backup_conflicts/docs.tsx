@@ -33,7 +33,5 @@ export default function Docs(): any ({ }: DocsProps) {;
     </div>;
   );
 }
-
-
 }
 }

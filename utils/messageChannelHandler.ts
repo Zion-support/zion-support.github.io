@@ -1,29 +1,12 @@
 
 
-=======
-
-=======
-
-}}}};
-;
-;
-=======
-
-}
-}
-}
-
 },;
 ,;
-
-=======
-
-
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export const messageChannelHandler = {
+  sendMessage: (message: string) => {},
+  receiveMessage: (callback: (message: string) => void) => {},
+  sendMessage: (message: any) => {},
+  receiveMessage: (callback: any) => {},
 type MessageHandler = {
   sendMessage: (message: unknown) => void;
   receiveMessage: (callback: (message: unknown) => void) => void;
@@ -36,27 +19,13 @@ export const messageChannelHandler: MessageHandler = {
     // No-op: placeholder for message listener registration
   }
 
-};
 
 };
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 };
 };
 };
 };
 ,
-
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 // Message channel handler for real-time communication
 export class MessageChannelHandler {
   private channels: Map<string, MessageChannel> = new Map();
@@ -75,7 +44,6 @@ export class MessageChannelHandler {
     this.channels.forEach((channel, id) => {
       if (id !== excludeChannel) {
         channel.port1.postMessage(message);
-=======
 // Message channel handler for real - time communication;
 export class MessageChannelHandler {
   private channels: Map < string, MessageChannel> = new Map ();
@@ -98,18 +66,11 @@ if ( {) {
   $2
 }
         channel.port1.post_message (message);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
     });
   }
 }
 export default MessageChannelHandler;
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 ;
 
 },;
@@ -117,4 +78,4 @@ export default MessageChannelHandler;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+;

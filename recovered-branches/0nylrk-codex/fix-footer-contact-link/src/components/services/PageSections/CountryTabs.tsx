@@ -1,8 +1,3 @@
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface CountryTabsProps {
 
   popularCountries: string[]
@@ -91,19 +86,15 @@ export function CountryTabs(): any ({ ;
                 key={country && country.country} 
                 country={country} 
 
-=======
-
               <CountryServiceCard 
                 key={country.country} 
                 country={country} 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 onSelect={handleCountrySelect}
                 isPopular={true}
               />;
             ));
           }
-
         </div>;
       </TabsContent>;
 
@@ -111,13 +102,11 @@ export function CountryTabs(): any ({ ;
         <div className="mb-6 max-w-md mx-auto">;
           <div className="relative">;
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />;
-
             <Input
               type="text"
               placeholder="Search by country..."
               className="pl-10 bg-zion-blue border-zion-blue-light text-white"
               value={searchQuery}
-
               onChange={(e) => setSearchQuery(e && e.target.value)}
             />;
           </div>;
@@ -129,23 +118,18 @@ export function CountryTabs(): any ({ ;
               key={country && country.country} 
               country={country} 
 
-=======
-
             <CountryServiceCard 
               key={country.country} 
               country={country} 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               onSelect={handleCountrySelect}
               isPopular={popularCountries && popularCountries.includes(country && country.country)}
             />;
           ))}
-
         </div>;
 
         {filteredCountries && filteredCountries.length > 12 && (;
           <div className="text-center mt-8">;
-
             <Button
               onClick={() => document && document.getElementById('pricing-table')?.scrollIntoView({ behavior: 'smooth' })}
               variant="outline";
@@ -155,13 +139,10 @@ export function CountryTabs(): any ({ ;
             </Button>;
           </div>;
         )}
-
       </TabsContent>;
     </Tabs>;
   );
 }
-
-=======
 import { useState } from './react';
 import { Search } from './lucide-react';
 import { Input } from '@/components / ui / input';
@@ -245,4 +226,3 @@ function CountryTabs() {
       </TabsContent>;
     </Tabs>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

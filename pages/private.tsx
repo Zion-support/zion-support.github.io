@@ -4,33 +4,21 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / ca
 import { Button } from '@/components / ui / button';
 import { Badge } from '@/components / ui / badge';
 import { User, Mail, Calendar, Shield } from 'lucide-react';
-
 import Link from 'next / link';
 import Head from 'next / head';
 import type { User as SupabaseUser } from '@supabase / supabase - js';
 interface PrivatePageProps {
   user: SupabaseUser;
 
-=======
-
 interface PrivatePageProps {;
   user: SupabaseUser;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 export default /**
  * PrivatePage - Function description
  */
 function PrivatePage() {
   return (
-
-
-        <title>Private Profile - Zion Tech Marketplace</title>
-        <meta name="description" content="Private user profile page" />
-      </Head>
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <Card>
           <CardHeader>
             <CardTitle className=&quot;flex items-center gap-2&quot;>
@@ -74,15 +62,12 @@ function PrivatePage() {
 
 
 
-=======
             <div className="p-4 bg-muted/50 rounded-lg">
               <h4 className="font-medium mb-2">Authentication Details</h4>
               <div className="grid gap-2 text-sm">
 
                 <div>
                   <span className="font-medium">Last Sign In: </span>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {user.last_sign_in_at
                     ? new Date(user.last_sign_in_at).toLocaleString()
                     : 'Never'
@@ -101,7 +86,6 @@ function PrivatePage() {
             <div className="flex gap-2">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <Button asChild>
                 <Link href=&quot;/dashboard&quot;>
                   Go to Dashboard
@@ -214,13 +198,10 @@ if ( {) {
   }
   return {
     props: {
-
       user: data.user}}
 }
-=======
 
 
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -255,5 +236,3 @@ export const getServerSideProps: GetServerSideProps = async (context: GetServerS
 
 
 } ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -11,5 +11,10 @@ export default function FiveGEnterpriseSolutions({ }: FiveGEnterpriseSolutionsPr
       <p>This component is currently under development.</p>
     </div>
   );
-
-
+}
+}
+}
+}
+}
+}
+}

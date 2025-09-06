@@ -1,21 +1,14 @@
-
-
-import fs from 'fs',;
-import path from 'path',;
-import Link from 'next/link',;
-
-
-function list(dir: string, baseDir: string) {
-
-
+  const items = fs.readdirSync(dir);
   return items.map((name) => {
     const full = path.join(dir, name)
     const rel = path.relative(baseDir, full)
     const stat = fs.statSync(full)
     return { name, rel, isDir: stat.isDirectory() }
   })
+}
 
-
+export async function getStaticProps() {
+  const base = path.join(process.cwd(), 'docs/gitbook')
   const sections = fs.existsSync(base)
     ? list(base, base).map((entry) => ({
         title: entry.name
@@ -23,10 +16,8 @@ function list(dir: string, baseDir: string) {
     : []
 
   return { props: { sections }, revalidate: 600 }
-=======
 
 
-=======
 import fs from 'fs';
 import path from 'path';
 import Link from 'next/link';
@@ -42,7 +33,6 @@ function list(dir: string, baseDir: string) {;
   }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
   });
   } catch (error) {
@@ -67,11 +57,8 @@ export async function getStaticProps() {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 export default function DocsIndex({ sections }: { sections: { title: string, items: { name: string, rel: string, isDir: boolean }[] }[] }) {
-=======
 import fs from 'fs',
 import path from 'path',
 import Link from 'next / link',
@@ -103,9 +90,7 @@ export default /**
  * DocsIndex - Function description
  */
 function DocsIndex() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
-
     <div className="space - y-6">;
       <h1 className="text - 3xl font - bold">Zion Docs (GitBook)</h1>;
       <p className="text - gray - 600 dark:text - gray - 300">Browse the documentation structure. Files link to the repository for now.</p>;
@@ -117,23 +102,8 @@ function DocsIndex() {
               {s.items.map ((it) => (
                 <li key={it.rel}>;
                   <a className="underline" href={`https://github.com / Zion - Holdings / zion.app / blob / main / docs / gitbook/${it.rel}`} target="_blank" rel="noreferrer">;
-
                     {it.rel}
-
-
-
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </div>
-    </div>
-
-=======
 }
-
-=======
                   </a>;
                 </li>))}
             </ul>;
@@ -141,20 +111,15 @@ function DocsIndex() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
   );
 };
 
-=======
                     {it.rel  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                   </Link>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 </li>
               ))  } catch (error) {
     console.error("Error:", error);
@@ -178,5 +143,3 @@ function DocsIndex() {
 
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

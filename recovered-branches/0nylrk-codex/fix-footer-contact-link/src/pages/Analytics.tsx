@@ -1,4 +1,3 @@
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -35,7 +34,6 @@ import {ExportPanel} from "@/components/analytics/ExportPanel";
 export default function Analytics() {;
   const [timeRange, setTimeRange] = useState('30d');
 
-=======
 
 
   const { data: pageViewTrends } = useQuery({
@@ -118,25 +116,14 @@ export default function Analytics() {;
       });
 
       // Fill in missing dates;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       const result = [];
       for (let i = 0, i < days, i++) {;
-
-        const date = new Date(),;
-        date.setDate(date.getDate() - i),;
-        const dateStr = date.toISOString().split('T')[0],;
-        if (viewsByDate[dateStr]) {;
-          result.push(viewsByDate[dateStr]);
-        } else {;
-          result.push({ date: dateStr, views: 0 });
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         }
       }
       return result.sort((a, b) => a.date.localeCompare(b.date))
     }
 
+        const date = new Date();
         date && date.setDate(date && date.getDate() - i);
         const dateStr = date && date.toISOString().split('T')[0];
 
@@ -152,35 +139,10 @@ export default function Analytics() {;
   });
 
   const { data: conversionData } = useQuery({;
-
     queryKey: ['conversion-data', timeRange];
     queryFn: async () => {;
       const days = parseInt(timeRange && timeRange.replace('d', ''));
       const startDate = new Date();
-
-
-  }),;
-  const { data: conversionData } = useQuery({;
-    queryKey: ['conversion-data', timeRange],;
-    queryFn: async () => {;
-      const days = parseInt(timeRange.replace('d', '')),;
-      const startDate = new Date(),;
-      startDate.setDate(startDate.getDate() - days),;
-      const { data, error } = await supabase;
-        .from('analytics_events');
-        .select('created_at, metadata');
-        .eq('event_typeconversion');
-        .gte('created_at', startDate.toISOString()),;
-      if (error) throw error,;
-      // Group by conversion type and date;
-      const conversionsByType = {},;
-      data?.forEach(item => {;
-        const date = new Date(item.created_at).toISOString().split('T')[0],;
-        const conversionType = item.metadata?.conversionType || 'unknown',;
-        if (!conversionsByType[conversionType]) {;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           conversionsByType[conversionType] = {}
         }
         if (!conversionsByType[conversionType][date]) {
@@ -194,7 +156,6 @@ export default function Analytics() {;
         conversionsByType[conversionType][date]++
       });
       // Get all dates in range
-=======
       startDate && startDate.setDate(startDate && startDate.getDate() - days);
 
       const { data, error } = await supabase;
@@ -223,14 +184,12 @@ export default function Analytics() {;
       });
 
       // Get all dates in range;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       const dates = [];
       for (let i = 0, i < days, i++) {;
         const date = new Date();
         date && date.setDate(date && date.getDate() - i);
         dates && dates.push(date && date.toISOString().split('T')[0]);
       }
-
       dates && dates.sort();
 
       // Format data for chart;
@@ -243,40 +202,22 @@ export default function Analytics() {;
 
         return result;
       });
-
     }
 
   }),
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
-
     <AnalyticsContainer>;
       <AnalyticsSummary />;
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">;
-
         <PageViewsChart
           data={pageViewTrends |[]}
           timeRange={timeRange}
           onTimeRangeChange={setTimeRange}
-
-        />;
-        <PageViewsTable />;
-      </div>;
-
-      <div className="mb-6">;
-        <UserBehaviorStats />;
-      </div>;
-
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">;
-        <ConversionAnalysisChart
-          data={conversionData || []} 
-          timeRange={timeRange}
-=======
 import React, { useState } from './react';
 import { use_query } from '@tanstack / react - query';
 import { supabase } from '@/integrations / supabase / client';
@@ -420,18 +361,9 @@ if ( {) {
         <ConversionAnalysisChart;
           data={conversion_data || []}
           time_range={time_range}
-
           onTimeRangeChange={setTimeRange}
         />;
         <ExportPanel />;
       </div>;
-
-
-
-
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </AnalyticsContainer>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,17 +1,10 @@
+    'Cloud migration and landing zones with cost governanceDevOps automation, CI/CD, and platform engineeringData platforms, lineage, and quality monitoringObservability, SLOs, and incident automation'];
 
-
-export default function EnterpriseITPage() {
-  const features = [
-    'Cloud migration and landing zones with cost governanceDevOps automation, CI/CD, and platform engineeringData platforms, lineage, and quality monitoringObservability, SLOs, and incident automation'],
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const solutions = [
     { name: 'Cloud Landing Zone', href: '/cloud-landing-zone' },
     { name: 'Cloud Cost Optimizer', href: '/cloud-cost-optimizer' },
     { name: 'Data Pipeline Observability', href: '/data-pipeline-observability' },
     { name: 'Uptime & SLO Monitor', href: '/uptime-slo-monitor' }],
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return (
     <Layout>
       <Head>
@@ -34,7 +27,6 @@ export default function EnterpriseITPage() {
               <a href="/market-pricing" className="px-8 py-4">See Market Pricing</Link>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </div>
           </header>
           <section>
@@ -55,24 +47,15 @@ export default function EnterpriseITPage() {
                 <a key={s.name} href={s.href} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40 transition-colors">
                   <div className="text-gray-200 font-semibold mb-2">{s.name}</div>
                   <p className="text-gray-300 text-sm">Learn more</p>
-
-
-  );
-};
-
-=======
-                </Link>
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-
+                </a>
+              ))}
+            </div>
+          </section>
+        </div>
+      </div>
+    </Layout>
+  )
 }
-
-=======
-}
-
-=======
 import React from 'react',
 import Head from 'next / head',
 import Layout from '../components / layout / Layout',
@@ -140,6 +123,3 @@ function EnterpriseITPage() {
   }
 
 }
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

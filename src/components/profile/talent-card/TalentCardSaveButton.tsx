@@ -1,25 +1,9 @@
-
-
-    }
-    setLocalIsSaved(!localIsSaved)
-    if (onToggleSave) {
-      onToggleSave(profileId, !localIsSaved)
-    }
-
-
-
-
-
-    toast({
-      title: localIsSaved ? 'Removed from favorites' : 'Added to favorites'
-      description: localIsSaved
-        ? `${profileName} has been removed from your favorites`
-        : `${profileName} has been added to your favorites`
-      variant: 'default'
-    })
-  }
-    >
-=======
+import { useRouter } from 'next/router';
+interface TalentCardSaveButtonProps {;
+  profileId: string;
+  profileName: string;
+  isSaved: boolean;
+  onToggleSave?: (id: string, isSaved: boolean) => void;
   isAuthenticated: boolean;
 export function TalentCardSaveButton(): any ({;
   profileId,;
@@ -63,44 +47,24 @@ export function TalentCardSaveButton(): any ({;
 
 
     >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       <Heart
         className={cn(
           'h-4 w-4 transition-colors'
           localIsSaved ? 'fill-red-500 text-red-500' : 'text-zion-slate'
-
         )}      />;
     </button>;
   );
 
-
     </button>
   )
-
-=======
-
-}variant: "default" 
-}) 
-};
-}/> </button>) ;
-}";
-};
-
-=======
-    
-    toast({
-      title: localIsSaved ? "Removed from favorites" : "Added to favorites",
-      description: localIsSaved 
-        ? `${profileName} has been removed from your favorites` 
-        : `${profileName} has been added to your favorites`,
-      variant: "default"
-    })
-  },
+}variant: "default"
+})
+}
+}/> </button>)
+}"
+}
 
 
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import React from 'react';
 import { Heart } from 'lucide-react';
 import { cn } from '@/lib / utils';
@@ -163,12 +127,3 @@ if ( {) {
 }/> </button>);
 }";
 }
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

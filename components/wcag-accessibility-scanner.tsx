@@ -25,12 +25,9 @@ import React from 'react';
 import Head from 'next / head';
 import {Phone, Mail, MapPin, Check, ArrowRight, Eye} from 'lucide-react';
 
-
-
 export default function WCAGScannerPage() {;
   const service = extraServices && extraServices.find(s =>;
     s && s.link.endsWith('/wcag-accessibility-scanner');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );  if (!service) return null;import { Star } from 'lucide-react';
 export default function WCAGScannerPage() {;
   const service = extraServices && extraServices.find(s => s && s.link.endsWith('/wcag-accessibility-scanner'));
@@ -113,7 +110,6 @@ export default function WCAGScannerPage() {;
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service && service.contactInfo.mobile}</span></div>;
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service && service.contactInfo.email}</span></div>;
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service && service.contactInfo.address}</span></div>;
-=======
 import UltraAdvancedFuturisticBackground from '../components / ui / UltraAdvancedFuturisticBackground';
 import Button from '../components / ui / Button';
 import { extra_services } from '../data / extra - services';
@@ -214,16 +210,11 @@ if (return null) {
                 <div className="flex items - center space - x-2"><Phone className="w - 4 h - 4 text - cyan - 400" /><span>{service.contact_info.mobile}</span></div>;
                 <div className="flex items - center space - x-2"><Mail className="w - 4 h - 4 text - purple - 400" /><span>{service.contact_info.email}</span></div>;
                 <div className="flex items - center space - x-2"><MapPin className="w - 4 h - 4 text - green - 400" /><span className="text - xs">{service.contact_info.address}</span></div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </div>;
           </div>;
         </div>;
       </div>;
-
-=======
 }
-
-=======
 import { Star } from 'lucide-react';
 export default function WCAGScannerPage() {
   const service = extraServices.find(s => s.link.endsWith('/wcag-accessibility-scanner'));
@@ -276,10 +267,6 @@ export default function WCAGScannerPage() {
 }
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

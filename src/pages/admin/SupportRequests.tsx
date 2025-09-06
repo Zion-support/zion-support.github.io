@@ -1,11 +1,3 @@
-
-
-
-// Mock data for support requests
-
-const MOCK_SUPPORT_REQUESTS = [
-  {
-
 import React, { useState } from 'react';
 import {
   Card,
@@ -45,7 +37,6 @@ const MOCK_SUPPORT_REQUESTS = [;
     created_at: '2023 - 12 - 15T14:30:00Z',
     last_updated: '2023 - 12 - 15T15:45:00Z',
     category: 'authentication',
-=======
 
     id: "SR-1001",
     user: "john.doe@example.com",
@@ -114,8 +105,72 @@ const MOCK_SUPPORT_REQUESTS = [;
     category: 'verification',
   },
   {
-
-
+    id: 'SR - 1007',
+    user: 'jamie.taylor@tech.org',
+    user_id: 'user - 345',
+    issue: 'Cannot upload portfolio images',
+    status: 'resolved',
+    priority: 'medium',
+    created_at: '2023 - 12 - 10T15:10:00Z',
+    last_updated: '2023 - 12 - 13T11:25:00Z',
+    category: 'profile',
+  },
+];
+export default /**
+ * SupportRequests - Function description
+ */
+function SupportRequests() {
+  const [search_query, setSearchQuery] = useState ('');
+  const [status_filter, setStatusFilter] = useState < string | null>(null);
+  const [priority_filter, setPriorityFilter] = useState < string | null>(null);
+  const [category_filter, setCategoryFilter] = useState < string | null>(null);
+  // Apply filters to the request data;
+  const filtered_requests = MOCK_SUPPORT_REQUESTS.filter (request => {
+    // Apply search query filter;
+    if (.includes (search_query.toLowerCase ()) &&) {
+  $2
+}
+      !request.user.toLowerCase ().includes (search_query.toLowerCase ()) &&;
+      !request.id.toLowerCase ().includes (search_query.toLowerCase ())) {
+      return false;
+    }
+    // Apply status filter;
+    // Check condition
+if ( {) {
+  $2
+}
+      return false;
+    }
+    // Apply priority filter;
+    // Check condition
+if ( {) {
+  $2
+}
+      return false;
+    }
+    // Apply category filter;
+    // Check condition
+if ( {) {
+  $2
+}
+      return false;
+    }
+    return true;
+  });
+  // Count by status for the summary dashboard;
+  const open_count = MOCK_SUPPORT_REQUESTS.filter (
+    r => r.status === 'open').length;
+  const inProgressCount = MOCK_SUPPORT_REQUESTS.filter (
+    r => r.status === 'in - progress').length;
+  const resolved_count = MOCK_SUPPORT_REQUESTS.filter (
+    r => r.status === 'resolved').length;
+  const total_count = MOCK_SUPPORT_REQUESTS.length;
+  const reset_filters = () =>: any {
+    setSearchQuery ('');
+    setStatusFilter (null);
+    setPriorityFilter (null);
+    setCategoryFilter (null);
+  }
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -302,93 +357,9 @@ export default function SupportRequests() {;
     setPriorityFilter(null);
     setCategoryFilter(null);
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <>;
-
-
-          
-          <div className="mt-4 md:mt-0">
-            <Button className="bg-zion-purple hover:bg-zion-purple-light">
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-              New Support Case
-            </Button>
-          </div>
-        </div>
-
-
-        
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-        {/* Status Cards */}
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8'>
-          <Card>
-            <CardHeader className='pb-2'>
-              <CardTitle className='text-2xl font-bold'>{openCount}</CardTitle>
-              <CardDescription>Open Requests</CardDescription>
-            </CardHeader>
-          </Card>
-
-
-          
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-          <Card>
-            <CardHeader className='pb-2'>
-              <CardTitle className='text-2xl font-bold'>
-                {inProgressCount}
-              </CardTitle>
-              <CardDescription>In Progress</CardDescription>
-            </CardHeader>
-          </Card>
-
-
-          
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-          <Card>
-            <CardHeader className='pb-2'>
-              <CardTitle className='text-2xl font-bold'>
-                {resolvedCount}
-              </CardTitle>
-              <CardDescription>Resolved</CardDescription>
-            </CardHeader>
-          </Card>
-
-
-          
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-          <Card>
-            <CardHeader className='pb-2'>
-              <CardTitle className='text-2xl font-bold'>{totalCount}</CardTitle>
-              <CardDescription>Total Requests</CardDescription>
-            </CardHeader>
-          </Card>
-        </div>
-
-
-        
-        <Tabs defaultValue="all" className="mb-8">
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-          <TabsList>
-            <TabsTrigger value='all'>All Requests</TabsTrigger>
-            <TabsTrigger value='escalated'>Escalated</TabsTrigger>
-            <TabsTrigger value='ai-flagged'>AI Flagged</TabsTrigger>
-            <TabsTrigger value='need-response'>Need Response</TabsTrigger>
-          </TabsList>
-
       />;
       <div className='container mx-auto px-4 py-8'>;
         <div className='flex flex-col md:flex-row items-start md:items-center justify-between mb-8'>;
@@ -452,174 +423,13 @@ export default function SupportRequests() {;
           </TabsList>;
 
           <TabsContent value='all' className='mt-6'>;
-
-=======
-
-          
-          <TabsContent value="all" className="mt-6">
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Search and Filters */}
             <div className='flex flex-col md:flex-row gap-4 mb-6'>;
               <div className='relative flex-1'>;
                 <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400' />;
                 <Input
-
-
-                value={statusFilter || ''}
-                onValueChange={value => setStatusFilter(value || null)}
-
-              >
-                <SelectTrigger className='w-[180px]'>
-                  <SelectValue placeholder='Status' />
-=======
-                  placeholder="Search by ID, user or issue..."
+                  placeholder='Search by ID, user or issue...'
                   value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="pl-10"
-                />
-              </div>
-              
-              <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
-                <SelectTrigger className="w-[180px]">
-                  <SelectValue placeholder="Status" />
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value=''>All Statuses</SelectItem>
-                  <SelectItem value='open'>Open</SelectItem>
-                  <SelectItem value='in-progress'>In Progress</SelectItem>
-                  <SelectItem value='resolved'>Resolved</SelectItem>
-                </SelectContent>
-              </Select>
-
-
-                value={priorityFilter || ''}
-                onValueChange={value => setPriorityFilter(value || null)}
-
-              >
-                <SelectTrigger className='w-[180px]'>
-                  <SelectValue placeholder='Priority' />
-=======
-              
-              <Select value={priorityFilter || ""} onValueChange={value => setPriorityFilter(value || null)}>
-                <SelectTrigger className="w-[180px]">
-                  <SelectValue placeholder="Priority" />
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value=''>All Priorities</SelectItem>
-                  <SelectItem value='high'>High</SelectItem>
-                  <SelectItem value='medium'>Medium</SelectItem>
-                  <SelectItem value='low'>Low</SelectItem>
-                </SelectContent>
-              </Select>
-
-
-                value={categoryFilter || ''}
-                onValueChange={value => setCategoryFilter(value || null)}
-
-              >
-                <SelectTrigger className='w-[180px]'>
-                  <SelectValue placeholder='Category' />
-=======
-              
-              <Select value={categoryFilter || ""} onValueChange={value => setCategoryFilter(value || null)}>
-                <SelectTrigger className="w-[180px]">
-                  <SelectValue placeholder="Category" />
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value=''>All Categories</SelectItem>
-                  <SelectItem value='authentication'>Authentication</SelectItem>
-                  <SelectItem value='billing'>Billing</SelectItem>
-                  <SelectItem value='api'>API</SelectItem>
-                  <SelectItem value='disputes'>Disputes</SelectItem>
-                  <SelectItem value='verification'>Verification</SelectItem>
-                  <SelectItem value='profile'>Profile</SelectItem>
-                </SelectContent>
-              </Select>
-
-                  onChange={e => setSearchQuery(e && e.target.value)}
-                  className='pl-10'                />;
-              </div>;
-
-              <Select
-                value={statusFilter || ''}
-                onValueChange={value => setStatusFilter(value || null)}
-=======
-=======
-
-              
-              <Button variant="outline" onClick={resetFilters} className="md:w-auto">
-                <Filter className="h-4 w-4 mr-2" /> Reset Filters
-              </Button>
-            </div>
-            
-
-
-            {/* Support Requests Table */}
-            <Card>
-              <CardContent className="p-0">
-                <Table>
-                  <TableHeader>
-                    <TableRow>
-                      <TableHead>ID</TableHead>
-                      <TableHead>User</TableHead>
-                      <TableHead>Issue</TableHead>
-                      <TableHead>Status</TableHead>
-                      <TableHead>Priority</TableHead>
-                      <TableHead>Category</TableHead>
-                      <TableHead>Created</TableHead>
-                      <TableHead>Last Updated</TableHead>
-                      <TableHead>Actions</TableHead>
-                    </TableRow>
-                  </TableHeader>
-                  <TableBody>
-
-                    {filteredRequests.map((request) => (
-                      <TableRow key={request.id}>
-                        <TableCell className="font-medium">{request.id}</TableCell>
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                        <TableCell>{request.user}</TableCell>
-                        <TableCell className="max-w-xs truncate">{request.issue}</TableCell>
-                        <TableCell>
-
-                          <Badge variant={
-                            request.status === 'open' 
-                              ? 'default' 
-                              : request.status === 'in-progress' 
-                              ? 'secondary' 
-                              : 'outline'
-                          }>
-;
-    return true;
-  }),;
-  // Count by status for the summary dashboard;
-  const openCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'open').length,;
-  const inProgressCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'in-progress').length,;
-  const resolvedCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'resolved').length,;
-  const totalCount = MOCK_SUPPORT_REQUESTS.length,;
-  const resetFilters = () => {;
-    setSearchQuery(""),;
-    setStatusFilter(null),;
-    setPriorityFilter(null);
-    setCategoryFilter(null);
-  };
-  return (;
-    <>;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <SEO;
         title='Support Requests | Admin Dashboard';
         description='Manage and track user support requests and issues';
@@ -692,7 +502,6 @@ export default function SupportRequests() {;
               <Select;
                 value={status_filter || ''}
                 onValueChange={value => setStatusFilter (value || null)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               >;
                 <SelectTrigger className='w-[180px]'>;
                   <SelectValue placeholder='Status' />;
@@ -700,7 +509,6 @@ export default function SupportRequests() {;
                 <SelectContent>;
                   <SelectItem value=''>All Statuses</SelectItem>;
                   <SelectItem value='open'>Open</SelectItem>;
-
                   <SelectItem value='in - progress'>In Progress</SelectItem>;
                   <SelectItem value='resolved'>Resolved</SelectItem>;
                 </SelectContent>;
@@ -708,7 +516,6 @@ export default function SupportRequests() {;
               <Select;
                 value={priority_filter || ''}
                 onValueChange={value => setPriorityFilter (value || null)}
-
               >;
                 <SelectTrigger className='w-[180px]'>;
                   <SelectValue placeholder='Priority' />;
@@ -720,11 +527,9 @@ export default function SupportRequests() {;
                   <SelectItem value='low'>Low</SelectItem>;
                 </SelectContent>;
               </Select>;
-
               <Select;
                 value={category_filter || ''}
                 onValueChange={value => setCategoryFilter (value || null)}
-
               >;
                 <SelectTrigger className='w-[180px]'>;
                   <SelectValue placeholder='Category' />;
@@ -739,7 +544,62 @@ export default function SupportRequests() {;
                   <SelectItem value='profile'>Profile</SelectItem>;
                 </SelectContent>;
               </Select>;
-
+            {/* Support Requests Table */}
+            <Card>;
+              <CardContent className='p-0'>;
+                <Table>;
+                  <TableHeader>;
+                    <TableRow>;
+                      <TableHead>ID</TableHead>;
+                      <TableHead>User</TableHead>;
+                      <TableHead>Issue</TableHead>;
+                      <TableHead>Status</TableHead>;
+                      <TableHead>Priority</TableHead>;
+                      <TableHead>Category</TableHead>;
+                      <TableHead>Created</TableHead>;
+                      <TableHead>Last Updated</TableHead>;
+                      <TableHead>Actions</TableHead>;
+                    </TableRow>;
+                  </TableHeader>;
+                  <TableBody>;
+                    {filteredRequests && filteredRequests.map(request => (                      <TableRow key={request && request.id}>;
+                        <TableCell className='font-medium'>;
+                          {request && request.id}
+                        </TableCell>;
+                        <TableCell>{request && request.user}</TableCell>;
+                        <TableCell className='max-w-xs truncate'>;
+                          {request && request.issue}
+                        </TableCell>;
+                        <TableCell>;
+                          <Badge
+                            variant={
+                              request && request.status === 'open'
+                                ? 'default'
+                                : request && request.status === 'in-progress'
+                                  ? 'secondary'
+                                  : 'outline'
+                            }>;
+                            {request && request.status}
+                          </Badge>;
+                        </TableCell>;
+                        <TableCell>;
+                          <Badge
+                            variant={
+                              request && request.priority === 'high'
+                                ? 'destructive'
+                                : request && request.priority === 'medium'
+                                  ? 'default'
+                                  : 'outline'
+                            }>;
+                            {request && request.priority}
+                          </Badge>;
+                        </TableCell>;
+                        <TableCell>{request && request.category}</TableCell>;
+                        <TableCell>;
+                          {new Date(request && request.createdAt).toLocaleDateString()}
+                        </TableCell>;
+                        <TableCell>;
+                          {new Date(request && request.lastUpdated).toLocaleDateString()}
               <Button;
                 variant='outline';
                 on_click={reset_filters}
@@ -798,7 +658,6 @@ export default function SupportRequests() {;
                         </TableCell>;
                         <TableCell>;
                           {new Date (request.last_updated).toLocaleDateString ()}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                         </TableCell>;
                         <TableCell>;
                           <Button variant='ghost' size='sm'>;
@@ -808,119 +667,6 @@ export default function SupportRequests() {;
                             Assign;
                           </Button>;
                         </TableCell>;
-
-
-          
-          <TabsContent value="escalated" className="mt-6">
-            <div className="bg-zion-blue-light/20 p-8 rounded-lg text-center">
-              <h3 className="text-xl font-medium mb-4">Escalated Requests</h3>
-              <p className="text-zion-slate-light">
-                This tab will show support requests that have been escalated by agents or the system.
-              </p>
-            </div>
-          </TabsContent>
-          
-          <TabsContent value="ai-flagged" className="mt-6">
-            <div className="bg-zion-blue-light/20 p-8 rounded-lg text-center">
-              <h3 className="text-xl font-medium mb-4">AI Flagged Issues</h3>
-              <p className="text-zion-slate-light">
-                This tab shows issues that our AI system has identified as requiring human attention.
-              </p>
-            </div>
-          </TabsContent>
-          
-          <TabsContent value="need-response" className="mt-6">
-            <div className="bg-zion-blue-light/20 p-8 rounded-lg text-center">
-              <h3 className="text-xl font-medium mb-4">Awaiting Response</h3>
-              <p className="text-zion-slate-light">
-                These support requests have been waiting for an agent response for over 24 hours.
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-              </p>
-            </div>
-          </TabsContent>
-        </Tabs>
-      </div>
-    </>
-  )
-
-                  </TableBody>;
-                </Table>;
-              </CardContent>;
-            </Card>;
-          </TabsContent>;
-
-          <TabsContent value='escalated' className='mt-6'>;
-            <div className='bg-zion-blue-light/20 p-8 rounded-lg text-center'>;
-              <h3 className='text-xl font-medium mb-4'>Escalated Requests</h3>;
-              <p className='text-zion-slate-light'>;
-                This tab will show support requests that have been escalated by;
-                agents or the system.;
-              </p>;
-            </div>;
-          </TabsContent>;
-
-          <TabsContent value='ai-flagged' className='mt-6'>;
-            <div className='bg-zion-blue-light/20 p-8 rounded-lg text-center'>;
-              <h3 className='text-xl font-medium mb-4'>AI Flagged Issues</h3>;
-              <p className='text-zion-slate-light'>;
-                This tab shows issues that our AI system has identified as;
-                requiring human attention.;
-              </p>;
-            </div>;
-          </TabsContent>;
-
-          <TabsContent value='need-response' className='mt-6'>;
-            <div className='bg-zion-blue-light/20 p-8 rounded-lg text-center'>;
-              <h3 className='text-xl font-medium mb-4'>Awaiting Response</h3>;
-              <p className='text-zion-slate-light'>;
-                These support requests have been waiting for an agent response;
-                for over 24 hours.;
-              </p>;
-            </div>;
-          </TabsContent>;
-        </Tabs>;
-      </div>;
-    </>;
-  );
-
-  return true;
-});
-//Count by status for the summary dashboard Support Requests | Admin Dashboard"description=" Manage and track user support requests and issues"/> <div className=" container mx-auto px-4 py-8"> <div className=" flex flex-col md:flex-row items-start md:items-center justify-between mb-8"> <div> <h1 className=" text-3xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent"> Support Requests </h1> <p className=" text-zion-slate-light mt-2"> Manage and respond to user support requests and issues </p> </div> <div className=" mt-4 md:mt-0"> <Button className=" bg-zion-purple hover:bg-zion-purple-light"> New Support Case </Button> </div> </div> <CardDescription>Open Requests</CardDescription> </CardHeader> </Card> <Card> <CardDescription>In Progress</CardDescription> </CardHeader> </Card> <Card> <CardDescription>Resolved</CardDescription> </CardHeader> </Card> <Card> <CardDescription>Total Requests</CardDescription> </CardHeader> </Card> </div> <Tabs defaultValue=" all"className=" mb-8"> <TabsList> <TabsTrigger value=" all">All Requests</TabsTrigger> <TabsTrigger value=" escalated">Escalated</TabsTrigger> <TabsTrigger value=" ai-flagged">AI Flagged</TabsTrigger> <TabsTrigger value=" need-response">Need Response</TabsTrigger> </TabsList> </SelectTrigger> <SelectContent> <SelectItem value="">All Statuses</SelectItem> <SelectItem value=" open">Open</SelectItem> <SelectItem value=" in-progress">In Progress</SelectItem> <SelectItem value=" resolved">Resolved</SelectItem> </SelectContent> </Select> </SelectTrigger> <SelectContent> <SelectItem value="">All Priorities</SelectItem> <SelectItem value=" high">High</SelectItem> <SelectItem value=" medium">Medium</SelectItem> <SelectItem value=" low">Low</SelectItem> </SelectContent> </Select> </SelectTrigger> <SelectContent> <SelectItem value="">All Categories</SelectItem> <SelectItem value=" authentication">Authentication</SelectItem> <SelectItem value=" billing">Billing</SelectItem> <SelectItem value=" api">API</SelectItem> <SelectItem value=" disputes">Disputes</SelectItem> <SelectItem value=" verification">Verification</SelectItem> <SelectItem value=" profile">Profile</SelectItem> </SelectContent> </Select> </Button> </div> {;
-  /* Support Requests Table */ ";
-}<Card> <CardContent className=" p-0"> <Table> <TableHeader> <TableRow> <TableHead>ID</TableHead> <TableHead>User</TableHead> <TableHead>Issue</TableHead> <TableHead>Status</TableHead> <TableHead>Priority</TableHead> <TableHead>Category</TableHead> <TableHead>Created</TableHead> <TableHead>Last Updated</TableHead> <TableHead>Actions</TableHead> </TableRow> </TableHeader> <TableBody> {;
-  filteredRequests && filteredRequests.map ( (request) => (<TableRowkey= {
-  request && request.id 
-}> <TableCell> <Badgevariant= {
-  request && request.status === 'open' ? 'default' : request && request.status === 'in-progress' ? 'secondary' : 'outline' 
-}> {;
-  request && request.status ;
-}</Badge> </TableCell> <TableCell> <Badgevariant= {'
-  request && request.priority === 'high' ? 'destructive' : request && request.priority === 'medium' ? 'default' : 'outline' 
-}> {;
-  request && request.priority ;
-}</Badge> </TableCell> <TableCell> {;
-  request && request.category ;
-}</TableCell> <TableCell> {;
-  new Date (request && request.createdAt) .toLocaleDateString () ;
-}</TableCell> <TableCell> {;
-  new Date (request && request.lastUpdated) .toLocaleDateString () ";
-=======
-
-}
-;
-
-=======
-
-}</TableCell> <TableCell> <Button variant=" ghost"size=" sm">View</Button> <Button variant=" ghost"size=" sm">Assign</Button> </TableCell> </TableRow>) ) ";
-}</TableBody> </Table> </CardContent> </Card> </TabsContent> <TabsContent value=" escalated"className=" mt-6"> <div className=" bg-zion-blue-light/20 p-8 rounded-lg text-center"> <h3 className=" text-xl font-medium mb-4">Escalated Requests</h3> <p className=" text-zion-slate-light"> This tab will show support requests that have been escalated by agents or the system. </p> </div> </TabsContent> <TabsContent value=" ai-flagged"className=" mt-6"> <div className=" bg-zion-blue-light/20 p-8 rounded-lg text-center"> <h3 className=" text-xl font-medium mb-4">AI Flagged Issues</h3> <p className=" text-zion-slate-light"> This tab shows issues that our AI system has identified as requiring human attention. </p> </div> </TabsContent> <TabsContent value=" need-response"className=" mt-6"> <div className=" bg-zion-blue-light/20 p-8 rounded-lg text-center"> <h3 className=" text-xl font-medium mb-4">Awaiting Response</h3> <p className=" text-zion-slate-light" > These support requests have been waiting for an agent response for over 24 hours. </p> </div> </TabsContent> </Tabs> </div> </>) ;
-}'"}
-
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                       </TableRow>))}
                   </TableBody>;
                 </Table>;
@@ -981,5 +727,3 @@ export default function SupportRequests() {;
 }</TableCell> <TableCell> <Button variant=" ghost"size=" sm">View</Button> <Button variant=" ghost"size=" sm">Assign</Button> </TableCell> </TableRow>) ) ";
 }</TableBody> </Table> </CardContent> </Card> </TabsContent> <TabsContent value=" escalated"className=" mt - 6"> <div className=" bg - zion - blue - light / 20 p - 8 rounded - lg text - center"> <h3 className=" text - xl font - medium mb - 4">Escalated Requests</h3> <p className=" text - zion - slate - light"> This tab will show support requests that have been escalated by agents or the system. </p> </div> </TabsContent> <TabsContent value=" ai - flagged"className=" mt - 6"> <div className=" bg - zion - blue - light / 20 p - 8 rounded - lg text - center"> <h3 className=" text - xl font - medium mb - 4">AI Flagged Issues</h3> <p className=" text - zion - slate - light"> This tab shows issues that our AI system has identified as requiring human attention. </p> </div> </TabsContent> <TabsContent value=" need - response"className=" mt - 6"> <div className=" bg - zion - blue - light / 20 p - 8 rounded - lg text - center"> <h3 className=" text - xl font - medium mb - 4">Awaiting Response</h3> <p className=" text - zion - slate - light" > These support requests have been waiting for an agent response for over 24 hours. </p> </div> </TabsContent> </Tabs> </div> </>);
 }'"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

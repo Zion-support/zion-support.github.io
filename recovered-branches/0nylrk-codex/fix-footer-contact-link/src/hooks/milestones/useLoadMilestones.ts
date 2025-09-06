@@ -1,27 +1,18 @@
 
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';
 import {toast} from 'sonner';
 import {Milestone, MilestoneActivity} from './types';
-
         
         activitiesMap[milestone && milestone.id] = activitiesData || []
-
       }
       setActivities(activitiesMap);
       setError(null)
     } catch (err: any) {
-
       console && console.error("Error fetching milestones:", err);
       setError("Failed to fetch milestones: " + err && err.message),
       toast && toast.error("Failed to fetch milestones")
-
-=======
 export const useLoadMilestones = (project_id?: string) =>: any {
   const { user } = use_auth ();
   const [milestones, set_milestones] = useState < Milestone[]>([]);
@@ -35,12 +26,10 @@ if ( {) {
   $2
 }
       setIsLoading (false);
-=======
 
         
         activitiesMap[milestone.id] = activitiesData || []
 
-=======
 import { useState, useEffect } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -55,7 +44,6 @@ export const useLoadMilestones = (projectId?: string) => {;
   const fetchMilestones = async () => {;
     if (!projectId) {;
       setIsLoading(false),;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       return;
     }
     try {
@@ -91,7 +79,6 @@ if (throw milestones_error) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
       set_activities (activities_map);
       set_error (null);
@@ -99,9 +86,10 @@ if (throw milestones_error) {
       console.error ("Error fetching milestones:", err);
       set_error ("Failed to fetch milestones: " + err.message),
       toast.error ("Failed to fetch milestones");
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
-
+      setIsLoading (false);
+    }
+  }
 ;
   // Fetch milestones when component mounts or project_id changes;
   useEffect (() => {
@@ -113,20 +101,15 @@ if ( {) {
     }
   }, [project_id]);
 ;
-
   return {
     milestones;
     activities;
     is_loading;
     error;
     refetch: fetch_milestones;
-=======
       setIsLoading(false)
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
-
 ;
-

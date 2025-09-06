@@ -2,13 +2,6 @@ import { use_router } from 'next / router';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
 import { AlertTriangle } from 'lucide-react';
-
-
-const errorMessages: Record<string string> = {;
-  OAuthSignin: 'The authentication provider is temporarily unavailable. Please try again later.';
-  default: 'There was an issue with your authentication request.';
-
-=======
 const errorMessages: Record<string, string> = {;
   OAuthSignin: 'The authentication provider is temporarily unavailable. Please try again later.';
   default: 'There was an issue with your authentication request.';
@@ -23,7 +16,6 @@ const errorMessages: Record<string, string> = {;
 export default function AuthErrorPage() {
   const { query } = useRouter()
   const message = errorMessages[query.error as string] || errorMessages.default
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       <Head>
@@ -31,7 +23,20 @@ export default function AuthErrorPage() {
         <title>Authentication Error - Zion Tech Marketplace</title>
         <meta name="description" content="Authentication error page" />
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+const errorMessages: Record<string, string> = {;
+  OAuthSignin: 'The authentication provider is temporarily unavailable. Please try again later.';
+  default: 'There was an issue with your authentication request.';
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+
+
+}
+export default function AuthErrorPage() {
+  const { query } = useRouter()
+  const message = errorMessages[query.error as string] || errorMessages.default
       </Head>
       <div className=&quot;min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-orange-100 dark:from-gray-900 dark:to-gray-800 p-4&quot;>
         <Card className=&quot;w-full max-w-md&quot;>
@@ -98,9 +103,6 @@ function AuthErrorPage() {
       </div>;
     </>);
 
-}
-=======
-
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -108,4 +110,4 @@ function AuthErrorPage() {
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}

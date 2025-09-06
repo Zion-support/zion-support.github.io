@@ -1,8 +1,3 @@
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function Featured() {
   return (
     <>
@@ -23,7 +18,6 @@ import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 import {FeaturedListingsSection} from "@/components/FeaturedListingsSection";
 import {GradientHeading} from "@/components/GradientHeading";
-=======
 
           
 import { Header } from "@/components/Header",;
@@ -55,8 +49,6 @@ export default function Featured() {;
     </>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
 import { FeaturedListingsSection } from '@/components / FeaturedListingsSection';
@@ -91,6 +83,3 @@ function Featured() {
   )
 
 }
-;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

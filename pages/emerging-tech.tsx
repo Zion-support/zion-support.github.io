@@ -1,17 +1,10 @@
+    'Blockchain, tokenization, and smart contract auditsIoT and edge orchestration with zero-trust patterns5G private networks and campus connectivityMetaverse and spatial computing experimentation'];
 
-
-export default function EmergingTechPage() {
-  const features = [
-    'Blockchain, tokenization, and smart contract auditsIoT and edge orchestration with zero-trust patterns5G private networks and campus connectivityMetaverse and spatial computing experimentation'],
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const solutions = [
     { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform' },
     { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration' },
     { name: '5G Private Networks', href: '/5g-private-network-solutions' },
     { name: 'Metaverse AI Platform', href: '/metaverse-ai-development-platform' }],
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return (
     <Layout>
       <Head>
@@ -34,7 +27,6 @@ export default function EmergingTechPage() {
               <a href="/market-pricing" className="px-8 py-4">See Market Pricing</Link>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </div>
           </header>
           <section>
@@ -55,24 +47,15 @@ export default function EmergingTechPage() {
                 <a key={s.name} href={s.href} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40 transition-colors">
                   <div className="text-gray-200 font-semibold mb-2">{s.name}</div>
                   <p className="text-gray-300 text-sm">Learn more</p>
-
-
-  );
-};
-
-=======
-                </Link>
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-
+                </a>
+              ))}
+            </div>
+          </section>
+        </div>
+      </div>
+    </Layout>
+  )
 }
-
-=======
-}
-
-=======
 import React from 'react',
 import Head from 'next / head',
 import Layout from '../components / layout / Layout',
@@ -140,6 +123,3 @@ function EmergingTechPage() {
   }
 
 }
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

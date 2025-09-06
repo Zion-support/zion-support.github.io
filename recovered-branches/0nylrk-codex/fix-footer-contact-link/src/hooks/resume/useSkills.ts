@@ -1,25 +1,3 @@
-
-
-import {useState} from 'react';
-import {supabase} from '@/integrations/supabase/client';
-import {Skill} from '@/types/resume';
-import {useAuth} from '@/hooks/useAuth';
-import {handleResumeError, showSuccessToast} from './useResumeUtils';
-export function useSkills() {;
-
-
-  const { user } = useAuth();
-  const [isLoading, setIsLoading] = useState(false);
-
-  const [error, setError] = useState<string | null>(null);
-  const addSkill = async (resumeId: string, skill: Skill): Promise<boolean> => {
-    if (!user) {
-      setError('You must be logged in to add skills')
-      return false
-
-
-
-=======
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Skill } from '@/types/resume',;
@@ -41,8 +19,27 @@ export function useSkills() {;
     setIsLoading(true),
     setError(null),
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import { useState } from 'react',;
+import { supabase } from '@/integrations/supabase/client',;
+import { Skill } from '@/types/resume',;
+import { useAuth } from '@/hooks/useAuth',;
+import { handleResumeError, showSuccessToast } from './useResumeUtils',;
+export function useSkills() {;
+  const { user } = useAuth(),;
+  const [isLoading, setIsLoading] = useState(false),;
+  const [error, setError] = useState<string | null>(null),;
+  const addSkill = async (resumeId: string, skill: Skill): Promise<boolean> => {;
+    if (!user) {;
+      setError('You must be logged in to add skills'),;
+      return false;
+
+
+
+    }
+    
+    setIsLoading(true),
+    setError(null),
+    
     try {
       const { error } = await supabase
         .from('resume_skills')
@@ -52,10 +49,8 @@ export function useSkills() {;
           proficiency: skill && skill.proficiency;
           category: skill && skill.category,
           years_experience: skill && skill.years_experience
-
         });
       if (error) throw error;
-=======
 
           resume_id: resumeId,
           name: skill.name,
@@ -67,7 +62,6 @@ export function useSkills() {;
       if (error) throw error,
       
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       return showSuccessToast("Skill added", "Your skill has been added to your resume")
     } catch (e: any) {
       return handleResumeError(e, 'Could not add skill')
@@ -76,7 +70,6 @@ export function useSkills() {;
 
 
 
-=======
 ;
     setIsLoading(true),;
     setError(null),;
@@ -110,8 +103,6 @@ export function useSkills() {;
     setIsLoading(true),
     setError(null),
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     try {
       const { error } = await supabase
         .from('resume_skills')
@@ -130,10 +121,7 @@ export function useSkills() {;
     } finally {
       setIsLoading(false)
 
-
-
-
-=======
+    deleteSkill
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {Skill} from '@/types / resume';
@@ -167,7 +155,7 @@ if ( {) {
 
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    deleteSkill
 ;
     try {
       const { error } = await supabase;
@@ -226,6 +214,5 @@ if (throw error) {
     error;
     add_skill;
     delete_skill;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 }

@@ -1,8 +1,3 @@
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface TranslatableJobFormProps {
 
   onSubmit: (formData: any) => void
@@ -29,10 +24,8 @@ import {useTranslation} from "react-i18next";
 import {useTranslationService} from "@/hooks/useTranslationService";
 import {useLanguage, SupportedLanguage} from "@/context/LanguageContext";
 import {toast} from "@/components/ui/use-toast";
-=======
 
 
-=======
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
@@ -122,7 +115,6 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
     // Find first non-empty content to translate;
     for (const lang of supportedLanguages && supportedLanguages.map(l => l && l.code)) {;
       if (field === 'title' && title[lang]) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         content = title[lang];
         sourceLanguage = lang;
         break;
@@ -138,43 +130,8 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
     }
-
-
-      const { translations, error } = await translateContent(content, 'job', sourceLanguage),
-      
-
-
-      if (error) {
-        toast({
-          title: t('translation.translation_failed')
-          description: error
-          variant: "destructive"})
-        return
-
-
-;
-    if (!content) {;
-      toast({;
-        title: t('translation.no_content'),;
-        description: t('translation.add_content_first'),;
-        variant: "destructive"}),;
-      return;
-    }
-;
-    try {;
-      const { translations, error } = await translateContent(content, 'job', sourceLanguage),;
-      if (error) {;
-        toast({;
-          title: t('translation.translation_failed'),;
-          description: error,;
-          variant: "destructive"}),;
-        return;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
       if (field === 'title') {
         setTitle(translations)
@@ -221,7 +178,6 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
       promises.push(autoTranslate('title'));
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
     // Description translations
     if (Object.values(description).some(val => val) && Object.values(description).some(val => !val)) {
@@ -237,15 +193,11 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
 
 
   },
-=======
   };
-=======
   },
 
 
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div>
@@ -260,7 +212,6 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
             <label htmlFor="title" className="text-lg font-medium">
               {t('jobs.job_title')}
             </label>
-=======
 
     if (!content) {;
       toast({;
@@ -343,13 +294,11 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
             <label htmlFor="title" className="text-lg font-medium">;
               {t('jobs && jobs.job_title')}
             </label>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <Button
               type="button"
               size="sm"
               variant="outline"
               onClick={() => autoTranslate('title')}
-
               disabled={isTranslating || (!title && title.en && !title && title.es && !title && title.pt && !title && title.ar)}
               className="flex items-center gap-1";
             >;
@@ -393,13 +342,11 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
             <label htmlFor="description" className="text-lg font-medium">;
               {t('jobs && jobs.job_description')}
             </label>;
-
             <Button
               type="button"
               size="sm"
               variant="outline"
               onClick={() => autoTranslate('description')}
-
               disabled={isTranslating || (!description && description.en && !description && description.es && !description && description.pt && !description && description.ar)}
               className="flex items-center gap-1";
             >;
@@ -441,13 +388,11 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
             <label htmlFor="requirements" className="text-lg font-medium">;
               {t('jobs && jobs.skills_required')}
             </label>;
-
             <Button
               type="button"
               size="sm"
               variant="outline"
               onClick={() => autoTranslate('requirements')}
-
               disabled={isTranslating || (!requirements && requirements.en && !requirements && requirements.es && !requirements && requirements.pt && !requirements && requirements.ar)}
               className="flex items-center gap-1";
             >;
@@ -489,7 +434,6 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
             <label htmlFor="budget" className="text-lg font-medium">;
               {t('jobs && jobs.budget')}
             </label>;
-
             <Input
               id="budget"
               value={budget}
@@ -506,10 +450,6 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
               id="deadline"
               type="date"
               value={deadline}
-
-              onChange={(e) => setDeadline(e && e.target.value)}
-              className="w-full";
-=======
 import React, { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { Input } from '@/components / ui / input';
@@ -862,20 +802,10 @@ if ( {) {
               value={deadline}
               on_change={(e) => set_deadline (e.target.value)}
               className="w - full";
-
             />;
           </div>;
         </div>;
       </div>;
-
-
-
-        </Button>;
-      </div>;
-    </form>;
-  );
-}
-
       <div className="pt - 4">;
         <Button;
           type="submit";
@@ -892,8 +822,5 @@ if ( {) {
       </div>;
     </form>);
 }
-
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,13 +1,14 @@
-
-
+    unread_count,
+    markAsRead,
+  const handleFilterChange = (new_filter: FilterType, ) =>: any {
+    set_filter (new_filter as any);
+  }
     unreadCount, ;
     markAsRead, ;
 
   const handleFilterChange = (newFilter: FilterType,) => {;
-=======
 
 
-=======
 import React, { useState, useEffect } from 'react',
 // Use the shared icon wrapper
 import { Bell } from 'lucide-react'
@@ -28,7 +29,6 @@ export const NotificationCenter: React.FC = () => {
     filteredNotifications,
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     unreadCount, 
     markAsRead, 
     markAllAsRead,
@@ -63,18 +63,10 @@ export const NotificationCenter: React.FC = () => {
     }
   },;
   const handleFilterChange = (newFilter: FilterType) => {;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     setFilter(newFilter as any);
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-          )}
-
         </Button>;
       </PopoverTrigger>;
       <PopoverContent className="w-[350px] p-0 bg-zion-blue border-zion-blue-light max-h-[500px] flex flex-col">;
@@ -88,7 +80,6 @@ export const NotificationCenter: React.FC = () => {
           onFilterChange = {handleFilterChange,}
         />;
 
-
         <NotificationList
           loading = {loading,}
           error = {error,}
@@ -97,15 +88,6 @@ export const NotificationCenter: React.FC = () => {
           onDismiss = {dismissNotification,}
           onRetry = {fetchNotifications,}
 
-        />;
-
-        <NotificationFooter onClose={() => setOpen(false)} />;
-      </PopoverContent>;
-    </Popover>;
-  );
-},;
-
-=======
     <Popover open={open} onOpenChange={(v, ) => set_open (v ?? false)}>;
       <PopoverTrigger as_child>;
         <Button variant="ghost" size="icon" className="relative" aria - label="Open notifications">;
@@ -138,10 +120,3 @@ export const NotificationCenter: React.FC = () => {
     </Popover>);
 },
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-        <NotificationHeader 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

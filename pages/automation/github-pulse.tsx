@@ -1,6 +1,6 @@
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+// @ts-ignore
+import data from '../../data/github-pulse.json';
 export default function GithubPulsePage() {
 
   const repo = data?.repo |{}
@@ -33,11 +33,8 @@ function Metric({ label, value }: { label: string, value: any }) {
       <div className="text-xs text-gray-500 dark:text-gray-400">{label}</div>
       <div className="text-lg font-semibold">{value ?? '—'}</div>
     </div>
-
-=======
+  )
 }
-
-=======
 import EnhancedLayout from '../../components / layout / EnhancedLayout',
 // @ts - ignore;
 import data from '../../data / github - pulse.json',
@@ -73,9 +70,5 @@ function Metric() {
       <div className="text - lg font - semibold">{value ?? '—'}</div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,4 +1,3 @@
-
 export type ReferralEvent = 'visit' | 'signup' | 'profile_completed' | 'job_created' | 'hire',
 export async /**
  * triggerReferralEvent - Function description
@@ -14,10 +13,8 @@ if (return, ) {
       method: 'POST',
       headers: { 'Content - Type': 'application / json' }
       body: JSON.stringify ({ code: ref_code, event, url: typeof window !== 'undefined' ? window.location.href : '', referrer: typeof document !== 'undefined' ? document.referrer : '' })});
-
   } catch {}
 }
-=======
 
 
     await fetch('/api/referrals/track', {;
@@ -27,4 +24,3 @@ if (return, ) {
 
 
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

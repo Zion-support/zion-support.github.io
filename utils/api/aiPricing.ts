@@ -1,15 +1,10 @@
 // Stub AI pricing utility - placeholder for missing functionality;
-
 },
-
 export const calculateAICost = async (usage: any) => {
   // Placeholder implementation;
   return { cost: 0, success: true }
 }
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
 export const getAIPricing = async (service: string) => {;
   // Placeholder implementation;
@@ -29,4 +24,6 @@ export const calculateAICost = async (usage: any) => {;
 }
 
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export const getAIPricing = async (service: string) => {;
+  // Placeholder implementation;
+};

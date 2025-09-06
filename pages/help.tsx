@@ -1,5 +1,4 @@
 
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -22,17 +21,14 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-
 import React, { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-
 import {
   Search
   HelpCircle
@@ -46,7 +42,6 @@ import {
   ExternalLink
   ChevronDown
   Cloud
-=======
 
 
 import {
@@ -64,7 +59,6 @@ import {
   ChevronDown,
   Cloud,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 } from "lucide-react";
 const helpArticles = [
   {
@@ -93,7 +87,6 @@ const helpArticles = [
         readTime: "8 min read"
         type: "Technical"
       }
-
 import React, { useState } from './react';
 import Head from './next / head';
 import Link from './next / link';
@@ -140,9 +133,7 @@ const help_articles = [;
         read_time: "8 min read",
         type: "Technical",
       },
-
       {
-
         title: 'AI Best Practices',
         description: 'Tips and best practices for AI development',
         readTime: '6 min read',
@@ -154,15 +145,8 @@ const help_articles = [;
     id: 'cloud-services',
     title: 'Cloud Services',
     description: 'Cloud infrastructure and deployment solutions.',
-
     icon: Cloud,
     color: "blue",
-
-=======
-      {
-
-
-
         title: "AI Best Practices"
         description: "Tips and best practices for AI development"
         readTime: "6 min read"
@@ -176,11 +160,6 @@ const help_articles = [;
     description: "Cloud infrastructure and deployment solutions."
     icon: Cloud
     color: "blue"
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     articles: [
       {
         title: "Cloud Migration Guide"
@@ -188,7 +167,6 @@ const help_articles = [;
         readTime: "12 min read"
         type: "Guide"
       }
-
     articles: [;
       {
         title: "Cloud Migration Guide",
@@ -196,9 +174,7 @@ const help_articles = [;
         read_time: "12 min read",
         type: "Guide",
       },
-
       {
-
         title: 'Cloud Security',
         description: 'Best practices for securing your cloud infrastructure',
         readTime: '9 min read',
@@ -206,13 +182,9 @@ const help_articles = [;
       }
     ]
   }
-
-=======
-=======
       {
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         title: "Cloud Security"
         description: "Best practices for securing your cloud infrastructure"
         readTime: "9 min read"
@@ -220,34 +192,25 @@ const help_articles = [;
       }
     ]
   }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 ];
-
 ;
 const help_categories = [;
-
   {
-
-=======
-
-
     title: "Getting Started"
     description: "New to our platform? Start here."
     icon: BookOpen
     color: "blue"
     articles: helpArticles
   }
-
 ];
-
-=======
-
-
+export default function HelpPage() {
+  const [searchTerm, setSearchTerm] = useState("");
     color: 'blue',
     articles: helpArticles
   }
 ];
-
+  const [expandedCategory, setExpandedCategory] = useState<number | null>(null);
+  const toggleCategory = (index: number) => {
 import {;
   Search,;
   HelpCircle,;
@@ -336,19 +299,8 @@ export default function HelpPage() {;
   const [expandedCategory, setExpandedCategory] = useState<number | null>(null);
 
   const toggleCategory = (index: number) => {;
-
     setExpandedCategory(expandedCategory === index ? null : index);
-
-=======
-
-  const [expandedCategory, setExpandedCategory] = useState<number | null>(null);
-  const toggleCategory = (index: number) => {
-    setExpandedCategory(expandedCategory === index ? null : index);
-
-
-
   }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
   const filteredCategories = helpCategories
     .map((category) => ({
       ...category
@@ -359,7 +311,6 @@ export default function HelpPage() {;
       )
     }))
     .filter((category) => category.articles.length > 0);
-
   const filteredCategories = helpCategories.map(category => ({
     ...category,
     articles: category.articles.filter(article =>
@@ -367,8 +318,6 @@ export default function HelpPage() {;
       article.description.toLowerCase().includes(searchTerm.toLowerCase())
     )
   })).filter(category => category.articles.length > 0);
-
-=======
   const filteredCategories = helpCategories;
     .map((category) => ({;
       ...category,;
@@ -379,15 +328,9 @@ export default function HelpPage() {;
       ),;
     }));
     .filter((category) => category && category.articles.length > 0);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
   return (
     <>;
       <Head>;
@@ -399,12 +342,10 @@ export default function HelpPage() {;
         <meta
           name="keywords"
           content="help, support, documentation, FAQ, tutorials, guides"
-
         />;
       </Head>;
 
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">;
-
         {/* Hero Section */}
         <section className="relative py-20 px-4">;
           <div className="max-w-7xl mx-auto">;
@@ -436,7 +377,6 @@ export default function HelpPage() {;
       </div>;
     </>;
   );
-=======
 ;
 export default /**
  * HelpPage - Function description
@@ -505,5 +445,4 @@ function HelpPage() {
         </section>;
       </div>;
     </>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

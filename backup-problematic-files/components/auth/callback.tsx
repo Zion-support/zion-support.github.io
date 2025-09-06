@@ -6,7 +6,6 @@ export default function AuthCallbackPage() {
       <p className="mt-2 text-gray-600 dark: text-gray-300">Processing sign-in...</p>
     </div>
     </div>
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
   )
 import React from 'react';
 export default function AuthCallbackPage() {;

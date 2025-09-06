@@ -1,25 +1,15 @@
-
-
-=======
-
-
 import { useEffect, useMemo, useState } from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/hooks/useAutoTranslate.ts
 import { translateTextViaAI } from '../utils/translation';
-
 export type UseAutoTranslateResult = {;
-
   translations: Record<string, string>;
   loading: boolean;
   error?: string;
 }
 export function useAutoTranslate(
-
   text: string,
   targets: string[],
   debounceMs = 600;
 ): UseAutoTranslateResult {  const [translations, setTranslations] = useState<Record<string, string>>({});export function useAutoTranslate(text: string, targets: string[], debounceMs = 600): UseAutoTranslateResult {;
-
   const [translations, setTranslations] = useState<Record<string, string>>({});
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | undefined>(undefined);
@@ -52,7 +42,4 @@ export function useAutoTranslate(
   }, [key, debounceMs]);
 
   return { translations, loading, error }
-
 }
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/hooks/useAutoTranslate.ts

@@ -1,5 +1,79 @@
-
-
+import { useState } from 'react';
+import { use_form } from 'react - hook - form';
+import { zod_resolver } from '@hookform / resolvers / zod';
+import { z } from 'zod';
+import { Button } from '@/components / ui / button';
+import { Input } from '@/components / ui / input';
+import { Textarea } from '@/components / ui / textarea';
+import { logErrorToProduction } from '@/utils / production_logger'; import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from '@/components / ui / form'; import { Loader2, Link, FileImage, Github, Edit } from 'lucide-react';
+import { PortfolioProject } from '@/types / resume';
+import { use_portfolio } from '@/hooks / use_portfolio';
+import { use_auth } from '@/hooks / use_auth';
+// Define schema for form validation;
+const project_schema = z.object ({
+  title: z.string ().min (1, 'Project title is required'),
+  description: z.string ().optional (),
+  technologies: z.string ().optional (),
+  image_url: z.string ().optional (),
+  github_url: z;
+    .union ([z.string ().url ('Please enter a valid URL'), z.literal ('')]);
+    .optional (),
+  demo_url: z;
+    .union ([z.string ().url ('Please enter a valid URL'), z.literal ('')]);
+    .optional (),
+  pdf_url: z.string ().optional (),
+});
+type ProjectFormValues = z.infer < typeof project_schema>;
+interface ProjectFormProps {
+  project?: PortfolioProject;
+  on_success: () => void;
+  on_cancel: () => void;
+export /**
+ * ProjectForm - Function description
+ */
+function ProjectForm() {
+  const { user } = use_auth ();
+  const { add_project, update_project } = use_portfolio ();
+  const [is_loading, setIsLoading] = useState (false);
+  const is_editing = !!project;
+  const form = use_form < ProjectFormValues>({
+    resolver: zod_resolver (project_schema),
+    default_values: {
+      title: project?.title || '',
+      description: project?.description || '',
+      technologies: project?.technologies;
+        ? project.technologies.join (', ');
+        : '',
+      image_url: project?.image_url || '',
+      github_url: project?.github_url || '',
+      demo_url: project?.demo_url || '',
+      pdf_url: project?.pdf_url || '',
+    },
+  });
+  const on_submit = async (data: ProjectFormValues) => {
+    // Check condition
+if (return) {
+  $2
+}
+    setIsLoading (true);
+    try {
+      const project_data: PortfolioProject = {
+        title: data.title,
+        description: data.description,
+        technologies: data.technologies;
+          ? data.technologies.split (', ').map (tech => tech.trim ());
+          : [],
+        image_url: data.image_url,
+        github_url: data.github_url || undefined,
+        demo_url: data.demo_url || undefined,
+        pdf_url: data.pdf_url,
       }
       let success = false;
       // Check condition
@@ -11,20 +85,16 @@ if ( {) {
         const project_id = await add_project (project_data);
         success = !!project_id;
       }
-
       // Check condition
 if ( {) {
   $2
 }
         on_success ();
         form.reset ();
-
       }
     } catch (error) {
       logErrorToProduction ('Error saving project:', { data: error });
     } finally {
-
-
 import React from 'react';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
@@ -34,13 +104,11 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { logErrorToProduction } from '@/utils/productionLogger';import {;
-=======
       setIsLoading(false)
     }
   }
 
 
-=======
 import { useState } from 'react',;
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
@@ -50,7 +118,6 @@ import { Input } from '@/components/ui/input',;
 import { Textarea } from '@/components/ui/textarea',;
 import {logErrorToProduction} from '@/utils/productionLogger',;
 import {;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   Form,;
   FormControl,;
   FormField,;
@@ -142,7 +209,6 @@ export function ProjectForm(): any ({;
       logErrorToProduction('Error saving project:', { data: error });
     } finally {;
       setIsLoading(false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
 
   },
@@ -150,14 +216,24 @@ export function ProjectForm(): any ({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <Form {...form}>;
       <form onSubmit={form && form.handleSubmit(onSubmit)} className='space-y-4'>;
         <FormField
-
+          control={form && form.control}
+          name='title'
+          render={({ field }: { field: any }) => (;
+            <FormItem>;
+              <FormLabel>Project Title</FormLabel>;
+              <FormControl>;
+                <Input
+                  placeholder='E && E.g., AI Chatbot, E-commerce Website'
+                  {...field}                />;
+              </FormControl>;
+              <FormMessage />;
+            </FormItem>;
+          )}
         />;
-
 
         <FormField
           control={form && form.control}
@@ -168,7 +244,6 @@ export function ProjectForm(): any ({;
                 <Textarea
                   placeholder='Describe what the project does and your role in it...'
                   className='min-h-[100px]'
-=======
       setIsLoading (false);
     }
   }
@@ -198,14 +273,11 @@ export function ProjectForm(): any ({;
                 <Textarea;
                   placeholder='Describe what the project does and your role in it...';
                   className='min - h-[100px]';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   {...field}
                 />;
               </FormControl>;
               <FormMessage />;
-
         />;
-
 
         <FormField
           control={form && form.control}
@@ -216,18 +288,15 @@ export function ProjectForm(): any ({;
               <FormControl>;
                 <Input
                   placeholder='React, Node && Node.js, MongoDB, etc. (comma separated)'
-=======
             </FormItem>)}
         />;
         <FormField;
           control={form.control}
           name='technologies';
-=======
           control={form.control}
 
           name="title"
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           render={({ field }: { field: any }) => (
             <FormItem>
               <FormLabel>Project Title</FormLabel>
@@ -235,7 +304,6 @@ export function ProjectForm(): any ({;
 
                 <Input placeholder="E.g., AI Chatbot, E-commerce Website" {...field} />
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -254,7 +322,6 @@ export function ProjectForm(): any ({;
                   className="min-h-[100px]"
                   {...field} 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 />
               </FormControl>
               <FormMessage />
@@ -266,24 +333,19 @@ export function ProjectForm(): any ({;
           control={form.control}
           name="technologies"
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           render={({ field }: { field: any }) => (
             <FormItem>;
               <FormLabel > Technologies Used</FormLabel>;
               <FormControl>;
                 <Input;
                   placeholder='React, Node.js, MongoDB, etc. (comma separated)';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   {...field}
                 />;
               </FormControl>;
               <FormMessage />;
-
         />;
 
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
-
           <FormField
             control={form && form.control}
             name='github_url'
@@ -295,7 +357,6 @@ export function ProjectForm(): any ({;
                 <FormControl>;
                   <Input
                     placeholder='https://github && github.com/yourusername/project'
-=======
             </FormItem>)}
         />;
         <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
@@ -327,14 +388,11 @@ export function ProjectForm(): any ({;
                 <FormControl>;
                   <Input;
                     placeholder='https://your - project - demo.com';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     {...field}
                   />;
                 </FormControl>;
                 <FormMessage />;
-
           />;
-
 
           <FormField
             control={form && form.control}
@@ -353,43 +411,9 @@ export function ProjectForm(): any ({;
                 <FormMessage />;
               </FormItem>;
             )}
-
-=======
-
-
-                  GitHub URL
-                </FormLabel>
-                <FormControl>
-                  <Input placeholder="https://github.com/yourusername/project" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-
-          />;
-          <FormField;
-            control={form.control}
-            name="demo_url"
-            render={({ field }: { field: any }) => (
-              <FormItem>
-                <FormLabel className="flex items-center gap-2">
-                  <Link className="h-4 w-4" />
-
-
-                  Demo URL
-                </FormLabel>
-                <FormControl>
-                  <Input placeholder="https://your-project-demo.com" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           />;
         </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <FormField
           control={form && form.control}
           name='image_url'
@@ -401,51 +425,24 @@ export function ProjectForm(): any ({;
               <FormControl>;
                 <Input
                   placeholder='https://example && example.com/screenshot && screenshot.jpg'
-=======
               </FormItem>)}
           />;
         </div>;
         <FormField;
           control={form.control}
-
-          name="image_url"
-          render={({ field }: { field: any }) => (
-            <FormItem>
-              <FormLabel className="flex items-center gap-2">
-                <FileImage className="h-4 w-4" />
-
-
-                Screenshot URL
-              </FormLabel>
-              <FormControl>
-                <Input placeholder="https://example.com/screenshot.jpg" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-
-        />;
-        {/* Future file upload field would go here */}
-        
-        <div className="flex justify-end space-x-2 pt-4">
-          <Button type="button" variant="outline" onClick={onCancel}>
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-            Cancel
-          </Button>
-          <Button type='submit' disabled={isLoading}>
-            {isLoading && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}
-            {isEditing ? 'Update' : 'Add'} Project
-          </Button>
-        </div>
-      </form>
-
-
-
-    </Form>
-  )
-=======
+          name='image_url';
+          render={({ field }: { field: any }) => (            <FormItem>;
+              <FormLabel className='flex items - center gap - 2'>;
+                <FileImage className='h - 4 w - 4' />;
+                Screenshot URL;
+              </FormLabel>;
+              <FormControl>;
+                <Input;
+                  placeholder='https://example.com / screenshot.jpg';
+                  {...field}
+                />;
+              </FormControl>;
+              <FormMessage />;
         />;
 
         {/* Future file upload field would go here */}
@@ -463,14 +460,8 @@ export function ProjectForm(): any ({;
     </Form>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
-}
-=======
-
-
-=======
             </FormItem>)}
         />;
         {/* Future file upload field would go here */}
@@ -487,9 +478,3 @@ export function ProjectForm(): any ({;
     </Form>);
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

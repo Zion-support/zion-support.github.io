@@ -15,7 +15,6 @@ export default function AuditLogVaultPage() {
   const features = [
     'Append-only, tamper-evident storageFlexible retention and legal holdsCryptographic digests and attestationsFine-grained search and export bundlesChain-of-custody and access reviewsAlerts for risky access patterns'
   ],
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
 
   return (_<UltraAdvancedFuturisticBackground>
       <Head>

@@ -1,4 +1,3 @@
-
 "use client",;
 export function StructuredData() {;
   const structuredData = {;
@@ -49,9 +48,7 @@ export function StructuredData() {;
       "url": "https://ziontechgroup.com";
     }
   };
-
   return (;
-=======
 "use client",
 export /**
  * StructuredData - Function description
@@ -106,7 +103,6 @@ function StructuredData() {
     }
   }
   return (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     <script;
       type="application / ld + json";
       dangerouslySetInnerHTML={{ __html: JSON.stringify (structured_data) }}

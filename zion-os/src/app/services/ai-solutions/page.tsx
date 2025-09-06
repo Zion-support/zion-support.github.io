@@ -1,4 +1,3 @@
-
 "use client",;
 import { useState } from "react",;
 interface AIService {;
@@ -191,10 +190,8 @@ const aiServices: AIService[] = [;
 ],;
 export default function AISolutionsPage() {;
   const [selectedService, setSelectedService] = useState<string | null>(null);
-
   return (;
     <div className="space-y-8">;
-=======
 "use client",
 import { useState  } from './react';,
 interface AIService {
@@ -391,7 +388,6 @@ function AISolutionsPage() {
   const [selected_service, setSelectedService] = useState < string | null>(null);
   return (
     <div className="space - y-8">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Header */}
       <div className="text - center space - y-4">;
         <h1 className="text - 4xl font - bold">AI Solutions & Services</h1>;

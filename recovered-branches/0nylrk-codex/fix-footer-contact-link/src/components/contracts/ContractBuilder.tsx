@@ -1,8 +1,3 @@
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ContractBuilderProps {
 
   isOpen: boolean
@@ -31,7 +26,6 @@ interface ContractBuilderProps {;
 }
 
 export function ContractBuilder(): any ({;
-
   isOpen;
   onClose;
   talent;
@@ -40,7 +34,6 @@ export function ContractBuilder(): any ({;
 }: ContractBuilderProps) {;
   const [activeTab, setActiveTab] = useState<string>("form");
   const [generatedContract, setGeneratedContract] = useState<string | null>(null);
-
   const [formValues, setFormValues] = useState<ContractFormValues | undefined>(;
     undefined;
   );
@@ -60,16 +53,12 @@ export function ContractBuilder(): any ({;
   };
 
   if (showSmartContractBuilder) {;
-
     return (
       <SmartContractBuilder
         isOpen={isOpen}
         onClose={() => {;
           setShowSmartContractBuilder(false);
-
           onClose();
-
-=======
 import { useState } from './react';
 import { Dialog, DialogContent } from '@/components / ui / dialog';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components / ui / tabs';
@@ -123,8 +112,6 @@ if ( {) {
         on_close={() => {
           setShowSmartContractBuilder (false);
           on_close ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 }
 
 
@@ -150,21 +137,10 @@ if ( {) {
     if (onContractGenerated) {
       onContractGenerated(contract)
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         }}
         talent={talent}
         client_name={client_name}
         onContractGenerated={onContractGenerated}
-
-      />
-    )
-  }
-
-
-
-
-  return (
-
     <Dialog open={isOpen} onOpenChange={onClose}>;
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">;
         <Tabs value={activeTab} onValueChange={setActiveTab} className="mt-4">;
@@ -185,13 +161,10 @@ if ( {) {
                 Templates;
               </Button>;
 
-
               <Button
                 variant="secondary"
                 size="sm"
                 onClick={() => setShowSmartContractBuilder(true)}
-
-=======
       />);
   }
   return (
@@ -217,33 +190,27 @@ if ( {) {
                 variant="secondary";
                 size="sm";
                 on_click={() => setShowSmartContractBuilder (true)}
-
               >;
                 Smart Contract Builder;
               </Button>;
             </div>;
           </div>;
 
-          <TabsContent value="form" className="pt - 4">;
-            <ContractForm;
-
-=======
-
             <ContractForm 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            <ContractForm
+          <TabsContent value="form" className="pt - 4">;
+            <ContractForm;
               talent={talent}
               client_name={client_name}
               initial_values={form_values}
               onFormValuesChange={setFormValues}
               onContractGenerated={handleContractGenerated}
-
             />;
           </TabsContent>;
 
           <TabsContent value="preview" className="pt-4">;
             {generatedContract && (;
-
               <ContractPreview
                 contractContent={generatedContract}
                 talent={talent}
@@ -251,23 +218,19 @@ if ( {) {
                 status="ready"
               />;
             )}
-
           </TabsContent>;
         </Tabs>;
-
 
         <TemplateManager
           isOpen={templateManagerOpen}
           onClose={() => setTemplateManagerOpen(false)}
           onSelectTemplate={handleLoadTemplate}
           currentValues={formValues}
-
         />;
       </DialogContent>;
     </Dialog>;
   );
 }
-
             />;
           </TabsContent>;
           <TabsContent value="preview" className="pt - 4">;
@@ -289,8 +252,5 @@ if ( {) {
       </DialogContent>;
     </Dialog>);
 }
-
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

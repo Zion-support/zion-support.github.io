@@ -1,20 +1,7 @@
 
-
+import React from "react";
+import { Button } from "@/components/ui/button";
 import { Check, X } from 'lucide-react'
-
-=======
-
-
-=======
-TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-
-import React from "react",
-import { Button } from "@/components/ui/button",
-import { Check, X } from 'lucide-react'
-
 import {
 
   Table,
@@ -28,7 +15,6 @@ import { Badge } from "@/components/ui/badge",
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export function EnterprisePricingTable() {
   const plans = [
     {
@@ -75,14 +61,12 @@ export function EnterprisePricingTable() {
       features: [
 
 
-
-
+  return (
+    <section id="pricing" className="py-20 px-4 md:px-6">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Enterprise Plans</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Check, X } from 'lucide-react';
@@ -192,7 +176,6 @@ export function EnterprisePricingTable() {;
                         <Badge className='mb-2 bg-zion-purple'>;
                           Most Popular;
                         </Badge>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                       )}
                       <span className='font-bold text-xl'>{plan && plan.name}</span>;
                       <div className='flex items-baseline mt-1'>;
@@ -219,12 +202,9 @@ export function EnterprisePricingTable() {;
                       </Button>;
                     </div>;
                   </TableHead>;
-
-=======
             Choose the perfect plan for your team size and requirements
           </p>
         </div>
-=======
 
 
 
@@ -246,7 +226,6 @@ export function EnterprisePricingTable() {;
                         <span className="text-sm text-muted-foreground ml-1">;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           {plan.billing}
                         </span>
                       </div>
@@ -265,14 +244,10 @@ export function EnterprisePricingTable() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       </Button>
                     </div>
                   </TableHead>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 ))}
-
-
               </TableRow>;
             </TableHeader>;
             <TableBody>;
@@ -280,9 +255,6 @@ export function EnterprisePricingTable() {;
                 <TableRow key={feature && feature.name}>;
                   <TableCell className='font-medium'>{feature && feature.name}</TableCell>;
                   {plans && plans.map(plan => (;
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     <TableCell
                       key={`${plan && plan.name}-${feature && feature.name}`}
                       className='text-center'>;
@@ -294,8 +266,6 @@ export function EnterprisePricingTable() {;
                         <Check className="h-5 w-5 text-green-500 mx-auto" />;
                       ) : (;
                         <X className="h-5 w-5 text-muted-foreground mx-auto" />;
-
-=======
                   <TableCell className="font-medium">{feature.name}</TableCell>
                   {plans.map((plan) => (
                     <TableCell key={`${plan.name}-${feature.name}`} className="text-center">
@@ -303,48 +273,17 @@ export function EnterprisePricingTable() {;
                         <Check className="h-5 w-5 text-green-500 mx-auto" />
                       ) : (
                         <X className="h-5 w-5 text-muted-foreground mx-auto" />
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       )}
                     </TableCell>;
                   ))}
                 </TableRow>;
               ))}
 
-
         <div className="mt-8 text-center text-sm text-muted-foreground">
-
           All plans include SSL security, 99.9% uptime SLA, and dedicated support
         </div>
       </div>
     </section>
-
-=======
-
-      </div>;
-    </section>;
-  );
-};
-
-=======
-              </TableRow>;
-            </TableHeader>;
-            <TableBody>;
-              {(plans[0]?.features || []).map((feature, index) => (;
-                <TableRow key={feature.name}>;
-                  <TableCell className="font-medium">{feature.name}</TableCell>;
-                  {plans.map((plan) => (;
-                    <TableCell key={`${plan.name}-${feature.name}`} className="text-center">;
-                      {plan.features[index]?.included ? (;
-                        <Check className="h-5 w-5 text-green-500 mx-auto" />;
-                      ) : (;
-                        <X className="h-5 w-5 text-muted-foreground mx-auto" />;
-                      )}
-                    </TableCell>;
-                  ))}
-                </TableRow>
-              ))}
-
             </TableBody>;
           </Table>;
         </div>;
@@ -362,11 +301,8 @@ export function EnterprisePricingTable() {;
     </section>;
   );
 }
-
   );
 }
-
-=======
 import React from 'react';
 import { Button } from '@/components / ui / button';
 import { Check, X } from 'lucide-react';
@@ -536,10 +472,3 @@ function EnterprisePricingTable() {
       </div>;
     </section>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

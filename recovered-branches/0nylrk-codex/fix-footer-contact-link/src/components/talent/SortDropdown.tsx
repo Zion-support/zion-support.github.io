@@ -1,10 +1,5 @@
 
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-
 import React from './react';
 import { Button  } from '@/components / ui / button';
 import { SORT_OPTIONS  } from '@/data / sort_options';
@@ -34,7 +29,6 @@ function SortDropdown() {
           <div className="flex items - center gap - 2">;
             <SortDesc className="h - 4 w - 4 text - zion - purple" />;
             {SORT_OPTIONS.find ((opt) => opt.value === sort_option)?.label ||;
-
               "Sort by"}
           </div>;
           <ChevronDown className="h - 4 w - 4 ml - 2 opacity - 50" />;
@@ -47,7 +41,6 @@ function SortDropdown() {
         {SORT_OPTIONS.map ((option) => (
           <DropdownMenuItem;
             key={option.value}
-
 interface SortDropdownProps {;
   sortOption: string,;
   setSortOption: (option: string) => void;
@@ -76,19 +69,15 @@ export function SortDropdown(): any ({ sortOption, setSortOption }: SortDropdown
             onClick={() => setSortOption(option && option.value)}
             className={`text-white hover:bg-zion-blue-light/30 cursor-pointer ${;
               sortOption === option && option.value ? "bg-zion-purple/20 text-zion-purple" : "";
-
             }`}
           >;
             {option && option.label}
           </DropdownMenuItem>;
         ))}
-
       </DropdownMenuContent>;
     </DropdownMenu>;
   );
 }
-
-=======
             on_click={() => setSortOption (option.value)}
             className={`text - white hover:bg - zion - blue - light / 30 cursor - pointer ${
               sort_option === option.value;
@@ -101,8 +90,6 @@ export function SortDropdown(): any ({ sortOption, setSortOption }: SortDropdown
       </DropdownMenuContent>;
     </DropdownMenu>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
               "Sort by"}
           </div>
           <ChevronDown className="h-4 w-4 ml-2 opacity-50" />
@@ -125,5 +112,3 @@ export function SortDropdown(): any ({ sortOption, setSortOption }: SortDropdown
 
 }
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

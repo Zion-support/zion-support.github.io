@@ -1,8 +1,3 @@
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 // Define suggested quick replies
 
 const QUICK_REPLIES = [
@@ -46,30 +41,12 @@ export function ChatBotPanel() {;
       content: "Hi! How can I help you?",;
       sender: "bot",;
       timestamp: new Date()}]),;
-
   const [inputValue, setInputValue] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [failedAttempts, setFailedAttempts] = useState(0);
   const scrollAreaRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const { theme } = useTheme();
-
-
-},
-
-export function ChatBotPanel() {
-  const [messages, setMessages] = useState<Message[]>([
-    {
-      id: "welcome",
-      content: "Hi! How can I help you?",
-      sender: "bot",
-
-
-  // Auto-scroll to bottom when messages change
-  useEffect(() => {
-    if (scrollAreaRef.current) {
-      scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight
-
 
   // Auto-scroll to bottom when messages change;
   useEffect(() => {;
@@ -117,12 +94,10 @@ export function ChatBotPanel() {
         // After 3 failed attempts, suggest escalation;
         if (failedAttempts >= 2) {;
           suggestEscalation();
-
         }
       } else {;
         // Reset failed attempts if successful;
         setFailedAttempts(0);
-=======
 import React, { useState, useRef, useEffect } from './react';
 import { Button } from '@/components / ui / button';
 import { Input } from '@/components / ui / input';
@@ -220,7 +195,6 @@ if ( {) {
   $2
 }
           suggest_escalation ();
-=======
 
 import React, { useState, useRef, useEffect } from "react",;
 import { Button } from "@/components/ui/button",;
@@ -271,7 +245,6 @@ export function ChatBotPanel() {;
   }, []),
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleSendMessage = async (text: string = inputValue) => {
     if (!text.trim()) return
     const userMessage: Message = {
@@ -305,14 +278,11 @@ export function ChatBotPanel() {;
         if (failedAttempts >= 2) {
           suggestEscalation()
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         }
       } else {
         // Reset failed attempts if successful;
         setFailedAttempts (0);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
-
     } catch (error) {;
       console && console.error("Error in AI chat:", error);
       toast({;
@@ -320,11 +290,9 @@ export function ChatBotPanel() {;
         title: "Communication Error",;
         description: "We're having trouble connecting to our support service."}),;
 
-
       setFailedAttempts((prev) => prev + 1);
       if (failedAttempts >= 2) {;
         suggestEscalation();
-=======
     } catch (error) {
       console.error("Error in AI chat:", error),
       toast({
@@ -337,23 +305,18 @@ export function ChatBotPanel() {;
       if (failedAttempts >= 2) {
         suggestEscalation()
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
     } finally {;
       setIsLoading(false);
     }
-
-
-  },
-=======
-  };
-=======
   },
 
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  },
+
+
+
   const sendToAIAssistant = async (message: string) => {
     try {
       const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
@@ -383,7 +346,6 @@ export function ChatBotPanel() {;
       return {
         success: true
         message: data.message
-=======
       console.error ("Error in AI chat:", error);
       toast ({
         variant: "destructive",
@@ -424,20 +386,10 @@ if ( {) {
       return {
         success: true,
         message: data.message;
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
     } catch (error) {
       console.error ("Error in AI chat:", error);
       return {
-
-
-  };
-
-=======
       };
     }
   },
@@ -459,8 +411,27 @@ if ( {) {
     logSupportEscalation()
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      };
+    }
+  },
+
+
+
+
+  const suggestEscalation = () => {
+    const escalationMessage: Message = {
+      id: `bot-escalation-${Date.now()}`,
+      content: 
+        "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?",
+      sender: "bot",
+      timestamp: new Date()},
+    
+    setMessages((prev) => [...prev, escalationMessage]),
+    
+    // Log this interaction for the support team
+    logSupportEscalation()
+  },
+
   const logSupportEscalation = async () => {
     try {
       // Send the conversation to the backend for logging
@@ -506,76 +477,10 @@ if ( {) {
           timestamp: m.timestamp;
         }));
       });
-
     } catch (error) {
       console.error ("Failed to log support escalation:", error);
     }
   }
-
-    } catch (error) {
-      console.error("Failed to log support escalation:", error)
-    }
-
-  },
-
-  const handleQuickReply = (text: string) => {
-    handleSendMessage(text)
-  },
-
-
-
-  const handleEscalateToLiveAgent = () => {
-    setMessages((prev) => [
-      ...prev
-      {
-        id: `user-${Date.now()}`
-        content: "I'd like to speak with a human agent"
-        sender: "user"
-        timestamp: new Date()
-
-
-      },
-      {
-        id: `bot-${Date.now()}`,
-        content: "I'm connecting you with a support agent. Please note that our support hours are Monday to Friday, 9AM to 6PM EST. If you're messaging outside these hours, a team member will follow up with you as soon as possible.",
-        sender: "bot",
-        timestamp: new Date()
-      }
-    ]),
-    
-
-
-    // In a real implementation, this would trigger a live chat request
-    toast({
-      title: "Support request submitted"
-      description: "A support agent will be with you shortly."})
-
-
-  },
-
-
-
-  const handleEmailSupport = () => {
-    setMessages((prev) => [
-      ...prev
-      {
-        id: `user-${Date.now()}`
-        content: "I'd like to email support"
-        sender: "user"
-        timestamp: new Date()
-
-
-      },
-
-
-      {
-        id: `bot-${Date.now()}`
-        content: "Please send your question to support@ziontechgroup.com. Our team will get back to you within 24 hours."
-        sender: "bot"
-        timestamp: new Date()
-      }
-    ])
-
   };
 
   const sendToAIAssistant = async (message: string) => {;
@@ -609,7 +514,6 @@ if ( {) {
     }
   };
 
-=======
 
   },
 
@@ -697,7 +601,6 @@ if ( {) {
     ]);
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className="flex flex-col h-full">;
       <ScrollArea className="flex-1 p-4" ref={scrollAreaRef}>;
@@ -713,10 +616,6 @@ if ( {) {
               timestamp={message.timestamp}
             />
           ))}
-
-          
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {isLoading && (
             <div className="flex items-center justify-center py-2">
               <Loader2 className="h-5 w-5 animate-spin text-zion-purple" />
@@ -731,7 +630,6 @@ if ( {) {
           </p>
           <div className="flex flex-wrap gap-2">
             {QUICK_REPLIES.map((reply) => (
-=======
 
           {isLoading && (;
             <div className="flex items-center justify-center py-2">;
@@ -748,7 +646,6 @@ if ( {) {
           </p>;
           <div className="flex flex-wrap gap-2">;
             {QUICK_REPLIES && QUICK_REPLIES.map((reply) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <QuickReplyButton
                 key={reply && reply.id}
                 text={reply && reply.text}
@@ -758,25 +655,6 @@ if ( {) {
           </div>;
         </div>;
       )}
-
-
-      
-
-
-      {failedAttempts >= 3 && (
-        <div className="px-4 py-3 border-t border-zion-purple/10">
-          <p className={cn("text-sm mb-2 font-medium", theme === "dark" ? "text-gray-300" : "text-gray-600")}>
-            Need more help?
-          </p>
-          <div className="flex gap-2">
-            <Button
-              onClick={handleEscalateToLiveAgent}
-              size="sm"
-              className="bg-zion-purple hover:bg-zion-purple-light text-white"
-            >
-              Chat with Live Agent
-            </Button>
-=======
 
       {failedAttempts >= 3 && (;
         <div className="px-4 py-3 border-t border-zion-purple/10">;
@@ -790,7 +668,6 @@ if ( {) {
               className="bg-zion-purple hover:bg-zion-purple-light text-white">;
               Chat with Live Agent;
             </Button>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <Button
               onClick={handleEmailSupport}
               size="sm"
@@ -801,7 +678,6 @@ if ( {) {
         </div>;
       )}
 
-
       <divclassName={cn(
         "p-4 border-t", 
         theme === "dark" ? "border-zion-blue-light" : "border-gray-200"
@@ -810,45 +686,20 @@ if ( {) {
           onSubmit={(e) => {;
             e && e.preventDefault();
             handleSendMessage();
-
           }}
           className="flex items-center gap-2";
         >;
           <Input
             ref={inputRef}
             value={inputValue}
-
-            onChange={(e) => setInputValue(e.target.value)}
-            placeholder="Type your question..."
-            className={cn(
-
-              "flex-1",
-              theme === "dark" 
-                ? "bg-zion-blue border-zion-blue-light focus-visible:ring-zion-purple" 
-
-
-                : "bg-white border-gray-200"
-            )}
-          />
-          <Button
-            type="submit"
-            size="icon"
-            disabled={isLoading |!inputValue.trim()}
-            className="bg-zion-cyan hover: bg-zion-cyan/80 text-white"
-          >
-            <Send className="h-4 w-4" />
-          </Button>
-        </form>
-      </div>
-    </div>
-  )
-
+            onChange={(e) => setInputValue(e && e.target.value)}
+            placeholder="Type your question...";
+            className={cn(;
+              "flex-1";
               theme === "dark" ;
                 ? "bg-zion-blue border-zion-blue-light focus-visible:ring-zion-purple" ;
-=======
 
 
-=======
 ;
       {failedAttempts >= 3 && (;
         <div className="px-4 py-3 border-t border-zion-purple/10">;
@@ -913,10 +764,7 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 ;
   const handleQuickReply = (text: string) =>: any {
     handleSendMessage (text);
@@ -1049,4 +897,3 @@ if ( {) {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

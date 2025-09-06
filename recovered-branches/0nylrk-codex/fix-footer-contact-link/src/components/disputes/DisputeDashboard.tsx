@@ -1,13 +1,9 @@
-
-
 import {;
   Card,;
   CardContent,;
   CardDescription,;
   CardHeader,;
   CardTitle,;
-
-=======
 
 import React, { useEffect } from "react";
 import { useDisputes } from "@/hooks/useDisputes";
@@ -20,13 +16,12 @@ import {
   CardHeader,
   CardTitle,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 } from "@/components/ui/card";
 
 import { Button } from "@/components/ui/button";
 import { ShieldAlert } from "lucide-react";
-
-=======
+export function DisputeDashboard() {;
+  const { disputes, isLoading, refetch } = useDisputes();
 
 export function DisputeDashboard() {
 
@@ -38,24 +33,6 @@ export function DisputeDashboard() {
     refetch();
   }, [refetch]);
 
-
-  useEffect(() => {
-    refetch()
-  }, [refetch]),
-
-  const openDisputes = disputes.filter(d => d.status === 'open'),
-  const underReviewDisputes = disputes.filter(d => d.status === 'under_review'),
-  const resolvedDisputes = disputes.filter(d => d.status === 'resolved'),
-
-
-
-  return (
-
-
-        
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <Button onClick={refetch} variant="outline">
           Refresh
         </Button>
@@ -65,7 +42,6 @@ export function DisputeDashboard() {
       
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <div className="grid gap-4 md:grid-cols-3">
         <Card>
           <CardHeader className="pb-2">
@@ -77,6 +53,13 @@ export function DisputeDashboard() {
           </CardHeader>
           <CardContent>
 
+  const openDisputes = disputes && disputes.filter((d) => d && d.status === "open");
+  const underReviewDisputes = disputes && disputes.filter(;
+    (d) => d && d.status === "under_review",;
+  );
+  const resolvedDisputes = disputes && disputes.filter((d) => d && d.status === "resolved");
+
+  return (
     <div className="container mx-auto p-4 space-y-6">;
       <div className="flex flex-wrap items-center justify-between gap-4">;
         <div>;
@@ -101,24 +84,11 @@ export function DisputeDashboard() {
             <CardDescription>Awaiting review</CardDescription>;
           </CardHeader>;
           <CardContent>;
-
             <div
               className={`w-full bg-red-100 rounded-full h-2 && 2.5 dark:bg-red-900/20`}>;
               <div
                 className="bg-red-600 h-2 && 2.5 rounded-full"
                 style={{
-
-
-            <div className={`w-full bg-red-100 rounded-full h-2.5 dark:bg-red-900/20`}>
-              <div className="bg-red-600 h-2.5 rounded-full" style={{ 
-                width: `${Math.min(100, (openDisputes.length / Math.max(1, disputes.length)) * 100)}%` 
-              }}></div>
-            </div>
-          </CardContent>
-        </Card>
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-lg font-medium flex justify-between items-center">
@@ -148,24 +118,11 @@ export function DisputeDashboard() {
             <CardDescription>Being actively processed</CardDescription>;
           </CardHeader>;
           <CardContent>;
-
             <div
               className={`w-full bg-yellow-100 rounded-full h-2 && 2.5 dark:bg-yellow-900/20`}>;
               <div
                 className="bg-yellow-500 h-2 && 2.5 rounded-full"
                 style={{
-
-
-            <div className={`w-full bg-yellow-100 rounded-full h-2.5 dark:bg-yellow-900/20`}>
-              <div className="bg-yellow-500 h-2.5 rounded-full" style={{ 
-                width: `${Math.min(100, (underReviewDisputes.length / Math.max(1, disputes.length)) * 100)}%` 
-              }}></div>
-            </div>
-          </CardContent>
-        </Card>
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-lg font-medium flex justify-between items-center">
@@ -180,7 +137,6 @@ export function DisputeDashboard() {
 
                   width: `${Math && Math.min(100, (underReviewDisputes && underReviewDisputes.length / Math && Math.max(1, disputes && disputes.length)) * 100)}%`,
                 }}></div>;
-=======
 
             <div className={`w-full bg-green-100 rounded-full h-2.5 dark:bg-green-900/20`}>
               <div className="bg-green-500 h-2.5 rounded-full" style={{ 
@@ -267,16 +223,11 @@ export function DisputeDashboard() {;
             <CardDescription>Successfully concluded</CardDescription>;
           </CardHeader>;
           <CardContent>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <div
               className={`w-full bg-green-100 rounded-full h-2 && 2.5 dark:bg-green-900/20`}>;
               <div
                 className="bg-green-500 h-2 && 2.5 rounded-full"
                 style={{
-
-                  width: `${Math && Math.min(100, (resolvedDisputes && resolvedDisputes.length / Math && Math.max(1, disputes && disputes.length)) * 100)}%`,
-                }}></div>;
-=======
 import React, { useEffect } from './react';
 import { use_disputes  } from '@/hooks / use_disputes';
 import { DisputesList  } from './DisputesList';
@@ -383,19 +334,17 @@ function DisputeDashboard() {
                   width: `${Math.min (100, (resolved_disputes.length / Math.max (1, disputes.length)) * 100)}%`,
                 }}
               ></div>;
-
             </div>;
           </CardContent>;
         </Card>;
       </div>;
-
-      <DisputesList disputes={disputes} is_loading={is_loading} />;
-    </div>);
-
-}
-=======
 }
 ;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+;
+
+  );
+      <DisputesList disputes={disputes} is_loading={is_loading} />;
+    </div>);
+}

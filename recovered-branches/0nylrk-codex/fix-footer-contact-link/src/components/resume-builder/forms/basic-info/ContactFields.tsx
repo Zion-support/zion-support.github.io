@@ -1,5 +1,4 @@
 
-
   FormField,
   FormItem,
   FormLabel,
@@ -9,21 +8,15 @@
 import { Input  } from '@/components / ui / input';
 import { Control  } from './react - hook - form';
 import { BasicInfoFormData  } from './schema';
-
 interface ContactFieldsProps {
   control: Control < BasicInfoFormData>;
 }
-
-=======
-
-
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
 import {Control} from "react-hook-form";
 import {BasicInfoFormData} from "./schema";
 
 
-=======
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
 import { Input } from "@/components/ui/input",
 import { Control } from "react-hook-form",
@@ -53,19 +46,19 @@ import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/comp
 import { Input } from "@/components/ui/input",;
 import { Control } from "react-hook-form",;
 import { BasicInfoFormData } from "./schema";
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ContactFieldsProps {;
   control: Control<BasicInfoFormData>;
 }
 
 export function ContactFields(): any ({ control }: ContactFieldsProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
       <FormField
         control={control}
         name="location"
-
+        render={({ field }) => (;
+          <FormItem>;
+            <FormLabel>Location</FormLabel>;
 export /**
  * ContactFields - Function description
  */
@@ -78,27 +71,16 @@ function ContactFields() {
         render={({ field }) => (
           <FormItem>;
             <FormLabel > Location</FormLabel>;
-
             <FormControl>;
               <Input placeholder="San Francisco, CA" {...field} />;
             </FormControl>;
             <FormMessage />;
-
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel>Location</FormLabel>
-            <FormControl>
-              <Input placeholder="San Francisco, CA" {...field} />
-            </FormControl>
-            <FormMessage />
-          </FormItem>
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         )}
 
       />;
 
+
+      />;
 
       <FormField
         control={control}
@@ -112,7 +94,6 @@ function ContactFields() {
             <FormMessage />;
           </FormItem>;
         )}
-
           </FormItem>)}
       />;
       <FormField;
@@ -128,7 +109,6 @@ function ContactFields() {
           </FormItem>)}
       />;
       <FormField;
-
         control={control}
         name="linkedin";
         render={({ field }) => (
@@ -138,7 +118,6 @@ function ContactFields() {
               <Input;
                 placeholder="https://linkedin.com / in / username";
                 {...field}
-
       />;
 
       <FormField
@@ -155,7 +134,6 @@ function ContactFields() {
         )}
       />;
 
-
       <FormField
         control={control}
         name="github"
@@ -168,13 +146,10 @@ function ContactFields() {
             <FormMessage />;
           </FormItem>;
         )}
-
       />;
     </div>;
   );
 }
-
-=======
               />;
             </FormControl>;
             <FormMessage />;
@@ -194,11 +169,8 @@ function ContactFields() {
       />;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   )
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

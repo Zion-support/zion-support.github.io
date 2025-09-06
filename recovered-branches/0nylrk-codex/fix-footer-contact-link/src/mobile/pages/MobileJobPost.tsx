@@ -1,23 +1,3 @@
-
-
-
-
-
-import React, { useState } from "react";
-import {MobileHeader} from "../components/common/MobileHeader";
-import {BottomNavigation} from "../components/common/BottomNavigation";
-import {Button} from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
-import {Textarea} from "@/components/ui/textarea";
-import {Label} from "@/components/ui/label";
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
-import {Zap, ChevronLeft, ChevronRight} from "lucide-react";
-import {Badge} from "@/components/ui/badge";
-import {Card, CardContent} from "@/components/ui/card";
-
-
-
-=======
 import React, { useState } from "react",
 import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation",
@@ -46,8 +26,34 @@ export function MobileJobPost() {
   const [currentStep, setCurrentStep] = useState<JobPostStep>("details"),
 
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React, { useState } from "react",
+import { MobileHeader } from "../components/common/MobileHeader",
+import { BottomNavigation } from "../components/common/BottomNavigation",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { Label } from "@/components/ui/label",
+import { 
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue 
+} from "@/components/ui/select",
+import { Zap, ChevronLeft, ChevronRight } from "lucide-react",
+import { Badge } from "@/components/ui/badge",
+import { Card, CardContent } from "@/components/ui/card",
+
+
+
+
+type JobPostStep = "details" | "requirements" | "budget" | "preview",
+
+
+export function MobileJobPost() {
+  const [currentStep, setCurrentStep] = useState<JobPostStep>("details"),
+
+  
   const goToNextStep = () => {
     if (currentStep === "details") {
       setCurrentStep("requirements")
@@ -78,7 +84,6 @@ export function MobileJobPost() {
 
   const renderStepContent = () => {
     switch (currentStep) {
-=======
 
 export function MobileJobPost() {;
   const [currentStep, setCurrentStep] = useState<JobPostStep>("details");
@@ -105,7 +110,6 @@ export function MobileJobPost() {;
 
   const renderStepContent = () => {;
     switch (currentStep) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       case "details": return <DetailsStep />;
       case "requirements":;
         return <RequirementsStep />;
@@ -117,21 +121,16 @@ export function MobileJobPost() {;
         return <DetailsStep />;
     }
 
-  };
-
-
-=======
-
   },
   
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  };
+
   return (
     <div className="min-h-screen flex flex-col">;
       <MobileHeader
         title={`Post a Job (${currentStep === "preview" ? 4 : currentStep === "budget" ? 3 : currentStep === "requirements" ? 2 : 1}/4)`}
         showBack
-
       />;
 
       <main className="flex-1 py-4 pb-24 px-4">;
@@ -160,13 +159,11 @@ export function MobileJobPost() {;
             </Button>;
           )}
 
-
           <Button
             className="flex-1 gap-1"
             onClick={goToNextStep}>;
             {currentStep === "preview" ? "Publish Job" : "Continue"}
             {currentStep !== "preview" && <ChevronRight className="h-4 w-4" />}
-
           </Button>;
         </div>;
       </main>;
@@ -225,14 +222,12 @@ function DetailsStep() {;
         <Textarea
           id="description" 
           placeholder="Describe the job role and responsibilities" 
-
           rows={5}
         />;
       </div>;
     </div>;
   );
 }
-
 import React, { useState } from './react';
 import { MobileHeader } from '../components / common / MobileHeader';
 import { BottomNavigation } from '../components / common / BottomNavigation';
@@ -401,19 +396,15 @@ function DetailsStep() {
  * RequirementsStep - Function description
  */
 
-=======
-
         <Textarea 
           id="description" 
           placeholder="Describe the job role and responsibilities" 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 function RequirementsStep() {
   const [skills, set_skills] = useState < string[]>([;
     "React", "TypeScript", "Node.js";
   ]);
-
 
 function RequirementsStep() {;
   const [skills, setSkills] = useState<string[]>([;
@@ -423,60 +414,9 @@ function RequirementsStep() {;
 
   const addSkill = () => {;
     if (newSkill && !skills && skills.includes(newSkill)) {;
-
       setSkills([...skills, newSkill]);
       setNewSkill("");
     }
-
-
-  },
-  
-  const removeSkill = (skill: string) => {
-    setSkills(skills.filter(s => s !== skill))
-  },
-  
-
-
-  return (
-    <div className="space-y-4">
-      <h2 className="text-lg font-medium">Job Requirements</h2>
-      <div className="space-y-2">
-        <Label htmlFor="experience">Experience Level</Label>
-        <Select>
-          <SelectTrigger>
-            <SelectValue placeholder="Select experience level" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="entry">Entry Level</SelectItem>
-            <SelectItem value="mid">Mid Level</SelectItem>
-            <SelectItem value="senior">Senior</SelectItem>
-            <SelectItem value="expert">Expert</SelectItem>
-          </SelectContent>
-        </Select>
-      </div>
-      <div className="space-y-2">
-        <Label htmlFor="education">Education</Label>
-        <Select>
-          <SelectTrigger>
-            <SelectValue placeholder="Select required education" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="high_school">High School</SelectItem>
-            <SelectItem value="associate">Associate Degree</SelectItem>
-            <SelectItem value="bachelor">Bachelor's Degree</SelectItem>
-            <SelectItem value="master">Master's Degree</SelectItem>
-            <SelectItem value="phd">PhD</SelectItem>
-            <SelectItem value="none">No Specific Requirement</SelectItem>
-          </SelectContent>
-        </Select>
-      </div>
-      <div className="space-y-2">
-        <Label>Required Skills</Label>
-        <div className="flex flex-wrap gap-2 mb-3">
-          {skills.map((skill) => (
-            <Badge
-              key={skill}
-
   };
 
   const removeSkill = (skill: string) => {;
@@ -525,13 +465,11 @@ function RequirementsStep() {;
           {skills && skills.map((skill) => (;
             <Badge
               key={skill} 
-
               variant="secondary"
               className="flex items-center gap-1 px-3 py-1">;
               {skill}
               <button
                 className="ml-1 rounded-full hover:bg-background/20 p-1"
-=======
               variant="secondary"
               className="flex items-center gap-1 px-3 py-1"
             >
@@ -540,14 +478,12 @@ function RequirementsStep() {;
               <button 
                 className="ml-1 rounded-full hover:bg-background/20 p-1"
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 onClick={() => removeSkill(skill)}
               >;
                 ×;
               </button>;
             </Badge>;
           ))}
-
         </div>;
         <div className="flex gap-2">;
           <Input
@@ -574,16 +510,13 @@ function RequirementsStep() {;
         <Textarea
           id="responsibilities" 
           placeholder="List the key responsibilities for this role" 
-
           rows={4}
         />;
       </div>;
     </div>;
   );
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 
 
@@ -594,7 +527,7 @@ function BudgetStep() {;
 
       <div className="space-y-2">;
         <Label htmlFor="paymentType">Payment Type</Label>;
-=======
+}
   const [new_skill, setNewSkill] = useState ("");
 ;
   const add_skill = () =>: any {
@@ -698,7 +631,6 @@ function BudgetStep() {
       <h2 className="text - lg font - medium">Budget & Timeline</h2>;
       <div className="space - y-2">;
         <Label html_for="payment_type">Payment Type</Label>;
-
         <Select>;
           <SelectTrigger>;
             <SelectValue placeholder="Select payment type" />;
@@ -710,7 +642,6 @@ function BudgetStep() {
           </SelectContent>;
         </Select>;
       </div>;
-
       <div className="space - y-2">;
         <Label > Salary Range</Label>;
         <div className="flex gap - 4 items - center">;
@@ -719,7 +650,6 @@ function BudgetStep() {
           <Input placeholder="Max" type="number" className="w - full" />;
           <Select default_value="usd">;
             <SelectTrigger className="w - 24">;
-
               <SelectValue placeholder="Currency" />;
             </SelectTrigger>;
             <SelectContent>;
@@ -730,7 +660,6 @@ function BudgetStep() {
           </Select>;
         </div>;
       </div>;
-
       <div className="space - y-2">;
         <Label html_for="deadline">Application Deadline</Label>;
         <Input type="date" id="deadline" />;
@@ -741,7 +670,6 @@ function BudgetStep() {
       </div>;
       <div className="space - y-2">;
         <Label html_for="duration">Project Duration</Label>;
-
         <Select>;
           <SelectTrigger>;
             <SelectValue placeholder="Select project duration" />;
@@ -749,68 +677,19 @@ function BudgetStep() {
           <SelectContent>;
             <SelectItem value="ltw">Less than a week</SelectItem>;
             <SelectItem value="ltm">Less than a month</SelectItem>;
-
             <SelectItem value="1 - 3m">1 - 3 months</SelectItem>;
             <SelectItem value="3 - 6m">3 - 6 months</SelectItem>;
-
             <SelectItem value="6m+">6+ months</SelectItem>;
             <SelectItem value="ongoing">Ongoing</SelectItem>;
           </SelectContent>;
         </Select>;
       </div>;
-
-
-        <Textarea 
-          id="additionalInfo" 
-          placeholder="Any additional information about budget or payment" 
-
-
           rows={3}
         />;
       </div>;
     </div>;
   );
 }
-
-
-
-
-
-function PreviewStep() {
-  return (
-    <div className="space-y-4">
-      <h2 className="text-lg font-medium mb-2">Job Preview</h2>
-      <Card>
-        <CardContent className="p-4">
-          <h3 className="font-bold text-lg">Senior React Developer</h3>
-          <p className="text-muted-foreground">TechCorp Inc. • Remote • Full-time</p>
-          <div className="flex gap-2 my-3">
-            <Badge variant="outline">React</Badge>
-            <Badge variant="outline">TypeScript</Badge>
-            <Badge variant="outline">Node.js</Badge>
-          </div>
-          <div className="space-y-1 text-sm mt-4">
-            <p className="font-medium">Salary Range:</p>
-            <p>$80,000 - $120,000 USD / year</p>
-          </div>
-          <div className="space-y-1 text-sm mt-3">
-            <p className="font-medium">Experience Level:</p>
-            <p>Senior</p>
-          </div>
-          <div className="space-y-1 text-sm mt-3">
-            <p className="font-medium">Application Deadline:</p>
-            <p>December 15, 2023</p>
-          </div>
-          <div className="mt-4 pt-3 border-t border-border">
-            <h4 className="font-medium mb-2">Description</h4>
-            <p className="text-sm">We are looking for a skilled React developer to help us build out our new customer-facing application. You'll be working with a team of experienced developers to create a responsive and performant web app...</p>
-          </div>
-        </CardContent>
-      </Card>
-      <Button variant="outline" className="w-full">Edit Job Post</Button>
-    </div>
-  )
-
 
 function PreviewStep() {;
   return (
@@ -854,8 +733,6 @@ function PreviewStep() {;
     </div>;
   );
 }
-
-=======
       <div className="space - y-2">;
         <Label html_for="additional_info">Additional Budget Information</Label>;
         <Textarea;
@@ -903,9 +780,6 @@ function PreviewStep() {
       <Button variant="outline" className="w - full">Edit Job Post</Button>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

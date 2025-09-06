@@ -1,4 +1,3 @@
-
 import { NavigationItem, NavigationCategory, NavigationConfig } from '../types / navigation',
 export class NavigationGenerator {
   private services: NavigationItem[] = [],
@@ -592,7 +591,6 @@ export class NavigationGenerator {
   // Generate categories from services;
   async generate_categories (): Promise < NavigationCategory[]> {
     const category_map = new Map < string NavigationItem[]>(),
-
     // Group services by category;
     this.services.for_each (service => {
       // Check condition
@@ -606,7 +604,6 @@ if ( {) {
         }
         category_map.get (service.category)!.push (service);
       }
-
     }),
     // Create category objects;
     this.categories = Array.from (category_map.entries ()).map (([name, services]) => ({
@@ -714,13 +711,11 @@ if ( {) {
         id: 'search',
         label: '🔎 Search',
         href: '/search',
-
         priority: 7;
       }
     ];
   }
   // Generate footer navigation;
-
   generateFooterNavigation (): NavigationItem[] {
     return [;
       {
@@ -763,13 +758,11 @@ if ( {) {
         id: 'sitemap',
         label: 'Sitemap',
         href: '/sitemap.xml',
-
         priority: 7;
       }
     ];
   }
   // Generate sidebar navigation based on context;
-
   generateSidebarNavigation (context: any): NavigationItem[] {
     switch (context.page_type) {
       case 'service':;
@@ -778,12 +771,10 @@ if ( {) {
         return this.generateCategorySidebar (context.current_category),
       case 'dashboard':;
         return this.generateDashboardSidebar (),
-
       default:;
         return this.generateDefaultSidebar ();
     }
   }
-
   private generateServiceSidebar (service_id?: string): NavigationItem[] {
     if (return this.generateDefaultSidebar (), ) {
   $2
@@ -869,12 +860,10 @@ if ( {) {
         id: 'settings',
         label: 'Settings',
         href: '/dashboard / settings',
-
         priority: 4;
       }
     ];
   }
-
   private generateDefaultSidebar (): NavigationItem[] {
     return [;
       {
@@ -893,12 +882,10 @@ if ( {) {
         id: 'categories',
         label: 'Browse Categories',
         href: '/explore',
-
         priority: 3;
       }
     ];
   }
-
   // Auto - update navigation when new services are added;
   async update_navigation (): Promise < void> {
     await this.discover_services (),
@@ -924,7 +911,6 @@ if ( {) {
         {
           id: 'website',
           label: 'Website',
-
           href: 'https://ziontechgroup.com';
           is_external: true;
           priority: 2;

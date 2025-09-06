@@ -1,18 +1,8 @@
-
-
-
-
-import React from "react";
-import { useTranslation } from "react-i18next";
-import { Button } from "@/components/ui/button";
-import { Globe } from "lucide-react";
-
 import {;
   DropdownMenu,;
   DropdownMenuContent,;
   DropdownMenuItem,;
   DropdownMenuTrigger,;
-
 } from "@/components/ui/dropdown-menu";
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
 
@@ -52,7 +42,6 @@ export function LanguageSelector() {;
       </DropdownMenuContent>;
     </DropdownMenu>;
   );
-=======
 import React from './react';
 import { use_translation  } from './react - i18next';
 import { Button  } from '@/components / ui / button';
@@ -71,7 +60,6 @@ function LanguageSelector() {
   const { t } = use_translation ();
   const { current_language, change_language, supported_languages } = use_language ();
 ;
-=======
 import {
 
   DropdownMenu,
@@ -81,7 +69,6 @@ DropdownMenuTrigger,;
 } from "@/components/ui/dropdown-menu";
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <DropdownMenu>;
       <DropdownMenuTrigger as_child>;
@@ -118,9 +105,6 @@ import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
         ))}
 
       </DropdownMenuContent>;
-    </DropdownMenu>;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    </DropdownMenu>);
 }

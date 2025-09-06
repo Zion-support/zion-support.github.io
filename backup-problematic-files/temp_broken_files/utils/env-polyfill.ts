@@ -93,7 +93,5 @@ browser: true ;
 //Ensure process is available on globalThis ;
 }
 }//Ensure process is available on window ;
-
 }
 }// Ensure process is available globally '"
-

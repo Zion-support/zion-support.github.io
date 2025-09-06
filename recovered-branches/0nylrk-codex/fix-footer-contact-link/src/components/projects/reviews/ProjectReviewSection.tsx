@@ -1,17 +1,3 @@
-
-
-
-import {useState} from "react";
-import {Star} from "lucide-react";
-import {Button} from "@/components/ui/button";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {ReviewsList} from "@/components/reviews/ReviewsList";
-import {LeaveReviewModal} from "@/components/reviews/LeaveReviewModal";
-import {useReviews} from "@/hooks/useReviews";
-import {Project} from "@/types/projects";
-import {useAuth} from "@/hooks/useAuth";
-
-=======
 import { useState } from "react",
 import { Star } from "lucide-react",
 import { Button } from "@/components/ui/button",
@@ -28,7 +14,6 @@ interface ProjectReviewSectionProps {
   project: Project;
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
   return (
@@ -48,7 +33,6 @@ interface ProjectReviewSectionProps {
           <div className="space-y-6">
             {(isClient |isTalent) && (
               <div className="border-b pb-4 mb-4">
-=======
 import { useState  } from './react';
 import { Star  } from './lucide-react';
 import { Button  } from '@/components / ui / button';
@@ -110,7 +94,6 @@ function ProjectReviewSection() {
           <div className="space - y-6">;
             {(is_client || is_talent) && (
               <div className="border - b pb - 4 mb - 4">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 {canLeaveReview ? (
                   <div className="bg - muted / 20 rounded - lg p - 4 text - center">;
                     <h3 className="font - medium mb - 2">Share your experience</h3>;
@@ -130,7 +113,6 @@ function ProjectReviewSection() {
                       {user_review.status === "approved";
                         ? "published";
                         : "pending approval"}
-
 import {useState} from "react";
 import {Star} from "lucide-react";
 import {Button} from "@/components/ui/button";
@@ -140,7 +122,6 @@ import {LeaveReviewModal} from "@/components/reviews/LeaveReviewModal";
 import {useReviews} from "@/hooks/useReviews";
 import {Project} from "@/types/projects";
 import {useAuth} from "@/hooks/useAuth";
-=======
 
 import { useState } from "react",;
 import { Star } from "lucide-react",;
@@ -214,23 +195,16 @@ export function ProjectReviewSection(): any ({ project }: ProjectReviewSectionPr
                       <Button variant="outline" onClick={() => setIsReviewModalOpen(true)}>;
                         Edit Review;
                       </Button>;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     )}
                   </div>;
                 ) : null}
               </div>;
             )}
 
-
-
             <ReviewsList
               reviews={reviews}
               isLoading={isLoading}
               onReportReview={reportReview}
-
             />;
           </div>;
         ) : (;
@@ -246,11 +220,8 @@ export function ProjectReviewSection(): any ({ project }: ProjectReviewSectionPr
       {/* Review Modal */}
       {(isClient || isTalent) && (;
 
-=======
-
       {(isClient || isTalent) && (
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <LeaveReviewModal
           projectId={project && project.id}
           revieweeId={revieweeId}
@@ -259,12 +230,9 @@ export function ProjectReviewSection(): any ({ project }: ProjectReviewSectionPr
           onClose={() => setIsReviewModalOpen(false)}
         />;
       )}
-
     </Card>;
   );
 }
-
-=======
                     </p>;
                     {user_review.status === "pending" && (
                       <Button;
@@ -302,4 +270,3 @@ export function ProjectReviewSection(): any ({ project }: ProjectReviewSectionPr
         />)}
     </Card>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

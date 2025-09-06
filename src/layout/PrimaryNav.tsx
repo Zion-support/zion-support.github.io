@@ -1,5 +1,6 @@
-
-
+import React from 'react';
+import { useState } from 'react';
+import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
 import Link from 'next/link';
 import { useRouter  } from 'next/router';
 import { Logo  } from '@/components/header/Logo';
@@ -16,7 +17,6 @@ import { slugify  } from '@/lib/slugify';
 import { ResponsiveNavigation  } from '@/components/navigation/ResponsiveNavigation';
 import { MobileMenu  } from '@/components/header/MobileMenu';
 import { MobileBottomNav  } from '@/components/header/MobileBottomNav';
-=======
 
 import { useState } from 'react'
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger'
@@ -37,12 +37,10 @@ import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigati
 import { MobileMenu } from '@/components/header/MobileMenu'
 import { MobileBottomNav } from '@/components/header/MobileBottomNav'
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { Menu, X } from 'lucide-react'
 import { useTranslation  } from 'react-i18next';
 import { CartDrawer  } from '@/components/cart/CartDrawer';
 import { LoginModal } from '@/components/auth/LoginModal';
-
 import { useState } from 'react';
 import { log_debug, logErrorToProduction } from '@/utils / production_logger';
 import Link from 'next / link';
@@ -79,32 +77,12 @@ function PrimaryNav() {
   const [query, set_query] = useState ('');
   const suggestions = generateSearchSuggestions ();
   let unread_count = 0;
-
   try {
     const messaging = use_messaging ();
     unread_count = messaging.unread_count;
   } catch {
-
-    // context not available
-
-  };
-;
-  const handleSubmit = (e: React.FormEvent) => {;
-    e.preventDefault();
-
-
-    const trimmed = query.trim();    if (trimmed) {
-      logDebug('PrimaryNav search submit:', { query: trimmed })
-      router
-        .push(`/search?q=${encodeURIComponent(trimmed)}`)
-        .then(() => setQuery(''))
-        .catch(err =>
-          logErrorToProduction('Search navigation failed', err, {
-            query: trimmed
-            component: 'PrimaryNav'
-          })
-        ) }
-=======
+    // context not available;
+  }
   const handle_submit = (e: React.FormEvent) =>: any {
     e.prevent_default ();
     const trimmed = query.trim ();    // Check condition
@@ -120,9 +98,7 @@ if ( {) {
             query: trimmed,
             component: 'PrimaryNav',
           })) }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
-=======
 export function PrimaryNav() {;
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [loginOpen, setLoginOpen] = useState(false);
@@ -156,44 +132,18 @@ export function PrimaryNav() {;
         );    }
   };
 
-
+  return (
+    <>;
         data-testid='header'>;
         <div className='container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap'>;
           <Logo />;
-
 
           {/* Navigation - hidden on mobile and tablets, shown on desktop */}
           <div className='hidden lg:block order-1 flex-shrink-0'>;
             <ResponsiveNavigation
               openLoginModal={returnToPath => setLoginOpen(true)}
-
             />          </div>;
 
-
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  return (
-    <>
-      <header
-        className="sticky top-0 z-70 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md"
-        role="navigation"
-        aria-label="Primary"
-        data-testid="header"
-      >
-        <div className="container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap">
-          <Logo />
-
-          
-          {/* Navigation - hidden on mobile and tablets, shown on desktop */}
-          <div className="hidden lg:block order-1 flex-shrink-0">
-            <ResponsiveNavigation openLoginModal={(returnToPath) => setLoginOpen(true)} />
-          </div>
-          
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Actions container with responsive layout */}
           <div className='hidden lg:flex items-center gap-2 order-2 flex-shrink-0 min-w-0'>;
             {/* Search form with clamped width */}
@@ -204,7 +154,6 @@ export function PrimaryNav() {;
               <EnhancedSearchInput
                 value={query}
                 onChange={setQuery}
-
       <header;
         className='sticky top - 0 z - 70 w - full border - b border - primary / 20 bg - card / 90 backdrop - blur - md';
         role='navigation';
@@ -252,18 +201,15 @@ if ( {) {
 }
                     // Blog posts navigate to blog detail page;
                     router.push (`/blog/${sugg.slug}`);
-
                   } else {
                     // Default: search results page with query parameter;
                     router.push (`/search?q=${encodeURIComponent (sugg.text)}`);
                   }
-
                 onSelectSuggestion={sugg => {;
                   logDebug('PrimaryNav search suggestion selected:', {;
                     suggestion: sugg,;
                   });                  // Handle different suggestion types with proper navigation;
                   if (sugg && sugg.id) {;
-=======
 
                 onSelectSuggestion={(sugg) => {;
                   logDebug('PrimaryNav search suggestion selected:', { suggestion: sugg }),;
@@ -335,10 +281,8 @@ if ( {) {
               <CartDrawer />;
             </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* Compact controls group */}
             <div className='flex items-center gap-1 border-l border-primary/20 pl-1 ml-1'>;
-=======
                   set_query ('');
                   // Track analytics event;
                   // Check condition
@@ -416,40 +360,21 @@ if ( {) {
                       e.preventDefault(),
                       setLoginOpen(true)
             <div className="flex items-center gap-1">;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <PointsBadge />;
               <CartDrawer />;
             </div>;
             {/* Compact controls group */}
             <div className='flex items - center gap - 1 border - l border - primary / 20 pl - 1 ml - 1'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               <ModeToggle />;
               <LanguageSelector />;
             </div>;
             {/* Auth links - flex wrap for very small screens */}
-
-                  <Link;
-                    href="/auth/login";
-                    className="text-sm hover: text-primary whitespace-nowrap";
-                    data-testid="login-link";
-                    onClick={(e) => {;
-                      e.preventDefault();
-                      setLoginOpen(true);
-                    }}
-                  >;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-                    {t('auth.login')}
-                  </Link>
-=======
                     onClick={e => {;
                       e && e.preventDefault();
                       setLoginOpen(true);                    }}
                   >;
                     {t('auth && auth.login')}
                   </Link>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   <Link
                     href='/signup'
                     className='text-sm hover:text-primary whitespace-nowrap'>;
@@ -458,14 +383,9 @@ if ( {) {
                 </>;
               )}
               {isLoggedIn && <UserMenu />}
-
-=======
-
-
             </div>;
           </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {/* Tablet view (md to lg) - simplified controls */}
 
           <div className="hidden md: flex lg:hidden items-center gap-2 order-2">
@@ -486,23 +406,10 @@ if ( {) {
             <ModeToggle />;
             <LanguageSelector />;
             {!isLoggedIn && (;
-              <Link;
-                href="/auth/login";
-                className="text-sm hover:text-primary";
-                data-testid="login-link";
-                onClick={(e) => {;
-                  e.preventDefault();
-                  setLoginOpen(true);
-                }}
-              >;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-                {t('auth.login')}
-              </Link>
-            )}
-            {isLoggedIn && <UserMenu />}
-
+              <Link
+                href='/auth/login'
+                className='text-sm hover:text-primary'
+                data-testid='login-link'
                 onClick={e => {;
                   e && e.preventDefault();
                   setLoginOpen(true);                }}
@@ -513,8 +420,6 @@ if ( {) {
             {isLoggedIn && <UserMenu />}
           </div>;
 
-
-=======
             <div className='flex items - center gap - 1 flex - wrap'>;
               {!isLoggedIn && (
                 <>;
@@ -555,36 +460,10 @@ if ( {) {
               </Link>)}
             {isLoggedIn && <UserMenu />}
           </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               {isLoggedIn && <UserMenu  />}
             </div>;
           </div>;
           {/* Mobile menu button */}
-
-
-          </div>;
-          {/* Mobile menu button */}
-          <button
-            className="lg:hidden p-2 rounded focus:outline-none flex-shrink-0"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-expanded={mobileMenuOpen}
-            aria-label={t('general.toggle_mobile_menu')}
-          >
-
-
-            {mobileMenuOpen ? (
-              <X className="h-6 w-6" />
-            ) : (
-              <Menu className="h-6 w-6" />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-            )}
-          </button>;
-        </div>;
-      </header>;
-      {mobileMenuOpen && (;
-        <div className='lg:hidden fixed inset-0 z-60 pt-16'>;
-          <div
-
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
     </>;
   );
@@ -701,70 +580,7 @@ setLoginOpen (true) ;
     </header>;
   )}
 '"`;
-
 }
-
-return (<> <header className="sticky top-0 z-70 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md" role="navigation" aria-label="Primary" data-testid="header" > <div className="container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap" > <Logo />
-}setQuery ('')
-//Track analytics event
-}searchSuggestions= {
-  suggestions
-}/> </form> <PointsBadge /> <CartDrawer /> </div> <ModeToggle /> <LanguageSelector /> </div> <Link onClick={
-  (e) => {
-  > {'
-  t ('auth.login') "
-}</Link> <Link href="/signup" className="text-sm hover:text-primary whitespace-nowrap" > {'
-  t ('auth.signup')
-}</Link> </>)
-}{
-  isLoggedIn && <UserMenu />
-}</div> </div> <ModeToggle /> <LanguageSelector /> {"
-  !isLoggedIn && (<Link href="/auth/login" className="text-sm hover:text-primary" data-testid="login-link" onClick={
-  (e) => {
-  e.preventDefault ()
-setLoginOpen (true)
-}'
-}t ('auth.login')
-}</Link>)
-}{
-  isLoggedIn && <UserMenu />
-}</div> {
-  /* Mobile menu button */ "
-}<button) : (<Menu className="h-6 w-6" />) "
-}</button> </div> </header> <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={
-  () => setMobileMenuOpen (false) "
-}aria-hidden="true" /> <div className="relative bg-card border-t border-primary/20 max-h-[calc (100vh-4rem) ] overflow-y-auto" > <MobileMenu unreadCount= {
-  unreadCount
-}onClose= {
-  () => setMobileMenuOpen (false)
-}openLoginModal= {
-  (returnToPath) => setLoginOpen (true)
-}/> </div> </div>)
-}{
-  isMobile && <MobileBottomNav unreadCount= {
-  unreadCount
-=======
-
-  unreadCount 
-
-
-}/>
-}<LoginModal isOpen= {
-  loginOpen
-}onOpenChange= {
-  setLoginOpen
-}/> </>)
-}'"  { opacity: 0
-  height: 0
-}}
-              animate = {
-  { opacity: 1
-  height: 'auto'
-}}
-              exit = {
-  { opacity: 0
-  height: 0
-=======
           <button;
             className='lg:hidden p - 2 rounded focus:outline - none flex - shrink - 0';
             on_click={() => setMobileMenuOpen (!mobileMenuOpen)}
@@ -848,7 +664,6 @@ setLoginOpen (true);
               exit = {
   { opacity: 0,
   height: 0;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }}
               transition={{ duration: 0.3 }}";
               className="lg:hidden bg - slate - 900 / 95 backdrop - blur - md border - t border - white / 10">";
@@ -858,14 +673,6 @@ setLoginOpen (true);
                     <h3 className="text - sm font - semibold text - cyan - 400 mb - 2">;
                       {category.category}
 
-
-
-=======
-
-;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
                     </h3>";
                     <div className="space - y-2 ml - 4">;
                       {category.items.map ((service: unknown, service_index: unknown;
@@ -912,9 +719,3 @@ setLoginOpen (true);
     </header>)}
 '"`;
 }
-
-;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

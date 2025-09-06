@@ -1,4 +1,26 @@
 
+export default function CookieConsent() {;
+  const [isVisible, setIsVisible] = useState(false);
+  const [showSettings, setShowSettings] = useState(false);
+  const [preferences, setPreferences] = useState({
+    necessary: true
+    analytics: false
+    marketing: false
+    functional: false
+  });
+  useEffect(() => {
+    const consent = localStorage.getItem("cookie-consent");
+    if (!consent) {
+      setIsVisible(true);
+    }
+  }, []);
+  const acceptAll = () => {
+    const allAccepted = {
+      necessary: true
+      analytics: true
+      marketing: true
+      functional: true
+    }
 
 export default function CookieConsent() {;
   const [isVisible, setIsVisible] = useState(false);
@@ -24,11 +46,9 @@ export default function CookieConsent() {;
       marketing: true,;
       functional: true,;
     };
-
     setPreferences(allAccepted);
     localStorage && localStorage.setItem("cookie-consent", JSON && JSON.stringify(allAccepted));
     setIsVisible(false);
-
 
     // Initialize analytics if accepted;
     if (allAccepted && allAccepted.analytics) {;
@@ -55,31 +75,15 @@ export default function CookieConsent() {;
       marketing: false,;
       functional: false,;
     };
-
     setPreferences(onlyNecessary);
     localStorage && localStorage.setItem("cookie-consent", JSON && JSON.stringify(onlyNecessary));
     setIsVisible(false);
-
   };
 
   if (!isVisible) {;
-
     return null;
   }
   return (
-
-    <div className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200 shadow-lg">;
-      <div className="max-w-7xl mx-auto p-4">;
-        {!showSettings ? (;
-          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">;
-            <div className="flex items-start gap-3">;
-              <Cookie className="w-6 h-6 text-blue-600 mt-1 flex-shrink-0" />;
-              <div>;
-                <h3 className="font-semibold text-gray-900 mb-1">;
-                  We use cookies to enhance your experience;
-                </h3>;
-                <p className="text-sm text-gray-600">;
-=======
 import React, { useState, useEffect } from './react';
 import { X, Cookie, Settings  } from './lucide-react';
 ;
@@ -171,14 +175,39 @@ if ( {) {
                   We use cookies to enhance your experience;
                 </h3>;
                 <p className="text - sm text - gray - 600">;
-
                   We use cookies to improve your browsing experience, serve;
                   personalized content, and analyze our traffic. By clicking;
                   "Accept All", you consent to our use of cookies.;
                 </p>;
               </div>;
             </div>;
-
+              <button
+                onClick={() => setShowSettings(true)}
+                className="px-4 py-2 text-sm text-gray-600 hover:text-gray-800 transition-colors flex items-center gap-2";
+              >;
+                <Settings className="w-4 h-4" />;
+                Cookie Settings;
+              </button>;
+              <button
+                onClick={rejectAll}
+                className="px-4 py-2 text-sm text-gray-600 hover:text-gray-800 transition-colors">;
+                Reject All;
+              </button>;
+              <button
+                onClick={acceptAll}
+                className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium">;
+                Accept All;
+              </button>;
+            </div>;
+          </div>;
+        ) : (;
+          <div>;
+            <div className="flex items-center justify-between mb-4">;
+              <h3 className="text-lg font-semibold text-gray-900">;
+                Cookie Preferences;
+              </h3>;
+              <button
+                onClick={() => setShowSettings(false)}
                 className="text-gray-400 hover:text-gray-600 transition-colors";
               >;
                 <X className="w-5 h-5" />;
@@ -195,13 +224,11 @@ if ( {) {
                     Required for the website to function properly;
                   </p>;
                 </div>;
-
                 <input
                   type="checkbox"
                   checked={preferences && preferences.necessary}
                   disabled
                   className="w-4 h-4 text-blue-600 rounded"
-
                 />;
               </div>;
 
@@ -274,7 +301,6 @@ if ( {) {
             </div>;
 
             <div className="flex flex-col sm:flex-row gap-2 justify-end">;
-
               <button
                 onClick={rejectAll}
                 className="px-4 py-2 text-sm text-gray-600 hover:text-gray-800 transition-colors">;
@@ -291,7 +317,6 @@ if ( {) {
       </div>;
     </div>;
   );
-=======
             <div className="flex flex - col sm:flex - row gap - 2 w - full md:w - auto">;
               <button;
                 on_click={() => setShowSettings (true)}
@@ -425,5 +450,4 @@ if ( {) {
           </div>)}
       </div>;
     </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

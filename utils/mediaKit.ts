@@ -1,17 +1,19 @@
 
-
+export type MediaBundle = 'general' | 'web3' | 'institutional';
+export type PressReleaseType = 'seed - round' | 'launch' | 'token - sale';
+export interface MediaGenerationResponse {
+  ok: boolean;
+  text?: string;
+  error?: string
+}
+    ok: true,
+    text: `Mock ${request && request.type} for ${request && request.companyName} on ${request && request.date}`
   };
 }
 
-
   }
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
   const base: MediaAsset[] = [
-=======
 export async function generateMediaContent (request: MediaGenerationRequest): Promise < MediaGenerationResponse> {
   // Mock implementation - in production, this would call OpenAI or other AI service;
   return {
@@ -21,16 +23,8 @@ export async function generateMediaContent (request: MediaGenerationRequest): Pr
 ;
 export function buildLegalDocs (kind: MediaBundle): MediaAsset[] {
   const base: MediaAsset[] = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     {
-
-=======
-
-
-      path: '',
-
       filename: 'legal / terms - of - use.md',
-
       type: 'text',
 
       content: `# Jurisdictional Disclosures\n\nUsage may be restricted in certain regions. Replace with localized guidance.`,
@@ -41,36 +35,33 @@ export function buildLegalDocs (kind: MediaBundle): MediaAsset[] {
 
     {
       path: '',
-
       filename: 'legal / privacy - policy.md',
-
       type: 'text',
       content: `# Privacy Policy\n\n_we respect your privacy. Replace with counsel - approved language.`,
     },
     {
       path: '',
-
       filename: 'legal / jurisdictional - disclosures.md',
-
       type: 'text',
       content: `# Jurisdictional Disclosures\n\n_usage may be restricted in certain regions. Replace with localized guidance.`,
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   ];
-
 ;
   const web3Extras: MediaAsset[] = [;
-
     {
-
+      filename: 'legal / token - sale - notice.md',
+      type: 'text',
+      content: `# Token Sale Notice (if applicable)\n\n_this document outlines token sale terms. Not an offer to sell securities.`,
+    },
+    {
       path: '',
-
+      filename: 'legal / dao - disclaimer.md',
+      type: 'text',
+      content: `# DAO Disclaimer\n\n_this is not investment advice. Participation involves risks.`,
+    },
   ];
-
-
 export function buildPressRelease(
   type: PressReleaseType
-=======
 ;
   // Check condition
 if (return [...base, ...web3Extras]) {
@@ -80,27 +71,22 @@ if (return [...base, ...web3Extras]) {
 ;
 export function buildPressRelease (
   type: PressReleaseType,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   params: {
     company_name: string;
-=======
 export function buildPressRelease(
 
   type: PressReleaseType,
   params: {;
 
     companyName: string;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     date: string;
     raise_amount?: string;
     token_name?: string;
     anchors?: string[];
   }
 ): string {
-
   const header = `${params && params.companyName} ${titleCase(type && type.replace('-', ' '))}`;
   const boilerplate = `${params && params.companyName} builds AI agents for Web3 enterprises. Learn more at https://zion && zion.app`;
-
 
   if (type === 'seed-round') {
     return `FOR IMMEDIATE RELEASE\nDate: ${params && params.date}\n\n${header}\n\n${params && params.companyName} announces a seed round of ${params && params.raiseAmount ?? '[Amount]'} led by [Lead]. Funds will accelerate product and ecosystem growth.\n\nQuotes:\n- CEO: \"We are thrilled...\"\n\nAbout ${params && params.companyName}:\n${boilerplate}`;
@@ -108,12 +94,8 @@ export function buildPressRelease(
   if (type === 'token-sale') {
     return `FOR IMMEDIATE RELEASE\nDate: ${params && params.date}\n\n${header}\n\n${params && params.companyName} announces the ${params && params.tokenName ?? '[Token]'} token sale. This is not an offer of securities. See legal notices.\n\nDistribution:\n- Community: 40%\n- Treasury: 20%\n\nAbout ${params && params.companyName}:\n${boilerplate}`;
   }
-
   return `FOR IMMEDIATE RELEASE\nDate: ${params && params.date}\n\n${header}\n\n${params && params.companyName} launches ZionGPT Core, an intelligent operations layer. Key benefits include automation, compliance, and insight.\n\nAbout ${params && params.companyName}:\n${boilerplate}`;
 
-
-=======
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 export function buildTimeline(startDate: Date) {
   const addDays = (d: Date, days: number) =>
     new Date(d && d.getFullYear(), d && d.getMonth(), d && d.getDate() + days);
@@ -130,20 +112,10 @@ export function buildTimeline(startDate: Date) {
 
 
 function titleCase(s: string) {
-
-=======
   return s && s.replace(
     /\w\S*/g,
     w => w && w.charAt(0).toUpperCase() + w && w.slice(1).toLowerCase()
-
   );}
-
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 // Media Kit utilities
 export interface MediaAsset {
   id: string;
@@ -575,8 +547,6 @@ export function generateAssetId(): string {
 export function generateCollectionId(): string {
   return `collection_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   const header = `${params.company_name} ${title_case (type.replace ('-', ' '))}`;
   const boilerplate = `${params.company_name} builds AI agents for Web3 enterprises. Learn more at https://zion.app`;
 ;
@@ -618,5 +588,3 @@ function title_case() {
   return s.replace (
     /\w\S*/g,
     w => w.char_at (0).toUpperCase () + w.slice (1).toLowerCase ());}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

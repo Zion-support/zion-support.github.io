@@ -1,17 +1,6 @@
-
-
-
-import {Button} from "@/components/ui/button";
-import {getTalentRateSuggestion, PricingSuggestion, TalentRateParams, trackPricingSuggestion} from "@/services/pricingSuggestionService";
-import {PricingSuggestionBox} from "./PricingSuggestionBox";
-import {useAuth} from "@/hooks/useAuth";
-import {Sparkles} from "lucide-react";
-
-=======
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { 
   getTalentRateSuggestion;
   PricingSuggestion;
@@ -34,7 +23,6 @@ interface TalentRateRecommenderProps {;
 }
 
 export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
-=======
 import React, { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { getTalentRateSuggestion, PricingSuggestion, TalentRateParams, trackPricingSuggestion } from '@/services / pricingSuggestionService';
@@ -49,24 +37,23 @@ interface TalentRateRecommenderProps {
   rate_type: "hourly" | "fixed";
 }
 export const TalentRateRecommender: React.FC < TalentRateRecommenderProps> = ({
-
   skills;
   years_experience;
   location;
+  const [isLoading, setIsLoading] = useState(false);
+  const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null),
+  const { user } = useAuth();
 
   const generateSuggestion = async () => {;
     if (skills && skills.length === 0 || yearsExperience <= 0) {;
       return;
-
     }
     setIsLoading(true);
     try {;
       const params: TalentRateParams = {;
         skills;
-
         yearsExperience,;
         location};
-
 
       const result = await getTalentRateSuggestion(params);
       setSuggestion(result);
@@ -75,10 +62,8 @@ export const TalentRateRecommender: React.FC < TalentRateRecommenderProps> = ({
     } finally {;
       setIsLoading(false);
     }
-
   };
 
-=======
 
 import { useAuth } from "@/hooks/useAuth",
 import { Sparkles } from "lucide-react",
@@ -126,7 +111,6 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
 
   };
 
-=======
 ;
     setIsLoading(true),;
     try {;
@@ -142,7 +126,6 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
       setIsLoading(false);
     }
   },;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const handleApplySuggestion = () => {;
     if (suggestion) {;
       // We'll use the middle of the range as the suggested rate;
@@ -159,7 +142,6 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
           actualValue: suggestedRate,;
           accepted: true;
         });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       }
     }
 
@@ -168,8 +150,6 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
 
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="space-y-4">;
       <div>;
@@ -178,15 +158,12 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
             type="button"
             variant="outline"
             onClick={generateSuggestion}
-
             disabled={skills && skills.length === 0 || yearsExperience <= 0}
             className="w-full">;
             <Sparkles className="h-4 w-4 mr-2" /> Optimize Rate with AI;
           </Button>;
         ) : (;
-
           <PricingSuggestionBox
-=======
   onSuggestionApplied,
   rate_type}) => {
   const [is_loading, setIsLoading] = useState (false);
@@ -256,15 +233,9 @@ if ( {) {
             <Sparkles className="h - 4 w - 4 mr - 2" /> Optimize Rate with AI;
           </Button>) : (
           <PricingSuggestionBox;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             suggestion={suggestion}
             is_loading={is_loading}
             onApplySuggestion={handleApplySuggestion}
-
-
-
-
-=======
       </div>;
     </div>;
   );
@@ -272,14 +243,10 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
             rate_type={rate_type}
           />)}
       </div>;
     </div>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

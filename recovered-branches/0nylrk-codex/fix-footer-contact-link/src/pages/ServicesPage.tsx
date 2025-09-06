@@ -1,18 +1,3 @@
-
-
-
-// Sample service listings
-const SERVICE_LISTINGS: ProductListing[] = [
-  {
-    id: "service-1",
-    title: "AI Development & Integration",
-    description: "Full-stack AI development services to integrate advanced machine learning models into your existing business systems.",
-    category: "Development",
-    price: 5000,
-    currency: "$",
-    tags: ["AI Integration", "Machine Learning", "Enterprise"],
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     author: {
       name: "TechSolutions Inc."
       id: "tech-solutions"
@@ -132,7 +117,6 @@ const SERVICE_FILTERS = [
   { label: 'Analytics', value: 'analytics' }
   { label: 'Consulting', value: 'consulting' }
   { label: 'Strategy', value: 'strategy' }]
-=======
 import {DynamicListingPage} from "@/components/DynamicListingPage";
 import {ProductListing} from "@/types/listings";
 import {AppLayout} from "@/layout/AppLayout";
@@ -211,7 +195,6 @@ const SERVICE_LISTINGS: ProductListing[] = [;
   {;
     id: "service-5",;
     title: "IT Infrastructure Modernization",;
-=======
 import { DynamicListingPage } from '@/components / DynamicListingPage';
 import { ProductListing } from '@/types / listings';
 import { AppLayout } from '@/layout / AppLayout';
@@ -290,27 +273,14 @@ const SERVICE_LISTINGS: ProductListing[] = [;
   {
     id: "service - 5",
     title: "IT Infrastructure Modernization",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     description: "Transform your legacy systems into modern, agile infrastructure that supports innovation and business growth.";
     category: "Consulting",;
     price: 8500,;
     currency: "$",;
     tags: ["Digital Transformation", "Legacy Systems", "Infrastructure"];
 
-    <AppLayout>;
-      <div className="bg-zion-blue-dark py-4 px-4 md:px-8 mb-6 border-b border-zion-blue-light">;
-        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">;
-          <h2 className="text-white text-lg font-medium">Featured Services</h2>;
-          <div className="flex flex-wrap gap-2">;
-            <Link to="/it-onsite-services">;
-              <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">;
-                <Globe className="h-4 w-4 mr-2" />;
-                Global IT Onsite Services;
-              </Button>;
-            </Link>;
-            <Link to="/request-quote">;
-              <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">;
-=======
+export default function ServicesPage() {;
+  return (
     author: {
       name: "ModernizeIT Consulting",
       id: "modernize - it"},
@@ -362,21 +332,24 @@ function ServicesPage() {
             </Link>;
             <Link to="/request - quote">;
               <Button className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white">;
-
                 Request a Quote;
               </Button>;
             </Link>;
           </div>;
         </div>;
       </div>;
-
+      <DynamicListingPage
+        title="IT & AI Services"
+        description="Find expert technology service providers for your business needs, from AI development to infrastructure management."
+        categorySlug="services"
+        listings={SERVICE_LISTINGS}
+        categoryFilters={SERVICE_FILTERS}
+        initialPrice={{ min: 3000, max: 10000 }}
       />;
       <TrustedBySection />;
     </AppLayout>;
   );
 }
-
-=======
       <DynamicListingPage;
         title="IT & AI Services";
         description="Find expert technology service providers for your business needs, from AI development to infrastructure management.";
@@ -388,12 +361,9 @@ function ServicesPage() {
       <TrustedBySection />;
     </AppLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
       <DynamicListingPage 
         title="IT & AI Services"
         description="Find expert technology service providers for your business needs, from AI development to infrastructure management."
         categorySlug="services"
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

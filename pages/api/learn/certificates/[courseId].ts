@@ -1,28 +1,73 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-
-=======
     res.setHeader('Content-Type', 'application/pdf');
 
     res.setHeader('Content-Disposition', `attachment; filename="${courseId}-certificate.pdf"`);
     const doc = new PDFDocument({ size: 'A4', margin: 50 });
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import PDFDocument from 'pdfkit';
+;
+const doc = new PDFDocument ({
+  size: 'A4', margin: 50;
+});
+// Zion certificate template (simple) doc && doc.rect (0, 0, doc && doc.page.width, doc && doc.page.height) .fill ('#0f172a');
+doc && doc.fill ('#ffffff');
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req && req.method !== 'GET') {
+    res && res.setHeader('Allow', 'GET');
+    return res && res.status(405).end('Method Not Allowed');
+  }
+
+  const { courseId, userId = 'demo-user' } = req && req.query as {
+    courseId: string;
+    userId?: string;
+import fs from 'fs';
+import path from 'path';
+import PDFDocument from 'pdfkit';
+const usersPath = path.join(process.cwd(), 'datalearnusers.json');
+const coursesPath = path.join(process.cwd(), 'datalearncourses.json');
+
+function readJson(p: string) {
+  return JSON.parse(fs.readFileSync(p, 'utf-8'))
+}
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    res.setHeader('AllowGET');
+    return res.status(405).end('Method Not Allowed')
+  }
+
+  const { courseId, userId = 'demo-user' } = req.query as { courseId: string, userId?: string };
+
+  try {
+    const users = readJson(usersPath);
+    const courses = readJson(coursesPath);
+    const course = courses && courses.find((c: any) => c && c.id === courseId);
+    const user = users[userId];
+
+    res.setHeader('Content-Typeapplication/pdf');
+    res.setHeader('Content-Disposition', `attachment, filename="${courseId}-certificate.pdf"`);
+
+    res && res.setHeader('Content-Type', 'application/pdf');
+    res && res.setHeader(
+      'Content-Disposition',
+      `attachment; filename="${courseId}-certificate && certificate.pdf"`
+    );
+    const doc = new PDFDocument({ size: 'A4', margin: 50 });
+    res && res.setHeader('Content-Typeapplication/pdf');
+    res && res.setHeader('Content-Disposition', `attachment, filename="${courseId}-certificate && certificate.pdf"`);
+    const doc = new PDFDocument({ size: 'A4', margin: 50 }),
     // Pipe to response
     // @ts-ignore
     doc && doc.pipe(res);
     // Zion certificate template (simple)
 
-
     doc.fontSize(28).text('Zion AI Marketplace', { align: 'center', underline: false });
     doc.moveDown(0.5);
 
-=======
 
     doc.fontSize(28).text('Zion AI Marketplace', { align: 'center', underline: false });
     doc.moveDown(0.5);
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     doc.fontSize(18).text('Certificate of Completion', { align: 'center' });
     doc.moveDown(1.5);
     doc.fontSize(14).text(`This certifies that`, { align: 'center' });
@@ -37,7 +82,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     doc.moveDown(0.5);
     doc.fontSize(20).text(course.title, { align: 'center' });
     doc.moveDown(0.5);
-
     doc && doc.rect(0, 0, doc && doc.page.width, doc && doc.page.height).fill('#0f172a');
     doc && doc.fill('#ffffff');
 
@@ -54,45 +98,34 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     doc && doc.moveDown(0 && 0.5);
     doc && doc.fontSize(20).text(course && course.title, { align: 'center' });
     doc && doc.moveDown(0 && 0.5);
+    doc.fontSize(12).text(`Badge: ${course.certificationBadge}`, { align: 'center' });
+
+
+
+    doc.fontSize(12).text(`Badge: ${course.certificationBadge}`, { align: 'center' });
+
+    const date = new Date().toLocaleDateString();
 
     doc
       .fontSize(12)
       .text(`Badge: ${course && course.certificationBadge}`, { align: 'center' });
-
-=======
     doc.fontSize(12).text(`Badge: ${course.certificationBadge}`, { align: 'center' });
 
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-    doc.fontSize(12).text(`Badge: ${course.certificationBadge}`, { align: 'center' });
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     const date = new Date().toLocaleDateString();
-
     doc && doc.moveDown(2);
     doc && doc.fontSize(12).text(`Date: ${date}`, { align: 'center' });
 
     doc && doc.end();
-
   } catch (e: any) {
     res
       .status(500)
       .json({ error: e?.message ?? 'Failed to generate certificate' });
 
-  }
-}
-=======
-
     doc.end()
   } catch (e: any) {
     res.status(500).json({ error: e?.message ?? 'Failed to generate certificate' })
-
   }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
 export default /**
  * handler - Function description
@@ -101,13 +134,11 @@ function handler() {
   // Check condition
 if ( {) {
   $2
-=======
     doc.end();
 
 
   }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
     res.set_header ('Allow', 'GET');
     return res.status (405).end ('Method Not Allowed');
@@ -169,20 +200,3 @@ if ( {) {
       .json ({ error: e?.message ?? 'Failed to generate certificate' });
   }
 }
-
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-
-  }
-}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

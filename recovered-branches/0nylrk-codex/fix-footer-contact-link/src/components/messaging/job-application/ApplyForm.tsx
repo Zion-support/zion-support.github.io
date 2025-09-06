@@ -1,8 +1,3 @@
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ApplyFormProps {
 
   job: Job
@@ -28,7 +23,6 @@ interface ApplyFormProps {;
 }
 
 export function ApplyForm(): any ({ job, onClose, onApplySuccess }: ApplyFormProps) {;
-
   const { createConversation } = useMessaging();
   const { applyToJob } = useJobApplications();
   const [message, setMessage] = useState(;
@@ -41,37 +35,6 @@ export function ApplyForm(): any ({ job, onClose, onApplySuccess }: ApplyFormPro
   const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null);
   const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null);
 
-}
-
-
-
-  const [message, setMessage] = useState(
-    `Hi, I'm interested in your job "${job.title}" and would like to apply. I believe my skills and experience are a great match for this role.`
-
-  ),
-  const [proposalLink, setProposalLink] = useState(''),
-  const [isSubmitting, setIsSubmitting] = useState(false),
-  const [activeTab, setActiveTab] = useState<string>("message"),
-  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null),
-  const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null),
-  
-
-  const handleResumeSelected = (resume: ResumeOption) => {
-    setSelectedResume(resume)
-    setSelectedResumeId(resume.id)
-
-  },
-  
-
-
-  const handleApply = async () => {
-    if (!message.trim()) {
-      toast({
-        title: "Message required"
-        description: "Please enter a message before applying."
-        variant: "destructive"
-
-
   const handleResumeSelected = (resume: ResumeOption) => {;
     setSelectedResume(resume),;
     setSelectedResumeId(resume && resume.id);
@@ -83,57 +46,9 @@ export function ApplyForm(): any ({ job, onClose, onApplySuccess }: ApplyFormPro
         title: "Message required",;
         description: "Please enter a message before applying.",;
         variant: "destructive";
-
       });
       return;
     }
-
-      }),
-      return
-    }
-    try {
-
-      setIsSubmitting(true),
-      
-
-
-      // First submit the application to the job applications table
-      const applicationSuccess = await applyToJob(
-        job.id
-        message
-        selectedResumeId
-
-
-      ),
-      
-      if (!applicationSuccess) {
-        throw new Error("Failed to submit application")
-
-
-      }
-      // Add info about attached resume if available
-      if (selectedResume) {
-        fullMessage += `\n\nI've attached my resume: ${selectedResume.title}`
-      }
-
-
-      
-
-
-      // Create context data for the conversation
-      const contextData = {
-        title: job.title
-        description: job.description
-        attachedResume: selectedResume ? {
-          id: selectedResume.id
-          title: selectedResume.title
-          type: selectedResume.type
-        } : null
-      }
-      // Create conversation with the job client
-      await createConversation(
-        job.client_id;
-=======
 
     try {;
       setIsSubmitting(true);
@@ -175,16 +90,11 @@ export function ApplyForm(): any ({ job, onClose, onApplySuccess }: ApplyFormPro
       // Create conversation with the job client;
       await createConversation(;
         job && job.client_id;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         fullMessage;
         'job';
         job && job.id;
         contextData;
       );
-
-
-
-=======
 ;
       // Create context data for the conversation;
       const contextData = {;
@@ -212,8 +122,33 @@ export function ApplyForm(): any ({ job, onClose, onApplySuccess }: ApplyFormPro
 
       }
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+;
+      // Create context data for the conversation;
+      const contextData = {;
+        title: job.title,;
+        description: job.description,;
+        attachedResume: selectedResume ? {;
+          id: selectedResume.id,;
+          title: selectedResume.title,;
+          type: selectedResume.type;
+        } : null;
+      },;
+      // Create conversation with the job client;
+      await createConversation(;
+        job.client_id,;
+        fullMessage,;
+        'job',;
+        job.id,;
+        contextData;
+      ),;
+      // Call onApplySuccess to update job status in the UI;
+      if (onApplySuccess) {;
+        await onApplySuccess(job.id);
+
+
+
+      }
+      
       toast({
         title: "Application sent"
         description: `Your application for "${job.title}" has been sent.`})
@@ -248,18 +183,14 @@ export function ApplyForm(): any ({ job, onClose, onApplySuccess }: ApplyFormPro
       });
     } finally {;
       setIsSubmitting(false);
-
     }
   }
-=======
     }
 
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
-
     <>;
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
         <TabsList className="w-full mb-4 bg-zion-blue-dark/30">;
@@ -272,9 +203,7 @@ export function ApplyForm(): any ({ job, onClose, onApplySuccess }: ApplyFormPro
         </TabsList>;
 
         <TabsContent value="message">;
-
           <MessageTab
-=======
 import React, { useState } from 'react';
 import { Button } from '@/components / ui / button';
 import { Loader2 } from './lucide-react';
@@ -407,17 +336,13 @@ if ( {) {
         </TabsList>;
         <TabsContent value="message">;
           <MessageTab;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
           <MessageTab 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             message={message}
             set_message={set_message}
             proposal_link={proposal_link}
             setProposalLink={setProposalLink}
-
           />;
         </TabsContent>;
 
@@ -430,7 +355,6 @@ if ( {) {
       </Tabs>;
 
       <div className="flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 gap-2 sm:gap-0 mt-4">;
-
         <Button
           type="button"
           variant="outline"
@@ -451,13 +375,11 @@ if ( {) {
           ) : (;
             'Submit Application';
           )}
-
         </Button>;
       </div>;
     </>;
   );
 }
-
           />;
         </TabsContent>;
         <TabsContent value="resume">;
@@ -492,8 +414,5 @@ if ( {) {
       </div>;
     </>);
 }
-
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

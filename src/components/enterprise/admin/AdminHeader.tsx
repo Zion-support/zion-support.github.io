@@ -1,5 +1,10 @@
-
-
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import { Download, Settings } from 'lucide-react';
+import { useCompanyWorkspace } from '@/hooks/useCompanyWorkspace';
+export function AdminHeader() {;
+  // const { user } = useAuth(); // Unused but available;
+  const { company } = useCompanyWorkspace();
 
 import React from "react",
 import { Button } from "@/components/ui/button";
@@ -10,7 +15,6 @@ export function AdminHeader() {
   const { company } = useCompanyWorkspace();
   return (
 
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Download, Settings } from 'lucide-react'
@@ -20,11 +24,9 @@ export function AdminHeader() { // const { user  } = useAuth(), // Unused but av
   const { company  } = useCompanyWorkspace(),
 
 
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
@@ -33,7 +35,6 @@ export function AdminHeader() { // const { user  } = useAuth(), // Unused but av
           <p className="text-muted-foreground mt-1">
             Manage your company's account, team members, and subscription
           </p>
-
         </div>
         <div className="flex items-center gap-2">
 
@@ -45,20 +46,17 @@ export function AdminHeader() { // const { user  } = useAuth(), // Unused but av
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <Button variant="outline" size="sm" className="gap-2">
             <Download className="h-4 w-4" />
             Export Data
           </Button>
         </div>
       </div>
-
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div className="bg-card rounded-lg p-4 border border-border">
           <div className="text-sm text-muted-foreground">Subscription Plan</div>
           <div className="text-xl font-medium">{company?.plan || "Enterprise"}</div>
-
         </div>
         <div className="bg-card rounded-lg p-4 border border-border">
           <div className="text-sm text-muted-foreground">Team Members</div>
@@ -69,9 +67,7 @@ export function AdminHeader() { // const { user  } = useAuth(), // Unused but av
           <div className="text-xl font-medium">{company?.billingCycle |"Annual"}</div>
         </div>
       </div>
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <div className="bg-muted/50 rounded-lg p-4 flex items-center justify-between">
         <div className="flex items-center gap-4">
           <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center">
@@ -85,7 +81,6 @@ export function AdminHeader() { // const { user  } = useAuth(), // Unused but av
           </div>
           <div>
 
-=======
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div className="bg-card rounded-lg p-4 border border-border">
@@ -111,73 +106,24 @@ export function AdminHeader() { // const { user  } = useAuth(), // Unused but av
               src={company?.logoUrl || "/placeholder.svg"}
               alt={company?.name || "Company"}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="max-h-10 max-w-10"
               loading="lazy"
             />
           </div>
           <div>
 
-=======
 
-=======
 
 
             <h2 className="font-medium">{company?.name || "Company Name"}</h2>
             <p className="text-sm text-muted-foreground">
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               Workspace URL: {company?.workspaceUrl || "loading..."}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             </p>
           </div>
         </div>
         <Button>Customize Workspace</Button>
       </div>
     </div>
-
-    <div className='space-y-4'>;
-      <div className='flex items-center justify-between'>;
-=======
-
-;
-
-=======
-import React from "react",;
-import { Button } from "@/components/ui/button",;
-import { Download, Settings } from 'lucide-react';
-import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace",;
-export function AdminHeader() {;
-  // const { user } = useAuth(), // Unused but available;
-  const { company } = useCompanyWorkspace();
-  return (;
-    <div className="space-y-4">;
-      <div className="flex items-center justify-between">;
-
-        <div>;
-          <h1 className='text-3xl font-bold tracking-tight'>;
-            Enterprise Admin Dashboard;
-          </h1>;
-          <p className='text-muted-foreground mt-1'>;
-            Manage your company's account, team members, and subscription;
-          </p>;
-        </div>;
-        <div className='flex items-center gap-2'>;
-          <Button variant='outline' size='sm' className='gap-2'>;
-            <Settings className='h-4 w-4' />;
-            Settings;
-          </Button>;
-          <Button variant='outline' size='sm' className='gap-2'>;
-            <Download className='h-4 w-4' />            Export Data;
-          </Button>;
-        </div>;
-      </div>        <div className="flex items-center gap-2">;
-          <Button variant="outline" size="sm" className="gap-2">;
-            <Settings className="h-4 w-4" />;
-            Settings;
-          </Button>;
-          <Button variant="outline" size="sm" className="gap-2">;
-            <Download className="h-4 w-4" />;
-=======
 import React from 'react';
 import { Button } from '@/components / ui / button';
 import { Download, Settings } from 'lucide-react';
@@ -215,16 +161,12 @@ function AdminHeader() {
           </Button>;
           <Button variant="outline" size="sm" className="gap - 2">;
             <Download className="h - 4 w - 4" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             Export Data;
           </Button>;
         </div>;
       </div>;
-
   );
 }
-
-=======
       <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 4'>;
         <div className='bg - card rounded - lg p - 4 border border - border'>;
           <div className='text - sm text - muted - foreground'>Subscription Plan</div>;
@@ -292,10 +234,3 @@ function AdminHeader() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

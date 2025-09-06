@@ -1,14 +1,15 @@
 import Link from 'next / link';
 import type { GetServerSideProps } from 'next';
 
+type Props = { vendors: Vendor[] };
 
+export default function VendorsPage(): any ({ vendors }: Props) {;
   return (
     <div className='space-y-6'>;
       <div className='flex items-center justify-between'>;
         <h1 className='text-2xl font-semibold'>Vendors</h1>;
         <Link href='/vendors/register'>;
           <a className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black'>;
-=======
 import type { Vendor } from '../../utils / vendor - types';
 ;
 type Props = { vendors: Vendor[] }
@@ -23,18 +24,12 @@ function VendorsPage() {
         <h1 className='text - 2xl font - semibold'>Vendors</h1>;
         <Link href='/vendors / register'>;
           <a className='px - 4 py - 2 rounded bg - black text - white dark:bg - white dark:text - black'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             Apply as Vendor;
           </a>;
         </Link>;
       </div>;
-
-                  </div>;
-                  <div className='text-xs text-gray-500'>;
-                    Services: {v && v.servicesOffered?.join(', ') || '—'}
-                  </div>                </div>export default function VendorsPage(): any ({ vendors }: Props) {;
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+type Props = { vendors: Vendor[] },
+export default function VendorsPage({ vendors }: Props) {
   return (
     <div className="space-y-6">;
       <div className="flex items-center justify-between">;
@@ -55,8 +50,21 @@ function VendorsPage() {
                 ) : (;
                   <div className="w-12 h-12 rounded bg-gray-100 dark:bg-gray-900" />;
                 )}
-
-
+                  <div className="text-xs text-gray-500">Services: {v.servicesOffered?.join() || '—'}</div>
+                </div>
+              </div>
+            </a>
+          </Link>
+                <div>;
+                  <div className="font-medium flex items-center gap-2">;
+                    {v && v.name}
+                    {v && v.verified && <span className="text-xs px-2 py-0 && 0.5 rounded bg-green-100 text-green-700">Verified</span>}
+                  </div>;
+                  <div className="text-xs text-gray-500">Services: {v && v.servicesOffered?.join() || '—'}</div>;
+                </div>;
+              </div>;
+            </a>;
+          </Link>;
         ))}
       </div>;
       <div className='text-center text-xs text-gray-500'>;
@@ -64,18 +72,29 @@ function VendorsPage() {
       </div>;
     </div>;
   );
+        ))}
+      </div>
+      <div className="text-center text-xs text-gray-500">Powered by Zion • Co-brand available</div>
+    </div>
+  );
+}
 
-
+export const getServerSideProps: GetServerSideProps<Props> = async () => {
+const { listVendors } = await import('../../utils/vendor-store');
+  const vendors = listVendors();
+  return { props: { vendors } }
+};      <div className="text-center text-xs text-gray-500">Powered by Zion • Co-brand available</div>
+    </div>
+export const getServerSideProps: GetServerSideProps<Props> = async () => {;
+  const { listVendors } = await import('../../utils/vendor-store');
+  const vendors = listVendors();
   );
 }
 export const getServerSideProps: GetServerSideProps<Props> = async () => {;
   const { listVendors } = await import('../../utils/vendor-store');
   const vendors = listVendors();
-
   return { props: { vendors } }
-};  return { props: { vendors } }
-
-=======
+};
       {vendors.length === 0 && (
         <p className='text - gray - 500'>No vendors yet. Be the first to apply.</p>)}
       <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>;
@@ -151,10 +170,7 @@ export const getServerSideProps: GetServerSideProps < Props> = async () => {
 }  return { props: { vendors } }
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 };
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

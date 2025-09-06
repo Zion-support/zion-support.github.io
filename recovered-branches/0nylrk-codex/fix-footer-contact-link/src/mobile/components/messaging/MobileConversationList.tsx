@@ -1,8 +1,3 @@
-
-
-
-
-
 import React from "react";
 import {Card} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
@@ -22,33 +17,16 @@ interface Conversation {;
 
 interface MobileConversationListProps {;
   conversations: Conversation[],;
-
   activeConversation?: string;
   onSelectConversation: (id: string) => void;
 }
 
-interface Conversation {
-  id: string,
-  name: string,
-  avatar?: string,
-  lastMessage: string,
-  timestamp: string,
-  unreadCount: number,
-  isTyping?: boolean
-
-
-
-export function MobileConversationList({
-=======
-
 export function MobileConversationList(): any ({;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   conversations;
   activeConversation;
   onSelectConversation;
 }: MobileConversationListProps) {;
   return (
-
     <div className="space-y-4">;
       <div className="px-4 mb-2">;
         <div className="relative">;
@@ -71,48 +49,9 @@ export function MobileConversationList(): any ({;
 
       <div className="space-y-2 pb-24">;
         {conversations && conversations.map((conversation) => (;
-
           <div
             key={conversation && conversation.id}
             className={cn(
-
-
-              "px-4",
-
-
-              activeConversation === conversation.id && "bg-primary/5"
-            )}
-            onClick={() => onSelectConversation(conversation.id)}
-          >
-            <div className="flex items-center gap-3 py-3 cursor-pointer">
-              <Avatar>
-                <AvatarImage src={conversation.avatar} />
-                <AvatarFallback>
-                  {conversation.name.charAt(0).toUpperCase()}
-                </AvatarFallback>
-              </Avatar>
-              <div className="flex-1 min-w-0">
-                <div className="flex justify-between items-baseline">
-                  <h3 className="font-medium truncate">{conversation.name}</h3>
-                  <span className="text-xs text-muted-foreground whitespace-nowrap ml-2">
-                    {conversation.timestamp}
-                  </span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <p className="text-sm text-muted-foreground truncate">
-
-
-                    {conversation.isTyping 
-
-
-                      ? <em>Typing...</em>
-                      : conversation.lastMessage}
-                  </p>
-                  {conversation.unreadCount > 0 && (
-                    <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">
-                      {conversation.unreadCount}
-                    </Badge>
-=======
               "px-4"
               activeConversation === conversation && conversation.id && "bg-primary/5"
             )}
@@ -145,7 +84,6 @@ export function MobileConversationList(): any ({;
                     <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">;
                       {conversation && conversation.unreadCount}
                     </Badge>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   )}
                 </div>;
               </div>;
@@ -153,13 +91,10 @@ export function MobileConversationList(): any ({;
             <div className="border-t border-border ml-12"></div>;
           </div>;
         ))}
-
       </div>;
     </div>;
   );
 }
-
-=======
 import React from './react';
 import { Card } from '@/components / ui / card';
 import { Badge } from '@/components / ui / badge';
@@ -245,4 +180,3 @@ function MobileConversationList() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

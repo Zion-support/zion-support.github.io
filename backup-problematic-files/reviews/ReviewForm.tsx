@@ -1,9 +1,5 @@
 
 
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 </div> <div> <label className="block text-sm font-medium mb-2" >Your Review</label> <textarea required /> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <button > {
   submitting ? 'Submitting...' : 'Submit Review'
 }</button> </form>)
@@ -12,14 +8,12 @@ type Props = {
   initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;};import React, { useState } from 'react';
 import StarRating from './StarRating';
 export type ReviewFormValues = {
-
   projectId: string,
   fromRole: 'client' | 'talent',
   fromId: string,
   rating: number,
   text: string,
   categories?: {;
-
     communication?: number;
     qualityOfWork?: number;
     timeliness?: number;
@@ -76,32 +70,48 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
         <label className='block text-sm font-medium mb-2'>Overall Rating</label>        <StarRating value={rating} onChange={setRating} />
       </div>
       <div>
-
-=======
         <label className='block text-sm font-medium mb-2'>Your Review</label>
 
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/reviews/ReviewForm.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        <label className='block text-sm font-medium mb-2'>Your Review</label>
+
+
     }
   }
   return (
 
 
+        <label className='block text-sm font-medium mb-2'>Your Review</label>
+
+    }
+  }
+  return (
+    <form onSubmit={handleSubmit} className='space-y-6'>
+      <div>
+        <label className='block text-sm font-medium mb-2'>Overall Rating</label>    <form onSubmit={handleSubmit} className="space-y-6">
+      <div>
+        <label className="block text-sm font-medium mb-2" htmlFor="input-Overall Rating">Overall Rating</label>
+    }
+  }
+
+  return (
+
         <StarRating value={rating} onChange={setRating} />
       </div>
       <div>
 
+          required
+        />
+      </div>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        </div>
+      </div>
+
+      <button
       >
         {submitting ? 'Submitting...' : 'Submit Review'}
       </button>
       {message && <p className='text-sm'>{message}</p>}
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     </form>
   );
 }
@@ -109,11 +119,3 @@ export default ReviewForm;    </form>
   )
 }
 export default ReviewForm;
-
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/reviews/ReviewForm.tsx
-=======
-=======
->>>>>>> main:components/reviews/ReviewForm.tsx
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/reviews/ReviewForm.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

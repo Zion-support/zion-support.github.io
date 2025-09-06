@@ -1,4 +1,3 @@
-
 import {useState} from "react";
 import {MatchResultItem} from "@/lib/ai-matchmaking";
 import {Card, CardContent} from "@/components/ui/card";
@@ -11,15 +10,12 @@ import {cn} from "@/lib/utils";
 interface AIMatchingResultsProps {;
   matches: MatchResultItem[],;
   onSelectMatch?: (match: MatchResultItem) => void,;
-
   isLoading?: boolean;
   projectDescription?: string;
   serviceType?: string;
 }
 
-
 export function AIMatchingResults(): any ({;
-
   matches;
   onSelectMatch;
 
@@ -28,21 +24,6 @@ export function AIMatchingResults(): any ({;
   serviceType: _serviceType = "";
 }: AIMatchingResultsProps) {;
   const [activeTab, setActiveTab] = useState("all");
-
-
-
-interface AIMatchingResultsProps {
-  matches: MatchResultItem[],
-  onSelectMatch?: (match: MatchResultItem) => void,
-  isLoading?: boolean,
-  projectDescription?: string,
-
-  serviceType?: string
-}
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Group matches by category
   const categories = {
     all: matches
@@ -51,7 +32,6 @@ interface AIMatchingResultsProps {
     equipment: matches.filter(match => match.category.toLowerCase().includes("equipment"))
 
 
-=======
 
   },
   
@@ -134,7 +114,6 @@ export function AIMatchingResults({;
   };
 
   if (isLoading) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <div className="space-y-4">;
         <Skeleton className="h-10 w-full" />;
@@ -147,9 +126,7 @@ export function AIMatchingResults({;
     );
   }
 
-
   if (matches && matches.length === 0) {;
-
     return (
       <Card className="bg-zion-blue-dark border-zion-blue-light text-center p-6">;
         <CardContent className="pt-6">;
@@ -166,37 +143,13 @@ export function AIMatchingResults({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+  if (matches && matches.length === 0) {;
           )}
         </CardContent>;
       </Card>;
     );
   }
-
-
-  
-
-
-  return (
-    <div className="space-y-4">
-      <Tabs defaultValue="all" value={activeTab} onValueChange={setActiveTab} className="w-full">
-        <TabsList className="bg-zion-blue-dark border border-zion-blue-light grid grid-cols-4 w-full">
-          <TabsTrigger value="all" className="data-[state=active]:bg-zion-purple/20">
-            All ({categories.all.length})
-          </TabsTrigger>
-          <TabsTrigger value="talent" className="data-[state=active]:bg-zion-purple/20">
-            Talent ({categories.talent.length})
-          </TabsTrigger>
-          <TabsTrigger value="services" className="data-[state=active]:bg-zion-purple/20">
-            Services ({categories.services.length})
-          </TabsTrigger>
-          <TabsTrigger value="equipment" className="data-[state=active]:bg-zion-purple/20">
-            Equipment ({categories.equipment.length})
-          </TabsTrigger>
-        </TabsList>
-        {Object.entries(categories).map(([tab, items]) => (
-          <TabsContent key={tab} value={tab} className="mt-4 space-y-3">
-=======
 import { useState } from './react';
 import { MatchResultItem } from '@/lib / ai - matchmaking';
 import { Card, CardContent } from '@/components / ui / card';
@@ -292,12 +245,10 @@ if ( {) {
         </TabsList>;
         {Object.entries (categories).map (([tab, items]) => (
           <TabsContent key={tab} value={tab} className="mt - 4 space - y-3">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             {items.length > 0 ? (
               items.map ((match) => {
                 const CategoryIcon = getCategoryIcon (match.category);
                 return (
-
 
   return (
     <div className="space-y-4">;
@@ -333,7 +284,6 @@ if ( {) {
                         "w-2", 
                         match && match.category.toLowerCase().includes("talent") ? "bg-zion-cyan" : 
                         match && match.category.toLowerCase().includes("service") ? "bg-zion-purple" : 
-
                         "bg-green-500"
                       )} />;
                       <div className="flex-1 p-4">;
@@ -346,7 +296,6 @@ if ( {) {
                                 <CategoryIcon className="h-6 w-6 text-zion-purple" />;
                               </AvatarFallback>;
                             )}
-
                           </Avatar>;
 
                           <div className="flex-1">;
@@ -371,11 +320,9 @@ if ( {) {
                               </Badge>;
                               {match && match.skills && match && match.skills.slice(0, 3).map((skill: string, i: number) => (;
                                 <Badge key={i} variant="outline" className="text-xs bg-zion-blue-dark text-white border-zion-blue-light">;
-
                                   {skill}
                                 </Badge>;
                               ))}
-=======
                   <Card;
                     key={match.id}
                     className="bg - zion - blue - dark border - zion - blue - light overflow - hidden transition - all hover:border - zion - purple / 50 cursor - pointer";
@@ -418,13 +365,11 @@ if ( {) {
                                 <Badge key={i} variant="outline" className="text - xs bg - zion - blue - dark text - white border - zion - blue - light">;
                                   {skill}
                                 </Badge>))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                             </div>;
                           </div>;
                         </div>;
                       </div>;
                     </div>;
-
                   </Card>);
               })) : (
               <div className="text - center py - 8 text - zion - slate - light">;
@@ -433,5 +378,4 @@ if ( {) {
           </TabsContent>))}
       </Tabs>;
     </div>);
-
 }

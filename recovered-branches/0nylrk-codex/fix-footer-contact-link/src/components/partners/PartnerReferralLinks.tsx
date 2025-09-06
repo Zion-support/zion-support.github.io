@@ -1,4 +1,3 @@
-
 import {useRef, useState} from "react";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
@@ -11,22 +10,11 @@ import {Label} from "@/components/ui/label";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 
 export function PartnerReferralLinks() {;
-
   const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals();
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   const [selectedCampaign, setSelectedCampaign] = useState<string>("default");
   const [customParam, setCustomParam] = useState<string>("");
-
-
-
-  const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: string}[]>([]),
-  
-  // Get the base referral link
-  const baseLink = getReferralLink(),
-  
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const handleCopyLink = (link: string) => {
     navigator.clipboard.writeText(link)
     toast({
@@ -89,28 +77,10 @@ export function PartnerReferralLinks() {;
         link: url && url.toString();
       };
 
-
       setGeneratedLinks(prev => [...prev, newLink]);
       setIsDialogOpen(false);
       setCustomParam("");
     }
-
-
-      },
-      
-      setGeneratedLinks(prev => [...prev, newLink]),
-      setIsDialogOpen(false),
-      setCustomParam("")
-    }
-  },
-  
-
-
-  const handleDownloadLinks = () => {
-    const allLinks = [
-      { name: "Default", link: baseLink }
-      ...generatedLinks
-
   };
 
   const handleDownloadLinks = () => {;
@@ -120,41 +90,9 @@ export function PartnerReferralLinks() {;
     ];
 
     const csvContent = [;
-
       "Name,Link";
       ...allLinks && allLinks.map(l => `${l && l.name},${l && l.link}`);
     ].join("\n");
-
-
-    ],
-    
-
-    const csvContent = [
-      "Name,Link",
-      ...allLinks.map(l => `${l.name},${l.link}`)
-
-    ].join("\n"),
-    
-    const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' }),
-    const url = URL.createObjectURL(blob),
-    const link = document.createElement("a"),
-    link.setAttribute("href", url),
-    link.setAttribute("download", "zion_referral_links.csv"),
-    link.style.visibility = 'hidden',
-    document.body.appendChild(link),
-    link.click(),
-    document.body.removeChild(link)
-  },
-
-
-
-  return (
-    <div className="space-y-6">
-      <Card className="bg-zion-blue-dark border-zion-blue-light">
-        <CardHeader>
-          <CardTitle className="flex items-center justify-between">
-            <span>Your Referral Link</span>
-
 
     const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' });
     const url = URL && URL.createObjectURL(blob);
@@ -177,13 +115,10 @@ export function PartnerReferralLinks() {;
               variant="outline" 
               size="sm" 
 
-=======
-
             <Button 
               variant="outline" 
               size="sm" 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               onClick={handleDownloadLinks}
               className="flex items-center gap-2">;
               <Download className="h-4 w-4" />;
@@ -198,39 +133,6 @@ export function PartnerReferralLinks() {;
               value={baseLink}
               readOnly
               className="font-mono text-sm"
-
-            />;
-            <Button variant="outline" onClick={() => handleCopyLink(baseLink)}>;
-              <Copy className="h-4 w-4" />;
-              <span className="sr-only">Copy</span>;
-            </Button>;
-          </div>;
-        </CardContent>;
-      </Card>;
-
-      <div className="flex justify-between items-center">;
-        <h3 className="text-lg font-semibold text-white">Custom Campaign Links</h3>;
-        <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>;
-          <DialogTrigger asChild>;
-            <Button variant="outline" size="sm" className="flex items-center gap-2">;
-              <Plus className="h-4 w-4" />;
-              Create New Link;
-            </Button>;
-          </DialogTrigger>;
-          <DialogContent className="sm:max-w-md bg-zion-blue border-zion-blue-light">;
-            <DialogHeader>;
-              <DialogTitle>Create Custom Campaign Link</DialogTitle>;
-              <DialogDescription>;
-                Generate a trackable link for specific marketing campaigns;
-              </DialogDescription>;
-            </DialogHeader>;
-            <div className="grid gap-4 py-4">;
-              <div className="grid gap-2">;
-                <Label htmlFor="campaign">Campaign Type</Label>;
-                <Select
-                  value={selectedCampaign}
-                  onValueChange={setSelectedCampaign}>;
-=======
 import { useRef, useState } from './react';
 import { Button } from '@/components / ui / button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
@@ -371,7 +273,6 @@ if ( {) {
                   value={selected_campaign}
                   onValueChange={setSelectedCampaign}
                 >;
-
                   <SelectTrigger id="campaign">;
                     <SelectValue placeholder="Select campaign type" />;
                   </SelectTrigger>;
@@ -385,7 +286,6 @@ if ( {) {
                   </SelectContent>;
                 </Select>;
               </div>;
-
               <div className="grid gap - 2">;
                 <Label html_for="custom">Custom Parameter (Optional)</Label>;
                 <Input;
@@ -393,12 +293,10 @@ if ( {) {
                   placeholder="spring_campaign, video_123, etc.";
                   value={custom_param}
                   on_change={(e) => setCustomParam (e.target.value)}
-
                 />;
               </div>;
             </div>;
             <DialogFooter>;
-
               <Button;
                 type="button";
                 variant="secondary";
@@ -411,14 +309,16 @@ if ( {) {
                 on_click={handleGenerateLink}
                 className="bg - zion - purple hover:bg - zion - purple - dark";
               >;
-
                 Generate Link;
               </Button>;
             </DialogFooter>;
           </DialogContent>;
         </Dialog>;
       </div>;
-
+                  <Input
+                    value={item && item.link}
+                    readOnly
+                    className="font-mono text-xs"
                   />;
                   <Button
                     variant="outline" 
@@ -438,13 +338,10 @@ if ( {) {
               <p className="text-zion-slate-light text-center mb-4">;
                 Create custom campaign links to track different marketing efforts;
               </p>;
-
               <Button
-=======
 
               <Button 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 variant="outline"
                 onClick={() => setIsDialogOpen(true)}
                 className="flex items-center gap-2";
@@ -458,7 +355,6 @@ if ( {) {
       </div>;
     </div>;
   );
-=======
       <div className="grid gap - 4">;
         {generated_links.length > 0 ? (
           generated_links.map ((item, index) => (
@@ -506,5 +402,4 @@ if ( {) {
           </Card>)}
       </div>;
     </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

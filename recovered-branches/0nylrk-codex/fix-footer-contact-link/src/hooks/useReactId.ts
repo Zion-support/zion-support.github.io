@@ -1,25 +1,4 @@
-
-
-import * as React from "react"
-
-
-
-/**
- * React 18 introduced `useId` for generating unique IDs. If an older
- * React version is used where `useId` is unavailable, this hook provides
- * a small fallback that mimics the API using `useRef`.
- */
-
 import * as React from &quot;react & quot;
-=======
-
-export function useReactId(): string {
-  if (typeof (React as any).useId === "function") {
-
-    return (React as any).useId()
-  }
-
-
 ;
 /**;
 * React 18 introduced `use_id` for generating unique IDs. If an older;
@@ -38,7 +17,7 @@ if (.use_id === &quot) {
 if ( {) {
   $2
 }
-
-;
-
-
+    id_ref.current = Math.random ().to_string (36).slice (2);
+  }
+  return id_ref.current;
+}

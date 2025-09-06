@@ -1,4 +1,3 @@
-
 import Link from "next/link",;
 export const metadata = {;
   title: "News & Insights - Zion Tech Group | Latest Technology Updates",;
@@ -6,9 +5,7 @@ export const metadata = {;
   keywords: "news, insights, technology updates, AI news, quantum computing, cybersecurity, Zion Tech Group"};
 export default function NewsPage() {;
   return (;
-
     <div className="min-h-screen">;
-=======
 import Link from './next / link';,
 export const metadata = {
   title: "News & Insights - Zion Tech Group | Latest Technology Updates",
@@ -20,7 +17,6 @@ export default /**
 function NewsPage() {
   return (
     <div className="min - h-screen">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Hero Section */}
       <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto text - center">;

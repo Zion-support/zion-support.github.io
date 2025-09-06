@@ -1624,5 +1624,3 @@ export default function News() {;
     </>;
   );
 }
-
-

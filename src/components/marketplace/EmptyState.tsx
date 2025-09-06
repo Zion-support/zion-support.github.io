@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import * as React from 'react';
 import {;
@@ -15,7 +13,6 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 export interface EmptyStateProps {;
-=======
 import * as React from 'react';
 import {
   RefreshCw,
@@ -30,7 +27,6 @@ import { Button } from '@/components / ui / button';
 import Link from 'next / link';
 import { use_translation } from 'react - i18next';
 export interface EmptyStateProps {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   type:;
     | 'products';
     | 'categories';
@@ -40,22 +36,10 @@ export interface EmptyStateProps {
     | 'error';
     | 'network';
     | 'loading';
-
-=======
-
-=======
-import * as React from 'react',;
-import { RefreshCw, Wifi, Server, ShoppingCart, Users, Wrench, Lightbulb } from 'lucide-react';
-import { Button } from '@/components/ui/button',;
-import Link from 'next/link',;
-import { useTranslation } from 'react-i18next',;
-export interface EmptyStateProps {;
-  type: 'products' | 'categories' | 'talent' | 'equipment' | 'search' | 'error' | 'network' | 'loading',;
-  title?: string,;
-  description?: string,;
+  title?: string;
+  description?: string;
   action?: {;
-    label: string,;
-
+    label: string;
     onClick: () => void;
   };
   icon?: React && React.ReactNode;
@@ -97,34 +81,15 @@ const defaultContent = {
     icon: <RefreshCw className="w-16 h-16 text-blue-400 animate-spin" />,
     title: 'Loading...',
 
-
-          {action.label}
-        </Button>
+      {action && (;
+        <Button
+          onClick={action && action.onClick}
+          variant='outline'
+          className='flex items-center gap-2'>;
+          <RefreshCw className='w-4 h-4' />;
+          {action && action.label}
+        </Button>;
       )}
-
-      
-
-=======
-
-=======
-      
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-      {type === 'error' && (
-        <div className='mt-4 text-sm text-gray-500 dark:text-gray-400'>
-          <p>If this issue continues, please contact our support team.</p>
-        </div>
-      )}
-
-
-      
-
-
-      {type === 'network' && (
-        <div className='mt-4 text-sm text-gray-500 dark:text-gray-400'>
-          <p>
-
   title?: string;
   description?: string;
   action?: {
@@ -228,14 +193,12 @@ export function ProductsEmptyState ({
   on_retry,
   onAddProduct,
   is_authenticated = false,
-
 }: {
   on_retry?: () => void;
   onAddProduct?: () => void;
   is_authenticated?: boolean }) {
   const action = onAddProduct;
     ? {
-
 
       {type === 'error' && (;
         <div className='mt-4 text-sm text-gray-500 dark:text-gray-400'>;
@@ -249,7 +212,6 @@ export function ProductsEmptyState ({
             {t('general && general.check_status_page')}{' '}
             <Link href='https://status && status.zion.ai' className='underline'>;
               {t('general && general.status_page')}
-=======
 
   )
 export function CategoriesEmptyState({ onRetry }: { onRetry?: () => void }) {
@@ -281,7 +243,6 @@ export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
 }
 }
 
-=======
             {t('general.check_status_page')}
             {" "}
             <Link href="https://status.zion.ai" className="underline">
@@ -308,61 +269,11 @@ export function ProductsEmptyState(): any ({;
     ? {;
         label: isAuthenticated ? 'Add Product' : 'Login to Add Product',;
         onClick: onAddProduct,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       }
     : onRetry;
       ? { label: 'Try Again', onClick: onRetry }
 
-      : undefined;
-=======
 
-  return (
-    <EmptyState
-      type="categories"
-      action={onRetry ? { label: 'Refresh Categories', onClick: onRetry } : undefined}
-    />;
-  );
-}
-
-
-  const customDescription = isAuthenticated;
-    ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!";
-    : "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!";
-
-      />;
-  );
-
-export function CategoriesEmptyState(): any ({ onRetry }: { onRetry?: () => void }) {;
-      />;
-  );
-
-export function TalentEmptyState(): any ({ onRetry }: { onRetry?: () => void }) {;
-      />;
-  );
-
-export function EquipmentEmptyState(): any ({ onRetry }: { onRetry?: () => void }) {;
-      />;
-  );
-
-export function SearchEmptyState(): any ({ onRetry }: { onRetry?: () => void }) {;
-      />;
-  );
-
-export function NetworkErrorState(): any ({ onRetry }: { onRetry?: () => void }) {;
-      />;
-  );
-
-export function ServerErrorState(): any ({ onRetry }: { onRetry?: () => void }) {;
-      />;
-  );
-} ;
-
-
-=======
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
         label: is_authenticated ? 'Add Product' : 'Login to Add Product',
         on_click: onAddProduct,
       }
@@ -387,9 +298,3 @@ export function ServerErrorState ({ on_retry }: { on_retry?: () => void }) {
       />);
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

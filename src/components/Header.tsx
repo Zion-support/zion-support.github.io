@@ -125,7 +125,7 @@ const Header: React.FC = () => {
           )}
         </AnimatePresence>
       </div>
-    </header>
+    </motion.header>
   );
 };
 

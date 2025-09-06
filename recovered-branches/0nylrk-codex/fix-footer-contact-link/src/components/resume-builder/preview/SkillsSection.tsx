@@ -1,15 +1,3 @@
-
-
-import {Skill} from '@/types/resume';
-
-
-interface SkillsSectionProps {
-  skills: Skill[];
-}
-export function SkillsSection({ skills }: SkillsSectionProps) {
-  // Group skills by category
-
-
 import { Skill  } from '@/types / resume';
 interface SkillsSectionProps {
   skills: Skill[];
@@ -26,20 +14,10 @@ function SkillsSection() {
 if ( {) {
   $2
 }
-
         acc[category] = [];
       }
       acc[category].push (skill);
       return acc;
-
-  const skillsByCategory = skills.reduce((acc, skill) => {;
-    const category = skill.category || 'Other';
-    if (!acc[category]) {
-      acc[category] = []
-    }
-    acc[category].push(skill);
-
-=======
 import { Skill } from '@/types/resume',;
 interface SkillsSectionProps {;
   skills: Skill[];
@@ -61,8 +39,27 @@ export function SkillsSection({ skills }: SkillsSectionProps) {;
 
   if (skills.length === 0) return null,
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import { Skill } from '@/types/resume',;
+interface SkillsSectionProps {;
+  skills: Skill[];
+}
+;
+export function SkillsSection({ skills }: SkillsSectionProps) {;
+  // Group skills by category;
+  const skillsByCategory = skills.reduce((acc, skill) => {;
+    const category = skill.category || 'Other',;
+    if (!acc[category]) {;
+      acc[category] = [];
+    }
+    acc[category].push(skill),
+
+
+
+    return acc
+  }, {} as Record<string Skill[]>),
+
+  if (skills.length === 0) return null,
+  
   return (
     <div className="mb-6">
       <h2 className="text-lg font-semibold border-b mb-3">Skills</h2>
@@ -81,17 +78,14 @@ export function SkillsSection({ skills }: SkillsSectionProps) {;
         ))}
       </div>
     </div>
-=======
     },
     {} as Record < string, Skill[]>,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   );
 ;
   // Check condition
 if (return null) {
   $2
 }
-
 import {Skill} from '@/types/resume';
 interface SkillsSectionProps {;
   skills: Skill[];
@@ -126,8 +120,6 @@ export function SkillsSection(): any ({ skills }: SkillsSectionProps) {;
     </div>;
   );
 }
-
-=======
   return (
     <div className="mb - 6">;
       <h2 className="text - lg font - semibold border - b mb - 3">Skills</h2>;
@@ -142,4 +134,3 @@ export function SkillsSection(): any ({ skills }: SkillsSectionProps) {;
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

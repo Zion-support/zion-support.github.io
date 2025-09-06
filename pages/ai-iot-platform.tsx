@@ -1,38 +1,18 @@
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
-
+import {;
+  Phone,;
+  Mail,;
+  MapPin,;
+  Check,;
+  ArrowRight,;
+  Star,;
+  Cpu,;
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 
-
 export default function AIIoTPlatformPage() {;
   const service = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find(s =>;
     s && s.link.endsWith('/ai-iot-platform');
-
   );  if (!service) return null;
 
   return (
@@ -90,27 +70,8 @@ export default function AIIoTPlatformPage() {;
               </div>;
               <a
                 href='/contact'
-
-                className='w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200 w-5 h-5 ml-2'>;
-                Modernize IoT Ops;
-                <ArrowRight />;
-              </a>;
-              <div className='mt-6 space-y-3 text-sm text-slate-300'>;
-                <div className='flex items-center space-x-2 w-4 h-4 text-violet-400'>;
-                  <Phone />;
-                  <span>{service && service.contactInfo.mobile}</span>;
-                </div>;
-                <div className='flex items-center space-x-2 w-4 h-4 text-purple-400'>;
-                  <Mail />;
-                  <span>{service && service.contactInfo.email}</span>;
-                </div>;
-                <div className='flex items-center space-x-2 w-4 h-4 text-green-400 text-xs'>;
-                  <MapPin />;
-                  <span>{service && service.contactInfo.address}</span>;
-=======
 import Head from 'next / head';
 import {
-=======
 
 import React from 'react';
 
@@ -214,12 +175,10 @@ if (return null) {
                 <div className='flex items - center space - x-2 w - 4 h - 4 text - green - 400 text - xs'>;
                   <MapPin />;
                   <span>{service.contact_info.address}</span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 </div>              </div>;
             </div>;
           </div>;
         </div>;
-
         <div className="bg - violet - 50 rounded - lg p - 8 text - center">;
           <h2 className="text - 2xl font - bold mb - 4">Connect Your World</h2>;
           <p className="text - lg text - gray - 700 mb - 6">;
@@ -230,15 +189,11 @@ if (return null) {
               Get Started;
             </a>;
             <a href="/about" className="border border - violet - 600 text - violet - 600 px - 6 py - 3 rounded - lg hover:bg - violet - 50">;
-
               Learn More;
             </a>;
           </div>;
         </div>;
       </main>;
-
-
-=======
 import { Phone, Mail, MapPin, Check, ArrowRight, Star, Cpu } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
@@ -251,7 +206,6 @@ export default function AIIoTPlatformPage() {
 
 
 
-=======
 import React from 'react'
 import Head from 'next/head'
 import { Phone, Mail, MapPin, Check, ArrowRight, Star, Cpu } from 'lucide-react',
@@ -263,7 +217,6 @@ export default function AIIoTPlatformPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-iot-platform'))
   if (!service) return null,
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <Layout>
       <Head>
@@ -309,19 +262,12 @@ export default function AIIoTPlatformPage() {
 
 }
 
-=======
 
       </div>
     </Layout>
   )
 }
 
+
     </Layout>);
 ;
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

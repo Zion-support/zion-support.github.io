@@ -50,7 +50,5 @@ export function ProjectActions({;
   isTalent && !isUnderDispute && (<Button onClick={;
   onAddMilestone ;
 }> Add Milestone </Button>) ;
-
 }</div>) ;
 }"
-

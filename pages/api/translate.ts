@@ -1,5 +1,4 @@
-
-
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -21,8 +20,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const completion = await openai.chat.completions.create({
         model: 'gpt-4o-mini'
         messages: [
-
-
+          { role: 'system', content: system },
+          { role: 'user', content: `Translate this into ${langName} in a business-appropriate tone.\n\n${text}` }
+        ],
+        temperature: 0.2
+      });
+      const translated = completion.choices?.[0]?.message?.content?.trim() || '';
       results[lng] = translated
     }
     return res.status(200).json(results)
@@ -31,11 +34,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     return res.status(500).json({ error: 'Translation failed' })
   }
-
-=======
 }
-
-=======
 import type { NextApiRequest, NextApiResponse } from 'next',
 import OpenAI from 'openai',
 const openai = new OpenAI ({ api_key: process.env.OPENAI_API_KEY }),
@@ -77,9 +76,5 @@ if (|| targets.length === 0) {) {
     return res.status (500).json ({ error: 'Translation failed' });
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

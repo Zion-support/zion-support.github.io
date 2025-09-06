@@ -1,12 +1,4 @@
-
-
-
-
-
-=======
 }
-
-=======
 import React from 'react',
 import ServiceLanding from '../components / sections / ServiceLanding',
 export default /**
@@ -35,9 +27,6 @@ return (
     canonical="https: //ziontechgroup.com / ai - predictive - maintenance - platform";
   />);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 export default function AIPredictiveMaintenancePlatform() {
 	return (
 		<ServiceLanding
@@ -59,4 +48,3 @@ export default function AIPredictiveMaintenancePlatform() {
 				"APIs and event webhooks"
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,13 +1,30 @@
+import fs from 'fs';
+import path from 'path';
+import type { GetStaticProps } from 'next';
+interface AuditReport {
+  generatedAt?: string;
+  metadata?: any;
+  vulnerabilities?: any;
+  error?: string;
+  raw?: string
+}
+</pre> </div>)
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import fs from 'fs';
+import path from 'path';
+import type { GetStaticProps } from 'next';
+interface AuditReport {
+  generatedAt?: string;
+  metadata?: any;
+  vulnerabilities?: any;
+  error?: string;
+  raw?: string
+}
+</pre> </div>)
 export default function SecurityAudit({ report }: Props) {
-=======
 };
 </pre> </div>) ;
 export default function SecurityAudit(): any ({ report }: Props) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return (
     <div className="space-y-4">;
       <header className="space-y-1">;
@@ -18,23 +35,6 @@ export default function SecurityAudit(): any ({ report }: Props) {;
       {report && report.generatedAt && (;
         <div className="text-sm text-gray-500">Generated at: {new Date(report && report.generatedAt).toLocaleString()}</div>;
       )}
-
-
-    </div>;
-
-
-);
-}
-=======
-      <pre className="whitespace-pre-wrap text-xs p-4 rounded border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900/40 overflow-auto">;
-{JSON && JSON.stringify(report, null, 2)}
-      </pre>;
-    </div>;
-  );
-}
-
-
-=======
 }
 </pre> </div>);
 export default /**
@@ -55,4 +55,3 @@ function SecurityAudit() {
       </pre>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

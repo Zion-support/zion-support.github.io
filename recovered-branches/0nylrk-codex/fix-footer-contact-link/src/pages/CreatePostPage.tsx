@@ -1,8 +1,3 @@
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface PostFormValues {
 
   title: string
@@ -91,78 +86,19 @@ export default function CreatePostPage() {;
         description: "There was a problem creating your post",;
         variant: "destructive";
       });
-
     }
   }
-=======
     }
 
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
-
     <AppLayout>;
-
       <SEO
         title="Create New Post | Community Forum | Zion AI Marketplace"
         description="Create a new discussion post in the Zion AI Marketplace community forum."
         keywords="community, forum, discussion, create post, new thread"
-
-=======
-
-import { useState, useEffect } from "react",;
-import { Link, useNavigate, useSearchParams } from "react-router-dom",;
-import { AppLayout } from "@/layout/AppLayout",;
-import { SEO } from "@/components/SEO",;
-import { Button } from "@/components/ui/button",;
-import PostForm from "@/components/community/PostForm",;
-import { useToast } from "@/hooks/use-toast",;
-import { ForumCategory } from "@/types/community",;
-interface PostFormValues {;
-  title: string,;
-  content: string,;
-  categoryId: ForumCategory,;
-  tags: string;
-}
-;
-export default function CreatePostPage() {;
-  const navigate = useNavigate(),;
-  const { toast } = useToast(),;
-  const [searchParams] = useSearchParams(),;
-  // Get category from URL query params if available;
-  const initialCategory = searchParams.get("category") as ForumCategory | null,;
-  const initialValues: Partial<PostFormValues> = {;
-    categoryId: initialCategory || "project-help";
-  },;
-  const handleSubmit = async (values: PostFormValues) => {;
-    try {;
-      // Here we would normally save to the database;
-      // For now, we'll just simulate a successful post creation;
-      // Parse tags into an array;
-      const tagsArray = values.tags.split(",").map(tag => tag.trim()),;
-      toast({;
-        title: "Post created",;
-        description: "Your post has been published successfully";
-      }),;
-      // Redirect to the forum category;
-      navigate(`/community/category/${values.categoryId}`);
-    } catch (error) {;
-      toast({;
-        title: "Error",;
-        description: "There was a problem creating your post";
-        variant: "destructive";
-      });
-    }
-  };
-  return (;
-    <AppLayout>;
-      <SEO;
-        title="Create New Post | Community Forum | Zion AI Marketplace";
-        description="Create a new discussion post in the Zion AI Marketplace community forum.";
-        keywords="community, forum, discussion, create post, new thread";
-
       />;
 
       <div className="container py-8">;
@@ -181,7 +117,6 @@ export default function CreatePostPage() {;
     </AppLayout>;
   );
 }
-
 import { useState, useEffect } from './react';
 import { Link, use_navigate, useSearchParams } from './react-router-dom';
 import { AppLayout } from '@/layout / AppLayout';
@@ -254,9 +189,7 @@ function CreatePostPage() {
       </div>;
     </AppLayout>);
 }
-
-=======
 ;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+;
+

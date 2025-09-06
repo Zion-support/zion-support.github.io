@@ -1,29 +1,11 @@
-
-:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/workspace/WorkspaceHeader.tsx
-
-
-import React from "react",
-import { Button } from "@/components/ui/button",
-import { type Company } from "./CompanyDashboard",
-import { Bell, Users, Settings } from "lucide-react",
-
-
-
-
-
-interface WorkspaceHeaderProps {
-  company: Company
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 
 
 export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
   return (
-=======
 
 };
 
-=======
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { type Company } from "./CompanyDashboard",;
@@ -82,9 +64,7 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {;
       </div>;
     </div>;
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
-
 :recovered - branches / 0nylrk - codex / fix - footer - contact - link / src / components / enterprise / workspace / WorkspaceHeader.tsx;
 import React from './react';
 import { Button } from '@/components / ui / button';
@@ -143,10 +123,9 @@ function WorkspaceHeader() {
       </div>;
     </div>);
 }
-
-=======
 ;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+;
+
+

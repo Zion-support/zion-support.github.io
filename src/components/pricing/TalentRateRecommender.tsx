@@ -1,27 +1,40 @@
-
-
-import { Sparkles } from 'lucide-react'
 interface TalentRateRecommenderProps {
-
   skills: string[],
   yearsExperience: number,
   location?: string,
-  onSuggestionApplied: (value: number,) => void,
-  rateType: "hourly" | "fixed"
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-      // Track this suggestion application
-      if (user && user.id) {
-        trackPricingSuggestion({
-          userId: user.id
-          suggestionType: "talent"
-          suggestedMin: suggestion.minRate
-          suggestedMax: suggestion.maxRate
-          actualValue: suggestedRate
-          accepted: true
-        })
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  onSuggestionApplied: (value: number, ) => void,
+  rate_type: "hourly" | "fixed";
+}
+export const TalentRateRecommender: React.FC < TalentRateRecommenderProps> = ({
+  skills;
+  years_experience;
+  location;
+  onSuggestionApplied,
+  rate_type}) => {
+  const [is_loading, setIsLoading] = useState (false);
+  const [suggestion, set_suggestion] = useState < PricingSuggestion | null>(null);
+  const { user } = use_auth ();
+  const generate_suggestion = async () => {
+    // Check condition
+if ( {) {
+  $2
+}
+      return;
+    }
+    setIsLoading (true);
+    try {
+      const params: TalentRateParams = {
+        skills;
+        years_experience,
+        location}
+      const result = await getTalentRateSuggestion (params);
+      set_suggestion (result);
+    } catch (error) {
+      logErrorToProduction ('Error generating rate suggestion:', { data: error });
+    } finally {
+      setIsLoading (false);
+    }
+  }
 interface TalentRateRecommenderProps {;
   skills: string[],;
   yearsExperience: number,;
@@ -93,8 +106,6 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
           actualValue: suggestedRate,;
           accepted: true;
         });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   const handleApplySuggestion = () =>: any {
     // Check condition
 if ( {) {
@@ -116,7 +127,6 @@ if ( {) {
           actual_value: suggested_rate,
           accepted: true;
         });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
     }
 
@@ -125,29 +135,14 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
-
-
-            onClick={generateSuggestion}
-            disabled={skills.length === 0 || yearsExperience <= 0}
-
-
-            className="w-full"
-          >
-            <Sparkles className="h-4 w-4 mr-2" /> Optimize Rate with AI
-          </Button>
-        ) : (
-=======
             disabled = {skills && skills.length === 0 || yearsExperience <= 0,}
             className="w-full">;
             <Sparkles className="h-4 w-4 mr-2" /> Optimize Rate with AI;
           </Button>;
         ) : (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <PricingSuggestionBox
 
-=======
 
   rateType 
 }/>) 
@@ -156,7 +151,6 @@ if ( {) {
 '"};
 };
 
-=======
             suggestion={suggestion}
             isLoading={isLoading}
             onApplySuggestion={handleApplySuggestion}
@@ -164,16 +158,6 @@ if ( {) {
           />;
         )}
 
-      </div>;
-    </div>;
-  );
-};
-
-
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     <div className="space - y-4">;
       <div>;
         {!suggestion && !is_loading ? (
@@ -211,10 +195,3 @@ return (<div className="space - y-4" > <div> {";
 }
 '"},
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

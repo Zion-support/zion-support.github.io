@@ -1,8 +1,3 @@
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ProfileErrorStateProps {
   error: string | null;
 }
@@ -44,8 +39,6 @@ export function ProfileErrorState(): any ({ error }: ProfileErrorStateProps) {;
     </div>;
   );
 }
-
-=======
 import React from './react';
 import { Button  } from '@/components / ui / button';
 import { Link  } from './react-router-dom';
@@ -73,15 +66,11 @@ function ProfileErrorState() {
       </Button>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   )
-=======
   )
 
 }
 
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

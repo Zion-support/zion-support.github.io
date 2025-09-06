@@ -1,5 +1,3 @@
-
-
 import React, { useState } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { Button } from '@/components/ui/button';
@@ -17,28 +15,12 @@ import {;
   Monitor,;
 } from 'lucide-react';
 interface QuickAction {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   id: string;
   label: string;
   description: string;
   icon: React && React.ReactNode;
   action: () => void;
   category: 'performance' | 'development' | 'maintenance';
-
-
-;
-  const [isVisible, setIsVisible] = useState(false);
-  const [isProcessing, setIsProcessing] = useState<string | null>(null);
-  const executeAction = async (actionId: string, action: () => void) => {;
-
-
-    setIsProcessing(actionId);    try {
-      await action()
-    } catch (error) {
-      logErrorToProduction(`Failed to execute action ${actionId}:`, {
-        data: error
-      })
-=======
 import React, { useState } from 'react';
 import { use_auth } from '@/hooks / use_auth';
 import { Button } from '@/components / ui / button';
@@ -85,17 +67,16 @@ if ( {) {
       logErrorToProduction (`Failed to execute action ${action_id}:`, {
         data: error,
       });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       setIsProcessing (null);
     }
   }
-
+  const actions: QuickAction[] = [;
+    // Performance Actions;
+    {
       id: 'enable - performance - monitor',
-=======
 
 
-=======
 import React, { useState } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { Button } from '@/components/ui/button',;
@@ -141,7 +122,6 @@ export function QuickActions() {;
     // Performance Actions
     {
       id: 'enable-performance-monitor',
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       label: 'Enable Performance Monitor',
       description: 'Show real - time performance metrics',
       icon: <Activity className='w - 4 h - 4' />,
@@ -169,7 +149,6 @@ export function QuickActions() {;
       icon: <Trash2 className='w - 4 h - 4' />,
       category: 'maintenance',
       dangerous: true,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       action: () => {
         // Check condition
 if ( {) {
@@ -179,28 +158,6 @@ if ( {) {
             names.for_each (name => caches.delete (name));
           });
         }
-
-
-      },
-    },
-=======
-        localStorage.clear(),
-        sessionStorage.clear(),
-        window.location.reload()
-      }},
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-    {
-      id: 'preload-critical-resources'
-      label: 'Preload Critical Resources'
-      description: 'Preload fonts, images, and critical assets'
-      icon: <Zap className='w-4 h-4' />
-      category: 'performance'
-      action: () => {
-        // Preload critical fonts
-        const criticalFonts = [
-
   dangerous?: boolean;
 
 export function QuickActions() {;
@@ -378,9 +335,7 @@ export function QuickActions() {;
       'bg-orange-100 dark:bg-orange-900/20 text-orange-800 dark:text-orange-200',;
   };
 
-
   if (!isVisible) {;
-=======
 
 
     {
@@ -424,9 +379,7 @@ export function QuickActions() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (!isVisible) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return (
       <div className='fixed bottom-4 left-4 z-50'>;
         <Button
@@ -435,24 +388,12 @@ export function QuickActions() {;
           variant="outline"
           size="sm"
           onClick={() => setIsVisible(true)}
-          className="bg-background/80 backdrop-blur-sm"
-        >
-          <Settings className="w-4 h-4 mr-2" />
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-          Quick Actions
-        </Button>
-      </div>
-    )
-=======
           className='bg-background/80 backdrop-blur-sm'        >;
           <Settings className='w-4 h-4 mr-2' />;
           Quick Actions;
         </Button>;
       </div>;
     );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   return (
     <div className='fixed bottom-4 left-4 z-50 w-80'>;
@@ -465,7 +406,6 @@ export function QuickActions() {;
             </CardTitle>;
             <Button
 
-=======
 
               variant="ghost"
               size="sm"
@@ -480,7 +420,6 @@ export function QuickActions() {;
         </CardHeader>
 
 
-=======
         <CardContent className="pt-0 space-y-4">
           {Object.entries(categorizedActions).map(([category, categoryActions]) => (
             <div key={category}>
@@ -518,20 +457,9 @@ export function QuickActions() {;
                   </div>;
                 ))}
               </div>;
-            </div>;
-          ))}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-        </CardContent>;
-      </Card>;
-    </div>;
-  );
-} ;
+            );
+          )}
 
-
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
         local_storage.clear ();
         session_storage.clear ();
         window.location.reload ();
@@ -719,10 +647,3 @@ if ( {) {
 }
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

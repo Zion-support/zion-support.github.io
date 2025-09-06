@@ -1,11 +1,7 @@
 
-
-=======
-
 function toSlug(name: string): string {;
   return name;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     .toLowerCase();
     .replace(/[^a-z0-9]+/g, "-");
     .replace(/(^-|-$)+/g, "");
@@ -17,7 +13,6 @@ function toSlug(name: string): string {;
   ensureDir(eventsDir),;
   const summitEventPath = path.join(eventsDir, `summit-${instanceSlug}.json`),;
 
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -360,12 +355,10 @@ if ( {) {
     instance_slug,
     config_path,
     assets,
-
     logs;
     summary;
     version}
 }
-=======
       changelogPath,;
       `# Changelog\n\n- ${nowIso()}: Genesis deployment initialized for ${input.instanceName}.\n`;
     ),;
@@ -402,13 +395,11 @@ if ( {) {
   }
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Schedule launch stream (/summit);
   ensureDir(eventsDir);
   const summitEventPath = path.join(eventsDir, `summit-${instanceSlug}.json`);
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   writeTextFile(;
 
     summitEventPath,;
@@ -435,4 +426,3 @@ if ( {) {
 
 
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

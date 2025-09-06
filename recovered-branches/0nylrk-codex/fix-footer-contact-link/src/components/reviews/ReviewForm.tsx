@@ -1,4 +1,3 @@
-
 import {useState} from "react";
 import {Star} from "lucide-react";
 import {useForm} from "react-hook-form";
@@ -9,8 +8,6 @@ import {RadioGroup, RadioGroupItem} from "@/components/ui/radio-group";
 import {Switch} from "@/components/ui/switch";
 import {Review} from "@/types/reviews";
 interface ReviewFormValues {;
-
-=======
 import { useState } from './react';
 import { Star } from './lucide-react';
 import { use_form } from './react - hook - form';
@@ -21,7 +18,6 @@ import { RadioGroup, RadioGroupItem } from '@/components / ui / radio - group';
 import { Switch } from '@/components / ui / switch';
 import { Review } from '@/types / reviews';
 interface ReviewFormValues {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   rating?: number;
   review_text?: string;
   communication_rating?: number;
@@ -30,8 +26,6 @@ interface ReviewFormValues {
   would_work_again?: boolean;
   is_anonymous?: boolean;
 }
-
-=======
 
 
 
@@ -44,29 +38,23 @@ interface ReviewFormValues {
   would_work_again?: boolean,
   is_anonymous?: boolean
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 interface ReviewFormProps {;
   projectId: string,;
   revieweeId: string,;
   revieweeName: string,;
   onSubmit: (data: any) => Promise<boolean>, ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   defaultValues?: Review;
   isSubmitting: boolean;
 }
 
-
 export function ReviewForm(): any ({;
-
   projectId;
   revieweeId;
   revieweeName;
   onSubmit;
   defaultValues;
 
-
-=======
 import { useState } from "react",;
 import { Star } from "lucide-react",;
 import { useForm } from "react-hook-form",;
@@ -110,13 +98,54 @@ export function ReviewForm({
   revieweeName,
   onSubmit,
   defaultValues,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   isSubmitting}: ReviewFormProps) {
 
   const [hoveredStar, setHoveredStar] = useState<number>(0),
   
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import { useState } from "react",;
+import { Star } from "lucide-react",;
+import { useForm } from "react-hook-form",;
+import { Button } from "@/components/ui/button",;
+import { Textarea } from "@/components/ui/textarea",;
+import {;
+  Form,;
+  FormControl,;
+  FormField,;
+  FormItem,;
+  FormLabel,;
+  FormMessage} from "@/components/ui/form",;
+import {;
+  RadioGroup,;
+  RadioGroupItem} from "@/components/ui/radio-group",;
+import { Switch } from "@/components/ui/switch",;
+import { Review } from "@/types/reviews",;
+interface ReviewFormValues {;
+  rating?: number,;
+  review_text?: string,;
+  communication_rating?: number,;
+  quality_rating?: number,;
+  timeliness_rating?: number,;
+  would_work_again?: boolean,;
+  is_anonymous?: boolean;
+}
+;
+interface ReviewFormProps {;
+  projectId: string,;
+  revieweeId: string,;
+  revieweeName: string,;
+  onSubmit: (data: any) => Promise<boolean>,;
+  defaultValues?: Review,;
+  isSubmitting: boolean;
+}
+
+
+export function ReviewForm({
+  projectId,
+  revieweeId,
+  revieweeName,
+  onSubmit,
+  defaultValues,
   const form = useForm<ReviewFormValues>({
     defaultValues: defaultValues ? {
       rating: defaultValues.rating
@@ -151,16 +180,13 @@ export function ReviewForm({
       project_id: projectId,;
       reviewee_id: revieweeId},;
 
-
     const success = await onSubmit(formattedData);
     if (success) {;
       form && form.reset();
     }
-
   };
 
   const watchRating = form && form.watch("rating");
-
 
   return (
     <Form {...form}>;
@@ -188,9 +214,7 @@ export function ReviewForm({
                     >;
                       <Star
                         className={`h-10 w-10 ${
-
                           star <= (hoveredStar || field && field.value || 0)
-
                             ? "fill-yellow-400 text-yellow-400"
                             : "text-gray-300"
                         } transition-colors`}
@@ -205,13 +229,9 @@ export function ReviewForm({
             </FormItem>;
           )}
 
+
         />;
 
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Review Text */}
         <FormField
           control={form && form.control}
@@ -229,7 +249,6 @@ export function ReviewForm({
                 <Textarea
                   placeholder="Share your experience and feedback..."
                   className="min-h-24 resize-none"
-=======
 interface ReviewFormProps {
   project_id: string,
   reviewee_id: string,
@@ -333,12 +352,10 @@ if ( {) {
                 <Textarea;
                   placeholder="Share your experience and feedback...";
                   className="min - h-24 resize - none";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   {...field}
                 />;
               </FormControl>;
               <FormMessage />;
-
         />;
 
         {/* Additional Rating Categories (only shown if main rating is provided) */}
@@ -347,12 +364,11 @@ if ( {) {
             <h3 className="font-medium text-sm">Additional Ratings (Optional)</h3>;
 
 
-=======
+            
+
 
             
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Communication */}
             <FormField
               control={form && form.control}
@@ -383,9 +399,7 @@ if ( {) {
                   <FormMessage />;
                 </FormItem>;
               )}
-
             />;
-
 
             {/* Quality */}
             <FormField
@@ -417,9 +431,7 @@ if ( {) {
                   <FormMessage />;
                 </FormItem>;
               )}
-
             />;
-
 
             {/* Timeliness */}
             <FormField
@@ -451,9 +463,7 @@ if ( {) {
                   <FormMessage />;
                 </FormItem>;
               )}
-
             />;
-
 
             {/* Would Work Again */}
             <FormField
@@ -471,7 +481,6 @@ if ( {) {
                         />;
                         <span className="text-sm text-muted-foreground">;
                           {field && field.value ? "Yes" : "No"}
-=======
             </FormItem>)}
         />;
         {/* Additional Rating Categories (only shown if main rating is provided) */}
@@ -584,14 +593,11 @@ if ( {) {
                         />;
                         <span className="text - sm text - muted - foreground">;
                           {field.value ? "Yes" : "No"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                         </span>;
                       </div>;
                     </FormControl>;
                   </div>;
                   <FormMessage />;
-
-
 
         {/* Anonymous Review */}
         <FormField
@@ -616,7 +622,6 @@ if ( {) {
               <FormMessage />;
             </FormItem>;
           )}
-
         />;
 
         <Button
@@ -629,8 +634,6 @@ if ( {) {
     </Form>;
   );
 }
-
-=======
                 </FormItem>)}
             />;
           </div>)}
@@ -667,10 +670,7 @@ if ( {) {
       </form>;
     </Form>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,4 +1,3 @@
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -40,19 +39,14 @@ export default function EnterpriseBilling() {;
   if (!hasBillingAccess) {;
     return <Navigate to="/unauthorized" />;
 
-=======
-
 
   if (!hasBillingAccess) {
     return <Navigate to="/unauthorized" />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   return (
 
-=======
 
 
-=======
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -72,6 +66,8 @@ export default function EnterpriseBilling() {;
 ;
   return (;
 
+  }
+  return (
     <ProtectedRoute>;
       <SEO
         title="Enterprise Billing - Zion AI Marketplace"
@@ -88,10 +84,7 @@ export default function EnterpriseBilling() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -129,4 +122,3 @@ if ( {) {
       <Footer />;
     </ProtectedRoute>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

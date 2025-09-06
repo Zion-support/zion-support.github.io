@@ -1,11 +1,9 @@
-
-
+export const getStaticProps: GetStaticProps < PageProps> = async () => {
   return {
     props: {
       docs: content as DocsContent,
     },
   }}import React, { useEffect } from 'react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import type { GetStaticProps } from 'next';
 import content from '../../../data / docs / content.json';
 export type Section = {
@@ -22,11 +20,11 @@ type DocsContent = {
 ;
 type PageProps = {
 
+export const getStaticProps: GetStaticProps<PageProps> = async () => {
   docs: DocsContent;
 }
 ;
 export const getStaticProps: GetStaticProps < PageProps> = async () => {
-
   return {
     props: {
       docs: content as DocsContent
@@ -51,16 +49,6 @@ export const getStaticProps: GetStaticProps<PageProps> = async () => {
   return {
     props: {
       docs: content as DocsContent}}
-
-
-
-
-
-export default function PrintDocs({ docs }: PageProps) {
-  useEffect(() => {
-    const id = setTimeout(() => window.print(), 500);
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -116,7 +104,6 @@ export const getStaticProps: GetStaticProps<PageProps> = async () => {;
 export default function PrintDocs(): any ({ docs }: PageProps) {;
   useEffect(() => {;
     const id = setTimeout(() => window && window.print(), 500);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return () => clearTimeout(id);
   }, []);
   return (
@@ -135,8 +122,6 @@ export default function PrintDocs(): any ({ docs }: PageProps) {;
                   {c && c.content}
                 </pre>;
               ))}          </section>  }, []);
-
-=======
 };
 
 export default function PrintDocs({ docs }: PageProps) {
@@ -144,8 +129,6 @@ export default function PrintDocs({ docs }: PageProps) {
     const id = setTimeout(() => window.print(), 500);
     return () => clearTimeout(id)
   }, []);
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   return (
     <div className="p-8 max-w-4xl mx-auto">;
@@ -158,20 +141,14 @@ export default function PrintDocs({ docs }: PageProps) {
             {s && s.code && s && s.code.map((c, i) => (;
               <pre key={i} className="mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap">{c && c.content}</pre>;
             ))}
-
-
+          </section>
         ))}
-
       </div>;
     </div>;
   );
 }
-
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 export default /**
  * PrintDocs - Function description
  */
@@ -212,14 +189,9 @@ function PrintDocs() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
 }
 
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

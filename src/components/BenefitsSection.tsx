@@ -1,10 +1,13 @@
 
+import { GradientHeading } from "./GradientHeading";
+import { FeatureCard } from "./FeatureCard";
+import { Bot, Clock, Globe, TrendingDown } from 'lucide-react'
+import { cn } from "@/lib/utils";
+import { useTranslation } from "react-i18next";
+interface BenefitsSectionProps {
+  className?: string;
+  style?: React.CSSProperties
 
-
-const getBenefits = (t: any) => [
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   {
 
     title: t('benefits.ai_matchmaking'),
@@ -22,7 +25,6 @@ const getBenefits = (t: any) => [
     title: t('benefits.cost_reduction'),
     description: t('benefits.cost_reduction_desc'),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <GradientHeading>{t('home.benefits_title')}</GradientHeading>
           <p className='text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto'>
             {t('home.benefits_subtitle')}
@@ -35,8 +37,6 @@ const getBenefits = (t: any) => [
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {benefits.map((benefit, index) => (
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -108,7 +108,8 @@ export function BenefitsSection(): any ({ className, style }: BenefitsSectionPro
 
         <div className='grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto'>          {benefits && benefits.map((benefit, index) => (        ;
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">;
-
+          {benefits && benefits.map((benefit, index) => (;
+            <FeatureCard
 import { GradientHeading } from './GradientHeading';
 import { FeatureCard } from './FeatureCard';
 import { Bot, Clock, Globe, TrendingDown } from 'lucide-react';
@@ -157,23 +158,8 @@ function BenefitsSection() {
         <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8 max - w-5xl mx - auto">;
           {benefits.map ((benefit, index) => (
             <FeatureCard;
-
-=======
-          {benefits.map((benefit, index) => (;
-            <FeatureCard;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               key={index}
-
-=======
-              title={benefit.title}
-              description={benefit.description}
-              icon={benefit.icon}
-
           ))}
-
               className='bg - zion - blue hover:bg - zion - blue - dark transition - all duration - 300'            />              className="bg - zion - blue hover:bg - zion - blue - dark transition - all duration - 300";
               className="bg - zion - blue hover:bg - zion - blue - dark transition - all duration - 300";
             />))}
@@ -183,7 +169,6 @@ function BenefitsSection() {
 }
 import React, { useState } from 'react';
 export /**;
-
 export default BenefitsSection }}}}</motion.div></motion.div></motion.div>}
 import { GradientHeading } from './ui / GradientHeading';
 export default /**
@@ -191,30 +176,8 @@ export default /**
  */
 function Page() {
   {
-
-=======
-
-      "Direct provider connections",";
-      "Competitive pricing",";
-      "Bulk discount options",";
-      "Transparent cost structure" ];
-
-=======
-              className="bg-zion-blue hover:bg-zion-blue-dark transition-all duration-300"
-            />
-          ))}
-
-        </div>;
-      </div>;
-    </section>;
-  );
-
-
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ";
     title: "24 / 7 Support", ";
     description: "Our dedicated team is available around the clock to assist with any questions or issues you might encounter during your journey.", ";
@@ -239,12 +202,3 @@ function Page() {
       "Competitive pricing", ";
       "Bulk discount options", ";
       "Transparent cost structure" ];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-}
-;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

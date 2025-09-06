@@ -23,13 +23,7 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 
-
-export default function InvestorsPage() {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-
 export default function InvestorsPage() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>;
       <Head>;
@@ -71,10 +65,8 @@ export default function InvestorsPage() {;
       </div>;
     </div>;
   );	return (
-
 export default function InvestorsPage() {
 	return (
-
 		<div className="min-h-screen pt-24 pb-20 px-4 sm: px-6 lg:px-8">
 			<Head>
 				<title>Investors | Zion Tech Group</title>
@@ -92,7 +84,8 @@ export default function InvestorsPage() {
 				<div className="pt-4 text-slate-300">Contact IR: <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></div>
 			</div>
 		</div>
-
+	)
+}
 		<div className="min-h-screen pt-24 pb-20 px-4 sm: px-6 lg:px-8">;
 			<Head>;
 				<title>Investors | Zion Tech Group</title>;
@@ -112,10 +105,6 @@ export default function InvestorsPage() {
 		</div>;
 	),;
 }
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import Head from 'next / head';
 export default /**
  * InvestorsPage - Function description
@@ -179,10 +168,7 @@ function InvestorsPage() {
   </div>;
   </div>),
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 	),
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

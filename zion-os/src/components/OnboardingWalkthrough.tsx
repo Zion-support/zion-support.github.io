@@ -1,4 +1,3 @@
-
 "use client",
 import { useState, useEffect  } from './react';,
 import { use_auth  } from '@/contexts / AuthContext';,
@@ -7,7 +6,6 @@ interface WalkthroughStep {
   title: string,
   description: string,
   target?: string,
-=======
 
 "use client",;
 import { useState, useEffect } from "react",;
@@ -110,11 +108,7 @@ if ( {) {
 }
     return null;
   }
-
-;
-
-  return (;
-
+  return (
     <>;
       {/* Overlay */}
       <div className="fixed inset - 0 bg - black / 50 z - 40" on_click={handle_skip} />;
@@ -171,20 +165,6 @@ if ( {) {
       {/* Highlight Target Element */}
       {currentStepData.target && (
         <div;
-
-          className="fixed z-30 pointer-events-none";
-
-          style={{;
-            top: 0,;
-            left: 0,;
-            right: 0,;
-
-
-            bottom: 0}}
-        >;
-          <div;
-            className="absolute border-2 border-blue-500 rounded-lg shadow-lg bg-blue-500/10";
-
           className="fixed z - 30 pointer - events - none";
           style={{
             top: 0,
@@ -199,14 +179,11 @@ if ( {) {
               left: "50%",
               transform: "translate (-50%, -50%)",
 
-=======
-
             style={{;
               top: "50%",;
               left: "50%",;
               transform: "translate(-50%, -50%)",;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               width: "300px";
               height: "200px"}}
           />;
@@ -217,18 +194,11 @@ if ( {) {
 
 ;
 // Hook to add data attributes for walkthrough targeting;
-export function useWalkthroughTarget(id: string) {;
-  return {;
-
-
-    "data-walkthrough-target": id;
-=======
 export /**
  * useWalkthroughTarget - Function description
  */
 function useWalkthroughTarget() {
   return {
     "data - walkthrough - target": id;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     id}
 }

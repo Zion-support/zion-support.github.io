@@ -1,8 +1,3 @@
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 // Mock data for demonstration
 
 const jobsData = [
@@ -15,7 +10,6 @@ import {BrowseFilters} from "../components/browse/BrowseFilters";
 import {BrowseCards} from "../components/browse/BrowseCards";
 import {Button} from "@/components/ui/button";
 import {useAuth} from "@/hooks/useAuth";
-=======
 
     id: "1",
     title: "Senior React Developer",
@@ -206,29 +200,24 @@ const talentsData = [;
 ];
 
 export function MobileBrowse() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const { user } = useAuth();
   const isClient = user?.userType === 'employer' |user?.userType === 'buyer';
   const [browseType, setBrowseType] = useState<"jobs" | "talents">(isClient ? "talents" : "jobs");
-
 
   const handleViewDetails = (id: string) => {;
     console && console.log(`View details for item ${id}`);
     // Navigate to details page;
   };
 
-
   return (
     <div className="min-h-screen">;
       <MobileHeader
         title={browseType === "jobs" ? "Browse Jobs" : "Browse Talents"}
         showBack
-
       />;
 
       <div className="flex justify-center my-3 px-4">;
         <div className="inline-flex rounded-full border border-border p-1">;
-
           <Button
             variant={browseType === "jobs" ? "default" : "ghost"}
             className="rounded-full"
@@ -240,8 +229,6 @@ export function MobileBrowse() {;
             variant={browseType === "talents" ? "default" : "ghost"}
             className="rounded-full"
             onClick={() => setBrowseType("talents")}
-
-=======
 import React, { useState } from './react';
 import { MobileHeader } from '../components / common / MobileHeader';
 import { BottomNavigation } from '../components / common / BottomNavigation';
@@ -354,23 +341,19 @@ function MobileBrowse() {
             variant={browse_type === "talents" ? "default" : "ghost"}
             className="rounded - full";
             on_click={() => setBrowseType ("talents")}
-
           >;
             Talents;
           </Button>;
         </div>;
       </div>;
-
-      <BrowseFilters type={browseType} />;
-      <div className="py-4 px-4">;
-        <BrowseCards;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           items={browseType === "jobs" ? jobsData : talentsData}
           type={browseType}
           onViewDetails={handleViewDetails}
 
+        <BrowseCards
+          items={browseType === "jobs" ? jobsData : talentsData}
+          type={browseType}
+          onViewDetails={handleViewDetails}
         />;
       </div>;
 
@@ -378,8 +361,6 @@ function MobileBrowse() {
     </div>;
   );
 }
-
-=======
       <BrowseFilters type={browse_type} />;
       <div className="py - 4 px - 4">;
         <BrowseCards;
@@ -391,4 +372,3 @@ function MobileBrowse() {
       <BottomNavigation />;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

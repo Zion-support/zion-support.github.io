@@ -124,10 +124,8 @@ onSelectConversation ;
   conversation.name.charAt (0) .toUpperCase () ;
 }</AvatarFallback> </Avatar> ? <em>Typing...</em> : conversation.lastMessage ;
 }</p> {;
-
   conversation.unreadCount ;
 }</Badge>) ";
 }</div> </div> </div> <div className=" border-t border-border ml-12" ></div> </div>) ) ;
 }</div> </div>) ;
 }"
-

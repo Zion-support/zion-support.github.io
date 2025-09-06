@@ -1,35 +1,10 @@
 
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
-
+export default function RAGEvaluationLabPage() {;
   return (
     <>;
       <SEO
         title='RAG Evaluation Lab'
         description='Measure answer quality, hallucination rate, latency, and cost of your RAG pipelines with production-grade evals and CI gates.'
-
 import SEO from '../components / SEO';
 import Link from 'next / link';
 ;
@@ -55,13 +30,11 @@ function RAGEvaluationLabPage() {
           </p>;
           <div className='mt - 8 grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>;
             {[;
-
               {
                 title: 'Grounding & Faithfulness'
                 desc: 'Measure factual consistency, citation quality, and hallucination rate.'
               }
               {
-
       />;
       <section className='relative pt-28 pb-16 md:pt-36 md:pb-24'>;
         <div className='container mx-auto px-4'>;
@@ -100,7 +73,6 @@ function RAGEvaluationLabPage() {
                 desc: 'Team dashboards, API access, and exportable reports.',;
               },;
             ].map(f => (;
-
               <div
                 key={f && f.title}
                 className='rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur'>;
@@ -130,9 +102,6 @@ function RAGEvaluationLabPage() {
       </section>;
     </>;
   );
-
-
-=======
 export default function RAGEvaluationLabPage() {
 	return (
 		<>
@@ -173,8 +142,6 @@ export default function RAGEvaluationLabPage() {
 		</>
 	)
 }
-
-=======
                 title: 'Golden Datasets',
                 desc: 'Curate and run task - specific datasets for repeatable evaluation.',
               },
@@ -226,9 +193,5 @@ export default function RAGEvaluationLabPage() {
       </section>;
     </>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

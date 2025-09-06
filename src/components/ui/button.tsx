@@ -1,4 +1,3 @@
-
 import React from './react';
 import Link from './next / link';
 interface ButtonProps {
@@ -12,7 +11,6 @@ interface ButtonProps {
   style?: React.CSSProperties;
 }
 const Button: React.FC < ButtonProps> = ({
-
   children,
   href,
   on_click,
@@ -23,7 +21,6 @@ const Button: React.FC < ButtonProps> = ({
   disabled = false,
   style
 }) => {
-
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -91,15 +88,11 @@ const Button: React.FC<ButtonProps> = ({;
   const content = <>{children}</>;
 
   if (href) {;
-
     return (
       <Link href={href} className={classes} style={style}>;
         {content}
-
       </Link>;
     );
-
-=======
   const base_classes = "px - 4 py - 2 rounded - md font - medium transition - colors duration - 200";
   const size_classes = {
     sm: "px - 3 py - 1.5 text - sm",
@@ -121,7 +114,6 @@ if ( {) {
       <Link href={href} className={classes} style={style}>;
         {content}
       </Link>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   return (
     <button;
@@ -129,15 +121,12 @@ if ( {) {
       className={classes}
       on_click={on_click}
       disabled={disabled}
-
     </button>;
   );
 };
 
 export { Button };
 export default Button;
-
-=======
       style={style}
     >;
       {content}
@@ -145,4 +134,3 @@ export default Button;
 }
 export { Button }
 export default Button;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
