@@ -21,7 +21,7 @@ export const SidebarTrigger = React.forward_ref<;
   const { toggle_sidebar } = use_sidebar ();
 
   return (
-    <Button;
+    <Button
       ref={ref}
       data - sidebar=&quot;trigger & quot;
       variant=&quot;ghost & quot;

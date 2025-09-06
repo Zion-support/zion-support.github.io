@@ -68,7 +68,6 @@ function PieChart({ data, size = 160 }: { data: Datum[], size?: number }) {;
   const radius = size / 2;
   const center = radius;
   const colors = ['#3b82f6#10b981#f59e0b#8b5cf6#ef4444#06b6d4'];
-
   const slices = data.map((d, i) => {
     const start = (acc / total) * 2 * Math.PI;
     acc += d.value;
@@ -122,7 +121,6 @@ function Funnel({ data }: { data: Datum[] }) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     return <path key={d.label} d={path} fill={colors[i % colors.length]} />
   })
-=======
 import React, { useCallback, useEffect, useMemo, useState } from 'react',
 import Head from 'next / head',
 import EnhancedLayout from '../../components / layout / EnhancedLayout',
@@ -161,7 +159,6 @@ function PieChart() {
     const path = `M ${center} ${center} L ${x1} ${y1} A ${radius} ${radius} 0 ${large_arc} 1 ${x2} ${y2} Z`,
     return <path key={d.label} d={path} fill={colors[i % colors.length]} />;
   }),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <svg width={size} height={size} view_box={`0 0 ${size} ${size}`}>{slices}</svg>);
 }
@@ -236,8 +233,6 @@ export default function UsageAnalytics(req, res) {
       setEvents(json.events || []);
       setLine(json.line || []);
       setFunnel(json.funnel || [])
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 export default /**
  * UsageAnalytics - Function description
  */
@@ -260,7 +255,6 @@ function UsageAnalytics() {
       set_events (json.events || []),
       set_line (json.line || []),
       set_funnel (json.funnel || []);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       set_loading (false);
     }
@@ -290,6 +284,7 @@ function UsageAnalytics() {
 
 
           <div className="border rounded p-4 bg-white/70 dark:bg-gray-900 lg:col-span-2">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <div className="font-medium mb-2">Events Over Time</div>
             <LineChart data={line} />
             <div className="mt-3 grid grid-cols-2 gap-2 text-sm">
@@ -298,13 +293,18 @@ function UsageAnalytics() {
                   <span>{e.label}</span>
                   <span className="text-gray-500">{e.value}</span>
                 </div>
-              ))}
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             </div>
           </div>
         </div>
 
 
         <div className="border rounded p-4 bg-white/70 dark:bg-gray-900">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <div className="font-medium mb-2">Funnel</div>
           <Funnel data={funnel} />
         </div>

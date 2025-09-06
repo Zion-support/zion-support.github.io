@@ -73,8 +73,8 @@ export const lazyLoadComponents = () => {
 };
 
 export const lazyLoadComponents = () => {
-  console.log('Lazy loading components...');
-};
+  console.log('Lazy loading components...')
+}
 
 export const optimizeBundleSize = () => {
   // Dynamic imports for non-critical components

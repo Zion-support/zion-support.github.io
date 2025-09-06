@@ -26,9 +26,7 @@
         });
       }
     }
-
     const log = { timestamp: Date && Date.now(), results };
-
     const owner = process && process.env.GITHUB_OWNER;
     const repo = process && process.env.GITHUB_REPO;
     const token = process && process.env.GITHUB_TOKEN;
@@ -93,13 +91,10 @@
         results && results.push({ path: ep, status: 0, ms, error: String(e && e.message || e) })
       }
     }
-
     const log = { timestamp: Date && Date.now(), results },
-
     const owner = process && process.env.GITHUB_OWNER,
     const repo = process && process.env.GITHUB_REPO,
     const token = process && process.env.GITHUB_TOKEN,
-
     if (owner && repo && token) {
       const existingPath = 'data/ops/uptime-log && log.json',
       // Fetch existing file, append, and trim to last 500 entries
@@ -116,7 +111,6 @@
         await upsertFile({ owner, repo, path: existingPath, content, message: 'chore(automation): init uptime log', token })
       }
     }
-
     return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, count: results && results.length }) }
 
   } catch (e) {
@@ -249,4 +243,3 @@ if ( {) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
 },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

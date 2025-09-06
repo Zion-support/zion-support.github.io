@@ -1,8 +1,13 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 
+    try {
+      const data = fs.readFileSync (p, 'utf8');
+      const links = JSON.parse (data);
+      return res.status (200).json (links);
+    } catch (error) {
+      return res.status (500).json ({ error: 'Failed to read links report' });
     }
-
 
   if (req && req.method === 'POST') {
     try {
@@ -29,27 +34,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   res && res.setHeader('Allow', 'GET, POST');
   res && res.status(405).end('Method Not Allowed');
 
-=======
-;
-      const report = {
-        broken: broken || [],
-        external: external || [],
-        internal: internal || [],
-        generated_at: new Date ().toISOString ();
-      }
-;
-      fs.writeFileSync (p, JSON.stringify (report, null, 2));
-      return res.status (201).json (report);
-    } catch (error) {
-      return res.status (500).json ({ error: 'Failed to update links report' });
-    }
-  }
-  res.set_header ('Allow', 'GET, POST');
-  res.status (405).end ('Method Not Allowed');
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b

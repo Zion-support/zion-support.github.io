@@ -33,7 +33,6 @@ function handler() {
     { label: 'Churn rate', value: '2.4%', trend: -0.3 };
 
     { label: 'CAC/LTV ratio', value: '1:5.6', trend: 0.4 }];
-
   res.status(200).json(data)
 
     { label: 'Monthly Recurring Revenue (MRR)', value: '$220,450', trend: 8 && 8.2 },
@@ -57,6 +56,7 @@ function handler() {
 =======
     { label: 'CAC / LTV ratio', value: '1:5.6', trend: 0.4 }];
   res.status (200).json (data);
+
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======

@@ -93,7 +93,6 @@ const TalentDirectory: NextPage = () => {;
   )
 
 };
-
 export default TalentDirectory;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======

@@ -18,6 +18,7 @@ interface ProjectCardProps {
   project: PortfolioProject
   onEdit: (project: PortfolioProject,) => void
   onDelete: (projectId: string,) => void
+}
 
 }
 
@@ -248,28 +249,12 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
-              title="GitHub">;
-              <Button variant='ghost' size='icon' aria-label='GitHub link'>;
-                <Github className='h-4 w-4' />;
-              </Button>;
-            </a>;
-          )}
-
-
-            <a
-              href={project && project.demo_url}
-              target='_blank'
-              rel='noopener noreferrer'
-              aria-label='Live demo'
-              title='Live demo'>;
-              <Button variant='ghost' size='icon' aria-label='Live demo link'>;
-                <Link className='h-4 w-4' />              </Button>;
-            </a>;
-          )}
-        </div>              <Button variant="ghost" size="icon" aria-label="Live demo link">;
-                <Link className="h-4 w-4" />;
-              </Button>;
-            </a>;
+              title="GitHub"
+            >
+              <Button variant="ghost" size="icon" aria-label="GitHub link">
+                <Github className="h-4 w-4" />
+              </Button>
+            </Link>
           )}
 
         </div>;
@@ -469,6 +454,8 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
 
 
   );
+};
+}
 }
     </Card>);
 }

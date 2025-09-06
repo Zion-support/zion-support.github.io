@@ -78,9 +78,9 @@ export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
 
               sortOption === option.value ? "bg-zion-purple/20 text-zion-purple" : "";
             }`}
-          >;
-            {option && option.label}
-          </DropdownMenuItem>;
+          >
+            {option.label}
+          </DropdownMenuItem>
         ))}
 
       </DropdownMenuContent>;

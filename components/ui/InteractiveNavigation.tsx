@@ -22,15 +22,12 @@ const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({
   items
   className = ''
 }) => {
-=======
-
 interface NavigationItem {;
   name: string, href: string,;
   submenu?: NavigationItem[];
 }
 
             </Link>;
-
             {/* Submenu */}
             {item && item.submenu && activeItem === item && item.name && (;
               <motion&& motion.div

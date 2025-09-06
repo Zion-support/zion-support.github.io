@@ -94,9 +94,8 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-
 const serviceCategories = [
-=======
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next / head',
 import Link from 'next / link',
@@ -151,6 +150,7 @@ const service_categories = [;
 
   {
     title: '🚗 Autonomous & Mobility',
+<<<<<<< HEAD
     description: 'Self - driving and mobility solutions',
     icon: Car,
 
@@ -1062,6 +1062,67 @@ function ServicesShowcase2028() {
       </section>;
       <UltraFuturisticFooter2028 />;
     </>);
+
+export default function ServicesShowcase2028() {_return (_<>
+      <Head>
+        <title>2028 Futuristic Services Showcase - Zion Tech Group</title>
+        <meta name=&quot;description&quot; content=&quot;Explore our cutting-edge 2028 services including AI, quantum computing, autonomous systems, and futuristic innovations. Transform your business with next-generation technology.&quot; />
+        <meta name=&quot;keywords&quot; content=&quot;2028 technology, AI services, quantum computing, autonomous systems, futuristic innovations, Zion Tech Group&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;2028 Futuristic Services Showcase - Zion Tech Group&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;Explore our cutting-edge 2028 services including AI, quantum computing, autonomous systems, and futuristic innovations.&quot; />
+        <meta property=&quot;og:url&quot; content=&quot;https://ziontechgroup.com/2028-services-showcase&quot; />
+        <meta property=&quot;og:type&quot; content=&quot;website&quot; />
+        <link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/2028-services-showcase&quot; />
+      </Head>
+
+      <UltraFuturisticNavigation2028 />
+
+      {/* Hero Section */}
+      <section className=&quot;relative min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-purple-900/20 to-blue-900/20 overflow-hidden&quot;>
+        {/* Animated Background */}
+        <div className=&quot;absolute inset-0&quot;>
+          <div className=&quot;absolute top-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse&quot;></div>
+          <div className=&quot;absolute top-1/2 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000&quot;></div>
+          <div className=&quot;absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl animate-pulse delay-2000&quot;></div>
+        </div>
+
+        <div className=&quot;relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>
+=======
+    description: 'Self-driving and mobility solutions',
+    icon: Car,
+    color: 'from-red-600 to-pink-600',
+    services: futuristic2028Services.filter(s => s.category.includes('Autonomous')).slice(0, 4)
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+<<<<<<< HEAD
+import {
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap
+  DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles
+  Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale
+  Building, Factory, Camera, Video, Music, Gamepad2
+} from 'lucide-react'
+=======
+import {;
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap,;
+  DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles,;
+  Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale,;
+  Building, Factory, Camera, Video, Music, Gamepad2;
+} from 'lucide-react',;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028';
+import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
+import { futuristic2028Services } from '../data/2028-futuristic-innovations';
+import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
+<<<<<<< HEAD
+const contactInfo = {
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+  website: 'https://ziontechgroup.com'
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

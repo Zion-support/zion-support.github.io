@@ -18,10 +18,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { amount } = req.body |{}
 =======
+    return res.status(405).json({ error: 'Method not allowed' });  const { amount } = req.body || {};export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   if (!requireSuperadminApi(req, res)) return;
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { amount } = req.body || {};
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const commits = readJsonFile('deal/soft-commits.json', [] as any[]);
   const record = { amount, timestamp: new Date().toISOString() }
   commits.push(record);
@@ -48,8 +50,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 =======
   res.status(200).json(record)
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import { readJsonFile, writeJsonFile } from '../../../../utils / api / storage';
 import { requireSuperadminApi } from '../../../../utils / api / auth';
 ;
@@ -79,5 +79,6 @@ function handler() {
   commits.push (record);
   writeJsonFile ('deal / soft - commits.json', commits);
   res.status (200).json (record);  res.status (200).json (record);
+
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

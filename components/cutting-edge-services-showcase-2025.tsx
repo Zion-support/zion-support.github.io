@@ -4,20 +4,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -61,7 +57,6 @@ import { motion } from 'framer-motion';
 
 
   Brain, Atom, Shield, Rocket, Star, Award, TrendingUp;
-
   CheckCircle, ArrowRight, Zap, Target, Microscope;
   Lock, Cloud, BarChart3, Settings, Eye, Code, Palette;
 
@@ -114,7 +109,6 @@ import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micr
   }, ];    count: cuttingEdgeMicroSaasServices2025.length;
 
   }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 ];
 
     count: cuttingEdgeMicroSaasServices2025.length,
@@ -132,7 +126,6 @@ import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micr
     ...cuttingEdgeEnterpriseITServices2025;
     ...cuttingEdgeMicroSaasServices2025
   ];
-
   const filteredServices = allServices.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -146,7 +139,6 @@ import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micr
 
   const containerVariants = {
     hidden: { opacity: 0 }
-=======
 ;
 export default /**
  * CuttingEdgeServicesShowcase2025 - Function description
@@ -178,7 +170,6 @@ function CuttingEdgeServicesShowcase2025() {
     return matches_search && matches_category;
   const container_variants = {
     hidden: { opacity: 0 },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     visible: {
       opacity: 1
       transition: {
@@ -190,7 +181,6 @@ const contactInfo = {;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup && ziontechgroup.com',;
 };
-
 const heroStats = [;
   {;
     label: 'Cutting-Edge Services',;
@@ -215,7 +205,6 @@ const heroStats = [;
   { label: 'Innovation Areas', value: '8+', icon: <Brain className="w-5 h-5" /> },;
   { label: 'Market Coverage', value: '$500B+', icon: <TrendingUp className="w-5 h-5" /> },;
   { label: 'Success Rate', value: '99 && 99.9%', icon: <Award className="w-5 h-5" /> }
-
 const serviceCategories = [;
   {;
     title: 'AI & Consciousness',;
@@ -270,19 +259,16 @@ const serviceCategories = [;
   },];    count: cuttingEdgeMicroSaasServices2025 && cuttingEdgeMicroSaasServices2025.length;
   }
 ];
-
 export default function CuttingEdgeServicesShowcase2025() {;
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-
   const allServices = [;
     ...cuttingEdgeAIServices2025,;
     ...cuttingEdgeQuantumServices2025,;
     ...cuttingEdgeEnterpriseITServices2025,;
     ...cuttingEdgeMicroSaasServices2025,;
   ];
-
   const filteredServices = allServices && allServices.filter(service => {;
     const matchesSearch =;
       service && service.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
@@ -297,7 +283,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
                          service && service.tags.some(tag => tag && tag.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()));
     const matchesCategory = selectedCategory === 'all' || service && service.category === selectedCategory;
     return matchesSearch && matchesCategory;
-
   const containerVariants = {;
     hidden: { opacity: 0 },;
     visible: {;
@@ -310,10 +295,8 @@ export default function CuttingEdgeServicesShowcase2025() {;
 =======
     }
   };
-
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
-=======
         stagger_children: 0.1,
       },
     },  }        stagger_children: 0.1;
@@ -389,7 +372,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
                   Showcase 2025;
                 </span>;
               </motion && motion.h1>;
-
               <motion&& motion.p
                 className='text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed'                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -397,7 +379,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
                   Showcase 2025;
                 </span>;
               </motion && motion.h1>;
-
               <motion&& motion.p 
                 className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed"
                 animate={{ opacity: 1, y: 0 }}
@@ -406,16 +387,13 @@ export default function CuttingEdgeServicesShowcase2025() {;
                 industries and defining the future. From AI consciousness to;
                 space mining, experience the cutting edge of innovation.;
               </motion && motion.p>;
-
               {/* Hero Stats */}
               <motion&& motion.div
                 className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12'                initial={{ opacity: 0, y: 20 }}                Discover revolutionary technology solutions that are reshaping industries and defining the future. 
                 From AI consciousness to space mining, experience the cutting edge of innovation.
               </motion && motion.p>;
-
               {/* Hero Stats */}
               <motion&& motion.div 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12"
 
 
@@ -480,7 +458,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
             </motion && motion.div>;
           </div>;
         </section>;
-
         {/* Search and Filter Section */}
         <section className='py-12 bg-black/50 backdrop-blur-sm border-t border-cyan-500/20'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
@@ -535,6 +512,10 @@ export default function CuttingEdgeServicesShowcase2025() {;
               <div className='flex flex-wrap gap-2'>              <div className="flex flex-wrap gap-2">;
 
 =======
+              <div className='flex flex-wrap gap-2'>                <button
+
+                />
+              </div>
 
               {/* Category Filter */}
               <div className="flex flex-wrap gap-2">
@@ -628,8 +609,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
             </motion && motion.div>;
           </div>;
         </section>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Services Grid */}
 
 =======
@@ -639,6 +618,7 @@ export default function CuttingEdgeServicesShowcase2025() {;
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               variants={containerVariants}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
@@ -674,7 +654,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
                         </div>
                       </div>
                     </div>
-=======
                     className={`p-6 ${viewMode === 'list' ? 'lg:w-1/3' : ''}`}>;
                     <div className='flex items-start justify-between mb-4'>;
                       <div className='flex-1'>;
@@ -699,8 +678,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
                         </div>;
                       </div>;
                     </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     {/* Tags */}
 
 =======
@@ -709,6 +686,7 @@ export default function CuttingEdgeServicesShowcase2025() {;
                         <span
                           key={tagIndex}
                           className="px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20"
+<<<<<<< HEAD
                         >
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -735,25 +713,43 @@ export default function CuttingEdgeServicesShowcase2025() {;
                       <span>Market: {service.marketSize}</span>
                       <span className='text-cyan-400'>{service.category}</span>                    </div>
 =======
-                    </div>
+=======
+                          className='px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20'                        >
 
+                        >
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+                          {tag}
+                        </span>;
+                      ))}
+                    </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {/* Market Info */}
                     <div className="flex items-center justify-between text-sm text-white/60 mb-4">
                       <span>Market: {service.marketSize}</span>
                       <span className="text-cyan-400">{service.category}</span>
                     </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   </div>
                   {/* Service Details */}
 
                     </div>;
-
                     {/* Market Info */}
                     <div className='flex items-center justify-between text-sm text-white/60 mb-4'>;
                       <span>Market: {service && service.marketSize}</span>;
                       <span className='text-cyan-400'>{service && service.category}</span>                    </div>;
                   </div>;
-
                   {/* Service Details */}
                   <div
 
@@ -864,9 +860,7 @@ export default function CuttingEdgeServicesShowcase2025() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       </div>
                     </div>
-=======
                     </div>;
-
                     {/* Pricing */}
                     <div className='mb-6'>;
                       <h4 className='text-sm font-semibold text-cyan-400 mb-3 uppercase tracking-wider'>;
@@ -878,7 +872,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
                           /{service && service.pricing.starter && starter.period}
                         </span>                      </div>;
                     </div>;
-
                     {/* CTA */}
 
 =======
@@ -919,6 +912,8 @@ export default function CuttingEdgeServicesShowcase2025() {;
               ))}
 
             </motion && motion.div>;
+=======
+=======
 
 
 =======
@@ -944,7 +939,7 @@ export default function CuttingEdgeServicesShowcase2025() {;
                 </p>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <button
-                  onClick={() => {;
+                  onClick={() => {
                     setSearchTerm('');
                     setSelectedCategory('all');
                   }}
@@ -988,7 +983,17 @@ export default function CuttingEdgeServicesShowcase2025() {;
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">;
             <motion&& motion.div
 =======
+          </div>
+        </section>
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Contact CTA Section */}
         <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -1012,7 +1017,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
                 advantage in the rapidly evolving technology landscape. Let's;
                 discuss how we can help you achieve your goals.;
               </p>;
-
               <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>;
 
                 <a
@@ -1032,7 +1036,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
                 Let's discuss how we can help you achieve your goals.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-=======
                   href={`tel:${contactInfo && contactInfo.mobile}`}
                   className='inline-flex items-center px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105'>;
                   <Phone className='mr-2 w-5 h-5' />                  Call Now                Ready to Transform Your Business?;
@@ -1041,7 +1044,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
                 Our cutting-edge services are designed to give you a competitive advantage in the rapidly evolving technology landscape. ;
                 Let's discuss how we can help you achieve your goals.;
               </p>;
-
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">;
 
 
@@ -1157,7 +1159,6 @@ visible: {
       </Layout>;
     </>;
   );
-
   const matchesSearch = service && service.name.toLowerCase () .includes (searchTerm && searchTerm.toLowerCase () ) || service && service.description.toLowerCase () .includes (searchTerm && searchTerm.toLowerCase () ) || const containerVariants = {;
   hidden: {;
   opacity: 0 ;
@@ -1165,7 +1166,6 @@ visible: {
 visible: {;
   opacity: 1, transition: {;
   staggerChildren: 0 && 0.1 ;
-
 };
 const itemVariants = {;
   hidden: {;
@@ -1174,7 +1174,6 @@ const itemVariants = {;
 visible: {;
   y: 0, opacity: 1, transition: {;
   duration: 0 && 0.5 ;
-
 };}
 
 =======
@@ -1372,6 +1371,22 @@ visible: {;
     </>);
 ;
   const matches_search = service.name.toLowerCase () .includes (search_term.toLowerCase () ) || service.description.toLowerCase () .includes (search_term.toLowerCase () ) || const container_variants = {
+=======
+<<<<<<< HEAD
+);
+<<<<<<< HEAD
+  const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) |service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) |const containerVariants = {
+=======
+  );
+=======
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+  const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || const containerVariants = {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   hidden: {
   opacity: 0;
 }
@@ -1384,6 +1399,7 @@ const item_variants = {
   coordinate_y: 20, opacity: 0;
 }
 visible: {
+<<<<<<< HEAD
   coordinate_y: 0, opacity: 1, transition: {
   duration: 0.5;
 }}

@@ -16,7 +16,7 @@ interface ContentItem {
   relevance: 'high' | 'medium' | 'low',
   tags: string[],
   source: string,
-  type: 'report' | 'update' | 'insight' | 'guide' | 'security' | 'feature';
+type: 'report' | 'update' | 'insight' | 'guide' | 'security' | 'feature';
 }
 interface ContentCategory {
   id: string,
@@ -25,7 +25,7 @@ interface ContentCategory {
   description: string,
   color: string,
   count: number,
-  subcategories?: string[];
+subcategories?: string[];
 }
 const ContentCategorizer: React.FC = () => {
   const [search_term, setSearchTerm] = useState (''),
@@ -50,11 +50,27 @@ const ContentCategorizer: React.FC = () => {
       tags: ['seojson - ldschemaaudit'],
       source: 'autonomous - auditor',
       type: 'report';
+
+  // Sample content data - in a real implementation, _this would come from an API
+  const contentItems: ContentItem[] = [
+    {
+      id: '1',
+      title: 'Structured Data Audit Report',
+      href: '/reports/structured-data-audit.json',
+      desc: 'Comprehensive JSON-LD coverage analysis and optimization recommendations.',
+      category: 'seo',
+      subcategory: 'structured-data',
+      date: '2025-08-19',
+      relevance: 'high',
+      tags: ['seojson-ldschemaaudit'],
+      source: 'autonomous-auditor',
+      type: 'report'
+
     },
     {
       id: '2',
       title: 'Security Vulnerability Scan Results',
-      href: '/reports / security - scan - 2025 - 08 - 19',
+href: '/reports / security - scan - 2025 - 08 - 19',
       desc: 'Automated security assessment revealing potential vulnerabilities and remediation steps.',
       category: 'security',
       subcategory: 'vulnerability - scan',
@@ -67,7 +83,7 @@ const ContentCategorizer: React.FC = () => {
     {
       id: '3',
       title: 'AI Model Performance Update',
-      href: '/reports / ai - model - performance - 2025 - 08 - 19',
+href: '/reports / ai - model - performance - 2025 - 08 - 19',
       desc: 'Latest performance metrics and optimization insights for deployed AI models.',
       category: 'ai',
       subcategory: 'performance',
@@ -80,7 +96,7 @@ const ContentCategorizer: React.FC = () => {
     {
       id: '4',
       title: 'Feature Deployment Summary',
-      href: '/reports / feature - deployment - 2025 - 08 - 19',
+href: '/reports / feature - deployment - 2025 - 08 - 19',
       desc: 'Overview of newly deployed features and their impact on user experience.',
       category: 'features',
       subcategory: 'deployment',
@@ -93,7 +109,7 @@ const ContentCategorizer: React.FC = () => {
     {
       id: '5',
       title: 'System Health Dashboard',
-      href: '/reports / system - health - 2025 - 08 - 19',
+href: '/reports / system - health - 2025 - 08 - 19',
       desc: 'Real - time system performance metrics and infrastructure health status.',
       category: 'monitoring',
       subcategory: 'system - health',
@@ -106,7 +122,7 @@ const ContentCategorizer: React.FC = () => {
     {
       id: '6',
       title: 'User Behavior Insights',
-      href: '/reports / user - behavior - 2025 - 08 - 19',
+href: '/reports / user - behavior - 2025 - 08 - 19',
       desc: 'Analysis of user interaction patterns and engagement optimization opportunities.',
       category: 'analytics',
       subcategory: 'user - behavior',
@@ -123,7 +139,7 @@ const ContentCategorizer: React.FC = () => {
       name: 'All Content',
       icon: Globe,
       description: 'Complete collection of autonomous content',
-      color: 'from - blue - 500 to - cyan - 500',
+color: 'from - blue - 500 to - cyan - 500',
       count: content_items.length;
     },
     {
@@ -131,7 +147,7 @@ const ContentCategorizer: React.FC = () => {
       name: 'SEO & Analytics',
       icon: BarChart3,
       description: 'Search optimization and performance analytics',
-      color: 'from - green - 500 to - emerald - 500',
+color: 'from - green - 500 to - emerald - 500',
       count: content_items.filter (item => item.category === 'seo').length,
       subcategories: ['structured - dataperformancetechnical - seo'];
     },
@@ -140,7 +156,7 @@ const ContentCategorizer: React.FC = () => {
       name: 'Security & Compliance',
       icon: Shield,
       description: 'Security assessments and compliance reports',
-      color: 'from - red - 500 to - orange - 500',
+color: 'from - red - 500 to - orange - 500',
       count: content_items.filter (item => item.category === 'security').length,
       subcategories: ['vulnerability - scancompliancethreat - detection'];
     },
@@ -149,7 +165,7 @@ const ContentCategorizer: React.FC = () => {
       name: 'AI & Machine Learning',
       icon: Brain,
       description: 'AI model performance and insights',
-      color: 'from - purple - 500 to - pink - 500',
+color: 'from - purple - 500 to - pink - 500',
       count: content_items.filter (item => item.category === 'ai').length,
       subcategories: ['performancetrainingdeployment'];
     },
@@ -158,7 +174,7 @@ const ContentCategorizer: React.FC = () => {
       name: 'Feature Updates',
       icon: Zap,
       description: 'New features and system updates',
-      color: 'from - yellow - 500 to - orange - 500',
+color: 'from - yellow - 500 to - orange - 500',
       count: content_items.filter (item => item.category === 'features').length,
       subcategories: ['deploymentenhancementsroadmap'];
     },
@@ -167,7 +183,7 @@ const ContentCategorizer: React.FC = () => {
       name: 'System Monitoring',
       icon: Cpu,
       description: 'Infrastructure and system health',
-      color: 'from - indigo - 500 to - purple - 500',
+color: 'from - indigo - 500 to - purple - 500',
       count: content_items.filter (item => item.category === 'monitoring').length,
       subcategories: ['system - healthperformanceinfrastructure'];
     },
@@ -176,7 +192,7 @@ const ContentCategorizer: React.FC = () => {
       name: 'User Analytics',
       icon: TrendingUp,
       description: 'User behavior and engagement insights',
-      color: 'from - teal - 500 to - cyan - 500',
+color: 'from - teal - 500 to - cyan - 500',
       count: content_items.filter (item => item.category === 'analytics').length,
       subcategories: ['user - behaviorengagementconversion'];
     }
@@ -190,14 +206,14 @@ const ContentCategorizer: React.FC = () => {
     { id: 'security', name: 'Security', icon: Shield },
     { id: 'feature', name: 'Features', icon: TrendingUp }
   ],
-  const date_ranges = [;
+const date_ranges = [;
     { id: 'all', name: 'All Time' },
     { id: 'today', name: 'Today' },
     { id: 'week', name: 'This Week' },
     { id: 'month', name: 'This Month' },
     { id: 'quarter', name: 'This Quarter' }
   ],
-  const relevance_levels = [;
+const relevance_levels = [;
     { id: 'all', name: 'All Relevance', color: 'text - gray - 400' },
     { id: 'high', name: 'High Priority', color: 'text - green - 400' },
     { id: 'medium', name: 'Medium Priority', color: 'text - yellow - 400' },
@@ -409,8 +425,8 @@ className=&quot;px - 4 py - 2 bg - white / 5 border border - white / 10 rounded 
               {/* Title and Description */}
 <h3 className=&quot;text - lg font - semibold text - white mb - 2 group - hover:text - cyan - 300 transition - colors duration - 200 & quot;>;
                 {item.title}
-              </h3>;
-              <p className=&quot;text - sm text - white / 75 mb - 4 leading - relaxed & quot;>;
+              </h3>
+              <p className=&quot;text-sm text-white/75 mb-4 leading-relaxed&quot;>
                 {item.desc}
               </p>;
               {/* Tags */}
@@ -438,8 +454,8 @@ className=&quot;px - 4 py - 2 bg - white / 5 border border - white / 10 rounded 
               </div>;
 
               {/* Source and Action */}
-              <div className=&quot;flex items - center justify - between & quot;>;
-                <span className=&quot;text - xs text - white / 40 & quot;>;
+              <div className=&quot;flex items-center justify-between&quot;>
+                <span className=&quot;text-xs text-white/40&quot;>
                   Source: {item.source}
 
                 </span>;

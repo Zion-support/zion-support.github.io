@@ -1,6 +1,7 @@
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   if (!requireSuperadminApi(req, res)) return;
 
   const id = String(req.query.id || '');
@@ -93,6 +94,7 @@ function handler() {
   doc.font_size (12).text (u.kpis || "");
   doc.end ();
   doc.end ();
+
 }
 
 =======

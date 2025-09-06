@@ -80,20 +80,15 @@ export default function GreenIT() {;
 
 
                 <div>
-                  <h2 className='text-3xl font-bold text-white mb-6'>
-                    Sustainable IT for a Better Future
-                  </h2>
-                  <p className='text-zion-slate-light text-lg mb-6'>
-                    As AI and cloud computing demand grows exponentially, so
-                    does the environmental impact of data centers. Our Green IT
-                    solutions help organizations implement sustainable practices
-                    in their IT infrastructure while maintaining performance and
-                    reliability.
+                  <h2 className="text-3xl font-bold text-white mb-6">Sustainable IT for a Better Future</h2>
+                  <p className="text-zion-slate-light text-lg mb-6">
+                    As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. 
+                    Our Green IT solutions help organizations implement sustainable practices in their IT infrastructure 
+                    while maintaining performance and reliability.
                   </p>
-                  <p className='text-zion-slate-light text-lg mb-6'>
-                    From energy-efficient hardware to renewable energy
-                    integration, we offer comprehensive solutions for reducing
-                    your carbon footprint.
+                  <p className="text-zion-slate-light text-lg mb-6">
+                    From energy-efficient hardware to renewable energy integration, we offer comprehensive solutions 
+                    for reducing your carbon footprint.
                   </p>
 
 import { SEO } from '@/components / SEO';
@@ -250,7 +245,7 @@ export default function GreenIT() {;
   ]
 
   return (
-    <>;
+    <>
       <SEO
         title="Green IT Solutions - Sustainable Technology"
         description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining performance."
@@ -339,14 +334,7 @@ export default function GreenIT() {;
                 <div className="rounded-lg overflow-hidden relative w-full h-full">
 
                   <img
-                    src='https://images && images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=800&h=600&q=80'
-                    alt='Green IT sustainability'
-                    className='object-cover'                  />;
-                </div>;
-              </div>;
-            </div>                <div className="rounded-lg overflow-hidden relative w-full h-full">;
-                  <img
-                    src="https://images && images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=800&h=600&q=80"
+                    src="https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=800&h=600&q=80"
                     alt="Green IT sustainability"
                     className="object-cover"
 
@@ -849,101 +837,102 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {};
                 Green IT''
 
               </span>{' '}
-              Solutions";
-            </h1>"            <p className="text - xl text - gray - 300 max - w-3xl mx - auto leading - relaxed">;
-              Transform your technology infrastructure with sustainable;
-              solutions that reduce energy consumption, lower costs, and;
-              minimize environmental impact.";
-            </p>"";
-            <div className="mt - 8 flex flex - col sm:flex - row gap - 4 justify - center">"";
-              <button className="px - 8 py - 3 bg - gradient - to - r from - green - 400 to - blue - 500 text - white font - semibold rounded - lg hover:from - green - 500 hover:to - blue - 600 transition - all duration - 200 hover:scale - 105">;
-                Get Green IT Assessment";
-              </button>"";
-              <button className="px - 8 py - 3 border border - green - 400 text - green - 400 font - semibold rounded - lg hover:bg - green - 400 hover:text - white transition - all duration - 200">;
-                View Case Studies;
-              </button>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-";
-      {/* Environmental Impact */}"";
-      <section className="py - 20">"";
-        <div className="container mx - auto px - 6">;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}";
-            transition={{ duration: 0.8 }}"";
-            className="text - center mb - 16"">"";
-            <h2 className="text - 4xl font - bold text - white mb - 4">;
-              Our Environmental Impact";
-            </h2>"";
-            <p className="text - xl text - gray - 300">;
-              Real results from implementing sustainable technology solutions;
-            </p>;
-          </motion.div>";
-"";
-          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">;
-            {environmental_impact.map ((impact, index) => (
-              <motion.div;
+              Solutions"
+            </h1>"            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Transform your technology infrastructure with sustainable
+              solutions that reduce energy consumption, lower costs, and
+              minimize environmental impact."
+            </p>""
+            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">""
+              <button className="px-8 py-3 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg hover:from-green-500 hover:to-blue-600 transition-all duration-200 hover:scale-105">
+                Get Green IT Assessment"
+              </button>""
+              <button className="px-8 py-3 border border-green-400 text-green-400 font-semibold rounded-lg hover:bg-green-400 hover:text-white transition-all duration-200">
+                View Case Studies
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+"
+      {/* Environmental Impact */}""
+      <section className="py-20">""
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}"
+            transition={{ duration: 0.8 }}""
+            className="text-center mb-16"">""
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Our Environmental Impact"
+            </h2>""
+            <p className="text-xl text-gray-300">
+              Real results from implementing sustainable technology solutions
+            </p>
+          </motion.div>"
+""
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {environmentalImpact.map((impact, index) => (
+              <motion.div
                 key={impact.label}
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}";
-                transition={{ duration: 0.8, delay: index * 0.1 }}"";
-                className="text - center"">"";
-                <div className="inline - flex items - center justify - center w - 20 h - 20 bg - gradient - to - r from - green - 500 / 20 to - blue - 500 / 20 rounded - 2xl mb - 6">"";
-                  <impact.icon className="w - 10 h - 10 text - green - 400" />";
-                </div>"";
-                <div className="text - 4xl font - bold text - white mb - 2">;
-                  {impact.metric}";
-                </div>"";
-                <div className="text - lg font - semibold text - green - 400 mb - 2">;
-                  {impact.label}";
-                </div>"";
-                <p className="text - gray - 300 text - sm">{impact.description}</p>;
-              </motion.div>))}
-          </div>;
-        </div>;
-      </section>;
-";
-      {/* Green IT Solutions */}"";
-      <section className="py - 20 bg - gradient - to - r from - slate - 800 / 50 to - slate - 700 / 50">"";
-        <div className="container mx - auto px - 6">;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}";
-            transition={{ duration: 0.8 }}"";
-            className="text - center mb - 16"">"";
-            <h2 className="text - 4xl font - bold text - white mb - 4">;
-              Green IT Solutions";
-            </h2>"";
-            <p className="text - xl text - gray - 300">;
-              Comprehensive sustainable technology solutions for your;
-              organization;
-            </p>;
-          </motion.div>;
-";
-          {/* Category Filter */}"";
-          <div className="flex flex - wrap justify - center gap - 4 mb - 12">;
-            {categories.map (category => (
-              <button;
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}"
+                transition={{ duration: 0.8, delay: index * 0.1 }}""
+                className="text-center"">""
+                <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-2xl mb-6">""
+                  <impact.icon className="w-10 h-10 text-green-400" />"
+                </div>""
+                <div className="text-4xl font-bold text-white mb-2">
+                  {impact.metric}"
+                </div>""
+                <div className="text-lg font-semibold text-green-400 mb-2">
+                  {impact.label}"
+                </div>""
+                <p className="text-gray-300 text-sm">{impact.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+"
+      {/* Green IT Solutions */}""
+      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">""
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}"
+            transition={{ duration: 0.8 }}""
+            className="text-center mb-16"">""
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Green IT Solutions"
+            </h2>""
+            <p className="text-xl text-gray-300">
+              Comprehensive sustainable technology solutions for your
+              organization
+            </p>
+          </motion.div>
+"
+          {/* Category Filter */}""
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            {categories.map(category => (
+              <button
                 key={category.id}
-                on_click={() => setSelectedCategory (category.id)}
-                className={`px - 6 py - 3 rounded - lg font - medium transition - all duration - 200 ${}
-';
-'';
-'''`;
-                  selected_category === category.id'''`'`;
-                    ? 'bg - gradient - to - r from - green - 400 to - blue - 500 text - white'''`'`'`;
-                    : 'bg - slate - 800 / 50 text - gray - 300 hover:bg - slate - 700 / 50'````;
+                onClick={() => setSelectedCategory(category.id)}
+                className={`px-6 py-3 rounded-lg font-medium transition-all duration-200 ${}
+'
+''
+'''`
+                  selectedCategory === category.id'''`'`
+                    ? 'bg-gradient-to-r from-green-400 to-blue-500 text-white'''`'`'`
+                    : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50'````
 }`}
-              >;
+              >
                 {category.name} ({category.count}) </button>) ) }
-          </div>";
-"";
-          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
-            {filtered_solutions.map ((solution, index) => (
-              <motion.div;
+          </div>"
+""
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredSolutions.map((solution, index) => (
+              <motion.div
                 key={solution.id}
 
       id: 'energy - monitoring',;
@@ -1380,21 +1369,21 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
                                 : 'bg - orange - 500 / 20 text - orange - 400'````;
 
 }`}
-                      >;
-                        {categories.find (c => c.id === solution.category) ?.name}
-                      </span>;
-                    </div>";
-"";
-                    <div className="flex items - center gap - 3 mb - 4">"";
-                      <div className="inline - flex items - center justify - center w - 12 h - 12 bg - gradient - to - r from - green - 500 / 20 to - blue - 500 / 20 rounded - xl">"";
-                        <solution.icon className="w - 6 h - 6 text - green - 400" />";
-                      </div>"";
-                      <h3 className="text - xl font - bold text - white group - hover:text - green - 400 transition - colors duration - 200">;
+                      >
+                        {categories.find(c => c.id === solution.category) ?.name}
+                      </span>
+                    </div>"
+""
+                    <div className="flex items-center gap-3 mb-4">""
+                      <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-xl">""
+                        <solution.icon className="w-6 h-6 text-green-400" />"
+                      </div>""
+                      <h3 className="text-xl font-bold text-white group-hover:text-green-400 transition-colors duration-200">
                         {solution.name}
-                      </h3>;
-                    </div>";
-"";
-                    <p className="text - gray - 300 text - sm mb - 4 leading - relaxed">;
+                      </h3>
+                    </div>"
+""
+                    <p className="text-gray-300 text-sm mb-4 leading-relaxed">
                       {solution.description}
 
                           solution && solution.category === 'energy'''''
@@ -1595,160 +1584,161 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
                         initial={{ opacity: 0, height: 0 }}';
 
                         animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}";
-                        transition={{ duration: 0.3 }}"";
-                        className="mt - 4 pt - 4 border - t border - slate - 600 / 50"">"";
-                        <div className="mb - 4">"";
-                          <h4 className="text - sm font - semibold text - white mb - 2">;
-                            Key Features:";
-                          </h4>"";
-                          <ul className="space - y-1">;
-                            {solution.features.map ((feature, feature_index) => (
-                              <li";
-                                key={feature_index}"";
-                                className="flex items - center text - gray - 300 text - sm"">"";
-                                <CheckCircle className="w - 3 h - 3 text - green - 400 mr - 2 flex - shrink - 0"  />                                {feature}
+                        exit={{ opacity: 0, height: 0 }}"
+                        transition={{ duration: 0.3 }}""
+                        className="mt-4 pt-4 border-t border-slate-600/50"">""
+                        <div className="mb-4">""
+                          <h4 className="text-sm font-semibold text-white mb-2">
+                            Key Features:"
+                          </h4>""
+                          <ul className="space-y-1">
+                            {solution.features.map((feature, featureIndex) => (
+                              <li"
+                                key={featureIndex}""
+                                className="flex items-center text-gray-300 text-sm"">""
+                                <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0"  />                                {feature}
                               </li>) ) }
-                          </ul>;
-                        </div>";
-"";
-                        <div className="mb - 4">"";
-                          <h4 className="text - sm font - semibold text - white mb - 2">;
-                            Benefits:";
-                          </h4>"";
-                          <ul className="space - y-1">;
-                            {solution.benefits.map ((benefit, benefit_index) => (
-                              <li";
-                                key={benefit_index}"";
-                                className="flex items - center text - gray - 300 text - sm"">"";
-                                <Star className="w - 3 h - 3 text - blue - 400 mr - 2 flex - shrink - 0"  />                                {benefit}
+                          </ul>
+                        </div>"
+""
+                        <div className="mb-4">""
+                          <h4 className="text-sm font-semibold text-white mb-2">
+                            Benefits:"
+                          </h4>""
+                          <ul className="space-y-1">
+                            {solution.benefits.map((benefit, benefitIndex) => (
+                              <li"
+                                key={benefitIndex}""
+                                className="flex items-center text-gray-300 text-sm"">""
+                                <Star className="w-3 h-3 text-blue-400 mr-2 flex-shrink-0"  />                                {benefit}
                               </li>) ) }
-                          </ul>;
-                        </div>;
+                          </ul>
+                        </div>
                       </motion.div>) }
-                  </div>;
-                </div>;
+                  </div>
+                </div>
               </motion.div>) ) }
-          </div>;
-        </div>;
-      </section>;
-";
-      {/* Certifications */}"";
-      <section className="py - 20">"";
-        <div className="container mx - auto px - 6">;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}";
-            transition={{ duration: 0.8 }}"";
-            className="text - center mb - 16"">"";
-            <h2 className="text - 4xl font - bold text - white mb - 4">;
-              Our Certifications";
-            </h2>"";
-            <p className="text - xl text - gray - 300">;
-              Recognized for our commitment to environmental sustainability;
-            </p>;
-          </motion.div>";
-"";
-          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">;
-            {certifications.map ((cert, index) => (
-              <motion.div;
+          </div>
+        </div>
+      </section>
+"
+      {/* Certifications */}""
+      <section className="py-20">""
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}"
+            transition={{ duration: 0.8 }}""
+            className="text-center mb-16"">""
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Our Certifications"
+            </h2>""
+            <p className="text-xl text-gray-300">
+              Recognized for our commitment to environmental sustainability
+            </p>
+          </motion.div>"
+""
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {certifications.map((cert, index) => (
+              <motion.div
                 key={cert.name}
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}";
-                transition={{ duration: 0.8, delay: index * 0.1 }}"";
-                className="text - center">`;
-                <div``;
-                  className={`inline - flex items - center justify - center w - 20 h - 20 bg - gradient - to - r ${cert.color} rounded - 2xl mb - 6`}">"";
-                  <cert.icon className="w - 10 h - 10 text - white" />";
-                </div>"";
-                <h3 className="text - lg font - bold text - white mb - 2">;
-                  {cert.name}";
-                </h3>"";
-                <p className="text - gray - 300 text - sm">{cert.description}</p>;
-              </motion.div>))}
-          </div>;
-        </div>;
-      </section>;
-";
-      {/* Case Studies */}"";
-      <section className="py - 20 bg - gradient - to - r from - slate - 800 / 50 to - slate - 700 / 50">"";
-        <div className="container mx - auto px - 6">;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}";
-            transition={{ duration: 0.8 }}"";
-            className="text - center mb - 16"">"";
-            <h2 className="text - 4xl font - bold text - white mb - 4">;
-              Success Stories";
-            </h2>"";
-            <p className="text - xl text - gray - 300">;
-              Real results from organizations implementing our Green IT;
-              solutions;
-            </p>;
-          </motion.div>";
-"";
-          <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 8">;
-            {case_studies.map ((study, index) => (
-              <motion.div;
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}"
+                transition={{ duration: 0.8, delay: index * 0.1 }}""
+                className="text-center">`
+                <div``
+                  className={`inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r ${cert.color} rounded-2xl mb-6`}">""
+                  <cert.icon className="w-10 h-10 text-white" />"
+                </div>""
+                <h3 className="text-lg font-bold text-white mb-2">
+                  {cert.name}"
+                </h3>""
+                <p className="text-gray-300 text-sm">{cert.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+"
+      {/* Case Studies */}""
+      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">""
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}"
+            transition={{ duration: 0.8 }}""
+            className="text-center mb-16"">""
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Success Stories"
+            </h2>""
+            <p className="text-xl text-gray-300">
+              Real results from organizations implementing our Green IT
+              solutions
+            </p>
+          </motion.div>"
+""
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {caseStudies.map((study, index) => (
+              <motion.div
                 key={study.title}
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}";
-                transition={{ duration: 0.8, delay: index * 0.1 }}"";
-                className="group"">"";
-                <div className="bg - gradient - to - br from - slate - 800 / 50 to - slate - 700 / 50 rounded - 2xl border border - slate - 600 / 50 hover:border - green - 400 / 50 transition - all duration - 300 hover:scale - 105 p - 6">"";
-                  <div className="flex items - center gap - 3 mb - 4">"";
-                    <span className="px - 3 py - 1 rounded - full text - xs font - medium bg - blue - 500 / 20 text - blue - 400">;
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}"
+                transition={{ duration: 0.8, delay: index * 0.1 }}""
+                className="group"">""
+                <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-2xl border border-slate-600/50 hover:border-green-400/50 transition-all duration-300 hover:scale-105 p-6">""
+                  <div className="flex items-center gap-3 mb-4">""
+                    <span className="px-3 py-1 rounded-full text-xs font-medium bg-blue-500/20 text-blue-400">
                       {study.industry}
-                    </span>;
-                  </div>";
-"";
-                  <h3 className="text - xl font - bold text - white mb - 3 group - hover:text - green - 400 transition - colors duration - 200">;
+                    </span>
+                  </div>"
+""
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-green-400 transition-colors duration-200">
                     {study.title}
-                  </h3>";
-"";
-                  <div className="mb - 4">"";
-                    <h4 className="text - sm font - semibold text - white mb - 2">;
-                      Challenge:";
-                    </h4>"";
-                    <p className="text - gray - 300 text - sm">{study.challenge}</p>;
-                  </div>";
-"";
-                  <div className="mb - 4">"";
-                    <h4 className="text - sm font - semibold text - white mb - 2">;
-                      Solution:";
-                    </h4>"";
-                    <p className="text - gray - 300 text - sm">{study.solution}</p>;
-                  </div>";
-"";
-                  <div className="mb - 4">"";
-                    <h4 className="text - sm font - semibold text - white mb - 2">;
-                      Results:";
-                    </h4>"";
-                    <ul className="space - y-1">;
-                      {study.results.map ((result, result_index) => (
-                        <li";
-                          key={result_index}"";
-                          className="flex items - center text - gray - 300 text - sm"">"";
-                          <CheckCircle className="w - 3 h - 3 text - green - 400 mr - 2 flex - shrink - 0"  />                          {result}
+                  </h3>"
+""
+                  <div className="mb-4">""
+                    <h4 className="text-sm font-semibold text-white mb-2">
+                      Challenge:"
+                    </h4>""
+                    <p className="text-gray-300 text-sm">{study.challenge}</p>
+                  </div>"
+""
+                  <div className="mb-4">""
+                    <h4 className="text-sm font-semibold text-white mb-2">
+                      Solution:"
+                    </h4>""
+                    <p className="text-gray-300 text-sm">{study.solution}</p>
+                  </div>"
+""
+                  <div className="mb-4">""
+                    <h4 className="text-sm font-semibold text-white mb-2">
+                      Results:"
+                    </h4>""
+                    <ul className="space-y-1">
+                      {study.results.map((result, resultIndex) => (
+                        <li"
+                          key={resultIndex}""
+                          className="flex items-center text-gray-300 text-sm"">""
+                          <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0"  />                          {result}
                         </li>) ) }
-                    </ul>;
-                  </div>";
-"";
-                  <div className="grid grid - cols - 2 gap - 4 text - sm">";
-                    <div>"";
-                      <div className="text - gray - 400">Annual Savings</div>"";
-                      <div className="text - green - 400 font - medium">;
+                    </ul>
+                  </div>"
+""
+                  <div className="grid grid-cols-2 gap-4 text-sm">"
+                    <div>""
+                      <div className="text-gray-400">Annual Savings</div>""
+                      <div className="text-green-400 font-medium">
                         {study.savings}
-                      </div>;
-                    </div>";
-                    <div>"";
-                      <div className="text - gray - 400">Implementation</div>"";
-                      <div className="text - blue - 400 font - medium">;
+                      </div>
+                    </div>"
+                    <div>""
+                      <div className="text-gray-400">Implementation</div>""
+                      <div className="text-blue-400 font-medium">
                         {study.timeline}
-                      </div>;
-                    </div>;
-                  </div>;
-                </div>;
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </motion.div>) ) }
 
   )
@@ -1822,47 +1812,32 @@ export default function GreenIT() {;
 
               </div>;
             </div>;
-
-            <div className='mb-16'>;
-              <h2 className='text-2xl font-bold text-white mb-6'>;
-                Why Choose Green IT?;
-              </h2>;
-
-              <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>;
-                <div className='bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6'>;
-                  <h3 className='text-white font-medium text-xl mb-4'>;
-                    Environmental Benefits;
-                  </h3>;
-                  <ul className='text-zion-slate-light space-y-2'>;
-                    <li>;
-                      • Reduced carbon footprint and greenhouse gas emissions;
-                    </li>;
+            <div className="mb-16">;
+              <h2 className="text-2xl font-bold text-white mb-8">Our Green IT Solutions</h2>;
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
+                {greenITSolutions.map((solution, index) => (;
+                  <div key={index} className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 hover:border-zion-purple transition-colors">;
+                    <div className="flex justify-center mb-4">;
+                      <solution.icon className="h-12 w-12 text-zion-cyan" />;
+                    </div>;
+                    <h3 className="text-white font-medium text-xl text-center mb-3">{solution.title}</h3>;
+                    <p className="text-zion-slate-light text-center">{solution.description}</p>;
+                  </div>;
+                ))}
+              </div>;
+            </div>;
+            <div className="mb-16">;
+              <h2 className="text-2xl font-bold text-white mb-6">Why Choose Green IT?</h2>;
+              <div className="grid grid-cols-1 md: grid-cols-2 gap-8">;
+                <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">;
+                  <h3 className="text-white font-medium text-xl mb-4">Environmental Benefits</h3>;
+                  <ul className="text-zion-slate-light space-y-2">;
+                    <li>• Reduced carbon footprint and greenhouse gas emissions</li>;
                     <li>• Lower energy consumption and resource utilization</li>;
-                    <li>;
-                      • Decreased electronic waste through better lifecycle;
-                      management;
-                    </li>;
-                    <li>• Support for renewable energy initiatives</li>;
-                  </ul>;
-                </div>;
-
-                <div className='bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6'>;
-                  <h3 className='text-white font-medium text-xl mb-4'>;
-                    Business Benefits;
-                  </h3>;
-                  <ul className='text-zion-slate-light space-y-2'>;
-                    <li>• Significant cost savings on energy and cooling</li>;
-                    <li>;
-                      • Enhanced brand reputation and stakeholder relations;
-                    </li>;
-                    <li>;
-                      • Compliance with emerging environmental regulations;
-                    </li>                    <li>• Improved operational efficiency and performance</li>                    <li>• Lower energy consumption and resource utilization</li>;
                     <li>• Decreased electronic waste through better lifecycle management</li>;
                     <li>• Support for renewable energy initiatives</li>;
                   </ul>;
                 </div>;
-
                 <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">;
                   <h3 className="text-white font-medium text-xl mb-4">Business Benefits</h3>;
                   <ul className="text-zion-slate-light space-y-2">;
@@ -1875,19 +1850,6 @@ export default function GreenIT() {;
               </div>;
             </div>;
           </div>;
-
-          <div className='bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center'>;
-            <h2 className='text-3xl font-bold text-white mb-6'>;
-              Ready to implement Green IT solutions?;
-            </h2>;
-            <p className='text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto'>;
-              Connect with our experts to discuss how we can help you build a;
-              more sustainable IT infrastructure.;
-            </p>;
-            <Button
-              className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple'
-              asChild>;
-              <Link href='/contact'>Contact Our Team</Link>            </Button>          ;
           <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">;
             <h2 className="text-3xl font-bold text-white mb-6">Ready to implement Green IT solutions?</h2>;
             <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">;
@@ -1895,6 +1857,7 @@ export default function GreenIT() {;
             </p>;
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple" asChild>;
               <Link href="/contact">Contact Our Team</Link>;
+            </Button>;
           </div>;
         </div>;
       </main>;

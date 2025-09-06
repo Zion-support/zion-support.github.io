@@ -295,12 +295,30 @@ function CaseStudyPage() {
                   <Link;
                     href="/contact";
                     className="bg - gradient - to - r from - purple - 400 to - cyan - 400 text - white px - 8 py - 4 rounded - lg font - semibold hover:from - purple - 500 hover:to - cyan - 500 transition - all duration - 300";
+=======
+            <section className="text-center">;
+              <div className="bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-2xl p-8 border border-purple-500/20">;
+                <h2 className="text-2xl font-bold mb-4 text-white">Ready to Scale Your Content?</h2>;
+                <p className="text-white/80 mb-6 max-w-2xl mx-auto">;
+                  This case study demonstrates the real impact of AI automation in content generation.;
+                  Let's discuss how we can help you achieve similar results.;
+                </p>;
+                <div className="flex flex-col sm: flex-row gap-4 justify-center">;
+                  <Link;
+                    href="/contact";
+                    className="bg-gradient-to-r from-purple-400 to-cyan-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-500 hover:to-cyan-500 transition-all duration-300";
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   >;
                     Get Started;
                   </Link>;
                   <Link;
+<<<<<<< HEAD
                     href="/case - studies";
                     className="px - 8 py - 4 border border - white / 20 rounded - lg text - white hover:border - purple - 400 / 50 transition - all duration - 300";
+=======
+                    href="/case-studies";
+                    className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-purple-400/50 transition-all duration-300";
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   >;
                     View More Case Studies;
                   </Link>;
@@ -310,6 +328,7 @@ function CaseStudyPage() {
           </div>;
         </main>;
       </div>;
+<<<<<<< HEAD
     </>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

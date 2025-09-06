@@ -28,6 +28,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 
   } catch (e) {
+<<<<<<< HEAD
     res && res.status(200).json({ summary: [], error: 'Failed to compute summary' });
   }
 

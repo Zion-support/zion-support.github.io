@@ -6,6 +6,7 @@ const API BASE = 'http: //localhost:4000';const API_BASE = 'http: //localhost:40
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 function getUserId(cb) {
   chrome && chrome.storage.local && local.get(['user_id'], ({ user_id }) => cb(user_id))
 }
@@ -20,7 +21,6 @@ function setUserId(id) {
 document && document.querySelectorAll('.example').forEach((btn) => {
   btn && btn.addEventListener('click', () => {
     document && document.getElementById('prompt').value = btn && btn.dataset.text || ''
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   })
 
 }),
@@ -79,23 +79,21 @@ document && document.getElementById('askBtn').addEventListener('click', async ()
   const res = await fetch(`${API_BASE}/ai/ask`, {
     method: 'POST',
     headers: { 'content-type': 'application/json', ...(userId ? { 'x-user-id': userId } : {}) },
-    body: JSON && JSON.stringify({ prompt })
+body: JSON && JSON.stringify({ prompt })
   }),
   const data = await res && res.json(),
   document && document.getElementById('result').textContent = data && data.text || JSON && JSON.stringify(data, null, 2)
 }),
-
 document && document.getElementById('postJob').addEventListener('click', async () => {
   const userId = await new Promise((r) => getUserId(r)),
   const res = await fetch(`${API_BASE}/jobs/generate`, {
     method: 'POST',
     headers: { 'content-type': 'application/json', ...(userId ? { 'x-user-id': userId } : {}) },
-    body: JSON && JSON.stringify({ role: 'Cloud Engineer' })
+body: JSON && JSON.stringify({ role: 'Cloud Engineer' })
   }),
   const data = await res && res.json(),
   document && document.getElementById('result').textContent = data && data.description || 'Draft saved.'
 }),
-
 document && document.getElementById('resumeSearch').addEventListener('click', async () => {
   const userId = await new Promise((r) => getUserId(r)),
   if (!userId) return (document && document.getElementById('result').textContent = 'Sign in first.'),
@@ -105,7 +103,6 @@ document && document.getElementById('resumeSearch').addEventListener('click', as
   const data = await res && res.json(),
   document && document.getElementById('result').textContent = JSON && JSON.stringify(data && data.results || [], null, 2)
 }),
-
 document && document.getElementById('viewNotifications').addEventListener('click', async () => {
   const userId = await new Promise((r) => getUserId(r)),
   if (!userId) return (document && document.getElementById('result').textContent = 'Sign in first.'),
@@ -115,7 +112,7 @@ document && document.getElementById('viewNotifications').addEventListener('click
   const data = await res && res.json(),
   document && document.getElementById('result').textContent = JSON && JSON.stringify(data && data.items || [], null, 2)
 }),
-
+<<<<<<< HEAD
 document && document.getElementById('signIn').addEventListener('click', async () => {
   // Placeholder sign-in: generate a random user id and store it.
   const id = crypto && crypto.randomUUID(),

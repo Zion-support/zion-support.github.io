@@ -2,12 +2,12 @@
 
 import {useEffect} from 'react';
 import {useRouter} from 'next/router';
-
 export default function WhitepaperGeneratorRedirect() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const router = useRouter();
   useEffect(() => {;
     router && router.replace('/tokenomics');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }, [router]);
   return null;
 
@@ -27,8 +27,6 @@ export default function WhitepaperGeneratorRedirect() {
   }, [router]);
   return null
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import {useEffect} from 'react';
 import {use_router} from 'next / router';
 export default /**

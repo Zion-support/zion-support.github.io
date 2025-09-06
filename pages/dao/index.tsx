@@ -23,12 +23,17 @@
                   <div className="h-2 bg-emerald-600 rounded" style={{ width: `${Math.min(100, d.percent)}%` }} />
                 </div>
               </div>
-            ))}
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           </div>
         </div>
 
 
         <div className="border rounded p-4">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <div className="font-medium mb-2">Top Holders (approx)</div>
           <table className="w-full text-sm">
             <thead>
@@ -40,10 +45,15 @@
             <tbody>
               {data.topHolders.map((h) => (
                 <tr key={h.address} className="border-t border-gray-200 dark:border-gray-800">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <td className="py-1 pr-2 truncate max-w-[10rem]">{h.address}</td>
                   <td className="py-1">{h.amount}</td>
                 </tr>
-              ))}
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             </tbody>
           </table>
         </div>
@@ -51,13 +61,18 @@
 
 
       <section className="grid lg:grid-cols-2 gap-6">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <div className="border rounded p-4">
           <div className="font-medium mb-2">Active Proposals</div>
           {data.activeProposals.length ? (
             <ul className="list-disc pl-5 text-sm">
               {data.activeProposals.map((p, i) => (
                 <li key={i}>{JSON.stringify(p)}</li>
-              ))}
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             </ul>
           ) : (
             <div className="text-sm text-gray-600">No active proposals.</div>

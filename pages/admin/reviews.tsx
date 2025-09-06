@@ -25,8 +25,16 @@
                 <button className="enhanced-button enhanced-button-secondary" onClick={() => moderate('remove', r.id)}>Remove</button>
               </div>
             </div>
-          ))}
-          {!pending.length && <div>No pending reviews.</div>}
+          ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          {!pending.length && <div>No pending reviews.</div>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         </div>
       </section>
 

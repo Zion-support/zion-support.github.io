@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button",
 import { Checkbox } from "@/components/ui/checkbox";
 import { SkillsFilterProps } from "@/types/filters";
 // Common skills in AI and tech
+<<<<<<< HEAD
 
 const POPULAR_SKILLS = [
 
@@ -61,7 +62,7 @@ export function SkillsFilter(): any ({;
 export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSection, isMobileFilterOpen }: SkillsFilterProps) {
 
   return (
-    <div className='mb-6 border-b border-zion-blue-light pb-6'>;
+    <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
         onClick={toggleSection}
 
@@ -82,7 +83,7 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
 
 
       {expanded && (
-        <div className='mt-4 space-y-2'>
+        <div className="mt-4 space-y-2">
           {POPULAR_SKILLS.map(skill => (
       </button>;
 
@@ -91,7 +92,7 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
           {POPULAR_SKILLS && POPULAR_SKILLS.map(skill => (;
             <div key={skill} className='flex items-center'>              <Checkbox
                 id={`skill-${skill}`}
-                checked={selectedSkills && selectedSkills.includes(skill)}
+                checked={selectedSkills.includes(skill)}
                 onCheckedChange={() => toggleSkill(skill)}
 
             <div key={skill} className="flex items-center">;
@@ -180,13 +181,16 @@ const POPULAR_SKILLS = [;
 
                 {skill}
               ">
-                {skill}
               </label>
             </div>
           ))}
 
     </div>;
   );
+};
+}
+<<<<<<< HEAD
+}
 }
 
     </div>

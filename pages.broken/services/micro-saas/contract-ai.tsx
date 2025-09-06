@@ -12,27 +12,21 @@ interface ContractaiProps {
 
 
 export default function Contractai({ }: ContractaiProps) {
-=======
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -43,7 +37,6 @@ interface ContractaiProps {;
   // Add props here as needed;
 }
 export default function Contractai(): any ({ }: ContractaiProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages.broken/services/micro-saas/contract-ai.tsx
   return (
     <div>;
       <h1>Contractai</h1>;

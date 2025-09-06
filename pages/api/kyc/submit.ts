@@ -7,10 +7,29 @@ function load(): Record<string, KycProfile> {
     const raw = fs.readFileSync(FILE, 'utf8');
     return JSON.parse(raw)
 
+
+import type { KycProfile } from '../../../utils/kyc';
+
+import { validateKycSubmission } from '[^']*';
+import { getAmlProvider } from '[^']*';
+import fs from 'fs';
+import path from 'path';
+
+const DATA_DIR = path.join(process.cwd(), 'data', 'kyc');const FILE = path.join(DATA_DIR, 'profiles.json');
+
+function load(): Record<string, KycProfile> {
+  try {
+    const raw = fs.readFileSync(FILE, 'utf8');
+    return JSON.parse(raw);
+
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
   } catch {
     return {}
   }
 function save(db: Record<string, KycProfile>) {
+
   fs && fs.mkdirSync(DATA_DIR, { recursive: true });
   fs && fs.writeFileSync(FILE, JSON && JSON.stringify(db, null, 2));
 }
@@ -19,8 +38,6 @@ function save(db: Record<string, KycProfile>) {
   if (req && req.method !== 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });  const { userId } = req && req.body as { userId?: string };
   if (!userId) return res && res.status(400).json({ error: 'Missing userId' });
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const db = load();
   const profile = db[userId];
   if (!profile) return res && res.status($1).json({$2});
@@ -42,7 +59,6 @@ function save(db: Record<string, KycProfile>) {
   ).toLowerCase();
   if (name && name.includes('test') || name && name.includes('demo') || name && name.includes('fake'))
     flags && flags.add('fraud_risk');
-
   const ip = (
     (req && req.headers['x-forwarded-for'] as string) ||
     req && req.socket.remoteAddress ||
@@ -59,17 +75,8 @@ function save(db: Record<string, KycProfile>) {
         a => a && a.action === 'kyc_submitted' && (a && a.details as any)?.ip === ip
       )
     ).length;
-    if (sameIpCount >= 2) flags && flags.add('duplicate_ip');  }
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-
-
-function load(): Record<string, KycProfile> {
-  try {
-    const raw = fs.readFileSync(FILE, 'utf8');
-    return JSON.parse(raw);
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -85,9 +92,15 @@ function load(): Record<string, KycProfile> {
   const now = new Date().toISOString();
 
 
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  profile.auditTrail.push({ at: now, by: userId, action: 'kyc_submitted', details: { aml: amlResult, ip } });
+  db[userId] = profile;
+  save(db);
+  res.status(200).json({ ok: true, profile, aml: amlResult })
+
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
+
 import type { KycProfile } from '../../../utils / kyc';
 import {validateKycSubmission} from '../../../utils / kyc';
 import {getAmlProvider} from '../../../utils / aml';
@@ -215,8 +228,10 @@ if ( {) {
 res.status (200).json ({ ok: true, profile, aml: aml_result });
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-  profile.lastUpdatedAt = now;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+>>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b

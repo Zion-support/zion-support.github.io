@@ -29,8 +29,8 @@ function JobsListPage() {
       subtitle: 'Remote • Part - time',
       description: 'Design pipelines for training / inference at scale.',
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   ];
+<<<<<<< HEAD
 ;
   return (
 
@@ -38,7 +38,6 @@ function JobsListPage() {
 export default function JobsListPage() {
   const [loading, setLoading] = useState(true);
   useEffect(() => { const t = setTimeout(() => setLoading(false), 500), return () => clearTimeout(t) }, []);
-
   const jobs = [
     { slug: 'senior-ai-engineer', title: 'Senior AI Engineer', subtitle: 'Remote • Contract', description: 'Build and optimize LLM-powered features in production.' },
     { slug: 'mlops-specialist', title: 'MLOps Specialist', subtitle: 'Remote • Part-time', description: 'Design pipelines for training/inference at scale.' }],
@@ -47,6 +46,22 @@ export default function JobsListPage() {
 
 
   return (
+=======
+
+=======
+import EnhancedLoading from '../../components/ui/EnhancedLoading',
+import { useEffect, useState } from 'react',
+import InteractiveSearch from '../../components/ui/InteractiveSearch',
+export default function JobsListPage() {
+  const [loading, setLoading] = useState(true),
+  useEffect(() => { const t = setTimeout(() => setLoading(false), 500), return () => clearTimeout(t) }, []),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  const jobs = [
+    { slug: 'senior-ai-engineer', title: 'Senior AI Engineer', subtitle: 'Remote • Contract', description: 'Build and optimize LLM-powered features in production.' },
+    { slug: 'mlops-specialist', title: 'MLOps Specialist', subtitle: 'Remote • Part-time', description: 'Design pipelines for training/inference at scale.' }],
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  return (
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     <div className="space-y-4">
       <InteractiveSearch placeholder="Search jobs, keywords, or companies..." />
       {loading ? (
@@ -57,6 +72,7 @@ export default function JobsListPage() {
             <Link key={j.slug} href={`/jobs/${j.slug}`}>
               <a>
                 <EnhancedMarketplaceCard title={j.title} subtitle={j.subtitle} description={j.description} footer={<span className="text-blue-600">View Job →</span>} />
+<<<<<<< HEAD
               </a>
             </Link>
 
@@ -67,8 +83,6 @@ export default function JobsListPage() {
     </div>
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     <div className='space - y-4'>;
       <InteractiveSearch placeholder='Search jobs, keywords, or companies...' />;
       {loading ? (

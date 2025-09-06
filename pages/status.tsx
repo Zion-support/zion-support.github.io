@@ -5,20 +5,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -62,8 +58,8 @@ export default function Status() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
     </Layout>
-=======
 export default function Status() {;
   return (
     <Layout
@@ -84,10 +80,10 @@ export default function Status() {;
           </div>;
         </div>;
       </div>;
-    </Layout>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  );
 =======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+    </Layout>;
+  );
 import React from './react';
 import Layout from "../components / Layout";
 ;
@@ -116,5 +112,4 @@ function Status() {
         </div>;
       </div>;
     </Layout>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

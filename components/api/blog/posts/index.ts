@@ -8,10 +8,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     const { status, topic, tag, author, limit, offset } = req.query;
-=======
   if (req && req.method === 'GET') {
     const { status, topic, tag, author, limit, offset } = req && req.query;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     let posts = readPosts();
 
 

@@ -5,20 +5,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -26,9 +22,6 @@ import React, { useState, useEffect } from 'react';
 
 import Link from 'next/link';
 
-=======
-import Link from 'next / link';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import { motion, AnimatePresence } from 'framer-motion';
 
 
@@ -95,12 +88,10 @@ import {;
   Network,;
   Cpu,;
 } from 'lucide-react';import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Zap, Brain, Atom, Microscope, Gamepad2, Shield, Rocket, Database, TestTube, Car, Globe, Code, Palette, Cloud, Server, Network, Cpu } from 'lucide-react';
-
 export default function UltraAdvancedNavigation2026V2() {;
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
   useEffect(() => {;
     const handleScroll = () => {;
       setIsScrolled(window && window.scrollY > 20);
@@ -110,7 +101,6 @@ export default function UltraAdvancedNavigation2026V2() {;
     };
     window && window.addEventListener('scroll', handleScroll);
     return () => window && window.removeEventListener('scroll', handleScroll);
-
   const navigationItems = [;
     {;
       name: 'Home',;
@@ -225,7 +215,6 @@ export default function UltraAdvancedNavigation2026V2() {;
     },  ];      icon: <Mail className="w-4 h-4" />;
     }
   ];
-
   const contactInfo = {;
     mobile: '+1 302 464 0950',;
     email: 'kleber@ziontechgroup && ziontechgroup.com',;
@@ -237,12 +226,11 @@ export default function UltraAdvancedNavigation2026V2() {;
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)
   }, []);
-
   const navigationItems = [
     {
       name: 'Home',
       href: '/',
-      icon: <Zap className="w-4 h-4" />
+icon: <Zap className="w-4 h-4" />
     };
     {
       name: 'Services',
@@ -266,7 +254,16 @@ export default function UltraAdvancedNavigation2026V2() {;
         { name: 'Creative & Design', href: '/services?category=creative', icon: <Palette className="w-4 h-4" /> },
         { name: 'Global Solutions', href: '/services?category=global', icon: <Globe className="w-4 h-4" /> }
       ]
+<<<<<<< HEAD
     };
+=======
+    },    {
+<<<<<<< HEAD
+      name: 'Showcase'
+      href: '/enhanced-services-showcase-2026-v2'
+      icon: <Rocket className='w-4 h-4' />
+    }
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     {
       name: 'Showcase',
       href: '/enhanced-services-showcase-2026-v2',
@@ -286,7 +283,6 @@ export default function UltraAdvancedNavigation2026V2() {;
       name: 'Contact',
       href: '/contact',
       icon: <Mail className="w-4 h-4" />
-=======
   Menu,
   X,
   ChevronDown,
@@ -324,6 +320,7 @@ function UltraAdvancedNavigation2026V2() {
     const handle_scroll = () =>: any {
       setIsScrolled (window.scroll_y > 20);
     }
+<<<<<<< HEAD
     window.addEventListener ('scroll', handle_scroll);
     return () => window.removeEventListener ('scroll', handle_scroll);  }, []);      setIsScrolled (window.scroll_y > 20);
     }
@@ -553,8 +550,6 @@ function UltraAdvancedNavigation2026V2() {
                 <div className="text-xs text-gray-400">Innovation 2026</div>;
               </div>;
             </Link>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* Desktop Navigation */}
 
             <div className="hidden lg:flex items-center space-x-8">
@@ -602,14 +597,12 @@ function UltraAdvancedNavigation2026V2() {
 
 
             </div>;
-
             {/* CTA Button */}
             <div className='hidden lg:flex items-center space-x-4'>;
               <Link href='/contact'>;
                 <button className='bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg'>                  Get Started            <div className="hidden lg:flex items-center space-x-4">;
               <Link href="/contact">;
                 <button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg">;
-=======
       {/* Main Navigation */}
       <nav;
         className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${
@@ -724,7 +717,6 @@ function UltraAdvancedNavigation2026V2() {
                 <button className='bg - gradient - to - r from - purple - 600 to - pink - 600 hover:from - purple - 700 hover:to - pink - 700 text - white font - semibold px - 6 py - 3 rounded - xl transition - all duration - 300 transform hover:scale - 105 hover:shadow - lg'>                  Get Started            <div className="hidden lg:flex items - center space - x-4">;
               <Link href="/contact">;
                 <button className="bg - gradient - to - r from - purple - 600 to - pink - 600 hover:from - purple - 700 hover:to - pink - 700 text - white font - semibold px - 6 py - 3 rounded - xl transition - all duration - 300 transform hover:scale - 105 hover:shadow - lg">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   Get Started;
                 </button>;
               </Link>;
@@ -769,7 +761,6 @@ function UltraAdvancedNavigation2026V2() {
                   <X className='w-6 h-6' />;
                 </button>;
               </div>;
-
               <div className='space-y-6'>;
                 {navigationItems && navigationItems.map(item => (;
                   <div key={item && item.name}>;
@@ -824,7 +815,6 @@ function UltraAdvancedNavigation2026V2() {
                   <X className="w-6 h-6" />
                 </button>
               </div>
-
               <div className="space-y-6">
                 {navigationItems.map((item) => (
                   <div key={item.name}>
@@ -832,7 +822,7 @@ function UltraAdvancedNavigation2026V2() {
                       <div>
                             <button
                               onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
-                              className="flex items-center justify-between w-full text-left text-gray-300 hover:text-white transition-colors duration-200 py-3"
+className="flex items-center justify-between w-full text-left text-gray-300 hover:text-white transition-colors duration-200 py-3"
                             >
                               <div className="flex items-center space-x-3">
                                 {item.icon}
@@ -849,7 +839,7 @@ function UltraAdvancedNavigation2026V2() {
                                     key={dropdownItem.name}
                                     href={dropdownItem.href}
                                     onClick={() => setIsOpen(false)}
-                                    className="flex items-center space-x-3 p-2 rounded-lg hover:bg-white/10 transition-colors duration-200 text-gray-400 hover:text-white"
+className="flex items-center space-x-3 p-2 rounded-lg hover:bg-white/10 transition-colors duration-200 text-gray-400 hover:text-white"
                                   >
                                     {dropdownItem.icon}
                                     <span>{dropdownItem.name}</span>
@@ -861,7 +851,91 @@ function UltraAdvancedNavigation2026V2() {
                     ) : (
 
                       <Link
-                        href={item && item.href}
+href={item && item.href}
+                        onClick={() => setIsOpen(false)}
+                        className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 py-3"
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      {/* Mobile Navigation */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, x: '100%' }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: '100%' }}
+            transition={{ duration: 0.3 }}
+            className='fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-white/10 z-50 lg:hidden'
+<<<<<<< HEAD
+=======
+
+          >
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            <div className='p-6'>
+              <div className='flex items-center justify-between mb-8'>
+                <div className='text-xl font-bold text-white'>Menu</div>
+                <button
+                  onClick={() => setIsOpen(false)}
+                  className='p-2 text-gray-300 hover:text-white transition-colors'
+                >
+                  <X className='w-6 h-6' />
+                </button>
+              </div>
+              <div className='space-y-6'>
+                {navigationItems.map(item => (
+                  <div key={item.name}>
+                    {item.dropdown ? (
+                      <div>
+                        <button
+                          onClick={() =>
+                            setActiveDropdown(
+                              activeDropdown === item.name ? null : item.name
+                            )
+                          }
+                          className='flex items-center justify-between w-full text-left text-gray-300 hover:text-white transition-colors duration-200 py-3'
+                        >
+                          <div className='flex items-center space-x-3'>
+                            {item.icon}
+                            <span>{item.name}</span>
+                          </div>
+                          <ChevronDown
+                            className={`w-4 h-4 transition-transform duration-200 ${
+                              activeDropdown === item.name ? 'rotate-180' : ''
+                            }`}
+                          />
+                        </button>
+                        {activeDropdown === item.name && (
+                          <div className='ml-6 mt-2 space-y-2'>
+                            {item.dropdown.map(dropdownItem => (
+                              <Link
+                                key={dropdownItem.name}
+                                href={dropdownItem.href}
+                                onClick={() => setIsOpen(false)}
+                                className='flex items-center space-x-3 p-2 rounded-lg hover:bg-white/10 transition-colors duration-200 text-gray-400 hover:text-white'
+                              >
+                                {dropdownItem.icon}
+                                <span>{dropdownItem.name}</span>
+                              </Link>
+                            ))}
+                          </div>
+                        )}
+                      </div>                    ) : (
+                      <Link
+                        href={item.href}
+                        onClick={() => setIsOpen(false)}
+                        className='flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 py-3'                      >                    ) : (
+                      <Link
+                        href={item.href}
                         onClick={() => setIsOpen(false)}
 
 =======
@@ -897,10 +971,7 @@ function UltraAdvancedNavigation2026V2() {
                 <div className='pt-6 border-t border-white/10'>
                   <Link href='/contact' onClick={() => setIsOpen(false)}>
                     <button className='w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300'>                      Get Started                <div className="pt-6 border-t border-white/10">
-=======
-
-                <div className="pt-6 border-t border-white/10">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <Link href="/contact" onClick={() => setIsOpen(false)}>
                     <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300">
                       Get Started
@@ -952,7 +1023,6 @@ function UltraAdvancedNavigation2026V2() {
                   <div className="flex items-center space-x-2">;
                     <MapPin className="w-4 h-4 text-green-400" />;
                     <span className="text-xs">{contactInfo && contactInfo.address}</span>;
-=======
       {/* Mobile Navigation */}
       <AnimatePresence>;
         {is_open && (
@@ -1051,13 +1121,15 @@ function UltraAdvancedNavigation2026V2() {
                   <div className="flex items - center space - x-2">;
                     <MapPin className="w - 4 h - 4 text - green - 400" />;
                     <span className="text - xs">{contact_info.address}</span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   </div>;
                 </div>;
               </div>;
             </div>;
 
       </AnimatePresence>;
+=======
+<<<<<<< HEAD
+=======
 
 
 =======
@@ -1069,13 +1141,11 @@ function UltraAdvancedNavigation2026V2() {
       {/* Overlay */}
       {isOpen && (;
         <motion&& motion.div
-=======
           </motion.div>)}
       </AnimatePresence>;
       {/* Overlay */}
       {is_open && (
         <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}

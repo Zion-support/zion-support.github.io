@@ -5,20 +5,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -43,8 +39,6 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
     ...real2036ITServices;
     ...real2036AIServices
   ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-
 const ComprehensiveServicesShowcase2036: React.FC = () => {;
   const allServices = [;
     ...real2036InnovativeServices,;
@@ -53,8 +47,6 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {;
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   const categories = [...new Set(allServices && allServices.map(service => service && service.category))],;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
 
 
@@ -66,7 +58,7 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {;
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
+className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
             >
               Experience the future of technology with our revolutionary portfolio of AI, Quantum Computing, Space Technology, and cutting-edge IT solutions
             </motion.p>
@@ -74,7 +66,87 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {;
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
+className="flex flex-col sm:flex-row gap-4 justify-center"
+=======
+<<<<<<< HEAD
+      <div className='min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white'>
+        {/* Hero Section */}
+        <section className='relative py-20 px-4 overflow-hidden'>
+          <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-blue-500/20 to-purple-500/20 animate-pulse'></div>
+          <div className='relative z-10 max-w-7xl mx-auto text-center'>
+=======
+      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white">
+        {/* Hero Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-blue-500/20 to-purple-500/20 animate-pulse"></div>
+          <div className="relative z-10 max-w-7xl mx-auto text-center">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            <motion.h1
+              initial={{ opacity: 0, y: 50 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
+            >
+              2036 Services Showcase
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.8, delay: 0.2 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
+            >
+              Experience the future of technology with our revolutionary portfolio of AI, Quantum Computing, Space Technology, and cutting-edge IT solutions
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.8, delay: 0.4 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               className="flex flex-col sm:flex-row gap-4 justify-center"
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             >
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
                 Get Started Today
@@ -138,6 +210,7 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {;
               ))}
 
               className="text-center mb-16"
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Revolutionary Service Categories
@@ -155,6 +228,11 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {;
 }
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
               {categories.map((category, index) => (
+=======
+<<<<<<< HEAD
+            {/* Category Cards */}
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>              {categories.map((category, index) => (
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <motion.div
                   key={category  } catch (error) {
     console.error("Error:", error);
@@ -191,6 +269,53 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+className="text-center mb-16"
+=======
+            {/* Featured Services */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className='text-center mb-16'
+=======
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm text-gray-400">Starting from</span>
+                    <span className="text-lg font-bold text-green-400">
+                      ${Math.min(...allServices.filter(service => service.category === category).map(s => parseInt(s.price.replace(/[^0-9]/g, ''))))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    </span>;
+                  </div>;
+                </motion.div>;
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            </div>;
+            {/* Featured Services */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            <motion.div;
+              initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               className="text-center mb-16"
 =======
 
@@ -243,7 +368,6 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {;
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Discover our most innovative and game-changing services that are reshaping industries and defining the future of technology.
               </p>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             </motion.div>
 
               transition={{ duration: 0 && 0.8 }}
@@ -275,7 +399,6 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {;
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Explore our entire collection of {allServices.length} innovative services across all technology domains.
               </p>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             </motion.div>
 
 
@@ -288,11 +411,15 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {;
                 Explore our entire collection of {allServices && allServices.length} innovative;
                 services across all technology domains.              </p>;
             </motion && motion.div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* Services by Category */}
             {categories && categories.map((category, categoryIndex) => (;
               <motion&& motion.div
+=======
+<<<<<<< HEAD
+            {/* Services by Category */}
+            {categories.map((category, categoryIndex) => (
+              <motion.div
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 key={category}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -338,9 +465,19 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {;
                             <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs px-2 py-1 rounded-full">
                               Popular
                             </span>
+<<<<<<< HEAD
                           )}
                         </div>
+<h4 className="text-lg font-bold mb-2 text-white">{service.name}</h4>
+=======
+                          )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                        </div>
                         <h4 className="text-lg font-bold mb-2 text-white">{service.name}</h4>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                         <p className="text-gray-300 text-sm mb-3">{service.description}</p>
                         <div className="mb-3">
                           <span className="text-2xl font-bold text-green-400">{service.price}</span>
@@ -368,6 +505,7 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         </div>
                         <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-3 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 text-sm">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                           View Details
                         </button>
                       </motion.div>
@@ -382,9 +520,19 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {;
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+<<<<<<< HEAD
+Contact Us Today
+                </button>
+                <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105">
+                  Contact Us Today
+                </button>
+                <button className=&quot;px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105&quot;>
+
+=======
                   Contact Us Today
                 </button>
                 <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   Schedule Demo
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 </button>
@@ -682,12 +830,33 @@ export default ComprehensiveServicesShowcase2036;
                   Contact Us Today;
                 </button>;
                 <button className='px - 8 py - 4 border - 2 border - cyan - 400 text - cyan - 400 font - semibold rounded - lg hover:bg - cyan - 400 hover:text - black transition - all duration - 300 transform hover:scale - 105'>                  Schedule Demo;
+=======
+
+=======
+},
+export default ComprehensiveServicesShowcase2036,
+              className="text-center py-16 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl border border-cyan-400/20";
+            >;
+              <h2 className="text-4xl font-bold mb-6 text-white">;
+                Ready to Transform Your Business?;
+              </h2>;
+              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">;
+                Join the future of technology with our revolutionary services. Get in touch to discuss how we can help you achieve your goals.;
+              </p>;
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">;
+                <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">;
+                  Contact Us Today;
+                </button>;
+                <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105">;
+                  Schedule Demo;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 </button>;
               </div>;
             </motion.div>;
           </div>;
         </section>;
       </div>;
+<<<<<<< HEAD
     </Layout>),
 }
 ;

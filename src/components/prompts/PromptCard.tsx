@@ -26,19 +26,22 @@ export function PromptCard(): any ({ prompt }: PromptCardProps) {;
 
 
   return (
-    <div className='p-4 border rounded-md bg-background flex flex-col justify-between'>;
-      <p className='mb-4 text-sm'>{prompt && prompt.text}</p>;
-      <div className='flex gap-2 mt-auto'>;
+    <div className='p-4 border rounded-md bg-background flex flex-col justify-between'>
+      <p className='mb-4 text-sm'>{prompt.text}</p>
+      <div className='flex gap-2 mt-auto'>
         <Button
           variant='outline'
           size='sm'
           onClick={handleCopy}
-          aria-label='Copy prompt'>;
+          aria-label='Copy prompt'
+        >
           {copied ? 'Copied' : <Copy className='w-4 h-4' />}
 
 
 }
   );
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 
 import { useState } from 'react';

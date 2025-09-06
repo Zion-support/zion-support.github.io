@@ -3,39 +3,43 @@
 
 interface File extends Blob {
   name: string;
-  last_modified: number;
+  lastModified: number;
 }
+=======
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface Blob {
   size: number;
   type: string;
-  slice (start?: number, end?: number, content_type?: string): Blob;
+  slice(start?: number, end?: number, contentType?: string): Blob;
 }
 interface FormData {
-  append (name: string, value: string | Blob): void;
-  delete (name: string): void;
-  get (name: string): string | File | null;
-  get_all (name: string): (string | File)[];
-  has (name: string): boolean;
-  set (name: string, value: string | Blob): void;
+  append(name: string, value: string | Blob): void;
+  delete(name: string): void;
+  get(name: string): string | File | null;
+  getAll(name: string): (string | File)[];
+  has(name: string): boolean;
+  set(name: string, value: string | Blob): void;
 }
 interface URLSearchParams {
-  append (name: string, value: string): void;
-  delete (name: string): void;
-  get (name: string): string | null;
-  get_all (name: string): string[];
-  has (name: string): boolean;
-  set (name: string, value: string): void;
-  to_string (): string;
+  append(name: string, value: string): void;
+  delete(name: string): void;
+  get(name: string): string | null;
+  getAll(name: string): string[];
+  has(name: string): boolean;
+  set(name: string, value: string): void;
+  toString(): string;
 }
 type BodyInit = string | Blob | ArrayBuffer | FormData | URLSearchParams;
-type RequestCache = 'default' | 'no - store' | 'reload' | 'no - cache' | 'force - cache' | 'only - if - cached';
-type RequestCredentials = 'omit' | 'same - origin' | 'include';
+type RequestCache = 'default' | 'no-store' | 'reload' | 'no-cache' | 'force-cache' | 'only-if-cached';
+type RequestCredentials = 'omit' | 'same-origin' | 'include';
 interface Headers {
-  append (name: string, value: string): void;
-  delete (name: string): void;
-  get (name: string): string | null;
-  has (name: string): boolean;
-  set (name: string, value: string): void;
+  append(name: string, value: string): void;
+  delete(name: string): void;
+  get(name: string): string | null;
+  has(name: string): boolean;
+  set(name: string, value: string): void;
 }
 
 type HeadersInit = Headers | string[][] | Record < string, string>;
@@ -55,7 +59,7 @@ interface RequestInit {
   mode?: RequestMode;
   redirect?: RequestRedirect;
   referrer?: string;
-  referrer_policy?: ReferrerPolicy;
+  referrerPolicy?: ReferrerPolicy;
   signal?: AbortSignal | null;
   window?: any;
   timeout?: number;
@@ -65,7 +69,7 @@ interface RequestInit {
 
 interface AbortController {
   signal: AbortSignal;
-  abort (): void;
+  abort(): void;
 }
 
 // Define AbortSignal if not available;
@@ -242,10 +246,8 @@ export type { ApiResponse, RequestOptions };
 >>>>>>> origin/automation-improvements-final
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 interface ApiResponse<T = unknown> {
-=======
-interface ApiResponse < T = unknown> {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   data?: T;
   error?: string;
   success: boolean;
@@ -289,6 +291,7 @@ if ( {) {
       set_timeout (() => controller.abort (), options.timeout);
 
     }
+
     try {
 
         ...options,
@@ -309,27 +312,6 @@ if ( {) {
 
         success: true
         data
-=======
-      const response = await fetch (url, {
-        ...options,
-        signal: controller.signal,
-        headers: {
-...this.default_headers,
-          ...options.headers,
-        },
-      });
-;
-      // Check condition
-if ( {) {
-  $2
-}
-        throw new Error (`HTTP error! status: ${response.status}`);
-      }
-      const data = await response.json ();
-      return {
-        success: true,
-        data,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
     } catch (error) {
       return {
@@ -360,6 +342,7 @@ export type { ApiResponse, RequestOptions }
 =======
 export type { ApiResponse, RequestOptions }
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
         error: error instanceof Error ? error.message : 'Unknown error occurred',
       }

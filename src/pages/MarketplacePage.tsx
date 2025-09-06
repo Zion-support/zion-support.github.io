@@ -142,18 +142,18 @@ const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: Pro
   const { formatPrice } = useCurrency(),;
 
   return (
-  <Card className="h-full hover:shadow-lg transition-shadow">;
-    <CardHeader className="pb-3">;
-      <div className="flex items-start justify-between">;
-        <div className="flex-1 min-w-0">;
-          <h3 className="font-semibold text-lg truncate">{product && product.title}</h3>;
-          <p className="text-sm text-muted-foreground">{product && product.category}</p>;
-          <div className="flex items-center gap-2 mt-2">;
-            <Badge variant="secondary" className="text-xs">{product && product.brand}</Badge>;
-            {product && product.aiScore && product && product.aiScore > 80 && (;
-              <Badge variant="default" className="text-xs bg-gradient-to-r from-blue-600 to-purple-600">;
-                AI {product && product.aiScore}
-              </Badge>;
+  <Card className="h-full hover:shadow-lg transition-shadow">
+    <CardHeader className="pb-3">
+      <div className="flex items-start justify-between">
+        <div className="flex-1 min-w-0">
+          <h3 className="font-semibold text-lg truncate">{product.title}</h3>
+          <p className="text-sm text-muted-foreground">{product.category}</p>
+          <div className="flex items-center gap-2 mt-2">
+            <Badge variant="secondary" className="text-xs">{product.brand}</Badge>
+            {product.aiScore && product.aiScore > 80 && (
+              <Badge variant="default" className="text-xs bg-gradient-to-r from-blue-600 to-purple-600">
+                AI {product.aiScore}
+              </Badge>
             )}
           </div>;
         </div>;
@@ -478,7 +478,6 @@ function MarketplacePageContent() {;
 
 
   }, [sortBy, filterCategory, showRecommended]),;
-
   const {;
     items: products,;
     loading,;
@@ -491,37 +490,31 @@ function MarketplacePageContent() {;
     scrollToTop,;
     loadMore;
   } = useInfiniteScrollPagination(fetchProducts, 12),;
-
   // Refresh when filters change;
-  useEffect((,) => {;
-    const timeoutId = setTimeout((,) => {;
+  useEffect(() => {;
+    const timeoutId = setTimeout(() => {;
       refresh();
     }, 100),;
-
     return () => clearTimeout(timeoutId);
   }, [sortBy, filterCategory, showRecommended, refresh]),;
-
-  const marketStats = useMemo((,) => {;
-    if (products && products.length === 0) return null,;
+  const marketStats = useMemo(() => {;
+    if (products.length === 0) return null,;
     return {;
-      averagePrice: products && products.reduce((sum, p,) => sum + (p && p.price || 0), 0) / products && products.length,;
-      averageRating: products && products.reduce((sum, p,) => sum + (p && p.rating || 0), 0) / products && products.length,;
-      totalProducts: products && products.length,;
-      availableCount: products && products.filter(p => p && p.availability === "Available").length;
+      averagePrice: products.reduce((sum, p) => sum + (p.price || 0), 0) / products.length,;
+      averageRating: products.reduce((sum, p) => sum + (p.rating || 0), 0) / products.length,;
+      totalProducts: products.length,;
+      availableCount: products.filter(p => p.availability === "Available").length;
     }
   }, [products]),;
-
-  const categories = useMemo((,) => {;
+  const categories = useMemo(() => {;
     return ["AI & Machine Learning", "Cloud Services", "Software Development", "Professional Services", "Hardware & Infrastructure"];
   }, []),;
-
   const [showScrollTop, setShowScrollTop] = useState(false),;
-  useEffect((,) => {;
-    const handleScroll = () => setShowScrollTop(window && window.scrollY > 800),;
-    window && window.addEventListener('scroll', handleScroll),;
-    return () => window && window.removeEventListener('scroll', handleScroll);
+  useEffect(() => {;
+    const handleScroll = () => setShowScrollTop(window.scrollY > 800),;
+    window.addEventListener('scroll', handleScroll),;
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []),;
-
   // Loading state;
 
   if (loading && products.length === 0) {;
@@ -573,7 +566,7 @@ function MarketplacePageContent() {;
   if (error && products && products.length === 0) {;
 
     return (
-      <>;
+      <>
         <NextSeo
           title="Marketplace - Zion Tech Marketplace Solutions & Services"
           description="Visit our Zion Tech Marketplace to browse top-rated products, service packages, and exclusive offers. Start shopping with confidence today. Earn rewards and access limited deals."
@@ -914,14 +907,11 @@ if ( {) {
               <MarketplaceCard;
                 product = {item, }
                 onViewDetails={() => {
-                  // Check condition
-if ( {) {
-  $2
-}
+                  if (typeof window !== 'undefined') {
                     try {
-                      session_storage.set_item (`product:${item.id}`, JSON.stringify (item));
+                      sessionStorage.setItem(`product:${item.id}`, JSON.stringify(item))
                     } catch {
-                      // ignore storage errors;
+                      // ignore storage errors
                     }
                   }
                   router.push (`/marketplace / listing/${item.id}`);
@@ -930,10 +920,10 @@ if ( {) {
 
 
                 onAddToCart={() => {;
-                  dispatch(addItem({ id: item && item.id, title: item && item.title, price: item && item.price ?? 0 })),;
+                  dispatch(addItem({ id: item.id, title: item.title, price: item.price ?? 0 })),;
                   toast({;
                     title: 'Added to cart',;
-                    description: `${item && item.title} has been added to your cart`,;
+                    description: `${item.title} has been added to your cart`,;
                     action: {;
                       label: 'View Cart',;
                       onClick: (,) => router && router.push('/cart')}});
@@ -1028,10 +1018,10 @@ if ( {) {
           </motion && motion.button>;
 
         )}
-      </AnimatePresence>;
-    </div>;
-    </>;
-  );
+      </AnimatePresence>
+    </div>
+    </>
+  )
 }
 
 

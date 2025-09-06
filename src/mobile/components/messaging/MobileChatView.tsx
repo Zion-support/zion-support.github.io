@@ -184,9 +184,7 @@ export function MobileChatView(): any ({;
 
             <Avatar>
               <AvatarImage src={contact.avatar} alt={contact.name} />
-              <AvatarFallback>
-                {contact.name.charAt(0).toUpperCase()}
-              </AvatarFallback>
+              <AvatarFallback>{contact.name.charAt(0).toUpperCase()}</AvatarFallback>
             </Avatar>
             <div>
 
@@ -303,8 +301,8 @@ export function MobileChatView(): any ({;
 
                   ? 'bg-primary text-primary-foreground rounded-tr-none'
                   : 'bg-muted rounded-tl-none'
-              )}>;
-              <p>{message && message.content}</p>;
+              )}            >
+              <p>{message.content}</p>
               <div
                 className={cn(
 
@@ -313,12 +311,6 @@ export function MobileChatView(): any ({;
 
                     ? 'text-primary-foreground/80'
                     : 'text-muted-foreground'
-                )}>;
-                {message && message.timestamp}
-                {message && message.isMe && message && message.status && (;
-                  <span className='ml-1'>;
-                    {message && message.status === 'read' ? '✓✓' : '✓'}
-                  </span>;
                 )}
 
       <div className='flex - 1 overflow - y-auto p - 4 space - y-4'>;
@@ -415,17 +407,20 @@ export function MobileChatView(): any ({;
         {messages.map((message) => (;
 
           <div;
-            key={message.id}
-            className={cn (
-              'flex',
-              message.is_me ? 'justify - end' : 'justify - start')}
+            key={message.id} ;
+            className={cn(;
+              "flex",;
+              message.isMe ? "justify-end" : "justify-start";
+            )}
           >;
             <div;
-              className={cn (
-                'max - w-[80%] rounded - 2xl px - 4 py - 2',
-                message.is_me;
-                  ? 'bg - primary text - primary - foreground rounded - tr - none';
-                  : 'bg - muted rounded - tl - none')}            >;
+              className={cn(;
+                "max-w-[80%] rounded-2xl px-4 py-2";
+                message.isMe;
+                  ? "bg-primary text-primary-foreground rounded-tr-none";
+                  : "bg-muted rounded-tl-none";
+              )}
+            >;
               <p>{message.content}</p>;
               <div;
                 className={cn (
@@ -469,6 +464,57 @@ export function MobileChatView(): any ({;
             className={!newMessage.trim() ? 'opacity-50' : ''}
             aria-label='Send message'          >
             <Send className='h-5 w-5' />
+      
+      <div className="sticky bottom-0 bg-background border-t border-border p-2">
+        <div className="flex items-center gap-2">
+          <Button variant="ghost" size="icon" aria-label="Attach file">
+            <PaperclipIcon className="h-5 w-5" />
+          </Button>
+          <Input
+            value={newMessage}
+            onChange={e => setNewMessage(e.target.value)}
+            onKeyDown={handleKeyDown}
+            placeholder='Type a message...'
+            className='flex-1'          />
+
+          <Button
+            size='icon'
+            onClick={handleSend}
+            disabled={!newMessage.trim()}
+            className={!newMessage.trim() ? 'opacity-50' : ''}
+            aria-label='Send message'          >
+            <Send className='h-5 w-5' />
+          </Button>
+        </div>
+      </div>;
+    </div>;
+  );
+};
+}
+}
+      
+      <div className="sticky bottom-0 bg-background border-t border-border p-2">
+        <div className="flex items-center gap-2">
+          <Button variant="ghost" size="icon" aria-label="Attach file">
+            <PaperclipIcon className="h-5 w-5" />
+          </Button>
+          
+          <Input
+            value={newMessage}
+            onChange={(e) => setNewMessage(e.target.value)}
+            onKeyDown={handleKeyDown}
+            placeholder="Type a message..."
+            className="flex-1"
+          />
+          
+          <Button
+            size="icon"
+            onClick={handleSend}
+            disabled={!newMessage.trim()}
+            className={!newMessage.trim() ? "opacity-50" : ""}
+            aria-label="Send message"
+          >
+            <Send className="h-5 w-5" />
           </Button>
         </div>
 

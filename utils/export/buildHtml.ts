@@ -4,20 +4,10 @@
 
   const chapterHtml = chapters;
     .map(;
-=======
-import type { BookProject } from '../book / book_types',
-export function buildPrintableHtml (project: BookProject): string {
-  const { meta, chapters, visuals } = project,
-  const quotes_html = visuals.quote_callouts;
-    .map ((q) => `<blockquote class="quote"><p>${escape_html (q.text)}</p>${q.attribution ? `<cite>${escape_html (q.attribution)}</cite>` : ''}</blockquote>`);
-    .join ('\n'),
-  const chapter_html = chapters;
-    .map (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       (c) => `;
       <section class="chapter">;
-        <h2>${escape_html (c.title)}</h2>;
-        <div class="content">${paragraphize (c.content)}</div>;
+        <h2>${escapeHtml(c.title)}</h2>;
+        <div class="content">${paragraphize(c.content)}</div>;
       </section>;
     `);
 
@@ -38,8 +28,8 @@ export function buildPrintableHtml (project: BookProject): string {
   return `<!doctype html>;
 <html>;
 <head>;
-<meta charset="utf - 8" />;
-<title>${escape_html (meta.title)}</title>;
+<meta charset="utf-8" />;
+<title>${escapeHtml(meta.title)}</title>;
 <style>;
 
 
@@ -131,9 +121,9 @@ function escapeHtml(s: string): string {;
 
     ${barcode}
   </section>;
-  ${quotes_html}
-  ${chapter_html}
-  ${visuals_html}
+  ${quotesHtml}
+  ${chapterHtml}
+  ${visualsHtml}
 </body>;
 </html>`;
 }

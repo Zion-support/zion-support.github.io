@@ -41,10 +41,69 @@ export default function QuantumSecureCommunication() {
     address: '364 E Main St STE 1008 Middletown DE 19709',
 
     website: 'https://ziontechgroup.com'
+}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import {
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap
+  DollarSign, Shield, Mail, MapPin, Rocket, Lock
+  Brain, Database, TrendingUp as TrendingUpIcon, Users
+=======
+import React from 'react',;
+import Head from 'next/head',;
+import Link from 'next/link',;
+import { motion } from 'framer-motion',;
+import { 
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
+import {
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap,
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  DollarSign, Shield, Mail, MapPin, Rocket, Lock,
+  Brain, Database, TrendingUp as TrendingUpIcon, Users,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  Target, BarChart, PieChart, Activity, Eye, Key
+<<<<<<< HEAD
+} from 'lucide-react'
+import Button from '../components/ui/Button';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
+=======
+} from 'lucide-react',;
+import Button from '../components/ui/Button',;
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
+import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation',;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default function QuantumSecureCommunication() {
+  const contactInfo = {
+    mobile: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+    website: 'https://ziontechgroup.com'
+<<<<<<< HEAD
   }
+=======
+  },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const features = [
     'Quantum key distribution (QKD) encryptionEnd-to-end encryption for all communicationsQuantum-resistant algorithms and protocolsSecure file sharing and collaboration toolsReal-time encrypted messaging and video callsAudit trails and compliance reportingMulti-platform support (Web, Mobile, Desktop)Integration with existing communication tools'
     'Advanced threat detection and monitoring24/7 security monitoring and support'
+<<<<<<< HEAD
   ]
   const useCases = [
     'Secure executive communicationsConfidential document sharingRegulated industry complianceResearch collaborationGovernment communications'
@@ -55,11 +114,20 @@ export default function QuantumSecureCommunication() {
   const technology = [
     'Quantum ComputingPost-Quantum CryptographyReactNode.jsWebRTCWebAssemblyDockerKubernetes'
   ]
+<<<<<<< HEAD
+=======
 
   return (
+<<<<<<< HEAD
     <UltraAdvancedFuturisticBackground
       intensity="high"
+=======
+<<<<<<< HEAD
+    <UltraAdvancedFuturisticBackground 
+      intensity="high" 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       colorScheme="quantum-fusion"
+<<<<<<< HEAD
       particleCount={500}
       animationSpeed={2.0}
       enableHolographic={true}
@@ -206,6 +274,7 @@ function QuantumSecureCommunication() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 className="text-2xl md:text-3xl text-gray-200 mb-8 max-w-4xl mx-auto font-medium"
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               >
                 Unbreakable encryption for the <span className="text-purple-400 font-bold">quantum era</span>
               </motion.p>
@@ -606,12 +675,83 @@ function QuantumSecureCommunication() {
                   className="group bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-2xl p-6 hover:border-green-400/60 hover:shadow-2xl hover:shadow-green-500/20 transition-all duration-300"
                 >
                   <div className="flex items-center space-x-3 mb-4">
-                    <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center">
-                      <Shield className="w-5 h-5 text-white" />
+                    <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center">
+                      <CheckCircle className="w-5 h-5 text-white" />
                     </div>
                     <h3 className="text-lg font-semibold text-white group-hover:text-green-300 transition-colors">
 
 =======
+                      {feature  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    </h3>;
+                  </div>;
+                </motion.div>;
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            </div>;
+          </div>;
+        </section>;
+        {/* Use Cases Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.6 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                <span className="bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
+                  Use Cases
+                </span>
+              </h2>
+              <p className="text-gray-300 text-xl max-w-3xl mx-auto leading-relaxed">
+                Discover how quantum-secure communication protects your most sensitive communications
+              </p>
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {useCases.map((useCase, index) => (
+                <motion.div
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+                  key={index}
+                  initial={{ opacity: 0, coordinate_y: 20 }}
+                  whileInView={{ opacity: 1, coordinate_y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+<<<<<<< HEAD
                   while_hover={{ scale: 1.02, coordinate_y: -5 }}
                   className="group bg - gradient - to - br from - green - 900 / 20 to - emerald - 900 / 20 border border - green - 500 / 30 rounded - 2xl p - 6 hover:border - green - 400 / 60 hover:shadow - 2xl hover:shadow - green - 500 / 20 transition - all duration - 300";
                 >;
@@ -635,7 +775,6 @@ function QuantumSecureCommunication() {
             </div>;
           </div>;
         </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Technology & Integrations */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gradient - to - b from - transparent to - gray - 900 / 20">;
           <div className="max - w-7xl mx - auto">;
@@ -866,6 +1005,7 @@ function QuantumSecureCommunication() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 className="bg-gradient-to-br from-yellow-900/20 to-orange-900/20 border border-yellow-500/30 rounded-2xl p-8"
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               >
                 <h3 className="text-2xl font-bold text-white mb-6">Competitive Advantage</h3>
                 <p className="text-gray-300 mb-6">
@@ -917,6 +1057,7 @@ function QuantumSecureCommunication() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-2xl p-8"
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               >
                 <h3 className="text-2xl font-bold text-white mb-6">Return on Investment</h3>
                 <div className="text-4xl font-bold text-green-400 mb-4">500% ROI</div>
@@ -1026,7 +1167,6 @@ function QuantumSecureCommunication() {
             </div>;
           </div>;
         </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* CTA Section */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gradient - to - b from - transparent to - gray - 900 / 20">;
           <div className="max - w-4xl mx - auto text - center">;

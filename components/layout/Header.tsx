@@ -1,7 +1,6 @@
 
 
     { name: 'Contact', href: '/contact', icon: Phone }
-
   ];
 
   const service_categories = [;
@@ -119,7 +118,6 @@
       is_scrolled ;
         ? 'bg - slate - 900 / 95 backdrop - blur - md border - b border - slate - 700 / 50' ;
         : 'bg - transparent';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }`}>;
       <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
         <div className="flex items - center justify - between h - 16">;

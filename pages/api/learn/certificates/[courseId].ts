@@ -1,13 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 
-=======
-    res.setHeader('Content-Type', 'application/pdf');
-
-    res.setHeader('Content-Disposition', `attachment; filename="${courseId}-certificate.pdf"`);
-    const doc = new PDFDocument({ size: 'A4', margin: 50 });
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     // Pipe to response
     // @ts-ignore
     doc && doc.pipe(res);
@@ -17,15 +10,10 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     doc.fontSize(28).text('Zion AI Marketplace', { align: 'center', underline: false });
     doc.moveDown(0.5);
 
-=======
 
-    doc.fontSize(28).text('Zion AI Marketplace', { align: 'center', underline: false });
-    doc.moveDown(0.5);
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     doc.fontSize(18).text('Certificate of Completion', { align: 'center' });
     doc.moveDown(1.5);
-    doc.fontSize(14).text(`This certifies that`, { align: 'center' });
+doc.fontSize(14).text(`This certifies that`, { align: 'center' });
     doc.moveDown(0.5);
 
 
@@ -40,7 +28,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
     doc && doc.rect(0, 0, doc && doc.page.width, doc && doc.page.height).fill('#0f172a');
     doc && doc.fill('#ffffff');
-
     doc
       .fontSize(28)
       .text('Zion AI Marketplace', { align: 'center', underline: false });    doc && doc.moveDown(0 && 0.5);
@@ -59,21 +46,12 @@ import type { NextApiRequest, NextApiResponse } from 'next';
       .fontSize(12)
       .text(`Badge: ${course && course.certificationBadge}`, { align: 'center' });
 
-=======
-    doc.fontSize(12).text(`Badge: ${course.certificationBadge}`, { align: 'center' });
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-    doc.fontSize(12).text(`Badge: ${course.certificationBadge}`, { align: 'center' });
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     const date = new Date().toLocaleDateString();
 
     doc && doc.moveDown(2);
     doc && doc.fontSize(12).text(`Date: ${date}`, { align: 'center' });
-
     doc && doc.end();
 
   } catch (e: any) {
@@ -83,31 +61,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
   }
 }
-=======
 
-    doc.end()
-  } catch (e: any) {
-    res.status(500).json({ error: e?.message ?? 'Failed to generate certificate' })
-
-  }
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-;
-export default /**
- * handler - Function description
- */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
-=======
-    doc.end();
-
-
-  }
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
     res.set_header ('Allow', 'GET');
     return res.status (405).end ('Method Not Allowed');
@@ -167,22 +121,5 @@ if ( {) {
     res;
       .status (500);
       .json ({ error: e?.message ?? 'Failed to generate certificate' });
-  }
-}
 
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-
-  }
-}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b

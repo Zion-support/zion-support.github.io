@@ -14,10 +14,7 @@
 
 
 interface NotificationSystemProps {
-=======
-
 interface NotificationSystemProps {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   notifications: Notification[];
   on_dismiss?: (id: string) => void;
 }
@@ -51,11 +48,8 @@ interface Notification {
   message: string;
 }
 
-interface NotificationSystemProps {
-  notifications: Notification[];
-  onDismiss?: (id: string) => void;
-  className?: string;
-}
+export function NotificationProvider({ children }: { children: ReactNode }) {
+  const [toasts, setToasts] = useState<Toast[]>([]),
 
 const NotificationSystem: React.FC<NotificationSystemProps> = ({
   notifications,
@@ -86,6 +80,7 @@ export default function NotificationSystem({
   if (notifications.length === 0) return null;
 
   return (
+<<<<<<< HEAD
     <div className={`fixed top-4 right-4 z-50 space-y-2 ${className}`}>
       {notifications.map((notification) => (
         <div
@@ -103,6 +98,7 @@ export default function NotificationSystem({
               <button
                 onClick={() => onDismiss(notification.id)}
                 className="ml-2 text-gray-400 hover:text-gray-600"
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               >
                 ×
               </button>

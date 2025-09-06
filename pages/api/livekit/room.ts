@@ -1,75 +1,9 @@
 
 
-
-
-import type { NextApiRequest, NextApiResponse } from "next";
-import { RoomServiceClient, CreateRoomOptions } from "livekit-server-sdk";
-
-
-const LIVEKIT_API_KEY = process && process.env.LIVEKIT_API_KEY || "";
-const LIVEKIT_API_SECRET = process && process.env.LIVEKIT_API_SECRET || "";
-const LIVEKIT_HOST = process && process.env.LIVEKIT_HOST || "";
-
-
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  if (req && req.method !== "POST") {
-    res && res.setHeader("Allow", "POST");
-    return res && res.status(405).json({ error: "Method not allowed" });
-
-=======
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    res.setHeader('AllowPOST');
-    return res.status(405).json({ error: 'Method not allowed' })
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-  }
-  try {
-
-    const { projectId, preferredName } = req && req.body || {};
-
-
-    if (!projectId) {
-      return res && res.status(400).json({ error: "Missing projectId" });
-
-=======
-    const { projectId, preferredName } = req.body || {};
-
-
-    if (!projectId) {
-      return res.status(400).json({ error: 'Missing projectId' })
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-    }
-
-    if (!LIVEKIT_API_KEY || !LIVEKIT_API_SECRET || !LIVEKIT_HOST) {
-
-    }
-    const date = new Date();
-    const pad = (n: number) => String(n).padStart(2, "0");
-
-    const roomName = `${projectId}-${date && date.getFullYear()}${pad(date && date.getMonth() + 1)}${pad(date && date.getDate())}-${pad(date && date.getHours())}${pad(date && date.getMinutes())}`;
-
-
-    // Attempt to create or ensure the room exists
-    try {
-
-
-      );
-
-=======
-      const roomService = new RoomServiceClient(LIVEKIT_HOST, LIVEKIT_API_KEY, LIVEKIT_API_SECRET);
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       const opts: CreateRoomOptions = {
 
 
-=======
-    console.error('Room create error', err);
-    return res.status(500).json({ error: 'Failed to create room' });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   }
 
 }
@@ -79,8 +13,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
         name: room_name,
         empty_timeout: 60 * 10, // 10 minutes;
         max_participants: 24,
@@ -88,6 +20,30 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           project_id,
           created_by: preferred_name || "host",
         }),
+
+    }
+    if (!LIVEKIT_API_KEY |!LIVEKIT_API_SECRET |!LIVEKIT_HOST) {
+      return res.status(500).json({ error: "LiveKit env vars not configured" });
+    }
+    const date = new Date();
+    const pad = (n: number) => String(n).padStart(2, "0");
+    const roomName = `${projectId}-${date.getFullYear()}${pad(date.getMonth() + 1)}${pad(date.getDate())}-${pad(date.getHours())}${pad(date.getMinutes())}`;
+    // Attempt to create or ensure the room exists
+    try {
+      const roomService = new RoomServiceClient(
+        LIVEKIT_HOST
+        LIVEKIT_API_KEY
+        LIVEKIT_API_SECRET
+      );
+      const opts: CreateRoomOptions = {
+        name: roomName
+        emptyTimeout: 60 * 10, // 10 minutes
+        maxParticipants: 24
+        metadata: JSON.stringify({
+          projectId
+          createdBy: preferredName |"host"
+        })
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       }
       await room_service.create_room (opts).catch (() => Promise.resolve ());
     } catch (e) {
@@ -98,8 +54,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
     return res.status (200).json ({ room_name });
   } catch (err: any) {
+
     console.error ("Room create error", err);
     return res.status (500).json ({ error: "Failed to create room" });
+
   }
 }
 
@@ -107,7 +65,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 
-  }
-}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    return res.status(200).json({ roomName });
+  } catch (err: any) {
+    console.error('Room create error', err);
+    return res.status(500).json({ error: 'Failed to create room' });
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  }
+
+
+>>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b

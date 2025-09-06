@@ -6,7 +6,6 @@ export default function LinksReportRedirect() {
   useEffect(() => {
     if (typeof window !== 'undefined') {
       window.location.replace('/reports/links/index.html')
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     }
   }, []);
   return null;export default function LinksReportRedirect() {;
@@ -47,6 +46,7 @@ if ( {) {
     }
   }, []);
   return null;
+
 }
 
 

@@ -91,8 +91,8 @@
         </p>;
 
         {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
-      </div>;
-    </div>;
+      </div>
+    </div>
   );
 };
 

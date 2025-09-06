@@ -68,7 +68,6 @@ export default function AISolutionsPage() {
       complexity: 'Intermediate'
 
     };
-=======
 import React from 'react';
 import Head from 'next / head';
 import Link from 'next / link';
@@ -187,20 +186,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -278,7 +273,6 @@ export default function AISolutionsPage() {;
       category: 'Automation',;
       complexity: 'Intermediate';
     }
-
   const useCases = [;
     {;
       industry: 'Manufacturing',;
@@ -313,7 +307,6 @@ export default function AISolutionsPage() {;
       icon: '🛍️',;
     },;
   ];
-
   const technologies = [;
     'TensorFlow',;
     'PyTorch',;
@@ -338,7 +331,6 @@ export default function AISolutionsPage() {;
       icon: '🛍️';
     }
   ];
-
   const technologies = [;
     'TensorFlowPyTorchScikit-learnOpenAI GPTBERTYOLOKerasPandas';
 
@@ -405,7 +397,6 @@ export default function AISolutionsPage() {;
 ;
   const technologies = [;
     'TensorFlowPyTorchScikit - learnOpenAI GPTBERTYOLOKerasPandas';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   ];
 ;
   return (
@@ -418,7 +409,6 @@ export default function AISolutionsPage() {;
         />;
         <meta name='twitter:card' content='summary_large_image' />;
       </Head>;
-
       <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>;
         <main className='container mx-auto px-6 py-12'>;
           <section className='text-center mb-16'>;
@@ -430,7 +420,6 @@ export default function AISolutionsPage() {;
               businesses and drive innovation;
             </p>;
           </section>;
-
           <section className='mx-auto max-w-7xl'>;
 
             {/* AI Solutions Grid */}
@@ -466,7 +455,6 @@ export default function AISolutionsPage() {;
                       ))}
 
   ];
-
   return (
     <>
       <Head>
@@ -492,7 +480,6 @@ export default function AISolutionsPage() {;
 
                     </ul>;
                     <Link      </Head>;
-
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">;
         <main className="container mx-auto px-6 py-12">;
           <section className="text-center mb-16">;
@@ -503,7 +490,6 @@ export default function AISolutionsPage() {;
               Cutting-edge artificial intelligence solutions that transform businesses and drive innovation;
             </p>;
           </section>;
-
           <section className="mx-auto max-w-7xl">;
 
             {/* AI Solutions Grid */}
@@ -906,6 +892,7 @@ export default function AISolutionsPage() {;
                 >
                   Start Your AI Journey
                 </Link>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <Link
                   href="/automation-insights"
 
@@ -930,12 +917,14 @@ export default function AISolutionsPage() {;
 
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    </>);
+=======
+<<<<<<< HEAD
+);
+<<<<<<< HEAD
 =======
   );
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
-    </>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
