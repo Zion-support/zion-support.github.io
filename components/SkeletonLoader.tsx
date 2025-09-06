@@ -8,7 +8,6 @@ const SkeletonLoader: React.FC<SkeletonLoaderProps> = ({
     lines = 3,
     className = ''
   }) => {
-  return (
     <div className={`animate-pulse ${className}`}>
       {Array.from({ length: lines }).map((_, index) => (
         <div

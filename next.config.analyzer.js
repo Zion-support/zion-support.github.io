@@ -1,10 +1,31 @@
 };
-<<<<<<< HEAD
 ;
-=======
-<<<<<<< HEAD
+,;
+;};
 ;
-=======
+};
 ,
->>>>>>> cursor/automate-test-improve-and-merge-code-8ee2
->>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+module.exports = {
+  "webpack": (config, { isServer }) => {
+    if ( {
+      config.plugins.push(
+        new BundleAnalyzerPlugin({
+          "analyzerMode": 'static',
+          "openAnalyzer": 'false',
+          "reportFilename": isServer ? '../analyze/server.html' : './analyze/client.html'})
+      )}
+    return config) {
+     {
+      config.plugins.push(
+        new BundleAnalyzerPlugin({
+          "analyzerMode": 'static',
+          "openAnalyzer": false,
+          "reportFilename": isServer ? '../analyze/server.html' : './analyze/client.html'})
+      )}
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config,{ isServer }) => { if ( { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config) { { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config}},};
+    return config}},
+};
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config,{ isServer }) => { if ( { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config) { { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config}},};
+    return config}}};
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config,{ isServer }) => { if ( { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: 'false',reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config) { { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'static',openAnalyzer: false,reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',}) )} return config}},};

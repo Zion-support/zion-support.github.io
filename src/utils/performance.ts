@@ -1,12 +1,17 @@
 <<<<<<< HEAD
-}; observer.unobserve(image)}}}}));
+// TypeScript file
+export const placeholder = 'placeholder';
 =======
-};
-          observer.unobserve(image)};
-      };
+
+},;
+          observer.unobserve(image)}
+      }
 <<<<<<< HEAD
-}}));
-=======
+
 }})),
->>>>>>> cursor/automate-test-improve-and-merge-code-8ee2
->>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
+
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+=======
+;
+}})),;
+>>>>>>> cursor/automate-test-improve-and-merge-code-4094

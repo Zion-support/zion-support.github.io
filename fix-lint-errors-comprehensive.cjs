@@ -1,4 +1,6 @@
 
+
+
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -94,10 +96,9 @@ function fixLintIssues(filePath) {
           const imports = importMatch[1].split(',').map(imp => imp.trim());
           // Check if any of these imports are actually used
           const usedImports = imports.filter(imp => {
-    const importName = imp.split(' as ')[0].trim(),
-    return content.includes(importName) && !line.includes(importName)
-  });
-          return usedImports.length > 0;
+            const importName = imp.split(' as ')[0].trim();
+            return content.includes(importName) && !line.includes(importName);
+          });          return usedImports.length > 0;
         }
       }
       return true;
@@ -144,5 +145,7 @@ try {
 } catch (error) {
   console.error('Script error:', error);
   process.exit(1);
+
+
 
 }

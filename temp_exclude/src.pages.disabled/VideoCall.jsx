@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface VideoCallProps {
   // Add props here as needed
 }
-
 export default function VideoCall({ }: VideoCallProps) {
   return (
     <div>
@@ -13,11 +11,15 @@ export default function VideoCall({ }: VideoCallProps) {
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD:src.pages.disabled/VideoCall.jsx
+}
+=======
 <<<<<<< HEAD
-}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/src.pages.disabled/VideoCall.jsx
+<<<<<<< HEAD
 =======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 }
-=======
 }
-=======
+}
 }

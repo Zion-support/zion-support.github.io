@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface HRPlatformProps {
   // Add props here as needed
 }
-
 export default function HRPlatform({ }: HRPlatformProps) {
   return (
     <div>
@@ -13,11 +11,15 @@ export default function HRPlatform({ }: HRPlatformProps) {
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD:src.pages.disabled/HRPlatform.jsx
+}
+=======
 <<<<<<< HEAD
-}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/src.pages.disabled/HRPlatform.jsx
+<<<<<<< HEAD
 =======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 }
-=======
 }
-=======
+}
 }

@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface CustomerExperienceProps {
   // Add props here as needed
 }
-
 export default function CustomerExperience({ }: CustomerExperienceProps) {
   return (
     <div>
@@ -13,11 +11,15 @@ export default function CustomerExperience({ }: CustomerExperienceProps) {
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD:src.pages.disabled/CustomerExperience.jsx
+}
+=======
 <<<<<<< HEAD
-}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/src.pages.disabled/CustomerExperience.jsx
+<<<<<<< HEAD
 =======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 }
-=======
 }
-=======
+}
 }

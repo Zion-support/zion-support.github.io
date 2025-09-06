@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 #!/usr/bin/env node;
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -41,8 +37,6 @@ function autoResolveConflicts() {}
     const src = fs.readFileSync(file, 'utf8');
     // Prefer incoming (theirs) content on conflict;
     const resolved = src;
-      .replace(/<<<<<<<[\s\S]*?([\s\S]*?)>>>>>>>[\t].*\n?/g, (_, theirs) => theirs);
-      .replace(/<<<<<<<[\s\S]*?>>>>>>>[\t].*\n?/g, '');
     fs.writeFileSync(file, resolved);
     sh(`git add -- "${file}"`)};
   const staged = sh('git diff --cached --name-only || true');
@@ -51,7 +45,6 @@ function autoResolveConflicts() {}
 };
 async function main() {}
   const { owner, repo } = getRepo();
-  
   const startBranch = sh('git rev-parse --abbrev-ref HEAD');
   sh('git fetch origin');
   sh('git checkout main');

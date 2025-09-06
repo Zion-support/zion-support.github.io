@@ -96,8 +96,8 @@ class MasterAutomationOrchestrator {
 
     const scripts = [
       'enhanced-automation-suite.cjs',
-      'app-optimizer.js',
-      'complete-improvement-suite.cjs',
+      'app-optimizer.cjs',
+      'comprehensive-app-improvement-suite.cjs',
     ];
 
     for (const script of scripts) {

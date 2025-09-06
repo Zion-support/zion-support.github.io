@@ -1,7 +1,1 @@
-
-<<<<<<< HEAD
-
-
-
 export default AvatarMenu;
-

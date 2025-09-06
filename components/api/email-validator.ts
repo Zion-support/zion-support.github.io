@@ -1,11 +1,15 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
+ import type { NextApiRequest, NextApiResponse } from 'next';
 
 interface EmailValidationResult {
-  email: string, isValid: boolean,
-  score: number, suggestions: string[],
+  email: string;
+  isValid: boolean;
+  score: number;
+  suggestions: string[];
   details: {
-    hasValidFormat: boolean, hasValidDomain: boolean,
-    hasValidMX: boolean, isDisposable: boolean,
+    hasValidFormat: boolean;
+    hasValidDomain: boolean;
+    hasValidMX: boolean;
+    isDisposable: boolean;
     isRoleBased: boolean,
     isFreeProvider: boolean
   }
@@ -16,7 +20,7 @@ export default async function handler(
   res: NextApiResponse<EmailValidationResult | { error: string }>
 ) {
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' })
+    return res.status(405).json({ error: 'Method not allowed' });  }    return res.status(405).json({ error: 'Method not allowed' })
   }
 
   try {
@@ -36,14 +40,45 @@ export default async function handler(
 
     // Check for common disposable email providers
     const disposableDomains = [
-      'tempmail.orgguerrillamail.commailinator.com10minutemail.comtemp-mail.orgsharklasers.comgetairmail.commailnesia.com'
+      'tempmail.org',
+      'guerrillamail.com',
+      'mailinator.com',
+      '10minutemail.com',
+      'temp-mail.org',
+      'sharklasers.com',
+      'getairmail.com',
+      'mailnesia.com',    ];      'tempmail.orgguerrillamail.commailinator.com10minutemail.comtemp-mail.orgsharklasers.comgetairmail.commailnesia.com'
     ];
     const isDisposable = disposableDomains.some(d => domain?.includes(d));
 
     // Check for role-based emails
     const roleBasedPatterns = [
-      'admin@info@support@contact@sales@help@noreply@no-reply@', 'donotreply@do-not-reply@'
+      'admin@',
+      'info@',
+      'support@',
+      'contact@',
+      'sales@',
+      'help@',
+      'noreply@',
+      'no-reply@',
+      'donotreply@',
+      'do-not-reply@',
     ];
+    const isRoleBased = roleBasedPatterns.some(pattern =>
+      email.startsWith(pattern)
+    );
+
+    // Check for free email providers
+    const freeProviders = [
+      'gmail.com',
+      'yahoo.com',
+      'hotmail.com',
+      'outlook.com',
+      'aol.com',
+      'icloud.com',
+      'protonmail.com',
+      'mail.com',
+      'yandex.com',    ];    ];
     const isRoleBased = roleBasedPatterns.some(pattern => email.startsWith(pattern));
 
     // Check for free email providers
@@ -61,23 +96,40 @@ export default async function handler(
     if (isFreeProvider) score -= 10;
 
     // Generate suggestions
-    const suggestions: string[] = [];
+    const suggestions: string[] = [],
     if (!hasValidFormat) {
-      suggestions.push('Check email format (should be user@domain.com)')
-    }
+      suggestions.push('Check email format (should be user@domain.com)');
     if (isDisposable) {
-      suggestions.push('Consider using a permanent email address')
+      suggestions.push('Consider using a permanent email address');
     }
     if (isRoleBased) {
-      suggestions.push('Role-based emails may have delivery issues')
+      suggestions.push('Role-based emails may have delivery issues');
     }
     if (score < 50) {
-      suggestions.push('This email may not be suitable for business use')
+      suggestions.push('This email may not be suitable for business use');
     }
 
     const result: EmailValidationResult = {
-      email;
+      email,
       isValid: score >= 70,
+      score: Math.max(0, score),
+      suggestions,
+      details: {
+        hasValidFormat,
+        hasValidDomain,
+        hasValidMX: true, // Simplified for demo
+        isDisposable,
+        isRoleBased,
+        isFreeProvider,
+      },
+    };
+
+    res.status(200).json(result);
+  } catch (error) {
+    console.error('Email validation error:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }      email;
+      isValid: score >= 70;
       score: Math.max(0, score);
       suggestions;
       details: {

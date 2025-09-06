@@ -155,6 +155,7 @@ const securityHeaders = [
   {
     key: 'Strict-Transport-Security',
     value: 'max-age=63072000, includeSubDomains, preload'
+    value: 'max-age=63072000, includeSubDomains, preload'
   },
   {
     key: 'X-XSS-Protection',
@@ -207,17 +208,20 @@ module.exports = {
     
     if (this.vulnerabilities.length > 0) {
       this.log('⚠️ Security Vulnerabilities: '),
+      this.log('⚠️ Security Vulnerabilities: '),
       this.vulnerabilities.forEach(vuln => this.log(`   • ${vuln}`));
       this.log('');
     }
     
     if (this.fixes.length > 0) {
       this.log('✅ Security Fixes Applied: '),
+      this.log('✅ Security Fixes Applied: '),
       this.fixes.forEach(fix => this.log(`   • ${fix}`));
       this.log('');
     }
     
     if (this.errors.length > 0) {
+      this.log('❌ Errors: '),
       this.log('❌ Errors: '),
       this.errors.forEach(error => this.log(`   • ${error}`));
       this.log('');

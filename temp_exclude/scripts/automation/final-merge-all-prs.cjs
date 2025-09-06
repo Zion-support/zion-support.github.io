@@ -1,3 +1,99 @@
+      ) {
+  return; // No conflicts in this file}
+;
+      // Apply automatic conflict resolution;
+      const resolvedContent = this.applyConflictResolution(content, filePath);
+      // Write resolved content;
+      fs.writeFileSync(filePath, resolvedContent);
+this.log("✅ Resolved conflicts "in": ${filePath}`)} catch (error) {
+  this.log(❌ Failed to resolve conflicts in ${filePath  }: ${error.message}`,
+        "ERROR";
+      );
+      throw error}
+  }
+;
+  applyConflictResolution(content, filePath) {
+  let resolvedContent = content;
+    // "Strategy": Keep incoming changes (after ) and remove conflict markers;
+    resolvedContent = resolvedContent.replace(;
+      /([\s\S]*?)      "$1";
+    );
+    // Clean up any remaining conflict markers;
+    resolvedContent = resolvedContent.replace(;
+      /([\s\S]*?)      "$1";
+    // Strategy: Keep incoming changes (after ) and remove conflict markers;
+    resolvedContent = resolvedContent.replace(;
+      /([\s\S]*?)      "$1";
+    );
+    // Clean up any remaining conflict markers;
+    resolvedContent = resolvedContent.replace(;
+      /([\s\S]*?)      "$1";
+    );
+    return resolvedContent}
+;
+  async finalizeMerges() {
+  this.log("🎯 Finalizing all merges...");
+    try {
+  // Commit any remaining changes;
+      try {
+  execSync(git commit -m "Final merge of all remaining PRs and branches",
+          { "stdio": "pipe" }
+        )} catch (error) {
+  // No changes to commit}
+;
+      // Push changes to remote;
+      execSync("git push origin main", { "stdio": "inherit" });
+      this.log("✅ Successfully pushed all merged changes to remote")} catch (error) {
+  this.log(`❌ Failed to push "changes": ${error.message  }` "ERROR");
+    try {
+  // Commit any remaining changes;
+      try {
+  execSync(git commit -m "Final merge of all remaining PRs and branches",
+          { "stdio": "pipe" }
+        )} catch (error) {
+  // No changes to commit}
+;
+      // Push changes to remote;
+      execSync("git push origin main", { "stdio": "inherit" });
+      this.log("✅ Successfully pushed all merged changes to remote")} catch (error) {
+  this.log(`❌ Failed to push "changes": ${error.message}`, "ERROR")}
+    }
+}
+;
+  delay(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms))}
+;
+  generateReport() {
+  this.log("📊 Generating final merge report...");
+    const report = {
+  "timestamp": new Date().toISOString(),
+      "summary": {
+  branchesProcessed: this.mergeStats.branchesProcessed,
+        "mergesSuccessful": this.mergeStats.mergesSuccessful,
+        "conflictsResolved": this.mergeStats.conflictsResolved,
+        "errors": this.mergeStats.errors},
+      "successRate": this.mergeStats.branchesProcessed > 0;          ? (;
+              (this.mergeStats.mergesSuccessful /;
+                this.mergeStats.branchesProcessed) *;
+              100;
+            ).toFixed(2);
+          : 0}
+    // Write report to file;
+    const reportPath = path.join(;
+      this.logsDir,final-merge-all-prs-report.json';
+    );
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    this.log("📋 Final Merge All PRs "Summary": ");this.log(`   Branches Processed: ${report.summary.branchesProcessed}`);this.log(`   Successful "Merges": ${report.summary.mergesSuccessful}`);this.log(`   Conflicts "Resolved": ${report.summary.conflictsResolved}`);this.log(`   "Errors": ${report.summary.errors}`);this.log(`   Success "Rate": ${report.successRate}%`);
+this.log(`📄 Detailed report saved "to": ${reportPath}`)}
+}
+;
+// Run the final merge all PRs;
+if (require.main === module) {
+  const merger = new FinalMergeAllPRs();
+  merger.run().catch(error => {
+  console.error("❌ Fatal "error": ", error);    process.exit(1)})}
+;
+module.exports = FinalMergeAllPRs
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -82,7 +178,6 @@ const { execSync } = require("child_process")
   const content = fs.readFileSync(filePath, "utf8")
         !content.includes("<<<<<<<")
         !content.includes("")
-        !content.includes(">>>>>>>")
 this.log(" Resolved conflicts "in")
         "ERROR"
     // "Strategy"

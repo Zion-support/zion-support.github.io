@@ -42,7 +42,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   }
 
 
-  return (
     <Image
       src={src}
       alt={alt}
@@ -55,7 +54,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       quality={quality}
       style={style}
 
-    />
   );
 };
 

@@ -352,3 +352,20 @@ async function main() {
 }
 
 main().catch(console.error);
+main().catch(console.error);
+// Fix each file;
+let fixedCount = 0;
+errorFiles.forEach(filePath => {;
+  if (fixFile(filePath)) {;
+  fixedCount++;,
+}
+});
+console.log(`Fixed ${fixedCount} files`);
+// Run lint again to check remaining errors;
+console.log("\nRunning lint again to check remaining errors...");
+try {;
+  execSync("npm run lint", { stdio: "inherit" });
+  console.log("All lint errors fixed!");,
+} catch (error) {;
+  console.log("Some lint errors remain. Manual review may be needed.');,
+}))))

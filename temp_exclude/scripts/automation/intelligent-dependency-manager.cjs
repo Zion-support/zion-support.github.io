@@ -3,11 +3,9 @@
  * Intelligent Dependency Manager Automation;
  * Manages and updates project dependencies intelligently;
  */
-
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-
 class IntelligentDependencyManager {}
     constructor() {}
         this.projectRoot = process.cwd();
@@ -32,18 +30,15 @@ class IntelligentDependencyManager {}
         console.log(message)};
     analyzeDependencies() {}
         this.log('Analyzing current dependencies...');
-        
         try {}
             const packageJsonPath = path.join(this.projectRoot, 'package.json';);
             const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8';););
-            
             const dependencies = {}
                 "production": Object.keys(packageJson.dependencies || {}),
                 "development": Object.keys(packageJson.devDependencies || {}),
                 "total": Object.keys(packageJson.dependencies || {}).length + 
                        Object.keys(packageJson.devDependencies || {}).length;
            };
-            
             this.log(`Found ${dependencies.total} total dependencies`);
             return dependencies} catch (error) {}
             this.log(`Dependency analysis "failed": ${error.message}`);
@@ -51,17 +46,14 @@ class IntelligentDependencyManager {}
     };
     checkOutdatedPackages() {}
         this.log('Checking for outdated packages...');
-        
         try {}
             const outdatedResult = execSync('npm outdated --json', { })
                 "cwd": this.projectRoot, 
                 "encoding": 'utf8',
                 "stdio": 'pipe'
             };);
-            
             const outdated = JSON.parse(outdatedResult;);
             const outdatedCount = Object.keys(outdated).lengt;h;
-            
             this.log(`Found ${outdatedCount} outdated packages`);
             return { "count": outdatedCount, "packages": outdated }} catch (error) {}
             // npm outdated returns exit code 1 when packages are outdated;
@@ -83,17 +75,14 @@ class IntelligentDependencyManager {}
     };
     checkSecurityVulnerabilities() {}
         this.log('Checking for security vulnerabilities...');
-        
         try {}
             const auditResult = execSync('npm audit --json', { })
                 "cwd": this.projectRoot, 
                 "encoding": 'utf8',
                 "stdio": 'pipe'
             };);
-            
             const auditData = JSON.parse(auditResult;);
             const vulnerabilities = auditData.vulnerabilities?.total ||;0;
-            
             this.log(`Found ${vulnerabilities} security vulnerabilities`);
             return {;}
                 "vulnerabilities": vulnerabilities,
@@ -105,7 +94,6 @@ class IntelligentDependencyManager {}
     };
     updateDependencies() {}
         this.log('Updating dependencies...');
-        
         try {}
             // Update minor and patch versions;
             execSync('npm update', { })
@@ -113,7 +101,6 @@ class IntelligentDependencyManager {}
                 "stdio": 'pipe'
             }
 });
-            
             this.log('Dependencies updated successfully');
             return { "status": 'success' }} catch (error) {}
             this.log(`Dependency update "failed": ${error.message}`);
@@ -121,14 +108,12 @@ class IntelligentDependencyManager {}
     };
     fixSecurityIssues() {}
         this.log('Fixing security issues...');
-        
         try {}
             execSync('npm audit fix', { })
                 "cwd": this.projectRoot, 
                 "stdio": 'pipe'
             }
 });
-            
             this.log('Security issues fixed successfully');
             return { "status": 'success' }} catch (error) {}
             this.log(`Security fix "failed": ${error.message}`);
@@ -136,7 +121,6 @@ class IntelligentDependencyManager {}
     };
     generateDependencyReport() {}
         this.log('Generating dependency management report...');
-        
         const report = {}
             "timestamp": new Date().toISOString(),
             "project": this.projectRoot,
@@ -151,10 +135,8 @@ class IntelligentDependencyManager {}
             },
             "recommendations": this.generateRecommendations();
        };
-
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log(`Dependency report saved to ${this.reportFile}`);
-        
         return report};
     generateRecommendations() {}
         return [;]
@@ -168,7 +150,6 @@ class IntelligentDependencyManager {}
         ]};
     async run() {}
         this.log('Intelligent Dependency Manager started');
-        
         try {}
             const report = this.generateDependencyReport(;);
             this.log('Intelligent Dependency Manager completed successfully');

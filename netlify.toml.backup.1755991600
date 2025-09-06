@@ -11,6 +11,22 @@
   directory = "netlify/functions"
   node_bundler = "esbuild"
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 [[plugins]]
   package = "netlify-plugin-cloudinary"
 
@@ -36,6 +52,22 @@
   name = "front-enhancer"
   schedule = "*/5 * * * *" # every 5 minutes
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 [[scheduled.functions]]
   name = "front-index-orchestrator"
   schedule = "*/5 * * * *" # every 5 minutes
@@ -151,11 +183,87 @@
   status = 301
 
 # Section placeholders to existing hubs
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+[[redirects]]
+=======
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    X-DNS-Prefetch-Control = "on"
+    Content-Security-Policy = "default-src 'self'; object-src 'none'; upgrade-insecure-requests; script-src 'self' 'unsafe-inline' https://plausible.io; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://plausible.io; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+
+[[redirects]]
+  from = "/og-image.jpg"
+  to = "/og-image.svg"
+  status = 301
+
+[[redirects]]
+  from = "/twitter-image.jpg"
+  to = "/og-image.svg"
+  status = 301
+
+[[redirects]]
+  from = "/api"
+  to = "/api-documentation"
+  status = 301
+
+[[redirects]]
+  from = "/webinars"
+  to = "/news"
+  status = 301
+
+[[redirects]]
+  from = "/events"
+  to = "/news"
+  status = 301
+
+[[redirects]]
+>>>>>>> origin/cursor/website-audit-content-update-and-deployment-7272
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+  from = "/team"
 [[redirects]]  from = "/team"
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+[[redirects]]  from = "/team"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+[[redirects]]  from = "/team"
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   to = "/about"
   status = 301
 
 [[redirects]]
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   from = "/ai-autonomous-ecosystem"
   to = "/ai-autonomous-ecosystem-manager"
   status = 301
@@ -222,4 +330,28 @@
 
 [[redirects]]
   from = "/quantum-encryption-gateway"
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+  to = "/quantum-internet-security-platform"
+=======
+  from = "/press"
+  to = "/news"
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+  status = 301
   to = "/quantum-internet-security-platform"  status = 301
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+  to = "/quantum-internet-security-platform"  status = 301
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+  to = "/quantum-internet-security-platform"  status = 301
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

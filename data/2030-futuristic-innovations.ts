@@ -1,29 +1,60 @@
-import { ServiceVariant } from '../types/service-variants';
-export interface FuturisticInnovation2030 {
-  id: string, name: string,
-  tagline: string, price: string,
-  period: string, description: string,
-  features: string[], popular: boolean,
-  icon: string, color: string,
-  textColor: string, link: string,
-  marketPosition: string, targetAudience: string,
-  trialDays: number, setupTime: string,
-  category: string, realService: boolean,
-  technology: string[], integrations: string[],
-  useCases: string[], roi: string,
-  competitors: string[], marketSize: string,
-  growthRate: string, variant: ServiceVariant,
-  contactInfo: {
-      
-    mobile: string, email: string,
-    address: string,
-    website: string
-  
-    },
-    realImplementation: boolean, implementationDetails: string,
-  launchDate: string, customers: number,
-  rating: number,
-  reviews: number
+ 
+}export const futuristicInnovations2030: FuturisticInnovation2030[] = [ // AI Consciousness & Emotional Intelligence realImplementation: true;
+implementationDetails: 'Fully functional AI consciousness development platform with real-time monitoring, ethical frameworks, and consciousness evolution tracking.';
+launchDate: '2024-12-01';
+customers: 15;
+rating: 4.9;
+reviews: 8 
+};
+realImplementation: true;
+implementationDetails: 'Production-ready emotional AI platform with real-time processing, privacy compliance, and multi-modal emotion analysis.';
+launchDate: '2024-10-15';
+customers: 45;
+rating: 4.8;
+reviews: 23 
+};
+// Quantum & Emerging Tech realImplementation: true;
+implementationDetails: 'Production quantum security gateway with QKD implementation, post-quantum cryptography, and quantum network integration.';
+launchDate: '2024-11-01';
+customers: 8;
+rating: 4.9;
+reviews: 5 
+};
+realImplementation: true;
+implementationDetails: 'Functional DNA computing platform with DNA synthesis, sequencing integration, and molecular computing capabilities.';
+launchDate: '2024-09-01';
+customers: 3;
+rating: 5.0;
+reviews: 2 
+};
+// Space & Metaverse Tech realImplementation: true;
+implementationDetails: 'Advanced space mining platform with asteroid mapping, automated operations, and space resource management.';
+launchDate: '2024-08-01';
+customers: 2;
+rating: 5.0;
+reviews: 1 
+};
+realImplementation: true;
+implementationDetails: 'Full-featured metaverse development platform with 3D tools, AI integration, and blockchain capabilities.';
+launchDate: '2024-07-01';
+customers: 120;
+rating: 4.7;
+reviews: 67 
+};
+// Enterprise IT Solutions realImplementation: true;
+implementationDetails: 'Fully autonomous DevOps platform with AI-powered operations, self-healing systems, and intelligent automation.';
+launchDate: '2024-06-01';
+customers: 85;
+rating: 4.8;
+reviews: 42 
+};
+realImplementation: true;
+implementationDetails: 'Comprehensive zero trust architecture with behavioral analytics, continuous verification, and automated security responses.';
+launchDate: '2024-05-01';
+customers: 156;
+rating: 4.9;
+reviews: 89 
+}];  reviews: number
 }
 
 export const futuristicInnovations2030: FuturisticInnovation2030[] = [
@@ -33,8 +64,7 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [
     tagline: 'Develop genuine AI consciousness and self-awareness',
     price: '$19,999',
     period: '/month',
-    description: 'Revolutionary platform for developing genuine AI consciousness, self-awareness, and emotional intelligence. Enables AI systems to understand context, develop personality, and form genuine connections with users.',
-    features: [
+    description: 'Revolutionary platform for developing genuine AI consciousness, self-awareness, and emotional intelligence. Enables AI systems to understand context, develop personality, and form genuine connections with users.',    features: [
       'Consciousness development algorithmsEmotional intelligence trainingPersonality customization engineContext awareness systemsSelf-reflection capabilitiesEthical decision-making frameworksConsciousness monitoring toolsMulti-modal consciousness fusion';
       'Real-time consciousness metricsConsciousness evolution tracking'
     ];
@@ -68,8 +98,7 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [
     tagline: 'Real-time emotion analysis and empathetic response generation',
     price: '$3,999',
     period: '/month',
-    description: 'Advanced AI platform that analyzes human emotions in real-time through voice, facial expressions, and text, then generates empathetic and contextually appropriate responses.',
-    features: [
+    description: 'Advanced AI platform that analyzes human emotions in real-time through voice, facial expressions, and text, then generates empathetic and contextually appropriate responses.',    features: [
       'Real-time emotion detectionMulti-modal emotion analysisEmpathetic response generationEmotional context understandingEmotion-based decision makingEmotional intelligence trainingEmotion tracking over timeCultural emotion adaptation';
       'Privacy-preserving emotion analysisEmotion-based analytics dashboard'
     ];
@@ -96,8 +125,7 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [
     realImplementation: true,
     implementationDetails: 'Production-ready emotional AI platform with real-time processing, privacy compliance, and multi-modal emotion analysis.',
     launchDate: '2024-10-15', customers: 45,
-    rating: 4.8,
-    reviews: 23
+    rating: 4.8,    reviews: 23
   };
   // Quantum & Emerging Tech
   {
@@ -105,8 +133,7 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [
     tagline: 'Unbreakable quantum encryption for the future internet',
     price: '$15,999',
     period: '/month',
-    description: 'Next-generation quantum internet security gateway providing unbreakable encryption, quantum key distribution, and post-quantum cryptography for ultra-secure communications.',
-    features: [
+    description: 'Next-generation quantum internet security gateway providing unbreakable encryption, quantum key distribution, and post-quantum cryptography for ultra-secure communications.',    features: [
       'Quantum key distribution (QKD)Post-quantum cryptographyQuantum-resistant algorithmsReal-time quantum encryptionQuantum network securityQuantum threat detectionQuantum-safe protocolsQuantum network monitoring';
       'Quantum key managementQuantum security analytics'
     ];
@@ -141,8 +168,7 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [
     tagline: 'Revolutionary DNA-based computation and data storage',
     price: '$25,999',
     period: '/month',
-    description: 'Groundbreaking platform leveraging DNA molecules for ultra-dense data storage and parallel computing, enabling massive computational power in microscopic spaces.',
-    features: [
+    description: 'Groundbreaking platform leveraging DNA molecules for ultra-dense data storage and parallel computing, enabling massive computational power in microscopic spaces.',    features: [
       'DNA data encoding/decodingParallel DNA computationUltra-dense data storageDNA synthesis automationDNA sequencing integrationMolecular computingDNA-based algorithmsBiocompatible interfaces';
       'DNA error correctionDNA computing analytics'
     ];
@@ -168,8 +194,7 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [
     realImplementation: true,
     implementationDetails: 'Functional DNA computing platform with DNA synthesis, sequencing integration, and molecular computing capabilities.',
     launchDate: '2024-09-01', customers: 3,
-    rating: 5.0,
-    reviews: 2
+    rating: 5.0,    reviews: 2
   };
   // Space & Metaverse Tech
   {
@@ -177,8 +202,7 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [
     tagline: 'Automated asteroid mining and space resource extraction',
     price: '$45,999',
     period: '/month',
-    description: 'Revolutionary platform for automated asteroid mining, space resource extraction, and orbital manufacturing. Enables sustainable space exploration and resource utilization.',
-    features: [
+    description: 'Revolutionary platform for automated asteroid mining, space resource extraction, and orbital manufacturing. Enables sustainable space exploration and resource utilization.',    features: [
       'Asteroid identification and mappingAutomated mining operationsSpace resource extractionOrbital manufacturingSpace logistics managementResource processing automationSpace safety protocolsResource transportation';
       'Space mining analyticsRegulatory compliance tools'
     ];
@@ -212,8 +236,7 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [
     id: 'metaverse-development-platform', name: 'Metaverse Development Platform',
     tagline: 'Build immersive virtual worlds and digital experiences', price: '$499',
     period: '/month',
-    description: 'Comprehensive platform for creating immersive metaverse experiences, virtual worlds, and digital reality applications with advanced AI, blockchain, and spatial computing.',
-    features: [
+    description: 'Comprehensive platform for creating immersive metaverse experiences, virtual worlds, and digital reality applications with advanced AI, blockchain, and spatial computing.',    features: [
       '3D world building toolsAI-powered NPCsBlockchain integrationVR/AR supportMulti-user collaborationReal-time renderingSpatial audioDigital asset marketplace';
       'Metaverse analyticsCross-platform deployment'
     ];
@@ -240,16 +263,14 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [
     realImplementation: true,
     implementationDetails: 'Full-featured metaverse development platform with 3D tools, AI integration, and blockchain capabilities.',
     launchDate: '2024-07-01', customers: 120,
-    rating: 4.7,
-    reviews: 67
+    rating: 4.7,    reviews: 67
   };
   // Enterprise IT Solutions
   {
     id: 'autonomous-devops-platform', name: 'Autonomous DevOps Platform',
     tagline: 'Fully autonomous DevOps operations and infrastructure management', price: '$799',
     period: '/month',
-    description: 'Revolutionary DevOps platform that operates completely autonomously, managing infrastructure, deployments, monitoring, and optimization without human intervention.',
-    features: [
+    description: 'Revolutionary DevOps platform that operates completely autonomously, managing infrastructure, deployments, monitoring, and optimization without human intervention.',    features: [
       'Autonomous infrastructure managementSelf-healing systemsAutomated deployment pipelinesIntelligent monitoringPredictive maintenanceAuto-scaling capabilitiesSecurity automationPerformance optimization';
       'Cost optimizationCompliance automation'
     ];
@@ -283,8 +304,7 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [
     id: 'zero-trust-network-architecture', name: 'Zero Trust Network Architecture',
     tagline: 'Never trust, always verify - comprehensive zero trust security',
     price: '$599', period: '/month',
-    description: 'Complete zero trust network architecture implementation providing comprehensive security through continuous verification, micro-segmentation, and least-privilege access.',
-    features: [
+    description: 'Complete zero trust network architecture implementation providing comprehensive security through continuous verification, micro-segmentation, and least-privilege access.',    features: [
       'Continuous identity verificationMicro-segmentationLeast-privilege accessMulti-factor authenticationBehavioral analyticsThreat detectionAccess control policiesNetwork monitoring';
       'Security automationCompliance reporting'
     ];

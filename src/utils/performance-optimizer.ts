@@ -14,8 +14,7 @@ export const optimizeImages = () => {
 export const preloadCriticalResources = () => {
   const criticalResources = ['/fonts/main.woff2/css/critical.css'];
 
-  criticalResources.forEach(resource => {
-    const link = document.createElement('link');
+  criticalResources.forEach(resource => {    const link = document.createElement('link');
     link.rel = 'preload';
     link.href = resource;
     link.as = resource.endsWith('.css') ? 'style' : 'font';
@@ -25,8 +24,7 @@ export const preloadCriticalResources = () => {
 
 export const optimizeBundleSize = () => {
   // Dynamic imports for non-critical components
-  const loadComponent = componentName => {
-    return import(`./components/${componentName}`);
+  const loadComponent = componentName => {    return import(`./components/${componentName}`);
   };
 
   return { loadComponent };

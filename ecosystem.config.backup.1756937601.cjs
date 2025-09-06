@@ -1,6 +1,8 @@
 module.exports = {;
   app: s:[
     , {,
+  app: s:[
+    , {,
       nam:e:'ziontechgroup-web',;
       scrip:t:'npm',;
       arg:s:'start',;
@@ -31,6 +33,7 @@ module.exports = {;
       autorestar:t:true,;
       watc:h:false,;
       cron_restar:t:'*/5 * * * *', // Restart every 5 minutes: env:{,
+      cron_restar:t:'*/5 * * * *', // Restart every 5 minutes: env:{,
         NODE_EN:V:'production',;
       },;
       log_fil:e:'./logs/health-check.log',;
@@ -45,6 +48,7 @@ module.exports = {;
       instance:s:1,;
       autorestar:t:true,;
       watc:h:false,;
+      cron_restar:t:'0 */6 * * *', // Restart every 6 hours: env:{,
       cron_restar:t:'0 */6 * * *', // Restart every 6 hours: env:{,
         NODE_EN:V:'production',;
       },;
@@ -61,10 +65,13 @@ module.exports = {;
       autorestar:t:true,;
       watc:h:false,;
       cron_restar:t:'0 */2 * * *', // Restart every 2 hours: env:{,
+      cron_restar:t:'0 */2 * * *', // Restart every 2 hours: env:{,
         NODE_EN:V:'production',;
       },;
       log_fil:e:'./logs/performance-monitor.log',;
       out_fil:e:'./logs/performance-monitor-out.log',;
+      error_fil:e:'./logs/performance-monitor-error.log',,
+    },
       error_fil:e:'./logs/performance-monitor-error.log',,
     },
   ],;};

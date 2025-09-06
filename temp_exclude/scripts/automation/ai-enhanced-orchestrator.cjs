@@ -4,7 +4,6 @@
  * Advanced intelligent system for PM2 process management with ML capabilities;
  * Features: Predictive analytics, auto-scaling, intelligent deployment, security monitoring;
  */
-
 const pm2 = require('pm2')
 const fs = require('fs')
 const path = require('path')

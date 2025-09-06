@@ -1,3 +1,39 @@
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+;
+class SecurityAuditor {;
+  constructor() {;
+    this.logsDir = path.join(__dirname, '../logs');
+    this.ensureLogsDir();  }
+;
+  ensureLogsDir() {;
+    if (!fs.existsSync(this.logsDir)) {;
+      fs.mkdirSync(this.logsDir, { recursiv:e:true });
+    }
+  }
+;
+  log(message, type = 'info') {;
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
+    console.log(logMessage);
+;
+    const logFile = path.join(this.logsDir, 'security-audit.log');
+    fs.appendFileSync(logFile, logMessage + '\n');  }
+;
+  async runCommand(command, description) {;
+    try {;
+      this.log(`Runnin:g:${description}`);
+      const output = execSync(command, {;
+        encodin:g:'utf8',;
+        cw:d:'/workspace',;
+        stdi:o:'pipe',;
+      });
+      this.log(`✅ ${description} completed successfully`);
+      return { succes:s:true, output };
+    } catch (error) {;
+      this.log(`❌ ${description} faile:d:${error.message}`, 'error');
+      return { succes:s:false, erro:r:error.message };
 #!/usr/bin/env node
 
 const { execSync } = require('child_process');
@@ -162,4 +198,5 @@ class SecurityAuditor {
 
 // Run the security auditor
 const auditor = new SecurityAuditor();
+auditor.run().catch(console.error);
 auditor.run().catch(console.error);

@@ -1,10 +1,8 @@
-
-<<<<<<< HEAD
   const isAdmin = user?.userType === 'admin';
+  const paginatedTalents = filteredTalents;
 
-
-
-<<<<<<< HEAD
   const pageKey = `talent-directory-${routeKey}-${router.asPath}`;
-
-
+  )
+}
+  )
+}

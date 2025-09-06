@@ -1,10 +1,13 @@
 import React from 'react';
 import type { Room } from 'livekit-client';
+
 type Props = {
+  room: Room | null;
+  onLeave: () => void;
+  accent?: 'blue' | 'cyan';};type Props = {
   room: Room | null,
   onLeave: () => void,
   accent?: 'blue' | 'cyan'
-};
 
 export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
   const [micEnabled, setMicEnabled] = React.useState(true);
@@ -15,38 +18,59 @@ export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
 
   const toggleMic = async () => {
     if (!room) return;
-    const enabled = await room.localParticipant.setMicrophoneEnabled(!micEnabled);
+    const enabled =
+      await room.localParticipant.setMicrophoneEnabled(!micEnabled);
+    setMicEnabled(enabled);  };    const enabled = await room.localParticipant.setMicrophoneEnabled(!micEnabled);
     setMicEnabled(enabled)
   };
 
   const toggleCam = async () => {
     if (!room) return;
     const enabled = await room.localParticipant.setCameraEnabled(!camEnabled);
-    setCamEnabled(enabled)
+    setCamEnabled(enabled);  };    setCamEnabled(enabled)
   };
 
   const toggleScreenShare = async () => {
     if (!room) return;
     try {
-      const enabled = await room.localParticipant.setScreenShareEnabled(!sharing);
+      const enabled =
+        await room.localParticipant.setScreenShareEnabled(!sharing);
+      setSharing(enabled);
+    } catch (e) {
+      console.warn('Screen share failed', e);    }
+  };
+
+  return (      const enabled = await room.localParticipant.setScreenShareEnabled(!sharing);
       setSharing(enabled)
     } catch (e) {
       console.warn('Screen share failed', e)
-    }
   };
 
   return (
-    <div className="flex items-center gap-3">
-      <button onClick={toggleMic} className={`px-4 py-2 rounded ${accentClass} text-white`}>
-        {micEnabled ? 'Mute' : 'Unmute'}
+    <div className='flex items-center gap-3'>
+      <button
+        onClick={toggleMic}
+        className={`px-4 py-2 rounded ${accentClass} text-white`}
+      >
       </button>
-      <button onClick={toggleCam} className={`px-4 py-2 rounded ${accentClass} text-white`}>
+      <button
+        onClick={toggleCam}
+        className={`px-4 py-2 rounded ${accentClass} text-white`}
+      >
         {camEnabled ? 'Stop Video' : 'Start Video'}
       </button>
-      <button onClick={toggleScreenShare} className="px-4 py-2 rounded bg-gray-700 text-white">
+      <button
+        onClick={toggleScreenShare}
+        className='px-4 py-2 rounded bg-gray-700 text-white'
+      >
         {sharing ? 'Stop Share' : 'Share Screen'}
       </button>
-      <button onClick={onLeave} className="px-4 py-2 rounded bg-red-600 text-white">Leave</button>
+      <button
+        onClick={onLeave}
+        className='px-4 py-2 rounded bg-red-600 text-white'
+      >
+        Leave
+      </button>
     </div>
   );
 }
