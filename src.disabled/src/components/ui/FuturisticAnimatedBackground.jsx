@@ -1,3 +1,9 @@
 import React,{ useEffect,useRef } from \'react\';\'; import { motion } from \'framer-motion\';\'; export const FuturisticAnimatedBackground = ({ variant = \'cyberpunk\',intensity = \'medium\',className = \'' }) => {}; const canvasRef = useRef(null); const particlesRef = useRef([]); const animationRef = useRef(null); useEffect(() => {}; const canvas = canvasRef && canvasRef.current; if(!canvas); return;\'; const ctx = canvas && canvas.getContext(\'2d\'); if(!ctx); return; )
 const React,{ useEffect,useRef } from "react";"; import { motion } from "framer-motion";"; export const FuturisticAnimatedBackground = ({ variant = "cyberpunk",intensity = "medium",className = "" }) => {}; const canvasRef = useRef(null); const particlesRef = useRef([]); const animationRef = useRef(null); useEffect(() => {}; const canvas = canvasRef && canvasRef.current; if(!canvas); return;"; const ctx = canvas && canvas.getContext("2d"); if(!ctx); return; )""
+<<<<<<< HEAD
+
 import _React,{ useEffect,useRef } from 'react';'; import { motion } from 'framer-motion';'; export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk',intensity = 'medium',className = '' }) => {}; const canvasRef = useRef(null); const particlesRef = useRef([]); const animationRef = useRef(null); useEffect(() => {}; const canvas = canvasRef && canvasRef.current; if(!canvas); return;'; const ctx = canvas && canvas.getContext('2d'); if(!ctx); return; )
+
+=======
+import _React,{ useEffect,useRef } from 'react';'; import { motion } from 'framer-motion';'; export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk',intensity = 'medium',className = '' }) => {}; const canvasRef = useRef(null); const particlesRef = useRef([]); const animationRef = useRef(null); useEffect(() => {}; const canvas = canvasRef && canvasRef.current; if(!canvas); return;'; const ctx = canvas && canvas.getContext('2d'); if(!ctx); return; )
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

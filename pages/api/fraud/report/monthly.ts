@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getFraudStore } from "../../../../utils/fraud/store";
@@ -23,7 +30,13 @@ export default async function handler(
   }
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
 
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getFraudStore  } from '../../../../utils / fraud / store';
 ;
@@ -36,8 +49,34 @@ if ( {) {
   $2
 }
     res.status (405).json ({ error: "Method not allowed" });
+<<<<<<< HEAD
+=======
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import { getFraudStore } from "../../../../utils/fraud/store";
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  if (req.method !== "GET") {;
+    res.status(405).json({ error: "Method not allowed" });
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { getFraudStore } from '../../../../utils/fraud/store';
+export default async function handler(req, res) {
+  try {
+  if (req.method !== '$1') {
+    res.status(405).json({ error: 'Method not allowed' });
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     return;
   }
+<<<<<<< HEAD
+=======
+    return;
+  }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const month =;
     (req.query.month as string) || new Date ().toISOString ().slice (0, 7);
   const store = getFraudStore ();
@@ -45,6 +84,24 @@ if ( {) {
   res.status (200).json (report);
 }
 
+<<<<<<< HEAD
+=======
+  const month =
+    (req.query.month as string) |new Date().toISOString().slice(0, 7);
+  const store = getFraudStore();
+  const report = await store.generateMonthlyReport(month);
+  res.status(200).json(report);
+}
+
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const month = (req.query.month as string) || new Date().toISOString().slice(0, 7);
   const store = getFraudStore();
   const report = await store.generateMonthlyReport(month);
@@ -57,4 +114,12 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

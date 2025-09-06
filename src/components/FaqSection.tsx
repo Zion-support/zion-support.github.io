@@ -1,41 +1,32 @@
 import React, { useState } from 'react';
-import { ChevronDown, ChevronUp } from 'lucide-react';
 
-const FaqSection: React.FC = () => {
+const FaqSection = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const faqs = [
     {
       question: "What services does Zion Tech offer?",
-      answer: "We offer comprehensive AI solutions, IT services, cloud infrastructure, cybersecurity, data analytics, and digital transformation services. Our team specializes in machine learning, cloud migration, system administration, and business process optimization."
+      answer: "We offer comprehensive AI solutions, IT services, cloud migration, cybersecurity, data analytics, and digital transformation services to help businesses modernize and grow."
     },
     {
-      question: "How long does a typical project take?",
-      answer: "Project timelines vary based on complexity and scope. Simple implementations can take 2-4 weeks, while comprehensive digital transformations may take 3-6 months. We provide detailed timelines during the discovery phase and keep you updated throughout the project."
+      question: "How long does implementation take?",
+      answer: "Implementation timelines vary based on project complexity. Simple solutions can be deployed in 2-4 weeks, while complex enterprise solutions may take 3-6 months. We provide detailed timelines during consultation."
     },
     {
       question: "Do you provide ongoing support?",
-      answer: "Yes, we offer 24/7 support for all our clients. Our support includes monitoring, maintenance, troubleshooting, and continuous optimization. We also provide dedicated account managers for enterprise clients."
+      answer: "Yes, we offer 24/7 support for all our services. Our support includes monitoring, maintenance, updates, and technical assistance to ensure optimal performance."
     },
     {
-      question: "What industries do you serve?",
-      answer: "We serve a wide range of industries including healthcare, finance, manufacturing, retail, education, and government. Our solutions are tailored to meet the specific compliance and security requirements of each industry."
+      question: "What makes Zion Tech different?",
+      answer: "We combine cutting-edge AI technology with deep industry expertise, offer personalized solutions, provide comprehensive support, and maintain a track record of successful implementations across various industries."
+    },
+    {
+      question: "Do you work with small businesses?",
+      answer: "Absolutely! We work with businesses of all sizes, from startups to large enterprises. Our solutions are scalable and can be tailored to fit any budget and requirement."
     },
     {
       question: "How do you ensure data security?",
-      answer: "We implement enterprise-grade security measures including SOC 2 compliance, end-to-end encryption, regular security audits, and advanced threat detection. All our team members are security-certified and we follow industry best practices."
-    },
-    {
-      question: "Can you work with our existing systems?",
-      answer: "Absolutely! We specialize in integrating with existing systems and can work with virtually any technology stack. Our team will assess your current infrastructure and create a seamless integration plan."
-    },
-    {
-      question: "What is your pricing model?",
-      answer: "We offer flexible pricing models including project-based, retainer, and subscription options. Pricing depends on the scope of work, timeline, and specific requirements. We provide detailed quotes after understanding your needs."
-    },
-    {
-      question: "Do you offer training for our team?",
-      answer: "Yes, we provide comprehensive training programs for your team to ensure they can effectively use and maintain the solutions we implement. Training includes documentation, hands-on sessions, and ongoing support."
+      answer: "We implement enterprise-grade security measures including encryption, access controls, regular security audits, compliance with industry standards, and continuous monitoring to protect your data."
     }
   ];
 
@@ -46,54 +37,36 @@ const FaqSection: React.FC = () => {
   return (
     <section className="py-16 px-4 bg-gray-50">
       <div className="container mx-auto max-w-4xl">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">Frequently Asked Questions</h2>
-          <p className="text-xl text-gray-600">
-            Find answers to common questions about our services and processes.
-          </p>
-        </div>
-
+        <h2 className="text-4xl font-bold text-center mb-4">Frequently Asked Questions</h2>
+        <p className="text-xl text-gray-600 text-center mb-12">
+          Find answers to common questions about our services and processes.
+        </p>
         <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-lg shadow-md overflow-hidden"
-            >
+            <div key={index} className="bg-white rounded-lg shadow-md">
               <button
+                className="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none focus:ring-2 focus:ring-blue-500"
                 onClick={() => toggleFaq(index)}
-                className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
               >
-                <h3 className="text-lg font-semibold text-gray-900 pr-4">
-                  {faq.question}
-                </h3>
-                {openIndex === index ? (
-                  <ChevronUp className="w-5 h-5 text-blue-600 flex-shrink-0" />
-                ) : (
-                  <ChevronDown className="w-5 h-5 text-gray-400 flex-shrink-0" />
-                )}
+                <span className="text-lg font-semibold">{faq.question}</span>
+                <svg
+                  className={`w-5 h-5 transform transition-transform ${
+                    openIndex === index ? 'rotate-180' : ''
+                  }`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
               </button>
-              
               {openIndex === index && (
                 <div className="px-6 pb-4">
-                  <p className="text-gray-600 leading-relaxed">
-                    {faq.answer}
-                  </p>
+                  <p className="text-gray-600">{faq.answer}</p>
                 </div>
               )}
             </div>
           ))}
-        </div>
-
-        <div className="mt-12 text-center">
-          <div className="bg-blue-600 rounded-lg p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4">Still have questions?</h3>
-            <p className="text-xl mb-6 opacity-90">
-              Our team is here to help. Get in touch with us for personalized answers.
-            </p>
-            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-              Contact Us
-            </button>
-          </div>
         </div>
       </div>
     </section>

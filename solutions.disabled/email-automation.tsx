@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react';
 interface EmailautomationProps {
   // Add props here as needed
@@ -6,6 +14,13 @@ import React from 'react';
 interface EmailautomationProps {
   // Add props here as needed
 
+<<<<<<< HEAD
+
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function Emailautomation({ }: EmailautomationProps) {
   return (
     <div>
@@ -14,3 +29,20 @@ export default function Emailautomation({ }: EmailautomationProps) {
     </div>
   );
 
+<<<<<<< HEAD
+}
+
+<<<<<<< HEAD
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+}
+}
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

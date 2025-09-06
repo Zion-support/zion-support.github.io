@@ -620,7 +620,11 @@ export class NavigationGenerator {;
         id: 'company',;
         name: 'Company',;
         slug: 'company',;
+<<<<<<< HEAD
+        icon: '🏢',;
+=======
         icon: '',;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         serviceCount: 0,;
         services: [],;
         priority: 1;
@@ -629,7 +633,11 @@ export class NavigationGenerator {;
         id: 'resources',;
         name: 'Resources',;
         slug: 'resources',;
+<<<<<<< HEAD
+        icon: '📚',;
+=======
         icon: '',;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         serviceCount: 0,;
         services: [],;
         priority: 2;
@@ -649,9 +657,15 @@ export class NavigationGenerator {;
   // Get category icon;
   private getCategoryIcon(categoryName: string): string {;
     const iconMap: { [key: string]: string } = {;
+<<<<<<< HEAD
+      'AI & Machine Learning': '🤖Cybersecurity': '🔒Infrastructure': '🏗️Blockchain': '⛓️Content & Marketing': '📝Research & Development': '🔬Creative AI': '🎨Legal AI': '⚖️Healthcare AI': '🏥';
+    },;
+    return iconMap[categoryName] || '🚀';
+=======
       'AI & Machine Learning': 'Cybersecurity': 'Infrastructure': 'Blockchain': 'Content & Marketing': 'Research & Development': 'Creative AI': 'Legal AI': 'Healthcare AI': '';
     },;
     return iconMap[categoryName] || '';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 ;
   // Get category priority;
@@ -675,43 +689,71 @@ export class NavigationGenerator {;
     return [;
       {;
         id: 'home',;
+<<<<<<< HEAD
+        label: '🏠 Home',;
+=======
         label: ' Home',;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         href: '/',;
         priority: 1;
       },;
       {;
         id: 'explore',;
+<<<<<<< HEAD
+        label: '🔍 Explore',;
+=======
         label: ' Explore',;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         href: '/explore',;
         priority: 2;
       },;
       {;
         id: 'services',;
+<<<<<<< HEAD
+        label: '🚀 Services',;
+=======
         label: ' Services',;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         href: '/services',;
         priority: 3;
       },;
       {;
         id: 'automation',;
+<<<<<<< HEAD
+        label: '⚡ Automations',;
+=======
         label: ' Automations',;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         href: '/automation',;
         priority: 4;
       },;
       {;
         id: 'reports',;
+<<<<<<< HEAD
+        label: '📊 Reports',;
+=======
         label: ' Reports',;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         href: '/reports',;
         priority: 5;
       },;
       {;
         id: 'newsroom',;
+<<<<<<< HEAD
+        label: '📰 Updates',;
+=======
         label: ' Updates',;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         href: '/newsroom',;
         priority: 6;
       },;
       {;
         id: 'search',;
+<<<<<<< HEAD
+        label: '🔎 Search',;
+=======
         label: ' Search',;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         href: '/search',;
         priority: 7;
       }

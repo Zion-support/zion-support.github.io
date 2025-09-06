@@ -1,131 +1,49 @@
-import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
+import React from 'react';
 
-interface Testimonial {
-  id: number;
-  name: string;
-  company: string;
-  role: string;
-  content: string;
-  rating: number;
-  avatar?: string;
-}
-
-const TestimonialCarousel: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const testimonials: Testimonial[] = [
+const TestimonialCarousel = () => {
+  const testimonials = [
     {
       id: 1,
       name: "Sarah Johnson",
-      company: "TechCorp Solutions",
-      role: "CTO",
-      content: "Zion Tech transformed our entire infrastructure. Their AI solutions increased our efficiency by 300% and their support team is exceptional.",
-      rating: 5,
-      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face"
+      company: "TechCorp Inc.",
+      content: "Zion Tech transformed our business with their AI solutions. The results exceeded our expectations.",
+      rating: 5
     },
     {
       id: 2,
       name: "Michael Chen",
-      company: "InnovateLabs",
-      role: "CEO",
-      content: "The cybersecurity solutions provided by Zion Tech are top-notch. We've had zero security incidents since implementing their systems.",
-      rating: 5,
-      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
+      company: "DataFlow Systems",
+      content: "Outstanding IT services and support. They helped us migrate to the cloud seamlessly.",
+      rating: 5
     },
     {
       id: 3,
       name: "Emily Rodriguez",
-      company: "DataFlow Inc",
-      role: "Data Director",
-      content: "Their cloud migration services were seamless. We saved 40% on infrastructure costs while improving performance significantly.",
-      rating: 5,
-      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
-    },
-    {
-      id: 4,
-      name: "David Kim",
-      company: "FutureTech",
-      role: "VP Engineering",
-      content: "Zion Tech's digital transformation approach helped us modernize our legacy systems without any downtime. Highly recommended!",
-      rating: 5,
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
+      company: "SecureNet Ltd.",
+      content: "Their cybersecurity solutions are top-notch. We feel completely protected.",
+      rating: 5
     }
   ];
 
-  const nextTestimonial = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-  };
-
-  const prevTestimonial = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
-
-  const currentTestimonial = testimonials[currentIndex];
-
   return (
-    <div className="relative max-w-4xl mx-auto">
-      <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
-        <div className="text-center mb-8">
-          <div className="flex justify-center mb-4">
-            {[...Array(5)].map((_, i) => (
-              <Star
-                key={i}
-                className={`w-6 h-6 ${
-                  i < currentTestimonial.rating
-                    ? 'text-yellow-400 fill-current'
-                    : 'text-gray-300'
-                }`}
-              />
-            ))}
+    <div className="relative">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {testimonials.map((testimonial) => (
+          <div key={testimonial.id} className="bg-white p-6 rounded-lg shadow-lg">
+            <div className="flex mb-4">
+              {[...Array(testimonial.rating)].map((_, i) => (
+                <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p className="text-gray-600 mb-4">"{testimonial.content}"</p>
+            <div>
+              <p className="font-semibold text-gray-900">{testimonial.name}</p>
+              <p className="text-sm text-gray-500">{testimonial.company}</p>
+            </div>
           </div>
-          <blockquote className="text-xl md:text-2xl text-gray-700 italic leading-relaxed">
-            "{currentTestimonial.content}"
-          </blockquote>
-        </div>
-
-        <div className="flex items-center justify-center space-x-4">
-          <div className="w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center text-white font-bold text-xl">
-            {currentTestimonial.name.charAt(0)}
-          </div>
-          <div className="text-center">
-            <h4 className="text-lg font-semibold text-gray-900">
-              {currentTestimonial.name}
-            </h4>
-            <p className="text-gray-600">
-              {currentTestimonial.role} at {currentTestimonial.company}
-            </p>
-          </div>
-        </div>
-
-        <div className="flex justify-center mt-8 space-x-2">
-          {testimonials.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentIndex(index)}
-              className={`w-3 h-3 rounded-full transition-colors ${
-                index === currentIndex
-                  ? 'bg-blue-600'
-                  : 'bg-gray-300 hover:bg-gray-400'
-              }`}
-            />
-          ))}
-        </div>
-
-        <div className="flex justify-center mt-6 space-x-4">
-          <button
-            onClick={prevTestimonial}
-            className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
-          >
-            <ChevronLeft className="w-6 h-6 text-gray-600" />
-          </button>
-          <button
-            onClick={nextTestimonial}
-            className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
-          >
-            <ChevronRight className="w-6 h-6 text-gray-600" />
-          </button>
-        </div>
+        ))}
       </div>
     </div>
   );
