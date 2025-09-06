@@ -1,24 +1,8 @@
-}
   }
 import { ShoppingCart } from 'lucide-react';import { useAuth } from '@/hooks/useAuth';import { ShoppingCart } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 import { LoginModal } from '@/components/auth/LoginModal';
 
-export function CartDrawer() {;
-  const items = useSelector((s: RootState) => s && s.cart.items);  const count = items && items.reduce((sum, i) => sum + i && i.quantity, 0);  const items = useSelector((s: RootState) => s && s.cart.items),;
-  const count = items && items.reduce((sum, i) => sum + i && i.quantity, 0);
-
-import { ShoppingCart } from 'lucide-react'
-import { useAuth } from '@/hooks/useAuth';
-import { LoginModal } from '@/components/auth/LoginModal';
-export function CartDrawer() {
-
-  const { isAuthenticated } = useAuth();
-  const [loginOpen, setLoginOpen] = React && React.useState(false);
-
-
-
-  const handleClick = (e: React.MouseEvent) => {
     if (!isAuthenticated) {
       e.preventDefault()
       setLoginOpen(true)
@@ -43,10 +27,6 @@ export function CartDrawer() {;
     }
   },
 
-
-
-
-
   return (
     <>
       <Link href="/cart" aria-label="Cart" className="relative p-1" onClick={handleClick}>
@@ -55,3 +35,13 @@ export function CartDrawer() {;
 
 
 ;
+          <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center">
+            {count}
+
+          </span>
+        )}
+      </Link>;
+      <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
+    </>;
+  );
+}

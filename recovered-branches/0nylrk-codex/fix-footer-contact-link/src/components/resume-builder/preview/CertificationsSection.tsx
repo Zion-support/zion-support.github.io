@@ -1,36 +1,10 @@
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import { Certification  } from '@/types/resume';
-import { format } from 'date-fns';
-interface CertificationsSectionProps {
-  certifications: Certification[];
-=======
-<<<<<<< HEAD
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-import { Certification  } from '@/types/resume';
-import { format } from 'date-fns';
-interface CertificationsSectionProps {
-  certifications: Certification[]
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import {Certification} from '@/types/resume';
 import {format} from 'date-fns';
 interface CertificationsSectionProps {
   certifications: Certification[]
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
 import {Certification} from '@/types / resume';
 import {format} from 'date - fns';
 
@@ -38,30 +12,10 @@ interface CertificationsSectionProps {
   certifications: Certification[];
 }
 
-
-
-import {Certification} from '@/types/resume';
-import {format} from 'date-fns';
-interface CertificationsSectionProps {
-  certifications: Certification[]
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { Certification } from '@/types/resume',;
 import { format } from 'date-fns',;
 interface CertificationsSectionProps {;
   certifications: Certification[];
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 }
 ;
 export function CertificationsSection({ certifications }: CertificationsSectionProps) {;
@@ -70,13 +24,6 @@ export function CertificationsSection({ certifications }: CertificationsSectionP
     if (typeof date === 'string') {;
       return format(new Date(date), 'MMM yyyy');
     }
-    return format(date, 'MMM yyyy');
-  };
-    return format(date, 'MMM yyyy')
-  },
-
-  if (certifications.length === 0) return null,
-  
   return (
     <div>
       <h2 className="text-lg font-semibold border-b mb-3">Certifications</h2>
@@ -90,57 +37,18 @@ export function CertificationsSection({ certifications }: CertificationsSectionP
                   {formatDate(cert.issue_date)}
                   {cert.expiration_date && ` - ${formatDate(cert.expiration_date)}`}
                 </span>
-=======
-import {Certification} from '@/types/resume';
-import {format} from 'date-fns';
-interface CertificationsSectionProps {;
+                </span>;
+interface CertificationsSectionProps {
   certifications: Certification[];
 }
-
-export function CertificationsSection(): any ({ certifications }: CertificationsSectionProps) {;
-  const formatDate = (date: Date | string | undefined) => {;
-    if (!date) return '',;
-    if (typeof date === 'string') {;
-      return format(new Date(date), 'MMM yyyy');
-    }
-    return format(date, 'MMM yyyy');
-  };
-
-  if (certifications && certifications.length === 0) return null;
-
-  return (
-    <div>;
-      <h2 className="text-lg font-semibold border-b mb-3">Certifications</h2>;
-      <div className="space-y-2">;
-        {certifications && certifications.map((cert, index) => (;
-          <div key={cert && cert.id || index} className="space-y-1">;
-            <div className="flex justify-between">;
-              <h3 className="text-sm font-medium">{cert && cert.name}</h3>;
-              {cert && cert.issue_date && (;
-                <span className="text-sm">;
-                  {formatDate(cert && cert.issue_date)}
-                  {cert && cert.expiration_date && ` - ${formatDate(cert && cert.expiration_date)}`}
-                </span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               )}
             </div>;
-            <p className="text-sm">{cert && cert.issuing_organization}</p>;
-            {cert && cert.credential_url && (;
+            <p className="text-sm">{cert.issuing_organization}</p>;
+            {cert.credential_url && (;
               <p className="text-sm">;
-                <a href={cert && cert.credential_url} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">;
+                <a href={cert.credential_url} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">;
                   View Credential;
                 </a>;
-              </p>;
-            )}
-          </div>;
-        ))}
-
-      </div>;
-    </div>;
-  );
-}
-
-=======
 export /**
  * CertificationsSection - Function description
  */
@@ -188,4 +96,3 @@ if (return null) {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

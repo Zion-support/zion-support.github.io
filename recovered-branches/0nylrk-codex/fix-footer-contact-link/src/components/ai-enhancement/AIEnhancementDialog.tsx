@@ -1,22 +1,3 @@
-
-<<<<<<< HEAD
-import React from 'react';
-import { Dialog;
-  DialogContent;
-  DialogHeader;
-  DialogTitle } from '@/components/ui/dialog';
-import { AIEnhancementPanel  } from './AIEnhancementPanel';
-import { AIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
-interface AIEnhancementDialogProps {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   title: string,
   isOpen: boolean,
   onClose: () => void,
@@ -26,20 +7,12 @@ interface AIEnhancementDialogProps {
 }
 
 export function AIEnhancementDialog({;
+import React from 'react';
   title;
   isOpen;
   onClose;
   onApply;
   defaultOptions;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react',;
 import {;
   Dialog,;
@@ -66,18 +39,7 @@ interface AIEnhancementDialogProps {;
   initialContent?: string
 }
 export function AIEnhancementDialog({
-  title,
-  isOpen,
-  onClose,
-  onApply,
-  defaultOptions,
-  initialContent
-}: AIEnhancementDialogProps) {
 
-  const handleApply = (content: string) => {
-    onApply(content)
-    onClose()
-  }
   },
 
   return (
@@ -91,14 +53,6 @@ export function AIEnhancementDialog({
           defaultOptions={defaultOptions}
           onApply={handleApply}
           initialContent={initialContent}
-
-        />;
-      </DialogContent>;
-    </Dialog>;
-  );
-}
-
-=======
 import {Dialog, DialogContent, DialogHeader, DialogTitle} from '@/components / ui / dialog';
 import {AIEnhancementPanel} from './AIEnhancementPanel';
 import {AIEnhancementOptions} from '@/hooks / useAIContentEnhancer';
@@ -134,4 +88,3 @@ function AIEnhancementDialog() {
       </DialogContent>;
     </Dialog>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

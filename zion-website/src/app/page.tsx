@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import {
   LightBulbIcon
   CpuChipIcon
@@ -12,15 +7,6 @@ import {
   UserGroupIcon
 } from '@heroicons/react/24/outline';
 import React from 'react';
-=======
-<<<<<<< HEAD
-=======
-
-
-import React from 'react';
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import { 
   LightBulbIcon,
   CpuChipIcon, 
@@ -29,24 +15,10 @@ import {
   ChartBarIcon,
   UserGroupIcon;
 } from '@heroicons/react/24/outline';
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
-
-=======
-=======
-import React from 'react';
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const features = [
   {
     name: 'AI-Powered Research'
@@ -108,124 +80,6 @@ const solutions = [
   }
 ];
 export default function HomePage() {
-=======
-  LightBulbIcon,
-  CpuChipIcon,
-  GlobeAltIcon,
-  ShieldCheckIcon,
-  ChartBarIcon,
-  UserGroupIcon;
-} from '@heroicons / react / 24 / outline';
-;
-const features = [;
-=======
-  LightBulbIcon
-  CpuChipIcon
-  GlobeAltIcon
-  ShieldCheckIcon
-  ChartBarIcon
-  UserGroupIcon
-} from '@heroicons/react/24/outline';
-=======
-import React from 'react';
-=======
-import { 
-  LightBulbIcon,
-  CpuChipIcon, 
-  GlobeAltIcon, 
-  ShieldCheckIcon,
-  ChartBarIcon,
-  UserGroupIcon;
-} from '@heroicons/react/24/outline';
-=======
-import React from 'react';
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-const features = [
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-  {
-    name: 'AI - Powered Research',
-    description: 'Cutting - edge artificial intelligence that accelerates research and discovery across all domains.',
-    icon: LightBulbIcon;
-  },
-  {
-    name: 'Quantum Computing',
-    description: 'Next - generation quantum neural networks for solving complex computational problems.',
-    icon: CpuChipIcon;
-  },
-  {
-    name: 'Global Solutions',
-    description: 'Worldwide deployment of autonomous business operations and digital transformation.',
-    icon: GlobeAltIcon;
-  },
-  {
-    name: 'Enterprise Security',
-    description: 'Military - grade security protocols protecting your most valuable digital assets.',
-    icon: ShieldCheckIcon;
-  },
-  {
-    name: 'Data Analytics',
-    description: 'Advanced analytics and insights driving informed decision - making.',
-    icon: ChartBarIcon;
-  },
-  {
-    name: 'Expert Team',
-    description: 'World - class researchers and engineers pushing the boundaries of technology.',
-    icon: UserGroupIcon;
-  }
-];
-;
-const stats = [;
-  { name: 'Research Papers Published', value: '150+' },
-  { name: 'AI Models Deployed', value: '500+' },
-  { name: 'Global Clients', value: '1000+' },
-  { name: 'Patents Filed', value: '25+' }
-];
-;
-const solutions = [;
-  {
-    name: 'AI Research Assistant',
-    description: 'Autonomous research platform that accelerates scientific discovery.',
-    href: '/solutions / ai - autonomous - research';
-  },
-  {
-    name: 'Quantum Neural Networks',
-    description: 'Next - generation computing for complex problem solving.',
-    href: '/solutions / quantum - neural - networks';
-  },
-  {
-    name: 'Autonomous Business Operations',
-    description: 'AI - powered automation for enterprise efficiency.',
-    href: '/solutions / autonomous - business';
-  },
-  {
-    name: 'IT Asset Management',
-    description: 'Intelligent management of digital infrastructure.',
-    href: '/solutions / it - asset - management';
-  }
-];
-;
-export default /**
- * HomePage - Function description
- */
-function HomePage() {
-  return (
-    <div className="bg-black">
-      {/* Hero section */}
-      <div className="relative isolate px-6 pt-14 lg:px-8">
-        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-              Leading the Future of{' '}
-              <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
-                AI & Technology
-              </span>
-            </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-300">
-              Transform your business with cutting-edge artificial intelligence, quantum computing, and autonomous solutions.
-              Transform your business with cutting-edge artificial intelligence, quantum computing, and autonomous solutions. 
               Join the revolution that's reshaping industries worldwide.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
@@ -234,25 +88,10 @@ function HomePage() {
                 className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105"
               >
                 Get Started
-              </a>
-              <a href="/about" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
-                Learn More <span aria-hidden="true">→</span>
-              </a>
               </Link>
               <a href="/about" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
                 Learn More <span aria-hidden="true">→</span>
               </Link>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
             </div>
           </div>
         </div>
@@ -265,8 +104,6 @@ function HomePage() {
             Everything you need to accelerate innovation
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
-            Our comprehensive suite of AI and technology solutions empowers organizations to achieve breakthrough results
-            Our comprehensive suite of AI and technology solutions empowers organizations to achieve breakthrough results 
             and maintain competitive advantage in the digital age.
           </p>
         </div>
@@ -282,41 +119,10 @@ function HomePage() {
                   <p className="flex-auto">{feature.description}</p>
                   <p className="mt-6">
                     <a href="/solutions" className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200">
-                      Learn more <span aria-hidden="true">→</span>
-                    </a>
-                    </Link>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
                   </p>
                 </dd>
               </div>
             ))}
-          </dl>
-        </div>
-      </div>
-          </dl>;
-        </div>;
-      </div>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       {/* Stats section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:max-w-none">
@@ -335,21 +141,6 @@ function HomePage() {
                 <dd className="order-first text-3xl font-bold tracking-tight text-white">{stat.value}</dd>
               </div>
             ))}
-<<<<<<< HEAD
-          </dl>
-        </div>
-      </div>
-          </dl>;
-        </div>;
-      </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       {/* Solutions showcase */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
@@ -403,7 +194,6 @@ function HomePage() {
           </div>;
         </div>;
       </div>;
-=======
 
               <span className="bg - gradient - to - r from - blue - 400 to - purple - 600 bg - clip - text text - transparent">;
                 AI & Technology;
@@ -480,14 +270,11 @@ function HomePage() {
         </div>;
       </div>;
 
-=======
 
           </dl>;
         </div>;
       </div>;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Solutions showcase */}
       <div className="mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8">;
         <div className="mx - auto max - w-2xl lg:text - center">;
@@ -518,16 +305,6 @@ function HomePage() {
                   <h3 className="mt - 3 text - lg font - semibold leading - 6 text - white group - hover:text - blue - 400 transition - colors duration - 200">;
                     <a href={solution.href}>;
                       <span className="absolute inset - 0" />;
-                      {solution.name}
-
-
-          </div>;
-        </div>;
-      </div>;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* CTA section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
@@ -545,27 +322,7 @@ function HomePage() {
               Get Started
             </a>
             <a href="/solutions" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
-              View Solutions <span aria-hidden="true">→</span>
-            </a>
-            </Link>
-            <a href="/solutions" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
-              View Solutions <span aria-hidden="true">→</span>
-            </Link>
-<<<<<<< HEAD
-          </div>
-        </div>
-      </div>
-    </div>
-          </div>
-        </div>
-      </div>
-    </div>;
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
-=======
                     </a>;
                   </h3>;
                   <p className="mt - 5 line - clamp - 3 text - sm leading - 6 text - gray - 300">{solution.description}</p>;
@@ -608,7 +365,6 @@ function HomePage() {
       </div>;
     </div>);
 }
-=======
                     </a>
                   </h3>
                   <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-300">{solution.description}</p>
@@ -625,19 +381,6 @@ function HomePage() {
                 </div>
               </article>
             ))}
-<<<<<<< HEAD
-          </div>
-        </div>
-      </div>
-=======
-          </div>;
-        </div>;
-      </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* CTA section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
@@ -653,35 +396,16 @@ function HomePage() {
               className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-all duration-200 hover:scale-105"
             >
               Get Started
-<<<<<<< HEAD
-            </a>
-            <a href="/solutions" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
-              View Solutions <span aria-hidden="true">→</span>
-            </a>
-=======
-            </Link>
-            <a href="/solutions" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
-              View Solutions <span aria-hidden="true">→</span>
-            </Link>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           </div>
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           </div>
         </div>
       </div>
     </div>;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
 }
-=======
   )
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

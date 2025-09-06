@@ -1,44 +1,18 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import {serve} from 'https: //deno.land/std@0.208.0/http/server.ts'
-<<<<<<< HEAD
-=======
-import {serve} from 'https: //deno.land/std@0.208.0/http/server.ts',;
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
 
 
 import {serve} from 'https: //deno.land/std@0.208.0/http/server.ts',;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.39.7';
 
-=======
 import {serve} from 'https: //deno && deno.land/std@0 && 0.208.0/http/server && server.ts',
 import {createClient} from 'https: //esm && esm.sh/@supabase/supabase-js@2 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import {serve} from 'https: //deno.land / std@0.208.0 / http / server.ts',
 import {create_client} from 'https: //esm.sh/@supabase / supabase - js@2.39.7';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface TenantInfo {
   id: string;
   brand_name: string;
   subdomain: string;
   custom_domain: string | null;
   primary_color: string;
-
-const supabaseUrl = Deno && Deno.env.get('SUPABASE_URL');
-const supabaseServiceKey = Deno && Deno.env.get('SUPABASE_SERVICE_ROLE_KEY');
-
-if (!supabaseUrl || !supabaseServiceKey) {
-
   throw new Error('Required environment variables are not set')
 }
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
@@ -50,18 +24,6 @@ serve(async (req) => {
       headers: corsHeaders})
   }
   try {
-
-    const url = new URL(req && req.url);
-    const hostnameParam = url && url.searchParams.get('host');
-    const subdomainParam = url && url.searchParams.get('subdomain');
-    
-    // Get hostname from parameters or headers
-    const forwardedHost = req && req.headers.get('x-forwarded-host');
-    const hostname = hostnameParam || 
-      (forwardedHost ? forwardedHost && forwardedHost.split()[0].trim().split(':')[0] : null) ||
-      url && url.hostname;
-
-
     if (!hostname && !subdomainParam) {
       throw new Error('No hostname or subdomain provided')
     }
@@ -98,17 +60,6 @@ serve(async (req) => {
             .eq('subdomain', subdomain)
             .eq('is_active', true)
             .single();
-          if (!subdomainResult.error) {
-            tenantInfo = subdomainResult.data as TenantInfo
-import { serve } from 'https: //deno.land/std@0.208.0/http/server.ts',;
-import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.39.7',;
-interface TenantInfo {;
-  id: string,;
-  brand_name: string,;
-  subdomain: string,;
-  custom_domain: string | null,;
-  primary_color: string,;
-  logo_url: string | null,;
   theme_preset: string;
 }
 const cors_headers = {
@@ -185,30 +136,26 @@ if ( {) {
         .single ();
 ;
       // If no match on custom domain, try subdomain;
-
-      if (!data && !error) {;
-        const subdomain = hostname.split('.')[0],;
-        if (subdomain && !['wwwapplocallocalhost'].includes(subdomain)) {;
-          const subdomainResult = await supabase;
-            .from('whitelabel_tenants');
-            .select('id, brand_name, subdomain, custom_domain, primary_color, logo_url, theme_preset');
-            .eq('subdomain', subdomain);
-            .eq('is_active', true);
-            .single(),;
-          if (!subdomainResult.error) {;
-            tenantInfo = subdomainResult.data as TenantInfo;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+      // Check condition
+if ( {) {
+  $2
+}
+        const subdomain = hostname.split ('.')[0];
+        if () {) {
+  $2
+}
+          const subdomain_result = await supabase;
+            .from ('whitelabel_tenants');
+            .select ('id, brand_name, subdomain, custom_domain, primary_color, logo_url, theme_preset');
+            .eq ('subdomain', subdomain);
+            .eq ('is_active', true);
+            .single ();
+;
+          // Check condition
+if ( {) {
+  $2
+}
+            tenant_info = subdomain_result.data as TenantInfo;
           }
         }
       } else // Check condition
@@ -218,19 +165,11 @@ if ( {) {
         tenant_info = data as TenantInfo;
       }
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+
     return new Response(
 
       JSON && JSON.stringify({
@@ -244,14 +183,6 @@ if ( {) {
           ...corsHeaders}}
     )
   } catch (error) {
-    console && console.error('Tenant detector error:', error);
-    return new Response(
-
-      JSON && JSON.stringify({ 
-        error: error && error.message || 'Internal server error',
-
-        status: 'error'
-=======
     return new Response (
       JSON.stringify ({
         tenant: tenant_info,
@@ -268,14 +199,10 @@ if ( {) {
       JSON.stringify ({
         error: error.message || 'Internal server error',
         status: 'error';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       });
       {
         status: 500;
         headers: {
-          'Content-Type': 'application/json'
-          ...corsHeaders}}
-    )
 ;
     return new Response(;
       JSON.stringify({;
@@ -298,26 +225,12 @@ if ( {) {
         headers: {;
           'Content-Type': 'application/json',;
           ...corsHeaders}});
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   }
 });
 
-=======
           'Content - Type': 'application / json',
           ...cors_headers}}
     );
   }
 });
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

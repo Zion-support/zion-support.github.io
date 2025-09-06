@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import React from 'react',
-import React from 'react';
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-import Head from 'next/head';
-import ServiceLanding from '../components/sections/ServiceLanding';
-export default function AIPoweredDevOpsPlatformPage() {
-=======
 
 
 class ErrorBoundary extends React.Component {
@@ -34,7 +23,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   return (
     <>;
@@ -70,20 +58,10 @@ import React from 'react';
     </>;
   );
 
-<<<<<<< HEAD
-}
-import React from 'react',
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import Head from 'next/head',
 import ServiceLanding from '../components/sections/ServiceLanding',
-=======
 
-=======
 import ServiceLanding from '../components/sections/ServiceLanding';
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function AIPoweredDevOpsPlatformPage() {
 	return (
 		<>
@@ -113,20 +91,7 @@ export default function AIPoweredDevOpsPlatformPage() {
 		</>
 	)
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
-=======
-import Head from 'next / head';
-import Layout from '../components / layout / Layout';
-export default /**
- * AIPoweredDevOpsPlatformPage - Function description
- */
-function AIPoweredDevOpsPlatformPage() {
   return (
     <>;
       <Head>;
@@ -160,11 +125,5 @@ function AIPoweredDevOpsPlatformPage() {
       />;
     </>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

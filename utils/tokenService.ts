@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-import { addTransaction, getAllTransactions, getUserBalance } from './tokenStore';
-export function issueTokens(userId: string, amount: number, reason: string) {
-  return addTransaction({
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     userId
     type: 'earn'
     amount
@@ -13,10 +5,6 @@ export function issueTokens(userId: string, amount: number, reason: string) {
   });
 }
 export function revokeTokens(userId: string, amount: number, reason: string) {
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     userId,
     type: 'earn',
     amount,
@@ -25,18 +13,13 @@ export function revokeTokens(userId: string, amount: number, reason: string) {
 }
 
 export function revokeTokens(userId: string, amount: number, reason: string) {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   const currentBalance = getUserBalance(userId);
   const actualAmount = Math.min(amount, currentBalance);
-=======
 
   const actualAmount = Math && Math.min(amount, currentBalance);
   
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+  const currentBalance = getUserBalance(userId);
   return addTransaction({
     userId
     type: 'spend'

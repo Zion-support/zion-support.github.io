@@ -6,18 +6,6 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-origin/automation-improvements-final
-import {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   Search
   HelpCircle
   BookOpen
@@ -30,17 +18,10 @@ import {
   ExternalLink
   ChevronDown
   Cloud
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
-=======
 
 
 import {
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Search,
   HelpCircle,
   BookOpen,
@@ -53,16 +34,8 @@ import {
   ExternalLink,
   ChevronDown,
   Cloud,;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 } from "lucide-react";
+
 const helpArticles = [
   {
     id: "overview"
@@ -79,29 +52,6 @@ const helpArticles = [
     color: "green"
     articles: [
       {
-        title: "AI Implementation Guide"
-        description: "How to implement AI solutions in your business"
-        readTime: "10 min read"
-        type: "Guide"
-      }
-      {
-        title: "Machine Learning Models"
-        description: "Understanding different ML models and their applications"
-        readTime: "8 min read"
-        type: "Technical"
-      }
-      {
-        title: "AI Best Practices",
-        description: "Tips and best practices for AI development",
-        readTime: "6 min read",
-        type: "Best Practice",
-      },
-    ],
-  },
-  {
-    id: "cloud-services",
-    title: "Cloud Services",
-    description: "Cloud infrastructure and deployment solutions.",
         title: 'AI Best Practices',
         description: 'Tips and best practices for AI development',
         readTime: '6 min read',
@@ -110,25 +60,6 @@ const helpArticles = [
     ]
   },
   {
-    id: 'cloud-services',
-    title: 'Cloud Services',
-    description: 'Cloud infrastructure and deployment solutions.',
-origin/automation-improvements-final
-    icon: Cloud,
-    color: "blue",
-        title: "AI Best Practices"
-        description: "Tips and best practices for AI development"
-        readTime: "6 min read"
-        type: "Best Practice"
-      }
-    ]
-  }
-  {
-    id: "cloud-services"
-    title: "Cloud Services"
-    description: "Cloud infrastructure and deployment solutions."
-    icon: Cloud
-    color: "blue"
     articles: [
       {
         title: "Cloud Migration Guide"
@@ -136,24 +67,6 @@ origin/automation-improvements-final
         readTime: "12 min read"
         type: "Guide"
       }
-
-    articles: [;
-      {
-        title: "Cloud Security",
-        description: "Best practices for securing your cloud infrastructure",
-        readTime: "9 min read",
-        type: "Security",
-      },
-    ],
-  },
-        title: 'Cloud Security',
-        description: 'Best practices for securing your cloud infrastructure',
-        readTime: '9 min read',
-        type: 'Security'
-      }
-    ]
-  }
-origin/automation-improvements-final
         title: "Cloud Security"
         description: "Best practices for securing your cloud infrastructure"
         readTime: "9 min read"
@@ -162,63 +75,21 @@ origin/automation-improvements-final
     ]
   }
 ];
-
-;
-const help_categories = [;
-
-  {
-    title: "Getting Started",
-    description: "New to our platform? Start here.",
-    icon: BookOpen,
-    color: "blue",
-    articles: helpArticles,
-  },
-    title: "Getting Started"
-    description: "New to our platform? Start here."
-    icon: BookOpen
-    color: "blue"
-    articles: helpArticles
-  }
-<<<<<<< HEAD
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 ];
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-];
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 export default function HelpPage() {
   const [searchTerm, setSearchTerm] = useState("");
-=======
 
 ];
 
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     color: 'blue',
     articles: helpArticles
   }
 ];
-<<<<<<< HEAD
-export default function HelpPage() {
-<<<<<<< HEAD
-=======
 
 export default function HelpPage() {;
-=======
-<<<<<<< HEAD
-export default function HelpPage() {
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
 
-export default function HelpPage() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
 import {;
   Search,;
@@ -304,22 +175,7 @@ const helpCategories = [;
 ];
 
 export default function HelpPage() {;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   const [searchTerm, setSearchTerm] = useState("");
-  const [expandedCategory, setExpandedCategory] = useState<number | null>(null);
-
-  const toggleCategory = (index: number) => {;
-
-    setExpandedCategory(expandedCategory === index ? null : index);
-
-export default function HelpPage() {
-  const [searchTerm, setSearchTerm] = useState('');
-origin/automation-improvements-final
-  const [expandedCategory, setExpandedCategory] = useState<number | null>(null);
-  const toggleCategory = (index: number) => {
-    setExpandedCategory(expandedCategory === index ? null : index);
-  };
 
   }
   const filteredCategories = helpCategories
@@ -332,14 +188,6 @@ origin/automation-improvements-final
       )
     }))
     .filter((category) => category.articles.length > 0);
-  const filteredCategories = helpCategories.map(category => ({
-    ...category,
-    articles: category.articles.filter(article =>
-      article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      article.description.toLowerCase().includes(searchTerm.toLowerCase())
-    )
-  })).filter(category => category.articles.length > 0);
-origin/automation-improvements-final
 
   return (
     <>;
@@ -352,12 +200,6 @@ origin/automation-improvements-final
         <meta
           name="keywords"
           content="help, support, documentation, FAQ, tutorials, guides"
-
-        />;
-      </Head>;
-
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">;
-
         {/* Hero Section */}
         <section className="relative py-20 px-4">;
           <div className="max-w-7xl mx-auto">;
@@ -389,7 +231,6 @@ origin/automation-improvements-final
       </div>;
     </>;
   );
-=======
 ;
 export default /**
  * HelpPage - Function description
@@ -458,5 +299,4 @@ function HelpPage() {
         </section>;
       </div>;
     </>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

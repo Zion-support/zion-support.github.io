@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-
-import React from 'react',
-import React from "react";
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import { ResumeSelector, ResumeOption } from "../resume-selector";
 import { Button } from "@/components/ui/button";
 export interface ResumeTabProps {;
@@ -39,63 +27,29 @@ export function ResumeTab({
   return (
     <div className="space-y-4">
       <ResumeSelector onResumeSelected={handleResumeSelected} />
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       {onApply && (
         <div className="mt-6">
           <Button
             onClick={onApply}
             disabled={!selectedResumeId |isSubmitting}
-<<<<<<< HEAD
-=======
-=======
-=======
 
 import React from 'react',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-import React from 'react',
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import { ResumeSelector, ResumeOption } from "../resume-selector",
 import { Button } from "@/components/ui/button",
-=======
 
 
 import React from './react';
 import { ResumeSelector, ResumeOption  } from '../resume - selector';
 import { Button  } from '@/components / ui / button';
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export interface ResumeTabProps {
 
   selectedResumeId?: string | null;
   onSelectResume?: (resume_id: string) => void;
   onResumeSelected?: (resume: ResumeOption) => void;
-
-export function ResumeTab(): any ({;
-  selectedResumeId,;
-  onSelectResume,;
-  onResumeSelected,;
-  onApply,;
-  isSubmitting = false,;
-}: ResumeTabProps) {;
-  const handleResumeSelected = (resume: ResumeOption) => {;
-    if (onResumeSelected) {;
-      onResumeSelected(resume);
-    }
-
-    if (onSelectResume) {;
-      onSelectResume(resume && resume.id);
-
     }
   }
 
   return (
-    <div className="space-y-4">
-      <ResumeSelector onResumeSelected={handleResumeSelected} />
-      
       {onApply && (
         <div className="mt-6">
           <Button 
@@ -105,58 +59,20 @@ export function ResumeTab(): any ({;
           >
             {isSubmitting ? "Submitting..." : "Submit Application"}
           </Button>
-          
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
           {!selectedResumeId && (
             <p className="text-sm text-muted-foreground mt-2">
               Please select a resume to continue
             </p>
-=======
-    <div className="space-y-4">;
-      <ResumeSelector onResumeSelected={handleResumeSelected} />;
-
-      {onApply && (;
-        <div className="mt-6">;
-          <Button
-            onClick={onApply}
-            disabled={!selectedResumeId || isSubmitting}
-            className="w-full">;
-            {isSubmitting ? "Submitting..." : "Submit Application"}
-          </Button>;
-
-          {!selectedResumeId && (;
-            <p className="text-sm text-muted-foreground mt-2">;
-              Please select a resume to continue;
-            </p>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           )}
         </div>;
       )}
     </div>
     </div>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+          )}
+        </div>;
+      )}
+    </div>;
   );
-=======
   on_apply?: () => Promise < void>;
   is_submitting?: boolean;
 }
@@ -197,5 +113,4 @@ if ( {) {
             </p>)}
         </div>)}
     </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

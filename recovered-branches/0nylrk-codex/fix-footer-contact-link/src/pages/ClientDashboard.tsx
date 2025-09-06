@@ -1,16 +1,3 @@
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState, useEffect} from "react";
 import {AppHeader} from "@/layout/AppHeader";
 import {Footer} from "@/components/Footer";
@@ -28,12 +15,6 @@ import {ClientOnboardingSteps} from "@/components/onboarding/ClientOnboardingSte
 import {ActiveProjectsCard} from "@/components/projects/ActiveProjectsCard";
 import {UpcomingInterviewsCard} from "@/components/interviews/UpcomingInterviewsCard";
 import {useIsMobile} from "@/hooks/use-mobile";
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import { useState, useEffect } from "react",
 import { AppHeader } from "@/layout/AppHeader",
 import { Footer } from "@/components/Footer",
@@ -52,28 +33,12 @@ import { ActiveProjectsCard } from "@/components/projects/ActiveProjectsCard",
 import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard",
 import { useIsMobile } from "@/hooks/use-mobile";
 function ClientDashboardContent() {
-=======
-function ClientDashboardContent() {;
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all");
   const { jobs, isLoading } = useJobs();
 
   const [selectedJobId, setSelectedJobId] = useState<string | null>(null);
   const [selectedJobTitle, setSelectedJobTitle] = useState<string>("");
   const isMobile = useIsMobile();
-<<<<<<< HEAD
-=======
-import { useIsMobile } from "@/hooks/use-mobile",
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-import { useIsMobile } from "@/hooks/use-mobile",
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
   // Set the first job as selected when jobs are loaded (if any);
@@ -84,11 +49,6 @@ import { useIsMobile } from "@/hooks/use-mobile",
       setSelectedJobTitle(jobs[0].title);
     }
   }, [jobs, selectedJobId]);
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 function ClientDashboardContent() {
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all"),
   const { jobs, isLoading } = useJobs(),
@@ -102,14 +62,6 @@ function ClientDashboardContent() {
       setSelectedJobId(jobs[0].id),
       setSelectedJobTitle(jobs[0].title)
     }
-  }, [jobs, selectedJobId]);
-  }, [jobs, selectedJobId]),
-
-  const handleJobSelect = (jobId: string, jobTitle: string) => {
-    setSelectedJobId(jobId)
-    setSelectedJobTitle(jobTitle)
-  }
-  },
 
   return (
     <>
@@ -170,117 +122,6 @@ function ClientDashboardContent() {
           </div>
           <div>
             <div className="sticky top-4 space-y-6">
-import { useState, useEffect } from "react",;
-import { AppHeader } from "@/layout/AppHeader",;
-import { Footer } from "@/components/Footer",;
-import { JobsList } from "@/components/jobs/JobsList",;
-import { Button } from "@/components/ui/button",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { Link } from "react-router-dom",;
-import { JobStatus } from "@/types/jobs",;
-import { SEO } from "@/components/SEO",;
-import { BriefcaseIcon, UserIcon, MessageSquare, Star, PlusCircle, Kanban, Video } from "lucide-react",;
-import { ProtectedRoute } from "@/components/ProtectedRoute",;
-import { SuggestedTalents } from "@/components/jobs/SuggestedTalents",;
-import { useJobs } from "@/hooks/useJobs",;
-import { ClientOnboardingSteps } from "@/components/onboarding/ClientOnboardingSteps",;
-import { ActiveProjectsCard } from "@/components/projects/ActiveProjectsCard",;
-import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard",;
-import { useIsMobile } from "@/hooks/use-mobile",;
-function ClientDashboardContent() {;
-  const [activeTab, setActiveTab] = useState<JobStatus | "all">("all"),;
-  const { jobs, isLoading } = useJobs(),;
-  const [selectedJobId, setSelectedJobId] = useState<string | null>(null),;
-  const [selectedJobTitle, setSelectedJobTitle] = useState<string>(""),;
-  const isMobile = useIsMobile(),;
-  // Set the first job as selected when jobs are loaded (if any);
-  useEffect(() => {;
-    if (jobs.length > 0 && !selectedJobId) {;
-      setSelectedJobId(jobs[0].id),;
-      setSelectedJobTitle(jobs[0].title);
-    }
-  }, [jobs, selectedJobId]),;
-
-  const handleJobSelect = (jobId: string, jobTitle: string) => {;
-    setSelectedJobId(jobId),;
-    setSelectedJobTitle(jobTitle);
-  };
-
-  return (
-    <>;
-      <SEO
-        title="Client Dashboard | Zion AI Marketplace" 
-        description="Manage your jobs and talent requests in the Zion AI Marketplace." 
-      />;
-      <AppHeader />;
-      <main className="container mx-auto px-4 py-8">;
-        <div className={`flex flex-col ${!isMobile ? 'md:flex-row md:justify-between md:items-center' : ''} mb-8 gap-4`}>;
-          <div>;
-            <h1 className={`text-${isMobile ? '2xl' : '3xl'} font-bold`}>My Jobs</h1>;
-            <p className="text-muted-foreground mt-1">Manage your job postings and talent applications</p>;
-          </div>;
-          <div className={`flex gap-2 ${isMobile ? 'flex-col' : ''}`}>;
-            <Button variant="outline" asChild className={isMobile ? 'w-full justify-center' : ''}>;
-              <Link to="/hiring-tracker">;
-                <Kanban className="h-4 w-4 mr-2" /> Hiring Pipeline;
-              </Link>;
-            </Button>;
-            <Button asChild className={isMobile ? 'w-full justify-center' : ''}>;
-              <Link to="/post-job">;
-                <PlusCircle className="h-4 w-4 mr-2" /> Post New Job;
-              </Link>;
-            </Button>;
-          </div>;
-        </div>;
-
-        {/* New Onboarding Steps */}
-        <div className="mb-8">;
-          <ClientOnboardingSteps />;
-        </div>;
-
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
-          <div className="lg:col-span-2">;
-            <Tabs defaultValue="all" onValueChange={(value) => setActiveTab(value as JobStatus | "all")}>;
-              <TabsList className={`mb-6 ${isMobile ? 'w-full' : ''}`}>;
-                <TabsTrigger value="all" className={isMobile ? 'flex-1' : ''}>All</TabsTrigger>;
-                <TabsTrigger value="new" className={isMobile ? 'flex-1' : ''}>New</TabsTrigger>;
-                <TabsTrigger value="in_progress" className={isMobile ? 'flex-1' : ''}>Active</TabsTrigger>;
-                <TabsTrigger value="filled" className={isMobile ? 'flex-1' : ''}>Filled</TabsTrigger>;
-                <TabsTrigger value="closed" className={isMobile ? 'flex-1' : ''}>Closed</TabsTrigger>;
-              </TabsList>;
-
-              <TabsContent value="all" className="mt-0">;
-                <JobsList onSelectJob={handleJobSelect} />;
-              </TabsContent>;
-              <TabsContent value="new" className="mt-0">;
-                <JobsList filter="new" onSelectJob={handleJobSelect} />;
-              </TabsContent>;
-              <TabsContent value="in_progress" className="mt-0">;
-                <JobsList filter="in_progress" onSelectJob={handleJobSelect} />;
-              </TabsContent>;
-              <TabsContent value="filled" className="mt-0">;
-                <JobsList filter="filled" onSelectJob={handleJobSelect} />;
-              </TabsContent>;
-              <TabsContent value="closed" className="mt-0">;
-                <JobsList filter="closed" onSelectJob={handleJobSelect} />;
-              </TabsContent>;
-            </Tabs>;
-          </div>;
-
-          <div>;
-            <div className="sticky top-4 space-y-6">;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
               {/* Active Projects Card */}
               <ActiveProjectsCard />;
 
@@ -302,31 +143,7 @@ function ClientDashboardContent() {;
                       Select a job to see AI-matched talent suggestions;
                     </p>;
                   </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 )}
-<<<<<<< HEAD
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-      <Footer />
-    </>
-  )
-}
-export default function ClientDashboard() {
-  return (
-    <ProtectedRoute>
-      <ClientDashboardContent />
-    </ProtectedRoute>
-  )
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
-=======
 import { useState, useEffect } from './react';
 import { AppHeader } from '@/layout / AppHeader';
 import { Footer } from '@/components / Footer';
@@ -353,7 +170,6 @@ function ClientDashboardContent() {
   const [selectedJobId, setSelectedJobId] = useState < string | null>(null);
   const [selectedJobTitle, setSelectedJobTitle] = useState < string>("");
   const is_mobile = useIsMobile ();
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
   // Set the first job as selected when jobs are loaded (if any);
   useEffect (() => {
@@ -447,40 +263,15 @@ if ( {) {
                       Select a job to see AI - matched talent suggestions;
                     </p>;
                   </div>)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               </div>;
             </div>;
           </div>;
         </div>;
       </main>;
       <Footer />;
-
-
-=======
-
 ;
 
-export default function ClientDashboard() {;
-  return (
-    <ProtectedRoute>;
-      <ClientDashboardContent />;
-    </ProtectedRoute>;
-  );
-}
 
-;
-<<<<<<< HEAD
-;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
-
-
-=======
     </>);
 }
 export default /**
@@ -492,6 +283,3 @@ function ClientDashboard() {
       <ClientDashboardContent />;
     </ProtectedRoute>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

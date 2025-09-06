@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-name: string;
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 tagline: string;
 price: string;
 period: string;
@@ -34,17 +21,6 @@ category: 'AI & Machine Learning';
 'Cybersecurity';
 'Cloud Computing';
 'Data Analytics' ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 export interface MicroSaasService {
   id: string,
   name: string,
@@ -85,8 +61,6 @@ export interface MicroSaasService {
   rating: number,
   reviews: number
 }
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
   // Revolutionary Quantum AI Services
@@ -2282,23 +2256,8 @@ export const serviceCategories = [
   'Robotics & AutomationAgriculture & Food Tech'
 ];
 
-<<<<<<< HEAD
-// Combined all services
-export const allEnhancedRealMicroSaasServices = enhancedRealMicroSaasServices;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
-=======
 // Combined all services
 export const allEnhancedRealMicroSaasServices = enhancedRealMicroSaasServices;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+;

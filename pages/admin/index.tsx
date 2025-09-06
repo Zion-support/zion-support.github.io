@@ -1,22 +1,7 @@
-<<<<<<< HEAD
-import Link from 'next/link';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import Link from 'next/link',;
 import Link from 'next/link';
-=======
-<<<<<<< HEAD
-import Link from 'next/link';
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 export default function AdminIndex() {
   return (
     <div className="space-y-2">
@@ -25,8 +10,6 @@ export default function AdminIndex() {
         <li><Link href="/admin/partners"><a className="text-blue-600 underline">Partners</a></Link></li>
       </ul>
     </div>
-  )
-};
   );
   } catch (error) {
     console.error("Error:", error);

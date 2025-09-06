@@ -1,15 +1,43 @@
-// Search parser utilities
-export const parseSearchQuery = (query: string) => {
-  // Add search query parsing functionality here
-  return {
-<<<<<<< HEAD
-    keywords: []
-    skills: []
-    location: null
-    type: null
-=======
+  };
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+  const apiKey =
+    process.env.OPENAI_API_KEY || process.env.NEXT_PUBLIC_OPENAI_API_KEY;
+  if (!apiKey) return base;
+
+  try {
+    const system = `You are Operator GPT parsing user search intent into filters for a marketplace. Return ONLY a compact JSON object with keys: type (one of: all|talent|jobs|projects), skills (array of strings), location (string|optional), minBudgetUsd (number|optional), maxBudgetUsd (number|optional), availability (full-time|part-time|contract|optional).`;
+    const user = `Query: ${query}`;
+    const resp = await fetch('https://api.openai.com/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${apiKey}`,
+      },
+      body: JSON.stringify({
+        model: 'gpt-4o-mini',
+        messages: [
+          { role: 'system', content: system },
+          { role: 'user', content: user },
+        ],
+        temperature: 0.1,
+        response_format: { type: 'json_object' },
+      }),
+    });
+    if (!resp.ok) throw new Error(`${resp.status}`);
+    const data = await resp.json();
+    const content = data.choices?.[0]?.message?.content;
+    const parsed = JSON.parse(content || '{}');
+    return {
+      type: parsed.type || base.type,
+      skills: Array.isArray(parsed.skills) ? parsed.skills : base.skills,
+      location: parsed.location ?? base.location,
+      minBudgetUsd: parsed.minBudgetUsd ?? base.minBudgetUsd,
+      maxBudgetUsd: parsed.maxBudgetUsd ?? base.maxBudgetUsd,
+      availability: parsed.availability ?? base.availability,
+      keywords: base.keywords,
+    };
+  } catch {
+    return base;
   }
 
   const words = query && query.toLowerCase().split(/\s+/);
@@ -22,11 +50,6 @@ export const parseSearchQuery = (query: string) => {
       keywords && keywords.push(word);
     }
   }
-<<<<<<< HEAD
-}
-=======
-<<<<<<< HEAD
-=======
   
   if (keywords && keywords.length > 0) {
     filters && filters.keywords = keywords;
@@ -46,22 +69,10 @@ export const parseSearchQuery = (query: string) => {
   }
   
   return filters;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     keywords: [],
     skills: [],
     location: null,
     type: null;
-  };
-};
-
-export const searchAll = (parsed: any, access: any) => {
-  // Add search functionality here
   return {
     all: [],
     talent: [],
@@ -71,40 +82,17 @@ export const searchAll = (parsed: any, access: any) => {
   };
 };
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export const suggestDidYouMean = (query: string) => {
-  // Add did you mean functionality here;
-  return null;
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export const suggestDidYouMean = (query: string) => {
   // Add did you mean functionality here;
   return null;
 
-}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 };
 
 }
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+  }
+}
+;
+export const suggestDidYouMean = (query: string) =>: any {
+  // Add did you mean functionality here;
+  return null;
+}

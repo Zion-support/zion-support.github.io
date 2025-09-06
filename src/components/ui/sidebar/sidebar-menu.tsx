@@ -1,10 +1,3 @@
-return (<a;
-          href={href}
-    return(<button
-        ref={ref}
-
-SidebarMenuItem.display_name = "SidebarMenuItem";
-
 export { SidebarMenuItem, SidebarMenuGroup }
 export { SidebarMenuItem, SidebarMenuGroup }
 }
@@ -134,4 +127,3 @@ const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, children, ..
     </div>;
   );
 },;
-export { SidebarMenuItem, SidebarMenuGroup };

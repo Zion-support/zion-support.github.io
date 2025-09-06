@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-const fs = require('fs');
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 console.log('🔧 Fixing site loading issues...');
 // Fix Next.js configuration;
 const nextConfig = `/** @type {import('next').NextConfig} */;
@@ -30,19 +24,8 @@ emptyFiles.forEach(file => {if (fs.existsSync(file) && fs.statSync(file).size ==
   }
 });
 console.log('🎉 Site fixes completed!');
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 const fs = require('fs'),;
 const fs = require('fs');
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
 
 const fs = require ('fs'),
 console.log ('🔧 Fixing site loading issues...'),
@@ -54,77 +37,23 @@ const next_config = {
   typescript: { ignoreBuildErrors: true },
   page_extensions: ['tsxtsjsxjs'],
   images: {
-=======
-
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 console.log('🔧 Fixing site loading issues...'),;
 // Fix Next.js configuration;
 const nextConfig = `/** @type {import('next').NextConfig} */;
 const nextConfig = {;
-<<<<<<< HEAD
-  reactStrictMode: true;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   reactStrictMode: true,;
   reactStrictMode: true;
-=======
-<<<<<<< HEAD
-  reactStrictMode: true;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   eslint: { ignoreDuringBuilds: true },;
   typescript: { ignoreBuildErrors: true },;
   pageExtensions: ['tsxtsjsxjs'],;
   images: {;
-
-    domains: ["localhost", "ziontechgroup.com"];
-  },
-  output: 'standalone',
-  trailing_slash: false,
-  dist_dir: '.next';
-},
-module.exports = next_config, `,
-fs.writeFileSync ('next.config.js', next_config),
-console.log ('✅ Next.js configuration fixed'),
-// Remove empty files that might cause issues;
-
-const emptyFiles = [;
-  'components/BundleAnalyzer.jscomponents/PerformanceMonitor.jscomponents/SEO.js';
-<<<<<<< HEAD
-];
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 ],;
 ];
-=======
-<<<<<<< HEAD
-];
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 emptyFiles.forEach(file => {;
   if (fs.existsSync(file) && fs.statSync(file).size === 0) {;
     fs.unlinkSync(file),;
     console.log(`✅ Removed empty file: ${file}`);
-
-  }
-}),;
-console.log('🎉 Site fixes completed!'),;

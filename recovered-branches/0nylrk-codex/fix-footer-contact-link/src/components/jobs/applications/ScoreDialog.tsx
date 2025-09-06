@@ -1,18 +1,3 @@
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
-import {JobApplication} from "@/types/jobs";
-import {ApplicationScoreCard} from "../ApplicationScoreCard";
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import {
   Dialog;
   DialogContent;
@@ -23,20 +8,6 @@ import { JobApplication } from "@/types/jobs";
 import { ApplicationScoreCard } from "../ApplicationScoreCard";
 import { JobApplication } from "@/types/jobs",
 import { ApplicationScoreCard } from "../ApplicationScoreCard",
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 interface ScoreDialogProps {
 
   open: boolean
@@ -45,22 +16,11 @@ interface ScoreDialogProps {
 
   onScoreUpdated: (updatedApplication: JobApplication) => void
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
 export function ScoreDialog({;
   open;
   onOpenChange;
   application;
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 export function ScoreDialog({
   open,
   onOpenChange,
@@ -76,14 +36,6 @@ export function ScoreDialog({
         {application && (
           <ApplicationScoreCard
           <ApplicationScoreCard 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import {;
   Dialog,;
   DialogContent,;
@@ -92,12 +44,10 @@ import {;
 } from "@/components/ui/dialog",;
 import { JobApplication } from "@/types/jobs",;
 import { ApplicationScoreCard } from "../ApplicationScoreCard",;
-=======
 
 import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
 import {JobApplication} from "@/types/jobs";
 import {ApplicationScoreCard} from "../ApplicationScoreCard";
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ScoreDialogProps {;
   open: boolean,;
   onOpenChange: (open: boolean) => void,;
@@ -134,37 +84,11 @@ export function ScoreDialog(): any ({;
           <DialogTitle>Application Match Score</DialogTitle>;
         </DialogHeader>;
         {application && (;
-<<<<<<< HEAD
-          <ApplicationScoreCard;
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-          <ApplicationScoreCard;
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
           <ApplicationScoreCard
-=======
-
-          <ApplicationScoreCard 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
             application={application}
             onScoreUpdated={onScoreUpdated}
           />;
         )}
-
-      </DialogContent>;
-    </Dialog>;
-  );
-}
-
-=======
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components / ui / dialog';
 import { JobApplication } from '@/types / jobs';
 import { ApplicationScoreCard } from '../ApplicationScoreCard';
@@ -192,4 +116,3 @@ function ScoreDialog() {
       </DialogContent>;
     </Dialog>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

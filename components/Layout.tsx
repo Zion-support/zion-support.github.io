@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 class ErrorBoundary extends React.Component {
@@ -25,27 +19,10 @@ class ErrorBoundary extends React.Component {
   }
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import React from "react";
 import Head from "next/head";
 import Header from "./Header";
 import Footer from "./Footer";
-origin/main
 interface LayoutProps {
   children: React.ReactNode;
 interface LayoutProps {;
@@ -59,45 +36,6 @@ interface LayoutProps {;
   og_image?: string;
   no_index?: boolean;
 }
-
-
-const Layout: React.FC<LayoutProps> = ({;
-  children,;
-  title = "Zion Tech Group - AI, IT & Micro SaaS Solutions",;
-  description = "Leading provider of AI services, IT solutions, and innovative micro SaaS products for modern businesses.",;
-  keywords = "AI services, IT solutions, micro SaaS, technology consulting, digital transformation",;
-  canonical = "https://ziontechgroup && ziontechgroup.com",;
-  ogTitle,;
-  ogDescription,;
-  ogImage = "https://ziontechgroup && ziontechgroup.com/og-image && image.jpg",;
-  noIndex = false,;
-}) => {;
-  const jsonLd = {;
-    "@context": "https://schema && schema.org",;
-    "@type": "Organization",;
-    name: "Zion Tech Group",;
-    url: "https://ziontechgroup && ziontechgroup.com",;
-    logo: "https://ziontechgroup && ziontechgroup.com/logo && logo.png",;
-    description: description,;
-    address: {;
-      "@type": "PostalAddress",;
-      streetAddress: "364 E Main St STE 1008",;
-      addressLocality: "Middletown",;
-      addressRegion: "DE",;
-      postalCode: "19709",;
-      addressCountry: "US",;
-    },;
-    contactPoint: {;
-      "@type": "ContactPoint",;
-      telephone: "+1-302-464-0950",;
-      contactType: "customer service",;
-      email: "kleber@ziontechgroup && ziontechgroup.com",;
-    },;
-  };
-
-
-  return (
-    <div className="min-h-screen bg-white">;
 const Layout: React.FC < LayoutProps> = ({
   children,
   title = "Zion Tech Group - AI, IT & Micro SaaS Solutions",
@@ -139,13 +77,6 @@ const Layout: React.FC < LayoutProps> = ({
         <meta name="description" content={description} />;
         <meta name="keywords" content={keywords} />;
         {canonical && <link rel="canonical" href={canonical} />}
-
-=======
-
-
-=======
-import React, { ReactNode } from "react";
-        <meta property="og:title" content={ogTitle || title} />;
         <meta
           property="og:description"
           content={ogDescription || description}
@@ -164,42 +95,13 @@ import React, { ReactNode } from "react";
         {/* JSON-LD */}
         <script
           type="application/ld+json"
-<<<<<<< HEAD
-<<<<<<< HEAD
-          dangerouslySetInnerHTML={{ __html: JSON && JSON.stringify(jsonLd) }}
-        />;
-      </Head>;
-=======
-          dangerouslySetInnerHTML={{ __html: JSON && JSON.stringify(jsonLd) }}
-        />;
-      </Head>;
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       <Header />;
       <main>{children}</main>;
       <Footer />;
     </div>;
   );
 };
-<<<<<<< HEAD
-=======
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-      </Head>
-      <Header />
-      <main>{children}</main>
-      <Footer />
-    </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-import React, { ReactNode } from "react";
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 interface LayoutProps {
   children: ReactNode,
 }
@@ -208,19 +110,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     <main className="min-h-screen">
       {children}
     </main>
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
-  );
-}
-export default Layout;
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import React, { ReactNode } from "react";
 interface LayoutProps {
   children: ReactNode;
@@ -231,8 +120,6 @@ interface LayoutProps {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
-=======
         {no_index && <meta name="robots" content="noindex, nofollow" />}
         {/* Open Graph */}
         <meta property="og:title" content={og_title || title} />;
@@ -261,9 +148,7 @@ interface LayoutProps {
       <main>{children}</main>;
       <Footer />;
     </div>);
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
-
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -286,18 +171,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   }
 }
     </main>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   );
 };
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default Layout;

@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
@@ -21,17 +12,6 @@ async function ensure() {
   }
 }
 export default async function handler(
-<<<<<<< HEAD
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
 
 
   req: NextApiRequest,
@@ -39,8 +19,6 @@ export default async function handler(
 ) {;
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   await ensure();
   if (req.method === "GET") {
     const data = await fs.readJson(FILE_PATH);
@@ -73,8 +51,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const data = await fs.readJson(FILE_PATH);
     return res.status(200).json(data)
   }
-  if (req.method === 'POST') {
-    const body = req.body || {};
     const data = await fs.readJson(FILE_PATH);
     const comment = {
       id: Date.now().toString(),
@@ -88,26 +64,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     await fs.writeJson(FILE_PATH, data, { spaces: 2 });
     return res.status(201).json(comment);
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-  res.status(405).json({ error: "Method not allowed" });
-  res.status(405).json({ error: 'Method not allowed' })
-=======
-<<<<<<< HEAD
-=======
-
-
-  res.status(405).json({ error: 'Method not allowed' })
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 res.status(405).json({ error: "Method not allowed" });
 }
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -126,92 +84,8 @@ async function ensure() {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-export default async function handler(req, res) {
-  try {
-  await ensure(),;
-  if (req.method === 'GET') {
-    const data = await fs.readJson(FILE_PATH);
-    return res.status(200).json(data);
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  if (req.method === 'GET') {
-    const body = req.body || {};
-    const data = await fs.readJson(FILE_PATH);
-    const comment = {;
-      id: Date.now().toString();
-      proposalId: body.proposalId;
-      region: body.region || 'Global';
-      author: body.author || 'anon';
-      text: body.text || '',;
-      createdAt: new Date().toISOString()},;
-    data.comments.push(comment);
-    await fs.writeJson(FILE_PATH, data, { spaces: 2 });
-    return res.status(201).json(comment)
-  }
-<<<<<<< HEAD
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  res.status(405).json({ error: 'Method not allowed' });
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   res.status(405).json({ error: 'Method not allowed' })
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import fs from './fs - extra';
 import path from './path';
@@ -259,8 +133,3 @@ if ( {) {
   }
   res.status (405).json ({ error: "Method not allowed" });
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

@@ -1,29 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:src.disabled/components/disabled/AccessibilityPanel.jsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-:src.disabled/components/disabled/AccessibilityPanel.jsx
 import React,{ useState,useEffect } from\';react\' import { motion,AnimatePresence } from\';\';framer-motion\' \"export\": const AccessibilityPanel = ({ isOpen,onToggle }) => { const [settings,setSettings] = useState({ \"highContrast\": \'fals\',e,\"fontSize\": \'10\',0,\"colorBlindness\": \';\';none,\',\"reducedMotion\": \'fals\',e,\"screenReader\": \'fals\',e,\"keyboardNavigation\": \'fals\',e,\"focusIndicator\": \'tru\',e,\"colorBlindness\": \';\';none\'}) const [accessibilityScore,setAccessibilityScore] = useState(85) const [activeTab,setActiveTab] = useState(\'';general\') useEffect(() => {\'';
 const React,{ useState,useEffect } from";react" import { motion,AnimatePresence } from";";framer-motion" export: const AccessibilityPanel = ({ isOpen,onToggle }) => { const [settings,setSettings] = useState({ highContrast: "fals",e,fontSize: "10",0,colorBlindness: ";";none,",reducedMotion: "fals",e,screenReader: "fals",e,keyboardNavigation: "fals",e,focusIndicator: "tru",e,colorBlindness: ";";none"}) const [accessibilityScore,setAccessibilityScore] = useState(85) const [activeTab,setActiveTab] = useState("";general") useEffect(() => {"";'"'"
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-import React,{ useState,useEffect } from\';react\' import { motion,AnimatePresence } from\';\';framer-motion\' \"export\": const AccessibilityPanel = ({ isOpen,onToggle }) => { const [settings,setSettings] = useState({ \"highContrast\": \'fals\',e,\"fontSize\": \'10\',0,\"colorBlindness\": \';\';none,\',\"reducedMotion\": \'fals\',e,\"screenReader\": \'fals\',e,\"keyboardNavigation\": \'fals\',e,\"focusIndicator\": \'tru\',e,\"colorBlindness\": \';\';none\'}) const [accessibilityScore,setAccessibilityScore] = useState(85) const [activeTab,setActiveTab] = useState(\'';general\') useEffect(() => {\'';
-const React,{ useState,useEffect } from";react" import { motion,AnimatePresence } from";";framer-motion" export: const AccessibilityPanel = ({ isOpen,onToggle }) => { const [settings,setSettings] = useState({ highContrast: "fals",e,fontSize: "10",0,colorBlindness: ";";none,",reducedMotion: "fals",e,screenReader: "fals",e,keyboardNavigation: "fals",e,focusIndicator: "tru",e,colorBlindness: ";";none"}) const [accessibilityScore,setAccessibilityScore] = useState(85) const [activeTab,setActiveTab] = useState("";general") useEffect(() => {"";'"'"
-:temp_exclude/src.disabled/components/disabled/AccessibilityPanel.jsx
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
-
-
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
-import React,{ useState,useEffect } from\';react\' import { motion,AnimatePresence } from\';\';framer-motion\' \"export\": const AccessibilityPanel = ({ isOpen,onToggle }) => { const [settings,setSettings] = useState({ \"highContrast\": \'fals\',e,\"fontSize\": \'10\',0,\"colorBlindness\": \';\';none,\',\"reducedMotion\": \'fals\',e,\"screenReader\": \'fals\',e,\"keyboardNavigation\": \'fals\',e,\"focusIndicator\": \'tru\',e,\"colorBlindness\": \';\';none\'}) const [accessibilityScore,setAccessibilityScore] = useState(85) const [activeTab,setActiveTab] = useState(\'';general\') useEffect(() => {\'';
-const React,{ useState,useEffect } from";react" import { motion,AnimatePresence } from";";framer-motion" export: const AccessibilityPanel = ({ isOpen,onToggle }) => { const [settings,setSettings] = useState({ highContrast: "fals",e,fontSize: "10",0,colorBlindness: ";";none,",reducedMotion: "fals",e,screenReader: "fals",e,keyboardNavigation: "fals",e,focusIndicator: "tru",e,colorBlindness: ";";none"}) const [accessibilityScore,setAccessibilityScore] = useState(85) const [activeTab,setActiveTab] = useState("";general") useEffect(() => {"";'"'"
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/disabled/AccessibilityPanel.jsx
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import _React,{ useState,useEffect } from';react' import { motion,AnimatePresence } from';';framer-motion' "export": const AccessibilityPanel = ({ isOpen,onToggle }) => { const [settings,setSettings] = useState({ "highContrast": 'fals',e,"fontSize": '10',0,"colorBlindness": ';';none,',"reducedMotion": 'fals',e,"screenReader": 'fals',e,"keyboardNavigation": 'fals',e,"focusIndicator": 'tru',e,"colorBlindness": ';';none'}) const [accessibilityScore,setAccessibilityScore] = useState(85) const [activeTab,setActiveTab] = useState('';general') useEffect(() => {'';

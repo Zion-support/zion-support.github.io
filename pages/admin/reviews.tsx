@@ -1,27 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react',;
-import type { NextPage } from 'next',;
-import type { Review } from '../../types/reviews',;
-const ADMIN_KEY = typeof window === 'undefined' ? '' : (localStorage.getItem('ADMIN_KEY') || 'dev-admin-key'),
-
-
-  async function refresh() {
-    const res = await fetch('/api/admin/debug/reviews'),
-    const data = await res.json(),
-    if (res.ok) {
-      setAll(data.reviews),
-      setPending(data.reviews.filter((r: Review) => !r.approved && !r.removed))
-    }
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import React, { useEffect, useState } from 'react';
 import type { NextPage } from 'next';
 import type { Review } from '../../types/reviews';
@@ -62,22 +38,9 @@ const AdminReviewsPage: NextPage = () => {;
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
 
 
     if (res.ok) refresh()
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   }
 }
     } catch (error) {
@@ -122,57 +85,24 @@ const AdminReviewsPage: NextPage = () => {;
           {!pending.length && <div>No pending reviews.</div>}
         </div>
       </section>
-
-
       <section className="enhanced-card">
         <h2 className="text-xl font-semibold mb-2">All Reviews</h2>
         <pre className="text-xs whitespace-pre-wrap">{JSON.stringify(all, null, 2)}</pre>
       </section>
     </main>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-}
-export default AdminReviewsPage;
 
 },
 export default AdminReviewsPage,
 },
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-export default AdminReviewsPage;
-=======
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 },
 export default AdminReviewsPage,
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
 },
 export default AdminReviewsPage,
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 },
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 export default AdminReviewsPage,;
 export default AdminReviewsPage,
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

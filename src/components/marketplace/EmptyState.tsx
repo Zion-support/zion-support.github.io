@@ -1,47 +1,27 @@
-import React from 'react';
-import * as React from 'react';
-import {;
-  RefreshCw,;
-  Wifi,;
-  Server,;
-  ShoppingCart,;
-  Users,;
-  Wrench,;
-  Lightbulb,;
-} from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
-import { useTranslation } from 'react-i18next';
-export interface EmptyStateProps {;
-import * as React from 'react';
 import * as React from 'react'
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+import * as React from 'react'
 import {
-  RefreshCw,
-  Wifi,
-  Server,
-  ShoppingCart,
-  Users,
-  Wrench,
-  Lightbulb,
-} from 'lucide-react';
-import { Button } from '@/components / ui / button';
-import Link from 'next / link';
-import { use_translation } from 'react - i18next';
+  RefreshCw
+  Wifi
+  Server
+  ShoppingCart
+  Users
+  Wrench
+  Lightbulb
+} from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import Link from 'next/link'
+import { useTranslation } from 'react-i18next'
+
 export interface EmptyStateProps {
-  type:;
-    | 'products';
-    | 'categories';
-    | 'talent';
-    | 'equipment';
-    | 'search';
-    | 'error';
-    | 'network';
-    | 'loading';
-
-
+  type: 'products' | 'categories' | 'talent' | 'equipment' | 'search' | 'error' | 'network' | 'loading';
+  title?: string;
+  description?: string;
+  action?: {
+    label: string;
+    onClick: () => void
+  }
+  icon?: React.ReactNode
 import * as React from 'react',;
 import { RefreshCw, Wifi, Server, ShoppingCart, Users, Wrench, Lightbulb } from 'lucide-react';
 import { Button } from '@/components/ui/button',;
@@ -53,7 +33,6 @@ export interface EmptyStateProps {;
   description?: string,;
   action?: {;
     label: string,;
-
     onClick: () => void;
   },;
   icon?: React.ReactNode;
@@ -62,11 +41,6 @@ export interface EmptyStateProps {;
 
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const defaultContent = {
   products: {
     icon: <ShoppingCart className="w-16 h-16 text-gray-400" />,
@@ -99,8 +73,43 @@ const defaultContent = {
   loading: {
     icon: <RefreshCw className="w-16 h-16 text-blue-400 animate-spin" />,
     title: 'Loading...',
-      
 
+export function EmptyState({
+  type,
+  title,
+  description,
+  action,
+  icon
+}: EmptyStateProps) {
+  const { t } = useTranslation(),
+  const content = defaultContent[type],
+  const displayTitle = title || content.title,
+  const displayDescription = description || content.description,
+  const displayIcon = icon || content.icon,
+
+  return (
+    <div className="flex flex-col items-center justify-center py-12 px-6 text-center">
+      <div className="mb-4">
+        {displayIcon}
+      </div>
+      
+      <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+        {displayTitle}
+      </h3>
+      
+      <p className="text-gray-600 dark:text-gray-400 max-w-md mb-6">
+        {displayDescription}
+      </p>;
+      {action && (;
+        <Button;
+          onClick={action.onClick}
+          variant="outline"
+          className="flex items-center gap-2"
+        >
+          <RefreshCw className="w-4 h-4" />
+          {action.label}
+        </Button>
+      )}
 
       
       {type === 'error' && (
@@ -108,30 +117,11 @@ const defaultContent = {
           <p>If this issue continues, please contact our support team.</p>
         </div>
       )}
-      
-      {type === 'network' && (
-        <div className="mt-4 text-sm text-gray-500 dark:text-gray-400">
-          <p>
-            {t('general.check_status_page')}{' '}
-            <Link href='https://status.zion.ai' className='underline'>
-              {t('general.status_page')}
-            </Link>
-            .
-          </p>
-        </div>
-      )}
-    </div>
-  )
-// Specific empty state variants for quick use
-export function ProductsEmptyState({
-  onRetry
-  onAddProduct
-  isAuthenticated = false
 }: {
-  onRetry?: () => void
-  onAddProduct?: () => void
-  isAuthenticated?: boolean }) {
-  const action = onAddProduct
+  on_retry?: () => void;
+  onAddProduct?: () => void;
+  is_authenticated?: boolean }) {
+  const action = onAddProduct;
     ? {
 
 
@@ -148,8 +138,6 @@ export function ProductsEmptyState({
             <Link href='https://status && status.zion.ai' className='underline'>;
               {t('general && general.status_page')}
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   )
 export function CategoriesEmptyState({ onRetry }: { onRetry?: () => void }) {
       />
@@ -169,22 +157,14 @@ export function NetworkErrorState({ onRetry }: { onRetry?: () => void }) {
 export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
       />
   )
-} 
-};
-;
-}
-}
-}
-}
-}
-}
-}
 
+      {type === 'network' && (
+        <div className="mt-4 text-sm text-gray-500 dark:text-gray-400">
+          <p>
             {t('general.check_status_page')}
             {" "}
             <Link href="https://status.zion.ai" className="underline">
               {t('general.status_page')}
-
             </Link>;
             .;
           </p>;
@@ -192,32 +172,17 @@ export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
       )}
     </div>;
   );
-}
-;
-// Specific empty state variants for quick use;
-export function ProductsEmptyState({;
-  onRetry,;
-  onAddProduct,;
-  isAuthenticated = false;
-}: {;
-  onRetry?: () => void,;
-  onAddProduct?: () => void,;
-  isAuthenticated?: boolean;
-}) {;
   const action = onAddProduct;
     ? {;
         label: isAuthenticated ? 'Add Product' : 'Login to Add Product',;
-        onClick: onAddProduct,;
-      }
-    : onRetry;
-      ? { label: 'Try Again', onClick: onRetry }
-
-      : undefined;
-
   return (
-    <EmptyState 
-      type="products" 
-    : undefined;
+    <EmptyState
+      type="categories"
+      action={onRetry ? { label: 'Refresh Categories', onClick: onRetry } : undefined}
+    />;
+  );
+}
+
   const customDescription = isAuthenticated;
     ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!";
     : "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!";
@@ -230,88 +195,6 @@ export function ProductsEmptyState({;
   );
 }
 
-  )
-export function CategoriesEmptyState({ onRetry }: { onRetry?: () => void }) {
-      />
-  )
-export function TalentEmptyState({ onRetry }: { onRetry?: () => void }) {
-      />
-  )
-export function EquipmentEmptyState({ onRetry }: { onRetry?: () => void }) {
-      />
-  )
-export function SearchEmptyState({ onRetry }: { onRetry?: () => void }) {
-      />
-  )
-export function NetworkErrorState({ onRetry }: { onRetry?: () => void }) {
-      />
-  )
-export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
-      />
-  )
-}
-}
-  return (
-    <EmptyState
-      type="categories"
-      action={onRetry ? { label: 'Refresh Categories', onClick: onRetry } : undefined}
-    />;
-  );
-}
-
-
-  const customDescription = isAuthenticated;
-    ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!";
-    : "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!";
-
-      />;
-  );
-}
-
-export function TalentEmptyState({ onRetry }: { onRetry?: () => void }) {
-  return (
-    <EmptyState
-      type="talent"
-      action={onRetry ? { label: 'Reset Filters', onClick: onRetry } : undefined}
-    />;
-  );
-}
-
-export function EquipmentEmptyState({ onRetry }: { onRetry?: () => void }) {
-  return (
-    <EmptyState
-      type="equipment"
-      action={onRetry ? { label: 'Refresh Listings', onClick: onRetry } : undefined}
-    />;
-  );
-}
-
-export function SearchEmptyState({ onRetry }: { onRetry?: () => void }) {
-  return (
-    <EmptyState
-      type="search"
-      action={onRetry ? { label: 'Clear Search', onClick: onRetry } : undefined}
-    />;
-  );
-}
-
-export function NetworkErrorState({ onRetry }: { onRetry?: () => void }) {
-  return (
-    <EmptyState
-      type="network"
-      action={onRetry ? { label: 'Try Again', onClick: onRetry } : undefined}
-    />;
-  );
-}
-
-export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
-  return (
-    <EmptyState
-      type="error"
-      action={onRetry ? { label: 'Retry', onClick: onRetry } : undefined}
-    />;
-  );
-} ;
 
 
 
@@ -338,5 +221,4 @@ export function NetworkErrorState ({ on_retry }: { on_retry?: () => void }) {
       />);
 export function ServerErrorState ({ on_retry }: { on_retry?: () => void }) {
       />);
-}
 }

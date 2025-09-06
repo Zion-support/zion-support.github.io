@@ -1,38 +1,3 @@
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
-import {ReferralStats, as, ReferralStatsType} from "@/types/referrals";
-import {Award, Share, Star, TrendingUp} from "lucide-react";
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
-import { ReferralStats as ReferralStatsType } from "@/types/referrals";
-import { Award, Share, Star, TrendingUp } from "lucide-react";
-import { ReferralStats as ReferralStatsType } from "@/types/referrals",
-import { Award, Share, Star, TrendingUp } from "lucide-react",
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 interface ReferralStatsProps {
   stats: ReferralStatsType;
   isLoading: boolean
@@ -41,7 +6,6 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
 
   const statCards = [
     {
-      title: "Total Referrals"
       value: stats.totalReferrals
       icon: <Share className="h-5 w-5 text-muted-foreground" />
       description: "People you've invited"
@@ -64,6 +28,57 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
       icon: <Award className="h-5 w-5 text-muted-foreground" />
       description: "Credits earned from referrals"
     }
+  ];
+;
+  return (
+    <div className="grid gap - 4 md:grid - cols - 2 lg:grid - cols - 4">;
+      {stat_cards.map ((card, i) => (
+        <Card key={i}>;
+          <CardHeader className="flex flex - row items - center justify - between space - y-0 pb - 2">;
+            <CardTitle className="text - sm font - medium">{card.title}</CardTitle>;
+            {card.icon}
+          </CardHeader>;
+          <CardContent>;
+            {is_loading ? (
+              <div className="h - 6 w - 20 bg - muted animate - pulse rounded" />) : (
+              <>;
+                <div className="text - 2xl font - bold">{card.value}</div>;
+                <p className="text - xs text - muted - foreground">;
+                  {card.description}
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { ReferralStats, as, ReferralStatsType } from "@/types/referrals";
+import { Award, Share, Star, TrendingUp } from "lucide-react";
+interface ReferralStatsProps {
+  stats: ReferralStatsType;
+  isLoading: boolean;
+}
+
+export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
+  const statCards = [
+    {
+      title: "Total Referrals",
+      value: stats.totalReferrals,
+      icon: <Share className="h-5 w-5 text-muted-foreground" />,
+      description: "People you've invited",
+    },
+    {
+      title: "Completed",
+      value: stats.completedReferrals,
+      icon: <Star className="h-5 w-5 text-muted-foreground" />,
+      description: "Signed up & completed onboarding",
+    },
+    {
+      title: "Pending",
+      value: stats.pendingReferrals,
+      icon: <TrendingUp className="h-5 w-5 text-muted-foreground" />,
+      description: "Not yet completed onboarding",
+    },
+    {
+      title: "Total Rewards",
+      value: stats.totalRewards > 0 ? `$${stats.totalRewards.toFixed(2)}` : "-",
+      icon: <Award className="h-5 w-5 text-muted-foreground" />,
+      description: "Credits earned from referrals",
+    },
   ];
 
   return (
@@ -92,7 +107,6 @@ interface ReferralStatsProps {;
   stats: ReferralStatsType,;
   isLoading: boolean;
 }
-
 export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) {;
   const statCards = [;
     {;
@@ -115,7 +129,6 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
       value: stats && stats.totalRewards > 0 ? `$${stats && stats.totalRewards.toFixed(2)}` : "-",;
       icon: <Award className="h-5 w-5 text-muted-foreground" />,;
       description: "Credits earned from referrals"}],;
-
   return (
     <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">;
       {statCards && statCards.map((card, i) => (;
@@ -132,38 +145,16 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
                 <div className="text-2xl font-bold">{card && card.value}</div>;
                 <p className="text-xs text-muted-foreground">{card && card.description}</p>;
               </>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
             )}
           </CardContent>;
         </Card>;
       ))}
-    </div>
-<<<<<<< HEAD
-  );
-}
-  )
-}
-;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
 
   )
 }
-;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+                </p>;
+              </>)}
+          </CardContent>;
+        </Card>))}
+    </div>);
+}

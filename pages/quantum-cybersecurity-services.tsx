@@ -1,31 +1,14 @@
-<<<<<<< HEAD
-import React from 'react',
-import React from 'react';
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import Head from 'next/head';
 import { motion  } from 'framer-motion';
 import { quantumCybersecurityServices  } from '../data/2026-quantum-cybersecurity-services';
 import UltraFuturisticBackground2026 from '../components/ui/UltraFuturisticBackground2026';
 import UltraFuturisticServiceCard2026 from '../components/ui/UltraFuturisticServiceCard2026';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import React from 'react',
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import { quantumCybersecurityServices } from '../data/2026-quantum-cybersecurity-services',
 import UltraFuturisticBackground2026 from '../components/ui/UltraFuturisticBackground2026',
 import UltraFuturisticServiceCard2026 from '../components/ui/UltraFuturisticServiceCard2026',
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 export default function QuantumCybersecurityServices() {
   return (
     <>
@@ -70,13 +53,6 @@ export default function QuantumCybersecurityServices() {
 }
         <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16">
           <div className="text-center z-10 max-w-6xl mx-auto">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
             <motion.h1
               initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
@@ -121,14 +97,6 @@ export default function QuantumCybersecurityServices() {
               algorithms. Protect your business from tomorrow's threats today.            </motion.p>
               Unbreakable security powered by quantum computing and advanced AI algorithms. Protect your business from tomorrow's threats today.
             </motion.p>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
 
 
               initial={{ opacity: 0, y: 30 }}
@@ -144,8 +112,6 @@ export default function QuantumCybersecurityServices() {
               animate={{ opacity: 1, y: 0 }}
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
             <motion.div
               initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
@@ -181,39 +147,6 @@ export default function QuantumCybersecurityServices() {
             <motion&& motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-              transition={{ duration: 1, delay: 0.6 }}
-              className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto'
-            {/* Key Benefits */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            <motion.div;
-              initial={{ opacity: 0, y: 50 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              transition={{ duration: 1, delay: 0.6 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto"
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
 
 
                   Advanced threat detection that learns and adapts to new attack;
@@ -222,8 +155,6 @@ export default function QuantumCybersecurityServices() {
               </div>;
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
             >
               <div className="bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-6">
                 <div className="text-4xl mb-4">🔐</div>
@@ -243,38 +174,12 @@ export default function QuantumCybersecurityServices() {
             </motion.div>
           </div>
         </section>
-        {/* Services Section */}
-        <section id='services' className='py-20 px-4 sm:px-6 lg:px-8 relative'>
-          <div className='max-w-7xl mx-auto'>            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className='text-center mb-16'
         {/* Services Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
-        <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 relative">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
             >
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
@@ -285,16 +190,6 @@ export default function QuantumCybersecurityServices() {
                 Protect your digital assets with the most advanced security technology available, powered by quantum computing and AI.
               </p>
             </motion.div>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {quantumCybersecurityServices.map((service, index) => (
-                <motion.div
-                  key={service.id}
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {quantumCybersecurityServices.map((service, index) => (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 <motion.div
 
 
@@ -324,45 +219,15 @@ export default function QuantumCybersecurityServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                  initial={{ opacity: 0, y: 50 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  transition={{ duration: 0.8, delay: index * 0.1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
                 >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <UltraFuturisticServiceCard2026
                     service={service}
                     variant='premium'
                     theme='cyberpunk'                  />;
                 </motion && motion.div>;
 
-=======
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
@@ -392,41 +257,6 @@ export default function QuantumCybersecurityServices() {
             </div>;
           </div>;
         </section>;
-<<<<<<< HEAD
-        {/* Why Quantum Security Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative bg-black/20">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              className="text-center mb-16"
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Why Quantum Security Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative bg-black/20'>;
           <div className='max-w-7xl mx-auto'>            <motion&& motion.div
@@ -443,8 +273,6 @@ export default function QuantumCybersecurityServices() {
 
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>              <motion&& motion.div
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
             >
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
@@ -452,48 +280,6 @@ export default function QuantumCybersecurityServices() {
                 </span>
               </h2>
             </motion.div>
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.1 }}
-                viewport={{ once: true }}
-                className='bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-8'
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <motion.div
-<<<<<<< HEAD
-                initial={{ opacity: 0, x: -30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                whileInView={{ opacity: 1, x: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                transition={{ duration: 0.8, delay: 0.1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                className="bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-8"
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
               >
                 <h3 className="text-2xl font-bold text-white mb-4">The Quantum Threat</h3>
                 <p className="text-gray-300 mb-4">
@@ -501,7 +287,6 @@ export default function QuantumCybersecurityServices() {
                 </p>
                 <ul className="text-gray-400 space-y-2">
                   <li>• RSA encryption will be vulnerable</li>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   <li>• Current SSL/TLS certificates at risk</li>
                   <li>• Blockchain security compromised</li>
                   <li>• Financial systems exposed</li>
@@ -512,41 +297,6 @@ export default function QuantumCybersecurityServices() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-                className='bg-black/40 backdrop-blur-xl border border-purple-400/30 rounded-2xl p-8'
-                initial={{ opacity: 0, x: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                whileInView={{ opacity: 1, x: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                transition={{ duration: 0.8, delay: 0.2 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                className="bg-black/40 backdrop-blur-xl border border-purple-400/30 rounded-2xl p-8"
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
               >
                 <h3 className="text-2xl font-bold text-white mb-4">Our Quantum Solution</h3>
                 <p className="text-gray-300 mb-4">
@@ -554,7 +304,6 @@ export default function QuantumCybersecurityServices() {
                 </p>
                 <ul className="text-gray-400 space-y-2">
                   <li>• Post-quantum cryptography</li>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   <li>• Quantum key distribution</li>
                   <li>• AI-enhanced threat detection</li>
                   <li>• Future-proof security architecture</li>
@@ -568,32 +317,12 @@ export default function QuantumCybersecurityServices() {
           <div className='max-w-7xl mx-auto'>            <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className='text-center mb-16'
-        {/* Security Features Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
             >
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
@@ -601,73 +330,14 @@ export default function QuantumCybersecurityServices() {
                 </span>
               </h2>
             </motion.div>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.1 }}
-                viewport={{ once: true }}
-                className='text-center'
-              >
-                <div className='text-6xl mb-4'>🔒</div>
-                <h3 className='text-xl font-semibold text-white mb-2'>
-                  Zero Trust Architecture
-                </h3>
-                <p className='text-gray-400 text-sm'>
-                  Never trust, always verify approach to security.
-                </p>              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                viewport={{ once: true }}
-                className='text-center'
-              >
-                <div className='text-6xl mb-4'>🔄</div>
-                <h3 className='text-xl font-semibold text-white mb-2'>
-                  Continuous Monitoring
-                </h3>
-                <p className='text-gray-400 text-sm'>
-                  24/7 threat detection and response.
-                </p>              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
-                viewport={{ once: true }}
-                className='text-center'
-              >
-                <div className='text-6xl mb-4'>🤖</div>
-                <h3 className='text-xl font-semibold text-white mb-2'>
-                  AI Automation
-                </h3>
-                <p className='text-gray-400 text-sm'>
-                  Automated threat response and incident resolution.
-                </p>              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-                viewport={{ once: true }}
-                className='text-center'
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <motion.div
-
-
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
                 viewport={{ once: true }}
-
-
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.3 }}
                 viewport={{ once: true }}
-
-
-              <motion.div
-
-
                 className='text-center'>;
                 <div className='text-6xl mb-4'>🤖</div>;
                 <h3 className='text-xl font-semibold text-white mb-2'>;
@@ -678,49 +348,10 @@ export default function QuantumCybersecurityServices() {
                 </p>              </motion && motion.div>;
 
               <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
                 viewport={{ once: true }}
-
-
-        {/* Contact Section */}
-        <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>;
-          <div className='max-w-4xl mx-auto text-center'>            <motion&& motion.div
-=======
-                className="text-center"
-=======
-                initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                transition={{ duration: 0.8, delay: 0.4 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                className="text-center"
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
               >
                 <div className="text-6xl mb-4">📊</div>
                 <h3 className="text-xl font-semibold text-white mb-2">Real-Time Analytics</h3>
@@ -729,21 +360,6 @@ export default function QuantumCybersecurityServices() {
             </div>
           </div>
         </section>
-        {/* Contact Section */}
-        <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>
-          <div className='max-w-4xl mx-auto text-center'>            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-        {/* Contact Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
               initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -764,50 +380,11 @@ export default function QuantumCybersecurityServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
             >
-              <h2 className="text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-6">
-                <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
-                  Secure Your Future Today
-                </span>
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Don't wait for quantum computers to break your security. Contact us now to implement quantum-resistant protection.
-              </p>
-              <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>
-                <div className='bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-6'>
-                  <div className='text-3xl mb-4'>📱</div>
-                  <h3 className='text-xl font-semibold text-white mb-2'>
-                    Phone
-                  </h3>
                   <a
                     href='tel:+13024640950'
-<<<<<<< HEAD
-                    className='text-indigo-400 hover:text-indigo-300 transition-colors'
-                  >
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                <div className="bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-6">
-                  <div className="text-3xl mb-4">📱</div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
-                  <a href="tel:+13024640950" className="text-indigo-400 hover:text-indigo-300 transition-colors">
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
                     className='text-indigo-400 hover:text-indigo-300 transition-colors'>;
                     +1 302 464 0950;
                   </a>;
@@ -830,7 +407,6 @@ export default function QuantumCybersecurityServices() {
                     Address;
                   </h3>;
                   <p className='text-gray-300 text-sm'>;
-=======
               <div className='bg - black / 40 backdrop - blur - xl border border - indigo - 400 / 30 rounded - 2xl p - 6'>;
                 <div className='text - 4xl mb - 4'>⚡</div>;
                 <h3 className='text - xl font - semibold text - white mb - 2'>;
@@ -1060,8 +636,6 @@ export default function QuantumCybersecurityServices() {
               </div>;
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
                     +1 302 464 0950
                   </a>
                 </div>
@@ -1070,7 +644,6 @@ export default function QuantumCybersecurityServices() {
                   <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
                   <a href="mailto:kleber@ziontechgroup.com" className="text-indigo-400 hover:text-indigo-300 transition-colors">
                     kleber@ziontechgroup.com
-                  </a>
                 </div>
                 <div className="bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-6">
                   <div className="text-3xl mb-4">📍</div>
@@ -1081,19 +654,8 @@ export default function QuantumCybersecurityServices() {
                   </p>
                 </div>
               </div>
-              <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
                 <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:from-indigo-600 hover:to-purple-600 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
@@ -1104,7 +666,6 @@ export default function QuantumCybersecurityServices() {
                   href="https://ziontechgroup.com"
                   className="border-2 border-indigo-400 text-indigo-400 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-indigo-400 hover:text-black transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
                 >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   Visit Our Website
                 </a>
               </div>
@@ -1113,41 +674,6 @@ export default function QuantumCybersecurityServices() {
         </section>
       </UltraFuturisticBackground2026>
     </>
-  );
-  )
-            >;
-              <h2 className="text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-6">;
-                <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">;
-                  Secure Your Future Today;
-                </span>;
-              </h2>;
-              <p className="text-xl text-gray-300 mb-8">;
-                Don't wait for quantum computers to break your security. Contact us now to implement quantum-resistant protection.;
-              </p>;
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">;
-                <div className="bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-6">;
-                  <div className="text-3xl mb-4">📱</div>;
-                  <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>;
-                  <a href="tel:+13024640950" className="text-indigo-400 hover:text-indigo-300 transition-colors">;
-                    +1 302 464 0950;
-                  </a>;
-                </div>;
-                <div className="bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-6">;
-                  <div className="text-3xl mb-4">✉️</div>;
-                  <h3 className="text-xl font-semibold text-white mb-2">Email</h3>;
-                  <a href="mailto:kleber@ziontechgroup.com" className="text-indigo-400 hover:text-indigo-300 transition-colors">;
-                    kleber@ziontechgroup.com;
-                  </a>;
-                </div>;
-                <div className="bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-6">;
-                  <div className="text-3xl mb-4">📍</div>;
-                  <h3 className="text-xl font-semibold text-white mb-2">Address</h3>;
-                  <p className="text-gray-300 text-sm">;
-                    364 E Main St STE 1008<br />;
-                    Middletown DE 19709;
-                  </p>;
-                </div>;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </div>;
             </motion && motion.div>;
           </div>;
@@ -1157,11 +683,8 @@ export default function QuantumCybersecurityServices() {
   );
 
 
-=======
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
               <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
                 <a;
                   href='mailto:kleber@ziontechgroup.com';
@@ -1178,7 +701,6 @@ export default function QuantumCybersecurityServices() {
           </div>;
         </section>;
       </UltraFuturisticBackground2026>;
-
     </>;
   );
   } catch (error) {
@@ -1186,14 +708,3 @@ export default function QuantumCybersecurityServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

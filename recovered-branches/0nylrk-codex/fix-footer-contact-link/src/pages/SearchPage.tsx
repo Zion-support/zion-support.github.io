@@ -1,35 +1,3 @@
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import {useEffect, useState} from "react";
 import {useNavigate, useSearchParams} from "react-router-dom";
 import {EnhancedSearchInput} from "@/components/search/EnhancedSearchInput";
@@ -38,17 +6,6 @@ import {SearchSuggestion} from "@/types/search";
 import {useAISearch} from "@/hooks/useAISearch";
 import {AppLayout} from "@/layout/AppLayout";
 export default function SearchPage() {;
-<<<<<<< HEAD
-  const [params] = useSearchParams();
-  const navigate = useNavigate();
-  const initial = params.get("q") || "";
-  const [query, setQuery] = useState(initial);
-  const { results, loading, search } = useAISearch();
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import { useEffect, useState } from "react",
 import { useNavigate, useSearchParams } from "react-router-dom",
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
@@ -72,43 +29,17 @@ export default function SearchPage() {
   const initial = params.get("q") || "",
   const [query, setQuery] = useState(initial),
   const { results, loading, search } = useAISearch(),
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
 
   const [params] = useSearchParams();
 
   const navigate = useNavigate();
 
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   const suggestions: SearchSuggestion[] = generateSearchSuggestions(),
 
   useEffect(() => {
     if (initial) {
       search(initial)
     }
-  }, [initial]);
-
-  const handleSubmit = (e: React && React.FormEvent) => {;
-    e && e.preventDefault(),;
-    navigate(`/search?q=${encodeURIComponent(query)}`);
-    search(query)
-  }
-  }, [initial]),
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault(),
-    navigate(`/search?q=${encodeURIComponent(query)}`),
-    search(query)
-  },
-
   return (
     <AppLayout>;
       <main className="container mx-auto px-4 py-8">;
@@ -118,9 +49,6 @@ export default function SearchPage() {
             onChange={setQuery}
             searchSuggestions={suggestions}
             placeholder="Search talent, jobs, and projects..."
-          />
-        </form>
-
 
 import { useEffect, useState } from "react",;
 import { useNavigate, useSearchParams } from "react-router-dom",;
@@ -157,15 +85,6 @@ export default function SearchPage() {;
             placeholder="Search talent, jobs, and projects...";
           />;
         </form>;
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
         {loading && <p className="text-zion-slate-light">Searching...</p>}
         {!loading && results && results.length === 0 && (;
           <p className="text-zion-slate-light">No results found.</p>;
@@ -183,15 +102,6 @@ export default function SearchPage() {;
                 <p className="text-zion-slate-light">{r && r.description}</p>;
               </div>;
             ))}
-          </div>;
-        )}
-
-      </main>;
-    </AppLayout>;
-  );
-}
-
-=======
 import { useEffect, useState } from './react';
 import { use_navigate, useSearchParams } from './react-router-dom';
 import { EnhancedSearchInput } from '@/components / search / EnhancedSearchInput';
@@ -255,4 +165,3 @@ if ( {) {
       </main>;
     </AppLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

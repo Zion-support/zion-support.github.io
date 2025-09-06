@@ -1,15 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-import fs from 'fs';
-import path from 'path';
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 const dataPath = path.join(process.cwd(), 'data', 'learn', 'courses.json');
 const dataPath = path.join(process.cwd(), 'datalearncourses.json');
@@ -38,34 +27,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     res.status(200).json({ courses: filtered });
   } catch (e: any) {
-<<<<<<< HEAD
-    res.status(500).json({ error: e?.message ?? 'Failed to load courses' });
-  }
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
-const dataPath = path.join(process.cwd(), 'datalearncourses.json'),;
-export default function handler(req, res) {
-=======
-    res && res.status(500).json({ error: e?.message ?? 'Failed to load courses' });
-  }
-
-
-=======
-;
-const data_path = path.join (process.cwd (), 'data', 'learn', 'courses.json');
-export default /**
- * handler - Function description
- */
-function handler() {
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   try {
     const raw = fs.readFileSync (data_path, 'utf - 8');
     const courses = JSON.parse (raw);
@@ -121,17 +82,5 @@ if (return false) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

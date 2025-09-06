@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-import React from "react";
-import { Textarea } from "@/components/ui/textarea";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-export interface MessageTabProps {;
-  message: string;
-  setMessage: (message: string) => void;
-  proposalLink: string;
-  setProposalLink: (link: string) => void;
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
 import React from 'react',
 import { Textarea } from "@/components/ui/textarea",
@@ -55,28 +34,12 @@ export function MessageTab({ message, setMessage, proposalLink, setProposalLink 
         <Textarea
           id="message"
           value={message}
-          onChange={(e) => setMessage(e.target.value)}
-          className="h-32 bg-zion-blue-dark/20 border-zion-purple/30 text-white"
-          placeholder="Write a message to the job poster..."
-        />
-      </div>
-      
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       <div>
         <Label htmlFor="proposalLink" className="text-white">Link to Proposal/Portfolio (Optional)</Label>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <Input
           id="proposalLink"
           type="url"
           value={proposalLink}
-
 import React from './react';
 import { Textarea  } from '@/components / ui / textarea';
 import { Input  } from '@/components / ui / input';
@@ -106,41 +69,6 @@ function MessageTab() {
         />;
       </div>;
       <div>;
-        <Label html_for="proposal_link" className="text - white">;
-          Link to Proposal / Portfolio (Optional);
-        </Label>;
-        <Input;
-          id="proposal_link";
-          type="url";
-          value={proposal_link}
-          on_change={(e) => setProposalLink (e.target.value)}
-          className="bg - zion - blue - dark / 20 border - zion - purple / 30 text - white";
-          placeholder="https: //...";
-        />;
-      </div>;
-    </div>);
-
-}
-=======
-          onChange={(e) => setProposalLink(e.target.value)}
-          className="bg-zion-blue-dark/20 border-zion-purple/30 text-white"
-          placeholder="https: //..."
-        />
-      </div>
-    </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-}
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
-  );
-}
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   )
 import React from 'react',;
 import { Textarea } from "@/components/ui/textarea",;
@@ -180,21 +108,11 @@ export function MessageTab({ message, setMessage, proposalLink, setProposalLink 
     </div>;
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-;
-=======
 
     </div>;
   );
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+}

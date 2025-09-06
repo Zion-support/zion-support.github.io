@@ -1,25 +1,10 @@
-<<<<<<< HEAD
-import EnhancedCard from '../../components/ui/EnhancedCard',
-import EnhancedButton from '../../components/ui/EnhancedButton';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import {useEffect, useState} from 'react';
 const STEPS = [
   { key: 'profile', label: 'Profile completed' }
   { key: 'skills', label: 'Skills added' }
   { key: 'availability', label: 'Availability set' }
   { key: 'match', label: 'First match received' }
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ] as const;
 type StepKey = (typeof STEPS)[number]['key'];
 
@@ -32,33 +17,15 @@ const STEPS = [
 type StepKey = typeof STEPS[number]['key'];
 
 export default function TalentDashboard() {
-<<<<<<< HEAD
-  const [completed, setCompleted] = useState<Record<StepKey, boolean>>({
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  const [completed, setCompleted] = useState<Record<StepKey, boolean>>({
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     profile: false
     skills: false
     availability: false
     match: false
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     profile: false,
     skills: false,
     availability: false,
     match: false,;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   });
-=======
-  const [completed, setCompleted] = useState<Record<StepKey, boolean>>({ profile: false, skills: false, availability: false, match: false }),
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   useEffect(() => {
     try {
       const raw = window.localStorage.getItem('onboarding.talent');
@@ -100,55 +67,10 @@ export default function TalentDashboard() {;
 
     setCompleted(c => ({ ...c, [key]: !c[key] }));
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import EnhancedCard from '../../components/ui/EnhancedCard';
-import EnhancedButton from '../../components/ui/EnhancedButton';
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
-import EnhancedCard from '../../components/ui/EnhancedCard';
-import EnhancedButton from '../../components/ui/EnhancedButton';
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import { useEffect, useState } from 'react';
 const STEPS = [;
   { key: 'profile', label: 'Profile completed' },;
   { key: 'skills', label: 'Skills added' },;
-  { key: 'availability', label: 'Availability set' },;
-  { key: 'match', label: 'First match received' }] as const,;
-type StepKey = typeof STEPS[number]['key'];
-export default function TalentDashboard(req, res) {
-  try {
-  const [completed, setCompleted] = useState<Record<StepKey boolean>>({ profile: false, skills: false, availability: false, match: false }),;
-  useEffect(() => {;
-    try {
-      const raw = window.localStorage.getItem('onboarding.talent');
-      if (raw) setCompleted(JSON.parse(raw));
-    } catch {  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  }, []),;
-  useEffect(() => {;
-    try { window.localStorage.setItem('onboarding.talent', JSON.stringify(completed)) } catch {  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  }, [completed]),
-  const progress = Math.round((Object.values(completed).filter(Boolean).length / STEPS.length) * 100),
-  const toggle = (key: StepKey) => setCompleted((c) => ({ ...c, [key]: !c[key] })),
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
   return (
     <div className='space-y-4'>;
       <EnhancedCard>;
@@ -199,7 +121,6 @@ export default function TalentDashboard(req, res) {
                 </EnhancedButton>              )}
             </li>;
 
-=======
     try { window.localStorage.setItem('onboarding.talent', JSON.stringify(completed)) } catch {}
   }, [completed]);
 
@@ -207,12 +128,9 @@ export default function TalentDashboard(req, res) {
 
   const toggle = (key: StepKey) => setCompleted((c) => ({ ...c, [key]: !c[key] }));
 
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   return (
     <div className="space-y-4">
       <EnhancedCard>
@@ -240,41 +158,11 @@ export default function TalentDashboard(req, res) {
               {completed[s.key] ? (
                 <button onClick={() => toggle(s.key)} className="text-xs text-gray-500 hover:underline">Undo</button>
               ) : (
-<<<<<<< HEAD
-                <EnhancedButton
-                  onClick={() => toggle(s.key)}
-                  variant='secondary'
-                  className='text-xs py-1 px-2'
-                >
-                  {s.key === 'skills' ? 'Add skills' : 'Mark done'}
-                </EnhancedButton>              )}
-            </li>
-          ))}
-        </ul>
-      </EnhancedCard>
-    </div>
-);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
-}
-=======
-
-
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
 
 
 }
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
                 <EnhancedButton onClick={() => toggle(s.key)} variant="secondary" className="text-xs py-1 px-2">{s.key === 'skills' ? 'Add skills' : 'Mark done'}</EnhancedButton>
               )  } catch (error) {
     console.error("Error:", error);
@@ -287,18 +175,14 @@ export default function TalentDashboard(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         </ul>;
       </EnhancedCard>;
     </div>;
   );
 
 
-=======
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import EnhancedCard from '../../components / ui / EnhancedCard';
 import EnhancedButton from '../../components / ui / EnhancedButton';
 import {useEffect, useState} from 'react';
@@ -394,21 +278,8 @@ function TalentDashboard() {
       </EnhancedCard>;
     </div>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

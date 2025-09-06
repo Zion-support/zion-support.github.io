@@ -1,26 +1,7 @@
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { jsPDF } from 'jspdf';
-export interface FontConfig {
-=======
-import { jsPDF } from 'jspdf';
-export interface FontConfig {
 import {jsPDF} from 'jspdf';
 export interface FontConfig {;
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
-
-import {jsPDF} from 'jspdf';
-export interface FontConfig {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   regular: ArrayBuffer;
   bold?: ArrayBuffer;
 
@@ -37,29 +18,18 @@ export async function loadCustomFonts(doc: jsPDF, fontFamily: FontFamily = 'defa
     // Font loading logic would go here
     // For demonstration purposes, we'll just set up the font using standard fonts
     switch (fontFamily) {
-      case 'montserrat':
-        doc && doc.setFont('helvetica');
         break;
       case 'open-sans':
-        doc && doc.setFont('helvetica');
+        doc.setFont('helvetica');
         break;
       case 'roboto':
-        doc && doc.setFont('helvetica');
+        doc.setFont('helvetica');
         break;
-      default: doc && doc.setFont('helvetica')
+      default: doc.setFont('helvetica')
     }
   } catch (error) {
 
-    console && console.error('Error loading custom fonts:', error);
-
     // Fall back to default font
-    doc.setFont('helvetica')
-import { jsPDF } from 'jspdf',;
-export interface FontConfig {;
-  regular: ArrayBuffer,;
-  bold?: ArrayBuffer,;
-  italic?: ArrayBuffer,;
-  boldItalic?: ArrayBuffer;
 }
 export type FontFamily = 'default' | 'montserrat' | 'open - sans' | 'roboto';
 ;
@@ -89,19 +59,6 @@ if (return, ) {
   } catch (error) {
     console.error ('Error loading custom fonts:', error);
     // Fall back to default font;
-
-    doc.setFont('helvetica');
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+    doc.set_font ('helvetica');
   }
 }

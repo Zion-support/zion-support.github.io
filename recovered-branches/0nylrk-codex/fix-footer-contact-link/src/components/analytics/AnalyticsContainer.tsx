@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-import React from "react";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { SEO } from "@/components/SEO";
-import { Navigate } from "react-router-dom";
-import { useAuth } from "@/hooks/useAuth";
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
 import React from "react",
 import { Header } from "@/components/Header",
@@ -24,47 +7,15 @@ import { Navigate } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
 import { Navigate } from "react-router-dom",
 import { useAuth } from "@/hooks/useAuth",
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-interface AnalyticsContainerProps {
-  children: React.ReactNode
-}
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
-
-
-export function AnalyticsContainer(): any ({ children }: AnalyticsContainerProps) {;
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 interface AnalyticsContainerProps {
   children: React.ReactNode
 }
 
-export function AnalyticsContainer({ children }: AnalyticsContainerProps) {;
-  const { isAuthenticated, isLoading, user } = useAuth();
+interface AnalyticsContainerProps {
+  children: React.ReactNode
+}
 
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
   const { isAuthenticated, isLoading, user } = useAuth();
   // Check if user is admin (using either role or userType)
@@ -84,12 +35,10 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
       </div>
     )
   }
-  
   // If not authenticated, redirect
   if (!isAuthenticated) {
     return <Navigate to="/login" state={{ from: '/analytics' }} replace />
   }
-  
   // If not admin, redirect
   if (!isAdmin) {
     return <Navigate to="/unauthorized" replace />
@@ -109,12 +58,6 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
             Track user behavior, page views, and conversion rates
           </p>
         </div>
-        {children}
-      </main>
-      <Footer />
-    </div>
-  );
-}
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -122,16 +65,10 @@ import { SEO } from "@/components/SEO",;
 import { Navigate } from "react-router-dom",;
 import { useAuth } from "@/hooks/useAuth",;
 interface AnalyticsContainerProps {;
-  children: React.ReactNode;
-}
-;
-export function AnalyticsContainer({ children }: AnalyticsContainerProps) {;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const { isAuthenticated, isLoading, user } = useAuth();
 
   // Check if user is admin (using either role or userType);
   const isAdmin = user?.role === "admin" || user?.userType === "admin";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   // If still loading auth status, show loading;
   if (isLoading) {;
@@ -141,16 +78,6 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {;
       </div>;
     );
   }
-
-
-  // If not authenticated, redirect;
-  if (!isAuthenticated) {;
-    return <Navigate to="/login" state={{ from: "/analytics" }} replace />;
-  }
-
-  // If not admin, redirect;
-  if (!isAdmin) {;
-
     return <Navigate to="/unauthorized" replace />;
   }
   return (
@@ -167,7 +94,6 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {;
             Analytics Dashboard;
           </h1>;
           <p className="text-zion-slate-light">;
-=======
 import React from './react';
 import { Header  } from '@/components / Header';
 import { Footer  } from '@/components / Footer';
@@ -224,26 +150,10 @@ if ( {) {
             Analytics Dashboard;
           </h1>;
           <p className="text - zion - slate - light">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             Track user behavior, page views, and conversion rates;
           </p>;
         </div>;
         {children}
       </main>;
       <Footer />;
-
-    </div>);
-
 }
-=======
-}
-;
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

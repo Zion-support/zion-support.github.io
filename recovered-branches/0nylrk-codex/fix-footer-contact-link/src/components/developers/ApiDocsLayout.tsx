@@ -1,20 +1,3 @@
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-import React from "react";
-import {Link, useLocation} from "react-router-dom";
-import {Search} from "lucide-react";
-import {Input} from "@/components/ui/input";
-import {cn} from "@/lib/utils";
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import React from "react",
 import { Link, useLocation } from "react-router-dom",
 import { Search } from "lucide-react",
@@ -22,38 +5,10 @@ import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 import { Input } from "@/components/ui/input",
 import { cn } from "@/lib/utils",
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-interface ApiDocsLayoutProps {
-  children: React.ReactNode
-}
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 interface ApiDocsLayoutProps {
   children: React.ReactNode
 }
 
-<<<<<<< HEAD
-export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {;
-  const location = useLocation();
-  const currentPath = location.pathname;
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
 
   const location = useLocation();
@@ -67,56 +22,10 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
     { title: "Webhooks", path: "/developers/docs/webhooks" }
     { title: "Sample Code", path: "/developers/docs/samples" }
     { title: "Error Codes & Rate Limits", path: "/developers/docs/errors" }]
-=======
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-
-import React from "react";
-import {Link, useLocation} from "react-router-dom";
-import {Search} from "lucide-react";
-import {Input} from "@/components/ui/input";
-import {cn} from "@/lib/utils";
-interface ApiDocsLayoutProps {;
-  children: React && React.ReactNode;
-}
-
-export function ApiDocsLayout(): any ({ children }: ApiDocsLayoutProps) {;
-  const location = useLocation();
-  const currentPath = location && location.pathname;
-
-  const navigationItems = [;
-    { title: "Getting Started", path: "/developers/docs/getting-started" },;
-    { title: "API Reference", path: "/developers/docs/reference" },;
-    { title: "Webhooks", path: "/developers/docs/webhooks" },;
-    { title: "Sample Code", path: "/developers/docs/samples" },;
-    { title: "Error Codes & Rate Limits", path: "/developers/docs/errors" }],;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className="flex min-h-screen bg-zinc-950">;
       {/* Sidebar */}
 
-=======
                 <Link
                   to={item.path}
                   className={cn(
@@ -124,23 +33,6 @@ export function ApiDocsLayout(): any ({ children }: ApiDocsLayoutProps) {;
                     currentPath === item.path
                       ? "bg-zion-purple/20 text-zion-cyan"
                       : "text-zinc-400 hover:text-white hover:bg-zinc-900"
-                  )}
-                >
-                  {item.title}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </div>
-      {/* Main content */}
-      <div className="flex-grow max-w-5xl mx-auto px-4 py-8 md:px-8 md:py-12">
-        {children}
-      </div>
-    </div>
-  )
-}
-export default ApiDocsLayout;
 
 import React from "react",;
 import { Link, useLocation } from "react-router-dom",;
@@ -186,7 +78,9 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {;
           <ul className="space-y-1">;
             {navigationItems && navigationItems.map((item) => (;
               <li key={item && item.path}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  return (
+    <div className="flex min-h-screen bg-zinc-950">;
+      {/* Sidebar */}
                 <Link
                   to={item && item.path}
                   className={cn(
@@ -199,12 +93,6 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {;
                 </Link>;
               </li>;
             ))}
-
-          </ul>;
-        </nav>;
-      </div>;
-
-
       {/* Main content */}
       <div className="flex-grow max-w-5xl mx-auto px-4 py-8 md:px-8 md:py-12">;
         {children}
@@ -213,15 +101,5 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {;
   );
 }
 
-;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 export default ApiDocsLayout;

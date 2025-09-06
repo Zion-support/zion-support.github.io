@@ -1,7 +1,3 @@
-public_url;
-}= supabase.storage.from ('resumes') .getPublicUrl (file_name);
-return public_url;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import {
   Form
   FormControl
@@ -108,13 +104,9 @@ export function TalentOnboardingForm() {
   const [showSuccessScreen, setShowSuccessScreen] = useState(false)
   const { enhanceProfile, isGenerating } = useTalentProfileEnhancer()
   const totalSteps = 4
-=======
-=======
 import { useAuth } from "@/hooks/useAuth",
 import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer",
 import { supabase } from "@/integrations/supabase/client",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const form = useForm<TalentFormValues>({
     resolver: zodResolver(talentSchema)
     defaultValues: {
@@ -141,15 +133,10 @@ import { supabase } from "@/integrations/supabase/client",
     const file = e.target.files?.[0],
     if (!file) return,
     
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     // Preview the image
     const reader = new FileReader()
     reader.onloadend = () => {
       setProfilePictureUrl(reader.result as string)
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 //Rest of the file remains unchanged... // [Previous implementation continues...] return null;
 }'}

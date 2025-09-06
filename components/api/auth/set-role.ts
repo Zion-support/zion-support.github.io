@@ -1,33 +1,6 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from "next";
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-  const { role = "guest", talent } = req.query as {
-  const { role = "guest", talent } = req.query as {;
-=======
-
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-
-=======
-  const { role = "guest", talent } = req.query as {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     role?: string;
     talent?: string;
   }
-
-      const expires = new Date(Date && Date.now() + days * 864e5).toUTCString();
-      cookies && cookies.push(
-        `${k}=${encodeURIComponent(v)}; Path=/; SameSite=Lax; Expires=${expires}`,
-
       );
     }
     if (role === "admin" |role === "talent" |role === "guest") {
@@ -37,12 +10,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       set("talentSlug", talent);
     }
     set("userId", role === "guest" ? "" : "test-user");
-
-
-    headers["Set-Cookie"] = cookies && cookies.join(", ");
-    res && res.writeHead(302, { ...headers, Location: "/" });
-    res && res.end();
-
   }
   if (role === "admin" |role === "talent" |role === "guest") {
     set("role", role);
@@ -52,20 +19,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   set("userId", role === "guest" ? "" : "test-user");
 
-
-
-  headers["Set-Cookie"] = cookies && cookies.join();
-  res && res.writeHead(302, { ...headers, Location: "/" });
-  res && res.end();
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-}
-
-
-
-=======
-  export default /**
  * handler - Function description
  */
 function handler() {
@@ -118,9 +71,3 @@ if ( {) {
   headers["Set - Cookie"] = cookies.join ();
   res.write_head (302, { ...headers, Location: "/" });
   res.end ();
-
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

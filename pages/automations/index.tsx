@@ -1,10 +1,3 @@
-
-const AutomationsIndex: NextPage = () => {
-  const items = [
-    { href: '/automations/top-talents', title: 'Top Talents (Auto)', desc: 'Aggregated from approved reviews, updated on schedule' }
-    { href: '/automations/sitemap-status', title: 'Sitemap Status (Auto)', desc: 'Nightly sitemap and weekly pings to search engines' }]
-    { href: '/automations/top-talents', title: 'Top Talents (Auto)', desc: 'Aggregated from approved reviews, updated on schedule' },
-    { href: '/automations/sitemap-status', title: 'Sitemap Status (Auto)', desc: 'Nightly sitemap and weekly pings to search engines' }],
   return (
     <main className="space-y-6">
       <h1 className="text-3xl font-bold">Autonomous Automations</h1>
@@ -15,30 +8,12 @@ const AutomationsIndex: NextPage = () => {
             <div className="enhanced-card hover:shadow-lg cursor-pointer">
               <h2 className="text-xl font-semibold">{it.title}</h2>
               <p className="text-sm text-gray-600 mt-1">{it.desc}</p>
-            </div>
-          </Link>
-        ))}
-      </div>
-    </main>
-  )
-}
-export default AutomationsIndex;
-
-<<<<<<< HEAD
-export default AutomationsIndex,;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
         ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
 
-=======
 import type { NextPage } from 'next',
 import Link from 'next / link',
 const AutomationsIndex: NextPage = () => {
@@ -57,22 +32,8 @@ const AutomationsIndex: NextPage = () => {
               <p className="text - sm text - gray - 600 mt - 1">{it.desc}</p>;
             </div>;
           </Link>))}
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       </div>;
-
     </main>;
   );
 },;
 export default AutomationsIndex;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

@@ -197,7 +197,7 @@ const allServices = [;
                         </span>;
                       </div>;
                       <div className="text-xs text-gray-500">;
-                        {(service as any).trialDays ? `${(service as any).trialDays} days free trial` : ''} • {(service as any).setupTime ? `${(service as any).setupTime} setup` : 'Custom setup'}
+                        {(service as any).trialDays ? `${(service as any).trialDays} days free trial` : ''}  {(service as any).setupTime ? `${(service as any).setupTime} setup` : 'Custom setup'}
                       </div>;
                     </div>;
                   </div>;
@@ -498,8 +498,3 @@ const allServices = [;
     </div>;
   );
 },;
-:temp_conflicts/pages/2025-comprehensive-services-showcase.tsx
-export default ComprehensiveServicesShowcase2025;
-}
-export default ComprehensiveServicesShowcase;
-:backup-problematic-files/components/2025-comprehensive-services-showcase.tsx

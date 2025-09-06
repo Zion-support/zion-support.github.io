@@ -1,16 +1,3 @@
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react";
 import {useWallet} from "@/hooks/useWallet";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
@@ -20,12 +7,6 @@ import {Badge} from "@/components/ui/badge";
 import {formatDistanceToNow} from "date-fns";
 export function TransactionHistory() {;
   const { transactions, loading } = useWallet();
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import React from "react",
 import { useWallet } from "@/hooks/useWallet",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
@@ -39,16 +20,12 @@ import { Badge } from "@/components/ui/badge",
 import { formatDistanceToNow } from "date-fns",
 export function TransactionHistory() {
   const { transactions, loading } = useWallet(),
-=======
 
   if (loading) {;
 
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   if (loading) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return (
       <Card>;
         <CardHeader>;
@@ -59,39 +36,6 @@ export function TransactionHistory() {
     );
   }
 
-  const earnTransactions = transactions && transactions.filter(tx => tx && tx.transaction_type === 'earn');
-  const burnTransactions = transactions && transactions.filter(tx => tx && tx.transaction_type === 'burn');
-
-  return (
-    <Card>
-      <CardHeader>
-        <CardTitle>Transaction History</CardTitle>
-        <CardDescription>Your recent ZION$ activity</CardDescription>
-      </CardHeader>
-      <CardContent>
-        <Tabs defaultValue="earned">
-          <TabsList className="w-full">
-            <TabsTrigger value="earned" className="flex-1">Earned</TabsTrigger>
-            <TabsTrigger value="spent" className="flex-1">Spent</TabsTrigger>
-          </TabsList>
-          <TabsContent value="earned">
-            <ScrollArea className="h-64">
-              {earnTransactions.length === 0 ? (
-                <p className="text-center py-8 text-muted-foreground">No tokens earned yet</p>
-              ) : (
-                <div className="space-y-2 mt-2">
-                  {earnTransactions.map(tx => (
-                    <div key={tx.id} className="flex items-center justify-between py-2 border-b">
-                      <div>
-                        <p className="font-medium">{tx.reason |"Token reward"}</p>
-                        <p className="text-xs text-muted-foreground">
-                          {formatDistanceToNow(new Date(tx.created_at), { addSuffix: true })}
-                        </p>
-                      </div>
-                      <Badge variant="outline" className="bg-green-100 text-green-800">
-                        +{tx.amount} ZION$
-                      </Badge>
-                    </div>
 import React from "react",;
 import { useWallet } from "@/hooks/useWallet",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -129,64 +73,27 @@ export function TransactionHistory() {;
           </TabsList>;
           <TabsContent value="earned">;
             <ScrollArea className="h-64">;
-              {earnTransactions && earnTransactions.length === 0 ? (;
-                <p className="text-center py-8 text-muted-foreground">No tokens earned yet</p>;
               ) : (;
                 <div className="space-y-2 mt-2">;
-                  {earnTransactions && earnTransactions.map(tx => (;
+                  {burnTransactions && burnTransactions.map(tx => (;
                     <div key={tx && tx.id} className="flex items-center justify-between py-2 border-b">;
                       <div>;
-                        <p className="font-medium">{tx && tx.reason || "Token reward"}</p>;
+                        <p className="font-medium">{tx && tx.reason || "Feature purchase"}</p>;
                         <p className="text-xs text-muted-foreground">;
                           {formatDistanceToNow(new Date(tx && tx.created_at), { addSuffix: true })}
                         </p>;
                       </div>;
-                      <Badge variant="outline" className="bg-green-100 text-green-800">;
-                        +{tx && tx.amount} ZION$;
+                      <Badge variant="outline" className="bg-red-100 text-red-800">;
+                        -{tx && tx.amount} ZION$;
                       </Badge>;
                     </div>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+                  ))}
+                </div>;
+              )}
                   ))}
                 </div>
               )}
-            </ScrollArea>
-          </TabsContent>
-          <TabsContent value="spent">
-            <ScrollArea className="h-64">
-              {burnTransactions.length === 0 ? (
-                <p className="text-center py-8 text-muted-foreground">No tokens spent yet</p>
-              ) : (
-                <div className="space-y-2 mt-2">
-                  {burnTransactions.map(tx => (
-                    <div key={tx.id} className="flex items-center justify-between py-2 border-b">
-                      <div>
-                        <p className="font-medium">{tx.reason |"Feature purchase"}</p>
-                        <p className="text-xs text-muted-foreground">
-                          {formatDistanceToNow(new Date(tx.created_at), { addSuffix: true })}
-                        </p>
-                      </div>
-                      <Badge variant="outline" className="bg-red-100 text-red-800">
-                        -{tx.amount} ZION$
-                      </Badge>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </ScrollArea>
-          </TabsContent>
-        </Tabs>
-      </CardContent>
-    </Card>
-  )
-}
+            </ScrollArea>;
+          </TabsContent>;
+        </Tabs>;
+      </CardContent>;

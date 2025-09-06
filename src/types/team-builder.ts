@@ -1,8 +1,3 @@
-project_name: string, goals: string,
-  timeline: string, budget: string,
-  tech_stack?: string[];
-  talent_filters?: { verified_only?: boolean; regions?: string[] }
-
 }
 
   projectName: string, goals: string,
@@ -18,5 +13,5 @@ export interface ProjectBrief {;
   talentFilters?: { verifiedOnly?: boolean, regions?: string[] }
 
 
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+}
 }

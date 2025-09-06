@@ -1,17 +1,5 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { randomUUID } from 'crypto';
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { randomUUID } from 'crypto',;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-import type { NextApiRequest, NextApiResponse } from 'next',;
-import { randomUUID } from 'crypto',;
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 type Note = {
   id: string
   targetType: string
@@ -21,7 +9,6 @@ type Note = {
   createdAt: number
 }
 const notesStore: Note[] = []
-=======
 
   id: string;
   targetType: string;
@@ -34,45 +21,13 @@ const notesStore: Note[] = []
 const notesStore: Note[] = [];
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const isAdmin = req.headers['x-admin'] === 'true'
   if (!isAdmin) return res.status(403).json({ error: 'Admin only' })
   if (req.method === 'GET') {
-
-
-  }
-  if (req.method === 'POST') {
-<<<<<<< HEAD
-    const authorId = String(req.headers['x-admin-user'] |'admin')
-    const { targetType, targetId, text } = req.body |{}
-    if (!targetType |!targetId |!text?.trim()) return res.status(400).json({ error: 'Missing fields' })
-    const note: Note = { id: randomUUID(), targetType, targetId, text: String(text), authorId, createdAt: Date.now() }
-    notesStore.push(note)
-    return res.status(200).json({ ok: true, note })
-  }
-  return res.status(405).json({ error: 'Method not allowed' })
-}
-export function getAllNotes(): Note[] {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  return [...notesStore].sort((a, b) => b.createdAt - a.createdAt)
-}
-
-=======
-=======
-=======
-  return [...notesStore].sort((a, b) => b.createdAt - a.createdAt)
-}
-
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   return [...notesStore].sort((a, b) => b.createdAt - a.createdAt);
 };
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
 interface Note {
   id: string;
@@ -117,26 +72,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     } else {
       res.setHeader('Allow', 'GET, POST');
       res.status(405).end('Method Not Allowed');
-<<<<<<< HEAD
-    }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
 
     const authorId = String(req.headers['x-admin-user'] || 'admin');
     const { targetType, targetId, text } = req.body || {};
     if (!targetType || !targetId || !text?.trim()) {
       return res.status(400).json({ error: 'Missing fields' });
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     const note: Note = {
       id: randomUUID(),
@@ -150,18 +90,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(200).json({ ok: true, note });
   }
 
-  return res.status(405).json({ error: 'Method not allowed' });
-}
-<<<<<<< HEAD
-=======
 
-export function getAllNotes(): Note[] {
-  return [...notesStore].sort((a, b) => b.createdAt - a.createdAt);
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

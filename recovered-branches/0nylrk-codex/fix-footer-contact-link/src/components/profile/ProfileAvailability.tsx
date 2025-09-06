@@ -1,20 +1,6 @@
-
-<<<<<<< HEAD
-import { Availability } from "@/types/profile",
-import { Badge } from "@/components/ui/badge";
-import { Calendar, Clock, Check } from "lucide-react";
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {Availability} from "@/types/profile";
 import {Badge} from "@/components/ui/badge";
 import {Calendar, Clock, Check} from "lucide-react";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-import {Availability} from "@/types/profile";
-import {Badge} from "@/components/ui/badge";
-import {Calendar, Clock, Check} from "lucide-react";
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 interface ProfileAvailabilityProps {
   availability: Availability
 }
@@ -35,20 +21,8 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
       case 'unavailable': return 'Currently Unavailable'
       default: return ''
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-=======
-=======
-=======
-  }
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   };
 import { Availability } from "@/types/profile",
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import { Badge } from "@/components/ui/badge",
 import { Calendar, Clock, Check } from "lucide-react",
 
@@ -57,7 +31,6 @@ interface ProfileAvailabilityProps {
 import { Availability } from "@/types/profile",;
 import { Badge } from "@/components/ui/badge",;
 import { Calendar, Clock, Check } from "lucide-react",;
-=======
 import { Availability } from '@/types / profile';
 import { Badge } from '@/components / ui / badge';
 import { Calendar, Clock, Check } from './lucide-react';
@@ -70,7 +43,6 @@ import {Availability} from "@/types/profile";
 import {Badge} from "@/components/ui/badge";
 import {Calendar, Clock, Check} from "lucide-react";
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ProfileAvailabilityProps {;
   availability: Availability;
 }
@@ -93,24 +65,6 @@ export function ProfileAvailability(): any ({ availability }: ProfileAvailabilit
       default: return '';
 
     }
-<<<<<<< HEAD
-  },
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-  },
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-  }
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
@@ -146,52 +100,12 @@ export function ProfileAvailability(): any ({ availability }: ProfileAvailabilit
                   <span>{slot.hours}</span>
                 </div>
               </div>
-=======
-    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">;
-      <h3 className="text-xl font-bold text-white mb-4">Availability</h3>;
 
-      <div className="flex flex-col md:flex-row md:items-center md:gap-6 mb-4">;
-        <Badge
-          variant="outline" 
-          className={`${getStatusColor(availability && availability.status)} text-sm py-1 px-3 mb-4 md:mb-0 w-fit`}>;
-          {getStatusText(availability && availability.status)}
-        </Badge>;
-
-        {availability && availability.nextAvailable && availability && availability.status !== 'available' && (;
-          <div className="flex items-center gap-2 text-zion-slate-light">;
-            <Calendar className="h-4 w-4" />;
-            <span>Next available: {availability && availability.nextAvailable}</span>;
-          </div>;
-        )}
-      </div>;
-
-      {availability && availability.message && (;
-        <p className="text-zion-slate mb-4">{availability && availability.message}</p>;
-      )}
-
-      {availability && availability.availableHours && availability && availability.availableHours.length > 0 && (;
-        <div className="mt-4">;
-          <h4 className="text-zion-slate-light text-sm mb-2">Weekly Availability</h4>;
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-2">;
-            {availability && availability.availableHours.map((slot, index) => (;
-              <div key={index} className="flex items-center gap-2 text-zion-slate">;
-                <div className="w-20 text-zion-slate-light">{slot && slot.day}:</div>;
-                <div className="flex items-center gap-1">;
-                  <Clock className="h-4 w-4 text-zion-cyan" />;
-                  <span>{slot && slot.hours}</span>;
-                </div>;
-              </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  return (
             ))}
           </div>;
         </div>;
       )}
-
-    </div>;
-  );
-}
-
-=======
 export /**
  * ProfileAvailability - Function description
  */
@@ -248,4 +162,3 @@ function ProfileAvailability() {
         </div>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

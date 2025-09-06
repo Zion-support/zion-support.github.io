@@ -1,24 +1,8 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
-async function fetchFromGitHub(): Promise<any[]> {;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import fs from 'fs',;
 import path from 'path',;
 async function fetchFromGitHub(): Promise<any[]> {
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   try {
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       } catch {
@@ -30,58 +14,15 @@ return results;
     return [];
   }
 }
-
-export default async /**
- * handler - Function description
- */
-function handler() {
-const dir = path.join (process.cwd (), 'automation_logs'),
-  try {
-    if () {) {
-  $2
-}
-      const files = fs.readdir_sync (dir).filter ((f) => f.ends_with ('.json')).sort ().reverse (),
-      // Check condition
-if ( {) {
-  $2
-}
-        const logs = files.slice (0, 50).map ((f) => {
-          try {
-            const raw = fs.readFileSync (path.join (dir, f), 'utf8'),
-            const json = JSON.parse (raw),
-            return { id: json.id || f, file: f, generated_at: json.generated_at, insights: json.insights }
-          } catch {
-            return { id: f, file: f }
-          }
-        }),
-        return res.status (200).json ({ logs });
-
-      }
-    }
-  } catch {
-<<<<<<< HEAD
-    // fall through to GitHub
   }
 const remote = await fetchFromGitHub()
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  return res.status(200).json({ logs: remote })
-=======
-=======
-=======
-  return res.status(200).json({ logs: remote })
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 const remote = await fetchFromGitHub(),
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 async function fetchFromGitHub(): Promise<any[]> {;
   try {
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     const repoUrl = require('../../../package.json').repository?.url || '';
     const match = repoUrl.match(/github.com\/(.+?)\/(.+?)\.git$/i);
     const owner = process.env.GITHUB_OWNER || (match ? match[1] : '');
@@ -169,38 +110,16 @@ export default async function handler(req, res) {
 
   const remote = await fetchFromGitHub();
   return res.status(200).json({ logs: remote });
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
-=======
 }
 };
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
-    // fall through to GitHub;
-  }
-
-=======
-}
-
-=======
 const remote = await fetchFromGitHub (),
   return res.status (200).json ({ logs: remote });
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
   return res.status(200).json({ logs: remote });
 
 };
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

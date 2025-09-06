@@ -1,80 +1,5 @@
-
-import { useState } from "react",
-import { useJobApplications } from "@/hooks/useJobApplications",
-import { ApplicationCard } from "./ApplicationCard",
-import { LoadingState } from "./LoadingState",
-import { EmptyState } from "./EmptyState",
-import { ErrorState } from "./ErrorState",
-import { useState } from "react";
-import { useJobApplications } from "@/hooks/useJobApplications";
-import { ApplicationCard } from "./ApplicationCard";
-import { LoadingState } from "./LoadingState";
-import { EmptyState } from "./EmptyState";
-import { ErrorState } from "./ErrorState";
-import { Button } from "@/components/ui/button";
-import { ApplicationStatus } from "@/types/jobs";
-export function ApplicationsTracker() {;
-export function ApplicationsTracker() {
-  const { applications, isLoading, error } = useJobApplications();
-
-  const [statusFilter, setStatusFilter] = useState<ApplicationStatus | "all">(;
-    "all",;
-
-  );
-
-
-
-=======
-import { useState } from "react",
-import { useJobApplications } from "@/hooks/useJobApplications",
-import { ApplicationCard } from "./ApplicationCard",
-import { LoadingState } from "./LoadingState",
-import { EmptyState } from "./EmptyState",
-import { ErrorState } from "./ErrorState",
-import { Button } from "@/components/ui/button",
-import { ApplicationStatus } from "@/types/jobs",
-export function ApplicationsTracker() {
-  const { applications, isLoading, error } = useJobApplications(),
-  const [statusFilter, setStatusFilter] = useState<ApplicationStatus | 'all'>('all'),
-  
-  if (isLoading) {
-    return <LoadingState />;
-  }
-  if (error) {
-
-    return <ErrorState error={error} />;
-  }
-  if (applications.length === 0) {
-    return <EmptyState />;
-  }
-  const filteredApplications =
-    statusFilter === "all"
-      ? applications
-      : applications.filter((app) => app.status === statusFilter);
-
-    return <LoadingState />
-import { useState } from "react",;
-import { useJobApplications } from "@/hooks/useJobApplications",;
-import { ApplicationCard } from "./ApplicationCard",;
-import { LoadingState } from "./LoadingState",;
-import { EmptyState } from "./EmptyState",;
-import { ErrorState } from "./ErrorState",;
-import { Button } from "@/components/ui/button",;
-import { ApplicationStatus } from "@/types/jobs",;
-export function ApplicationsTracker() {;
-  const { applications, isLoading, error } = useJobApplications(),;
-  const [statusFilter, setStatusFilter] = useState<ApplicationStatus | 'all'>('all');
   if (isLoading) {;
     return <LoadingState />;
-  }
-;
-
-  if (error) {;
-    return <ErrorState error={error} />;
-  }
-
-  if (applications && applications.length === 0) {;
-    return <EmptyState />;
   }
 
   
@@ -82,17 +7,6 @@ export function ApplicationsTracker() {;
     ? applications
     : applications.filter(app => app.status === statusFilter),
   
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   return (
     <div className="space-y-6">;
       <div className="flex flex-wrap gap-2">;
@@ -140,41 +54,11 @@ export function ApplicationsTracker() {;
         </Button>;
         <Button
           size="sm"
-          variant={statusFilter === 'rejected' ? 'default' : 'outline'}
-          onClick={() => setStatusFilter('rejected')}
-        >
-          Not Selected
-        </Button>
-      </div>
-      
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       <div className="grid gap-4 md:grid-cols-1 lg:grid-cols-2">
         {filteredApplications.map((application) => (
           <ApplicationCard key={application.id} application={application} />
         ))}
       </div>
-      
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       {filteredApplications.length === 0 && (
         <div className="text-center p-8">
           <p className="text-muted-foreground">
@@ -182,7 +66,6 @@ export function ApplicationsTracker() {;
           </p>
         </div>
 
-=======
 import { useState  } from './react';
 import { useJobApplications  } from '@/hooks / useJobApplications';
 import { ApplicationCard  } from './ApplicationCard';
@@ -198,21 +81,8 @@ function ApplicationsTracker() {
   const { applications, is_loading, error } = useJobApplications ();
   const [status_filter, setStatusFilter] = useState < ApplicationStatus | "all">(
     "all",
-=======
-      )}
-    </div>
-    </div>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   );
 ;
   // Check condition
@@ -287,22 +157,10 @@ if ( {) {
           size="sm";
           variant={status_filter === "rejected" ? "default" : "outline"}
           on_click={() => setStatusFilter ("rejected")}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+          variant={statusFilter === "rejected" ? "default" : "outline"}
+          onClick={() => setStatusFilter("rejected")}
         >;
           Not Selected;
         </Button>;
       </div>;
-
-      <div className="grid gap - 4 md:grid - cols - 1 lg:grid - cols - 2">;
-        {filtered_applications.map ((application) => (
-          <ApplicationCard key={application.id} application={application} />))}
-      </div>;
-      {filtered_applications.length === 0 && (
-        <div className="text - center p - 8">;
-          <p className="text - muted - foreground">;
-            No applications with this status.;
-          </p>;
-        </div>)}
-    </div>);
-
 }

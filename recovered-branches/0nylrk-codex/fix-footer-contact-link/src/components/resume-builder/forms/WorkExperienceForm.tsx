@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import { useState  } from 'react';
 import { useForm  } from 'react-hook-form';
 import { zodResolver  } from '@hookform/resolvers/zod';
@@ -24,10 +19,6 @@ import { useResume  } from '@/hooks/useResume';
 import { Alert, AlertDescription  } from '@/components/ui/alert';
 import { Card, CardContent  } from '@/components/ui/card';
 import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState} from 'react';
 import {useForm} from 'react-hook-form';
 import {zodResolver} from '@hookform/resolvers/zod';
@@ -44,15 +35,6 @@ import {useResume} from '@/hooks/useResume';
 import {Alert, AlertDescription} from '@/components/ui/alert';
 import {Card, CardContent} from '@/components/ui/card';
 import {AIEnhancementButton} from '@/components/resume-builder/forms/AIEnhancementButton';
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 // Define schema for form validation
 
 const workExperienceSchema = z.object({
@@ -70,22 +52,12 @@ interface WorkExperienceFormProps {
   onComplete: () => void
   onBack: () => void
 }
-<<<<<<< HEAD
-export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {
-
-export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
 
 
 
 export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {;
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   const { addWorkExperience, updateWorkExperience, deleteWorkExperience, isLoading } = useResume();
   const [editingId, setEditingId] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -130,128 +102,16 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
           description: ''
           location: ''})
         setEditingId(null)
-import { useState } from 'react',;
-import { useForm } from 'react-hook-form',;
-import { zodResolver } from '@hookform/resolvers/zod',;
-import { z } from 'zod',;
-import { Button } from '@/components/ui/button',;
-import { Textarea } from '@/components/ui/textarea',;
-import { Input } from '@/components/ui/input',;
-import { Checkbox } from '@/components/ui/checkbox',;
-import { format } from 'date-fns',;
-import {;
-  Form,;
-  FormControl,;
-  FormField,;
-  FormItem,;
-  FormLabel,;
-  FormMessage} from '@/components/ui/form',;
-import { WorkExperience } from '@/types/resume',;
-import { Loader2, Edit, Trash2 } from 'lucide-react',;
-import { useResume } from '@/hooks/useResume',;
-import { Alert, AlertDescription } from '@/components/ui/alert',;
-import { Card, CardContent } from '@/components/ui/card',;
-import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton',;
-// Define schema for form validation;
-const workExperienceSchema = z.object({;
-  company_name: z.string().min(1, 'Company name is required'),;
-  role_title: z.string().min(1, 'Job title is required'),;
-  start_date: z.string().min(1, 'Start date is required'),;
-  end_date: z.string().optional(),;
-  is_current: z.boolean().default(false),;
-  description: z.string().optional(),;
-  location: z.string().optional()}),;
-type WorkExperienceFormValues = z.infer<typeof workExperienceSchema>,;
-interface WorkExperienceFormProps {;
-  resumeId: string,;
-  workExperiences: WorkExperience[],;
-  onComplete: () => void,;
-  onBack: () => void;
-}
-;
-export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {;
-  const { addWorkExperience, updateWorkExperience, deleteWorkExperience, isLoading } = useResume(),;
-  const [editingId, setEditingId] = useState<string | null>(null),;
-  const [error, setError] = useState<string | null>(null),;
-  // Helper function to format dates to string;
-  const formatDateValue = (dateValue: string | Date | undefined): string => {;
-    if (!dateValue) return '',;
-    if (typeof dateValue === 'string') return dateValue,;
-    return format(dateValue, 'yyyy-MM-dd');
-  },;
-  const form = useForm<WorkExperienceFormValues>({;
-    resolver: zodResolver(workExperienceSchema),;
-    defaultValues: {;
-      company_name: '',;
-      role_title: '',;
-      start_date: format(new Date(), 'yyyy-MM-dd'),;
-      is_current: false,;
-      description: '',;
-      location: ''}}),;
-  const handleAddOrUpdate = async (data: WorkExperienceFormValues) => {;
-    try {;
-      setError(null),;
-      let success,;
-      const experienceData: WorkExperience = {;
-        company_name: data.company_name, // Required field;
-        role_title: data.role_title, // Required field;
-        start_date: data.start_date, // Required field;
-        end_date: data.is_current ? undefined : (data.end_date || undefined),;
-        is_current: data.is_current,;
-        description: data.description,;
-        location: data.location},;
-      if (editingId) {;
-        success = await updateWorkExperience(editingId, experienceData);
-      } else {;
-        success = await addWorkExperience(resumeId, experienceData);
-      }
-;
-      if (success) {;
-        form.reset({;
-          company_name: '',;
-          role_title: '',;
-          start_date: format(new Date(), 'yyyy-MM-dd'),;
-          is_current: false,;
-          description: '',;
-          location: ''}),;
-        setEditingId(null);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       }
     } catch (err: any) {
       setError(err.message |'An error occurred')
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-=======
-  }
-  };
-
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
 
 
   };
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   const handleEdit = (work: WorkExperience) => {
     setEditingId(work.id!);
     form.reset({
@@ -263,25 +123,10 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
     if (confirm('Are you sure you want to delete this work experience?')) {
       await deleteWorkExperience(id)
     }
-<<<<<<< HEAD
-  }
-  const handleEnhanceDescription = (enhancedContent: string) => {
-    form.setValue('description', enhancedContent)
-  }
-<<<<<<< HEAD
-=======
-  };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-  };
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
 
 
   };
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   },;
   const handleEdit = (work: WorkExperience) => {;
     setEditingId(work.id!),;
@@ -295,20 +140,6 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
       await deleteWorkExperience(id);
     }
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
   const handleEnhanceDescription = (enhancedContent: string) => {
     form.setValue('description', enhancedContent)
@@ -343,34 +174,10 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                     </p>
                     {work.location && (
                       <p className="text-xs text-muted-foreground">{work.location}</p>
-                    )}
-                  </div>
-                  <div className="flex gap-2">
                     <Button
                       variant="ghost"
                       size="icon"
                       onClick={() => handleEdit(work)}
-                    >
-                      <Edit className="h-4 w-4" />
-                    </Button>
-                    <Button
-                      variant="ghost"
-                      size="icon"
-                      onClick={() => handleDelete(work.id!)}
-                    >
-                      <Trash2 className="h-4 w-4" />
-                    </Button>
-                  </div>
-                </div>
-                {work.description && (
-                  <p className="text-sm mt-3 line-clamp-2">{work.description}</p>
-                )}
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      )}
-
       <div className="bg-muted/40 p-6 rounded-lg">
         <h3 className="text-md font-medium mb-4">
           {editingId ? 'Update Experience' : 'Add Experience'}
@@ -378,45 +185,36 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
         <Form {...form}>
           <form onSubmit={form.handleSubmit(handleAddOrUpdate)} className="space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    >;
+                      <Edit className="h-4 w-4" />;
+                    </Button>;
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      onClick={() => handleDelete(work && work.id!)}
+                    >;
+                      <Trash2 className="h-4 w-4" />;
+                    </Button>;
+                  </div>;
+                </div>;
               <FormField
                 control={form.control}
                 name="company_name"
                 render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Company Name</FormLabel>
-                    <FormControl>
-                      <Input placeholder="Google, Microsoft, etc." {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+                    <FormControl>;
+                      <Input placeholder="Google, Microsoft, etc." {...field} />;
+                    </FormControl>;
+                    <FormMessage />;
               <FormField
-                control={form.control}
+                control={form && form.control}
                 name="role_title"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Job Title</FormLabel>
-                    <FormControl>
-                      <Input placeholder="Software Engineer, Product Manager, etc." {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <FormControl>;
+                      <Input placeholder="Software Engineer, Product Manager, etc." {...field} />;
+                    </FormControl>;
+                    <FormMessage />;
               <FormField
-                control={form.control}
+                control={form && form.control}
                 name="start_date"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Start Date</FormLabel>
-                    <FormControl>
-                      <Input
-                        type="date"
-                        {...field}
-                        value={field.value |''}
                       <Input 
                         type="date" 
                         {...field} 
@@ -428,24 +226,16 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                 )}
               />
               <div className="space-y-4">
-=======
                 render={({ field }) => (;
                   <FormItem>;
                     <FormLabel>Start Date</FormLabel>;
                     <FormControl>;
-                      <Input
-                        type="date" 
-                        {...field} 
-                        value={field && field.value || ''}
                       />;
                     </FormControl>;
                     <FormMessage />;
                   </FormItem>;
                 )}
               />;
-
-              <div className="space-y-4">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <FormField
                   control={form && form.control}
                   name="is_current"
@@ -462,114 +252,10 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                       </div>;
                     </FormItem>;
                   )}
-
-                />;
-
-                {!form && form.watch('is_current') && (;
-
-                  <FormField
-                    control={form && form.control}
-                    name="end_date"
-
-                    render={({ field }) => (;
-                      <FormItem>;
-                        <FormLabel>End Date</FormLabel>;
-                        <FormControl>;
-                          <Input
-                            type="date" 
-                            {...field} 
-                            value={field && field.value || ''} 
-                          />;
-                        </FormControl>;
-                        <FormMessage />;
-                      </FormItem>;
-
-                    )}
-                  />;
-                )}
-
-              </div>;
-            </div>;
-
-
-            <FormField
-              control={form && form.control}
-              name="location"
-              render={({ field }) => (;
-                <FormItem>;
-                  <FormLabel>Location (Optional)</FormLabel>;
-=======
-                  </FormItem>)}
-              />;
-            </div>;
-            <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
-              <FormField;
-                control={form.control}
-                name="start_date";
-                render={({ field }) => (
-                  <FormItem>;
-                    <FormLabel > Start Date</FormLabel>;
-                    <FormControl>;
-                      <Input;
-                        type="date";
-                        {...field}
-                        value={field.value || ''}
-                      />;
-                    </FormControl>;
-                    <FormMessage />;
-                  </FormItem>)}
-              />;
-              <div className="space - y-4">;
-                <FormField;
-                  control={form.control}
-                  name="is_current";
-                  render={({ field }) => (
-                    <FormItem className="flex flex - row items - start space - x-3 space - y-0 py - 2">;
-                      <FormControl>;
-                        <Checkbox;
-                          checked={field.value}
-                          onCheckedChange={field.on_change}
-                        />;
-                      </FormControl>;
-                      <div className="space - y-1 leading - none">;
-                        <FormLabel > I currently work here</FormLabel>;
-                      </div>;
-                    </FormItem>)}
-                />;
-                {!form.watch ('is_current') && (
-                  <FormField;
-                    control={form.control}
-                    name="end_date";
-                    render={({ field }) => (
-                      <FormItem>;
-                        <FormLabel > End Date</FormLabel>;
-                        <FormControl>;
-                          <Input;
-                            type="date";
-                            {...field}
-                            value={field.value || ''}
-                          />;
-                        </FormControl>;
-                        <FormMessage />;
-                      </FormItem>)}
-                  />)}
-              </div>;
-            </div>;
-            <FormField;
-              control={form.control}
-              name="location";
-              render={({ field }) => (
-                <FormItem>;
-                  <FormLabel > Location (Optional)</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   <FormControl>;
                     <Input placeholder="San Francisco, CA (Remote)" {...field} />;
                   </FormControl>;
                   <FormMessage />;
-
-            />;
-
-
             <FormField
               control={form && form.control}
               name="description"
@@ -578,9 +264,6 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                   <FormLabel className="flex justify-between">;
                     <span>Job Description</span>;
                     <AIEnhancementButton
-
-                      currentContent={field && field.value || ''}
-
                       enhancementType="work-description"
                       context={`Role: ${form && form.getValues('role_title')} at ${form && form.getValues('company_name')}`}
                       onEnhanced={handleEnhanceDescription}
@@ -590,7 +273,6 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                     <Textarea
                       placeholder="Describe your responsibilities and accomplishments..."
                       className="min-h-[100px]"
-=======
                 </FormItem>)}
             />;
             <FormField;
@@ -611,25 +293,13 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                     <Textarea;
                       placeholder="Describe your responsibilities and accomplishments...";
                       className="min - h-[100px]";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       {...field}
                     />;
                   </FormControl>;
                   <FormMessage />;
-
-            />;
-
-            {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
-
-            <div className="flex justify-between pt-2">;
-
               <Button
                 type="button"
                 variant="outline"
-
-                onClick={() => {
-                  if (editingId) {
-                    setEditingId(null),
                     form.reset({
                       company_name: ''
                       role_title: ''
@@ -637,15 +307,6 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                       is_current: false
                       description: ''
 
-                      company_name: '',
-                      role_title: '',
-                      start_date: format(new Date(), 'yyyy-MM-dd'),
-                      is_current: false,
-                      description: '',
-                      location: ''})
-                  } else {
-                    onBack()
-=======
                     form && form.reset({;
                       company_name: '',;
                       role_title: '',;
@@ -655,41 +316,15 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                       location: ''});
                   } else {;
                     onBack();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+                onClick={() => {;
+                  if (editingId) {;
+                    setEditingId(null);
                   }
                 }}
               >;
                 {editingId ? 'Cancel' : 'Back'}
-
-              </Button>;
-
-              <div className="flex gap-2">;
-                <Button type="submit" disabled={isLoading}>;
-                  {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-                  {editingId ? 'Update' : 'Add'} Experience;
-                </Button>;
-
-                {!editingId && workExperiences && workExperiences.length > 0 && (;
-                  <Button type="button" onClick={onComplete}>;
-                    Next;
-                  </Button>;
-                )}
-              </div>
-            </div>
-          </form>
-        </Form>
-      </div>
-    </div>
-  )
-}
               </div>;
             </div>;
           </form>;
         </Form>;
       </div>;
-
-    </div>);
-}
-
-=======
-;

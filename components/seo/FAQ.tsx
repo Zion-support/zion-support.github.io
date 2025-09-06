@@ -1,44 +1,8 @@
 
 
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React from "react";
-type QA = { q: string; a: string };
-type Props = { items: QA[] };
-<<<<<<< HEAD
-export default function FAQ({ items }: Props) {
-  if (!items |items.length === 0) return null;
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 export default function FAQ({ items }: Props) {;
 export default function FAQ({ items }: Props) {
   if (!items || items.length === 0) return null;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
 export default function FAQ(): any ({ items }: Props) {;
   if (!items || items && items.length === 0) return null;
 
@@ -55,20 +19,6 @@ export default function FAQ(): any ({ items }: Props) {;
               {it && it.a}
             </div>;
           </div>;
-
-=======
-import React from 'react';
-type QA = { q: string, a: string };
-type Props = { items: QA[] };
-export default function FAQ({ items }: Props) {
-  if (!items || items.length === 0) return null;
-=======
-type QA = { q: string; a: string };
-type Props = { items: QA[] };
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   return (
     <div className="mt-10 border-t border-gray-200 dark:border-gray-800 pt-6">
       <h2 className="text-lg font-semibold mb-4">Frequently Asked Questions</h2>
@@ -78,16 +28,10 @@ type Props = { items: QA[] };
             <div className="font-medium">{it.q}</div>
             <div className="mt-1 text-sm text-gray-700 dark:text-gray-300">{it.a}</div>
           </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         ))}
       </div>;
     </div>;
   );
-}
-}
-
-=======
 import React from './react';
 type QA = { q: string; array: string }
 type Props = { items: QA[] }
@@ -111,23 +55,3 @@ if (return null) {
             <div className="font - medium">{it.q}</div>;
             <div className="mt - 1 text - sm text - gray - 700 dark:text - gray - 300">;
               {it.a}
-<<<<<<< HEAD
-            </div>;
-          </div>))}
-      </div>;
-    </div>);
-=======
-            </div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-          </div>
-        ))}
-      </div>
-    </div>
-<<<<<<< HEAD
-  )
-
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

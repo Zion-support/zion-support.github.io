@@ -1,10 +1,3 @@
-
-import React, { useState, useEffect } from 'react';
-import { supabase  } from '@/integrations/supabase/client';
-import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
-import { Avatar, AvatarFallback, AvatarImage  } from '@/components/ui/avatar';
-import { format  } from 'date-fns';
-import { Skeleton } from '@/components/ui/skeleton';
 interface MilestoneActivitiesProps {
   project_id: string;
 }
@@ -22,33 +15,10 @@ interface Activity {
   milestone: {
 
 
-<<<<<<< HEAD
-    avatar_url: string | null
-  }
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
-  const [activities, setActivities] = useState<Activity[]>([]),
-=======
-export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
-  const [activities, setActivities] = useState<Activity[]>([]),
-
 export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
   const [activities, setActivities] = useState<Activity[]>([]);
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
 
 
-export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
-  const [activities, setActivities] = useState<Activity[]>([]);
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     async function fetchActivities() {
@@ -70,70 +40,6 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
       } catch (err) {
         console.error('Error fetching milestone activities:', err)
       } finally {
-        setIsLoading(false)
-import React, { useState, useEffect } from 'react',;
-import { supabase } from '@/integrations/supabase/client',;
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar',;
-import { format } from 'date-fns',;
-import { Skeleton } from '@/components/ui/skeleton',;
-interface MilestoneActivitiesProps {;
-  projectId: string;
-}
-
-interface Activity {;
-  id: string,;
-  milestone_id: string,;
-  user_id: string,;
-  action: string,;
-  previous_status: string | null,;
-  new_status: string,;
-  comment: string | null,;
-  created_at: string,;
-  milestone: {;
-    title: string;
-  };
-  created_by_profile: {;
-    display_name: string,;
-    avatar_url: string | null;
-  }
-}
-
-export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesProps) {;
-  const [activities, setActivities] = useState<Activity[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {;
-    async function fetchActivities() {;
-      try {;
-        setIsLoading(true);
-
-        const { data, error } = await supabase;
-          .from('milestone_activities');
-          .select(`;
-            *;
-            milestone: milestone_id(title),;
-            created_by_profile:profiles!user_id(display_name, avatar_url);
-          `);
-          .eq('project_id', projectId);
-          .order('created_at', { ascending: false }),;
-
-        if (error) throw error;
-
-        setActivities(data || []);
-      } catch (err) {;
-        console && console.error('Error fetching milestone activities:', err);
-      } finally {;
-        setIsLoading(false);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       }
     }
     if (projectId) {
@@ -144,36 +50,12 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
     switch (activity.action) {
       case 'created':
 
-<<<<<<< HEAD
-        return 'created a new milestone'
-
-      case 'status_changed':
-        return `changed status from ${activity.previous_status |'none'} to ${activity.new_status}`;
-      case 'updated':
-        return 'updated milestone details';
-      case 'deliverable_added':
-        return 'added a deliverable';
-      default:
-        return activity.action.replace(/_/g, ' ')
-<<<<<<< HEAD
-<<<<<<< HEAD
-    }
-  }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-    }
-  }
-=======
     if (projectId) {;
       fetchActivities();
     }
 
 
 
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }, [projectId]),;
   function getActivityDescription(activity: Activity): string {;
     switch (activity.action) {;
@@ -183,21 +65,13 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
       case 'status_changed':;
         return `changed status from ${activity && activity.previous_status || 'none'} to ${activity && activity.new_status}`;
       case 'updated':;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+        setIsLoading (false);
+      }
+    }
         return 'updated milestone details';
       case 'deliverable_added':;
         return 'added a deliverable';
       default:;
-        return activity.action.replace(/_/g, ' ');
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     }
   }
 
@@ -222,7 +96,9 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
   }
 
   if (activities.length === 0) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        return activity && activity.action.replace(/_/g, ' ');
+    }
+  }
     return (
       <div className="space-y-4">;
         {[1, 2, 3].map((i) => (;
@@ -239,42 +115,11 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
           </Card>;
         ))}
       </div>;
-    );
-  }
-
-
-  if (activities && activities.length === 0) {;
-
-    return (
       <Card>;
         <CardContent className="p-6 text-center">;
           <p className="text-muted-foreground py-8">No activity found for this project</p>;
         </CardContent>;
       </Card>;
-    );
-  }
-  return (
-
-    <div className="space-y-4">;
-      <Card>;
-        <CardHeader>;
-          <CardTitle>Project Activity</CardTitle>;
-        </CardHeader>;
-        <CardContent className="p-6">;
-          <div className="space-y-6">;
-            {activities && activities.map((activity) => (;
-              <div key={activity && activity.id} className="flex items-start space-x-4">;
-                <Avatar className="h-10 w-10">;
-                  <AvatarImage src={activity && activity.created_by_profile?.avatar_url || ''} alt="User" />;
-                  <AvatarFallback>;
-                    {activity && activity.created_by_profile?.display_name?.charAt(0) || '?'}
-                  </AvatarFallback>;
-                </Avatar>;
-                <div className="space-y-1">;
-                  <div className="flex items-center space-x-2">;
-                    <span className="font-medium">{activity && activity.created_by_profile?.display_name}</span>;
-                    <span className="text-muted-foreground text-sm">;
-
                       {getActivityDescription(activity)}
                     </span>;
                     <span className="text-muted-foreground text-xs">;
@@ -290,20 +135,6 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
                 </div>;
               </div>;
             ))}
-          </div>
-        </CardContent>
-      </Card>
-    </div>
-  )
-}
-          </div>;
-        </CardContent>;
-      </Card>;
-    </div>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     // Check condition
 if ( {) {
   $2

@@ -1,7 +1,5 @@
-
 import { useState, useEffect  } from './react';
 ;
-
 interface User {
   id: string;
   email: string;
@@ -16,22 +14,11 @@ export const useAuth = () => {;
     // Simulate auth check
     setLoading(false);
   }, []);
-=======
-export const use_auth = () =>: any {
-  const [user, set_user] = useState < User | null>(null);
-  const [loading, set_loading] = useState (true);
 ;
-  useEffect (() => {
-    // Simulate auth check;
-    set_loading (false);
-  }, []);
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return {
     user
     loading
     login: (email: string, password: string) => {
-
       // Simulate login;
       set_user ({ id: "1", email, name: "User" });
     },
@@ -41,4 +28,3 @@ export const use_auth = () =>: any {
   }
 }
 ;
-

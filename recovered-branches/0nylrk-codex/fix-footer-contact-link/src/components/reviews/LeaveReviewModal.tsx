@@ -1,15 +1,3 @@
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState, useEffect } from "react";
-=======
-=======
-import { useState, useEffect } from "react";
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import {useState, useEffect} from "react";
 import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
@@ -17,15 +5,6 @@ import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {ReviewForm} from "./ReviewForm";
 import {useReviews} from "@/hooks/useReviews";
 import { useState, useEffect } from "react",
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import {
   Dialog;
   DialogContent;
@@ -35,23 +14,10 @@ import {
   DialogTrigger} from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-<<<<<<< HEAD
 import { ReviewForm } from "./ReviewForm";
 import { useReviews } from "@/hooks/useReviews";
 interface LeaveReviewModalProps {
 
-  projectId: string
-  revieweeId: string
-  revieweeName: string
-  isOpen: boolean
-
-  onClose: () => void
-}
-export function LeaveReviewModal({
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import { ReviewForm } from "./ReviewForm",
 import { useReviews } from "@/hooks/useReviews",
 interface LeaveReviewModalProps {
@@ -63,10 +29,6 @@ interface LeaveReviewModalProps {
 }
 
 export function LeaveReviewModal({;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   projectId;
   revieweeId;
   revieweeName;
@@ -98,11 +60,6 @@ export function LeaveReviewModal({;
       const success = await submitReview(formValues);
       if (success) {
         handleOpenChange(false)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import { useState, useEffect } from "react",
 import {
   Dialog,
@@ -121,11 +78,6 @@ interface LeaveReviewModalProps {
   revieweeName: string,
   isOpen: boolean,
   onClose: () => void
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import { useState, useEffect } from "react",;
 import {;
   Dialog,;
@@ -138,7 +90,6 @@ import { Button } from "@/components/ui/button",;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
 import { ReviewForm } from "./ReviewForm",;
 import { useReviews } from "@/hooks/useReviews",;
-=======
 
 import {useState, useEffect} from "react";
 import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
@@ -146,7 +97,6 @@ import {Button} from "@/components/ui/button";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {ReviewForm} from "./ReviewForm";
 import {useReviews} from "@/hooks/useReviews";
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface LeaveReviewModalProps {;
   projectId: string,;
   revieweeId: string,;
@@ -154,35 +104,10 @@ interface LeaveReviewModalProps {;
   isOpen: boolean,;
   onClose: () => void;
 }
-
-export function LeaveReviewModal(): any ({;
-
   projectId;
   revieweeId;
   revieweeName;
   isOpen;
-  onClose}: LeaveReviewModalProps) {;
-  const { userReview, submitReview, updateReview, isSubmitting } = useReviews(projectId);
-  const [open, setOpen] = useState(isOpen);
-
-
-  useEffect(() => {;
-    setOpen(isOpen);
-  }, [isOpen]);
-
-  const handleOpenChange = (open: boolean) => {;
-    setOpen(open),;
-    if (!open) {;
-      onClose();
-    }
-  };
-
-  const handleSubmit = async (formValues: any) => {;
-    if (userReview) {;
-      // Update existing review;
-
-      const { project_id, reviewee_id, ...updates } = formValues;
-      const success = await updateReview(userReview && userReview.id, updates);
       if (success) {;
         handleOpenChange(false);
       }
@@ -192,62 +117,20 @@ export function LeaveReviewModal(): any ({;
       const success = await submitReview(formValues);
       if (success) {;
         handleOpenChange(false);
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       }
       return success;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   }
 
   },
-<<<<<<< HEAD
-=======
-=======
-=======
-
-import { ReviewForm } from "./ReviewForm",
-import { useReviews } from "@/hooks/useReviews",
-
-interface LeaveReviewModalProps {
-  projectId: string,
-  revieweeId: string,
-  revieweeName: string,
-  isOpen: boolean,
-  onClose: () => void
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
       return success;
     }
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   };
   },
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
   };
-=======
   },
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   
   return (
     <Dialog open={open} onOpenChange={handleOpenChange}>;
@@ -255,14 +138,6 @@ interface LeaveReviewModalProps {
         <DialogHeader>;
           <DialogTitle>;
             {userReview ? "Edit Your Review" : `Rate Your Experience with ${revieweeName}`}
-
-          </DialogTitle>;
-          <DialogDescription>;
-            Your feedback helps build a trustworthy community. It will be visible after moderation.;
-          </DialogDescription>;
-        </DialogHeader>;
-
-
         <ReviewForm
           projectId={projectId}
           revieweeId={revieweeId}
@@ -270,18 +145,6 @@ interface LeaveReviewModalProps {
           onSubmit={handleSubmit}
           defaultValues={userReview |undefined}
           isSubmitting={isSubmitting}
-        />
-      </DialogContent>
-    </Dialog>
-  )
-}
-        />;
-      </DialogContent>;
-    </Dialog>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import { useState, useEffect } from './react';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components / ui / dialog';
 import { Button } from '@/components / ui / button';

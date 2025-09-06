@@ -1,22 +1,8 @@
-
-export type Json =;
-  | string;
-  | number;
-  | boolean;
-  | null;
-  | { [key: string]: Json | undefined }
-  | Json[];
-
 export type Database = {
   public: {
     Tables: {
       ai_chats: {
         Row: {
-          created_at: string;
-          id: string;
-          message: string;
-          response: string;
-          user_id: string;
         }
         Insert: {
           created_at?: string;
@@ -124,45 +110,6 @@ export type Database = {
             referenced_columns: ["user_id"];
           }];
       }
-      api_logs: {
-        Row: {
-          api_key_id: string | null
-          created_at: string
-          endpoint: string
-          id: string
-          ip_address: string | null
-          method: string
-          response_time_ms: number | null
-          status_code: number
-          user_agent: string | null
-          user_id: string | null
-        }
-        Insert: {
-          api_key_id?: string | null
-          created_at?: string
-          endpoint: string
-          id?: string
-          ip_address?: string | null
-          method: string
-          response_time_ms?: number | null
-          status_code: number
-          user_agent?: string | null
-          user_id?: string | null
-        }
-        Update: {
-          api_key_id?: string | null
-          created_at?: string
-          endpoint?: string
-          id?: string
-          ip_address?: string | null
-          method?: string
-          response_time_ms?: number | null
-          status_code?: number
-          user_agent?: string | null
-          user_id?: string | null
-      api_logs: {;
-        Row: {;
-
           api_key_id: string | null;
           created_at: string;
           endpoint: string;
@@ -186,7 +133,6 @@ export type Database = {
           user_agent?: string | null;
           user_id?: string | null;
         }
-        Update: {
           api_key_id?: string | null;
           created_at?: string;
           endpoint?: string;
@@ -197,14 +143,6 @@ export type Database = {
           status_code?: number;
           user_agent?: string | null;
           user_id?: string | null;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
         }
         Relationships: [;
           {
@@ -217,38 +155,10 @@ export type Database = {
             referencedColumns: ["id"]
           }
           },
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         }
         Relationships: [;
           {
-
-            foreignKeyName: "api_logs_api_key_id_fkey";
-            columns: ["api_key_id"];
-            isOneToOne: false;
-            referenced_relation: "api_keys";
-            referenced_columns: ["id"];
-
           }
-=======
-<<<<<<< HEAD
-          },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-            referencedColumns: ["id"]
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
           {
             foreignKeyName: "api_logs_user_id_fkey";
             columns: ["user_id"];
@@ -540,13 +450,6 @@ export type Database = {
         }
         Relationships: [;
           {
-            foreignKeyName: "fraud_flags_reviewed_by_fkey"
-            columns: ["reviewed_by"]
-            isOneToOne: false
-            referencedRelation: "user_metrics"
-            referencedColumns: ["user_id"]
-          }
-          },
           {
             foreignKeyName: "fraud_flags_user_id_fkey";
             columns: ["user_id"];
@@ -720,28 +623,12 @@ export type Database = {
         }
         Relationships: [;
           {
-            foreignKeyName: "job_applications_job_id_fkey"
-            columns: ["job_id"]
-            isOneToOne: false
-            referencedRelation: "jobs"
-            referencedColumns: ["id"]
-          }
-          },
           {
             foreignKeyName: "job_applications_resume_id_fkey"
             columns: ["resume_id"]
             isOneToOne: false
             referencedRelation: "talent_resumes"
             referencedColumns: ["id"]
-          }
-          },
-          {
-            foreignKeyName: "job_applications_resume_id_fkey";
-            columns: ["resume_id"];
-            isOneToOne: false;
-            referenced_relation: "talent_resumes";
-            referenced_columns: ["id"];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           }
           {
             foreignKeyName: "job_applications_talent_id_fkey";
@@ -833,13 +720,6 @@ export type Database = {
         }
         Relationships: [;
           {
-            foreignKeyName: "milestone_activities_milestone_id_fkey"
-            columns: ["milestone_id"]
-            isOneToOne: false
-            referencedRelation: "project_milestones"
-            referencedColumns: ["id"]
-          }
-          },
           {
             foreignKeyName: "milestone_activities_user_id_fkey";
             columns: ["user_id"];
@@ -875,12 +755,6 @@ export type Database = {
         }
         Relationships: [;
           {
-            foreignKeyName: "notification_preferences_user_id_fkey";
-            columns: ["user_id"];
-            isOneToOne: true;
-            referenced_relation: "user_metrics";
-            referenced_columns: ["user_id"];
-          }];
       }
       notifications: {
         Row: {
@@ -918,12 +792,6 @@ export type Database = {
         }
         Relationships: [;
           {
-            foreignKeyName: "notifications_user_id_fkey";
-            columns: ["user_id"];
-            isOneToOne: false;
-            referenced_relation: "user_metrics";
-            referenced_columns: ["user_id"];
-          }];
       }
       partner_payouts: {
         Row: {
@@ -961,230 +829,6 @@ export type Database = {
         }
         Relationships: [;
           {
-            foreignKeyName: "partner_payouts_partner_id_fkey";
-            columns: ["partner_id"];
-            isOneToOne: false;
-            referenced_relation: "partner_profiles";
-            referenced_columns: ["id"];
-          }];
-      }
-      partner_profiles: {
-        Row: {
-          audience_size: string;
-          bio: string;
-          commission_rate: number | null;
-          created_at: string;
-          fraud_flags: number | null;
-          id: string;
-          name: string;
-          niche: string;
-          payout_method: string;
-          social_media: Json | null;
-          status: string;
-          updated_at: string;
-          user_id: string;
-          website: string | null;
-        }
-        Insert: {
-          audience_size: string;
-          bio: string;
-          commission_rate?: number | null;
-          created_at?: string;
-          fraud_flags?: number | null;
-          id?: string;
-          name: string;
-          niche: string;
-          payout_method: string;
-          social_media?: Json | null;
-          status?: string;
-          updated_at?: string;
-          user_id: string;
-          website?: string | null;
-        }
-        Update: {
-          audience_size?: string;
-          bio?: string;
-          commission_rate?: number | null;
-          created_at?: string;
-          fraud_flags?: number | null;
-          id?: string;
-          name?: string;
-          niche?: string;
-          payout_method?: string;
-          social_media?: Json | null;
-          status?: string;
-          updated_at?: string;
-          user_id?: string;
-          website?: string | null;
-        }
-        Relationships: [;
-          {
-            foreignKeyName: "partner_profiles_user_id_fkey";
-            columns: ["user_id"];
-            isOneToOne: false;
-            referenced_relation: "user_metrics";
-            referenced_columns: ["user_id"];
-          }];
-      }
-      partner_referral_links: {
-        Row: {
-          campaign: string | null;
-          clicks: number | null;
-          conversions: number | null;
-          created_at: string;
-          id: string;
-          name: string;
-          partner_id: string;
-          source: string | null;
-          updated_at: string;
-        }
-        Insert: {
-          campaign?: string | null;
-          clicks?: number | null;
-          conversions?: number | null;
-          created_at?: string;
-          id?: string;
-          name: string;
-          partner_id: string;
-          source?: string | null;
-          updated_at?: string;
-        }
-        Update: {
-          campaign?: string | null;
-          clicks?: number | null;
-          conversions?: number | null;
-          created_at?: string;
-          id?: string;
-          name?: string;
-          partner_id?: string;
-          source?: string | null;
-          updated_at?: string;
-        }
-        Relationships: [;
-          {
-            foreignKeyName: "partner_referral_links_partner_id_fkey";
-            columns: ["partner_id"];
-            isOneToOne: false;
-            referenced_relation: "partner_profiles";
-            referenced_columns: ["id"];
-          }];
-      }
-      portfolio_projects: {
-        Row: {
-          created_at: string;
-          demo_url: string | null;
-          description: string | null;
-          github_url: string | null;
-          id: string;
-          image_url: string | null;
-          pdf_url: string | null;
-          technologies: string[] | null;
-          title: string;
-          updated_at: string;
-          user_id: string;
-        }
-        Insert: {
-          created_at?: string;
-          demo_url?: string | null;
-          description?: string | null;
-          github_url?: string | null;
-          id?: string;
-          image_url?: string | null;
-          pdf_url?: string | null;
-          technologies?: string[] | null;
-          title: string;
-          updated_at?: string;
-          user_id: string;
-        }
-        Update: {
-          created_at?: string;
-          demo_url?: string | null;
-          description?: string | null;
-          github_url?: string | null;
-          id?: string;
-          image_url?: string | null;
-          pdf_url?: string | null;
-          technologies?: string[] | null;
-          title?: string;
-          updated_at?: string;
-          user_id?: string;
-        }
-        Relationships: [;
-          {
-            foreignKeyName: "portfolio_projects_user_id_fkey";
-            columns: ["user_id"];
-            isOneToOne: false;
-            referenced_relation: "user_metrics";
-            referenced_columns: ["user_id"];
-          }];
-      }
-      profiles: {
-        Row: {
-          avatar_url: string | null;
-          average_rating: number | null;
-          bio: string | null;
-          created_at: string;
-          display_name: string | null;
-          headline: string | null;
-          id: string;
-          ip_address: string | null;
-          last_login_ip: string | null;
-          profile_complete: boolean;
-          rating_count: number | null;
-          rating_sum: number | null;
-          role: string | null;
-          signup_timestamp: string | null;
-          tenant_id: string | null;
-          updated_at: string;
-          user_type: string | null;
-        }
-        Insert: {
-          avatar_url?: string | null;
-          average_rating?: number | null;
-          bio?: string | null;
-          created_at?: string;
-          display_name?: string | null;
-          headline?: string | null;
-          id: string;
-          ip_address?: string | null;
-          last_login_ip?: string | null;
-          profile_complete?: boolean;
-          rating_count?: number | null;
-          rating_sum?: number | null;
-          role?: string | null;
-          signup_timestamp?: string | null;
-          tenant_id?: string | null;
-          updated_at?: string;
-          user_type?: string | null;
-        }
-        Update: {
-          avatar_url?: string | null;
-          average_rating?: number | null;
-          bio?: string | null;
-          created_at?: string;
-          display_name?: string | null;
-          headline?: string | null;
-          id?: string;
-          ip_address?: string | null;
-          last_login_ip?: string | null;
-          profile_complete?: boolean;
-          rating_count?: number | null;
-          rating_sum?: number | null;
-          role?: string | null;
-          signup_timestamp?: string | null;
-          tenant_id?: string | null;
-          updated_at?: string;
-          user_type?: string | null;
-        }
-        Relationships: [;
-          {
-            foreignKeyName: "profiles_id_fkey"
-            columns: ["id"]
-            isOneToOne: true
-            referencedRelation: "user_metrics"
-            referencedColumns: ["user_id"]
-          }
-          },
           {
             foreignKeyName: "profiles_tenant_id_fkey";
             columns: ["tenant_id"];
@@ -1235,12 +879,8 @@ export type Database = {
         }
         Relationships: [;
           {
-            foreignKeyName: "project_milestones_created_by_fkey"
-            columns: ["created_by"]
-            isOneToOne: false
-            referencedRelation: "user_metrics"
-            referencedColumns: ["user_id"]
           }
+
           },
           {
             foreignKeyName: "project_milestones_project_id_fkey";
@@ -1248,39 +888,7 @@ export type Database = {
             isOneToOne: false;
             referenced_relation: "projects";
             referenced_columns: ["id"];
-          }];
-      }
-      project_notes: {
-        Row: {
-          content: string;
-          created_at: string;
-          id: string;
-          project_id: string;
-          user_id: string;
-        }
-        Insert: {
-          content: string;
-          created_at?: string;
-          id?: string;
-          project_id: string;
-          user_id: string;
-        }
-        Update: {
-          content?: string;
-          created_at?: string;
-          id?: string;
-          project_id?: string;
-          user_id?: string;
-        }
-        Relationships: [;
           {
-            foreignKeyName: "project_notes_project_id_fkey"
-            columns: ["project_id"]
-            isOneToOne: false
-            referencedRelation: "projects"
-            referencedColumns: ["id"]
-          }
-          },
           {
             foreignKeyName: "project_notes_user_id_fkey";
             columns: ["user_id"];
@@ -1331,13 +939,6 @@ export type Database = {
         }
         Relationships: [;
           {
-            foreignKeyName: "projects_client_id_fkey"
-            columns: ["client_id"]
-            isOneToOne: false
-            referencedRelation: "user_metrics"
-            referencedColumns: ["user_id"]
-          }
-          },
           {
             foreignKeyName: "projects_job_id_fkey"
             columns: ["job_id"]
@@ -1345,14 +946,6 @@ export type Database = {
             referencedRelation: "jobs"
             referencedColumns: ["id"]
           }
-          },
-          {
-            foreignKeyName: "projects_job_id_fkey";
-            columns: ["job_id"];
-            isOneToOne: false;
-            referenced_relation: "jobs";
-            referenced_columns: ["id"];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           }
           {
             foreignKeyName: "projects_talent_id_fkey";
@@ -1406,35 +999,6 @@ export type Database = {
           viewed_at?: string | null;
         }
         Update: {
-          budget_display?: string | null;
-          budget_max?: number | null;
-          budget_min?: number | null;
-          created_at?: string;
-          id?: string;
-          is_archived?: boolean;
-          project_description?: string | null;
-          project_name?: string;
-          project_summary?: string;
-          replied_at?: string | null;
-          requester_email?: string;
-          requester_id?: string | null;
-          requester_name?: string;
-          start_date?: string | null;
-          status?: Database["public"]["Enums"]["quote_request_status"];
-          talent_id?: string | null;
-          timeline?: string;
-          updated_at?: string;
-          viewed_at?: string | null;
-        }
-        Relationships: [;
-          {
-            foreignKeyName: "quote_requests_requester_id_fkey"
-            columns: ["requester_id"]
-            isOneToOne: false
-            referencedRelation: "profiles"
-            referencedColumns: ["id"]
-          }
-          },
           {
             foreignKeyName: "quote_requests_talent_id_fkey";
             columns: ["talent_id"];
@@ -1443,30 +1007,6 @@ export type Database = {
             referenced_columns: ["id"];
           }];
       }
-      referral_codes: {
-        Row: {
-          code: string
-          created_at: string
-          id: string
-          updated_at: string
-          user_id: string
-        }
-        Insert: {
-          code: string
-          created_at?: string
-          id?: string
-          updated_at?: string
-          user_id: string
-        }
-        Update: {
-          code?: string
-          created_at?: string
-          id?: string
-          updated_at?: string
-          user_id?: string
-      referral_codes: {;
-        Row: {;
-
           code: string;
           created_at: string;
           id: string;
@@ -1480,24 +1020,11 @@ export type Database = {
           updated_at?: string;
           user_id: string;
         }
-        Update: {
           code?: string;
           created_at?: string;
           id?: string;
           updated_at?: string;
           user_id?: string;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
         }
         Relationships: [;
           {
@@ -1541,28 +1068,12 @@ export type Database = {
         }
         Relationships: [;
           {
-            foreignKeyName: "referral_rewards_partner_id_fkey"
-            columns: ["partner_id"]
-            isOneToOne: false
-            referencedRelation: "partner_profiles"
-            referencedColumns: ["id"]
-          }
-          },
           {
             foreignKeyName: "referral_rewards_referral_id_fkey"
             columns: ["referral_id"]
             isOneToOne: false
             referencedRelation: "referrals"
             referencedColumns: ["id"]
-          }
-          },
-          {
-            foreignKeyName: "referral_rewards_referral_id_fkey";
-            columns: ["referral_id"];
-            isOneToOne: false;
-            referenced_relation: "referrals";
-            referenced_columns: ["id"];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           }
           {
             foreignKeyName: "referral_rewards_user_id_fkey";
@@ -1623,43 +1134,18 @@ export type Database = {
         }
         Relationships: [;
           {
-            foreignKeyName: "referrals_partner_id_fkey"
-            columns: ["partner_id"]
-            isOneToOne: false
-            referencedRelation: "partner_profiles"
-            referencedColumns: ["id"]
-          }
-          },
           {
             foreignKeyName: "referrals_referral_code_fkey"
             columns: ["referral_code"]
             isOneToOne: false
             referencedRelation: "referral_codes"
             referencedColumns: ["code"]
-          }
-          },
           {
             foreignKeyName: "referrals_referred_id_fkey"
             columns: ["referred_id"]
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-          }
-          },
-          {
-            foreignKeyName: "referrals_referral_code_fkey";
-            columns: ["referral_code"];
-            isOneToOne: false;
-            referenced_relation: "referral_codes";
-            referenced_columns: ["code"];
-          }
-          {
-            foreignKeyName: "referrals_referred_id_fkey";
-            columns: ["referred_id"];
-            isOneToOne: false;
-            referenced_relation: "user_metrics";
-            referenced_columns: ["user_id"];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           }
           {
             foreignKeyName: "referrals_referrer_id_fkey";
@@ -1669,39 +1155,6 @@ export type Database = {
             referenced_columns: ["user_id"];
           }];
       }
-      reminder_logs: {
-        Row: {
-          clicked_at: string | null
-          email_body: string
-          email_subject: string
-          id: string
-          opened_at: string | null
-          reminder_type: string
-          sent_at: string | null
-          user_id: string
-        }
-        Insert: {
-          clicked_at?: string | null
-          email_body: string
-          email_subject: string
-          id?: string
-          opened_at?: string | null
-          reminder_type: string
-          sent_at?: string | null
-          user_id: string
-        }
-        Update: {
-          clicked_at?: string | null
-          email_body?: string
-          email_subject?: string
-          id?: string
-          opened_at?: string | null
-          reminder_type?: string
-          sent_at?: string | null
-          user_id?: string
-      reminder_logs: {;
-        Row: {;
-
           clicked_at: string | null;
           email_body: string;
           email_subject: string;
@@ -1721,7 +1174,6 @@ export type Database = {
           sent_at?: string | null;
           user_id: string;
         }
-        Update: {
           clicked_at?: string | null;
           email_body?: string;
           email_subject?: string;
@@ -1730,57 +1182,9 @@ export type Database = {
           reminder_type?: string;
           sent_at?: string | null;
           user_id?: string;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
         }
         Relationships: [;
           {
-            foreignKeyName: "reminder_logs_user_id_fkey";
-            columns: ["user_id"];
-            isOneToOne: false;
-            referenced_relation: "user_metrics";
-            referenced_columns: ["user_id"];
-          }];
-      }
-      resume_skills: {
-        Row: {
-          category: string | null;
-          created_at: string;
-          id: string;
-          name: string;
-          proficiency: number | null;
-          resume_id: string;
-          years_experience: number | null;
-        }
-        Insert: {
-          category?: string | null;
-          created_at?: string;
-          id?: string;
-          name: string;
-          proficiency?: number | null;
-          resume_id: string;
-          years_experience?: number | null;
-        }
-        Update: {
-          category?: string | null;
-          created_at?: string;
-          id?: string;
-          name?: string;
-          proficiency?: number | null;
-          resume_id?: string;
-          years_experience?: number | null;
-        }
-        Relationships: [;
           {
             foreignKeyName: "resume_skills_resume_id_fkey";
             columns: ["resume_id"];
@@ -1819,13 +1223,6 @@ export type Database = {
         }
         Relationships: [;
           {
-            foreignKeyName: "review_reports_reporter_id_fkey"
-            columns: ["reporter_id"]
-            isOneToOne: false
-            referencedRelation: "user_metrics"
-            referencedColumns: ["user_id"]
-          }
-          },
           {
             foreignKeyName: "review_reports_review_id_fkey";
             columns: ["review_id"];
@@ -1891,28 +1288,12 @@ export type Database = {
         }
         Relationships: [;
           {
-            foreignKeyName: "reviews_project_id_fkey"
-            columns: ["project_id"]
-            isOneToOne: false
-            referencedRelation: "projects"
-            referencedColumns: ["id"]
-          }
-          },
           {
             foreignKeyName: "reviews_reviewee_id_fkey"
             columns: ["reviewee_id"]
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-          }
-          },
-          {
-            foreignKeyName: "reviews_reviewee_id_fkey";
-            columns: ["reviewee_id"];
-            isOneToOne: false;
-            referenced_relation: "user_metrics";
-            referenced_columns: ["user_id"];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           }
           {
             foreignKeyName: "reviews_reviewer_id_fkey";
@@ -2062,13 +1443,6 @@ export type Database = {
         }
         Relationships: [;
           {
-            foreignKeyName: "tenant_administrators_tenant_id_fkey"
-            columns: ["tenant_id"]
-            isOneToOne: false
-            referencedRelation: "whitelabel_tenants"
-            referencedColumns: ["id"]
-          }
-          },
           {
             foreignKeyName: "tenant_administrators_user_id_fkey";
             columns: ["user_id"];
@@ -2359,11 +1733,6 @@ export type Database = {
     Views: {
       conversion_rates: {
         Row: {
-          conversion_count: number | null;
-          conversion_rate: number | null;
-          conversion_type: string | null;
-          date: string | null;
-          view_count: number | null;
         }
         Relationships: [];
       }
@@ -2400,24 +1769,6 @@ export type Database = {
         Relationships: [];
       }
     }
-    Functions: {
-      check_users_needing_reminders: {
-        Args: Record<PropertyKey, never>
-        Returns: {
-          user_id: string
-          email: string
-          display_name: string
-          user_type: string
-          last_login: string
-          reminder_type: string
-          days_since_login: number
-          onboarding_status: Json
-        }[]
-    Functions: {;
-      check_users_needing_reminders: {;
-        Args: Record<PropertyKey never>;
-        Returns: {;
-
           user_id: string;
           email: string;
           display_name: string;
@@ -2427,18 +1778,6 @@ export type Database = {
           days_since_login: number;
           onboarding_status: Json;
         }[];
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       }
       complete_referral: {
         Args: { _referred_id: string, _user_type: string }
@@ -2454,23 +1793,8 @@ export type Database = {
         }
         Returns: string;
       }
-      create_scheduled_reminders: {
-        Args: Record<PropertyKey, never>
-        Returns: undefined
-      create_scheduled_reminders: {;
-        Args: Record<PropertyKey never>;
+        Args: Record < PropertyKey, never>;
         Returns: undefined;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       }
       flag_suspicious_content: {
         Args: {
@@ -2499,95 +1823,22 @@ export type Database = {
       }
       get_api_key_user_id: {
         Args: { key_prefix: string, provided_key: string }
-
-        Returns: string
+        Returns: string;
       }
       get_current_tenant_id: {
-        Args: Record<PropertyKey, never>
-        Returns: string
-      get_current_tenant_id: {;
-        Args: Record<PropertyKey never>;
+        Args: Record < PropertyKey, never>;
         Returns: string;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       }
       get_event_distribution: {
         Args: { days_back?: number }
         Returns: {
-          date: string;
-          event_type: string;
-          count: number;
-        }[];
       }
       hash_api_key: {
         Args: { api_key: string }
         Returns: string;
       }
-      schedule_email_reminders: {
-        Args: Record<PropertyKey, never>
-        Returns: number
-      schedule_email_reminders: {;
-        Args: Record<PropertyKey never>;
+        Args: Record < PropertyKey, never>;
         Returns: number;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-      }
-      trigger_resume_scoring: {
-        Args: { application_id: string }
-        Returns: undefined
-      }
-      update_onboarding_milestone: {
-        Args: { _user_id: string, _milestone: string, _status: boolean }
-        Returns: undefined
-      }
-      verify_api_key: {
-        Args: { provided_key: string, stored_hash: string }
-        Returns: boolean
-      }
-    }
-    Enums: {
-      api_key_scope:
-        | "jobs:read"
-        | "jobs:write"
-        | "talent:read"
-        | "quotes:write"
-        | "webhooks:manage"
-      fraud_severity: "safe" | "suspicious" | "dangerous"
-      quote_request_status:
-        | "new"
-        | "in_review"
-        | "accepted"
-        | "responded"
-        | "closed"
-        | "archived"
-      referral_status: "pending" | "completed" | "expired"
-    }
-    CompositeTypes: {
-      [_ in never]: never
-    }
-  }
-}
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
       trigger_resume_scoring: {
         Args: { application_id: string }
@@ -2624,28 +1875,6 @@ export type Database = {
     }
   }
 }
-
-type DefaultSchema = Database[Extract<keyof Database, "public">]
-export type Tables<
-  DefaultSchemaTableNameOrOptions extends
-    | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"]);
-    | { schema: keyof Database };
-    | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"])
-<<<<<<< HEAD
-    | { schema: keyof Database }
-    | { schema: keyof Database },
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database
   }
@@ -2664,27 +1893,11 @@ export type Tables<
         DefaultSchema["Views"])[DefaultSchemaTableNameOrOptions] extends {
         Row: infer R
       }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       ? R
       : never
     : never
 export type TablesInsert<
   DefaultSchemaTableNameOrOptions extends
-    | keyof DefaultSchema["Tables"];
-<<<<<<< HEAD
-    | { schema: keyof Database };
-    | keyof DefaultSchema["Tables"]
-    | { schema: keyof Database }
-    | { schema: keyof Database },
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
-
     | { schema: keyof Database }
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database;
@@ -2706,8 +1919,6 @@ export type TablesInsert<
     | keyof DefaultSchema["Tables"]
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database
   }
@@ -2722,27 +1933,11 @@ export type TablesInsert<
     ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {
         Insert: infer I
       }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       ? I
       : never
     : never
 export type TablesUpdate<
   DefaultSchemaTableNameOrOptions extends
-    | keyof DefaultSchema["Tables"];
-<<<<<<< HEAD
-    | { schema: keyof Database };
-    | keyof DefaultSchema["Tables"]
-    | { schema: keyof Database }
-    | { schema: keyof Database },
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
-
     | { schema: keyof Database }
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database;
@@ -2764,8 +1959,6 @@ export type TablesUpdate<
     | keyof DefaultSchema["Tables"]
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database
   }
@@ -2780,26 +1973,11 @@ export type TablesUpdate<
     ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {
         Update: infer U
       }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       ? U
       : never
     : never
 export type Enums<
   DefaultSchemaEnumNameOrOptions extends
-<<<<<<< HEAD
-    | keyof DefaultSchema["Enums"];
-    | { schema: keyof Database };
-    | keyof DefaultSchema["Enums"]
-    | { schema: keyof Database }
-    | { schema: keyof Database },
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   EnumName extends DefaultSchemaEnumNameOrOptions extends {
     schema: keyof Database
   }
@@ -2816,14 +1994,6 @@ export type CompositeTypes<
     | keyof DefaultSchema["CompositeTypes"]
     | { schema: keyof Database }
     | { schema: keyof Database },
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {
     schema: keyof Database
   }
@@ -2865,12 +2035,6 @@ export const Constants = {
         "webhooks:manage"],
       fraud_severity: ["safe", "suspicious", "dangerous"],
       quote_request_status: [
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
         "new";
         "in_review";
         "accepted";
@@ -2879,11 +2043,6 @@ export const Constants = {
         "archived"],
       referral_status: ["pending", "completed", "expired"]}}} as const
 ;
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
         "new",
         "in_review",
         "accepted",
@@ -2957,16 +2116,13 @@ export type TablesUpdate<;
     ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {;
         Update: infer U;
       }
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       ? U;
       : never;
     : never;
 export type Enums<;
   DefaultSchemaEnumNameOrOptions extends;
     | keyof DefaultSchema["Enums"];
-
     | { schema: keyof Database }
   EnumName extends DefaultSchemaEnumNameOrOptions extends {
     schema: keyof Database;
@@ -2974,32 +2130,6 @@ export type Enums<;
     ? keyof Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"];
     : never = never;
 > = DefaultSchemaEnumNameOrOptions extends { schema: keyof Database }
-
-
-    | keyof DefaultSchema["Enums"]
-
-
-  EnumName extends DefaultSchemaEnumNameOrOptions extends {
-    schema: keyof Database
-  }
-    ? keyof Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"]
-    : never = never> = DefaultSchemaEnumNameOrOptions extends { schema: keyof Database }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  ? Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"][EnumName]
-  : DefaultSchemaEnumNameOrOptions extends keyof DefaultSchema["Enums"]
-    ? DefaultSchema["Enums"][DefaultSchemaEnumNameOrOptions]
-    : never
-export type CompositeTypes<
-  PublicCompositeTypeNameOrOptions extends
-
-  ? Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"][EnumName];
-  : DefaultSchemaEnumNameOrOptions extends keyof DefaultSchema["Enums"];
-    ? DefaultSchema["Enums"][DefaultSchemaEnumNameOrOptions];
-    : never;
-export type CompositeTypes<;
-  PublicCompositeTypeNameOrOptions extends;
-    | keyof DefaultSchema["CompositeTypes"];
-
     | { schema: keyof Database }
   CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {
     schema: keyof Database;
@@ -3007,27 +2137,6 @@ export type CompositeTypes<;
     ? keyof Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"];
     : never = never;
 > = PublicCompositeTypeNameOrOptions extends { schema: keyof Database }
-
-
-    | keyof DefaultSchema["CompositeTypes"]
-
-
-  CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {
-    schema: keyof Database
-  }
-    ? keyof Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"]
-    : never = never> = PublicCompositeTypeNameOrOptions extends { schema: keyof Database }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  ? Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"][CompositeTypeName]
-  : PublicCompositeTypeNameOrOptions extends keyof DefaultSchema["CompositeTypes"]
-    ? DefaultSchema["CompositeTypes"][PublicCompositeTypeNameOrOptions]
-    : never
-
-  ? Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"][CompositeTypeName];
-  : PublicCompositeTypeNameOrOptions extends keyof DefaultSchema["CompositeTypes"];
-    ? DefaultSchema["CompositeTypes"][PublicCompositeTypeNameOrOptions];
-    : never;
-
 export const Constants = {
   public: {
     Enums: {
@@ -3045,23 +2154,11 @@ export const Constants = {
         "responded";
         "closed";
 
-        "archived"],
-      referral_status: ["pending", "completed", "expired"]}}} as const;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
 ;
-=======
 export const Constants = {
   public: {
     Enums: {
 
       api_key_scope: [
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+;

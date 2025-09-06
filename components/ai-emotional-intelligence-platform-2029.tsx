@@ -1,76 +1,11 @@
-import React from 'react',
-import Head from 'next/head',
-import React from 'react';
-import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
-<<<<<<< HEAD
-  Brain
-  Heart
-  Eye
-  MessageCircle
-  Users
-  Shield
-  Zap
-  TrendingUp
-  CheckCircle
-  ArrowRight
-  Star
-  Phone
-  Mail
-  MapPin
-  Globe
-  Cpu
-  Lock
-  BarChart3
-  Smartphone
-  Database
-  Cloud
-  Server
-  ShieldCheck;
-} from 'lucide-react';
-import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
-import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';import {
-  Brain, Heart, Eye, MessageCircle, Users, Shield
-
-=======
-<<<<<<< HEAD
-  Brain
-  Heart
-  Eye
-  MessageCircle
-  Users
-  Shield
-  Zap
-  TrendingUp
-  CheckCircle
-  ArrowRight
-  Star
-  Phone
-  Mail
-  MapPin
-  Globe
-  Cpu
-  Lock
-  BarChart3
-  Smartphone
-  Database
-  Cloud
-  Server
-  ShieldCheck;
-} from 'lucide-react';
-import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
-import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';import {
-  Brain, Heart, Eye, MessageCircle, Users, Shield
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
   Brain,
   Heart,
   Eye,
@@ -96,14 +31,6 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
   ShieldCheck,;
 } from 'lucide-react';
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
-import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';import {
-  Brain, Heart, Eye, MessageCircle, Users, Shield, ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   Brain,
   Heart,
   Eye,
@@ -125,85 +52,8 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
   Smartphone,
   Database,
   Cloud,
-<<<<<<< HEAD
-  Server,
-  ShieldCheck,
-} from 'lucide-react';
-import UltraFuturisticNavigation2029 from '../components / layout / UltraFuturisticNavigation2029';
-import UltraFuturisticFooter2028 from '../components / layout / UltraFuturisticFooter2028';import {
-  Brain, Heart, Eye, MessageCircle, Users, Shield,
-  Zap, TrendingUp, CheckCircle, ArrowRight, Star;
-  Phone, Mail, MapPin, Globe, Cpu, Lock, BarChart3;
-  Smartphone, Database, Cloud, Server, ShieldCheck;
-} from 'lucide-react';
-const AIEmotionalIntelligencePlatform2029 = () => {
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-};
-  const features = [
-    {
-      icon: Brain,
-      title: 'Real-time Emotion Detection',
-      description: 'Advanced AI algorithms that detect emotions from facial expressions, voice tone, and text in real-time',
-color: 'from-violet-500 to-purple-600'
-    };
-    {;
-      title: 'Mental Health Applications',;
-      description: 'Emotional support and monitoring for mental health care',;
-      icon: Heart,;
-      color: 'from-pink-500 to-rose-600',;
-    },      color: 'from-pink-500 to-rose-600';
-    };
-    {;
-      title: 'Educational Platforms',;
-      description: 'Personalized learning experiences based on emotional state',;
-      icon: Brain,;
-      color: 'from-green-500 to-emerald-600',;
-    },      color: 'from-green-500 to-emerald-600';
-    };
-    {;
-      title: 'Marketing Optimization',;
-      description: 'Campaign optimization based on emotional response analysis',;
-      icon: TrendingUp,;
-      color: 'from-orange-500 to-red-600',;
-    },      color: 'from-orange-500 to-red-600';
-    };
-    {;
-      title: 'HR and Recruitment',;
-      description: 'Emotional intelligence assessment and team building',;
-      icon: Users,;
-      color: 'from-purple-500 to-indigo-600',;
-    },      color: 'from-purple-500 to-indigo-600';
-    };
-    {;
-      title: 'Healthcare Diagnostics',;
-      description: 'Emotional state monitoring for healthcare professionals',;
-      icon: Shield,;
-      color: 'from-teal-500 to-cyan-600',;
-    },      color: 'from-teal-500 to-cyan-600';
-    }
-  ];
-        />;
-        <meta name='author' content='Zion Tech Group' />;
-        <meta name='robots' content='index, follow' />;
-=======
-  Server,;
-  ShieldCheck,;
-} from 'lucide-react';
-import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
-import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';import {
-  Brain, Heart, Eye, MessageCircle, Users, Shield, ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   Zap, TrendingUp, CheckCircle, ArrowRight, Star;
   Phone, Mail, MapPin, Globe, Cpu, Lock, BarChart3;
   Smartphone, Database, Cloud, Server, ShieldCheck
@@ -386,29 +236,6 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
       ]
       popular: false
     },  };        'Unlimited emotional interactionsCustom emotion detection models24/7 dedicated supportCustom integrationsAdvanced security featuresWhite-label optionsOn-premise deploymentCustom training and consulting'
-=======
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   Zap, TrendingUp, CheckCircle, ArrowRight, Star;
   Phone, Mail, MapPin, Globe, Cpu, Lock, BarChart3;
   Smartphone, Database, Cloud, Server, ShieldCheck;
@@ -454,116 +281,29 @@ class ErrorBoundary extends React.Component {
   ];
 
 
-
       ];
       popular: false
     }
-
-<<<<<<< HEAD
-  };
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-=======
-  };
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-  };
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   return (
-    <>
-      <Head>
-        <title>AI Emotional Intelligence Platform 2029 | Zion Tech Group</title>
+    <>;
+      <Head>;
+        <title>AI Emotional Intelligence Platform 2029 | Zion Tech Group</title>;
         <meta
           name='description'
           content='Revolutionary AI platform that reads, understands, and responds to human emotions in real-time. Improve customer satisfaction by 85% with emotional intelligence.'
-        />
+        />;
         <meta
           name='keywords'
           content='AI emotional intelligence, emotion detection, sentiment analysis, customer experience, mental health AI, emotional AI'
-
-        />;
-        <meta name='author' content='Zion Tech Group' />;
-        <meta name='robots' content='index, follow' />;
-
-
         {/* Open Graph */}
         <meta
           property='og:title'
           content='AI Emotional Intelligence Platform 2029'
-<<<<<<< HEAD
-        />;
-        <meta
-          property='og:description'
-          content='Revolutionary AI platform that reads, understands, and responds to human emotions in real-time.'
-        />;
-        <meta property='og:type' content='website' />;
-        <meta
-          property='og:url'
-          content='https://ziontechgroup && ziontechgroup.com/ai-emotional-intelligence-platform-2029'
-        />;
-        <meta
-          property='og:image'
-
-          content='https://ziontechgroup && ziontechgroup.com/og-image && image.jpg'
-        />;
-
-
-        {/* Twitter */}
-        <meta name='twitter:card' content='summary_large_image' />;
-        <meta
-          name='twitter:title'
-          content='AI Emotional Intelligence Platform 2029'
-        />;
-        <meta
-          name='twitter:description'
-          content='Revolutionary AI platform that reads, understands, and responds to human emotions in real-time.'
-        />;
-        <meta
-          name='twitter:image'
-
-          content='https://ziontechgroup && ziontechgroup.com/twitter-image && image.jpg'
-        />;
-
-
-        {/* Additional Meta Tags */}
-        <meta name='viewport' content='width=device-width, initial-scale=1' />;
-        <meta name='theme-color' content='#8b5cf6' />;
-        <link
-          rel='canonical'
-          href='https://ziontechgroup && ziontechgroup.com/ai-emotional-intelligence-platform-2029'
-        />      </Head>        {/* Open Graph */}
-
-
-=======
-            className='mb-16'            className="mb-16"
-          >
-
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className='mb-16'            className="mb-16";
+          >;
             {/* Badge */}
             <motion&& motion.div
               initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -655,79 +395,35 @@ class ErrorBoundary extends React.Component {
             <motion.div;
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-violet-500/20 to-purple-500/20 border border-purple-500/30 text-purple-300 text-sm font-medium mb-8'
-            >
-              <Brain className='w-4 h-4 mr-2' />              🚀 2029 Revolutionary AI Technology              className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-violet-500/20 to-purple-500/20 border border-purple-500/30 text-purple-300 text-sm font-medium mb-8"
             >
               <Brain className="w-4 h-4 mr-2" />
               🚀 2029 Revolutionary AI Technology
             </motion.div>
+              transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
+              className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-violet-500/20 to-purple-500/20 border border-purple-500/30 text-purple-300 text-sm font-medium mb-8'>;
+              <Brain className='w-4 h-4 mr-2' />              🚀 2029 Revolutionary AI Technology              className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-violet-500/20 to-purple-500/20 border border-purple-500/30 text-purple-300 text-sm font-medium mb-8";
+            >;
+              <Brain className="w-4 h-4 mr-2" />;
+              🚀 2029 Revolutionary AI Technology;
+            </motion && motion.div>;
 
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
             {/* Main Heading */}
             <motion&& motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.3 }}
-              className='text-5xl md:text-7xl font-bold text-white mb-6 leading-tight'
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
             >
               <span className='bg-gradient-to-r from-violet-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
                 AI Emotional Intelligence
               </span>
               <br />
               <span className='text-white'>Platform</span>            </motion.h1>            >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <span className="bg-gradient-to-r from-violet-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                 AI Emotional Intelligence
               </span>
               <br />
               <span className="text-white">Platform</span>
             </motion.h1>
-
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
               transition={{ duration: 1, delay: 0 && 0.3 }}
               className='text-5xl md:text-7xl font-bold text-white mb-6 leading-tight'>;
               <span className='bg-gradient-to-r from-violet-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
@@ -742,77 +438,28 @@ class ErrorBoundary extends React.Component {
               <span className="text-white">Platform</span>;
             </motion && motion.h1>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
             {/* Subheading */}
             <motion&& motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.5 }}
-              className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed'
-            >
-              Revolutionary AI platform that reads, understands, and responds to
-              human emotions in real-time across all communication channels.
-              Transform your business with emotional intelligence.            </motion.p>              className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"
-            >
-              Revolutionary AI platform that reads, understands, and responds to human emotions in real-time across all communication channels. Transform your business with emotional intelligence.
-            </motion.p>
+              transition={{ duration: 1, delay: 0 && 0.5 }}
+              className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed'>;
+              Revolutionary AI platform that reads, understands, and responds to;
+              human emotions in real-time across all communication channels.;
+              Transform your business with emotional intelligence.            </motion && motion.p>              className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed";
+            >;
+              Revolutionary AI platform that reads, understands, and responds to human emotions in real-time across all communication channels. Transform your business with emotional intelligence.;
+            </motion && motion.p>;
 
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
             {/* CTA Buttons */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.7 }}
-              className='flex flex-col sm:flex-row items-center justify-center gap-4 mb-12'
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
             >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <Link
                 href='/contact'
 
@@ -831,13 +478,6 @@ class ErrorBoundary extends React.Component {
                 <span className='flex items-center'>;
                   View Pricing;
                   <ArrowRight className='ml-2 w-5 h-5' />                </span>            >;
-
-=======
-              transition={{ duration: 1, delay: 0.7 }}
-              className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
-            >
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               <Link
                 href="/contact"
 
@@ -851,58 +491,11 @@ class ErrorBoundary extends React.Component {
 
               <Link
                 href="#pricing"
-                className="group px-8 py-4 border-2 border-purple-500/50 hover:border-purple-400 text-purple-300 hover:text-white font-bold rounded-2xl text-lg transition-all duration-300 hover:bg-purple-500/10"
-              >
-                <span className="flex items-center">
-                  View Pricing
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </span>
-              </Link>
-            </motion.div>
-
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
             {/* Key Stats */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.9 }}
-              className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
             >
               <div className='text-center'>
                 <div className='text-3xl font-bold text-violet-400 mb-2'>
@@ -933,7 +526,6 @@ class ErrorBoundary extends React.Component {
                   $8.2B
                 </div>
                 <div className='text-sm text-gray-400'>Market Size by 2029</div>              </div>            >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="text-center">
                 <div className="text-3xl font-bold text-violet-400 mb-2">85%</div>
                 <div className="text-sm text-gray-400">Customer Satisfaction Increase</div>
@@ -954,122 +546,25 @@ class ErrorBoundary extends React.Component {
           </motion.div>
         </div>
       </section>
-
-
-              transition={{ duration: 1, delay: 0 && 0.9 }}
-              className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'>;
-              <div className='text-center'>;
-                <div className='text-3xl font-bold text-violet-400 mb-2'>;
-                  85%;
-                </div>;
-                <div className='text-sm text-gray-400'>;
-                  Customer Satisfaction Increase;
-                </div>;
-              </div>;
-              <div className='text-center'>;
-                <div className='text-3xl font-bold text-purple-400 mb-2'>;
-                  60%;
-                </div>;
-                <div className='text-sm text-gray-400'>;
-                  Customer Churn Reduction;
-                </div>;
-              </div>;
-              <div className='text-center'>;
-                <div className='text-3xl font-bold text-pink-400 mb-2'>;
-                  24/7;
-                </div>;
-                <div className='text-sm text-gray-400'>;
-                  Emotional Monitoring;
-                </div>;
-              </div>;
-              <div className='text-center'>;
-                <div className='text-3xl font-bold text-blue-400 mb-2'>;
-                  $8 && 8.2B;
-                </div>;
-                <div className='text-sm text-gray-400'>Market Size by 2029</div>              </div>            >;
-              <div className="text-center">;
-                <div className="text-3xl font-bold text-violet-400 mb-2">85%</div>;
-                <div className="text-sm text-gray-400">Customer Satisfaction Increase</div>;
-              </div>;
-              <div className="text-center">;
-                <div className="text-3xl font-bold text-purple-400 mb-2">60%</div>;
-                <div className="text-sm text-gray-400">Customer Churn Reduction</div>;
-              </div>;
-              <div className="text-center">;
-                <div className="text-3xl font-bold text-pink-400 mb-2">24/7</div>;
-                <div className="text-sm text-gray-400">Emotional Monitoring</div>;
-              </div>;
-              <div className="text-center">;
-                <div className="text-3xl font-bold text-blue-400 mb-2">$8 && 8.2B</div>;
-                <div className="text-sm text-gray-400">Market Size by 2029</div>;
-              </div>;
-            </motion && motion.div>;
-          </motion && motion.div>;
-        </div>;
-      </section>;
-      {/* Features Section */}
-      <section className='py-20 bg-gradient-to-b from-black to-gray-900'>;
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-b from-black to-gray-900">;
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-          <motion&& motion.div
-
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Features Section */}
       <section className="py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
       {/* Features Section */}
       <section className='py-20 bg-gradient-to-b from-black to-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div      <section className="py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
 
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
-            className='text-center mb-16'
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               Revolutionary{' '}
 
             className="text-center mb-16"
@@ -1108,35 +603,14 @@ class ErrorBoundary extends React.Component {
             {features && features.map((feature, index) => (;
               <motion&& motion.div
                 key={feature && feature.title}
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-                className='group relative p-8 rounded-2xl bg-gradient-to-b from-white/5 to-white/10 border border-white/10 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300 transform hover:scale-105'
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               >
                 <div className={`flex justify-center mb-6`}>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <div
                     className={`p-4 rounded-xl bg-gradient-to-r ${feature && feature.color} bg-opacity-20`}>;
                     <feature && feature.icon className='w-8 h-8 text-white' />;
@@ -1156,22 +630,6 @@ class ErrorBoundary extends React.Component {
                 <h3 className="text-xl font-bold text-white mb-4 text-center">{feature && feature.title}</h3>;
                 <p className="text-gray-300 text-center leading-relaxed">{feature && feature.description}</p>;
               </motion && motion.div>;
-
-=======
-                className="group relative p-8 rounded-2xl bg-gradient-to-b from-white/5 to-white/10 border border-white/10 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300 transform hover:scale-105"
-              >
-                <div className={`flex justify-center mb-6`}>
-=======
-                className='group relative p-8 rounded-2xl bg-gradient-to-b from-white/5 to-white/10 border border-white/10 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300 transform hover:scale-105'
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
               >
                 <div className={`flex justify-center mb-6`}>
                   <div
@@ -1187,7 +645,6 @@ class ErrorBoundary extends React.Component {
                   {feature.description}
                 </p>              </motion.div>              >
                 <div className={`flex justify-center mb-6`}>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <div className={`p-4 rounded-xl bg-gradient-to-r ${feature.color} bg-opacity-20`}>
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
@@ -1196,113 +653,33 @@ class ErrorBoundary extends React.Component {
                 <p className="text-gray-300 text-center leading-relaxed">{feature.description}</p>
               </motion.div>
 
-<<<<<<< HEAD
-=======
-=======
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-=======
-          </div>;
-        </div>;
-      </section>;
-
-
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+            ))}
       {/* Benefits Section */}
       <section className='py-20 bg-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-black">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
 
-=======
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       {/* Benefits Section */}
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
 
-<<<<<<< HEAD
-=======
-=======
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
-            className='text-center mb-16'
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               Transform Your{' '}
 
             className="text-center mb-16"
@@ -1335,146 +712,41 @@ class ErrorBoundary extends React.Component {
               Experience unprecedented improvements in customer satisfaction, team collaboration, and business outcomes.;
             </p>;
           </motion && motion.div>;
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
-            {benefits && benefits.map((benefit, index) => (;
-              <motion&& motion.div
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 key={benefit}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-
-
-=======
-                className='flex items-start space-x-4 p-6 rounded-xl bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20'
-              >
-                <CheckCircle className='w-6 h-6 text-green-400 mt-1 flex-shrink-0' />
-                <span className='text-white text-lg'>{benefit}</span>              </motion.div>                className="flex items-start space-x-4 p-6 rounded-xl bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20"
-              >
-                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
-                <span className="text-white text-lg">{benefit}</span>
                 <span className='text-white text-lg'>{benefit}</span>              </motion.div>
 
               </motion.div>
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-=======
-          </div>;
-        </div>;
-      </section>;
-
-
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+            ))}
       {/* Use Cases Section */}
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-b from-gray-900 to-black">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
-
-=======
-                className='flex items-start space-x-4 p-6 rounded-xl bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20'
-              >
-                <CheckCircle className='w-6 h-6 text-green-400 mt-1 flex-shrink-0' />
-<<<<<<< HEAD
-                <span className='text-white text-lg'>{benefit}</span>              </motion.div>                className="flex items-start space-x-4 p-6 rounded-xl bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20"
-              >
-                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
-                <span className="text-white text-lg">{benefit}</span>
-=======
-                <span className='text-white text-lg'>{benefit}</span>              </motion.div>
-
-              </motion.div>
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       {/* Use Cases Section */}
       <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-
-<<<<<<< HEAD
-=======
-=======
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
-            className='text-center mb-16'
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               Powerful{' '}
 
             className="text-center mb-16"
@@ -1512,35 +784,14 @@ class ErrorBoundary extends React.Component {
             {useCases && useCases.map((useCase, index) => (;
               <motion&& motion.div
                 key={useCase && useCase.title}
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-                className='group relative p-8 rounded-2xl bg-gradient-to-b from-white/5 to-white/10 border border-white/10 backdrop-blur-sm hover:border-blue-500/50 transition-all duration-300 transform hover:scale-105'
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               >
                 <div className={`flex justify-center mb-6`}>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <div
                     className={`p-4 rounded-xl bg-gradient-to-r ${useCase && useCase.color} bg-opacity-20`}>;
                     <useCase && useCase.icon className='w-8 h-8 text-white' />;
@@ -1560,22 +811,6 @@ class ErrorBoundary extends React.Component {
                 <h3 className="text-xl font-bold text-white mb-4 text-center">{useCase && useCase.title}</h3>;
                 <p className="text-gray-300 text-center leading-relaxed">{useCase && useCase.description}</p>;
               </motion && motion.div>;
-
-=======
-                className="group relative p-8 rounded-2xl bg-gradient-to-b from-white/5 to-white/10 border border-white/10 backdrop-blur-sm hover:border-blue-500/50 transition-all duration-300 transform hover:scale-105"
-              >
-                <div className={`flex justify-center mb-6`}>
-=======
-                className='group relative p-8 rounded-2xl bg-gradient-to-b from-white/5 to-white/10 border border-white/10 backdrop-blur-sm hover:border-blue-500/50 transition-all duration-300 transform hover:scale-105'
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
               >
                 <div className={`flex justify-center mb-6`}>
                   <div
@@ -1591,7 +826,6 @@ class ErrorBoundary extends React.Component {
                   {useCase.description}
                 </p>              </motion.div>              >
                 <div className={`flex justify-center mb-6`}>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <div className={`p-4 rounded-xl bg-gradient-to-r ${useCase.color} bg-opacity-20`}>
                     <useCase.icon className="w-8 h-8 text-white" />
                   </div>
@@ -1600,113 +834,33 @@ class ErrorBoundary extends React.Component {
                 <p className="text-gray-300 text-center leading-relaxed">{useCase.description}</p>
               </motion.div>
 
-<<<<<<< HEAD
-=======
-=======
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-=======
-          </div>;
-        </div>;
-      </section>;
-
-
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+            ))}
       {/* Pricing Section */}
       <section id='pricing' className='py-20 bg-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section id="pricing" className="py-20 bg-black">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
 
-=======
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       {/* Pricing Section */}
       <section id="pricing" className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
 
-<<<<<<< HEAD
-=======
-=======
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
-            className='text-center mb-16'
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               Choose Your{' '}
 
             className="text-center mb-16"
@@ -1739,12 +893,6 @@ class ErrorBoundary extends React.Component {
               Flexible pricing options designed to scale with your business needs.;
             </p>;
           </motion && motion.div>;
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-            {Object && Object.entries(pricing).map(([key, plan], index) => (;
-              <motion&& motion.div
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 key={key}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -1754,120 +902,31 @@ class ErrorBoundary extends React.Component {
                   plan && plan.popular
                     ? 'border-purple-500 bg-gradient-to-b from-purple-500/10 to-purple-600/5'
                     : 'border-white/10 bg-gradient-to-b from-white/5 to-white/10'
-
-
                   className={`block w-full text-center py-3 px-6 rounded-xl font-bold transition-all duration-300 ${
                     plan && plan.popular
                       ? 'bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white transform hover:scale-105'
                       : 'bg-white/10 hover:bg-white/20 text-white border border-white/20'
-                  }`}>;
-                  Get Started;
-                </Link>;
-              </motion && motion.div>;
-            ))}
-          </div>
-        </div>
-      </section>
-
-<<<<<<< HEAD
-=======
-          </div>;
-        </div>;
-      </section>;
-
-
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Contact Section */}
       <section className='py-20 bg-gradient-to-b from-black to-purple-900/20'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
-
-=======
-                  }`}
-                >
-                  Get Started
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       {/* Contact Section */}
       <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
 
-<<<<<<< HEAD
-=======
-=======
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
-            className='text-center mb-16'
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               Ready to{' '}
               <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
                 Transform
               </span>{' '}
-
-            className="text-center mb-16"
-          >
-
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Transform</span> Your Business?
             </h2>
@@ -1877,10 +936,6 @@ class ErrorBoundary extends React.Component {
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <motion.div
-
-              Your Business?;
-            </h2>;
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
                     <span className='text - lg text - gray - 400'>{plan.period}</span>;
                   </div>;
                   <p className='text - gray - 300'>{plan.description}</p>;
@@ -1937,46 +992,17 @@ class ErrorBoundary extends React.Component {
               Your Business?;
             </h2>;
             <p className='text - xl text - gray - 300 max - w-3xl mx - auto'>;
-
               Contact us today to learn how our AI Emotional Intelligence;
               Platform can revolutionize your customer experience and business;
               outcomes.;
             </p>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
+              transition={{ duration: 0 && 0.8, delay: 0 && 0.1 }}
               viewport={{ once: true }}
-
-
               className='text-center p-6 rounded-2xl bg-gradient-to-b from-white/5 to-white/10 border border-white/10'>;
               <Phone className='w-12 h-12 text-purple-400 mx-auto mb-4' />;
               <h3 className='text-xl font-bold text-white mb-2'>Call Us</h3>;
@@ -1985,13 +1011,10 @@ class ErrorBoundary extends React.Component {
               <Phone className="w-12 h-12 text-purple-400 mx-auto mb-4" />;
               <h3 className="text-xl font-bold text-white mb-2">Call Us</h3>;
               <p className="text-gray-300">{contactInfo && contactInfo.mobile}</p>;
-            <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
               viewport={{ once: true }}
-
-
               className='text-center p-6 rounded-2xl bg-gradient-to-b from-white/5 to-white/10 border border-white/10'>;
               <Mail className='w-12 h-12 text-purple-400 mx-auto mb-4' />;
               <h3 className='text-xl font-bold text-white mb-2'>Email Us</h3>;
@@ -2000,13 +1023,10 @@ class ErrorBoundary extends React.Component {
               <Mail className="w-12 h-12 text-purple-400 mx-auto mb-4" />;
               <h3 className="text-xl font-bold text-white mb-2">Email Us</h3>;
               <p className="text-gray-300">{contactInfo && contactInfo.email}</p>;
-            <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.3 }}
               viewport={{ once: true }}
-
-
               className='text-center p-6 rounded-2xl bg-gradient-to-b from-white/5 to-white/10 border border-white/10'>;
               <MapPin className='w-12 h-12 text-purple-400 mx-auto mb-4' />;
               <h3 className='text-xl font-bold text-white mb-2'>Visit Us</h3>;
@@ -2016,73 +1036,21 @@ class ErrorBoundary extends React.Component {
               <h3 className="text-xl font-bold text-white mb-2">Visit Us</h3>;
               <p className="text-gray-300">{contactInfo && contactInfo.address}</p>;
           </div>;
-          <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
             viewport={{ once: true }}
-            className='text-center'
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <Link
               href='/contact'
               className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold rounded-2xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25'>;
               <span className='flex items-center'>;
                 Get Started Today;
                 <ArrowRight className='ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300' />              </span>          >;
-=======
-            className="text-center"
-          >
-            <Link
-              href="/contact"
-
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 hover: from-purple-600 hover:to-pink-600 text-white font-bold rounded-2xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25">;
-              <span className="flex items-center">;
-                Get Started Today;
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />;
-              </span>;
-            </Link>;
-          </motion && motion.div>;
-        </div>;
-      </section>;
-      <UltraFuturisticFooter2028 />;
-    </>;
-  );
-<<<<<<< HEAD
-}
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
-export default AIEmotionalIntelligencePlatform2029;  );
 
-};
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default AIEmotionalIntelligencePlatform2029;
-
-
-=======
           </motion.div>;
           <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8 mb - 12'>            <motion.div          >;
             <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
@@ -2141,108 +1109,10 @@ export default AIEmotionalIntelligencePlatform2029;
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-            className='text - center';
-          >;
-            <Link;
-              href='/contact';
-              className='inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - purple - 500 to - pink - 500 hover:from - purple - 600 hover:to - pink - 600 text - white font - bold rounded - 2xl text - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl hover:shadow - purple - 500 / 25';
-            >;
-              <span className='flex items - center'>;
-                Get Started Today;
-                <ArrowRight className='ml - 2 w - 5 h - 5 group - hover:translate - x-1 transition - transform duration - 300' />              </span>          >;
-            <Link;
-              href="/contact";
-              className="inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - purple - 500 to - pink - 500 hover: from - purple - 600 hover:to - pink - 600 text - white font - bold rounded - 2xl text - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl hover:shadow - purple - 500 / 25";
-            >;
-              <span className="flex items - center">;
-                Get Started Today;
-                <ArrowRight className="ml - 2 w - 5 h - 5 group - hover:translate - x-1 transition - transform duration - 300" />;
-              </span>;
-            </Link>;
-          </motion.div>;
-        </div>;
-      </section>;
-      <UltraFuturisticFooter2028 />;
-    </>);
-}
 ;
-export default AIEmotionalIntelligencePlatform2029);
-=======
-            className='text-center'
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-          >
-            <Link
-              href='/contact'
-              className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold rounded-2xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25'
-            >
-              <span className='flex items-center'>
-                Get Started Today
-                <ArrowRight className='ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300' />              </span>          >
-            <Link
-              href="/contact"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 hover: from-purple-600 hover:to-pink-600 text-white font-bold rounded-2xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25"
-            >
-              <span className="flex items-center">
-                Get Started Today
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-              </span>
-            </Link>
-          </motion.div>
-        </div>
-      </section>
-      <UltraFuturisticFooter2028 />
-    </>
-  );
-<<<<<<< HEAD
-}
-=======
-};
-
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export default AIEmotionalIntelligencePlatform2029;  )
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-}
-;
-export default AIEmotionalIntelligencePlatform2029;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-export default AIEmotionalIntelligencePlatform2029;
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 };
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
 export default AIEmotionalIntelligencePlatform2029;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+;

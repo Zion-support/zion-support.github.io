@@ -3,9 +3,11 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
@@ -19,37 +21,12 @@ class ErrorBoundary extends React.Component {
 import React, { useState } from 'react';
 
 
-export type ProposalType =;
-  | 'Workforce Dev';
-  | 'AI Ethics';
-  | 'Digital ID';
-  | 'Education';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
 
 export type ProposalForm = {;
 
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-export type ProposalForm = {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
 
 export type ProposalForm = {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   targetInstitution: string;
 ;
 export type ProposalForm = {
@@ -59,27 +36,11 @@ export type ProposalForm = {
   budgetOrGoals: string;
   supportingMultiverses: string;
   language?: string;
-  customPrompt?: string;};export type ProposalForm = {
-<<<<<<< HEAD
-  targetInstitution: string
-  type: ProposalType
-  regionalScope: string
-  budgetOrGoals: string
-  supportingMultiverses: string
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   targetInstitution: string,
   type: ProposalType,
   regionalScope: string,
   budgetOrGoals: string,
   supportingMultiverses: string,;
-<<<<<<< HEAD
-  language?: string;
-  customPrompt?: string
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   language?: string;
   customPrompt?: string
 }
@@ -92,17 +53,11 @@ export default function ProposalGenerator() {
     supportingMultiverses: ''
     language: 'English'
     customPrompt:
-<<<<<<< HEAD
-      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.'
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
 
   language?: string;
   customPrompt?: string
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
 export type ProposalType = 'Workforce Dev' | 'AI Ethics' | 'Digital ID' | 'Education';
 export type ProposalForm = {
   targetInstitution: string,
@@ -113,15 +68,6 @@ export type ProposalForm = {
   budgetOrGoals: string,
   supporting_multiverses: string,
   language?: string;
-
-  customPrompt?: string;};export type ProposalForm = {;
-  targetInstitution: string,;
-  type: ProposalType,;
-  regionalScope: string,;
-  budgetOrGoals: string,;
-  supportingMultiverses: string,;
-  language?: string;
-  customPrompt?: string;
 };
 export default function ProposalGenerator() {;
   const [form, setForm] = useState<ProposalForm>({;
@@ -133,85 +79,26 @@ export default function ProposalGenerator() {;
     language: 'English',;
     customPrompt:;
       'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
-=======
-
-=======
-
-      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   });
   const [isGenerating, setIsGenerating] = useState(false);
   const [draftMarkdown, setDraftMarkdown] = useState('');
   const [draftJson, setDraftJson] = useState<any>(null);
-<<<<<<< HEAD
-  const [exportLinks, setExportLinks] = useState<{;
-=======
-  const [exportLinks, setExportLinks] = useState<{
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     pdfUrl?: string;
     jsonUrl?: string;
     mdUrl?: string;
   } | null>(null);
   const [statusMessage, setStatusMessage] = useState('');
-
-
-  function handleChange<K extends keyof ProposalForm>(;
-    key: K,;
-    value: ProposalForm[K];
-  ) {;
-
-    setForm(prev => ({ ...prev, [key]: value }));  }  const [isGenerating, setIsGenerating] = useState(false);
-
-=======
-      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.'});
-  const [isGenerating, setIsGenerating] = useState(false);
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const [draftMarkdown, setDraftMarkdown] = useState('');
   const [draftJson, setDraftJson] = useState<any>(null);
   const [exportLinks, setExportLinks] = useState<{ pdfUrl?: string, jsonUrl?: string, mdUrl?: string } | null>(null);
   const [statusMessage, setStatusMessage] = useState('');
-
-
-      setStatusMessage('Draft ready. You can edit and export.');
-    } catch (e: any) {;
-      console && console.error(e);
-      setStatusMessage('Failed to generate. You can edit manually and export.');
-    } finally {
-      setIsGenerating(false);    }      const data = await res.json();
-      setDraftMarkdown(data.markdown |'');
-      setDraftJson(data.json |null);
       setStatusMessage('Draft ready. You can edit and export.')
     } catch (e: any) {
       console.error(e);
       setStatusMessage('Failed to generate. You can edit manually and export.')
     } finally {
-      setIsGenerating(false)
-<<<<<<< HEAD
-=======
-      setIsGenerating(false);    }
-
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     }
   }
-=======
     } finally {
 
       setIsGenerating(false);    }
@@ -226,76 +113,25 @@ export default function ProposalGenerator() {;
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
-
-          markdown: draftMarkdown,
-          json: draftJson,
-          meta: form})}),
-      const data = await res.json();
-      setExportLinks({
-        pdfUrl: data.pdfUrl
-        jsonUrl: data.jsonUrl
-        mdUrl: data.mdUrl
-      });
-      setStatusMessage('Exported. Files saved.');
-    } catch (e) {
-      console.error(e);
-      setStatusMessage('Export failed');    }      const data = await res.json();
-      setExportLinks({ pdfUrl: data.pdfUrl, jsonUrl: data.jsonUrl, mdUrl: data.mdUrl })
       setStatusMessage('Exported. Files saved.')
     } catch (e) {
       console.error(e);
       setStatusMessage('Export failed')
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-=======
-  }
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
-
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       setStatusMessage('Export failed');    }
 
     }
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   }
 
+  }
   async function handleSubmitBridge() {
     setStatusMessage('Submitting via bridge (email/IPFS/signature)...');
     try {
       const res = await fetch('/api/proposals/submit', {
-
-    } finally {;
-      setIsGenerating(false);    }      const data = await res && res.json();
-      setDraftMarkdown(data && data.markdown || '');
-      setDraftJson(data && data.json || null);
-      setStatusMessage('Draft ready. You can edit and export.');
-    } catch (e: any) {;
-      console && console.error(e);
-      setStatusMessage('Failed to generate. You can edit manually and export.');
-    } finally {;
-      setIsGenerating(false);
-
     }
   }
+
   async function handleExport() {;
     setStatusMessage('Exporting to PDF/Markdown/JSON...');
     try {;
@@ -346,53 +182,14 @@ export default function ProposalGenerator() {;
       setStatusMessage('Submission failed');    }
   }
   return (
-<<<<<<< HEAD
-    <div className='space-y-6'>
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
         <div className='space-y-4'>      const data = await res.json();
       setStatusMessage(`Submitted. Status: ${data.status |'queued'}. IPFS: ${data.ipfsCid |'N/A'}`)
     } catch (e) {
       console.error(e);
-<<<<<<< HEAD
-=======
-
-      setStatusMessage('Submission failed')
-      setStatusMessage('Submission failed')
-        <div className='space-y-4'>
-
-=======
-    <div className='space-y-6'>
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <div className='space-y-4'>      const data = await res.json();
       setStatusMessage(`Submitted. Status: ${data.status |'queued'}. IPFS: ${data.ipfsCid |'N/A'}`)
     } catch (e) {
       console.error(e);
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-
-      setStatusMessage('Submission failed')
-=======
-      setStatusMessage('Submission failed')
-=======
-        <div className='space-y-4'>
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
     <div className='space-y-6'>;
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
@@ -402,8 +199,6 @@ export default function ProposalGenerator() {;
       console && console.error(e);
       setStatusMessage('Submission failed');
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     }
   }
   return (
@@ -507,244 +302,54 @@ export default function ProposalGenerator() {;
           <div className='flex gap-2'>;
             <button
               className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'              onClick={handleGenerate}            <input
-
-=======
-    <div className="space-y-6">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div className="space-y-4">
-          <div>
-            <label className="block text-sm font-medium" htmlFor="input-Target institution">Target institution</label>
-            <input
-              className="w-full border rounded px-3 py-2"
-              value={form.targetInstitution}
-              onChange={(e) => handleChange('targetInstitution', e.target.value)}
-              placeholder="UNDP / World Bank / ILO"
-            />
-          </div>
-          <div>
-            <label className="block text-sm font-medium" htmlFor="input-Type">Type</label>
-            <select
-              className="w-full border rounded px-3 py-2"
-              value={form.type}
-              onChange={(e) => handleChange('type', e.target.value as ProposalType)}
-
-
-    }
-  }
-  return (
-    <div className='space-y-6'>
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-        <div className='space-y-4'>
-
-
-    }
-  }
-
-  return (
-
-            >
-              <option>Workforce Dev</option>
-              <option>AI Ethics</option>
-              <option>Digital ID</option>
-              <option>Education</option>
-            </select>
-          </div>
-          <div>
-            <label className="block text-sm font-medium" htmlFor="input-Regional scope">Regional scope</label>
-            <input
-
-              className='w-full border rounded px-3 py-2'
-              value={form.regionalScope}
-              onChange={e => handleChange('regionalScope', e.target.value)}
-              placeholder='Global / Africa / LATAM / APAC / EU / ...'
-            />
-          </div>
-          <div>
-            <label className='block text-sm font-medium'>
-              Budget / Resolution goals
-            </label>
-            <textarea
-              className='w-full border rounded px-3 py-2 min-h-[80px]'
-              value={form.budgetOrGoals}
-              onChange={e => handleChange('budgetOrGoals', e.target.value)}
-              placeholder='$5M for pilot; goals: 10k workers onboarded, 70% female youth, etc.'
-            />
-          </div>
-          <div>
-            <label className='block text-sm font-medium'>
-              Supporting multiverse(s)
-            </label>
-            <input
-              className='w-full border rounded px-3 py-2'
-              value={form.supportingMultiverses}
-              onChange={e =>
-                handleChange('supportingMultiverses', e.target.value)
-              }
-              placeholder='Eg. Zion.ai, Zion.ID, Zion.Work'
-            />
-          </div>
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-            <div>
-              <label className='block text-sm font-medium'>Language</label>
-              <input
-                className='w-full border rounded px-3 py-2'
-                value={form.language}
-                onChange={e => handleChange('language', e.target.value)}
-                placeholder='English / French / Spanish / Arabic / ...'
-              />
-            </div>
-            <div>
-              <label className='block text-sm font-medium'>
-                GPT Prompt Assist
-              </label>
-              <textarea
-                className='w-full border rounded px-3 py-2 min-h-[80px]'
-                value={form.customPrompt}
-                onChange={e => handleChange('customPrompt', e.target.value)}
-              />
-            </div>
-          </div>
-          <div className='flex gap-2'>
-            <button
-              className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'              onClick={handleGenerate}            <input
-              className="w-full border rounded px-3 py-2"
-              value={form.regionalScope}
-              onChange={(e) => handleChange('regionalScope', e.target.value)}
-              placeholder="Global / Africa / LATAM / APAC / EU / ..."
-            />
-          </div>
-          <div>
-            <label className="block text-sm font-medium" htmlFor="input-Budget / Resolution goals">Budget / Resolution goals</label>
             <textarea
               className="w-full border rounded px-3 py-2 min-h-[80px]"
-              value={form.budgetOrGoals}
-              onChange={(e) => handleChange('budgetOrGoals', e.target.value)}
-              placeholder="$5M for pilot, goals: 10k workers onboarded, 70% female youth, etc."
-            />
-          </div>
-          <div>
-            <label className="block text-sm font-medium" htmlFor="input-Supporting multiverse(s)">Supporting multiverse(s)</label>
+              value={form && form.budgetOrGoals}
+              onChange={(e) => handleChange('budgetOrGoals', e && e.target.value)}
+              placeholder="$5M for pilot, goals: 10k workers onboarded, 70% female youth, etc.";
+            />;
+          </div>;
+          <div>;
+            <label className="block text-sm font-medium" htmlFor="input-Supporting multiverse(s)">Supporting multiverse(s)</label>;
             <input
               className="w-full border rounded px-3 py-2"
-              value={form.supportingMultiverses}
-              onChange={(e) => handleChange('supportingMultiverses', e.target.value)}
-              placeholder="Eg. Zion.ai, Zion.ID, Zion.Work"
-            />
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-              <label className="block text-sm font-medium" htmlFor="input-Language">Language</label>
+              value={form && form.supportingMultiverses}
+              onChange={(e) => handleChange('supportingMultiverses', e && e.target.value)}
+              placeholder="Eg. Zion && Zion.ai, Zion && Zion.ID, Zion && Zion.Work";
+            />;
+          </div>;
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+            <div>;
+              <label className="block text-sm font-medium" htmlFor="input-Language">Language</label>;
               <input
                 className="w-full border rounded px-3 py-2"
-                value={form.language}
-                onChange={(e) => handleChange('language', e.target.value)}
-                placeholder="English / French / Spanish / Arabic / ..."
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium" htmlFor="input-GPT Prompt Assist">GPT Prompt Assist</label>
+                value={form && form.language}
+                onChange={(e) => handleChange('language', e && e.target.value)}
+                placeholder="English / French / Spanish / Arabic / ...";
+              />;
+            </div>;
+            <div>;
+              <label className="block text-sm font-medium" htmlFor="input-GPT Prompt Assist">GPT Prompt Assist</label>;
               <textarea
                 className="w-full border rounded px-3 py-2 min-h-[80px]"
-                value={form.customPrompt}
-                onChange={(e) => handleChange('customPrompt', e.target.value)}
-              />
-            </div>
-          </div>
-          <div className="flex gap-2">
+                value={form && form.customPrompt}
+                onChange={(e) => handleChange('customPrompt', e && e.target.value)}
+              />;
+            </div>;
+          </div>;
+          <div className="flex gap-2">;
             <button
-              className="px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50"
-              className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'              onClick={handleGenerate}
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
               onClick={handleGenerate}
-              disabled={isGenerating}
-            >
+              disabled={isGenerating}>;
               {isGenerating ? 'Generating...' : 'Generate Draft'}
-            </button>
+            </button>;
             <button
-              className='px-4 py-2 bg-emerald-600 text-white rounded'              onClick={handleExport}              className="px-4 py-2 bg-emerald-600 text-white rounded"
               onClick={handleExport}
-              disabled={!draftMarkdown}
-            >
-              Export (PDF/JSON/MD)
-            </button>
+              disabled={!draftMarkdown}>;
+              Export (PDF/JSON/MD);
+            </button>;
             <button
-              className='px-4 py-2 bg-purple-600 text-white rounded'              onClick={handleSubmitBridge}              className="px-4 py-2 bg-purple-600 text-white rounded"
-              onClick={handleSubmitBridge}
-              disabled={!draftMarkdown}
-            >
-              Submit Bridge
-            </button>
-          </div>
-          {statusMessage && (
-            <p className='text-sm text-gray-600'>{statusMessage}</p>
-          )}
-          {exportLinks && (
-            <div className='text-sm space-y-1'>
-              {exportLinks.pdfUrl && (
-                <div>
-                  <a
-                    className='text-blue-600 underline'
-                    href={exportLinks.pdfUrl}
-                    target='_blank'
-                    rel='noreferrer'
-                  >
-                    PDF
-                  </a>                </div>
-              )}
-              {exportLinks.mdUrl && (
-                <div>          {exportLinks && (
-            <div className="text-sm space-y-1">
-              {exportLinks.pdfUrl && (
-                <div>
-                  <a className="text-blue-600 underline" href={exportLinks.pdfUrl} target="_blank" rel="noreferrer">PDF</a>
-                </div>
-              )}
-              {exportLinks.mdUrl && (
-                <div>
-                  <a
-                    className='text-blue-600 underline'
-                    href={exportLinks.mdUrl}
-                    target='_blank'
-                    rel='noreferrer'
-                  >
-                    Markdown
-                  </a>                </div>
-              )}
-              {exportLinks.jsonUrl && (
-                <div>                  <a className="text-blue-600 underline" href={exportLinks.mdUrl} target="_blank" rel="noreferrer">Markdown</a>
-                </div>
-              )}
-              {exportLinks.jsonUrl && (
-                <div>
-                  <a
-                    className='text-blue-600 underline'
-                    href={exportLinks.jsonUrl}
-                    target='_blank'
-                    rel='noreferrer'
-                  >
-                    JSON
-                  </a>                </div>                  <a className="text-blue-600 underline" href={exportLinks.jsonUrl} target="_blank" rel="noreferrer">JSON</a>
-                </div>
 
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               onClick={handleGenerate}
               disabled={isGenerating}>;
               {isGenerating ? 'Generating...' : 'Generate Draft'}
@@ -759,25 +364,69 @@ export default function ProposalGenerator() {;
             <button
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+              disabled={!draftMarkdown}>;
+              Submit Bridge;
+            </button>;
+          </div>;
+          {statusMessage && (;
+            <p className='text-sm text-gray-600'>{statusMessage}</p>;
+          )}
+          {exportLinks && (;
+            <div className='text-sm space-y-1'>;
+              {exportLinks && exportLinks.pdfUrl && (;
+                <div>;
+                  <a
+                    className='text-blue-600 underline'
+                    href={exportLinks && exportLinks.pdfUrl}
+                    target='_blank'
+                    rel='noreferrer'>;
+                    PDF;
+                  </a>                </div>;
+              )}
+              {exportLinks && exportLinks.mdUrl && (;
+                <div>          {exportLinks && (;
+            <div className="text-sm space-y-1">;
+              {exportLinks && exportLinks.pdfUrl && (;
+                <div>;
+                  <a className="text-blue-600 underline" href={exportLinks && exportLinks.pdfUrl} target="_blank" rel="noreferrer">PDF</a>;
+                </div>;
+              )}
+              {exportLinks && exportLinks.mdUrl && (;
+                <div>;
+                  <a
+                    className='text-blue-600 underline'
+                    href={exportLinks && exportLinks.mdUrl}
+                    target='_blank'
+                    rel='noreferrer'>;
+                    Markdown;
+                  </a>                </div>;
+              )}
+              {exportLinks && exportLinks.jsonUrl && (;
+                <div>                  <a className="text-blue-600 underline" href={exportLinks && exportLinks.mdUrl} target="_blank" rel="noreferrer">Markdown</a>;
+                </div>;
+              )}
+              {exportLinks && exportLinks.jsonUrl && (;
+                <div>;
+                  <a
+                    className='text-blue-600 underline'
+                    href={exportLinks && exportLinks.jsonUrl}
+                    target='_blank'
+                    rel='noreferrer'>;
+                    JSON;
+                  </a>                </div>                  <a className="text-blue-600 underline" href={exportLinks && exportLinks.jsonUrl} target="_blank" rel="noreferrer">JSON</a>;
+                </div>;
               )}
             </div>;
           )}
-
-=======
-        </div>
-        <div className="space-y-2">
-          <label className="block text-sm font-medium" htmlFor="input-Draft (Markdown)">Draft (Markdown)</label>
+        </div>;
+        <div className='space-y-2'>;
+          <label className='block text-sm font-medium'>Draft (Markdown)</label>;
           <textarea
-
+            className='w-full border rounded px-3 py-2 min-h-[520px] font-mono'
+            value={draftMarkdown}
+            onChange={e => setDraftMarkdown(e && e.target.value)}          />          <textarea
             className="w-full border rounded px-3 py-2 min-h-[520px] font-mono"
             value={draftMarkdown}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
             onChange={(e) => setDraftMarkdown(e && e.target.value)}
@@ -785,47 +434,19 @@ export default function ProposalGenerator() {;
         </div>;
       </div>;
     </div>;
-=======
             onChange={(e) => setDraftMarkdown(e.target.value)}
           />
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-);
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   );
-=======
 
   );
 
 }
-=======
-<<<<<<< HEAD
-}
-=======
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
   );
 }
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
-  custom_prompt?: string;
-}
-  );
-}
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   custom_prompt?: string;
 }
 ;
@@ -1188,6 +809,3 @@ function handleSubmitBridge() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

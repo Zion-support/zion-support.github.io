@@ -1,21 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react',
-=======
-import React from 'react';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Head from 'next/head';
 
 import {
-<<<<<<< HEAD
-=======
-import React from 'react',
-import React from 'react';
-import Head from 'next/head';
-
-import {
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   Phone
   Mail
   MapPin
@@ -23,44 +8,6 @@ import {
   ArrowRight
   Star
   Search;
-<<<<<<< HEAD
-=======
-=======
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
-
-} from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-
-
-export default function AIMarketResearchPage() {;
-  const service = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find(s =>;
-    s && s.link.endsWith('/ai-market-research');
-
   );  if (!service) return null;
 
   return (
@@ -120,28 +67,8 @@ export default function AIMarketResearchPage() {;
               </div>;
               <a
                 href='/contact'
-
-                className='w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200 w-5 h-5 ml-2'>;
-                Start a Research Sprint;
-                <ArrowRight />;
-              </a>;
-              <div className='mt-6 space-y-3 text-sm text-slate-300'>;
-                <div className='flex items-center space-x-2 w-4 h-4 text-indigo-400'>;
-                  <Phone />;
-                  <span>{service && service.contactInfo.mobile}</span>;
-                </div>;
-                <div className='flex items-center space-x-2 w-4 h-4 text-purple-400'>;
-                  <Mail />;
-                  <span>{service && service.contactInfo.email}</span>;
-                </div>;
-                <div className='flex items-center space-x-2 w-4 h-4 text-green-400 text-xs'>;
-                  <MapPin />;
-                  <span>{service && service.contactInfo.address}</span>;
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
 import Head from 'next / head';
 import {
-=======
 
 import React from 'react';
 
@@ -150,7 +77,6 @@ import Head from 'next/head';
 import {
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Phone,
   Mail,
   MapPin,
@@ -159,11 +85,6 @@ import {
 
   Star,;
   Search,;
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from 'lucide-react';
 import Layout from '../components / layout / Layout';
 ;
@@ -251,23 +172,15 @@ if (return null) {
                 <div className='flex items - center space - x-2 w - 4 h - 4 text - green - 400 text - xs'>;
                   <MapPin />;
                   <span>{service.contact_info.address}</span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 </div>              </div>;
             </div>;
           </div>;
         </div>;
-
-        <div className="bg - indigo - 50 rounded - lg p - 8 text - center">;
-          <h2 className="text - 2xl font - bold mb - 4">Understand Your Market</h2>;
-          <p className="text - lg text - gray - 700 mb - 6">;
-            Get comprehensive market insights with our AI - powered research and analysis platform.;
           </p>;
           <div className="flex justify - center gap - 4">;
             <a href="/contact" className="bg - indigo - 600 text - white px - 6 py - 3 rounded - lg hover: bg - indigo - 700">;
               Get Started;
             </a>;
-            <a href="/about" className="border border - indigo - 600 text - indigo - 600 px - 6 py - 3 rounded - lg hover:bg - indigo - 50">;
-
               Learn More;
             </a>;
           </div>;
@@ -275,25 +188,11 @@ if (return null) {
       </main>;
 
 
-=======
-import { Phone, Mail, MapPin, Check, ArrowRight, Star, Search } from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 export default function AIMarketResearchPage() {
   const service = enhancedRealMicroSaasServices.find(s =>
     s.link.endsWith('/ai-market-research');
   );  if (!service) return null;
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
 
 
 
@@ -303,22 +202,13 @@ export default function AIMarketResearchPage() {
 
 
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react'
 import Head from 'next/head'
 import { Phone, Mail, MapPin, Check, ArrowRight, Star, Search } from 'lucide-react',
 import Layout from '../components/layout/Layout'
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services'
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 export default function AIMarketResearchPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-market-research'))
   if (!service) return null,
@@ -326,7 +216,6 @@ export default function AIMarketResearchPage() {
     <Layout>
       <Head>
         <title>{service.name} - Zion Tech Group</title>
-        <meta name="description" content={service.description} />
         <link rel="canonical" href="https://ziontechgroup.com/ai-market-research" />
       </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -341,81 +230,17 @@ export default function AIMarketResearchPage() {
               <p className="text-slate-300 mb-6">{service.description}</p>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {service.features.slice(0, 12).map((feat, i) => (
-                  <li key={i} className="flex items-start space-x-3 text-slate-200 w-5 h-5 text-indigo-400 mt-0.5"><Check /><span>{feat}</span></li>
-                ))}
-              </ul>
-            </div>
-            <div className="bg-black/30 rounded-2xl border border-indigo-500/30 p-6 h-fit">
-              <div className="flex items-end justify-between mb-3">
-                <div>
-                  <div className="text-3xl font-bold text-white text-slate-400 text-base">{service.price}<span >{service.period}</span></div>
-                  <div className="text-slate-400">{service.trialDays}-day free trial • Setup: {service.setupTime}</div>
-                </div>
-                <div className="flex items-center text-yellow-400 w-4 h-4 mr-1"><Star />{service.rating.toFixed(1)}</div>
-              </div>
-              <a href="/contact" className="w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200 w-5 h-5 ml-2">Start a Research Sprint<ArrowRight /></a>
-              <div className="mt-6 space-y-3 text-sm text-slate-300">
-                <div className="flex items-center space-x-2 w-4 h-4 text-indigo-400"><Phone /><span>{service.contactInfo.mobile}</span></div>
-                <div className="flex items-center space-x-2 w-4 h-4 text-purple-400"><Mail /><span>{service.contactInfo.email}</span></div>
-                <div className="flex items-center space-x-2 w-4 h-4 text-green-400 text-xs"><MapPin /><span >{service.contactInfo.address}</span></div>
-              </div>
-            </div>
-          </div>
-        </div>
-<<<<<<< HEAD
-        <div className="bg-indigo-50 rounded-lg p-8 text-center">
-          <h2 className="text-2xl font-bold mb-4">Understand Your Market</h2>
-          <p className="text-lg text-gray-700 mb-6">
-            Get comprehensive market insights with our AI-powered research and analysis platform.
-          </p>
-          <div className="flex justify-center gap-4">
-            <a href="/contact" className="bg-indigo-600 text-white px-6 py-3 rounded-lg hover: bg-indigo-700">
-              Get Started
-            </a>
-            <a href="/about" className="border border-indigo-600 text-indigo-600 px-6 py-3 rounded-lg hover:bg-indigo-50">
-              Learn More
-            </a>
-          </div>
-        </div>
-      </main>
-    </Layout>
-);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-}
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
 
 
 
 }
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       </div>
     </Layout>
   )
 }
-<<<<<<< HEAD
-=======
-
-    </Layout>);
-;
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+
+

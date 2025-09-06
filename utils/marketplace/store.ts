@@ -1,32 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Marketplace data store utilitiesexport interface Project {
-=======
-// Marketplace data store utilitiesexport interface Project {
-// Marketplace data store utilitiesexport interface Project {;
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
 
 // Marketplace data store utilities
 
 export interface Project {
 
-=======
-
-// Marketplace data store utilitiesexport interface Project {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   id: string;
   title: string;
   summary: string;
-  clientId: string;
-  talentSlug?: string;
+  client_id: string;
+  talent_slug?: string;
   startDateIso: string;
   endDateIso?: string;
   status: 'DRAFT' | 'ACTIVE' | 'COMPLETED' | 'CANCELLED' | 'PAUSED';
@@ -34,85 +15,38 @@ export interface Project {
     id: string;
     title: string;
     description: string;
-
-    status: 'pending' | 'in_progress' | 'completed' | 'overdue'
-
-=======
-    due_date: string;
-    status: 'pending' | 'in_progress' | 'completed' | 'overdue',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }>;
   documents: Array<{
     id: string;
     name: string;
     url: string;
-
-    uploadedAtIso: string
-
   }>;
   budget?: {
     total: number;
     currency: string;
-
-    type: 'fixed' | 'hourly' | 'milestone'
-  }
-  createdAt: string;
-  updatedAt: string
-<<<<<<< HEAD
 }
-=======
-<<<<<<< HEAD
-
-}
-<<<<<<< HEAD
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
 export interface Offer {
-
-export interface Offer {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
-export interface Offer {
-=======
-}
-
-
-export interface Offer {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   id: string;
   createdAtIso: string;
-  clientId: string;
-  talentSlug: string;
+  client_id: string;
+  talent_slug: string;
   startDateIso: string;
-  scopeSummary: string;
-  paymentTerms: {
+  scope_summary: string;
+  payment_terms: {
     type: 'fixed' | 'hourly' | 'milestone';
     amount?: number;
-    hourlyRate?: number;
+    hourly_rate?: number;
     milestones?: Array<{
       title: string;
       amount: number;
-
-      dueDate: string
-
     }>;
   }
   agreementUrl?: string;
   status: 'SENT' | 'ACCEPTED' | 'REJECTED' | 'EXPIRED' | 'CANCELLED';
   expiresAt?: string;
-<<<<<<< HEAD
   notes?: string
-=======
-<<<<<<< HEAD
+}
 
-  notes?: string
-
-=======
       due_date: string,
     }>;
   }
@@ -120,107 +54,38 @@ export interface Offer {;
   status: 'SENT' | 'ACCEPTED' | 'REJECTED' | 'EXPIRED' | 'CANCELLED';
   expires_at?: string;
   notes?: string,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 }
-<<<<<<< HEAD
 export interface Application {
-<<<<<<< HEAD
-
-export interface Application {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
-=======
-  notes?: string
-}
-
-
-export interface Application {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   id: string;
   projectId: string;
   talentSlug: string;
   appliedAtIso: string;
   status: 'PENDING' | 'ACCEPTED' | 'REJECTED' | 'WITHDRAWN';
-  coverLetter?: string;
-  proposedRate?: number;
-  proposedTimeline?: string;
-  portfolioItems?: string[];
-  notes?: string
+  cover_letter?: string;
+  proposed_rate?: number;
+  proposed_timeline?: string;
+  portfolio_items?: string[];
+  notes?: string,
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
 export interface Message {
-
-export interface Message {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
-
-
-export interface Message {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   id: string;
-  conversationId: string;
-  senderId: string;
-  recipientId: string;
+  conversation_id: string;
+  sender_id: string;
+  recipient_id: string;
   body: string;
-  linkUrl?: string;
+  link_url?: string;
   attachmentBase64?: string;
-  attachmentName?: string;
+  attachment_name?: string;
   context?: string;
   sentAtIso: string;
   readAtIso?: string;
-<<<<<<< HEAD
-  isRead: boolean
-=======
-<<<<<<< HEAD
-
-  isRead: boolean
-
-=======
   is_read: boolean,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 }
-<<<<<<< HEAD
 export interface Conversation {
-<<<<<<< HEAD
-
-export interface Conversation {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
-=======
-  isRead: boolean
-}
-
-
-export interface Conversation {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   id: string;
   participants: string[];
   lastMessageAtIso: string;
   lastMessageId?: string;
-
-  createdAtIso: string
-
 }
 class MarketplaceStore {
   private projects: Map<string, Project> = new Map();
@@ -230,250 +95,108 @@ class MarketplaceStore {
   private conversations: Map<string, Conversation> = new Map();
   // Project methods
   async createProject(project: Project): Promise<Project> {
-    this.projects.set(project.id, project);
-    return project;
-  }
-  async getProject(id: string): Promise<Project | null> {
-
-    return this.projects.get(id) |null
-
-=======
-    return this && this.projects.get(id) || null,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  }
-  async updateProject(id: string, updates: Partial<Project>): Promise<Project | null> {
-
-    const project = this && this.projects.get(id);
-    if (!project) return null,
-
-
-=======
     if (!project) return null
     const updatedProject = {
       ...project
       ...updates
       updatedAt: new Date().toISOString()
-
-    };
-
-    this && this.projects.set(id, updatedProject);
-
-    return updatedProject;
-  }
-  async deleteProject(id: string): Promise<boolean> {
-
-    return this.projects.delete(id)
-
-=======
-    return this && this.projects.delete(id),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  }
-  async getProjectsByClient(clientId: string): Promise<Project[]> {
-
-    return Array.from(this.projects.values()).filter(p => p.clientId === clientId)
-
-=======
-    return Array && Array.from(this && this.projects.values()).filter(p => p && p.clientId === clientId),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  }
-  async getProjectsByTalent(talentSlug: string): Promise<Project[]> {
-
-    return Array.from(this.projects.values()).filter(p => p.talentSlug === talentSlug)
-
-=======
-    return Array && Array.from(this && this.projects.values()).filter(p => p && p.talentSlug === talentSlug),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   async getAllProjects(): Promise<Project[]> {
-    return Array.from(this.projects.values());
+    return Array && Array.from(this && this.projects.values());
   }
   // Offer methods
   async createOffer(offer: Offer): Promise<Offer> {
-    this.offers.set(offer.id, offer);
+    this && this.offers.set(offer && offer.id, offer);
     return offer;
   }
   async getOffer(id: string): Promise<Offer | null> {
-
-    return this.offers.get(id) |null
-
-=======
-    return this && this.offers.get(id) || null,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  }
-  async updateOffer(id: string, updates: Partial<Offer>): Promise<Offer | null> {
-
-    if (!offer) return null
-    const updatedOffer = { ...offer, ...updates }
-
     this.offers.set(id, updatedOffer);
+    const offer = this && this.offers.get(id);
+    if (!offer) return null,
+
+    const updatedOffer = { ...offer, ...updates };
+    this && this.offers.set(id, updatedOffer);
     return updatedOffer;
   }
   async deleteOffer(id: string): Promise<boolean> {
-
-    return this.offers.delete(id)
-
-=======
-    return this && this.offers.delete(id),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  }
-  async getOffersByClient(clientId: string): Promise<Offer[]> {
-
-    return Array.from(this.offers.values()).filter(o => o.clientId === clientId)
-
-=======
-    return Array && Array.from(this && this.offers.values()).filter(o => o && o.clientId === clientId),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  }
-  async getOffersByTalent(talentSlug: string): Promise<Offer[]> {
-
-    return Array.from(this.offers.values()).filter(o => o.talentSlug === talentSlug)
-
-=======
-    return Array && Array.from(this && this.offers.values()).filter(o => o && o.talentSlug === talentSlug),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   async getAllOffers(): Promise<Offer[]> {
-    return Array.from(this.offers.values());
+    return Array && Array.from(this && this.offers.values());
   }
   // Application methods
   async createApplication(application: Application): Promise<Application> {
-    this.applications.set(application.id, application);
+    this && this.applications.set(application && application.id, application);
     return application;
   }
   async getApplication(id: string): Promise<Application | null> {
-
-    return this.applications.get(id) |null
-
-=======
-    return this && this.applications.get(id) || null,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  }
-  async updateApplication(id: string, updates: Partial<Application>): Promise<Application | null> {
-
-    if (!application) return null
-    const updatedApplication = { ...application, ...updates }
-
     this.applications.set(id, updatedApplication);
+    const application = this && this.applications.get(id);
+    if (!application) return null,
+
+    const updatedApplication = { ...application, ...updates };
+    this && this.applications.set(id, updatedApplication);
     return updatedApplication;
   }
   async deleteApplication(id: string): Promise<boolean> {
-
-    return this.applications.delete(id)
-
-=======
-    return this && this.applications.delete(id),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  }
-  async getApplicationsByProject(projectId: string): Promise<Application[]> {
-
-    return Array.from(this.applications.values()).filter(a => a.projectId === projectId)
-
-=======
-    return Array && Array.from(this && this.applications.values()).filter(a => a && a.projectId === projectId),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  }
-  async getApplicationsByTalent(talentSlug: string): Promise<Application[]> {
-
-    return Array.from(this.applications.values()).filter(a => a.talentSlug === talentSlug)
-
-=======
-    return Array && Array.from(this && this.applications.values()).filter(a => a && a.talentSlug === talentSlug),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   async getAllApplications(): Promise<Application[]> {
-    return Array.from(this.applications.values());
+    return Array && Array.from(this && this.applications.values());
   }
   // Message methods
   async createMessage(message: Message): Promise<Message> {
-    this.messages.set(message.id, message);
+    this && this.messages.set(message && message.id, message);
     return message;
   }
   async getMessage(id: string): Promise<Message | null> {
-
-    return this.messages.get(id) |null
-
-=======
-    return this && this.messages.get(id) || null,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  }
-  async updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {
-
-    if (!message) return null
-    const updatedMessage = { ...message, ...updates }
-
     this.messages.set(id, updatedMessage);
+    const message = this && this.messages.get(id);
+    if (!message) return null,
+
+    const updatedMessage = { ...message, ...updates };
+    this && this.messages.set(id, updatedMessage);
     return updatedMessage;
   }
   async deleteMessage(id: string): Promise<boolean> {
-
-    return this.messages.delete(id)
-
-=======
     return this && this.messages.delete(id),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   async getMessagesByConversation(conversationId: string): Promise<Message[]> {
-    return Array.from(this.messages.values())
-      .filter(m => m.conversationId === conversationId)
-      .sort((a, b) => new Date(a.sentAtIso).getTime() - new Date(b.sentAtIso).getTime());
+    return Array && Array.from(this && this.messages.values())
+      .filter(m => m && m.conversationId === conversationId)
+      .sort((a, b) => new Date(a && a.sentAtIso).getTime() - new Date(b && b.sentAtIso).getTime());
   }
   async getMessagesByUser(userId: string): Promise<Message[]> {
-
-    return Array && Array.from(this && this.messages.values())
-      .filter(m => m && m.senderId === userId || m && m.recipientId === userId)
-      .sort((a, b) => new Date(b && b.sentAtIso).getTime() - new Date(a && a.sentAtIso).getTime());
-
   }
   async getAllMessages(): Promise<Message[]> {
-    return Array.from(this.messages.values());
+    return Array && Array.from(this && this.messages.values());
   }
   // Conversation methods
   async createConversation(conversation: Conversation): Promise<Conversation> {
-    this.conversations.set(conversation.id, conversation);
+    this && this.conversations.set(conversation && conversation.id, conversation);
     return conversation;
   }
   async getConversation(id: string): Promise<Conversation | null> {
-
-    return this.conversations.get(id) |null
-
-=======
-    return this && this.conversations.get(id) || null,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  }
-  async updateConversation(id: string, updates: Partial<Conversation>): Promise<Conversation | null> {
-
-    if (!conversation) return null
-    const updatedConversation = { ...conversation, ...updates }
-
     this.conversations.set(id, updatedConversation);
+    const conversation = this && this.conversations.get(id);
+    if (!conversation) return null,
+
+    const updatedConversation = { ...conversation, ...updates };
+    this && this.conversations.set(id, updatedConversation);
     return updatedConversation;
   }
   async deleteConversation(id: string): Promise<boolean> {
-
-    return this.conversations.delete(id)
-
-=======
     return this && this.conversations.delete(id),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   async getConversationsByUser(userId: string): Promise<Conversation[]> {
-    return Array.from(this.conversations.values())
-      .filter(c => c.participants.includes(userId))
-      .sort((a, b) => new Date(b.lastMessageAtIso).getTime() - new Date(a.lastMessageAtIso).getTime());
+    return Array && Array.from(this && this.conversations.values())
+      .filter(c => c && c.participants.includes(userId))
+      .sort((a, b) => new Date(b && b.lastMessageAtIso).getTime() - new Date(a && a.lastMessageAtIso).getTime());
   }
   async getAllConversations(): Promise<Conversation[]> {
-    return Array.from(this.conversations.values());
+    return Array && Array.from(this && this.conversations.values());
   }
   // Utility methods
   async getOrCreateConversation(userId1: string, userId2: string): Promise<Conversation> {
     // Find existing conversation between these two users
-
-        return conversation
-
-=======
-    for (const conversation of this && this.conversations.values()) {
-      if (conversation && conversation.participants.includes(userId1) && conversation && conversation.participants.includes(userId2)) {
-=======
   is_archived: boolean;
   createdAtIso: string,
 }
@@ -649,39 +372,23 @@ if (return null, ) {
       if (&& conversation.participants.includes (userId2)) {) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         return conversation,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       }
     }
-
-      id: `conv_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`,
-      participants: [userId1, userId2],
-      lastMessageAtIso: new Date().toISOString(),
-      isArchived: false,
-      createdAtIso: new Date().toISOString()
-    };
-
-    return this && this.createConversation(conversation);
-
   }
   async markMessageAsRead(messageId: string): Promise<boolean> {
-    const message = this.messages.get(messageId);
+    const message = this && this.messages.get(messageId);
     if (!message) return false;
-
-    message.readAtIso = new Date().toISOString()
-
     this.messages.set(messageId, message);
+
+    message && message.isRead = true;
+    message && message.readAtIso = new Date().toISOString(),
+    this && this.messages.set(messageId, message);
     return true;
   }
   async getUnreadMessageCount(userId: string): Promise<number> {
-
-      .length
-
-=======
     return Array && Array.from(this && this.messages.values())
       .filter(m => m && m.recipientId === userId && !m && m.isRead)
-=======
     // Create new conversation;
     const conversation: Conversation = {
       id: `conv_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
@@ -707,39 +414,27 @@ if (return false) {
   async getUnreadMessageCount (user_id: string): Promise < number> {
     return Array.from (this.messages.values ());
       .filter (m => m.recipient_id === user_id && !m.is_read);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       .length,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
-
-    )
-
-=======
     const lowercaseQuery = query && query.toLowerCase();
     return Array && Array.from(this && this.projects.values()).filter(project =>
       project && project.title.toLowerCase().includes(lowercaseQuery) ||
       project && project.summary.toLowerCase().includes(lowercaseQuery)
     ),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   async searchOffers(query: string): Promise<Offer[]> {
-
-    )
-
-=======
     const lowercaseQuery = query && query.toLowerCase();
     return Array && Array.from(this && this.offers.values()).filter(offer =>
       offer && offer.scopeSummary.toLowerCase().includes(lowercaseQuery)
     ),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   // Cleanup methods
   async clearAll(): Promise<void> {
-    this.projects.clear();
-    this.offers.clear();
-    this.applications.clear();
-    this.messages.clear();
-    this.conversations.clear();
+    this && this.projects.clear();
+    this && this.offers.clear();
+    this && this.applications.clear();
+    this && this.messages.clear();
+    this && this.conversations.clear();
   }
   // Statistics
   async getStats(): Promise<{
@@ -747,219 +442,91 @@ if (return false) {
     totalOffers: number;
     totalApplications: number;
     totalMessages: number;
-
-    totalConversations: number
-
-  }> {
-    return {
-
-      totalProjects: this && this.projects.size,
-      totalOffers: this && this.offers.size,
-      totalApplications: this && this.applications.size,
-      totalMessages: this && this.messages.size,
-      totalConversations: this && this.conversations.size
-    };
-
   }
 }
 // Singleton instance
 export const marketplaceStore = new MarketplaceStore();
 // Main functions for external use
 export async function createProject(project: Project): Promise<Project> {
-
-  return marketplaceStore.createProject(project)
-
-=======
-  return marketplaceStore && marketplaceStore.createProject(project),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 export async function getProject(id: string): Promise<Project | null> {
-
   return marketplaceStore.getProject(id)
 
-=======
   return marketplaceStore && marketplaceStore.getProject(id),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
-<<<<<<< HEAD
-export async function updateProject(id: string, updates: Partial<Project>): Promise<Project | null> {
-  return marketplaceStore && marketplaceStore.updateProject(id, updates);
-=======
-  return marketplaceStore.getProject(id)
-}
-<<<<<<< HEAD
-export async function updateProject(id: string, updates: Partial<Project>): Promise<Project | null> {
-
-export async function updateProject(id: string, updates: Partial<Project>): Promise<Project | null> {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
 
 
 export async function updateProject(id: string, updates: Partial<Project>): Promise<Project | null> {;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   return marketplaceStore.updateProject(id, updates);
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 export async function deleteProject(id: string): Promise<boolean> {
-
-  return marketplaceStore.deleteProject(id)
-
-=======
   return marketplaceStore && marketplaceStore.deleteProject(id),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 export async function createOffer(offer: Offer): Promise<Offer> {
-
-  return marketplaceStore.createOffer(offer)
-
-=======
   return marketplaceStore && marketplaceStore.createOffer(offer),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 export async function getOffer(id: string): Promise<Offer | null> {
-
-  return marketplaceStore.getOffer(id)
-
-=======
   return marketplaceStore && marketplaceStore.getOffer(id),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
-<<<<<<< HEAD
 export async function updateOffer(id: string, updates: Partial<Offer>): Promise<Offer | null> {
   return marketplaceStore && marketplaceStore.updateOffer(id, updates);
-=======
   return marketplaceStore.getOffer(id)
+
+  return marketplaceStore && marketplaceStore.getOffer(id),
 }
-<<<<<<< HEAD
-export async function updateOffer(id: string, updates: Partial<Offer>): Promise<Offer | null> {
-
-export async function updateOffer(id: string, updates: Partial<Offer>): Promise<Offer | null> {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
 
 
 export async function updateOffer(id: string, updates: Partial<Offer>): Promise<Offer | null> {;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   return marketplaceStore.updateOffer(id, updates);
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 export async function deleteOffer(id: string): Promise<boolean> {
-
-  return marketplaceStore.deleteOffer(id)
-
-=======
   return marketplaceStore && marketplaceStore.deleteOffer(id),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 export async function createApplication(application: Application): Promise<Application> {
-
-  return marketplaceStore.createApplication(application)
-
-=======
   return marketplaceStore && marketplaceStore.createApplication(application),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 export async function getApplication(id: string): Promise<Application | null> {
-
-  return marketplaceStore.getApplication(id)
-
-=======
   return marketplaceStore && marketplaceStore.getApplication(id),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
-<<<<<<< HEAD
 export async function updateApplication(id: string, updates: Partial<Application>): Promise<Application | null> {
   return marketplaceStore && marketplaceStore.updateApplication(id, updates);
-=======
   return marketplaceStore.getApplication(id)
+
+  return marketplaceStore && marketplaceStore.getApplication(id),
 }
-<<<<<<< HEAD
-export async function updateApplication(id: string, updates: Partial<Application>): Promise<Application | null> {
-
-export async function updateApplication(id: string, updates: Partial<Application>): Promise<Application | null> {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
 
 
 export async function updateApplication(id: string, updates: Partial<Application>): Promise<Application | null> {;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   return marketplaceStore.updateApplication(id, updates);
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 export async function deleteApplication(id: string): Promise<boolean> {
-
-  return marketplaceStore.deleteApplication(id)
-
-=======
   return marketplaceStore && marketplaceStore.deleteApplication(id),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 export async function createMessage(message: Message): Promise<Message> {
-
-  return marketplaceStore.createMessage(message)
-
-=======
   return marketplaceStore && marketplaceStore.createMessage(message),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 export async function getMessage(id: string): Promise<Message | null> {
-<<<<<<< HEAD
-  return marketplaceStore.getMessage(id)
-=======
-
-  return marketplaceStore.getMessage(id)
-
-=======
   return marketplaceStore && marketplaceStore.getMessage(id),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 }
-<<<<<<< HEAD
 export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {
   return marketplaceStore && marketplaceStore.updateMessage(id, updates);
-=======
   return marketplaceStore.getMessage(id)
+
+  return marketplaceStore && marketplaceStore.getMessage(id),
 }
-<<<<<<< HEAD
-export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {
-
-export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
 
 
 export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   return marketplaceStore.updateMessage(id, updates);
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 export async function deleteMessage(id: string): Promise<boolean> {
-
-  return marketplaceStore.deleteMessage(id)
-
-=======
   return marketplaceStore && marketplaceStore.deleteMessage(id),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 // Utility functions
-<<<<<<< HEAD
-=======
 export function createProjectData(
   title: string
   summary: string
@@ -967,11 +534,6 @@ export function createProjectData(
   additionalData?: Partial<Project>
 ): Omit<Project, 'id' | 'createdAt' | 'updatedAt'> {
   return {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     title
     summary
     clientId
@@ -981,7 +543,6 @@ export function createProjectData(
     documents: []
     ...additionalData
   }
-=======
     title,
     summary,
     clientId,
@@ -991,7 +552,6 @@ export function createProjectData(
     documents: [],
     ...additionalData;
   };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 export function createOfferData(
   clientId: string
@@ -1001,7 +561,6 @@ export function createOfferData(
   additionalData?: Partial<Offer>
 ): Omit<Offer, 'id' | 'createdAtIso'> {
   return {
-<<<<<<< HEAD
     clientId
     talentSlug
     startDateIso: new Date().toISOString()
@@ -1010,16 +569,6 @@ export function createOfferData(
     status: 'SENT'
     ...additionalData
   }
-=======
-    clientId,
-    talentSlug,
-    startDateIso: new Date().toISOString(),
-    scopeSummary,
-    paymentTerms,
-    status: 'SENT',
-    ...additionalData;
-  };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 export function createApplicationData(
   projectId: string
@@ -1027,19 +576,11 @@ export function createApplicationData(
   additionalData?: Partial<Application>
 ): Omit<Application, 'id' | 'appliedAtIso'> {
   return {
-<<<<<<< HEAD
     projectId
     talentSlug
     status: 'PENDING'
     ...additionalData
   }
-=======
-    projectId,
-    talentSlug,
-    status: 'PENDING',
-    ...additionalData;
-  };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 export function createMessageData(
   conversationId: string
@@ -1049,7 +590,6 @@ export function createMessageData(
   additionalData?: Partial<Message>
 ): Omit<Message, 'id' | 'sentAtIso'> {
   return {
-<<<<<<< HEAD
     conversationId
     senderId
     recipientId
@@ -1059,19 +599,109 @@ export function createMessageData(
   }
 }
 export function generateId(prefix: string = 'item'): string {
-  return `${prefix}_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
     conversationId,
     senderId,
     recipientId,
-=======
+  return `${prefix}_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;
+  // Search methods;
+  async search_projects (query: string): Promise < Project[]> {
+    const lowercase_query = query.toLowerCase ();
+    return Array.from (this.projects.values ()).filter (project =>;
+      project.title.toLowerCase ().includes (lowercase_query) ||;
+      project.summary.toLowerCase ().includes (lowercase_query)),
+  }
+  async search_offers (query: string): Promise < Offer[]> {
+    const lowercase_query = query.toLowerCase ();
+    return Array.from (this.offers.values ()).filter (offer =>;
+      offer.scope_summary.toLowerCase ().includes (lowercase_query)),
+  }
+  // Cleanup methods;
+  async clear_all (): Promise < void> {
+    this.projects.clear ();
+    this.offers.clear ();
+    this.applications.clear ();
+    this.messages.clear ();
+    this.conversations.clear ();
+  }
+  // Statistics;
+  async get_stats (): Promise<{
+    total_projects: number;
+    total_offers: number;
+    total_applications: number;
+    total_messages: number;
+    total_conversations: number,
+  }> {
+    return {
+      total_projects: this.projects.size,
+      total_offers: this.offers.size,
+      total_applications: this.applications.size,
+      total_messages: this.messages.size,
+      total_conversations: this.conversations.size;
+    }
+  }
+}
+// Singleton instance;
+export const marketplace_store = new MarketplaceStore ();
+;
+// Main functions for external use;
+export async function create_project (project: Project): Promise < Project> {
+  return marketplace_store.create_project (project),
+}
+export async function get_project (id: string): Promise < Project | null> {
+  return marketplace_store.get_project (id),
+}
+export async function update_project (id: string, updates: Partial < Project>): Promise < Project | null> {
+  return marketplace_store.update_project (id, updates);
+}
+export async function delete_project (id: string): Promise < boolean> {
+  return marketplace_store.delete_project (id),
+}
+export async function create_offer (offer: Offer): Promise < Offer> {
+  return marketplace_store.create_offer (offer),
+}
+export async function get_offer (id: string): Promise < Offer | null> {
+  return marketplace_store.get_offer (id),
+}
+export async function update_offer (id: string, updates: Partial < Offer>): Promise < Offer | null> {
+  return marketplace_store.update_offer (id, updates);
+}
+export async function delete_offer (id: string): Promise < boolean> {
+  return marketplace_store.delete_offer (id),
+}
+export async function create_application (application: Application): Promise < Application> {
+  return marketplace_store.create_application (application),
+}
+export async function get_application (id: string): Promise < Application | null> {
+  return marketplace_store.get_application (id),
+}
+export async function update_application (id: string, updates: Partial < Application>): Promise < Application | null> {
+  return marketplace_store.update_application (id, updates);
+}
+export async function delete_application (id: string): Promise < boolean> {
+  return marketplace_store.delete_application (id),
+}
+export async function create_message (message: Message): Promise < Message> {
+  return marketplace_store.create_message (message),
+}
+export async function get_message (id: string): Promise < Message | null> {
+  return marketplace_store.get_message (id),
+}
+export async function update_message (id: string, updates: Partial < Message>): Promise < Message | null> {
+  return marketplace_store.update_message (id, updates);
+}
+export async function delete_message (id: string): Promise < boolean> {
+  return marketplace_store.delete_message (id),
+}
+// Utility functions;
+export function createProjectData (
+  title: string,
+  summary: string,
+  client_id: string,
+  additional_data?: Partial < Project>): Omit < Project, 'id' | 'created_at' | 'updated_at'> {
+  return {
     title,
     summary,
     client_id,
@@ -1119,28 +749,13 @@ export function createMessageData (
     conversation_id,
     sender_id,
     recipient_id,
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     body,
-    isRead: false,
-    ...additionalData;
-  };
+    is_read: false,
+    ...additional_data;
+  }
 }
-<<<<<<< HEAD
-
-export function generateId(prefix: string = 'item'): string {;
-  return `${prefix}_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
-=======
 }
-=======
 export function generate_id (prefix: string = 'item'): string {
   return `${prefix}_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

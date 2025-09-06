@@ -1,15 +1,3 @@
-
-<<<<<<< HEAD
-import React from "react",
-import { Button } from "@/components/ui/button";
-import { Calendar, ArrowRight } from "lucide-react";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 export function EnterpriseCTA() {
   return (
     <section className="py-20 px-4 md: px-6">
@@ -24,30 +12,12 @@ export function EnterpriseCTA() {
                 <p className="text-xl text-muted-foreground mb-8">
                   Schedule a personalized demo with our enterprise team to see
                   how Zion AI can help you build your dream team.
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Calendar, ArrowRight } from "lucide-react";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { Calendar, ArrowRight } from "lucide-react";
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
     </section>);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
 
 
 export function EnterpriseCTA() {;
@@ -113,7 +83,6 @@ export function EnterpriseCTA() {;
                       </span>;
                     </div>;
                     <p>Free consultation on implementation</p>;
-=======
 import React from './react';
 import { Button  } from '@/components / ui / button';
 import { Calendar, ArrowRight  } from './lucide-react';
@@ -182,7 +151,6 @@ function EnterpriseCTA() {
                       </span>;
                     </div>;
                     <p > Free consultation on implementation</p>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   </li>;
                 </ul>;
               </div>;
@@ -194,10 +162,7 @@ function EnterpriseCTA() {
     </section>);
 
 }
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button size="lg" className="gap-2">
@@ -243,24 +208,10 @@ function EnterpriseCTA() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </section>
-  );
-}
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     </section>;
   );
 }
     </section>
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   )
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -323,21 +274,10 @@ export function EnterpriseCTA() {;
           </div>;
         </div>;
       </div>;
-    </section>;
-  );
+
+    </section>);
+
 }
-;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+}

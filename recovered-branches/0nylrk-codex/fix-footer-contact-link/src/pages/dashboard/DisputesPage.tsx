@@ -1,51 +1,19 @@
-
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import { SEO  } from '@/components/SEO';
 import { AppHeader  } from '@/layout/AppHeader';
 import { Footer  } from '@/components/Footer';
 import { DisputeDashboard  } from '@/components/disputes';
 import { ProtectedRoute } from '@/components/ProtectedRoute';
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {SEO} from '@/components/SEO';
 import {AppHeader} from '@/layout/AppHeader';
 import {Footer} from '@/components/Footer';
 import {DisputeDashboard} from '@/components/disputes';
 import {ProtectedRoute} from '@/components/ProtectedRoute';
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react',
 import { SEO } from '@/components/SEO',
 import { AppHeader } from '@/layout/AppHeader',
 import { Footer } from '@/components/Footer',
 import { DisputeDashboard } from '@/components/disputes',
 import { ProtectedRoute } from '@/components/ProtectedRoute',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 function DisputesPage() {
   return (
     <ProtectedRoute>
@@ -53,21 +21,7 @@ function DisputesPage() {
 
         <SEO
           title="Dispute Resolution Center | Zion AI Marketplace"
-=======
-import {SEO} from '@/components/SEO';
-import {AppHeader} from '@/layout/AppHeader';
-import {Footer} from '@/components/Footer';
-import {DisputeDashboard} from '@/components/disputes';
-import {ProtectedRoute} from '@/components/ProtectedRoute';
-function DisputesPage() {;
-  return (
-    <ProtectedRoute>;
-      <>;
-        <SEO
-          title="Dispute Resolution Center | Zion AI Marketplace" 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           description="View and manage disputes between clients and talents"
-=======
 import React from 'react';
 import {SEO} from '@/components / SEO';
 import {AppHeader} from '@/layout / AppHeader';
@@ -84,40 +38,17 @@ function DisputesPage() {
         <SEO;
           title="Dispute Resolution Center | Zion AI Marketplace";
           description="View and manage disputes between clients and talents";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         />;
         <AppHeader />;
         <DisputeDashboard />;
         <Footer />;
       </>;
-
-
-
-=======
-;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default DisputesPage;
 
-=======
     </ProtectedRoute>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
 ;
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 export default DisputesPage;
 
 ;

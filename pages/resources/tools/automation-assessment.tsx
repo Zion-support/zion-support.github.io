@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -15,23 +5,11 @@ export default function ToolPage() {
   const [currentQuestion, setCurrentQuestion] = useState(0),
   const [answers, setAnswers] = useState<{ [key: string]: number }>({}),
   const [showResults, setShowResults] = useState(false),
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 export default function ToolPage() {
-
-
   const questions = [
     {
       id: 'current-automation'
@@ -46,39 +24,10 @@ export default function ToolPage() {
       options: [
         'No expertise - team needs trainingBeginner - some basic knowledgeIntermediate - can implement basic solutionsAdvanced - can build complex systemsExpert - can innovate and lead'
       ]
-
-
       options: [
         'No support - resistance to changeWeak support - some interest but no actionModerate support - willing to try pilot projectsStrong support - actively championing automationFull support - automation is strategic priority'
       ]
     }
-  ]
-  const handleAnswer = (questionId: string, value: number) => {
-    setAnswers(prev => ({ ...prev, [questionId]: value }))
-<<<<<<< HEAD
-  }
-  const calculateScore = () => {
-    const totalScore = Object.values(answers).reduce((sum, score) => sum + score, 0)
-    const maxScore = questions.length * 5
-    const percentage = (totalScore / maxScore) * 100
-    if (percentage >= 80) return { level: 'Advanced', color: 'text-green-400', description: 'Your organization is well-positioned for advanced automation initiatives.' }
-    if (percentage >= 60) return { level: 'Intermediate', color: 'text-yellow-400', description: 'You have a solid foundation and can move forward with strategic automation.' }
-    if (percentage >= 40) return { level: 'Beginner', color: 'text-orange-400', description: 'You have some groundwork to do before major automation projects.' }
-    return { level: 'Foundation', color: 'text-red-400', description: 'Focus on building fundamentals before automation projects.' }
-  }
-  const nextQuestion = () => {
-    if (currentQuestion < questions.length - 1) {
-      setCurrentQuestion(currentQuestion + 1)
-    } else {
-      setShowResults(true)
-    }
-  }
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -87,18 +36,11 @@ export default function ToolPage(req, res) {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState<{ [key: string]: number }>({});
   const [showResults, setShowResults] = useState(false);
-=======
 
 
   const nextQuestion = () => {
     if (currentQuestion < questions.length - 1) {
       setCurrentQuestion(currentQuestion + 1)
-
-=======
-
-
-
-=======
 import React, { useState } from 'react',
 import Head from 'next / head',
 import Link from 'next / link',
@@ -109,7 +51,6 @@ function ToolPage() {
   const [current_question, setCurrentQuestion] = useState (0),
   const [answers, set_answers] = useState<{ [key: string]: number }>({}),
   const [show_results, setShowResults] = useState (false),
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const questions = [;
     {
       id: 'current - automation',
@@ -178,18 +119,6 @@ function ToolPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   },
   const resetAssessment = () => {
     setCurrentQuestion(0)
@@ -210,11 +139,6 @@ function ToolPage() {
             <div className="max-w-4xl mx-auto">
               <nav className="mb-8">
                 <Link href="/resources" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                  ← Back to Resources
-                </Link>
-              </nav>
-
-
               <div className="text-center mb-12">
                 <h1 className="text-4xl font-bold text-white mb-4">Assessment Results</h1>
                 <p className="text-white/80 text-lg">Your automation readiness evaluation is complete</p>
@@ -226,26 +150,6 @@ function ToolPage() {
                   {questions.map((q, index) => (
                     <div key={q.id} className="bg-white/10 rounded-lg p-4 border border-white/20">
                       <h3 className="font-semibold text-cyan-400 mb-2">{q.question}</h3>
-                      <p className="text-white/80 text-sm">Score: {answers[q.id] |0}/5</p>
-                      <p className="text-white/80 text-sm">Score: {answers[q.id] || 0}/5</p>
-                    </div>
-                  ))}
-                </div>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-                  <button 
-
-                    onClick={resetAssessment}
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
                   <button
                     onClick={resetAssessment}
                     onClick={resetAssessment  } catch (error) {
@@ -253,12 +157,6 @@ function ToolPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
 
                       <p className="text-white/80 text-sm">Score: {answers[q.id] || 0}/5</p>
                     </div>
@@ -269,40 +167,14 @@ function ToolPage() {
                   <button 
 
                     onClick={resetAssessment}
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
                     className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
                   >
                     Retake Assessment
                   </button>
-<<<<<<< HEAD
-                  <Link
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-                  <Link 
-                  <Link
-=======
-<<<<<<< HEAD
-                  <Link
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
                     href="/contact"
                     className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300"
                   >
@@ -315,48 +187,6 @@ function ToolPage() {
         </div>
       </>
     )
-  }
-  const currentQ = questions[currentQuestion]
-
-}
-  const currentQ = questions[currentQuestion],
-  return (
-    <>
-      <Head>
-        <title>Automation Readiness Assessment | Zion Tech Group</title>
-        <meta name="description" content="Evaluate your organization's readiness for AI automation implementation with our interactive assessment tool." />
-      </Head>
-      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
-        <main className="container mx-auto px-6 py-12">
-          <div className="max-w-4xl mx-auto">
-            <nav className="mb-8">
-              <Link href="/resources" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                ← Back to Resources
-              </Link>
-            </nav>
-
-
-            <div className="text-center mb-12">
-              <h1 className="text-4xl font-bold text-white mb-4">Automation Readiness Assessment</h1>
-              <p className="text-white/80 text-lg">Evaluate your organization's readiness for AI automation</p>
-              <div className="mt-4 text-cyan-400">
-                Question {currentQuestion + 1} of {questions.length}
-                Question {currentQuestion + 1} of {questions.length  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
               </div>
             </div>
 
@@ -368,10 +198,6 @@ function ToolPage() {
                   <label key={index} className="flex items-center p-4 bg-white/10 rounded-lg border border-white/20 hover:border-cyan-400/50 transition-all duration-300 cursor-pointer">
                     <input
                       type="radio"
-                      name={currentQ.id}
-                      value={index + 1}
-                      checked={answers[currentQ.id] === index + 1}
-                      onChange={() => handleAnswer(currentQ.id, index + 1)}
   },;
   const resetAssessment = () => {;
     setCurrentQuestion(0);
@@ -496,17 +322,6 @@ function ToolPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
                       className="mr-3 text-cyan-400 focus:ring-cyan-400"
                     />
                     <span className="text-white/90">{option}</span>
@@ -514,22 +329,6 @@ function ToolPage() {
                 ))}
               </div>
 
-
-              <div className="flex justify-between">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-                <button 
-                  onClick={() => setCurrentQuestion(Math.max(0, currentQuestion - 1))}
-                  disabled={currentQuestion === 0}
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
                 <button
                   onClick={() => setCurrentQuestion(Math.max(0, currentQuestion - 1))}
                   disabled={currentQuestion === 0}
@@ -543,35 +342,14 @@ function ToolPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
                   className="px-6 py-3 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   Previous
                 </button>
-<<<<<<< HEAD
-                <button
-                  onClick={nextQuestion}
-                  disabled={!answers[currentQ.id]}
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
                 <button 
                   onClick={nextQuestion}
                   disabled={!answers[currentQ.id]}
@@ -588,21 +366,12 @@ function ToolPage() {
   );
 };
                 <button
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
                   onClick={nextQuestion  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
-=======
   },
   const reset_assessment = () =>: any {
     setCurrentQuestion (0),
@@ -618,7 +387,6 @@ if ( {) {
                   {currentQuestion === questions.length - 1 ? 'Get Results' : 'Next'  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   const current_q = questions[current_question],
   return (
@@ -678,25 +446,13 @@ if ( {) {
           </div>;
         </main>;
       </div>;
-
     </>;
   );
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-}
-}
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
 
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

@@ -1,30 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next',;
-;
-function randomString(length: number) {
-  const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789',
-  let res = '',
-  const cryptoObj = require('crypto'),
-  const bytes: Buffer = cryptoObj.randomBytes(length),
-  for (let i = 0, i < length, i++) res += charset[bytes[i] % charset.length],
-  return res
-}
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const nonce = randomString(16),
-  res.setHeader('Set-Cookie', `siwe-nonce=${nonce}, HttpOnly, Path=/, SameSite=Lax`),
-  res.status(200).json({ nonce });
-};
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 function randomString(length: number): string {
@@ -35,9 +8,7 @@ function randomString(length: number): string {
   for (let i = 0; i < length; i++) res += charset[bytes[i] % charset.length];
   return res;
 }
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 function randomString(length: number) {
   const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
@@ -51,29 +22,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const nonce = randomString(16)
   res.setHeader('Set-Cookie', `siwe-nonce=${nonce}, HttpOnly, Path=/, SameSite=Lax`)
 
-  res.status(200).json({ nonce })
-<<<<<<< HEAD
-  try {
-    const nonce = randomString(16);
-    res.setHeader('Set-Cookie', `siwe-nonce=${nonce}, HttpOnly, Path=/, SameSite=Lax`);
-    res.status(200).json({ nonce });
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-}
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-}
-=======
-
-=======
-}
-
-=======
 import type { NextApiRequest, NextApiResponse } from 'next',
 ;
 /**
@@ -96,14 +44,5 @@ function handler() {
   res.status (200).json ({ nonce });
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

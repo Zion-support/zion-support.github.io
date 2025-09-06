@@ -1,18 +1,94 @@
 {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> origin/main
   "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
   "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
+=======
+<<<<<<< HEAD
+  "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+=======
+  "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
+  "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
   "extends": [
     "next/core-web-vitals",
     "@typescript-eslint/recommended"
   ],
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+=======
+  "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+>>>>>>> origin/main
+=======
 origin/automation-improvements-final
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
+=======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+>>>>>>> origin/main
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint"],
   "env": {
     "browser": true,
     "node": true,
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
     "es6": true,
     "jest": true
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    "es6": true,
+    "jest": true
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+>>>>>>> origin/main
+=======
+    "es6": true,
+    "jest": true
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+    "es6": true,
+    "jest": true
+>>>>>>> origin/main
+=======
+    "es6": true,
+    "jest": true
+>>>>>>> origin/main
     "es2021": true
   },
   "globals": {
@@ -22,21 +98,126 @@ origin/automation-improvements-final
     "KeyboardEvent": "readonly",
     "HTMLImageElement": "readonly",
     "alert": "readonly"
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+=======
+    "es6": true,
+    "jest": true
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+>>>>>>> origin/main
+=======
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+>>>>>>> origin/main
+=======
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+=======
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+>>>>>>> origin/main
   },
   "rules": {
     "@typescript-eslint/no-unused-vars": "warn",
     "@typescript-eslint/no-explicit-any": "warn",
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
     "react/no-unescaped-entities": "off",
     "react-hooks/exhaustive-deps": "warn",
     "no-console": "warn"
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    "react/no-unescaped-entities": "off",
+    "react-hooks/exhaustive-deps": "warn",
+    "no-console": "warn"
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+>>>>>>> origin/main
+=======
+    "react/no-unescaped-entities": "off",
+    "react-hooks/exhaustive-deps": "warn",
+    "no-console": "warn"
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+    "react/no-unescaped-entities": "off",
+    "react-hooks/exhaustive-deps": "warn",
+    "no-console": "warn"
+>>>>>>> origin/main
+=======
+    "react/no-unescaped-entities": "off",
+    "react-hooks/exhaustive-deps": "warn",
+    "no-console": "warn"
+>>>>>>> origin/main
     "react-hooks/exhaustive-deps": "warn",
     "react/react-in-jsx-scope": "off",
     "no-undef": "error",
     "react/no-unescaped-entities": "off"
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+=======
+    "react/no-unescaped-entities": "off",
+    "react-hooks/exhaustive-deps": "warn",
+    "no-console": "warn"
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+>>>>>>> origin/main
+=======
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+>>>>>>> origin/main
+=======
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+=======
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+>>>>>>> origin/main
   },
   "ignorePatterns": [
     "node_modules/",
@@ -109,6 +290,167 @@ origin/automation-improvements-final
     "security-reports/",
     "pages.__backup/",
     "pages-disabled/",
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    "pages.disabled_auto/"
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    "pages.disabled_auto/"
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+=======
+>>>>>>> origin/main
+    "pages.disabled_auto/",
+    "zion_academy/",
+    "pm2-automation/",
+    "scripts/",
+    "*.report.json",
+    "temp_*/",
+    "test_build/",
+    "tests.disabled/",
+    "pages.disabled/",
+    "src.disabled/",
+    "components.disabled/",
+    "hooks.disabled/",
+    "types.disabled/",
+    "contracts.disabled/",
+    "solutions.disabled/",
+    "zion-os.disabled/",
+    "src_backup_temp/",
+    "temp-backup/",
+    "tests/",
+    "supabase/",
+    "*.test.js",
+    "*.test.ts",
+    "*.test.tsx",
+    "*.spec.js",
+    "*.spec.ts",
+    "*.spec.tsx",
+    "temp_footer_start.tsx",
+    "test-simple.js",
+    "test-utils.js",
+    "ultimate-automation-runner.js",
+    "vite.config-backup.ts",
+    "vite.config.ts",
+    "types/empty.ts",
+    "pages_backup_conflicts/",
+    "pages_disabled/",
+    "src.broken/",
+    "src.corrupted/",
+    "src.pages.disabled/",
+    "performance-monitor.js",
+    "performance-optimization.js",
+    "playwright.config.ts",
+    "postcss.config-backup.js",
+    "public/",
+    "resolve-conflicts.js",
+    "resolve-merge-conflicts.js",
+    "run-automation-safely.js",
+    "run-automation.js",
+    "run-complete-automation.js",
+    "security-config.js",
+    "server/",
+    "setupTests.ts",
+    "simple-test.js",
+    "src/components/layout/",
+    "types/",
+    "utils/",
+    "pages_backup/",
+    "pages_backup_before_cleanup/",
+    "services/",
+    "components.disabled_full/",
+    "comprehensive-automation-runner.js",
+    "comprehensive-automation.js",
+    "comprehensive-merge-resolver.js",
+    "corrupted-files-backup/",
+    "cypress.config.ts",
+    "cypress_backup/",
+    "data.disabled/",
+    "database/",
+    "ecosystem.simple.js",
+    "ecosystem.working.js",
+    "execute-automation.js",
+    "fix_all_function_names.js",
+    "fix_corrupted_files.js",
+    "fix_empty_pages.js",
+    "fix_utils_files.js",
+    "fix_variable_names.js",
+    "git-ops.js",
+    "health-endpoint.js",
+    "hooks/",
+    "improve-app.js",
+    "jest.config.ts",
+    "jest.setup.js",
+    "lib.broken/",
+    "lib.disabled/",
+    "lib/",
+    "lint-stub.js",
+    "lint-target/",
+    "maintenance-scheduler.js",
+    "merge-prs.js",
+    "merge-resolver.js",
+    "middleware.security.ts",
+    "middleware/",
+    "monitoring-system.js",
+    "netlify/",
+    "next-env.d.ts",
+    "next.config.analyze.js",
+    "next.config.analyzer.js",
+    "next.config.optimized.js",
+    "next.config.resolved.js",
+    "optimized-build.js",
+    "pages-backup/",
+    "pages._quarantine/",
+    "pages.disabled_full/",
+    "pages.old/",
+    "App.tsx",
+    "advanced-app-improvements.js",
+    "analyze-missing-pages.js",
+    "api-disabled/",
+    "api.disabled/",
+    "api/",
+    "automation-runner.js",
+    "basic-test.js",
+    "broken_files_backup/",
+    "build-verification.js",
+    "check-syntax.js",
+    "clean-conflicts.js",
+    "commit-and-push.js",
+    "advanced-automation-improvements.cjs",
+    "analyze_links.cjs",
+    "app-enhancement-suite.cjs",
+    "app-optimizer.js",
+    "apps.backup/**",
+    "automated-merge-conflict-resolver.cjs",
+    "automation/**",
+    "backup-problematic-files/**"
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    "pages.disabled_auto/"
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+>>>>>>> origin/main
+=======
+    "pages.disabled_auto/"
+=======
+>>>>>>> origin/main
     "pages.disabled_auto/",
     "zion_academy/",
     "pm2-automation/",
@@ -236,5 +578,19 @@ origin/automation-improvements-final
     "pages.disabled_auto/"
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+<<<<<<< HEAD
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
+=======
+    "pages.disabled_auto/"
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+=======
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
+>>>>>>> origin/main
   ]
 }

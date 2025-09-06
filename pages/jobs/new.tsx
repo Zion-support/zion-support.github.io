@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import { useState  } from 'react';
 import EnhancedCard from '../../components/ui/EnhancedCard',
 import EnhancedButton from '../../components/ui/EnhancedButton',
@@ -12,10 +7,6 @@ export default function NewJobPage() {
   const { notify } = useToast();
   const [loading, setLoading] = useState(false);
   const onSubmit = null;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import {useState} from 'react';
 import EnhancedCard from '../../components/ui/EnhancedCard';
 import EnhancedButton from '../../components/ui/EnhancedButton';
@@ -26,11 +17,6 @@ import { useToast } from '../../components/ui/NotificationSystem';
       </EnhancedCard>
     </div>
 );
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import { useState } from 'react'
 import EnhancedCard from '../../components/ui/EnhancedCard'
 import EnhancedButton from '../../components/ui/EnhancedButton'
@@ -47,10 +33,6 @@ export default function NewJobPage() {
       notify('Job posted! Invite talent to get responses.success')
     }, 800)
   },
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className="max-w-2xl mx-auto">
       <EnhancedCard>
@@ -64,10 +46,6 @@ export default function NewJobPage() {
             <textarea className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm" rows={5} placeholder="Job description" />
             <EnhancedButton type="submit" variant="primary">Publish</EnhancedButton>
           </form>
-        )}
-      </EnhancedCard>
-    </div>
-);
         )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -81,12 +59,3 @@ export default function NewJobPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

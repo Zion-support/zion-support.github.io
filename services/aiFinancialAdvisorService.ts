@@ -1,150 +1,35 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-export interface InvestmentPortfolio {
-=======
-export interface InvestmentPortfolio {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 export interface InvestmentPortfolio {
 export interface InvestmentPortfolio {;
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   id: string;
   userId: string;
   name: string;
   totalValue: number;
   currency: string;
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-  risk_tolerance: 'conservative' | 'moderate' | 'aggressive',
-  investment_horizon: number, // in years;
-  target_return: number;
+  riskTolerance: 'conservative' | 'moderate' | 'aggressive'
 
   assets: PortfolioAsset[];
   last_rebalanced: Date;
   performance: PortfolioPerformance;
-
-  created_at: Date,
-  updated_at: Date;
-
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-export interface PortfolioAsset {
-
-export interface PortfolioAsset {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
-export interface PortfolioAsset {
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   id: string;
   symbol: string;
   name: string;
   type: 'stock' | 'bond' | 'etf' | 'mutual_fund' | 'crypto' | 'real_estate' | 'commodity';
   quantity: number;
-
-  current_price: number;
-  market_value: number,
-  allocation: number, // percentage of portfolio;
-  purchase_price: number;
-  purchase_date: Date;
-  performance: {
-    daily_return: number;
-    weekly_return: number;
-    monthly_return: number;
-    yearly_return: number,
-    total_return: number;
-
-  }
-}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-export interface PortfolioPerformance {
-
-export interface PortfolioPerformance {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-  totalReturn: number;
-  annualizedReturn: number;
-=======
-export interface PortfolioPerformance {
-  total_return: number;
-  annualized_return: number;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   volatility: number;
   sharpe_ratio: number;
   max_drawdown: number;
   beta: number;
   alpha: number;
-
-  tracking_error: number;
-  information_ratio: number,
-  sortino_ratio: number;
-
-}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-export interface InvestmentRecommendation {
-
-export interface InvestmentRecommendation {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
-export interface InvestmentRecommendation {
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   id: string;
   user_id: string;
   type: 'buy' | 'sell' | 'hold' | 'rebalance';
   asset: {
     symbol: string;
     name: string;
-
-    type: string,
-    current_price: number;
-  }
-  confidence: number;
-  reasoning: string[];
-  expected_return: number;
-  risk_level: 'low' | 'medium' | 'high',
-  time_horizon: number, // in months;
-  alternatives: string[];
-  created_at: Date,
-  expires_at: Date;
-
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
 export interface FinancialGoal {
-
-export interface FinancialGoal {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
-export interface FinancialGoal {
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   id: string;
   user_id: string;
   name: string;
@@ -153,84 +38,25 @@ export interface FinancialGoal {
   target_date: Date;
   priority: 'low' | 'medium' | 'high';
   category: 'retirement' | 'education' | 'home' | 'emergency' | 'vacation' | 'business' | 'other';
-
-  monthly_contribution: number;
-  expected_return: number;
-  risk_tolerance: 'conservative' | 'moderate' | 'aggressive',
-  progress: number, // percentage;
-  created_at: Date,
-  updated_at: Date;
-
-}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
 export interface MarketAnalysis {
-
-export interface MarketAnalysis {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
-export interface MarketAnalysis {
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   id: string;
   market: string;
-
-  analysis: string,
-  key_metrics: Record < string, number>;
-
   trends: string[];
   risks: string[];
   opportunities: string[];
   recommendations: string[];
   confidence: number;
-
-  last_updated: Date,
-  next_update: Date;
-
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
 export interface FinancialPlan {
-
-export interface FinancialPlan {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
-export interface FinancialPlan {
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   id: string;
   user_id: string;
   name: string;
   summary: string;
-
-  goals: FinancialGoal[],
-  investment_strategy: {
-    asset_allocation: Record < string, number>;
-    rebalancing_frequency: 'monthly' | 'quarterly' | 'semi_annually' | 'annually',
-    risk_management: string[];
-  }
-  cash_flow: {
-    monthly_income: number;
-    monthly_expenses: number;
-    savings_rate: number,
-    emergency_fund: number;
-
   }
   insurance: {
     life: boolean;
     health: boolean;
     disability: boolean;
-
     property: boolean,
     recommendations: string[];
   }
@@ -249,93 +75,37 @@ export interface FinancialPlan {
   created_at: Date,
   updated_at: Date;
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-export interface FinancialRequest {
-
-export interface FinancialRequest {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   userId: string;
-=======
 export interface FinancialRequest {
   user_id: string;
   request_type: 'portfolio_analysis' | 'investment_recommendation' | 'financial_planning' | 'market_analysis' | 'goal_tracking',
   parameters: Record < string, any>;
   preferences?: Record < string, any>;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   requestType: 'portfolio_analysis' | 'investment_recommendation' | 'financial_planning' | 'market_analysis' | 'goal_tracking'
   parameters: Record<string, any>;
 
   preferences?: Record<string, any>
 }
-<<<<<<< HEAD
-=======
-export interface FinancialResponse {
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-
-export interface FinancialResponse {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   success: boolean;
   data: {
     portfolio?: InvestmentPortfolio;
     recommendations?: InvestmentRecommendation[];
     plan?: FinancialPlan;
-
-  constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontechgroup.com') {
-    this && this.apiKey = apiKey,
-    this && this.baseUrl = baseUrl
-
-<<<<<<< HEAD
-  estimatedFees: number
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-export class AIFinancialAdvisorService {
-=======
-
-export class AIFinancialAdvisorService {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 export class AIFinancialAdvisorService {
 
 export class AIFinancialAdvisorService {;
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   private apiKey: string;
 
   private baseUrl: string
   constructor(apiKey: string, baseUrl: string = 'https://api.ziontechgroup.com') {
     this.apiKey = apiKey
     this.baseUrl = baseUrl
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
   async analyzePortfolio(portfolioId: string): Promise<InvestmentPortfolio> {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/financial/portfolio/${portfolioId}/analyze`, {
         headers: {
-
-          'Authorization': `Bearer ${this && this.apiKey}`}});
-
-      if (!response && response.ok) {
-        throw new Error(`HTTP error! status: ${response && response.status}`)
-      }
-
-      const data = await response && response.json();
-      return data && data.portfolio
-
     } catch (error) {
       console && console.error('Error analyzing portfolio:', error);
       throw error
@@ -343,21 +113,6 @@ export class AIFinancialAdvisorService {;
   }
   async getInvestmentRecommendations(userId: string, riskTolerance: string, investmentHorizon: number): Promise<InvestmentRecommendation[]> {
     try {
-
-      const response = await fetch(`${this && this.baseUrl}/api/financial/recommendations`, {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${this && this.apiKey}`;
-          'Content-Type': 'application/json'};
-        body: JSON && JSON.stringify({ userId, riskTolerance, investmentHorizon })});
-
-      if (!response && response.ok) {
-        throw new Error(`HTTP error! status: ${response && response.status}`)
-      }
-
-      const data = await response && response.json();
-      return data && data.recommendations || []
-
     } catch (error) {
       console && console.error('Error getting investment recommendations:', error);
       throw error
@@ -365,21 +120,6 @@ export class AIFinancialAdvisorService {;
   }
   async createFinancialPlan(request: FinancialRequest): Promise<FinancialPlan> {
     try {
-
-      const response = await fetch(`${this && this.baseUrl}/api/financial/plan`, {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${this && this.apiKey}`;
-          'Content-Type': 'application/json'};
-        body: JSON && JSON.stringify(request)});
-
-      if (!response && response.ok) {
-        throw new Error(`HTTP error! status: ${response && response.status}`)
-      }
-
-      const data = await response && response.json();
-      return data && data.plan
-
     } catch (error) {
       console && console.error('Error creating financial plan:', error);
       throw error
@@ -387,18 +127,6 @@ export class AIFinancialAdvisorService {;
   }
   async trackFinancialGoals(userId: string): Promise<FinancialGoal[]> {
     try {
-      const response = await fetch(`${this && this.baseUrl}/api/financial/goals/${userId}`, {
-        headers: {
-
-          'Authorization': `Bearer ${this && this.apiKey}`}});
-
-      if (!response && response.ok) {
-        throw new Error(`HTTP error! status: ${response && response.status}`)
-      }
-
-      const data = await response && response.json();
-      return data && data.goals || []
-
     } catch (error) {
       console && console.error('Error tracking financial goals:', error);
       throw error
@@ -406,18 +134,6 @@ export class AIFinancialAdvisorService {;
   }
   async getMarketAnalysis(market: string): Promise<MarketAnalysis> {
     try {
-      const response = await fetch(`${this && this.baseUrl}/api/financial/market-analysis/${market}`, {
-        headers: {
-
-          'Authorization': `Bearer ${this && this.apiKey}`}});
-
-      if (!response && response.ok) {
-        throw new Error(`HTTP error! status: ${response && response.status}`)
-      }
-
-      const data = await response && response.json();
-      return data && data.analysis
-
     } catch (error) {
       console && console.error('Error getting market analysis:', error);
       throw error
@@ -436,21 +152,6 @@ export class AIFinancialAdvisorService {;
     expectedImpact: string
   }> {
     try {
-
-      const response = await fetch(`${this && this.baseUrl}/api/financial/portfolio/${portfolioId}/rebalance`, {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${this && this.apiKey}`;
-          'Content-Type': 'application/json'};
-        body: JSON && JSON.stringify({ targetAllocation })});
-
-      if (!response && response.ok) {
-        throw new Error(`HTTP error! status: ${response && response.status}`)
-      }
-
-      const data = await response && response.json();
-      return data && data.rebalancing
-
     } catch (error) {
       console && console.error('Error rebalancing portfolio:', error);
       throw error
@@ -464,44 +165,12 @@ export class AIFinancialAdvisorService {;
     recommendations: string[]
   }> {
     try {
-
-      const response = await fetch(`${this && this.baseUrl}/api/financial/retirement-calculator`, {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${this && this.apiKey}`;
-          'Content-Type': 'application/json'};
-        body: JSON && JSON.stringify({ userId, targetAge, desiredIncome })});
-
-      if (!response && response.ok) {
-        throw new Error(`HTTP error! status: ${response && response.status}`)
-      }
-
-      const data = await response && response.json();
-      return data && data.calculation
-
     } catch (error) {
       console && console.error('Error calculating retirement needs:', error);
       throw error
     }
   }
   async getTaxOptimizationStrategies(userId: string, taxYear: number): Promise<{
-=======
-    analysis?: MarketAnalysis,
-    goals?: FinancialGoal[];
-  }
-  insights: string[];
-  next_steps: string[];
-  risk_warnings: string[],
-  estimated_fees: number;
-}
-export class AIFinancialAdvisorService {
-  private api_key: string;
-  private base_url: string,
-  constructor (api_key: string, base_url: string = 'https://api.ziontechgroup.com') {
-    this.api_key = api_key,
-    this.base_url = base_url;
-  }
-  async analyze_portfolio (portfolio_id: string): Promise < InvestmentPortfolio> {
     try {
       const response = await fetch (`${this.base_url}/api / financial / portfolio/${portfolio_id}/analyze`, {
         headers: {
@@ -513,30 +182,6 @@ if ( {) {
 }
         throw new Error (`HTTP error! status: ${response.status}`);
       }
-      const data = await response.json ();
-      return data.portfolio;
-    } catch (error) {
-      console.error ('Error analyzing portfolio:', error);
-      throw error;
-    }
-  }
-  async getInvestmentRecommendations (user_id: string, risk_tolerance: string, investment_horizon: number): Promise < InvestmentRecommendation[]> {
-    try {
-      const response = await fetch (`${this.base_url}/api / financial / recommendations`, {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${this.api_key}`;
-          'Content - Type': 'application / json'}
-        body: JSON.stringify ({ user_id, risk_tolerance, investment_horizon })});
-;
-      // Check condition
-if ( {) {
-  $2
-}
-        throw new Error (`HTTP error! status: ${response.status}`);
-      }
-      const data = await response.json ();
-      return data.recommendations || [];
     } catch (error) {
       console.error ('Error getting investment recommendations:', error);
       throw error;
@@ -628,61 +273,9 @@ if ( {) {
 }
         throw new Error (`HTTP error! status: ${response.status}`);
       }
-      const data = await response.json ();
-      return data.rebalancing;
-    } catch (error) {
-      console.error ('Error rebalancing portfolio:', error);
-      throw error;
-    }
-  }
-  async calculateRetirementNeeds (user_id: string, target_age: number, desired_income: number): Promise<{
-    estimated_needs: number;
-    monthly_contribution: number;
-    projected_value: number,
-    assumptions: Record < string, any>;
-    recommendations: string[];
-  }> {
-    try {
-      const response = await fetch (`${this.base_url}/api / financial / retirement - calculator`, {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${this.api_key}`;
-          'Content - Type': 'application / json'}
-        body: JSON.stringify ({ user_id, target_age, desired_income })});
-;
-      // Check condition
-if ( {) {
-  $2
-}
-        throw new Error (`HTTP error! status: ${response.status}`);
-      }
-      const data = await response.json ();
-      return data.calculation;
-    } catch (error) {
-      console.error ('Error calculating retirement needs:', error);
-      throw error;
-    }
-  }
-  async getTaxOptimizationStrategies (user_id: string, tax_year: number): Promise<{
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     strategies: string[];
     estimated_savings: number;
     implementation: string[];
-
-      const response = await fetch(`${this && this.baseUrl}/api/financial/tax-optimization`, {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${this && this.apiKey}`;
-          'Content-Type': 'application/json'};
-        body: JSON && JSON.stringify({ userId, taxYear })});
-
-      if (!response && response.ok) {
-        throw new Error(`HTTP error! status: ${response && response.status}`)
-      }
-
-      const data = await response && response.json();
-      return data && data.optimization
-
     } catch (error) {
       console && console.error('Error getting tax optimization strategies:', error);
       throw error
@@ -697,21 +290,6 @@ if ( {) {
     nextSteps: string[]
   }> {
     try {
-
-      const response = await fetch(`${this && this.baseUrl}/api/financial/report`, {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${this && this.apiKey}`;
-          'Content-Type': 'application/json'};
-        body: JSON && JSON.stringify({ userId, reportType })});
-
-      if (!response && response.ok) {
-        throw new Error(`HTTP error! status: ${response && response.status}`)
-      }
-
-      const data = await response && response.json();
-      return data && data.report
-
     } catch (error) {
       console && console.error('Error generating financial report:', error);
       throw error
@@ -720,16 +298,6 @@ if ( {) {
 }
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY |'demo-key');
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-export interface InvestmentPortfolio {;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
-export interface InvestmentPortfolio {;
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   id: string,;
   userId: string,;
   name: string,;
@@ -743,11 +311,6 @@ export interface InvestmentPortfolio {;
   performance: PortfolioPerformance,;
   createdAt: Date,;
   updatedAt: Date;
-=======
-
-export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process && process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
-
-=======
     risks: string[],
     deadlines: Record < string, Date>;
   }> {
@@ -762,7 +325,6 @@ export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process &
       // Check condition
 if ( {) {
   $2
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
         throw new Error (`HTTP error! status: ${response.status}`);
       }
@@ -803,19 +365,4 @@ if ( {) {
     }
   }
 }
-export const aiFinancialAdvisorService = new AIFinancialAdvisorService (process.env.FINANCIAL_ADVISOR_API_KEY || 'demo - key');
-;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-export interface InvestmentPortfolio {;
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');

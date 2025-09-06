@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-import { useEffect, useState } from 'react',;
-;
-type Holder = { address: string, amount: string },
-
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import { useEffect, useState } from 'react';
 
 type Holder = { address: string, amount: string }
@@ -41,13 +26,6 @@ export default function DaoMetrics() {
   if (!data) return <div>Error loading data</div>
 
 type Holder = { address: string, amount: string };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 type Metrics = {
   updatedAt: number;
   tokenDistribution: { address: string, percent: number }[],;
@@ -76,11 +54,6 @@ export default function DaoMetrics(req, res) {
   }, []),
   if (loading) return <div>Loading...</div>,
   if (!data) return <div>Error loading data</div>,
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className="space-y-6">
       <div className="flex items-end justify-between">
@@ -106,8 +79,6 @@ export default function DaoMetrics(req, res) {
             ))}
           </div>
         </div>
-
-
         <div className="border rounded p-4">
           <div className="font-medium mb-2">Top Holders (approx)</div>
           <table className="w-full text-sm">
@@ -128,8 +99,6 @@ export default function DaoMetrics(req, res) {
           </table>
         </div>
       </section>
-
-
       <section className="grid lg:grid-cols-2 gap-6">
         <div className="border rounded p-4">
           <div className="font-medium mb-2">Active Proposals</div>
@@ -140,24 +109,11 @@ export default function DaoMetrics(req, res) {
               ))}
             </ul>
           ) : (
-            <div className="text-sm text-gray-600">No active proposals.</div>
-          )}
           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
         </div>
         <div className="border rounded p-4">
           <div className="font-medium mb-2">Governance Participation Rate</div>
@@ -169,40 +125,15 @@ export default function DaoMetrics(req, res) {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  );
-};
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
-  );
-};
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   )
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-}
-=======
 
-=======
 }
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
-=======
 import { useEffect, useState } from 'react',
 ;
 type Holder = { address: string, amount: string },
@@ -305,11 +236,5 @@ if (return <div > Error loading data</div>, ) {
       </section>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

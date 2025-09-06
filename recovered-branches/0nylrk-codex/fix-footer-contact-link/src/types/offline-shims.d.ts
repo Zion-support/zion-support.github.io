@@ -1,39 +1,14 @@
-<<<<<<< HEAD
-declare module 'react' {
-  const React: any;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
-  export default React
-  // Basic overloads for useRef to handle common cases
-  export function useRef<T>(initialValue: T): { current: T }
-  export function useRef<T>(initialValue: T | null): { current: T | null }
-  export function useRef<T = undefined>(initialValue?: T): { current: T | undefined }
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   export default React,
   // Basic overloads for useRef to handle common cases;
   export function useRef<T>(initialValue: T): { current: T };
   export function useRef<T>(initialValue: T | null): { current: T | null };
   export function useRef<T = undefined>(initialValue?: T): { current: T | undefined };
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   export const useEffect: any;
   export type Dispatch<A> = (value: A) => void;
   export type SetStateAction<S> = S | ((prevState: S) => S)
   export function useState<S>(
-    initialState: S | (() => S)
+    initialState: S | (() => S);
   ): [S, Dispatch<SetStateAction<S>>];
   export function createContext<T>(defaultValue: T): any;
   export function useContext<T>(context: any): T;
@@ -42,9 +17,13 @@ declare module 'react' {
   export function useId(): string
   // Generic definition to allow usage like forwardRef<HTMLDivElement, Props>()
   export function forwardRef<T, P = {}>(
-    render: (props: P, ref: Ref<T>) => ReactElement | null
+
+  export type ReactElement = any,
+  export type ComponentType<P = {}> = (props: P) => any,;
+
+
+    render: (props: P, ref: Ref<T>) => ReactElement | null;
   ): any;
-=======
   export default React,
   // Basic overloads for useRef to handle common cases;
   export function useRef < T>(initial_value: T): { current: T }
@@ -63,28 +42,40 @@ declare module 'react' {
   // Generic definition to allow usage like forward_ref < HTMLDivElement, Props>();
   export function forward_ref < T, P = {}>(
     render: (props: P, ref: Ref < T>) => ReactElement | null): any;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+declare module 'react' {
+  const React: any;
   export const Fragment: any;
   export const StrictMode: any;
   export const clone_element: any;
   export type ReactNode = any;
-<<<<<<< HEAD
-  export type ReactElement = any
-  export type ComponentType<P = {}> = (props: P) => any
-  export type ReactElement = any,
-  export type ComponentType<P = {}> = (props: P) => any,;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
 
 
   export type ReactElement = any,
   export type ComponentType<P = {}> = (props: P) => any,;
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   export type FC<P = {}> = (props: P) => any;
   export type ComponentProps<T = any> = any;
   export type ComponentPropsWithoutRef<T = any> = any;
@@ -103,47 +94,10 @@ declare module 'react' {
   export type LegacyRef<T = any> = any;
   export type ElementRef<T = any> = any
   export type CSSProperties = Record<string, string | number | undefined>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-  export type ReactElement = any,
-  export type ComponentType < P = {}> = (props: P) => any,
-  export type FC < P = {}> = (props: P) => any;
-  export type ComponentProps < T = any> = any;
-  export type ComponentPropsWithoutRef < T = any> = any;
-  export type PropsWithoutRef < T = any> = any;
-  export type ComponentPropsWithRef < T = any> = any;
-  export type HTMLAttributes < T = any> = any;
-  export type ButtonHTMLAttributes < T = any> = any;
-  export type SVGProps < T = any> = any;
-  export type ChangeEvent < T = any> = any;
-  export type MouseEvent < T = any> = any;
-  export type DragEvent < T = any> = any;
-  export type FormEvent < T = any> = any;
-  export type KeyboardEvent < T = any> = any;
-  export type SyntheticEvent < T = any> = any;
-  export type Ref < T = any> = any;
-  export type LegacyRef < T = any> = any;
-  export type ElementRef < T = any> = any,
-  export type CSSProperties = Record < string, string | number | undefined>;
-
 }
 declare module 'react-dom' {
   export * from 'react-dom / index';
 }
-
-declare module 'react / jsx - runtime' {
-  export const jsx: any;
-  export const jsxs: any,
-  export const Fragment: any;
-
-}
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 }
 
 declare module 'react-dom' {
@@ -155,15 +109,6 @@ declare module 'react/jsx-runtime' {;
   export const jsxs: any,
   export const Fragment: any;
 };
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 declare module 'react' {;
   const React: any,;
   export default React,;
@@ -193,6 +138,36 @@ declare module 'react' {;
   export type ReactElement = any,;
   export type ComponentType<P = {}> = (props: P) => any,;
   export type FC<P = {}> = (props: P) => any,;
+}
+declare module 'react' {;
+  const React:any,;
+  export default React,;
+  // Basic overloads for useRef to handle common cases;
+  export function useRef<T>(initialValue:T):{ current:T },;
+  export function useRef<T>(initialValue:T | null):{ current:T | null },;
+  export function useRef<T = undefined>(initialValue?:T):{ current:T | undefined },;
+  export const useEffect:any,;
+  export type Dispatch<A> = (value:A) => void,;
+  export type SetStateAction<S> = S | ((prevState:S) => S),;
+  export function useState<S>(;
+    initialState:S | (() => S);
+  ):[S, Dispatch<SetStateAction<S>>],;
+  export function createContext<T>(defaultValue:T):any,;
+  export function useContext<T>(context:any):T,;
+  export const useMemo:any,;
+  export const useCallback:any,;
+  export function useId():string,;
+  // Generic definition to allow usage like forwardRef<HTMLDivElement Props>();
+  export function forwardRef<T P = {}>(;
+    render:(props:P, ref:Ref<T>) => ReactElement | null;
+  ):any,;
+  export const Fragment:any,;
+  export const StrictMode:any,;
+  export const cloneElement:any,;
+  export type ReactNode = any,;
+  export type ReactElement = any,;
+  export type ComponentType<P = {}> = (props:P) => any,;
+  export type FC<P = {}> = (props:P) => any,;
   export type ComponentProps<T = any> = any,;
   export type ComponentPropsWithoutRef<T = any> = any,;
   export type PropsWithoutRef<T = any> = any,;
@@ -210,11 +185,6 @@ declare module 'react' {;
   export type LegacyRef<T = any> = any,;
   export type ElementRef<T = any> = any,;
   export type CSSProperties = Record<string string | number | undefined>;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 }
 declare module 'react-dom' {
   export * from 'react-dom/index'
@@ -223,44 +193,20 @@ declare module 'react/jsx-runtime' {
   export const jsx: any;
   export const jsxs: any
 
-  export const Fragment: any
 }
 ;
 declare module 'react-dom' {;
   export * from 'react-dom/index';
 }
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
 }
 ;
 declare module 'react-dom' {;
   export * from 'react-dom/index';
 }
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 ;
 declare module 'react/jsx-runtime' {;
   export const jsx: any,;
   export const jsxs: any;
   export const Fragment: any;
-<<<<<<< HEAD
 }
-}
-=======
-
-}
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

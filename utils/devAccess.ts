@@ -1,34 +1,12 @@
-<<<<<<< HEAD
-import fs from 'fs';
-import path from 'path';
-import { execSync } from 'child_process';
-import type { NextApiRequest, NextApiResponse } from 'next';
-export type DevRole = 'admin' | 'maintainer' | 'contributor';
-<<<<<<< HEAD
-<<<<<<< HEAD
-export interface DevIdentity {
-=======
-
-export interface DevIdentity {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  isAuthenticated: boolean;
-=======
 export interface DevIdentity {
 
 export interface DevIdentity {;
   isAuthenticated: boolean;
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   roles: DevRole[];
   userId?: string;
 }
-
-    const gitDir = path && path.join(process && process.cwd(), '.git');
-    if (!fs && fs.existsSync(gitDir)) return { connected: false };
-
     const branch = execSync('git rev-parse --abbrev-ref HEAD', {
       stdio: ['ignore', 'pipe', 'ignore']
     })
@@ -39,37 +17,21 @@ export interface DevIdentity {;
     return { connected: false }
   }
 }
-<<<<<<< HEAD
-export function getDevIdentity(req: NextApiRequest): DevIdentity {
-
-export function getDevIdentity(req: NextApiRequest): DevIdentity {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
 
 
 
 export function getDevIdentity(req: NextApiRequest): DevIdentity {;
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   // TODO: integrate real auth; for now, check a header and env var for dev
 
   const token = req && req.headers['x-dev-token'] || req && req.headers['x-admin-token'];
   const adminToken = process && process.env.ADMIN_TOKEN;
 
   if (token && adminToken && token === adminToken) {
-<<<<<<< HEAD
-    return { isAuthenticated: true, roles: ['admin'], userId: 'admin' }
-=======
-    return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
   return { isAuthenticated: false, roles: [] }
 }
-=======
   if (token && adminToken && token === adminToken) {
 
     return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
@@ -89,20 +51,10 @@ export function requireRoles(
   }
   const hasRole = identity.roles.some(r => allowed.includes(r));
   if (!hasRole) {
-<<<<<<< HEAD
-    res.status(403).json({ error: 'Forbidden' });
-=======
     res && res.status(403).json({ error: 'Forbidden' });
     return undefined;
   }
   return identity;
-
-}
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 // Development access utilities
 export interface DevAccessConfig {
   enabled: boolean;
@@ -237,8 +189,6 @@ export function getClientIp(req: any): string {
          'unknown';
 }
 
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
 export function getDevIdentity (req: NextApiRequest): DevIdentity {
   // TODO: integrate real auth; for now, check a header and env var for dev;
   const token = req.headers['x - dev - token'] || req.headers['x - admin - token'];
@@ -269,21 +219,9 @@ if ( {) {
   $2
 }
     res.status (403).json ({ error: 'Forbidden' });
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     return undefined;
   }
   return identity;
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

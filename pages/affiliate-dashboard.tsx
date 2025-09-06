@@ -1,78 +1,32 @@
-<<<<<<< HEAD
-import { useEffect, useMemo, useState } from 'react';
-import { useEffect, useMemo, useState } from 'react',;
-;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-function getRefCode(): string {
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   useEffect(() => {
     if (!code) return
     (async () => {
       try {
-
-
   async function requestPayout() {
     setMsg('')
     try {
       const res = await fetch('/api/partners/request-payout', {
-
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ code, amount: amount ? Number(amount) : undefined })}),
-      const json = await res.json();
-      if (!res.ok) throw new Error(json.error || 'Failed');
-
       setMsg('Payout requested')
     } catch (e: any) {
       setMsg(e?.message |'Error')
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-  const exportUrl = useMemo(() => (code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#'), [code])
-
-=======
-=======
-=======
-import { useEffect, useMemo, useState } from 'react';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
   const exportUrl = useMemo(() => (code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#'), [code])
 
 import { useEffect, useMemo, useState } from 'react';
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 function getRefCode(): string {;
   if (typeof window === 'undefined') return '',;
   return localStorage.getItem('ref_code') || '';
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
   }
   const exportUrl = useMemo(() => (code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#'), [code])
 
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   }
 }
 ;
@@ -131,7 +85,6 @@ export default function AffiliateDashboard(req, res) {
       </div>
     )
   }
-}
   return (
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">Affiliate Dashboard</h1>
@@ -145,35 +98,10 @@ export default function AffiliateDashboard(req, res) {
         <div className="flex items-center justify-between">
           <div>
             <div className="text-sm text-gray-600 dark:text-gray-300">Estimated Payout</div>
-            <div className="text-2xl font-bold">{metrics?.payout_amount ?? 0} {metrics?.currency |'USD'}</div>
-            <div className="text-2xl font-bold">{metrics?.payout_amount ?? 0} {metrics?.currency || 'USD'}</div>
           </div>
           <div className="flex gap-2">
             <input className="border rounded px-3 py-2" placeholder="Amount (optional)" value={amount} onChange={e=>setAmount(e.target.value)} />
             <button className="px-3 py-2 rounded bg-indigo-600 text-white" onClick={requestPayout}>Request Payout</button>
-            <a href={exportUrl} className="px-3 py-2 rounded border">Export CSV</a>
-          </div>
-        </div>
-        {msg && <p className="mt-2 text-sm">{msg}</p>}
-            <a href={exportUrl} className="px-3 py-2 rounded border">Export CSV</Link>
-          </div>
-        </div>
-        {msg && <p className="mt-2 text-sm">{msg}</p>  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       </div>
     </div>
   )
@@ -184,19 +112,6 @@ function Stat({ label, value }: { label: string, value: number | string }) {
       <div className="text-sm text-gray-600 dark:text-gray-300">{label}</div>
       <div className="text-2xl font-semibold">{value}</div>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  );
-};
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
-  );
-};
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   )
 ;
   const exportUrl = useMemo(() => (code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#'), [code]);
@@ -211,13 +126,9 @@ function Stat({ label, value }: { label: string, value: number | string }) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
-=======
 import { useEffect, useMemo, useState } from 'react',
 ;
 function getRefCode (): string {
@@ -290,43 +201,6 @@ if ( {) {
         <Stat label="Total Signups" value={metrics?.total_signups ?? '-'} />;
         <Stat label="Profile Completions" value={metrics?.total_profile_completions ?? '-'} />;
         <Stat label="Job Creations" value={metrics?.total_job_creations ?? '-'} />;
-      </div>;
-      <div className="p - 4 rounded border border - gray - 200 dark:border - gray - 800">;
-        <div className="flex items - center justify - between">;
-          <div>;
-            <div className="text - sm text - gray - 600 dark:text - gray - 300">Estimated Payout</div>;
-            <div className="text - 2xl font - bold">{metrics?.payout_amount ?? 0} {metrics?.currency || 'USD'}</div>;
-          </div>;
-          <div className="flex gap - 2">;
-            <input className="border rounded px - 3 py - 2" placeholder="Amount (optional)" value={amount} on_change={e=>set_amount (e.target.value)} />;
-            <button className="px - 3 py - 2 rounded bg - indigo - 600 text - white" on_click={request_payout}>Request Payout</button>;
-            <a href={export_url} className="px - 3 py - 2 rounded border">Export CSV</a>;
-          </div>;
-        </div>;
-        {msg && <p className="mt - 2 text - sm">{msg}</p>}
-      </div>;
-    </div>);
-}
-<<<<<<< HEAD
-;
-function Stat({ label, value }: { label: string, value: number | string }) {;
-  return (;
-    <div className="p-4 rounded border border-gray-200 dark:border-gray-800">;
-      <div className="text-sm text-gray-600 dark:text-gray-300">{label}</div>;
-      <div className="text-2xl font-semibold">{value}</div>;
-    </div>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-}
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-}
-=======
 /**
  * Stat - Function description
  */
@@ -337,15 +211,5 @@ function Stat() {
       <div className="text - 2xl font - semibold">{value}</div>;
     </div>);
 }
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

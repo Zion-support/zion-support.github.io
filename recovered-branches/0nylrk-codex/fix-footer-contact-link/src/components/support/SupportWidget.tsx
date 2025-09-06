@@ -1,16 +1,3 @@
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {ChatBotPanel} from "./ChatBotPanel";
@@ -20,16 +7,7 @@ import {useTheme} from "@/hooks/useTheme";
 export function SupportWidget() {;
   const [isOpen, setIsOpen] = useState(false);
   const { theme } = useTheme();
-
-
   return (
-<<<<<<< HEAD
-    <>
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { ChatBotPanel } from "./ChatBotPanel",
@@ -41,45 +19,11 @@ export function SupportWidget() {
   const { theme } = useTheme();
   return (
     <>
-=======
     <>;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Fixed button in the bottom right */}
       {!isOpen && (;
         <Button
 
-<<<<<<< HEAD
-import { cn } from "@/lib/utils",
-import { useTheme } from "@/hooks/useTheme",
-export function SupportWidget() {
-  const [isOpen, setIsOpen] = useState(false),
-  const { theme } = useTheme(),
-  
-  return (
-    <>
-import React, { useState } from "react",;
-import { Button } from "@/components/ui/button",;
-import { ChatBotPanel } from "./ChatBotPanel",;
-import { MessageSquare, Info, X } from "lucide-react",;
-import { cn } from "@/lib/utils",;
-import { useTheme } from "@/hooks/useTheme",;
-export function SupportWidget() {;
-  const [isOpen, setIsOpen] = useState(false),;
-  const { theme } = useTheme();
-  return (;
-    <>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       {/* Fixed button in the bottom right */}
       {!isOpen && (
         <Button
@@ -91,19 +35,6 @@ export function SupportWidget() {;
           <MessageSquare className="h-6 w-6" />;
         </Button>;
       )}
-
-
-      {/* Support panel */}
-      {isOpen && (;
-        <div
-          className={cn(
-            "fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col";
-            theme === "dark"
-              ? "bg-zion-blue-dark border border-zion-blue-light"
-
-            "fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col",
-            theme === "dark" 
-              ? "bg-zion-blue-dark border border-zion-blue-light" 
               : "bg-white border border-gray-200"
           )}
           style={{ height: "600px", maxHeight: "80vh" }}>;
@@ -119,7 +50,6 @@ export function SupportWidget() {;
                 variant="ghost"
                 size="icon"
                 className="h-8 w-8 rounded-full"
-                onClick={() => window && window.location.href = "/help"}
                 aria-label="Help center";
               >;
                 <Info className="h-5 w-5" />;
@@ -128,23 +58,11 @@ export function SupportWidget() {;
                 variant="ghost"
                 size="icon"
                 className="h-8 w-8 rounded-full"
+              <Button;
+                variant="ghost";
+                size="icon";
+                className="h-8 w-8 rounded-full";
                 onClick={() => setIsOpen(false)}
-
-                aria-label="Close support";
-              >;
-                <X className="h-5 w-5" />;
-              </Button>;
-            </div>;
-          </div>;
-
-          <ChatBotPanel />;
-        </div>;
-      )}
-    </>;
-  );
-}
-
-=======
 import React, { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { ChatBotPanel } from './ChatBotPanel';
@@ -212,4 +130,3 @@ function SupportWidget() {
         </div>)}
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

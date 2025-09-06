@@ -1,16 +1,3 @@
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState} from "react";
 import {Button} from "@/components/ui/button";
 import {useAuth} from "@/hooks/useAuth";
@@ -20,12 +7,6 @@ export function Web3Login() {;
 
   const { loginWithWeb3 } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { useAuth } from "@/hooks/useAuth",
@@ -33,13 +14,6 @@ import { Wallet } from "@/components/icons";
 import { toast } from "sonner";
 import { Wallet } from "@/components/icons",
 import { toast } from "sonner",
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
 
   const handleWeb3Login = async () => {;
     try {;
@@ -47,19 +21,11 @@ import { toast } from "sonner",
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 export function Web3Login() {
   const { loginWithWeb3 } = useAuth(),
   const [isLoading, setIsLoading] = useState(false),
-
-  const handleWeb3Login = async () => {
-    try {
-      setIsLoading(true);
-      setIsLoading(true),
-      
       // Check if wallet is available
-      const ethereum = (window as any).ethereum;
+      const ethereum = (window as any).ethereum,
       if (!ethereum) {
         toast("Web3 wallet not found", {
           description: "Please install MetaMask or another compatible wallet"})
@@ -74,26 +40,6 @@ export function Web3Login() {
       setIsLoading(false)
 
 
-      // Check if wallet is available;
-      const ethereum = (window as any).ethereum;
-      if (!ethereum) {;
-        toast("Web3 wallet not found", {;
-          description: "Please install MetaMask or another compatible wallet"}),;
-        return;
-      }
-
-      await loginWithWeb3();
-
-    } catch (error: any) {;
-      toast("Login failed", {;
-        description: error && error.message || "Failed to connect wallet"}),;
-      console && console.error("Web3 login error:", error);
-    } finally {;
-      setIsLoading(false);
-
-    }
-  }
-  },
 
   return (
     <Button
@@ -101,7 +47,6 @@ export function Web3Login() {
       variant="outline"
       className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
       onClick={handleWeb3Login}
-
       disabled={isLoading}
     >
       {isLoading ? (
@@ -117,24 +62,10 @@ export function Web3Login() {
           <span className="sr-only">Sign in with Web3</span>
           <Wallet className="h-5 w-5" />
         </>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       )}
     </Button>
   )
 }
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -174,9 +105,8 @@ export function Web3Login() {;
 
       {isLoading ? (;
         <span className="flex items-center">;
-          <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www && www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">;
+          <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">;
             <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>;
-            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5 && 8V0C5.373 0 0 5 && 5.373 0 12h4zm2 5 && 5.291A7.962 7 && 7.962 0 014 12H0c0 3 && 3.042 1 && 1.135 5 && 5.824 3 7 && 7.938l3-2 && 2.647z"></path>;
           </svg>;
           Connecting...;
         </span>;
@@ -185,26 +115,11 @@ export function Web3Login() {;
           <span className="sr-only">Sign in with Web3</span>;
           <Wallet className="h-5 w-5" />;
         </>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       )}
-
-    </Button>;
-  );
-}
-
-=======
 import { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { use_auth } from '@/hooks / use_auth';

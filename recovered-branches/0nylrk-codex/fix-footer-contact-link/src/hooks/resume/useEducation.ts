@@ -1,33 +1,15 @@
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Education  } from '@/types/resume';
 import { useAuth  } from '@/hooks/useAuth';
 import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';
 export function useEducation() {
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Education} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
 export function useEducation() {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -36,20 +18,6 @@ export function useEducation() {;
     if (!user) {
       setError('You must be logged in to add education')
       return false
-<<<<<<< HEAD
-    }
-    setIsLoading(true);
-    setError(null);
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
-
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Education } from '@/types/resume',;
@@ -63,17 +31,6 @@ export function useEducation() {;
     if (!user) {;
       setError('You must be logged in to add education'),;
       return false;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     }
     
     setIsLoading(true),
@@ -83,61 +40,11 @@ export function useEducation() {;
       const { error } = await supabase
         .from('education')
         .insert({
-          resume_id: resumeId;
-          institution: education.institution;
-          degree: education.degree;
-          field_of_study: education.field_of_study;
-          start_date: formatDateForDB(education.start_date);
-          end_date: education.is_current ? null : formatDateForDB(education.end_date);
-          is_current: education.is_current;
-          description: education.description;
-          institution_logo_url: education.institution_logo_url
-          location: education.location
-        });
-      if (error) throw error;
-          resume_id: resumeId,
-          institution: education.institution,
-          degree: education.degree,
-          field_of_study: education.field_of_study,
-          start_date: formatDateForDB(education.start_date),
-          end_date: education.is_current ? null : formatDateForDB(education.end_date),
-          is_current: education.is_current,
-          description: education.description,
-          institution_logo_url: education.institution_logo_url,
-          location: education.location
-        }),
-      
-      if (error) throw error,
-      
       return showSuccessToast("Education added", "Your education has been added to your resume")
     } catch (e: any) {
       return handleResumeError(e, 'Could not add education')
     } finally {
       setIsLoading(false)
-<<<<<<< HEAD
-    }
-  }
-  const updateEducation = async (eduId: string, education: Education): Promise<boolean> => {
-    if (!user) {
-      setError('You must be logged in to update education')
-      return false
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-    }
-    setIsLoading(true);
-    setError(null);
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
-
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
     setIsLoading(true),;
     setError(null),;
@@ -168,17 +75,6 @@ export function useEducation() {;
     if (!user) {;
       setError('You must be logged in to update education'),;
       return false;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     }
     
     setIsLoading(true),
@@ -188,61 +84,11 @@ export function useEducation() {;
       const { error } = await supabase
         .from('education')
         .update({
-          institution: education.institution;
-          degree: education.degree;
-          field_of_study: education.field_of_study;
-          start_date: formatDateForDB(education.start_date);
-          end_date: education.is_current ? null : formatDateForDB(education.end_date);
-          is_current: education.is_current;
-          description: education.description;
-          institution_logo_url: education.institution_logo_url
-          location: education.location
-        })
-        .eq('id', eduId);
-      if (error) throw error;
-          institution: education.institution,
-          degree: education.degree,
-          field_of_study: education.field_of_study,
-          start_date: formatDateForDB(education.start_date),
-          end_date: education.is_current ? null : formatDateForDB(education.end_date),
-          is_current: education.is_current,
-          description: education.description,
-          institution_logo_url: education.institution_logo_url,
-          location: education.location
-        })
-        .eq('id', eduId),
-      
-      if (error) throw error,
-      
       return showSuccessToast("Education updated", "Your education has been updated")
     } catch (e: any) {
       return handleResumeError(e, 'Could not update education')
     } finally {
       setIsLoading(false)
-<<<<<<< HEAD
-    }
-  }
-  const deleteEducation = async (eduId: string): Promise<boolean> => {
-    if (!user) {
-      setError('You must be logged in to delete education')
-      return false
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-    }
-    setIsLoading(true);
-    setError(null);
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
-
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
     setIsLoading(true),;
     setError(null),;
@@ -273,17 +119,6 @@ export function useEducation() {;
     if (!user) {;
       setError('You must be logged in to delete education'),;
       return false;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     }
     
     setIsLoading(true),
@@ -293,42 +128,11 @@ export function useEducation() {;
       const { error } = await supabase
         .from('education')
         .delete()
-        .eq('id', eduId);
-      if (error) throw error;
-        .eq('id', eduId),
-      
-      if (error) throw error,
-      
       return showSuccessToast("Education deleted", "Your education has been removed from your resume")
     } catch (e: any) {
       return handleResumeError(e, 'Could not delete education')
     } finally {
       setIsLoading(false)
-    }
-  }
-  return {
-    isLoading;
-    error;
-    addEducation;
-    updateEducation;
-
-<<<<<<< HEAD
-    deleteEducation
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-    deleteEducation
-  }
-}
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
-
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {Education} from '@/types / resume';
@@ -341,36 +145,14 @@ function use_education() {
   const { user } = use_auth ();
   const [is_loading, setIsLoading] = useState (false);
   const [error, set_error] = useState < string | null>(null);
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
   const add_education = async (resume_id: string, education: Education): Promise < boolean> => {
     // Check condition
 if ( {) {
   $2
 }
-      set_error ('You must be logged in to add education'),
-      return false;
-    }
-
-  },;
-  return {;
-    isLoading,;
-    error,;
-    addEducation;
-    updateEducation;
-    deleteEducation;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    setIsLoading (true);
+    set_error (null);
 ;

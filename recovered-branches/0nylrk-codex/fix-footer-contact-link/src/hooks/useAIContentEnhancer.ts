@@ -1,18 +1,7 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {toast} from '@/hooks/use-toast';
@@ -22,30 +11,11 @@ type EnhancementType =
   | 'job-post'
   | 'proposal'
   | 'general';
-<<<<<<< HEAD
-export interface AIEnhancementOptions {
-
-
-export interface AIEnhancementOptions {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   enhancementType: EnhancementType;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   content?: string;
   context?: string
   instructions?: string
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-export function useAIContentEnhancer() {
-=======
-export function useAIContentEnhancer() {
-
-export function useAIContentEnhancer() {;
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
 
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
@@ -60,25 +30,6 @@ type EnhancementType =;
 
 export interface AIEnhancementOptions {
   enhancement_type: EnhancementType;
-=======
-
-
-export interface AIEnhancementOptions {;
-
-  enhancementType: EnhancementType;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  content?: string;
-
-
-
-export function useAIContentEnhancer() {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   const [isEnhancing, setIsEnhancing] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const enhanceContent = async ({
@@ -90,10 +41,6 @@ export function useAIContentEnhancer() {;
     setIsEnhancing(true);
     setError(null);
     try {
-
-      const { data, error } = await supabase && supabase.functions.invoke('ai-content-enhancer', {
-        body: { 
-
           content;
           enhancementType;
           context
@@ -101,20 +48,9 @@ export function useAIContentEnhancer() {;
         }
       });
       if (error) {
-<<<<<<< HEAD
-        throw new Error(error.message)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        throw new Error(error.message)
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-      }
-      return data.enhancedContent
-=======
 
       
       return data && data.enhancedContent
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     } catch (err: any) {
       const errorMessage = err && err.message || 'Failed to enhance content';
 
@@ -122,19 +58,6 @@ export function useAIContentEnhancer() {;
       toast({
         title: "AI Enhancement Failed";
         description: errorMessage
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
-        throw new Error(error.message)
-
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { toast } from '@/hooks/use-toast',;
@@ -173,15 +96,6 @@ export function useAIContentEnhancer() {;
       }),;
       if (error) {;
         throw new Error(error.message);
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       }
       
       return data.enhancedContent
@@ -203,18 +117,6 @@ export function useAIContentEnhancer() {;
     enhanceContent;
     isEnhancing;
 
-<<<<<<< HEAD
-    error
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-    error
-  }
-}
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   context?: string,
   instructions?: string;
 }
@@ -224,13 +126,6 @@ export /**
 function useAIContentEnhancer() {
   const [is_enhancing, setIsEnhancing] = useState (false);
   const [error, set_error] = useState < string | null>(null);
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
-
-
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
   const enhance_content = async ({
     enhancement_type;
@@ -271,23 +166,5 @@ if ( {) {
     } finally {
       setIsEnhancing (false);
     }
-
-  },;
-  return {;
-    enhanceContent;
-    isEnhancing;
-    error;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   }
 ;

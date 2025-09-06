@@ -1,29 +1,4 @@
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
-
-
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-
-
-
-=======
-export default function CloudAutomationsPage() {;
-=======
-
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function CloudAutomationsPage() {
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export default function CloudAutomationsPage() {;
   const [data, setData] = useState<any>(null);
@@ -34,12 +9,6 @@ export default function CloudAutomationsPage() {;
       .catch(() => setData({ ok: false }));  }, []);      .then((r) => r && r.json());
       .then(setData);
       .catch(() => setData({ ok: false }));
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 export default function CloudAutomationsPage() {
   const [data, setData] = useState<any>(null);
   useEffect(() => {
@@ -47,26 +16,13 @@ export default function CloudAutomationsPage() {
       .then((r) => r.json())
       .then(setData)
       .catch(() => setData({ ok: false }))
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }, []);
 
   const items = data?.data ? Object && Object.entries(data && data.data) : [];
-  return (
 
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ) : null}
           </div>;
         ))}
-      </div>
-    </div>
-);
-}
-  );
-}
-
-=======
   );
 }
               <pre className='mt - 2 text - xs whitespace - pre - wrap'>;
@@ -82,36 +38,3 @@ export default function CloudAutomationsPage() {
           </div>))}
       </div>;
     </div>);
-  const items = data?.data ? Object.entries(data.data) : []
-
-  return (
-    <div className=&quot;space-y-6&quot;>
-      <h1 className=&quot;text-3xl font-bold&quot;>Cloud Automations</h1>
-      <p className=&quot;text-gray-600 dark:text-gray-300&quot;>Autonomous agents running in the cloud. No servers to babysit. No manual ops.</p>
-      <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-4&quot;>
-        {items.map(([key, value]: any) => (
-          <div key={key} className=&quot;border rounded p-4 bg-gray-50 dark:bg-gray-900&quot;>
-            <h2 className=&quot;text-xl font-semibold&quot;>{value.name || key}</h2>
-            <p className=&quot;text-sm text-gray-500&quot;>Started: {value.startedAt || '—'}</p>
-            <p className=&quot;text-sm text-gray-500&quot;>Finished: {value.finishedAt || '—'}</p>
-            <p className={`text-sm ${value.success ? 'text-green-600' : 'text-red-600'}`}>{value.success ? 'Success' : 'Failed'}</p>
-            {value.metrics ? (
-              <pre className=&quot;mt-2 text-xs whitespace-pre-wrap&quot;>{JSON.stringify(value.metrics, null, 2)}</pre>
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-            ) : null}
-          </div>
-        ))}
-      </div>
-    </div>
-<<<<<<< HEAD
-  )
-
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-  );
-}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

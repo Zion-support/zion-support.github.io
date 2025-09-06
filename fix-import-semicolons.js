@@ -1,45 +1,8 @@
-<<<<<<< HEAD
-#!/usr/bin/env node
-import fs from "fs";
-import path from "path";
-import { glob } from "glob";
-// Find all TypeScript and JavaScript files
-const files = glob.sync("src/**/*.{ts,tsx,js,jsx}", { cwd: process.cwd() });
-let totalFixed = 0;
-files.forEach((file) => {
-  try {
-    const filePath = path.join(process.cwd(), file);
-    let content = fs.readFileSync(filePath, "utf8");
-=======
-
-const files = glob && glob.sync("src/**/*.{ts,tsx,js,jsx}", { cwd: process && process.cwd() });
-let totalFixed = 0;
-files && files.forEach((file) => {
-
-  try {
-    const filePath = path && path.join(process && process.cwd(), file);
-    let content = fs && fs.readFileSync(filePath, "utf8");
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-    let modified = false;
-<<<<<<< HEAD
-    // Fix import statements missing semicolons
-
-    // Fix import statements missing semicolons;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
 
 
     // Fix import statements missing semicolons;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     const importRegex = /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm;
-
-    const matches = content && content.match(importRegex);
-
-
     if (matches) {
       matches && matches.forEach((match) => {
         if (!match && match.trim().endsWith(";")) {
@@ -80,10 +43,6 @@ if (.ends_with (") {
         }
       });
     }
-
-    content = content && content.replace(
-      /(\w+)\s*=\s*[^;]+(?!;)\s*$/gm,
-
       (match, varName) => {
         if (
           !match && match.includes("function") &&
@@ -130,11 +89,6 @@ if (&&) {
         return match;
       }
     );
-
-
-console && console.log(`\nTotal files fixed: ${totalFixed}`);
-
-=======
 ;
     // Check condition
 if ( {) {
@@ -150,4 +104,3 @@ if ( {) {
 });
 ;
 console.log (`\n_total files fixed: ${total_fixed}`);
-;

@@ -1,19 +1,7 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import { FlaskConical, ShieldCheck, FileCode, GitBranch, Phone, Mail, MapPin, Check  } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import ServiceAds from '../components/sections/ServiceAds';
 export default function ApiMockContractTestingPage() {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import {FlaskConical, ShieldCheck, FileCode, GitBranch, Phone, Mail, MapPin, Check,} from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import ServiceAds from '../components/sections/ServiceAds';
@@ -23,16 +11,11 @@ export default function ApiMockContractTestingPage() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',;
     website: 'https://ziontechgroup.com',  };
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
   const contactInfo = {
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
-=======
 
 
 class ErrorBoundary extends React.Component {
@@ -59,7 +42,6 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 
-=======
 import Head from 'next / head';
 import {FlaskConical, ShieldCheck, FileCode, GitBranch, Phone, Mail, MapPin, Check, } from 'lucide-react';
 import Layout from '../components / layout / Layout';
@@ -72,21 +54,10 @@ function ApiMockContractTestingPage() {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     website: 'https://ziontechgroup.com',  }
 ;
   const ad_items = [;
     {
-<<<<<<< HEAD
-      title: '🧪 API Mock & Contract Testing Platform'
-      description:
-        'Spin up OpenAPI/GraphQL mocks in seconds, validate breaking changes in CI, and gate deployments with contract tests. SDK stubs, data generators, and snapshot diffs included.'
-      price: 'Starting at $69/month'
-      features: [
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
         'OpenAPI/GraphQL import and live mock server'
         'Contract tests gated in CI (GitHub/GitLab/Bitbucket)'
         'Dynamic data generators and scenario templates'
@@ -95,10 +66,6 @@ function ApiMockContractTestingPage() {
       link: 'https://ziontechgroup.com/api-mock-contract-testing'
       contactInfo
     }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
         'OpenAPI/GraphQL import and live mock server',
         'Contract tests gated in CI (GitHub/GitLab/Bitbucket)',
         'Dynamic data generators and scenario templates',
@@ -107,10 +74,6 @@ function ApiMockContractTestingPage() {
       link: 'https://ziontechgroup.com/api-mock-contract-testing',
       contactInfo,;
     },;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   ];
   const tiers = [
     {
@@ -129,17 +92,8 @@ function ApiMockContractTestingPage() {
       items: ['SAML/SSO', 'RBAC', 'Private cloud/VPC', 'Premium support']
     },  ];
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-import React from 'react';
-import Head from 'next/head';
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import { FlaskConical, ShieldCheck, FileCode, GitBranch, Phone, Mail, MapPin, Check } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import ServiceAds from '../components/sections/ServiceAds';
@@ -176,14 +130,6 @@ export default function ApiMockContractTestingPage(req, res) {
   }
 }
   ],
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
       title: '🧪 API Mock & Contract Testing Platform',
       description:;
         'Spin up OpenAPI / GraphQL mocks in seconds, validate breaking changes in CI, and gate deployments with contract tests. SDK stubs, data generators, and snapshot diffs included.',
@@ -200,25 +146,8 @@ export default function ApiMockContractTestingPage(req, res) {
   ];
 ;
   const tiers = [;
-    {
-      name: 'Starter',
-      price: '$69 / month',
-      items: ['1 project', '5 mocks', 'OpenAPI import', 'CI status checks'],
-    },
-    {
-      name: 'Team',
-      price: '$149 / month',
-      items: ['5 projects', 'Unlimited mocks', 'Record / replay', 'Slack alerts'],
-    },
-    {
-      name: 'Enterprise',
-      price: 'Custom',
-      items: ['SAML / SSO', 'RBAC', 'Private cloud / VPC', 'Premium support'],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     },  ];
 ;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   return (
     <Layout>
       <Head>
@@ -231,13 +160,6 @@ export default function ApiMockContractTestingPage(req, res) {
           heading='API Quality Fast-Track'
           subheading='Mock, validate, and ship with confidence.'
           items={adItems}
-
-        />;
-
-        <div className='max-w-5xl mx-auto mt-8'>;
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>;
-            {tiers && tiers.map(t => (;
-
               <div
                 key={t && t.name}
                 className='bg-black/30 border border-gray-700/50 rounded-2xl p-6'>;
@@ -255,9 +177,6 @@ export default function ApiMockContractTestingPage(req, res) {
                       className='flex items-start gap-2 w-4 h-4 mt-0 && 0.5 text-emerald-400'>;
                       <Check /> <span>{i}</span>;
                     </li>                  ))}
-                </ul>
-              </div>
-            ))}
           </div>
           <div className='mt-8 max-w-3xl mx-auto bg-black/20 backdrop-blur-xl rounded-2xl p-6 border border-cyan-500/30'>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-4'>
@@ -273,31 +192,6 @@ export default function ApiMockContractTestingPage(req, res) {
                 <MapPin />
                 <span>{contactInfo.address}</span>
               </div>
-      <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
-        <ServiceAds heading="API Quality Fast-Track" subheading="Mock, validate, and ship with confidence." items={adItems} />
-        <div className="max-w-5xl mx-auto mt-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {tiers.map((t) => (
-              <div key={t.name} className="bg-black/30 border border-gray-700/50 rounded-2xl p-6">
-                <div className="flex items-center gap-2 mb-2">
-                  <ShieldCheck className="w-5 h-5 text-cyan-400" />
-                  <h3 className="text-white text-xl font-bold">{t.name}</h3>
-                </div>
-                <div className="text-cyan-400 font-semibold mb-4">{t.price}</div>
-                <ul className="space-y-2 text-gray-300 text-sm">
-                  {t.items.map((i) => (
-                    <li key={i} className="flex items-start gap-2 w-4 h-4 mt-0.5 text-emerald-400"><Check /> <span>{i}</span></li>
-                  ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                </ul>;
-              </div>;
-
-            ))}
-
-            ))}
           </div>
 
           <div className="mt-8 max-w-3xl mx-auto bg-black/20 backdrop-blur-xl rounded-2xl p-6 border border-cyan-500/30">
@@ -308,37 +202,11 @@ export default function ApiMockContractTestingPage(req, res) {
             </div>
             <div className="text-center">
 
-              <a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl">Book a Demo</Link>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
             </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           </div>
         </div>
       </div>
     </Layout>
-<<<<<<< HEAD
-);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
-}
-=======
 
           </div>;
 
@@ -361,8 +229,6 @@ export default function ApiMockContractTestingPage(req, res) {
               <a
                 href='/contact'
                 className='bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl'>;
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
     <Layout>;
       <Head>;
         <title > API Mock & Contract Testing | Zion Tech Group</title>;
@@ -432,32 +298,11 @@ export default function ApiMockContractTestingPage(req, res) {
           </div>;
         </div>;
       </div>;
-
-
-=======
-
-
-}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   )
 }
 
     </Layout>);
 ;
-<<<<<<< HEAD
-=======
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

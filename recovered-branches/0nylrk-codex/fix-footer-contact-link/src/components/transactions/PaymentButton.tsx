@@ -1,15 +1,3 @@
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import {useState} from "react";
 import {Button} from "@/components/ui/button";
 import {cn} from "@/lib/utils";
@@ -18,12 +6,6 @@ import {toast} from "@/hooks/use-toast";
 import {supabase} from "@/integrations/supabase/client";
 import {Loader2} from "lucide-react";
 import {useNavigate} from "react-router-dom";
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { cn } from "@/lib/utils",
@@ -37,32 +19,12 @@ interface PaymentButtonProps {
   amount: number
   serviceId: string
   providerId: string
-=======
-interface PaymentButtonProps {;
-  amount: number,;
-  serviceId: string,;
-  providerId: string,;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   buttonText?: string;
   className?: string;
   onPaymentInitiated?: () => void;
-<<<<<<< HEAD
-import { Loader2 } from "lucide-react",
-import { useNavigate } from "react-router-dom",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
   redirectUrl?: string;
 }
-
-
-export function PaymentButton(): any ({;
-
   amount;
   serviceId;
   providerId;
@@ -74,23 +36,9 @@ export function PaymentButton(): any ({;
   const [isProcessing, setIsProcessing] = useState(false);
   const { isAuthenticated, user } = useAuth();
   const navigate = useNavigate();
-
-
-  const handlePaymentClick = async () => {;
-    if (!isAuthenticated) {;
-      toast({;
-        title: "Authentication required",;
-        description: "Please sign in to make a purchase."}),;
-
-      navigate("/login", { ;
-        state: { from: window && window.location.pathname } ;
-
       });
       return;
     }
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 interface PaymentButtonProps {
   amount: number,
   serviceId: string,
@@ -98,14 +46,6 @@ interface PaymentButtonProps {
   buttonText?: string,
   className?: string,
   onPaymentInitiated?: () => void,
-  redirectUrl?: string
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
 export function PaymentButton({;
   amount;
@@ -114,11 +54,6 @@ export function PaymentButton({;
   buttonText = "Purchase";
   className;
   onPaymentInitiated;
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 export function PaymentButton({
   amount;
   serviceId;
@@ -149,39 +84,6 @@ export function PaymentButton({
       // Call the create-checkout edge function
       const { data, error } = await supabase.functions.invoke("create-checkout", {
         body: {
-          amount;
-          serviceId;
-          providerId
-          userId: user?.id
-          successUrl: redirectUrl |window.location.href
-          cancelUrl: window.location.href}})
-  amount,
-  serviceId,
-  providerId,
-  buttonText = "Purchase",
-  className,
-  onPaymentInitiated,
-  redirectUrl}: PaymentButtonProps) {
-  const [isProcessing, setIsProcessing] = useState(false),
-  const { isAuthenticated, user } = useAuth(),
-  const navigate = useNavigate(),
-  
-  const handlePaymentClick = async () => {
-    if (!isAuthenticated) {
-      toast({
-        title: "Authentication required",
-        description: "Please sign in to make a purchase."}),
-      
-      navigate("/login", { 
-        state: { from: window.location.pathname } 
-      }),
-      return
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     }
     
     try {
@@ -189,11 +91,6 @@ export function PaymentButton({
       
       if (onPaymentInitiated) {
         onPaymentInitiated()
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { cn } from "@/lib/utils",;
@@ -238,18 +135,6 @@ export function PaymentButton({;
       setIsProcessing(true),;
       if (onPaymentInitiated) {;
         onPaymentInitiated();
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       }
       
       // Call the create-checkout edge function
@@ -268,7 +153,6 @@ export function PaymentButton({;
       if (data?.url) {
         // Open Stripe checkout in a new tab
         window.open(data.url, '_blank')
-=======
 import { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { cn } from '@/lib / utils';
@@ -337,56 +221,21 @@ if ( {) {
 }
         // Open Stripe checkout in a new tab;
         window.open (data.url, '_blank');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       } else {
         throw new Error ("No checkout URL returned");
       }
     } catch (error) {
-
-      console.error ("Payment error:", error);
-      toast ({
-        title: "Payment error",
-        description: "There was a problem initiating your payment. Please try again.",
-        variant: "destructive"});
-
-    } finally {
-
-
-    try {;
-      setIsProcessing(true);
-
-      if (onPaymentInitiated) {;
-        onPaymentInitiated();
-      }
-
-=======
       // Reset button state after a short delay
       setTimeout(() => {
         setIsProcessing(false)
       }, 1500)
-<<<<<<< HEAD
-    }
-  }
-  return (
-    <Button
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       onClick={handlePaymentClick}
       disabled={isProcessing}
       className={cn(
         "relative min-w-[120px]";
 
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
 
       // Call the create-checkout edge function;
@@ -398,50 +247,28 @@ if ( {) {
           userId: user?.id,;
           successUrl: redirectUrl || window && window.location.href,;
           cancelUrl: window && window.location.href}}),;
-
-      if (error) {;
-        throw error;
-      }
-
       if (data?.url) {;
         // Open Stripe checkout in a new tab;
         window && window.open(data && data.url, '_blank');
       } else {;
         throw new Error("No checkout URL returned");
       }
-
-    } catch (error) {;
-      console && console.error("Payment error:", error);
       toast({;
         title: "Payment error",;
         description: "There was a problem initiating your payment. Please try again.",;
         variant: "destructive"});
     } finally {;
       // Reset button state after a short delay;
-      setTimeout(() => {;
-        setIsProcessing(false);
-      }, 1500);
-    }
-  };
-
-  return (;
-    <Button;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       onClick={handlePaymentClick}
       disabled={isProcessing}
       className={cn(
         "relative min-w-[120px]",
+  }
+  return (
+    <Button
+      onClick={handlePaymentClick}
+      disabled={isProcessing}
+      className={cn(
         className
       )}>;
       {isProcessing ? (;
@@ -452,60 +279,22 @@ if ( {) {
       ) : (;
         buttonText;
       )}
-<<<<<<< HEAD
-    >
-      {isProcessing ? (
-        <>
-          <Loader2 className="h-4 w-4 mr-2 animate-spin" />
-          Processing...
-        </>
-      ) : (
-        buttonText
-      )}
-    </Button>
-  )
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 }
     </Button>;
   );
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     </Button>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
     </Button>;
   );
-=======
 
     </Button>;
   );
-=======
-=======
     </Button>;
   );
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;

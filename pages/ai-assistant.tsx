@@ -1,21 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 const AIAssistant: React.FC = () => {
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import React from 'react',
 import Head from 'next/head';
 
@@ -33,11 +17,6 @@ import Head from 'next/head';
               AI Assistant;
             </h1>;
             <p className='text-gray-300 text-lg'>;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <title > AI Assistant | Zion Tech Group</title>;
         <meta;
           name='description';
@@ -59,7 +38,6 @@ import Head from 'next/head';
           </header>;
 
               className='px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white'>;
-=======
           <section className='grid grid - cols - 1 md:grid - cols - 3 gap - 6'>;
             {[;
               'Research and summarize documents and web sources',
@@ -105,24 +83,8 @@ import Head from 'next/head';
       </main>;
 
 
-<<<<<<< HEAD
-import Head from 'next/head',
-import Button from '../components/ui/Button',
-export default function AIAssistantPage() {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   return (
     <>
       <Head>
@@ -138,20 +100,6 @@ export default function AIAssistantPage() {
           </header>
           <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              'Research and summarize documents and web sources'
-              'Draft emails, posts, briefs, and reports'
-              'Auto-schedule meetings and follow-ups'
-              'Integrations: Gmail, Google Drive, Slack, Calendar'
-              'Team approvals and audit trail'
-              'Starting at $99/mo'
-            ].map(f => (
-              <div
-                key={f}
-                className='p-6 rounded-2xl bg-black/40 border border-gray-700/60 text-gray-200'
-              >
-                {f}
-              </div>
-            ))}
               'Research and summarize documents and web sourcesDraft emails, posts, briefs, and reportsAuto-schedule meetings and follow-upsIntegrations: Gmail, Google Drive, Slack, CalendarTeam approvals and audit trailStarting at $99/mo'
             ].map((f) => (
               <div key={f} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 text-gray-200">{f}</div>
@@ -165,41 +113,10 @@ export default function AIAssistantPage() {
             <Button href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">Request a Demo</Button>
           </div>
         </div>
-<<<<<<< HEAD
-        <div className="bg-blue-50 rounded-lg p-8 text-center">
-          <h2 className="text-2xl font-bold mb-4">Ready to Get Started?</h2>
-          <p className="text-lg text-gray-700 mb-6">
-            Experience the power of AI assistance for your business operations.
-          </p>
-          <div className="flex justify-center gap-4">
-            <a href="/contact" className="bg-blue-600 text-white px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white rounded-lg hover: bg-blue-700">
-              Request a Demo
-            </a>
-            <a href="/about" className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50">
-              Learn More
-            </a>
-          </div>
-        </div>
-      </main>
-    </Layout>
-  );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-}
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
 
 
 }
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
 import Button from '../components/ui/Button';
 export default function AIAssistantPage() {
   return (
@@ -226,24 +143,11 @@ export default function AIAssistantPage() {
             <Button href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">Request a Demo</Button>
           </div>
         </div>
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       </div>
     </>
   )
 }
-<<<<<<< HEAD
-=======
-
-    </Layout>);
-;
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+
+

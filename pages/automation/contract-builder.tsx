@@ -1,22 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import React, { useEffect, useMemo, useState } from 'react',;
 import DatePicker from 'react-datepicker',;
 import { useRouter } from 'next/router',;
 type PaymentType = 'hourly' | 'fixed',
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React, { useEffect, useMemo, useState } from 'react';
 import DatePicker from 'react-datepicker';
 import { useRouter } from 'next/router';
@@ -57,7 +44,6 @@ export default function ContractBuilderPage() {
       !!endDate &&
       (paymentType === 'hourly' ? hourlyRate > 0 : fixedAmount > 0)
     )
-  }, [talentName, projectName, scopeSummary, startDate, endDate, paymentType, hourlyRate, fixedAmount])
   async function submitForm(event: React.FormEvent) {
     event.preventDefault()
     if (!canSubmit) return
@@ -103,139 +89,15 @@ export default function ContractBuilderPage() {
       setContract(data.contract)
     } catch (e: any) {
       setError(e?.message |'Failed to generate contract')
-=======
-import React, { useEffect, useMemo, useState } from 'react',
-import DatePicker from 'react - datepicker',
-import { use_router } from 'next / router',
-type PaymentType = 'hourly' | 'fixed',
-export default /**
- * ContractBuilderPage - Function description
- */
-function ContractBuilderPage() {
-  const router = use_router (),
-  const [talent_name, setTalentName] = useState (''),
-  const [project_name, setProjectName] = useState (''),
-  const [scope_summary, setScopeSummary] = useState (''),
-  const [start_date, setStartDate] = useState < Date | null>(null),
-  const [end_date, setEndDate] = useState < Date | null>(null),
-  const [payment_type, setPaymentType] = useState < PaymentType>('hourly'),
-  const [currency, set_currency] = useState ('USD'),
-  const [hourly_rate, setHourlyRate] = useState < number>(100),
-  const [weeklyHourCap, setWeeklyHourCap] = useState < number | ''>(''),
-  const [fixed_amount, setFixedAmount] = useState < number>(5000),
-  const [milestone_summary, setMilestoneSummary] = useState (''),
-  const [payment_schedule, setPaymentSchedule] = useState ('Net 15 on invoice'),
-  const [nda, set_nda] = useState (true),
-  const [ip_transfer, setIpTransfer] = useState (true),
-  const [governing_law, setGoverningLaw] = useState ('Delaware, USA'),
-  const [revision_rounds, setRevisionRounds] = useState < number>(2),
-  const [loading, set_loading] = useState (false),
-  const [error, set_error] = useState < string | null>(null),
-  const [contract, set_contract] = useState < string>(''),
-  useEffect (() => {
-    // Check condition
-if (return, ) {
-  $2
-}
-    const { talent, project } = router.query as { talent?: string, project?: string },
-    if (setTalentName (decodeURIComponent (talent)), ) {
-  $2
-}
-    if (setProjectName (decodeURIComponent (project))) {
-  $2
-}
-  }, [router.is_ready, router.query, talent_name, project_name]),
-  const can_submit = useMemo (() => {
-    return (
-      talent_name.trim ().length > 0 &&;
-      project_name.trim ().length > 0 &&;
-      scope_summary.trim ().length > 0 &&;
-      !!start_date &&;
-      !!end_date &&;
-      (payment_type === 'hourly' ? hourly_rate > 0 : fixed_amount > 0));
-  }, [talent_name, project_name, scope_summary, start_date, end_date, payment_type, hourly_rate, fixed_amount]),
-  async /**
- * submit_form - Function description
- */
-function submit_form() {
-    event.prevent_default (),
-    // Check condition
-if (return, ) {
-  $2
-}
-    set_loading (true),
-    set_error (null),
-    set_contract (''),
-    try {
-      const body = {
-        talent_name,
-        project_name,
-        scope_summary,
-        start_date: start_date?.toISOString ().slice (0, 10),
-        end_date: end_date?.toISOString ().slice (0, 10),
-        payment:;
-          payment_type === 'hourly';
-            ? {
-                type: 'hourly',
-                currency,
-                hourly_rate,
-                weeklyHourCap: typeof weeklyHourCap === 'number' ? weeklyHourCap : undefined,
-                payment_schedule}
-            : {
-                type: 'fixed',
-                currency,
-                total_amount: fixed_amount,
-                milestone_summary: milestone_summary || undefined,
-                payment_schedule},
-        clauses: {
-          nda,
-          ip_transfer},
-        governing_law,
-        revision_rounds},
-      const res = await fetch ('/api / ai - contract', {
-        method: 'POST',
-        headers: {
-          'Content - Type': 'application / json'},
-        body: JSON.stringify (body)}),
-      // Check condition
-if ( {) {
-  $2
-}
-        const data = await res.json ().catch (() => ({})),
-        throw new Error (data?.error || `Request failed: ${res.status}`);
-      }
-      const data = (await res.json ()) as { contract: string },
-      set_contract (data.contract);
-    } catch (e: any) {
-      set_error (e?.message || 'Failed to generate contract');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       set_loading (false);
     }
   }
 
-<<<<<<< HEAD
-    URL.revokeObjectURL(url)
-  }
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     setLoading(true),
     setError(null),
     setContract(''),
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useEffect, useMemo, useState } from 'react';
 import DatePicker from 'react-datepicker';
 import { useRouter } from 'next/router';
@@ -284,17 +146,6 @@ export default function ContractBuilderPage(req, res) {
     setLoading(true);
     setError(null);
     setContract('');
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     try {
       const body = {;
         talentName;
@@ -313,72 +164,6 @@ export default function ContractBuilderPage(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-            : {;
-                type: 'fixed',;
-                currency,;
-                totalAmount: fixedAmount,;
-                milestoneSummary: milestoneSummary || undefined,;
-                paymentSchedule},;
-        clauses: {;
-          nda,;
-          ipTransfer},;
-        governingLaw,;
-        revisionRounds},;
-      const res = await fetch('/api/ai-contract', {;
-        method: 'POST',;
-        headers: {;
-          'Content-Type': 'application/json'},;
-        body: JSON.stringify(body)}),;
-      if (!res.ok) {;
-        const data = await res.json().catch(() => ({}));
-        throw new Error(data?.error || `Request failed: ${res.status}`);
-        } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-      const data = (await res.json()) as { contract: string };
-      setContract(data.contract);
-    } catch (error) {
-      setError(e?.message || 'Failed to generate contract');
-    } finally {;
-      setLoading(false);
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-  function copyToClipboard() {;
-    if (!contract) return;
-    void navigator.clipboard.writeText(contract);
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-  function downloadAsTxt() {;
-    if (!contract) return;
-    const blob = new Blob([contract], { type: 'text/plain,charset=utf-8' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `contract-${projectName.replace(/\s+/g, '-').toLowerCase()}.txt`;
-    a.click();
-    URL.revokeObjectURL(url);
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
   return (
     <div className="max-w-5xl mx-auto">
       <h1 className="text-3xl font-bold mb-6">Contract Builder</h1>
@@ -469,30 +254,12 @@ export default function ContractBuilderPage(req, res) {
           <input type="number" className="w-full input input-bordered" value={revisionRounds} onChange={(e) => setRevisionRounds(Number(e.target.value))} />
         </div>
         <div className="md:col-span-2 flex items-center gap-3">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <button type="submit" className="btn btn-primary" disabled={!canSubmit |loading}>
-=======
-          <button type="submit" className="btn btn-primary" disabled={!canSubmit || loading}>
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-            {loading ? 'Generating…' : 'Generate contract'}
-          </button>
-          {error && <span className="text-red-600 text-sm">{error}</span>}
-=======
-<<<<<<< HEAD
-          <button type="submit" className="btn btn-primary" disabled={!canSubmit || loading}>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
           <button type="submit" className="btn btn-primary" disabled={!canSubmit |loading}>
           <button type="submit" className="btn btn-primary" disabled={!canSubmit || loading}>
             {loading ? 'Generating…' : 'Generate contract'}
           </button>
           {error && <span className="text-red-600 text-sm">{error}</span>}
           <button type="submit" className="btn btn-primary" disabled={!canSubmit || loading}>
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
             {loading ? 'Generating…' : 'Generate contract'  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -504,24 +271,13 @@ export default function ContractBuilderPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
 
 
           <button type="submit" className="btn btn-primary" disabled={!canSubmit || loading}>
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
         </div>
       </form>
-=======
   /**
  * copyToClipboard - Function description
  */
@@ -642,20 +398,11 @@ if (return, ) {
           {error && <span className="text - red - 600 text - sm">{error}</span>}
         </div>;
       </form>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {contract && (
-
-=======
-}
-
-=======
           </article>;
         </div>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
         <div className="mt-8">
           <div className="flex items-center justify-between mb-3">
             <h2 className="text-2xl font-semibold">Generated Contract</h2>
@@ -665,31 +412,10 @@ if (return, ) {
             </div>
           </div>
           <article className="prose dark:prose-invert max-w-none whitespace-pre-wrap bg-white dark:bg-black p-6 rounded-lg border border-gray-200 dark:border-neutral-800">
-<<<<<<< HEAD
-            {contract}
-          </article>
-        </div>
-      )}
-    </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  )
-=======
-  )
-  );
-};
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
 
   );
 };
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {contract  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -708,16 +434,3 @@ if (return, ) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-}
-}
-=======
-
-}
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

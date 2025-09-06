@@ -1,5 +1,3 @@
-return (
-    <>;
 import React, { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import {  Dialog
@@ -9,6 +7,10 @@ import {  Dialog
   DialogDescription
 } from '@/components/ui/dialog'
 import { DisputeForm } from './DisputeForm'
+Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
 
 import { ShieldAlert } from 'lucide-react'
   DialogDescription} from "@/components/ui/dialog"
@@ -22,15 +24,24 @@ interface RaiseDisputeButtonProps {
   className?: string
 
 export function RaiseDisputeButton({
-=======
 Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { 
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription} from "@/components/ui/dialog",
+import { DisputeForm } from "./DisputeForm",
+import { useRouter } from 'next/router',
+import { ShieldAlert } from 'lucide-react'
+
+interface RaiseDisputeButtonProps {
   projectId: string,
   milestoneId?: string,
   variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link",
@@ -47,9 +58,28 @@ export function RaiseDisputeButton({
 }: RaiseDisputeButtonProps) {
 
 
+  const [isDialogOpen, setIsDialogOpen] = useState(false),
+  const router = useRouter(),
+  
+  const handleDisputeCreated = (disputeId: string) => {
+    setIsDialogOpen(false),
+    router.push(`/dashboard/disputes/${disputeId}`)
+  },
+  
+  return (
+    <>
+      <Button 
+        variant={variant} 
+        size={size} 
+        className={className} 
+        onClick={() => setIsDialogOpen(true)}
+      >
+        <ShieldAlert className="h-4 w-4 mr-2" />
+        Raise Dispute
+      </Button>
+      
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
         <DialogContent className='sm:max-w-[550px]'>
-          <DialogHeader>
             <DialogTitle>Raise a Dispute</DialogTitle>
             <DialogDescription>
               Please provide details about the issue you're experiencing with
@@ -85,11 +115,6 @@ export function RaiseDisputeButton({
             </DialogDescription>;
           </DialogHeader>;
 
-            onCancel={() => setIsDialogOpen(false)}          />;
-        </DialogContent>;
-      </Dialog>;
-    </>;
-  );
 }
 
           <DisputeForm;
@@ -102,8 +127,6 @@ export function RaiseDisputeButton({
     </>
   )
 }
-
-
           
           <DisputeForm 
 import React, { useState } from "react",;
@@ -166,6 +189,3 @@ export function RaiseDisputeButton({;
       </Dialog>;
     </>;
   );
-};
-}
-;

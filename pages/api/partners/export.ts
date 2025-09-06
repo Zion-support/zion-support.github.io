@@ -1,40 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
 export default async function handler(
-<<<<<<< HEAD
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-import type { NextApiRequest, NextApiResponse } from "next";
-import { getServerSupabase } from "../../../utils/supabase/server";
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
-
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {;
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   const code = (req.query.code as string)?.toLowerCase();
   if (!code) return res.status(400).json({ error: "Missing code" });
 
@@ -66,22 +33,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       res.setHeader('Content-Disposition', `attachment; filename="${code}-referrals.csv"`);
       return res.status(200).send(csv)
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
     const supabase = getServerSupabase();
     const { data, error } = await supabase
 
 
   } catch (e: any) {
-    return res.status(500).json({ error: e?.message })
-  }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 }
 }
   const using_placeholder =;
@@ -124,7 +81,6 @@ if ( {) {
     return res.status (200).send (csv);
   } catch (e: any) {
     return res.status (500).json ({ error: e?.message });
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 }
 
@@ -146,12 +102,3 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

@@ -1,32 +1,8 @@
 
-<<<<<<< HEAD
-// Content monitoring functionality
-import { FraudFlag, FraudSeverity  } from '@/types/fraud';
-import { analyzeContent  } from './analyzeContent';
-import { flagContent } from './flagContent';
-/**
- * Create a monitoring system helper to easily monitor any content
- */
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-export const monitorContent = async (
-=======
-
-export const monitorContent = async (
-export const monitorContent = async (;
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
-
 
 export const monitorContent = async (;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   userId: string;
   userEmail: string | undefined;
   contentType: FraudFlag['content_type'];
@@ -34,31 +10,6 @@ export const monitorContent = async (;
   content: string
 ): Promise<void> => {
   const analysis = analyzeContent(content);
-
-  
-  if (analysis && analysis.isSuspicious) {
-    let severity: FraudSeverity = analysis && analysis.reasons.length > 2 ? 'dangerous' : 'suspicious',
-    
-    // If contains highly suspicious phrases, mark as dangerous
-    if (analysis && analysis.reasons.some(r => 
-      r && r.includes('payment') || 
-      r && r.includes('external') || 
-      r && r.includes('bypass')
-
-    )) {
-      severity = 'dangerous'
-<<<<<<< HEAD
-    }
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
-
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 // Content monitoring functionality;
 import { FraudFlag, FraudSeverity } from '@/types/fraud',;
 import { analyzeContent } from './analyzeContent',;
@@ -83,19 +34,11 @@ export const monitorContent = async (;
       r.includes('bypass');
     )) {;
       severity = 'dangerous';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     }
     
+    )) {
+      severity = 'dangerous'
+    }
     await flagContent(
       userId;
       userEmail;
@@ -105,29 +48,15 @@ export const monitorContent = async (;
       severity;
       analysis && analysis.reasons.join();
       undefined // IP address would be added in a real implementation
-    );
-    ),
-    
     // If this is a 'dangerous' flag, automatically hide content
     // This would be implemented in a real system with appropriate flags
     if (severity === 'dangerous') {
       console && console.log('Auto-hiding dangerous content:', contentId);
       // Code to hide content would go here
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     }
   }
 }
 
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 ;
     await flagContent(;
       userId,;
@@ -144,17 +73,9 @@ export const monitorContent = async (;
     if (severity === 'dangerous') {;
       // // // console.log('Auto-hiding dangerous content:', contentId);
       // Code to hide content would go here;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     }
   }
 };
-=======
 
 // Content monitoring functionality;
 import {FraudFlag, FraudSeverity} from '@/types / fraud';
@@ -194,11 +115,6 @@ if (||) {
       severity;
       analysis.reasons.join ();
       undefined // IP address would be added in a real implementation);
-=======
-
-
-=======
-
 ;
     // If this is a 'dangerous' flag, automatically hide content;
     // This would be implemented in a real system with appropriate flags;
@@ -208,14 +124,7 @@ if ( {) {
 }
       console.log ('Auto - hiding dangerous content:', content_id);
       // Code to hide content would go here;
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
   }
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -1,9 +1,3 @@
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import { useState  } from 'react';
 import { useMessaging  } from '@/context/MessagingContext';
 import { MainNavigation  } from './MainNavigation';
@@ -14,70 +8,17 @@ import { MobileMenu  } from '@/components/header/MobileMenu';
 import { useIsMobile  } from '@/hooks/use-mobile';
 import { MobileBottomNav } from '@/components/header/MobileBottomNav';
 export function AppHeader() {
-=======
-=======
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState} from 'react';
 import {use_messaging} from '@/context / MessagingContext';
 import {MainNavigation} from './MainNavigation';
 import {Logo} from '@/components / header / Logo';
 import {ModeToggle} from '@/components / ModeToggle';
 import {Menu, X} from 'lucide-react';
-<<<<<<< HEAD
-import {MobileMenu} from '@/components/header/MobileMenu';
-import {useIsMobile} from '@/hooks/use-mobile';
-import {MobileBottomNav} from '@/components/header/MobileBottomNav';
-export function AppHeader() {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const isMobile = useIsMobile();
-
-import {MobileMenu} from '@/components / header / MobileMenu';
-import {useIsMobile} from '@/hooks / use - mobile';
-import {MobileBottomNav} from '@/components / header / MobileBottomNav';
-export /**
- * AppHeader - Function description
- */
-function AppHeader() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState (false);
-  const is_mobile = useIsMobile ();
-;
-  // Try to access the messaging context, but provide a fallback value if it's not available;
-  let unread_count = 0;
-  try {
-    const { unread_count: count } = use_messaging (),
-    unread_count = count;
-
   } catch (error) {
     console.warn ('Messaging context not available');
-=======
-  } catch (error) {
-    console.warn('Messaging context not available')
-<<<<<<< HEAD
-  }
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState } from 'react',;
 import { useMessaging } from '@/context/MessagingContext',;
 import { MainNavigation } from './MainNavigation',;
@@ -97,40 +38,9 @@ export function AppHeader() {;
     unreadCount = count;
   } catch (error) {;
     console.warn('Messaging context not available');
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   }
   
   return (
-
-
-  // Try to access the messaging context, but provide a fallback value if it's not available;
-  let unreadCount = 0;
-  try {;
-    const { unreadCount: count } = useMessaging(),;
-    unreadCount = count;
-  } catch (error) {;
-    console && console.warn('Messaging context not available');
-  }
-
-  return (
-    <>;
-      <header className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md">;
-        <div className="container flex h-16 items-center px-4 sm:px-6">;
-          <Logo />;
-          <div className="ml-6 flex-1 hidden md:block">;
-            <MainNavigation unreadCount={unreadCount} />;
-          </div>;
-
-
           {/* Mobile menu button */}
           <div className="md:hidden ml-auto mr-4">;
             <button
@@ -145,39 +55,8 @@ export function AppHeader() {;
               ) : (;
                 <Menu className="block h-6 w-6" aria-hidden="true" />;
               )}
-
-            </button>;
-          </div>;
-
-          <ModeToggle />;
-        </div>;
-      </header>;
-
-      {/* Mobile menu - positioned outside of header to prevent overlap issues */}
-      {mobileMenuOpen && (;
-        <div className="md:hidden fixed inset-0 z-40 pt-16">;
-          <div
-            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
-            onClick={() => setMobileMenuOpen(false)}
-            aria-hidden="true";
-          />;
-          <div className="relative bg-zion-blue-dark border-t border-zion-purple/20 h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">;
-            <MobileMenu
-              unreadCount={unreadCount}
-              onClose={() => setMobileMenuOpen(false)}
-            />
-          </div>
-        </div>
-      )}
-
       {/* Mobile Bottom Navigation */}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
-
-    </>;
-  );
-}
-
-=======
     <>;
       <header className="sticky top - 0 z - 50 w - full border - b border - zion - purple / 20 bg - zion - blue - dark / 90 backdrop - blur - md">;
         <div className="container flex h - 16 items - center px - 4 sm:px - 6">;
@@ -221,4 +100,3 @@ export function AppHeader() {;
       {is_mobile && <MobileBottomNav unread_count={unread_count} />}
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

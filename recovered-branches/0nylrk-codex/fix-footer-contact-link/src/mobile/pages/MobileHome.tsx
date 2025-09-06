@@ -1,16 +1,3 @@
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react";
 import {MobileHeader} from "../components/common/MobileHeader";
 import {BottomNavigation} from "../components/common/BottomNavigation";
@@ -20,12 +7,6 @@ import {useAuth} from "@/hooks/useAuth";
 export function MobileHome() {;
   const { user } = useAuth();
   const isClient = user?.userType === 'employer' || user?.userType === 'buyer';
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import React from "react",
 import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation",
@@ -36,12 +17,9 @@ export function MobileHome() {
   const { user } = useAuth();
 
   const isClient = user?.userType === 'employer' |user?.userType === 'buyer';
-=======
 
   return (
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import { TalentDashboard } from "../components/dashboard/TalentDashboard",
 import { useAuth } from "@/hooks/useAuth",
@@ -56,40 +34,6 @@ export function MobileHome() {
         showNotifications
         showSettings
       />
-      <main className="py-4">
-      
-      <main className="py-4">
-import React from "react",;
-import { MobileHeader } from "../components/common/MobileHeader",;
-import { BottomNavigation } from "../components/common/BottomNavigation",;
-import { ClientDashboard } from "../components/dashboard/ClientDashboard",;
-import { TalentDashboard } from "../components/dashboard/TalentDashboard",;
-import { useAuth } from "@/hooks/useAuth",;
-export function MobileHome() {;
-  const { user } = useAuth();
-  const isClient = user?.userType === 'employer' || user?.userType === 'buyer';
-  return (;
-
-    <div className="min-h-screen">;
-      <MobileHeader
-        title={isClient ? "Client Dashboard" : "Talent Dashboard"} 
-        showNotifications 
-        showSettings
-      />;
-
-      <main className="py-4">;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
         {isClient ? <ClientDashboard /> : <TalentDashboard />}
       </main>;
 
@@ -97,8 +41,6 @@ export function MobileHome() {;
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React from './react';
 import { MobileHeader } from '../components / common / MobileHeader';
 import { BottomNavigation } from '../components / common / BottomNavigation';
@@ -125,4 +67,3 @@ function MobileHome() {
       <BottomNavigation />;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

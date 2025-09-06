@@ -1,13 +1,3 @@
-
-import React from 'react';
-
-
-
-
-
-
-// Export all mobile pages;
-
 export * from './pages/MobileOnboarding';
 export * from './pages/MobileHome';
 export * from './pages/MobileBrowse';
@@ -15,29 +5,9 @@ export * from './pages/MobileProjects';
 export * from './pages/MobileMessages';
 export * from './pages/MobileResumeBuilder';
 export * from './pages/MobileJobPost';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
-import {MobileApp} from './MobileApp';
-export { MobileApp }
-;
-=======
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react',;
 import { MobileApp } from './MobileApp',;
 export { MobileApp },;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 // Export all mobile components for potential reuse in other projects;
 export * from './components / common / BottomNavigation';
 export * from './components / common / MobileHeader';
@@ -49,8 +19,6 @@ export * from './components / browse / BrowseCards';
 export * from './components / browse / BrowseFilters';
 export * from './components / projects / MobileProjectView';
 export * from './theme / MobileThemeProvider';
-;
-// Export all mobile pages;
 
 export * from './pages/MobileOnboarding',;
 export * from './pages/MobileHome',;
@@ -59,15 +27,11 @@ export * from './pages/MobileProjects',;
 export * from './pages/MobileMessages',;
 export * from './pages/MobileResumeBuilder';
 export * from './pages/MobileJobPost';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+export * from './pages / MobileOnboarding';
+export * from './pages / MobileHome';
+export * from './pages / MobileBrowse';
+export * from './pages / MobileProjects';
+export * from './pages / MobileMessages';
+export * from './pages / MobileResumeBuilder';
+export * from './pages / MobileJobPost';
+;

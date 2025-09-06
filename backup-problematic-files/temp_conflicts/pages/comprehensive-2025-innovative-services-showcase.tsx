@@ -196,7 +196,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {;
                 <div className="text-gray-300 text-sm">Autonomous Operations</div>;
               </div>;
               <div className="p-4 group hover:bg-white/5 rounded-xl transition-all duration-300 border border-green-400/20">;
-                <div className="text-3xl font-bold text-green-400 mb-2 group-hover:text-green-300 transition-colors">∞</div>;
+                <div className="text-3xl font-bold text-green-400 mb-2 group-hover:text-green-300 transition-colors"></div>;
                 <div className="text-gray-300 text-sm">Future Possibilities</div>;
               </div>;
             </motion.div>;
@@ -458,12 +458,3 @@ export default function Comprehensive2025InnovativeServicesShowcase() {;
       </section>;
     </Layout>;
   );
-:temp_conflicts/pages/comprehensive-2025-innovative-services-showcase.tsx
-};
-export default Comprehensive2025InnovativeServicesShowcase;
-}
-}
-},;
-;
-export default Comprehensive2025InnovativeServicesShowcase,;
-:backup-problematic-files/temp_conflicts/pages/comprehensive-2025-innovative-services-showcase.tsx

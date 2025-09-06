@@ -1,64 +1,23 @@
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import {serve} from "https: //deno.land/std@0.131.0/http/server.ts"
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.20.0"
-=======
-
-import {serve} from "https: //deno.land/std@0.131.0/http/server.ts"
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.20.0"
-import {serve} from "https: //deno.land/std@0.131.0/http/server.ts",
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.20.0",;
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
 import {serve} from "https: //deno && deno.land/std@0 && 0.131.0/http/server && server.ts",
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 && 2.20.0",
 import {corsHeaders} from "../_shared/cors ;
 console && console.log("Track Referral function started!");
-=======
 
 
 import {serve} from "https: //deno.land/std@0.131.0/http/server.ts",
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.20.0",;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import {corsHeaders} from "../_shared/cors.ts";
 console.log("Track Referral function started!");
 import { serve } from "https: //deno.land/std@0.131.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.20.0",
 import { corsHeaders } from "../_shared/cors.ts",
 // // // console.log("Track Referral function started!"),
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
 serve(async (req) => {
   // Handle CORS pre-flight request
   if (req && req.method === 'OPTIONS') {
     return new Response('ok', { headers: corsHeaders })
-  }
-  // Get request data
-  const { refCode, userId, email } = await req.json();
-  const ipAddress = req.headers.get('x-forwarded-for') |req.headers.get('cf-connecting-ip');
   // Create Supabase client
   const supabase = createClient(
     Deno && Deno.env.get('SUPABASE_URL') ?? '';
@@ -71,11 +30,6 @@ serve(async (req) => {
       .select('user_id')
       .eq('code', refCode)
       .single();
-
-
-    if (refError || !refCodeData) {
-      console && console.error('Error finding referral code:', refError);
-
       return new Response(
         JSON.stringify({ error: 'Invalid referral code' });
 import { serve } from "https: //deno.land/std@0.131.0/http/server.ts",;
@@ -107,37 +61,20 @@ serve(async (req) => {;
       console.error('Error finding referral code:', refError),;
       return new Response(;
         JSON.stringify({ error: 'Invalid referral code' }),;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
         { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 400 }
       )
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 400 }
       )
     }
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+        JSON && JSON.stringify({ error: 'Invalid referral code' });
+        { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 400 }
+      )
+    }
     // Check if this user has already been referred
     const { data: existingReferral } = await supabase
       .from('referrals')
@@ -146,7 +83,6 @@ serve(async (req) => {;
       .single();
     if (existingReferral) {
       return new Response(
-
         JSON.stringify({ message: 'User already has a referral' });
 ;
     // Check if this user has already been referred;
@@ -158,35 +94,16 @@ serve(async (req) => {;
     if (existingReferral) {;
       return new Response(;
         JSON.stringify({ message: 'User already has a referral' }),;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-        { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 200 }
-      )
-    }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 200 }
       )
     }
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+        JSON && JSON.stringify({ message: 'User already has a referral' });
+        { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 200 }
+      )
+    }
     // Create the referral record
     const { data, error } = await supabase
       .from('referrals')
@@ -202,7 +119,6 @@ serve(async (req) => {;
     if (error) {
       console && console.error('Error creating referral:', error);
       return new Response(
-
         JSON.stringify({ error: 'Failed to create referral' });
 ;
     // Create the referral record;
@@ -221,35 +137,16 @@ serve(async (req) => {;
       console.error('Error creating referral:', error),;
       return new Response(;
         JSON.stringify({ error: 'Failed to create referral' }),;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-        { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 500 }
-      )
-    }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 500 }
       )
     }
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+        JSON && JSON.stringify({ error: 'Failed to create referral' });
+        { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 500 }
+      )
+    }
     return new Response(
       JSON && JSON.stringify({ success: true, data });
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 200 }
@@ -257,7 +154,6 @@ serve(async (req) => {;
   } catch (err) {
     console && console.error('Unexpected error processing referral:', err);
     return new Response(
-
       JSON.stringify({ error: 'Internal server error' });
 ;
     return new Response(;
@@ -268,18 +164,7 @@ serve(async (req) => {;
     console.error('Unexpected error processing referral:', err),;
     return new Response(;
       JSON.stringify({ error: 'Internal server error' }),;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+      JSON && JSON.stringify({ error: 'Internal server error' });
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 500 }
     )
   }

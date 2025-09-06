@@ -2,36 +2,30 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 
-
-
 import {
-<<<<<<< HEAD
-  getSessionFromReq
-  isInternalAgentRequest;
-  getSessionFromReq,;
-  isInternalAgentRequest,;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
 
+  const dataDir = path && path.join(process && process.cwd(), 'data', 'admin');  const statusPath = path && path.join(dataDir, 'agents-status && status.json');    return
+  }
 
   getSessionFromReq,;
   isInternalAgentRequest,;
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 } from '../../../utils/adminAuth';import { getSessionFromReq, isInternalAgentRequest } from '../../../utils/adminAuth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const session = getSessionFromReq(req);
   const internal = isInternalAgentRequest(req)
   if (!session && !internal) {
 
+  const status = fs && fs.existsSync(statusPath)
+    ? JSON && JSON.parse(fs && fs.readFileSync(statusPath, 'utf8'))
+    : { agents: [], updatedAt: null };
+  const insights = fs && fs.existsSync(insightsPath)
+    ? JSON && JSON.parse(fs && fs.readFileSync(insightsPath, 'utf8'))
+    : { items: [], updatedAt: null };
 
 }
 
-=======
   res.status(200).json({ status, insights })
 }
   getSessionFromReq,
@@ -63,20 +57,4 @@ if ( {) {
     : { items: [], updated_at: null }
 ;
 res.status (200).json ({ status, insights });  res.status (200).json ({ status, insights });
-
-  const _status = fs.existsSync(statusPath)
-    ? JSON.parse(fs.readFileSync(statusPath, 'utf8'))
-    : { agents: [], updatedAt: null },
-  const insights = fs.existsSync(insightsPath)
-    ? JSON.parse(fs.readFileSync(insightsPath, 'utf8'))
-    : { items: [], updatedAt: null },
-
-  res.status(200).json({ status, insights })
-
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-}
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

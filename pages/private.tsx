@@ -1,70 +1,13 @@
-import { GetServerSideProps, GetServerSidePropsContext } from 'next / types';
-import { createServerSideClient } from '../src / utils / supabase / server';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
-import { Button } from '@/components / ui / button';
-import { Badge } from '@/components / ui / badge';
-import { User, Mail, Calendar, Shield } from 'lucide-react';
-import Link from 'next/link';
-import Head from 'next/head';
-import type { User as SupabaseUser } from '@supabase/supabase-js';
-interface PrivatePageProps {user: SupabaseUser;
-interface PrivatePageProps {;
-  user: SupabaseUser;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 }
 export default /**
  * PrivatePage - Function description
  */
 function PrivatePage() {
   return (
-    <>
-      <Head>
-        <title>Private Profile - Zion Tech Marketplace</title>;
-        <meta name=&quot;description&quot; content=&quot;Private user profile page&quot; />
-      </Head>
-      <div className=&quot;container max-w-4xl mx-auto py-8&quot;>
-        <title>Private Profile - Zion Tech Marketplace</title>
-        <meta name="description" content="Private user profile page" />
-      </Head>
-<<<<<<< HEAD
-      <div className=&quot;container max-w-4xl mx-auto py-8&quot;>
-      <div className="container max-w-4xl mx-auto py-8">
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
         <Card>
           <CardHeader>
             <CardTitle className=&quot;flex items-center gap-2&quot;>
@@ -105,26 +48,6 @@ function PrivatePage() {
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-            <div className=&quot;p-4 bg-muted/50 rounded-lg&quot;>
-              <h4 className=&quot;font-medium mb-2&quot;>Authentication Details</h4>
-              <div className=&quot;grid gap-2 text-sm&quot;>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <div>
-                  <span className=&quot;font-medium&quot;>Last Sign In: </span>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-                <div>
-                  <span className=&quot;font-medium&quot;>Last Sign In: </span>
-=======
-
-
-
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <div className="p-4 bg-muted/50 rounded-lg">
               <h4 className="font-medium mb-2">Authentication Details</h4>
               <div className="grid gap-2 text-sm">
@@ -143,19 +66,6 @@ function PrivatePage() {
                 </div>
               </div>
             </div>
-            <div className=&quot;flex gap-2&quot;>
-            <div className="flex gap-2">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
               <Button asChild>
                 <Link href=&quot;/dashboard&quot;>
                   Go to Dashboard
@@ -172,7 +82,6 @@ function PrivatePage() {
       </div>
     </>
   )
-}
 export const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext) => {
   const supabase = createServerSideClient (context);
   const { data, error } = await supabase.auth.get_user ();
@@ -188,24 +97,6 @@ if ( {) {
   return {
     props: {
 
-      user: data.user}}
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
-
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -215,38 +106,8 @@ if ( {) {
 export const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext) => {;
   const supabase = createServerSideClient(context);
   const { data, error } = await supabase.auth.getUser();
-  if (error || !data?.user) {;
-    return {;
+  if (error |!data?.user) {return {;
       redirect: {;
         destination: '/auth/login';
-        permanent: false}  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+        permanent: false}}
   }
-}
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-  return {;
-    props: {;
-      user: data.user}  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
-} ;
-} ;
-=======
-
-
-} ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

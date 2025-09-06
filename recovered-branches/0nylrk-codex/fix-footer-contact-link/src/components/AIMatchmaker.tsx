@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-import React from 'react';
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import {useState} from "react";
 import {toast} from "@/hooks/use-toast";
 import {Button} from "@/components/ui/button";
@@ -15,12 +6,6 @@ import {AIMatchingResults} from "@/components/AIMatchingResults";
 import {findMatches, MatchResult} from "@/lib/ai-matchmaking";
 import {Textarea} from "@/components/ui/textarea";
 import {Sparkles, Search} from "lucide-react";
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import { useState } from "react",
 import { toast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
@@ -30,10 +15,8 @@ import { findMatches, MatchResult } from "@/lib/ai-matchmaking",
 import { Textarea } from "@/components/ui/textarea";
 import { Sparkles, Search } from "lucide-react";
 interface AIMatchmakerProps {
-=======
 
 interface AIMatchmakerProps {;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   serviceType?: string;
   onMatchSelect?: (match: any) => void,;
   className?: string;
@@ -51,44 +34,17 @@ export function AIMatchmaker(): any ({ serviceType = "", onMatchSelect, classNam
 import { Textarea } from "@/components/ui/textarea",
 import { Sparkles, Search } from "lucide-react",
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 interface AIMatchmakerProps {
   serviceType?: string,
   onMatchSelect?: (match: any) => void,
   className?: string
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
 export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {;
   const [query, setQuery] = useState("");
   const [isMatchmaking, setIsMatchmaking] = useState(false);
   const [matches, setMatches] = useState([] as MatchResult[]);
   const [hasSearched, setHasSearched] = useState(false);
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {
   const [query, setQuery] = useState("");
   const [isMatchmaking, setIsMatchmaking] = useState(false);
@@ -99,12 +55,9 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
   const [matches, setMatches] = useState([] as MatchResult[]),
   const [hasSearched, setHasSearched] = useState(false),
 
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const handleSearch = async () => {
     if (!query.trim()) {
       toast({
@@ -112,20 +65,6 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
         description: "Tell us what you're looking for so we can find matches."
         variant: "destructive"})
       return
-
-=======
-    }
-
-
-
-  const handleSearch = async () => {;
-    if (!query && query.trim()) {;
-      toast({;
-        title: "Please enter a description",;
-        description: "Tell us what you're looking for so we can find matches.",;
-        variant: "destructive"}),;
-      return;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
     setIsMatchmaking(true);
     setHasSearched(true);
@@ -143,27 +82,11 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
         serviceType;
         3;
       );
-
-      // // // console.log("Starting AI matching with query:", query, "and service type:", serviceType),
-      
-      // Get AI matches
-      const results = await findMatches(
-        query,
-        serviceType,
-        3
-      );
-      console.log("AI matching results:", results);
-      setMatches(results);
-      ),
-      
-      // // // console.log("AI matching results:", results),
-      setMatches(results),
-      
       toast({
         title: "Matches Found"
         description: `Found ${results.length} matches based on your description.`})
     } catch (error) {
-      console.error("Error during AI matching:", error);
+      console.error("Error during AI matching:", error),
       toast({
         title: "Matching Error"
         description: "We couldn't find matches for your request. Please try again."
@@ -171,41 +94,16 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
       // Set empty matches to show no results found UI
       setMatches([])
     } finally {
-<<<<<<< HEAD
-      setIsMatchmaking(false)
-    }
-  }
-  const handleItemSelect = (item: any) => {
-    if (onMatchSelect) {
-      // Find the original MatchResult that contains this item
-      const matchResult = matches.find(match => match.item.id === item.id)
-      if (matchResult) {
-        onMatchSelect(matchResult)
-      }
-    }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   }
   // Extract just the items from each MatchResult
   const matchItems = matches.map(match => match.item);
 
-<<<<<<< HEAD
-=======
   };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-  };
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
 
       setIsMatchmaking(false)
 
   };
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState } from "react",;
 import { toast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
@@ -233,54 +131,15 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
         variant: "destructive"}),;
       return;
     }
-;
-    setIsMatchmaking(true),;
-    setHasSearched(true),;
-    try {;
-      // // // console.log("Starting AI matching with query:", query, "and service type:", serviceType),;
-      // Get AI matches;
-      const results = await findMatches(;
-        query,;
-        serviceType,;
-        3;
-      ),;
-      // // // console.log("AI matching results:", results),;
-      setMatches(results),;
-      toast({;
-        title: "Matches Found",;
-        description: `Found ${results.length} matches based on your description.`});
-    } catch (error) {;
-      console.error("Error during AI matching:", error),;
-      toast({;
-        title: "Matching Error",;
-        description: "We couldn't find matches for your request. Please try again.",;
-        variant: "destructive"}),;
-      // Set empty matches to show no results found UI;
-      setMatches([]);
-    } finally {;
-      setIsMatchmaking(false);
-    }
-  },;
-  const handleItemSelect = (item: any) => {;
-    if (onMatchSelect) {;
-      // Find the original MatchResult that contains this item;
-      const matchResult = matches.find(match => match.item.id === item.id),;
-      if (matchResult) {;
-        onMatchSelect(matchResult);
+  }
+  const handleItemSelect = (item: any) => {
+    if (onMatchSelect) {
+      // Find the original MatchResult that contains this item
+      const matchResult = matches.find(match => match.item.id === item.id)
+      if (matchResult) {
+        onMatchSelect(matchResult)
       }
     }
-  },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   
   // Extract just the items from each MatchResult
   const matchItems = matches.map(match => match.item),
@@ -299,87 +158,12 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
       <CardContent>
         <div className="space-y-4">
           <div className="space-y-2">
-=======
-
-      console && console.log("AI matching results:", results);
-      setMatches(results);
-
-      toast({;
-        title: "Matches Found",;
-        description: `Found ${results && results.length} matches based on your description.`});
-    } catch (error) {;
-      console && console.error("Error during AI matching:", error);
-      toast({;
-        title: "Matching Error",;
-        description: "We couldn't find matches for your request. Please try again.",;
-        variant: "destructive"}),;
-      // Set empty matches to show no results found UI;
-      setMatches([]);
-    } finally {;
-      setIsMatchmaking(false);
-    }
-  };
-
-  const handleItemSelect = (item: any) => {;
-    if (onMatchSelect) {;
-      // Find the original MatchResult that contains this item;
-      const matchResult = matches && matches.find(match => match && match.item.id === item && item.id),;
-      if (matchResult) {;
-        onMatchSelect(matchResult);
-      }
-    }
-  };
-
-  // Extract just the items from each MatchResult;
-  const matchItems = matches && matches.map(match => match && match.item);
-
-  return (
-    <Card className={`border border-zion-blue-light bg-zion-blue-dark ${className || ""}`}>;
-      <CardHeader className="pb-2">;
-        <CardTitle className="flex items-center text-white">;
-          <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" />;
-          AI Matchmaker;
-        </CardTitle>;
-        <p className="text-sm text-zion-slate-light">;
-=======
-;
-  const handleItemSelect = (item: any) =>: any {
-    // Check condition
-if ( {) {
-  $2
-}
-      // Find the original MatchResult that contains this item;
-      const match_result = matches.find (match => match.item.id === item.id),
-      // Check condition
-if ( {) {
-  $2
-}
-        onMatchSelect (match_result);
-      }
     }
   }
-;
-  // Extract just the items from each MatchResult;
-  const match_items = matches.map (match => match.item);
-;
-  return (
-    <Card className={`border border - zion - blue - light bg - zion - blue - dark ${class_name || ""}`}>;
-      <CardHeader className="pb - 2">;
-        <CardTitle className="flex items - center text - white">;
-          <Sparkles className="h - 5 w - 5 mr - 2 text - zion - cyan" />;
-          AI Matchmaker;
-        </CardTitle>;
-        <p className="text - sm text - zion - slate - light">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           Describe what you're looking for and our AI will find the best matches;
         </p>;
       </CardHeader>;
       <CardContent>;
-
-              onChange={(e: React && React.ChangeEvent<HTMLTextAreaElement>) => setQuery(e && e.target.value)}
-              className="min-h-24 bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white";
-            />;
-
             <Button
               onClick={handleSearch}
               disabled={isMatchmaking}
@@ -392,25 +176,17 @@ if ( {) {
                   Find Matches;
                 </>;
               )}
-
-            </Button>;
-          </div>;
-
-          {hasSearched && (;
-
             <AIMatchingResults
               matches={matchItems}
               onSelectMatch={handleItemSelect}
               isLoading={isMatchmaking}
               serviceType={serviceType}
               projectDescription={query}
-            />;
           )}
         </div>;
       </CardContent>;
     </Card>;
   );
-=======
         <div className="space - y-4">;
           <div className="space - y-2">;
             <Textarea;
@@ -443,5 +219,4 @@ if ( {) {
         </div>;
       </CardContent>;
     </Card>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 export function getConfig() {
   return {
     tokenName: 'Zion Token',
@@ -10,45 +5,26 @@ export function getConfig() {
     decimals: 18,
     totalSupply: 1000000
   };
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 export interface TokenTransaction {;
   id: string;
   userId: string;
-=======
 
 
   id: string;
   user_id: string;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+export interface TokenTransaction {
+  id: string;
+  user_id: string;
   amount: number;
   type: 'issue' | 'redeem' | 'transfer';
   reason: string;
   timestamp: number;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
+
+
+
 }
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
-
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-}
-
-// Mock data storage - replace with actual database
+// Mock data storage - replace with actual database;
 let transactions: TokenTransaction[] = [];
-<<<<<<< HEAD
-export function issueTokens(userId: string, amount: number, reason: string): TokenTransaction {
-  const transaction: TokenTransaction = {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     userId
     amount
@@ -56,13 +32,6 @@ export function issueTokens(userId: string, amount: number, reason: string): Tok
     reason
     timestamp: Date.now()
   }
-=======
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
     userId,
     amount,
@@ -71,15 +40,6 @@ export function issueTokens(userId: string, amount: number, reason: string): Tok
     timestamp: Date.now();
   };
   
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   transactions.push(transaction);
   return transaction;
 }
@@ -88,91 +48,20 @@ export function redeemTokens(userId: string, amount: number, reason: string): To
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     userId
     amount: -amount, // Negative for redemption
-<<<<<<< HEAD
-    type: 'redeem'
-    reason
-    timestamp: Date.now()
-  }
-=======
-<<<<<<< HEAD
-=======
-
-;
-export function issue_tokens (user_id: string, amount: number, reason: string): TokenTransaction {
-  const transaction: TokenTransaction = {
-    id: `tx_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
-    user_id,
-    amount,
-    type: 'issue',
-    reason,
-    timestamp: Date.now ();
-  }
-;
-  transactions.push (transaction);
-  return transaction;
-}
-export function redeem_tokens (user_id: string, amount: number, reason: string): TokenTransaction {
-  const transaction: TokenTransaction = {
-    id: `tx_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
-    user_id,
-    amount: -amount, // Negative for redemption;
-    type: 'redeem',
-    reason,
-    timestamp: Date.now ();
-  }
-;
-  transactions.push (transaction);
-
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     type: 'redeem',
     reason,
     timestamp: Date.now();
   };
   
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   transactions.push(transaction);
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return transaction;
-=======
     id: `tx_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`,
     userId,
     amount,
     reason,
     timestamp: Date && Date.now()
+    timestamp: Date.now();
   };
-  
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  transactions.push(transaction);
-  return transaction;
-}
-<<<<<<< HEAD
-export function setConfig(
-  partial: Partial<ReturnType<typeof getConfig>>
-): void {;
-  const current = getConfig();
-  // Update the configuration
-  Object.assign(current, partial);
-}
-<<<<<<< HEAD
-
-=======
-
-  const current = tokenStore && tokenStore.getConfig();
-  tokenStore && tokenStore.setConfig({ ...current, ...partial });
-
-=======
-<<<<<<< HEAD
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
 // Token service utilities
 export interface TokenConfig {
   id: string;
@@ -270,28 +159,10 @@ export async function getAllTokenBalances(address?: string): Promise<TokenBalanc
   }
   return [...tokenBalances];
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
 export function set_config (
   partial: Partial < ReturnType < typeof get_config>>): void {
   const current = get_config ();
   // Update the configuration;
   Object.assign (current, partial);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

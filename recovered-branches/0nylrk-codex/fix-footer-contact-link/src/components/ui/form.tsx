@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import * as React from 'react';
-import * as LabelPrimitive from '@radix-ui/react-label';
-import {useReactId} from '@/hooks/useReactId';
-import {Slot} from '@radix-ui/react-slot';
-import {Controller, type, FieldPath, type, FieldValues, FormProvider, useFormContext,} from 'react-hook-form';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import {cn} from '@/lib/utils';
 import {Label} from '@/components/ui/label';
 const Form = FormProvider;
@@ -18,17 +8,6 @@ const FormFieldContext = React.createContext<FormFieldContextValue>({
   name: ''
 });
 const FormField = ({ ...props }: any) =></FormFieldContextValue> {
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
-
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import * as React from "react"
 import * as LabelPrimitive from "@radix-ui/react-label"
 import { useReactId } from "@/hooks/useReactId"
@@ -39,111 +18,29 @@ import {
   type FieldValues,
   FormProvider,
   useFormContext} from "react-hook-form"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 type FormFieldContextValue = {;
   name: string,;
 };
 
-const FormField = ({ ...props }: any) => {
   return (
-
-};
-
-const useFormField = () => {;
-  const fieldContext = React && React.useContext(;
-    FormFieldContext;
-
+    <FormFieldContext && FormFieldContext.Provider value={{ name: props && props.name }}>;
+      <Controller {...props} />;
+    </FormFieldContext && FormFieldContext.Provider>;
+  );
   ) as FormFieldContextValue;
   const itemContext = React && React.useContext(;
     FormItemContext;
   ) as FormItemContextValue | null;
   const { getFieldState, formState } = useFormContext();
-
-    <FormFieldContext.Provider value={{ name: props.name }}>
-      <Controller {...props} />
-    </FormFieldContext.Provider>
-  );
-}
-const useFormField = () => {
-  const fieldContext = React.useContext(
-    FormFieldContext
-  ) as FormFieldContextValue;
-  const itemContext = React.useContext(
-    FormItemContext
-  ) as FormItemContextValue | null;
-  const { getFieldState, formState } = useFormContext();
-  const fieldState = getFieldState(fieldContext.name, formState);
-  )
-}
-
-const useFormField = () => {
-  const fieldContext = React.useContext(FormFieldContext) as FormFieldContextValue
-  const itemContext = React.useContext(FormItemContext) as FormItemContextValue | null
-  const { getFieldState, formState } = useFormContext()
-
-  const fieldState = getFieldState(fieldContext.name, formState)
-
-  if (!fieldContext) {
-    throw new Error('useFormField should be used within <FormField>');
-  }
-  if (!itemContext) {
-    throw new Error('useFormField should be used within <FormItem>');
-  }
-  const { id } = itemContext as FormItemContextValue;
-<<<<<<< HEAD
-  return {
-    id
-    name: fieldContext.name
-    formItemId: `${id}-form-item`
-    formDescriptionId: `${id}-form-item-description`
-    formMessageId: `${id}-form-item-message`
-    ...fieldState
-  }
-}
-type FormItemContextValue = {
-  id: string
-}
-const FormItemContext = React.createContext<FormItemContextValue | null>(null);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 const FormItem = React.forwardRef<
   HTMLDivElement
   React.HTMLAttr</HTMLDivElement>ibutes<HTMLDivElement>
 >(({ className, ...props }, ref) => {
   const id = useReactId();
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
-
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     throw new Error("useFormField should be used within <FormItem>")
   }
 
@@ -164,96 +61,18 @@ type FormItemContextValue = {;
 
 
 const FormItemContext = React.createContext<FormItemContextValue | null>(null)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
 
-  return (
-
-FormItem && FormItem.displayName = 'FormItem';
-
-const FormLabel = React && React.forwardRef<;
-  React && React.ElementRef<typeof LabelPrimitive && LabelPrimitive.Root>,;
-  React && React.ComponentProp</typeof>sWithoutRef<typeof LabelPrimitive && LabelPrimitive.Root>;
->(({ className, ...props }, ref) => {;
-  const { error, formItemId } = useFormField();
-
-
-    />;
-  );
-});
-FormLabel && FormLabel.displayName = 'FormLabel';
-
-const FormControl = React && React.forwardRef<;
-  React && React.ElementRef<typeof Slot</typeof>>,;
-  React && React.ComponentPropsWithoutRef<typeof Slot>;
->(({ ...props }, ref) => {;
-  const { error, formItemId, formDescriptionId, formMessageId } =;
-    useFormField();
-
-
-    />;
-  );
-});
-FormControl && FormControl.displayName = 'FormControl';
-
-const FormDescription = React && React.forwardRef<;
-  HTMLParag</HTMLParagraphElement>raphElement,;
-  React && React.HTMLAttributes<HTMLParagraphElement>;
->(({ className, ...props }, ref) => {;
-  const { formDescriptionId } = useFormField();
-
-
-    />;
-  );
-});
-FormDescription && FormDescription.displayName = 'FormDescription';
-
-const FormMessage = React.</HTMLParagraphElement>forwardRef<;
-  HTMLParagraphElement,;
-  React && React.HTMLAttributes<HTMLParagraphElement>;
->(({ className, children, ...props }, ref) => {;
-  const { error, formMessageId } = useFormField();
-  const body = error ? String(error?.message) : children;
-
-  if (!body) {;
-    return null;
+    throw new Error('useFormField should be used within <FormItem>');
   }
-
-
-    >;
-
-      {body}
-    </p>;
+  const { id } = itemContext as FormItemContextValue;
+  const id = useReactId();
+  return (
+    <FormItemContext && FormItemContext.Provider value={{ id }}>;
+      <div ref={ref} className={cn('space-y-2', className)} {...props} />;
+    </FormItemContext && FormItemContext.Provider>;
   );
 });
-
-FormMessage && FormMessage.displayName = 'FormMessage';
-=======
-    <FormItemContext.Provider value={{ id }}>
-      <div ref={ref} className={cn("space-y-2", className)} {...props} />
-    </FormItemContext.Provider>
-  );
-});
-FormItem.displayName = 'FormItem';
-const FormLabel = React.forwardRef<
-  React.ElementRef<typeof LabelPrimitive.Root>
-  React.ComponentProp</typeof>sWithoutRef<typeof LabelPrimitive.Root>
->(({ className, ...props }, ref) => {
   const { error, formItemId } = useFormField();
     />
   );
@@ -286,40 +105,12 @@ const FormMessage = React.</HTMLParagraphElement>forwardRef<
   const body = error ? String(error?.message) : children;
   if (!body) {
     return null;
-  )
-})
-FormItem.displayName = "FormItem"
-
-const FormLabel = React.forwardRef<
-  React.ElementRef<typeof LabelPrimitive.Root>,
-  React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root>
->(({ className, ...props }, ref) => {
-  const { error, formItemId } = useFormField()
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   return (
     <Label
       ref={ref}
       className={cn(error && "text-destructive", className)}
       htmlFor={formItemId}
       {...props}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     />
   )
 })
@@ -331,14 +122,6 @@ const FormControl = React.forwardRef<
 >(({ ...props }, ref) => {
   const { error, formItemId, formDescriptionId, formMessageId } = useFormField()
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   return (
     <Slot
       ref={ref}
@@ -350,17 +133,6 @@ const FormControl = React.forwardRef<
       }
       aria-invalid={!!error}
       {...props}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     />
   )
 })
@@ -372,31 +144,12 @@ const FormDescription = React.forwardRef<
 >(({ className, ...props }, ref) => {
   const { formDescriptionId } = useFormField()
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   return (
     <p
       ref={ref}
       id={formDescriptionId}
       className={cn("text-sm text-muted-foreground", className)}
       {...props}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     />
   )
 })
@@ -410,60 +163,12 @@ const FormMessage = React.forwardRef<
   const body = error ? String(error?.message) : children
 
   if (!body) {
-<<<<<<< HEAD
-    return null
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-    return null;
-    return null
-=======
-<<<<<<< HEAD
-    return null
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   }
     >
       {body}
     </p>
-  );
-});
-FormMessage.displayName = 'FormMessage';
-export {
-  useFormField
-  Form
-  FormItem
-  FormLabel
-  FormControl
-  FormDescription
-  FormMessage
-  FormField
-}
-  )
-})
-FormMessage.displayName = "FormMessage"
-
-
-export {;
-  useFormField,;
-  Form,;
-  FormItem,;
-  FormLabel,;
-  FormControl,;
-  FormDescription,;
-  FormMessage,;
-  FormField,;
-};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import * as LabelPrimitive from '@radix - ui / react - label';
 import {useReactId} from '@/hooks / useReactId';
 import {Slot} from '@radix - ui / react - slot';
@@ -599,28 +304,13 @@ export {
   FormControl,
   FormDescription,
   FormMessage,
-<<<<<<< HEAD
-  FormField}
-;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   FormField,;
 };
   FormField}
 ;
-=======
-<<<<<<< HEAD
-  FormField}
+
+
+
+  FormField,
+}
 ;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

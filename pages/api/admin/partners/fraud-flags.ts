@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { getServerSupabase } from '../../../../utils/supabase/server';
-import type { NextApiRequest, NextApiResponse } from 'next',;
-import { getServerSupabase } from '../../../../utils/supabase/server',;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
     }
@@ -18,66 +6,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       .from('referral_events')
       .select('ip_address, created_at')
       .eq('partner_code', code)
-
-
     }
     const flags: any[] = []
     counts.forEach((count, ip) => {
       if (count > 30 && ip !== 'unknown') {
 
-<<<<<<< HEAD
-  } catch (e: any) {
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-  } catch (e: any) {
-    return res.status(500).json({ error: e?.message });
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     return res.status(500).json({ error: e?.message })
   };
 };
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
-    if (req.method === 'GET') {
-      const code = (req.query.code as string)?.toLowerCase();
-      if (!code) return res.status(400).json({ error: 'Code required' });
 
-      // Mock fraud flags data
-      const flags = [
-        { type: 'suspicious_ip', severity: 'low', note: 'Multiple visits from same IP' }
-      ];
-
-      res.json({ flags });
-    } else {
-      res.setHeader('Allow', 'GET');
-      res.status(405).end('Method Not Allowed');
-    }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

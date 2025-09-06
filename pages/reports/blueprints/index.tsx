@@ -1,34 +1,17 @@
 import React from 'react';
-<<<<<<< HEAD
-import Head from 'next/head';
-import Link from 'next/link';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-=======
 
 import Head from 'next / head';
 import Link from 'next / link';
 ;
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 const BlueprintsIndexPage: React.FC = () => {
   const blueprint_categories = [;
     {
-      category: 'System Architecture'
-      blueprints: [
+
+      category: 'System Architecture',
+      blueprints: [;
         {
           id: 'comprehensive - redundancy',
           name: 'Comprehensive Redundancy System',
@@ -138,24 +121,9 @@ const BlueprintsIndexPage: React.FC = () => {
     }
       category: 'System Architecture',
       blueprints: [
-<<<<<<< HEAD
-        {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
         { 
         {
-=======
-<<<<<<< HEAD
-        {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
           id: 'comprehensive-redundancy',
           name: 'Comprehensive Redundancy System',
           description: 'Multi-layer redundancy architecture for maximum uptime',
@@ -163,25 +131,10 @@ const BlueprintsIndexPage: React.FC = () => {
           complexity: 'high',
           lastUpdated: '2025-01-17'
         },
-<<<<<<< HEAD
-        {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
         { 
         {
-=======
-<<<<<<< HEAD
-        {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
           id: 'ultimate-redundancy',
 
           name: 'Ultimate Redundancy System',
@@ -191,81 +144,31 @@ const BlueprintsIndexPage: React.FC = () => {
 
           lastUpdated: '2025-01-16'
         },
-<<<<<<< HEAD
-        {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
         { 
         {
-=======
-<<<<<<< HEAD
-        {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
           id: 'github-actions-automation',
           name: 'GitHub Actions Automation',
           description: 'Complete CI/CD automation with self-healing',
           status: 'active',
           complexity: 'high',
           lastUpdated: '2025-01-15'
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-        }
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
           } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       ]
     },
     {
       category: 'Deployment Patterns',
       blueprints: [
-<<<<<<< HEAD
-        {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
         { 
         {
-=======
-<<<<<<< HEAD
-        {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
           id: 'zero-downtime-deployment',
           name: 'Zero-Downtime Deployment',
           description: 'Blue-green deployment with health checks',
@@ -273,25 +176,10 @@ const BlueprintsIndexPage: React.FC = () => {
           complexity: 'medium',
           lastUpdated: '2025-01-14'
         },
-<<<<<<< HEAD
-        {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
         { 
         {
-=======
-<<<<<<< HEAD
-        {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
           id: 'canary-deployment',
 
           name: 'Canary Deployment',
@@ -301,25 +189,10 @@ const BlueprintsIndexPage: React.FC = () => {
 
           lastUpdated: '2025-01-13'
         },
-<<<<<<< HEAD
-        {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
         { 
         {
-=======
-<<<<<<< HEAD
-        {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
           id: 'rolling-update',
 
           name: 'Rolling Update Strategy',
@@ -328,56 +201,21 @@ const BlueprintsIndexPage: React.FC = () => {
           complexity: 'medium',
 
           lastUpdated: '2025-01-12'
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-        }
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
           } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       ]
     },
     {
       category: 'Monitoring & Observability',
       blueprints: [
-<<<<<<< HEAD
-        {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
         { 
         {
-=======
-<<<<<<< HEAD
-        {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
           id: 'health-check-system',
 
           name: 'Health Check System',
@@ -387,25 +225,10 @@ const BlueprintsIndexPage: React.FC = () => {
 
           lastUpdated: '2025-01-11'
         },
-<<<<<<< HEAD
-        {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
         { 
         {
-=======
-<<<<<<< HEAD
-        {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
           id: 'performance-monitoring',
           name: 'Performance Monitoring',
           description: 'Real-time performance metrics and alerting',
@@ -413,49 +236,21 @@ const BlueprintsIndexPage: React.FC = () => {
           complexity: 'medium',
           lastUpdated: '2025-01-10'
         },
-<<<<<<< HEAD
-        {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
         { 
         {
-=======
-<<<<<<< HEAD
-        {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
           id: 'logging-aggregation',
 
           name: 'Logging Aggregation',
           description: 'Centralized logging with search and analytics',
           status: 'active',
           complexity: 'low',
-<<<<<<< HEAD
           lastUpdated: '2025-01-09'
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
         }
       ]
     }
-  ];
 
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
           } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -468,22 +263,12 @@ const BlueprintsIndexPage: React.FC = () => {
   }
 }
   ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
 
 ;
   const recent_blueprints = [;
-=======
           lastUpdated: '2025-01-09'
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   const recentBlueprints = [
 
     {
@@ -507,41 +292,18 @@ const BlueprintsIndexPage: React.FC = () => {
 
       date: '2025-01-17',
       status: 'research'
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-    }
-  ];
-
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
   ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
 
 
   ];
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'active': return 'text-green-400';
@@ -549,48 +311,19 @@ const BlueprintsIndexPage: React.FC = () => {
       case 'development': return 'text-yellow-400';
       case 'research': return 'text-purple-400';
       default: return 'text-gray-400';
-<<<<<<< HEAD
-    }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-=======
-  }
-  };
-
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
 
   };
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
   };
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   const getComplexityColor = (complexity: string) => {
-=======
 ;
   const getComplexityColor = (complexity: string) =>: any {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     switch (complexity) {
 
       case 'critical': return 'bg-red-500/20 text-red-400';
@@ -598,45 +331,16 @@ const BlueprintsIndexPage: React.FC = () => {
       case 'medium': return 'bg-yellow-500/20 text-yellow-400';
       case 'low': return 'bg-green-500/20 text-green-400';
       default: return 'bg-gray-500/20 text-gray-400';
-<<<<<<< HEAD
-    }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-=======
-  }
-  };
-
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
 
   };
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
   };
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-gray-900 text-white">
       <Head>
@@ -645,23 +349,6 @@ const BlueprintsIndexPage: React.FC = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <div className="container mx-auto px-4 py-8">
-        {/* Header */}
-        {/* Header */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
         <div className="mb-8">
           <Link href="/reports" className="text-cyan-400 hover:text-cyan-300 transition-colors">
             ← Back to Reports
@@ -673,23 +360,6 @@ const BlueprintsIndexPage: React.FC = () => {
             Architectural patterns and deployment strategies for scalable systems
           </p>
         </div>
-        {/* Blueprint Overview */}
-        {/* Blueprint Overview */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-8">
           <div className="bg-white/10 rounded-xl p-6 border border-white/20">
             <h3 className="text-xl font-semibold mb-4 text-indigo-400">Total Blueprints</h3>
@@ -712,23 +382,6 @@ const BlueprintsIndexPage: React.FC = () => {
             <p className="text-gray-300 text-sm mt-2">Conceptual phase</p>
           </div>
         </div>
-        {/* Blueprint Categories */}
-        {/* Blueprint Categories */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Blueprint Categories</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -739,17 +392,6 @@ const BlueprintsIndexPage: React.FC = () => {
                   {category.blueprints.map((blueprint, blueprintIndex) => (
                     <div key={blueprintIndex} className="border-l-2 border-indigo-400/30 pl-4">
                       <div className="flex justify-between items-start mb-2">
-<<<<<<< HEAD
-                        <Link
-                        <Link 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-                          href={`/reports/blueprints/${blueprint.id}`}
-                          className="text-white font-medium hover:text-indigo-300 transition-colors"
-                        >
-=======
 
 ;
   return (
@@ -811,21 +453,10 @@ const BlueprintsIndexPage: React.FC = () => {
                           className="text - white font - medium hover:text - indigo - 300 transition - colors";
                         >;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                           {blueprint.name}
                         </Link>;
                         <span className={`px - 2 py - 1 text - xs rounded - full ${getComplexityColor (blueprint.complexity)}`}>;
                           {blueprint.complexity}
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-                        <Link
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
                           href={`/reports/blueprints/${blueprint.id}`  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -845,14 +476,6 @@ const BlueprintsIndexPage: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
                         </span>;
                       </div>;
                       <p className="text - gray - 300 text - sm mb - 2">{blueprint.description}</p>;
@@ -862,70 +485,20 @@ const BlueprintsIndexPage: React.FC = () => {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
                         </span>
                       </div>
                       <p className="text-gray-300 text-sm mb-2">{blueprint.description}</p>
                       <div className="flex justify-between items-center text-xs">
                         <span className={`${getStatusColor(blueprint.status)}`}>
-                          ● {blueprint.status}
                           ● {blueprint.status  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
                         </span>
                         <span className="text-gray-400">{blueprint.lastUpdated}</span>
                       </div>
                     </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-        {/* Recent Blueprints */}
-                  ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                </div>
-              </div>
-            ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </div>
-        </div>
-        {/* Recent Blueprints */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Recent Blueprints</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -934,39 +507,16 @@ const BlueprintsIndexPage: React.FC = () => {
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-lg font-semibold text-white">{blueprint.name}</h3>
                   <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(blueprint.status)}`}>
-                    {blueprint.status}
                     {blueprint.status  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
                   </span>
                 </div>
                 <p className="text-gray-300 text-sm mb-4">{blueprint.description}</p>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-400 text-sm">{blueprint.date}</span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                  <Link 
-                    href={`/reports/blueprints/${blueprint.id}`}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
-                  <Link 
-                    href={`/reports/blueprints/${blueprint.id}`}
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
                   <Link
                     href={`/reports/blueprints/${blueprint.id}`}
                     href={`/reports/blueprints/${blueprint.id}`  } catch (error) {
@@ -974,54 +524,16 @@ const BlueprintsIndexPage: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
                     className="text-indigo-400 hover:text-indigo-300 text-sm transition-colors"
                   >
                     View Blueprint →
                   </Link>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-        {/* Blueprint Benefits */}
-            ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </div>
-        </div>
-        {/* Blueprint Benefits */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Blueprint Benefits</h2>
           <div className="bg-white/10 rounded-xl p-8 border border-white/20">
@@ -1029,27 +541,10 @@ const BlueprintsIndexPage: React.FC = () => {
               <div className="text-6xl font-bold text-indigo-400 mb-4">🏗️</div>
               <h3 className="text-xl font-semibold mb-2 text-white">Proven Architecture</h3>
               <p className="text-gray-300 mb-6">
-<<<<<<< HEAD
-                Our blueprints provide battle-tested architectural patterns that ensure
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-                Our blueprints provide battle-tested architectural patterns that ensure 
-                Our blueprints provide battle-tested architectural patterns that ensure
-=======
-<<<<<<< HEAD
-                Our blueprints provide battle-tested architectural patterns that ensure
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
                 scalability, reliability, and maintainability for your systems.
               </p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
@@ -1073,26 +568,11 @@ const BlueprintsIndexPage: React.FC = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-        {/* Navigation */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        <div className="flex flex-wrap gap-4 justify-center">
-          <Link 
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
 
 
         <div className="flex flex-wrap gap-4 justify-center">
           <Link 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Navigation */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1100,68 +580,24 @@ const BlueprintsIndexPage: React.FC = () => {
 }
         <div className="flex flex-wrap gap-4 justify-center">
           <Link
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
             href="/reports"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-indigo-400/50"
           >
             All Reports
           </Link>
-<<<<<<< HEAD
-          <Link
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-          <Link 
-          <Link
-=======
-<<<<<<< HEAD
-          <Link
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
             href="/reports/performance"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-cyan-400/50"
           >
             Performance
           </Link>
-<<<<<<< HEAD
-          <Link
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-          <Link 
-          <Link
-=======
-<<<<<<< HEAD
-          <Link
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
             href="/reports/innovation"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-purple-400/50"
           >
@@ -1171,28 +607,9 @@ const BlueprintsIndexPage: React.FC = () => {
       </div>
     </div>
   );
-}
-<<<<<<< HEAD
-};
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-=======
 ;
 
-=======
 
 };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 export default BlueprintsIndexPage;

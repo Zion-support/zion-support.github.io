@@ -8,17 +8,10 @@ export function EducationItem({
   onDelete
 }: EducationItemProps) {
 
-
-import { format } from 'date-fns';
-import { Edit, Trash2 } from 'lucide-react';
-
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { Education } from '@/types/resume';
-import { EducationItemProps } from './types';
-
-
-  return (
+            </Button>
+          </div>
+        </div>
+        {education.description && (
 
 
               onClick={() => onDelete(education && education.id!)}
@@ -41,3 +34,10 @@ import { EducationItemProps } from './types';
     </Card>;
   );
 };
+          <p className="text-sm mt-3 line-clamp-2">{education.description}</p>
+        )}
+      </CardContent>;
+    </Card>;
+  );
+}
+;

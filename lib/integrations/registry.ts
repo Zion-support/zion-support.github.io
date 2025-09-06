@@ -1,20 +1,7 @@
-import { IntegrationProviderMeta } from "./types";
 
 import { IntegrationProviderMeta } from "./types";
 export const PROVIDERS: IntegrationProviderMeta[] = [
-=======
-import { IntegrationProviderMeta  } from './types';
-;
-export const PROVIDERS: IntegrationProviderMeta[] = [;
-=======
-<<<<<<< HEAD
-=======
-import { IntegrationProviderMeta } from "./types";
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-import { IntegrationProviderMeta } from "./types";
-export const PROVIDERS: IntegrationProviderMeta[] = [
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   {
     id: "salesforce"
     name: "Salesforce"
@@ -28,13 +15,6 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
     description: "Marketing & Sales CRM"
   }
   {
-
-    id: "zoho",
-    name: "Zoho CRM",
-    category: "crm",
-    description: "All - in - one CRM",
-  },
-
   {
     id: "pipedrive"
     name: "PipeDrive"
@@ -55,47 +35,13 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
     description: "Recruiting software"
   }
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     id: "bamboohr"
     name: "BambooHR"
     category: "ats"
     description: "HRIS & ATS"
   }
-=======
-    id: "bamboohr",
-    name: "BambooHR",
-    category: "ats",
-    description: "HRIS & ATS",
-  },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];
 export function getProviderById(
-<<<<<<< HEAD
-  id: string
-): IntegrationProviderMeta | undefined {
-  return PROVIDERS.find((p) => p.id === id);
-}
-=======
-  id: string,
-<<<<<<< HEAD
-): IntegrationProviderMeta | undefined {;
-  return PROVIDERS.find((p) => p.id === id);
-}
-=======
-): IntegrationProviderMeta | undefined {
-  return PROVIDERS.find(p => p.id === id);
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 }
 import { IntegrationProviderMeta } from './types';
@@ -110,53 +56,26 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
   { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' }
 ];
 
-=======
 ;
 export function getProviderById (
   id: string,
 ): IntegrationProviderMeta | undefined {
   return PROVIDERS.find ((p) => p.id === id);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
     id: "bamboohr",
     name: "BambooHR",
     category: "ats",
     description: "HRIS & ATS",
   },;
-<<<<<<< HEAD
-];
-export function getProviderById(
-  id: string
-): IntegrationProviderMeta | undefined {
-  return PROVIDERS.find((p) => p.id === id);
-}
-=======
 
 ];
 export function getProviderById(
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string,
 ): IntegrationProviderMeta | undefined {;
   return PROVIDERS.find((p) => p.id === id);
 }
 ): IntegrationProviderMeta | undefined {
   return PROVIDERS.find(p => p.id === id);
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

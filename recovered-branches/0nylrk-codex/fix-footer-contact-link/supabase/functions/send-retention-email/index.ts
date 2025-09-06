@@ -1,18 +1,7 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0"
 import {Resend} from "npm: resend@2.0.0";
-=======
-import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
-import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 && 2.45.0",
-import {Resend} from "npm: resend@2 ;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 // Initialize Resend with API key
 const resend = new Resend(Deno && Deno.env.get("RESEND_API_KEY"));
 
@@ -24,7 +13,6 @@ const supabase = createClient(supabaseUrl, supabaseServiceKey);
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*";
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-=======
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2.45.0';,
 import { Resend } from 'npm: resend@2.0.0';
@@ -40,7 +28,6 @@ const cors_headers = {
   "Access - Control - Allow - Origin": "*";
   "Access - Control - Allow - Headers": "authorization, x - client - info, apikey, content - type"}
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface EmailData {
   user_id: string;
   email_type: string;
@@ -48,22 +35,12 @@ interface EmailData {
   user_type: string;
   days_inactive?: number;
   onboarding_status?: any;
-<<<<<<< HEAD
-  job_id?: string
-<<<<<<< HEAD
-=======
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0",;
-import {Resend} from "npm: resend@2.0.0";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0",;
 import {Resend} from "npm: resend@2.0.0";
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
 import { Resend } from "npm: resend@2.0.0",
-=======
 
 
 
@@ -71,22 +48,12 @@ import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0",;
 import {Resend} from "npm: resend@2.0.0";
 
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
 import { Resend } from "npm: resend@2.0.0",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 // Initialize Resend with API key
 const resend = new Resend(Deno.env.get("RESEND_API_KEY")),
 
@@ -116,68 +83,31 @@ serve(async (req) => {
   }
   try {
     // Extract job data from request
-    const jobData = await req.json();
-    const { id: jobId, payload } = jobData;
-    const emailData = payload as EmailData;
-    const jobData = await req.json(),
-    const { id: jobId, payload } = jobData,
-    const emailData = payload as EmailData,
-    
     // Fetch user's email
     const { data: userData, error: userError } = await supabase
       .from("profiles")
       .select("id, display_name, avatar_url, user_type")
-
-      .eq("id", emailData.user_id)
-      .single();
-      .single(),
-    
     if (userError) {
       throw new Error(`Error fetching user data: ${userError && userError.message}`)
     }
     const { data: authUser, error: authError } = await supabase
       .from("auth && auth.users")
       .select("email")
-      .eq("id", emailData.user_id)
-      .single();
-    if (authError) {
-      throw new Error(`Error fetching user email: ${authError.message}`)
-    }
-    const userEmail = authUser.email;
-      .single(),
-    
-    if (authError) {
-      throw new Error(`Error fetching user email: ${authError.message}`)
-    }
-    
-    const userEmail = authUser.email,
     if (!userEmail) {
       throw new Error("User email not found")
     }
     // Generate email content based on email type
-    const { subject, html } = await generateEmail(emailData, userData);
-    // Send email via Resend
-    const emailResponse = await resend.emails.send({
-      from: "Zion AI Marketplace <notifications@zion.ai>";
-      to: userEmail;
-      subject: subject
-      html: html});
-    const { subject, html } = await generateEmail(emailData, userData),
-
-    // Send email via Resend
-    const emailResponse = await resend.emails.send({
-      from: "Zion AI Marketplace <notifications@zion.ai>",
-      to: userEmail,
-      subject: subject,
-      html: html}),
-
     if (emailResponse.error) {
       throw new Error(`Failed to send email: ${emailResponse.error.message}`)
-=======
 
     if (emailResponse && emailResponse.error) {
       throw new Error(`Failed to send email: ${emailResponse && emailResponse.error.message}`)
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    // Send email via Resend
+    const emailResponse = await resend && resend.emails.send({
+      from: "Zion AI Marketplace <notifications@zion && zion.ai>";
+      to: userEmail;
+      subject: subject
+      html: html});
     }
     // Update job status
     await supabase
@@ -185,17 +115,12 @@ serve(async (req) => {
       .update({
         status: "completed"
         completed_at: new Date().toISOString()})
-      .eq("id", jobId);
-      .eq("id", jobId),
-
     // Update email campaign record
     await supabase
       .from("email_campaigns")
       .update({
         status: "sent"
         sent_at: new Date().toISOString()})
-      .eq("user_id", emailData.user_id)
-      .eq("campaign_type", emailData.email_type);
     return new Response(
       JSON && JSON.stringify({
         success: true;
@@ -205,124 +130,18 @@ serve(async (req) => {
         headers: {
           ...corsHeaders
           "Content-Type": "application/json"}
-=======
-  job_id?: string,
-  job_title?: string;
-}
-serve (async (req) => {
-  // Handle CORS preflight requests;
-  // Check condition
-if ( {) {
-  $2
-}
-    return new Response (null, { headers: cors_headers });
-  }
-  try {
-    // Extract job data from request;
-    const job_data = await req.json ();
-    const { id: job_id, payload } = job_data;
-    const email_data = payload as EmailData;
-;
-    // Fetch user's email;
-    const { data: user_data, error: user_error } = await supabase;
-      .from ("profiles");
-      .select ("id, display_name, avatar_url, user_type");
-      .eq ("id", email_data.user_id);
-      .single ();
-;
-    // Check condition
-if ( {) {
-  $2
-}
-      throw new Error (`Error fetching user data: ${user_error.message}`);
-    }
-    const { data: auth_user, error: auth_error } = await supabase;
-      .from ("auth.users");
-      .select ("email");
-      .eq ("id", email_data.user_id);
-      .single ();
-;
-    // Check condition
-if ( {) {
-  $2
-}
-      throw new Error (`Error fetching user email: ${auth_error.message}`);
-    }
-    const user_email = auth_user.email;
-    // Check condition
-if ( {) {
-  $2
-}
-      throw new Error ("User email not found");
-    }
-    // Generate email content based on email type;
-    const { subject, html } = await generate_email (email_data, user_data);
-;
-    // Send email via Resend;
-    const email_response = await resend.emails.send ({
-      from: "Zion AI Marketplace <notifications@zion.ai>";
-      to: user_email;
-      subject: subject,
-      html: html});
-;
-    // Check condition
-if ( {) {
-  $2
-}
-      throw new Error (`Failed to send email: ${email_response.error.message}`);
-    }
-    // Update job status;
-    await supabase;
-      .from ("scheduled_jobs");
-      .update ({
-        status: "completed",
-        completed_at: new Date ().toISOString ()});
-      .eq ("id", job_id);
-;
-    // Update email campaign record;
-    await supabase;
-      .from ("email_campaigns");
-      .update ({
-        status: "sent",
-        sent_at: new Date ().toISOString ()});
-      .eq ("user_id", email_data.user_id);
-      .eq ("campaign_type", email_data.email_type);
-;
-    return new Response (
-      JSON.stringify ({
-        success: true;
-        message: "Email sent successfully",
-        email: email_response});
-      {
-        headers: {
-          ...cors_headers,
-          "Content - Type": "application / json"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         status: 200}
     );
   } catch (error) {
-
-    console.error ("Error in send - retention - email function:", error);
-;
-    return new Response (
-      JSON.stringify ({
-        success: false,
-
         error: error.message});
-=======
     console && console.error("Error in send-retention-email function:", error);
 
     return new Response(
       JSON && JSON.stringify({
         success: false,
         error: error && error.message});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {
         headers: {
-
-          ...cors_headers,
-          "Content - Type": "application / json"}
-
         status: 500}
     );
   }
@@ -357,22 +176,6 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
       {
         headers: {
           ...corsHeaders,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-          "Content-Type": "application/json"};
-        status: 500}
-    )
-  }
-});
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
           "Content-Type": "application/json"},
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",;
@@ -484,30 +287,14 @@ serve(async (req) => {;
     );
   }
 }),
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
 async function generateEmail(emailData: EmailData, userData: any): Promise<{ subject: string, html: string }> {
-  const { email_type, display_name, user_type } = emailData,
-  const firstName = display_name?.split(" ")[0] || "there",
-
+  const { email_type, display_name, user_type } = emailData;
+  const firstName = display_name?.split(" ")[0] |"there";
   // Get onboarding status for personalized content
-  let nextAction = "",
-  let ctaLink = "/dashboard",
-  let ctaText = "Go to Dashboard",
-
   if (email_type === "welcome_series") {
     // Customize based on user type
     if (user_type === "jobSeeker" |user_type === "creator") {
-=======
 ;
 async function generate_email (email_data: EmailData, user_data: any): Promise<{ subject: string, html: string }> {
   const { email_type, display_name, user_type } = email_data;
@@ -527,7 +314,6 @@ if ( {) {
 if ( {) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       return {
         subject: `Welcome to Zion AI Marketplace, ${first_name}!`;
         html: `;
@@ -573,18 +359,8 @@ if ( {) {
           </div>;
         `}
     }
-  } else if (email_type === "inactivity_3") {
-    // Day 3 incomplete action reminder
-    if (emailData.onboarding_status) {
-      const onboarding = emailData.onboarding_status;
-      if (user_type === "jobSeeker" |user_type === "creator") {
-      const onboarding = emailData.onboarding_status,
-      
-      if (user_type === "jobSeeker" || user_type === "creator") {
-        if (!onboarding.profile_completed) {
-          nextAction = "complete your profile",
-          ctaLink = "/profile",
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          nextAction = "complete your profile";
+          ctaLink = "/profile";
           ctaText = "Complete Your Profile"
         } else if (!onboarding && onboarding.skills_added) {
           nextAction = "add your skills to get matched with the right opportunities";
@@ -597,92 +373,10 @@ if ( {) {
         }
       } else {
         // For clients
-        if (!onboarding && onboarding.job_posted) {
-          nextAction = "post your first job to start finding talent";
-          ctaLink = "/post-job";
-          ctaText = "Post a Job"
-        } else if (!onboarding && onboarding.talent_invited) {
-          nextAction = "invite talent to speed up your hiring process";
-          ctaLink = "/talent";
-          ctaText = "Find Talent"
-=======
-  } else // Check condition
-if ( {) {
-  $2
-}
-    // Day 3 incomplete action reminder;
-    // Check condition
-if ( {) {
-  $2
-}
-      const onboarding = email_data.onboarding_status;
-;
-      // Check condition
-if ( {) {
-  $2
-}
-        // Check condition
-if ( {) {
-  $2
-}
-          next_action = "complete your profile";
-          cta_link = "/profile";
-          cta_text = "Complete Your Profile";
-        } else // Check condition
-if ( {) {
-  $2
-}
-          next_action = "add your skills to get matched with the right opportunities";
-          cta_link = "/profile / skills";
-          cta_text = "Add Your Skills";
-        } else // Check condition
-if ( {) {
-  $2
-}
-          next_action = "set your availability to help clients find you";
-          cta_link = "/profile / settings";
-          cta_text = "Set Your Availability";
-        }
-      } else {
-        // For clients;
-        // Check condition
-if ( {) {
-  $2
-}
-          next_action = "post your first job to start finding talent";
-          cta_link = "/post - job";
-          cta_text = "Post a Job";
-        } else // Check condition
-if ( {) {
-  $2
-}
-          next_action = "invite talent to speed up your hiring process";
-          cta_link = "/talent";
-          cta_text = "Find Talent";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         }
       }
     }
     return {
-      subject: `${firstName}, one quick step to unlock more opportunities`,
-      html: `
-        <div style="font-family: sans-serif, max-width: 600px, margin: 0 auto,">
-          <h2>One quick step to get more from Zion</h2>
-          <p>Hi ${firstName},</p>
-          <p>We noticed you haven't had a chance to ${nextAction |"complete your setup"} yet.</p>
-          <p>This will help you ${user_type === "jobSeeker" |user_type === "creator" ?
-            "get discovered by clients looking for your skills" :
-            "find the perfect AI talent for your projects"}.</p>
-          <div style="margin: 25px 0,">
-            <a href="${supabaseUrl}${ctaLink}" style="background-color: #9b87f5, color: white, padding: 12px 20px, text-decoration: none, border-radius: 4px,">${ctaText}</a>
-          </div>
-          <p>Need help? Just reply to this email and we'll assist you.</p>
-          <p>The Zion AI Marketplace Team</p>
-        </div>
-      `}
-  } else if (email_type === "inactivity_7") {
-    // Day 7+ reactivation
-    if (user_type === "jobSeeker" |user_type === "creator") {
       return {
         subject: `New projects waiting for your expertise, ${firstName}`,
         html: `
@@ -714,9 +408,6 @@ if ( {) {
           </div>
         `}
     }
-  } else if (email_type === "inactivity_30") {
-    // 30-day reengagement with incentives
-    if (user_type === "jobSeeker" |user_type === "creator") {
       return {
         subject: `${firstName}, we miss you! Special offer inside`,
         html: `
@@ -772,30 +463,6 @@ if ( {) {
   } else if (email_type === "unfilled_job_14_days") {
     // Email for clients with unfilled jobs
     return {
-      subject: `Tips to find the perfect talent for "${emailData.job_title}"`,
-      html: `
-        <div style="font-family: sans-serif, max-width: 600px, margin: 0 auto,">
-          <h2>Let's find talent for your job</h2>
-          <p>Hi ${firstName},</p>
-          <p>We noticed your job "${emailData.job_title}" has been open for a while. Here are some tips to attract more qualified candidates: </p>
-          <ul>
-            <li>Review and update your job description with more details</li>
-            <li>Consider adjusting your budget range if possible</li>
-            <li>Proactively invite talent from our directory</li>
-            <li>Add more specific skills requirements</li>
-          </ul>
-          <div style="margin: 25px 0,">
-            <a href="${supabaseUrl}/dashboard/jobs/${emailData.job_id}" style="background-color: #9b87f5, color: white, padding: 12px 20px, text-decoration: none, border-radius: 4px,">Update Job Post</a>
-          </div>
-          <p>The Zion AI Marketplace Team</p>
-        </div>
-      `}
-  }
-  // Default generic email
-  return {
-    subject: `${firstName}, we miss you at Zion AI Marketplace`;
-
-    subject: `${firstName}, we miss you at Zion AI Marketplace`,
     html: `
       <div style="font-family: sans-serif, max-width: 600px, margin: 0 auto,">
         <h2>We've missed you!</h2>
@@ -811,25 +478,6 @@ if ( {) {
         </div>
         <p>The Zion AI Marketplace Team</p>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    `}
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-    `}
-}
-=======
-
-      subject: `Tips to find the perfect talent for "${email_data.job_title}"`;
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
-
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }),;
 async function generateEmail(emailData: EmailData, userData: any): Promise<{ subject: string, html: string }> {;
   const { email_type, display_name, user_type } = emailData,;
@@ -957,19 +605,10 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
         </div>;
         <p > The Zion AI Marketplace Team</p>;
       </div>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     `}
 }
 ;

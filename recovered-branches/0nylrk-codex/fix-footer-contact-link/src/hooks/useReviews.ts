@@ -1,26 +1,3 @@
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-import {useState} from "react";
-import {supabase} from "@/integrations/supabase/client";
-import {useAuth} from "@/hooks/useAuth";
-import {Review, ReviewReport} from "@/types/reviews";
-import {toast} from "@/hooks/use-toast";
-export function useReviews(projectId?: string) {;
-  const { user } = useAuth();
-  const [isLoading, setIsLoading] = useState(false);
-  const [reviews, setReviews] = useState<Review[]>([]);
-  const [userReview, setUserReview] = useState<Review | null>(null);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import { useState } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { useAuth } from "@/hooks/useAuth",
@@ -41,7 +18,6 @@ export function useReviews(projectId?: string) {
   const [userReview, setUserReview] = useState<Review | null>(null),
   const [isSubmitting, setIsSubmitting] = useState(false),
   
-=======
 import { useState } from './react';
 import { supabase } from '@/integrations / supabase / client';
 import { use_auth } from '@/hooks / use_auth';
@@ -65,31 +41,11 @@ if (return) {
 }
     setIsLoading (true),
 
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   // Fetch reviews for a project
 
   const fetchProjectReviews = async (projectId: string) => {
-    if (!projectId) return;
-    setIsLoading(true)
-    if (!projectId) return,
-    
-    setIsLoading(true),
-    
-    try {
-      const { data, error } = await supabase
-        .from("reviews")
-        .select(`
-          *,
-          reviewer_profile:profiles!reviewer_id(display_name, avatar_url)
-        `)
-        .eq("project_id", projectId)
-        .eq("is_visible", true)
-        .eq("status", "approved");
-      if (error) throw error;
-      setReviews(data |[]);
         .eq("status", "approved"),
         
       if (error) throw error,
@@ -102,31 +58,15 @@ if (return) {
           .from("reviews")
           .select("*")
           .eq("project_id", projectId)
-
-          .eq("reviewer_id", user.id)
-          .single();
-          .single(),
-          
         if (!userReviewError && userReviewData) {
           setUserReview(userReviewData)
         }
       }
     } catch (err: any) {
-      console && console.error("Error fetching reviews:", err);
-      toast({
-        title: "Error";
-        description: "Failed to load reviews"
-        title: "Error",
-        description: "Failed to load reviews",
-        variant: "destructive"})
     } finally {
       setIsLoading(false)
     }
   }
-  // Fetch reviews for a user (to display on profile)
-  const fetchUserReviews = async (userId: string) => {
-    if (!userId) return;
-    setIsLoading(true)
   },
   
   // Fetch reviews for a user (to display on profile)
@@ -135,58 +75,27 @@ if (return) {
     
     setIsLoading(true),
     
-    try {
-      const { data, error } = await supabase
-        .from("reviews")
-        .select(`
-          *,
-          reviewer_profile:profiles!reviewer_id(display_name, avatar_url)
-        `)
-        .eq("reviewee_id", userId)
-        .eq("is_visible", true)
-        .eq("status", "approved")
-        .order("created_at", { ascending: false });
-      if (error) throw error;
-      setReviews(data |[])
         .order("created_at", { ascending: false }),
         
       if (error) throw error,
       
       setReviews(data || [])
-    } catch (err: any) {
-      console && console.error("Error fetching user reviews:", err);
-      toast({
-        title: "Error";
-        description: "Failed to load reviews"
-        title: "Error",
-        description: "Failed to load reviews",
         variant: "destructive"})
-=======
           reviewer_profile:profiles ! reviewer_id (display_name, avatar_url);
         `);
         .eq ("reviewee_id", user_id);
         .eq ("is_visible", true);
         .eq ("status", "approved");
         .order ("created_at", { ascending: false });
-;
-      // Check condition
-if (throw error) {
-  $2
-}
-      set_reviews (data || []);
-    } catch (err: any) {
-      console.error ("Error fetching user reviews:", err);
-      toast ({
-        title: "Error";
-        description: "Failed to load reviews",
-        variant: "destructive"});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    try {
+      const { data, error } = await supabase;
+        .from ("reviews");
+        .select (`;
+          *;
     } finally {
       setIsLoading (false);
     }
   }
-  // Submit a review
-  const submitReview = async (review: {
     project_id: string;
     reviewee_id: string;
     rating: number;
@@ -194,7 +103,6 @@ if (throw error) {
     communication_rating?: number;
     quality_rating?: number;
     timeliness_rating?: number;
-    would_work_again?: boolean
   },
   
   // Submit a review
@@ -207,16 +115,12 @@ if (throw error) {
     quality_rating?: number,
     timeliness_rating?: number,
     would_work_again?: boolean,
+
     is_anonymous: boolean
   }) => {
     if (!user) {
       toast({
-        title: "Error";
-        description: "You must be logged in to submit a review"
-        variant: "destructive"});
-      return false
-    }
-    setIsSubmitting(true);
+
         title: "Error",
         description: "You must be logged in to submit a review",
         variant: "destructive"}),
@@ -225,6 +129,7 @@ if (throw error) {
     
     setIsSubmitting(true),
     
+
     try {
       const { data, error } = await supabase
         .from("reviews")
@@ -232,25 +137,9 @@ if (throw error) {
           ...review,
           reviewer_id: user.id})
         .select()
-        .single();
-      if (error) throw error;
-      toast({
-        title: "Success"
-        description: "Your review has been submitted and is pending approval"});
-      setUserReview(data);
-      return true
-    } catch (err: any) {
-      console.error("Error submitting review:", err);
-      // Check for unique constraint violation
-      if (err.code === "23505") {
         toast({
           title: "Error";
           description: "You have already submitted a review for this project"
-          variant: "destructive"})
-      } else {
-        toast({
-          title: "Error";
-          description: "Failed to submit review"
           variant: "destructive"})
         .single(),
         
@@ -276,14 +165,6 @@ if (throw error) {
           title: "Error",
           description: "Failed to submit review",
           variant: "destructive"})
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import { useState } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -322,47 +203,50 @@ export function useReviews(projectId?: string) {;
         if (!userReviewError && userReviewData) {;
           setUserReview(userReviewData);
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+          reviewer_id: user.id});
+        .select ();
+        .single ();
+;
+      // Check condition
+if (throw error) {
+  $2
+}
+      toast ({
+        title: "Success",
+        description: "Your review has been submitted and is pending approval"});
+;
+      setUserReview (data);
+      return true;
+    } catch (err: any) {
+      console.error ("Error submitting review:", err);
+;
+      // Check for unique constraint violation;
+      // Check condition
+if ( {) {
+  $2
+}
+        toast ({
+          title: "Error";
+          description: "You have already submitted a review for this project",
+          variant: "destructive"});
+      } else {
+        toast ({
+          title: "Error";
       }
       return false;
     } finally {
       setIsSubmitting (false);
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   }
   // Update a review
   const updateReview = async (reviewId: string, updates: Partial<Review>) => {
     if (!user) return false;
     setIsSubmitting(true)
-<<<<<<< HEAD
-=======
   };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-  };
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
 
 
   };
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   },;
   // Fetch reviews for a user (to display on profile);
   const fetchUserReviews = async (userId: string) => {;
@@ -445,17 +329,6 @@ export function useReviews(projectId?: string) {;
       setIsSubmitting(false);
     }
   },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   
   // Update a review
   const updateReview = async (reviewId: string, updates: Partial<Review>) => {
@@ -468,42 +341,20 @@ export function useReviews(projectId?: string) {;
         .from("reviews")
         .update(updates)
         .eq("id", reviewId)
-
-        .eq("reviewer_id", user.id)
-        .eq("status", "pending");
-      if (error) throw error;
-      toast({
-        title: "Success"
-        description: "Your review has been updated"});
-        .eq("status", "pending"),
-        
-      if (error) throw error,
-      
-      toast({
-        title: "Success",
-        description: "Your review has been updated"}),
-      
       if (userReview) {
         setUserReview({ ...userReview, ...updates })
       }
       return true
     } catch (err: any) {
-      console && console.error("Error updating review:", err);
-      toast({
+  }
         title: "Error";
         description: "Failed to update review"
         variant: "destructive"});
-        title: "Error",
-        description: "Failed to update review",
-        variant: "destructive"}),
-      return false
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      return false;
     } finally {
       setIsSubmitting (false);
     }
   }
-  },
-  
   // Report a review
   const reportReview = async (reviewId: string, reason: string) => {
     if (!user) return false
@@ -511,23 +362,11 @@ export function useReviews(projectId?: string) {;
       const { error } = await supabase
         .from("review_reports")
         .insert({
-          review_id: reviewId;
-          reporter_id: user.id
-          reason});
-          review_id: reviewId,
-          reporter_id: user.id,
-          reason}),
-        
       if (error) {
         // Check for unique constraint violation
         if (error && error.code === "23505") {
           toast({
-            title: "Error";
-            description: "You have already reported this review"
-            title: "Error",
-            description: "You have already reported this review",
             variant: "destructive"})
-=======
 ;
   // Report a review;
   const report_review = async (review_id: string, reason: string) => {
@@ -556,32 +395,10 @@ if ( {) {
             title: "Error";
             description: "You have already reported this review",
             variant: "destructive"});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         } else {
           throw error;
         }
       } else {
-        toast({
-          title: "Report Submitted"
-          description: "Thank you. Our team will review your report"});
-          title: "Report Submitted",
-          description: "Thank you. Our team will review your report"}),
-        return true
-      }
-    } catch (err: any) {
-      console.error("Error reporting review:", err),
-      toast({
-<<<<<<< HEAD
-        title: "Error";
-        description: "Failed to report review"
-        variant: "destructive"})
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     }
     return false
   }
@@ -591,24 +408,14 @@ if ( {) {
   }
   return {
     reviews;
-    userReview;
-    isLoading;
-    isSubmitting;
+    user_review;
+    is_loading;
+    is_submitting;
     fetchProjectReviews;
     fetchUserReviews;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         title: "Error",
         description: "Failed to report review",
         variant: "destructive"})
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-        title: "Error",
-        description: "Failed to report review",
-        variant: "destructive"})
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   },;
   // Update a review;
   const updateReview = async (reviewId: string, updates: Partial<Review>) => {;
@@ -689,26 +496,26 @@ if ( {) {
     isSubmitting,;
     fetchProjectReviews,;
     fetchUserReviews,;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     submitReview;
     updateReview;
 
     reportReview}
-=======
     submit_review;
     update_review;
     report_review}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+          description: "Thank you. Our team will review your report"});
+        return true;
+      }
+    } catch (err: any) {
+  }
+  return {
+    reviews;
+    user_review;
+    is_loading;
+    is_submitting;
+    fetchProjectReviews;
+    fetchUserReviews;
 }

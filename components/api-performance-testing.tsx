@@ -1,36 +1,28 @@
 
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
-=======
 
 
-import React from "react";
-import SEO from "../components/SEO";
-import { Check, ExternalLink } from "lucide-react";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export default function ApiPerformanceTestingPage() {
 
@@ -42,12 +34,6 @@ export default function ApiPerformanceTestingPage() {
     "Synthetic traffic for staging"
   ];
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
 export default function ApiPerformanceTestingPage() {
   const features = [
@@ -59,10 +45,6 @@ export default function ApiPerformanceTestingPage() {
   ];
 ;
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     <>;
       <SEO;
         title="API Performance Testing";
@@ -115,35 +97,7 @@ export default function ApiPerformanceTestingPage() {
               className="inline - flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300";
             >;
               <ExternalLink className="w - 4 h - 4" /> Gatling OSS;
-
-return (
   return (
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
-=======
-    <>;
-      <SEO;
-        title="API Performance Testing";
-        description="Load, latency and regression testing - as - a-service with CI and SLOs.";
-      />;
-      <main id="main" className="container mx - auto px - 4 py - 24">;
-        <section className="max - w-5xl mx - auto">;
-          <h1 className="text - 4xl font - extrabold tracking - tight">;
-            API Performance Testing;
-          </h1>;
-          <p className="mt - 4 text - lg text - gray - 300">;
-            Ship with confidence using automated performance tests and;
-            guardrails integrated into your pipeline.;
-          </p>;
-          <div className="mt - 8 grid sm:grid - cols - 2 gap - 6">;
-            {features.map ((f) => (
-              <div;
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     <>
       <SEO
         title="API Performance Testing"
@@ -201,6 +155,7 @@ return (
           </div>;
         </section>;
       </main>;
-
-}
-
+            </a>;
+          </div>;
+        </section>;
+      </main>;

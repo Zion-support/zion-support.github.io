@@ -1,53 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-import type { NextApiRequest, NextApiResponse } from "next";
-import { readState, writeState } from "../../../utils/sync/storage";
-import { InstanceConfig, Peer, SyncScope } from "../../../utils/sync/types";
-=======
-<<<<<<< HEAD
-=======
-
-
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { readState, writeState } from "../../../utils/sync/storage",;
 import { InstanceConfig, Peer, SyncScope } from "../../../utils/sync/types",;
 ;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
-  const state = readState()
   if (req.method === "GET") {
-<<<<<<< HEAD
-    return res.status(200).json({ config: state.config })
-  }
-
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
 
     return res.status(200).json({ config: state.config })
   }
 
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
@@ -74,55 +35,27 @@ import { readState, writeState } from "../../../utils/sync/storage",
 import { InstanceConfig, Peer, SyncScope } from "../../../utils/sync/types",
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const state = readState(),
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (req.method === "GET") {
     return res.status(200).json({ config: state.config })
   }
 
-=======
 }
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   if (req.method === "POST") {
     const { optIn, paused, scope, peers, instanceId } = req.body as Partial<InstanceConfig> & {
       peers?: Peer[],
       scope?: SyncScope,
       instanceId?: string
     },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
     if (Array.isArray(peers)) {
       state.config.peers = peers.filter((p) => typeof p.baseUrl === "string" && p.baseUrl.length > 0)
     }
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     if (scope && !["full", "dao", "marketplace"].includes(scope)) {
       return res.status(400).json({ error: "Invalid scope" })
       } catch (error) {
@@ -154,37 +87,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     if (typeof optIn === "boolean") state.config.optIn = optIn,
     if (typeof paused === "boolean") state.config.paused = paused,
     if (scope) state.config.scope = scope,
     if (instanceId && typeof instanceId === "string") state.config.instanceId = instanceId,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     writeState(state),
     return res.status(200).json({ config: state.config })
     } catch (error) {
@@ -194,11 +101,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   if (req.method === "POST") {
     const { optIn, paused, scope, peers, instanceId } = req.body as Partial<InstanceConfig> & {
       peers?: Peer[]
@@ -220,29 +122,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(200).json({ config: state.config })
   }
   return res.status(405).json({ error: "Method not allowed" })
-<<<<<<< HEAD
-=======
 
   return res.status(405).json({ error: "Method not allowed" });
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-  return res.status(405).json({ error: "Method not allowed" });
-};
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
 
 
   return res.status(405).json({ error: "Method not allowed" });
 };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import type { NextApiRequest, NextApiResponse } from './next';,
 import { read_state, write_state  } from '../../../utils / sync / storage';,
 import { InstanceConfig, Peer, SyncScope  } from '../../../utils / sync / types';,
@@ -300,8 +188,6 @@ if (state.config.instance_id = instance_id, ) {
 }
 ;
 
-  return res.status(405).json({ error: "Method not allowed" });
-  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
@@ -313,18 +199,3 @@ if (state.config.instance_id = instance_id, ) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-}
-}
-=======
-
-}
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

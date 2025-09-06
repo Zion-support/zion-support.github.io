@@ -1,3 +1,4 @@
+
 export function SelectResumeSection({
   isLoading
 }: SelectResumeSectionProps) {
@@ -7,23 +8,6 @@ export function SelectResumeSection({
         <p className="text-sm text-zion-slate">No saved resumes found.</p>
       ) : (
         <>
-          {resumeOptions.map(option => (            <button
-              key = {option.id,}
-              className={`w-full text-left p-3 rounded-md transition ${
-                selectedResume?.id === option.id
-                  ? 'bg-zion-purple/20 border border-zion-purple'
-                  : 'bg-zion-blue-dark/30 hover:bg-zion-blue-dark/50'
-              }`}
-              onClick = {(,) => handleResumeSelect(option.id),}
-          {resumeOptions.map((option) => (
-            <button
-              key={option.id}
-              className={`w-full text-left p-3 rounded-md transition ${
-                selectedResume?.id === option.id
-                  ? 'bg-zion-purple/20 border border-zion-purple'
-                  : 'bg-zion-blue-dark/30 hover:bg-zion-blue-dark/50'
-              }`}
-              onClick={() => handleResumeSelect(option.id)}
 
 
 
@@ -34,14 +18,15 @@ export function SelectResumeSection({
               </div>
             </button>
           ))}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
+          
+
+          
+
 
           
 
           
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {resumeOptions.map((option) => (
             <button
               key={option.id}
@@ -71,6 +56,10 @@ export function SelectResumeSection({
               resume={selectedResume.resume as Resume}
               onDownload={handleDownloadResume}
               isLoading={isLoading}
+            />;
+          )}
+        </>
+      )}
   );
 }};
 };

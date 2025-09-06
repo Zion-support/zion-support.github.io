@@ -1,40 +1,13 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-import { v4 as uuidv4  } from 'uuid';
-import { BlogPost  } from '@/utils/types/blog';
-import { readPosts, writePosts } from '@/utils/data/blogStore';
-import { requireAdmin } from '@/utils/api/auth';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
   if (req.method === 'GET') {
+
   if (req.method === 'GET') {;
-=======
-
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-
   if (req.method === 'GET') {
-=======
-
-  if (req.method === 'GET') {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     const { status, topic, tag, author, limit, offset } = req.query;
   if (req && req.method === 'GET') {
     const { status, topic, tag, author, limit, offset } = req && req.query;
     let posts = readPosts();
-
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import { v4 as uuidv4 } from 'uuid';
 import { BlogPost } from '@/utils / types / blog';
 import { read_posts, write_posts } from '@/utils / data / blog_store';
@@ -117,24 +90,8 @@ if ( {) {
       tags: body.tags || [],
       topics: body.topics || [],
       seo: {
-        metaTitle: body.seo?.metaTitle |body.title!
-        metaDescription: body.seo?.metaDescription |''
-        ogImageUrl: body.seo?.ogImageUrl |body.coverImageUrl |''
-      }
-      body: body.body |''
-      status: body.status |'draft'
-      metrics: { views: 0, likes: 0, shares: 0 }
-    }
-    posts.unshift(post);
-    writePosts(posts);
-    return res.status(201).json(post);
-
-  }
-return res.status(405).end();
-}
-        metaTitle: body.seo?.metaTitle || body.title!,
-        metaDescription: body.seo?.metaDescription || '',
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        meta_title: body.seo?.meta_title || body.title!,
+        meta_description: body.seo?.meta_description || '',
         ogImageUrl: body.seo?.ogImageUrl || body.coverImageUrl || '',
       },
       body: body.body || '',
@@ -145,29 +102,11 @@ return res.status(405).end();
     write_posts (posts);
     return res.status (201).json (post);
   }
-
-<<<<<<< HEAD
-  return res.status(405).end();
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 return res.status(405).end();
 }
 
 }
 }
   return res.status(405).end();
-=======
-<<<<<<< HEAD
-  return res.status(405).end();
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+return res.status (405).end ();
+}

@@ -1,25 +1,9 @@
-import { ServiceVariant } from '../types/service-variants';
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export interface EmergingTechInnovationService {
 
 export interface EmergingTechInnovationService {;
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
-<<<<<<< HEAD
-=======
-export interface EmergingTechInnovationService {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+export interface EmergingTechInnovationService {
+
   id: string;
   name: string;
   tagline: string;
@@ -50,27 +34,11 @@ export interface EmergingTechInnovationService {;
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  }
-
-  real_implementation: boolean;
-  implementation_details: string;
-  launch_date: string;
-
   customers: number;
   rating: number;
   reviews: number;
   benefits: string[];
   capabilities: string[];
-
-  market_advantage: string;
-;
-const contact = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com', }  mobile: '+1 302 464 0950';
-
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
@@ -82,69 +50,11 @@ const contact = {
   email: 'kleber@ziontechgroup && ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com'
-
-=======
-export interface EmergingTechInnovation {
-  id: string, name: string,
-  tagline: string, price: string,
-  period: string, description: string,
-  features: string[], popular: boolean,
-  icon: string, color: string,
-  textColor: string, link: string,
-  marketPosition: string, targetAudience: string,
-  trialDays: number, setupTime: string,
-  category: string, realService: boolean,
-  technology: string[], integrations: string[],
-  useCases: string[], roi: string,
-  competitors: string[], marketSize: string,
-  growthRate: string, variant: ServiceVariant,
-  contactInfo: {
-    mobile: string, email: string,
-    address: string,
-    website: string
-    },
-    realImplementation: boolean, implementationDetails: string,
-  launchDate: string, customers: number,
-  rating: number, reviews: number,
-  benefits: string[], capabilities: string[],
-  marketAdvantage: string
-}
-const contact = {
-  mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-
-};
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-export const emergingTechInnovations: EmergingTechInnovation[] = [
-  // Quantum Internet & Communication Services
-  {
-<<<<<<< HEAD
-    id: 'quantum-internet-protocol-stack'
-    name: 'Quantum Internet Protocol Stack'
     tagline:
       'Next-generation quantum internet infrastructure for unbreakable communication'
     price: '$6,999'
     period: '/month'
     description:
-      'Revolutionary quantum internet protocol stack that enables quantum-secure communication, quantum key distribution, and quantum networking across global infrastructure.'
-      'Quantum key distribution (QKD) protocols'
-      'Quantum internet routing and switching'
-      'Quantum memory and storage systems'
-      'Quantum repeater networks'
-      'Quantum entanglement distribution'
-      'Post-quantum cryptography integration'
-      'Quantum network security and monitoring'
-      'Multi-protocol quantum communication'
-      'Quantum internet governance and compliance'
-      'Integration with classical internet infrastructure'
-    ]
-    popular: true
-    icon: '🌐'
-    color: 'from-indigo-600 to-purple-700'
-    textColor: 'text-indigo-400'
-    link: 'https://ziontechgroup.com/quantum-internet-protocol-stack'
-    marketPosition: 'Pioneering quantum internet infrastructure platform'
     targetAudience:
       'Telecommunications companies, Government agencies, Research institutions, Financial institutions'
     trialDays: 14
@@ -170,11 +80,6 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     contactInfo: contact
     realImplementation: true
     implementationDetails:
-      'Custom quantum internet infrastructure with protocol development and hardware integration'
-    launchDate: '2024-08-01'
-    customers: 18
-    rating: 4.9
-    reviews: 12
     benefits: [
       'Unbreakable quantum encryption'
       'Future-proof infrastructure'
@@ -203,22 +108,6 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     description:
       'Comprehensive AI platform for autonomous vehicles that provides advanced perception, decision-making, and control systems for safe and efficient autonomous operation.'
     features: [
-      'Advanced computer vision and perception'
-      'Real-time object detection and tracking'
-      'Predictive path planning and navigation'
-      'Behavioral prediction and modeling'
-      'Multi-sensor fusion and calibration'
-      'Safety-critical decision making'
-      'Real-time performance monitoring'
-      'Over-the-air updates and learning'
-      'Regulatory compliance and certification'
-      'Integration with vehicle systems'
-    ]
-    popular: true
-    icon: '🚗'
-    color: 'from-blue-600 to-cyan-700'
-    textColor: 'text-blue-400'
-    link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform'
     marketPosition:
       'Leading AI platform for autonomous vehicle development and deployment'
     targetAudience:
@@ -242,11 +131,6 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     contactInfo: contact
     realImplementation: true
     implementationDetails:
-      'Enterprise-grade platform with safety certification and vehicle integration'
-    launchDate: '2024-10-01'
-    customers: 67
-    rating: 4.8
-    reviews: 45
     benefits: [
       '3x faster development'
       '40% improvement in safety'
@@ -275,22 +159,6 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     description:
       'Advanced digital twin platform that creates virtual representations of physical assets, processes, and systems for real-time monitoring, optimization, and predictive maintenance.'
     features: [
-      'Real-time asset monitoring and visualization'
-      'Predictive maintenance and analytics'
-      '3D modeling and simulation'
-      'IoT sensor integration and management'
-      'Performance optimization algorithms'
-      'Historical data analysis and trending'
-      'Custom dashboard and reporting'
-      'Integration with enterprise systems'
-      'Scalable architecture for large deployments'
-      'Advanced analytics and machine learning'
-    ]
-    popular: false
-    icon: '🔄'
-    color: 'from-emerald-600 to-teal-700'
-    textColor: 'text-emerald-400'
-    link: 'https://ziontechgroup.com/enterprise-digital-twin-platform'
     marketPosition:
       'Leading digital twin platform for enterprise asset management and optimization'
     targetAudience:
@@ -300,8 +168,6 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     category: 'Edge Computing & IoT'
     realService: true
     technology: [
-      'Unity3D, Unreal Engine, Python, Node.js, IoT protocols, 3D modeling'
-    ]
     integrations: [
       'IoT platforms, ERP systems, SCADA systems, Cloud platforms, CAD software'
     ]
@@ -318,11 +184,6 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     contactInfo: contact
     realImplementation: true
     implementationDetails:
-      'Cloud-native platform with 3D visualization and IoT integration'
-    launchDate: '2025-01-01'
-    customers: 89
-    rating: 4.7
-    reviews: 67
     benefits: [
       '30% reduction in maintenance costs'
       '25% improvement in efficiency'
@@ -351,22 +212,6 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     description:
       'Advanced robotics orchestration platform that enables intelligent management, learning, and coordination of robotic systems across various industries and applications.'
     features: [
-      'Multi-robot fleet management and coordination'
-      'AI-powered task planning and optimization'
-      'Autonomous learning and adaptation'
-      'Real-time performance monitoring'
-      'Predictive maintenance and health monitoring'
-      'Human-robot collaboration and safety'
-      'Custom robotics application development'
-      'Integration with existing automation systems'
-      'Advanced simulation and training environments'
-      'Comprehensive analytics and reporting'
-    ]
-    popular: false
-    icon: '🤖'
-    color: 'from-gray-600 to-slate-700'
-    textColor: 'text-gray-400'
-    link: 'https://ziontechgroup.com/ai-robotics-orchestration'
     marketPosition:
       'Leading AI-powered robotics orchestration platform for intelligent automation'
     targetAudience:
@@ -392,11 +237,6 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     contactInfo: contact
     realImplementation: true
     implementationDetails:
-      'Enterprise-grade platform with robotics integration and safety certification'
-    launchDate: '2024-12-01'
-    customers: 56
-    rating: 4.6
-    reviews: 42
     benefits: [
       '40% improvement in efficiency'
       '30% reduction in costs'
@@ -424,23 +264,6 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     description:
       'Revolutionary materials discovery platform that leverages quantum computing and artificial intelligence to accelerate the development of new materials, drugs, and chemical compounds.'
     features: [
-      'Quantum molecular simulation and modeling'
-      'AI-powered molecular design and optimization'
-      'High-throughput screening and analysis'
-      'Materials property prediction and optimization'
-      'Drug discovery and pharmaceutical development'
-      'Automated laboratory workflow integration'
-      'Advanced analytics and reporting'
-      'Collaboration and data sharing tools'
-      'Regulatory compliance and validation'
-      'Integration with research platforms'
-    ]
-    popular: false
-    icon: '🧪'
-    color: 'from-purple-600 to-pink-700'
-    textColor: 'text-purple-400'
-    link: 'https://ziontechgroup.com/quantum-materials-discovery'
-    marketPosition: 'Pioneering quantum-powered materials discovery platform'
     targetAudience:
       'Pharmaceutical companies, Materials science firms, Research institutions, Chemical companies'
     trialDays: 14
@@ -466,11 +289,6 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     contactInfo: contact
     realImplementation: true
     implementationDetails:
-      'Research-grade platform with quantum computing access and expert consultation'
-    launchDate: '2024-09-01'
-    customers: 28
-    rating: 4.9
-    reviews: 19
     benefits: [
       '10-100x faster discovery'
       '60% reduction in costs'
@@ -499,31 +317,6 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     description:
       'Comprehensive metaverse platform that enables businesses to create, deploy, and manage immersive 3D virtual environments for collaboration, training, and customer engagement.'
     features: [
-      '3D world building and environment creation'
-      'AI-powered content generation and NPCs'
-      'Multi-user collaboration and social features'
-      'VR/AR device compatibility and optimization'
-      'Advanced analytics and user behavior tracking'
-      'Customizable avatars and identity management'
-      'Integration with business systems and workflows'
-      'Real-time communication and collaboration tools'
-      'Content management and distribution'
-      'Performance optimization and scaling'
-    ]
-    popular: true
-    icon: '🌐'
-    color: 'from-violet-600 to-purple-700'
-    textColor: 'text-violet-400'
-    link: 'https://ziontechgroup.com/enterprise-metaverse-platform'
-    marketPosition:
-      'Leading enterprise metaverse platform for business applications and collaboration'
-    targetAudience:
-      'Enterprises, Educational institutions, Event organizers, Retail brands'
-    trialDays: 21
-    setupTime: '2-4 weeks'
-    category: 'Metaverse & VR/AR'
-    realService: true
-    technology: ['Unity3D, Unreal Engine, WebGL, Three.js, Python, JavaScript']
     integrations: [
       'Business systems, CRM platforms, Learning management systems, Social platforms'
     ]
@@ -538,11 +331,6 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     contactInfo: contact
     realImplementation: true
     implementationDetails:
-      'Cloud-native platform with 3D creation tools and business integration'
-    launchDate: '2024-11-01'
-    customers: 134
-    rating: 4.7
-    reviews: 98
     benefits: [
       '70% reduction in travel costs'
       '40% improvement in collaboration'
@@ -570,23 +358,6 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     description:
       'Revolutionary energy optimization platform that uses quantum computing and artificial intelligence to optimize energy generation, distribution, and consumption for maximum efficiency and sustainability.'
     features: [
-      'Quantum-powered energy grid optimization'
-      'AI-driven demand forecasting and load balancing'
-      'Renewable energy integration and optimization'
-      'Real-time energy monitoring and analytics'
-      'Predictive maintenance for energy infrastructure'
-      'Energy storage optimization and management'
-      'Carbon footprint tracking and reduction'
-      'Regulatory compliance and reporting'
-      'Integration with smart grid systems'
-      'Advanced energy analytics and insights'
-    ]
-    popular: false
-    icon: '⚡'
-    color: 'from-yellow-600 to-orange-700'
-    textColor: 'text-yellow-400'
-    link: 'https://ziontechgroup.com/quantum-energy-optimization'
-    marketPosition: 'Leading quantum-powered energy optimization platform'
     targetAudience:
       'Utility companies, Energy providers, Smart grid operators, Sustainability consultants'
     trialDays: 30
@@ -612,11 +383,6 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     contactInfo: contact
     realImplementation: true
     implementationDetails:
-      'Enterprise-grade platform with quantum computing access and grid integration'
-    launchDate: '2024-10-01'
-    customers: 45
-    rating: 4.8
-    reviews: 32
     benefits: [
       '25% reduction in energy costs'
       '30% improvement in efficiency'
@@ -645,23 +411,6 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     description:
       'Advanced biotechnology research platform that combines artificial intelligence with cutting-edge biotech tools to accelerate drug discovery, genetic research, and biological analysis.'
     features: [
-      'AI-powered drug discovery and design'
-      'Genetic sequence analysis and optimization'
-      'Protein structure prediction and modeling'
-      'Biological pathway analysis and simulation'
-      'High-throughput screening and analysis'
-      'Real-time laboratory data integration'
-      'Advanced bioinformatics and analytics'
-      'Collaborative research tools and workflows'
-      'Regulatory compliance and validation'
-      'Integration with laboratory equipment'
-    ]
-    popular: false
-    icon: '🧬'
-    color: 'from-green-600 to-emerald-700'
-    textColor: 'text-green-400'
-    link: 'https://ziontechgroup.com/ai-biotechnology-research'
-    marketPosition: 'Leading AI-powered biotechnology research platform'
     targetAudience:
       'Biotech companies, Pharmaceutical companies, Research institutions, Healthcare organizations'
     trialDays: 30
@@ -685,11 +434,6 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     contactInfo: contact
     realImplementation: true
     implementationDetails:
-      'Research-grade platform with laboratory integration and expert consultation'
-    launchDate: '2025-01-15'
-    customers: 34
-    rating: 4.7
-    reviews: 23
     benefits: [
       '5x faster research'
       '50% reduction in costs'
@@ -718,22 +462,6 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     description:
       'Revolutionary cybersecurity platform that combines quantum computing with advanced AI to provide unprecedented threat detection, analysis, and response capabilities.'
     features: [
-      'Quantum-powered threat detection algorithms'
-      'AI-driven behavioral analysis and profiling'
-      'Real-time threat intelligence and monitoring'
-      'Autonomous incident response and remediation'
-      'Quantum-resistant encryption and security'
-      'Advanced malware analysis and reverse engineering'
-      'Threat hunting automation and orchestration'
-      'Compliance monitoring and reporting'
-      'Integration with security tools and systems'
-      '24/7 threat monitoring and response'
-    ]
-    popular: true
-    icon: '🛡️'
-    color: 'from-red-600 to-pink-700'
-    textColor: 'text-red-400'
-    link: 'https://ziontechgroup.com/quantum-threat-intelligence'
     marketPosition:
       'Pioneering quantum-powered cybersecurity platform with AI-driven intelligence'
     targetAudience:
@@ -759,11 +487,6 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     contactInfo: contact
     realImplementation: true
     implementationDetails:
-      'Enterprise-grade platform with quantum computing access and AI integration'
-    launchDate: '2024-12-01'
-    customers: 89
-    rating: 4.8
-    reviews: 67
     benefits: [
       '90% faster threat detection'
       '70% reduction in false positives'
@@ -779,10 +502,6 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
       'Threat hunting'
     ]
     marketAdvantage:
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       'Only quantum-powered cybersecurity platform with proven AI integration'
   }
 ];      'Quantum threat detectionAI behavioral analysisAutonomous responseQuantum encryptionThreat hunting'
@@ -791,10 +510,6 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
   }
 ];
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       'Only quantum-powered cybersecurity platform with proven AI integration',
   },;
 ];      'Quantum threat detectionAI behavioral analysisAutonomous responseQuantum encryptionThreat hunting'
@@ -1269,28 +984,20 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [;
 ];
 
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     ];
     market_advantage: 'Only quantum - powered cybersecurity platform with proven AI integration';
-=======
 
       'Only quantum-powered cybersecurity platform with proven AI integration',
   },;
 ];      'Quantum threat detectionAI behavioral analysisAutonomous responseQuantum encryptionThreat hunting'
     ];
     marketAdvantage: 'Only quantum-powered cybersecurity platform with proven AI integration'
+  }
+];
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
+
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTechInnovation {;
   id: string,;
@@ -1756,24 +1463,28 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [;
       'Quantum threat detectionAI behavioral analysisAutonomous responseQuantum encryptionThreat hunting';
     ];
     marketAdvantage: 'Only quantum-powered cybersecurity platform with proven AI integration';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+    benefits: [;
+      '90% faster threat detection',
+      '70% reduction in false positives',
+      'Quantum advantage',
+      'AI - driven intelligence',
+      '24 / 7 monitoring',
+    ],
+    capabilities: [;
+      'Quantum threat detection',
+      'AI behavioral analysis',
+      'Autonomous response',
+      'Quantum encryption',
+      'Threat hunting',
+    ],
+    market_advantage:;
+      'Only quantum - powered cybersecurity platform with proven AI integration',
+  },
+];      'Quantum threat detectionAI behavioral analysis_autonomous response_quantum encryption_threat hunting';
+    ];
+    market_advantage: 'Only quantum - powered cybersecurity platform with proven AI integration';
+  }
+];
+;

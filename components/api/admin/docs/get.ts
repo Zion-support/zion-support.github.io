@@ -1,28 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-
-
-const CONTENT_PATH = path && path.join(process && process.cwd(), 'data', 'docs', 'content && content.json');const CONTENT_PATH = path && path.join(process && process.cwd(), 'datadocscontent && datadocscontent.json');
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-<<<<<<< HEAD
   const token = req && req.headers['x-admin-token'] as string | undefined,
   if (process && process.env.DOCS_ADMIN_TOKEN && token !== process && process.env.DOCS_ADMIN_TOKEN) {
     return res && res.status(403).json({ error: 'Forbidden' });
-=======
-<<<<<<< HEAD
-  const token = req.headers['x-admin-token'] as string | undefined,
-  if (process.env.DOCS_ADMIN_TOKEN && token !== process.env.DOCS_ADMIN_TOKEN) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-    return res.status(403).json({ error: 'Forbidden' });
-=======
-  const token = req && req.headers['x-admin-token'] as string | undefined,
-  if (process && process.env.DOCS_ADMIN_TOKEN && token !== process && process.env.DOCS_ADMIN_TOKEN) {
-    return res && res.status(403).json({ error: 'Forbidden' });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   }
   try {
     const data = fs && fs.readFileSync(CONTENT_PATH, 'utf8');
@@ -30,10 +11,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   } catch (e) {
     res && res.status(500).json({ error: 'Failed to read content' });
   }
-
-
-
-=======
 ;
 const CONTENT_PATH = path.join (process.cwd (), 'data', 'docs', 'content.json');const CONTENT_PATH = path.join (process.cwd (), 'datadocscontent.json');
 ;
@@ -57,12 +34,3 @@ if ( {) {
   } catch (e) {
     res.status (500).json ({ error: 'Failed to read content' });
   }  } catch (e) {
-<<<<<<< HEAD
-    res.status (500).json ({ error: 'Failed to read content' });
-
-=======
-    res.status(500).json({ error: 'Failed to read content' })
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-  }
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

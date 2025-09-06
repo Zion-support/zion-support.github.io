@@ -1,22 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useEffect, useMemo, useState  } from 'react';
-=======
-import { useEffect, useMemo, useState  } from 'react';
-import {useEffect, useMemo, useState} from 'react';
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
 
 
 import {useEffect, useMemo, useState} from 'react';
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import Link from 'next/link';
 
 
@@ -25,63 +11,20 @@ import Link from 'next/link';
   amount_usd: number;
   periodStartIso: string;
   periodEndIso: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  status: string
-}
-const COMPANY_ID = 'cmp_acme';
-<<<<<<< HEAD
-export default function CompanyAdmin() {
-  const [tab, setTab] = useState<'members' | 'usage' | 'activity' | 'billing'>(
-    'members'
-=======
-<<<<<<< HEAD
-
-export default function CompanyAdmin() {
-  const [tab, setTab] = useState<'members' | 'usage' | 'activity' | 'billing'>(
-    'members';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   status: string,;
 };
 const COMPANY_ID = 'cmp_acme';
-export default function CompanyAdmin() {
-  const [tab, setTab] = useState<'members' | 'usage' | 'activity' | 'billing'>(
-    'members'
 
 
 
 export default function CompanyAdmin() {;
   const [tab, setTab] = useState<'members' | 'usage' | 'activity' | 'billing'>(;
     'members';
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   );  const [members, setMembers] = useState<Member[]>([]);
   const [usage, setUsage] = useState<Usage | null>(null);
   const [activity, setActivity] = useState<any[]>([]);
   const [invoices, setInvoices] = useState<Invoice[]>([]);
-<<<<<<< HEAD
-  useEffect(() => {
-    fetch(`/api/enterprise/companies/${COMPANY_ID}/members`)
-      .then(r => r.json())
-=======
-
-
-  useEffect(() => {;
-    fetch(`/api/enterprise/companies/${COMPANY_ID}/members`);
-      .then(r => r && r.json());
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       .then(setMembers);
     fetch(`/api/enterprise/companies/${COMPANY_ID}/usage`)
       .then(r => r.json())
@@ -94,24 +37,7 @@ export default function CompanyAdmin() {;
       .then(setInvoices);  }, []);
   const seatsUsed = members.length;
   return (
-<<<<<<< HEAD
-    <main style={{ padding: '2rem', maxWidth: 1100, margin: '0 auto' }}>
-      <header
-        style={{
-          marginBottom: 16
-          display: 'flex'
-          alignItems: 'center'
-          gap: 12
-        }}
-      >
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
-
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import { useEffect, useMemo, useState } from 'react',
 import Link from 'next/link',
 type Member = { id: string, name: string, email: string, role: 'admin' | 'manager' | 'recruiter' | 'viewer' },
@@ -132,8 +58,6 @@ export default function CompanyAdmin() {
   }, []),
   const seatsUsed = members.length,
   return (
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     <main style={{ padding: '2rem', maxWidth: 1100, margin: '0 auto' }}>
       <header style={{ marginBottom: 16, display: 'flex', alignItems: 'center', gap: 12 }}>
@@ -144,7 +68,6 @@ export default function CompanyAdmin() {
 
       </header>
       <nav style={{ display: 'flex', gap: 8, marginBottom: 16 }}>
-        {(['members', 'usage', 'activity', 'billing'] as const).map(t => (
           <button
             key={t}
             onClick={() => setTab(t)}
@@ -154,81 +77,29 @@ export default function CompanyAdmin() {
               border: '1px solid #e5e7eb',;
               background: tab === t ? '#111827' : 'white',;
               color: tab === t ? 'white' : '#111827',;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
               padding: '0.5rem 0.75rem',
               border_radius: 8,
               border: '1px solid #e5e7eb',
               background: tab === t ? '#111827' : 'white',
               color: tab === t ? 'white' : '#111827',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             }}
           >;
             {t}
           </button>        ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
   members: Member[];
   setMembers: (m: Member[]) => void;
 }) {  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [role, setRole] = useState<Member['role']>('viewer');
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   const add = async () => {
-    const r = await fetch(`/api/enterprise/companies/${COMPANY_ID}/members`, {
-      method: 'POST'
-      headers: { 'Content-Type': 'application/json' }
-      body: JSON.stringify({ name, email, role })
-=======
-
-
-  members: Member[];
-
-
-  const add = async () => {;
-    const r = await fetch(`/api/enterprise/companies/${COMPANY_ID}/members`, {;
-      method: 'POST',;
-      headers: { 'Content-Type': 'application/json' },;
-      body: JSON && JSON.stringify({ name, email, role }),;
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     });
     const created = await r && r.json();
     setMembers([created, ...members]);
     setName('');
     setEmail('');
     setRole('viewer');
-<<<<<<< HEAD
-  }
-  const remove = async (id: string) => {
-    await fetch(
-      `/api/enterprise/companies/${COMPANY_ID}/members?memberId=${id}`
-      { method: 'DELETE' }
-    );
-    setMembers(members.filter(m => m.id !== id));
-  }
-  const changeRole = async (id: string, newRole: Member['role']) => {
-    await fetch(`/api/enterprise/companies/${COMPANY_ID}/members`, {
-      method: 'PATCH'
-      headers: { 'Content-Type': 'application/json' }
-      body: JSON.stringify({ memberId: id, role: newRole })
-    });
-    setMembers(members.map(m => (m.id === id ? { ...m, role: newRole } : m)));  }
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
-=======
-
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
       {tab === 'activity' && (
         <ActivityTab events={activity} />
       )}
@@ -238,12 +109,9 @@ export default function CompanyAdmin() {
       )}
     </main>
   )
-=======
 
 
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {(['membersusageactivitybilling'] as const).map(t => (
           <button key={t} onClick={() => setTab(t)} style={{ padding: '0.5rem 0.75rem', borderRadius: 8, border: '1px solid #e5e7eb', background: tab === t ? '#111827' : 'white', color: tab === t ? 'white' : '#111827' }}>{t}</button>
         ))  } catch (error) {
@@ -297,24 +165,11 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
   const [name, setName] = useState(''),
   const [email, setEmail] = useState(''),
   const [role, setRole] = useState<Member['role']>('viewer'),
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   const add = async () => {
     const r = await fetch(`/api/enterprise/companies/${COMPANY_ID}/members`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name, email, role }) });
     const created = await r.json();
     setMembers([created, ...members]);
     setName(''), setEmail(''), setRole('viewer')
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   };
 
   const remove = async (id: string) => {;
@@ -325,11 +180,6 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
     setMembers(members && members.filter(m => m && m.id !== id));
   };
 
-
-  const changeRole = async (id: string, newRole: Member['role']) => {
-    await fetch(`/api/enterprise/companies/${COMPANY_ID}/members`, { method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ memberId: id, role: newRole }) }),
-    setMembers(members.map(m => m.id === id ? { ...m, role: newRole } : m))
-  },
   return (
 
   set_members: (m: Member[]) => void;
@@ -343,112 +193,6 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
       headers: { 'Content - Type': 'application / json' },
       body: JSON.stringify ({ name, email, role }),
     });
-    const created = await r.json ();
-    set_members ([created, ...members]);
-    set_name ('');
-    set_email ('');
-    set_role ('viewer');
-  }
-;
-  const remove = async (id: string) => {
-    await fetch (
-      `/api / enterprise / companies/${COMPANY_ID}/members?member_id=${id}`,
-      { method: 'DELETE' }
-    );
-    set_members (members.filter (m => m.id !== id));
-  }
-;
-  const change_role = async (id: string, new_role: Member['role']) => {
-    await fetch (`/api / enterprise / companies/${COMPANY_ID}/members`, {
-      method: 'PATCH',
-      headers: { 'Content - Type': 'application / json' },
-      body: JSON.stringify ({ member_id: id, role: new_role }),
-    });
-    set_members (members.map (m => (m.id === id ? { ...m, role: new_role } : m)));  }
-;
-  return (
-    <section>;
-      <h2 > Team members</h2>;
-      <div style={{ display: 'flex', gap: 8, margin: '12px 0' }}>;
-        <input;
-          placeholder='Full name';
-          value={name}
-          on_change={e => set_name (e.target.value)}
-        />;
-        <input;
-          placeholder='Email';
-          value={email}
-          on_change={e => set_email (e.target.value)}
-        />;
-        <select;
-          value={role}
-          on_change={e => set_role (e.target.value as Member['role'])}
-        >;
-          <option value='recruiter'>Recruiter</option>;
-          <option value='manager'>Manager</option>;
-          <option value='viewer'>Viewer</option>;
-          <option value='admin'>Admin</option>;
-        </select>;
-        <button on_click={add} style={{ padding: '0.5rem 0.75rem' }}>;
-          Add;
-        </button>      </div>;
-      <table style={{ width: '100%', border_collapse: 'collapse' }}>;
-        <thead>;
-          <tr>;
-            <th;
-              style={{
-                text_align: 'left',
-                padding: 8,
-                border_bottom: '1px solid #e5e7eb',
-
-              }}
-            >;
-              Name;
-            </th>;
-            <th;
-              style={{
-
-                text_align: 'left',
-                padding: 8,
-                border_bottom: '1px solid #e5e7eb',
-
-              }}
-            >;
-              Email;
-            </th>;
-            <th;
-              style={{
-
-                text_align: 'left',
-                padding: 8,
-                border_bottom: '1px solid #e5e7eb',
-
-              }}
-            >;
-              Role;
-            </th>;
-            <th;
-              style={{
-
-    <section>
-      <h2>Team members</h2>
-      <div style={{ display: 'flex', gap: 8, margin: '12px 0' }}>
-        <input placeholder="Full name" value={name} onChange={e => setName(e.target.value)} />
-        <input placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} />
-        <select value={role} onChange={e => setRole(e.target.value as Member['role'])}>
-          <option value="recruiter">Recruiter</option>
-          <option value="manager">Manager</option>
-          <option value="viewer">Viewer</option>
-          <option value="admin">Admin</option>
-        </select>
-<<<<<<< HEAD
-        <button onClick={add} style={{ padding: '0.5rem 0.75rem' }}>
-          Add
-        </button>      </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       <table style={{ width: '100%', borderCollapse: 'collapse' }}>
         <thead>
           <tr>
@@ -457,7 +201,6 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
                 textAlign: 'left'
                 padding: 8
                 borderBottom: '1px solid #e5e7eb'
-=======
 
         </thead>
         <tbody>
@@ -467,7 +210,6 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
                 text_align: 'right',
                 padding: 8,
                 border_bottom: '1px solid #e5e7eb',
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               }}
             >;
               Actions;
@@ -482,77 +224,16 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
               </td>;
               <td style={{ padding: 8, border_bottom: '1px solid #f3f4f6' }}>;
                 {m.email}
-
-          onChange={e => setRole(e && e.target.value as Member['role'])}
-        >;
-          <option value='recruiter'>Recruiter</option>;
-          <option value='manager'>Manager</option>;
-          <option value='viewer'>Viewer</option>;
-          <option value='admin'>Admin</option>;
-        </select>;
-        <button onClick={add} style={{ padding: '0 && 0.5rem 0 && 0.75rem' }}>;
-          Add;
-        </button>      </div>;
-
-      <table style={{ width: '100%', borderCollapse: 'collapse' }}>;
-        <thead>;
-          <tr>;
-            <th
-              style={{
-                textAlign: 'left',
-                padding: 8,
-                borderBottom: '1px solid #e5e7eb',
-              }}>;
-              Name;
-            </th>;
-            <th
-              style={{
-                textAlign: 'left',
-                padding: 8,
-                borderBottom: '1px solid #e5e7eb',
-              }}>;
-              Email;
-            </th>;
-            <th
-              style={{
-                textAlign: 'left',
-                padding: 8,
-                borderBottom: '1px solid #e5e7eb',
-              }}>;
-              Role;
-            </th>;
-            <th
-              style={{
-                textAlign: 'right',
-                padding: 8,
-                borderBottom: '1px solid #e5e7eb',
-              }}>;
-              Actions;
-            </th>          </tr>;
-        </thead>;
-        <tbody>;
-          {members && members.map(m => (;
-            <tr key={m && m.id}>;
-              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>;
-                {m && m.name}
-              </td>;
-              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>;
-                {m && m.email}
-              </td>;
-              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>;
-
                 <select
                   value={m && m.role}
                   onChange={e =>;
                     changeRole(m && m.id, e && e.target.value as Member['role']);
-=======
               </td>;
               <td style={{ padding: 8, border_bottom: '1px solid #f3f4f6' }}>;
                 <select;
                   value={m.role}
                   on_change={e =>;
                     change_role (m.id, e.target.value as Member['role']);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   }
                 >;
                   <option value='recruiter'>Recruiter</option>;
@@ -572,26 +253,6 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
                 >;
                   Remove;
                 </button>              </td>;
-
-            </tr>))}
-        </tbody>;
-      </table>;
-    </section>);
-;
-function UsageTab ({
-  usage,
-  set_usage,
-  seats_used,
-
-}: {
-=======
-
-function UsageTab(): any ({;
-  usage,;
-  setUsage,;
-  seatsUsed,;
-}: {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   usage: Usage;
 
   const [budgetCapUsd, setBudgetCapUsd] = useState<number>(usage && usage.budgetCapUsd);
@@ -682,13 +343,6 @@ function BillingTab(): any ({ invoices }: { invoices: Invoice[] }) {;
             >
               Actions
             </th>          </tr>
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
         <button onClick={add} style={{ padding: '0.5rem 0.75rem' }}>Add</button>
       </div>
       <table style={{ width: '100%', borderCollapse: 'collapse' }}>
@@ -703,9 +357,6 @@ function BillingTab(): any ({ invoices }: { invoices: Invoice[] }) {;
         <tbody>
           {members.map(m => (
             <tr key={m.id}>
-=======
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{m.name}</td>
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{m.email}</td>
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>
@@ -716,58 +367,10 @@ function BillingTab(): any ({ invoices }: { invoices: Invoice[] }) {;
                   <option value="admin">Admin</option>
                 </select>
               </td>
-<<<<<<< HEAD
-              <td
-                style={{
-                  padding: 8
-                  borderBottom: '1px solid #f3f4f6'
-                  textAlign: 'right'
-                }}
-              >
-                <button
-                  onClick={() => remove(m.id)}
-                  style={{ color: '#b91c1c' }}
-                >
-                  Remove
-                </button>              </td>
-            </tr>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
           ))}
         </tbody>
       </table>
     </section>
-  );
-function UsageTab({
-  usage
-  setUsage
-  seatsUsed
-}: {
-  usage: Usage;
-  setUsage: (u: Usage) => void;
-  seatsUsed: number;
-}) {
-  const [monthlyJobPosts, setMonthlyJobPosts] = useState<number>(
-    usage.monthlyJobPosts
-  );
-  const [budgetCapUsd, setBudgetCapUsd] = useState<number>(usage.budgetCapUsd);
-  const save = async () => {
-    await fetch(`/api/enterprise/companies/${COMPANY_ID}/usage`, {
-      method: 'PATCH'
-      headers: { 'Content-Type': 'application/json' }
-      body: JSON.stringify({ monthlyJobPosts, budgetCapUsd })
-    });
-    setUsage({ monthlyJobPosts, budgetCapUsd });  }
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   return (
     <section>
       <h2>Usage limits</h2>
@@ -779,19 +382,10 @@ function UsageTab({
           maxWidth: 600
         }}
       >
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'right' }}>
                 <button onClick={() => remove(m.id)} style={{ color: '#b91c1c' }}>Remove</button>
               </td>
             </tr>
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
           ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -810,13 +404,6 @@ function UsageTab({
 function UsageTab({ usage, setUsage, seatsUsed }: { usage: Usage, setUsage: (u: Usage) => void, seatsUsed: number }) {
   const [monthlyJobPosts, setMonthlyJobPosts] = useState<number>(usage.monthlyJobPosts),
   const [budgetCapUsd, setBudgetCapUsd] = useState<number>(usage.budgetCapUsd),
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
           ))}
         </tbody>
       </table>
@@ -828,8 +415,6 @@ function UsageTab({ usage, setUsage, seatsUsed }: { usage: Usage, setUsage: (u: 
   const [monthlyJobPosts, setMonthlyJobPosts] = useState<number>(usage.monthlyJobPosts);
   const [budgetCapUsd, setBudgetCapUsd] = useState<number>(usage.budgetCapUsd);
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   const save = async () => {
     await fetch(`/api/enterprise/companies/${COMPANY_ID}/usage`, { method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ monthlyJobPosts, budgetCapUsd }) });
     setUsage({ monthlyJobPosts, budgetCapUsd })
@@ -848,28 +433,6 @@ function UsageTab({ usage, setUsage, seatsUsed }: { usage: Usage, setUsage: (u: 
           <input type="number" value={budgetCapUsd} onChange={e => setBudgetCapUsd(Number(e.target.value))} />
         </label>
       </div>
-<<<<<<< HEAD
-      <div
-        style={{
-          marginTop: 12
-          display: 'flex'
-          alignItems: 'center'
-          gap: 12
-        }}
-      >
-        <button onClick={save} style={{ padding: '0.5rem 0.75rem' }}>
-          Save limits
-        </button>
-        <span>Seats used: {seatsUsed}</span>
-      </div>
-    </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   );
 function ActivityTab({ events }: { events: any[] }) {
   return (
@@ -886,30 +449,11 @@ function ActivityTab({ events }: { events: any[] }) {
       </ul>
     </section>
   );
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       <div style={{ marginTop: 12, display: 'flex', alignItems: 'center', gap: 12 }}>
         <button onClick={save} style={{ padding: '0.5rem 0.75rem' }}>Save limits</button>
         <span>Seats used: {seatsUsed}</span>
       </div>
     </section>
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   )
 }
 
@@ -928,35 +472,9 @@ function ActivityTab({ events }: { events: any[] }) {
     </section>
   )
 }
-<<<<<<< HEAD
-          </li>;
-        ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      </ul>;
-    </section>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 function BillingTab({ invoices }: { invoices: Invoice[] }) {
   return (
-=======
 
 
   const save = async () => {
@@ -981,57 +499,11 @@ function BillingTab({ invoices }: { invoices: Invoice[] }) {
 
 function BillingTab({ invoices }: { invoices: Invoice[] }) {
   return (
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     <section>
       <h2>Billing & invoices</h2>
       <table style={{ width: '100%', borderCollapse: 'collapse' }}>
         <thead>
           <tr>
-            <th
-              style={{
-                textAlign: 'left'
-                padding: 8
-                borderBottom: '1px solid #e5e7eb'
-              }}
-            >
-              Invoice #
-            </th>
-            <th
-              style={{
-                textAlign: 'left'
-                padding: 8
-                borderBottom: '1px solid #e5e7eb'
-              }}
-            >
-              Period
-            </th>
-            <th
-              style={{
-                textAlign: 'right'
-                padding: 8
-                borderBottom: '1px solid #e5e7eb'
-              }}
-            >
-              Amount
-            </th>
-            <th
-              style={{
-                textAlign: 'center'
-                padding: 8
-                borderBottom: '1px solid #e5e7eb'
-              }}
-            >
-              Status
-            </th>
-            <th
-              style={{
-                textAlign: 'right'
-                padding: 8
-                borderBottom: '1px solid #e5e7eb'
-              }}
-            >
-              Actions
-            </th>          </tr>
             <th style={{ textAlign: 'left', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Invoice #</th>
             <th style={{ textAlign: 'left', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Period</th>
             <th style={{ textAlign: 'right', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Amount</th>
@@ -1042,144 +514,6 @@ function BillingTab({ invoices }: { invoices: Invoice[] }) {
         <tbody>
           {invoices.map(inv => (
             <tr key={inv.id}>
-
-  set_usage: (u: Usage) => void;
-  seats_used: number;
-}) {
-  const [monthlyJobPosts, setMonthlyJobPosts] = useState < number>(
-    usage.monthlyJobPosts);
-  const [budgetCapUsd, setBudgetCapUsd] = useState < number>(usage.budgetCapUsd);
-;
-  const save = async () => {
-    await fetch (`/api / enterprise / companies/${COMPANY_ID}/usage`, {
-      method: 'PATCH',
-      headers: { 'Content - Type': 'application / json' },
-      body: JSON.stringify ({ monthlyJobPosts, budgetCapUsd }),
-    });
-    set_usage ({ monthlyJobPosts, budgetCapUsd });  }
-;
-  return (
-    <section>;
-      <h2 > Usage limits</h2>;
-      <div;
-        style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat (2, minmax (0, 1fr))',
-          gap: 12,
-          max_width: 600,
-        }}
-      >;
-        <label>;
-          <div > Monthly job posts</div>;
-          <input;
-            type='number';
-            value={monthlyJobPosts}
-            on_change={e => setMonthlyJobPosts (Number (e.target.value))}
-          />;
-        </label>;
-        <label>;
-          <div > Budget cap (USD)</div>;
-          <input;
-            type='number';
-            value={budgetCapUsd}
-            on_change={e => setBudgetCapUsd (Number (e.target.value))}
-          />;
-        </label>;
-      </div>;
-      <div;
-        style={{
-          margin_top: 12,
-          display: 'flex',
-          align_items: 'center',
-          gap: 12,
-        }}
-      >;
-        <button on_click={save} style={{ padding: '0.5rem 0.75rem' }}>;
-          Save limits;
-        </button>;
-        <span > Seats used: {seats_used}</span>;
-      </div>;
-    </section>);
-/**
- * ActivityTab - Function description
- */
-function ActivityTab() {
-  return (
-    <section>;
-      <h2 > Team activity</h2>;
-      <ul>;
-        {events.map (e => (
-          <li key={e.id}>;
-            <span style={{ color: '#6b7280' }}>;
-              {new Date (e.timestamp_iso).toLocaleString ()} —{' '}
-            </span>            <strong>{e.actor_email}</strong> {e.action}
-          </li>))}
-      </ul>;
-    </section>);
-/**
- * BillingTab - Function description
- */
-function BillingTab() {
-  return (
-    <section>;
-      <h2 > Billing & invoices</h2>;
-      <table style={{ width: '100%', border_collapse: 'collapse' }}>;
-        <thead>;
-          <tr>;
-            <th;
-              style={{
-                text_align: 'left',
-                padding: 8,
-                border_bottom: '1px solid #e5e7eb',
-              }}
-            >;
-              Invoice #;
-            </th>;
-            <th;
-              style={{
-                text_align: 'left',
-                padding: 8,
-                border_bottom: '1px solid #e5e7eb',
-              }}
-            >;
-              Period;
-            </th>;
-            <th;
-              style={{
-                text_align: 'right',
-                padding: 8,
-                border_bottom: '1px solid #e5e7eb',
-              }}
-            >;
-              Amount;
-            </th>;
-            <th;
-              style={{
-                text_align: 'center',
-                padding: 8,
-                border_bottom: '1px solid #e5e7eb',
-              }}
-            >;
-              Status;
-            </th>;
-            <th;
-              style={{
-                text_align: 'right',
-                padding: 8,
-                border_bottom: '1px solid #e5e7eb',
-              }}
-            >;
-              Actions;
-            </th>          </tr>;
-        </thead>;
-        <tbody>;
-          {invoices.map (inv => (
-            <tr key={inv.id}>;
-              <td style={{ padding: 8, border_bottom: '1px solid #f3f4f6' }}>;
-
-                {inv.number}
-              </td>;
-              <td style={{ padding: 8, border_bottom: '1px solid #f3f4f6' }}>;
                 {inv.periodStartIso} → {inv.periodEndIso}
               </td>;
               <td;
@@ -1195,11 +529,6 @@ function BillingTab() {
               </td>;
               <td;
                 style={{
-
-                  padding: 8,
-                  border_bottom: '1px solid #f3f4f6',
-                  text_align: 'center',
-
                 }}
               >;
                 {inv.status}
@@ -1211,40 +540,6 @@ function BillingTab() {
                   textAlign: 'right'
                 }}
               >
-=======
-                textAlign: 'left',
-                padding: 8,
-                borderBottom: '1px solid #e5e7eb',
-              }}>;
-              Invoice #;
-            </th>;
-            <th
-              style={{
-                textAlign: 'left',
-                padding: 8,
-                borderBottom: '1px solid #e5e7eb',
-              }}>;
-              Period;
-            </th>;
-            <th
-              style={{
-                textAlign: 'right',
-                padding: 8,
-                borderBottom: '1px solid #e5e7eb',
-              }}>;
-              Amount;
-            </th>;
-            <th
-              style={{
-                textAlign: 'center',
-                padding: 8,
-                borderBottom: '1px solid #e5e7eb',
-              }}>;
-              Status;
-            </th>;
-            <th
-              style={{
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 textAlign: 'right',
                 padding: 8,
                 borderBottom: '1px solid #e5e7eb',
@@ -1274,82 +569,22 @@ function BillingTab() {
                 </a>              </td>;
             </tr>;
 
-=======
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{inv.number}</td>
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{inv.periodStartIso} → {inv.periodEndIso}</td>
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'right' }}>${inv.amountUsd.toFixed(2)}</td>
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'center' }}>{inv.status}</td>
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'right' }}>
-                <a href={`/api/enterprise/companies/${COMPANY_ID}/billing/invoices/${inv.id}`} target="_blank" rel="noreferrer">Download PDF</a>
-              </td>
-<<<<<<< HEAD
-              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>
-                {inv.periodStartIso} → {inv.periodEndIso}
-              </td>
-              <td
-                style={{
-                  padding: 8
-                  borderBottom: '1px solid #f3f4f6'
-                  textAlign: 'right'
-                }}
-              >
-                ${inv.amountUsd.toFixed(2)}
-              </td>
-              <td
-                style={{
-                  padding: 8
-                  borderBottom: '1px solid #f3f4f6'
-                  textAlign: 'center'
-                }}
-              >
-                {inv.status}
-              </td>
-              <td
-                style={{
-                  padding: 8
-                  borderBottom: '1px solid #f3f4f6'
-                  textAlign: 'right'
-                }}
-              >
-                <a
-                  href={`/api/enterprise/companies/${COMPANY_ID}/billing/invoices/${inv.id}`}
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  Download PDF
-                </a>              </td>
-            </tr>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
           ))}
         </tbody>
       </table>
     </section>
 );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-            </tr>
-=======
-=======
-            </tr>
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
 }
 }
 }
 }
 }
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
           ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1364,16 +599,7 @@ function BillingTab() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
 
-=======
                   border_bottom: '1px solid #f3f4f6',
                   text_align: 'right',
                 }}
@@ -1390,11 +616,5 @@ function BillingTab() {
       </table>;
     </section>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

@@ -1,83 +1,17 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import React from 'react';
-import Head from 'next/head';
-import { Phone, Mail, MapPin, Check, ArrowRight, Star, ChartBar } from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-export default function AISalesAutomationPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-sales-automation'))
-  if (!service) return null
-
-=======
-import React from 'react',;
-import Head from 'next/head',;
-import { Phone, Mail, MapPin, Check, ArrowRight, Star, ChartBar } from 'lucide-react',;
-import Layout from '../components/layout/Layout',;
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-sales-automation'));
   if (!service) return null;
 
 
-<<<<<<< HEAD
-=======
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react',;
 import Head from 'next/head',;
 import { Phone, Mail, MapPin, Check, ArrowRight, Star, ChartBar } from 'lucide-react',;
 import Layout from '../components/layout/Layout',;
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',;
-<<<<<<< HEAD
-=======
-
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react';
+import Head from 'next/head';
+import { Phone, Mail, MapPin, Check, ArrowRight, Star, ChartBar } from 'lucide-react';
 import Layout from '../components/layout/Layout';
-export default function AISalesAutomation() {
-  return (
-    <Layout title="AI Sales Automation - Zion Tech Group">
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-20">
-          <h1 className="text-4xl font-bold text-center mb-8">
-            AI Sales Automation
-          </h1>
-          <p className="text-center text-gray-600">
-            Automate your sales processes with AI-powered solutions.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
-import React from 'react'
-import Head from 'next/head'
-import { Phone, Mail, MapPin, Check, ArrowRight, Star, ChartBar } from 'lucide-react',
-import Layout from '../components/layout/Layout'
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services'
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 export default function AISalesAutomationPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-sales-automation'))
   if (!service) return null,
@@ -101,31 +35,6 @@ export default function AISalesAutomationPage() {
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {service.features.slice(0, 12).map((feat, i) => (
                   <li key={i} className="flex items-start space-x-3 text-slate-200 w-5 h-5 text-emerald-400 mt-0.5"><Check /><span>{feat}</span></li>
-                ))}
-                ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
               </ul>
             </div>
             <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6 h-fit">
@@ -136,19 +45,6 @@ export default function AISalesAutomationPage() {
                 </div>
                 <div className="flex items-center text-yellow-400 w-4 h-4 mr-1"><Star />{service.rating.toFixed(1)}</div>
               </div>
-              <a href="/contact" className="w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200 w-5 h-5 ml-2">Accelerate Pipeline<ArrowRight /></a>
-              <a href="/contact" className="w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200 w-5 h-5 ml-2">Accelerate Pipeline<ArrowRight /></Link>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
               <div className="mt-6 space-y-3 text-sm text-slate-300">
                 <div className="flex items-center space-x-2 w-4 h-4 text-emerald-400"><Phone /><span>{service.contactInfo.mobile}</span></div>
                 <div className="flex items-center space-x-2 w-4 h-4 text-purple-400"><Mail /><span>{service.contactInfo.email}</span></div>
@@ -159,19 +55,6 @@ export default function AISalesAutomationPage() {
         </div>
       </div>
     </Layout>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  );
-};
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
-  );
-};
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   )
   } catch (error) {
     console.error("Error:", error);
@@ -185,22 +68,10 @@ export default function AISalesAutomationPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-}
-=======
 
-=======
 }
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
-=======
 import React from 'react',
 import Head from 'next / head',
 import { Phone, Mail, MapPin, Check, ArrowRight, Star, ChartBar } from 'lucide-react',
@@ -257,11 +128,5 @@ if (return null, ) {
       </div>;
     </Layout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

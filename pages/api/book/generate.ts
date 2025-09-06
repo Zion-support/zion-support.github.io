@@ -1,26 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next',;
-import OpenAI from 'openai',;
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    res.status(405).json({ error: 'Method not allowed' }),
-    return
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
     const completion = await client.chat.completions.create({
@@ -31,31 +12,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     drafted.push({ title: ch.title, content: text })
   }
   res.status(200).json({ chapters: drafted })
-<<<<<<< HEAD
-export default async function handler(req, res) {
-  try {
-  if (req.method !== '$1') {
-    res.status(405).json({ error: 'Method not allowed' });
-    return;
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  }
-=======
-  }
-=======
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 }
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next',
 import OpenAI from 'openai',
 export default async /**
@@ -74,11 +32,9 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
-=======
 
 
   }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
     // Fallback: return structured placeholders;
     const drafted = chapters.map ((c) => ({
@@ -103,32 +59,16 @@ if ( {) {
   }
   res.status (200).json ({ chapters: drafted });
 }
-
 ;
   res.status(200).json({ chapters: drafted });
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
   res.status(200).json({ chapters: drafted });
 };
 }
-=======
-<<<<<<< HEAD
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

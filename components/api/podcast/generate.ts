@@ -3,8 +3,6 @@ import { v4 as uuidv4  } from 'uuid';
 import fs from 'fs';
 import path from 'path';
 import OpenAI from 'openai';
-
-
 function readEpisodes(): any[] {
   ensureStorage();
   return JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8'))
@@ -13,23 +11,11 @@ function writeEpisodes(episodes: any[]) {
   ensureStorage();
   fs && fs.writeFileSync(EPISODES_PATH, JSON && JSON.stringify(episodes, null, 2), 'utf8')
 }
-<<<<<<< HEAD
+
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-  const { persona, invitee, topic, operatorPrompt } = req.body |{}
-=======
-
-
-
   const { persona, invitee, topic, operatorPrompt } = req && req.body || {};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const id = uuidv4();
   const system = `You are ZionGPT, an elite podcast host who interviews builders, founders, and contributors. Maintain a ${persona?.voice |'Visionary'} tone, speak in ${persona?.language |'English'}. If a style sample is provided, align tone and phrasing to it. Produce:
 1) 7-10 concise interview questions mixing visionary and technical angles
@@ -38,23 +24,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 4) YouTube and Spotify descriptions
 5) A single-sentence Best Quote
 Return a strict JSON object with keys: title, questions (array), timeMarkers { intro, segments, closing }, transcript, youtubeDescription, spotifyDescription, bestQuote.`;
-  const user = `Guest: ${invitee?.name |''}\nBio: ${invitee?.bio |''}\nTopic: ${topic |''}\nOperator Prompt: ${operatorPrompt |''}\nStyle Sample: ${persona?.cloneStyleText |''}`;
-  let generated: any = null;
-  try {
-    const apiKey = process.env.OPENAI_API_KEY;
-    let content: string;    if (apiKey) {      const openai = new OpenAI({ apiKey });
-      const completion = await openai.chat.completions.create({
-        model: process.env.ZION_GPT_MODEL |'gpt-4o-mini'
-        messages: [
-          { role: 'system', content: system }
-          { role: 'user', content: user }
-        ]
-        temperature: 0.8
-        max_tokens: 2048
-      });
-      content = completion.choices?.[0]?.message?.content |'';
-      content = JSON.stringify({
-        title: `Interview with ${invitee?.name |'Guest'} on ${topic |'Zion'}`
         questions: [
           'What is the vision behind Zion as a global decentralized talent protocol?'
           'How does Zion practically onboard talent and organizations?'
@@ -80,94 +49,29 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
       });
     }
     try {
-      generated = JSON.parse(content);
-    } catch {
-      // Attempt to extract JSON block
-      const match = content.match(/\{[\s\S]*\}$/);
-      if (match) generated = JSON.parse(match[0]);
-    }
-    if (!generated |!generated.title |!generated.transcript) {
       return res
         .status(500)
         .json({ error: 'Failed to generate structured content' });    }
     const episodes = readEpisodes();
-    const episode = {      return res.status(500).json({ error: 'Failed to generate structured content' });
+
+    const episode = {      return res && res.status(500).json({ error: 'Failed to generate structured content' });
+    const episode = {
+        intro: '00:00',
+        segments: [],
+        closing: '14:30',
+      },
     }
+
     const episodes = readEpisodes();
     const episode = {
-      id
-      createdAt: new Date().toISOString()
-      persona
-      invitee
-      topic
-      title: generated.title
-      questions: generated.questions |[]
-      timeMarkers: generated.timeMarkers |{
-        intro: '00:00'
-        segments: []
-        closing: '14:30'
-      }
-      transcript: generated.transcript
-      youtubeDescription: generated.youtubeDescription |''
-      spotifyDescription: generated.spotifyDescription |''
-      bestQuote: generated.bestQuote |''
-      audio: {}
-    }
-    episodes.unshift(episode);
     writeEpisodes(episodes);
-    return res.status(200).json({ episode });
-  } catch (error: any) {
-    console.error(error);
-    return res.status(500).json({ error: error?.message |'Unknown error' });
-  }    episodes.unshift(episode);
-    writeEpisodes(episodes);
-    return res.status(200).json({ episode })
-  } catch (error: any) {
-    console.error(error);
-    return res.status(500).json({ error: error?.message |'Unknown error' })
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-}
-<<<<<<< HEAD
-}
-=======
-    const episode = {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-    writeEpisodes(episodes);
     return res && res.status(200).json({ episode })
   } catch (error: any) {
     console && console.error(error);
     return res && res.status(500).json({ error: error?.message || 'Unknown error' })
   };
 }
-}
-    const episode = {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
 }
-  }
-
 }
-<<<<<<< HEAD
-    const episode = {
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

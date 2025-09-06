@@ -1,21 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import React, { useEffect, useState } from "react";
 import Tree, { TreeNode } from "../../components/ui/Tree";
 
   nodes: TreeNode[]
 status: {
   gitConnected: boolean, gitBranch?: string
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import React, { useEffect, useState } from 'react';
 import Tree, { TreeNode } from '../../components/ui/Tree';
-=======
 
 
 import React, { useEffect, useState } from 'react';
@@ -26,57 +16,16 @@ import React, { useEffect, useState } from 'react';
 
 import Tree, { TreeNode } from '../../components / ui / Tree';
 interface ApiResponse {
-  nodes: TreeNode[],
-status: {
-  git_connected: boolean, git_branch?: string;
-export default /**
- * DevTreePage - Function description
- */
-function DevTreePage() {
-  const [nodes, set_nodes] = useState < TreeNode[] | null>(null);
-  const [error, set_error] = useState < string | null>(null);
-  const [git, set_git] = useState < ApiResponse['status'] | null>(null);
-  const [admin_token, setAdminToken] = useState < string>('');
-;
-  const fetch_tree = async (token?: string) => {
-    try {
-      const resp = await fetch ('/api / dev / source - map', {
-        headers: token ? { 'x - admin - token': token } : undefined,
-      });
-      // Check condition
-if ( {) {
-  $2
-}
-        const inner_index = await resp.json ().catch (() => ({}));
-        throw new Error (j.error || `HTTP ${resp.status}`);
-
-      }
-      const data: ApiResponse = await resp.json ();
-      set_nodes (data.nodes);
-      set_git (data.status);
-    } catch (e: any) {
-
-import React, { useEffect, useState } from "react";
-import Tree, { TreeNode } from "../../components/ui/Tree";
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ApiResponse {
   nodes: TreeNode[],
   status: { gitConnected: boolean, gitBranch?: string }
 }
 
-export default function DevTreePage() {
   const [nodes, setNodes] = useState<TreeNode[] | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [git, setGit] = useState<ApiResponse['status'] | null>(null);
   const [adminToken, setAdminToken] = useState<string>('');
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
-=======
-=======
-
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import React, { useEffect, useState } from "react",
 import Tree, { TreeNode } from "../../components/ui/Tree",
 interface ApiResponse {
@@ -99,29 +48,6 @@ export default function DevTreePage() {
   const fetchTree = async (token?: string) => {
     try {
       const resp = await fetch('/api/dev/source-map', {
-        headers: token ? { 'x-admin-token': token } : undefined
-      });
-      if (!resp.ok) {
-        const j = await resp.json().catch(() => ({}));
-        throw new Error(j.error |`HTTP ${resp.status}`);
-      }
-      const data: ApiResponse = await resp.json();
-      setNodes(data.nodes);
-      setGit(data.status);
-    } catch (e: any) {
-      setError(e.message |'Failed to load');    }
-  }
-  useEffect(() => {
-    const stored = localStorage.getItem('ADMIN_TOKEN') |'';
-    setAdminToken(stored);
-    fetchTree(stored);
-  }, []);
-  const handleSaveToken = () => {
-    localStorage.setItem('ADMIN_TOKEN', adminToken);
-    fetchTree(adminToken);  }
-  const onDeploy = async (p: string) => {
-    try {
-      const resp = await fetch('/api/dev/source-map', {
         method: 'POST'
         headers: {
           'Content-Type': 'application/json'
@@ -136,122 +62,11 @@ export default function DevTreePage() {
       await fetchTree(adminToken);
     } catch (e: any) {
 
-<<<<<<< HEAD
-      const resp = await fetch("/api/dev/source-map", {
-        headers: token ? { "x-admin-token": token } : undefined}),
-      if (!resp.ok) {
-        const j = await resp.json().catch(() => ({})),
-        throw new Error(j.error || `HTTP ${resp.status}`)
-        } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      const data: ApiResponse = await resp.json(),
-      setNodes(data.nodes),
-      setGit(data.status)
-    } catch (e: any) {
-      setError(e.message || "Failed to load")
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  },
-  useEffect(() => {
-    const stored = localStorage.getItem("ADMIN_TOKEN") || "",
-    setAdminToken(stored),
-    fetchTree(stored)
-  }, []),
-  const handleSaveToken = () => {
-    localStorage.setItem("ADMIN_TOKEN", adminToken),
-    fetchTree(adminToken)
-  },
-  const onDeploy = async (p: string) => {
-    try {
-      const resp = await fetch("/api/dev/source-map", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "x-admin-token": adminToken},
-        body: JSON.stringify({ path: p })}),
-      if (!resp.ok) {
-        const j = await resp.json().catch(() => ({})),
-        throw new Error(j.error || `HTTP ${resp.status}`)
-        } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      await fetchTree(adminToken)
-    } catch (e: any) {
-      setError(e.message || "Deploy failed")
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  },
-  return (
-    <div className="p-6 max-w-5xl mx-auto">
-      <div className="flex items-center gap-4 mb-4">
-        <h1 className="text-xl font-semibold">Zion OS Source Tree</h1>
-        {git && (
-          <div className="text-sm text-gray-600">
-            Git: {git.gitConnected ? `connected (${git.gitBranch})` : "not connected"  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </div>
-        )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        <div className="ml-auto flex items-center gap-2">
-          <input
-            className="border rounded px-2 py-1 text-sm"
-            placeholder="Admin token"
-            value={adminToken  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            onChange={(e) => setAdminToken(e.target.value)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          />
-          <button className="px-3 py-1 text-sm bg-blue-600 text-white rounded" onClick={handleSaveToken}>
-            Save Token
-          </button>
-        </div>
-      </div>
-      {error && <div className='mb-3 text-sm text-red-600'>{error}</div>}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
-
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       {error && <div className="mb-3 text-sm text-red-600">{error}</div>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
   const fetchTree = async (token?: string) => {;
     try {;
       const resp = await fetch('/api/dev/source-map', {;
@@ -296,53 +111,20 @@ export default function DevTreePage() {
     } catch (e: any) {;
       setError(e && e.message || 'Deploy failed');    }
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       {nodes ? (
         <div className="rounded border p-3 bg-white">
           <Tree nodes={nodes} onDeploy={onDeploy} />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         </div>
       ) : (
         <div>Loading...</div>
-<<<<<<< HEAD
-      )}
-    </div>
-);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-
-=======
-<<<<<<< HEAD
-      )}
-    </div>
-);
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
 
             onClick={handleSaveToken}>            Save Token;
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
 }
 }
 }
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useEffect, useState } from "react";
 import Tree, { TreeNode } from "../../components/ui/Tree";
 interface ApiResponse {;
@@ -455,7 +237,6 @@ export default function DevTreePage(req, res) {
           />;
           <button className="px-3 py-1 text-sm bg-blue-600 text-white rounded" onClick={handleSaveToken}>;
             Save Token;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </button>;
         </div>;
       </div>;
@@ -472,11 +253,6 @@ export default function DevTreePage(req, res) {
   );
 
 
-=======
-  )
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
       set_error (e.message || 'Failed to load');    }
   }
 ;
@@ -544,21 +320,8 @@ if ( {) {
         <div > Loading...</div>)}
     </div>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

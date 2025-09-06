@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-import React, { useMemo, useState } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import React, { useMemo, useState } from 'react',;
 import {
   generateZionWiki,
@@ -13,13 +5,7 @@ import {
   buildWikitextFromWiki,
   operatorPrompt,
   slugify} from '../utils/data/zionContent',
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
 function CopyButton({ text, label }: { text: string, label: string }) {
   const [copied, setCopied] = useState(false)
@@ -29,32 +15,13 @@ function CopyButton({ text, label }: { text: string, label: string }) {
         await navigator.clipboard.writeText(text)
         setCopied(true)
         setTimeout(() => setCopied(false), 1500)
-<<<<<<< HEAD
-      }}
-      className="px-3 py-1 rounded border text-xs hover:bg-gray-50 dark:hover:bg-gray-900"
-    >
-      {copied ? 'Copied' : label}
-    </button>
-  )
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 }
 export default function WikiPage() {
   const wiki = useMemo(() => generateZionWiki(), [])
   const md = useMemo(() => buildMarkdownFromWiki(wiki), [wiki])
   const wikitext = useMemo(() => buildWikitextFromWiki(wiki), [wiki])
 
-<<<<<<< HEAD
-=======
-=======
-=======
 import React, { useMemo, useState } from 'react';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-import React, { useMemo, useState } from 'react';
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import {;
   generateZionWiki,;
   buildMarkdownFromWiki,;
@@ -87,18 +54,9 @@ function CopyButton({ text, label }: { text: string, label: string }) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 }
 
 export default function WikiPage() {
@@ -114,40 +72,17 @@ export default function WikiPage() {
             <li key={s.id}>
               <a href={`#${slugify(s.title)}`} className="opacity-80 hover:opacity-100">
                 {s.title}
-              </a>
                 {s.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
               </Link>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
             </li>
           ))}
           <li>
             <a href="#references" className="opacity-80 hover:opacity-100">References</a>
             <a href="#references" className="opacity-80 hover:opacity-100">References</Link>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
           </li>
         </ul>
       </aside>
@@ -164,34 +99,11 @@ export default function WikiPage() {
           </div>
         </div>
         <p>{wiki.intro}</p>
-
-
         {wiki.sections.map((s) => (
           <section key={s.id} id={slugify(s.title)}>
             <h2>{s.title}</h2>
             {s.paragraphs.map((p, i) => (
               <p key={i}>{p}</p>
-<<<<<<< HEAD
-            ))}
-          </section>
-        ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-=======
-
-
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
-
-
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -203,24 +115,12 @@ export default function WikiPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
         <h2 id="references">References</h2>
         <ol>
           {wiki.references.map((r, i) => (
             <li key={i}>{r}</li>
           ))}
         </ol>
-
-
         <div className="not-prose mt-10 p-4 border rounded bg-white/60 dark:bg-black/20">
           <div className="flex items-center justify-between mb-2">
             <div className="font-semibold">Export</div>
@@ -230,48 +130,14 @@ export default function WikiPage() {
             </div>
           </div>
           <pre className="overflow-auto text-xs whitespace-pre-wrap">
-{md}
-{md  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
           </pre>
         </div>
         <div className="not-prose mt-6 p-4 border rounded bg-white/60 dark:bg-black/20">
           <div className="font-semibold mb-2">Operator Prompt</div>
           <pre className="overflow-auto text-xs whitespace-pre-wrap">{operatorPrompt}</pre>
-        </div>
-      </article>
-    </div>;
-  );
-};
     </div>
   )
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-}
-}
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

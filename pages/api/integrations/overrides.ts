@@ -1,91 +1,23 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-import { readState, writeState } from '[^']*';
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   if (req && req.method === "GET") {
 
     const state = readState();
     return res && res.status(200).json({ overrides: state && state.overrides });
   }
-  if (req && req.method === "POST") {
-    const { jobId, disableCrmSync, disableAtsSync } = req && req.body as {
-      jobId?: string;
-      disableCrmSync?: boolean;
-      disableAtsSync?: boolean;
-
-    };
-    if (!jobId) return res && res.status(400).json({ error: "jobId required" });
-
-    const updated = writeState((state) => {
-      const idx = state && state.overrides.findIndex((o) => o && o.jobId === jobId);
-      const entry = {
-
-        jobId,
-        disableCrmSync: !!disableCrmSync,
-        disableAtsSync: !!disableAtsSync,
-      };
-      if (idx >= 0) state && state.overrides[idx] = entry;
-      else state && state.overrides.push(entry);
-
     });
     return res && res.status(200).json({
       ok: true,
       override: updated && updated.overrides.find((o) => o && o.jobId === jobId),
-
-
-    });
-
-  }
-<<<<<<< HEAD
-  return res.status(405).json({ error: "Method not allowed" });
-=======
-=======
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-  return res.status(405).json({ error: "Method not allowed" });
-import type { NextApiRequest, NextApiResponse } from "next";
-import { readState, writeState } from "../../../lib/integrations/fileStore";
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === "GET") {;
-    const state = readState();
-    return res.status(200).json({ overrides: state.overrides });
-import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { readState, writeState } from '../../../lib/integrations/fileStore';
-export default function handler(req, res) {
-  try {
-  if (req.method === 'GET') {
-    const state = readState();
-    return res.status(200).json({ overrides: state.overrides });
-    } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
 
   return res && res.status(405).json({ error: "Method not allowed" });
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
+}
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_state, write_state  } from '../../../lib / integrations / file_store';
 export default /**
@@ -131,63 +63,20 @@ if (state.overrides[idx] = entry) {
   }
   return res.status (405).json ({ error: "Method not allowed" });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
-=======
 
   }
-<<<<<<< HEAD
+  }
 }
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  return res.status(405).json({ error: 'Method not allowed' });
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-  }
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-}
-=======
-<<<<<<< HEAD
-=======
-}
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-return res.status(405).json({ error: "Method not allowed" });
-}
-}
-=======
-}
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

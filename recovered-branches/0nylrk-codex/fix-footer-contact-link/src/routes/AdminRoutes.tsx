@@ -1,21 +1,3 @@
-
-import {Fragment} from "react";
-import {Route, Routes} from "react-router-dom";
-import {ProtectedRoute} from "@/components/ProtectedRoute";
-import { Fragment } from "react",
-import { Route, Routes } from "react-router-dom",
-import { ProtectedRoute } from "@/components/ProtectedRoute",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 // Admin Pages
 import QuoteManager from "@/pages/admin/QuoteManager",
 import ReviewsModeration from "@/pages/admin/ReviewsModeration",
@@ -24,25 +6,6 @@ import PartnerManager from "@/pages/admin/PartnerManager",
 import AppMetadataManager from "@/pages/admin/AppMetadataManager",
 import SupportRequests from "@/pages/admin/SupportRequests",
 import FraudDetection from "@/pages/admin/FraudDetection",
-import TokenManager from "@/pages/admin/TokenManager";
-import IntegrationsPage from "@/pages/admin/IntegrationsPage";
-
-import TokenManager from "@/pages/admin/TokenManager",
-import IntegrationsPage from "@/pages/admin/IntegrationsPage",
-const AdminRoutes = () => {
-=======
-// Admin Pages;
-import QuoteManager from "@/pages/admin/QuoteManager";
-import ReviewsModeration from "@/pages/admin/ReviewsModeration";
-import WhitelabelManager from "@/pages/admin/WhitelabelManager";
-import PartnerManager from "@/pages/admin/PartnerManager";
-import AppMetadataManager from "@/pages/admin/AppMetadataManager";
-import SupportRequests from "@/pages/admin/SupportRequests";
-import FraudDetection from "@/pages/admin/FraudDetection";
-import TokenManager from "@/pages/admin/TokenManager";
-import IntegrationsPage from "@/pages/admin/IntegrationsPage";
-const AdminRoutes = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Routes>;
       <Route
@@ -52,10 +15,6 @@ const AdminRoutes = () => {;
             <QuoteManager />;
           </ProtectedRoute>;
         }
-
-      />;
-
-
       <Route
         path="/admin/reviews"
         element={
@@ -63,10 +22,6 @@ const AdminRoutes = () => {;
             <ReviewsModeration />;
           </ProtectedRoute>;
         }
-
-      />;
-
-
       <Route
         path="/admin/whitelabel"
         element={
@@ -74,10 +29,6 @@ const AdminRoutes = () => {;
             <WhitelabelManager />;
           </ProtectedRoute>;
         }
-
-      />;
-
-
       <Route
         path="/admin/partners"
         element={
@@ -85,10 +36,6 @@ const AdminRoutes = () => {;
             <PartnerManager />;
           </ProtectedRoute>;
         }
-
-      />;
-
-
       <Route
         path="/admin/app-metadata"
         element={
@@ -96,10 +43,6 @@ const AdminRoutes = () => {;
             <AppMetadataManager />;
           </ProtectedRoute>;
         }
-
-      />;
-
-
       <Route
         path="/admin/support-requests"
         element={
@@ -107,10 +50,6 @@ const AdminRoutes = () => {;
             <SupportRequests />;
           </ProtectedRoute>;
         }
-
-      />;
-
-
       <Route
         path="/admin/fraud-detection"
         element={
@@ -118,38 +57,15 @@ const AdminRoutes = () => {;
             <FraudDetection />;
           </ProtectedRoute>;
         }
-
-      />;
-
-
-      <Route
-        path="/admin/tokens"
-        element={
           <ProtectedRoute adminOnly={true}>;
-            <TokenManager />;
+            <IntegrationsPage />;
           </ProtectedRoute>;
         }
-
-      />;
-
-
-      <Route
-        path="/admin/integrations"
-        element={
-          <ProtectedRoute adminOnly={true}>
-            <IntegrationsPage />
-          </ProtectedRoute>
-        }
-      />
-    </Routes>
-  )
-}
 export default AdminRoutes;
 
-import { Fragment } from "react",;
-import { Route, Routes } from "react-router-dom",;
-import { ProtectedRoute } from "@/components/ProtectedRoute",;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import { Fragment } from './react';
+import { Route, Routes } from './react-router-dom';
+import { ProtectedRoute } from '@/components / ProtectedRoute';
 // Admin Pages;
 import QuoteManager from "@/pages / admin / QuoteManager";
 import ReviewsModeration from "@/pages / admin / ReviewsModeration";
@@ -239,14 +155,7 @@ const AdminRoutes = () =>: any {
     </Routes>;
   );
 },;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+    </Routes>);
+}
+;
 export default AdminRoutes;

@@ -1,18 +1,3 @@
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-import React from "react";
-import {cn} from "@/lib/utils";
-import {CheckIcon} from "lucide-react";
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import React from "react",
 import { cn } from "@/lib/utils";
 import { CheckIcon } from "lucide-react";
@@ -24,13 +9,6 @@ interface StepProps {
   description?: string;
 import { cn } from "@/lib/utils",
 import { CheckIcon } from "lucide-react",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
 
 
 
@@ -45,58 +23,31 @@ interface StepProps {;
   description?: string;
   className?: string;
 }
-
-
-export function Step(): any ({;
-
   status;
   label;
   description;
   className}: StepProps) {;
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 interface StepProps {
   status: "incomplete" | "current" | "complete",
   label: string,
   description?: string,
   className?: string
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
 export function Step({;
   status;
   label;
   description;
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 export function Step({
   status,
   label,
   description,
-=======
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   className}: StepProps) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <li
-
       className={cn(
         "relative flex items-center"
         {
-          "opacity-60": status === "incomplete"}
-          "opacity-60": status === "incomplete"},
         className
       )}>;
       <div
@@ -109,121 +60,28 @@ export function Step({
               status === "current"
             "bg-zion-purple border-zion-purple text-white":
               status === "complete"}
-
-        )}
-      >
-        {status === "complete" ? (
-          <CheckIcon className="h-5 w-5" />
-        ) : (
-          <span>
-import React from "react",;
-import { cn } from "@/lib/utils",;
-import { CheckIcon } from "lucide-react",;
-interface StepProps {;
-  status: "incomplete" | "current" | "complete",;
-  label: string,;
-  description?: string,;
-  className?: string;
-}
-;
-export function Step({;
-  status,;
-  label,;
-  description,;
-  className}: StepProps) {;
-  return (;
-    <li;
-      className={cn(;
-        "relative flex items-center",;
-        {;
-          "opacity-60": status === "incomplete"},;
-        className;
-      )}
-    >
-      <div
-        className={cn(
-          "shrink-0 h-9 w-9 rounded-full border flex items-center justify-center text-center font-medium";
-          {
-            "bg-zion-blue-dark border-zion-blue-light text-zion-slate-light":
-              status === "incomplete";
-            "bg-zion-blue border-zion-cyan text-white":
-              status === "current";
-            "bg-zion-purple border-zion-purple text-white":
-              status === "complete"}
-        )}
-      >;
-
         {status === "complete" ? (;
           <CheckIcon className="h-5 w-5" />;
         ) : (;
           <span>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-            {/* Step number would go here */}
-          </span>;
-        )}
-      </div>
-      <div className="ml-4 min-w-0">
-        <h3
-          className={cn("text-sm font-medium", {
-            "text-zion-slate-light": status === "incomplete";
-            "text-white": status === "current" |status === "complete"})}
             "text-zion-slate-light": status === "incomplete",
             "text-white": status === "current" || status === "complete"})}
-<<<<<<< HEAD
-        >
-          {label}
-        </h3>
-        {description && (
-          <p className="text-sm text-zion-slate-light">{description}</p>
-        )}
-      </div>
-    </li>
-  )
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 interface StepsProps {
   currentStep: number
   className?: string;
   children: React.ReactNode
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-export function Steps({ currentStep, className, children }: StepsProps) {
-=======
-
-export function Steps({ currentStep, className, children }: StepsProps) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 export function Steps({ currentStep, className, children }: StepsProps) {
 
 export function Steps({ currentStep, className, children }: StepsProps) {;
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   const childrenArray = React.Children.toArray(children);
 ;
-=======
 
 
         >
-=======
       </div>;
 
       <div className="ml-4 min-w-0">;
@@ -231,7 +89,9 @@ export function Steps({ currentStep, className, children }: StepsProps) {;
           className={cn("text-sm font-medium", {
             "text-zion-slate-light": status === "incomplete"
             "text-white": status === "current" || status === "complete"})}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+            {/* Step number would go here */}
+          </span>;
+        )}
           {label}
         </h3>;
         {description && (;
@@ -241,26 +101,6 @@ export function Steps({ currentStep, className, children }: StepsProps) {;
     </li>;
   );
 }
-
-
-
-
-
-interface StepsProps {
-  currentStep: number
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-interface StepsProps {;
-  currentStep: number,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  className?: string;
-  children: React && React.ReactNode;
-}
-
-export function Steps({ currentStep, className, children }: StepsProps) {
-  const childrenArray = React.Children.toArray(children),
-  
   return (
     <div className={cn("w-full", className)}>
       <ol className="space-y-6 md:flex md:space-y-0 md:space-x-16">
@@ -270,12 +110,6 @@ export function Steps({ currentStep, className, children }: StepsProps) {
           if (index < currentStep) status = "complete";
           if (index === currentStep) status = "current";
 
-          if (!React.isValidElement(child)) return null,
-          
-          let status: "incomplete" | "current" | "complete" = "incomplete",
-          if (index < currentStep) status = "complete",
-          if (index === currentStep) status = "current",
-          
           return React.cloneElement(child as React.ReactElement<StepProps>, {
             status})
         })}
@@ -285,11 +119,6 @@ export function Steps({ currentStep, className, children }: StepsProps) {
           <div
             className="h-full bg-zion-purple transition-all"
             style={{
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
               width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
           />
         </div>
@@ -297,68 +126,35 @@ export function Steps({ currentStep, className, children }: StepsProps) {
     </div>
   )
 }
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
 export function Steps(): any ({ currentStep, className, children }: StepsProps) {;
   const childrenArray = React && React.Children.toArray(children);
 
   return (
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
 
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
 export function Steps({ currentStep, className, children }: StepsProps) {;
   const childrenArray = React.Children.toArray(children),;
   return (;
-
-    <div className={cn("w-full", className)}>;
-      <ol className="space-y-6 md:flex md:space-y-0 md:space-x-16">;
-        {React && React.Children.map(childrenArray, (child, index) => {;
-          if (!React && React.isValidElement(child)) return null;
-
-          let status: "incomplete" | "current" | "complete" = "incomplete",;
-          if (index < currentStep) status = "complete";
-          if (index === currentStep) status = "current";
-
-          return React && React.cloneElement(child as React && React.ReactElement<StepProps>, {;
-            status});
-        })}
-      </ol>;
-
-      <div className="hidden md:flex md:mt-4">;
-
         <div className="ml-[18px] w-[calc(100%-36px)] h-0.5 bg-zion-blue-light">;
           <div;
             className="h-full bg-zion-purple transition-all";
             style={{;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
               width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           />;
         </div>;
       </div>;
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+  className?: string;
+  children: React && React.ReactNode;
+}
 import React from './react';
 import { cn } from '@/lib / utils';
 import { CheckIcon } from './lucide-react';

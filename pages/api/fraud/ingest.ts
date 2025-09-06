@@ -1,43 +1,15 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import type { NextApiRequest, NextApiResponse } from "next";
 import { evaluateHeuristics } from "../../../utils/fraud/heuristics";
 import { classifyWithGPT } from "../../../utils/fraud/gpt";
 import { getFraudStore, newEvent } from "../../../utils/fraud/store";
 import { extractClientIp } from "../../../utils/ip";
 import {
-<<<<<<< HEAD
-  AdminActionRecord
-  GptClassification
-  GptClassificationLabel
-  MonitoredSource
-  StoredFraudRecord
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   AdminActionRecord,
   GptClassification,
   GptClassificationLabel,
   MonitoredSource,
   StoredFraudRecord,;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 } from "../../../utils/fraud/types";
 import { sendWarningEmail } from "../../../utils/email";
 const allowedSources: MonitoredSource[] = [
@@ -55,30 +27,6 @@ export default async function handler(
     res && res.status(405).json({ error: "Method not allowed" });
     return;
 
-
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { evaluateHeuristics } from '../../../utils/fraud/heuristics';
-import { classifyWithGPT } from '../../../utils/fraud/gpt';
-import { getFraudStore, newEvent } from '../../../utils/fraud/store';
-import { extractClientIp } from '../../../utils/ip';
-import { AdminActionRecord, GptClassification, GptClassificationLabel, MonitoredSource, StoredFraudRecord } from '../../../utils/fraud/types';
-import { sendWarningEmail } from '../../../utils/email';
-const allowedSources: MonitoredSource[] = ['signup', 'job_post', 'message', 'quote', 'review'];
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    res.status(405).json({ error: 'Method not allowed' });
-    return
-
-  }
-  try {
-
-
-    const body = req && req.body || {};
-    const source = body && body.source as MonitoredSource;
-    if (!allowedSources && allowedSources.includes(source)) {
-      res && res.status(400).json({ error: "Invalid source" });
       return;
     }
 
@@ -88,7 +36,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const metadata =
       body && body.metadata && typeof body && body.metadata === "object" ? body && body.metadata : null;
-=======
       res.status(400).json({ error: 'Invalid source' });
       return
     }
@@ -96,14 +43,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const userId = typeof body.userId === 'string' ? body.userId : null;
     const content = typeof body.content === 'string' ? body.content : null;
     const metadata = (body.metadata && typeof body.metadata === 'object') ? body.metadata : null;
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     const ip = extractClientIp(req);
     const store = getFraudStore();
 
       countEventsByIp: (ip, s, m) => store && store.countEventsByIp(ip, s, m),
 
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { evaluate_heuristics  } from '../../../utils / fraud / heuristics';
 import { classifyWithGPT  } from '../../../utils / fraud / gpt';
@@ -162,7 +106,6 @@ if ( {) {
 ;
     const heuristic = await evaluate_heuristics (event, {
       countEventsByIp: (ip, s, m) => store.countEventsByIp (ip, s, m),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     });
     // Privacy opt - out check for content analysis;
     let gpt: GptClassification | undefined = undefined;
@@ -222,7 +165,6 @@ if ( {) {
       autoHidden: saved && saved.autoHidden,
       createdAt: saved && saved.createdAt,
 
-=======
     let combined_label: GptClassificationLabel =;
       gpt?.label || (heuristic.flagged ? "SUSPICIOUS" : "SAFE");
     // Check condition
@@ -269,24 +211,11 @@ if ( {) {
       gpt,
       auto_hidden: saved.auto_hidden,
       created_at: saved.created_at,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     });
 
   } catch (e: any) {
-<<<<<<< HEAD
-    res
-      .status(500)
-<<<<<<< HEAD
-<<<<<<< HEAD
-      .json({ error: "Internal error", details: e?.message |String(e) });
-=======
-      .json({ error: "Internal error", details: e?.message || String(e) });
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
       .json({ error: "Internal error", details: e?.message |String(e) });
       .json({ error: "Internal error", details: e?.message || String(e) });
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'Fraud ingest endpoint' });
@@ -309,27 +238,15 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-=======
 
 
       .json({ error: "Internal error", details: e?.message || String(e) });
 
 
-=======
-      .json({ error: "Internal error", details: e?.message |String(e) });
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 }
-=======
     res
       .status(500)
-<<<<<<< HEAD
-      .json({ error: "Internal error", details: e?.message |String(e) });
-=======
-      .json({ error: "Internal error", details: e?.message || String(e) });
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
       status: 'PENDING'};
 
     const saved = await store.saveEvent(stored);
@@ -351,79 +268,16 @@ export default async function handler(req, res) {
       createdAt: saved.createdAt})
   } catch (e: any) {
     res.status(500).json({ error: 'Internal error', details: e?.message || String(e) })
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  }
+}
+  }
+}
+  }
+}
   }
 }
 
-    res;
-      .status (500);
-      .json ({ error: "Internal error", details: e?.message || String (e) });
-=======
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-    res.status(200).json({;
-      id: saved.id,;
-      flagged: combinedLabel !== 'SAFE',;
-      label: combinedLabel,;
-      heuristic,;
-      gpt;
-      autoHidden: saved.autoHidden;
-      createdAt: saved.createdAt});
-  } catch (error) {
-    res.status(500).json({ error: 'Internal error', details: e?.message || String(e) });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

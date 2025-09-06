@@ -1,10 +1,3 @@
-
-<<<<<<< HEAD
-import React, { useState } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import { Milestone, MilestoneStatus, MilestoneActivity  } from '@/hooks/useMilestones';
 import { useAuth  } from '@/hooks/useAuth';
 import { MilestoneCard  } from './MilestoneCard';
@@ -15,13 +8,6 @@ import { Card, CardContent  } from '@/components/ui/card';
 import { Plus  } from '@/components/icons';
 import { EmptyState } from '@/components/ui/empty-state';
 interface MilestonesListProps {
-=======
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import {Milestone, MilestoneStatus, MilestoneActivity} from '@/hooks/useMilestones';
 import {useAuth} from '@/hooks/useAuth';
 import {MilestoneCard} from './MilestoneCard';
@@ -55,15 +41,6 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({;
   onDeleteMilestone;
   onUploadDeliverable;
   isSubmitting;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from 'react',;
 import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -110,47 +87,20 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
   onUpdateStatus;
   onDeleteMilestone;
   onUploadDeliverable;
-
-  onApprove
-  onReject
-}) => {
-  const [showAddForm, setShowAddForm] = useState(false);
-  milestones,
-  activities,
-  isLoading,
-  isClient,
-  onCreateMilestone,
-  onUpdateStatus,
-  onDeleteMilestone,
-  onUploadDeliverable,
-  isSubmitting,
-  onApprove,
-  onReject
-}) => {
-  const [showAddForm, setShowAddForm] = useState(false),
-  
-  const handleSubmit = async (data: any) => {
-    await onCreateMilestone(data)
-    setShowAddForm(false)
-  }
-  },
-
-  if (isLoading) {
     return (
-      <div className="space-y-4">
-        {[1, 2, 3].map((i) => (
-          <Card key={i}>
-            <CardContent className="p-6">
-              <div className="h-6 w-48 bg-muted rounded animate-pulse mb-4"></div>
-              <div className="h-4 bg-muted rounded animate-pulse w-full mb-2"></div>
-              <div className="h-4 bg-muted rounded animate-pulse w-3/4"></div>
-            </CardContent>
-          </Card>
+      <div className="space-y-4">;
+        {[1, 2, 3].map((i) => (;
+          <Card key={i}>;
+            <CardContent className="p-6">;
+              <div className="h-6 w-48 bg-muted rounded animate-pulse mb-4"></div>;
+              <div className="h-4 bg-muted rounded animate-pulse w-full mb-2"></div>;
+              <div className="h-4 bg-muted rounded animate-pulse w-3/4"></div>;
+            </CardContent>;
+          </Card>;
         ))}
-      </div>
-    )
+      </div>;
+    );
   }
-  
   if (milestones.length === 0 && !showAddForm) {
     return (
       <EmptyState
@@ -164,32 +114,10 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
             text: "Create First Milestone"
             onClick: () => setShowAddForm(true)
           } : undefined
-
-
-  if (milestones && milestones.length === 0 && !showAddForm) {;
-    return (
-      <EmptyState
-        icon={<span className="text-3xl">📊</span>}
-        title="No Milestones Yet";
-        description={isClient ? ;
-          "Break down the project into manageable milestones to track progress and payments." : ;
-          "No milestones have been created for this project yet."}
-        action={isClient ? ;
-          {;
-            text: "Create First Milestone",;
-            onClick: () => setShowAddForm(true);
-          } : undefined;
-
         }
       />;
     );
   }
-=======
-        }
-      />
-    )
-  }
-
   return (
     <div className="space-y-6">;
       {isClient && !showAddForm && (;
@@ -200,12 +128,6 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
           </Button>;
         </div>;
       )}
-      {showAddForm && (
-        <Card>
-          <CardContent className="pt-6">
-            <h3 className="text-lg font-medium mb-4">Create New Milestone</h3>
-            <AddMilestoneForm
-            <AddMilestoneForm 
               onSubmit={handleSubmit}
               isSubmitting={isSubmitting}
               onCancel={() => setShowAddForm(false)}
@@ -213,14 +135,11 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
           </CardContent>;
         </Card>;
       )}
-      
       <div className="space-y-4">
         {milestones.map((milestone) => (
-=======
 
       <div className="space-y-4">;
         {milestones && milestones.map((milestone) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <MilestoneCard
             key={milestone && milestone.id}
             id={milestone && milestone.id}
@@ -234,43 +153,104 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
             onReject={onReject}
           />;
         ))}
-<<<<<<< HEAD
-      </div>
-    </div>
-  )
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 }
 
       </div>;
     </div>;
   );
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
 
 
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 };
+  is_submitting;
+  on_approve,
+  on_reject;
+}) => {
+  const [showAddForm, setShowAddForm] = useState (false);
+;
+  const handle_submit = async (data: any) => {
+    await onCreateMilestone (data),
+    setShowAddForm (false);
+  }
+;
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <div className="space - y-4">;
+        {[1, 2, 3].map ((i) => (
+          <Card key={i}>;
+            <CardContent className="p - 6">;
+              <div className="h - 6 w - 48 bg - muted rounded animate - pulse mb - 4"></div>;
+              <div className="h - 4 bg - muted rounded animate - pulse w - full mb - 2"></div>;
+              <div className="h - 4 bg - muted rounded animate - pulse w - 3/4"></div>;
+            </CardContent>;
+          </Card>))}
+      </div>);
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <EmptyState;
+        icon={<span className="text - 3xl">📊</span>}
+        title="No Milestones Yet";
+        description={is_client ?;
+          "Break down the project into manageable milestones to track progress and payments." :;
+          "No milestones have been created for this project yet."}
+        action={is_client ?;
+          {
+            text: "Create First Milestone",
+            on_click: () => setShowAddForm (true);
+          } : undefined;
+        }
+      />);
+  }
+  return (
+    <div className="space - y-6">;
+      {is_client && !showAddForm && (
+        <div className="flex justify - end">;
+          <Button on_click={() => setShowAddForm (true)}>;
+            <Plus className="h - 4 w - 4 mr - 2" />;
+            Add Milestone;
+          </Button>;
+        </div>)}
+      {showAddForm && (
+        <Card>;
+          <CardContent className="pt - 6">;
+            <h3 className="text - lg font - medium mb - 4">Create New Milestone</h3>;
+            <AddMilestoneForm;
+              on_submit={handle_submit}
+              is_submitting={is_submitting}
+              on_cancel={() => setShowAddForm (false)}
+            />;
+          </CardContent>;
+        </Card>)}
+      <div className="space - y-4">;
+        {milestones.map ((milestone) => (
+          <MilestoneCard;
+            key={milestone.id}
+            id={milestone.id}
+            project_id={milestone.project_id}
+            title={milestone.title}
+            description={milestone.description}
+            amount={parse_float (milestone.amount.to_string ())}
+            status={milestone.status}
+            due_date={milestone.due_date}
+            on_approve={on_approve}
+            on_reject={on_reject}
+          />))}
+      </div>;
+    </div>);
+}
+;

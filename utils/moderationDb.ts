@@ -1,18 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-export interface ModerationFlag {
-=======
-export interface ModerationFlag {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 export interface ModerationFlag {
 export interface ModerationFlag {;
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+export interface ModerationFlag {
   id: string;
   contentId: string;
   contentType: string;
@@ -22,23 +12,6 @@ export interface ModerationFlag {;
   createdAt: string;
   updatedAt: string;
   adminNotes?: string;
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-
-// Mock data storage - replace with actual database
-let flags: ModerationFlag[] = [];
-export async function getFlagById(id: string): Promise<ModerationFlag | null> {
-  return flags.find(flag => flag.id === id) |null;
-
-}
-export async function readAllFlags(): Promise<ModerationFlag[]> {
-  // Mock implementation - replace with actual database logic
-  return [];
-=======
-<<<<<<< HEAD
-=======
-=======
 export interface ModerationFlag {
   id: string;
   content_id: string;
@@ -48,53 +21,15 @@ export interface ModerationFlag {
   status: 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
   created_at: string;
   admin_notes?: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 }
-
-;
-export async function getFlagById (id: string): Promise < ModerationFlag | null> {
-  return flags.find (flag => flag.id === id) || null;
-}
-export async function readAllFlags (): Promise < ModerationFlag[]> {
-  return [...flags];
-
+// Mock data storage - replace with actual database;
+let flags: ModerationFlag[] = [];
 }
 export async function create_flag (data: Partial < ModerationFlag>): Promise < ModerationFlag> {
   const flag: ModerationFlag = {
 
-  flag && flag.status = status;
-  flag && flag.adminNotes = adminNotes || flag && flag.adminNotes;
-  flag && flag.updatedAt = new Date().toISOString();
-
-  await upsertFlag(flag);
-  return flag;
-
-}
-
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-// Moderation database utilities
-export interface ModerationFlag {
-  id: string, type: 'spam' | 'inappropriate' | 'harassment' | 'other',
-  content: string, reporterId: string,
-  reportedUserId?: string;
-  status: 'pending' | 'reviewed' | 'resolved' | 'dismissed', createdAt: Date,
-  updatedAt: Date, moderatorId?: string,
-  notes?: string;
-}
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-=======
 
 
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
 // Mock data storage - replace with actual database
 let flags: ModerationFlag[] = [];
@@ -112,31 +47,31 @@ export async function createFlag(data: Partial<ModerationFlag>): Promise<Moderat
     id: `flag_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
     contentId: data.contentId || '',
     contentType: data.contentType || 'post',
+    id: `flag_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
+    content_id: data.content_id || '',
+    content_type: data.content_type || 'post',
     reason: data.reason || '',
-    userEmail: data.userEmail || '',
+    user_email: data.user_email || '',
     status: 'pending',
-    createdAt: new Date().toISOString(),
+    created_at: new Date ().toISOString (),
     ...data;
-  };
-  
-  flags.push(flag);
+  }
+;
+  flags.push (flag);
   return flag;
 }
-
-export async function updateFlagStatus(
-  id: string, 
-  status: ModerationFlag['status'], 
-  adminNotes?: string
-): Promise<FlaggedContent | undefined> {;
-  const flag = await getFlagById(id);
-  if (!flag) return undefined;
-=======
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+export async function updateFlagStatus (
+  id: string,
+  status: ModerationFlag['status'],
+  admin_notes?: string): Promise < FlaggedContent | undefined> {
+  const flag = await getFlagById (id);
+  // Check condition
+if (return undefined) {
+  $2
+}
   flag.status = status;
-  flag.adminNotes = adminNotes || flag.adminNotes;
-  flag.updatedAt = new Date().toISOString();
-  await upsertFlag(flag);
+  flag.admin_notes = admin_notes || flag.admin_notes;
+  flag.updated_at = new Date ().toISOString ();
+  await upsert_flag (flag);
   return flag;
-
 }

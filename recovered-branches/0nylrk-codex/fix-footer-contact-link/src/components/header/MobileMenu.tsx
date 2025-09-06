@@ -1,16 +1,3 @@
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {Link} from "react-router-dom";
 import {useLocation} from "react-router-dom";
 import {Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle} from "lucide-react";
@@ -18,7 +5,6 @@ import {cn} from "@/lib/utils";
 import {useAuth} from "@/hooks/useAuth";
 import {Button} from "@/components/ui/button";
 export interface MobileMenuProps {;
-
   unreadCount?: number;
   onClose: () => void;
 }
@@ -27,12 +13,6 @@ export function MobileMenu(): any ({ unreadCount = 0, onClose }: MobileMenuProps
   const location = useLocation();
   const { user } = useAuth();
   const isAuthenticated = !!user;
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import { Link } from "react-router-dom",
 import { useLocation } from "react-router-dom",
 import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from "lucide-react",
@@ -41,27 +21,15 @@ import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/useAuth",
 import { Button } from "@/components/ui/button",
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 export interface MobileMenuProps {
   unreadCount?: number,
   onClose: () => void
 }
 
 export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
-  const location = useLocation();
-  const { user } = useAuth();
-  const isAuthenticated = !!user;
   const location = useLocation(),
   const { user } = useAuth(),
   const isAuthenticated = !!user,
@@ -72,7 +40,6 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
       href: "/"
       icon: Home
       matches: (path: string) => path === "/"
-    }
     {
       name: "Browse"
       href: "/talent"
@@ -80,32 +47,12 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
       matches: (path: string) => path.startsWith("/talent") |path.startsWith("/categories") |path.startsWith("/marketplace")
     }
     {
-      name: "Community"
-      href: "/community"
-      icon: MessageCircle
-      matches: (path: string) => path.startsWith("/community") |path.startsWith("/forum")
-    }
-    },
-    {
-      name: "Browse",
-      href: "/talent",
-      icon: Search,
-      matches: (path: string) => path.startsWith("/talent") || path.startsWith("/categories") || path.startsWith("/marketplace")
-    },
-    {
-      name: "Community",
-      href: "/community",
-      icon: MessageCircle,
-      matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum")
-    },
     {
       name: "Post Job"
       href: "/post-job"
       icon: BriefcaseIcon
       matches: (path: string) => path.startsWith("/post-job")
       authRequired: true
-    }
-    },
     {
       name: "Messages"
       href: "/messages"
@@ -113,8 +60,6 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
       matches: (path: string) => path.startsWith("/messages") |path.startsWith("/inbox")
       badge: unreadCount
       authRequired: true
-    }
-    },
     {
       name: "Dashboard"
       href: "/dashboard"
@@ -122,112 +67,20 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
       matches: (path: string) => path.startsWith("/dashboard")
       authRequired: true
     }
-  ];
-  // Filter items based on auth status
-  const visibleItems = navItems.filter(item =>
-    !item.authRequired |(item.authRequired && isAuthenticated)
-  );
-  ],
-
-
-  return (
-
-=======
           <Link
             key={item.name}
             to={item.href}
             className={cn(
-              "flex items-center px-6 py-3 text-base font-medium";
-
-              "flex items-center px-6 py-3 text-base font-medium",
               item.matches(location.pathname)
                 ? "bg-zion-purple/20 text-zion-cyan border-l-4 border-zion-cyan"
                 : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
             )}
-            onClick={onClose}
-          >
-            <div className="relative mr-4">
-              <item.icon className="h-5 w-5" />
-              {item.badge && item.badge > 0 && (
-                <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">
-                  {item.badge > 9 ? '9+' : item.badge}
-                </span>
-import { Link } from "react-router-dom",;
-import { useLocation } from "react-router-dom",;
-import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from "lucide-react",;
-import { cn } from "@/lib/utils",;
-import { useAuth } from "@/hooks/useAuth",;
-import { Button } from "@/components/ui/button",;
-export interface MobileMenuProps {;
-  unreadCount?: number,;
-  onClose: () => void;
-}
-;
-export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {;
-  const location = useLocation(),;
-  const { user } = useAuth(),;
-  const isAuthenticated = !!user,;
-  const navItems = [;
-    {;
-      name: "Home",;
-      href: "/",;
-      icon: Home,;
-      matches: (path: string) => path === "/";
-    },;
-    {;
-      name: "Browse",;
-      href: "/talent",;
-      icon: Search,;
-      matches: (path: string) => path.startsWith("/talent") || path.startsWith("/categories") || path.startsWith("/marketplace");
-    },;
-    {;
-      name: "Community",;
-      href: "/community",;
-      icon: MessageCircle,;
-      matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum");
-    },;
-    {;
-      name: "Post Job",;
-      href: "/post-job",;
-      icon: BriefcaseIcon,;
-      matches: (path: string) => path.startsWith("/post-job"),;
-      authRequired: true;
-    },;
-    {;
-      name: "Messages",;
-      href: "/messages",;
-      icon: MessageSquare,;
-      matches: (path: string) => path.startsWith("/messages") || path.startsWith("/inbox"),;
-      badge: unreadCount,;
-      authRequired: true;
-    },;
-    {;
-      name: "Dashboard",;
-      href: "/dashboard",;
-      icon: User,;
-      matches: (path: string) => path.startsWith("/dashboard"),;
-      authRequired: true;
-    }
-  ],;
-  // Filter items based on auth status;
-  const visibleItems = navItems.filter(item =>;
-    !item.authRequired || (item.authRequired && isAuthenticated);
   );
-  return (;
-
-    <div className="py-6">;
-      <div className="flex justify-between items-center px-6 mb-6">;
-        <h2 className="text-xl font-bold">Menu</h2>;
-        <Button variant="ghost" size="icon" onClick={onClose}>;
-          <X className="h-5 w-5" />;
-        </Button>;
-      </div>;
-
-      <nav className="space-y-1">;
-
-              "flex items-center px-6 py-3 text-base font-medium"
-              item && item.matches(location && location.pathname)
-
+  return (
+          <Link
+            key={item && item.name}
+            to={item && item.href}
+            className={cn(
                 ? "bg-zion-purple/20 text-zion-cyan border-l-4 border-zion-cyan"
                 : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
             )}
@@ -238,7 +91,6 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {;
                 <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">;
                   {item && item.badge > 9 ? '9+' : item && item.badge}
                 </span>;
-=======
         {visibleItems.map(item => (;
           <Link;
             key={item.name}
@@ -257,61 +109,27 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {;
                 <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">;
                   {item.badge > 9 ? '9+' : item.badge}
                 </span>;
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
               )}
             </div>;
             {item && item.name}
           </Link>;
         ))}
-<<<<<<< HEAD
-      </nav>
-    </div>
-  )
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 }
       </nav>;
     </div>;
   );
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
 
 
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
       </nav>;
     </div>;
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import { Link } from './react-router-dom';
 import { use_location } from './react-router-dom';
 import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from './lucide-react';

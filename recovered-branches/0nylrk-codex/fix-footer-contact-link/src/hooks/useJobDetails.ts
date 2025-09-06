@@ -1,30 +1,9 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState, useEffect  } from 'react';
-import { supabase } from '@/integrations/supabase/client';
-export function useJobDetails(jobId: string | undefined) {
-=======
-import { useState, useEffect  } from 'react';
-import { supabase } from '@/integrations/supabase/client';
-export function useJobDetails(jobId: string | undefined) {
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 export function useJobDetails(jobId: string | undefined) {;
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
-
-import {useState, useEffect} from 'react';
-import {supabase} from '@/integrations/supabase/client';
-export function useJobDetails(jobId: string | undefined) {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   const [job, setJob] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -44,80 +23,15 @@ export function useJobDetails(jobId: string | undefined) {;
       setJob(data);
       setError(null)
     } catch (err) {
-      console && console.error('Error loading job details:', err);
-      setError(err && err.message)
-=======
-import {useState, useEffect} from 'react';
-import {supabase} from '@/integrations / supabase / client';
-export /**
- * useJobDetails - Function description
- */
-function useJobDetails() {
-  const [job, set_job] = useState (null);
-  const [is_loading, setIsLoading] = useState (true);
-  const [error, set_error] = useState (null);
-;
-  async /**
- * loadJobDetails - Function description
- */
-function loadJobDetails() {
-    // Check condition
-if ( {) {
-  $2
-}
-      setIsLoading (false);
-      return;
-    }
-    try {
-      setIsLoading (true);
-      const { data, error } = await supabase;
-        .from ('jobs');
-        .select ('*');
-        .eq ('id', job_id);
-        .single ();
-;
-      // Check condition
-if (throw error) {
-  $2
-}
-      set_job (data);
-      set_error (null);
-    } catch (err) {
-      console.error ('Error loading job details:', err);
-      set_error (err.message);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       setIsLoading (false);
     }
   }
-
-  // Load job details when component mounts or job_id changes;
-  useEffect (() => {
-    loadJobDetails ();
-  }, [job_id]);
-;
-
-  return {
-    job;
-
     isLoading;
     error;
     loadJobDetails
   }
 }
-<<<<<<< HEAD
-export default useJobDetails;
-
-=======
-
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState, useEffect } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 export function useJobDetails(jobId: string | undefined) {;
@@ -155,23 +69,11 @@ export function useJobDetails(jobId: string | undefined) {;
   return {;
     job,;
     isLoading,;
-
     error;
     loadJobDetails;
   }
 }
 
-;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 export default useJobDetails;

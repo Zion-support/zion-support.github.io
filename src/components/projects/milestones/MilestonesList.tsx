@@ -1,4 +1,4 @@
-if (isLoading) {
+  if (isLoading) {
     return (
       <div className="space-y-4">
         {[1, 2, 3].map((i) => (
@@ -13,45 +13,14 @@ if (isLoading) {
       </div>
     )
   }
-  
   if (milestones.length === 0 && !showAddForm) {
     return (
       <EmptyState
         icon={<span className="text-3xl">📊</span>}
         title="No Milestones Yet"
 
-
-        description={isClient ? 
-          "Break down the project into manageable milestones to track progress and payments." : 
-          "No milestones have been created for this project yet."}
-        action={isClient ? 
-          {
-            text: "Create First Milestone",
-            onClick: () => setShowAddForm(true)
-          } : undefined
-        }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 
-
-  if (milestones && milestones.length === 0 && !showAddForm) {;
-    return (
-      <EmptyState
-        icon = {<span className="text-3xl">📊</span>,}
-        title="No Milestones Yet";
-        description = {isClient ? ;
-          "Break down the project into manageable milestones to track progress and payments." : ;
-          "No milestones have been created for this project yet.",}
-        action={isClient ? ;
-          {;
-            text: "Create First Milestone",;
-            onClick: (,) => setShowAddForm(true);
-          } : undefined;
-        }
   return (
     <div className="space-y-6">
       {isClient && !showAddForm && (
@@ -62,20 +31,63 @@ if (isLoading) {
           </Button>
         </div>
       )}
-      
       {showAddForm && (
         <Card>
           <CardContent className="pt-6">
             <h3 className="text-lg font-medium mb-4">Create New Milestone</h3>
+              onSubmit = {handleSubmit,}
+              isSubmitting = {isSubmitting,}
+              onCancel = {(,) => setShowAddForm(false),}
+            />
+          </CardContent>
+        </Card>
+
+
+      {showAddForm && (;
+        <Card>;
+          <CardContent className="pt-6">;
+            <h3 className="text-lg font-medium mb-4">Create New Milestone</h3>;
+
+            <AddMilestoneForm
+              onSubmit = {handleSubmit,}
+              isSubmitting = {isSubmitting,}
+              onCancel = {(,) => setShowAddForm(false),}
+            />;
+          </CardContent>;
+        </Card>;
       )}
-
-
-      <div className="space-y-4">;
-        {milestones && milestones.map((milestone,) => (;
-
+      <div className="space-y-4">
+        {milestones.map((milestone,) => (
           <MilestoneCard
         ))}
-
+      </div>
+    </div>
+  )
+}
+"
+              onSubmit={handleSubmit}
+              isSubmitting={isSubmitting}
+              onCancel={() => setShowAddForm(false)}
+            />;
+          </CardContent>;
+        </Card>;
+      )}
+      
+      <div className="space-y-4">
+        {milestones.map((milestone) => (
+          <MilestoneCard
+            key={milestone.id}
+            id={milestone.id}
+            projectId={milestone.project_id}
+            title={milestone.title}
+            description={milestone.description}
+            amount={parseFloat(milestone.amount.toString())}
+            status={milestone.status}
+            dueDate={milestone.due_date}
+            onApprove={onApprove}
+            onReject={onReject}
+          />;
+        ))}
       </div>;
     </div>;
   );
@@ -103,7 +115,7 @@ if ( {) {
 }
     return (
       <EmptyState;
-        icon = {<span className="text - 3xl">📊</span>, }
+        icon = {<span className="text - 3xl"></span>, }
         title="No Milestones Yet";
         description = {is_client ?;
           "Break down the project into manageable milestones to track progress and payments." :;
@@ -154,5 +166,3 @@ if ( {) {
     </div>);
 }
 ";
-
-            <AddMilestoneForm

@@ -1,23 +1,3 @@
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useEffect, useState  } from 'react';
-import { useAuth  } from '@/hooks/useAuth';
-import { supabase  } from '@/integrations/supabase/client';
-=======
-import {useEffect, useState} from 'react';
-import {useAuth} from '@/hooks/useAuth';
-import {supabase} from '@/integrations/supabase/client';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-import { useEffect, useState  } from 'react';
-import { useAuth  } from '@/hooks/useAuth';
-import { supabase  } from '@/integrations/supabase/client';
-import {useEffect, useState} from 'react';
-import {useAuth} from '@/hooks/useAuth';
-import {supabase} from '@/integrations/supabase/client';
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import type { Wallet, TokenTransaction } from '@/types/tokens';
 export function useWallet() {;
   const { user } = useAuth();
@@ -32,7 +12,6 @@ export function useWallet() {;
       setWallet(null);
       setLoading(false);
       return
-=======
 import {useEffect, useState} from 'react';
 import {use_auth} from '@/hooks / use_auth';
 import {supabase} from '@/integrations / supabase / client';
@@ -58,7 +37,6 @@ if ( {) {
       set_wallet (null);
       set_loading (false);
       return;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     try {
       set_loading (true);
@@ -78,14 +56,10 @@ if ( {) {
     } catch (err: any) {
       console.error ('Error fetching wallet:', err);
       set_error (err.message);
-
     } finally {
       set_loading (false);
     }
   }
-
-    setWallet(prev => prev ? { ...prev, balance: prev && prev.balance + amount } : prev);
-
     setTransactions(prev => [
       {
         id: crypto && crypto.randomUUID();
@@ -115,7 +89,6 @@ if ( {) {
     fetchWallet();
     fetchTransactions()
   }, [user?.id]);
-=======
   async /**
  * fetch_transactions - Function description
  */
@@ -187,13 +160,11 @@ if (return) {
     fetch_transactions ();
   }, [user?.id]);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return {
     wallet;
     transactions;
     loading;
     error;
-    fetchWallet;
 import { useEffect, useState } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -289,25 +260,12 @@ export function useWallet() {;
     loading,;
     error,;
     fetchWallet,;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     fetchTransactions;
     earnTokens;
 
     spendTokens}
-=======
     fetch_wallet;
     fetch_transactions;
     earn_tokens;
     spend_tokens}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

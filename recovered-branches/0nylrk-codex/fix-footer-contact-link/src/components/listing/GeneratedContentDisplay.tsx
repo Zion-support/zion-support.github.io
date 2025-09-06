@@ -1,46 +1,23 @@
+} from "@/components/ui/card";
 
-import React from "react",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { ArrowRight } from "lucide-react";
-
+interface GeneratedContent {;
+  description: string;
+  tags: string[];
+  suggestedPrice: {;
+import React from './react';
+import { Button  } from '@/components / ui / button';
+import { Badge  } from '@/components / ui / badge';
+import { ArrowRight  } from './lucide-react';
 import {
-<<<<<<< HEAD
-  Card
-  CardContent
-  CardFooter
-  CardHeader
-  CardTitle
-=======
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Card,
   CardContent,
   CardFooter,
   CardHeader,
-<<<<<<< HEAD
-  CardTitle,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-} from "@/components/ui/card";
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-=======
-
-  key_points: string[];
+    min: number;
 
 }
 interface GeneratedContentDisplayProps {
-=======
 interface GeneratedContentDisplayProps {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   CardTitle,;
 } from "@/components/ui/card";
 
@@ -50,28 +27,10 @@ import { Badge } from "@/components/ui/badge",
 import { ArrowRight } from "lucide-react",
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 interface GeneratedContent {
   description: string,
   tags: string[],
   suggestedPrice: {
-    min: number;
-
-    max: number;
-  }
-  keyPoints: string[];
-
-}
-interface GeneratedContentDisplayProps {
     min: number,
     max: number
   },
@@ -92,15 +51,6 @@ interface GeneratedContent {;
 }
 ;
 interface GeneratedContentDisplayProps {;
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   content: GeneratedContent;
   onApply: () => void
 }
@@ -117,60 +67,18 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
       </CardHeader>
       <CardContent className="space-y-4">
         <div>
-          <h3 className="text-sm font-medium text-zion-slate-light mb-2">
-            Description
-          </h3>
-          <p className="text-white">{content.description}</p>
-        </div>
-        
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">
             Tags
           </h3>
           <div className="flex flex-wrap gap-2">
             {content.tags.map((tag, index) => (
-              <Badge
-                key={index}
-                className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30"
-              >
-              <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
                 {tag}
               </Badge>;
             ))}
           </div>
         </div>
         
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">
             Suggested Price Range
@@ -180,18 +88,6 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
             {content.suggestedPrice.max.toFixed(2)}
           </p>
         </div>
-        
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">
             Key Selling Points
@@ -199,30 +95,14 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
           <ul className="list-disc pl-5 text-white space-y-1">
             {content.keyPoints.map((point, index) => (
               <li key={index}>{point}</li>
-=======
-          </div>;
-        </div>;
-
-        <div>;
-          <h3 className="text-sm font-medium text-zion-slate-light mb-2">;
-            Suggested Price Range;
-          </h3>;
-          <p className="text-white">;
-            ${content && content.suggestedPrice.min && min.toFixed(2)} - $;
-            {content && content.suggestedPrice.max && max.toFixed(2)}
-          </p>;
-        </div>;
-
-        <div>;
-          <h3 className="text-sm font-medium text-zion-slate-light mb-2">;
-            Key Selling Points;
-          </h3>;
-          <ul className="list-disc pl-5 text-white space-y-1">;
-            {content && content.keyPoints.map((point, index) => (;
-              <li key={index}>{point}</li>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  content: GeneratedContent;
+              <Badge
+                key={index}
+                className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">;
+                {tag}
+              </Badge>;
             ))}
-=======
+            ))}
   on_apply: () => void;
 }
 export /**
@@ -271,7 +151,6 @@ function GeneratedContentDisplay() {
           <ul className="list - disc pl - 5 text - white space - y-1">;
             {content.key_points.map ((point, index) => (
               <li key={index}>{point}</li>))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           </ul>;
         </div>;
       </CardContent>;
@@ -283,20 +162,6 @@ function GeneratedContentDisplay() {
           <ArrowRight className="ml-2 h-4 w-4" />
         </Button>
       </CardFooter>
-    </Card>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-}
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
-  );
-}
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   )
           className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-white";
         >;
@@ -304,11 +169,8 @@ function GeneratedContentDisplay() {
           <ArrowRight className="ml-2 h-4 w-4" />;
         </Button>;
       </CardFooter>;
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     </Card>;
   );
 }
-;

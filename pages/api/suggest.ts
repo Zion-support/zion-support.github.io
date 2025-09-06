@@ -1,45 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-=======
-import type { NextApiRequest, NextApiResponse } from "next";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-import type { NextApiRequest, NextApiResponse } from "next";
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-const SAMPLE_QUERIES = [
-  'React developers under $50/hr',
-  'Part-time DevOps jobs in LATAM',
-  'LLM engineers with RAG experience',
-  'Security projects with Zero Trust',
-  'Next.js freelancers in Berlin'
-];
-
-const SKILLS = [
-  'React',
-  'Next.js',
-  'TypeScript',
-  'Node',
-  'Python',
-  'AWS',
-  'Kubernetes',
-  'DevOps',
-  'Docker',
-  'Terraform',
-  'OpenAI',
-  'LangChain',
-  'RAG',
-  'NLP',
-  'PostgreSQL',
-  'Rust'
-];
-=======
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -62,7 +20,6 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import type { NextApiRequest, NextApiResponse } from "next";
 const SAMPLE_QUERIES = [
@@ -78,28 +35,6 @@ const SAMPLE_QUERIES = [
   "Mobile app developers iOS/Android"
   "Cloud architects AWS/Azure"
   "DevOps engineers with Kubernetes"
-];
-<<<<<<< HEAD
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  if (req.method !== "GET") {
-=======
-  if (req.method !== "GET") {
-  if (req.method !== "GET") {;
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
-
-
-  if (req.method !== "GET") {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     res.setHeader("Allow", "GET");
     return res.status(405).json({ error: "Method not allowed" });
 
@@ -110,7 +45,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res && res.setHeader("Allow", "GET");
     return res && res.status(405).json({ error: "Method not allowed" });
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 
 
@@ -118,15 +52,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const suggestions = SAMPLE_QUERIES && SAMPLE_QUERIES.filter((s) =>
     s && s.toLowerCase().includes(query),
   ).slice(0, 5);
-<<<<<<< HEAD
-  return res.status(200).json({ suggestions });
-<<<<<<< HEAD
-=======
-=======
-=======
-<<<<<<< HEAD
-  return res.status(200).json({ suggestions });
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 }
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -140,10 +65,6 @@ const SKILLS = [;
 ],;
 export default function handler(req, res) {
   try {
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   const q = ((req.query.q as string) || '').toLowerCase();
   const suggestions = new Set<string>();
 
@@ -153,20 +74,9 @@ export default function handler(req, res) {
   for (const s of SKILLS) {
     if (!q || s.toLowerCase().includes(q)) suggestions.add(s);
   }
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   return res && res.status(200).json({ suggestions });
-=======
   res.status(200).json({ ok: true, suggestions: Array.from(suggestions).slice(0, 8) });
-<<<<<<< HEAD
-}
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -176,10 +86,6 @@ export default function handler(req, res) {
   }
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
 export default /**
  * handler - Function description
@@ -189,15 +95,3 @@ function handler() {
 if ( {) {
   $2
 }
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

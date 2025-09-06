@@ -1,48 +1,18 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
 import type { NextPage } from 'next'
 import Head from 'next/head'
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 import type { NextPage } from 'next',;
 import Head from 'next/head',;
 import type { NextPage } from 'next'
 import Head from 'next/head'
-=======
-
-
-=======
 
 import type { NextPage } from 'next'
 import Head from 'next/head'
 
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
-import type { NextPage } from 'next',;
-import Head from 'next/head',;
-=======
-import type { NextPage } from 'next'
-import Head from 'next/head'
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 const Page: NextPage = () => {
   return (
-import type {_NextPage} from 'next';
-import Head from 'next/head';
-const Page: NextPage = () => {_return (
-ursor/fix-lint-push-and-merge-to-main-ce13
     <>
       <Head>
         <title>Auto Update 2025-08-23T23-59-59-376Z</title>
@@ -54,32 +24,14 @@ ursor/fix-lint-push-and-merge-to-main-ce13
       </div>
     </>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-}
-export default Page;
-
-},
-;
-export default Page
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 },
 
 export default Page,;
 ;
-=======
 
 
 export default Page;
 
-=======
 import type { NextPage } from 'next',
 import Head from 'next / head',
 const Page: NextPage = () => {
@@ -96,21 +48,9 @@ const Page: NextPage = () => {
     </>);
 },
 export default Page,
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
 export default Page
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 },
 
 
 export default Page
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

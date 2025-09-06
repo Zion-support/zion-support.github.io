@@ -1,19 +1,3 @@
-
-<<<<<<< HEAD
-import React, { createContext, useContext, useEffect, ReactNode } from 'react';
-import { useAuth  } from '@/hooks/useAuth';
-import { MessagingContextType  } from '@/types/messaging';
-import { useMessagingOperations, useMessagingRealtime } from '@/hooks/messaging';
-// Default context used when React type definitions are missing
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 const defaultContext: MessagingContextType = {
   messages: [],
   conversations: [],
@@ -28,15 +12,6 @@ const defaultContext: MessagingContextType = {
   fetchConversations: async () => {},
   loadMessages: async () => {}
 };
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { createContext, useContext, useEffect, ReactNode } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { MessagingContextType } from '@/types/messaging',;
@@ -56,19 +31,6 @@ const defaultContext: MessagingContextType = {;
   fetchConversations: async () => {},;
   loadMessages: async () => {}
 },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
 const defaultContext: MessagingContextType = {
   messages: []
@@ -89,28 +51,10 @@ const defaultContext: MessagingContextType = {
 // value instead of passing a generic type parameter directly.
 const MessagingContext = createContext(
   defaultContext as MessagingContextType
-);
-),
-
-// Hook for using the messaging context
-export function useMessaging(): MessagingContextType {
-  // Cast to avoid type errors when React type definitions are missing;
-  const context = useContext(MessagingContext) as MessagingContextType;
-  // Cast to avoid type errors when React type definitions are missing
-  const context = useContext(MessagingContext) as MessagingContextType,
-  if (context === undefined) {
-    throw new Error('useMessaging must be used within a MessagingProvider')
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   return context;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React, { create_context, useContext, useEffect, ReactNode } from 'react';
 import {use_auth} from '@/hooks / use_auth';
 import {MessagingContextType} from '@/types / messaging';
@@ -157,24 +101,20 @@ function MessagingProvider() {
   const { user } = use_auth ();
 ;
 
+  const context = useContext(MessagingContext) as MessagingContextType;
+  if (context === undefined) {;
+    throw new Error('useMessaging must be used within a MessagingProvider');
+  }
+  return context;
+}
   const {
-=======
-
-// Provider component;
-export function MessagingProvider(): any ({ children }: { children: ReactNode }) {;
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 // Provider component
 export function MessagingProvider({ children }: { children: ReactNode }) {;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const { user } = useAuth();
-
   const {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     messages;
     active_messages;
     setActiveMessages;
@@ -188,24 +128,10 @@ export function MessagingProvider({ children }: { children: ReactNode }) {;
     send_message;
     create_conversation;
     markAsRead;
-
-<<<<<<< HEAD
-  return (
-    <MessagingContext.Provider value={contextValue}>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       {children}
     </MessagingContext.Provider>
   )
 }
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 ;
 // Provider component;
 export function MessagingProvider({ children }: { children: ReactNode }) {;
@@ -242,20 +168,12 @@ export function MessagingProvider({ children }: { children: ReactNode }) {;
       fetchConversations();
     } else {;
       setConversations([]),;
-=======
 
 
       setConversations([]);
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       setUnreadCount(0);
     }
   }, [user, fetchConversations, setConversations, setUnreadCount]);
-
-
-  // Create context value with all the methods and states;
-  const contextValue: MessagingContextType = {;
-
-=======
     fetch_conversations;
     load_messages;
   } = useMessagingOperations (user);
@@ -289,7 +207,6 @@ if ( {) {
 ;
   // Create context value with all the methods and states;
   const context_value: MessagingContextType = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     messages;
     active_messages;
     conversations;
@@ -301,30 +218,9 @@ if ( {) {
     markAsRead;
     setActiveConversation;
 
-    fetchConversations,;
-    loadMessages;
-  };
-<<<<<<< HEAD
-  return (;
-    <MessagingContext.Provider value={contextValue}>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+  return (
+    <MessagingContext && MessagingContext.Provider value={contextValue}>;
       {children}
-
-    </MessagingContext && MessagingContext.Provider>;
-  );
-}
-
-=======
     fetch_conversations,
     load_messages;
   }

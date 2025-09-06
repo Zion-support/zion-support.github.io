@@ -1,9 +1,29 @@
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
 import React from 'react';
 interface LanguageSelectorProps {
   // Add props here as needed
-}
-
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
 export default function LanguageSelector({ }: LanguageSelectorProps) {
   return (
     <div>
@@ -11,29 +31,4 @@ export default function LanguageSelector({ }: LanguageSelectorProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD:src.disabled/components/header/LanguageSelector.jsx
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-:src.disabled/components/header/LanguageSelector.jsx
 }
-}
-ursor/add-new-services-and-deploy-updates-0462
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-}
-:temp_exclude/src.disabled/components/header/LanguageSelector.jsx
-=======
-
-}
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
-}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/header/LanguageSelector.jsx
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

@@ -1,10 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-
 import {GradientHeading} from "./GradientHeading";
 import {Check, Handshake, Search, Send} from "lucide-react";
 const steps = [
@@ -12,41 +6,22 @@ const steps = [
     title: "Post"
     description: "Publish your service, job, or equipment in minutes with our AI-powered form.";
     icon: Send}
-<<<<<<< HEAD
-=======
-import {GradientHeading} from "./GradientHeading";
-import {Check, Handshake, Search, Send} from "lucide-react";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import {GradientHeading} from "./GradientHeading";
 import {Check, Handshake, Search, Send} from "lucide-react";
 import { GradientHeading } from "./GradientHeading",
 import { Check, Handshake, Search, Send } from "lucide-react",
 
-=======
 import { GradientHeading } from './GradientHeading';
 import { Check, Handshake, Search, Send } from './lucide-react';
 const steps = [;
-=======
 
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
 import { GradientHeading } from "./GradientHeading",
 import { Check, Handshake, Search, Send } from "lucide-react",
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 const steps = [
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   {
     title: "Post",
     description: "Publish your service, job, or equipment in minutes with our AI - powered form.";
@@ -56,33 +31,6 @@ const steps = [
     description: "Our AI automatically matches your needs with the perfect providers or opportunities."
     icon: Search}
   {
-
-
-const steps = [;
-  {;
-    title: "Post",;
-    description: "Publish your service, job, or equipment in minutes with our AI-powered form.";
-    icon: Send},;
-  {;
-    title: "Match",;
-    description: "Our AI automatically matches your needs with the perfect providers or opportunities.",;
-    icon: Search},;
-  {;
-    title: "Hire/Buy",;
-    description: "Connect directly with matched providers and complete your transaction securely.",;
-    icon: Handshake},;
-  {;
-    title: "Done",;
-    description: "Enjoy hassle-free delivery and support for your technology solutions.",;
-    icon: Check}],;
-
-
-export function HowItWorksSection() {;
-  return (
-
-=======
-                className={`flex flex-col md:flex-row items-center ${
-                  index % 2 === 0 ? "md:flex-row-reverse" : ""
 import { GradientHeading } from "./GradientHeading",;
 import { Check, Handshake, Search, Send } from "lucide-react",;
 const steps = [;
@@ -104,7 +52,6 @@ const steps = [;
     icon: Check}];
 export function HowItWorksSection() {;
   return (;
-
     <section className="py-20 bg-zion-blue">;
       <div className="container mx-auto px-4">;
         <div className="text-center mb-16">;
@@ -125,16 +72,6 @@ export function HowItWorksSection() {;
                 key={step.title}
                 className={`flex flex-col md:flex-row items-center ${;
                   index % 2 === 0 ? "md:flex-row-reverse" : "";
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
                 } relative`}
               >
                 <div className="md:w-1/2 mb-6 md:mb-0 md:px-12 text-center md:text-right">
@@ -143,7 +80,6 @@ export function HowItWorksSection() {;
                       <h3 className="text-2xl font-bold text-white mb-3">{step.title}</h3>
                       <p className="text-zion-slate-light">{step.description}</p>
                     </div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   ) : null}
 
                 </div>;
@@ -154,30 +90,13 @@ export function HowItWorksSection() {;
 
                 <div className="md:w-1/2 md:px-12 text-center md:text-left">;
                   {index % 2 !== 0 ? (;
+                } relative`}>;
+                <div className="md:w-1/2 mb-6 md:mb-0 md:px-12 text-center md:text-right">;
+                  {index % 2 === 0 ? (;
                     <div>;
                       <h3 className="text-2xl font-bold text-white mb-3">{step && step.title}</h3>;
                       <p className="text-zion-slate-light">{step && step.description}</p>;
                     </div>;
-
-                  ) : null}
-                </div>;
-              </div>;
-            ))}
-<<<<<<< HEAD
-          </div>
-        </div>
-      </div>
-    </section>
-  )
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-}
-};
-;
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
 
           </div>;
         </div>;
@@ -186,7 +105,6 @@ export function HowItWorksSection() {;
   );
 }
 
-=======
     title: "Hire / Buy",
     description: "Connect directly with matched providers and complete your transaction securely.",
     icon: Handshake},
@@ -241,15 +159,7 @@ function HowItWorksSection() {
       </div>;
     </section>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 };
 ;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

@@ -1,13 +1,3 @@
-import Head from "next/head";
-import Link from "next/link";
-ursor/integrate-build-improve-and-re-verify-8f7d
-import Head from 'next/head';
-import Link from 'next/link';
-origin/automation-improvements-final
-
-import Head from "next/head";
-import Link from "next/link";
-origin/main
 export default function FAQ() {
   const contact = {
     phone: "+1 302 464 0950"
@@ -66,16 +56,11 @@ export default function FAQ() {
       answer:
         "Yes, we work with businesses of all sizes, from startups to enterprises. Our micro SaaS products are particularly well-suited for small and medium businesses looking for cost-effective solutions."
     }
-  ];
 import Head from 'next/head'
 import Link from 'next/link'
 export default function FAQ() {
   const contact = {
-    phone: "+1 302 464 0950",
-    email: "kleber@ziontechgroup.com",
-    address: "364 E Main St STE 1008 Middletown DE 19709",
-    site: "https://ziontechgroup.com",;
-  };
+
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -85,6 +70,7 @@ export default function FAQ() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
   const faqs = [
     {
       question: "What services does Zion Tech Group offer ? ",
@@ -131,60 +117,11 @@ export default function FAQ() {
   }
 }
   ]
-  return (
-    <>
-      <Head>
-        <title>Frequently Asked Questions - Zion Tech Group</title>
-        <meta name="description" content="Find answers to common questions about Zion Tech Group's micro SaaS products, AI services, and IT solutions. Get help with pricing, implementation, and support." />
-        <meta name="keywords" content="FAQ, frequently asked questions, zion tech group, micro SaaS, AI services, IT solutions" />
-        <link rel="canonical" href={`${contact.site}/faq`} />
-      </Head>
-      <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
-        {/* Hero Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        <section className="py-20 px-4 text-center">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
-              Frequently Asked Questions
-            </h1>
-            <p className="text-xl text-slate-300 mb-8">
-              Get Answers to Common Questions
-            </p>
-            <p className="text-lg text-slate-400 mb-12 max-w-3xl mx-auto">
-              Find answers to the most common questions about our services
-              pricing, implementation, and support. Can&apos;t find what
-              you&apos;re looking for? Contact us directly.
-            </p>
-          </div>
-        </section>
-        {/* FAQ Section */}
               Find answers to the most common questions about our services, pricing,
               implementation, and support. Can't find what you're looking for? Contact us directly.
             </p>
           </div>
         </section>
-<<<<<<< HEAD
-        {/* FAQ Section */}
-        {/* FAQ Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto">
             <div className="space-y-8">
@@ -201,21 +138,11 @@ export default function FAQ() {
             </div>
           </div>
         </section>
-        {/* Contact CTA */}
         {/* Contact CTA */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
         <section className="py-16 px-4 bg-slate-900/40">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-8">
@@ -227,34 +154,10 @@ export default function FAQ() {
               business.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
-                Call {contact.phone  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              </a>
-              <a href={`mailto:${contact.email}`} className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors">
-                Email {contact.email  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              </a>
-              <Link href="/contact" className="px-8 py-3 bg-slate-800 hover: bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
-                Contact Form
-              </Link>
-            </div>
-          </div>
-        </section>
-      </main>
-    </>
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/Layout';
-
 export default function FAQPage() {
-  
     >
       <div className="min-h-screen bg-gray-50">
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
@@ -271,14 +174,11 @@ export default function FAQPage() {
         </section>
       </div>
     </Layout>
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
+
+
+
+
+
   );
 }
-  )
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 }

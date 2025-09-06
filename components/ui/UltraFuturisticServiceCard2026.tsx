@@ -1,179 +1,21 @@
-
-
 import React from 'react';
-
-import {motion} from 'framer-motion';
-import {Star, Check, Zap, TrendingUp, Shield, Brain, Atom, Rocket} from 'lucide-react';
-
-interface Service {;
-  id: string,;
-  name: string,;
-  tagline: string,;
-  description: string,;
-  price?: string | {;
-
     monthly?: number;
     yearly?: number;
     currency?: string;
-
-    setupTime?: string;
-  };
-    trial_days?: number;
-    setup_time?: string;
-  }
-
   period?: string;
   pricing?: any;
   features: string[],;
   popular?: boolean;
-
-  marketPrice?: string;
   competitors?: string[];
   targetMarket?: string;
   useCases?: string[];
-  integration?: string[],
-  benefits?: string[]
-}
-interface ServiceCardProps {
-
-interface ServiceCardProps {
-  service: Service,
-  variant?: 'ai' | 'quantum' | 'space' | 'cybersecurity' | 'enterprise' | 'automation' | 'it' | 'emerging' | 'premium' | 'default'
-}
-
-  service: Service
-  variant?: 'ai' | 'quantum' | 'space' | 'cybersecurity' | 'enterprise' | 'automation' | 'it' | 'emerging' | 'premium' | 'default'
-}
-const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, variant = 'default' }) => {
-  const getVariantStyles = () => {
-=======
-  category: string,
-  icon: string,
-  market_price?: string;
-  competitors?: string[];
-  target_market?: string;
-  use_cases?: string[];
-  integration?: string[];
-  benefits?: string[];
-}
-interface ServiceCardProps {
-  service: Service,
-  variant?: 'ai' | 'quantum' | 'space' | 'cybersecurity' | 'enterprise' | 'automation' | 'it' | 'emerging' | 'premium' | 'default';
-}
-const UltraFuturisticServiceCard2026: React.FC < ServiceCardProps> = ({ service, variant = 'default' }) => {
-  const getVariantStyles = () =>: any {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     switch (variant) {
       case 'ai':;
         return {
-
-  integration?: string[];
-  benefits?: string[];
-}
-interface ServiceCardProps {;
-  service: Service,;
-  variant?: 'ai' | 'quantum' | 'space' | 'cybersecurity' | 'enterprise' | 'automation' | 'it' | 'emerging' | 'premium' | 'default';
-}
-const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, variant = 'default' }) => {;
-  const getVariantStyles = () => {;
-    switch (variant) {;
-      case 'ai':;
-        return {;
-          gradient: 'from-purple-600 via-pink-600 to-purple-700',;
-          borderColor: 'border-purple-400/30',;
-          textColor: 'text-purple-400',;
-          iconBg: 'bg-purple-500/20',;
-          iconBorder: 'border-purple-400/30';
-        };
-      case 'quantum':;
-        return {;
-          gradient: 'from-cyan-600 via-blue-600 to-cyan-700',;
-          borderColor: 'border-cyan-400/30',;
-          textColor: 'text-cyan-400',;
-          iconBg: 'bg-cyan-500/20',;
-          iconBorder: 'border-cyan-400/30';
-        };
-      case 'space':;
-        return {;
-          gradient: 'from-indigo-600 via-purple-600 to-indigo-700',;
-          borderColor: 'border-indigo-400/30',;
-          textColor: 'text-indigo-400',;
-          iconBg: 'bg-indigo-500/20',;
-          iconBorder: 'border-indigo-400/30';
-        };
-      case 'cybersecurity':;
-        return {;
-          gradient: 'from-red-600 via-orange-600 to-red-700',;
-          borderColor: 'border-red-400/30',;
-          textColor: 'text-red-400',;
-          iconBg: 'bg-red-500/20',;
-          iconBorder: 'border-red-400/30';
-        };
-      case 'enterprise':;
-        return {;
-          gradient: 'from-indigo-600 via-purple-600 to-indigo-700',;
-          borderColor: 'border-indigo-400/30',;
-          textColor: 'text-indigo-400',;
-          iconBg: 'bg-indigo-500/20',;
-          iconBorder: 'border-indigo-400/30';
-        };
-      case 'automation':;
-        return {;
-          gradient: 'from-green-600 via-emerald-600 to-green-700',;
-          borderColor: 'border-green-400/30',;
-          textColor: 'text-green-400',;
-          iconBg: 'bg-green-500/20',;
-          iconBorder: 'border-green-400/30';
-        };
-      case 'it':;
-        return {;
-          gradient: 'from-blue-600 via-indigo-600 to-blue-700',;
-          borderColor: 'border-blue-400/30',;
-          textColor: 'text-blue-400',;
-          iconBg: 'bg-blue-500/20',;
-          iconBorder: 'border-blue-400/30';
-        };
-      case 'emerging':;
-        return {;
-          gradient: 'from-yellow-600 via-orange-600 to-yellow-700',;
-          borderColor: 'border-yellow-400/30',;
-          textColor: 'text-yellow-400',;
-          iconBg: 'bg-yellow-500/20',;
-          iconBorder: 'border-yellow-400/30';
-        };
-      case 'premium':;
-        return {;
-          gradient: 'from-amber-600 via-yellow-600 to-amber-700',;
-          borderColor: 'border-amber-400/30',;
-          textColor: 'text-amber-400',;
-          iconBg: 'bg-amber-500/20',;
-          iconBorder: 'border-amber-400/30';
-        };
-      default:;
-        return {;
-          gradient: 'from-gray-600 via-gray-700 to-gray-800',;
-          borderColor: 'border-gray-400/30',;
-          textColor: 'text-gray-400',;
-          iconBg: 'bg-gray-500/20',;
-          iconBorder: 'border-gray-400/30';
-
         }
     }
   }
   const styles = getVariantStyles();
-
-
-  const getCategoryIcon = (category: string) => {;
-    if (category && category.includes('AI')) return Brain;
-    if (category && category.includes('Quantum')) return Atom;
-    if (category && category.includes('Space')) return Rocket;
-    if (category && category.includes('Cybersecurity')) return Shield;
-    return TrendingUp;
-  };
-
-  const CategoryIcon = getCategoryIcon(service && service.category);
-
-
   return (
     <motion&& motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -183,16 +25,6 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
       className="group relative">;
       <div className="relative p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-white/10 hover:border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl backdrop-blur-sm overflow-hidden">;
         {/* Enhanced Background Glow */}
-
-        <div className={`absolute inset-0 bg-gradient-to-br ${styles && styles.gradient} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>;
-
-
-=======
-
-        
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Popular Badge */}
         {service && service.popular && (;
           <motion&& motion.div
@@ -204,7 +36,6 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
             Popular;
           </motion && motion.div>;
         )}
-
           gradient: 'from - purple - 600 via - pink - 600 to - purple - 700',
           border_color: 'border - purple - 400 / 30',
           text_color: 'text - purple - 400',
@@ -316,62 +147,17 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
     >;
       <div className="relative p - 8 rounded - 2xl bg - gradient - to - br from - gray - 900 / 50 to - gray - 800 / 50 border border - white / 10 hover:border - white / 20 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl backdrop - blur - sm overflow - hidden">;
         {/* Enhanced Background Glow */}
-<<<<<<< HEAD
-        <div className={`absolute inset-0 bg-gradient-to-br ${styles.gradient} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
-        
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
         <div className={`absolute inset - 0 bg - gradient - to - br ${styles.gradient} opacity - 5 group - hover:opacity - 10 transition - opacity duration - 300`}></div>;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
         {/* Popular Badge */}
         {service.popular && (
           <motion.div;
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
-            className="absolute -top-3 left-6 px-4 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-sm font-bold rounded-full shadow-lg"
-          >
-            <Star className="w-4 h-4 inline mr-1" />
-            Popular
-          </motion.div>
-        )}
-        
         {/* Service Header */}
         <div className="text - center mb - 8 relative z - 10">;
           <div className={`w - 24 h - 24 mx - auto mb - 6 rounded - full ${styles.icon_bg} flex items - center justify - center border ${styles.icon_border} text - 4xl backdrop - blur - sm`}>;
             {service.icon}
-
-
-        {/* Service Header */}
-        <div className="text-center mb-8 relative z-10">;
-          <div className={`w-24 h-24 mx-auto mb-6 rounded-full ${styles && styles.iconBg} flex items-center justify-center border ${styles && styles.iconBorder} text-4xl backdrop-blur-sm`}>;
-            {service && service.icon}
-          </div>;
-          <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-gray-100 transition-colors">;
-            {service && service.name}
-          </h3>;
-          <p className="text-gray-300 text-sm mb-4 leading-relaxed">;
-            {service && service.tagline}
-          </p>;
-          <div className="text-4xl font-bold text-cyan-400 mb-2 group-hover:text-cyan-300 transition-colors">;
-            {service && service.price}
-            <span className="text-lg text-gray-400 font-normal">/{service && service.period}</span>;
-          </div>;
-          {/* Category Badge */}
-          <div className="inline-flex items-center space-x-2 px-3 py-1 bg-gray-800/50 border border-gray-600/30 rounded-full text-xs text-gray-300">;
-            <CategoryIcon className="w-3 h-3" />;
-            <span>{service && service.category}</span>;
-          </div>;
-        </div>;
-
-
         {/* Features List */}
         <div className="space-y-3 mb-8 relative z-10">;
           <h4 className="text-sm font-semibold text-gray-300 mb-4 flex items-center">;
@@ -389,19 +175,6 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
               <span>{feature}</span>;
             </motion && motion.div>;
           ))}
-        </div>
-        
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
         {/* Enhanced Market Information */}
         {service.marketPrice && (
           <div className="border-t border-white/10 pt-4 mb-6 space-y-3 relative z-10">
@@ -413,53 +186,9 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
               <div className="text-xs text-gray-500">
                 Competes with: {service.competitors.slice(0, 2).join()}
               </div>
-=======
-        </div>;
-        {/* Enhanced Market Information */}
-        {service && service.marketPrice && (;
-          <div className="border-t border-white/10 pt-4 mb-6 space-y-3 relative z-10">;
-            <div className="flex items-center justify-between text-xs">;
-              <span className="text-gray-400">Market Price:</span>;
-              <span className="text-green-400 font-semibold">{service && service.marketPrice}</span>;
-            </div>;
-            {service && service.competitors && (;
-              <div className="text-xs text-gray-500">;
-                Competes with: {service && service.competitors.slice(0, 2).join()}
-              </div>;
             )}
           </div>
         )}
-        
-        {/* Target Market & Use Cases */}
-        {service.targetMarket && (
-          <div className="border-t border-white/10 pt-4 mb-6 space-y-3 relative z-10">
-            <div className="text-xs">
-              <div className="text-gray-400 mb-2">Target Market:</div>
-              <div className="text-gray-300">{service.targetMarket}</div>
-            </div>
-            {service.useCases && (
-              <div className="text-xs mt-3">
-                <div className="text-gray-400 mb-2">Use Cases:</div>
-                <div className="text-gray-300">{service.useCases.slice(0, 3).join()}</div>
-              </div>
-=======
-
-        {/* Target Market & Use Cases */}
-        {service && service.targetMarket && (;
-          <div className="border-t border-white/10 pt-4 mb-6 space-y-3 relative z-10">;
-            <div className="text-xs">;
-              <div className="text-gray-400 mb-2">Target Market:</div>;
-              <div className="text-gray-300">{service && service.targetMarket}</div>;
-            </div>;
-            {service && service.useCases && (;
-              <div className="text-xs mt-3">;
-                <div className="text-gray-400 mb-2">Use Cases:</div>;
-                <div className="text-gray-300">{service && service.useCases.slice(0, 3).join()}</div>;
-              </div>;
-            )}
-          </div>;
-        )}
-        
         {/* Benefits Section */}
         {service && service.benefits && (;
           <div className="border-t border-white/10 pt-4 mb-6 relative z-10">;
@@ -477,7 +206,6 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
             </div>;
           </div>;
         )}
-        
         {/* CTA Button */}
         <div className="relative z-10">
           <motion.button
@@ -488,18 +216,6 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
             Get Started
           </motion.button>
         </div>
-        
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
         {/* Enhanced Hover Effects */}
         <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-white/0 to-white/0 group-hover: from-white/5 group-hover:via-white/2 group-hover:to-white/5 transition-all duration-500 rounded-2xl"></div>
       </div>
@@ -512,10 +228,6 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
 UltraFuturisticServiceCard2026.displayName = 'UltraFuturisticServiceCard2026';
 export default UltraFuturisticServiceCard2026;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
         {/* CTA Button */}
         <div className="relative z-10">;
@@ -538,27 +250,11 @@ UltraFuturisticServiceCard2026 && UltraFuturisticServiceCard2026.displayName = '
 
 
 
-=======
-<<<<<<< HEAD
-export default UltraFuturisticServiceCard2026;
-=======
-export default UltraFuturisticServiceCard2026;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export default UltraFuturisticServiceCard2026;
 export default UltraFuturisticServiceCard2026;
-<<<<<<< HEAD
+UltraFuturisticServiceCard2026.displayName = 'UltraFuturisticServiceCard2026';
 export default UltraFuturisticServiceCard2026;
-=======
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
+
           </div>;
           <h3 className="text - 2xl font - bold text - white mb - 3 group - hover:text - gray - 100 transition - colors">;
             {service.name}
@@ -654,7 +350,3 @@ UltraFuturisticServiceCard2026.display_name = 'UltraFuturisticServiceCard2026';
 ;
 export default UltraFuturisticServiceCard2026;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

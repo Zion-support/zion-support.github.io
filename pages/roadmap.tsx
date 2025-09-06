@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import Head from 'next/head';
-import React, { useMemo, useState } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-
-import Head from 'next / head',
-import React, { useMemo, useState } from 'react',
-;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
 type RoadmapInputs = {
 
@@ -49,7 +36,6 @@ type RoadmapInputs = {
       .map((s) => String(s))
     const metrics: string[] = [
       'Weekly active contributorsVerified engagements (intros, briefs, scopes)On-chain/escrow settlement volumeTime-to-hire and time-to-payRetention and NPS']
-=======
   priorities: string;
 },
 type Stage = {
@@ -93,14 +79,9 @@ function generate_stages ({ milestones, keywords, priorities }: RoadmapInputs): 
       .map ((s) => String (s)),
     const metrics: string[] = [;
       'Weekly active contributors_verified engagements (intros, briefs, scopes)On - chain / escrow settlement volume_time - to - hire and time - to - pay_retention and NPS'],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     return { id, name, theme, objective, highlights, metrics }
   });
 }
-
-
-function defaultOperatorPrompt(): string {
-  return `You are Zion's Product Operator.
 Inputs you will receive:
 - milestones (string list)
 - keywords (string list)
@@ -112,31 +93,6 @@ Goals:
 4) Include explicit risks and validation signals per stage
 5) Output concise, skimmable, exec-ready text
 Format:
-
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-import Head from 'next/head',;
-import React, { useMemo, useState } from 'react',;
-;
-import Head from 'next/head';
-import React, { useMemo, useState } from 'react';
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
-=======
-function defaultOperatorPrompt (): string {
-=======
-
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 type RoadmapInputs = {
   milestones: string;
   keywords: string;
@@ -209,7 +165,6 @@ Goals:;
 4) Include explicit risks and validation signals per stage;
 5) Output concise, skimmable, exec - ready text;
 Format:;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 Zion v{n} — {theme}
 Objective: ...;
 Highlights:;
@@ -221,7 +176,6 @@ Risks:;
 Validation:;
 - ...;
 `;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
     () => generateStages({ milestones, keywords, priorities });
@@ -244,28 +198,29 @@ Validation:;
 }
   },
   return (
-    <>
-      <Head>
-        <title>Zion Roadmap</title>
-        <meta name="description" content="Zion 10-stage product evolution and roadmap generator." />
-      </Head>
-      <main className="min-h-screen bg-white text-gray-900">
-        <div className="mx-auto w-full max-w-6xl px-6 py-12">
-          <header className="mb-8">
-            <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">Zion Roadmap</h1>
-            <p className="mt-3 text-gray-700">Public-facing product evolution from v1 → v10 with a generator for operators.</p>
-          </header>
-          <section className="mb-10 grid gap-6 rounded-lg border border-gray-200 bg-gray-50 p-6 md:grid-cols-3">
-            <div className="md:col-span-1">
-              <h2 className="text-xl font-semibold">Generator Inputs</h2>
-              <p className="mt-1 text-sm text-gray-600">Tune the roadmap with current context and focus.</p>
-            </div>
-            <div className="md:col-span-2 grid gap-4">
-              <div>
-                <label className="block text-sm font-medium text-gray-700">Milestones achieved so far</label>
-                <textarea
+    <>;
+      <Head>;
+        <title > Zion Roadmap</title>;
+        <meta name="description" content="Zion 10 - stage product evolution and roadmap generator." />;
+      </Head>;
+      <main className="min - h-screen bg - white text - gray - 900">;
+        <div className="mx - auto w - full max - w-6xl px - 6 py - 12">;
+          <header className="mb - 8">;
+            <h1 className="text - 4xl font - extrabold tracking - tight sm:text - 5xl">Zion Roadmap</h1>;
+            <p className="mt - 3 text - gray - 700">Public - facing product evolution from v1 → v10 with a generator for operators.</p>;
+          </header>;
+          <section className="mb - 10 grid gap - 6 rounded - lg border border - gray - 200 bg - gray - 50 p - 6 md:grid - cols - 3">;
+            <div className="md:col - span - 1">;
+              <h2 className="text - xl font - semibold">Generator Inputs</h2>;
+              <p className="mt - 1 text - sm text - gray - 600">Tune the roadmap with current context and focus.</p>;
+            </div>;
+            <div className="md:col - span - 2 grid gap - 4">;
+              <div>;
+                <label className="block text - sm font - medium text - gray - 700">Milestones achieved so far</label>;
+                <textarea;
+
                   value={milestones}
-                  onChange={(e) => setMilestones(e.target.value)}
+                  on_change={(e) => set_milestones (e.target.value)}
                   rows={3}
                   value={milestones  } catch (error) {
     console.error("Error:", error);
@@ -282,16 +237,6 @@ Validation:;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
                   className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none"
                   placeholder="e.g., MVP live, 100 design partners, 1k weekly active contributors"
                 />
@@ -311,14 +256,6 @@ Validation:;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
                   className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none"
                   placeholder="e.g., AI-native, trustless, talent-first, sovereign tools"
                 />
@@ -326,8 +263,6 @@ Validation:;
               <div>
                 <label className="block text-sm font-medium text-gray-700">Upcoming priorities</label>
                 <input
-                  value={priorities}
-                  onChange={(e) => setPriorities(e.target.value)}
                   value={priorities  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -338,44 +273,20 @@ Validation:;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
                   className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none"
                   placeholder="e.g., governance, scale, regional expansion"
                 />
               </div>
             </div>
           </section>
-
-
           <section className="mb-12">
             <div className="mb-3 flex items-center justify-between gap-3">
               <h2 className="text-xl font-semibold">Operator Prompt</h2>
               <button
-                onClick={copyPrompt}
-                onClick={copyPrompt  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
                 className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-900"
               >
                 {copied ? 'Copied' : 'Copy'}
@@ -423,25 +334,6 @@ Validation:;
                     </ul>
                   </div>
                 </article>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-              ))}
-            </div>
-          </section>
-        </div>
-      </main>
-    </>
-  );
-};
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   };
   return (;
     <>;
@@ -468,10 +360,6 @@ Validation:;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
                   onChange={(e) => setMilestones(e.target.value)  } catch (error) {
     console.error("Error:", error);
@@ -523,85 +411,9 @@ Validation:;
               </div>;
             </div>;
           </section>;
-          <section className="mb - 12">;
-            <div className="mb - 3 flex items - center justify - between gap - 3">;
-              <h2 className="text - xl font - semibold">Operator Prompt</h2>;
-              <button;
-                on_click={copy_prompt}
-                className="rounded - md bg - black px - 3 py - 2 text - sm font - semibold text - white shadow - sm hover:bg - gray - 900";
-              >;
-                {copied ? 'Copied' : 'Copy'}
-              </button>;
-            </div>;
-            <pre className="whitespace - pre - wrap rounded - lg border border - gray - 200 bg - gray - 50 p - 4 text - sm text - gray - 800">{operator_prompt}</pre>;
-          </section>;
-          <section>;
-            <h2 className="mb - 4 text - xl font - semibold">Zion v1 → v10</h2>;
-            <div className="grid gap - 6 md:grid - cols - 2">;
-              {stages.map ((stage) => (
-                <article key={stage.id} className="rounded - lg border border - gray - 200 p - 5 shadow - sm">;
-                  <h3 className="text - lg font - bold">{stage.name} — {stage.theme}</h3>;
-                  <p className="mt - 2 text - gray - 700"><span className="font - semibold">Objective:</span> {stage.objective}</p>;
-                  <div className="mt - 3">;
-                    <p className="font - semibold">Highlights</p>;
-                    <ul className="mt - 1 list - disc space - y-1 pl - 5 text - gray - 800">;
-                      {stage.highlights.map ((h, i) => (
-                        <li key={i}>{h}</li>))}
-                    </ul>;
-                  </div>;
-                  <div className="mt - 3">;
-                    <p className="font - semibold">Metrics</p>;
-                    <ul className="mt - 1 list - disc space - y-1 pl - 5 text - gray - 800">;
-                      {stage.metrics.map ((m, i) => (
-                        <li key={i}>{m}</li>))}
-                    </ul>;
-                  </div>;
-                  <div className="mt - 3">;
-                    <p className="font - semibold">Risks</p>;
-                    <ul className="mt - 1 list - disc space - y-1 pl - 5 text - gray - 800">;
-                      <li > Scope creep, unclear ownership</li>;
-                      <li > Model hallucinations or bias affecting matches</li>;
-                      <li > Regulatory and payment - compliance variability</li>;
-                    </ul>;
-                  </div>;
-                  <div className="mt - 3">;
-                    <p className="font - semibold">Validation</p>;
-                    <ul className="mt - 1 list - disc space - y-1 pl - 5 text - gray - 800">;
-                      <li > Leading indicator movement on activation and retention</li>;
-                      <li > Faster time - to - hire and time - to - pay</li>;
-                      <li > Positive contributor NPS and dispute resolution rates</li>;
-                    </ul>;
-                  </div>;
-                </article>))}
             </div>;
           </section>;
         </div>;
       </main>;
-<<<<<<< HEAD
-    </>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-}
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-}
-=======
-    </>);
-}
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

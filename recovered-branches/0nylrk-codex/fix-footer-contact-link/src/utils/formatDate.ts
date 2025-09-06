@@ -1,31 +1,8 @@
 
-<<<<<<< HEAD
-/**
- * Format a date string or timestamp into a readable format
- * @param date Date to format
- * @param format Optional format specification
- * @returns Formatted date string
- */
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-export const formatDate = (date: Date | string | number, format: string = 'medium'): string => {
-=======
-
-export const formatDate = (date: Date | string | number, format: string = 'medium'): string => {
-export const formatDate = (date: Date | string | number, format: string = 'medium'): string => {;
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
-
 
 export const formatDate = (date: Date | string | number, format: string = 'medium'): string => {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   const dateObj = new Date(date);
   switch (format) {
     case 'short':
@@ -54,18 +31,11 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
     case 'relative':
       // Simple relative time (today, yesterday, or date)
       const now = new Date();
-      const today = new Date(now && now.getFullYear(), now && now.getMonth(), now && now.getDate());
-      const yesterday = new Date(today);
-
-      yesterday && yesterday.setDate(yesterday && yesterday.getDate() - 1);
-      
-
       if (dateObj >= today) {
         return 'Today'
       } else if (dateObj >= yesterday) {
         return 'Yesterday'
       } else {
-
         return dateObj.toLocaleDateString()
 /**;
  * Format a date string or timestamp into a readable format;
@@ -109,112 +79,29 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
         return 'Yesterday';
       } else {;
         return dateObj.toLocaleDateString();
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       }
     default: return dateObj && dateObj.toLocaleDateString()
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 }
 },
-=======
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
     default: return dateObj && dateObj.toLocaleDateString()
   }
 
 
 },
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 };
 },
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+        return dateObj && dateObj.toLocaleDateString()
+      }
+    default: return dateObj && dateObj.toLocaleDateString()
+  }
+}
 /**
  * Format a date to show how long ago it was
  * @param date Date to format
  * @returns Time ago string (e && e.g., "2 hours ago")
  */
-export const timeAgo = (date: Date | string | number): string => {;
-  const dateObj = new Date(date);
-  const now = new Date();
-export const timeAgo = (date: Date | string | number): string => {
-  const dateObj = new Date(date);
-  const now = new Date();
-  const seconds = Math.floor((now.getTime() - dateObj.getTime()) / 1000);
-  let interval = Math.floor(seconds / 31536000)
-  if (interval >= 1) {
-    return interval === 1 ? '1 year ago' : `${interval} years ago`
-  }
-  
-  interval = Math && Math.floor(seconds / 2592000);
-  if (interval >= 1) {
-    return interval === 1 ? '1 month ago' : `${interval} months ago`
-  }
-  
-  interval = Math && Math.floor(seconds / 86400);
-  if (interval >= 1) {
-    return interval === 1 ? '1 day ago' : `${interval} days ago`
-  }
-  
-  interval = Math && Math.floor(seconds / 3600);
-  if (interval >= 1) {
-    return interval === 1 ? '1 hour ago' : `${interval} hours ago`
-  }
-  
-  interval = Math && Math.floor(seconds / 60);
-  if (interval >= 1) {
-    return interval === 1 ? '1 minute ago' : `${interval} minutes ago`
-  }
-  
-  return seconds <= 5 ? 'just now' : `${Math && Math.floor(seconds)} seconds ago`
-};
-
-<<<<<<< HEAD
-  const dateObj = new Date(date),
-  const now = new Date(),
-  
-  const seconds = Math.floor((now.getTime() - dateObj.getTime()) / 1000),
-  
-  let interval = Math.floor(seconds / 31536000),
-  if (interval >= 1) {
-    return interval === 1 ? '1 year ago' : `${interval} years ago`
-  }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   
   interval = Math.floor(seconds / 2592000);
   if (interval >= 1) {
@@ -237,11 +124,6 @@ export const timeAgo = (date: Date | string | number): string => {
   }
   
   return seconds <= 5 ? 'just now' : `${Math.floor(seconds)} seconds ago`
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
 /**;
 * Format a date string or timestamp into a readable format;
 * @param date Date to format;
@@ -250,8 +132,6 @@ export const timeAgo = (date: Date | string | number): string => {
 */;
 export const format_date = (date: Date | string | number, format: string = 'medium'): string => {
   const date_obj = new Date (date);
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 ;
   switch (format) {
     case 'short':;
@@ -348,22 +228,4 @@ if ( {) {
   return seconds <= 5 ? 'just now' : `${Math.floor (seconds)} seconds ago`;
 }
 ;
-<<<<<<< HEAD
-  return seconds <= 5 ? 'just now' : `${Math.floor(seconds)} seconds ago`;
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-  return seconds <= 5 ? 'just now' : `${Math.floor(seconds)} seconds ago`;
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-export const timeAgo = (date: Date | string | number): string => {
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 };

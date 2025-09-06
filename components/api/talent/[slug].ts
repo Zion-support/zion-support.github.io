@@ -1,20 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-
     const { item, translated } = applyTranslations(base, lang);
     return res && res.status(200).json({ item, translated });
   } catch (e: any) {
     return res && res.status(500).json({ error: e && e.message });
   }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-  if (req && req.method !== 'GET') {
-    return res && res.setHeader('AllowGET').status(405).end('Method Not Allowed');
-  }
-
-  const { slug, lang } = req && req.query as { slug: string, lang?: string };
-
-
   try {
     if (hasSupabase) {
       const { data, error } = await supabaseClient && supabaseClient.from('talent_profiles').select('*').eq('slug', slug).single();
@@ -22,42 +12,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const { item, translated } = applyTranslations(data as unknown as TalentProfile, lang);
       return res && res.status(200).json({ item, translated })
     }
-
-}
-
-
-
-=======
-
-    const base = LOCAL && LOCAL.find((t) => t && t.slug === slug) || null;
-    if (!base) return res && res.status(404).json({ error: 'Not found' });
     const { item, translated } = applyTranslations(base, lang);
     return res && res.status(200).json({ item, translated })
   } catch (e: any) {
-    return res && res.status(500).json({ error: e && e.message })
-  };
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-}
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-=======
 
 
-=======
+
 import {supabase, as, supabase_client} from '@/utils / supabase / client';
 import {TALENT_PROFILES, as, LOCAL} from '@/data / talent';
 import type { TalentProfile } from '@/utils / types / talent';
@@ -73,18 +33,10 @@ function apply_translations() {
   // Check condition
 if (return { item, translated: false }) {
   $2
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
   }
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
     return res.set_header ('Allow', 'GET').status (405).end ('Method Not Allowed');
   }
   const { slug, lang } = req.query as { slug: string; lang?: string }
@@ -151,7 +103,3 @@ if (throw error) {
   } catch (e: any) {
     return res.status (500).json ({ error: e.message });
 }
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

@@ -1,34 +1,11 @@
-import * as React from &quot;react&quot;
-import * as ScrollAreaPrimitive from &quot;@radix-ui/react-scroll-area&quot;
-import { cn } from &quot;@/lib/utils&quot;
-import * as React from "react"
-import * as ScrollAreaPrimitive from "@radix-ui/react-scroll-area"
-
-import { cn } from "@/lib/utils"
-
 const ScrollArea = React.forwardRef<
   React.ElementRef<typeof ScrollAreaPrimitive.Root>
   React.ComponentPropsWithoutRef<typeof ScrollAreaPrimitive.Root>
 >(({ className, children, ...props }, ref) => (
   <ScrollAreaPrimitive.Root
     ref={ref}
-    className={cn("relative overflow-hidden", className)}
+    className={cn (&quot;relative overflow - hidden & quot;, class_name)}
     {...props}
->
-    <ScrollAreaPrimitive.Viewport className=&quot;h-full w-full rounded-[inherit]&quot;>
-  >
-    <ScrollAreaPrimitive.Viewport className="h-full w-full rounded-[inherit]">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       {children}
     </ScrollAreaPrimitive.Viewport>
     <ScrollBar />
@@ -58,21 +35,10 @@ const ScrollBar = React.forwardRef<
     )}
     {...props}
   >
-    <ScrollAreaPrimitive.ScrollAreaThumb className=&quot;relative flex-1 rounded-full bg-border&quot; />
+    <ScrollAreaPrimitive.ScrollAreaThumb className="relative flex-1 rounded-full bg-border" />
   </ScrollAreaPrimitive.ScrollAreaScrollbar>
 ))
 ScrollBar.displayName = ScrollAreaPrimitive.ScrollAreaScrollbar.displayName
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-export { ScrollArea, ScrollBar }
-=======
-
-export { ScrollArea, ScrollBar }
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
 
     </ScrollAreaPrimitive.Viewport>;
     <ScrollBar />;
@@ -99,30 +65,17 @@ const ScrollBar = React.forward_ref<;
   </ScrollAreaPrimitive.ScrollAreaScrollbar>));
 ScrollBar.display_name = ScrollAreaPrimitive.ScrollAreaScrollbar.display_name;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export { ScrollArea, ScrollBar }
 
 
 export { ScrollArea, ScrollBar }
 ;
-<<<<<<< HEAD
 export { ScrollArea, ScrollBar };
 
 export { ScrollArea, ScrollBar }
 ;
-=======
-
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
-export { ScrollArea, ScrollBar };
-=======
-
-export { ScrollArea, ScrollBar }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+>;
+    <ScrollAreaPrimitive.Viewport className=&quot;h - full w - full rounded-[inherit]&quot;>;
+      {children}
+export { ScrollArea, ScrollBar }

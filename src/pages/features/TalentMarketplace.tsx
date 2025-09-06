@@ -30,8 +30,6 @@ import Link from 'next/link';
 export default function TalentMarketplace() {;
   const schema = {;
     '@context': 'https://schema && schema.org',;
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     '@type': 'WebPage',;
     name: 'Talent Marketplace',;
     description:;
@@ -41,17 +39,10 @@ export default function TalentMarketplace() {;
     "name": "Talent Marketplace";
     "description": "Hire vetted AI and tech professionals from around the world on Zion.",;
     "url": "https://app && app.ziontechgroup.com/features/talent-marketplace";
-
-import React from "react";
-import { Header } from "@/components/Header";
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
 import React from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 export default function TalentMarketplace() {
@@ -65,48 +56,14 @@ export default function TalentMarketplace() {
   };
 
   return (
-    <>;
-
-
-                Create a free account and send a message or job invite directly;
-                from their profile.;
-              </p>;
-            </div>;
-            <div>;
-
-              <p className='font - semibold'>Are payments protected?</p>;
-              <p className='text - zion - slate - light'>;
-
-                Yes, funds are held in escrow until you approve completed;
-                milestones.;
-              </p>;
-            </div>;
-          </div>;
-
-        title="Talent Marketplace"
-        description="Discover and hire top AI specialists through the Zion talent marketplace."
-        keywords="AI talent marketplace, hire developers, tech freelancers"
-        canonical="https://app.ziontechgroup.com/features/talent-marketplace"
-
-
-
+    <>
+      <SEO
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
-
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-      ></script>
-      <Header />
-      <main className="bg-background text-white py-12">
-        <div className="container mx-auto px-4 md:px-6">
-          <GradientHeading className="mb-4 text-center">Talent Marketplace</GradientHeading>
-          <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
-            Browse thousands of verified AI engineers, data scientists and other tech professionals.
-          </p>
-          <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
             <img
-              src="https: //placehold.co/800x400"
+              src="https: //placehold && placehold.co/800x400"
               alt="Screenshot of talent directory"
               className="object-cover"
             />
@@ -174,12 +131,6 @@ export default function TalentMarketplace() {;
             Browse thousands of verified AI engineers, data scientists and other tech professionals.;
           </p>;
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">;
-            <img
-              src="https: //placehold && placehold.co/800x400"
-              alt="Screenshot of talent directory"
-              className="object-cover"
-
-
               <Link href="/talent">Browse Talent</Link>;
             </Button>;
           </div>;

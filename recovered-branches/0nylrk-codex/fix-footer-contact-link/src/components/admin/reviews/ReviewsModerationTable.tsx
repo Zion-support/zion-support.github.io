@@ -1,15 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import {useState} from "react";
 import {useMutation} from "@tanstack/react-query";
 import {Check, X, User, Star, MoreHorizontal} from "lucide-react";
@@ -17,23 +6,6 @@ import {format} from "date-fns";
 import {toast} from "@/hooks/use-toast";
 import {supabase} from "@/integrations/supabase/client";
 import {Review, ReviewStatus} from "@/types/reviews";
-<<<<<<< HEAD
-import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
-import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
-import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle} from "@/components/ui/dialog";
-import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
-import {Badge} from "@/components/ui/badge";
-import {Button} from "@/components/ui/button";
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
-
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState } from "react",
 import { useMutation } from "@tanstack/react-query",
 import { Check, X, User, Star, MoreHorizontal } from "lucide-react",
@@ -41,20 +13,6 @@ import { format } from "date-fns",
 import { toast } from "@/hooks/use-toast",
 import { supabase } from "@/integrations/supabase/client",
 import { Review, ReviewStatus } from "@/types/reviews",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
 import {
   Table,
@@ -84,30 +42,17 @@ interface ReviewsModerationTableProps {
 
   onRefresh: () => void
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
 export function ReviewsModerationTable({;
   reviews;
   isLoading;
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 export function ReviewsModerationTable({
   reviews,
   isLoading,
-=======
 
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   onRefresh}: ReviewsModerationTableProps) {
   const [selectedReview, setSelectedReview] = useState<Review | null>(null),
   const [viewDetailsOpen, setViewDetailsOpen] = useState(false);
@@ -125,147 +70,26 @@ export function ReviewsModerationTable({
       const { error } = await supabase
         .from("reviews")
         .update({ status })
-        .eq("id", reviewId);
-      if (error) throw error;
-      return { reviewId, status }
-    }
-    onSuccess: (data) => {
-      toast({
-
-        title: "Review updated"
-        description: `Review has been ${data.status}.`})
-
-      onRefresh();
-      setViewDetailsOpen(false)
-    }
-        .eq("id", reviewId),
-
-      if (error) throw error,
-      return { reviewId, status }
-    },
-    onSuccess: (data) => {
-      toast({
-        title: "Review updated",
-        description: `Review has been ${data.status}.`}),
-      onRefresh(),
-      setViewDetailsOpen(false)
-    },
     onError: (error: Error) => {
       toast({
 
         title: "Error"
         description: `Failed to update review: ${error.message}`
         variant: "destructive"})
-    }});
-    }}),
-
-  const getStatusColor = (status: ReviewStatus) => {
-    switch (status) {
-      case "approved": return "bg-green-100 text-green-800 hover:bg-green-200",
       case "rejected":
         return "bg-red-100 text-red-800 hover:bg-red-200"
       default:
         return "bg-yellow-100 text-yellow-800 hover:bg-yellow-200"
     }
-  }
-  },
-
   const getInitials = (name: string) => {
     return name
       .split(" ")
       .map((n) => n[0])
       .join("")
       .toUpperCase()
-  }
-  },
-
-  if (isLoading) {
-    return (
-      <div className="space-y-4">
-        <div className="h-12 w-full bg-muted rounded animate-pulse" />
-        <div className="h-16 w-full bg-muted rounded animate-pulse" />
-        <div className="h-16 w-full bg-muted rounded animate-pulse" />
-        <div className="h-16 w-full bg-muted rounded animate-pulse" />
-      </div>
-    )
-  }
-  if (reviews.length === 0) {
-    return (
-      <div className="py-10 text-center">
-        <h3 className="text-lg font-medium mb-2">No reviews to moderate</h3>
-        <p className="text-muted-foreground">
-          All reviews have been processed. Check back later for new submissions.
-        </p>
-      </div>
-    )
-  }
-  const handleApprove = (reviewId: string) => {
-    updateReviewStatus({ reviewId, status: "approved" })
-  }
-  const handleReject = (reviewId: string) => {
-    updateReviewStatus({ reviewId, status: "rejected" })
-  }
-  },
-
-  const handleReject = (reviewId: string) => {
-    updateReviewStatus({ reviewId, status: "rejected" })
-  },
-
-  const handleViewDetails = (review: Review) => {
-    setSelectedReview(review)
-    setViewDetailsOpen(true)
-  }
-  },
-
-  const renderStars = (rating: number) => {
-    return (
-      <div className="flex">
-        {[1, 2, 3, 4, 5].map((star) => (
-          <Star
-            key={star}
-            className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
-          />
-        ))}
-      </div>
-    )
-  }
-
-<<<<<<< HEAD
-  return (
-    <>
-      <Table>
-        <TableHeader>
-          <TableRow>
-            <TableHead>Reviewer</TableHead>
-            <TableHead>Rating</TableHead>
-            <TableHead>Date</TableHead>
-            <TableHead>Status</TableHead>
-            <TableHead>Reports</TableHead>
-            <TableHead className="text-right">Actions</TableHead>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          {reviews.map((review) => (
-            <TableRow key={review.id}>
-              <TableCell>
-                <div className="flex items-center gap-2">
-                  <Avatar className="h-8 w-8">
-                    {review.reviewer_profile?.avatar_url ? (
-                      <AvatarImage
-<<<<<<< HEAD
-<<<<<<< HEAD
                         src={review.reviewer_profile.avatar_url}
                         alt={review.reviewer_profile.display_name |""}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-                        src={review.reviewer_profile.avatar_url}
-                        alt={review.reviewer_profile.display_name |""}
-=======
 
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState } from "react",;
 import { useMutation } from "@tanstack/react-query",;
 import { Check, X, User, Star, MoreHorizontal } from "lucide-react",;
@@ -295,70 +119,14 @@ import {;
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
-
 interface ReviewsModerationTableProps {;
   reviews: Review[],;
   isLoading: boolean,;
   onRefresh: () => void;
 }
-
-export function ReviewsModerationTable(): any ({;
-  reviews;
-  isLoading;
-  onRefresh}: ReviewsModerationTableProps) {;
-  const [selectedReview, setSelectedReview] = useState<Review | null>(null);
-  const [viewDetailsOpen, setViewDetailsOpen] = useState(false);
-
-  const { mutate: updateReviewStatus, isPending } = useMutation({;
-    mutationFn: async ({;
-      reviewId,;
-      status}: {;
-      reviewId: string,;
-      status: ReviewStatus;
-    }) => {;
-      const { error } = await supabase;
-        .from("reviews");
-        .update({ status });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         .eq("id", reviewId);
       if (error) throw error;
       return { reviewId, status }
-
-    };
-    onSuccess: (data) => {;
-      toast({;
-        title: "Review updated",;
-        description: `Review has been ${data && data.status}.`}),;
-      onRefresh();
-      setViewDetailsOpen(false);
-    };
-    onError: (error: Error) => {;
-      toast({;
-        title: "Error",;
-        description: `Failed to update review: ${error && error.message}`,;
-        variant: "destructive"});
-    }});
-
-  const getStatusColor = (status: ReviewStatus) => {;
-    switch (status) {;
-      case "approved": return "bg-green-100 text-green-800 hover:bg-green-200";
-      case "rejected":;
-        return "bg-red-100 text-red-800 hover:bg-red-200",;
-      default:;
-        return "bg-yellow-100 text-yellow-800 hover:bg-yellow-200";
-    }
-  };
-
-  const getInitials = (name: string) => {;
-    return name;
-      .split(" ");
-      .map((n) => n[0]);
-      .join("");
-      .toUpperCase();
-  };
-
-  if (isLoading) {;
-
     return (
       <div className="space-y-4">;
         <div className="h-12 w-full bg-muted rounded animate-pulse" />;
@@ -368,10 +136,6 @@ export function ReviewsModerationTable(): any ({;
       </div>;
     );
   }
-
-
-  if (reviews && reviews.length === 0) {;
-
     return (
       <div className="py-10 text-center">;
         <h3 className="text-lg font-medium mb-2">No reviews to moderate</h3>;
@@ -381,23 +145,6 @@ export function ReviewsModerationTable(): any ({;
       </div>;
     );
   }
-
-
-  const handleApprove = (reviewId: string) => {;
-    updateReviewStatus({ reviewId, status: "approved" });
-  };
-
-  const handleReject = (reviewId: string) => {;
-    updateReviewStatus({ reviewId, status: "rejected" });
-  };
-
-  const handleViewDetails = (review: Review) => {;
-    setSelectedReview(review),;
-    setViewDetailsOpen(true);
-  };
-
-  const renderStars = (rating: number) => {;
-
     return (
       <div className="flex">;
         {[1, 2, 3, 4, 5].map((star) => (;
@@ -407,12 +154,6 @@ export function ReviewsModerationTable(): any ({;
           />;
         ))}
 
-      </div>;
-    );
-  };
-
-
-=======
 import { useState } from './react';
 import { use_mutation } from '@tanstack / react - query';
 import { Check, X, User, Star, MoreHorizontal } from './lucide-react';
@@ -445,40 +186,6 @@ function ReviewsModerationTable() {
       status}: {
       review_id: string,
       status: ReviewStatus;
-    }) => {
-      const { error } = await supabase;
-        .from ("reviews");
-        .update ({ status });
-        .eq ("id", review_id);
-;
-      // Check condition
-if (throw error) {
-  $2
-}
-      return { review_id, status }
-    }
-    on_success: (data) => {
-      toast ({
-        title: "Review updated",
-        description: `Review has been ${data.status}.`}),
-      on_refresh ();
-      setViewDetailsOpen (false);
-    }
-    on_error: (error: Error) => {
-      toast ({
-        title: "Error",
-        description: `Failed to update review: ${error.message}`,
-        variant: "destructive"});
-    }});
-;
-  const getStatusColor = (status: ReviewStatus) =>: any {
-    switch (status) {
-      case "approved": return "bg - green - 100 text - green - 800 hover:bg - green - 200";
-      case "rejected":;
-        return "bg - red - 100 text - red - 800 hover:bg - red - 200",
-      default:;
-        return "bg - yellow - 100 text - yellow - 800 hover:bg - yellow - 200";
-    }
   }
 ;
   const get_initials = (name: string) =>: any {
@@ -511,12 +218,6 @@ if ( {) {
         <p className="text - muted - foreground">;
           All reviews have been processed. Check back later for new submissions.;
         </p>;
-      </div>);
-  }
-  const handle_approve = (review_id: string) =>: any {
-    updateReviewStatus ({ review_id, status: "approved" });
-  }
-;
   const handle_reject = (review_id: string) =>: any {
     updateReviewStatus ({ review_id, status: "rejected" });
   }
@@ -532,61 +233,21 @@ if ( {) {
         {[1, 2, 3, 4, 5].map ((star) => (
           <Star;
             key={star}
-            className={`h - 4 w - 4 ${star <= rating ? "fill - yellow - 400 text - yellow - 400" : "text - gray - 300"}`}
-          />))}
-      </div>);
-  }
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <>;
       <Table>;
         <TableHeader>;
           <TableRow>;
-
-                    {review.reviewer_profile?.avatar_url ? (;
-                      <AvatarImage;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
                         src={review.reviewer_profile.avatar_url}
-                        alt={review.reviewer_profile.display_name || ""}
+                        alt={review.reviewer_profile.display_name |""}
                       />
                     ) : (
                       <AvatarFallback>
                         {review.reviewer_profile?.display_name
                           ? getInitials(review.reviewer_profile.display_name)
-=======
-                        src={review && review.reviewer_profile.avatar_url}
-                        alt={review && review.reviewer_profile.display_name || ""}
-                      />;
-                    ) : (;
-                      <AvatarFallback>;
-                        {review && review.reviewer_profile?.display_name;
-                          ? getInitials(review && review.reviewer_profile.display_name);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                           : <User className="h-4 w-4" />}
                       </AvatarFallback>;
                     )}
-
-                  </Avatar>;
-                  <div>;
-                    {review && review.is_anonymous ? (;
-                      <span className="text-sm font-medium">Anonymous</span>;
-                    ) : (;
-                      <span className="text-sm font-medium">;
-                        {review && review.reviewer_profile?.display_name || "User"}
-                      </span>;
-
                     )}
                   </div>;
                 </div>;
@@ -617,7 +278,6 @@ if ( {) {
                         size="sm"
                         variant="outline"
                         className="h-8 w-8 p-0"
-                        onClick={() => handleApprove(review && review.id)}
                         disabled={isPending}
                       >;
                         <Check className="h-4 w-4 text-green-500" />;
@@ -626,7 +286,6 @@ if ( {) {
                         size="sm"
                         variant="outline"
                         className="h-8 w-8 p-0"
-                        onClick={() => handleReject(review && review.id)}
                         disabled={isPending}
                       >;
                         <X className="h-4 w-4 text-red-500" />;
@@ -635,10 +294,6 @@ if ( {) {
                   )}
                   <DropdownMenu>;
                     <DropdownMenuTrigger asChild>;
-                      <Button
-                        variant="ghost"
-                        size="sm"
-                        className="h-8 w-8 p-0">;
                         <MoreHorizontal className="h-4 w-4" />;
                       </Button>;
                     </DropdownMenuTrigger>;
@@ -646,17 +301,6 @@ if ( {) {
                       <DropdownMenuItem onClick={() => handleViewDetails(review)}>;
                         View details;
                       </DropdownMenuItem>;
-                      {review && review.status === "approved" && (;
-                        <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId: review && review.id, status: "rejected" })}>;
-                          Mark as rejected;
-                        </DropdownMenuItem>;
-                      )}
-                      {review && review.status === "rejected" && (;
-                        <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId: review && review.id, status: "approved" })}>;
-                          Mark as approved;
-                        </DropdownMenuItem>;
-                      )}
-
             <TableHead > Reviewer</TableHead>;
             <TableHead > Rating</TableHead>;
             <TableHead > Date</TableHead>;
@@ -750,32 +394,10 @@ if ( {) {
                           Mark as rejected;
                         </DropdownMenuItem>)}
                       {review.status === "rejected" && (
-                        <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId: review.id, status: "approved" })}>
-                          Mark as approved
-                        </DropdownMenuItem>
-                      )}
-                    </DropdownMenuContent>
-                  </DropdownMenu>
-                </div>
-              </TableCell>
-            </TableRow>
                     </DropdownMenuContent>;
                   </DropdownMenu>;
                 </div>;
               </TableCell>;
-
-            </TableRow>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
           ))}
 
         </TableBody>;
@@ -809,34 +431,6 @@ if ( {) {
                           : <User className="h-4 w-4" />}
                       </AvatarFallback>;
                     )}
-
-                  </Avatar>;
-                  <div>;
-                    <div className="font-medium">;
-                      {selectedReview && selectedReview.is_anonymous;
-                        ? "Anonymous";
-                        : selectedReview && selectedReview.reviewer_profile?.display_name || "User"}
-                    </div>;
-                    <Badge variant="outline" className={getStatusColor(selectedReview && selectedReview.status as ReviewStatus)}>;
-                      {selectedReview && selectedReview.status}
-                    </Badge>;
-                  </div>;
-                </div>;
-                <div>{renderStars(selectedReview && selectedReview.rating)}</div>;
-              </div>;
-
-              <div className="border rounded-md p-3 bg-muted/20">;
-                <p className="whitespace-pre-wrap">{selectedReview && selectedReview.review_text}</p>;
-              </div>;
-
-              <div className="space-y-2">;
-                <h4 className="text-sm font-medium">Additional Ratings</h4>;
-                <div className="flex flex-wrap gap-2">;
-                  {selectedReview && selectedReview.communication_rating && (;
-                    <Badge variant="outline">;
-                      Communication: {selectedReview && selectedReview.communication_rating}/5;
-                    </Badge>;
-
                   )}
                   {selectedReview && selectedReview.quality_rating && (;
                     <Badge variant="outline">;
@@ -855,24 +449,6 @@ if ( {) {
                       {selectedReview && selectedReview.would_work_again ? "Would work again" : "Would not work again"}
                     </Badge>;
                   )}
-
-                </div>;
-              </div>;
-
-              {selectedReview && selectedReview.report_count > 0 && (;
-                <div className="bg-red-50 border border-red-200 rounded-md p-3">;
-                  <h4 className="text-sm font-medium text-red-800">Reports: {selectedReview && selectedReview.report_count}</h4>;
-                  <p className="text-sm text-red-700">;
-                    This review has been reported by users and may need investigation.;
-                  </p>;
-                </div>;
-              )}
-            </div>;
-
-            <DialogFooter>;
-              {selectedReview && selectedReview.status === "pending" && (;
-                <>;
-
                   <Button
                     variant="destructive"
                     onClick={() => handleReject(selectedReview && selectedReview.id)}
@@ -911,7 +487,6 @@ if ( {) {
       )}
     </>;
   );
-=======
             </TableRow>))}
         </TableBody>;
       </Table>;
@@ -1024,5 +599,4 @@ if ( {) {
           </DialogContent>;
         </Dialog>)}
     </>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

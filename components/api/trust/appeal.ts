@@ -1,26 +1,13 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-
   const appeal: TrustAppeal = {
     userId;
     message;
     contactEmail;
     createdAt: new Date().toISOString()}
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   try {
     await supabase && supabase.from('trust_appeals').insert(appeal)
   } catch {}
-return res.status(200).json({ ok: true, appeal });
-}
-
-
-
-  return res && res.status(200).json({ ok: true, appeal });
-}
-
-
-=======
 import type { TrustAppeal } from '../../../utils / types / trust';
 import { supabase } from '../../../utils / supabase / client';
 ;
@@ -71,9 +58,4 @@ if ( {) {
     await supabase.from ('trust_appeals').insert (appeal);
   } catch {}
 return res.status (200).json ({ ok: true, appeal });
-
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

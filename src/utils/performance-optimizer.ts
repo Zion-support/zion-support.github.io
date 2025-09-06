@@ -1,11 +1,7 @@
-const images = document && document.querySelectorAll('img');
-  images && images.forEach(img => {
-    if (!img && img.loading) {
-      img && img.loading = 'lazy';
-    }
-    if (!img.decoding) {
-      img.decoding = 'async'
-    }
+};
+
+export const optimizeBundleSize = () => {
+  // Dynamic imports for non-critical components
   });
 }
 export const optimizeBundleSize = () =>: any {
@@ -36,7 +32,6 @@ export const optimizeBundleSize = () => {
   // Dynamic imports for non-critical components
   const loadComponent = componentName => {
     return import(`./components/${componentName}`);
-
   };
 
   return { loadComponent };

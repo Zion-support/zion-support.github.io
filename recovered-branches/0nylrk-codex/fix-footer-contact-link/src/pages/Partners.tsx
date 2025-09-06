@@ -1,16 +1,3 @@
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
@@ -24,15 +11,6 @@ import {PartnerResources} from "@/components/partners/PartnerResources";
 import {useAuth} from "@/hooks/useAuth";
 import {useNavigate} from "react-router-dom";
 export default function Partners() {;
-<<<<<<< HEAD
-  const [activeTab, setActiveTab] = useState("overview");
-  const { user, isAuthenticated } = useAuth();
-  const navigate = useNavigate();
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
@@ -46,28 +24,10 @@ import { PartnerResources } from "@/components/partners/PartnerResources",
 import { useAuth } from "@/hooks/useAuth";
 import { useNavigate } from "react-router-dom";
 export default function Partners() {
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [activeTab, setActiveTab] = useState("overview");
   const { user, isAuthenticated } = useAuth();
 
   const navigate = useNavigate();
-<<<<<<< HEAD
-import { useAuth } from "@/hooks/useAuth",
-import { useNavigate } from "react-router-dom",
-export default function Partners() {
-  const [activeTab, setActiveTab] = useState("overview"),
-  const { user, isAuthenticated } = useAuth(),
-  const navigate = useNavigate(),
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
   // If not authenticated, display partner program info and signup CTA
   if (!isAuthenticated) {
@@ -191,14 +151,6 @@ export default function Partners() {
             size="lg" 
             variant="outline" 
             className="text-zion-cyan border-zion-cyan"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
@@ -215,18 +167,10 @@ export default function Partners() {;
   const [activeTab, setActiveTab] = useState("overview"),;
   const { user, isAuthenticated } = useAuth();
   const navigate = useNavigate();
-=======
-=======
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   // If not authenticated, display partner program info and signup CTA;
   if (!isAuthenticated) {;
     return (
-
       <div className="container max-w-6xl py-10">;
         <div className="text-center mb-8">;
           <h1 className="text-4xl font-bold tracking-tight text-white mb-2">Zion AI Partner Program</h1>;
@@ -344,19 +288,6 @@ export default function Partners() {;
           >;
             Apply to Join;
           </Button>;
-<<<<<<< HEAD
-          <Button;
-            size="lg";
-            variant="outline";
-            className="text-zion-cyan border-zion-cyan";
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
             onClick={() => navigate('/login')}
           >
             Partner Login
@@ -365,20 +296,11 @@ export default function Partners() {;
       </div>
     )
   }
-=======
           <Button
             size="lg" 
             variant="outline" 
 
             className="text-zion-cyan border-zion-cyan"
-=======
-
-          <Button 
-            size="lg" 
-            variant="outline" 
-            className="text-zion-cyan border-zion-cyan"
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             onClick={() => navigate('/login')}
           >;
             Partner Login;
@@ -387,11 +309,6 @@ export default function Partners() {;
       </div>;
     );
   }
-
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   // Authenticated user view - Partner Dashboard
   return (
@@ -443,6 +360,3 @@ export default function Partners() {;
       </Tabs>
     </div>
   )
-}
-}
-;

@@ -1,16 +1,3 @@
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
-=======
-import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
-import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 // Initialize Supabase client
 const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL")!;
 const supabaseServiceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
@@ -19,27 +6,10 @@ const supabase = createClient(supabaseUrl, supabaseServiceKey);
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*";
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 // Initialize Supabase client
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!,
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
@@ -56,62 +26,25 @@ serve(async (req) => {
   }
   try {
     // Call the database function to schedule retention emails
-    const { data: scheduledCount, error: scheduleError } = await supabase && supabase.rpc(
-      "schedule_retention_emails"
-    );
-    if (scheduleError) {
-      throw new Error(`Failed to schedule retention emails: ${scheduleError.message}`)
-    }
-    console.log(`Scheduled ${scheduledCount} retention emails`);
-    ),
-
-
-    console && console.log(`Scheduled ${scheduledCount} retention emails`);
-
-
-    // // // console.log(`Scheduled ${scheduledCount} retention emails`),
-
     // Fetch pending retention email jobs
     const { data: pendingJobs, error: jobsError } = await supabase
       .from("scheduled_jobs")
       .select("id, payload")
       .eq("job_type", "send_retention_email")
       .eq("status", "pending")
-      .limit(50);
     if (jobsError) {
-      throw new Error(`Failed to fetch pending jobs: ${jobsError.message}`)
+      throw new Error(`Failed to fetch pending jobs: ${jobsError && jobsError.message}`)
     }
-    const processedJobs = [];
-      .limit(50),
-
-    if (jobsError) {
-      throw new Error(`Failed to fetch pending jobs: ${jobsError.message}`)
-    }
-
-    const processedJobs = [],
-
     if (pendingJobs && pendingJobs.length > 0) {
       for (const job of pendingJobs) {
         try {
-          // Call the send-retention-email function for each job
-          const reminderResponse = await fetch(
-            `${supabaseUrl}/functions/v1/send-retention-email`,
+          // Call the send - retention - email function for each job;
+          const reminder_response = await fetch (
+            `${supabase_url}/functions / v1 / send - retention - email`;
             {
-              method: "POST",
+              method: "POST";
               headers: {
-                "Content-Type": "application/json"
-                "Authorization": `Bearer ${supabaseServiceKey}`}
-              body: JSON.stringify(job)}
-          );
-          if (!reminderResponse.ok) {
-            const errorText = await reminderResponse.text();
-            console.error(`Failed to process job ${job.id}: ${errorText}`);
-                "Content-Type": "application/json",
-                "Authorization": `Bearer ${supabaseServiceKey}`},
-              body: JSON.stringify(job)}
-          ),
 
-=======
 
 
                 "Content-Type": "application/json",
@@ -128,14 +61,10 @@ serve(async (req) => {
               .from("scheduled_jobs")
               .update({
                 status: "failed"})
-              .eq("id", job && job.id)
           } else {
             processedJobs && processedJobs.push(job && job.id)
           }
         } catch (error) {
-          console.error(`Error processing job ${job.id}:`, error);
-          console.error(`Error processing job ${job.id}:`, error),
-          
           // Update job status to failed
           await supabase
             .from("scheduled_jobs")
@@ -146,63 +75,25 @@ serve(async (req) => {
       }
     }
     return new Response(
-      JSON.stringify({
-        message: "Retention emails processed successfully";
-        emails_scheduled: scheduledCount;
-        emails_processed: processedJobs.length
-        job_ids: processedJobs});
-        message: "Retention emails processed successfully",
-        emails_scheduled: scheduledCount,
-        emails_processed: processedJobs.length,
-        job_ids: processedJobs}),
       {
         status: 200
         headers: { "Content-Type": "application/json", ...corsHeaders }}
     )
   } catch (error) {
-    console.error("Error in process-retention-emails function:", error);
-    console.error("Error in process-retention-emails function:", error),
-
     return new Response(
       JSON.stringify({
         error: "Internal server error"
         details: error.message
-=======
-    console && console.error("Error in process-retention-emails function:", error);
-
-    return new Response(
-      JSON && JSON.stringify({ 
-        error: "Internal server error", 
-        details: error && error.message
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
       {
         status: 500
         headers: { "Content-Type": "application/json", ...corsHeaders }}
     )
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-  }
-});
-
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
                 "Content - Type": "application / json",
                 "Authorization": `Bearer ${supabaseServiceKey}`}
               body: JSON.stringify (job)}
           );
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
-
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",;
 // Initialize Supabase client;
@@ -217,7 +108,6 @@ serve(async (req) => {;
   if (req.method === "OPTIONS") {;
     return new Response(null, { headers: corsHeaders });
   }
-
 ;
           // Check condition
 if ( {) {
@@ -269,18 +159,9 @@ if ( {) {
         status: 500,
         headers: { "Content - Type": "application / json", ...cors_headers }}
     );
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   }
 });

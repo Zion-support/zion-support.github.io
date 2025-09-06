@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import React, { useEffect, useState } from 'react';
 export default function PrivacySettingsPage() {
 
@@ -11,29 +6,9 @@ export default function PrivacySettingsPage() {
   const [loading, setLoading] = useState(false)
   const [message, setMessage] = useState('')
 import React, { useEffect, useState } from 'react',
-<<<<<<< HEAD
-=======
 import React, { useEffect, useState } from 'react',;
 ;
 import React, { useEffect, useState } from 'react',
-=======
-
-
-import React, { useEffect, useState } from 'react',
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
-import React, { useEffect, useState } from 'react',;
-;
-=======
-import React, { useEffect, useState } from 'react',
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 export default function PrivacySettingsPage() {
   const [userId, setUserId] = useState(''),
   const [optOut, setOptOut] = useState(false),
@@ -49,8 +24,6 @@ export default function PrivacySettingsPage() {
     if (res.ok) setOptOut(!!json.monitoringContentAnalysisOptOut);
     else setMessage(json.error || 'Failed to load');
     setLoading(false)
-  }
-  },
   const save = async () => {
     if (!userId) return
     setLoading(true)
@@ -64,13 +37,6 @@ export default function PrivacySettingsPage() {
     if (res.ok) setMessage('Saved');
     else setMessage(json.error || 'Save failed');
     setLoading(false)
-  }
-  },
-  useEffect(() => {
-    const savedUser = localStorage.getItem('user-id');
-    if (savedUser) setUserId(savedUser)
-  }, [])
-  }, []),
   const onSaveUser = () => {
     localStorage.setItem('user-id', userId);
 
@@ -91,66 +57,27 @@ export default function PrivacySettingsPage() {
           <label htmlFor="optout">Opt-out of GPT content analysis (basic heuristics still apply)</label>
         </div>
         <div className="flex items-center gap-2">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <button disabled={!userId |loading} className="bg-green-600 text-white px-3 py-1 rounded disabled:opacity-50" onClick={save}>Save</button>
-          <button disabled={!userId |loading} className="bg-gray-200 px-3 py-1 rounded disabled:opacity-50" onClick={load}>Reload</button>
-=======
-          <button disabled={!userId |loading} className="bg-green-600 text-white px-3 py-1 rounded disabled:opacity-50" onClick={save}>Save</button>
-          <button disabled={!userId |loading} className="bg-gray-200 px-3 py-1 rounded disabled:opacity-50" onClick={load}>Reload</button>
-          <button disabled={!userId || loading} className="bg-green-600 text-white px-3 py-1 rounded disabled:opacity-50" onClick={save}>Save</button>
-          <button disabled={!userId || loading} className="bg-gray-200 px-3 py-1 rounded disabled:opacity-50" onClick={load}>Reload</button>
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
 
           <button disabled={!userId || loading} className="bg-green-600 text-white px-3 py-1 rounded disabled:opacity-50" onClick={save}>Save</button>
           <button disabled={!userId || loading} className="bg-gray-200 px-3 py-1 rounded disabled:opacity-50" onClick={load}>Reload</button>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
           {message && <div>{message}</div>}
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  )
-=======
-<<<<<<< HEAD
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   )
           <button disabled={!userId || loading} className="bg-green-600 text-white px-3 py-1 rounded disabled:opacity-50" onClick={save}>Save</button>
           <button disabled={!userId || loading} className="bg-gray-200 px-3 py-1 rounded disabled:opacity-50" onClick={load}>Reload</button>
-<<<<<<< HEAD
-=======
   );
 };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-  );
-};
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
           {message && <div>{message}</div>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
   )
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
-=======
 import React, { useEffect, useState } from 'react',
 ;
 export default /**
@@ -222,34 +149,7 @@ if (return, ) {
           {message && <div>{message}</div>}
         </div>;
       </div>;
-<<<<<<< HEAD
-    </div>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-}
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-}
-=======
-    </div>);
-}
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
           <button disabled={!userId || loading} className="bg-green-600 text-white px-3 py-1 rounded disabled:opacity-50" onClick={save}>Save</button>
           <button disabled={!userId || loading} className="bg-gray-200 px-3 py-1 rounded disabled:opacity-50" onClick={load}>Reload</button>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

@@ -1,43 +1,31 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-:src.disabled/src/pages.disabled/ContractBuilder.jsx
+
 import React from \'react\';\''\'; import SEO from \'@/components/SEO\';\''\'; import { ProtectedRoute } from \'@/components/ProtectedRoute\';\''\'; import { ContractBuilderContent } from \'@/components/contracts/page/ContractBuilderContent\'; function ContractBuilderPage() {} return null} return (<ProtectedRoute> <> <SEO title=\"Smart Contract Builder | Zion AI Marketplace\" description=\"Create and deploy blockchain-backed smart contracts for your projects\"/>\"; <main className=\"container mx-auto py-10 px-4\"> <ContractBuilderContent /> ></div> ></div> </ProtectedRoute>)} export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage };
 const React from "react";"""; import SEO from "@/components/SEO";"""; import { ProtectedRoute } from "@/components/ProtectedRoute";"""; import { ContractBuilderContent } from "@/components/contracts/page/ContractBuilderContent"; function ContractBuilderPage() { return; } return null} return (<ProtectedRoute> <> <SEO title="Smart Contract Builder | Zion AI Marketplace" description="Create and deploy blockchain-backed smart contracts for your projects"/>"; <main className="container mx-auto py-10 px-4"> <ContractBuilderContent /> ></div> ></div> </ProtectedRoute>)} export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage };"""
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import React from \'react\';\''\'; import SEO from \'@/components/SEO\';\''\'; import { ProtectedRoute } from \'@/components/ProtectedRoute\';\''\'; import { ContractBuilderContent } from \'@/components/contracts/page/ContractBuilderContent\'; function ContractBuilderPage() {} return null} return (<ProtectedRoute> <> <SEO title=\"Smart Contract Builder | Zion AI Marketplace\" description=\"Create and deploy blockchain-backed smart contracts for your projects\"/>\"; <main className=\"container mx-auto py-10 px-4\"> <ContractBuilderContent /> ></div> ></div> </ProtectedRoute>)} export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage };
 const React from "react";"""; import SEO from "@/components/SEO";"""; import { ProtectedRoute } from "@/components/ProtectedRoute";"""; import { ContractBuilderContent } from "@/components/contracts/page/ContractBuilderContent"; function ContractBuilderPage() { return; } return null} return (<ProtectedRoute> <> <SEO title="Smart Contract Builder | Zion AI Marketplace" description="Create and deploy blockchain-backed smart contracts for your projects"/>"; <main className="container mx-auto py-10 px-4"> <ContractBuilderContent /> ></div> ></div> </ProtectedRoute>)} export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage };"""
-:temp_exclude/src.disabled/src/pages.disabled/ContractBuilder.jsx
+import React from \'react\';\''\'; import SEO from \'@/components/SEO\';\''\'; import { ProtectedRoute } from \'@/components/ProtectedRoute\';\''\'; import { ContractBuilderContent } from \'@/components/contracts/page/ContractBuilderContent\'; function ContractBuilderPage() {} return null} return (<ProtectedRoute> <> <SEO title=\"Smart Contract Builder | Zion AI Marketplace\" description=\"Create and deploy blockchain-backed smart contracts for your projects\"/>\"; <main className=\"container mx-auto py-10 px-4\"> <ContractBuilderContent /> ></div> ></div> </ProtectedRoute>)} export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage };
+const React from "react";"""; import SEO from "@/components/SEO";"""; import { ProtectedRoute } from "@/components/ProtectedRoute";"""; import { ContractBuilderContent } from "@/components/contracts/page/ContractBuilderContent"; function ContractBuilderPage() { return; } return null} return (<ProtectedRoute> <> <SEO title="Smart Contract Builder | Zion AI Marketplace" description="Create and deploy blockchain-backed smart contracts for your projects"/>"; <main className="container mx-auto py-10 px-4"> <ContractBuilderContent /> ></div> ></div> </ProtectedRoute>)} export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage };"""
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
 import _React from 'react';'''; import SEO from '@/components/SEO';'''; import { ProtectedRoute } from '@/components/ProtectedRoute';'''; import { ContractBuilderContent } from '@/components/contracts/page/ContractBuilderContent'; function ContractBuilderPage() {} return null} return (<ProtectedRoute> <> <SEO title="Smart Contract Builder | Zion AI Marketplace" description="Create and deploy blockchain-backed smart contracts for your projects"/>"; <main className="container mx-auto py-10 px-4"> <ContractBuilderContent /> ></div> ></div> </ProtectedRoute>)} export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage };
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD:src.disabled/src/pages.disabled/ContractBuilder.jsx
-<<<<<<< HEAD
-import React from \'react\';\''\'; import SEO from \'@/components/SEO\';\''\'; import { ProtectedRoute } from \'@/components/ProtectedRoute\';\''\'; import { ContractBuilderContent } from \'@/components/contracts/page/ContractBuilderContent\'; function ContractBuilderPage() {} return null} return (<ProtectedRoute> <> <SEO title=\"Smart Contract Builder | Zion AI Marketplace\" description=\"Create and deploy blockchain-backed smart contracts for your projects\"/>\"; <main className=\"container mx-auto py-10 px-4\"> <ContractBuilderContent /> ></div> ></div> </ProtectedRoute>)} export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage };
-const React from "react";"""; import SEO from "@/components/SEO";"""; import { ProtectedRoute } from "@/components/ProtectedRoute";"""; import { ContractBuilderContent } from "@/components/contracts/page/ContractBuilderContent"; function ContractBuilderPage() { return; } return null} return (<ProtectedRoute> <> <SEO title="Smart Contract Builder | Zion AI Marketplace" description="Create and deploy blockchain-backed smart contracts for your projects"/>"; <main className="container mx-auto py-10 px-4"> <ContractBuilderContent /> ></div> ></div> </ProtectedRoute>)} export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage };"""
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
-
-
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
-import React from \'react\';\''\'; import SEO from \'@/components/SEO\';\''\'; import { ProtectedRoute } from \'@/components/ProtectedRoute\';\''\'; import { ContractBuilderContent } from \'@/components/contracts/page/ContractBuilderContent\'; function ContractBuilderPage() {} return null} return (<ProtectedRoute> <> <SEO title=\"Smart Contract Builder | Zion AI Marketplace\" description=\"Create and deploy blockchain-backed smart contracts for your projects\"/>\"; <main className=\"container mx-auto py-10 px-4\"> <ContractBuilderContent /> ></div> ></div> </ProtectedRoute>)} export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage };
-const React from "react";"""; import SEO from "@/components/SEO";"""; import { ProtectedRoute } from "@/components/ProtectedRoute";"""; import { ContractBuilderContent } from "@/components/contracts/page/ContractBuilderContent"; function ContractBuilderPage() { return; } return null} return (<ProtectedRoute> <> <SEO title="Smart Contract Builder | Zion AI Marketplace" description="Create and deploy blockchain-backed smart contracts for your projects"/>"; <main className="container mx-auto py-10 px-4"> <ContractBuilderContent /> ></div> ></div> </ProtectedRoute>)} export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage };"""
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/src/pages.disabled/ContractBuilder.jsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import _React from 'react';'''; import SEO from '@/components/SEO';'''; import { ProtectedRoute } from '@/components/ProtectedRoute';'''; import { ContractBuilderContent } from '@/components/contracts/page/ContractBuilderContent'; function ContractBuilderPage() {} return null} return (<ProtectedRoute> <> <SEO title="Smart Contract Builder | Zion AI Marketplace" description="Create and deploy blockchain-backed smart contracts for your projects"/>"; <main className="container mx-auto py-10 px-4"> <ContractBuilderContent /> ></div> ></div> </ProtectedRoute>)} export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export default ContractBuilderPage; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage }; export { ContractBuilderPage };

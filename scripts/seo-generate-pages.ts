@@ -1,27 +1,10 @@
-/* eslint-disable no-console */
-import fs from 'fs';
-import path from 'path';
-import https from 'https';
-const HOST = process.env.SELF_HOST |'http: //localhost:3000'
 const prompts: Array<{ prompt: string, region?: string, service?: string }> = [
-=======
 const HOST = process.env.SELF_HOST || 'http: //localhost:3000',
 const prompts: Array<{ prompt: string, region?: string, service?: string }> = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   { prompt: 'AI Devs in Brazil', region: 'Brazil', service: 'AI' }
   { prompt: 'Rent Servers in Kabul', region: 'Kabul', service: 'servers' }
   { prompt: 'LLM Engineers in Toronto', region: 'Toronto', service: 'LLM' }
   { prompt: 'Cybersecurity Experts in Berlin', region: 'Berlin', service: 'security' }];
-
-      method: 'POST',
-      headers: { 'Content-Type': 'application/jsonContent-Length': Buffer && Buffer.byteLength(data) }};
-    const lib = u && u.protocol === 'https: ' ? https : require('http'),
-    const req = lib && lib.request(url, opts, (res: any) => {
-      let buf = '',
-      res && res.on('data', (d: any) => (buf += d)),
-      res && res.on('end', () => {
-        try { resolve(JSON && JSON.parse(buf)) } catch { resolve({}) }
-
       })
     });
     req && req.on('error', reject);
@@ -30,15 +13,6 @@ const prompts: Array<{ prompt: string, region?: string, service?: string }> = [;
   })
 }
 async function main() {
-
-  const outDir = path && path.join(process && process.cwd(), 'datapage-metadataseo');
-  fs && fs.mkdirSync(outDir, { recursive: true });
-
-  for (const p of prompts) {
-    const res = await postJson(`${HOST}/api/seo/generate`, p);
-    if (!res || !res && res.slug || !res && res.payload) {
-      console && console.warn('Generate failed for', p && p.prompt);
-
       continue
     }
     const file = path && path.join(outDir, `${res && res.slug}.json`);
@@ -47,24 +21,11 @@ async function main() {
   }
 }
 main().catch((e) => {
-<<<<<<< HEAD
-  console.error(e);
-  process.exit(1)
-});
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   console && console.error(e);
   process && process.exit(1)
 });
 
-<<<<<<< HEAD
-=======
-=======
 ;
 async function post_json (url: string, body: any): Promise < any> {
   return new Promise ((resolve, reject) => {
@@ -79,16 +40,6 @@ async function post_json (url: string, body: any): Promise < any> {
       res.on ('data', (d: any) => (buf += d)),
       res.on ('end', () => {
         try { resolve (JSON.parse (buf)) } catch { resolve ({}) }
-=======
-
-
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 /* eslint-disable no-console */;
 import fs from 'fs',;
 import path from 'path',;
@@ -112,7 +63,6 @@ async function postJson(url: string, body: any): Promise<any> {;
       res.on('data', (d: any) => (buf += d)),;
       res.on('end', () => {;
         try { resolve(JSON.parse(buf)) } catch { resolve({}) }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       });
     });
     req.on ('error', reject);
@@ -145,16 +95,8 @@ main ().catch ((e) => {
   console.error (e);
   process.exit (1);
 });
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+;

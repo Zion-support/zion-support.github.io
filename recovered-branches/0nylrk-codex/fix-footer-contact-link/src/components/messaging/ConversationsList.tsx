@@ -1,43 +1,17 @@
-
-import React from 'react';
-import { User  } from 'lucide-react';
-import { Conversation  } from '@/types/messaging';
-import { ConversationItem } from './ConversationItem';
-interface ConversationsListProps {
-
-
-<<<<<<< HEAD
-  markAsRead: (conversationId: string) => Promise<void>
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 export function ConversationsList({
   conversations;
 
   activeConversation
   setActiveConversation
   markAsRead
-<<<<<<< HEAD
-=======
 
 export function ConversationsList({ ;
   conversations;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-export function ConversationsList({ ;
-  conversations;
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
 
 
 export function ConversationsList({ ;
   conversations;
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react',;
 import { User } from 'lucide-react',;
 import { Conversation } from '@/types/messaging',;
@@ -75,33 +49,15 @@ export function ConversationsList({
               key={conversation.id}
               conversation={conversation}
               isActive={activeConversation?.id === conversation.id}
-              onClick={() => {
-                setActiveConversation(conversation);
 
-                markAsRead(conversation.id)
+              isActive={activeConversation?.id === conversation && conversation.id}
               onClick={() => {;
                 setActiveConversation(conversation);
-                markAsRead(conversation.id);
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
               }}
             />;
           ))}
         </div>;
       )}
-
-    </div>;
-  );
-}
-
-=======
 import {User} from 'lucide-react';
 import {Conversation} from '@/types / messaging';
 import {ConversationItem} from './ConversationItem';
@@ -142,4 +98,3 @@ function ConversationsList() {
         </div>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

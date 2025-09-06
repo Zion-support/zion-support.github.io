@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-import React, { createContext, useContext, useState, useEffect, ReactNode } from "react";
-import {supabase} from "@/integrations/supabase/client";
-import {AuthContext} from "@/context/auth/AuthContext";
-import type { UserDetails as AuthUserDetails } from "@/types/auth";
-// Define types for our context
-export interface UserDetails {;
   id?: string;
   name?: string;
   email?: string;
@@ -19,16 +7,6 @@ export interface UserDetails {;
   headline?: string;
   profileComplete?: boolean;
   role?: string;
-  permissions?: string[];
-  companyId?: string;
-  bio?: string;
-  createdAt?: string;
-  updatedAt?: string
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import React, { createContext, useContext, useState, useEffect, ReactNode } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { AuthContext } from "@/context/auth/AuthContext";
@@ -89,13 +67,6 @@ export interface UserDetails {;
   bio?: string,;
   createdAt?: string,;
   updatedAt?: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
 
 import React, { create_context, useContext, useState, useEffect, ReactNode } from './react';
 import { supabase } from '@/integrations / supabase / client';
@@ -113,11 +84,6 @@ export interface UserDetails {
   headline?: string;
   profile_complete?: boolean;
   role?: string;
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 }
 ;
 export interface AuthContextType {;
@@ -158,38 +124,10 @@ export interface AuthContextType {;
   loginWithWeb3: () => Promise<void>
 }
 // Create a provider component
-export function AuthProvider({ children }: { children: ReactNode }) {;
-  const [user, setUser] = useState<UserDetails | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-export function AuthProvider({ children }: { children: ReactNode }) {
-  const [user, setUser] = useState<UserDetails | null>(null),
-  const [isLoading, setIsLoading] = useState(true);
-  const [isLoading, setIsLoading] = useState(true),
-
   // Mock auth functions for now - these would connect to Supabase in a real implementation
 
   const signIn = async (email: string, password: string) => {
     // This would be replaced with actual Supabase auth
-    console.log("Sign in attempted with:", email);
-    // Mock successful sign-in
-    setUser({
-      id: "mock-user-id"
-      email
-      displayName: "Mock User"
-      name: "Mock User"
-      avatarUrl: ""
-      profileComplete: true
-      role: "enterprise_admin"
-      permissions: ["billing_access", "admin_access", "team_management"];
-    setUser({ 
-      id: "mock-user-id", 
-      email, 
-      displayName: "Mock User", 
-      name: "Mock User",
-      avatarUrl: "",
-      profileComplete: true,
-      role: "enterprise_admin",
-      permissions: ["billing_access", "admin_access", "team_management"],
       companyId: "company-123"
     }),
     return { error: null }
@@ -198,14 +136,14 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const signOut = async () => {
     // This would be replaced with actual Supabase auth
-    console.log("Sign out attempted");
+    // // // console.log("Sign out attempted"),
     setUser(null)
   }
   },
 
   const signUp = async (email: string, password: string, userData?: Partial<UserDetails>) => {
     // This would be replaced with actual Supabase auth
-    console.log("Sign up attempted with:", email, userData);
+    // // // console.log("Sign up attempted with:", email, userData),
     // Mock successful sign-up
     setUser({
       id: "mock-user-id"
@@ -214,30 +152,34 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       name: userData?.name |"New User"
       userType: userData?.userType
       profileComplete: false
-    });
+  const resetPassword = async (email: string) => {
+    // Mock implementation
+    console.log("Password reset requested for:", email);
+    return { error: null }
+  const updateProfile = async (data: Partial<UserDetails>) => {
+    // Mock implementation
+    console.log("Profile update requested with:", data);
+    }),
     return { error: null }
   }
   },
 
   const resetPassword = async (email: string) => {
     // Mock implementation
-    console.log("Password reset requested for:", email);
+    // // // console.log("Password reset requested for:", email),
     return { error: null }
   }
   },
 
   const updateProfile = async (data: Partial<UserDetails>) => {
     // Mock implementation
-    console.log("Profile update requested with:", data);
+    // // // console.log("Profile update requested with:", data),
     if (user) {
       setUser({ ...user, ...data })
     }
     return { error: null }
-  }
-  },
-
   const loginWithGoogle = async () => {
-    console.log("Google login requested");
+    // // // console.log("Google login requested"),
     // Mock implementation
     setUser({
       id: "google-user-id"
@@ -246,11 +188,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       name: "Google User"
       profileComplete: true
     })
-  }
-  },
-
   const loginWithFacebook = async () => {
-    console.log("Facebook login requested");
+    // // // console.log("Facebook login requested"),
     // Mock implementation
     setUser({
       id: "facebook-user-id"
@@ -259,11 +198,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       name: "Facebook User"
       profileComplete: true
     })
-  }
-  },
-
   const loginWithTwitter = async () => {
-    console.log("Twitter login requested");
+    // // // console.log("Twitter login requested"),
     // Mock implementation
     setUser({
       id: "twitter-user-id"
@@ -272,66 +208,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       name: "Twitter User"
       profileComplete: true
     })
-  }
-  },
-
-  const loginWithWeb3 = async () => {
-    // // // console.log("Web3 login requested"),
-    const ethereum = (window as any).ethereum,
-    if (!ethereum) {
-<<<<<<< HEAD
-      console.warn("No wallet detected");
-      return
-    }
-    try {
-      const accounts = await ethereum.request({ method: 'eth_requestAccounts' })
-      const address = accounts[0];
-      await ethereum.request({
-        method: 'personal_sign'
-        params: [address, address]
-      });
-      setUser({
-        id: address
-        displayName: address
-        profileComplete: true
-      })
-    } catch (err) {
-      console.error('Web3 login failed', err)
-    }
-  }
-  // Check for existing session on mount
-  useEffect(() => {
-    // Mock loading state and then set a null user to simulate no session
-    setIsLoading(true);
-    setTimeout(() => {
-      setUser(null);
-      setIsLoading(false)
-    }, 100)
-  }, []);
-  const value = {
-    user;
-    isAuthenticated: !!user
-    isLoading;
-    signIn;
-    signOut;
-    signUp;
-    // Add aliases for compatibility
-    login: signIn
-    logout: signOut
-    signup: signUp
-    resetPassword;
-    updateProfile;
-    loginWithGoogle;
-    loginWithFacebook;
-    loginWithTwitter;
-    loginWithWeb3
-  }
-  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 // Custom hook to use the auth context
 export function useAuth(): AuthContextType {
   const context = useContext(AuthContext);
@@ -341,21 +217,12 @@ export function useAuth(): AuthContextType {
   }
   return context
 }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
 // Custom hook to use the auth context
 export function useAuth(): AuthContextType {;
   const context = useContext(AuthContext);
   if (context === undefined) {
     throw new Error("useAuth must be used within an AuthProvider")
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
 
 
 // Custom hook to use the auth context
@@ -364,8 +231,6 @@ export function useAuth(): AuthContextType {;
   if (context === undefined) {
     throw new Error("useAuth must be used within an AuthProvider")
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       console.warn("No wallet detected"),
       return
 ;
@@ -403,12 +268,23 @@ export function AuthProvider({ children }: { children: ReactNode }) {;
     setUser({;
       id: "mock-user-id",;
       email,;
-
       displayName: userData?.name || "New User",;
       name: userData?.name || "New User",;
       userType: userData?.userType,;
       profileComplete: false;
-
+    });
+    return { error: null }
+  };
+  const resetPassword = async (email: string) => {;
+    // Mock implementation;
+    console && console.log("Password reset requested for:", email);
+    return { error: null }
+  };
+  const updateProfile = async (data: Partial<UserDetails>) => {;
+    // Mock implementation;
+    console && console.log("Profile update requested with:", data);
+    if (user) {;
+      setUser({ ...user, ...data });
   permissions?: string[];
   company_id?: string;
   bio?: string;
@@ -544,200 +420,71 @@ if ( {) {
 }
       console.warn ("No wallet detected");
       return;
-
     }
     return { error: null }
   };
-
   const loginWithGoogle = async () => {;
     console && console.log("Google login requested");
     // Mock implementation;
     setUser({ ;
       id: "google-user-id", ;
       email: "google@example && example.com", ;
-=======
-    }),;
-    return { error: null }
-  },;
-  const resetPassword = async (email: string) => {;
-    // Mock implementation;
-    // // // console.log("Password reset requested for:", email),;
-    return { error: null }
-  },;
-  const updateProfile = async (data: Partial<UserDetails>) => {;
-    // Mock implementation;
-    // // // console.log("Profile update requested with:", data),;
-    if (user) {;
-      setUser({ ...user, ...data });
-    }
-    return { error: null }
-  },;
-  const loginWithGoogle = async () => {;
-    // // // console.log("Google login requested"),;
-    // Mock implementation;
-    setUser({;
-      id: "google-user-id",;
-      email: "google@example.com",;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       displayName: "Google User",;
       name: "Google User",;
       profileComplete: true;
     });
-
-  },;
+  };
   const loginWithFacebook = async () => {;
-    // // // console.log("Facebook login requested"),;
+    console && console.log("Facebook login requested");
     // Mock implementation;
-    setUser({;
-      id: "facebook-user-id",;
-      email: "facebook@example.com",;
-      displayName: "Facebook User",;
+    setUser({ ;
+      id: "facebook-user-id", ;
+      email: "facebook@example && example.com", ;
+      displayName: "Facebook User", ;
       name: "Facebook User",;
       profileComplete: true;
     });
-  },;
+  };
   const loginWithTwitter = async () => {;
-    // // // console.log("Twitter login requested"),;
+    console && console.log("Twitter login requested");
     // Mock implementation;
     setUser({;
       id: "twitter-user-id",;
-      email: "twitter@example.com",;
-
       displayName: "Twitter User",;
       name: "Twitter User",;
       profileComplete: true;
     });
-
-      const accounts = await ethereum.request ({ method: 'eth_requestAccounts' }),
-      const address = accounts[0];
-      await ethereum.request ({
-        method: 'personal_sign',
-        params: [address, address];
-      });
-      set_user ({
-        id: address,
-        display_name: address,
-        profile_complete: true;
-      });
-
+  };
+  const loginWithWeb3 = async () => {;
+    console && console.log("Web3 login requested");
+    const ethereum = (window as any).ethereum;
+    if (!ethereum) {;
+      console && console.warn("No wallet detected");
+      return;
+    }
     } catch (err) {
       console.error ('Web3 login failed', err);
     }
   }
-
-=======
-  },;
-  const loginWithWeb3 = async () => {;
-    // // // console.log("Web3 login requested"),;
-    const ethereum = (window as any).ethereum,;
-    if (!ethereum) {;
-      console.warn("No wallet detected"),;
-      return;
-    }
-
-    try {;
-      const accounts = await ethereum && ethereum.request({ method: 'eth_requestAccounts' }),;
-      const address = accounts[0];
-      await ethereum && ethereum.request({;
-        method: 'personal_sign',;
-        params: [address, address];
-      });
-      setUser({;
-        id: address,;
-        displayName: address,;
-        profileComplete: true;
-      });
-    } catch (err) {;
-      console && console.error('Web3 login failed', err);
-    }
-  };
-
-  // Check for existing session on mount;
-  useEffect(() => {;
-    // Mock loading state and then set a null user to simulate no session;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-    setIsLoading(true);
-    setTimeout(() => {;
-      setUser(null);
-      setIsLoading(false);
-    }, 100);
-  }, []);
-
-
-  const value = {;
-    user;
-    isAuthenticated: !!user,;
-
     isLoading;
     signIn;
     signOut;
     signUp;
-
-    // Add aliases for compatibility;
-    login: signIn,;
-    logout: signOut,;
-    signup: signUp,;
-
     resetPassword;
     updateProfile;
     loginWithGoogle;
     loginWithFacebook;
     loginWithTwitter;
-
-;
-  // Check for existing session on mount;
-  useEffect (() => {
-    // Mock loading state and then set a null user to simulate no session;
-    setIsLoading (true);
-    set_timeout (() => {
-      set_user (null);
-      setIsLoading (false);
-    }, 100);
-  }, []);
-;
-  const value = {
-    user;
-    is_authenticated: !!user,
-    is_loading;
-    sign_in;
-    sign_out;
-    sign_up;
-    // Add aliases for compatibility;
-    login: sign_in,
-    logout: sign_out,
-    signup: sign_up,
-    reset_password;
-    update_profile;
-    loginWithGoogle;
-    loginWithFacebook;
-    loginWithTwitter;
-    loginWithWeb3;
-
   }
 ;
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }
-
-    loginWithWeb3;
-  };
-
-  return <AuthContext && AuthContext.Provider value={value}>{children}</AuthContext && AuthContext.Provider>;
-}
-
 // Custom hook to use the auth context;
 export function useAuth(): any (): AuthContextType {;
   const context = useContext(AuthContext);
   if (context === undefined) {;
     throw new Error("useAuth must be used within an AuthProvider");
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   }
   return context;
 }

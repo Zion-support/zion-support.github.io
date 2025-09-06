@@ -1,72 +1,24 @@
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React from 'react';
 import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Eye  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function HolographicAICommunicationPage() {
 
   const contactInfo = {
-<<<<<<< HEAD
-=======
-export default function HolographicAICommunicationPage() {
-
-  const contactInfo = {
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
   }
-=======
-<<<<<<< HEAD
-=======
-
-export default function HolographicAICommunicationPage() {
-
-  const contactInfo = {
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',;
   };
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
-=======
+export default function HolographicAICommunicationPage() {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+  const contactInfo = {
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+  }
   const features = [
     'AI-powered 3D holographic projection'
     'Real-time holographic rendering'
@@ -77,8 +29,6 @@ export default function HolographicAICommunicationPage() {
   }
   const features = [
     'AI-powered 3D holographic projectionReal-time holographic renderingMulti-user holographic meetingsGesture and voice controlCross-platform WebXR supportEnterprise-grade security'
-
-
 export default function HolographicAICommunicationPage() {;
   const contactInfo = {;
     mobile: '+1 302 464 0950',;
@@ -97,7 +47,6 @@ export default function HolographicAICommunicationPage() {;
 
   const features = [;
     'AI-powered 3D holographic projectionReal-time holographic renderingMulti-user holographic meetingsGesture and voice controlCross-platform WebXR supportEnterprise-grade security';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
     <UltraAdvancedFuturisticBackground>;
@@ -179,12 +128,8 @@ export default function HolographicAICommunicationPage() {;
       </div>;
     </UltraAdvancedFuturisticBackground>;
   );
-
-=======
-}
-
-=======
   ];
+
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
@@ -223,17 +168,7 @@ export default function HolographicAICommunicationPage() {;
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-  );
-<<<<<<< HEAD
 }
-}
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
 import Head from 'next / head';
 import {Phone, Mail, MapPin, Check, ArrowRight, Eye} from 'lucide-react';
@@ -250,19 +185,3 @@ function HolographicAICommunicationPage() {
   }
 ;
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-;
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

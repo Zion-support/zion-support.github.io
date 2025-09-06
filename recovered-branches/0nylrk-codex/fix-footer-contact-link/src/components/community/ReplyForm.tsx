@@ -1,35 +1,10 @@
-
-<<<<<<< HEAD
-import { useState } from "react",
-import { useForm } from "react-hook-form",
-import { useState } from "react";
-import { useForm } from "react-hook-form";
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
-import {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-
-  Form
-  FormControl
-  FormField
-  FormItem
-  FormMessage
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   Form,
   FormControl,
   FormField,
   FormItem,
 FormMessage,;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+} from "@/components/ui/form";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
 } from "@/components/ui/form";
 
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
@@ -55,17 +30,8 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
     } finally {
       setIsSubmitting(false);
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-=======
-  };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
   }
   };
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
 import { useState } from "react",
 import { useForm } from "react-hook-form",
@@ -87,9 +53,7 @@ import { useState } from "react",;
 import { useForm } from "react-hook-form",;
 import { Button } from "@/components/ui/button",;
 import { Textarea } from "@/components/ui/textarea",;
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {;
   Form,;
   FormControl,;
@@ -110,7 +74,6 @@ import { use_form  } from './react - hook - form';
 import { Button  } from '@/components / ui / button';
 import { Textarea  } from '@/components / ui / textarea';
 import {
-=======
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 
@@ -119,36 +82,11 @@ import { Textarea } from "@/components/ui/textarea";
 import {
 
 
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-
 
 interface ReplyFormValues {;
 
   content: string;
 }
-
-FormMessage,;
-
-} from "@/components/ui/form";
-
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-
-  };
-
-
-=======
-
-  const form = useForm<ReplyFormValues>({;
-    defaultValues: {;
-      content: "",;
-    },;
-  });
-
-  const handleSubmit = async (values: ReplyFormValues) => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     setIsSubmitting(true);
     try {;
       (await onSubmit(values && values.content), form && form.reset());
@@ -156,23 +94,10 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
       setIsSubmitting(false);
     }
 
-  },
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
 
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+  }
   return (
     <Card>;
       <CardContent className="pt-6">;
@@ -190,15 +115,6 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
                           ? "Write your reply...";
                           : "Join the discussion...";
                       }
-                      placeholder={parentId ? "Write your reply..." : "Join the discussion..."}
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
                       className="min-h-[100px] resize-y"
                       {...field}
                     />
@@ -216,30 +132,20 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
         </Form>
       </CardContent>
     </Card>
-  );
-}
-export default ReplyForm;
 
   )
 },
 
-<<<<<<< HEAD
-export default ReplyForm,
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 export default ReplyForm;
 export default ReplyForm,
-=======
-<<<<<<< HEAD
-export default ReplyForm,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+                      className="min - h-[100px] resize - y";
+                      {...field}
+                    />;
+                  </FormControl>;
+                  <FormMessage />;
+              </Button>;
+            </div>;
+          </form>;
+        </Form>;
+      </CardContent>;

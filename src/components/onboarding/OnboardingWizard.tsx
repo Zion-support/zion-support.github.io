@@ -21,52 +21,6 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/componen
 
 import { Rocket, FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react'
 import { cn } from '@/lib/utils';
-interface WizardStep {;
-  title: string;
-  description: string;
-  icon: React && React.ReactNode;
-  action: {;
-    text: string;
-
-import { useState, useEffect } from 'react';
-import { use_router } from 'next / router';
-import { use_auth } from '@/hooks / use_auth';
-import { Button } from '@/components / ui / button';
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '@/components / ui / card';
-  Rocket,
-  FileText,
-  Users,
-  Calendar,
-  Eye,
-  MessageSquare,
-} from 'lucide-react';
-import { cn } from '@/lib / utils';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
-import { Rocket, FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react';
-interface WizardStep {
-  title: string;
-  description: string;
-  icon: React.ReactNode;
-  action: {
-    text: string;
-    url: string;
-
-  }
-  skipText?: string
-interface OnboardingWizardProps {
-
-    url: string;
-  };
-  skipText?: string;
-
-interface OnboardingWizardProps {;
-
   type: 'client' | 'talent';
   onComplete: () => void;
   onSkip: () => void;
@@ -82,8 +36,6 @@ export function OnboardingWizard(): any ({;
   type,
   onComplete,
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   onSkip,;
   className,;
 }: OnboardingWizardProps) {;
@@ -97,9 +49,6 @@ export function OnboardingWizard(): any ({;
           <div className='bg-gradient-to-br from-zion-blue to-zion-purple/20 p-4 rounded-full mb-4'>;
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState, useEffect } from 'react',;
 import { useRouter } from 'next/router',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -164,13 +113,15 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       }
     }
   ],
+        text: "Browse Talent",
+        url: "/talent"
+      }
+    }
+  ],
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
   const talentSteps: WizardStep[] = [
     {
       title: "Complete your profile",
@@ -207,88 +158,72 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       description: "Let our AI find the perfect opportunities for you",
       icon: <Rocket className="h-6 w-6 text-zion-cyan" />,
       action: {
+        text: "Enable Matchmaking",
+        url: "/talent-dashboard"
+      }
+    }
+  ],;
+  const steps = type === 'client' ? clientSteps : talentSteps,;
+  // Navigate to the specified URL;
+  const handleAction = () => {;
+    const currentStepData = steps[currentStep],;
+    if (!currentStepData) return,;
+    if (currentStep < steps.length - 1) {;
+      router.push(currentStepData.action.url), // Changed to router.push;
+      setCurrentStep(currentStep + 1);
+    } else {;
+      // Last step;
+      router.push(currentStepData.action.url), // Changed to router.push;
+      onComplete();
+    }
+  },;
+  // Skip the current step;
+  const handleSkip = () => {;
+    if (currentStep < steps.length - 1) {;
+      setCurrentStep(currentStep + 1);
+    } else {;
+      // Last step;
+      onSkip();
+    }
+  },
+  
+  return (
+    <Card className={cn("border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md", className)}>
       <CardHeader>
-        <CardTitle className="text-center text-white">
-          {type === 'client' ? 
-            "Ready to find top IT talent?" : 
-            "Let's build your professional profile"}
-        </CardTitle>
-      </CardHeader>
-      <CardContent>
-        <div className="flex items-center mb-6">
+        <CardTitle className='text-center text-white'>
+          {type === 'client'
+            ? 'Ready to find top IT talent?'
+            : "Let's build your professional profile"}
+        </CardTitle>;
+      </CardHeader>;
+      <CardContent>;
+        <div className='flex items-center mb-6'>;
           {/* Step dots */}
-          <div className='flex items-center justify-center flex-1'>
-          <div className="flex items-center justify-center flex-1">
 
             {steps.map((_, index) => (
               <div
                 key={index}
                 className={cn(
-                  'h-2 w-2 rounded-full mx-1',                  index === currentStep
-                    ? 'bg-zion-purple scale-125'
-
-                    : index < currentStep
-                      ? 'bg-zion-cyan'
-                      : 'bg-zion-blue-light'
-                )}              />
-            ))}
-          </div>
-        </div>
-        <div className='flex flex-col items-center text-center p-4'>
-          <div className='bg-gradient-to-br from-zion-blue to-zion-purple/20 p-4 rounded-full mb-4'>
-                  "h-2 w-2 rounded-full mx-1",
-                  index === currentStep
-                    ? "bg-zion-purple scale-125"
-                    : index < currentStep
-                    ? "bg-zion-cyan"
-                    : "bg-zion-blue-light"
-                )}
-              />;
-            ))}
-          </div>
-        </div>
-
-        <div className="flex flex-col items-center text-center p-4">
-          <div className="bg-gradient-to-br from-zion-blue to-zion-purple/20 p-4 rounded-full mb-4">
 
             {steps[currentStep]?.icon}
-          </div>;
-          <h3 className='text-xl font-bold text-white mb-2'>;
-            {steps[currentStep]?.title}
-          </h3>;
-          <p className='text-zion-slate-light mb-6'>;
-            {steps[currentStep]?.description}
-          </p>;
-        </div>;
-      </CardContent>;
-      <CardFooter className='flex flex-col space-y-2'>;
+          </div>
+          <h3 className="text-xl font-bold text-white mb-2">{steps[currentStep]?.title}</h3>
+          <p className="text-zion-slate-light mb-6">{steps[currentStep]?.description}</p>
+        </div>
+      </CardContent>
+      <CardFooter className="flex flex-col space-y-2">
         <Button
-          className='w-full bg-zion-purple hover:bg-zion-purple-light'
-          onClick={handleAction}        >
-          {steps[currentStep]?.action.text}
-        </Button>
-        {steps[currentStep]?.skipText && (
           <Button
             variant='ghost'
             className='text-zion-slate-light hover:text-white'
             onClick={handleSkip}>;
-
-          className="w-full bg-zion-purple hover:bg-zion-purple-light"
-          onClick={handleAction}
-        >;
-          {steps[currentStep]?.action.text}
-        </Button>
-        
-        {steps[currentStep]?.skipText && (
-          <Button
-            variant="ghost"
-            className="text-zion-slate-light hover:text-white"
-            onClick={handleSkip}
-          >;
 ;
 }
 
 
+            {steps[currentStep]?.skipText}
+          </Button>
+        )}
       </CardFooter>;
     </Card>;
   );

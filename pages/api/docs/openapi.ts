@@ -1,25 +1,10 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import v1 from '../../../data/api-docs/v1';
-import { EndpointSpec } from '[^']*';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import v1 from "../../../data/api-docs/v1";
 import { EndpointSpec } from "../../../data/api-docs/types";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-import type { NextApiRequest, NextApiResponse } from "next";
-import v1 from "../../../data/api-docs/v1";
-import { EndpointSpec } from "../../../data/api-docs/types";
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 function toOpenApi() {
   const paths: Record<string, any> = {}
   v1.sections.forEach((section) => {
     section.endpoints.forEach((ep: EndpointSpec) => {
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
               }
@@ -28,47 +13,14 @@ function toOpenApi() {
             "200": {
               description: "OK"
               content: {
-
-                  schema: ep && ep.responseBodySchema || { type: "object" },
-=======
-                "application / json": {
-                  schema: ep.responseBodySchema || { type: "object" },
-
                 },
               },
             },
           },
-
           security:;
             ep.auth && ep.auth.length > 0 && !ep.auth.includes ("none");
               ? [{ bearer_auth: [] }];
               : [],
-
-        }));
-    });
-
-=======
-import { EndpointSpec } from '../../../data/api-docs/types';
-function toOpenApi() {
-  const paths: Record<string, any> = {};
-  v1.sections.forEach((section) => {
-    section.endpoints.forEach((ep: EndpointSpec) => {
-      paths[ep.path] = paths[ep.path] || {};
-      paths[ep.path][ep.method.toLowerCase()] = {
-        tags: [section.title], summary: ep.title,
-        description: ep.description,
-        parameters: [
-          ...(ep.params ? Object.entries(ep.params).map(([name, desc]) => ({ in: 'path', name, required: true, schema: { type: 'string' }, description: desc })) : []),
-          ...(ep.query ? Object.entries(ep.query).map(([name, desc]) => ({ in: 'query', name, required: false, schema: { type: 'string' }, description: desc })) : [])
-        ],
-        requestBody: ep.requestBodySchema ? { content: { 'application/json': { schema: ep.requestBodySchema } } } : undefined,
-        responses: {
-          '200': { description: 'OK', content: { 'application/json': { schema: ep.responseBodySchema || { type: 'object' } } } }
-        },
-        security: ep.auth && ep.auth.length > 0 && !ep.auth.includes('none') ? [{ bearerAuth: [] }] : []}
-    })
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   });
 
 ;
@@ -91,36 +43,14 @@ function toOpenApi() {
     }
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 }
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
 
 }
 
-<<<<<<< HEAD
-=======
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-export default function handler(_req: NextApiRequest, res: NextApiResponse) {;
-res.setHeader("Content-Type", "application/json");
   res.status(200).json(toOpenApi());
 }
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const openapi = {
     openapi: '3.0.3',
@@ -129,129 +59,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       version: '1.0.0',
       description: 'API documentation for Zion Tech Group services'
     },
-    servers: [{
-      url: 'https://api.zion.os'
-    }],
-    paths: {  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  };
-  res.status(200).json(openapi);
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-import type { NextApiRequest, NextApiResponse } from 'next';
-import v1 from '../../../data/api-docs/v1';
-import { EndpointSpec } from '../../../data/api-docs/types';
-function toOpenApi() {;
-  const paths: Record<string, any> = {};
-  v1.sections.forEach((section) => {;
-    section.endpoints.forEach((ep: EndpointSpec) => {;
-      paths[ep.path] = paths[ep.path] || {},;
-      paths[ep.path][ep.method.toLowerCase()] = {;
-        tags: [section.title],;
-        summary: ep.title,;
-        description: ep.description,;
-        parameters: [;
-          ...(ep.params ? Object.entries(ep.params).map(([name, desc]) => ({ in: 'path', name, required: true, schema: { type: 'string' }, description: desc })) : []),;
-          ...(ep.query ? Object.entries(ep.query).map(([name, desc]) => ({ in: 'query', name, required: false, schema: { type: 'string' }, description: desc })) : [])],;
-        requestBody: ep.requestBodySchema ? { content: { 'application/json': { schema: ep.requestBodySchema } } } : undefined,;
-        responses: {;
-          '200': { description: 'OK', content: { 'application/json': { schema: ep.responseBodySchema || { type: 'object' } } } }},;
-        security: ep.auth && ep.auth.length > 0 && !ep.auth.includes('none') ? [{ bearerAuth: [] }] : []  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    });
-  }),;
-  return {;
-    openapi: '3.0.3',;
-    info: { title: 'Zion OS API', version: 'v1', description: 'Zion OS API generated from internal spec' },;
-    servers: [{ url: 'https://api.zion.os' }],;
-    paths,;
-    components: { securitySchemes: { bearerAuth: { type: 'http', scheme: 'bearer', bearerFormat: 'JWT' } } }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-export default function handler(req, res) {
-  try {
-<<<<<<< HEAD
-  res.setHeader('Content-Typeapplication/json');
-  res.status(200).json(toOpenApi());
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+}
   res.setHeader('Content-Typeapplication/json');
   res.status(200).json(toOpenApi())
 }
@@ -260,19 +71,5 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
-export default /**
- * handler - Function description
- */
-function handler() {
-  res.set_header ("Content - Type", "application / json");
-  res.status (200).json (toOpenApi ());
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

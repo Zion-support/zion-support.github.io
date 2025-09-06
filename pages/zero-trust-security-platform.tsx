@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react',
-import React from 'react';
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-import React from 'react',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
 
 class ErrorBoundary extends React.Component {
@@ -41,8 +23,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import Head from 'next/head';
 import ServiceLanding from '../components/sections/ServiceLanding';
 
@@ -86,19 +66,9 @@ import ServiceLanding from '../components/sections/ServiceLanding';
     </>;
   );
 
-<<<<<<< HEAD
-}
-import React from 'react',
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 import Head from 'next/head',
 import ServiceLanding from '../components/sections/ServiceLanding',
-=======
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function ZeroTrustSecurityPlatformPage() {
 	return (
 		<>
@@ -128,14 +98,7 @@ export default function ZeroTrustSecurityPlatformPage() {
 		</>
 	)
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
-=======
 import React from 'react';
 import Head from 'next / head';
 import ServiceLanding from '../components / sections / ServiceLanding';
@@ -182,11 +145,5 @@ function ZeroTrustSecurityPlatformPage() {
       />;
     </>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

@@ -1,5 +1,36 @@
-return (
-
+import React, { useMemo } from 'react',;
+import { User } from 'lucide-react';
+import { Conversation } from '@/types/messaging',;
+import { ConversationItem } from './ConversationItem',;
+import { FixedSizeList as List, ListChildComponentProps } from 'react-window',;
+interface ConversationsListProps {;
+  conversations: Conversation[],;
+  activeConversation: Conversation | null,;
+  setActiveConversation: (conversation: Conversation) => void,;
+  markAsRead: (conversationId: string) => Promise<void>;
+}
+;
+export function ConversationsList({;
+  conversations,;
+  activeConversation,;
+  setActiveConversation,;
+  markAsRead;
+}: ConversationsListProps) {;
+  const itemSize = 80,;
+  const listHeight = useMemo(() => {;
+    return Math.min(conversations.length * itemSize, 600);
+  }, [conversations.length]),;
+  const Row = ({ index, style }: ListChildComponentProps) => {;
+    const conversation = conversations[index],;
+    if (!conversation) {;
+      return <div style={style} />;
+    }
+;
+    return (;
+      <div style={style}>;
+        <ConversationItem;
+          conversation={conversation}
+          isActive={activeConversation?.id === conversation.id}
           onClick={() => {;
             setActiveConversation(conversation);
             markAsRead(conversation.id);
@@ -9,10 +40,6 @@ return (
     )
   },
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className='w-full md:w-80 border-r border-zion-purple/20 overflow-y-auto'>;
       <div className='p-3 border-b border-zion-purple/20'>;

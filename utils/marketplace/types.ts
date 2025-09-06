@@ -1,124 +1,33 @@
-<<<<<<< HEAD
-// Marketplace types
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-export interface Offer {
-
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 
 
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 export interface Offer {;
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   id: string;
   createdAtIso: string;
-  clientId: string;
-  talentSlug: string;
+  client_id: string;
+  talent_slug: string;
   startDateIso: string;
 
-  scopeSummary: string;
-  paymentTerms: PaymentTerms;
-  agreementUrl?: string;
-  status: 'SENT' | 'CONFIRMED' | 'CHANGES_REQUESTED' | 'DECLINED';
-  changeRequestNote?: string;
-  projectId?: string;
-}
-export interface PaymentTerms {
-  type: 'hourly' | 'fixed' | 'milestone';
-  amount?: number;
-  currency?: string;
-  milestones?: Array<{
-    title: string;
-    amount: number;
-    dueDateIso: string;
-  }>;
-}
-export interface Project {
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-export interface PaymentTerms {;
-  type: 'hourly' | 'fixed' | 'milestone';
-  amount?: number;
-  currency?: string;
-  milestones?: Array<{
-    title: string;
-    amount: number;
-    dueDateIso: string;
-  }>;
-}
-
-export interface Project {;
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   id: string;
   title: string;
   summary: string;
-  clientId: string;
-  talentSlug: string;
+  client_id: string;
+  talent_slug: string;
   startDateIso: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-  status: 'ACTIVE' | 'COMPLETED' | 'CANCELLED';
-  timeline: any[];
-  documents: ProjectDocument[];
-  notes: ProjectNote[];
-}
-export interface ProjectDocument {
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 
 export interface ProjectDocument {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   id: string;
   name: string;
   url?: string;
   uploadedAtIso: string;
 }
-<<<<<<< HEAD
-=======
-export interface ProjectNote {
-
-export interface ProjectNote {;
+  id: string;
+  name: string;
+  url?: string;
+  uploadedAtIso: string;
+}
   id: string;
   authorId: string;
   authorRole: string;
@@ -126,53 +35,7 @@ export interface ProjectNote {;
   createdAtIso: string;
 }
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-  status: 'ACTIVE' | 'COMPLETED' | 'CANCELLED';
-  timeline: any[];
-  documents: ProjectDocument[];
-  notes: ProjectNote[];
-}
-export interface ProjectDocument {
-=======
-
-<<<<<<< HEAD
-export interface ProjectDocument {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  id: string;
-  name: string;
-  url?: string;
-  uploadedAtIso: string;
-}
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-export interface ProjectNote {
-=======
-
-export interface ProjectNote {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  id: string;
-  authorId: string;
-  authorRole: string;
-  content: string;
-  createdAtIso: string;
-}
-=======
-<<<<<<< HEAD
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
 
 
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

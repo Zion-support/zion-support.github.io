@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-const fs = require('fs');
-const path = require('path');
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 console.log('🔍 Debugging Next.js project structure...');
 // Check if we're in a valid Next.js project;
 console.log('📁 Current directory:', process.cwd());
@@ -30,61 +23,28 @@ for (const file of allFiles) {;
   try {;
     const content = fs.readFileSync(file, 'utf8');
     if (content.includes('') |content.includes('
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 const fs = require('fs'),;
 const path = require('path'),;
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
 
 const fs = require ('fs'),
 const path = require ('path'),
 console.log ('🔍 Debugging Next.js project structure...'),
-=======
 
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 console.log('🔍 Debugging Next.js project structure...'),;
-
 // Check if we're in a valid Next.js project;
-console.log ('📁 Current directory:', process.cwd ()),
-console.log ('📄 Package.json exists:', fs.exists_sync ('package.json')),
-console.log ('📄 Next.config.js exists:', fs.exists_sync ('next.config.js')),
-console.log ('📁 Pages directory exists:', fs.exists_sync ('pages')),
-console.log ('📁 Components directory exists:', fs.exists_sync ('components')),
+console.log('📁 Current directory:', process.cwd()),;
+console.log('📄 Package.json exists:', fs.existsSync('package.json')),;
+console.log('📄 Next.config.js exists:', fs.existsSync('next.config.js')),;
+console.log('📁 Pages directory exists:', fs.existsSync('pages')),;
+console.log('📁 Components directory exists:', fs.existsSync('components')),;
 // Check package.json;
-
-if (fs.existsSync('package.json')) {;
-<<<<<<< HEAD
-  const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8'));
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8')),;
   const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8'));
-=======
-<<<<<<< HEAD
-  const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8'));
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   console.log('📦 Next.js version:', packageJson.dependencies?.next || 'Not found'),;
   console.log('📦 React version:', packageJson.dependencies?.react || 'Not found');
 
@@ -92,25 +52,10 @@ if (fs.existsSync('package.json')) {;
 // Check pages directory structure;
 
 if (fs.existsSync('pages')) {;
-<<<<<<< HEAD
-  const pages = fs.readdirSync('pages');
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   const pages = fs.readdirSync('pages'),;
   const pages = fs.readdirSync('pages');
-=======
-<<<<<<< HEAD
-  const pages = fs.readdirSync('pages');
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   console.log('📄 Pages found:', pages.length),;
   console.log('📄 Main pages:', pages.filter(p => p.includes('index') || p.includes('_app')));
 
@@ -118,45 +63,14 @@ if (fs.existsSync('pages')) {;
 // Check for any problematic files;
 
 console.log('🔍 Checking for problematic files...'),;
-<<<<<<< HEAD
-const problematicFiles = [];
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 const problematicFiles = [],;
 const problematicFiles = [];
-=======
-<<<<<<< HEAD
-const problematicFiles = [];
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 const allFiles = getAllFiles('.', ['.tsx.ts.jsx.js']),;
 for (const file of allFiles) {;
   try {;
     const content = fs.readFileSync(file, 'utf8'),;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-    if (content.includes('') || content.includes('
-}
-}
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-    if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {;
-=======
-    if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {;
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
       problematicFiles.push(file);
     }
   } catch (error) {;
@@ -190,17 +104,3 @@ function getAllFiles(dir, extensions) {;
 }
 ;
 console.log('✅ Debug completed'),;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1

@@ -1,5 +1,3 @@
-import Head from 'next/head';
-export default function Page() {
   return (
     <div className='min-h-screen bg-slate-950 text-white'>;
       <Head>;
@@ -25,16 +23,7 @@ export default function Page() {
         <div
           className='mt-4'
           dangerouslySetInnerHTML={{
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             __html:
-
-              '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/explore" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/explore</a></p><h2>Context</h2><p>Signals indicate recurring needs around <strong>cloud, improving, continuously, autonomous, systems, live</strong>.</p><h2>Problem</h2><p>How do we design a robust, observable, and cost-efficient approach?</p><h2>Forces</h2><ul><li>Latency and throughput trade-offs</li><li>Quality and evaluation</li><li>Security and governance</li></ul><h2>Solution</h2><p>Define clear boundaries, automate evaluation, and continuously iterate with telemetry-in-the-loop.</p><h2>Consequences</h2><p>Improved reliability and faster iteration; requires disciplined measurement.</p>',;
-
           }}
         />;
         <p className='mt-6 text-white/60 text-sm'>;
@@ -43,17 +32,8 @@ export default function Page() {
       </main>;
     </div>;
   );export default function Page() {;
-
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
-<<<<<<< HEAD
-            __html:
-              '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/explore" target="_blank" rel="noopener">https://ziontechgroup.com/explore</a></p><h2>Context</h2><p>Signals indicate recurring needs around <strong>cloud, improving, continuously, autonomous, systems, live</strong>.</p><h2>Problem</h2><p>How do we design a robust, observable, and cost-efficient approach?</p><h2>Forces</h2><ul><li>Latency and throughput trade-offs</li><li>Quality and evaluation</li><li>Security and governance</li></ul><h2>Solution</h2><p>Define clear boundaries, automate evaluation, and continuously iterate with telemetry-in-the-loop.</p><h2>Consequences</h2><p>Improved reliability and faster iteration; requires disciplined measurement.</p>'
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 export default function Page() {
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return (
     <div className="min-h-screen bg-slate-950 text-white">;
       <Head>;
@@ -109,10 +89,6 @@ function Page() {
         <meta property="og:description" content="Actionable architectural pattern synthesized from live site signals." />;
         <meta name="twitter:card" content="summary_large_image" />;
       </Head>;
-
-}
-
-=======
       <main className="container mx - auto px - 6 py - 12 prose prose - invert">;
         <h1 className="text - 3xl font - extrabold">Pattern — Cloud Improving Continuously</h1>;
         <div className="mt - 4" dangerouslySetInnerHTML={{ __html: "<p > Source: <a class="text - cyan - 300 underline" href="https://ziontechgroup.com / explore" target="_blank" rel="noopener">https://ziontechgroup.com / explore</a></p><h2 > Context</h2><p > Signals indicate recurring needs around <strong > cloud, improving, continuously, autonomous, systems, live</strong>.</p><h2 > Problem</h2><p > How do we design a robust, observable, and cost - efficient approach?</p><h2 > Forces</h2><ul><li > Latency and throughput trade - offs</li><li > Quality and evaluation</li><li > Security and governance</li></ul><h2 > Solution</h2><p > Define clear boundaries, automate evaluation, and continuously iterate with telemetry - in - the - loop.</p><h2 > Consequences</h2><p > Improved reliability and faster iteration, requires disciplined measurement.</p>" }} />;
@@ -120,19 +96,9 @@ function Page() {
       </main>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
             __html:;
               '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/explore" target="_blank" rel="noopener">https://ziontechgroup.com/explore</a></p><h2>Context</h2><p>Signals indicate recurring needs around <strong>cloud, improving, continuously, autonomous, systems, live</strong>.</p><h2>Problem</h2><p>How do we design a robust, observable, and cost-efficient approach?</p><h2>Forces</h2><ul><li>Latency and throughput trade-offs</li><li>Quality and evaluation</li><li>Security and governance</li></ul><h2>Solution</h2><p>Define clear boundaries, automate evaluation, and continuously iterate with telemetry-in-the-loop.</p><h2>Consequences</h2><p>Improved reliability and faster iteration; requires disciplined measurement.</p>',
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
           }}
         />
         <p className='mt-6 text-white/60 text-sm'>
@@ -142,18 +108,6 @@ function Page() {
     </div>
   );export default function Page() {
   return (
-
-export default function Page() {
-  return (
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     <div className="min-h-screen bg-slate-950 text-white">
       <Head>
         <title>Pattern — Cloud Improving Continuously</title>
@@ -167,26 +121,12 @@ export default function Page() {
         <div className="mt-4" dangerouslySetInnerHTML={{ __html: "<p>Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/explore\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com/explore</a></p><h2>Context</h2><p>Signals indicate recurring needs around <strong>cloud, improving, continuously, autonomous, systems, live</strong>.</p><h2>Problem</h2><p>How do we design a robust, observable, and cost-efficient approach?</p><h2>Forces</h2><ul><li>Latency and throughput trade-offs</li><li>Quality and evaluation</li><li>Security and governance</li></ul><h2>Solution</h2><p>Define clear boundaries, automate evaluation, and continuously iterate with telemetry-in-the-loop.</p><h2>Consequences</h2><p>Improved reliability and faster iteration, requires disciplined measurement.</p>" }} />
         <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Deep Research Factory.</p>
       </main>
-<<<<<<< HEAD
-    </div>
-  );
-}
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
     </div>;
   );
 }
 
 }
     </div>
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
   )
 import Head from 'next/head';
 export default function Page(req, res) {
@@ -213,17 +153,5 @@ export default function Page(req, res) {
   }
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
