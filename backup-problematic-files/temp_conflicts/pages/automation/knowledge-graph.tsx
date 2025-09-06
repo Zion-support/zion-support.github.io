@@ -1,5 +1,0 @@
-import fs from 'fs'
-import path from 'path'
-import type { GetStaticProps } from 'next'
-    const file = path.join(process.cwd(), 'publicautomation', 'knowledge-graph.json'
-    const raw = fs.readFileSync(file, 'utf8'

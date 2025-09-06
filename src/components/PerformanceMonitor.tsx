@@ -22,7 +22,7 @@ const PerformanceMonitor: React.FC = () => {
       const renderTime = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
       
       // Memory usage (if available)
-      const memory = (performance as any).memory;
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
       const memoryUsage = memory ? memory.usedJSHeapSize / 1024 / 1024 : 0;
 
       setMetrics({

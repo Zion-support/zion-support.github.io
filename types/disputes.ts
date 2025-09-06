@@ -1,2 +1,0 @@
-  role: 'admin' | 'client' | 'talent';
-}

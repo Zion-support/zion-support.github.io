@@ -1,8 +1,0 @@
-    if (error) return res.status(500).json({ error: error.message });
-
-    return res.status(200).json({ ok: true });
-  } catch (e: any) {
-    return res.status (500).json ({ error: e?.message });
-  }
-}
-;

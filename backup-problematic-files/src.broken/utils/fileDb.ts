@@ -1,8 +1,0 @@
-import fs from 'fs'
-import path from 'path'
-const dataDir = path.resolve(process.cwd(), 'data'
-      fs.writeFileSync(targetPath, JSON.stringify(fallback, null, 2), 'utf8'
-    const raw = fs.readFileSync(targetPath, 'utf8'
-  fs.writeFileSync(targetPath, JSON.stringify(data, null, 2), 'utf8'
-import fs from 'fs'
-import path from 'path'

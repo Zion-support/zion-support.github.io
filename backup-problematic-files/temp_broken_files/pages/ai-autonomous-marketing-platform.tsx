@@ -1,1 +1,0 @@
-import ServicePage, { getStaticProps as getSlugStaticProps } from './services/

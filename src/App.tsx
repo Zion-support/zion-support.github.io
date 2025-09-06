@@ -1,44 +1,40 @@
-import React, { useState, Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import ErrorBoundary from './components/ErrorBoundary';
+import React from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Sidebar from './components/Sidebar';
-import LoadingSpinner from './components/LoadingSpinner';
-import PerformanceMonitor from './components/PerformanceMonitor';
-
-// Lazy load pages
-const Home = React.lazy(() => import('./pages/Home'));
-const About = React.lazy(() => import('./pages/About'));
-const Services = React.lazy(() => import('./pages/Services'));
-const Pricing = React.lazy(() => import('./pages/Pricing'));
-const Contact = React.lazy(() => import('./pages/Contact'));
+import './index.css';
 
 function App() {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-
   return (
-    <ErrorBoundary>
-      <Router>
-        <div className="min-h-screen flex flex-col">
-          <PerformanceMonitor />
-          <Header onMenuClick={() => setSidebarOpen(!sidebarOpen)} />
-          <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
-          <main className="flex-1">
-            <Suspense fallback={<LoadingSpinner />}>
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/services" element={<Services />} />
-                <Route path="/pricing" element={<Pricing />} />
-                <Route path="/contact" element={<Contact />} />
-              </Routes>
-            </Suspense>
-          </main>
-          <Footer />
+    <div className="flex flex-col min-h-screen">
+      <Header onMenuClick={() => {}} />
+      <main className="flex-grow container mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold text-center text-primary mb-8">Welcome to Zion Tech Group</h1>
+        <p className="text-lg text-center text-foreground/80 mb-12">
+          Your partner in advanced technology solutions, driving innovation and efficiency.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-card p-6 rounded-lg shadow-md">
+            <h2 className="text-2xl font-semibold text-secondary mb-4">AI & Automation</h2>
+            <p className="text-foreground/70">
+              Leverage cutting-edge Artificial Intelligence and automation to streamline your operations and unlock new possibilities.
+            </p>
+          </div>
+          <div className="bg-card p-6 rounded-lg shadow-md">
+            <h2 className="text-2xl font-semibold text-secondary mb-4">Software Development</h2>
+            <p className="text-foreground/70">
+              From custom applications to enterprise-grade solutions, our expert developers build robust and scalable software.
+            </p>
+          </div>
+          <div className="bg-card p-6 rounded-lg shadow-md">
+            <h2 className="text-2xl font-semibold text-secondary mb-4">Cloud Solutions</h2>
+            <p className="text-foreground/70">
+              Migrate, manage, and optimize your infrastructure in the cloud for unparalleled flexibility and performance.
+            </p>
+          </div>
         </div>
-      </Router>
-    </ErrorBoundary>
+      </main>
+      <Footer />
+    </div>
   );
 }
 

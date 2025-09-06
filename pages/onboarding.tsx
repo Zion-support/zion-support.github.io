@@ -1,4 +1,0 @@
-    <div>;
-      <OnboardingWizard />;
-    </div>);
-}

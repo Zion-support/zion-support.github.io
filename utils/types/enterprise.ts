@@ -1,3 +1,0 @@
-  activity: CompanyActivityEvent[];
-  invoices: InvoiceRecord[];
-}

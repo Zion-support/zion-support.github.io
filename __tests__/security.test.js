@@ -1,5 +1,0 @@
-    expect(url).toMatch(/^"https"
-      /passwords*[:=]s*['"][^'"
-      /api[_-]?keys*[:=]s*['"][^'"
-      /secrets*[:=]s*['"][^'"
-      /tokens*[:=]s*['"][^'"
