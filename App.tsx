@@ -1,9 +1,10 @@
 import React, { JSX } from 'react';
+import EnhancedServicesPage from './src/pages/EnhancedServicesPage';
 
-import React, { JSX } from 'react';
 export default function App(): JSX.Element {
   return (
     <main>
-      <h1>Hello App</h1>
+      <EnhancedServicesPage />
     </main>
-  )}
+  );
+}

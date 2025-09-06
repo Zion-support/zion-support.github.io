@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback, useMemo } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import { useRouter } from 'next/router',
-import { ArrowUp, Filter, SortAsc, Zap, TrendingUp, Star, ShoppingCart, Clock, Award } from 'lucide-react'
+import { ArrowUp, Filter, SortAsc, Zap, TrendingUp, Star, ShoppingCart, Clock, Award, MessageSquare, Phone, Mail } from 'lucide-react'
 import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll',
 import { generateITServices, getServicesMarketStats, getRecommendedServices } from '@/utils/servicesAutoFeedAlgorithm',
 import { ProductListing } from '@/types/listings',
@@ -10,7 +10,9 @@ import { Button } from '@/components/ui/button',
 import { Badge } from '@/components/ui/badge',
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
 import Spinner from '@/components/ui/spinner',
-import { SERVICES } from '@/data/servicesData',
+import { SERVICES, serviceCategories, getServicesMarketStats, getRecommendedServices } from '@/data/servicesData',
+import { specializedServices, specializedCategories } from '@/data/specializedServices',
+import { CONTACT_INFO, mainMarketingContent } from '@/data/marketingContent',
 import { useCurrency } from '@/hooks/useCurrency',
 // Initial services from existing data
 const INITIAL_SERVICES: ProductListing[] = SERVICES,
@@ -85,11 +87,18 @@ const ServiceFilterControls = ({
 const ServiceCard = ({ service, onViewDetails }: { service: ProductListing, onViewDetails: () => void }) => {
   const { formatPrice } = useCurrency(),
   return (
-  <Card className="h-full hover:shadow-lg transition-shadow">
+  <Card className="h-full hover:shadow-lg transition-shadow border-2 hover:border-primary/20">
     <CardHeader className="pb-3">
       <div className="flex items-start justify-between">
         <div className="flex-1 min-w-0">
-          <h3 className="font-semibold text-lg mb-1 line-clamp-1">{service.title}</h3>
+          <div className="flex items-center gap-2 mb-2">
+            <h3 className="font-semibold text-lg mb-1 line-clamp-1">{service.title}</h3>
+            {service.badge && (
+              <Badge variant="secondary" className="text-xs bg-gradient-to-r from-blue-500 to-purple-500 text-white">
+                {service.badge}
+              </Badge>
+            )}
+          </div>
           <div className="flex items-center gap-2 mb-2">
             <div className="flex items-center gap-1">
               <Star className="h-4 w-4 text-yellow-500 fill-current" />
@@ -99,24 +108,61 @@ const ServiceCard = ({ service, onViewDetails }: { service: ProductListing, onVi
             {service.aiScore && service.aiScore > 85 && (
               <Badge variant="secondary" className="text-xs bg-purple-100 text-purple-700">
                 AI Score: {service.aiScore}
-              </Badge>;
+              </Badge>
             )}
           </div>
           <div className="flex items-center gap-2 mt-2">
-            <Badge variant="secondary" className="text-xs">{service.author.name}</Badge>
+            <Badge variant="outline" className="text-xs">{service.category}</Badge>
           </div>
         </div>
         <div className="text-right">
-          <div className="text-xl font-bold text-green-600">{formatPrice(service.price ?? 0)}</div>
-          <Badge variant={service.availability === "Available" ? "default" : "outline"} className="text-xs">
-            {service.availability}
+          <div className="text-xl font-bold text-green-600">{service.price}</div>
+          <div className="text-xs text-muted-foreground line-through">{service.marketPrice}</div>
+          <Badge variant={service.availability === "Available" ? "default" : "outline"} className="text-xs mt-1">
+            {service.availability || "Available"}
           </Badge>
         </div>
       </div>
       <p className="text-sm text-muted-foreground mb-3 line-clamp-2">{service.description}</p>
+      
+      {/* Key Features */}
+      <div className="mb-3">
+        <h4 className="text-xs font-semibold text-muted-foreground mb-1">Key Features:</h4>
+        <div className="flex flex-wrap gap-1">
+          {service.features?.slice(0, 3).map((feature, index) => (
+            <Badge key={index} variant="outline" className="text-xs">
+              {feature}
+            </Badge>
+          ))}
+          {service.features?.length > 3 && (
+            <Badge variant="outline" className="text-xs">
+              +{service.features.length - 3} more
+            </Badge>
+          )}
+        </div>
+      </div>
+
+      {/* Contact Information */}
+      <div className="bg-muted/30 rounded-lg p-3 mb-3">
+        <h4 className="text-xs font-semibold text-muted-foreground mb-2">Contact Zion Tech Group:</h4>
+        <div className="space-y-1 text-xs">
+          <div className="flex items-center gap-2">
+            <span className="text-muted-foreground">📞</span>
+            <span>{service.contactInfo?.phone || CONTACT_INFO.phone}</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="text-muted-foreground">✉️</span>
+            <span>{service.contactInfo?.email || CONTACT_INFO.email}</span>
+          </div>
+        </div>
+      </div>
+
       <div className="flex items-center justify-between">
-        <span className="text-sm font-medium">{service.category}</span>
-        <Button size="sm" onClick={onViewDetails}>
+        <Button variant="outline" size="sm" onClick={onViewDetails}>
+          <MessageSquare className="h-4 w-4 mr-1" />
+          Learn More
+        </Button>
+        <Button size="sm" onClick={() => window.open(`mailto:${service.contactInfo?.email || CONTACT_INFO.email}?subject=Inquiry about ${service.title}`)}>
           <ShoppingCart className="h-4 w-4 mr-1" />
           Contact
         </Button>
@@ -235,12 +281,42 @@ export default function ServicesPage() {;
 ;
   return (;
     <div className="container py-8">;
-      <motion.div className="text-center mb-8" initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }}>;
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">;
-          IT & AI Services;
-        </h1>;
-        <p className="text-muted-foreground text-lg">Professional services for digital transformation and technology innovation</p>;
-      </motion.div>;
+      <motion.div className="text-center mb-8" initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }}>
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
+          {mainMarketingContent.title}
+        </h1>
+        <p className="text-muted-foreground text-lg mb-6">{mainMarketingContent.subtitle}</p>
+        <p className="text-muted-foreground text-base max-w-4xl mx-auto mb-8">{mainMarketingContent.description}</p>
+        
+        {/* Key Benefits */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+          {mainMarketingContent.benefits.slice(0, 6).map((benefit, index) => (
+            <div key={index} className="flex items-center gap-2 text-sm text-muted-foreground">
+              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+              <span>{benefit}</span>
+            </div>
+          ))}
+        </div>
+
+        {/* Contact Information */}
+        <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-6 mb-8">
+          <h3 className="text-xl font-semibold mb-4">Ready to Transform Your Business?</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+            <div className="flex items-center gap-2">
+              <Phone className="h-4 w-4 text-blue-600" />
+              <span>{CONTACT_INFO.phone}</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Mail className="h-4 w-4 text-blue-600" />
+              <span>{CONTACT_INFO.email}</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-blue-600">📍</span>
+              <span>{CONTACT_INFO.address}</span>
+            </div>
+          </div>
+        </div>
+      </motion.div>
       {marketStats && (;
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>;
           <ServicesMarketInsights stats={marketStats} />;
