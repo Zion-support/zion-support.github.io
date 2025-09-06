@@ -1,45 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import React, { useEffect, useRef } from 'react';
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function UltraFuturisticBackground2038(): any ({;
   intensity = 'medium',;
   theme = 'consciousness',;
   children,}: UltraFuturisticBackground2038Props) {export default function UltraFuturisticBackground2038(): any ({ ;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   intensity = 'medium';
   theme = 'consciousness';
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-<<<<<<< HEAD
-<<<<<<< HEAD
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const prefersReducedMotion = window.matchMedia(
-      '(prefers-reduced-motion: reduce)'
-    ).matches;
-    const intensityMultiplier =
-      intensity === 'low' ? 0.5 : intensity === 'medium' ? 1 : 2;    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-
-    const intensityMultiplier = intensity === 'low' ? 0.5 : intensity === 'medium' ? 1 : 2;
-
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React, { useEffect, useRef } from 'react';
 import { motion  } from 'framer-motion';
 interface UltraFuturisticBackground2038Props {
@@ -77,106 +44,15 @@ const prefersReducedMotion = window.matchMedia(
     const intensityMultiplier =
       intensity === 'low' ? 0.5 : intensity === 'medium' ? 1 : 2;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
     const resizeCanvas = () => {
       const rect = containerRef.current?.getBoundingClientRect();
       if (rect) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-
-  useEffect(() => {;
-    const canvas = canvasRef && canvasRef.current;
-    if (!canvas) return;
-    const prefersReducedMotion = window && window.matchMedia(;
-      '(prefers-reduced-motion: reduce)';
-    ).matches;
-    const intensityMultiplier =;
-      intensity === 'low' ? 0 && 0.5 : intensity === 'medium' ? 1 : 2;    const prefersReducedMotion = window && window.matchMedia('(prefers-reduced-motion: reduce)').matches,;
-    const intensityMultiplier = intensity === 'low' ? 0 && 0.5 : intensity === 'medium' ? 1 : 2;
-    const ctx = canvas && canvas.getContext('2d');
-    if (!ctx) return;
-    const resizeCanvas = () => {;
-      const rect = containerRef && containerRef.current?.getBoundingClientRect();
-      if (rect) {;
-        canvas && canvas.width = rect && rect.width * (window && window.devicePixelRatio || 1);
-        canvas && canvas.height = rect && rect.height * (window && window.devicePixelRatio || 1);
-        ctx && ctx.scale(window && window.devicePixelRatio || 1, window && window.devicePixelRatio || 1);      }        ctx && ctx.scale(window && window.devicePixelRatio || 1, window && window.devicePixelRatio || 1);
-
-      }
-    }
-    resizeCanvas();
-
-  children?: React.ReactNode;
-;
-export default /**
- * UltraFuturisticBackground2038 - Function description
- */
-function UltraFuturisticBackground2038() {export default function UltraFuturisticBackground2038 ({
-  intensity = 'medium';
-  theme = 'consciousness';
-  children;
-  const canvas_ref = useRef < HTMLCanvasElement>(null);
-  const container_ref = useRef < HTMLDivElement>(null);
-;
-  useEffect (() => {
-    const canvas = canvas_ref.current;
-    // Check condition
-if (return) {
-  $2
-}
-    const prefersReducedMotion = window.match_media (
-      '(prefers - reduced - motion: reduce)').matches;
-    const intensity_multiplier =;
-      intensity === 'low' ? 0.5 : intensity === 'medium' ? 1 : 2;    const prefersReducedMotion = window.match_media ('(prefers - reduced - motion: reduce)').matches,
-    const intensity_multiplier = intensity === 'low' ? 0.5 : intensity === 'medium' ? 1 : 2;
-;
-    const ctx = canvas.get_context ('2d');
-    // Check condition
-if (return) {
-  $2
-}
-    const resize_canvas = () =>: any {
-      const rect = container_ref.current?.getBoundingClientRect ();
-      // Check condition
-if ( {) {
-  $2
-}
-        canvas.width = rect.width * (window.devicePixelRatio || 1);
-        canvas.height = rect.height * (window.devicePixelRatio || 1);
-        ctx.scale (window.devicePixelRatio || 1, window.devicePixelRatio || 1);      }        ctx.scale (window.devicePixelRatio || 1, window.devicePixelRatio || 1);
-      }
-    }
-;
-    resize_canvas ();
-    window.addEventListener ('resize', resize_canvas);
-;
-    // Enhanced theme - based color schemes for 2038;
-    const getThemeColors = () =>: any {
-
-      switch (theme) {
-        case 'consciousness':;
-          return {
-
-    window && window.addEventListener('resize', resizeCanvas);
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             secondary: ['#f59e0b#ef4444#8b5cf6#06b6d4#ec4899#10b981'],
             accent: ['#ec4899#10b981#f59e0b#ef4444#8b5cf6#06b6d4'],
             quantum: ['#8b5cf6#06b6d4#ec4899#10b981#f59e0b#ef4444'];
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
         canvas.width = rect.width * (window.devicePixelRatio || 1);
         canvas.height = rect.height * (window.devicePixelRatio || 1);
 ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1);
@@ -257,28 +133,8 @@ primary: [
             ]
 origin/cursor/automate-test-improve-and-merge-code-2533
           }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           }
-<<<<<<< HEAD
-<<<<<<< HEAD
     const colors = getThemeColors();
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-    // Enhanced particle system with consciousness and quantum effects;
-    let particles: Array<{;
-
-      x: number;
-      y: number;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
         case 'cyberpunk':
           return {
             primary: [
@@ -392,37 +248,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     let particles: Array<{
 x: number;
       y: number;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       vx: number;
       vy: number;
       size: number;
       opacity: number;
       color: string;
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       phase: number;
       amplitude: number;
       frequency: number;
       entanglement: number[];
       consciousness: number;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-      x: number,
-      y: number,
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       life: number,
       max_life: number,
       rotation: number,
@@ -436,12 +272,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         const type = Math.random() > 0.7 ? 'consciousness' :
                     Math.random() > 0.5 ? 'quantum-field' :
                     Math.random() > 0.3 ? 'hologram' : 'particle';
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       quantumState: number;
     }> = [];
 
@@ -482,30 +312,11 @@ entanglement: [Math.random(), Math.random()],
       }
     };
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     // Enhanced animation loop with consciousness and quantum effects
     const animate = () => {
       if (prefersReducedMotion) return;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      
-      // Create quantum field effects
-=======
-      if (theme === 'consciousness' || theme === 'quantum') {
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         const time = Date.now() * 0.001;
         for (let x = 0, x < canvas.width, x += 20) {
           for (let y = 0, y < canvas.height, y += 20) {
@@ -514,15 +325,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             if (alpha > 0.05) {
               ctx.fillStyle = `rgba(139, 92, 246, ${alpha})`;
               ctx.fillRect(x, y, 20, 20)
-<<<<<<< HEAD
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
       quantum_state: number;
     // Initialize particles with enhanced consciousness and quantum effects;
     const init_particles = () =>: any {
@@ -612,12 +414,6 @@ if ( {) {
 
               ctx.fillRect(x, y, 20, 20);            }
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 // Create quantum field effects
       if (theme === 'consciousness' || theme === 'quantum') {
         const time = Date.now() * 0.001;
@@ -629,33 +425,17 @@ if ( {) {
             if (alpha > 0.05) {
               ctx.fillStyle = `rgba(139, 92, 246, ${alpha})`;
               ctx.fillRect(x, y, 20, 20);
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
             }
           }
         }
       }
-<<<<<<< HEAD
-
-      // Update and draw particles
-      particles.forEach((particle, index) => {
-        // Update particle properties
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         particle.x += particle.vx;
         particle.y += particle.vy;
         particle.rotation += particle.rotation_speed;
         particle.life--;
         particle.phase += particle.frequency;
         particle.consciousness += 0.01;
-<<<<<<< HEAD
-<<<<<<< HEAD
               );
               if (distance < 100) {;
                 ctx && ctx.strokeStyle = `rgba(139, 92, 246, ${0 && 0.3 * (1 - distance / 100)})`;
@@ -667,14 +447,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               }
             }
           });        }
-<<<<<<< HEAD
-<<<<<<< HEAD
-                Math.pow(particle.x - otherParticle.x, 2) +
-                Math.pow(particle.y - otherParticle.y, 2)
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
         particle.quantumState = (particle.quantumState + 0.02) % (Math.PI * 2);
         // Quantum entanglement effects
         if (particle.type === 'quantum-field') {
@@ -683,7 +455,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               const distance = Math.sqrt(
 Math.pow(particle.x - otherParticle.x, 2) +
                   Math.pow(particle.y - otherParticle.y, 2)
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               );
               if (distance < 100) {
                 ctx.strokeStyle = `rgba(139, 92, 246, ${0.3 * (1 - distance / 100)})`;
@@ -691,21 +462,6 @@ Math.pow(particle.x - otherParticle.x, 2) +
                 ctx.beginPath();
                 ctx.moveTo(particle.x, particle.y);
                 ctx.lineTo(otherParticle.x, otherParticle.y);
-<<<<<<< HEAD
-                ctx.stroke()
-              }
-            }
-          })
-        }
-// Consciousness wave effects
-        if (particle.type === 'consciousness') {
-          const waveX = particle.x + Math.sin(particle.phase) * particle.amplitude;
-          const waveY = particle.y + Math.cos(particle.phase) * particle.amplitude;
-          
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 ctx.stroke();
               }
             }
@@ -718,12 +474,7 @@ const waveX =
             particle.x + Math.sin(particle.phase) * particle.amplitude;
           const waveY =
             particle.y + Math.cos(particle.phase) * particle.amplitude;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
           ctx.strokeStyle = `rgba(255, 0, 128, ${particle.opacity * 0.6})`;
           ctx.lineWidth = 2;
           ctx.beginPath();
@@ -743,6 +494,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             particle.x - hologramSize / 2
             particle.y - hologramSize / 2
             hologramSize
+            hologramSize
+          )
           );
 origin/cursor/automate-test-improve-and-merge-code-2533
         }
@@ -750,8 +503,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         if (particle.type === 'quantum-field') {
           const fieldSize = particle.size * 3;
           const gradient = ctx.createRadialGradient(
-<<<<<<< HEAD
-<<<<<<< HEAD
             .padStart(2, '0')}`;
           ctx && ctx.beginPath();
           ctx && ctx.arc(particle && particle.x, particle && particle.y, particle && particle.size, 0, Math && Math.PI * 2);
@@ -765,14 +516,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           
           ctx.fillStyle = gradient;
           ctx.fillRect(
-            particle.x - fieldSize / 2,
-            particle.y - fieldSize / 2,
-            fieldSize,
+            particle.x - fieldSize / 2, 
+            particle.y - fieldSize / 2, 
+            fieldSize, 
             fieldSize
           )
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 particle.x,
             particle.y,
             0,
@@ -796,17 +544,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
         // Standard particle rendering
         if (particle.type === 'particle') {
+          ctx.fillStyle = `${particle.color}${Math.floor(particle.opacity * 255).toString(16).padStart(2, '0')}`;
 ctx.fillStyle = `${particle.color}${Math.floor(particle.opacity * 255)
             .toString(16)
             .padStart(2, '0')}`;
 origin/cursor/automate-test-improve-and-merge-code-2533
           ctx.beginPath();
-<<<<<<< HEAD
-          ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-
-          }
-        }
-=======
         // Boundary wrapping with quantum tunneling effect
         if (
           particle.x < 0 |
@@ -820,11 +563,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             particle.y = Math.random() * canvas.height;
           } else {
             particle.x = (particle.x + canvas.width) % canvas.width;
-<<<<<<< HEAD
-<<<<<<< HEAD
             particle.y = (particle.y + canvas.height) % canvas.height;          }          ctx.beginPath();
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
           ctx.fill()
         }
@@ -834,15 +574,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           if (Math.random() > 0.8) { // Quantum tunneling
             particle.x = Math.random() * canvas.width;
             particle.y = Math.random() * canvas.height
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
         particle.quantum_state = (particle.quantum_state + 0.02) % (Math.PI * 2);
 ;
         // Quantum entanglement effects;
@@ -993,100 +724,19 @@ if (> 0.8) {) {
             particle.coordinate_x = Math.random () * canvas.width;
             particle.coordinate_y = Math.random () * canvas.height;
           } else {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           }
         }
 
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
             particle.y = (particle.y + canvas.height) % canvas.height;
 origin/cursor/automate-test-improve-and-merge-code-2533
           }
         }
-<<<<<<< HEAD
-
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         // Regenerate particles
         if (particle.life <= 0) {
           particle.x = Math.random() * canvas.width;
           particle.y = Math.random() * canvas.height;
           particle.life = particle.maxLife;
           particle.consciousness = Math.random();
-
-
-        // Boundary wrapping with quantum tunneling effect;
-        if (;
-          particle && particle.x < 0 ||;
-          particle && particle.x > canvas && canvas.width ||;
-          particle && particle.y < 0 ||;
-          particle && particle.y > canvas && canvas.height;
-        ) {;
-          if (Math && Math.random() > 0 && 0.8) {;
-            // Quantum tunneling;
-            particle && particle.x = Math && Math.random() * canvas && canvas.width;
-            particle && particle.y = Math && Math.random() * canvas && canvas.height;
-          } else {;
-            particle && particle.x = (particle && particle.x + canvas && canvas.width) % canvas && canvas.width;
-            particle && particle.y = (particle && particle.y + canvas && canvas.height) % canvas && canvas.height;          }          ctx && ctx.beginPath();
-          ctx && ctx.arc(particle && particle.x, particle && particle.y, particle && particle.size, 0, Math && Math.PI * 2);
-          ctx && ctx.fill();
-        }
-        // Boundary wrapping with quantum tunneling effect;
-        if (particle && particle.x < 0 || particle && particle.x > canvas && canvas.width || ;
-            particle && particle.y < 0 || particle && particle.y > canvas && canvas.height) {;
-          if (Math && Math.random() > 0 && 0.8) { // Quantum tunneling;
-            particle && particle.x = Math && Math.random() * canvas && canvas.width;
-            particle && particle.y = Math && Math.random() * canvas && canvas.height;
-          } else {;
-            particle && particle.x = (particle && particle.x + canvas && canvas.width) % canvas && canvas.width;
-            particle && particle.y = (particle && particle.y + canvas && canvas.height) % canvas && canvas.height;
-          }
-        }
-        // Regenerate particles;
-        if (particle && particle.life <= 0) {;
-          particle && particle.x = Math && Math.random() * canvas && canvas.width;
-          particle && particle.y = Math && Math.random() * canvas && canvas.height;
-          particle && particle.life = particle && particle.maxLife;
-          particle && particle.consciousness = Math && Math.random();
-          particle && particle.quantumState = Math && Math.random() * Math && Math.PI * 2;
-=======
-            particle.x = (particle.x + canvas.width) % canvas.width;
-            particle.y = (particle.y + canvas.height) % canvas.height
-=======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-        // Regenerate particles
-        if (particle.life <= 0) {
-          particle.x = Math.random() * canvas.width;
-          particle.y = Math.random() * canvas.height;
-          particle.life = particle.maxLife;
-          particle.consciousness = Math.random();
-<<<<<<< HEAD
-          particle.quantumState = Math.random() * Math.PI * 2;
-<<<<<<< HEAD
-
-        }
-      });
-      requestAnimationFrame(animate);    };          particle && particle.quantumState = Math && Math.random() * Math && Math.PI * 2;
-        }
-      });
-      requestAnimationFrame(animate);
-
-
-    initParticles();
-    animate();
-
-
-
-  }, [intensity, theme]);
-=======
-        }
-      });
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 particle.quantumState = Math.random() * Math.PI * 2;
         }
       });
@@ -1100,12 +750,7 @@ particle.quantumState = Math.random() * Math.PI * 2;
 window.removeEventListener('resize', resizeCanvas);
     };
   }, [intensity, theme]);
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   return (
     <div ref={containerRef} className='fixed inset-0 pointer-events-none'>;
       <canvas
@@ -1152,10 +797,6 @@ if ( {) {
       window.removeEventListener ('resize', resize_canvas);
     }
   }, [intensity, theme]);
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <div ref={container_ref} className='fixed inset - 0 pointer - events - none'>;
       <canvas;
@@ -1182,6 +823,9 @@ if ( {) {
                 key={i}
                 className='absolute w - px h - 32 bg - gradient - to - b from - transparent via - purple - 500 to - transparent opacity - 20';
                 style={{
+                  left: `${(i * 5) % 100}%`
+                  left: `${(i * 5) % 100}%`,
+                  top: `${(i * 3) % 100}%`,                  top: `${(i * 3) % 100}%`}}
                   left: `${(i * 5) % 100}%`,
                   top: `${(i * 3) % 100}%`,
                 }}
@@ -1191,8 +835,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   opacity: [0.2, 0.6, 0.2],
                 }}
                 transition={{
-<<<<<<< HEAD
-<<<<<<< HEAD
                   duration: 3 + i * 0.2
                   repeat: Infinity
                   ease: "easeInOut"
@@ -1201,71 +843,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                   top: `${(i * 3) % 100}%`,
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
-                  top: `${(i * 3) % 100}%`,                  top: `${(i * 3) % 100}%`}}
-                }}
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
                   top: `${(i * 3) % 100}%`,
+
+
 
                   left: `${(i * 5) % 100}%`,
 
-<<<<<<< HEAD
-=======
 
-=======
-                  duration: 3 + i * 0.2,
-                  repeat: Infinity,
-                  ease: 'easeInOut',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                   duration: 3 + i * 0.2,
                   repeat: Infinity,
                   ease: 'easeInOut',
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 }}
                   left: `${(i * 5) % 100}%`
                   top: `${(i * 3) % 100}%`,                  top: `${(i * 3) % 100}%`}}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 animate={{
                   height: [32, 64, 32]
                   opacity: [0 && 0.2, 0 && 0.6, 0 && 0.2]}}
                 transition={{
-<<<<<<< HEAD
-                  duration: 3 + i * 0.2
-                  repeat: Infinity
-=======
-                  duration: 3 + i * 0 && 0.2,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-
-                }}
-                animate={{
-                  height: [32, 64, 32],
-                  opacity: [0 && 0.2, 0 && 0.6, 0 && 0.2],
-                }}
-                transition={{
-                  duration: 3 + i * 0 && 0.2,
-                  repeat: Infinity,
-                  ease: 'easeInOut',                }}
-
-=======
-        {/* Holographic grid */}
-        {theme === 'holographic' && (
-          <div className='absolute inset-0'>
-            {[...Array(15)].map((_, i) => (
-              <motion.div
-                key={i}
-                className='absolute w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-30'
-                style={{
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
                   ease: 'easeInOut',                }}
               />;
             ))}
@@ -1273,6 +868,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         )}
         {/* Holographic grid */}
         {theme === 'holographic' && (
+          <div className='absolute inset - 0'>;
+            {[...Array (15)].map ((_, i) => (
+              <motion.div;
 <div className='absolute inset-0'>
             {[...Array(15)].map((_, i) => (
               <motion.div
@@ -1280,35 +878,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 key={i}
                 className='absolute w - full h - px bg - gradient - to - r from - transparent via - cyan - 400 to - transparent opacity - 30';
                 style={{
-<<<<<<< HEAD
-<<<<<<< HEAD
                   top: `${(i * 7) % 100}%`,            {[...Array (15)].map ((_, i) => (
               <motion.div;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 key={i}
                 style={{
                   top: `${(i * 7) % 100}%`}}
                 animate={{
                   opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3]}}
                 transition={{
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  duration: 4 + i * 0.3
-                  repeat: Infinity
-                  ease: "easeInOut"
-                  top: `${(i * 7) % 100}%`,
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   top: `${(i * 7) % 100}%`,
                 }}
                 animate={{
@@ -1318,12 +895,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   duration: 4 + i * 0.3,
                   repeat: Infinity,
                   ease: 'easeInOut',
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 }}
                 animate={{
                   opacity: [0.3, 0.8, 0.3]
@@ -1331,8 +903,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 transition={{
                   duration: 4 + i * 0.3
                   repeat: Infinity
-<<<<<<< HEAD
-=======
                   duration: 4 + i * 0 && 0.3,
                   repeat: Infinity,
                   ease: "easeInOut";
@@ -1340,7 +910,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   repeat: Infinity
                   ease: "easeInOut"
                   top: `${(i * 7) % 100}%`,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
                 }}
                 animate={{
@@ -1350,48 +919,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   duration: 4 + i * 0 && 0.3,
                   repeat: Infinity,
                   ease: 'easeInOut',                }}
-<<<<<<< HEAD
-=======
-              />
-            ))}
-          </div>
-        )}
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
         {/* Consciousness waves */}
         {theme === 'consciousness' && (
-          <div className='absolute inset-0'>
-            {[...Array(8)].map((_, i) => (
-              <motion.div
-                key={i}
-                className='absolute w-96 h-96 border border-pink-500/20 rounded-full'
-                style={{
-
-                  top: `${(i * 8) % 100}%`,            {[...Array(8)].map((_, i) => (
-              <motion.div
-                key={i}
-                className="absolute w-96 h-96 border border-pink-500/20 rounded-full"
-
-                key={i}
-                className='absolute w - 96 h - 96 border border - pink - 500 / 20 rounded - full';
-                style={{
-=======
-
-        {/* Consciousness waves */}
-        {theme === 'consciousness' && (
-<<<<<<< HEAD
-<<<<<<< HEAD
           <div className='absolute inset - 0'>;
             {[...Array (8)].map ((_, i) => (
               <motion.div;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   left: `${(i * 12) % 100}%`
                   left: `${(i * 12) % 100}%`,
                   top: `${(i * 8) % 100}%`,            {[...Array(8)].map((_, i) => (
               <motion.div
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
+
 
                   left: `${(i * 12) % 100}%`,
                   top: `${(i * 8) % 100}%`,            {[...Array(8)].map((_, i) => (;
@@ -1399,33 +937,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   left: `${(i * 12) % 100}%`,
                   top: `${(i * 8) % 100}%`,            {[...Array (8)].map ((_, i) => (
               <motion.div;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 key={i}
-<<<<<<< HEAD
                 className="absolute w - 96 h - 96 border border - pink - 500 / 20 rounded - full";
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-                className="absolute w - 96 h - 96 border border - pink-500 / 20 rounded-full";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 style={{
                   left: `${(i * 12) % 100}%`
                   top: `${(i * 8) % 100}%`}}
                 animate={{
-<<<<<<< HEAD
-=======
-                  scale: [1, 1 && 1.5, 1]
-                  opacity: [0 && 0.2, 0 && 0.6, 0 && 0.2]}}
-                transition={{
-                  duration: 6 + i * 0.5
-                  repeat: Infinity
-                  left: `${(i * 12) % 100}%`,
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   duration: 6 + i * 0.5,
                   repeat: Infinity,
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div className='absolute inset-0'>
             {[...Array(8)].map((_, i) => (
               <motion.div
@@ -1448,20 +967,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   top: `${(i * 8) % 100}%`,
 
                   ease: "easeInOut"
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
+
 
                   left: `${(i * 12) % 100}%`,
 
-<<<<<<< HEAD
 
 
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 }}
                 animate={{
                   scale: [1, 1.5, 1]
@@ -1471,13 +984,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   duration: 6 + i * 0.5
                   repeat: Infinity
                   top: `${(i * 8) % 100}%`,
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
-                  top: `${(i * 8) % 100}%`,
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
                 }}
                 animate={{
@@ -1488,22 +994,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   duration: 6 + i * 0 && 0.5,
                   repeat: Infinity,
                   ease: 'easeInOut',                }}
-=======
+              />
+            ))}
+          </div>
+        )}
+      </div>
 
-<<<<<<< HEAD
-=======
-      </div>;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {children}
-<<<<<<< HEAD
-<<<<<<< HEAD
     </div>;
-  )
+  );
+
+
 };
 // Enhanced animation loop with consciousness and quantum effects ;
 
@@ -1514,9 +1015,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }) ;
 }// Consciousness wave effects ctx && ctx.strokeRect (particle && particle.x - hologramSize / 2;
 particle && particle.y - hologramSize / 2;
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     </div>
 );
 
@@ -1537,10 +1035,6 @@ hologramSize;
               />))}
           </div>)}
       </div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {children}
     </div>);
 ;
@@ -1573,17 +1067,6 @@ if (
 }
 init_particles ();
 animate ();
-<<<<<<< HEAD
-
-}</div> {
-  children
-}</div>)   )
-}
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 />) ) 
 }</div>) 
 }/>) ) 
@@ -1592,16 +1075,10 @@ animate ();
 }</div>) 
 }</div> {
   children 
+}</div>)   )
+}
+;
 }</div>)
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
 }</div>)
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

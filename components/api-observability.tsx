@@ -1,77 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-return (<UltraAdvancedFuturisticBackground> <Head> <title> {
-  service.name
-}- Zion Tech Group</title>) )
- return (<UltraAdvancedFuturisticBackground> <Head> <title> {
-return (<UltraAdvancedFuturisticBackground> <Head> <title> {
- return (<UltraAdvancedFuturisticBackground> <Head> <title> {
 }</ul> </div> <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) import React from 'react';
-<<<<<<< HEAD
-
-
-=======
-import React from 'react';
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-}</ul> </div> <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) import React from 'react';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-import React from 'react',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 import React from 'react',
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import Head from 'next/head';
 import { Shield, Phone, Mail, MapPin, Check, ArrowRight  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-export default function ApiObservabilityPage() {
-
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/api-observability'));
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   if (!service) return null;
 
-  return (
-    <UltraAdvancedFuturisticBackground>
-      <Head>
-        <title>{service.name} - Zion Tech Group</title>
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </UltraAdvancedFuturisticBackground>
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-
-;
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-  if (!service) return null;
-
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 export default function ApiObservabilityPage() {
   const service = null;
@@ -97,8 +33,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {service && service.features.slice(0, 12).map((feat, i) => (;
                   <li key={i} className="flex items-start space-x-3 text-slate-200"><Check className="w-5 h-5 text-cyan-400 mt-0 && 0.5" /><span>{feat}</span></li>;
                 ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
               </ul>;
             </div>;
             <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6 h-fit">;
@@ -173,12 +107,6 @@ if (return null) {
     </UltraAdvancedFuturisticBackground>);
 }
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
               </ul>
             </div>
             <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6 h-fit">
@@ -201,9 +129,4 @@ if (return null) {
     </UltraAdvancedFuturisticBackground>
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

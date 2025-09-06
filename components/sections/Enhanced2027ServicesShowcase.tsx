@@ -1,38 +1,7 @@
-<<<<<<< HEAD
-
-import Link from 'next/link';
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import {
-=======
-  ArrowRight
-  Star
-  TrendingUp
-  Zap
-  Brain
-  Atom
-  Rocket
-  Shield
-  Target
-  CheckCircle
-  ExternalLink
-  Search
-  Filter
-  Grid
-  List
-  ChevronDown;} from 'lucide-react';
-import { cuttingEdge2027Innovations } from '../../data/2027-cutting-edge-innovations';
-import { practicalMicroSaas2027 } from '../../data/2027-practical-micro-saas';
-import { emergingTech2027Services } from '../../data/2027-emerging-tech-services';import {
-  ArrowRight, Star, TrendingUp, Zap, Brain, Atom
-
-=======
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
+
 
   ArrowRight,
   Star,
@@ -52,7 +21,6 @@ import {
   ChevronDown,;} from 'lucide-react';
 import { cuttingEdge2027Innovations } from '../../data/2027-cutting-edge-innovations';
 import { practicalMicroSaas2027 } from '../../data/2027-practical-micro-saas';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   ArrowRight,
   Star,
   TrendingUp,
@@ -74,38 +42,31 @@ import { practicalMicroSaas2027 } from '../../data/2027-practical-micro-saas';
 import { emergingTech2027Services } from '../../data/2027-emerging-tech-services';import {
   ArrowRight, Star, TrendingUp, Zap, Brain, Atom, ;
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { ArrowRight, Star, TrendingUp, Zap, Brain, Atom;
 import { cuttingEdge2027Innovations } from '../../data/2027-cutting-edge-innovations';
 import { practicalMicroSaas2027 } from '../../data/2027-practical-micro-saas';
 import { emergingTech2027Services } from '../../data/2027-emerging-tech-services';import {
   ArrowRight, Star, TrendingUp, Zap, Brain, Atom
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   Rocket, Shield, Target, CheckCircle, ExternalLink;
   Search, Filter, Grid, List, ChevronDown
  } from 'lucide-react';
 import { cuttingEdge2027Innovations  } from '../../data/2027-cutting-edge-innovations';
 import { practicalMicroSaas2027  } from '../../data/2027-practical-micro-saas';
 import { emergingTech2027Services } from '../../data/2027-emerging-tech-services';
+
+const Enhanced2027ServicesShowcase: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [sortBy, setSortBy] = useState('name');
+    ...emergingTech2027Services
+  ];
+  // Get unique categories
+  const categories = [
+    'all'
+    ...Array.from(new Set(all2027Services.map(service => service.category)))
 const Enhanced2027ServicesShowcase: React.FC;
         service.tags.some(tag =>
           tag.toLowerCase().includes(searchTerm.toLowerCase())
@@ -120,68 +81,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         case 'name':
           return a.name.localeCompare(b.name);
         case 'price':
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
-        case 'roi':
-          return parseFloat(a.roi.replace(/[^0-9.]/g, '')) - parseFloat(b.roi.replace(/[^0-9.]/g, ''));
-        default: return 0
-      }
-    });
-
-=======
-
-  // Get unique categories;
-  const categories = ['all', ...Array && Array.from(new Set(all2027Services && all2027Services.map(service => service && service.category)))];
-  // Filter and sort services;
-  const filteredServices = all2027Services;
-    .filter(service => {;
-      const matchesSearch =;
-        service && service.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
-        service && service.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
-        service && service.tags.some(tag =>;
-          tag && tag.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
-        );
-      const matchesCategory =;
-        selectedCategory === 'all' || service && service.category === selectedCategory;
-      return matchesSearch && matchesCategory;    })      const matchesSearch = service && service.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
-                           service && service.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
-                           service && service.tags.some(tag => tag && tag.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()));
-      const matchesCategory = selectedCategory === 'all' || service && service.category === selectedCategory;
-      return matchesSearch && matchesCategory;
-    .sort((a, b) => {;
-      switch (sortBy) {;
-        case 'name':;
-          return a && a.name.localeCompare(b && b.name);
-        case 'price':;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-          return (
-            parseFloat(a && a.price.replace(/[^0-9.]/g, '')) -;
-            parseFloat(b && b.price.replace(/[^0-9.]/g, ''));
-          );
-        case 'roi':;
-          return (
-            parseFloat(a && a.roi.replace(/[^0-9.]/g, '')) -;
-            parseFloat(b && b.roi.replace(/[^0-9.]/g, ''));
-          );
-        default:;
-          return 0;      }          return parseFloat(a && a.price.replace(/[^0-9.]/g, '')) - parseFloat(b && b.price.replace(/[^0-9.]/g, ''));
-        case 'roi':;
-          return parseFloat(a && a.roi.replace(/[^0-9.]/g, '')) - parseFloat(b && b.roi.replace(/[^0-9.]/g, ''));
-        default: return 0;
-    });
-
-
-
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
   const getCategoryColor = (category: string) => {
     const colors = {
+
 
   const getCategoryColor = (category: string) => {;
     const colors = {;
@@ -196,18 +99,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Space Technology': 'from-violet-500 to-purple-600',;
       'Neural Technology': 'from-pink-500 to-rose-600',;
       'Materials Science': 'from-cyan-500 to-blue-600',;
-      'Environmental Technology': 'from-teal-500 to-green-600',
-};
+      'Environmental Technology': 'from-teal-500 to-green-600',;
+    };
     return (
       colors[category as keyof typeof colors] || 'from-gray-500 to-gray-600';
-    )
-};
+    );  };
 
   const getCategoryIcon = (category: string) => {;
-    const icons = {      'AI & Machine Learning': 'from-purple-500 to-indigo-600Quantum Computing': 'from-blue-500 to-cyan-600Emerging Technology': 'from-green-500 to-emerald-600Business Operations': 'from-orange-500 to-red-600Cybersecurity': 'from-red-500 to-pink-600Enterprise IT': 'from-indigo-500 to-purple-600Healthcare & Biotechnology': 'from-emerald-500 to-teal-600Financial Technology': 'from-yellow-500 to-orange-600Space Technology': 'from-violet-500 to-purple-600Neural Technology': 'from-pink-500 to-rose-600Materials Science': 'from-cyan-500 to-blue-600Environmental Technology': 'from-teal-500 to-green-600'
-};
-    return colors[category as keyof typeof colors] || 'from-gray-500 to-gray-600'
-};
+    const icons = {      'AI & Machine Learning': 'from-purple-500 to-indigo-600Quantum Computing': 'from-blue-500 to-cyan-600Emerging Technology': 'from-green-500 to-emerald-600Business Operations': 'from-orange-500 to-red-600Cybersecurity': 'from-red-500 to-pink-600Enterprise IT': 'from-indigo-500 to-purple-600Healthcare & Biotechnology': 'from-emerald-500 to-teal-600Financial Technology': 'from-yellow-500 to-orange-600Space Technology': 'from-violet-500 to-purple-600Neural Technology': 'from-pink-500 to-rose-600Materials Science': 'from-cyan-500 to-blue-600Environmental Technology': 'from-teal-500 to-green-600';
+    };
+    return colors[category as keyof typeof colors] || 'from-gray-500 to-gray-600';
+  };
 
   const getCategoryIcon = (category: string) => {;
     const icons = {;
@@ -223,12 +125,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Neural Technology': <Brain className='w-5 h-5' />,;
       'Materials Science': <Atom className='w-5 h-5' />,;
       'Environmental Technology': <Rocket className='w-5 h-5' />,;
-    return icons[category as keyof typeof icons] || <Zap className='w-5 h-5' />
-};
+    return icons[category as keyof typeof icons] || <Zap className='w-5 h-5' />;
+  };
 
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+
 return (
             parseFloat(a.price.replace(/[^0-9.]/g, '')) -
             parseFloat(b.price.replace(/[^0-9.]/g, ''))
@@ -286,10 +186,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <div className='container mx-auto px-4'>
         {/* Header */}
         <motion.div
-<<<<<<< HEAD
-<<<<<<< HEAD
           className='text-center mb-16'          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
+
 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -316,9 +215,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}>;
           <div className='bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6'>;
             <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>;
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
           className='text-center mb-16'
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -347,13 +243,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>
 origin/cursor/automate-test-improve-and-merge-code-2533
               {/* Search */}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <input
                     type='text'
                     placeholder='Search services, features, or use cases...'
                     value={searchTerm}
-<<<<<<< HEAD
-<<<<<<< HEAD
                     onChange={e => setSearchTerm(e && e.target.value)}
                     className='w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50'                  />              {/* Search */}
               <div className="flex-1 max-w-md">;
@@ -368,20 +261,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className='relative'>;
                   <select
                     value={selectedCategory}
-<<<<<<< HEAD
-
-=======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     value={selectedCategory}
                     onChange={(e) => setSelectedCategory(e.target.value)}
                     className="appearance-none bg-gray-700/50 border border-gray-600/50 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 pr-10"
                   >
                     {categories.map((category) => (
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     onChange={e => setSearchTerm(e.target.value)}
                     className='w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50'
                   />
@@ -398,29 +282,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {categories.map(category => (
 origin/cursor/automate-test-improve-and-merge-code-2533
                       <option key={category} value={category}>
+                    {categories.map(category => (                      <option key={category} value={category}>
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
                       <option key={category} value={category}>
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                         {category === 'all' ? 'All Categories' : category}
                       </option>;
                     ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 
                   </select>;
                   <ChevronDown className='absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none' />;
                 </div>;
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   </select>
 <ChevronDown className='absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none' />
                 </div>
@@ -458,9 +331,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <button
                     onClick={() => setViewMode('grid')}
                     className={`p-2 rounded-lg transition-all duration-200 ${
-<<<<<<< HEAD
-                      viewMode === 'grid'
-=======
                       viewMode === 'grid' 
                         ? 'bg-cyan-500/20 text-cyan-400' 
                         : 'text-gray-400 hover:text-white'
@@ -472,128 +342,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     onClick={() => setViewMode('list')}
                     className={`p-2 rounded-lg transition-all duration-200 ${
 viewMode === 'list'
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                         ? 'bg-cyan-500/20 text-cyan-400'
                         : 'text-gray-400 hover:text-white'
                     }`}
                   >
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    <Grid className="w-5 h-5" />
-=======
-=======
-                    <Grid className='w-5 h-5' />
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-                  </button>
-                  <button
-                    onClick={() => setViewMode('list')}
-                    className={`p-2 rounded-lg transition-all duration-200 ${
-<<<<<<< HEAD
-                      viewMode === 'list'
-=======
-viewMode === 'list'
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-                        ? 'bg-cyan-500/20 text-cyan-400'
-                        : 'text-gray-400 hover:text-white'
-                    }`}
-                  >
-<<<<<<< HEAD
-                    <List className='w-5 h-5' />                  </button>                      viewMode === 'list'
-                        ? 'bg-cyan-500/20 text-cyan-400'
-                        : 'text-gray-400 hover:text-white'
-                    }`}
-                  >
-                    <List className="w-5 h-5" />
-
-                        : 'text-gray-400 hover:text-white'
-                    }`}
-                  >
-                    <List className="w-5 h-5" />
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
                     <List className='w-5 h-5' />
                   </button>
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 </div>
               </div>
             </div>
           </div>
         </motion.div>
-<<<<<<< HEAD
-
-=======
-                  >;
-                    <List className='w-5 h-5' />                  </button>                      viewMode === 'list' ;
-                        ? 'bg-cyan-500/20 text-cyan-400' ;
-                        : 'text-gray-400 hover:text-white';
-                    }`}
-                  >;
-                    <List className="w-5 h-5" />;
-                  <ChevronDown className='absolute right - 3 top - 1/2 transform -translate - y-1 / 2 text - gray - 400 w - 5 h - 5 pointer - events - none' />;
-                </div>;
-                {/* View Mode */}
-                <div className='flex bg - gray - 700 / 50 rounded - xl p - 1'>;
-                  <button;
-                    on_click={() => setViewMode ('grid')}
-                    className={`p - 2 rounded - lg transition - all duration - 200 ${
-                      view_mode === 'grid';
-                        ? 'bg - cyan - 500 / 20 text - cyan - 400';
-                        : 'text - gray - 400 hover:text - white';
-                    }`}
-                  >;
-                    <Grid className='w - 5 h - 5' />                  </button>                  <button;
-                    on_click={() => setViewMode ('list')}
-                    className={`p - 2 rounded - lg transition - all duration - 200 ${
-                      view_mode === 'grid';
-                        ? 'bg - cyan - 500 / 20 text - cyan - 400';
-                        : 'text - gray - 400 hover:text - white';
-                    }`}
-                  >;
-                    <Grid className="w - 5 h - 5" />;
-                  </button>;
-                  <button;
-                    on_click={() => setViewMode ('list')}
-                    className={`p - 2 rounded - lg transition - all duration - 200 ${
-                      view_mode === 'list';
-                        ? 'bg - cyan - 500 / 20 text - cyan - 400';
-                        : 'text - gray - 400 hover:text - white';
-                    }`}
-                  >;
-                    <List className='w - 5 h - 5' />                  </button>                      view_mode === 'list';
-                        ? 'bg - cyan - 500 / 20 text - cyan - 400';
-                        : 'text - gray - 400 hover:text - white';
-                    }`}
-                  >;
-                    <List className="w - 5 h - 5" />;
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 </div>;
               </div>;
             </div>;
           </div>;
         </motion.div>;
         {/* Results Count */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <motion.div;
           className='mb - 8'          initial={{ opacity: 0 }}
-<<<<<<< HEAD
-
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0 && 0.6, delay: 0 && 0.3 }}>        <motion&& motion.div
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           className="mb-8"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -614,11 +382,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               key='grid'              initial={{ opacity: 0, scale: 0 && 0.95 }}
 
         {/* Results Count */}
-        <motion.div
+        <motion.div 
           className="mb-8"
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <motion.div
           className='mb-8'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -626,20 +391,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             Showing <span className="text-cyan-400 font-semibold">{filteredServices.length}</span> of{' '}
             <span className="text-cyan-400 font-semibold">{all2027Services.length}</span> services
           </p>
         </motion.div>
         >        <motion.div;
-          className="mb-8";
+          className="mb - 8";
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.3 }}
@@ -663,18 +420,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.3 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <p className='text-gray-400'>
             Showing{' '}
             <span className='text-cyan-400 font-semibold'>
@@ -697,12 +442,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.3 }}
 className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
             >
               {filteredServices.map((service, index) => (
                 <motion.div
@@ -710,21 +450,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  className='group'
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-                >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <div className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 h-full hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300 hover:-translate-y-2">
                     {/* Header */}
                     <div className="flex items-start justify-between mb-4">
@@ -737,16 +463,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </div>
                     </div>
                     {/* Content */}
-<<<<<<< HEAD
-
-=======
-                    <h3 className='text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors'>
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       {service.name}
                     </h3>;
-                    <p className='text - gray - 300 mb - 4 leading - relaxed'>                    <h3 className="text - xl font - bold text - white mb - 3 group - hover:text - cyan-400 transition-colors">;
+                    <p className='text - gray - 300 mb - 4 leading - relaxed'>                    <h3 className="text - xl font - bold text - white mb - 3 group - hover:text - cyan - 400 transition - colors">;
                       {service.name}
                         className={`p-3 rounded-xl bg-gradient-to-br ${getCategoryColor(service && service.category)} shadow-lg`}>;
                         {getCategoryIcon(service && service.category)}
@@ -787,18 +506,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <p className="text-gray-300 mb-4 leading-relaxed">;
                     </p>;
                     {/* Features */}
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-gray-400 mb-2">Key Features:</h4>
                       <ul className="space-y-1">
                         {service.features.slice(0, 3).map((feature, idx) => (
                           <li key={idx} className="flex items-center text-sm text-gray-300">
                             <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+
 
                       {service.description}
                     </p>
@@ -807,12 +521,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                             {feature}
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='group'
                 >
                   <div className='bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 h-full hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300 hover:-translate-y-2'>
@@ -852,39 +560,17 @@ className='group'
                           >
                             <CheckCircle className='w-4 h-4 text-cyan-400 mr-2 flex-shrink-0' />
                             {feature}
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                           </li>
                         ))}
                       </ul>
                     </div>
 
-<<<<<<< HEAD
-                    {/* Tags */}
-                    <div className='flex flex-wrap gap-2 mb-6'>
-                      {service.tags.slice(0, 3).map((tag, idx) => (
-                        <span
-                          key={idx}
-
-                          {tag}
-                        </span>;
-                      ))}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     {/* Tags */}
 <div className='flex flex-wrap gap-2 mb-6'>
                       {service.tags.slice(0, 3).map((tag, idx) => (
                         <span
                           key={idx}
-<<<<<<< HEAD
-<<<<<<< HEAD
                           className='px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50'                        >                    <div className="flex flex-wrap gap-2 mb-6">
                       {service.tags.slice(0, 3).map((tag, idx) => (
                         <span
@@ -894,49 +580,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                         >
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-                          className='px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50'
-                        >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                           className='px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50'
                         >
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                           {tag}
                         </span>;
                       ))}
                     </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    </div>;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     {/* CTA */}
                     <Link
                       href={service.link}
@@ -951,8 +604,6 @@ className='inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-
             </motion.div>
           ) : (
             <motion.div
-<<<<<<< HEAD
-<<<<<<< HEAD
               key='list'              initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
@@ -960,106 +611,15 @@ className='inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-
               className='space-y-4'            >              key="list"
               className='space-y-4'            >
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-key='list'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 key='list'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.3 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-              className='space - y-4'              className="space - y-4";
-            >;
-              {filtered_services.map ((service, index) => (
-                <motion.div;
-                  key={service.id}
-                  initial={{ opacity: 0, coordinate_x: -20 }}
-                  whileInView={{ opacity: 1, coordinate_x: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className='group';
-                >;
-                  <div className='bg - gray - 800 / 50 backdrop - blur - xl border border - gray - 700 / 50 rounded - 2xl p - 6 hover:border - cyan - 500 / 30 hover:shadow - xl hover:shadow - cyan - 500 / 20 transition - all duration - 300'>;
-                    <div className='flex flex - col lg:flex - row items - start lg:items - center gap - 6'>;
-                      {/* Icon and Category */}
-                      <div className='flex items - center space - x-4'>;
-                        <div;
-                          className={`p - 3 rounded - xl bg - gradient - to - br ${getCategoryColor (service.category)} shadow - lg`}
-                        >;
-                          {getCategoryIcon (service.category)}
-                        </div>;
-                        <div>;
-                          <div className='text - sm text - gray - 400'>;
-                            {service.category}
-                          </div>;
-                          <div className='text - 2xl font - bold text - cyan - 400'>;
-                            {service.price}
-                          className={`p-3 rounded-xl bg-gradient-to-br ${getCategoryColor(service && service.category)} shadow-lg`}>;
-                          {getCategoryIcon(service && service.category)}
-                        </div>;
-                        <div>;
-                          <div className='text-sm text-gray-400'>;
-                            {service && service.category}
-                          </div>;
-                          <div className='text-2xl font-bold text-cyan-400'>;
-                            {service && service.price}
-                          </div>                        </div>;
-                      </div>;
-                      {/* Content */}
-                      <div className='flex-1'>;
-                        <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>                >;
-                  <div className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300">;
-                    <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6">;
-                      href={service.link}
-                      className="inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25"
-                    >
-                      <span>Learn More</span>
-                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-
-                  </div>
-                </motion.div>
-              ))}
-            </motion.div>
-          ) : (
-            <motion.div
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
-              transition={{ duration: 0.3 }}
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-className='space-y-4'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 className='space-y-4'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
             >
               {filteredServices.map((service, index) => (
                 <motion.div
@@ -1067,17 +627,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  className='group'
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 >
                   <div className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300">
                     <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6">
@@ -1148,47 +697,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </div>;
                       </div>;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-                      {/* Content */}
-
-=======
-                      <div className="flex-1">
-                        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
-                          {service.name}
-                        </h3>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-                        <p className="text-gray-300 mb-3 leading-relaxed">
-                          </div>                        </div>;
-                      </div>;
-                      {/* Content */}
-                      <div className='flex - 1'>;
-                        <h3 className='text - xl font - bold text - white mb - 2 group - hover:text - cyan - 400 transition - colors'>                >;
-                  <div className="bg - gray - 800 / 50 backdrop - blur - xl border border - gray - 700 / 50 rounded - 2xl p - 6 hover:border - cyan - 500 / 30 hover:shadow - xl hover:shadow - cyan - 500 / 20 transition - all duration - 300">;
-                    <div className="flex flex - col lg:flex - row items - start lg:items - center gap - 6">;
-                      {/* Icon and Category */}
-                      <div className="flex items - center space - x-4">;
-                        <div className={`p - 3 rounded - xl bg - gradient - to - br ${getCategoryColor (service.category)} shadow - lg`}>;
-                          {getCategoryIcon (service.category)}
-                        </div>;
-                        <div>;
-                          <div className="text - sm text - gray - 400">{service.category}</div>;
-                          <div className="text - 2xl font - bold text - cyan - 400">{service.price}</div>;
-                        </div>;
-                      </div>;
-                      {/* Content */}
-                      <div className='flex - 1'>;
-                        <h3 className='text - xl font - bold text - white mb - 2 group - hover:text - cyan - 400 transition - colors'>;
-                          {service.name}
-                        </h3>;
-                        <p className='text - gray - 300 mb - 3 leading - relaxed'>;
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='group'
                 >
                   <div className='bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300'>
@@ -1215,28 +723,10 @@ className='group'
                           {service.name}
                         </h3>
                         <p className='text-gray-300 mb-3 leading-relaxed'>
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                           {service.description}
                         </p>;
-                        <div className='flex flex - wrap gap - 2 mb - 3'>;
-                          {service.tags.slice (0, 4).map ((tag, idx) => (
-                            <span;
-                              key={idx}
-
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-                          {service.description}
-                        </p>;
-                        <div className="flex flex - wrap gap-2 mb-3">;
+                        <div className="flex flex - wrap gap - 2 mb - 3">;
                           {service.tags.slice (0, 4).map ((tag, idx) => (
                             <span;
                               key={idx}
@@ -1262,11 +752,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             {service.roi}
                           </div>
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                         </div>
                         <Link
-<<<<<<< HEAD
-<<<<<<< HEAD
                           href={service && service.link}
                           className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25'>;
                           <span>Learn More</span>;
@@ -1281,26 +768,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>;
                   </div>;
                 </motion && motion.div>;
-<<<<<<< HEAD
-
-              ))}
-</motion && motion.div>;
-          )}
-        </AnimatePresence>
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* No Results */}
         {filteredServices && filteredServices.length === 0 && (;
           <motion&& motion.div
             className='text-center py-20'            initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-<<<<<<< HEAD
-            transition={{ duration: 0 && 0.6 }}>          <motion&& motion.div
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             className="text-center py-20"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -1311,26 +783,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <p className='text-gray-400 mb-8'>;
               Try adjusting your search terms or category filter to find what;
               you're looking for.            </p>;
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-          className="mt-20 text-center"
-            <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>
-
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
                 setSelectedCategory('all')
               }}
               className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                           href={service.link}
                           className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25'
                         >
@@ -1372,10 +827,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Clear Filters
             </button>
           </motion.div>
-<<<<<<< HEAD
-<<<<<<< HEAD
             <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>        <motion.div
             <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>        <motion.div 
+
+
+
 
         {/* CTA Section */}
           whileInView={{ opacity: 1, y: 0 }}
@@ -1383,22 +839,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           className="mt-20 text-center"
             <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
         )}
         {/* CTA Section */}
 <motion.div
           className='mt-20 text-center'
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6, delay: 0 && 0.8 }}>;
@@ -1407,7 +852,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Ready to Transform Your Business?;
             </h3>;
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>;
-                              className="px - 2 py - 1 bg - gray - 700 / 50 text - gray - 300 text - xs rounded - lg border border-gray-600 / 50";
+                              className="px - 2 py - 1 bg - gray - 700 / 50 text - gray - 300 text - xs rounded - lg border border - gray - 600 / 50";
                             >;
                               {tag}
                             </span>))}
@@ -1429,10 +874,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           <ArrowRight className='w - 4 h - 4 ml - 2 group - hover:translate - x-1 transition - transform' />                        </Link>                        </div>;
                         <Link;
                           href={service.link}
-                          className="inline - flex items - center px - 4 py - 2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl hover: from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 group - hover:shadow - lg group - hover:shadow-cyan-500 / 25";
+                          className="inline - flex items - center px - 4 py - 2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl hover: from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 group - hover:shadow - lg group - hover:shadow - cyan - 500 / 25";
                         >;
                           <span > Learn More</span>;
-                          <ArrowRight className="w - 4 h - 4 ml - 2 group - hover:translate-x-1 transition-transform" />;
+                          <ArrowRight className="w - 4 h - 4 ml - 2 group - hover:translate - x-1 transition - transform" />;
                         </Link>;
                       </div>;
                     </div>;
@@ -1447,7 +892,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
           >          <motion.div;
-            className="text-center py-20";
+            className="text - center py - 20";
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
@@ -1464,9 +909,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 setSearchTerm ('');
                 setSelectedCategory ('all');
               }}
-              className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300'            >            <div className="text-6xl mb-4">🔍</div>;
-            <h3 className="text - 2xl font - bold text-white mb-4">No services found</h3>;
-            <p className="text - gray-400 mb-8">;
+              className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300'            >            <div className="text - 6xl mb - 4">🔍</div>;
+            <h3 className="text - 2xl font - bold text - white mb - 4">No services found</h3>;
+            <p className="text - gray - 400 mb - 8">;
               Try adjusting your search terms or category filter to find what you're looking for.;
             <button;
               on_click={() => {
@@ -1475,7 +920,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               }}
               className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300'                setSelectedCategory ('all');
               }}
-              className="px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition-all duration-300";
+              className="px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300";
             >;
               Clear Filters;
             </button>;
@@ -1485,17 +930,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           className='mt - 20 text - center'          initial={{ opacity: 0, coordinate_y: 20 }}
           whileInView={{ opacity: 1, coordinate_y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </h3>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               Our team of experts is ready to help you implement these revolutionary services
               and achieve unprecedented growth. Let's build the future together.
             </p>
@@ -1524,90 +960,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </Link>;
               <Link
                 href="/pricing"
-<<<<<<< HEAD
-<<<<<<< HEAD
-                className="inline-flex items-center space-x-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl border border-gray-600/50"
-              >
-                <span>View Pricing</span>
-                <TrendingUp className="w-5 h-5" />
-              </Link>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-    </section>
-  );
-}
-/* Search and Filters */
-};
-  /* Search and Filters */ ;
-}<motion && motion.div /> </div> </div> > {;
-  categories && categories.map ( (category) => (<optionkey= {
-  category
-}value= {
-  category
-}> {;
-  category === 'all' ? 'All Categories' : category ;
-}</option>) ) ;
-}</select> <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" /> </div> > <option value="name" >Sort by Name</option> <option value="price" >Sort by Price</option> <option value="roi" >Sort by ROI</option> </select> <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" /> </div> <buttononClick= {
-  () => setViewMode ('grid') ;
-}className= {;
-  `p-2 rounded-lg transition-all duration-200 $ {;
-  viewMode === 'grid' ? 'bg-cyan-500/20 text-cyan-400' : 'text-gray-400 hover:text-white' ;
-}` ;
-}> <Grid className="w-5 h-5" /> </button> <buttononClick= {
-  () => setViewMode ('list') ;
-}className= {;
-  `p-2 rounded-lg transition-all duration-200 $ {;
-  viewMode === 'list' ? 'bg-cyan-500/20 text-cyan-400' : 'text-gray-400 hover:text-white' ;
-}` ;
-}> <List className="w-5 h-5" /> </button> </div> </div> </div> </div> </motion && motion.div> {;
-  /* Results Count */ ;
-}<motion && motion.div > {;
-  filteredServices && filteredServices.map ( (service, index) => (<motion&& motion.div key= {
-  service && service.id
-}</li>) ) ;
-}</ul> </div> <spankey= {
-  idx
-}className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50"> {;
-  tag ;
-}</span>) ) ;
-}</div> {;
-  /* CTA */ ;
-}<Link > <span>Learn More</span> <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" /> </a> </div> </motion && motion.div>) ) ;
-}</motion && motion.div> > {;
-  filteredServices && filteredServices.map ( (service, index) => (<motion&& motion.div key= {
-  service && service.id
-}<span key= {
-  idx
-}className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50"> {;
-  tag ;
-}</span>) ) ;
-}</div> </div> > <span>Learn More</span> <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" /> </a> </div> </div> </div> </motion && motion.div>) ) ;
-}</motion && motion.div>) ;
-}</AnimatePresence> > <div className="text-6xl mb-4" >🔍</div> <h3 className="text-2xl font-bold text-white mb-4" >No services found</h3> <p className="text-gray-400 mb-8" > Try adjusting your search terms or category filter to find what you're looking for. </p> <button > Clear Filters </button> </motion && motion.div>) ;
-}{;
-  /* CTA Section */ ;
-}<motion && motion.div > Ready to Transform Your Business? </h3> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Our team of experts is ready to help you implement these revolutionary services and achieve unprecedented growth. Let's build the future together. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/25" > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </a> <Link href="/pricing" className="inline-flex items-center space-x-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl border border-gray-600/50" > <span>View Pricing</span> <TrendingUp className="w-5 h-5" /> </a> </div> </div> </motion && motion.div> </div> </section>) ;
-};
-export default Enhanced2027ServicesShowcase;  );
-                className="inline-flex items-center space-x-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl border border-gray-600/50"
-              >
-                <span>View Pricing</span>
-                <TrendingUp className="w-5 h-5" />
-              </Link>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-    </section>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
         >
 <div className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12'>
             <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>
@@ -1642,12 +994,7 @@ export default Enhanced2027ServicesShowcase;  );
 };
 
   /* Search and Filters */ 
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }<motion.div /> </div> </div> > {
   categories.map ( (category) => (<option key= {
   category
@@ -1694,15 +1041,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }</motion.div>)
 }</AnimatePresence> > <div className="text-6xl mb-4" >🔍</div> <h3 className="text-2xl font-bold text-white mb-4" >No services found</h3> <p className="text-gray-400 mb-8" > Try adjusting your search terms or category filter to find what you're looking for. </p> <button > Clear Filters </button> </motion.div>)
 }{
-<<<<<<< HEAD
-  /* CTA Section */
-}<motion.div > Ready to Transform Your Business? </h3> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Our team of experts is ready to help you implement these revolutionary services and achieve unprecedented growth. Let's build the future together. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/25" > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </a> <Link href="/pricing" className="inline-flex items-center space-x-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl border border-gray-600/50" > <span>View Pricing</span> <TrendingUp className="w-5 h-5" /> </a> </div> </div> </motion.div> </div> </section>)
-}
-export default Enhanced2027ServicesShowcase;  )
-}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
                 className="inline-flex items-center space-x-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl border border-gray-600/50">;
                 <span>View Pricing</span>;
                 <TrendingUp className="w-5 h-5" />;
@@ -1712,10 +1050,9 @@ export default Enhanced2027ServicesShowcase;  )
         </motion && motion.div>;
       </div>;
     </section>;
-  )
+  );
 };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default Enhanced2027ServicesShowcase;
             <div className='flex flex - col sm:flex - row gap - 4 justify - center items - center'>;
               <Link;
@@ -1732,24 +1069,24 @@ export default Enhanced2027ServicesShowcase;
                 <span > View Pricing</span>;
                 <TrendingUp className='w - 5 h - 5' />              </Link>              Ready to Transform Your Business?;
             </h3>;
-            <p className="text - xl text - gray - 300 mb - 8 max-w-3xl mx-auto">;
+            <p className="text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto">;
               Our team of experts is ready to help you implement these revolutionary services;
               and achieve unprecedented growth. Let's build the future together.;
             </p>;
-            <div className="flex flex - col sm:flex - row gap - 4 justify-center items-center">;
+            <div className="flex flex - col sm:flex - row gap - 4 justify - center items - center">;
               <Link;
                 href="/contact";
-                className="inline - flex items - center space - x-2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white px - 8 py - 4 rounded - xl font - semibold text - lg transform transition - all duration - 300 hover:scale - 105 hover:shadow - xl hover:shadow-purple-500 / 25";
+                className="inline - flex items - center space - x-2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white px - 8 py - 4 rounded - xl font - semibold text - lg transform transition - all duration - 300 hover:scale - 105 hover:shadow - xl hover:shadow - purple - 500 / 25";
               >;
                 <span > Get Started Today</span>;
-                <ArrowRight className="w-5 h-5" />;
+                <ArrowRight className="w - 5 h - 5" />;
               </Link>;
               <Link;
                 href="/pricing";
-                className="inline - flex items - center space - x-2 bg - gradient - to - r from - gray - 700 to - gray - 800 text - white px - 8 py - 4 rounded - xl font - semibold text - lg transform transition - all duration - 300 hover:scale - 105 hover:shadow - xl border border-gray-600 / 50";
+                className="inline - flex items - center space - x-2 bg - gradient - to - r from - gray - 700 to - gray - 800 text - white px - 8 py - 4 rounded - xl font - semibold text - lg transform transition - all duration - 300 hover:scale - 105 hover:shadow - xl border border - gray - 600 / 50";
               >;
                 <span > View Pricing</span>;
-                <TrendingUp className="w-5 h-5" />;
+                <TrendingUp className="w - 5 h - 5" />;
               </Link>;
             </div>;
           </div>;
@@ -1759,14 +1096,6 @@ export default Enhanced2027ServicesShowcase;
 }
 ;
 /* Search and Filters */;
-<<<<<<< HEAD
-=======
-  );
-}
-/* Search and Filters */
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }<motion.div /> </div> </div> > {
   categories.map ( (category) => (<option key= {
   category
@@ -1813,26 +1142,10 @@ export default Enhanced2027ServicesShowcase;
 }</motion.div>)
 }</AnimatePresence> > <div className="text-6xl mb-4" >🔍</div> <h3 className="text-2xl font-bold text-white mb-4" >No services found</h3> <p className="text-gray-400 mb-8" > Try adjusting your search terms or category filter to find what you're looking for. </p> <button > Clear Filters </button> </motion.div>)
 }{
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 export default Enhanced2027ServicesShowcase;  )
 }
 export default Enhanced2027ServicesShowcase;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   /* CTA Section */ 
 }<motion.div > Ready to Transform Your Business? </h3> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Our team of experts is ready to help you implement these revolutionary services and achieve unprecedented growth. Let's build the future together. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/25" > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </a> <Link href="/pricing" className="inline-flex items-center space-x-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl border border-gray-600/50" > <span>View Pricing</span> <TrendingUp className="w-5 h-5" /> </a> </div> </div> </motion.div> </div> </section>) 
@@ -1844,12 +1157,4 @@ export default Enhanced2027ServicesShowcase;
 export default Enhanced2027ServicesShowcase;
 
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

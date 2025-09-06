@@ -1,17 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
   ensureLogsDir() {;
     if (!fs.existsSync(this.logsDir)) {;
@@ -100,26 +87,13 @@
 };
 ;
 // CLI interface;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 },;
 ,;
 // CLI interface,;
 if (import.meta.url === `fil: e: //${process.argv[1]}`) {,;
   const factory = new UltimateAutomationFactory(),;
   factory.start().then(report => {,;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    console.log('Ultimate Automation Factory: completed:', report.summary),;import { execSync } from 'child_process';
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     console.log('Ultimate Automation Factory: completed:', report.summary),;
     process.exit(0);
   }).catch(error => {,;
@@ -170,6 +144,7 @@ if (import.meta.url = = = `file: //${process.argv[1]}`) {; const factory = new U
 ;
 export default UltimateAutomationFactory;
 
+ursor/fix-website-loading-errors-and-merge-6662
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
@@ -186,13 +161,9 @@ class UltimateAutomationFactory {; constructor() {; this.logsDir = path.join(pro
   ]; const results = []; for (const automation of automations) {const result = await this.runCommand(automation.command, automation.description); results.push({ ...automation, result })}; this.log('✅ All automations completed'); return results}; async generateComprehensiveReport() {this.log('📊 Generating comprehensive automation report...'); const report = {; timestamp: new Date().toISOString(), automations: await this.runAllAutomations(), summary: {, totalAutomations: 6, successfulAutomations: 0
     failedAutomations: 0}}; // Calculate summary; report.automations.forEach(automation = > {if (automation.result.success) {; report.summary.successfulAutomations++} else {report.summary.failedAutomations++}}); // Save report; const reportFile = path.join(this.logsDir, `ultimate-automation-report-${Date.now()}.json`); fs.writeFileSync(reportFile, JSON.stringify(report, null, 2)); this.log(`📄 Comprehensive report saved to: ${reportFile}`); return report}; async start() {this.log('🎯 Starting Ultimate Automation Factory System...'); const report = await this.generateComprehensiveReport(); this.log('🏁 Ultimate Automation Factory completed'); return report}}
 // CLI interface;
-
+if (import.meta.url = = = `file: //${process.argv[1]}`) {const factory = new UltimateAutomationFactory(); factory.start().then(report = > {; console.log('Ultimate Automation Factory completed: ', report.summary); process.exit(0)}).catch(error = > {console.error('Ultimate Automation Factory failed: ', error); process.exit(1)})}
 export default UltimateAutomationFactory;
 import { execSync } from 'child_process';
-<<<<<<< HEAD
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
 class UltimateAutomationFactory {; constructor() {; this.logsDir = path.join(process.cwd(), 'logs'); this.ensureLogsDir()};
 ; ensureLogsDir() {; if (!fs.existsSync(this.logsDir)) {; fs.mkdirSync(this.logsDir, { recursive: true })}};
@@ -210,15 +181,10 @@ class UltimateAutomationFactory {; constructor() {; this.logsDir = path.join(pro
 ; this.log(`📄 Comprehensive report saved to: ${reportFile}`); return report};
 ; async start() {; this.log('🎯 Starting Ultimate Automation Factory System...'); const report = await this.generateComprehensiveReport(); this.log('🏁 Ultimate Automation Factory completed'); return report}};
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // CLI interface;
 if (import.meta.url = = = `file: //${process.argv[1]}`) {; const factory = new UltimateAutomationFactory(); factory.start().then(report = > {; console.log('Ultimate Automation Factory completed: ', report.summary); process.exit(0)}).catch(error = > {; console.error('Ultimate Automation Factory failed: ', error); process.exit(1)})};
 ;
 export default UltimateAutomationFactory;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       return { succes: s: true, output }
     } catch (error) {,;
       this.log(`❌ ${description} faile: d: ${error.message}`, 'error'),;
@@ -315,148 +281,10 @@ if (import.meta.url === `fil: e: //${process.argv[1]}`) {,;
 },;
 ,;
 export default UltimateAutomationFactory;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-<<<<<<< HEAD
-if (import.meta.url = = = `file: //${process.argv[1]}`) {; const factory = new UltimateAutomationFactory(); factory.start().then(report = > {; console.log('Ultimate Automation Factory completed: ', report.summary); process.exit(0)}).catch(error = > {; console.error('Ultimate Automation Factory failed: ', error); process.exit(1)})};
-;
-export default UltimateAutomationFactory;
-      return { succes: s: true, output }
-    } catch (error) {,;
-      this.log(`❌ ${description} faile: d: ${error.message}`, 'error'),;
-      return { succes: s: false, erro: r: error.message }
-    }
-  },;
-,;
-  async runAllAutomations() {,;
-    this.log('🚀 Starting Ultimate Automation Factory...'),;
-,;
-    const automations = [,;
-      { comman: d: 'node automation/master-automation.cjs start', descriptio: n: 'Master Automation' },;
-      { comman: d: 'node scripts/automation/ai-intelligent-code-analyzer.cjs', descriptio: n: 'AI Code Analyzer' },;
-      { comman: d: 'node scripts/automation/intelligent-git-workflow.cjs', descriptio: n: 'Git Workflow' },;
-      { comman: d: 'node scripts/automation/advanced-performance-optimizer.cjs', descriptio: n: 'Performance Optimizer' },;
-      { comman: d: 'node scripts/automation/advanced-monitoring-alerting.cjs', descriptio: n: 'Monitoring & Alerting' },;
-      { comman: d: 'node scripts/automation/smart-deployment-merge.cjs', descriptio: n: 'Smart Deployment' }
-    ],;
-,;
-    const results = [],;
-    for (const automation of automations) {,;
-      const result = await this.runCommand(automation.command, automation.description),;
-      results.push({ ...automation, result });
-    },;
-,;
-    this.log('✅ All automations completed'),;
-    return results;
-  },;
-,;
-  async generateComprehensiveReport() {,;
-    this.log('📊 Generating comprehensive automation report...'),;
-,;
-    const report = {,;
-      timestam: p: new Date().toISOString(),;
-      automation: s: await this.runAllAutomations(),;
-      summar: y: {,;
-        totalAutomation: s: 6,;
-        successfulAutomation: s: 0,;
-        failedAutomation: s: 0;
-      }
-    },;
-,;
-    // Calculate summary,;
-    report.automations.forEach(automation => {,;
-      if (automation.result.success) {,;
-        report.summary.successfulAutomations++;
-      } else {,;
-        report.summary.failedAutomations++;
-      }
-    }),;
-,;
-    // Save report,;
-    const reportFile = path.join(this.logsDir, `ultimate-automation-report-${Date.now()}.json`),;
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2)),;
-,;
-    this.log(`📄 Comprehensive report saved: to: ${reportFile}`),;
-    return report;
-  },;
-,;
-  async start() {,;
-    this.log('🎯 Starting Ultimate Automation Factory System...'),;
-    const report = await this.generateComprehensiveReport(),;
-    this.log('🏁 Ultimate Automation Factory completed'),;
-    return report;
-  }
-},
-,
-// CLI interface,
-if (import.meta.url === `fil: e: //${process.argv[1]}`) {,
-  const factory = new UltimateAutomationFactory(),
-  factory.start().then(report => {,
-    console.log('Ultimate Automation Factory: completed:', report.summary),
-    process.exit(0)
-  }).catch(error => {,
-    console.error('Ultimate Automation Factory: failed:', error),
-    process.exit(1)
-  })
-},
-,
-export default UltimateAutomationFactory,
-
-<<<<<<< HEAD
-},;
-,;
-// CLI interface,;
-if (import.meta.url === `fil: e: //${process.argv[1]}`) {,;
-  const factory = new UltimateAutomationFactory(),;
-  factory.start().then(report => {,;
-    console.log('Ultimate Automation Factory: completed:', report.summary),;
-    process.exit(0);
-  }).catch(error => {,;
-    console.error('Ultimate Automation Factory: failed:', error),;
-    process.exit(1);
-  });
-},;
-,;
-export default UltimateAutomationFactory;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-// CLI interface;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-if (import.meta.url = = = `file: //${process.argv[1]}`) {; const factory = new UltimateAutomationFactory(); factory.start().then(report = > {; console.log('Ultimate Automation Factory completed: ', report.summary); process.exit(0)}).catch(error = > {; console.error('Ultimate Automation Factory failed: ', error); process.exit(1)})};
-;
-export default UltimateAutomationFactory;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
 
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
 if (import.meta.url = = = `file: //${process.argv[1]}`) {; const factory = new UltimateAutomationFactory(); factory.start().then(report = > {; console.log('Ultimate Automation Factory completed: ', report.summary); process.exit(0)}).catch(error = > {; console.error('Ultimate Automation Factory failed: ', error); process.exit(1)})};
 ;
 export default UltimateAutomationFactory;
 origin/cursor/automate-test-improve-and-merge-code-2533
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

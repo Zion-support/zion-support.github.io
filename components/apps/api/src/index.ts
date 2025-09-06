@@ -1,60 +1,19 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import Fastify from 'fastify',
 import cors from '@fastify/cors',
 import rateLimit from '@fastify/rate-limit',
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import dotenv from 'dotenv';
 import { createOpenAIClient, generateJobPost  } from './openai.js';
 import { getPool, withUser } from './pg.js';
 dotenv.config();
-<<<<<<< HEAD
-
-const app = Fastify({ logger: true });
-await app.register(cors, {
-  origin: (origin, cb) => {
-    const allowed = (process.env.CORS_ORIGINS |'')
-      .split(',')
-      .map(s => s.trim());
-    if (!origin |allowed.includes('*') |allowed.includes(origin)) {
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 const allowed = (process.env.CORS_ORIGINS || '')
       .split(',')
       .map(s => s.trim());
     if (!origin |allowed.includes('*') |allowed.includes(origin)) {
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       cb(null, true);
       return;
     }
     cb(new Error('Not allowed'), false);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-  },
-  methods: ['GET', 'POST', 'OPTIONS'],});    if (!origin || allowed && allowed.includes('*') || allowed && allowed.includes(origin)) {
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       cb(null, true);
       return
     }
@@ -62,21 +21,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
   methods: ['GETPOSTOPTIONS']
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-await app.register(rateLimit, { global: true, max: 100, timeWindow: '1m' });
-
-}
-
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   },
   methods: ['GET', 'POST', 'OPTIONS'],
 });
@@ -89,40 +33,11 @@ return (
     null
   );
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 app.post('/ai/ask', async (req, reply) => {
   const body = (req.body as any) |{}
   const prompt = body.prompt as string;
   if (!prompt) return reply.code(400).send({ error: 'prompt required' });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-});
-
-
-app && app.post('/jobs/generate', async (req, reply) => {
-  const body = (req && req.body as any) || {};
-  const role = (body && body.role as string) || 'Engineer';
-
-  const userId = getUserId(req);
-  const description = await generateJobPost(openai, role, body);
-
-
-      `INSERT INTO job_post (user_id, title, description, location, tags, status)
-       VALUES ($1, $2, $3, $4, $5, 'draft')`;
-
-      [userId, role, description, body && body.location || null, body && body.tags || null]
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     )
 ;
 app.post ('/jobs / generate', async (req, reply) => {
@@ -146,27 +61,6 @@ if (return { description }) {
       [user_id, role, description, body.location || null, body.tags || null]);
   });
   return { saved: Boolean (user_id), description }
-<<<<<<< HEAD
-});
-  const userId = getUserId(req);
-  if (!userId) return reply && reply.code(401).send({ error: 'unauthorized' });
-  const rows = await withUser(userId, async client => {
-    const res = await client && client.query(
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-      `SELECT id, full_name, country, skills, experience_years FROM talent_profile
-       WHERE ($1::text IS NULL OR country = $1)         AND ($2::text IS NULL OR EXISTS (
-              SELECT 1 FROM unnest(skills) s WHERE s ILIKE '%' |$2 |'%'
-           ))
-       ORDER BY created_at DESC
-       LIMIT 25`,  const rows = await withUser(userId, async (client) => {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const completion = await openai.responses.create({
     model: 'gpt-4o-mini',
     input: prompt,
@@ -190,6 +84,9 @@ await withUser(userId, async client => {
 origin/cursor/automate-test-improve-and-merge-code-2533
 });
   const userId = getUserId(req);
+  if (!userId) return reply && reply.code(401).send({ error: 'unauthorized' });
+  const rows = await withUser(userId, async client => {
+    const res = await client && client.query(
   if (!userId) return reply.code(401).send({ error: 'unauthorized' });
 const rows = await withUser(userId, async client => {
     const res = await client.query(
@@ -200,10 +97,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               SELECT 1 FROM unnest(skills) s WHERE s ILIKE '%' || $2 || '%'
            ))
        ORDER BY created_at DESC
-<<<<<<< HEAD
-<<<<<<< HEAD
        LIMIT 25`,  const rows = await withUser(userId, async (client) => {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       `SELECT id, full_name, country, skills, experience_years FROM talent_profile
        WHERE ($1: :text IS NULL OR country = $1)
               SELECT 1 FROM unnest(skills) s WHERE s ILIKE '%' |$2 |'%'
@@ -212,25 +106,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
        LIMIT 25`
       [country |null, q |null]
     );
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  });
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     );
     return res && res.rows
   });
   return { results: rows }
-<<<<<<< HEAD
-});
-  const userId = getUserId(req);
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 LIMIT 25`,
       [country || null, q || null]
     );
@@ -240,9 +119,6 @@ LIMIT 25`,
 origin/cursor/automate-test-improve-and-merge-code-2533
 });
   const userId = getUserId(req);
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   if (!userId) return reply && reply.code(401).send({ error: 'unauthorized' });
   const items = await withUser(userId, async client => {    const res = await client && client.query(
       `SELECT id, channel, title, body, data, read, created_at FROM notification
@@ -258,38 +134,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 });
 });
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-app.get('/notifications', async (req, reply) => {
-  const userId = getUserId(req);
-  if (!userId) return reply.code(401).send({ error: 'unauthorized' });
-  const items = await withUser(userId, async (client) => {
-    const res = await client.query(
-      `SELECT id, channel, title, body, data, read, created_at FROM notification
-       WHERE read = false ORDER BY created_at DESC LIMIT 20`
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-  return { items }
-});
-
-
-const port = Number(process && process.env.API_PORT || 4000);
-app && app.listen({ port, host: '0 && 0.0.0 && 0.0' }).catch(err => {
-  app && app.log.error(err);
-  process && process.exit(1);
-});  });
-  return { items }
-});
-
-    );
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
 app.get ('/talent / search', async (req, reply) => {
   const q = (req.query as any).q as string;
@@ -319,81 +163,9 @@ app.get ('/talent / search', async (req, reply) => {
   });
   return { results: rows }
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-;
-app.get ('/projects/:name / track', async (req, reply) => {
-  const name = (req.params as any).name as string;
-  const user_id = getUserId (req);
-  if (return reply.code (401).send ({ error: 'unauthorized' })) {
-  $2
-}
-  const project = await with_user (user_id, async client => {
-    const res = await client.query (
-      `SELECT id, name, status, milestones FROM project WHERE name = $1 LIMIT 1`,
-      [name]);
-    return res.rows[0];
-  });
-  if (return reply.code (404).send ({ error: 'not found' })) {
-  $2
-}
-  return { project }});  const project = await with_user (user_id, async (client) => {
-    const res = await client.query (`SELECT id, name, status, milestones FROM project WHERE name = $1 LIMIT 1`, [name]);
-    return res.rows[0];
-  });
-  if (return reply.code (404).send ({ error: 'not found' })) {
-  $2
-}
-  return { project }
-app.get ('/notifications', async (req, reply) => {
-  const user_id = getUserId (req);
-  if (return reply.code (401).send ({ error: 'unauthorized' })) {
-  $2
-}
-  const items = await with_user (user_id, async client => {    const res = await client.query (
-      `SELECT id, channel, title, body, data, read, created_at FROM notification;
-      WHERE read = false ORDER BY created_at DESC LIMIT 20`);
-    return res.rows;  const items = await with_user (user_id, async (client) => {
-    const res = await client.query (
-      `SELECT id, channel, title, body, data, read, created_at FROM notification;
-      WHERE read = false ORDER BY created_at DESC LIMIT 20`);
-    return res.rows;
-  });
-  return { items }
-});
-;
-const port = Number (process.env.API_PORT || 4000);
-app.listen ({ port, host: '0.0.0.0' }).catch (err => {
-  app.log.error (err);
-  process.exit (1);
-});  });
-  return { items }
-});
-;
-const port = Number (process.env.API_PORT || 4000);
-app.listen ({ port, host: '0.0.0.0' }).catch ((err) => {
-  app.log.error (err);
-  process.exit (1);
-});
-<<<<<<< HEAD
-
-    );
-    );
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
     );
     );
 ;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-    );
-    );
-;
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   if (!userId) return reply.code(401).send({ error: 'unauthorized' });
 const project = await withUser(userId, async client => {
     const res = await client.query(
@@ -424,9 +196,4 @@ app.listen({ port, host: '0.0.0.0' }).catch(err => {
   app.log.error(err);
   process.exit(1);
 });
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -1,40 +1,11 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import {
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-  Brain
-  Monitor
-  Search
-  Shield
-  Mail
-  Share2
-  Check
-  Star
-  Zap
-  TrendingUp
-  Users
-  Globe
-  Lock
-  BarChart3
-  Calendar
-  Target;} from 'lucide-react';import {
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 import Head from 'next / head';
 import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
 import {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   Brain,
   Monitor,
   Search,
@@ -49,13 +20,6 @@ import {
   Globe,
   Lock,
   BarChart3,
-<<<<<<< HEAD
-  Calendar,
-  Target,;} from 'lucide-react';import { 
-  Calendar,;
-  Target,;} from 'lucide-react';import { ;
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   Brain;
   Monitor
   Search
@@ -63,15 +27,9 @@ import {
   Mail
   Share2
   Check
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
   Brain;
   Monitor,
   Search,
@@ -79,9 +37,6 @@ import {
   Mail,
   Share2,
   Check,
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { Brain;
   Monitor;
   Search;
@@ -121,22 +76,6 @@ export default function MicroSaasServicesPage() {
       ]
 origin/cursor/automate-test-improve-and-merge-code-2533
       pricing: {
-<<<<<<< HEAD
-
-      demo: 'https://demo.ai-content.ziontech.ai'
-}
-  Target;
-export default /**
- * MicroSaasServicesPage - Function description
- */
-function MicroSaasServicesPage() {
-  const microSaasServices = [;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-    {
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
         starter: {
           price: 19,
           features: [
@@ -285,7 +224,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         },
         enterprise: {
           price: 199,
-origin/cursor/automate-test-improve-and-merge-code-2533
           features: [
             'Unlimited keywords',
             'Full SEO suite',
@@ -450,9 +388,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Team collaboration',
         'Performance tracking',
         'Brand consistency',
-<<<<<<< HEAD
       ],
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       pricing: {
         starter: {
           price: 29,
@@ -474,72 +410,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ],
         },
         enterprise: {
-<<<<<<< HEAD
-
-    {
-      id: 'performance - monitor',
-      name: 'Website Performance Monitor',
-      description:;
-        'Monitor your website performance in real - time with comprehensive metrics, alerts, and optimization recommendations.',
-      icon: <Monitor className='w - 8 h - 8 text - white' />,
-      color: 'bg - gradient - to - br from - blue - 500 to - cyan - 600',
-      gradient: 'from - blue - 400 to - cyan - 500',
-      features: [;
-        'Real - time performance monitoring',
-        'Core Web Vitals tracking',
-        'Uptime monitoring',
-        'Performance alerts',
-        'Historical data analysis',
-        'Optimization recommendations',
-      ],
-      use_cases: [;
-        'Website performance tracking',
-        'User experience monitoring',
-        'SEO performance optimization',
-        'Server health monitoring',
-        'CDN performance analysis',
-        'Mobile performance testing',
-      ],
-      pricing: {
-        starter: {
-          price: 19,
-          features: [;
-            '5 URLs',
-            '5 - min monitoring',
-            'Basic metrics',
-            'Email alerts',
-            '7 - day retention',
-          ],
-        },
-        professional: {
-          price: 49,
-          features: [;
-            '25 URLs',
-            '1 - min monitoring',
-            'Advanced metrics',
-            'Multiple alerts',
-            '30 - day retention',
-            'API access',
-          ],
-        },
-        enterprise: {
-          price: 149,
-          features: [;
-            'Unlimited URLs',
-            'Real - time monitoring',
-            'All metrics',
-            'Custom dashboards',
-            '1 - year retention',
-            'SLA guarantee',
-          ],
-        },
-      },
-      market_price: '$19 - 149 / month',
-      competitors: ['Pingdom', 'GTmetrix', 'WebPageTest'],
-      website: 'https://performance.ziontech.ai',
-      demo: 'https://demo.performance.ziontech.ai',
-    },
-=======
             'Unlimited URLs'
             'Real-time monitoring'
             'All metrics'
@@ -559,7 +429,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   ];
     {
           price: 199
-=======
     {
       id: 'seo-analytics',
       name: 'SEO Analytics Dashboard',
@@ -608,7 +477,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         },
         enterprise: {
           price: 199,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           features: [
             'Unlimited keywords',
             'Full SEO suite',
@@ -671,9 +540,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ],
         },
         enterprise: {
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
           price: 199,
           features: [
             'Unlimited rules',
@@ -737,25 +603,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ],
         },
         enterprise: {
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             'Unlimited accounts',
             'Enterprise scheduling',
             'Advanced calendar',
             'Enterprise analytics',
             'Dedicated support',
-<<<<<<< HEAD
-            'White-label options',
-          ],
-        },
-      },
-      marketPrice: '$19-129/month',
-      competitors: ['Buffer', 'Hootsuite', 'Later'],
-      website: 'https://social.ziontech.ai',
-      demo: 'https://demo.social.ziontech.ai',;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     },  ];      demo: 'https://demo.social.ziontech.ai'
     }
   ];
@@ -793,7 +645,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Technical SEO audits',
         'Link building campaigns',
         'Content optimization',
-=======
           price: 199,
           features: [
             'Unlimited subscribers',
@@ -833,10 +684,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Team collaboration',
         'Performance tracking',
         'Brand consistency',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       ],
       pricing: {
         starter: {
@@ -861,144 +709,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ],
         },
         enterprise: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-          price: 199,
-          features: [;
-            'Unlimited keywords',
-            'Full SEO suite',
-            'Daily reports',
-            'Dedicated support',
-            '1 - year retention',
-            'White - label options',
-          ],
-        },
-      },
-      market_price: '$39 - 199 / month',
-      competitors: ['Ahrefs', 'SEMrush', 'Moz'],
-      website: 'https://seo.ziontech.ai',
-      demo: 'https://demo.seo.ziontech.ai',
-    },
-    {
-      id: 'api - rate - limiter',
-      name: 'API Rate Limiter',
-      description:;
-        'Protect your APIs with intelligent rate limiting, traffic management, and comprehensive analytics.',
-      icon: <Shield className='w - 8 h - 8 text - white' />,
-      color: 'bg - gradient - to - br from - red - 500 to - orange - 600',
-      gradient: 'from - red - 400 to - orange - 500',
-      features: [;
-        'Intelligent rate limiting',
-        'Traffic pattern analysis',
-        'API key management',
-        'Real - time monitoring',
-        'Custom rules & policies',
-        'Comprehensive analytics',
-      ],
-      use_cases: [;
-        'API protection & security',
-        'Traffic management',
-        'Developer portal management',
-        'Microservices protection',
-        'SaaS API security',
-        'Enterprise API governance',
-      ],
-      pricing: {
-        starter: {
-          price: 25,
-          features: [;
-            '10 rate limit rules',
-            'Basic limiting',
-            'API key management',
-            'Email notifications',
-            '7 - day retention',
-          ],
-        },
-        professional: {
-          price: 79,
-          features: [;
-            '50 rate limit rules',
-            'Advanced limiting',
-            'Unlimited API keys',
-            'Real - time monitoring',
-            '30 - day retention',
-            'API access',
-          ],
-        },
-        enterprise: {
-          price: 199,
-          features: [;
-            'Unlimited rules',
-            'Enterprise security',
-            'Advanced features',
-            'Custom integrations',
-            '1 - year retention',
-            'SLA guarantee',
-          ],
-        },
-      },
-      market_price: '$25 - 199 / month',
-      competitors: ['Kong', 'Tyk', 'AWS API Gateway'],
-      website: 'https://rate - limiter.ziontech.ai',
-      demo: 'https://demo.rate - limiter.ziontech.ai',
-    },
-    {
-      id: 'email - marketing',
-      name: 'Email Marketing Automation',
-      description:;
-        'Create engaging email campaigns, automate customer journeys, and drive conversions with intelligent email marketing.',
-      icon: <Mail className='w - 8 h - 8 text - white' />,
-      color: 'bg - gradient - to - br from - indigo - 500 to - purple - 600',
-      gradient: 'from - indigo - 400 to - purple - 500',
-      features: [;
-        'Drag & drop email builder',
-        'Advanced automation workflows',
-        'A / B testing & optimization',
-        'Subscriber segmentation',
-        'Performance analytics',
-        'Template library',
-      ],
-      use_cases: [;
-        'Newsletter campaigns',
-        'Welcome series automation',
-        'Abandoned cart recovery',
-        'Product announcements',
-        'Customer onboarding',
-        'Lead nurturing',
-      ],
-      pricing: {
-        starter: {
-          price: 29,
-          features: [;
-            '1, 000 subscribers',
-            'Basic templates',
-            'Simple automation',
-            'Basic analytics',
-            'Email support',
-          ],
-        },
-        professional: {
-          price: 79,
-          features: [;
-            '10, 000 subscribers',
-            'Advanced templates',
-            'Advanced automation',
-            'Advanced analytics',
-            'Priority support',
-            'API access',
-          ],
-        },
-        enterprise: {
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
           price: 129,
           features: [
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1007,23 +719,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             'Advanced calendar',
             'Enterprise analytics',
             'Dedicated support',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            'White - label options',
-          ],
-        },
-      },
-      market_price: '$19 - 129 / month',
-      competitors: ['Buffer', 'Hootsuite', 'Later'],
-      website: 'https://social.ziontech.ai',
-      demo: 'https://demo.social.ziontech.ai',;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-    },  ];      demo: 'https://demo.social.ziontech.ai'
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
   ];
 
@@ -1031,228 +726,81 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     {;
       title: 'AI Content Generation',;
       marketSize: '$1 && 1.2B',;
-      growth: '+23%',,
-  description:;
+      growth: '+23%',;
+      description:;
         'Rapidly growing market with increasing demand for automated content creation',;
     },    {;
       title: 'Performance Monitoring',;
       marketSize: '$3 && 3.8B',;
-      growth: '+18%',,
-  description:;
+      growth: '+18%',;
+      description:;
         'Essential for modern web applications and user experience optimization',;
     },    {;
       title: 'SEO Analytics',;
       marketSize: '$2 && 2.1B',;
-      growth: '+21%',,
-  description:;
+      growth: '+21%',;
+      description:;
         'Critical for digital marketing and search engine optimization',;
     },    {;
       title: 'API Management',;
       marketSize: '$4 && 4.2B',;
-      growth: '+25%',,
-  description: 'Growing demand for API security and traffic management',;
+      growth: '+25%',;
+      description: 'Growing demand for API security and traffic management',;
     },    {;
       title: 'Email Marketing',;
       marketSize: '$7 && 7.5B',;
-      growth: '+15%',,
-  description:;
+      growth: '+15%',;
+      description:;
         'Mature market with strong automation and personalization trends',;
     },    {;
       title: 'Social Media Management',;
       marketSize: '$2 && 2.8B',;
-      growth: '+19%',,
-  description:;
+      growth: '+19%',;
+      description:;
         'Increasing need for multi-platform social media coordination',;
-    },  ],
-  description: 'Rapidly growing market with increasing demand for automated content creation'
-};
+    },  ];      description: 'Rapidly growing market with increasing demand for automated content creation';
+    };
     {;
       title: 'Performance Monitoring',;
       marketSize: '$3 && 3.8B',;
-      growth: '+18%',,
-  description:;
+      growth: '+18%',;
+      description:;
         'Essential for modern web applications and user experience optimization',;
-    },      description: 'Essential for modern web applications and user experience optimization'
-};
+    },      description: 'Essential for modern web applications and user experience optimization';
+    };
     {;
       title: 'SEO Analytics',;
       marketSize: '$2 && 2.1B',;
-      growth: '+21%',,
-  description:;
+      growth: '+21%',;
+      description:;
         'Critical for digital marketing and search engine optimization',;
-    },      description: 'Critical for digital marketing and search engine optimization'
-};
+    },      description: 'Critical for digital marketing and search engine optimization';
+    };
     {;
       title: 'API Management',;
       marketSize: '$4 && 4.2B',;
-      growth: '+25%',,
-  description: 'Growing demand for API security and traffic management',;
-    },      description: 'Growing demand for API security and traffic management'
-};
+      growth: '+25%',;
+      description: 'Growing demand for API security and traffic management',;
+    },      description: 'Growing demand for API security and traffic management';
+    };
     {;
       title: 'Email Marketing',;
       marketSize: '$7 && 7.5B',;
-      growth: '+15%',,
-  description:;
+      growth: '+15%',;
+      description:;
         'Mature market with strong automation and personalization trends',;
-    },      description: 'Mature market with strong automation and personalization trends'
-};
+    },      description: 'Mature market with strong automation and personalization trends';
+    };
     {;
       title: 'Social Media Management',;
       marketSize: '$2 && 2.8B',;
-<<<<<<< HEAD
       growth: '+19%',;
       description:;
-<<<<<<< HEAD
-        'Schedule, manage, and analyze your social media presence across multiple platforms from one unified dashboard.',;
-      icon: <Share2 className='w-8 h-8 text-white' />,;
-      color: 'bg-gradient-to-br from-pink-500 to-rose-600',;
-      gradient: 'from-pink-400 to-rose-500',;
-      features: [;
-        'Multi-platform scheduling',;
-        'Content calendar management',;
-        'Campaign planning tools',;
-        'Performance analytics',;
-        'Team collaboration',;
-        'Auto-posting & optimization',;
-      ],;
-      useCases: [;
-        'Social media management',;
-        'Content calendar planning',;
-        'Campaign coordination',;
-        'Team collaboration',;
-        'Performance tracking',;
-        'Brand consistency',;
-      ],;
-      pricing: {;
-        starter: {;
-          price: 19,;
-          features: [;
-            '3 social accounts',;
-            'Basic scheduling',;
-            'Simple calendar',;
-            'Basic analytics',;
-            'Email support',;
-          ],;
-        },;
-        professional: {;
-          price: 49,;
-          features: [;
-            '10 social accounts',;
-            'Advanced scheduling',;
-            'Content calendar',;
-            'Advanced analytics',;
-            'Priority support',;
-            'API access',;
-          ],;
-        },;
-        enterprise: {;
-          price: 129,;
-          features: [;
-            'Unlimited accounts',;
-            'Enterprise scheduling',;
-            'Advanced calendar',;
-            'Enterprise analytics',;
-            'Dedicated support',;
-            'White-label options',;
-          ],;
-        },;
-      },;
-      marketPrice: '$19-129/month',;
-      competitors: ['Buffer', 'Hootsuite', 'Later'],;
-      website: 'https://social && social.ziontech.ai',;
-      demo: 'https://demo && demo.social.ziontech && ziontech.ai',;
-    },  ];      demo: 'https://demo && demo.social.ziontech && ziontech.ai';
-      title: 'AI Content Generation',
-      market_size: '$1.2B',
-      growth: '+23%',
-      description:;
-        'Rapidly growing market with increasing demand for automated content creation',
-    },    {
-      title: 'Performance Monitoring',
-      market_size: '$3.8B',
-      growth: '+18%',
-      description:;
-        'Essential for modern web applications and user experience optimization',
-    },    {
-      title: 'SEO Analytics',
-      market_size: '$2.1B',
-      growth: '+21%',
-      description:;
-        'Critical for digital marketing and search engine optimization',
-    },    {
-      title: 'API Management',
-      market_size: '$4.2B',
-      growth: '+25%',
-      description: 'Growing demand for API security and traffic management',
-    },    {
-      title: 'Email Marketing',
-      market_size: '$7.5B',
-      growth: '+15%',
-      description:;
-        'Mature market with strong automation and personalization trends',
-    },    {
-      title: 'Social Media Management',
-      market_size: '$2.8B',
-      growth: '+19%',
-      description:;
-        'Increasing need for multi - platform social media coordination',
-    },  ];      description: 'Rapidly growing market with increasing demand for automated content creation';
-    }
-    {
-      title: 'Performance Monitoring',
-      market_size: '$3.8B',
-      growth: '+18%',
-      description:;
-        'Essential for modern web applications and user experience optimization',
-    },      description: 'Essential for modern web applications and user experience optimization';
-    }
-    {
-      title: 'SEO Analytics',
-      market_size: '$2.1B',
-      growth: '+21%',
-      description:;
-        'Critical for digital marketing and search engine optimization',
-    },      description: 'Critical for digital marketing and search engine optimization';
-    }
-    {
-      title: 'API Management',
-      market_size: '$4.2B',
-      growth: '+25%',
-      description: 'Growing demand for API security and traffic management',
-    },      description: 'Growing demand for API security and traffic management';
-    }
-    {
-      title: 'Email Marketing',
-      market_size: '$7.5B',
-      growth: '+15%',
-      description:;
-        'Mature market with strong automation and personalization trends',
-    },      description: 'Mature market with strong automation and personalization trends';
-    }
-    {
-      title: 'Social Media Management',
-      market_size: '$2.8B',
-      growth: '+19%',
-      description:;
-        'Increasing need for multi - platform social media coordination',
-    },      description: 'Increasing need for multi - platform social media coordination';
-    }
-  ];
-
-  return (
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
-      growth: '+19%',,
-  description:;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         'Increasing need for multi-platform social media coordination',;
     },      description: 'Increasing need for multi-platform social media coordination';
     }
   ];
   return (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <>;
       <Head>;
         <title>;
@@ -1275,9 +823,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed">
             Discover our comprehensive suite of micro SaaS services designed for modern businesses.
             From AI-powered content generation to enterprise-grade performance monitoring, we deliver professional solutions with competitive pricing and exceptional value.
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
             'White-label options',
           ],
         },
@@ -1404,14 +949,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>;
                     <div className='text - green - 400 font - semibold'>;
                       {insight.growth}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Our services are positioned competitively in growing markets with strong demand and proven business models.
@@ -1495,63 +1032,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Card
                 key={index}
                 className="card-hover border-gradient-blue text-center"
-<<<<<<< HEAD
-<<<<<<< HEAD
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-white mb-4">{insight.title}</h3>
-                  <div className="flex items-center justify-center space-x-4 mb-4">
-                    <div className="text-2xl font-bold text-cursor-blue">{insight.marketSize}</div>
-                    <div className="text-green-400 font-semibold">{insight.growth}</div>
-                  </div>
-                  <p className="text-gray-400 text-sm">{insight.description}</p>
-                </div>
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-            ))}
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     </div>
                   </div>
                   <p className='text-gray-400 text-sm'>{insight.description}</p>
                 </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
               </Card>
             ))}
 
-<<<<<<< HEAD
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       {/* Services Grid */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
 
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               Our Micro SaaS Services
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -1561,9 +1060,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
           <div className='space-y-16'>
             {microSaasServices.map((service, index) => (
-<<<<<<< HEAD
-
-=======
           </div>;
         </div>;
       </section>;
@@ -1586,16 +1082,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
       </section>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Services Grid */}
 <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               Our Micro SaaS Services
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -1605,9 +1096,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
           <div className='space-y-16'>
             {microSaasServices.map((service, index) => (
-<<<<<<< HEAD
-
-=======
                 style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
                 <div className="p-6">;
                   <h3 className="text-xl font-bold text-white mb-4">{insight && insight.title}</h3>;
@@ -1619,7 +1107,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
               </Card>;
             ))}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <div
                 key={service && service.id}
                 className='bg-gray-900/50 rounded-2xl p-8 border border-gray-800'>;
@@ -1633,8 +1120,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <div>;
                         <h3 className='text - 2xl font - bold text - white'>;
                           {service.name}
-<<<<<<< HEAD
-<<<<<<< HEAD
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Each service is designed to solve specific business challenges with professional-grade features and competitive pricing.
@@ -1662,24 +1147,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             >;
                               <Check className='w - 4 h - 4 mr - 2 text - green - 400 flex - shrink - 0' />                              {feature}              Our Micro SaaS Services;
             </h2>;
-            <p className="text - responsive - md text - gray - 400 max - w-4xl mx-auto leading-relaxed">;
+            <p className="text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed">;
               Each service is designed to solve specific business challenges with professional - grade features and competitive pricing.;
             </p>;
           </div>;
-          <div className="space-y-16">;
+          <div className="space - y-16">;
             {microSaasServices.map ((service, index) => (
-              <div key={service.id} className="bg - gray - 900 / 50 rounded - 2xl p - 8 border border-gray-800">;
-                <div className="grid grid - cols - 1 lg:grid - cols-3 gap-8">;
+              <div key={service.id} className="bg - gray - 900 / 50 rounded - 2xl p - 8 border border - gray - 800">;
+                <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 8">;
                   {/* Service Info */}
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-                              {feature}
-                            </li>;
-                          ))}
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                             <li
                               key={useCaseIndex}
                               className='flex items-center text-gray-300 text-sm'>;
@@ -1690,23 +1166,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             <li key={useCaseIndex} className="flex items-center text-gray-300 text-sm">;
                               <Check className="w-4 h-4 mr-2 text-green-400 flex-shrink-0" />;
 
-<<<<<<< HEAD
-                              {useCase}
-                            </li>;
-                          ))}
-
-=======
-                        </ul>;
-                      </div>;
-                    </div>;
-                    <div className='flex flex-wrap gap-4'>;
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
                     <div className="flex flex-wrap gap-4">
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                         </h3>
                         <p className='text-gray-400'>{service.description}</p>
                       </div>
@@ -1751,29 +1211,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='flex flex-wrap gap-4'>
 origin/cursor/automate-test-improve-and-merge-code-2533
                       <Button
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                         size='sm'
-<<<<<<< HEAD
-<<<<<<< HEAD
                         className='bg-cursor-blue hover:bg-blue-600'>                    <div className="flex flex-wrap gap-4">;
                       <Button
                         href={service && service.website}
                         size="sm"
                         className="bg-cursor-blue hover:bg-blue-600"
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                        Visit Website
-                      </Button>;
-                      <Button
-                        href={service.demo}
-
-                        size="sm"
-                        className="border-cursor-blue text-cursor-blue hover:bg-cursor-blue hover:text-white"
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                         className='bg-cursor-blue hover:bg-blue-600'
                       >
                         Visit Website
@@ -1783,42 +1226,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 variant='outline'
                         size='sm'
                         className='border-cursor-blue text-cursor-blue hover:bg-cursor-blue hover:text-white'
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       >
                         Try Demo
                       </Button>
                     </div>
                   </div>
-<<<<<<< HEAD
-
-                                <div
-                                  key={tier}
-                                  className='flex justify-between items-center'>;
-                                  <span className='text-sm text-gray-300 capitalize'>;
-                                    {tier}
-                  <div className="lg:col-span-1">
-                    <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-700">
-                      <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
-                        <BarChart3 className="w-5 h-5 mr-2 text-cursor-blue" />
-                        Pricing & Market
-                      </h4>
-                      <div className="space-y-4">
-                        <div>
-                          <p className="text-sm text-gray-400 mb-1">Market Price Range</p>
-                          <p className="text-lg font-bold text-white">{service.marketPrice}</p>
-                        </div>
-                        <div>                          <p className="text-sm text-gray-400 mb-1">Our Pricing</p>
-                          <div className="space-y-2">
-                            {Object.entries(service.pricing).map(([tier, details]) => (
-                              <div key={tier} className="flex justify-between items-center">
-                                <span className="text-sm text-gray-300 capitalize">{tier}</span>
-                                <span className="text-sm font-semibold text-white">${details.price}/mo</span>
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-=======
-=======
                   {/* Pricing & Market Info */}
 <div className='lg:col-span-1'>
                     <div className='bg-gray-800/50 rounded-xl p-6 border border-gray-700'>
@@ -1863,57 +1275,22 @@ variant='outline'
                           <div className='flex flex-wrap gap-2'>
                             {service.competitors.map(
                               (competitor, compIndex) => (
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                                 <span
                                   key={compIndex}
                                   className='px-2 py-1 bg-gray-700 rounded text-xs text-gray-300'>;
                                   {competitor}
-<<<<<<< HEAD
-<<<<<<< HEAD
                                 </span>;
                               );
                             )}                          </div>                          <p className="text-sm text-gray-400 mb-1">Key Competitors</p>;
                           <div className="flex flex-wrap gap-2">;
                             {service && service.competitors.map((competitor, compIndex) => (;
                               <span key={compIndex} className="px-2 py-1 bg-gray-700 rounded text-xs text-gray-300">;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                         </div>;
                       </div>;
                     </div>;
                   </div>;
                 </div>;
-<<<<<<< HEAD
-
-=======
-                          </div>
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-            ))}
-
-=======
-      <section className="section-padding bg-gradient-cursor-accent">
-        <div className="container-cursor">
-          <div className="text-center mb-20">
-            <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
-              Why Choose Zion Tech Group Micro SaaS Services?
-
-            </h2>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               We combine professional-grade features with competitive pricing to deliver exceptional value for your business.
             </p>
@@ -1953,20 +1330,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">Global Infrastructure</h3>
                 <p className="text-gray-400 text-sm">Worldwide availability with enterprise-grade reliability</p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                                 </span>
                               )
                             )}
@@ -2044,31 +1407,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <p className='text-gray-400 text-sm'>
                   Worldwide availability with enterprise-grade reliability
                 </p>
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
               </div>
             </Card>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </div>;
             </Card>;
           </div>;
         </div>;
       </section>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <p className="text-responsive-md text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed">
             Choose the micro SaaS service that fits your business needs and start transforming your operations today.
           </p>
@@ -2077,17 +1426,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               href="/contact"
               size="lg"
               className="bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl hover-glow"
-
             >
               Get Started
             </Button>
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
               View Pricing
             </Button>;
           </div>;
@@ -2097,9 +1438,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <Button
 
     </>);
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       {/* CTA Section */}
 <section className='section-padding bg-gradient-to-r from-cursor-blue to-blue-600 relative overflow-hidden'>
         <div className='absolute inset-0 bg-dots opacity-10' />
@@ -2134,4 +1472,3 @@ href='/pricing'
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

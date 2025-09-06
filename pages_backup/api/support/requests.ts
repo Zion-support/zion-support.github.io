@@ -1,6 +1,4 @@
-<<<<<<< HEAD:pages/api/support/requests.ts
 <<<<<<< HEAD
-
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -9,17 +7,11 @@
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { readJson, writeJson } from '../../../utils/fsDb',
 =======
+>>>>>>> pr-12243
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJson, writeJson } from '../../../utils/fsDb'
->>>>>>> main
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { readJson, writeJson } from '../../../utils/fsDb'
-main
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/support/requests.ts
 ;
-
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
     const requests = readJson<any[]>('support/requests.json', [])
@@ -33,12 +25,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     requests.push(record)
     writeJson('support/requests.json', requests)
 
+=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJson, writeJson } from '[^']*';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method;
-origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(200).json({ ok: true, id })
   }
   return res.status(405).json({ error: 'Method not allowed' });
@@ -60,8 +53,32 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   return res.status(405).json({ error: 'Method not allowed' })
-<<<<<<< HEAD:pages/api/support/requests.ts
+<<<<<<< HEAD
+
+}
+
+import type { NextApiRequest, NextApiResponse } from 'next',
+import { read_json, write_json } from '../../../utils / fs_db',
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
+}
+    const requests = read_json < any[]>('support / requests.json', []),
+    return res.status (200).json ({ requests });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
 =======
 };
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/support/requests.ts
-
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

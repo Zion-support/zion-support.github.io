@@ -1,22 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readPosts, writePosts } from "@/utils/data/blogStore";
 import { requireAdmin } from "@/utils/api/auth";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-  const { id } = req.query;
-=======
   const { id } = req && req.query;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   if (typeof id !== "string")
     return res && res.status(400).json({ error: "Invalid id" });
   if (req && req.method === "PUT") {
@@ -26,17 +12,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     writePosts(posts);
     return res.status(200).json(updated);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-  return res.status(405).end();
-  export default function handler(req: NextApiRequest, res: NextApiResponse) {
-return res.status(405).end();
-  export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   if (typeof id !== 'string')
     return res.status(400).json({ error: 'Invalid id' });
 
@@ -52,27 +27,8 @@ return res.status(200).json(updated);
   }
   return res.status(405).end();
   export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     const { id } = req.query;
-    if (typeof id !== "string")
-
-
-      return res && res.status(400).json({ error: "Invalid id" });
-
-}
-
-  return res.status(405).end();
-  export default function handler(req: NextApiRequest, res: NextApiResponse) {
-    const { id } = req.query;
-
-=======
-    const { id } = req.query;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     if (typeof id !== "string")
       return res && res.status(400).json({ error: "Invalid id" });
 
@@ -101,24 +57,7 @@ function handler() {
   $2
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return res.status(405).end();
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   if (req.method === 'PUT') {
     if (!requireAdmin(req, res)) return;
@@ -128,18 +67,4 @@ function handler() {
     const updated = { ...posts[idx], ...req.body, id };
     posts[idx] = updated;
     writePosts(posts);
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

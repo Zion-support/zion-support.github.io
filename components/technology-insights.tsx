@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function TechnologyInsightsPage() {
 
   const technologyTrends = [
@@ -13,34 +7,10 @@ export default function TechnologyInsightsPage() {
       id: 'quantum-computing'
       title: 'Quantum Computing in 2025'
       description:
-<<<<<<< HEAD
-        'Exploring the latest developments in quantum computing and their implications for AI and automation.',      category: 'Emerging Tech'
-      readTime: '15 min read'
-      featured: true
-    }
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         'Exploring the latest developments in quantum computing and their implications for AI and automation.',      category: 'Emerging Tech',
       readTime: '15 min read',
-<<<<<<< HEAD
-<<<<<<< HEAD
-      featured: true;
-    };
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
       featured: true
 };
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-      featured: true
-};
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     {
       id: 'edge-ai'
       title: 'Edge AI Revolution'
@@ -95,73 +65,6 @@ export default function TechnologyInsightsPage() {
       focus: ['Human-AI InterfaceCollaborative Decision MakingSafety ProtocolsTrust Building'],;
       icon: '🤝';
     }
-<<<<<<< HEAD
-  ];
-
-  return (
-    <>
-      <Head>
-        <title>
-          Technology Insights | Zion Tech Group - Research & Innovation
-        </title>
-        <meta
-          name='description'
-          content="Explore Zion Tech Group's technology insights, research, and thought leadership in AI, automation, and emerging technologies."
-        />
-        <meta
-          property='og:title'
-          content='Technology Insights | Zion Tech Group'
-        />
-        <meta
-          property='og:description'
-          content='Research insights, technology trends, and thought leadership in AI and automation.'
-        />
-        <meta name='twitter:card' content='summary_large_image' />
-      </Head>
-      <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>
-        <main className='container mx-auto px-6 py-12'>
-          <section className='text-center mb-16'>
-            <h1 className='text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent'>
-              Technology Insights
-            </h1>
-            <p className='text-xl text-white/80 max-w-3xl mx-auto'>
-              Research insights, technology trends, and thought leadership in
-              AI, automation, and emerging technologies
-            </p>
-          </section>
-          <section className='mx-auto max-w-7xl'>
-            {/* Technology Trends */}
-            <div className='mb-16'>
-              <h2 className='text-3xl font-bold mb-8 text-center text-cyan-400'>
-                Latest Technology Trends
-              </h2>
-              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-                {technologyTrends.map((trend, index) => (
-                  <div
-                    key={index}
-                    className='bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300'
-                  >
-                    <div className='flex items-center justify-between mb-4'>
-                      <span className='px-3 py-1 bg-fuchsia-400/20 text-fuchsia-400 text-sm rounded-full'>
-                        {trend.category}
-                      </span>
-                      <span className='text-white/60 text-sm'>
-                        {trend.readTime}
-                      </span>
-                    </div>
-                    <h3 className='text-xl font-bold mb-3 text-white'>
-                      {trend.title}
-                    </h3>
-                    <p className='text-white/70 mb-4'>{trend.description}</p>
-                    <Link
-                      href={`/blog/${trend.id}`}
-                      className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'
-                    >
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
       <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>;
         <main className='container mx-auto px-6 py-12'>;
           <section className='text-center mb-16'>;
@@ -195,12 +98,6 @@ export default function TechnologyInsightsPage() {
               AI, automation, and emerging technologies;
             </p>;
           </section>;
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   const technologyTrends = null;
                       AI ethics, and human-AI collaboration. We work with leading institutions and industry partners to advance the state of the art.
   ];
@@ -328,24 +225,12 @@ description:
                     >
                       Read More <span className='ml-1'>→</span>
                     </Link>
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   </div>
                 ))}
               </div>
             </div>
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
                       href={`/blog/${trend && trend.id}`}
                       className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'>;
                       Read More <span className='ml-1'>→</span>                    </Link>      </Head>;
@@ -383,20 +268,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>;
             </div>;
             {/* Research Areas */}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             {/* Research Areas */}
 <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-fuchsia-400'>
                 Research Focus Areas
               </h2>
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 {researchAreas.map((area, index) => (
             <div className='mb-16'>;
               <h2 className='text-3xl font-bold mb-8 text-center text-fuchsia-400'>;
@@ -416,40 +293,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       {area && area.focus.map((focus, focusIndex) => (;
                         <li
                           key={focusIndex}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                          className='text-sm text-white/60 flex items-center'
-                        >
-                          <span className='text-cyan-400 mr-2'>•</span>                          {focus}                {researchAreas.map((area, index) => (
-
-                  <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6">
-                    <div className="text-4xl mb-4">{area.icon}</div>
-                    <h3 className="text-xl font-bold mb-3 text-white">{area.title}</h3>
-                    <p className="text-white/70 mb-4">{area.description}</p>
-                    <ul className="space-y-2">
-                      {area.focus.map((focus, focusIndex) => (
-                        <li key={focusIndex} className="text-sm text-white/60 flex items-center">
-                          <span className="text-cyan-400 mr-2">•</span>
-=======
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-                          className='text-sm text-white/60 flex items-center'
-                        >
-                          <span className='text-cyan-400 mr-2'>•</span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                           className='text-sm text-white/60 flex items-center'
                         >
                           <span className='text-cyan-400 mr-2'>•</span>
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                           {focus}
                         </li>;
                       ))}
@@ -457,39 +304,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>;
                 ))}
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
               </div>;
             </div>;
 
             {/* Whitepapers */}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             {/* Whitepapers */}
 <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-green-400'>
                 Research Whitepapers
               </h2>
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 {whitepapers.map((paper, index) => (
                   <div
                     key={index}
@@ -508,18 +333,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </h3>
                     <p className='text-white/70 mb-4'>{paper.description}</p>
                     <Link
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                      href={paper.downloadUrl}
-                      className='inline-flex items-center text-fuchsia-400 hover:text-fuchsia-300 transition-colors'
-                    >
-                      Download PDF <span className='ml-1'>→</span>                    </Link>                {whitepapers.map((paper, index) => (
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6">
                     <div className="flex items-center justify-between mb-3">
                       <span className="px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full">{paper.category}</span>
@@ -528,16 +341,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <h3 className="text-xl font-bold mb-3 text-white">{paper.title}</h3>
                     <p className="text-white/70 mb-4">{paper.description}</p>
                     <Link
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                       href={paper.downloadUrl}
-                      className='inline-flex items-center text-fuchsia-400 hover:text-fuchsia-300 transition-colors'
+                      className="inline-flex items-center text-fuchsia-400 hover:text-fuchsia-300 transition-colors"
                     >
-<<<<<<< HEAD
-=======
                       Download PDF <span className="ml-1">→</span>
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                       href={paper.downloadUrl}
                       className='inline-flex items-center text-fuchsia-400 hover:text-fuchsia-300 transition-colors'
                     >
@@ -545,35 +352,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
                     </Link>
                       Download PDF <span className='ml-1'>→</span>                    </Link>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
                     </Link>
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   </div>
                 ))}
               </div>
             </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             {/* Innovation Lab */}
 <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-blue-400'>
@@ -582,20 +368,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8'>
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 items-center'>
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-            {/* Innovation Lab */}
-            <div className='mb-16'>
-              <h2 className='text-3xl font-bold mb-8 text-center text-blue-400'>
-                Innovation Lab
-              </h2>
-              <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8'>
-                <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 items-center'>
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <div>
                     <h3 className='text-2xl font-bold mb-4 text-cyan-400'>
                       Cutting-Edge Research
@@ -607,21 +379,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       leading institutions and industry partners to advance the
                       state of the art.
                     </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    <ul className='space-y-2 text-white/70'>                      <li>• Advanced AI research and development</li>                  <div>
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     <h3 className="text-2xl font-bold mb-4 text-cyan-400">Cutting-Edge Research</h3>
                     <p className="text-white/80 mb-6">
                       Our innovation lab is dedicated to exploring the frontiers of technology, conducting research in autonomous systems, AI ethics, and human-AI collaboration. We work with leading institutions and industry partners to advance the state of the art.
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     <ul className='space-y-2 text-white/70'>
 origin/cursor/automate-test-improve-and-merge-code-2533
                     </p>
@@ -632,19 +392,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <li>• Industry collaboration and partnerships</li>
                     </ul>
                   </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                    <div className="text-6xl mb-4">🧪</div>
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     <p className="text-white/60 text-sm">Innovation Lab</p>
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div className='text-center'>
                     <div className='text-6xl mb-4'>🧪</div>
                     <p className='text-white/60 text-sm'>Innovation Lab</p>
@@ -653,25 +401,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-              <div className="flex flex-wrap justify-center gap-4">
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   </div>;
                 </div>;
               </div>;
             </div>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <Link
                   href="/contact"
                   className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105"
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
             {/* Call to Action */}
 <div className='bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 backdrop-blur-xl rounded-2xl p-8 text-center'>
               <h2 className='text-3xl font-bold mb-4 text-white'>
@@ -688,30 +424,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
                 >
                   Get in Touch
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-                <Link
-                  href="/blog"
-
-                  className="px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200"
-                >
-                  Read Our Blog
-                </Link>
-              </div>
-            </div>
-          </section>
-        </main>
-      </div>
-    </>
-}
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
                 </Link>
                 <Link
-<<<<<<< HEAD
-<<<<<<< HEAD
                   href="/blog"
                   Read Our Blog;
                 </Link>;
@@ -729,12 +443,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
     </>);
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   href='/blog'
                   className='px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200'
                 >
@@ -748,9 +456,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

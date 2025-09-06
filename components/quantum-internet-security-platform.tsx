@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import Head from 'next/head';
-
-import {
-  Phone
-  Mail
-  MapPin
-  Check
-  ArrowRight
-  Shield
-  Star;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   Phone,
   Mail,
   MapPin,
@@ -24,26 +5,6 @@ import {
   ArrowRight,
   Shield,;
   Star,;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-} from 'lucide-react';
-
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import Button from '../components/ui/Button';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-export default function QuantumInternetSecurityPage() {
-  const service = enhancedRealMicroSaasServices.find(s =>
-    s.link.endsWith('/quantum-internet-security-platform')
-=======
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React from 'react',
 import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Shield, Star  } from 'lucide-react';
@@ -60,12 +21,7 @@ import {
   ArrowRight
   Shield
   Star;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
@@ -73,6 +29,10 @@ import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-
 
 export default function QuantumInternetSecurityPage() {
 export default function QuantumInternetSecurityPage() {
+  );  if (!service) return null;import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import Button from '../components/ui/Button';
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+export default function QuantumInternetSecurityPage() {;
   const service = enhancedRealMicroSaasServices.find(s =>
     s.link.endsWith('/quantum-internet-security-platform')
   );
@@ -139,22 +99,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 href='/contact'
                 variant='quantum'
                 size='lg'
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <div className="mt-6 space-y-3 text-sm text-slate-300">
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service.contactInfo.mobile}</span></div>
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>
-<<<<<<< HEAD
-
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 className='w-full'
               >
                 Request a Security Demo
@@ -175,26 +123,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </div>
           </div>
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-=======
 
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-;
-}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <UltraAdvancedFuturisticBackground>;
       <Head>;
@@ -272,11 +208,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className='flex items - center space - x-2'>;
                   <MapPin className='w - 4 h - 4 text - green - 400' />;
                   <span className='text - xs'>{service.contact_info.address}</span>;
-                </div>              </div>              <Button href="/contact" variant="quantum" size="lg" className="w-full">Request a Security Demo < ArrowRight className="w - 5 h-5 ml-2" /></Button>;
-              <div className="mt - 6 space - y-3 text - sm text-slate-300">;
-                <div className="flex items-center space-x-2"><Phone className="w - 4 h - 4 text-cyan-400" /><span>{service.contact_info.mobile}</span></div>;
-                <div className="flex items-center space-x-2"><Mail className="w - 4 h - 4 text-purple-400" /><span>{service.contact_info.email}</span></div>;
-                <div className="flex items-center space-x-2"><MapPin className="w - 4 h - 4 text-green-400" /><span className="text-xs">{service.contact_info.address}</span></div>;
+                </div>              </div>              <Button href="/contact" variant="quantum" size="lg" className="w - full">Request a Security Demo < ArrowRight className="w - 5 h - 5 ml - 2" /></Button>;
+              <div className="mt - 6 space - y-3 text - sm text - slate - 300">;
+                <div className="flex items - center space - x-2"><Phone className="w - 4 h - 4 text - cyan - 400" /><span>{service.contact_info.mobile}</span></div>;
+                <div className="flex items - center space - x-2"><Mail className="w - 4 h - 4 text - purple - 400" /><span>{service.contact_info.email}</span></div>;
+                <div className="flex items - center space - x-2"><MapPin className="w - 4 h - 4 text - green - 400" /><span className="text - xs">{service.contact_info.address}</span></div>;
             </div>;
           </div>;
         </div>;
@@ -286,17 +222,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }
 
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

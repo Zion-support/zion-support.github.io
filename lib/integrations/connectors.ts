@@ -1,60 +1,25 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+// Integration connectors
 import { ProviderConnection, SyncLogEntry } from './types';
 import { v4 as uuidv4 } from 'uuid';
 import { ProviderConnection, SyncLogEntry } from "./types";
 import { v4 as uuidv4 } from "uuid";
 import { ProviderConnection, SyncLogEntry } from './types';
 import { v4 as uuidv4 } from 'uuid';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+pr-12243
 
+import { IntegrationConfig, IntegrationResponse, ApiEndpoint } from './types';
 
+export class BaseConnector {
+  protected config: IntegrationConfig;
 
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-=======
-
+  constructor(config: IntegrationConfig) {
+    this.config = config;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { ProviderConnection, SyncLogEntry } from "./types";
 import { v4 as uuidv4 } from "uuid";
 async function mockProviderCall<T>(
@@ -62,44 +27,8 @@ async function mockProviderCall<T>(
   action: string
   details: Record<string, any>
 ): Promise<{ log: SyncLogEntry; result: T }> {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  const log: SyncLogEntry = {
-    id: uuidv4()
-    timestamp: Date.now()
-    providerId: connection.providerId
-    level: "info"
-    action
-    details
-  }
-  // In a real implementation, call provider SDK/API here using connection.accessToken
-  return { log, result: { ok: true } as unknown as T }
-
-}
-// CRM actions
-export const crm = {
-  async syncContact(
-
-    return mockProviderCall(connection, "sync_contact", { contact });
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 async function callProvider<T>(
   connection: ProviderConnection,
@@ -120,12 +49,7 @@ async function callProvider<T>(
 
 // CRM actions
 export const crm = {
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   async syncContact(
     connection: ProviderConnection
     contact: Record<string, any>
@@ -154,13 +78,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 // ATS actions
 export const ats = {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const log: SyncLogEntry = {
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     id: uuidv4(),
     timestamp: Date.now(),
     providerId: connection.providerId,
@@ -188,83 +106,70 @@ async function mockProviderCall < T>(
   return { log, result: { ok: true } as unknown as T }
 }
 // CRM actions;
-<<<<<<< HEAD
 export const crm = {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-  async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {
-    return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
   async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {
     return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
+pr-12243
+  }
 
+  async connect(): Promise<IntegrationResponse> {
+    throw new Error('Connect method must be implemented');
+  }
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+  async disconnect(): Promise<IntegrationResponse> {
+    throw new Error('Disconnect method must be implemented');
   }
-  async addEmailTouchpoint(
-    connection: ProviderConnection
-    touchpoint: Record<string, any>
-  ) {
-    return mockProviderCall(connection, "add_email_touchpoint", { touchpoint });
-  }
-  async addProjectNote(
-    connection: ProviderConnection
-    note: Record<string, any>
-  ) {
-    return mockProviderCall(connection, "add_project_note", { note });
-  }
-}
 // ATS actions
 export const ats = {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  async updateStatus(
+pr-12243
 
-    return mockProviderCall(connection, "update_status", { status });
+  async test(): Promise<IntegrationResponse> {
+    throw new Error('Test method must be implemented');
+  }
+
+  protected async makeRequest(endpoint: ApiEndpoint): Promise<any> {
+    const response = await fetch(endpoint.url, {
+      method: endpoint.method,
+      headers: {
+        'Content-Type': 'application/json',
+        ...endpoint.headers,
+      },
+      body: endpoint.body ? JSON.stringify(endpoint.body) : undefined,
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    return response.json();
   }
 }
 
-// Email actions
-export const email = {
-  async sendNotification(
-=======
-<<<<<<< HEAD
+export class SlackConnector extends BaseConnector {
+  async connect(): Promise<IntegrationResponse> {
+    try {
+      // Test Slack API connection
+      const response = await this.makeRequest({
+        url: 'https://slack.com/api/auth.test',
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${this.config.credentials.token}`,
+        },
+      });
 
-  async pushApplicant($2) {
-    return simulateAction($3);
-  },
-  async uploadResume($2) {
-    return simulateAction($3);
-  },
-  async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
-    return simulateAction(connection, 'ats.updateStatus', { change })
-  }};
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
+      return {
+        success: response.ok,
+        data: response,
+      };
+    } catch (error) {
+      return {
+        success: false,
+        error: error instanceof Error ? error.message : 'Unknown error',
+      };
+    }
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 async pushApplicant(
     connection: ProviderConnection,
     applicant: Record<string, any>
@@ -279,40 +184,23 @@ async pushApplicant(
       resumeMeta: { name: resume?.name },
     });
   },
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   async updateStatus(
     connection: ProviderConnection
     status: Record<string, any>
   ) {
-<<<<<<< HEAD
-<<<<<<< HEAD
     connection: ProviderConnection,
     status: Record<string, any>,
   ) {;
     return mockProviderCall(connection, "update_status", { status });
   }
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   async sync_contact (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     connection: ProviderConnection,
-    notification: Record<string, any>
+    contact: Record < string, any>,
   ) {
-    return executeProviderAction(connection, 'sendNotification', { notification });
+    return mockProviderCall (connection, "sync_contact", { contact });
   },
-<<<<<<< HEAD
-};
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
   async addEmailTouchpoint (
     connection: ProviderConnection,
     touchpoint: Record < string, any>,
@@ -332,59 +220,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     level: "info"
     action
     details
+pr-12243
   }
-  // In a real implementation, call provider SDK/API here using connection.accessToken
-  return { log, result: { ok: true } as unknown as T }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-}
-=======
-export const crm = {}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-;
-// ATS actions;
-export const ats = {
-  async update_status (
-    connection: ProviderConnection,
-    status: Record < string, any>,
-  ) {
-    return mockProviderCall (connection, "update_status", { status });
-  },
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
-origin/cursor/expand-services-advertise-and-build-project-c28b
-}
-;
-// ATS actions;
-export const ats = {
-  async update_status (
-    connection: ProviderConnection,
-    status: Record < string, any>,
-  ) {
-    return mockProviderCall (connection, "update_status", { status });
-  },
-}
-origin/cursor/expand-services-advertise-and-build-project-c28b
-;
-origin/cursor/automate-test-improve-and-merge-code-20a4
+  async disconnect(): Promise<IntegrationResponse> {
+    return { success: true };
+  }
 
-
-
+  async test(): Promise<IntegrationResponse> {
+    return this.connect();
+  }
 }
 ;
 // ATS actions;
@@ -397,45 +242,24 @@ export const ats = {
   },
 }
 ;
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-
 origin/cursor/expand-services-advertise-and-build-project-c28b
+pr-12243
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+export class WebhookConnector extends BaseConnector {
+  async connect(): Promise<IntegrationResponse> {
+    return { success: true };
+  }
 
-  async createCandidate(
-    connection: ProviderConnection,
-    candidate: Record<string, any>
-  ) {
-    return executeProviderAction(connection, 'createCandidate', { candidate });
-  },
-};
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+  async disconnect(): Promise<IntegrationResponse> {
+    return { success: true };
+  }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+  async test(): Promise<IntegrationResponse> {
+    return { success: true };
+  }
+}
+ursor/fix-website-loading-errors-and-merge-6662
 // Email actions
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export const email = {
   async sendNotification(
     connection: ProviderConnection,
@@ -444,39 +268,11 @@ export const email = {
     return executeProviderAction(connection, 'sendNotification', { notification });
   },
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-    return simulateAction(connection, 'ats.updateStatus', { change });
-  },
-};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
 
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
     return simulateAction(connection, 'ats.updateStatus', { change });
   },
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+pr-12243

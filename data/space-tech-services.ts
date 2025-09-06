@@ -1,45 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface SpaceTechService {
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-  id: string;
-=======
 id: string;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   name: string;
   tagline: string;
   price: string;
-  period: string,
+  period: string;
   description: string;
   features: string[];
   popular: boolean;
   icon: string;
   color: string;
-<<<<<<< HEAD
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
   text_color: string;
   link: string;
   market_position: string;
@@ -60,7 +29,6 @@ id: string;
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
 
     website: string;
   }
@@ -70,7 +38,6 @@ id: string;
     realService: true
     technology: [
   {
-=======
 
 
   {
@@ -87,8 +54,6 @@ id: string;
       'Multi - satellite coordination',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Coverage optimization',
       'Interference management',
       'Power optimization',
@@ -100,14 +65,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'API for integration',
     ],
     popular: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
     icon: '🛰️',
-<<<<<<< HEAD
-=======
-=======
-    icon: '🛰️',
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     color: 'from - blue - 600 to - indigo - 700',
     text_color: 'text - blue - 400',
@@ -796,8 +754,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Satellite mission planningOrbital mechanics calculationsReal-time satellite trackingSpace weather monitoringLaunch vehicle integrationGround station managementSpace debris trackingMission analytics dashboard';
       'Regulatory compliance toolsMulti-satellite operations'
     ];
-<<<<<<< HEAD
-<<<<<<< HEAD
     popular: true, icon: '🚀',
     color: 'from-cyan-600 to-blue-700', textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/space-technology', marketPosition: 'Revolutionary technology with no direct competitors. SpaceX Starlink ($99/month) and OneWeb ($50/month) offer basic internet services. Our advantage: Complete mission management platform.',
@@ -809,100 +765,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     competitors: ['SpaceX StarlinkOneWebBasic satellite services'], marketSize: '$469B space economy',
     growthRate: '400% annual growth', variant: 'space-futuristic',
     contactInfo: {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
-<<<<<<< HEAD
-    reviews: 250
-  }
-];
-export interface SpaceTechService {;
-  id: string,;
-  name: string,;
-  tagline: string,;
-  price: string,;
-  period: string,;
-  description: string,;
-  features: string[],;
-  popular: boolean,;
-  icon: string,;
-  color: string,;
-  textColor: string,;
-  link: string,;
-  marketPosition: string,;
-  targetAudience: string,;
-  trialDays: number,;
-  setupTime: string,;
-  category: string,;
-  realService: boolean,;
-  technology: string[],;
-  integrations: string[],;
-  useCases: string[],;
-  roi: string,;
-  competitors: string[],;
-  marketSize: string,;
-  growthRate: string,;
-  variant: string,;
-  contactInfo: {;
-    mobile: string,;
-    email: string,;
-    address: string,;
-    website: string;
-  },;
-  realImplementation: boolean,;
-  implementationDetails: string,;
-  launchDate: string,;
-  customers: number,;
-  rating: number,;
-  reviews: number;
-}
-;
-export const spaceTechServices: SpaceTechService[] = [;
-  {;
-    id: 'space-mission-management-platform',;
-    name: 'Space Mission Management Platform',;
-    tagline: 'Complete space mission planning and execution platform',;
-    price: '$5,999',;
-    period: '/month',;
-    description: 'Comprehensive space mission management platform that enables commercial space companies to plan, execute, and monitor space missions like NASA. Manage satellite operations, launch vehicles, and ground stations.',;
-    features: [;
-      'Satellite mission planningOrbital mechanics calculationsReal-time satellite trackingSpace weather monitoringLaunch vehicle integrationGround station managementSpace debris trackingMission analytics dashboard',;
-      'Regulatory compliance toolsMulti-satellite operations';
-    ],;
-    popular: true,;
-    icon: '🚀',;
-    color: 'from-cyan-600 to-blue-700',;
-    textColor: 'text-cyan-400',;
-    link: 'https://ziontechgroup.com/space-technology',;
-    marketPosition: 'Revolutionary technology with no direct competitors. SpaceX Starlink ($99/month) and OneWeb ($50/month) offer basic internet services. Our advantage: Complete mission management platform.',;
-    targetAudience: 'Space companies, Satellite operators, Launch providers, Government agencies, Research institutions, Aerospace companies',;
-    trialDays: 30,;
-    setupTime: '2 weeks',;
-    category: 'Space Technology',;
-    realService: true,;
-    technology: ['Orbital MechanicsSatellite TrackingSpace WeatherReactNode.jsPostgreSQLReal-time Data'],;
-    integrations: ['Satellite networksLaunch providersGround stationsWeather servicesRegulatory databasesTracking systems'],;
-    useCases: ['Mission planningSatellite operationsLaunch coordinationSpace monitoringRegulatory compliancePerformance optimization'],;
-    roi: 'Enable commercial space operations and reduce mission costs by 60%. ROI through operational efficiency and new revenue streams.',;
-    competitors: ['SpaceX StarlinkOneWebBasic satellite services'],;
-    marketSize: '$469B space economy',;
-    growthRate: '400% annual growth',;
-    variant: 'space-futuristic',;
-    contactInfo: {;
-      mobile: '+1 302 464 0950',;
-      email: 'kleber@ziontechgroup.com',;
-      address: '364 E Main St STE 1008 Middletown DE 19709',;
       website: 'https://ziontechgroup.com';
     }
-
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-      website: 'https://ziontechgroup.com';
-    }
-<<<<<<< HEAD
     real_implementation: true,
     implementation_details: 'Complete space education platform with interactive courses, simulations, and comprehensive training. Includes mobile app and progress tracking.';
     launch_date: '2024 - 03 - 10';
@@ -912,9 +780,6 @@ export const spaceTechServices: SpaceTechService[] = [;
 
   }
 
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 export interface SpaceTechService {;
 
@@ -923,17 +788,8 @@ export interface SpaceTechService {;
 ];
 origin/cursor/integrate-build-improve-and-re-verify-2156
 ;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     realImplementation: true
-=======
-    icon: '🛰️',    realImplementation: true
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     implementationDetails:
       'Complete space mission platform with orbital calculations, satellite tracking, and mission management. Includes real-time monitoring and regulatory compliance.'
     launchDate: '2024-01-15'
@@ -1213,33 +1069,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     }
     realImplementation: true
     implementationDetails:
-<<<<<<< HEAD
       'Complete space education platform with interactive courses, simulations, and comprehensive training. Includes mobile app and progress tracking.'
     launchDate: '2024-03-10'
     customers: 500
     rating: 4.9
     reviews: 250
-<<<<<<< HEAD
   }
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Complete space education platform with interactive courses, simulations, and comprehensive training. Includes mobile app and progress tracking.',
     launchDate: '2024-03-10',
     customers: 500,
     rating: 4.9,
     reviews: 250,
   },;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 ];      mobile: '+1 302 464 0950';
-=======
-  }];      mobile: '+1 302 464 0950';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
@@ -1251,35 +1093,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.9
 
     reviews: 250
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
   }
 ];
-=======
 export interface SpaceTechService {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-export interface SpaceTechService {;
-
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   id: string,;
-=======
-  }
-];  id: string,;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   name: string,;
   tagline: string,;
   price: string,;
-  period: string,,
+  period: string,;
   description: string,;
   features: string[],;
   popular: boolean,;
@@ -1321,8 +1143,8 @@ export const spaceTechServices: SpaceTechService[] = [;
     name: 'Space Mission Management Platform',;
     tagline: 'Complete space mission planning and execution platform',;
     price: '$5,999',;
-    period: '/month',,
-  description: 'Comprehensive space mission management platform that enables commercial space companies to plan, execute, and monitor space missions like NASA. Manage satellite operations, launch vehicles, and ground stations.',;
+    period: '/month',;
+    description: 'Comprehensive space mission management platform that enables commercial space companies to plan, execute, and monitor space missions like NASA. Manage satellite operations, launch vehicles, and ground stations.',;
     features: [;
       'Satellite mission planningOrbital mechanics calculationsReal-time satellite trackingSpace weather monitoringLaunch vehicle integrationGround station managementSpace debris trackingMission analytics dashboard',;
       'Regulatory compliance toolsMulti-satellite operations';
@@ -1350,14 +1172,6 @@ export const spaceTechServices: SpaceTechService[] = [;
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
-<<<<<<< HEAD
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-  }
-];
-=======
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true,
@@ -1366,30 +1180,12 @@ export const spaceTechServices: SpaceTechService[] = [;
     customers: 500;
     rating: 4.9,
     reviews: 250;
-<<<<<<< HEAD
 
   }
-;  }
-];
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
-=======
-
-
+;
   }
 ];
-
-
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     popular: true;
     icon: '🚀';
     color: 'from-cyan-600 to-blue-700';
@@ -1767,9 +1563,4 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 250
   }
 ];
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

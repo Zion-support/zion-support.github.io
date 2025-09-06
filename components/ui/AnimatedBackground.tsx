@@ -1,43 +1,12 @@
-<<<<<<< HEAD
-=======
-
-export default function AnimatedBackground() {
-  return (
-    <div className='pointer-events-none fixed inset-0 -z-10 overflow-hidden'>;
-
 export default function AnimatedBackground() {
   return (
     <div className='pointer-events-none fixed inset-0 -z-10 overflow-hidden'>
-
-=======
-export default function AnimatedBackground() {
-  return (
-    <div className='pointer-events-none fixed inset-0 -z-10 overflow-hidden'>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <div
         className='absolute -inset-[20%] opacity-40 blur-3xl animate-[bgflow_20s_linear_infinite]'
         style={{
           background:
             'radial-gradient(600px at 0% 0%, #22d3ee 0%, transparent 60%), radial-gradient(600px at 100% 0%, #a78bfa 0%, transparent 60%), radial-gradient(600px at 0% 100%, #34d399 0%, transparent 60%), radial-gradient(600px at 100% 100%, #f472b6 0%, transparent 60%)'
         }}
-<<<<<<< HEAD
-
-=======
-      />
-      <style jsx global>{`
-        @keyframes bgflow {
-          0% {;
-          0% {
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-}
-export default AnimatedBackground;
-};
-export default AnimatedBackground;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
             transform: translateY(0px) rotate(0deg);
           }
           50% {;
@@ -47,8 +16,6 @@ export default AnimatedBackground;
             transform: translateY(0px) rotate(0deg);
           }
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
       `}</style>;
     </div>;
   );  return (
@@ -157,18 +124,7 @@ function AnimatedBackground() {
         className="absolute inset-0 opacity-10"
         style={{
           backgroundImage: `
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
       `}</style>
     </div>
   );
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

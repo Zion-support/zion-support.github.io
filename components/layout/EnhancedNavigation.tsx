@@ -1,81 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import {;
-  Menu,;
-  X,;
-  ChevronDown,;
-  Search,;
-  User,;
-  Settings,;
-  LogOut,;
-  Bell,;
-  Globe,;
-  Zap,;
-  Brain,;
-  Rocket,;
-  Dna,;
-  DollarSign,;
-  Lock,;
-  Wifi,;
-  Truck,;
-  Gamepad2,;
-  Bot,;
-  Factory,;
-  Car,;
-
-=======
-
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import {
-  Menu
-  X
-  ChevronDown
-  Search
-  User
-  Settings
-  LogOut
-  Bell
-  Globe
-  Zap
-  Brain
-  Rocket
-  Dna
-  DollarSign
-  Lock
-  Wifi
-  Truck
-  Gamepad2
-  Bot
-  Factory
-  Car
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   Menu,
   X,
   ChevronDown,
@@ -97,20 +19,10 @@ import {
   Bot,
   Factory,
   Car,;
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 } from "lucide-react";
 import Link from "next/link";
 interface EnhancedNavigationProps {;
   className?: string;
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 ursor/automate-test-fix-improve-and-merge-code-48f3
   const [servicesOpen, setServicesOpen] = useState(false)
   const [solutionsOpen, setSolutionsOpen] = useState(false)
@@ -571,24 +483,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
             <motion.button;
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
-<<<<<<< HEAD
-              transition={{ duration: 0.5, delay: 0.6 }}
-              className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300"
-            >
-              <Search className="w-5 h-5" />
-            </motion.button>
-
-=======
-              transition={{ duration: 0 && 0.5, delay: 0 && 0.6 }}
-              className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300">;
-              <Search className="w-5 h-5" />;
-            </motion && motion.button>;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             {/* Notifications */}
             <motion&& motion.button
               initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -600,26 +494,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
             <motion.button;
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
-<<<<<<< HEAD
-              transition={{ duration: 0.5, delay: 0.7 }}
-              className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300 relative"
-            >
-              <Bell className="w-5 h-5" />
-              <div className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full animate-pulse" />
-            </motion.button>
-
-=======
-              transition={{ duration: 0 && 0.5, delay: 0 && 0.7 }}
-              className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300 relative">;
-              <Bell className="w-5 h-5" />;
-              <div className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full animate-pulse" />;
-            </motion && motion.button>;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             {/* CTA Button */}
             <motion&& motion.div
               initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -637,24 +511,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0 && 0.5, delay: 0 && 0.9 }}
             onClick={() => setIsOpen(!isOpen)}
-<<<<<<< HEAD
-            className="lg:hidden p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300";
-          >;
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </motion.button>
-        </div>
-      </div>
-
-=======
-          </motion && motion.button>;
-        </div>;
-      </div>;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Mobile Navigation */}
       <AnimatePresence>;
         {isOpen && (;
@@ -710,19 +566,7 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                 <Link
                   href="/contact"
                   onClick={() => setIsOpen(false)}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-center px-6 py-3 rounded-lg font-medium transition-all duration-300";
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-              className="p - 2 text - gray - 400 hover:text - cyan - 400 hover:bg - cyan - 500 / 10 rounded - lg transition - all duration - 300 relative";
-=======
               className="p - 2 text - gray - 400 hover:text - cyan - 400 hover:bg - cyan - 500 / 10 rounded - lg transition-all duration-300 relative";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-              className="p - 2 text - gray - 400 hover:text - cyan - 400 hover:bg - cyan - 500 / 10 rounded - lg transition-all duration-300 relative";
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             >;
               <Bell className="w-5 h-5" />;
               <div className="absolute top - 1 right - 1 w - 2 h - 2 bg - red - 500 rounded-full animate-pulse" />;
@@ -824,26 +668,10 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
           </motion.div>)}
       </AnimatePresence>;
     </nav>);
-<<<<<<< HEAD
-=======
 }
 export default EnhancedNavigation
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-);
-=======
 )
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-)
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
 export default EnhancedNavigation;
 
-<<<<<<< HEAD
-export default EnhancedNavigation;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

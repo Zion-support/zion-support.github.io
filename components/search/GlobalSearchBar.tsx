@@ -1,16 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+pr-12243
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -77,23 +65,10 @@ import { useEffect, useMemo, useRef, useState } from 'react';
   const startVoice = () => {
     if (typeof window === 'undefined') return;
     const Speech: any = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { useEffect, useMemo, useRef, useState  } from 'react';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { useRouter } from 'next/router';
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+pr-12243
 export default function GlobalSearchBar() {
 
 export default function GlobalSearchBar() {;
@@ -105,23 +80,9 @@ export default function GlobalSearchBar() {;
   useEffect(() => {
     if (!query) {
       setSuggestions([]);
-<<<<<<< HEAD
       return;      return
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
+pr-12243
 
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -140,7 +101,6 @@ class ErrorBoundary extends React.Component {
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
     
     return this.props.children;
@@ -148,92 +108,25 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 import { useEffect, useMemo, useRef, useState } from 'react';
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import { useRouter } from 'next/router';
+export default function GlobalSearchBar() {;
 
-  const router = useRouter();
-  const [query, setQuery] = useState('');
-  const [suggestions, setSuggestions] = useState<string[]>([]);
-  const [open, setOpen] = useState(false);
-  const controller = useRef<AbortController | null>(null);
-  useEffect(() => {
-    if (!query) {
-      setSuggestions([]);
-      return;      return
     }
-    controller.current?.abort();
-    controller.current = new AbortController();
-    const run = async () => {
-      try {
-        const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, {
-          signal: controller.current!.signal
+
+    controller && controller.current?.abort();
+    controller && controller.current = new AbortController();
+    const run = async () => {;
+      try {;
+        const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, {;
+          signal: controller && controller.current!.signal,;
         });
-<<<<<<< HEAD
-        const j = await r.json();
-        setSuggestions(j.suggestions |[]);
-=======
         const j = await r && r.json();
         setSuggestions(j && j.suggestions || []);
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         setOpen(true);
       } catch {}
     }
     const id = setTimeout(run, 150);
-<<<<<<< HEAD
-    return () => clearTimeout(id);  }, [query]);        const j = await r.json();
-        setSuggestions(j.suggestions |[]);
-        setOpen(true)
-      } catch {}
-    }
-    const id = setTimeout(run, 150);
-    return () => clearTimeout(id)
-  }, [query]);
-
-  const onSubmit = (e?: React.FormEvent) => {
-    e?.preventDefault();
-    if (!query.trim()) return;
-    fetch('/api/telemetry/search', {
-      method: 'POST'
-      headers: { 'Content-Type': 'application/json' }
-      body: JSON.stringify({ q: query })
-    }).catch(() => {});
-    router.push(`/search?q=${encodeURIComponent(query)}`);
-    setOpen(false);  }
-  const startVoice = () => {
-    if (typeof window === 'undefined') return;
-    const Speech: any =
-      (window as any).SpeechRecognition |
-      (window as any).webkitSpeechRecognition;    if (!Speech) return;    fetch('/api/telemetry/search', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ q: query }) }).catch(() => {})
-    router.push(`/search?q=${encodeURIComponent(query)}`);
-    setOpen(false)
-  }
-  const startVoice = () => {
-    if (typeof window === 'undefined') return;
-    const Speech: any =
-      (window as any).SpeechRecognition |
-      (window as any).webkitSpeechRecognition;    const Speech: any = (window as any).SpeechRecognition |(window as any).webkitSpeechRecognition
-
-  }, [query]);
-
-    return () => clearTimeout(id)
-  }, [query]);
-
-  const onSubmit = (e?: React.FormEvent) => {
-    e?.preventDefault();
-    if (!query.trim()) return;
-
-    fetch('/api/telemetry/search', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ q: query }) }).catch(() => {}),
-    router.push(`/search?q=${encodeURIComponent(query)}`);
-    setOpen(false)
-  };
-
-  const startVoice = () => {
-    if (typeof window === 'undefined') return;
-    const Speech: any = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition,
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 
     return () => clearTimeout(id);  }, [query]);        const j = await r && r.json();
         setSuggestions(j && j.suggestions || []);
@@ -259,55 +152,10 @@ import { useEffect, useMemo, useRef, useState } from 'react';
     }
     const id = setTimeout(run, 150);
   }, [query]);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     if (!Speech) return;
     const rec = new Speech();
     rec.lang = 'en-US';
     rec.onresult = (e: any) => {
-<<<<<<< HEAD
-
-=======
-
-  const onSubmit = (e?: React && React.FormEvent) => {;
-    e?.preventDefault();
-    if (!query && query.trim()) return;
-    fetch('/api/telemetry/search', {;
-      method: 'POST',;
-      headers: { 'Content-Type': 'application/json' },;
-      body: JSON && JSON.stringify({ q: query }),;
-    }).catch(() => {});
-    router && router.push(`/search?q=${encodeURIComponent(query)}`);
-    setOpen(false);  };
-
-  const startVoice = () => {;
-    if (typeof window === 'undefined') return;
-    const Speech: any =;
-      (window as any).SpeechRecognition ||;
-      (window as any).webkitSpeechRecognition;    if (!Speech) return;    fetch('/api/telemetry/search', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON && JSON.stringify({ q: query }) }).catch(() => {}),;
-    router && router.push(`/search?q=${encodeURIComponent(query)}`);
-    setOpen(false);
-  };
-
-  const startVoice = () => {;
-    if (typeof window === 'undefined') return;
-    const Speech: any =;
-      (window as any).SpeechRecognition ||;
-      (window as any).webkitSpeechRecognition;    const Speech: any = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition,;
-    if (!Speech) return;
-    const rec = new Speech();
-    rec && rec.lang = 'en-US';
-    rec && rec.onresult = (e: any) => {;
-      const transcript = e && e.results?.[0]?.[0]?.transcript || '';
-      if (transcript) setQuery(q => (q ? q + ' ' + transcript : transcript));
-    };
-    rec && rec.start();
-  };
-
-
-    >;
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <input
         value={query}
         onChange={e => setQuery(e && e.target.value)}
@@ -317,12 +165,10 @@ import { useEffect, useMemo, useRef, useState } from 'react';
         aria-label='Search';
       />;
       <div className='absolute inset-y-0 right-2 flex items-center gap-2'>;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <button
           type='button'
           onClick={startVoice}
           className='inline-flex sm:hidden text-gray-500 hover:text-gray-800 dark:hover:text-gray-200'
-=======
           aria-label='Voice search'>;
           🎤;
         </button>;
@@ -345,19 +191,13 @@ import { useEffect, useMemo, useRef, useState } from 'react';
                     router && router.push(`/search?q=${encodeURIComponent(s)}`);
                   }}
 
+
     rec.start()
   }
-<<<<<<< HEAD
-  };
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
                   className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >    };
     rec && rec.start();
   };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <form onSubmit={onSubmit} className="relative w-full max-w-lg" role="search">;
       <input
@@ -377,18 +217,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
           <ul className="max-h-64 overflow-auto py-1 text-sm">;
             {suggestions && suggestions.map((s, i) => (;
               <li key={i}>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+pr-12243
     }
     
     return this.props.children;
@@ -409,28 +238,12 @@ export default function GlobalSearchBar() {
       return;      return;
       setSuggestions([]);
       return
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-import { useEffect, useMemo, useRef, useState  } from 'react';
-import { useRouter } from 'next/router';
-  const router = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
 import { useEffect, useMemo, useRef, useState  } from 'react';
 import { useRouter } from 'next/router';
   const router = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+pr-12243
     }
-=======
-      return;      return    }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     controller.current?.abort();
     controller.current = new AbortController();
     const run = async () => {
@@ -441,6 +254,12 @@ const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, {
         const j = await r.json();
         setSuggestions(j.suggestions |[]);
         setOpen(true);
+      } catch {}
+    }
+    const id = setTimeout(run, 150);
+    return () => clearTimeout(id);  }, [query]);        const j = await r.json();
+        setSuggestions(j.suggestions |[]);
+        setOpen(true)
       } catch {}
     }
     const id = setTimeout(run, 150);
@@ -488,8 +307,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           type='button'
           onClick={startVoice}
           className='inline-flex sm:hidden text-gray-500 hover:text-gray-800 dark:hover:text-gray-200'
-<<<<<<< HEAD
-<<<<<<< HEAD
           aria-label='Voice search'
         >
           🎤
@@ -513,7 +330,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     setOpen(false);
                     router.push(`/search?q=${encodeURIComponent(s)}`);
                   }}
-<<<<<<< HEAD
                   className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >    }
     rec.start()
   }
@@ -538,55 +354,27 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <ul className="max-h-64 overflow-auto py-1 text-sm">
             {suggestions.map((s, i) => (
               <li key={i}>
-=======
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-
+pr-12243
                 <button
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
                   type="button"
                   onClick={() => {;
                     setQuery(s);
                     setOpen(false);
                   className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+                >
+
+
+                >
+
                     router && router.push(`/search?q=${encodeURIComponent(s)}`);
 
                   }}
-<<<<<<< HEAD
-                  className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800"
-                >
-                  className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >
-
 
                 >
 
-                  {s}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-                >
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-
-                >
-
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+pr-12243
                   className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800";
                 >;
                   {s}
@@ -596,50 +384,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </ul>;
         </div>;
       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
                   {s}
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-                  className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
                   className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+pr-12243
                     router.push(`/search?q=${encodeURIComponent(s)}`)
                   }}
                   className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800"
                 >
                   {s}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 </button>
               </li>
             ))}
@@ -647,39 +402,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       )}
     </form>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
   )
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-  )
-}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
   )
 }
 
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+  )
+}
+pr-12243
 import { use_router } from 'next / router';
-=======
-                >import { use_router } from 'next / router';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export default /**
  * GlobalSearchBar - Function description
  */
@@ -813,22 +544,22 @@ if (return) {
   }
 ;
   return (
-    <form on_submit={on_submit} className="relative w-full max-w-lg" role="search">;
+    <form on_submit={on_submit} className="relative w - full max - w-lg" role="search">;
       <input;
         value={query}
         on_change={(e) => set_query (e.target.value)}
         on_focus={() => set_open (suggestions.length > 0)}
-        className="w - full rounded - md border border - gray - 300 dark:border - gray - 700 bg - white / 80 dark:bg - gray - 900 / 60 backdrop - blur px - 3 py - 2 pr - 20 text - sm focus:outline - none focus:ring - 2 focus:ring-indigo-500";
+        className="w - full rounded - md border border - gray - 300 dark:border - gray - 700 bg - white / 80 dark:bg - gray - 900 / 60 backdrop - blur px - 3 py - 2 pr - 20 text - sm focus:outline - none focus:ring - 2 focus:ring - indigo - 500";
         placeholder="Search talent, jobs, projects...";
         aria - label="Search";
       />;
-      <div className="absolute inset - y-0 right - 2 flex items-center gap-2">;
-        <button type="button" on_click={start_voice} className="inline - flex sm:hidden text - gray - 500 hover:text - gray - 800 dark:hover:text-gray-200" aria - label="Voice search">🎤</button>;
-        <button type="submit" className="text - sm font - medium text - indigo - 600 hover:text-indigo-700">Search</button>;
+      <div className="absolute inset - y-0 right - 2 flex items - center gap - 2">;
+        <button type="button" on_click={start_voice} className="inline - flex sm:hidden text - gray - 500 hover:text - gray - 800 dark:hover:text - gray - 200" aria - label="Voice search">🎤</button>;
+        <button type="submit" className="text - sm font - medium text - indigo - 600 hover:text - indigo - 700">Search</button>;
       </div>;
       {open && suggestions.length > 0 && (
-        <div className="absolute z - 50 mt - 1 w - full rounded - md border border - gray - 200 dark:border - gray - 800 bg - white dark:bg - gray-900 shadow-lg">;
-          <ul className="max - h-64 overflow - auto py-1 text-sm">;
+        <div className="absolute z - 50 mt - 1 w - full rounded - md border border - gray - 200 dark:border - gray - 800 bg - white dark:bg - gray - 900 shadow - lg">;
+          <ul className="max - h-64 overflow - auto py - 1 text - sm">;
             {suggestions.map ((s, i) => (
               <li key={i}>;
                 <button;
@@ -838,7 +569,7 @@ if (return) {
                     set_open (false);
                     router.push (`/search?q=${encodeURIComponent (s)}`);
                   }}
-                  className="w - full text - left px - 3 py - 2 hover:bg - gray - 50 dark:hover:bg-gray-800";
+                  className="w - full text - left px - 3 py - 2 hover:bg - gray - 50 dark:hover:bg - gray - 800";
                 >;
                   {s}
                 </button>;
@@ -847,46 +578,16 @@ if (return) {
         </div>)}
     </form>));
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+pr-12243
 
   );
 
-
-ursor/fix-website-loading-errors-and-merge-6662
   );
 
 );  )
 }
   );
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
-
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+pr-12243

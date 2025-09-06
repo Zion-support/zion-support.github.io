@@ -1,27 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-<<<<<<< HEAD
   const token = req.headers['x-admin-token'] |req.query.token;
   const superToken = process.env.SUPERADMIN_TOKEN;
   return !superToken |token === superToken;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-
-  const superToken = process.env.SUPERADMIN_TOKEN;
-  return !superToken || token === superToken
-}
-=======
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-
-  if (!isAuthorized(req)) return res.status(401).json({ error: 'Unauthorized' });
-  const { entries } = readLogs();
-  const stuckOnly = req.query.stuck === '1' || req.query.stuck === 'true';
-  if (stuckOnly) {
-    return res.status(200).json({ entries: entries.filter((e) => e.status === 'stuck' || e.status === 'laggy') });
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 
   const byModule: Record<string, number> = {};
@@ -40,10 +21,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   return res && res.status(200).json({ entries: entries && entries.slice(-200), byModule, byType, total: entries && entries.length });
 }
-<<<<<<< HEAD
-
-
-=======
 import { read_logs } from '@/utils / zion_brain';
 function is_authorized (req: NextApiRequest): boolean {
   const token = req.headers['x - admin - token'] || req.query.token;
@@ -79,11 +56,7 @@ if ( {) {
     return res.status (200).json ({
       entries: entries.filter (
         e => e.status === 'stuck' || e.status === 'laggy'),
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   if (!isAuthorized(req)) return res.status(401).json({ error: 'Unauthorized' });
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { readLogs } from '@/utils/zionBrain';
 function isAuthorized(req: NextApiRequest): boolean {
     return res.status(401).json({ error: 'Unauthorized' });
@@ -94,13 +67,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   if (stuckOnly) {
 return res.status(200).json({
       entries: entries.filter(
-<<<<<<< HEAD
-<<<<<<< HEAD
         e => e.status === 'stuck' |e.status === 'laggy'
       )
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
     });  }
   const by_module: Record < string, number> = {}
   const by_type: Record < string, number> = {}    return res.status (200).json ({ entries: entries.filter ((e) => e.status === 'stuck' || e.status === 'laggy') });
@@ -118,48 +86,20 @@ return res.status(200).json({
     byModule
     byType
     total: entries.length
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   });  for (const e of entries) {
     by_module[e.module] = (by_module[e.module] || 0) + 1;
     by_type[String (e.type)] = (by_type[String (e.type)] || 0) + 1;
   }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 return res.status (200).json ({ entries: entries.slice (-200), by_module, by_type, total: entries.length });
 
 }
   const byType: Record<string, number> = {};
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  const byModule: Record<string, number> = {};
-
-<<<<<<< HEAD
-}
-  const byType: Record<string, number> = {};
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-
-=======
-  const byModule: Record<string, number> = {};
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-
-  const byModule: Record<string, number> = {};
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
   const byModule: Record<string, number> = {};
 
   const byModule: Record<string, number> = {};
 
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
         e => e.status === 'stuck' || e.status === 'laggy'
       ),
     });
@@ -176,9 +116,4 @@ return res.status(200).json({
   }
 return res.status(200).json({ entries: entries.slice(-200), byModule, byType, total: entries.length });
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

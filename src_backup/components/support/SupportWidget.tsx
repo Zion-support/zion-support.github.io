@@ -1,46 +1,16 @@
-<<<<<<< HEAD:src/components/support/SupportWidget.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import React, { useState } from "react",
-import { useRouter } from "next/router",
-import { Button } from "@/components/ui/button",
-import { ChatBotPanel } from "./ChatBotPanel",
-import { MessageSquare, Info, X } from 'lucide-react'
-import { cn } from "@/lib/utils",
-import { useTheme } from "@/hooks/useTheme",
-export function SupportWidget() {
-  const [isOpen, setIsOpen] = useState(false),
-  const { theme } = useTheme(),
-  const router = useRouter(),
-  
-  return (
-    <>
 =======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+<<<<<<< HEAD
+<<<<<<< HEAD
 const [isOpen, setIsOpen] = useState(false)
   const { theme } = useTheme()
   const router = useRouter()
 =======
 <<<<<<< HEAD
 =======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 <<<<<<< HEAD
 >>>>>>> main
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> pr-12243
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 import { Button } from "@/components/ui/button";
@@ -53,14 +23,7 @@ export function SupportWidget() {
   const { theme } = useTheme();
   const router = useRouter();
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <>;
       {/* Fixed button in the bottom right */}
@@ -92,11 +55,6 @@ export function SupportWidget() {
                 className={cn(
                   "font-semibold",
                   theme === "dark" ? "text-white" : "text-gray-800",
-
-<<<<<<< HEAD
-=======
-=======
-=======
 const [isOpen, setIsOpen] = useState(false)
   const { theme } = useTheme()
   const router = useRouter()
@@ -121,7 +79,7 @@ const [isOpen, setIsOpen] = useState(false)
               ? 'bg-zion-blue-dark border border-zion-blue-light'
               : 'bg-white border border-gray-200'
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/support/SupportWidget.tsx
+=======
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 import { Button } from '@/components/ui/button';
@@ -137,7 +95,7 @@ export function SupportWidget() {
             theme === "dark" 
               ? "bg-zion-blue-dark border border-zion-blue-light" 
               : "bg-white border border-gray-200"
-origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           )}
           style={{ height: '600px', maxHeight: '80vh' }}        >
           <div className='flex items-center justify-between p-4 border-b border-zion-purple/20'>
@@ -147,14 +105,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 className={cn(
                   'font-semibold'
                   theme === 'dark' ? 'text-white' : 'text-gray-800'
-<<<<<<< HEAD:src/components/support/SupportWidget.tsx
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-main
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/support/SupportWidget.tsx
                 )}
               >
 
@@ -172,7 +122,6 @@ export function SupportWidget() {
   
   return (
     <>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React, { useState } from "react",;
 import { useRouter } from "next/router",;
 import { Button } from "@/components/ui/button",;
@@ -217,36 +166,21 @@ export function SupportWidget() {;
               </h3>
             </div>
             <div className="flex items-center gap-2">
-<<<<<<< HEAD:src/components/support/SupportWidget.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
-=======
+<<<<<<< HEAD
               <Button
 =======
 <<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 <<<<<<< HEAD
 >>>>>>> main
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> pr-12243
               <Button
                 variant="ghost"
                 size="icon"
                 className="h-8 w-8 rounded-full"
-<<<<<<< HEAD
-                onClick={() => router.push('/help')}
-=======
                 onClick={() => router.push("/help")}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
                 aria-label="Help center"
               >
                 <Info className="h-5 w-5" />
@@ -262,19 +196,6 @@ export function SupportWidget() {;
               </Button>
             </div>
           </div>
-<<<<<<< HEAD
-          
-          <ChatBotPanel />
-        </div>
-      )}
-    </>;
-  );
-}
-;
-=======
-              <Button
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
           <ChatBotPanel />
         </div>
@@ -283,37 +204,13 @@ export function SupportWidget() {;
   );
 <<<<<<< HEAD
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
-<<<<<<< HEAD
-;
-=======
-;
-=======
               <Button
+<<<<<<< HEAD
+=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-;
-              <Button
-
-main
-
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/support/SupportWidget.tsx
+>>>>>>> pr-12243

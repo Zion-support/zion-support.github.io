@@ -1,46 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-import { useEffect, useMemo, useState  } from 'react';
-import Head from 'next/head',
-import {useEffect, useMemo, useState} from 'react';
-import Head from 'next/head';
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-import Link from 'next/link';
-import { TALENT_PROFILES } from '../data/talent';
-
-  const storageKey = 'zion_favorites';
-  const [favorites, setFavorites] = useState<string[]>([]);
-  useEffect(() => {
-    try {
-      const raw = localStorage.getItem(storageKey);
-
-  }, []);
-  const remove = (slug: string) =>: any set_favorites ((prev) => prev.filter ((s) => s !== slug)),
-  return { favorites, remove }
-}
-=======
 export default function FavoritesPage() {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-export default function FavoritesPage() {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-export default function FavoritesPage() {
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
+export default function FavoritesPage() {;
   const { favorites, remove } = useFavorites();
   const profiles = useMemo(
     () => TALENT_PROFILES.filter(t => favorites.includes(t.slug))
     [favorites]
   );  const profiles = useMemo(() => TALENT_PROFILES.filter((t) => favorites.includes(t.slug)), [favorites]);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   const storageKey = 'zion_favorites';
   const [favorites, setFavorites] = useState<string[]>([]);
@@ -53,11 +18,7 @@ export default function FavoritesPage() {
   const remove = (slug: string) =>: any set_favorites ((prev) => prev.filter ((s) => s !== slug)),
   return { favorites, remove }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 import { useEffect, useMemo, useState  } from 'react';
 import Head from 'next/head',
 import Link from 'next/link';
@@ -69,20 +30,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <Head>
         <title>Favorites — Zion AI Marketplace</title>
       </Head>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-              </div>
-            </div>
-          ))}
-</div>;
-      )}
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export default function FavoritesPage() {;
   const { favorites, remove } = useFavorites();
   const profiles = useMemo(;
@@ -167,9 +114,6 @@ function FavoritesPage() {
         </nav>;
       </div>;
       <h1 className='text - 2xl font - semibold mb - 4'>Saved Talent</h1>;
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 
 <div className='mb-6 text-sm text-gray-500 dark:text-gray-400'>
         <nav aria-label='Breadcrumb'>
@@ -210,32 +154,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           {profiles.map (t => (
             <div;
               key={t.slug}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-<<<<<<< HEAD
-
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     </div>;
   );
 }
 
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
     </div>
   );
 }
@@ -271,12 +194,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>)}
     </div>);
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
               className='rounded-xl border border-gray-200 dark:border-gray-800 p-5 bg-white/70 dark:bg-black/40'
             >
               <div className='flex items-center justify-between'>
@@ -326,9 +243,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

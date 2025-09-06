@@ -1,46 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import Head from 'next/head';
-export default function OffworldConsole() {;
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [chat, setChat] = useState('');
   const [voteChoice, setVoteChoice] = useState('yes');
   const [proposalId, setProposalId] = useState('prop-1');
   const [name, setName] = useState('');
   const [skills, setSkills] = useState('');
   const [status, setStatus] = useState('');
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-    const res = await fetch('/api/offworld/orbit?action=chat', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ from: 'anon', text: chat }) }),
-    setStatus(res.ok ? 'Chat sent' : 'Chat failed')
-  }
-
-
-    const res = await fetch('/api/offworld/orbit?action=chat', {
-      method: 'POST'
-      headers: { 'content-type': 'application/json' }
-      body: JSON.stringify({ from: 'anon', text: chat })
-    });
-    setStatus(res.ok ? 'Chat sent' : 'Chat failed');    const res = await fetch('/api/offworld/orbit?action=chat', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ from: 'anon', text: chat }) })
-    setStatus(res.ok ? 'Chat sent' : 'Chat failed')
-  }
-  async function castVote() {
-    setStatus('Recording vote...');
-
-    const res = await fetch('/api/offworld/orbit?action=vote', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ proposalId, voter: 'anon', choice: voteChoice }) }),
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     setStatus(res.ok ? 'Vote recorded' : 'Vote failed')
   }
   async function syncProfile() {
@@ -53,11 +16,6 @@ export default function OffworldConsole() {;
     });
     setStatus(res && res.ok ? 'Broadcast sent' : 'Broadcast failed');
 
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { useState  } from 'react';
 import Head from 'next/head';
     const res = null;
@@ -101,12 +59,7 @@ const res = await fetch('/api/offworld/ipfs?action=broadcast', {
       body: JSON.stringify({ message: 'We build beyond platforms.' }),
     });
     setStatus(res.ok ? 'Broadcast sent' : 'Broadcast failed');
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   return (
         <input
           className='border p-2 w-full'
@@ -256,54 +209,19 @@ function broadcast() {
         />;
         <button
           className='px-3 py-2 bg-black text-white rounded'
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-          onClick={syncProfile}>;
-          Pin Profile to IPFS;
-        </button>;
-      </section>;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <section className='space-y-2'>;
         <h2 className='font-semibold'>Broadcast Manifesto</h2>;
         <button
           className='px-3 py-2 bg-indigo-600 text-white rounded'
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           onClick={broadcast}>;
           Broadcast;
         </button>;
       </section>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
       {status && <p className='text-sm text-gray-700'>{status}</p>}
     </div>
 );
 }
-<<<<<<< HEAD
-    setStatus('Broadcasting manifesto...');
-
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
-      {status && <p className='text-sm text-gray-700'>{status}</p>}
-    </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-);
-}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <button;
           className='px - 3 py - 2 bg - black text - white rounded';
           on_click={cast_vote}
@@ -343,61 +261,5 @@ function broadcast() {
       </section>;
       {status && <p className='text - sm text - gray - 700'>{status}</p>}
     </div>);
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-
-  return (
-    <div className=&quot;min-h-screen p-8 space-y-8&quot;>
-      <Head>
-        <title>Zion Offworld Console</title>
-      </Head>
-      <h1 className=&quot;text-2xl font-bold&quot;>Offworld Console</h1>
-
-      <section className=&quot;space-y-2&quot;>
-        <h2 className=&quot;font-semibold&quot;>Chat</h2>
-        <input className=&quot;border p-2 w-full&quot; placeholder=&quot;Type message&quot; value={chat} onChange={e => setChat(e.target.value)} />
-        <button className=&quot;px-3 py-2 bg-black text-white rounded&quot; onClick={sendChat}>Send</button>
-      </section>
-
-      <section className=&quot;space-y-2&quot;>
-        <h2 className=&quot;font-semibold&quot;>DAO Voting</h2>
-        <input className=&quot;border p-2 w-full&quot; placeholder=&quot;Proposal ID&quot; value={proposalId} onChange={e => setProposalId(e.target.value)} />
-        <select className=&quot;border p-2&quot; value={voteChoice} onChange={e => setVoteChoice(e.target.value)}>
-          <option value=&quot;yes&quot;>Yes</option>
-          <option value=&quot;no&quot;>No</option>
-          <option value=&quot;abstain&quot;>Abstain</option>
-        </select>
-        <button className=&quot;px-3 py-2 bg-black text-white rounded&quot; onClick={castVote}>Vote</button>
-      </section>
-
-      <section className=&quot;space-y-2&quot;>
-        <h2 className=&quot;font-semibold&quot;>Talent Profile Sync</h2>
-        <input className=&quot;border p-2 w-full&quot; placeholder=&quot;Name&quot; value={name} onChange={e => setName(e.target.value)} />
-        <input className=&quot;border p-2 w-full&quot; placeholder=&quot;Skills (comma separated)&quot; value={skills} onChange={e => setSkills(e.target.value)} />
-        <button className=&quot;px-3 py-2 bg-black text-white rounded&quot; onClick={syncProfile}>Pin Profile to IPFS</button>
-      </section>
-
-      <section className=&quot;space-y-2&quot;>
-        <h2 className=&quot;font-semibold&quot;>Broadcast Manifesto</h2>
-        <button className=&quot;px-3 py-2 bg-indigo-600 text-white rounded&quot; onClick={broadcast}>Broadcast</button>
-      </section>
-
-      {status && <p className=&quot;text-sm text-gray-700&quot;>{status}</p>}
-    </div>
-  )
-
-}
-    setStatus('Broadcasting manifesto...');
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

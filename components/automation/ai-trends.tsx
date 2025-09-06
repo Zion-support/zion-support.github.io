@@ -1,30 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-</div> </div>) )
- </div> </div>) ) 
-}</div> </div>) import fs from 'fs';
-import path from 'path';
-export type Trend = {
-  id: string
-  date: string
-  title: string
-  highlights: string[]
-  summary: string
-  tags: string[]
-}
-export async function getServerSideProps() {
-</div> </div>) ) 
- </div> </div>) ) 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }</div> </div>) import fs from 'fs';
 import fs from 'fs';
 import path from 'path';
@@ -34,9 +7,6 @@ export type Trend = {
     items = JSON.parse (raw);
   } catch {}
  </div> </div>) ) ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 }</div> </div>) import fs from 'fs';
 import path from 'path';
 export type Trend = {
@@ -96,9 +66,6 @@ export async function getServerSideProps() {;
     items = JSON.parse(raw)
   } catch {}
   items && items.sort((a, b) => (a && a.date < b && b.date ? 1 : -1));
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 import fs from 'fs';
 import path from 'path';
 export type Trend = any;
@@ -110,8 +77,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 }
 
@@ -143,15 +108,4 @@ function AiTrendsPage() {
           </div>))}
       </div>;
     </div>);
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

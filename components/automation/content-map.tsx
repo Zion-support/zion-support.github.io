@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }
 ) )
 }</ul> </section> <section>) )
@@ -32,44 +21,16 @@ export default function ContentMap({ report }: Props) {
 }</ul> </section> </div>) 
 export default function ContentMap({ report }: Props) {
   if (!report) return <div>No content map yet. Check back later.</div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const sections = Object.entries(report.bySection).sort((a, b) => b[1] - a[1]);
-
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
- 
-=======
   const sections = Object.entries(report.bySection).sort((a, b) => b[1] - a[1])
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-  const sections = Object.entries(report.bySection).sort((a, b) => b[1] - a[1])
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
 ) ) 
 }</ul> </section> <section>) ) 
 }</ul> </section> </div>) 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-export default function ContentMap({ report }: Props) {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export default function ContentMap({ report }: Props) {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   if (!report) return <div>No content map yet. Check back later.</div>;
   const sections = Object.entries(report.bySection).sort((a, b) => b[1] - a[1]);
 
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 import fs from 'fs',
 import path from 'path';
 import type { GetStaticProps } from 'next';
@@ -90,11 +51,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <ul className="text-sm space-y-1">
           {sections.map(([sec, n]) => (
             <li key={sec} className="flex justify-between"><span>{sec |'root'}</span><span className="text-gray-500">{n}</span></li>
-<<<<<<< HEAD
-=======
-
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 };
 ) ) ;
 }</ul> </section> <section>) ) ;
@@ -117,31 +73,15 @@ export default function ContentMap(): any ({ report }: Props) {;
         <ul className="text-sm space-y-1">;
           {sections && sections.map(([sec, n]) => (;
             <li key={sec} className="flex justify-between"><span>{sec || 'root'}</span><span className="text-gray-500">{n}</span></li>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           ))}
         </ul>
       </section>
       <section>
-
+        <h2 className="font-semibold mb-2">All Pages</h2>
+        <ul className="text-sm space-y-1 max-h-96 overflow-auto border rounded p-3 border-gray-200 dark:border-gray-800">
+          {report.pages.map((p, i) => (
+            <li key={i} className="flex justify-between gap-4"><span className="truncate">{p.route}</span><span className="text-gray-500 truncate">{p.file}</span></li>
           ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        </ul>
-      </section>
-    </div>
-=======
-<<<<<<< HEAD
-  )
-
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }
 ) );
 }</ul> </section> <section>) );
@@ -180,20 +120,9 @@ if (return <div > No content map yet. Check back later.</div>) {
         </ul>;
       </section>;
     </div>);
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
         </ul>
       </section>
     </div>
 );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

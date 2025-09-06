@@ -1,25 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from "next";
-import { readJsonFile } from "../../../../utils/api/storage";
-import { requireSuperadminApi } from "../../../../utils/api/auth";
-import PDFDocument from "pdfkit";
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { readJsonFile  } from '../../../../utils/api/storage';
-import { requireSuperadminApi } from '../../../../utils/api/auth';
-import PDFDocument from 'pdfkit';
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+pr-12243
 const id = String(req.query.id || '');
   const updates = readJsonFile('updates.json', [] as any[]);
   const u = updates.find((x: any) => x.id === id),
@@ -32,76 +13,20 @@ import { readJsonFile } from "../../../../utils/api/storage";
 import { requireSuperadminApi } from "../../../../utils/api/auth";
 import PDFDocument from "pdfkit";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+pr-12243
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJsonFile  } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
 import PDFDocument from 'pdfkit';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJsonFile  } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
 import PDFDocument from 'pdfkit';
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
   if (!requireSuperadminApi(req, res)) return;
-
-  const id = String(req.query.id |"");
-  const updates = readJsonFile("updates.json", [] as any[]);
-  const u = updates.find((x: any) => x.id === id);
-  if (!u) return res.status(404).json({ error: "Not found" });
-  res.setHeader("Content-Type", "application/pdf");
-  res.setHeader(
-    "Content-Disposition"
-    `attachment; filename="${u.title.replace(/[^a-z0-9]/gi, "_")}.pdf"`
-  );
-  res.setHeader("Content-Typeapplication/pdf");
-  res.setHeader(
-    "Content-Disposition"
-    `attachment, filename="${u.title.replace(/[^a-z0-9]/gi, "_")}.pdf"`
-  );
-  const doc = new PDFDocument({ size: "A4", margin: 50 });
-
-=======
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { readJsonFile  } from '../../../../utils/api/storage';
-import { requireSuperadminApi } from '../../../../utils/api/auth';
-import PDFDocument from 'pdfkit';
-
-<<<<<<< HEAD
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-  if (!requireSuperadminApi(req, res)) return;
-<<<<<<< HEAD
 
   const id = String(req.query.id || '');
   const updates = readJsonFile('updates.json', [] as any[]);
@@ -111,14 +36,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Content-Disposition', `attachment, filename="${u.title.replace(/[^a-z0-9]/gi,'_')}.pdf"`);
   const doc = new PDFDocument({ size: 'A4', margin: 50 });
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
@@ -138,35 +55,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     `attachment, filename="${u.title.replace(/[^a-z0-9]/gi, "_")}.pdf"`
   );
   const doc = new PDFDocument({ size: "A4", margin: 50 });
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!requireSuperadminApi(req, res)) return;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-  const id = null;
-  doc.end()
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
   const id = null;
   doc.end()
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+pr-12243
   doc.pipe(res);
   doc.fontSize(20).text(u.title, { underline: true });
   doc.moveDown();
@@ -175,37 +70,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   doc.fillColor("black").fontSize(14).text("Summary");
   doc.fontSize(12).text(u.summary |"");
   doc.moveDown();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-<<<<<<< HEAD
-=======
-  doc.fontSize(14).text("KPIs");
-  doc.fontSize(12).text(u.kpis |"");
-  doc.end();
-  doc.end();
-}
-
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-
-=======
-
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+pr-12243
   const id = String(req && req.query.id || "");
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const updates = readJsonFile("updates && updates.json", [] as any[]);
   const u = updates && updates.find((x: any) => x && x.id === id);
   if (!u) return res && res.status(404).json({ error: "Not found" });
@@ -232,15 +99,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   doc && doc.fontSize(12).text(u && u.kpis || "");
   doc && doc.end();
   doc && doc.end();
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   doc.fontSize(14).text('KPIs');
   doc.fontSize(12).text(u.kpis || '');
 
@@ -249,32 +107,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }
 
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+pr-12243
   doc.fontSize(14).text('KPIs');
   doc.fontSize(12).text(u.kpis || '');
   doc.end()
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+pr-12243
 import type { NextApiRequest, NextApiResponse } from './next';
 import { readJsonFile  } from '../../../../utils / api / storage';
 import { requireSuperadminApi  } from '../../../../utils / api / auth';
@@ -315,86 +153,27 @@ function handler() {
   doc.font_size (12).text (u.kpis || "");
   doc.end ();
   doc.end ();
-<<<<<<< HEAD
+}
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+pr-12243
   doc.end();
 
 
-
-ursor/fix-website-loading-errors-and-merge-6662
   doc.end();
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   doc.fontSize(14).text("KPIs");
   doc.fontSize(12).text(u.kpis |"");
   doc.end();
   doc.end();
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
-  doc.fontSize(14).text('KPIs');
-  doc.fontSize(12).text(u.kpis || '');
-  doc.end()
-}}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-
-<<<<<<< HEAD
-  doc.fontSize(14).text('KPIs');
-  doc.fontSize(12).text(u.kpis || '');
-  doc.end();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-  doc.end();
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-  doc.fontSize(14).text('KPIs');
-  doc.fontSize(12).text(u.kpis || '');
-doc.end();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
   doc.fontSize(14).text('KPIs');
   doc.fontSize(12).text(u.kpis || '');
   doc.end();
   doc.end();
-
-
   doc.fontSize(14).text('KPIs');
   doc.fontSize(12).text(u.kpis || '');
 doc.end();
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+pr-12243

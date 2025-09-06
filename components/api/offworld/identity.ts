@@ -1,30 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { buildIdentityProfile } from "@/utils/offworld/identity";
-=======
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from "next";
-import { buildIdentityProfile } from "@/utils/offworld/identity";
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  try {
-    const { address } = req.query as { address?: string }
-    const profile = await buildIdentityProfile(address);
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return res.status(200).json(profile);
 
     const { address } = req && req.query as { address?: string };
@@ -49,47 +29,19 @@ export default async /**
 function handler() {
   try {
     const { address } = req.query as { address?: string }
-<<<<<<< HEAD
-<<<<<<< HEAD
     const profile = await buildIdentityProfile (address);
     return res.status (200).json (profile);
-=======
-<<<<<<< HEAD
-    const profile = await buildIdentityProfile (address);
-    return res.status (200).json (profile);
-=======
-    const profile = await buildIdentityProfile(address);
-    return res.status(200).json(profile);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
     const profile = await buildIdentityProfile(address);
     return res.status(200).json(profile);
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   } catch (e: any) {
     return res.status (500).json ({ error: e.message });
   }
   try {
     const { address } = req.query as { address?: string }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  try {;
-    const { address } = req.query as { address?: string };
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-    const profile = await buildIdentityProfile(address);
-    return res.status(200).json(profile);
-  } catch (e: any) {
-=======
     const profile = await buildIdentityProfile(address);
     return res.status(200).json(profile);
   } catch (e: any) {
     return res.status(500).json({ error: e.message });
   }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

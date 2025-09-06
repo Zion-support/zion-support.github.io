@@ -1,44 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-import React from 'react';
-import Head from 'next/head';
 
-interface LayoutProps {
-  children: React.ReactNode;
-  title?: string;
-  description?: string;
-}
-
-export default function Layout({ children, title = "Zion Tech Group", description = "Leading technology solutions provider" }: LayoutProps) {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> main
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-main
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -111,7 +71,7 @@ const Layout: React.FC < LayoutProps> = ({
   }
 ;
   return (
-    <div className="min-h-screen bg-white">;
+    <div className="min - h-screen bg - white">;
       <Head>;
         <title>{title}</title>;
         <meta name="description" content={description} />;
@@ -139,7 +99,7 @@ const Layout: React.FC < LayoutProps> = ({
       <main>{children}</main>;
       <Footer />;
     </div>;
-  )
+  );
 };
 
 interface LayoutProps {
@@ -211,20 +171,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   }
 }
     </main>
-  )
+  );
 };
 export default Layout;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+pr-12243
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Header from './Header';
@@ -269,40 +219,11 @@ export default function Layout({
 }: LayoutProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> fe67bd071a7e77f7ecafdfd89dec983fba1e0332
-=======
->>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   return (
-=======
-=======  return (
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     <>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <div className="min-h-screen bg-gray-50">
-        {children}
-      </div>
-    </>
-  );
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
         <meta name="keywords" content={keywords} />
         <meta property="og:title" content={ogTitle || title} />
         <meta property="og:description" content={ogDescription || description} />
@@ -339,64 +260,20 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <main className="min-h-screen">
       {children}
     </main>
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     <div className="min-h-screen flex flex-col">
       <Navigation />
       <main className="flex-1">{children}</main>
       <Footer />
     </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-=======
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   );
 };
 
 export default Layout;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> fe67bd071a7e77f7ecafdfd89dec983fba1e0332
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
->>>>>>> fe67bd071a7e77f7ecafdfd89dec983fba1e0332
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-}
->>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
-=======
-}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 main
-
 main
-
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+pr-12243

@@ -1,15 +1,10 @@
-<<<<<<< HEAD
 export interface BlockchainWeb3Service {
-<<<<<<< HEAD
 export interface BlockchainWeb3Service {;
   id: string;
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 id: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
   name: string;
-  tagline: string,
+  tagline: string;
   description: string;
   category: string;
   price: {
@@ -18,22 +13,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     currency: string;
     trialDays: number;
     setupTime: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     enterprise: string
   },
   features: string[];
@@ -58,12 +39,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   rating: number;
   reviews: number
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+origin/cursor/automate-test-improve-and-merge-code-2533
 
   {
-<<<<<<< HEAD
 
       'OpenAI GPT-4, TensorFlow, Solidity, React, Node && Node.js, PostgreSQL, Redis',
     ],
@@ -85,14 +63,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ]
     support:
       '24/7 technical support, DeFi strategy consulting, custom development, and dedicated account manager.'
-    compliance: [];      'Social networkingContent creation and sharingCommunity buildingBrand marketingInfluencer monetizationDecentralized governance'
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
+    compliance: [
 
-  {
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-
-<<<<<<< HEAD
       'SOC 2 Type II, ISO 27001, GDPR, Financial regulations compliance',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-defi-yield-optimizer',
@@ -168,12 +140,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     link: 'https://ziontechgroup.com / ai - powered - defi - yield - optimizer',
 
     icon: '🌾',
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     color: 'from - green - 500 to - emerald - 600',
     popular: true,
     launch_date: '2024 - 01 - 15',
@@ -182,11 +149,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 6200,
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
       'Leading NFT intelligence platform. Competes with NFTGo ($99-299/month), Nifty Gateway (free), and OpenSea Pro ($0-2 && 2.5%). Our advantage: AI-powered valuation and predictive analytics.',
     competitors: ['NFTGo, Nifty Gateway, OpenSea Pro, Rarible, Foundation'],
@@ -195,12 +157,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ],
     realImplementation: true,
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     implementationDetails:
       'Production-ready NFT intelligence platform with real-time data feeds, AI models, and comprehensive analytics. Includes mobile app and institutional dashboard.'
     roi: 'NFT investors achieve 300% ROI through improved decision-making and optimized portfolio management.'
@@ -218,11 +175,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     support:
       '24/7 technical support, NFT strategy consulting, custom analytics, and dedicated success manager.'
     compliance: [
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
       'SOC 2 Type II, ISO 27001, GDPR, Financial regulations compliance',
     ],
@@ -297,12 +249,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     link: 'https://ziontechgroup.com / nft - marketplace - intelligence - platform',
 
     icon: '🎨',
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     color: 'from - pink - 500 to - rose - 600',
     popular: true,
     launch_date: '2024 - 03 - 01',
@@ -311,40 +258,20 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 2100,
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-      'Leading blockchain supply chain platform. Competes with IBM Food Trust ($0 && 0.01-0 && 0.10/transaction), SAP Blockchain ($500-2000/user), and Oracle Blockchain ($1000-5000/user). Our advantage: Multi-industry focus and IoT integration.',
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
       'Leading blockchain supply chain platform. Competes with IBM Food Trust ($0 && 0.01-0 && 0.10/transaction), SAP Blockchain ($500-2000/user), and Oracle Blockchain ($1000-5000/user). Our advantage: Multi-industry focus and IoT integration.',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     competitors: [
       'IBM Food Trust, SAP Blockchain, Oracle Blockchain, VeChain, WaltonChain'
     ]
     techStack: [
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
       'Hyperledger Fabric, Ethereum, Polygon, React, Node && Node.js, PostgreSQL, IoT platforms',
     ],
     realImplementation: true,
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     implementationDetails:
       'Production-ready blockchain platform with IoT integration, mobile applications, and comprehensive analytics. Includes hardware integration kits and enterprise API.'
     roi: 'Organizations achieve 300% ROI through improved transparency, reduced compliance costs, and enhanced brand value.'
@@ -360,11 +287,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'SAP, Oracle, Microsoft Dynamics, Salesforce, Custom ERP systems, IoT platforms'
     ]
     support:
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
       '24/7 technical support, implementation consulting, custom development, and dedicated success manager.',
     compliance: ['ISO 27001, SOC 2 Type II, GDPR, Industry-specific standards'],
@@ -439,12 +361,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     link: 'https://ziontechgroup.com / blockchain - supply - chain - traceability',
 
     icon: '🔗',
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     color: 'from - blue - 500 to - cyan - 600',
     popular: true,
     launch_date: '2024 - 02 - 10',
@@ -453,23 +370,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 680,
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
       'Innovative Web3 social platform. Competes with traditional platforms like Facebook (free), Twitter (free), and Instagram (free). Our advantage: True decentralization and content ownership.',
     competitors: ['Facebook, Twitter, Instagram, TikTok, LinkedIn, YouTube'],
     techStack: ['IPFS, Ethereum, Polygon, React, Node && Node.js, PostgreSQL, Redis'],
     realImplementation: true,
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     implementationDetails:
       'Production-ready Web3 social platform with decentralized storage, token economics, and comprehensive mobile/web applications. Includes developer SDK and API.'
     roi: 'Content creators earn 200-500% more compared to traditional social media platforms through direct monetization.'
@@ -485,17 +392,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'MetaMask, WalletConnect, OpenSea, Custom Web3 wallets and platforms'
     ]
     support:
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Community support, developer documentation, custom development services, and enterprise solutions.',
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'],
     link: 'https://ziontechgroup.com/web3-social-media-platform',
@@ -507,21 +405,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.6,
     reviews: 18000,
   },;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 ];      'Social networkingContent creation and sharingCommunity buildingBrand marketingInfluencer monetizationDecentralized governance'
 
-<<<<<<< HEAD
 
       'Community support, developer documentation, custom development services, and enterprise solutions.',
-=======
-=======
-=======
-
-];      'Social networkingContent creation and sharingCommunity buildingBrand marketingInfluencer monetizationDecentralized governance'
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     id: 'decentralized-identity-management';
     name: 'Decentralized Identity Management Platform';
     tagline: 'Self-sovereign identity with zero-knowledge proof verification';
@@ -737,22 +624,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ];
     integrations: ['MetaMask, WalletConnect, OpenSea, Custom Web3 wallets and platforms'],
     support: 'Community support, developer documentation, custom development services, and enterprise solutions.',
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'],
-=======
-      'Community support, developer documentation, custom development services, and enterprise solutions.',    compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'],
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     link: 'https://ziontechgroup && ziontechgroup.com/web3-social-media-platform',
     id: 'web3 - social - media - platform',
     name: 'Web3 Social Media Platform',
@@ -817,19 +690,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     support:;
       'Community support, developer documentation, custom development services, and enterprise solutions.',
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'],
-<<<<<<< HEAD
-<<<<<<< HEAD
-    link: 'https://ziontechgroup.com / web3 - social - media - platform',
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
     link: 'https://ziontechgroup.com / web3 - social - media - platform',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     icon: '🌐',
     color: 'from - purple - 500 to - indigo - 600',
     popular: true,
@@ -838,12 +701,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4 && 4.6,
     reviews: 18000,
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
   id: string, name: string,
   tagline: string, description: string,
@@ -870,8 +727,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 ];      'Social networking_content creation and sharing_community building_brand marketing_influencer monetization_decentralized governance';
 origin/cursor/automate-test-improve-and-merge-code-20a4
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     ];
 
     integrations: ['MetaMask, WalletConnect, OpenSea, Custom Web3 wallets and platforms'];
@@ -879,78 +734,41 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'];
 
     icon: '🌐';
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     color: 'from - purple - 500 to - indigo - 600';
-=======
-    link: 'https://ziontechgroup.com / web3 - social - media - platform',    color: 'from - purple - 500 to - indigo - 600';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     popular: true;
     launch_date: '2024 - 01 - 01';
     customers: 25000;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-    rating: 4.6,
-    reviews: 18000
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-<<<<<<< HEAD
     rating: 4.6,
     reviews: 18000;
   }
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-
-<<<<<<< HEAD
-=======
-=======
-=======
+    rating: 4.6,
+    reviews: 18000;
+  }
+;
 
     rating: 4 && 4.6,
 
     reviews: 18000
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+    rating: 4.6,
+    reviews: 18000;
+  }
+
 
 export interface BlockchainWeb3Service {;
 
   }
 
 ];
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-=======
 origin/cursor/integrate-build-improve-and-re-verify-2156
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 ;
-export interface BlockchainWeb3Service {;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-  id: string,;
-=======
-};
+origin/cursor/expand-services-advertise-and-build-project-c28b
   }
-];  id: string,;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+];
+export interface BlockchainWeb3Service {;
+  id: string,;
   name: string,;
-  tagline: string,,
+  tagline: string,;
   description: string,;
   category: string,;
   price: {;
@@ -988,8 +806,8 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [;
   {;
     id: 'decentralized-identity-management',;
     name: 'Decentralized Identity Management Platform',;
-    tagline: 'Self-sovereign identity with zero-knowledge proof verification',,
-  description: 'Revolutionary decentralized identity platform that gives users complete control over their digital identity while maintaining privacy through zero-knowledge proofs and blockchain technology.',;
+    tagline: 'Self-sovereign identity with zero-knowledge proof verification',;
+    description: 'Revolutionary decentralized identity platform that gives users complete control over their digital identity while maintaining privacy through zero-knowledge proofs and blockchain technology.',;
     category: 'Blockchain & Web3',;
     price: {;
       monthly: 99,;
@@ -1033,8 +851,8 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [;
   {;
     id: 'ai-powered-defi-yield-optimizer',;
     name: 'AI-Powered DeFi Yield Optimizer',;
-    tagline: 'Intelligent yield farming with AI-driven strategy optimization',,
-  description: 'Advanced AI platform that automatically optimizes DeFi yield farming strategies, manages risk, and maximizes returns across multiple blockchain networks and protocols.',;
+    tagline: 'Intelligent yield farming with AI-driven strategy optimization',;
+    description: 'Advanced AI platform that automatically optimizes DeFi yield farming strategies, manages risk, and maximizes returns across multiple blockchain networks and protocols.',;
     category: 'DeFi & Yield Optimization',;
     price: {;
       monthly: 199,;
@@ -1078,8 +896,8 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [;
   {;
     id: 'nft-marketplace-intelligence-platform',;
     name: 'NFT Marketplace Intelligence Platform',;
-    tagline: 'AI-powered NFT analytics, valuation, and trading insights',,
-  description: 'Comprehensive NFT intelligence platform that provides real-time analytics, AI-powered valuation models, and trading insights to maximize NFT investment returns.',;
+    tagline: 'AI-powered NFT analytics, valuation, and trading insights',;
+    description: 'Comprehensive NFT intelligence platform that provides real-time analytics, AI-powered valuation models, and trading insights to maximize NFT investment returns.',;
     category: 'NFT & Digital Assets',;
     price: {;
       monthly: 149,;
@@ -1123,8 +941,8 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [;
   {;
     id: 'blockchain-supply-chain-traceability',;
     name: 'Blockchain Supply Chain Traceability Platform',;
-    tagline: 'End-to-end transparency with immutable supply chain tracking',,
-  description: 'Revolutionary blockchain platform that provides complete transparency and traceability across supply chains, enabling real-time tracking, compliance monitoring, and sustainability verification.',;
+    tagline: 'End-to-end transparency with immutable supply chain tracking',;
+    description: 'Revolutionary blockchain platform that provides complete transparency and traceability across supply chains, enabling real-time tracking, compliance monitoring, and sustainability verification.',;
     category: 'Supply Chain & Traceability',;
     price: {;
       monthly: 299,;
@@ -1168,8 +986,8 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [;
   {;
     id: 'web3-social-media-platform',;
     name: 'Web3 Social Media Platform',;
-    tagline: 'Decentralized social networking with content ownership',,
-  description: 'Revolutionary Web3 social media platform where users own their content, earn from engagement, and maintain complete control over their data and privacy.',;
+    tagline: 'Decentralized social networking with content ownership',;
+    description: 'Revolutionary Web3 social media platform where users own their content, earn from engagement, and maintain complete control over their data and privacy.',;
     category: 'Web3 & Social Media',;
     price: {;
       monthly: 0,;
@@ -1209,52 +1027,13 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [;
     customers: 25000,;
     rating: 4.6,;
     reviews: 18000;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
     rating: 4.6,
     reviews: 18000;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
-
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   }
-=======
-    rating: 4.6,
-    reviews: 18000;  }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     rating: 4.6;
     reviews: 18000
   }
 ];
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

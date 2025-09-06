@@ -1,19 +1,12 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 import React from 'react';
-<<<<<<< HEAD:src/components/layout/Sidebar.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
-=======
 <<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
-
-import { Link } from 'react-router-dom';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
 export default function Sidebar() {
   return (
@@ -31,61 +24,19 @@ export default function Sidebar() {
     </aside>
   );
 }
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
-main
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/layout/Sidebar.tsx
-import { Link } from 'react-router-dom';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-export default function Sidebar() {
-  return (
 <<<<<<< HEAD
-    <aside className="sidebar">
-      <p>Sidebar</p>
-    </aside>
-  );
-}
-        { nam: e: 'Database Solutions', hre: f: '/database-solutions', ico: n: Database, descriptio: n: 'Database management & optimization' }
-      ];
-    },;
-    {,;
-      i: d: 'solutions',;
-      titl: e: 'Solutions',;
-      ico: n: Building2,;
-      item: s: [,;
-        { nam: e: 'Enterprise Solutions', hre: f: '/enterprise-solutions', ico: n: Building2, descriptio: n: 'Large-scale business solutions' },;
-        { nam: e: 'Startup Solutions', hre: f: '/startup-solutions', ico: n: Rocket, descriptio: n: 'Scalable startup solutions' },;
-        { nam: e: 'Industry Solutions', hre: f: '/industries', ico: n: Factory, descriptio: n: 'Industry-specific solutions' },;
-        { nam: e: 'Custom Development', hre: f: '/custom-development', ico: n: Code, descriptio: n: 'Tailored software development' },;
-        { nam: e: 'Digital Transformation', hre: f: '/digital-transformation', ico: n: Network, descriptio: n: 'Complete digital transformation' },;
-        { nam: e: 'Technology Consulting', hre: f: '/consulting', ico: n: Users, descriptio: n: 'Strategic technology consulting' }
-      ];
-    },;
-    {,;
-      i: d: 'company',;
-      titl: e: 'Company',;
-      ico: n: Building2,;
-      item: s: [,;
-        { nam: e: 'About Us', hre: f: '/about', ico: n: Building2, descriptio: n: 'Learn about our company' },;
-        { nam: e: 'Our Team', hre: f: '/team', ico: n: Users, descriptio: n: 'Meet our expert team' },;
-        { nam: e: 'Careers', hre: f: '/careers', ico: n: Award, descriptio: n: 'Join our team' },;
-        { nam: e: 'Case Studies', hre: f: '/case-studies', ico: n: CheckCircle, descriptio: n: 'Success stories' },;
-        { nam: e: 'News & Updates', hre: f: '/news', ico: n: ArrowRight, descriptio: n: 'Latest news' },;
-        { nam: e: 'Partners', hre: f: '/partners', ico: n: Users, descriptio: n: 'Our partners' }
-      ];
-    }
-  ],;
-,;
-  const quickLinks = [,;
-    { nam: e: 'Get Quote', hre: f: '/contact', ico: n: Phone, highligh: t: true },;
-    { nam: e: 'Schedule Call', hre: f: '/contact', ico: n: Clock },;
-    { nam: e: 'View Portfolio', hre: f: '/case-studies', ico: n: Award },;
-    { nam: e: 'Download Brochure', hre: f: '/resources', ico: n: ArrowRight }
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
+>>>>>>> main
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
+>>>>>>> pr-12243
+import { Link } from 'react-router-dom';
+
+const Sidebar: React.FC = () => {;
+  return (
     <div className="fixed left-0 top-0 h-full w-80 bg-white shadow-lg z-40 lg:block hidden">;
       <div className="p-6">;
         <h2 className="text-xl font-bold text-gray-900 mb-6">Navigation</h2>;
@@ -120,6 +71,7 @@ export default function Sidebar() {
     </div>;
   );
 };
+
 
 export default Sidebar;
 
@@ -172,34 +124,22 @@ export default Sidebar;
     { name: 'Schedule Call', href: '/contact', icon: Clock },
     { name: 'View Portfolio', href: '/case-studies', icon: Award },
     { name: 'Download Brochure', href: '/resources', icon: ArrowRight };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   ],
 ,
   const contactInfo = {,
-    phon: e: '+1 302 464 0950',
-    emai: l: 'kleber@ziontechgroup.com',
-    addres: s: '364 E Main St STE 1008, Middletown DE 19709'
-  },
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008, Middletown DE 19709',
+  };
 ,
-  const handleLinkClick = (hre: f: string) => {,
+  const handleLinkClick = (href: string) => {,
     if (onClose) onClose(),
-    router.push(href)
-  },
+    router.push(href),
+  };
 ,
   return (,
     <motion.aside,
-<<<<<<< HEAD:src/components/layout/Sidebar.tsx
-<<<<<<< HEAD
-
-      initial={false},
-      animate={{ x: isOpen ? 0 : -320 }},
-      transition={{ duratio: n: 0.3, eas: e: 'easeInOut' }},
-      className={`fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-40 overflow-y-auto ${className}`},
-
 =======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/layout/Sidebar.tsx
 };
 ; const navigationSections = [; {; id: 'services', title: 'Our Services', icon: Settings, items: [
     , { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Cutting-edge AI solutions' }; { name: 'IT Services', href: '/it-services', icon: Code, description: 'Comprehensive IT solutions' }; { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud, description: 'Scalable SaaS applications' }; { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield, description: 'Advanced security solutions' }; { name: 'Cloud Solutions', href: '/cloud-solutions', icon: Cloud, description: 'Cloud infrastructure & services' },
@@ -219,17 +159,15 @@ export default Sidebar;
 ; const handleLinkClick = (href: string) = > {, if (onClose) onClose(), router.push(href)};
 ; return (; <motion.aside; initial = {false}; animate = {{ x: isOpen ? 0: -320 }}; transition = {{ duration: 0.3, ease: 'easeInOut' }}; className = {`fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-40 overflow-y-auto ${className}`}>; <div className = "p-6">; {/* Header */}; <div className = "flex items-center justify-between mb-8">; <Link href = "/" className = "flex items-center space-x-2" onClick = {() = > onClose?.()}>; <div className = "w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">; <Brain className = "w-5 h-5 text-white" />; </div>; <span className = "text-lg font-bold text-gray-900">Zion Tech</span>; </Link>; {onClose && (; <button; onClick = {onClose}; className = "p-2 rounded-lg text-gray-500 hover: bg-gray-100 transition-colors">, ×, </button>; )}; </div>; {/* Quick Links */}; <div className = "mb-8">; <h3 className = "text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Quick Actions</h3>; <div className = "space-y-2">; {quickLinks.map((link) = > {; const IconComponent = link.icon; return (; <button; key = {link.name}; onClick = {() = > handleLinkClick(link.href)}; className = {`w-full flex items-center space-x-3 px-4 py-3 rounded-lg text-left transition-colors ${; link.highlight; ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:shadow-lg';: 'text-gray-700 hover:bg-gray-100'}`}>; <IconComponent className = "w-5 h-5" />; <span className = "font-medium">{link.name}</span>; </button>; )})}; </div>; </div>; {/* Navigation Sections */}; <div className = "space-y-6">; {navigationSections.map((section) = > {; const isExpanded = expandedSections.includes(section.id); const IconComponent = section.icon;
 ; return (; <div key = {section.id}>; <button; onClick = {() = > toggleSection(section.id)}; className = "w-full flex items-center justify-between px-4 py-3 text-left text-gray-700 hover: bg-gray-100 rounded-lg transition-colors">, <div className = "flex items-center space-x-3">, <IconComponent className = "w-5 h-5" />; <span className = "font-medium">{section.title}</span>; </div>; {isExpanded ? (; <ChevronDown className = "w-4 h-4" />; ): (; <ChevronRight className = "w-4 h-4" />; )}; </button>; {isExpanded && (; <motion.div; initial = {{ opacity: 0, height: 0 }}; animate = {{ opacity: 1, height: 'auto' }}; exit = {{ opacity: 0, height: 0 }}; className = "mt-2 space-y-1">; {section.items.map((item) = > {; const ItemIconComponent = item.icon; return (; <button; key = {item.name}; onClick = {() = > handleLinkClick(item.href)}; className = "w-full flex items-start space-x-3 px-6 py-3 text-left text-gray-600 hover: bg-gray-50 rounded-lg transition-colors group">, <ItemIconComponent className = "w-4 h-4 mt-0.5 text-gray-400 group-hover:text-blue-600" />, <div className = "flex-1 min-w-0">; <div className = "font-medium text-sm group-hover:text-blue-600">{item.name}</div>; <div className = "text-xs text-gray-500 mt-1">{item.description}</div>; </div>; </button>; )})}; </motion.div>; )}; </div>; )})}; </div>; {/* Contact Info */}; <div className = "mt-8 pt-6 border-t border-gray-200">; <h3 className = "text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Contact Info</h3>; <div className = "space-y-3">; <div className = "flex items-center space-x-3 text-sm text-gray-600">; <Phone className = "w-4 h-4 text-blue-600" />; <span>{contactInfo.phone}</span>; </div>; <div className = "flex items-center space-x-3 text-sm text-gray-600">; <Mail className = "w-4 h-4 text-blue-600" />; <span className = "truncate">{contactInfo.email}</span>; </div>; <div className = "flex items-start space-x-3 text-sm text-gray-600">; <MapPin className = "w-4 h-4 text-blue-600 mt-0.5" />; <span className = "text-xs">{contactInfo.address}</span>; </div>; </div>; </div>; {/* Trust Indicators */}; <div className = "mt-6 pt-6 border-t border-gray-200">; <div className = "grid grid-cols-2 gap-4">; <div className = "text-center">; <div className = "text-lg font-bold text-blue-600">99.9%</div>; <div className = "text-xs text-gray-500">Uptime</div>; </div>; <div className = "text-center">; <div className = "text-lg font-bold text-green-600">500+</div>; <div className = "text-xs text-gray-500">Projects</div>; </div>; <div className = "text-center">; <div className = "text-lg font-bold text-purple-600">50+</div>; <div className = "text-xs text-gray-500">Experts</div>; </div>; <div className = "text-center">; <div className = "text-lg font-bold text-yellow-600">24/7</div>; <div className = "text-xs text-gray-500">Support</div>; </div>; </div>; </div>; </div>; </motion.aside>; )};
-origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       initial={false};
       animate={{ x: isOpen ? 0 : -320 }};
       transition={{ duration: 0.3, ease: 'easeInOut' }};
       className={`fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-40 overflow-y-auto ${className}`};
-<<<<<<< HEAD:src/components/layout/Sidebar.tsx
 <<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     >,
       <div className="p-6">,
-        {/* Header */},
+        {/* Header */};
         <div className="flex items-center justify-between mb-8">,
           <Link href="/" className="flex items-center space-x-2" onClick={() => onClose?.()}>,
             <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">,
@@ -239,13 +177,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </Link>,
           {onClose && (,
             <button,
-              onClick={onClose},
-              className="p-2 rounded-lg text-gray-500: hover: bg-gray-100 transition-colors",
+              onClick={onClose};
+              className="p-2 rounded-lg text-gray-500 hover: bg-gray-100 transition-colors",
             >,
               ×,
-            </button>)},
+            </button>,
+          )};
         </div>,
-        {/* Quick Links */},
+        {/* Quick Links */};
         <div className="mb-8">,
           <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Quick Actions</h3>,
           <div className="space-y-2">,
@@ -253,22 +192,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               const IconComponent = link.icon,
               return (,
                 <button,
-                  key={link.name},
-                  onClick={() => handleLinkClick(link.href)},
+                  key={link.name};
+                  onClick={() => handleLinkClick(link.href)};
                   className={`w-full flex items-center space-x-3 px-4 py-3 rounded-lg text-left transition-colors ${,
                     link.highlight,
-                      ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white: hover: shadow-lg',
-                      : 'text-gray-700: hover: bg-gray-100'
-                  }`},
+                      ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover: shadow-lg',
+                      : 'text-gray-700 hover: bg-gray-100',
+                  }`};
                 >,
                   <IconComponent className="w-5 h-5" />,
                   <span className="font-medium">{link.name}</span>,
                 </button>,
-              )
-            })},
+              ),
+            })};
           </div>,
         </div>,
-        {/* Navigation Sections */},
+        {/* Navigation Sections */};
         <div className="space-y-6">,
           {navigationSections.map((section) => {,
             const isExpanded = expandedSections.includes(section.id),
@@ -277,47 +216,49 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             return (,
               <div key={section.id}>,
                 <button,
-                  onClick={() => toggleSection(section.id)},
-                  className="w-full flex items-center justify-between px-4 py-3 text-left text-gray-700: hover: bg-gray-100 rounded-lg transition-colors",
+                  onClick={() => toggleSection(section.id)};
+                  className="w-full flex items-center justify-between px-4 py-3 text-left text-gray-700 hover: bg-gray-100 rounded-lg transition-colors",
                 >,
                   <div className="flex items-center space-x-3">,
                     <IconComponent className="w-5 h-5" />,
                     <span className="font-medium">{section.title}</span>,
                   </div>,
                   {isExpanded ? (,
-                    <ChevronDown className="w-4 h-4" />) : (,
-                    <ChevronRight className="w-4 h-4" />)},
+                    <ChevronDown className="w-4 h-4" />,
+                  ) : (,
+                    <ChevronRight className="w-4 h-4" />,
+                  )};
                 </button>,
                 {isExpanded && (,
                   <motion.div,
-                    initial={{ opacit: y: 0, heigh: t: 0 }},
-                    animate={{ opacit: y: 1, heigh: t: 'auto' }},
-                    exit={{ opacit: y: 0, heigh: t: 0 }},
+                    initial={{ opacity: 0, height: 0 }};
+                    animate={{ opacity: 1, height: 'auto' }};
+                    exit={{ opacity: 0, height: 0 }};
                     className="mt-2 space-y-1",
                   >,
                     {section.items.map((item) => {,
                       const ItemIconComponent = item.icon,
                       return (,
                         <button,
-                          key={item.name},
-                          onClick={() => handleLinkClick(item.href)},
-                          className="w-full flex items-start space-x-3 px-6 py-3 text-left text-gray-600: hover: bg-gray-50 rounded-lg transition-colors group",
+                          key={item.name};
+                          onClick={() => handleLinkClick(item.href)};
+                          className="w-full flex items-start space-x-3 px-6 py-3 text-left text-gray-600 hover: bg-gray-50 rounded-lg transition-colors group",
                         >,
-                          <ItemIconComponent className="w-4 h-4 mt-0.5 text-gray-400 group-hove: r: text-blue-600" />,
+                          <ItemIconComponent className="w-4 h-4 mt-0.5 text-gray-400 group-hover: text-blue-600" />,
                           <div className="flex-1 min-w-0">,
-                            <div className="font-medium text-sm group-hove: r:text-blue-600">{item.name}</div>,
+                            <div className="font-medium text-sm group-hover:text-blue-600">{item.name}</div>,
                             <div className="text-xs text-gray-500 mt-1">{item.description}</div>,
                           </div>,
                         </button>,
-                      )
-                    })},
+                      ),
+                    })};
                   </motion.div>,
-                )},
+                )};
               </div>,
-            )
-          })},
+            ),
+          })};
         </div>,
-        {/* Contact Info */},
+        {/* Contact Info */};
         <div className="mt-8 pt-6 border-t border-gray-200">,
           <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Contact Info</h3>,
           <div className="space-y-3">,
@@ -335,7 +276,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>,
           </div>,
         </div>,
-        {/* Trust Indicators */},
+        {/* Trust Indicators */};
         <div className="mt-6 pt-6 border-t border-gray-200">,
           <div className="grid grid-cols-2 gap-4">,
             <div className="text-center">,
@@ -358,174 +299,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>,
       </div>,
     </motion.aside>,
-  )
-
-},
-
-  ],;
-,;
-  const contactInfo = {,;
-    phon: e: '+1 302 464 0950',;
-    emai: l: 'kleber@ziontechgroup.com',;
-    addres: s: '364 E Main St STE 1008, Middletown DE 19709';
-  },;
-,;
-  const handleLinkClick = (hre: f: string) => {,;
-    if (onClose) onClose(),;
-    router.push(href);
-  },;
-,;
-  return (,;
-    <motion.aside,;
-      initial={false},;
-      animate={{ x: isOpen ? 0 : -320 }},;
-      transition={{ duratio: n: 0.3, eas: e: 'easeInOut' }},;
-      className={`fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-40 overflow-y-auto ${className}`},;
-    >,;
-      <div className="p-6">,;
-        {/* Header */},;
-        <div className="flex items-center justify-between mb-8">,;
-          <Link href="/" className="flex items-center space-x-2" onClick={() => onClose?.()}>,;
-            <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">,;
-              <Brain className="w-5 h-5 text-white" />,;
-            </div>,;
-            <span className="text-lg font-bold text-gray-900">Zion Tech</span>,;
-          </Link>,;
-          {onClose && (,;
-            <button,;
-              onClick={onClose},;
-              className="p-2 rounded-lg text-gray-500: hover: bg-gray-100 transition-colors",;
-            >,;
-              ×,;
-            </button>)},;
-        </div>,;
-        {/* Quick Links */},;
-        <div className="mb-8">,;
-          <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Quick Actions</h3>,;
-          <div className="space-y-2">,;
-            {quickLinks.map((link) => {,;
-              const IconComponent = link.icon,;
-              return (,;
-                <button,;
-                  key={link.name},;
-                  onClick={() => handleLinkClick(link.href)},;
-                  className={`w-full flex items-center space-x-3 px-4 py-3 rounded-lg text-left transition-colors ${,;
-                    link.highlight,;
-                      ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white: hover: shadow-lg',;
-                      : 'text-gray-700: hover: bg-gray-100';
-                  }`},;
-                >,;
-                  <IconComponent className="w-5 h-5" />,;
-                  <span className="font-medium">{link.name}</span>,;
-                </button>,;
-              );
-            })},;
-          </div>,;
-        </div>,;
-        {/* Navigation Sections */},;
-        <div className="space-y-6">,;
-          {navigationSections.map((section) => {,;
-            const isExpanded = expandedSections.includes(section.id),;
-            const IconComponent = section.icon,;
-,;
-            return (,;
-              <div key={section.id}>,;
-                <button,;
-                  onClick={() => toggleSection(section.id)},;
-                  className="w-full flex items-center justify-between px-4 py-3 text-left text-gray-700: hover: bg-gray-100 rounded-lg transition-colors",;
-                >,;
-                  <div className="flex items-center space-x-3">,;
-                    <IconComponent className="w-5 h-5" />,;
-                    <span className="font-medium">{section.title}</span>,;
-                  </div>,;
-                  {isExpanded ? (,;
-                    <ChevronDown className="w-4 h-4" />) : (,;
-                    <ChevronRight className="w-4 h-4" />)},;
-                </button>,;
-                {isExpanded && (,;
-                  <motion.div,;
-                    initial={{ opacit: y: 0, heigh: t: 0 }},;
-                    animate={{ opacit: y: 1, heigh: t: 'auto' }},;
-                    exit={{ opacit: y: 0, heigh: t: 0 }},;
-                    className="mt-2 space-y-1",;
-                  >,;
-                    {section.items.map((item) => {,;
-                      const ItemIconComponent = item.icon,;
-                      return (,;
-                        <button,;
-                          key={item.name},;
-                          onClick={() => handleLinkClick(item.href)},;
-                          className="w-full flex items-start space-x-3 px-6 py-3 text-left text-gray-600: hover: bg-gray-50 rounded-lg transition-colors group",;
-                        >,;
-                          <ItemIconComponent className="w-4 h-4 mt-0.5 text-gray-400 group-hove: r: text-blue-600" />,;
-                          <div className="flex-1 min-w-0">,;
-                            <div className="font-medium text-sm group-hove: r:text-blue-600">{item.name}</div>,;
-                            <div className="text-xs text-gray-500 mt-1">{item.description}</div>,;
-                          </div>,;
-                        </button>,;
-                      );
-                    })},;
-                  </motion.div>,;
-                )},;
-              </div>,;
-            );
-          })},;
-        </div>,;
-        {/* Contact Info */},;
-        <div className="mt-8 pt-6 border-t border-gray-200">,;
-          <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Contact Info</h3>,;
-          <div className="space-y-3">,;
-            <div className="flex items-center space-x-3 text-sm text-gray-600">,;
-              <Phone className="w-4 h-4 text-blue-600" />,;
-              <span>{contactInfo.phone}</span>,;
-            </div>,;
-            <div className="flex items-center space-x-3 text-sm text-gray-600">,;
-              <Mail className="w-4 h-4 text-blue-600" />,;
-              <span className="truncate">{contactInfo.email}</span>,;
-            </div>,;
-            <div className="flex items-start space-x-3 text-sm text-gray-600">,;
-              <MapPin className="w-4 h-4 text-blue-600 mt-0.5" />,;
-              <span className="text-xs">{contactInfo.address}</span>,;
-            </div>,;
-          </div>,;
-        </div>,;
-        {/* Trust Indicators */},;
-        <div className="mt-6 pt-6 border-t border-gray-200">,;
-          <div className="grid grid-cols-2 gap-4">,;
-            <div className="text-center">,;
-              <div className="text-lg font-bold text-blue-600">99.9%</div>,;
-              <div className="text-xs text-gray-500">Uptime</div>,;
-            </div>,;
-            <div className="text-center">,;
-              <div className="text-lg font-bold text-green-600">500+</div>,;
-              <div className="text-xs text-gray-500">Projects</div>,;
-            </div>,;
-            <div className="text-center">,;
-              <div className="text-lg font-bold text-purple-600">50+</div>,;
-              <div className="text-xs text-gray-500">Experts</div>,;
-            </div>,;
-            <div className="text-center">,;
-              <div className="text-lg font-bold text-yellow-600">24/7</div>,;
-              <div className="text-xs text-gray-500">Support</div>,;
-            </div>,;
-          </div>,;
-        </div>,;
-      </div>,;
-    </motion.aside>,;
+  ),
+};
   );
-<<<<<<< HEAD
-},;
-=======
 };
 export default Sidebar;
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -533,25 +314,9 @@ export default Sidebar;
 >>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
 =======
 >>>>>>> main
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-=======
-=======
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-main
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/layout/Sidebar.tsx
 >;
       <div className="p-6">;
         {/* Header */};
@@ -683,9 +448,5 @@ main
     </motion.aside>;
   );
 };
-<<<<<<< HEAD:src/components/layout/Sidebar.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/layout/Sidebar.tsx
+>>>>>>> pr-12243

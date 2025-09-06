@@ -1,61 +1,15 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-interface EmailValidationResult {
-  email: string;
-  is_valid: boolean;
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-
-interface EmailValidationResult {
-  email: string;
-  isValid: boolean;
-
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface EmailValidationResult {
   email: string;
   is_valid: boolean;
 interface EmailValidationResult {
   email: string;
   isValid: boolean;
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   score: number;
   suggestions: string[];
   details: {
     hasValidFormat: boolean;
     hasValidDomain: boolean;
     hasValidMX: boolean;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    // Check for free email providers
-    const freeProviders = [
-      'gmail.comyahoo.comhotmail.comoutlook.comaol.comicloud.comprotonmail.commail.com', 'yandex.com'
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-    ];
-
-=======
-    const isFreeProvider = freeProviders && freeProviders.some(provider => domain === provider);
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
   try {
     const { email } = req && req.body;
@@ -71,12 +25,6 @@ interface EmailValidationResult {
       'temp-mail && mail.org',
       'sharklasers && sharklasers.com',
       'getairmail && getairmail.com',
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     isRoleBased: boolean;
     isFreeProvider: boolean
   }
@@ -133,12 +81,7 @@ return res.status(405).json({ error: 'Method not allowed' });
       'yandex.com',
     ];
     const isFreeProvider = freeProviders.some(provider => domain === provider);
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     // Calculate score (0-100)
     let score = 100;
     if (!hasValidFormat) score -= 50;
@@ -149,14 +92,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     // Generate suggestions
     const suggestions: string[] = []
     if (!hasValidFormat) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   } catch (error) {
     console && console.error('Email validation error:', error);
     res && res.status(500).json({ error: 'Internal server error' });
@@ -176,10 +111,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   } catch (error) {
     console.error ('Email validation error:', error);
     res.status (500).json ({ error: 'Internal server error' });
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }      email;
       is_valid: score >= 70;
       score: Math.max (0, score);
@@ -191,36 +122,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         is_disposable;
         isRoleBased;
         isFreeProvider}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    };
-    res && res.status(200).json(result)
-  } catch (error) {
-    console && console.error('Email validation error:', error);
-    res && res.status(500).json({ error: 'Internal server error' })
-
-  }
-
-}
-
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     }
 ;
     res.status (200).json (result);
   } catch (error) {
     console.error ('Email validation error:', error);
     res.status (500).json ({ error: 'Internal server error' });
-<<<<<<< HEAD
-  }
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 suggestions.push('Check email format (should be user@domain.com)');
     }
     if (isDisposable) {
@@ -255,4 +162,3 @@ suggestions.push('Check email format (should be user@domain.com)');
 origin/cursor/automate-test-improve-and-merge-code-2533
   }
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

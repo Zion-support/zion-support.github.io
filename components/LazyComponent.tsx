@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+pr-12243
 import React, { Suspense, lazy } from 'react',
 interface LazyComponentProps {
   component: () => Promise<{ default: React.ComponentType < any> }>,
@@ -22,8 +17,6 @@ const LazyComponent: React.FC < LazyComponentProps> = ({
       <LazyLoadedComponent {...props} />;
     </Suspense>);
 },
+export default LazyComponent;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+pr-12243

@@ -1,65 +1,18 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-export default function Page() {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 export default function Page() {;
 
 
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+export default function Page() {;
+pr-12243
   return (
     <div className='min-h-screen bg-slate-950 text-white'>;
       <Head>;
         <title>Case Study — Trigger Homepage</title>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import Head from 'next/head';
 export default function Page() {
   return (
     <div className='min-h-screen bg-slate-950 text-white'>
       <Head>
         <title>Case Study — Trigger Homepage</title>
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
         <meta
           name='description'
           content='Pragmatic case scenario inspired by live site signals.'
@@ -78,37 +31,14 @@ export default function Page() {
         <div
           className='mt-4'
           dangerouslySetInnerHTML={{
-<<<<<<< HEAD
             __html:
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-              '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/automation" target="_blank" rel="noopener">https://ziontechgroup.com/automation</a></p><h2>Scenario</h2><p>Exploring how trigger, homepage, sitemap, automation, hubdiscover delivers value.</p><h2>Approach</h2><ul><li>Baseline metrics</li><li>Iterative improvements</li><li>Risk management</li></ul><h2>Results</h2><p>Lower latency, higher reliability, and faster iteration speed.</p>'
-              '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/automation" target="_blank" rel="noopener">https://ziontechgroup.com/automation</a></p><h2>Scenario</h2><p>Exploring how trigger, homepage, sitemap, automation, hubdiscover delivers value.</p><h2>Approach</h2><ul><li>Baseline metrics</li><li>Iterative improvements</li><li>Risk management</li></ul><h2>Results</h2><p>Lower latency, higher reliability, and faster iteration speed.</p>',
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
+              '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/automation" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/automation</a></p><h2>Scenario</h2><p>Exploring how trigger, homepage, sitemap, automation, hubdiscover delivers value.</p><h2>Approach</h2><ul><li>Baseline metrics</li><li>Iterative improvements</li><li>Risk management</li></ul><h2>Results</h2><p>Lower latency, higher reliability, and faster iteration speed.</p>',;
 
               '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/automation" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/automation</a></p><h2>Scenario</h2><p>Exploring how trigger, homepage, sitemap, automation, hubdiscover delivers value.</p><h2>Approach</h2><ul><li>Baseline metrics</li><li>Iterative improvements</li><li>Risk management</li></ul><h2>Results</h2><p>Lower latency, higher reliability, and faster iteration speed.</p>',;
 
-=======
               '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/automation" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/automation</a></p><h2>Scenario</h2><p>Exploring how trigger, homepage, sitemap, automation, hubdiscover delivers value.</p><h2>Approach</h2><ul><li>Baseline metrics</li><li>Iterative improvements</li><li>Risk management</li></ul><h2>Results</h2><p>Lower latency, higher reliability, and faster iteration speed.</p>',;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-              '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/automation" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/automation</a></p><h2>Scenario</h2><p>Exploring how trigger, homepage, sitemap, automation, hubdiscover delivers value.</p><h2>Approach</h2><ul><li>Baseline metrics</li><li>Iterative improvements</li><li>Risk management</li></ul><h2>Results</h2><p>Lower latency, higher reliability, and faster iteration speed.</p>',;
-
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+pr-12243
           }}
-=======
-            __html:          }}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         />;
         <p className='mt-6 text-white/60 text-sm'>;
           Auto-generated by Cloud Deep Research Factory.;
@@ -116,88 +46,39 @@ export default function Page() {
       </main>;
     </div>;
   );export default function Page() {;
-<<<<<<< HEAD
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
               '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/automation" target="_blank" rel="noopener">https://ziontechgroup.com/automation</a></p><h2>Scenario</h2><p>Exploring how trigger, homepage, sitemap, automation, hubdiscover delivers value.</p><h2>Approach</h2><ul><li>Baseline metrics</li><li>Iterative improvements</li><li>Risk management</li></ul><h2>Results</h2><p>Lower latency, higher reliability, and faster iteration speed.</p>',
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+
+              '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/automation" target="_blank" rel="noopener">https://ziontechgroup.com/automation</a></p><h2>Scenario</h2><p>Exploring how trigger, homepage, sitemap, automation, hubdiscover delivers value.</p><h2>Approach</h2><ul><li>Baseline metrics</li><li>Iterative improvements</li><li>Risk management</li></ul><h2>Results</h2><p>Lower latency, higher reliability, and faster iteration speed.</p>',
+
+pr-12243
           }}
         />
         <p className='mt-6 text-white/60 text-sm'>
           Auto-generated by Cloud Deep Research Factory.
         </p>
       </main>
-<<<<<<< HEAD
-    </div>
-    </div>;
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   );export default function Page() {
   return (
 
 export default function Page() {
   return (
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export default function Page() {
     </div>;
 
   );export default function Page() {
   return (
 
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+pr-12243
   return (
     <div className="min-h-screen bg-slate-950 text-white">;
       <Head>;
         <title>Case Study — Trigger Homepage</title>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+pr-12243
 import Head from 'next / head';
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export default /**
  * Page - Function description
  */
@@ -237,41 +118,11 @@ function Page() {
  */
 function Page() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <div className="min - h-screen bg - slate-950 text-white">;
-      <Head>;        <meta name="description" content="Pragmatic case scenario inspired by live site signals." />;
-        <meta property="og:title" content="Case Study — Trigger Homepage" />;
-        <meta property="og:description" content="Pragmatic case scenario inspired by live site signals." />;
-        <meta name="twitter:card" content="summary_large_image" />;
-      </Head>;      <main className="container mx - auto px - 6 py-12 prose prose-invert">;
-        <h1 className="text-3xl font-extrabold">Case Study  Trigger Homepage</h1>;
-        <div className="mt-4" dangerouslySetInnerHTML={{ __html: "<p > Source: <a class="text - cyan - 300 underline" href="https://ziontechgroup.com / automation" target="_blank" rel="noopener">https://ziontechgroup.com / automation</a></p><h2 > Scenario</h2><p > Exploring how trigger, homepage, sitemap, automation, hubdiscover delivers value.</p><h2 > Approach</h2><ul><li > Baseline metrics</li><li > Iterative improvements</li><li > Risk management</li></ul><h2 > Results</h2><p > Lower latency, higher reliability, and faster iteration speed.</p>" }} />;
-        <p className="mt - 6 text-white / 60 text-sm">Auto - generated by Cloud Deep Research Factory.</p>;
-      </main>;
-    </div>);
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <Head>
-        <title>Case Study — Trigger Homepage</title>
-        <meta name=&quot;description&quot; content=&quot;Pragmatic case scenario inspired by live site signals.&quot; />
-        <meta property=&quot;og:title&quot; content=&quot;Case Study — Trigger Homepage&quot; />
-        <meta property=&quot;og:description&quot; content=&quot;Pragmatic case scenario inspired by live site signals.&quot; />
-        <meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; />
-      </Head>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
     <div className="min - h-screen bg - slate - 950 text - white">;
       <Head>;
+        <title > Case Study — Trigger Homepage</title>;
 
-
-
+pr-12243
         <meta name="description" content="Pragmatic case scenario inspired by live site signals." />;
         <meta property="og:title" content="Case Study — Trigger Homepage" />;
         <meta property="og:description" content="Pragmatic case scenario inspired by live site signals." />;
@@ -279,8 +130,10 @@ function Page() {
       </Head>;
 }
 
+}
 
-
+}
+pr-12243
       <main className="container mx - auto px - 6 py - 12 prose prose - invert">;
         <h1 className="text - 3xl font - extrabold">Case Study  Trigger Homepage</h1>;
         <div className="mt - 4" dangerouslySetInnerHTML={{ __html: "<p > Source: <a class="text - cyan - 300 underline" href="https://ziontechgroup.com / automation" target="_blank" rel="noopener">https://ziontechgroup.com / automation</a></p><h2 > Scenario</h2><p > Exploring how trigger, homepage, sitemap, automation, hubdiscover delivers value.</p><h2 > Approach</h2><ul><li > Baseline metrics</li><li > Iterative improvements</li><li > Risk management</li></ul><h2 > Results</h2><p > Lower latency, higher reliability, and faster iteration speed.</p>" }} />;
@@ -288,31 +141,11 @@ function Page() {
       </main>;
     </div>);
 }
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+origin/cursor/automate-test-improve-and-merge-code-20a4
+pr-12243
 
-          }}
-        />
-        <p className='mt-6 text-white/60 text-sm'>
-          Auto-generated by Cloud Deep Research Factory.
-        </p>
-      </main>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );export default function Page() {
-  return (
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
       <Head>
         <title>Case Study — Trigger Homepage</title>
@@ -338,37 +171,13 @@ function Page() {
         </p>
       </main>
     </div>
+    </div>;
+  );export default function Page() {
+  return (
 
-<<<<<<< HEAD
 export default function Page() {
   return (
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-    <div className="min - h-screen bg - slate - 950 text - white">;
-      <Head>;
-
-        <meta name="description" content="Pragmatic case scenario inspired by live site signals." />;
-        <meta property="og:title" content="Case Study — Trigger Homepage" />;
-        <meta property="og:description" content="Pragmatic case scenario inspired by live site signals." />;
-        <meta name="twitter:card" content="summary_large_image" />;
-      </Head>;
-
-      <main className="container mx - auto px - 6 py - 12 prose prose - invert">;
-        <h1 className="text - 3xl font - extrabold">Case Study  Trigger Homepage</h1>;
-        <div className="mt - 4" dangerouslySetInnerHTML={{ __html: "<p > Source: <a class="text - cyan - 300 underline" href="https://ziontechgroup.com / automation" target="_blank" rel="noopener">https://ziontechgroup.com / automation</a></p><h2 > Scenario</h2><p > Exploring how trigger, homepage, sitemap, automation, hubdiscover delivers value.</p><h2 > Approach</h2><ul><li > Baseline metrics</li><li > Iterative improvements</li><li > Risk management</li></ul><h2 > Results</h2><p > Lower latency, higher reliability, and faster iteration speed.</p>" }} />;
-        <p className="mt - 6 text - white / 60 text - sm">Auto - generated by Cloud Deep Research Factory.</p>;
-      </main>;
-    </div>);
-}
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+pr-12243
     <div className="min-h-screen bg-slate-950 text-white">
       <Head>
         <title>Case Study — Trigger Homepage</title>
@@ -382,31 +191,12 @@ export default function Page() {
         <div className="mt-4" dangerouslySetInnerHTML={{ __html: "<p>Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/automation\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com/automation</a></p><h2>Scenario</h2><p>Exploring how trigger, homepage, sitemap, automation, hubdiscover delivers value.</p><h2>Approach</h2><ul><li>Baseline metrics</li><li>Iterative improvements</li><li>Risk management</li></ul><h2>Results</h2><p>Lower latency, higher reliability, and faster iteration speed.</p>" }} />
         <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Deep Research Factory.</p>
       </main>
+pr-12243
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     </div>
   );
 }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-ursor/fix-website-loading-errors-and-merge-6662
-    </div>
-  );
-}
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+pr-12243
     </div>;
   );
 }
@@ -418,40 +208,7 @@ ursor/fix-website-loading-errors-and-merge-6662
   }
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
 
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+pr-12243

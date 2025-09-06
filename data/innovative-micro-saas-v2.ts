@@ -1,45 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
-=======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-import { ServiceVariant } from '../types/service-variants';
-export interface InnovativeMicroSaasV2 {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
 import { ServiceVariant } from '../types/service-variants';
 export interface InnovativeMicroSaasV2 {
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   id: string;
   name: string;
   tagline: string;
   price: string;
-  period: string,
+  period: string;
   description: string;
   features: string[];
   popular: boolean;
@@ -65,16 +34,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     website: string;
   }
 
@@ -92,14 +51,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   {
 
       'No-code smart contract creation',
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     id: 'smart - contract - automation - platform',
     name: 'Smart Contract Automation Platform',
     tagline: 'Automated smart contract creation and management for businesses',
@@ -109,12 +61,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Innovative platform that enables businesses to create, deploy, and manage smart contracts without coding knowledge. Automates business processes, reduces costs, and ensures transparency.',
     features: [;
       'No - code smart contract creation',
-<<<<<<< HEAD
-=======
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Template library (100+ templates)',
       'Automated contract execution',
       'Multi - blockchain support',
@@ -126,19 +74,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       '24 / 7 contract management',
     ],
     popular: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     icon: '📋',
 
-<<<<<<< HEAD
-=======
-=======
-=======
-    icon: '📋',
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     color: 'from - green - 600 to - emerald - 700',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / smart - contract - automation - platform',
@@ -152,14 +89,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     real_service: true,
     technology: [;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Blockchain',
       'Smart Contracts',
       'React',
@@ -169,8 +99,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Ethereum',
       'Polygon',
     ],
-<<<<<<< HEAD
-=======
 
     integrations: [;
       'QuickBooks',
@@ -203,8 +131,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     contact_info: {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -219,8 +145,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 289,
   },
   {
-<<<<<<< HEAD
-=======
 
       'AI-powered churn prediction',
     id: 'ai - powered - customer - success - platform',
@@ -235,8 +159,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'AI - powered churn prediction',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Automated customer engagement',
       'Upsell and cross - sell automation',
       'Customer health scoring',
@@ -248,8 +170,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       '24 / 7 customer success monitoring',
     ],
     popular: true,
-<<<<<<< HEAD
-=======
     icon: '🎯',
 
       'AI/ML',
@@ -268,8 +188,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'AI / ML',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'React',
       'Node && Node.js',
       'PostgreSQL',
@@ -278,8 +196,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Python',
       'TensorFlow',
     ],
-<<<<<<< HEAD
-=======
 
     integrations: [;
       'Salesforce',
@@ -313,8 +229,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     contact_info: {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -329,8 +243,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 423,
   },
   {
-<<<<<<< HEAD
-=======
 
       'AI-powered process analysis',
     id: 'intelligent - workflow - automation',
@@ -344,8 +256,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'AI - powered process analysis',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Automated workflow creation',
       'Intelligent task routing',
       'Process optimization suggestions',
@@ -357,8 +267,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       '24 / 7 workflow management',
     ],
     popular: false,
-<<<<<<< HEAD
-=======
     icon: '⚙️',
 
       'AI/ML',
@@ -377,8 +285,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'AI / ML',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'React',
       'Node && Node.js',
       'PostgreSQL',
@@ -387,8 +293,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Python',
       'TensorFlow',
     ],
-<<<<<<< HEAD
-=======
 
     integrations: [;
       'Slack',
@@ -412,8 +316,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     competitors: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Zapier',
       'Make',
       'IFTTT',
@@ -438,8 +340,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 678,
   },
   {
-<<<<<<< HEAD
-=======
 
       'AI-powered investment recommendations',
     id: 'ai - powered - financial - advisor',
@@ -453,8 +353,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'AI - powered investment recommendations',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Personalized financial planning',
       'Portfolio optimization algorithms',
       'Risk assessment and management',
@@ -466,8 +364,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       '24 / 7 financial monitoring',
     ],
     popular: true,
-<<<<<<< HEAD
-=======
     icon: '💰',
 
       'AI/ML',
@@ -486,8 +382,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'AI / ML',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'React',
       'Node && Node.js',
       'PostgreSQL',
@@ -497,12 +391,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'TensorFlow',
       'Financial APIs',
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 
       'Production-ready AI-powered financial advisory platform with personalized recommendations, portfolio optimization, and comprehensive financial management. Includes custom AI model training.',
@@ -513,15 +401,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },;
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -533,19 +413,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     customers: 789;
     rating: 4.8
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     reviews: 912
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -585,19 +454,8 @@ export interface InnovativeMicroSaasV2 {
 }
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     integrations: [;
-=======
-=======    integrations: [;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       'Plaid',
       'Yodlee',
       'Financial institutions',
@@ -664,33 +522,14 @@ export interface InnovativeMicroSaasV2 {
   launchDate: string, customers: number,
   rating: number,
   reviews: number
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }
 
 export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
   // Innovative Business Solutions
   {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-;      address: '364 E Main St STE 1008 Middletown DE 19709',
-=======
-<<<<<<< HEAD
 ;
-=======
-<<<<<<< HEAD
 ;
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     id: 'ai-powered-inventory-optimizer', name: 'AI-Powered Inventory Optimizer',
     tagline: 'Intelligent inventory management with predictive analytics', price: '$299',
     period: '/month',
@@ -712,8 +551,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'AI-powered demand forecastingReal-time inventory optimizationAutomated reorder managementMulti-location inventory trackingSupplier performance analyticsSeasonal trend analysisCost optimization algorithmsMobile app and dashboard';
       'API for integrations24/7 inventory monitoring'
     ];
-<<<<<<< HEAD
-<<<<<<< HEAD
     popular: true, icon: '📦',
     color: 'from-blue-600 to-cyan-700', textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-powered-inventory-optimizer',
@@ -728,18 +565,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     contactInfo: {
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       address: '364 E Main St STE 1008 Middletown DE 19709',
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
       website: 'https://ziontechgroup.com';
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     real_implementation: true,
     implementation_details: 'Production - ready AI - powered financial advisory platform with personalized recommendations, portfolio optimization, and comprehensive financial management. Includes custom AI model training.';
     launch_date: '2024 - 02 - 01';
@@ -752,48 +581,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ];
 
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-<<<<<<< HEAD
-];      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }
-    realImplementation: true
-    implementationDetails: 'Production-ready AI-powered financial advisory platform with personalized recommendations, portfolio optimization, and comprehensive financial management. Includes custom AI model training.';
-    launchDate: '2024-02-01';
-    customers: 789;
-    rating: 4.8
-
-    reviews: 912
-
-  }
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 ;
 origin/cursor/automate-test-improve-and-merge-code-20a4
 
-
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     popular: true;
     icon: '📦';
     color: 'from-blue-600 to-cyan-700';
@@ -999,9 +792,4 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 912
   }
 ];
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

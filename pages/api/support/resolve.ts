@@ -1,14 +1,10 @@
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
 =======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { readJson, writeJson } from '../../../utils/fsDb',
 ;
@@ -17,33 +13,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { id } = req.body as { id: string },
   if (!id) return res.status(400).json({ error: 'id required' }),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+  const requests = readJson<any[]>('support/requests.json', []),
+  const idx = requests.findIndex((r) => r.id === id),
 =======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-  }
-  return res.status(200).json({ ok: true })
-}
-
-
-<<<<<<< HEAD
-=======
-=======
+>>>>>>> pr-12243
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { readJson, writeJson } from '../../../utils/fsDb'
+;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-  const { id } = req.body as { id: string };
-  if (!id) return res.status(400).json({ error: 'id required' });
-  const requests = readJson<any[]>('support/requests.json', []);
-=======
-=======
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
+  const { id } = req.body as { id: string }
+  if (!id) return res.status(400).json({ error: 'id required' })
+
   const requests = readJson<any[]>('support/requests.json', [])
   const idx = requests.findIndex((r) => r.id === id)
->>>>>>> main
   if (idx >= 0) {
     requests[idx].status = 'resolved'
     requests[idx].resolvedAt = Date.now()
@@ -57,10 +40,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!id) return res.status(400).json({ error: 'id required' });
   const requests = null;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     writeJson('support/requests.json', requests)
   }
   return res.status(200).json({ ok: true })
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -70,7 +53,6 @@ export default async function handler(req, res) {
   try {
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
   const requests = readJson<any[]>('support/requests.json', []),;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const idx = requests.findIndex((r) => r.id === id);
   if (idx >= 0) {;
     requests[idx].status = 'resolved';
@@ -83,25 +65,11 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-}
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 
 
   }
   return res.status(200).json({ ok: true })
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import type { NextApiRequest, NextApiResponse } from 'next',
 import { read_json, write_json } from '../../../utils / fs_db',
 ;
@@ -129,93 +97,12 @@ if ( {) {
   return res.status (200).json ({ ok: true });
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-=======
-}
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-import type { NextApiRequest, NextApiResponse } from 'next',;
-import { readJson, writeJson } from '../../../utils/fsDb',;
-;
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' }),
-  const { id } = req.body as { id: string },
-  if (!id) return res.status(400).json({ error: 'id required' }),
-
-import { readJson, writeJson } from '../../../utils/fsDb';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
-  const { id } = req.body as { id: string }
-  if (!id) return res.status(400).json({ error: 'id required' })
-  const requests = readJson<any[]>('support/requests.json', [])
-  const idx = requests.findIndex((r) => r.id === id)
-=======
-  const requests = readJson<any[]>('support/requests.json', []),
-  const idx = requests.findIndex((r) => r.id === id),
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-  if (idx >= 0) {
-    requests[idx].status = 'resolved',
-    requests[idx].resolvedAt = Date.now(),
-    writeJson('support/requests.json', requests)
-  }
-  return res.status(200).json({ ok: true })
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { readJson, writeJson } from '../../../utils/fsDb';
-export default async function handler(req, res) {
-  try {
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-  const requests = readJson<any[]>('support/requests.json', []),;
-  const idx = requests.findIndex((r) => r.id === id);
-  if (idx >= 0) {;
-    requests[idx].status = 'resolved';
-    requests[idx].resolvedAt = Date.now();
-    writeJson('support/requests.json', requests);
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
   return res.status(200).json({ ok: true });
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-};
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -228,43 +115,6 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-}
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 };
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
-  const requests = readJson<any[]>('support/requests.json', []),
-  const idx = requests.findIndex((r) => r.id === id),
-
-  if (idx >= 0) {
-    requests[idx].status = 'resolved'
-    requests[idx].resolvedAt = Date.now()
-    writeJson('support/requests.json', requests)
-  }
-  return res.status(200).json({ ok: true })
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

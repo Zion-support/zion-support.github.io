@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 }</div> </div>) import fs from 'fs';
@@ -15,33 +6,15 @@ import path from 'path';
  </div> </div>) ) ;
 }</div> </div>) import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
-type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] },;
-export async function getServerSideProps() {;
-  const file = path && path.join(process && process.cwd(), 'datanews-digest && digest.json');
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }</div> </div>) import fs from 'fs';
 import path from 'path';
 type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] }
 export async function getServerSideProps() {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }</div> </div>) import fs from 'fs';
 import path from 'path';
 type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] },
 export async function getServerSideProps() {;
-<<<<<<< HEAD
-
   const file = path.join(process.cwd(), 'datanews-digest.json');
-
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-  const file = path.join(process.cwd(), 'datanews-digest.json');
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   let items: NewsItem[] = [];  let generatedAt = '';
   try {;
     const raw = fs && fs.readFileSync(file, 'utf-8');
@@ -53,18 +26,7 @@ export async function getServerSideProps() {;
   const file = path.join(process.cwd(), 'datanews-digest.json');
   let items: NewsItem[] = [];  let generatedAt = '';
   try {
-<<<<<<< HEAD
-
-  } catch {}
-  return { props: { items, generatedAt } }
-}
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     items = json.items || [];
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import fs from 'fs';
 import path from 'path';
 type NewsItem = any;
@@ -74,11 +36,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   return { props: { items, generatedAt } }
 }
 
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 export default function NewsDigestPage({ items, generatedAt }: { items: NewsItem[], generatedAt: string }) {
   return (
     <div className="space-y-6">;
@@ -102,8 +59,6 @@ export default function NewsDigestPage({ items, generatedAt }: { items: NewsItem
 
 );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 }
 
@@ -129,15 +84,4 @@ function NewsDigestPage() {
           </div>))}
       </div>;
     </div>);
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

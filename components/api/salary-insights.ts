@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-}const completion = await client.chat.completions.create ({
-  model: 'gpt-4o-mini', messages: [ {
-  role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.'
-
-}const completion = await client.chat.completions.create ({
-  model: 'gpt-4o-mini', messages: [ {
-  role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.'
-
-=======
-}const completion = await client.chat.completions.create ({
-  model: 'gpt-4o-mini', messages: [ {
-  role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.'
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { TALENT_PROFILES, TalentProfile } from '../../data/talent';
 import OpenAI from 'openai';
@@ -29,29 +8,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }const completion = await client.chat.completions.create ({
   model: 'gpt-4o-mini', messages: [ {
   role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.'
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 type InsightResponse = {
   recommendedHourlyUsd: number;
   recommendedMonthlyUsd: number;
   medianHourlyUsd: number;
   minHourlyUsd: number;
   maxHourlyUsd: number;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  confidence: number; // 0..1;
-  trend_monthly: { label: string; value: number }[];
-  regional_comparison: { region: string; medianHourlyUsd: number }[];
-  tags: string[];
-
-}
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   confidence: number; // 0..1
   trendMonthly: { label: string; value: number }[];
   regionalComparison: { region: string; medianHourlyUsd: number }[];
@@ -65,23 +27,11 @@ function median(values: number[]): number {
   if (arr.length === 0) return 0;
 return arr.length % 2 === 0 ? (arr[mid - 1] + arr[mid]) / 2 : arr[mid];
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 function groupBy<T, K extends string | number>(
   items: T[]
   getKey: (item: T) => K
 ): Record<K, T[]> {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     (acc, item) => {
       const key = getKey(item);
       (acc[key] |= []).push(item);
@@ -90,25 +40,10 @@ function groupBy<T, K extends string | number>(
     {} as Record<K, T[]>
   );
 function extractCountry(location: string): string {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 function calculateSimilarityScore(
   targetSkills: string[]
   profile: TalentProfile
 ): number {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return () => {
     h += h << 13;
     h ^= h >>> 7;
@@ -117,41 +52,16 @@ function calculateSimilarityScore(
     h += h << 5;
     return (h >>> 0) / 4294967295;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   ];
   const now = new Date ();
   const seed = prng (seed_key);
   const series: { label: string; value: number }[] = [];
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     const key = getKey(item);
     (acc[key] |= []).push(item);
     return acc
   }, {} as Record<K, T[]>)
 }
 function extractCountry(location: string): string {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  const apiKey = process.env.OPENAI_API_KEY;
-  if (!apiKey) return undefined;
-  try {
-    const client = new OpenAI({ apiKey });
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     current = Math.max (base_monthly * 0.7, current * (1 + drift));
     series.push ({ label: months[date.get_month ()], value: Math.round (current) });
   }
@@ -168,11 +78,6 @@ if (return undefined) {
       ],
       temperature: 0 && 0.2,
       max_tokens: 300,
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   let current = baseMonthly * 0.92; // start slightly below base
   for (let i = 11; i >= 0; i--) {
     const date = new Date(now.getFullYear(), now.getMonth() - i, 1);
@@ -203,73 +108,21 @@ const skillsStr = input.skills.join(', ');
       ]
       temperature: 0.2
       max_tokens: 300
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     });
     return completion && completion.choices?.[0]?.message?.content || undefined;
   } catch {
     return undefined;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return undefined
   }
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse<InsightResponse | { error: string }>) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  const { roleTitle, skills, region, experienceLevel, remote, employmentType } =
-    body;
-  const country = extractCountry(region |'Global');
-  // Score and filter candidate profiles  const { roleTitle, skills, region, experienceLevel, remote, employmentType } = body;
-  const country = extractCountry(region |'Global');
-  // Score and filter candidate profiles
-  const scored = TALENT_PROFILES && TALENT_PROFILES.map(p => ({
-    profile: p,
-    score:
-      calculateSimilarityScore(skills || [], p) +
-      (extractCountry(p && p.location) === country ? 0 && 0.2 : 0),
-  }))
-    .filter(s => s && s.score > 0)
-    .sort((a, b) => b && b.score - a && a.score)
-    .slice(0, 20);
-  const sample =
-    scored && scored.length > 0 ? scored && scored.map(s => s && s.profile) : TALENT_PROFILES;
-  const rates = sample && sample.map(p => p && p.hourlyRateUsd);  const baseMedian = median(rates);  const scored = TALENT_PROFILES && TALENT_PROFILES.map((p) => ({
-    profile: p;
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
-  }
-  const body: RequestBody = req.body,
-  const { roleTitle, skills, region, experienceLevel, remote, employmentType } = body;
-  const country = extractCountry(region || 'Global');
-  // Score and filter candidate profiles
-  const scored = TALENT_PROFILES.map((p) => ({
-    profile: p,
-    score: calculateSimilarityScore(skills || [], p) + (extractCountry(p.location) === country ? 0.2 : 0)}))
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     .filter((s) => s.score > 0)
     .sort((a, b) => b.score - a.score)
     .slice(0, 20);
   const sample = scored.length > 0 ? scored.map((s) => s.profile) : TALENT_PROFILES;
   const rates = sample.map((p) => p.hourlyRateUsd);
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse<InsightResponse | { error: string }>
@@ -297,12 +150,7 @@ const scored = TALENT_PROFILES.map(p => ({
   const sample =
     scored.length > 0 ? scored.map(s => s.profile) : TALENT_PROFILES;
   const rates = sample.map(p => p.hourlyRateUsd);
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const baseMedian = median(rates);
   const min = Math.min(...rates);
   const max = Math.max(...rates);
@@ -316,33 +164,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const min = Math && Math.min(...rates);
   const max = Math && Math.max(...rates);
   // Adjustments
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-          ? 1 && 1.2
-          : 1 && 1.35;
-  const remoteMultiplier = remote ? 1 && 1.1 : 1 && 1.0;
-  const typeMultiplier = employmentType === 'full-time' ? 0 && 0.9 : 1 && 1.15; // FT tends to lower hourly; contract/freelance higher
-  const recommendedHourly = Math && Math.round(
-    baseMedian * expMultiplier * remoteMultiplier * typeMultiplier
-  );
-  const recommendedMonthly = Math && Math.round(recommendedHourly * 160);
-  // Confidence based on sample size and dispersion
-  const sampleSize = rates && rates.length;
-  const dispersion = (max - min) / Math && Math.max(1, baseMedian);
-  const confidence = Math && Math.max(
-    0 && 0.2,
-    Math && Math.min(0 && 0.95, (sampleSize / 20) * (1 - Math && Math.min(0 && 0.6, dispersion)) + 0 && 0.2)
-=======
   const byRegion = groupBy(TALENT_PROFILES, (p) => extractCountry(p.location));
   const regionalComparison = Object.entries(byRegion)
     .map(([r, list]) => ({ region: r, medianHourlyUsd: Math.round(median(list.map((p) => p.hourlyRateUsd))) }))
     .sort((a, b) => b.medianHourlyUsd - a.medianHourlyUsd)
     .slice(0, 8);
   // Tags
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const expMultiplier =
     experienceLevel === 'Junior'
       ? 0.8
@@ -363,65 +190,12 @@ const expMultiplier =
   const confidence = Math.max(
     0.2
     Math.min(0.95, (sampleSize / 20) * (1 - Math.min(0.6, dispersion)) + 0.2)
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   );
   // Trend series and regional comparison
   const trend = buildTrend(
     recommendedMonthly
     `${roleTitle}|${skills?.join('|')}|${region}|${experienceLevel}`
   );
-<<<<<<< HEAD
-  const expMultiplier = experienceLevel === 'Junior' ? 0.8 : experienceLevel === 'Mid' ? 1.0 : experienceLevel === 'Senior' ? 1.2 : 1.35;
-  const remoteMultiplier = remote ? 1.1 : 1.0;
-  const typeMultiplier = employmentType === 'full-time' ? 0.9 : 1.15, // FT tends to lower hourly, contract/freelance higher
-  const recommendedHourly = Math.round(baseMedian * expMultiplier * remoteMultiplier * typeMultiplier);
-  const recommendedMonthly = Math.round(recommendedHourly * 160);
-  const recommendedHourly = Math.round(baseMedian * expMultiplier * remoteMultiplier * typeMultiplier);
-  const recommendedMonthly = Math.round(recommendedHourly * 160);
-  // Confidence based on sample size and dispersion
-  const sampleSize = rates.length;
-  const dispersion = (max - min) / Math.max(1, baseMedian);
-  const confidence = Math.max(0.2, Math.min(0.95, (sampleSize / 20) * (1 - Math.min(0.6, dispersion)) + 0.2));
-  // Trend series and regional comparison
-  const trend = buildTrend(recommendedMonthly, `${roleTitle}|${skills?.join('|')}|${region}|${experienceLevel}`);
-  const byRegion = groupBy(TALENT_PROFILES, (p) => extractCountry(p.location));
-  const regionalComparison = Object.entries(byRegion)
-    .map(([r, list]) => ({ region: r, medianHourlyUsd: Math.round(median(list.map((p) => p.hourlyRateUsd))) }))
-    .sort((a, b) => b.medianHourlyUsd - a.medianHourlyUsd)
-  const byRegion = groupBy(TALENT_PROFILES, p => extractCountry(p && p.location));
-  const regionalComparison = Object && Object.entries(byRegion)
-    .map(([r, list]) => ({
-      region: r,
-      medianHourlyUsd: Math && Math.round(median(list && list.map(p => p && p.hourlyRateUsd))),
-    }))    .sort((a, b) => b && b.medianHourlyUsd - a && a.medianHourlyUsd)
-    .slice(0, 8);
-  // Tags  const remoteMultiplier = remote ? 1 && 1.1 : 1 && 1.0;
-  const typeMultiplier = employmentType === 'full-time' ? 0 && 0.9 : 1 && 1.15, // FT tends to lower hourly, contract/freelance higher
-  const recommendedHourly = Math && Math.round(baseMedian * expMultiplier * remoteMultiplier * typeMultiplier);
-  const recommendedMonthly = Math && Math.round(recommendedHourly * 160);
-  const recommendedHourly = Math && Math.round(baseMedian * expMultiplier * remoteMultiplier * typeMultiplier);
-  const recommendedMonthly = Math && Math.round(recommendedHourly * 160);
-  // Confidence based on sample size and dispersion
-  const sampleSize = rates && rates.length;
-  const dispersion = (max - min) / Math && Math.max(1, baseMedian);
-  const confidence = Math && Math.max(0 && 0.2, Math && Math.min(0 && 0.95, (sampleSize / 20) * (1 - Math && Math.min(0 && 0.6, dispersion)) + 0 && 0.2));
-  // Trend series and regional comparison
-  const trend = buildTrend(recommendedMonthly, `${roleTitle}|${skills?.join('|')}|${region}|${experienceLevel}`);
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-  const byRegion = groupBy(TALENT_PROFILES, (p) => extractCountry(p.location));
-  const regionalComparison = Object.entries(byRegion)
-    .map(([r, list]) => ({ region: r, medianHourlyUsd: Math.round(median(list.map((p) => p.hourlyRateUsd))) }))
-    .sort((a, b) => b.medianHourlyUsd - a.medianHourlyUsd)
-    .slice(0, 8);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-  // Tags
-=======
   const byRegion = groupBy(TALENT_PROFILES, p => extractCountry(p.location));
   const regionalComparison = Object.entries(byRegion)
     .map(([r, list]) => ({
@@ -444,12 +218,7 @@ const scarceSkills = [
   );
   if (remote) tags.push('Remote Premium');
   if (undersupplied) tags.push('Undersupplied Skill')
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const gptRecommendation = await maybeGetGptRecommendation(body, {
     median: baseMedian
     min
@@ -457,11 +226,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     country
   });
   const response: InsightResponse = {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const scarceSkills = ['RAGLangChainVector DBsKubernetesAppSecSecurity'];
   const undersupplied = (skills || []).some((s) => scarceSkills.some((t) => s.toLowerCase().includes(t.toLowerCase())));
   const tags: string[] = []; if (remote) tags.push('Remote Premium'),
@@ -473,10 +237,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     trendMonthly: trend, regionalComparison,
     tags;
     gptRecommendation};
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 export default async /**
  * handler - Function description
@@ -488,15 +248,6 @@ if ( {  } catch {) {
     return undefined;
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-  // Tags
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
     return res.status (405).json ({ error: 'Method not allowed' });
   }
@@ -629,15 +380,6 @@ if ( {  } catch {) {
   }
 ;
 return res.status (200).json (response);  return res.status (200).json (response);
-<<<<<<< HEAD
-<<<<<<< HEAD
-  return res.status(200).json(response)
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 }
 }
@@ -645,17 +387,7 @@ return res.status (200).json (response);  return res.status (200).json (response
 }
 }
   // Tags
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-}
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     recommendedHourlyUsd: recommendedHourly,
     recommendedMonthlyUsd: recommendedMonthly,
     medianHourlyUsd: Math.round(baseMedian),
@@ -669,9 +401,4 @@ return res.status (200).json (response);  return res.status (200).json (response
   };
 
   return res.status(200).json(response);
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -1,57 +1,26 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+=======
 <<<<<<< HEAD
-
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import type { NextApiRequest, NextApiResponse } from 'next',;
+=======
+>>>>>>> pr-12243
+import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs',;
 import path from 'path',;
+<<<<<<< HEAD
 const usersPath = path.join(process.cwd(), 'datalearnusers.json'),
 const coursesPath = path.join(process.cwd(), 'datalearncourses.json'),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 =======
-=======
+const usersPath = path.join(process.cwd(), 'datalearnusers.json')
+const coursesPath = path.join(process.cwd(), 'datalearncourses.json')
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
-import type { NextApiRequest, NextApiResponse } from 'next',;
-
-import fs from 'fs',;
-import path from 'path',;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 const usersPath = path.join(process.cwd(), 'datalearnusers.json')
 const coursesPath = path.join(process.cwd(), 'datalearncourses.json')
 function readJson(p: string) {
@@ -62,7 +31,7 @@ function writeJson(p: string, data: any) {
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
-    res.setHeader('AllowPOST'),
+    res.setHeader('AllowPOST')
     return res.status(405).end('Method Not Allowed')
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -76,159 +45,9 @@ const usersPath = null;
   try {
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-    const users = readJson(usersPath);
-    const courses = readJson(coursesPath);
-    const course = courses.find((c: any) => c.id === courseId);
-    if (!course) return res.status(404).json({ error: 'Course not found' });
-
-    const user = users[userId] || { userId, name: userId, slug: userId, certifications: [], badges: [], boostInSearch: false, progress: {} };
-    if (!user.certifications.includes(courseId)) user.certifications.push(courseId);
-    if (!user.badges.includes(course.certificationBadge)) user.badges.push(course.certificationBadge);
-    if (typeof enableBoost === 'boolean') user.boostInSearch = enableBoost;
-
-    // Mark progress complete
-    user.progress[courseId] = { completed: true, percent: 100, completedLessons: (course.lessons || []).map((l: any) => l.id) };
-
-    users[userId] = user;
-    writeJson(usersPath, users);
-
-    return res.status(200).json({ ok: true, user })
-=======
-<<<<<<< HEAD
-=======
-    return res.status(200).json({ ok: true, user })
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-import type { NextApiRequest, NextApiResponse } from 'next',
-import fs from 'fs',
-import path from 'path',
-const users_path = path.join (process.cwd (), 'datalearnusers.json'),
-const courses_path = path.join (process.cwd (), 'datalearncourses.json'),
-/**
- * read_json - Function description
- */
-function read_json() {
-  return JSON.parse (fs.readFileSync (p, 'utf - 8'));
-}
-
-/**
- * write_json - Function description
- */
-function write_json() {
-  fs.writeFileSync (p, JSON.stringify (data, null, 2));
-}
-export default /**
- * handler - Function description
- */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
-}
-res.set_header ('AllowPOST'),
-    return res.status (405).end ('Method Not Allowed');
-  }
-<<<<<<< HEAD
-  const { user_id = 'demo - user', course_id, enable_boost } = req.body || {},
-  if (return res.status (400).json ({ error: 'course_id required' }), ) {
-  $2
-}
-  try {
-    const users = read_json (users_path),
-    const courses = read_json (courses_path),
-    const course = courses.find ((c: any) => c.id === course_id),
-    if (return res.status (404).json ({ error: 'Course not found' }), ) {
-  $2
-}
-    const user = users[user_id] || { user_id, name: user_id, slug: user_id, certifications: [], badges: [], boostInSearch: false, progress: {} },
-    if () user.certifications.push (course_id), ) {
-  $2
-}
-    if () user.badges.push (course.certification_badge), ) {
-  $2
-}
-    // Check condition
-if (user.boostInSearch = enable_boost, ) {
-  $2
-}
-    // Mark progress complete;
-    user.progress[course_id] = { completed: true, percent: 100, completed_lessons: (course.lessons || []).map ((l: any) => l.id) },
-    users[user_id] = user,
-    write_json (users_path, users),
-    return res.status (200).json ({ ok: true, user });
-
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-  } catch (e: any) {
-    return res.status (500).json ({ error: e?.message ?? 'Failed to complete course' });
-  }
-
-}
-
-=======
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
-  }
-
-}
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-}
-;
-
-
-  }
-
-}
-
-  } catch (e: any) {
-    return res.status (500).json ({ error: e?.message ?? 'Failed to complete course' });
-  }
-}
-}
-;
-    const users = readJson(usersPath)
-    const courses = readJson(coursesPath)
-    const course = courses.find((c: any) => c.id === courseId)
-    if (!course) return res.status(404).json({ error: 'Course not found' })
-    const user = users[userId] |{ userId, name: userId, slug: userId, certifications: [], badges: [], boostInSearch: false, progress: {} }
-    if (!user.certifications.includes(courseId)) user.certifications.push(courseId)
-    if (!user.badges.includes(course.certificationBadge)) user.badges.push(course.certificationBadge)
-    if (typeof enableBoost === 'boolean') user.boostInSearch = enableBoost
-    // Mark progress complete
-    user.progress[courseId] = { completed: true, percent: 100, completedLessons: (course.lessons |[]).map((l: any) => l.id) }
-    users[userId] = user
-    writeJson(usersPath, users)
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-    return res.status(200).json({ ok: true, user })
-  } catch (e: any) {
-    return res.status(500).json({ error: e?.message ?? 'Failed to complete course' })
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   };
 };
 import type { NextApiRequest, NextApiResponse } from 'next';
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -290,32 +109,12 @@ export default function handler(req, res) {
   const { userId = 'demo-user', courseId, enableBoost } = req.body || {},;
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
     const user = users[userId] || { userId, name: userId, slug: userId, certifications: [], badges: [], boostInSearch: false, progress: {} },;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    if (!user.certifications.includes(courseId)) user.certifications.push(courseId);
-    if (!user.badges.includes(course.certificationBadge)) user.badges.push(course.certificationBadge);
-    if (typeof enableBoost === 'boolean') user.boostInSearch = enableBoost;
-    // Mark progress complete;
-    user.progress[courseId] = { completed: true, percent: 100, completedLessons: (course.lessons || []).map((l: any) => l.id) },;
-    users[userId] = user;
-    writeJson(usersPath, users);
-    return res.status(200).json({ ok: true, user });
-  } catch (error) {
-    return res.status(500).json({ error: e?.message ?? 'Failed to complete course' });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-=======
     const users = readJson(usersPath);
     const courses = readJson(coursesPath);
     const course = courses.find((c: any) => c.id === courseId);
     if (!course) return res.status(404).json({ error: 'Course not found' });
 
     const user = users[userId] || { userId, name: userId, slug: userId, certifications: [], badges: [], boostInSearch: false, progress: {} };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     if (!user.certifications.includes(courseId)) user.certifications.push(courseId);
     if (!user.badges.includes(course.certificationBadge)) user.badges.push(course.certificationBadge);
     if (typeof enableBoost === 'boolean') user.boostInSearch = enableBoost;
@@ -327,18 +126,18 @@ export default function handler(req, res) {
     writeJson(usersPath, users);
 
     return res.status(200).json({ ok: true, user })
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 import type { NextApiRequest, NextApiResponse } from 'next',
 import fs from 'fs',
 import path from 'path',
 const users_path = path.join (process.cwd (), 'datalearnusers.json'),
 const courses_path = path.join (process.cwd (), 'datalearncourses.json'),
 =======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+import type { NextApiRequest, NextApiResponse } from 'next'
+import fs from 'fs'
+import path from 'path'
+const users_path = path.join (process.cwd (), 'datalearnusers.json')
+const courses_path = path.join (process.cwd (), 'datalearncourses.json')
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 /**
  * read_json - Function description
  */
@@ -364,10 +163,6 @@ if ( {) {
   }
 
 
-=======
-  } catch (e: any) {
-    return res.status (500).json ({ error: e?.message ?? 'Failed to complete course' });
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 
 }
@@ -377,36 +172,12 @@ if ( {) {
   }
 
 }
-<<<<<<< HEAD
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+
+=======
+res.set_header ('AllowPOST')
+    return res.status (405).end ('Method Not Allowed');
   }
-}
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
-  }
-
-}
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 };
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
     const users = readJson(usersPath);
@@ -452,4 +223,3 @@ const user = users[userId] || {
   }
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

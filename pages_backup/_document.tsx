@@ -1,11 +1,9 @@
 import { Html, Head, Main, NextScript } from 'next/document';
 
-<<<<<<< HEAD:pages/_document.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export default function Document() {
@@ -14,20 +12,13 @@ export default function Document() {
 <<<<<<< HEAD
       <Head />
 =======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
-export default function Document() {
-  return (
-    <Html lang="en">
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/_document.tsx
+>>>>>>> pr-12243
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import NextDocument, { Html, Head, Main, NextScript } from 'next/document';
 import {Html, Head, Main, NextScript} from 'next/document';
 import NextDocument, { Html, Head, Main, NextScript } from 'next/document';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+import {Html, Head, Main, NextScript} from 'next/document';
+import NextDocument, { Html, Head, Main, NextScript } from 'next/document';
 export default function Document() {
   return (
     <Html lang="en">
@@ -40,8 +31,6 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
           rel="stylesheet"
         />
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <link rel='icon' href='/favicon.ico' />
         <meta name='theme-color' content='#0a0a0a' />
         <meta
@@ -50,20 +39,9 @@ export default function Document() {
         />
         <link rel='preconnect' href='https://fonts.googleapis.com' />
         <link
-          rel='preconnect'
-          href='https://fonts.gstatic.com'
-          crossOrigin=''
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet"
         />
-<<<<<<< HEAD:pages/_document.tsx
-<<<<<<< HEAD
-        <link;
-          href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap'
-          rel='stylesheet'
-        />      </Head>
-=======
-
-
-=======
 <<<<<<< HEAD
         <link rel="icon" href="/favicon.ico" />
         <meta name="theme-color" content="#0a0a0a" />
@@ -71,8 +49,6 @@ export default function Document() {
         <link rel="preconnect" href="https: //fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
 =======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/_document.tsx
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta name="theme-color" content="#0a0a1a" />
@@ -118,91 +94,32 @@ export default function Document() {
           href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
         />
-<<<<<<< HEAD:pages/_document.tsx
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-      </Head>
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-export default function Document() {
-  return (
-    <Html lang="en">
-      <Head />
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
-=======
-import Document, { Html, Head, Main, NextScript } from 'next/document';
-import NextDocument, { Html, Head, Main, NextScript } from 'next/document';
-import {Html, Head, Main, NextScript} from 'next/document';
-import NextDocument, { Html, Head, Main, NextScript } from 'next/document';
-import {Html, Head, Main, NextScript} from 'next/document';
-import NextDocument, { Html, Head, Main, NextScript } from 'next/document';
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-export default function Document() {
-  return (
-    <Html lang="en">
-      <Head>
-        <meta charSet="utf-8" />
-        <meta name="theme-color" content="#1e293b" />
-        <meta name="description" content="Zion Tech Group - Leading provider of innovative micro SaaS products, AI services, and IT solutions" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 <<<<<<< HEAD
+=======
 >>>>>>> main
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-=======
-=======
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-      </Head>
-main
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/_document.tsx
         <link
           href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap'
           rel='stylesheet'
         />
       </Head>
-<<<<<<< HEAD:pages/_document.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/_document.tsx
+>>>>>>> pr-12243
       <body>
         <Main />
         <NextScript />
       </body>
     </Html>
-<<<<<<< HEAD:pages/_document.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/_document.tsx
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   );
   );
 
 }
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
 export default function Document() {;
   return (
@@ -252,54 +169,27 @@ function Document() {
         <Main />;
         <NextScript />;
       </body>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   )
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD:pages/_document.tsx
+
+
+
+
 <<<<<<< HEAD
 =======
-
-    </Html>);
-;
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+<<<<<<< HEAD
 =======
-}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/_document.tsx
-
-
-
-
-<<<<<<< HEAD:pages/_document.tsx
 >>>>>>> main
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
-=======
-main
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/_document.tsx
 );
-origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
   );
 }
-<<<<<<< HEAD:pages/_document.tsx
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/_document.tsx
+>>>>>>> pr-12243

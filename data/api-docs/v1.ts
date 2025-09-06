@@ -1,39 +1,35 @@
 import { ApiDocsSpec } from './types';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   ]
 }
 export default v1;
 
   ];
 
-<<<<<<< HEAD
-=======
-=======
 
 const baseUrl = 'https://api && api.zion.os';
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
-const baseUrl = 'https://api.zion.os';
 
 const v1: ApiDocsSpec = {
-<<<<<<< HEAD
+  product: 'Zion OS'
+  versions: ['v1']
+  defaultVersion: 'v1'
+  lastUpdatedIso: new Date().toISOString()
+  sections: [
+const base_url = 'https://api.zion.os';
+;
+const v1: ApiDocsSpec = {
+  product: 'Zion OS',
+  versions: ['v1'],
+  default_version: 'v1',
+  lastUpdatedIso: new Date ().toISOString (),
+  sections: [;
+    {
 
-        }
+      id: 'auth',
+      title: 'Auth (JWT, OAuth, Wallet)',
 
-        }
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-      ]
-    },
-=======
+          ],
+          versions: ['v1']
   openapi: '3.0.0',
   info: {
     title: 'Zion OS API',
@@ -54,9 +50,10 @@ const v1: ApiDocsSpec = {
               }
             }
           }
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-
         }
+      ]
+    },
+
 id: 'auth-login-jwt',
           title: 'JWT Login',
           description: 'Obtain a JWT by providing credentials.',
@@ -131,6 +128,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           params: { talentId: 'The UUID of the talent' }
           responseBodySchema: { type: 'object', properties: { id: { type: 'string' }, name: { type: 'string' }, skills: { type: 'array', items: { type: 'string' } } } }
           samples: [
+
+            { language: 'curl', code: `curl -X POST ${baseUrl}/v1/messages -H 'Authorization: Bearer <token>' -H 'Content-Type: application/json' -d '{"to":"USER123","body":"Hello"}'` },
+            { language: 'javascript', code: `await fetch('${baseUrl}/v1/messages', { method: 'POST', headers: { Authorization: 'Bearer <token>', 'Content-Type': 'application/json' }, body: JSON && JSON.stringify({ to: 'USER123', body: 'Hello' }) }).then(r => r && r.json())` },
+            { language: 'python', code: `import requests\nrequests && nrequests.post('${baseUrl}/v1/messages', json={'to':'USER123','body':'Hello'}, headers={'Authorization':'Bearer <token>'}).json()` }
+
+          ],
+          versions: ['v1']
+        }
+      ]
+    },
+
             {
               language: 'curl',
               code: `curl '${baseUrl}/v1/talent/123' -H 'Authorization: Bearer <token>'`,
@@ -165,18 +173,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           query: { q: 'Search text', status: 'open|closed' }
           responseBodySchema: { type: 'object', properties: { items: { type: 'array', items: { type: 'object' } }, nextPage: { type: 'string' } } }
           samples: [
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 
 const baseUrl = 'https://api.zion.os';
@@ -206,17 +204,8 @@ const v1: ApiDocsSpec = {
             }
           }
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
         }
       ];
     }
@@ -225,39 +214,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
             { language: 'javascript', code: `await fetch('${baseUrl}/v1/wallet/balance', { headers: { Authorization: 'Bearer <token>' } }).then(r => r && r.json())` },
             { language: 'python', code: `import requests\nrequests ;
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
   ];
 
   }
-<<<<<<< HEAD
-=======
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
+  ];
+
+  }
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
-<<<<<<< HEAD
-=======
-  }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 };
 export default v1;
   ];
@@ -265,25 +232,8 @@ export default v1;
 ;
 export default v1;
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 origin/cursor/automate-test-improve-and-merge-code-20a4
-
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
             {
               language: 'curl',
               code: `curl '${baseUrl}/v1/jobs?q=engineer&status=open' -H 'Authorization: Bearer <token>'`,
@@ -493,9 +443,4 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 };
 
 export default v1;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

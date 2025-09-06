@@ -1,34 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-<<<<<<< HEAD
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export const real2026Q2Additions = [
   {
+
 
       'Jira',
       'ServiceNow',
@@ -42,21 +19,11 @@ export const real2026Q2Additions = [
     price: '$2, 500',
     period: '/month',
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export const real2026Q2Additions = [
   {
     id: 'ai-governance-compliance-hub'
     name: 'AI Governance & Compliance Hub'
     category: 'AI & Data'
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 id: 'ai-governance-compliance-hub',
     name: 'AI Governance & Compliance Hub',
     category: 'AI & Data',
@@ -97,13 +64,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     link: 'https://ziontechgroup.com/services/ai-governance-compliance-hub',
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     trial_days: 14,
     setup_time: 'Fast',
     market_position: 'Strong enterprise traction with compliance - led buyers',
@@ -111,32 +71,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     link: 'https://ziontechgroup.com / services / ai - governance - compliance - hub',
 
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 export const real2026Q2Additions = [
-
-  {
-
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-
-export const real2026Q2Additions = [
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-  {
-=======
-
   {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
     id: 'ai - synthetic - data - factory',
     name: 'AI Synthetic Data Factory',
     category: 'AI & Data',
@@ -153,7 +92,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'SDKs for Python / JS and API access',
     ],
     use_cases: [;
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'MSPs and IT providers',
       'Internal IT for SMBs',
       'BYOD governance',
@@ -166,7 +104,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops',;
   },;
 
-<<<<<<< HEAD
 
       'Training data augmentation',
       'Privacy - preserving analytics',
@@ -181,11 +118,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     market_position: 'Growing demand driven by privacy regulations',
     roi: 'Cut data collection costs by 50% and improve model accuracy by 8%',
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     id: 'ecommerce - returns - orchestrator',
     name: 'E‑commerce Returns Orchestrator',
@@ -203,12 +135,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ],
     use_cases: [;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'DTC brands returns automation',
       'Marketplace return SLAs',
       'Reduce WISMO support',
@@ -221,11 +148,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     setup_time: 'Fast',
     market_position: 'Ideal for mid - market brands and marketplaces',
     roi: 'Reduce manual handling by 70% and increase exchanges by 20%',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     link: 'https://ziontechgroup.com / services / ecommerce - returns - orchestrator',
 
@@ -254,12 +176,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ],
     integrations: [;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'OpenAI',
       'Azure OpenAI',
       'Vertex AI',
@@ -274,11 +191,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     setup_time: 'Fast',
     market_position: 'Hot category with fast adoption in AI apps',
     roi: 'Cut token spend by 25% and improve response quality by 12%',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     link: 'https://ziontechgroup.com / services / ai - analytics - observability - kit',
 
@@ -301,12 +213,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ],
     use_cases: [;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'FinOps guardrails',
       'Cost regression prevention',
       'Unit economics tracking',
@@ -319,11 +226,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     setup_time: 'Fast',
     market_position: 'Proven ROI for cloud - native teams',
     roi: 'Reduce cloud waste by 30% within 60 days',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     link: 'https://ziontechgroup.com / services / cloud - cost - anomaly - guard',
 
@@ -345,12 +247,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ],
     use_cases: [;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Contract workflows',
       'Internal approvals',
       'Customer onboarding',
@@ -359,11 +256,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     competitors: ['DocuSign API', 'HelloSign API'],
     price: '$149',
     period: '/month',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     trial_days: 14,
     setup_time: 'Fast',
@@ -390,12 +282,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ],
     use_cases: [;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Public trust for SaaS',
       'B2B vendor requirements',
       'Platform reliability communications',
@@ -408,11 +295,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     setup_time: 'Fast',
     market_position: 'Great value with SLO - first approach',
     roi: 'Improve uptime communications and reduce churn risk',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     link: 'https://ziontechgroup.com / services / status - slo - plus',
 
@@ -437,12 +319,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     use_cases: [;
       'Third - party risk programs',
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Sales security reviews',
       'Procurement diligence',
     ],
@@ -454,11 +331,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     setup_time: 'Fast',
     market_position: 'Sales - assisted and security - led adoption',
     roi: 'Shorten sales cycles by 20% and reduce vendor risk exposure',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     link: 'https://ziontechgroup.com / services / vendor - risk - automation - pro',
 
@@ -480,12 +352,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ],
     use_cases: [;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Developer portals',
       'Internal knowledge bases',
       'Customer docs',
@@ -494,11 +361,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     competitors: ['Algolia Answers', 'Vectara'],
     price: '$249',
     period: '/month',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     trial_days: 14,
     setup_time: 'Fast',
@@ -780,25 +642,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Inventory, software metering, and alerts',
       'Ticketing and customer portals',
     ],
+    use_cases: [;
+
 
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-    useCases: [
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
     useCases: [
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'MSPs and IT providers',
       'Internal IT for SMBs',
       'BYOD governance',
@@ -806,28 +656,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     integrations: ['Azure AD', 'Okta', 'Slack', 'ServiceNow'],
     competitors: ['Atera', 'NinjaOne'],
     price: '$4',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',;
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops',;
   },;
-<<<<<<< HEAD
-];      'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals'
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 
 
 ];      'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals'
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     id: 'ai-governance-compliance-hub', name: 'AI Governance & Compliance Hub',
     category: 'AI & Data',
     tagline: 'Policy, risk, and model governance with automated evidence and audit trails.',
@@ -843,59 +680,22 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     link: 'https://ziontechgroup.com / services / msp - remote - device - ops',
   },
 ];      'Windows / macOS / Linux agent and lightweight mode_patch automation and health policies_remote scripts and secure sessions_inventory, software metering, and alerts_ticketing and customer portals';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 origin/cursor/automate-test-improve-and-merge-code-20a4
-
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     ];
-=======
-];      'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals'
-
-=======    ];
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     use_cases: ['MSPs and IT providers_internal IT for SMBsBYOD governance'];
     integrations: ['Azure ADOktaSlackServiceNow'];
     competitors: ['AteraNinjaOne'];
     price: '$4';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-
-    roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',
-    link: 'https://ziontechgroup && ziontechgroup.com/services/msp-remote-device-ops'
-
-  }
-];
-
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  }
-];
-;
-=======
     period: '/device/month';
     trialDays: 14;
     setupTime: 'Fast';
     marketPosition: 'Cost-effective RMM for partners and IT teams';
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%'
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops'
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
+  }
+];
+
 
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',
     link: 'https://ziontechgroup && ziontechgroup.com/services/msp-remote-device-ops'
@@ -904,14 +704,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 ];
 
 
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     period: '/device / month';
     trial_days: 14;
     setup_time: 'Fast';
@@ -920,11 +712,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     link: 'https://ziontechgroup.com / services / msp - remote - device - ops';
 
 
-<<<<<<< HEAD
-=======
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export const real2026Q2Additions = [;
   {;
     id: 'ai-governance-compliance-hub',;
@@ -1129,328 +916,27 @@ export const real2026Q2Additions = [;
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops';
 
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  }
-];
-;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
 ursor/fix-website-loading-errors-and-merge-6662
-
   }
 ];
 ;
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     period: '/device/month';
     trialDays: 14;
     setupTime: 'Fast';
     marketPosition: 'Cost-effective RMM for partners and IT teams';
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%'
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops'
-<<<<<<< HEAD
   }
 ];
-=======
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export const real2026Q2Additions = [;
   {;
-<<<<<<< HEAD
-    id: 'ai-governance-compliance-hub';
-    name: 'AI Governance & Compliance Hub';
-    category: 'AI & Data';
-    tagline: 'Policy, risk, and model governance with automated evidence and audit trails.';
-    description: 'Centralize AI model governance with policy mapping, automated risk assessments, lineage, PII scanning, red-teaming evidence, and auditor-ready reports. Integrates with Jira, ServiceNow, Slack, GitHub, and leading MLOps platforms.';
-=======
     id: 'ai-governance-compliance-hub',;
     name: 'AI Governance & Compliance Hub',;
     category: 'AI & Data',;
-    tagline: 'Policy, risk, and model governance with automated evidence and audit trails.',,
-  description: 'Centralize AI model governance with policy mapping, automated risk assessments, lineage, PII scanning, red-teaming evidence, and auditor-ready reports. Integrates with Jira, ServiceNow, Slack, GitHub, and leading MLOps platforms.',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-    features: [;
-      'Policy mapping to ISO/IEC 23894, NIST AI RMF, EU AI ActAutomated risk and impact assessments with mitigationsDataset lineage, consent tracking, and PII classificationPrompt and output red-teaming with evidence loggingHuman-in-the-loop approvals and audit workflowsRealtime controls dashboard and drift alertsExport auditor-ready reports (SOC2, ISO, HIPAA add-ons)';
-    ];
-    useCases: [;
-      'Enterprise AI model governanceRegulatory readiness and auditsVendor model risk management';
-    ];
-    integrations: ['JiraServiceNowSlackGitHubAzure OpenAIVertex AIDatadog'];
-    competitors: ['MonitaurCalypsoAICredo AI'];
-    price: '$2,500';
-    period: '/month';
-    trialDays: 14;
-    setupTime: 'Fast';
-    marketPosition: 'Strong enterprise traction with compliance-led buyers';
-    roi: 'Reduce audit prep by 60% and non-compliance risk by 40%';
-    link: 'https://ziontechgroup.com/services/ai-governance-compliance-hub';
-  };
-  {;
-<<<<<<< HEAD
-    id: 'ai-synthetic-data-factory';
-    name: 'AI Synthetic Data Factory';
-    category: 'AI & Data';
-    tagline: 'Generate high-quality, private, and balanced datasets for ML training.';
-    description: 'Produce privacy-preserving synthetic tabular and time-series datasets with distribution control, class rebalancing, bias mitigation, and privacy guarantees. Built-in quality metrics and drift checks.';
-=======
-    id: 'ai-synthetic-data-factory',;
-    name: 'AI Synthetic Data Factory',;
-    category: 'AI & Data',;
-    tagline: 'Generate high-quality, private, and balanced datasets for ML training.',,
-  description: 'Produce privacy-preserving synthetic tabular and time-series datasets with distribution control, class rebalancing, bias mitigation, and privacy guarantees. Built-in quality metrics and drift checks.',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-    features: [;
-      'Differential privacy and k-anonymity optionsData schema import and auto-profilingClass balancing, minority class boostersBias and fairness testing with reportsEvaluation dashboard with KS/JS metricsSDKs for Python/JS and API access';
-    ];
-    useCases: ['Training data augmentationPrivacy-preserving analyticsTest data generation'];
-    integrations: ['S3BigQuerySnowflakeDatabricks'];
-    competitors: ['Mostly AIGretelYData'];
-    price: '$1,200';
-    period: '/month';
-    trialDays: 14;
-    setupTime: 'Fast';
-    marketPosition: 'Growing demand driven by privacy regulations';
-    roi: 'Cut data collection costs by 50% and improve model accuracy by 8%';
-    link: 'https://ziontechgroup.com/services/ai-synthetic-data-factory';
-  };
-  {;
-<<<<<<< HEAD
-    id: 'ecommerce-returns-orchestrator';
-    name: 'E‑commerce Returns Orchestrator';
-    category: 'Developer Tools';
-    tagline: 'Automate RMAs, labels, refunds, and disposition in one workflow.';
-    description: 'A headless returns microservice with policy rules, label generation, refund logic, routing, and disposition tracking. Plug-and-play with major commerce platforms.';
-=======
-    id: 'ecommerce-returns-orchestrator',;
-    name: 'E‑commerce Returns Orchestrator',;
-    category: 'Developer Tools',;
-    tagline: 'Automate RMAs, labels, refunds, and disposition in one workflow.',,
-  description: 'A headless returns microservice with policy rules, label generation, refund logic, routing, and disposition tracking. Plug-and-play with major commerce platforms.',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-    features: [;
-      'Return portal widgets and hosted flowsPolicy rules engine with A/B testsCarrier label and pickup automationRefund/credit/store-credit workflowsDisposition tracking and warehouse notificationsAnalytics: reasons, preventable returns, CX scores';
-    ];
-    useCases: ['DTC brands returns automationMarketplace return SLAsReduce WISMO support'];
-    integrations: ['ShopifyBigCommerceMagentoStripeShippo'];
-    competitors: ['Loop ReturnsReturnly'];
-    price: '$399';
-    period: '/month';
-    trialDays: 14;
-    setupTime: 'Fast';
-    marketPosition: 'Ideal for mid-market brands and marketplaces';
-    roi: 'Reduce manual handling by 70% and increase exchanges by 20%';
-    link: 'https://ziontechgroup.com/services/ecommerce-returns-orchestrator';
-  };
-  {;
-<<<<<<< HEAD
-    id: 'ai-analytics-observability-kit';
-    name: 'AI Analytics Observability Kit';
-    category: 'Observability';
-    tagline: 'Monitor LLM quality, costs, latency, and hallucinations with guardrails.';
-    description: 'Drop-in SDK and UI to capture prompts, tokens, latencies, costs, moderation flags, and hallucination risk, with playbooks for mitigation and auto-rollbacks.';
-=======
-    id: 'ai-analytics-observability-kit',;
-    name: 'AI Analytics Observability Kit',;
-    category: 'Observability',;
-    tagline: 'Monitor LLM quality, costs, latency, and hallucinations with guardrails.',,
-  description: 'Drop-in SDK and UI to capture prompts, tokens, latencies, costs, moderation flags, and hallucination risk, with playbooks for mitigation and auto-rollbacks.',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-    features: [;
-      'Token and cost telemetry with budgetsHallucination detectors and blocklistsContent safety checks and policy labelsTrace viewer with spans and embeddingsRegression tests and golden promptsQuality scorecards and SLA alerts';
-    ];
-    useCases: ['GenAI product analyticsModel regression monitoringCost governance'];
-    integrations: ['OpenAIAzure OpenAIVertex AILangChainVercelDatadog'];
-    competitors: ['HumanloopArizeLangfuse'];
-    price: '$490';
-    period: '/month';
-    trialDays: 14;
-    setupTime: 'Fast';
-    marketPosition: 'Hot category with fast adoption in AI apps';
-    roi: 'Cut token spend by 25% and improve response quality by 12%';
-    link: 'https://ziontechgroup.com/services/ai-analytics-observability-kit';
-  };
-  {;
-<<<<<<< HEAD
-    id: 'cloud-cost-anomaly-guard';
-    name: 'Cloud Cost Anomaly Guard';
-    category: 'Cloud & FinOps';
-    tagline: 'Edge-detected anomalies, instant Slack alerts, and auto-remediation.';
-    description: 'Continuous spend anomaly detection with unsupervised and seasonal baselines, unit economics, and playbooks to stop runaway costs before the bill.';
-=======
-    id: 'cloud-cost-anomaly-guard',;
-    name: 'Cloud Cost Anomaly Guard',;
-    category: 'Cloud & FinOps',;
-    tagline: 'Edge-detected anomalies, instant Slack alerts, and auto-remediation.',,
-  description: 'Continuous spend anomaly detection with unsupervised and seasonal baselines, unit economics, and playbooks to stop runaway costs before the bill.',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-    features: [;
-      'Real-time anomaly detectionSlack/Teams alerts and triage workflowsAutomated remediation playbooksKubernetes cost allocation and showbackTag hygiene and unused resource cleanup';
-    ];
-    useCases: ['FinOps guardrailsCost regression preventionUnit economics tracking'];
-    integrations: ['AWSGCPAzureKubernetesSlackPagerDuty'];
-    competitors: ['CloudZeroKubecost'];
-    price: '$690';
-    period: '/month';
-    trialDays: 14;
-    setupTime: 'Fast';
-    marketPosition: 'Proven ROI for cloud-native teams';
-    roi: 'Reduce cloud waste by 30% within 60 days';
-    link: 'https://ziontechgroup.com/services/cloud-cost-anomaly-guard';
-  };
-  {;
-<<<<<<< HEAD
-    id: 'secure-pdf-signing-api';
-    name: 'Secure PDF Signing API';
-    category: 'Developer Tools';
-    tagline: 'REST and SDKs for compliant e-signatures with audit trails.';
-    description: 'A developer-first e-signature API with templates, bulk sends, webhooks, and long-term validation. SOC2-ready with EU data residency.';
-=======
-    id: 'secure-pdf-signing-api',;
-    name: 'Secure PDF Signing API',;
-    category: 'Developer Tools',;
-    tagline: 'REST and SDKs for compliant e-signatures with audit trails.',,
-  description: 'A developer-first e-signature API with templates, bulk sends, webhooks, and long-term validation. SOC2-ready with EU data residency.',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-    features: [;
-      'Signer authentication and KYC add-onsTemplates and merge fieldsBulk send and remindersWebhooks and event callbacksLTV and certificate validation';
-    ];
-    useCases: ['Contract workflowsInternal approvalsCustomer onboarding'];
-    integrations: ['ZapierMake.comSalesforceHubSpot'];
-    competitors: ['DocuSign APIHelloSign API'];
-    price: '$149';
-    period: '/month';
-    trialDays: 14;
-    setupTime: 'Fast';
-    marketPosition: 'SMB to mid-market developer teams';
-    roi: 'Accelerate time-to-sign by 50% and cut manual errors by 70%';
-    link: 'https://ziontechgroup.com/services/secure-pdf-signing-api';
-  };
-  {;
-<<<<<<< HEAD
-    id: 'status-slo-plus';
-    name: 'Status Pages + SLO Pro';
-    category: 'Quality & Monitoring';
-    tagline: 'One-click status pages with SLOs, error budgets, and subscribers.';
-    description: 'Publish incidents, SLOs, error budgets, and historical uptime with integrations to cloud and observability. Add subscribers and SLA exports.';
-=======
-    id: 'status-slo-plus',;
-    name: 'Status Pages + SLO Pro',;
-    category: 'Quality & Monitoring',;
-    tagline: 'One-click status pages with SLOs, error budgets, and subscribers.',,
-  description: 'Publish incidents, SLOs, error budgets, and historical uptime with integrations to cloud and observability. Add subscribers and SLA exports.',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-    features: [;
-      'Multiple environments and componentsSLOs and error budget burn trackingIncident templates and RCAsSubscriber notifications and webhooksCustom domains and branding';
-    ];
-    useCases: ['Public trust for SaaSB2B vendor requirementsPlatform reliability communications'];
-    integrations: ['AWS CloudWatchDatadogNew RelicPagerDuty'];
-    competitors: ['StatuspageBetter Uptime'];
-    price: '$79';
-    period: '/month';
-    trialDays: 14;
-    setupTime: 'Fast';
-    marketPosition: 'Great value with SLO-first approach';
-    roi: 'Improve uptime communications and reduce churn risk';
-    link: 'https://ziontechgroup.com/services/status-slo-plus';
-  };
-  {;
-<<<<<<< HEAD
-    id: 'vendor-risk-automation-pro';
-    name: 'Vendor Risk Automation Pro';
-    category: 'Quality & Monitoring';
-    tagline: 'Automate questionnaires, evidence collection, and continuous monitoring.';
-    description: 'End-to-end vendor risk workflows with templated questionnaires, auto evidence pulls, security ratings, and remediation tracking.';
-=======
-    id: 'vendor-risk-automation-pro',;
-    name: 'Vendor Risk Automation Pro',;
-    category: 'Quality & Monitoring',;
-    tagline: 'Automate questionnaires, evidence collection, and continuous monitoring.',,
-  description: 'End-to-end vendor risk workflows with templated questionnaires, auto evidence pulls, security ratings, and remediation tracking.',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-    features: [;
-      'Questionnaire templates and AI autofillEvidence collection from SOC2/SIG LiteContinuous internet scanning and ratingsFindings, tasks, and remediation playbooksBoard-ready risk reports';
-    ];
-    useCases: ['Third-party risk programsSales security reviewsProcurement diligence'];
-    integrations: ['SecurityScorecardBitSightOneTrustJira'];
-    competitors: ['WhisticVantaZenGRC'];
-    price: '$890';
-    period: '/month';
-    trialDays: 14;
-    setupTime: 'Fast';
-    marketPosition: 'Sales-assisted and security-led adoption';
-    roi: 'Shorten sales cycles by 20% and reduce vendor risk exposure';
-    link: 'https://ziontechgroup.com/services/vendor-risk-automation-pro';
-  };
-  {;
-<<<<<<< HEAD
-    id: 'ai-docs-search-answers';
-    name: 'AI Docs Search & Answers';
-    category: 'Developer Tools';
-    tagline: 'Embeddings + RAG search over docs with answer extraction.';
-    description: 'Hosted semantic search for documentation, with chunking, citations, guardrails, and analytics. Drop-in widget and APIs.';
-=======
-    id: 'ai-docs-search-answers',;
-    name: 'AI Docs Search & Answers',;
-    category: 'Developer Tools',;
-    tagline: 'Embeddings + RAG search over docs with answer extraction.',,
-  description: 'Hosted semantic search for documentation, with chunking, citations, guardrails, and analytics. Drop-in widget and APIs.',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-    features: [;
-      'Doc ingestion from URLs, PDFs, and reposEmbeddings index with incremental updatesRAG with citations and safety checksAnalytics: searches, deflections, gapsMulti-tenant and SSO support';
-    ];
-    useCases: ['Developer portalsInternal knowledge basesCustomer docs'];
-    integrations: ['GitHubConfluenceNotionZendesk'];
-    competitors: ['Algolia AnswersVectara'];
-    price: '$249';
-    period: '/month';
-    trialDays: 14;
-    setupTime: 'Fast';
-    marketPosition: 'High adoption for self-serve docs';
-    roi: 'Reduce tickets by 30% and improve time-to-answer';
-    link: 'https://ziontechgroup.com/services/ai-docs-search-answers';
-  };
-  {;
-<<<<<<< HEAD
-    id: 'msp-remote-device-ops';
-    name: 'MSP Remote Device Ops';
-    category: 'Cloud & FinOps';
-    tagline: 'Manage and secure fleets of endpoints with remote scripts and patches.';
-    description: 'MSP-grade remote monitoring and management for SMB fleets: inventory, patching, scripts, alerts, and remote access with compliance-ready logs.';
-=======
-    id: 'msp-remote-device-ops',;
-    name: 'MSP Remote Device Ops',;
-    category: 'Cloud & FinOps',;
-    tagline: 'Manage and secure fleets of endpoints with remote scripts and patches.',,
-  description: 'MSP-grade remote monitoring and management for SMB fleets: inventory, patching, scripts, alerts, and remote access with compliance-ready logs.',;
-    features: [;
-      'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals';
-    ],;
-    useCases: ['MSPs and IT providersInternal IT for SMBsBYOD governance'],;
-    integrations: ['Azure ADOktaSlackServiceNow'],;
-    competitors: ['AteraNinjaOne'],;
-    price: '$4',;
-    period: '/device/month',;
-    trialDays: 14,;
-    setupTime: 'Fast',;
-    marketPosition: 'Cost-effective RMM for partners and IT teams',;
-    roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%';
-    link: 'https://ziontechgroup.com/services/msp-remote-device-ops';
-
-  }
-];
-;export const real2026Q2Additions = [;
-  {;
-    id: 'ai-governance-compliance-hub',;
-    name: 'AI Governance & Compliance Hub',;
-    category: 'AI & Data',;
-    tagline: 'Policy, risk, and model governance with automated evidence and audit trails.',,
-  description: 'Centralize AI model governance with policy mapping, automated risk assessments, lineage, PII scanning, red-teaming evidence, and auditor-ready reports. Integrates with Jira, ServiceNow, Slack, GitHub, and leading MLOps platforms.',;
+    tagline: 'Policy, risk, and model governance with automated evidence and audit trails.',;
+    description: 'Centralize AI model governance with policy mapping, automated risk assessments, lineage, PII scanning, red-teaming evidence, and auditor-ready reports. Integrates with Jira, ServiceNow, Slack, GitHub, and leading MLOps platforms.',;
     features: [;
       'Policy mapping to ISO/IEC 23894, NIST AI RMF, EU AI ActAutomated risk and impact assessments with mitigationsDataset lineage, consent tracking, and PII classificationPrompt and output red-teaming with evidence loggingHuman-in-the-loop approvals and audit workflowsRealtime controls dashboard and drift alertsExport auditor-ready reports (SOC2, ISO, HIPAA add-ons)';
     ],;
@@ -1471,8 +957,8 @@ export const real2026Q2Additions = [;
     id: 'ai-synthetic-data-factory',;
     name: 'AI Synthetic Data Factory',;
     category: 'AI & Data',;
-    tagline: 'Generate high-quality, private, and balanced datasets for ML training.',,
-  description: 'Produce privacy-preserving synthetic tabular and time-series datasets with distribution control, class rebalancing, bias mitigation, and privacy guarantees. Built-in quality metrics and drift checks.',;
+    tagline: 'Generate high-quality, private, and balanced datasets for ML training.',;
+    description: 'Produce privacy-preserving synthetic tabular and time-series datasets with distribution control, class rebalancing, bias mitigation, and privacy guarantees. Built-in quality metrics and drift checks.',;
     features: [;
       'Differential privacy and k-anonymity optionsData schema import and auto-profilingClass balancing, minority class boostersBias and fairness testing with reportsEvaluation dashboard with KS/JS metricsSDKs for Python/JS and API access';
     ],;
@@ -1491,8 +977,8 @@ export const real2026Q2Additions = [;
     id: 'ecommerce-returns-orchestrator',;
     name: 'E‑commerce Returns Orchestrator',;
     category: 'Developer Tools',;
-    tagline: 'Automate RMAs, labels, refunds, and disposition in one workflow.',,
-  description: 'A headless returns microservice with policy rules, label generation, refund logic, routing, and disposition tracking. Plug-and-play with major commerce platforms.',;
+    tagline: 'Automate RMAs, labels, refunds, and disposition in one workflow.',;
+    description: 'A headless returns microservice with policy rules, label generation, refund logic, routing, and disposition tracking. Plug-and-play with major commerce platforms.',;
     features: [;
       'Return portal widgets and hosted flowsPolicy rules engine with A/B testsCarrier label and pickup automationRefund/credit/store-credit workflowsDisposition tracking and warehouse notificationsAnalytics: reasons, preventable returns, CX scores';
     ],;
@@ -1511,8 +997,8 @@ export const real2026Q2Additions = [;
     id: 'ai-analytics-observability-kit',;
     name: 'AI Analytics Observability Kit',;
     category: 'Observability',;
-    tagline: 'Monitor LLM quality, costs, latency, and hallucinations with guardrails.',,
-  description: 'Drop-in SDK and UI to capture prompts, tokens, latencies, costs, moderation flags, and hallucination risk, with playbooks for mitigation and auto-rollbacks.',;
+    tagline: 'Monitor LLM quality, costs, latency, and hallucinations with guardrails.',;
+    description: 'Drop-in SDK and UI to capture prompts, tokens, latencies, costs, moderation flags, and hallucination risk, with playbooks for mitigation and auto-rollbacks.',;
     features: [;
       'Token and cost telemetry with budgetsHallucination detectors and blocklistsContent safety checks and policy labelsTrace viewer with spans and embeddingsRegression tests and golden promptsQuality scorecards and SLA alerts';
     ],;
@@ -1531,8 +1017,8 @@ export const real2026Q2Additions = [;
     id: 'cloud-cost-anomaly-guard',;
     name: 'Cloud Cost Anomaly Guard',;
     category: 'Cloud & FinOps',;
-    tagline: 'Edge-detected anomalies, instant Slack alerts, and auto-remediation.',,
-  description: 'Continuous spend anomaly detection with unsupervised and seasonal baselines, unit economics, and playbooks to stop runaway costs before the bill.',;
+    tagline: 'Edge-detected anomalies, instant Slack alerts, and auto-remediation.',;
+    description: 'Continuous spend anomaly detection with unsupervised and seasonal baselines, unit economics, and playbooks to stop runaway costs before the bill.',;
     features: [;
       'Real-time anomaly detectionSlack/Teams alerts and triage workflowsAutomated remediation playbooksKubernetes cost allocation and showbackTag hygiene and unused resource cleanup';
     ],;
@@ -1551,8 +1037,8 @@ export const real2026Q2Additions = [;
     id: 'secure-pdf-signing-api',;
     name: 'Secure PDF Signing API',;
     category: 'Developer Tools',;
-    tagline: 'REST and SDKs for compliant e-signatures with audit trails.',,
-  description: 'A developer-first e-signature API with templates, bulk sends, webhooks, and long-term validation. SOC2-ready with EU data residency.',;
+    tagline: 'REST and SDKs for compliant e-signatures with audit trails.',;
+    description: 'A developer-first e-signature API with templates, bulk sends, webhooks, and long-term validation. SOC2-ready with EU data residency.',;
     features: [;
       'Signer authentication and KYC add-onsTemplates and merge fieldsBulk send and remindersWebhooks and event callbacksLTV and certificate validation';
     ],;
@@ -1571,8 +1057,8 @@ export const real2026Q2Additions = [;
     id: 'status-slo-plus',;
     name: 'Status Pages + SLO Pro',;
     category: 'Quality & Monitoring',;
-    tagline: 'One-click status pages with SLOs, error budgets, and subscribers.',,
-  description: 'Publish incidents, SLOs, error budgets, and historical uptime with integrations to cloud and observability. Add subscribers and SLA exports.',;
+    tagline: 'One-click status pages with SLOs, error budgets, and subscribers.',;
+    description: 'Publish incidents, SLOs, error budgets, and historical uptime with integrations to cloud and observability. Add subscribers and SLA exports.',;
     features: [;
       'Multiple environments and componentsSLOs and error budget burn trackingIncident templates and RCAsSubscriber notifications and webhooksCustom domains and branding';
     ],;
@@ -1591,8 +1077,8 @@ export const real2026Q2Additions = [;
     id: 'vendor-risk-automation-pro',;
     name: 'Vendor Risk Automation Pro',;
     category: 'Quality & Monitoring',;
-    tagline: 'Automate questionnaires, evidence collection, and continuous monitoring.',,
-  description: 'End-to-end vendor risk workflows with templated questionnaires, auto evidence pulls, security ratings, and remediation tracking.',;
+    tagline: 'Automate questionnaires, evidence collection, and continuous monitoring.',;
+    description: 'End-to-end vendor risk workflows with templated questionnaires, auto evidence pulls, security ratings, and remediation tracking.',;
     features: [;
       'Questionnaire templates and AI autofillEvidence collection from SOC2/SIG LiteContinuous internet scanning and ratingsFindings, tasks, and remediation playbooksBoard-ready risk reports';
     ],;
@@ -1611,8 +1097,8 @@ export const real2026Q2Additions = [;
     id: 'ai-docs-search-answers',;
     name: 'AI Docs Search & Answers',;
     category: 'Developer Tools',;
-    tagline: 'Embeddings + RAG search over docs with answer extraction.',,
-  description: 'Hosted semantic search for documentation, with chunking, citations, guardrails, and analytics. Drop-in widget and APIs.',;
+    tagline: 'Embeddings + RAG search over docs with answer extraction.',;
+    description: 'Hosted semantic search for documentation, with chunking, citations, guardrails, and analytics. Drop-in widget and APIs.',;
     features: [;
       'Doc ingestion from URLs, PDFs, and reposEmbeddings index with incremental updatesRAG with citations and safety checksAnalytics: searches, deflections, gapsMulti-tenant and SSO support';
     ],;
@@ -1631,40 +1117,21 @@ export const real2026Q2Additions = [;
     id: 'msp-remote-device-ops',;
     name: 'MSP Remote Device Ops',;
     category: 'Cloud & FinOps',;
-    tagline: 'Manage and secure fleets of endpoints with remote scripts and patches.',,
-  description: 'MSP-grade remote monitoring and management for SMB fleets: inventory, patching, scripts, alerts, and remote access with compliance-ready logs.',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+    tagline: 'Manage and secure fleets of endpoints with remote scripts and patches.',;
+    description: 'MSP-grade remote monitoring and management for SMB fleets: inventory, patching, scripts, alerts, and remote access with compliance-ready logs.',;
     features: [;
       'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals';
-    ];
-    useCases: ['MSPs and IT providersInternal IT for SMBsBYOD governance'];
-    integrations: ['Azure ADOktaSlackServiceNow'];
-    competitors: ['AteraNinjaOne'];
-    price: '$4';
-    period: '/device/month';
-    trialDays: 14;
-    setupTime: 'Fast';
-    marketPosition: 'Cost-effective RMM for partners and IT teams';
+    ],;
+    useCases: ['MSPs and IT providersInternal IT for SMBsBYOD governance'],;
+    integrations: ['Azure ADOktaSlackServiceNow'],;
+    competitors: ['AteraNinjaOne'],;
+    price: '$4',;
+    period: '/device/month',;
+    trialDays: 14,;
+    setupTime: 'Fast',;
+    marketPosition: 'Cost-effective RMM for partners and IT teams',;
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%';
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-  }
-];
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   }
 ];
   }
@@ -1687,8 +1154,8 @@ export const real2026Q2Additions = [;
     id: 'ai-governance-compliance-hub',;
     name: 'AI Governance & Compliance Hub',;
     category: 'AI & Data',;
-    tagline: 'Policy, risk, and model governance with automated evidence and audit trails.',,
-  description: 'Centralize AI model governance with policy mapping, automated risk assessments, lineage, PII scanning, red-teaming evidence, and auditor-ready reports. Integrates with Jira, ServiceNow, Slack, GitHub, and leading MLOps platforms.',;
+    tagline: 'Policy, risk, and model governance with automated evidence and audit trails.',;
+    description: 'Centralize AI model governance with policy mapping, automated risk assessments, lineage, PII scanning, red-teaming evidence, and auditor-ready reports. Integrates with Jira, ServiceNow, Slack, GitHub, and leading MLOps platforms.',;
     features: [;
       'Policy mapping to ISO/IEC 23894, NIST AI RMF, EU AI ActAutomated risk and impact assessments with mitigationsDataset lineage, consent tracking, and PII classificationPrompt and output red-teaming with evidence loggingHuman-in-the-loop approvals and audit workflowsRealtime controls dashboard and drift alertsExport auditor-ready reports (SOC2, ISO, HIPAA add-ons)';
     ],;
@@ -1709,8 +1176,8 @@ export const real2026Q2Additions = [;
     id: 'ai-synthetic-data-factory',;
     name: 'AI Synthetic Data Factory',;
     category: 'AI & Data',;
-    tagline: 'Generate high-quality, private, and balanced datasets for ML training.',,
-  description: 'Produce privacy-preserving synthetic tabular and time-series datasets with distribution control, class rebalancing, bias mitigation, and privacy guarantees. Built-in quality metrics and drift checks.',;
+    tagline: 'Generate high-quality, private, and balanced datasets for ML training.',;
+    description: 'Produce privacy-preserving synthetic tabular and time-series datasets with distribution control, class rebalancing, bias mitigation, and privacy guarantees. Built-in quality metrics and drift checks.',;
     features: [;
       'Differential privacy and k-anonymity optionsData schema import and auto-profilingClass balancing, minority class boostersBias and fairness testing with reportsEvaluation dashboard with KS/JS metricsSDKs for Python/JS and API access';
     ],;
@@ -1729,8 +1196,8 @@ export const real2026Q2Additions = [;
     id: 'ecommerce-returns-orchestrator',;
     name: 'E‑commerce Returns Orchestrator',;
     category: 'Developer Tools',;
-    tagline: 'Automate RMAs, labels, refunds, and disposition in one workflow.',,
-  description: 'A headless returns microservice with policy rules, label generation, refund logic, routing, and disposition tracking. Plug-and-play with major commerce platforms.',;
+    tagline: 'Automate RMAs, labels, refunds, and disposition in one workflow.',;
+    description: 'A headless returns microservice with policy rules, label generation, refund logic, routing, and disposition tracking. Plug-and-play with major commerce platforms.',;
     features: [;
       'Return portal widgets and hosted flowsPolicy rules engine with A/B testsCarrier label and pickup automationRefund/credit/store-credit workflowsDisposition tracking and warehouse notificationsAnalytics: reasons, preventable returns, CX scores';
     ],;
@@ -1749,8 +1216,8 @@ export const real2026Q2Additions = [;
     id: 'ai-analytics-observability-kit',;
     name: 'AI Analytics Observability Kit',;
     category: 'Observability',;
-    tagline: 'Monitor LLM quality, costs, latency, and hallucinations with guardrails.',,
-  description: 'Drop-in SDK and UI to capture prompts, tokens, latencies, costs, moderation flags, and hallucination risk, with playbooks for mitigation and auto-rollbacks.',;
+    tagline: 'Monitor LLM quality, costs, latency, and hallucinations with guardrails.',;
+    description: 'Drop-in SDK and UI to capture prompts, tokens, latencies, costs, moderation flags, and hallucination risk, with playbooks for mitigation and auto-rollbacks.',;
     features: [;
       'Token and cost telemetry with budgetsHallucination detectors and blocklistsContent safety checks and policy labelsTrace viewer with spans and embeddingsRegression tests and golden promptsQuality scorecards and SLA alerts';
     ],;
@@ -1769,8 +1236,8 @@ export const real2026Q2Additions = [;
     id: 'cloud-cost-anomaly-guard',;
     name: 'Cloud Cost Anomaly Guard',;
     category: 'Cloud & FinOps',;
-    tagline: 'Edge-detected anomalies, instant Slack alerts, and auto-remediation.',,
-  description: 'Continuous spend anomaly detection with unsupervised and seasonal baselines, unit economics, and playbooks to stop runaway costs before the bill.',;
+    tagline: 'Edge-detected anomalies, instant Slack alerts, and auto-remediation.',;
+    description: 'Continuous spend anomaly detection with unsupervised and seasonal baselines, unit economics, and playbooks to stop runaway costs before the bill.',;
     features: [;
       'Real-time anomaly detectionSlack/Teams alerts and triage workflowsAutomated remediation playbooksKubernetes cost allocation and showbackTag hygiene and unused resource cleanup';
     ],;
@@ -1789,8 +1256,8 @@ export const real2026Q2Additions = [;
     id: 'secure-pdf-signing-api',;
     name: 'Secure PDF Signing API',;
     category: 'Developer Tools',;
-    tagline: 'REST and SDKs for compliant e-signatures with audit trails.',,
-  description: 'A developer-first e-signature API with templates, bulk sends, webhooks, and long-term validation. SOC2-ready with EU data residency.',;
+    tagline: 'REST and SDKs for compliant e-signatures with audit trails.',;
+    description: 'A developer-first e-signature API with templates, bulk sends, webhooks, and long-term validation. SOC2-ready with EU data residency.',;
     features: [;
       'Signer authentication and KYC add-onsTemplates and merge fieldsBulk send and remindersWebhooks and event callbacksLTV and certificate validation';
     ],;
@@ -1809,8 +1276,8 @@ export const real2026Q2Additions = [;
     id: 'status-slo-plus',;
     name: 'Status Pages + SLO Pro',;
     category: 'Quality & Monitoring',;
-    tagline: 'One-click status pages with SLOs, error budgets, and subscribers.',,
-  description: 'Publish incidents, SLOs, error budgets, and historical uptime with integrations to cloud and observability. Add subscribers and SLA exports.',;
+    tagline: 'One-click status pages with SLOs, error budgets, and subscribers.',;
+    description: 'Publish incidents, SLOs, error budgets, and historical uptime with integrations to cloud and observability. Add subscribers and SLA exports.',;
     features: [;
       'Multiple environments and componentsSLOs and error budget burn trackingIncident templates and RCAsSubscriber notifications and webhooksCustom domains and branding';
     ],;
@@ -1829,8 +1296,8 @@ export const real2026Q2Additions = [;
     id: 'vendor-risk-automation-pro',;
     name: 'Vendor Risk Automation Pro',;
     category: 'Quality & Monitoring',;
-    tagline: 'Automate questionnaires, evidence collection, and continuous monitoring.',,
-  description: 'End-to-end vendor risk workflows with templated questionnaires, auto evidence pulls, security ratings, and remediation tracking.',;
+    tagline: 'Automate questionnaires, evidence collection, and continuous monitoring.',;
+    description: 'End-to-end vendor risk workflows with templated questionnaires, auto evidence pulls, security ratings, and remediation tracking.',;
     features: [;
       'Questionnaire templates and AI autofillEvidence collection from SOC2/SIG LiteContinuous internet scanning and ratingsFindings, tasks, and remediation playbooksBoard-ready risk reports';
     ],;
@@ -1849,8 +1316,8 @@ export const real2026Q2Additions = [;
     id: 'ai-docs-search-answers',;
     name: 'AI Docs Search & Answers',;
     category: 'Developer Tools',;
-    tagline: 'Embeddings + RAG search over docs with answer extraction.',,
-  description: 'Hosted semantic search for documentation, with chunking, citations, guardrails, and analytics. Drop-in widget and APIs.',;
+    tagline: 'Embeddings + RAG search over docs with answer extraction.',;
+    description: 'Hosted semantic search for documentation, with chunking, citations, guardrails, and analytics. Drop-in widget and APIs.',;
     features: [;
       'Doc ingestion from URLs, PDFs, and reposEmbeddings index with incremental updatesRAG with citations and safety checksAnalytics: searches, deflections, gapsMulti-tenant and SSO support';
     ],;
@@ -1869,8 +1336,8 @@ export const real2026Q2Additions = [;
     id: 'msp-remote-device-ops',;
     name: 'MSP Remote Device Ops',;
     category: 'Cloud & FinOps',;
-    tagline: 'Manage and secure fleets of endpoints with remote scripts and patches.',,
-  description: 'MSP-grade remote monitoring and management for SMB fleets: inventory, patching, scripts, alerts, and remote access with compliance-ready logs.',;
+    tagline: 'Manage and secure fleets of endpoints with remote scripts and patches.',;
+    description: 'MSP-grade remote monitoring and management for SMB fleets: inventory, patching, scripts, alerts, and remote access with compliance-ready logs.',;
     features: [;
       'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals';
     ],;
@@ -1885,28 +1352,8 @@ export const real2026Q2Additions = [;
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%';
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops';
   }
-<<<<<<< HEAD
 ];
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-];
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
-=======
-
-
-  }
-];
-
-
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     period: '/device/month',
     trialDays: 14,
     setupTime: 'Fast',
@@ -1915,9 +1362,4 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops',
   },;
 ];
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

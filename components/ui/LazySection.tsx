@@ -1,22 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
- const getInitialPosition = () => {
-  switch (direction) {
-  case 'up': 
-=======
-=======
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 interface LazySectionProps {
@@ -26,10 +12,7 @@ interface LazySectionProps {
   delay?: number;
   direction?: 'up' | 'down' | 'left' | 'right'
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 export const LazySection: React.FC<LazySectionProps> = ({
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   children
   className = ''
   threshold = 0.1
@@ -42,14 +25,6 @@ export const LazySection: React.FC<LazySectionProps> = ({
   delay = 0,
   direction = 'up',
 }) => {;
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { threshold, once: true });
   const getInitialPosition = () => {
@@ -62,9 +37,6 @@ export const LazySection: React.FC<LazySectionProps> = ({
       case 'right':
         return { opacity: 0, x: -50 }
       default:
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 export const LazySection: React.FC<LazySectionProps> = ({
   children;
@@ -144,41 +116,7 @@ export const LazySection: React.FC<LazySectionProps> = ({;
       {children}
     </motion && motion.div>;
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-};
-export default LazySection;      case 'down':;
-        return { opacity: 1, y: 0 },;
-      case 'left':;
-        return { opacity: 1, x: 0 },;
-      case 'right':;
-        return { opacity: 1, x: 0 },;
-      default:;
-
-        return { opacity: 1, y: 0 }
-    }
-  }
-
-  return (
-    <motion.div
-      ref={ref}
-      initial={getInitialPosition()}
-      animate={isInView ? getAnimatePosition() : getInitialPosition()}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-};
-
-export default LazySection;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 };
 
 export default LazySection;
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

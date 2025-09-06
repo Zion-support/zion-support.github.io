@@ -1,40 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
-
-
-
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export const advancedEmergingTechServices2025 = [
+  {
 
-<<<<<<< HEAD
-=======
 
 id: 'space-mining-operations-platform',
     name: 'SpaceMining Operations',
@@ -100,19 +71,6 @@ id: 'space-mining-operations-platform',
   }
 origin/cursor/automate-test-improve-and-merge-code-2533
   {
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
-=======
-=======export const advancedEmergingTechServices2025 = [
-  {
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-  {
     features: [
       'Quantum-biological hybrid processing'
       'DNA-based computing'
@@ -123,7 +81,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Custom quantum bio algorithms'
       '24/7 platform monitoring'
     ]
-=======
     pricing: {
 
     id: 'quantum - materials - discovery - platform',
@@ -208,9 +165,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Custom robotic algorithms',
       '24 / 7 robotic operations',
     ],
-
     pricing: {
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       starter: {
         price: 499,
         period: 'month',
@@ -256,7 +211,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
 
     market_size: '$3.2B',
     target_audience:;
@@ -462,21 +416,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   },;
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ];      phone: '+1 302 464 0950';
 
       email: 'kleber@ziontechgroup && ziontechgroup.com'
 
     };
     marketSize: '$6 && 6.8B',
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       starter: {
         price: 599
         period: 'month'
@@ -1030,52 +976,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     targetAudience:
       'Gaming companies, virtual reality firms, entertainment companies, technology startups'
     competitiveAdvantage:
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration'
-<<<<<<< HEAD
   }
-=======
       'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration',
   },;
-<<<<<<< HEAD
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-      'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration',
-  },;
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 ];      phone: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$6.8B'
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    targetAudience: 'Gaming companies, virtual reality firms, entertainment companies, technology startups';
-    competitiveAdvantage: 'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration'
-=======
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-=======
-  }];      phone: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com'
-    }
-    marketSize: '$6.8B'
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       'Quantum Computing',
       'Materials Science',
       'AI Discovery',
@@ -1596,15 +1504,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration',
   },;
 
-];      phone: '+1 302 464 0950'
-};
-    marketSize: '$6 && 6.8B',    targetAudience: 'Gaming companies, virtual reality firms, entertainment companies, technology startups';
-    competitiveAdvantage: 'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration'
 
-  }
-];
-=======
-
+];      phone: '+1 302 464 0950';
+    };
+    marketSize: '$6 && 6.8B',
 origin/cursor/expand-services-advertise-and-build-project-c28b
     targetAudience: 'Gaming companies, virtual reality firms, entertainment companies, technology startups';
     competitiveAdvantage: 'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration'
@@ -1612,10 +1515,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
+  }
+];
+
+
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     market_size: '$6.8B',
     target_audience:;
       'Gaming companies, virtual reality firms, entertainment companies, technology startups',
@@ -1632,8 +1537,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },;
   {;
     id: 'quantum-bio-computing-platform',;
-    name: 'QuantumBio Computing',,
-  description: 'Revolutionary quantum-biological hybrid computing platform that combines quantum computing with biological processing for unprecedented computational power.',;
+    name: 'QuantumBio Computing',;
+    description: 'Revolutionary quantum-biological hybrid computing platform that combines quantum computing with biological processing for unprecedented computational power.',;
     features: [;
       'Quantum-biological hybrid processingDNA-based computingBiological algorithm optimizationReal-time quantum bio analyticsIntegration with research platformsAdvanced analytics and reportingCustom quantum bio algorithms24/7 platform monitoring';
     ],;
@@ -1655,8 +1560,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },;
   {;
     id: 'brain-computer-interface-platform',;
-    name: 'BrainInterface Pro',,
-  description: 'Advanced brain-computer interface platform that enables direct neural communication, cognitive enhancement, and neurological research applications.',;
+    name: 'BrainInterface Pro',;
+    description: 'Advanced brain-computer interface platform that enables direct neural communication, cognitive enhancement, and neurological research applications.',;
     features: [;
       'Neural signal processingCognitive enhancement toolsBrain-computer communicationReal-time neural analyticsIntegration with medical devicesAdvanced analytics and reportingCustom neural algorithms24/7 neural monitoring';
     ],;
@@ -1678,8 +1583,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },;
   {;
     id: 'quantum-energy-fusion-platform',;
-    name: 'QuantumEnergy Fusion',,
-  description: 'Revolutionary quantum energy fusion platform that simulates and optimizes fusion power generation for sustainable energy solutions.',;
+    name: 'QuantumEnergy Fusion',;
+    description: 'Revolutionary quantum energy fusion platform that simulates and optimizes fusion power generation for sustainable energy solutions.',;
     features: [;
       'Fusion power simulationQuantum energy optimizationReal-time fusion monitoringEnergy efficiency analyticsIntegration with power gridsAdvanced analytics and reportingCustom fusion algorithms24/7 energy monitoring';
     ],;
@@ -1701,8 +1606,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },;
   {;
     id: 'autonomous-vehicle-ai-platform',;
-    name: 'AutonomousVehicle AI',,
-  description: 'Advanced autonomous vehicle AI platform that provides intelligent navigation, safety systems, and fleet management for autonomous transportation.',;
+    name: 'AutonomousVehicle AI',;
+    description: 'Advanced autonomous vehicle AI platform that provides intelligent navigation, safety systems, and fleet management for autonomous transportation.',;
     features: [;
       'AI-powered navigationAdvanced safety systemsFleet managementReal-time vehicle monitoringIntegration with vehicle systemsAdvanced analytics and reportingCustom AI algorithms24/7 autonomous operations';
     ],;
@@ -1724,8 +1629,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },;
   {;
     id: 'quantum-materials-discovery-platform',;
-    name: 'QuantumMaterials Discovery',,
-  description: 'Revolutionary quantum materials discovery platform that accelerates the development of new materials using quantum computing and AI.',;
+    name: 'QuantumMaterials Discovery',;
+    description: 'Revolutionary quantum materials discovery platform that accelerates the development of new materials using quantum computing and AI.',;
     features: [;
       'Quantum materials simulationAI-powered discovery algorithmsReal-time material analysisAdvanced property predictionIntegration with research platformsAdvanced analytics and reportingCustom discovery algorithms24/7 discovery operations';
     ],;
@@ -1747,8 +1652,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },;
   {;
     id: 'quantum-robotics-platform',;
-    name: 'QuantumRobotics Pro',,
-  description: 'Advanced quantum robotics platform that combines quantum computing with robotics for intelligent automation and advanced robotic systems.',;
+    name: 'QuantumRobotics Pro',;
+    description: 'Advanced quantum robotics platform that combines quantum computing with robotics for intelligent automation and advanced robotic systems.',;
     features: [;
       'Quantum-enhanced roboticsAI-powered automationReal-time robotic controlAdvanced motion planningIntegration with robotic systemsAdvanced analytics and reportingCustom robotic algorithms24/7 robotic operations';
     ],;
@@ -1770,8 +1675,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },;
   {;
     id: 'quantum-internet-security-platform',;
-    name: 'QuantumInternet Security',,
-  description: 'Next-generation quantum internet security platform that provides unbreakable encryption and secure communication for the quantum internet.',;
+    name: 'QuantumInternet Security',;
+    description: 'Next-generation quantum internet security platform that provides unbreakable encryption and secure communication for the quantum internet.',;
     features: [;
       'Quantum internet encryptionSecure quantum communicationReal-time security monitoringAdvanced threat detectionIntegration with internet infrastructureAdvanced analytics and reportingCustom security protocols24/7 quantum security operations';
     ],;
@@ -1793,8 +1698,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },;
   {;
     id: 'quantum-logistics-optimization-platform',;
-    name: 'QuantumLogistics Pro',,
-  description: 'Advanced quantum logistics optimization platform that provides intelligent route planning, supply chain optimization, and logistics automation.',;
+    name: 'QuantumLogistics Pro',;
+    description: 'Advanced quantum logistics optimization platform that provides intelligent route planning, supply chain optimization, and logistics automation.',;
     features: [;
       'Quantum route optimizationAI-powered logisticsReal-time supply chain monitoringAdvanced optimization algorithmsIntegration with logistics systemsAdvanced analytics and reportingCustom optimization models24/7 logistics operations';
     ],;
@@ -1816,8 +1721,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },;
   {;
     id: 'quantum-metaverse-development-platform',;
-    name: 'QuantumMetaverse Pro',,
-  description: 'Revolutionary quantum metaverse development platform that creates immersive virtual worlds with quantum-enhanced graphics and AI.',;
+    name: 'QuantumMetaverse Pro',;
+    description: 'Revolutionary quantum metaverse development platform that creates immersive virtual worlds with quantum-enhanced graphics and AI.',;
     features: [;
       'Quantum-enhanced graphicsAI-powered world generationReal-time virtual renderingAdvanced user interactionIntegration with VR/AR systemsAdvanced analytics and reportingCustom metaverse solutions24/7 platform monitoring';
     ],;
@@ -1836,56 +1741,21 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     marketSize: '$6.8B',;
     targetAudience: 'Gaming companies, virtual reality firms, entertainment companies, technology startups',;
     competitiveAdvantage: 'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration';
-<<<<<<< HEAD
     }
     market_size: '$6.8B',
     target_audience: 'Gaming companies, virtual reality firms, entertainment companies, technology startups';
     competitive_advantage: 'Industry - first quantum - enhanced metaverse, advanced AI world generation, and comprehensive VR / AR system integration';
-=======
+  }
+];
+;
 
 
 
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-  }
-];
-<<<<<<< HEAD
-;
-
-
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 ];
 ;
-=======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
-  }
-];
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-;  }
-];
-;  }
-];
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
-      'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration',
-  },
-];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 export const advancedEmergingTechServices2025 = [;
   {;
     id: 'space-mining-operations-platform',;
@@ -2116,15 +1986,10 @@ export const advancedEmergingTechServices2025 = [;
     marketSize: '$6.8B',;
     targetAudience: 'Gaming companies, virtual reality firms, entertainment companies, technology startups',;
     competitiveAdvantage: 'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration';
-
-
   }
 ];
-
-
 origin/cursor/expand-services-advertise-and-build-project-c28b
       'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration',
   },
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

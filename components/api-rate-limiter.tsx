@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from 'react',
-import Head from 'next/head',
-import Card from '../components/ui/Card',
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-
-import Button from '../components/ui/Button';
-
-import {
-=======
   Shield
   Zap
   BarChart3
@@ -23,8 +8,14 @@ import {
   CheckCircle
   AlertTriangle;
 } from 'lucide-react';import { Shield, Zap, BarChart3, Code, ArrowRight, Copy, RefreshCw, CheckCircle, AlertTriangle } from 'lucide-react';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+import React, { useState } from 'react',
+import Head from 'next/head',
+import Card from '../components/ui/Card',
+import Button from '../components/ui/Button';
+import { Shield, Zap, BarChart3, Code, ArrowRight, Copy, RefreshCw, CheckCircle, AlertTriangle } from 'lucide-react';
+origin/cursor/automate-test-improve-and-merge-code-2533
+export default function APIRateLimiterPage() {
   Shield,
   Zap,
   BarChart3,
@@ -33,81 +24,39 @@ import {
   Copy,
   RefreshCw,
 
-  const [endpoint, setEndpoint] = useState('');
-  const [rateLimit, setRateLimit] = useState('100');
-  const [timeWindow, setTimeWindow] = useState('1m');
-  const [testResults, setTestResults] = useState<any[]>([]),
-  const [isTesting, setIsTesting] = useState(false);
-  const [apiKey, setApiKey] = useState('');
-
-<<<<<<< HEAD
-  const timeWindows = [
-    { value: '1s', label: '1 Second', description: 'Per second rate limiting' }
-    { value: '1m', label: '1 Minute', description: 'Per minute rate limiting' }
-    { value: '1h', label: '1 Hour', description: 'Per hour rate limiting' }
-    { value: '1d', label: '1 Day', description: 'Per day rate limiting' },  ];    { value: '1d', label: '1 Day', description: 'Per day rate limiting' }
-  ];
-  const rateLimits = [
-    { value: '10', label: '10 requests', description: 'Very strict' }
-    { value: '100', label: '100 requests', description: 'Standard' }
-    { value: '1000', label: '1000 requests', description: 'High volume' }
-    { value: '10000', label: '10000 requests', description: 'Enterprise' }
-  ];
-  const generateApiKey = () => {
-    const key =
-      'zt_' +
-      Math.random().toString(36).substr(2, 9) +
-      '_' +
-      Date.now().toString(36);
-    setApiKey(key);  }
-  const testRateLimiting = async () => {
-
-  const generateApiKey = () => {
-    const key = 'zt_' + Math.random().toString(36).substr(2, 9) + '_' + Date.now().toString(36);
-    setApiKey(key)
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
   }
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useState } from 'react';
+
   CheckCircle,;
   AlertTriangle,;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 } from 'lucide-react';import { Shield, Zap, BarChart3, Code, ArrowRight, Copy, RefreshCw, CheckCircle, AlertTriangle } from 'lucide-react';
 
 import {
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-  Shield
-  Zap
-  BarChart3
-  Code
-  ArrowRight
-  Copy
-  RefreshCw
-  CheckCircle
-  AlertTriangle;
-} from 'lucide-react';import { Shield, Zap, BarChart3, Code, ArrowRight, Copy, RefreshCw, CheckCircle, AlertTriangle } from 'lucide-react';
-
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-import React, { useState } from 'react',
-import Head from 'next/head',
-import Card from '../components/ui/Card',
-import Button from '../components/ui/Button';
-import { Shield, Zap, BarChart3, Code, ArrowRight, Copy, RefreshCw, CheckCircle, AlertTriangle } from 'lucide-react';
-origin/cursor/automate-test-improve-and-merge-code-2533
-export default function APIRateLimiterPage() {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-export default function APIRateLimiterPage() {;
-=======
-=======
 import { Shield, Zap, BarChart3, Code, ArrowRight, Copy, RefreshCw, CheckCircle, AlertTriangle } from 'lucide-react';
 
 export default function APIRateLimiterPage() {;
 } from 'lucide-react';import { Shield, Zap, BarChart3, Code, ArrowRight, Copy, RefreshCw, CheckCircle, AlertTriangle } from 'lucide-react';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 export default function APIRateLimiterPage() {;
   const [endpoint, setEndpoint] = useState('');
@@ -116,41 +65,7 @@ export default function APIRateLimiterPage() {;
   const [testResults, setTestResults] = useState<any[]>([]),
   const [isTesting, setIsTesting] = useState(false);
   const [apiKey, setApiKey] = useState('');
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const timeWindows = [
-    { value: '1s', label: '1 Second', description: 'Per second rate limiting' }
-    { value: '1m', label: '1 Minute', description: 'Per minute rate limiting' }
-    { value: '1h', label: '1 Hour', description: 'Per hour rate limiting' }
-    { value: '1d', label: '1 Day', description: 'Per day rate limiting' },  ];    { value: '1d', label: '1 Day', description: 'Per day rate limiting' }
-  ];
-  const rateLimits = [
-    { value: '10', label: '10 requests', description: 'Very strict' }
-    { value: '100', label: '100 requests', description: 'Standard' }
-    { value: '1000', label: '1000 requests', description: 'High volume' }
-    { value: '10000', label: '10000 requests', description: 'Enterprise' }
-  ];
-  const generateApiKey = () => {
-    const key =
-      'zt_' +
-      Math.random().toString(36).substr(2, 9) +
-      '_' +
-      Date.now().toString(36);
-    setApiKey(key);  }
-  const testRateLimiting = async () => {
-    if (!endpoint.trim() |!rateLimit |!timeWindow) return;
-    { value: '10000', label: '10000 requests', description: 'Enterprise' }
-  ];
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     { value: '10', label: '10 requests', description: 'Very strict' },
     { value: '100', label: '100 requests', description: 'Standard' },
     { value: '1000', label: '1000 requests', description: 'High volume' },
@@ -158,7 +73,6 @@ export default function APIRateLimiterPage() {;
     { value: '10000', label: '10000 requests', description: 'Enterprise' }
   ];
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     if (!endpoint.trim() || !rateLimit || !timeWindow) return;
     { value: '10000', label: '10000 requests', description: 'Enterprise' }
   ];
@@ -173,18 +87,8 @@ export default function APIRateLimiterPage() {;
     { value: '1h', label: '1 Hour', description: 'Per hour rate limiting' },;
     { value: '1d', label: '1 Day', description: 'Per day rate limiting' },  ];    { value: '1d', label: '1 Day', description: 'Per day rate limiting' }
   ];
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
-<<<<<<< HEAD
-  const testRateLimiting = async () => {
-    if (!endpoint.trim() |!rateLimit |!timeWindow) return;
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     setIsTesting(true);
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   const timeWindows = null;
   ];
   const rateLimits = [
@@ -209,61 +113,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     setTestResults([]);
     const limit = parseInt(rateLimit);
     const results = [];
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       await new Promise(resolve => setTimeout(resolve, 100));
       const isAllowed = i <= limit;
       const status = isAllowed ? 'success' : 'rate_limited';
       const statusCode = isAllowed ? 200 : 429;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       });
       if (!isAllowed) break;
     }
     setTestResults(results);
     setIsTesting(false);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      await new Promise(resolve => setTimeout(resolve, 100));
-
-      const isAllowed = i <= limit;
-      const status = isAllowed ? 'success' : 'rate_limited';
-      const statusCode = isAllowed ? 200 : 429;
-
-  };
-
-  const getStatusColor = (status: string) => {
-
-=======
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
           'X-RateLimit-Limit': limit;
           'X-RateLimit-Remaining': Math && Math.max(0, limit - i);
           'X-RateLimit-Reset': new Date(Date && Date.now() + 60000).toISOString();
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
-      });
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-  };
-=======
       })
 };
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-      })
-};
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const testRateLimiting = async () => {
     if (!endpoint.trim() || !rateLimit || !timeWindow) return;
     setIsTesting(true);
@@ -380,28 +244,9 @@ if (break) {
   }
 ;
   const getStatusIcon = (status: string) =>: any {
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     switch (status) {
-<<<<<<< HEAD
-      case 'success':
-        return 'text-green-400';
-      case 'rate_limited':
-        return 'text-red-400'
-      default:
-        return 'text-yellow-400';    }        return 'text-yellow-400'
-    }
-
-  return (
-    <>
-      <Head>
-        <title>API Rate Limiter - Zion Tech Group</title>
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         return <AlertTriangle className='w-5 h-5 text-yellow-400' />;    }
 
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   }
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text);
@@ -418,47 +263,8 @@ return <CheckCircle className='w-5 h-5 text-green-400' />;
 origin/cursor/automate-test-improve-and-merge-code-2533
     }
 
-<<<<<<< HEAD
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-
-      <section className="pt-32 pb-20 bg-gradient-to-br from-green-900 via-blue-900 to-indigo-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="mb-8">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/20 border border-green-400/30 text-green-300 text-sm font-medium mb-6">
-              <Shield className="w-4 h-4 mr-2" />
-              API Protection & Security
-            </div>
-          </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
-            API Rate Limiter
-          </h1>
-          <p className="text-xl text-green-200 max-w-4xl mx-auto leading-relaxed">
-            Protect your APIs from abuse with intelligent rate limiting. Ensure fair usage, prevent DDoS attacks, and maintain optimal performance for all your users with our enterprise-grade rate limiting solution.
-          </p>
-        </div>
-      </section>
-      {/* Rate Limiter Configuration */}
-
-            </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Set up intelligent rate limiting rules to protect your APIs and ensure fair usage across all users.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* Configuration Form */}
-            <Card className="p-8 bg-gray-800 border border-gray-700">
-              <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
-                <Code className="w-6 h-6 mr-3 text-green-400" />
-                Rate Limiting Rules
-              </h3>
-              <div className="space-y-6">
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   };
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'success':
@@ -466,17 +272,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       case 'rate_limited':
         return 'text-red-400'
       default:
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    }
-  }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const getStatusColor = (status: string) => {;
     switch (status) {;
       case 'success':;
@@ -488,9 +283,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }
   }
         return 'text-yellow-400';    }        return 'text-yellow-400'
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 return 'text-yellow-400';
 origin/cursor/automate-test-improve-and-merge-code-2533
     }
@@ -499,6 +291,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   };
 
   return (
+    <>;
+      <Head>;
+        <title>API Rate Limiter - Zion Tech Group</title>;
+        <meta
     <>
       <Head>
         <title>API Rate Limiter - Zion Tech Group</title>
@@ -514,6 +310,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <meta
           property='og:description'
           content='Protect your APIs with intelligent rate limiting and prevent abuse.'
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 bg-gradient-to-br from-green-900 via-blue-900 to-indigo-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="mb-8">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/20 border border-green-400/30 text-green-300 text-sm font-medium mb-6">
+              <Shield className="w-4 h-4 mr-2" />
+              API Protection & Security
+            </div>
+          </div>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
+            API Rate Limiter
+          </h1>
+          <p className="text-xl text-green-200 max-w-4xl mx-auto leading-relaxed">
+            Protect your APIs from abuse with intelligent rate limiting. Ensure fair usage, prevent DDoS attacks, and maintain optimal performance for all your users with our enterprise-grade rate limiting solution.
         />
       </Head>
       {/* Hero Section */}
@@ -565,6 +375,47 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <input
                     type='text'
                     value={endpoint}
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Set up intelligent rate limiting rules to protect your APIs and ensure fair usage across all users.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Configuration Form */}
+            <Card className="p-8 bg-gray-800 border border-gray-700">
+              <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
+                <Code className="w-6 h-6 mr-3 text-green-400" />
+                Rate Limiting Rules
+              </h3>
+              <div className="space-y-6">
+                    onChange={e => setEndpoint(e && e.target.value)}
+                    placeholder='e && e.g., /api/users, /api/data, /api/analytics';
+                    className='w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent'                  />              Configure Your Rate Limiting;
+            </h2>;
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">;
+              Set up intelligent rate limiting rules to protect your APIs and ensure fair usage across all users.;
+            </p>;
+          </div>;
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
+            {/* Configuration Form */}
+            <Card className="p-8 bg-gray-800 border border-gray-700">;
+              <h3 className="text-2xl font-bold text-white mb-6 flex items-center">;
+                <Code className="w-6 h-6 mr-3 text-green-400" />;
+                Rate Limiting Rules;
+              </h3>;
+
+              <div className="space-y-6">;
+                {/* API Endpoint */}
+                <div>;
+                  <labelclassName="block text-sm font-medium text-gray-300 mb-2" htmlFor="input-
+                    API Endpoint
+                  ">;
+                    API Endpoint;
+                  </label>;
+                  <input
+                    type="text"
+                    value={endpoint}
                     onChange={e => setEndpoint(e.target.value)}
                     placeholder='e.g., /api/users, /api/data, /api/analytics'
                     className='w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent'
@@ -572,7 +423,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
                 {/* Rate Limit */}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                         key={limit.value}
                         on_click={() => setRateLimit (limit.value)}
                         className={`p - 3 rounded - lg border text - left transition - all ${
@@ -580,33 +430,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             ? 'border - green - 500 bg - green - 500 / 10 text - green - 300';
                             : 'border - gray - 600 hover:border - gray - 500 text - gray - 300 hover:text - white';
                         }`}
-<<<<<<< HEAD
-                      >
-                        <div className='font-medium'>{limit.label}</div>
-                        <div className='text-xs text-gray-400 mt-1'>
-                          {limit.description}
-                        </div>                      </button>                        <div className="font-medium">{limit.label}</div>
-                        <div className="text-xs text-gray-400 mt-1">{limit.description}</div>
-                      </button>
-                    ))}
-                  </div>
-                </div>
-
-                  </div>;
-                </div>;
-
-
-                {/* Time Window */}
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
                 {/* Time Window */}
                 <div>
-<<<<<<< HEAD
-<<<<<<< HEAD
                   <label className='block text-sm font-medium text-gray-300 mb-3'>
                     Time Window
                   </label>
@@ -643,7 +468,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </div>                      </button>                        <div className="font-medium">{window && window.label}</div>;
                         <div className="text-xs text-gray-400 mt-1">{window && window.description}</div>;
                       </button>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                         key={window.value}
                         on_click={() => setTimeWindow (window.value)}
                         className={`p - 3 rounded - lg border text - left transition - all ${
@@ -651,20 +475,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             ? 'border - green - 500 bg - green - 500 / 10 text - green - 300';
                             : 'border - gray - 600 hover:border - gray - 500 text - gray - 300 hover:text - white';
                         }`}
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-                  </div>;
-                </div>;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
                     ))}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 {/* API Key Generation */}
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     <input
                       type="text"
                       value={apiKey}
@@ -679,60 +492,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {isTesting ? (
                     <>
                       <RefreshCw className="w-5 h-5 mr-2 animate-spin" />
-<<<<<<< HEAD
-    
-    setIsTesting(true),
-    setTestResults([]),
-    
-    const limit = parseInt(rateLimit)
-    const results = []
-    
-    // Simulate API calls to test rate limiting
-    for (let i = 1, i <= limit + 5, i++) {
-      await new Promise(resolve => setTimeout(resolve, 100)),
-      
-      const isAllowed = i <= limit
-      const status = isAllowed ? 'success' : 'rate_limited'
-      const statusCode = isAllowed ? 200 : 429
-      
-      results.push({
-        request: i,
-        timestamp: new Date().toLocaleTimeString(),
-        status,
-        statusCode,
-        responseTime: Math.random() * 100 + 50,
-        headers: {
-          'X-RateLimit-Limit': limit,
-          'X-RateLimit-Remaining': Math.max(0, limit - i),
-          'X-RateLimit-Reset': new Date(Date.now() + 60000).toISOString()
-        }
-      }),
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
-=======
                         key={limit.value}
                         onClick={() => setRateLimit(limit.value)}
                         className={`p-3 rounded-lg border text-left transition-all ${
                           rateLimit === limit.value
                             ? 'border-green-500 bg-green-500/10 text-green-300'
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 <label className='block text-sm font-medium text-gray-300 mb-3'>
                     Rate Limit
                   </label>
                   <div className='grid grid-cols-2 gap-3'>
                     {rateLimits.map(limit => (
                       <button
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                         key={limit.value}
                         onClick={() => setRateLimit(limit.value)}
                         className={`p-3 rounded-lg border text-left transition-all ${
@@ -744,44 +515,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='font-medium'>{limit.label}</div>
                         <div className='text-xs text-gray-400 mt-1'>
                           {limit.description}
-<<<<<<< HEAD
-                        </div>                      </button>                        <div className="font-medium">{limit.label}</div>
-                        <div className="text-xs text-gray-400 mt-1">{limit.description}</div>
-<<<<<<< HEAD
-
-=======
                         </div>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       </button>
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-                      </button>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 {/* Time Window */}
                 <div>
 <label className='block text-sm font-medium text-gray-300 mb-3'>
                     Time Window
                   </label>
                   <div className='grid grid-cols-2 gap-3'>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-                    {timeWindows.map(window => (
-                      <button
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                     {timeWindows.map(window => (
                       <button
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                         key={window.value}
                         onClick={() => setTimeWindow(window.value)}
                         className={`p-3 rounded-lg border text-left transition-all ${
@@ -793,23 +537,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='font-medium'>{window.label}</div>
                         <div className='text-xs text-gray-400 mt-1'>
                           {window.description}
-<<<<<<< HEAD
-                        </div>                      </button>                        <div className="font-medium">{window.label}</div>
-                        <div className="text-xs text-gray-400 mt-1">{window.description}</div>
-<<<<<<< HEAD
-
-=======
                         </div>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       </button>
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-                      </button>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 {/* API Key Generation */}
                 <div>
 <label className='block text-sm font-medium text-gray-300 mb-2'>
@@ -825,8 +554,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     />
                     <Button
                       onClick={generateApiKey}
-<<<<<<< HEAD
-<<<<<<< HEAD
                       className='px-6 py-3 bg-green-600 hover:bg-green-700 text-white'                    >                    API Key
                   </label>
                   <div className="flex space-x-2">
@@ -839,24 +566,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     />
                     <Button
                       onClick={generateApiKey}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                      className="px-6 py-3 bg-green-600 hover:bg-green-700 text-white"
-
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                       className='px-6 py-3 bg-green-600 hover:bg-green-700 text-white'
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     >
                       Generate
                     </Button>
                   </div>
                 </div>
-<<<<<<< HEAD
-
-=======
                 <Button
                   onClick={testRateLimiting}
 disabled={
@@ -867,40 +582,22 @@ disabled={
                   {isTesting ? (
                     <>
                       <RefreshCw className='w-5 h-5 mr-2 animate-spin' />
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       Testing Rate Limiting...
                     </>
                   ) : (
                     <>
-<<<<<<< HEAD
-
-=======
 <Zap className='w-5 h-5 mr-2' />
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       Test Rate Limiting
                     </>
                   )}
                 </Button>
               </div>
             </Card>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
             {/* Test Results */}
 <Card className='p-8 bg-gray-800 border border-gray-700'>
               <div className='flex items-center justify-between mb-6'>
                 <h3 className='text-2xl font-bold text-white flex items-center'>
-<<<<<<< HEAD
-<<<<<<< HEAD
                   <BarChart3 className='w-6 h-6 mr-3 text-blue-400' />                  Test Results            <Card className="p-8 bg-gray-800 border border-gray-700">
               <div className="flex items-center justify-between mb-6">
                 <h3 className="text-2xl font-bold text-white flex items-center">
@@ -908,13 +605,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                   Test Results
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 </h3>
                 {testResults.length > 0 && (
             {/* Test Results */}
@@ -948,125 +638,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <div
                       key={index}
                       className={`p-4 rounded-lg border ${
-<<<<<<< HEAD
-
-                      >;
-                        <div className='font - medium'>{window.label}</div>;
-                        <div className='text - xs text - gray - 400 mt - 1'>;
-                          {window.description}
-                        </div>                      </button>                        <div className="font - medium">{window.label}</div>;
-                        <div className="text - xs text - gray - 400 mt - 1">{window.description}</div>;
-                      </button>))}
-                  </div>;
-                </div>;
-                {/* API Key Generation */}
-                <div>;
-                  <label className='block text - sm font - medium text - gray - 300 mb - 2'>;
-                    API Key;
-                  </label>;
-                  <div className='flex space - x-2'>;
-                    <input;
-                      type='text';
-                      value={api_key}
-                      read_only;
-                      placeholder='Generate an API key to test rate limiting';
-                      className='flex - 1 px - 4 py - 3 bg - gray - 700 border border - gray - 600 rounded - lg text - white placeholder - gray - 400';
-                    />;
-                    <Button;
-                      on_click={generateApiKey}
-                      className='px - 6 py - 3 bg - green - 600 hover:bg - green - 700 text - white'                    >                    API Key;
-                  </label>;
-                  <div className="flex space - x-2">;
-                    <input;
-                      type="text";
-                      value={api_key}
-                      read_only;
-                      placeholder="Generate an API key to test rate limiting";
-                      className="flex - 1 px - 4 py - 3 bg - gray - 700 border border - gray - 600 rounded - lg text - white placeholder - gray - 400";
-                    />;
-                    <Button;
-                      on_click={generateApiKey}
-                      className="px - 6 py - 3 bg - green - 600 hover:bg - green - 700 text - white";
-                    >;
-                      Generate;
-                    </Button>;
-                  </div>;
-                </div>;
-                <Button;
-                  on_click={testRateLimiting}
-                  disabled={
-                    !endpoint.trim () || !rate_limit || !time_window || is_testing;
-                  }
-                  className='w - full bg - gradient - to - r from - green - 600 to - blue - 600 hover:from - green - 700 hover:to - blue - 700 text - white py - 4 text - lg font - semibold disabled:opacity - 50 disabled:cursor - not - allowed';
-                >;
-                  {is_testing ? (
-                    <>;
-                      <RefreshCw className='w - 5 h - 5 mr - 2 animate - spin' />                      Testing Rate Limiting...;
-                    </>) : (
-                    <>;
-                      <Zap className='w - 5 h - 5 mr - 2' />                      Test Rate Limiting                  disabled={!endpoint.trim () || !rate_limit || !time_window || is_testing}
-                  className="w - full bg - gradient - to - r from - green - 600 to - blue - 600 hover:from - green - 700 hover:to - blue - 700 text - white py - 4 text - lg font - semibold disabled:opacity - 50 disabled:cursor - not - allowed";
-                >;
-                  {is_testing ? (
-                    <>;
-                      <RefreshCw className="w - 5 h - 5 mr - 2 animate - spin" />;
-                      Testing Rate Limiting...;
-                    </>) : (
-                    <>;
-                      <Zap className='w - 5 h - 5 mr - 2' />                      <Zap className="w - 5 h - 5 mr - 2" />;
-                      Test Rate Limiting;
-                    </>)}
-                </Button>;
-              </div>;
-            </Card>;
-
-            {/* Test Results */}
-            <Card className='p - 8 bg - gray - 800 border border - gray - 700'>;
-              <div className='flex items - center justify - between mb - 6'>;
-                <h3 className='text - 2xl font - bold text - white flex items - center'>;
-                  <BarChart3 className='w - 6 h - 6 mr - 3 text - blue - 400' />                  Test Results            <Card className="p - 8 bg - gray - 800 border border - gray - 700">;
-              <div className="flex items - center justify - between mb - 6">;
-                <h3 className="text - 2xl font - bold text - white flex items - center">;
-                  <BarChart3 className="w - 6 h - 6 mr - 3 text - blue - 400" />;
-                </h3>;
-                {test_results.length > 0 && (
-                  <Button;
-                    on_click={() => setTestResults ([])}
-                    variant='outline';
-                    size='sm';
-                    className='border - gray - 600 text - gray - 300 hover:bg - gray - 700'                  >                    variant="outline";
-                    size="sm";
-                    className="border - gray - 600 text - gray - 300 hover:bg - gray - 700";
-                  >;
-                    Clear Results;
-                  </Button>)}
-              </div>;
-              {test_results.length > 0 ? (
-                <div className='space - y-3 max - h-96 overflow - y-auto'>                  {test_results.map ((result, index) => (
-                    <div;
-                      key={index}
-                      className={`p - 4 rounded - lg border ${
-                        result.status === 'success';
-                          ? 'border - green - 500 / 30 bg - green - 500 / 10';
-                          : 'border - red - 500 / 30 bg - red - 500 / 10'                <div className="space - y-3 max - h-96 overflow - y-auto">;
-                  {test_results.map ((result, index) => (
-                    <div;
-                      key={index}
-                      className={`p - 4 rounded - lg border ${
-                        result.status === 'success';
-                          ? 'border - green - 500 / 30 bg - green - 500 / 10';
-                          : 'border - red - 500 / 30 bg - red - 500 / 10';
-                      }`}
-                    >;
-                      <div className='flex items - center justify - between mb - 2'>;
-                        <div className='flex items - center space - x-3'>;
-                          {getStatusIcon (result.status)}
-                          <span;
-                            className={`font - medium ${getStatusColor (result.status)}`}
-                          >;
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                             Request #{result.request}
                           </span>;
                         </div>;
@@ -1082,33 +653,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className="flex items-center justify-between mb-6">
                 <h3 className="text-2xl font-bold text-white flex items-center">
                   <BarChart3 className="w-6 h-6 mr-3 text-blue-400" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-                  <BarChart3 className='w-6 h-6 mr-3 text-blue-400' />
-                  Test Results
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                   <BarChart3 className='w-6 h-6 mr-3 text-blue-400' />
                   Test Results
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 </h3>
                 {testResults.length > 0 && (
                   <Button
                     onClick={() => setTestResults([])}
+                    variant="outline"
+                    size="sm"
+                    className="border-gray-600 text-gray-300 hover:bg-gray-700"
 variant='outline'
                     size='sm'
                     className='border-gray-600 text-gray-300 hover:bg-gray-700'
@@ -1118,19 +672,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </Button>
                 )}
               </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                  {testResults.map((result, index) => (
-                    <div
-                      key={index}
-                      className={`p-4 rounded-lg border ${
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       }`}
 
                     >
@@ -1139,9 +680,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           {getStatusIcon(result.status)}
                           <span className={`font-medium ${getStatusColor(result.status)}`}>
                             Request #{result.request}
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
               {testResults.length > 0 ? (
 <div className='space-y-3 max-h-96 overflow-y-auto'>
                   {testResults.map((result, index) => (
@@ -1162,18 +700,9 @@ result.status === 'success'
                             Request #{result.request}
                           </span>
                         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-                        <span className="text-sm text-gray-400">{result.timestamp}</span>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
                         <span className='text-sm text-gray-400'>
                           {result.timestamp}
                         </span>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       </div>
                       <div className='grid grid-cols-2 gap-4 text-sm'>
                         <div>
@@ -1188,33 +717,15 @@ result.status === 'success'
                           </span>
                         </div>
                         <div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                          <span className="ml-2 text-white">{result.responseTime.toFixed(0)}ms</span>
-
-                          <span className="ml-2 text-white">{result.responseTime.toFixed(0)}ms</span>
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-                          <span className="text-gray-400">Response Time:</span>
-                          <span className="ml-2 text-white">{result.responseTime.toFixed(0)}ms</span>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
                           <span className='text-gray-400'>Response Time:</span>
                           <span className='ml-2 text-white'>
                             {result.responseTime.toFixed(0)}ms
 origin/cursor/automate-test-improve-and-merge-code-2533
                           </span>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         </div>
                       </div>
                       {result.status === 'rate_limited' && (
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
                           </span>;
                         </div>;
                         <div>;
@@ -1258,11 +769,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </div>;
 
                         <div className="mt-3 p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                           <strong>Rate Limited:</strong> Request exceeded the limit of {rateLimit} requests per {timeWindow}
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div className='mt-3 p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300'>
                           <strong>Rate Limited:</strong> Request exceeded the
                           limit of {rateLimit} requests per {timeWindow}
@@ -1270,44 +777,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </div>
 
                         </div>
-                      </div>
-                      {result.status === 'rate_limited' && (
 
-
-                        </div>
-
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       )}
                     </div>;
                   ))}
 
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-              )}
-            </Card>
-          </div>
-        </div>
-      </section>
-
-=======
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
                 </div>
               ) : (
 <div className='bg-gray-900 p-6 rounded-lg border border-gray-700 text-center'>
@@ -1320,15 +794,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
               )}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       {/* Features */}
 <section className='py-20 bg-gray-800'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -1336,10 +801,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
 
               Advanced Rate Limiting Features
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
               Enterprise-grade rate limiting with intelligent algorithms and
@@ -1404,47 +865,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </h3>
               <p className='text-gray-400'>
                 Edge locations worldwide ensure consistent performance and low
-<<<<<<< HEAD
-<<<<<<< HEAD
                 latency for all users.              </p>            <Card className="text-center p-8 bg-gray-700 border border-gray-600">
-<<<<<<< HEAD
-
-=======
               )}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <div className="text-4xl mb-4">🌍</div>
               <h3 className="text-xl font-bold text-white mb-4">Global Distribution</h3>
               <p className="text-gray-400">
                 Edge locations worldwide ensure consistent performance and low latency for all users.
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-                latency for all users.
-              </p>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                 latency for all users.
               </p>
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
             </Card>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Get started with our rate limiting service in just a few lines of code.
             </p>
@@ -1458,41 +891,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className="bg-gray-900 p-4 rounded-lg overflow-x-auto">
                 <pre className="text-sm text-gray-300">
 {`const axios = require('axios');
-<<<<<<< HEAD
-
-  }
-});
-console.log('Response:', response.data);
-console.log('Rate Limit Info:', {
-  limit: response.headers['x-ratelimit-limit']
-  remaining: response.headers['x-ratelimit-remaining']
-  reset: response.headers['x-ratelimit-reset']
-});`)
-                }
-                variant='outline'
-                size='sm'
-                className='mt-4 border-gray-600 text-gray-300 hover:bg-gray-700'
-              >
-                <Copy className='w-4 h-4 mr-2' />                Copy Code
-              </Button>
-            </Card>
-}),`)}
-                variant="outline"
-                size="sm"
-                className="mt-4 border-gray-600 text-gray-300 hover: bg-gray-700"
-              >
-                <Copy className="w-4 h-4 mr-2" />
-              </Button>
-            </Card>
-            <Card className='p-6 bg-gray-800 border border-gray-700'>
-              <h3 className='text-xl font-bold text-white mb-4 flex items-center'>
-                <Code className='w-5 h-5 mr-2 text-blue-400' />
-                Python Example
-              </h3>
-              <div className='bg-gray-900 p-4 rounded-lg overflow-x-auto'>
-                <pre className='text-sm text-gray-300'>
-                  {`import requests
-=======
               Get started with our rate limiting service in just a few lines of;
               code.;
             </p>;
@@ -1502,9 +900,6 @@ const response = await axios.get(\`https://api.zion.tech\${endpoint}\`, {
   headers: {
     'Authorization': \`Bearer \${apiKey}\`;
     'X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}'
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       {/* Code Examples */}
 <section className='py-20 bg-gray-900'>
         <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -1543,6 +938,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </pre>;
               </div>;
               <Button
+                onClick={() =>;
+                  copyToClipboard(`const axios = require('axios');}),`}
+                </pre>;
+              </div>;
+              <Button
+                onClick={() => copyToClipboard(`const axios = require('axios');
+}),`}
+                </pre>
+              </div>
+              <Button
+                onClick={() => copyToClipboard(`const axios = require('axios');
                 onClick={() =>
                   copyToClipboard(`const axios = require('axios');
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1553,48 +959,23 @@ const endpoint = '${endpoint || '/api/users'}';
 // Make API request with rate limiting
 const response = await axios.get(\`https://api.zion.tech\${endpoint}\`, {
   headers: {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     'Authorization': \`Bearer \${apiKey}\`,
     'X-RateLimit-Limit': '${rateLimit}',
     'X-RateLimit-Window': '${timeWindow}'  }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
     'Authorization': \`Bearer \${apiKey}\`,
     'X-RateLimit-Limit': '${rateLimit}',
     'X-RateLimit-Window': '${timeWindow}'  }    'Authorization': \`Bearer \${apiKey}\`;
     'X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}'
     'X-RateLimit-Window': '${timeWindow}'  }
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-'Authorization': \`Bearer \${apiKey}\`,
-    'X-RateLimit-Limit': '${rateLimit}',
-    'X-RateLimit-Window': '${timeWindow}'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 'Authorization': \`Bearer \${apiKey}\`,
     'X-RateLimit-Limit': '${rateLimit}',
     'X-RateLimit-Window': '${timeWindow}'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   }
 });
                 }
-<<<<<<< HEAD
-<<<<<<< HEAD
                 variant='outline';
                 size='sm';
                 className='mt-4 border-gray-600 text-gray-300 hover:bg-gray-700';
@@ -1602,11 +983,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Copy className='w-4 h-4 mr-2' />                Copy Code;
               </Button>;
             </Card>;
-<<<<<<< HEAD
-
-=======
 }),`)}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <Card className="p-6 bg-gray-800 border border-gray-700">
               <h3 className="text-xl font-bold text-white mb-4 flex items-center">
                 <Code className="w-5 h-5 mr-2 text-blue-400" />
@@ -1615,40 +992,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className="bg-gray-900 p-4 rounded-lg overflow-x-auto">
                 <pre className="text-sm text-gray-300">
 {`import requests
-<<<<<<< HEAD
-
-=======
-
-api_key = '${apiKey || 'your_api_key_here'}'
-endpoint = '${endpoint || '/api/users'}'
-
-# Make API request with rate limiting
-headers = {
-    'Authorization': f'Bearer {api_key}'
-    'X-RateLimit-Limit': '${rateLimit}'
-    'Authorization': f'Bearer {api_key}',
-    'X-RateLimit-Limit': '${rateLimit}',
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     'X-RateLimit-Window': '${timeWindow}'
 response = requests.get(
     f'https://api.zion.tech{endpoint}',    headers=headers    'Authorization': f'Bearer {api_key}X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}'
 }
-<<<<<<< HEAD
-response = requests.get(
 
-<<<<<<< HEAD
-response = requests.get(;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 response = requests.get(;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     f'https://api.zion.tech{endpoint}';
 
     headers=headers
@@ -1660,9 +1010,6 @@ print('Rate Limit Info:', {
     'limit': response.headers.get('x-ratelimit-limit');
 
     'remaining': response.headers.get('x-ratelimit-remaining');
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
                 variant='outline'
                 size='sm'
                 className='mt-4 border-gray-600 text-gray-300 hover:bg-gray-700'
@@ -1699,11 +1046,6 @@ print('Rate Limit Info:', {
     'remaining': response.headers.get('x-ratelimit-remaining'),
 origin/cursor/automate-test-improve-and-merge-code-2533
     'reset': response.headers.get('x-ratelimit-reset')
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
                 variant="outline";
                 size="sm";
                 className="mt-4 border-gray-600 text-gray-300 hover: bg-gray-700";
@@ -1741,8 +1083,6 @@ print('Rate Limit Info:', {;
     'remaining': response && response.headers.get('x-ratelimit-remaining');
     'reset': response && response.headers.get('x-ratelimit-reset');
 })`}
-<<<<<<< HEAD
-<<<<<<< HEAD
     f'https://api.zion.tech{endpoint}';
 
     headers=headers
@@ -1804,12 +1144,6 @@ print('Rate Limit Info:', {;
 }
     </>);    </>);
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
                 </pre>
               </div>
               <Button
@@ -1877,9 +1211,4 @@ print('Rate Limit Info:', {
       </section>
 </>;
   );
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

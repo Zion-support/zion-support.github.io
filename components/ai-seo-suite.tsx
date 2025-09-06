@@ -1,45 +1,8 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head',
-import Card from '../components/ui/Card',
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-import {
-  Search
-  TrendingUp
-  Target
-  BarChart3
-  Globe
-  Zap
-  Users
-  CheckCircle
-  ArrowRight
-  Play
-  Star
-  Eye
-  Brain
-  Shield
-  Lock
-  Sparkles
-  ChartBar
-  Lightbulb
-  Rocket
-  Settings;
-} from 'lucide-react';
-export default function AISeosuitePage() {
-  const features = [
-    {
-      icon: <Search className='w-8 h-8 text-white' />,import { Search, TrendingUp, Target, BarChart3, Globe, Zap, Users, CheckCircle, ArrowRight, Play, Star, Eye, Brain, Shield, Lock, Sparkles, ChartBar, Lightbulb, Rocket, Settings } from 'lucide-react';
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   Search,
   TrendingUp,
   Target,
@@ -58,118 +21,6 @@ export default function AISeosuitePage() {
   Sparkles,
   ChartBar,
   Lightbulb,
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-} from 'lucide-react';
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-export default function AISeosuitePage() {
-  const features = [
-    {
-      icon: <Search className='w-8 h-8 text-white' />
-      title: 'AI Keyword Research'
-      description:
-        'Discover high-value keywords using advanced AI algorithms that analyze search patterns and competition.'
-      color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
-      gradient: 'from-blue-400 to-cyan-500'
-    }
-    {
-      icon: <TrendingUp className='w-8 h-8 text-white' />
-      title: 'Ranking Analytics'
-      description:
-        'Track your search rankings in real-time with comprehensive analytics and competitor insights.'
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600'
-      gradient: 'from-green-400 to-emerald-500'
-    }
-    {
-      icon: <Target className='w-8 h-8 text-white' />
-      title: 'Content Optimization'
-      description:
-        'AI-powered content analysis and optimization suggestions to improve search visibility.'
-      color: 'bg-gradient-to-br from-purple-500 to-indigo-600'
-      gradient: 'from-purple-400 to-indigo-500'
-    }
-    {
-      icon: <BarChart3 className='w-8 h-8 text-white' />
-      title: 'Technical SEO'
-      description:
-        'Comprehensive technical SEO audits with actionable recommendations for improvement.'
-      color: 'bg-gradient-to-br from-orange-500 to-red-600'
-      gradient: 'from-orange-400 to-red-500'
-    }
-    {
-      icon: <Globe className='w-8 h-8 text-white' />
-      title: 'Local SEO'
-      description:
-        'Optimize for local search with location-based keyword research and citation management.'
-      color: 'bg-gradient-to-br from-teal-500 to-blue-600'
-      gradient: 'from-teal-400 to-blue-500'
-    }
-    {
-      icon: <Zap className='w-8 h-8 text-white' />
-      title: 'Automated Reports'
-      description:
-        'Generate comprehensive SEO reports automatically with actionable insights and recommendations.'
-      color: 'bg-gradient-to-br from-pink-500 to-rose-600'
-      gradient: 'from-pink-400 to-rose-500'
-    }
-  ];
-        'Generate comprehensive SEO reports automatically with actionable insights and recommendations.',
-      color: 'bg-gradient-to-br from-pink-500 to-rose-600',
-      gradient: 'from-pink-400 to-rose-500',
-    },;
-  ];
-
-  const seoTools = [
-    {
-      category: 'Keyword Research'
-      icon: <Search className='w-6 h-6 text-blue-400' />
-      tools: [
-        'Long-tail keyword finder'
-        'Competitor keyword analysis'
-        'Search volume estimation'
-        'Keyword difficulty scoring'
-        'Trending keywords'
-      ]
-    }
-    {
-      category: 'On-Page SEO'
-      icon: <Target className='w-6 h-6 text-green-400' />
-      tools: [
-        'Content optimization'
-        'Meta tag generator'
-        'Schema markup builder'
-        'Internal linking suggestions'
-        'Image optimization'
-      ]
-    }
-    {
-      category: 'Technical SEO'
-      icon: <Settings className='w-6 h-6 text-purple-400' />
-      tools: [
-        'Site audit tool'
-        'Page speed analyzer'
-        'Mobile optimization'
-        'Core Web Vitals'
-        'XML sitemap generator'
-      ]
-    }
-    {
-      category: 'Analytics & Reporting'
-      icon: <BarChart3 className='w-6 h-6 text-orange-400' />
-      tools: [
-        'Ranking tracker'
-        'Traffic analysis'
-        'Conversion tracking'
-        'Competitor monitoring'
-        'Custom dashboards'
-      ]
-    },  ];      title: 'AI Keyword Research'
-      description: 'Discover high-value keywords using advanced AI algorithms that analyze search patterns and competition.'
-      color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
-      gradient: 'from-blue-400 to-cyan-500'}
-=======
   Rocket,;
   Settings,;
 } from 'lucide-react';
@@ -187,7 +38,6 @@ export default function AISeosuitePage() {;
   const features = [;
     {;
       icon: <Search className='w-8 h-8 text-white' />,import { Search, TrendingUp, Target, BarChart3, Globe, Zap, Users, CheckCircle, ArrowRight, Play, Star, Eye, Brain, Shield, Lock, Sparkles, ChartBar, Lightbulb, Rocket, Settings } from 'lucide-react';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     {
       icon: <TrendingUp className="w-8 h-8 text-white" />
       title: 'Ranking Analytics'
@@ -229,28 +79,10 @@ export default function AISeosuitePage() {;
       icon: <Target className="w-6 h-6 text-green-400" />
       tools: ['Content optimizationMeta tag generatorSchema markup builderInternal linking suggestionsImage optimization']
     }
-<<<<<<< HEAD
-    {
-      category: 'Technical SEO'
-      icon: <Settings className="w-6 h-6 text-purple-400" />
-      tools: ['Site audit toolPage speed analyzerMobile optimizationCore Web VitalsXML sitemap generator']
-    }
-    {
-      category: 'Analytics & Reporting'
-      icon: <BarChart3 className="w-6 h-6 text-orange-400" />
-      tools: ['Ranking trackerTraffic analysisConversion trackingCompetitor monitoringCustom dashboards']
-    }
-      icon: <Search className='w-8 h-8 text-white' />,
-  ];
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 export default function AISeosuitePage() {
   const features = [
     {
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 import { Search, TrendingUp, Target, BarChart3, Globe, Zap, Users, CheckCircle, ArrowRight, Play, Star, Eye, Brain, Shield, Lock, Sparkles, ChartBar, Lightbulb, Rocket, Settings } from 'lucide-react';
 export default function AISeosuitePage() {
   const features = null;
@@ -357,419 +189,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       period: '/month'
       description: 'Perfect for small websites and blogs'
       features: [
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        'Up to 5 websitesBasic keyword researchMonthly site auditsEmail supportBasic reportingMobile app access'
-      ];
-      popular: false,
-      color: 'border-gray-600',
-      buttonColor: 'bg-gray-600 hover:bg-gray-700'
-    };
-    {
-=======
-import Head from 'next / head';
-import Card from '../components / ui / Card';
-import Button from '../components / ui / Button';
-import {
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-  Search,
-  TrendingUp,
-  Target,
-  BarChart3,
-  Globe,
-  Zap,
-  Users,
-  CheckCircle,
-  ArrowRight,
-  Play,
-  Star,
-  Eye,
-  Brain,
-  Shield,
-  Lock,
-  Sparkles,
-  ChartBar,
-  Lightbulb,
-
-export default function AISeosuitePage() {
-  const features = [
-    {
-      icon: <Search className='w-8 h-8 text-white' />
-      title: 'AI Keyword Research'
-      description:
-        'Discover high-value keywords using advanced AI algorithms that analyze search patterns and competition.'
-      color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
-      gradient: 'from-blue-400 to-cyan-500'
-    }
-    {
-      icon: <TrendingUp className='w-8 h-8 text-white' />
-      title: 'Ranking Analytics'
-      description:
-        'Track your search rankings in real-time with comprehensive analytics and competitor insights.'
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600'
-      gradient: 'from-green-400 to-emerald-500'
-    }
-    {
-      icon: <Target className='w-8 h-8 text-white' />
-      title: 'Content Optimization'
-      description:
-        'AI-powered content analysis and optimization suggestions to improve search visibility.'
-      color: 'bg-gradient-to-br from-purple-500 to-indigo-600'
-      gradient: 'from-purple-400 to-indigo-500'
-    }
-    {
-      icon: <BarChart3 className='w-8 h-8 text-white' />
-      title: 'Technical SEO'
-      description:
-        'Comprehensive technical SEO audits with actionable recommendations for improvement.'
-      color: 'bg-gradient-to-br from-orange-500 to-red-600'
-      gradient: 'from-orange-400 to-red-500'
-    }
-    {
-      icon: <Globe className='w-8 h-8 text-white' />
-      title: 'Local SEO'
-      description:
-        'Optimize for local search with location-based keyword research and citation management.'
-      color: 'bg-gradient-to-br from-teal-500 to-blue-600'
-      gradient: 'from-teal-400 to-blue-500'
-    }
-    {
-      icon: <Zap className='w-8 h-8 text-white' />
-      title: 'Automated Reports'
-      description:
-
-  const seoTools = [
-    {
-      category: 'Keyword Research'
-      icon: <Search className='w-6 h-6 text-blue-400' />
-      tools: [
-        'Long-tail keyword finder'
-        'Competitor keyword analysis'
-        'Search volume estimation'
-        'Keyword difficulty scoring'
-        'Trending keywords'
-      ]
-    }
-    {
-      category: 'On-Page SEO'
-      icon: <Target className='w-6 h-6 text-green-400' />
-      tools: [
-        'Content optimization'
-        'Meta tag generator'
-        'Schema markup builder'
-        'Internal linking suggestions'
-        'Image optimization'
-      ]
-    }
-    {
-      category: 'Technical SEO'
-      icon: <Settings className='w-6 h-6 text-purple-400' />
-      tools: [
-        'Site audit tool'
-        'Page speed analyzer'
-        'Mobile optimization'
-        'Core Web Vitals'
-        'XML sitemap generator'
-      ]
-    }
-    {
-      category: 'Analytics & Reporting'
-      icon: <BarChart3 className='w-6 h-6 text-orange-400' />
-      tools: [
-        'Ranking tracker'
-        'Traffic analysis'
-        'Conversion tracking'
-        'Competitor monitoring'
-        'Custom dashboards'
-      ]
-    },  ];      title: 'AI Keyword Research'
-      description: 'Discover high-value keywords using advanced AI algorithms that analyze search patterns and competition.'
-      color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
-      gradient: 'from-blue-400 to-cyan-500'}
-    {
-      icon: <TrendingUp className="w-8 h-8 text-white" />
-      title: 'Ranking Analytics'
-      description: 'Track your search rankings in real-time with comprehensive analytics and competitor insights.'
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600'
-      gradient: 'from-green-400 to-emerald-500'}
-    {
-      icon: <Target className="w-8 h-8 text-white" />
-      title: 'Content Optimization'
-      description: 'AI-powered content analysis and optimization suggestions to improve search visibility.'
-      color: 'bg-gradient-to-br from-purple-500 to-indigo-600'
-      gradient: 'from-purple-400 to-indigo-500'}
-    {
-      icon: <BarChart3 className="w-8 h-8 text-white" />
-      title: 'Technical SEO'
-      description: 'Comprehensive technical SEO audits with actionable recommendations for improvement.'
-      color: 'bg-gradient-to-br from-orange-500 to-red-600'
-      gradient: 'from-orange-400 to-red-500'}
-    {
-      icon: <Globe className="w-8 h-8 text-white" />
-      title: 'Local SEO'
-      description: 'Optimize for local search with location-based keyword research and citation management.'
-      color: 'bg-gradient-to-br from-teal-500 to-blue-600'
-      gradient: 'from-teal-400 to-blue-500'}
-    {
-      icon: <Zap className="w-8 h-8 text-white" />
-      title: 'Automated Reports'
-      description: 'Generate comprehensive SEO reports automatically with actionable insights and recommendations.'
-      color: 'bg-gradient-to-br from-pink-500 to-rose-600'
-      gradient: 'from-pink-400 to-rose-500'}]
-  const seoTools = [
-    {
-      category: 'Keyword Research'
-      icon: <Search className="w-6 h-6 text-blue-400" />
-      tools: ['Long-tail keyword finderCompetitor keyword analysisSearch volume estimationKeyword difficulty scoringTrending keywords']
-    }
-    {
-      category: 'On-Page SEO'
-      icon: <Target className="w-6 h-6 text-green-400" />
-      tools: ['Content optimizationMeta tag generatorSchema markup builderInternal linking suggestionsImage optimization']
-    }
-    {
-      category: 'Technical SEO'
-      icon: <Settings className="w-6 h-6 text-purple-400" />
-      tools: ['Site audit toolPage speed analyzerMobile optimizationCore Web VitalsXML sitemap generator']
-    }
-    {
-      category: 'Analytics & Reporting'
-      icon: <BarChart3 className="w-6 h-6 text-orange-400" />
-      tools: ['Ranking trackerTraffic analysisConversion trackingCompetitor monitoringCustom dashboards']
-    }
-
-export default function AISeosuitePage() {
-  const features = [
-    {
-
-  ];
-  const pricingPlans = [
-    {
-      name: 'Starter'
-      price: '$39'
-      period: '/month'
-      description: 'Perfect for small websites and blogs'
-      features: [
-        'Up to 5 websites'
-        'Basic keyword research'
-        'Monthly site audits'
-        'Email support'
-        'Basic reporting'
-        'Mobile app access'
-      ]
-      popular: false
-      color: 'border-gray-600'
-      buttonColor: 'bg-gray-600 hover:bg-gray-700'
-    },    {        'Up to 5 websitesBasic keyword researchMonthly site auditsEmail supportBasic reportingMobile app access'
-      ];
-      popular: false
-      color: 'border-gray-600'
-      buttonColor: 'bg-gray-600 hover:bg-gray-700'
-    }
-      name: 'Professional'
-      price: '$129'
-      period: '/month'
-      description: 'Ideal for growing businesses and agencies'
-      features: [
-        'Up to 25 websites'
-        'Advanced keyword research'
-        'Weekly site audits'
-        'Priority support'
-        'Advanced reporting'
-        'Competitor analysis'
-        'API access'
-        'White-label reports'
-      ]
-      popular: true
-      color: 'border-blue-500'
-      buttonColor: 'bg-blue-600 hover:bg-blue-700'
-    },    {        'Up to 25 websitesAdvanced keyword researchWeekly site auditsPriority supportAdvanced reportingCompetitor analysisAPI accessWhite-label reports'
-      ];
-      popular: true
-      color: 'border-blue-500'
-      buttonColor: 'bg-blue-600 hover:bg-blue-700'
-    }
-      name: 'Enterprise'
-      price: '$399'
-      period: '/month'
-      description: 'For large organizations and enterprises'
-      features: [
-        'Unlimited websites'
-        'Full SEO suite'
-        'Daily site audits'
-        'Dedicated support'
-        'Custom reporting'
-        'Advanced analytics'
-        'SLA guarantee'
-        'On-premise option'
-      ]
-      popular: false
-      color: 'border-purple-600'
-      buttonColor: 'bg-purple-600 hover:bg-purple-700'
-    }
-  ];
-  const integrations = [
-    {
-      name: 'Google Analytics'
-      icon: '📊'
-      description: 'Traffic data integration'
-    }
-    {
-      name: 'Google Search Console'
-      icon: '🔍'
-      description: 'Search performance data'
-    },    { name: 'WordPress', icon: '🔌', description: 'Plugin integration' },      popular: false
-      color: 'border-purple-600'
-      buttonColor: 'bg-purple-600 hover:bg-purple-700'
-    }
-  ];
-  const integrations = [
-    { name: 'Google Analytics', icon: '📊', description: 'Traffic data integration' }
-    { name: 'Google Search Console', icon: '🔍', description: 'Search performance data' }
-    { name: 'WordPress', icon: '🔌', description: 'Plugin integration' }
-    { name: 'Shopify', icon: '🛒', description: 'E-commerce optimization' }
-    { name: 'HubSpot', icon: '📈', description: 'Marketing automation sync' }
-    { name: 'Slack', icon: '💬', description: 'Team notifications' }
-    { name: 'Zapier', icon: '⚡', description: '500+ app integrations' }
-    { name: 'API Access', icon: '🔑', description: 'Custom integrations' },  ];    { name: 'API Access', icon: '🔑', description: 'Custom integrations' }
-  ];
-  const useCases = [
-    {
-      title: 'E-commerce Websites'
-      description:
-        'Optimize product pages, category pages, and search functionality for better conversions.'
-      benefits: [
-        'Higher search rankings'
-        'Increased organic traffic'
-        'Better conversion rates'
-        'Competitive advantage'
-      ]
-    }
-    {
-      title: 'Content Marketing'
-      description:
-        'Optimize blog posts, articles, and content for search engines and user engagement.'
-      icon: '📝'
-      benefits: [
-        'Better content visibility'
-        'Higher engagement rates'
-        'More organic traffic'
-        'Authority building'
-      ]
-    }
-    {
-      title: 'Local Businesses'
-      description:
-        'Improve local search visibility and attract customers in your area.'
-      icon: '📍'
-      benefits: [
-        'Local search dominance'
-        'Increased foot traffic'
-        'Better customer acquisition'
-        'Competitive positioning'
-      ]
-    }
-    {
-      title: 'SaaS Companies'
-      description:
-        'Optimize landing pages, feature pages, and documentation for better user acquisition.'
-      icon: '💻'
-      benefits: [
-        'Higher conversion rates'
-        'Better user experience'
-        'Reduced acquisition costs'
-        'Market expansion'
-      ]
-    }
-  ];
-  const successMetrics = [
-  ];
-
-;
-  const use_cases = [;
-    {
-      title: 'E - commerce Websites',
-      description:;
-        'Optimize product pages, category pages, and search functionality for better conversions.',
-      benefits: [;
-        'Higher search rankings',
-        'Increased organic traffic',
-        'Better conversion rates',
-        'Competitive advantage',
-      ],
-    },
-    {
-      title: 'Content Marketing',
-      description:;
-        'Optimize blog posts, articles, and content for search engines and user engagement.',
-      icon: '📝',
-      benefits: [;
-        'Better content visibility',
-        'Higher engagement rates',
-        'More organic traffic',
-        'Authority building',
-      ],
-    },
-    {
-      title: 'Local Businesses',
-      description:;
-        'Improve local search visibility and attract customers in your area.',
-      icon: '📍',
-      benefits: [;
-        'Local search dominance',
-        'Increased foot traffic',
-        'Better customer acquisition',
-        'Competitive positioning',
-      ],
-    },
-    {
-      title: 'SaaS Companies',
-      description:;
-        'Optimize landing pages, feature pages, and documentation for better user acquisition.',
-      icon: '💻',
-      benefits: [;
-        'Higher conversion rates',
-        'Better user experience',
-        'Reduced acquisition costs',
-        'Market expansion',
-      ],
-    },
-  ];
-;
-  const success_metrics = [;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
-    {
-      metric: 'Organic Traffic'
-      value: '+150%'
-      description: 'Average increase in organic traffic'
-    }
-    {
-      metric: 'Search Rankings'
-      value: '+45%'
-      description: 'Improvement in search rankings'
-    }
-    {
-      metric: 'Conversion Rate'
-      value: '+80%'
-      description: 'Increase in conversion rates'
-    }
-    {
-      metric: 'ROI'
-      value: '400%'
-      description: 'Average return on investment'
-    },  ];    { metric: 'Organic Traffic', value: '+150%', description: 'Average increase in organic traffic' }
-    { metric: 'Search Rankings', value: '+45%', description: 'Improvement in search rankings' }
-    { metric: 'Conversion Rate', value: '+80%', description: 'Increase in conversion rates' }
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     };
     {;
       category: 'On-Page SEO',;
@@ -790,35 +209,11 @@ export default function AISeosuitePage() {
 
     { metric: 'ROI', value: '400%', description: 'Average return on investment' }
 
-  return (
-    <>
-      <Head>
+  ];
 
-<<<<<<< HEAD
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className='py - 24 bg - gray - 900 relative overflow - hidden'>;
-        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 relative z - 10'>;
-          <div className='text - center mb - 20'>;
-            <h2 className='text - 4xl sm:text - 5xl font - bold mb - 8 text - white leading - tight'>;
-              Powerful SEO Features;
-            </h2>;
-            <p className='text - xl text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
     { metric: 'ROI', value: '400%', description: 'Average return on investment' }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 'Up to 5 websites',
         'Basic keyword research',
         'Monthly site audits',
@@ -1089,8 +484,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               href='#demo'
               variant='outline'
               size='lg'
-<<<<<<< HEAD
-<<<<<<< HEAD
             <Button
               href="#pricing"
               size="lg"
@@ -1102,19 +495,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               href="#demo"
               variant="outline"
               size="lg"
-<<<<<<< HEAD
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               Everything you need to dominate search rankings and drive organic;
               traffic;
             </p>;
           </div>;
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
               className='border-white/20 hover:border-white/40 hover:bg-white/5'
             >
               <Play className='w-5 h-5 mr-2' />
@@ -1179,18 +563,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
                 <h3 className='text - xl font - bold mb - 4 text - white group - hover:text - blue - 400 transition - colors duration - 300'>;
                   {feature.title}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-                </h3>
-                <p className='text-gray-400 leading-relaxed'>                  {feature.description}              Powerful SEO Features
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Everything you need to dominate search rankings and drive organic traffic
@@ -1214,71 +586,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Card
                 key={index}
                 className="text-center group bg-gray-800/50 border border-gray-700 hover:border-blue-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1"
-<<<<<<< HEAD
-<<<<<<< HEAD
-                style={{ animationDelay: `${(index * 0.1) + 0.2}s` }}
-              >
-                <div className="relative">
-                  <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature.color} shadow-xl`}>
-=======
-                    {feature.icon}
-                  </div>
-                </div>
-                <h3 className="text-xl font-bold mb-4 text-white group-hover:text-blue-400 transition-colors duration-300">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-400 leading-relaxed">
-                  {feature.description}
-                <p className='text-gray-400 leading-relaxed'>                  {feature.description}
-
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-=======
-=======
-                </h3>
-                <p className='text-gray-400 leading-relaxed'>
-                  {feature.description}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                 </h3>
                 <p className='text-gray-400 leading-relaxed'>
                   {feature.description}
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 </p>
               </Card>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* SEO Tools Section */}
-      <section className='py-24 bg-black relative overflow-hidden'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
-          <div className='text-center mb-20'>
-            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
-              Comprehensive SEO Tools
-            </h2>
-            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Professional-grade tools used by top SEO agencies and marketers
-            </p>
-          </div>
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>      <section className="py-24 bg-black relative overflow-hidden">
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-      {/* SEO Tools Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       <section className="py-24 bg-black relative overflow-hidden">
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
                 style={{ animationDelay: `${(index * 0 && 0.1) + 0 && 0.2}s` }}>;
                 <div className="relative">;
@@ -1308,15 +629,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Comprehensive SEO Tools
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 <section className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
           <div className='text-center mb-20'>
@@ -1330,12 +642,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {seoTools.map((tool, index) => (
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
               <Card
                 key={index}
                 className='group border border-gray-700 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300'>;
@@ -1349,8 +656,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       {tool && tool.tools.map((toolName, toolIndex) => (;
                         <div
                           key={toolIndex}
-<<<<<<< HEAD
-<<<<<<< HEAD
                           className='flex items-center text-sm text-gray-300'>;
                           <CheckCircle className='w-4 h-4 text-blue-400 mr-2 flex-shrink-0' />                          {toolName}            {seoTools && seoTools.map((tool, index) => (;
               <Card
@@ -1366,67 +671,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       {tool && tool.tools.map((toolName, toolIndex) => (;
                         <div key={toolIndex} className="flex items-center text-sm text-gray-300">;
                           <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                          {toolName}
-
-                        </div>
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-                        </div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
-=======
-                          className='flex items-center text-sm text-gray-300'
-                        >
-                          <CheckCircle className='w-4 h-4 text-blue-400 mr-2 flex-shrink-0' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                           className='flex items-center text-sm text-gray-300'
                         >
                           <CheckCircle className='w-4 h-4 text-blue-400 mr-2 flex-shrink-0' />
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                           {toolName}
                         </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       ))}
                     </div>;
                   </div>;
                 </div>;
               </Card>;
             ))}
-<<<<<<< HEAD
-          </div>
-        </div>
-      </section>
-
       {/* Success Metrics Section */}
-      <section className='py-24 bg-gray-900 relative overflow-hidden'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
-          <div className='text-center mb-20'>
-            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
-              Proven Results
-            </h2>
-            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              See the impact our AI-powered SEO suite has on businesses
-            </p>
-          </div>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>      <section className="py-24 bg-gray-900 relative overflow-hidden">
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-      {/* Success Metrics Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       <section className="py-24 bg-gray-900 relative overflow-hidden">
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
@@ -1434,37 +693,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Proven Results
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
-<<<<<<< HEAD
-
-=======
-          </div>;
-        </div>;
-      </section>;
-      {/* Success Metrics Section */}
-      <section className='py-24 bg-gray-900 relative overflow-hidden'>;
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>;
-          <div className='text-center mb-20'>;
-            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>;
-              Proven Results;
-            </h2>;
-            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              See the impact our AI-powered SEO suite has on businesses;
-            </p>;
-          </div>;
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>      <section className="py-24 bg-gray-900 relative overflow-hidden">;
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">;
-          <div className="text-center mb-20">;
-            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">;
-              Proven Results;
-            </h2>;
-            <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">;
-            </p>;
-          </div>;
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>;
-            {successMetrics && successMetrics.map((metric, index) => (;
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <Card
                 key={index}
                 className='text-center group bg-gray-800/50 border border-gray-700 hover:border-blue-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'>;
@@ -1484,35 +712,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <h3 className="text-xl font-bold mb-2 text-white">{metric && metric.metric}</h3>;
                 <p className="text-gray-400 text-sm">{metric && metric.description}</p>;
               </Card>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-              See the impact our AI-powered SEO suite has on businesses
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {successMetrics.map((metric, index) => (
-              <Card
-                key={index}
-                className="text-center group bg-gray-800/50 border border-gray-700 hover:border-blue-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1"
-              >
-                <div className="text-4xl font-bold mb-4 text-blue-400 group-hover:scale-110 transition-transform duration-300">
-                  {metric.value}
-                </div>
-                <h3 className="text-xl font-bold mb-2 text-white">{metric.metric}</h3>
-                <p className="text-gray-400 text-sm">{metric.description}</p>
-              </Card>
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-
-
-              </Card>
-
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <section className='py-24 bg-gray-900 relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
           <div className='text-center mb-20'>
@@ -1538,31 +737,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </h3>
                 <p className='text-gray-400 text-sm'>{metric.description}</p>
               </Card>
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-            ))}
-          </div>
-        </div>
-      </section>
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
             ))}
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       {/* Use Cases Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       <section className="py-24 bg-black relative overflow-hidden">
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
             ))}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -1571,15 +751,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Use Cases
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <section className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
           <div className='text-center mb-20'>
@@ -1593,12 +764,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {useCases.map((useCase, index) => (
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
               <Card
                 key={index}
                 className='group border border-gray-700 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300'>;
@@ -1615,8 +781,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       {useCase && useCase.benefits.map((benefit, benefitIndex) => (;
                         <div
                           key={benefitIndex}
-<<<<<<< HEAD
-<<<<<<< HEAD
                           className='flex items-center text-sm text-gray-300'>;
                           <TrendingUp className='w-4 h-4 text-blue-400 mr-2 flex-shrink-0' />                          {benefit}            {useCases && useCases.map((useCase, index) => (;
               <Card
@@ -1635,70 +799,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       {useCase && useCase.benefits.map((benefit, benefitIndex) => (;
                         <div key={benefitIndex} className="flex items-center text-sm text-gray-300">;
                           <TrendingUp className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                          {benefit}
-
-                        </div>
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-                        </div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
-=======
-                          className='flex items-center text-sm text-gray-300'
-                        >
-                          <TrendingUp className='w-4 h-4 text-blue-400 mr-2 flex-shrink-0' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                           className='flex items-center text-sm text-gray-300'
                         >
                           <TrendingUp className='w-4 h-4 text-blue-400 mr-2 flex-shrink-0' />
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                           {benefit}
                         </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       ))}
                     </div>;
                   </div>;
                 </div>;
               </Card>;
             ))}
-<<<<<<< HEAD
-          </div>
-        </div>
-      </section>
-
       {/* Pricing Section */}
-      <section
-        id='pricing'
-        className='py-24 bg-gray-900 relative overflow-hidden'
-      >
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
-          <div className='text-center mb-20'>
-            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
-              Simple, Transparent Pricing
-            </h2>
-            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Choose the plan that fits your SEO needs
-            </p>
-          </div>
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingPlans.map((plan, index) => (      <section id="pricing" className="py-24 bg-gray-900 relative overflow-hidden">
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-      {/* Pricing Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       <section id="pricing" className="py-24 bg-gray-900 relative overflow-hidden">
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
@@ -1730,257 +845,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Card
                 key={index}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                </p>;
-              </Card>))}
-          </div>;
-        </div>;
-      </section>;
-      {/* SEO Tools Section */}
-      <section className='py - 24 bg - black relative overflow - hidden'>;
-        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 relative z - 10'>;
-          <div className='text - center mb - 20'>;
-            <h2 className='text - 4xl sm:text - 5xl font - bold mb - 8 text - white leading - tight'>;
-              Comprehensive SEO Tools;
-            </h2>;
-            <p className='text - xl text - gray - 400 max - w-4xl mx - auto leading - relaxed'>              Professional - grade tools used by top SEO agencies and marketers;
-            </p>;
-          </div>;
-          <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 8'>      <section className="py - 24 bg - black relative overflow - hidden">;
-        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 relative z - 10">;
-          <div className="text - center mb - 20">;
-            <h2 className="text - 4xl sm:text - 5xl font - bold mb - 8 text - white leading - tight">;
-              Comprehensive SEO Tools;
-            </h2>;
-            <p className="text - xl text - gray - 400 max - w-4xl mx - auto leading - relaxed">;
-            </p>;
-          </div>;
-          <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 8'>;
-            {seo_tools.map ((tool, index) => (
-              <Card;
-                key={index}
-                className='group border border - gray - 700 hover:border - blue - 500 / 30 hover:bg - gray - 900 / 80 transition - all duration - 300';
-              >;
-                <div className='flex items - start space - x-4'>;
-                  <div className='flex - shrink - 0'>{tool.icon}</div>;
-                  <div className='flex - 1'>;
-                    <h3 className='text - xl font - bold mb - 3 text - white group - hover:text - blue - 400 transition - colors duration - 300'>;
-                      {tool.category}
-                    </h3>;
-                    <div className='grid grid - cols - 1 gap - 2'>;
-                      {tool.tools.map ((tool_name, tool_index) => (
-                        <div;
-                          key={tool_index}
-                          className='flex items - center text - sm text - gray - 300';
-                        >;
-                          <CheckCircle className='w - 4 h - 4 text - blue - 400 mr - 2 flex - shrink - 0' />                          {tool_name}            {seo_tools.map ((tool, index) => (
-              <Card;
-                key={index}
-                className="group border border - gray - 700 hover:border - blue - 500 / 30 hover:bg - gray - 900 / 80 transition - all duration - 300";
-              >;
-                <div className="flex items - start space - x-4">;
-                  <div className="flex - shrink - 0">{tool.icon}</div>;
-                  <div className="flex - 1">;
-                    <h3 className="text - xl font - bold mb - 3 text - white group - hover:text - blue - 400 transition - colors duration - 300">;
-                      {tool.category}
-                    </h3>;
-                    <div className="grid grid - cols - 1 gap - 2">;
-                      {tool.tools.map ((tool_name, tool_index) => (
-                        <div key={tool_index} className="flex items - center text - sm text - gray - 300">;
-                          <CheckCircle className="w - 4 h - 4 text - blue - 400 mr - 2 flex - shrink - 0" />;
-                          {tool_name}
-                        </div>))}
-                    </div>;
-                  </div>;
-                </div>;
-              </Card>))}
-          </div>;
-        </div>;
-      </section>;
-      {/* Success Metrics Section */}
-      <section className='py - 24 bg - gray - 900 relative overflow - hidden'>;
-        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 relative z - 10'>;
-          <div className='text - center mb - 20'>;
-            <h2 className='text - 4xl sm:text - 5xl font - bold mb - 8 text - white leading - tight'>;
-              Proven Results;
-            </h2>;
-            <p className='text - xl text - gray - 400 max - w-4xl mx - auto leading - relaxed'>              See the impact our AI - powered SEO suite has on businesses;
-            </p>;
-          </div>;
-          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8'>      <section className="py - 24 bg - gray - 900 relative overflow - hidden">;
-        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 relative z - 10">;
-          <div className="text - center mb - 20">;
-            <h2 className="text - 4xl sm:text - 5xl font - bold mb - 8 text - white leading - tight">;
-              Proven Results;
-            </h2>;
-            <p className="text - xl text - gray - 400 max - w-4xl mx - auto leading - relaxed">;
-            </p>;
-          </div>;
-          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8'>;
-            {success_metrics.map ((metric, index) => (
-              <Card;
-                key={index}
-                className='text - center group bg - gray - 800 / 50 border border - gray - 700 hover:border - blue - 500 / 30 hover:bg - gray - 800 / 80 transition - all duration - 300 hover:-translate - y-1';
-              >;
-                <div className='text - 4xl font - bold mb - 4 text - blue - 400 group - hover:scale - 110 transition - transform duration - 300'>;
-                  {metric.value}
-                </div>;
-                <h3 className='text - xl font - bold mb - 2 text - white'>;
-                  {metric.metric}
-                </h3>;
-                <p className='text - gray - 400 text - sm'>{metric.description}</p>              </Card>            {success_metrics.map ((metric, index) => (
-              <Card;
-                key={index}
-                className="text - center group bg - gray - 800 / 50 border border - gray - 700 hover:border - blue - 500 / 30 hover:bg - gray - 800 / 80 transition - all duration - 300 hover:-translate - y-1";
-              >;
-                <div className="text - 4xl font - bold mb - 4 text - blue - 400 group - hover:scale - 110 transition - transform duration - 300">;
-                  {metric.value}
-                </div>;
-                <h3 className="text - xl font - bold mb - 2 text - white">{metric.metric}</h3>;
-                <p className="text - gray - 400 text - sm">{metric.description}</p>;
-              </Card>))}
-          </div>;
-        </div>;
-      </section>;
-      {/* Use Cases Section */}
-      <section className='py - 24 bg - black relative overflow - hidden'>;
-        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 relative z - 10'>;
-          <div className='text - center mb - 20'>;
-            <h2 className='text - 4xl sm:text - 5xl font - bold mb - 8 text - white leading - tight'>;
-              Use Cases;
-            </h2>;
-            <p className='text - xl text - gray - 400 max - w-4xl mx - auto leading - relaxed'>              Trusted by businesses across industries for SEO success;
-            </p>;
-          </div>;
-          <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 8'>      <section className="py - 24 bg - black relative overflow - hidden">;
-        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 relative z - 10">;
-          <div className="text - center mb - 20">;
-            <h2 className="text - 4xl sm:text - 5xl font - bold mb - 8 text - white leading - tight">;
-              Use Cases;
-            </h2>;
-            <p className="text - xl text - gray - 400 max - w-4xl mx - auto leading - relaxed">;
-            </p>;
-          </div>;
-          <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 8'>;
-            {use_cases.map ((use_case, index) => (
-              <Card;
-                key={index}
-                className='group border border - gray - 700 hover:border - blue - 500 / 30 hover:bg - gray - 900 / 80 transition - all duration - 300';
-              >;
-                <div className='flex items - start space - x-4'>;
-                  <div className='text - 4xl'>{use_case.icon}</div>;
-                  <div className='flex - 1'>;
-                    <h3 className='text - xl font - bold mb - 3 text - white group - hover:text - blue - 400 transition - colors duration - 300'>;
-                      {use_case.title}
-                    </h3>;
-                    <p className='text - gray - 400 mb - 4 leading - relaxed'>;
-                      {use_case.description}
-                    </p>;
-                    <div className='grid grid - cols - 2 gap - 2'>;
-                      {use_case.benefits.map ((benefit, benefit_index) => (
-                        <div;
-                          key={benefit_index}
-                          className='flex items - center text - sm text - gray - 300';
-                        >;
-                          <TrendingUp className='w - 4 h - 4 text - blue - 400 mr - 2 flex - shrink - 0' />                          {benefit}            {use_cases.map ((use_case, index) => (
-              <Card;
-                key={index}
-                className="group border border - gray - 700 hover:border - blue - 500 / 30 hover:bg - gray - 900 / 80 transition - all duration - 300";
-              >;
-                <div className="flex items - start space - x-4">;
-                  <div className="text - 4xl">{use_case.icon}</div>;
-                  <div className="flex - 1">;
-                    <h3 className="text - xl font - bold mb - 3 text - white group - hover:text - blue - 400 transition - colors duration - 300">;
-                      {use_case.title}
-                    </h3>;
-                    <p className="text - gray - 400 mb - 4 leading - relaxed">;
-                      {use_case.description}
-                    </p>;
-                    <div className="grid grid - cols - 2 gap - 2">;
-                      {use_case.benefits.map ((benefit, benefit_index) => (
-                        <div key={benefit_index} className="flex items - center text - sm text - gray - 300">;
-                          <TrendingUp className="w - 4 h - 4 text - blue - 400 mr - 2 flex - shrink - 0" />;
-                          {benefit}
-                        </div>))}
-                    </div>;
-                  </div>;
-                </div>;
-              </Card>))}
-          </div>;
-        </div>;
-      </section>;
-      {/* Pricing Section */}
-      <section;
-        id='pricing';
-        className='py - 24 bg - gray - 900 relative overflow - hidden';
-      >;
-        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 relative z - 10'>;
-          <div className='text - center mb - 20'>;
-            <h2 className='text - 4xl sm:text - 5xl font - bold mb - 8 text - white leading - tight'>;
-              Simple, Transparent Pricing;
-            </h2>;
-            <p className='text - xl text - gray - 400 max - w-4xl mx - auto leading - relaxed'>              Choose the plan that fits your SEO needs;
-            </p>;
-          </div>;
-          <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8'>            {pricing_plans.map ((plan, index) => (      <section id="pricing" className="py - 24 bg - gray - 900 relative overflow - hidden">;
-        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 relative z - 10">;
-          <div className="text - center mb - 20">;
-            <h2 className="text - 4xl sm:text - 5xl font - bold mb - 8 text - white leading - tight">;
-              Simple, Transparent Pricing;
-            </h2>;
-            <p className="text - xl text - gray - 400 max - w-4xl mx - auto leading - relaxed">;
-            </p>;
-          </div>;
-          <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8'>          <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
-            {pricing_plans.map ((plan, index) => (
-              <Card;
-                key={index}
-                className={`relative group ${plan.popular ? 'ring - 2 ring - blue - 500 scale - 105' : ''} border ${plan.color} hover:border - blue - 500 / 50 transition - all duration - 300`}
-              >;
-                {plan.popular && (
-                  <div className='absolute -top - 4 left - 1/2 transform -translate - x-1 / 2'>;
-                    <span className='bg - blue - 500 text - white px - 4 py - 2 rounded - full text - sm font - semibold'>                      Most Popular;
-                    </span>;
-                  </div>)}                  <div className="absolute -top - 4 left - 1/2 transform -translate - x-1 / 2">;
-                    <span className="bg - blue - 500 text - white px - 4 py - 2 rounded - full text - sm font - semibold">;
-                      Most Popular;
-                    </span>;
-                  </div>)}
-                <div className='text - center mb - 8'>;
-                  <h3 className='text - 2xl font - bold text - white mb - 2'>;
-
-                    {plan.name}
-                  </h3>;
-                  <div className='text - 4xl font - bold text - white mb - 2'>;
-                    {plan.price}
-
-                className={`relative group ${plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''} border ${plan.color} hover:border-blue-500/50 transition-all duration-300`}
-              >
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-=======
-                className={`relative group ${plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''} border ${plan.color} hover:border-blue-500/50 transition-all duration-300`}
-              >
-                {plan.popular && (
-                  <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
-                    <span className='bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>                      Most Popular
-                    </span>
-                  </div>
-                )}                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-
-                    <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
-                    </span>
-                  </div>
-                )}
-=======
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <div className='text-center mb-8'>;
                   <h3 className='text-2xl font-bold text-white mb-2'>;
                     {plan && plan.name}
@@ -1991,11 +855,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>;
                   <p className='text-gray-400'>{plan && plan.description}</p>;
                 </div>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <div className='text-center mb-8'>
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 <section
         id='pricing'
         className='py-24 bg-gray-900 relative overflow-hidden'
@@ -2036,30 +896,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
                 <ul className='space-y-4 mb-8'>
                   {plan.features.map((feature, featureIndex) => (
-<<<<<<< HEAD
-                    <li
-                      key={featureIndex}
-                      className='flex items-center text-gray-300'
-                    >
-                      <CheckCircle className='w-5 h-5 text-blue-400 mr-3 flex-shrink-0' />                      {feature}                  </div>
-                  <p className="text-gray-400">{plan.description}</p>
-                </div>
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
-                      {feature}
-                      {feature}
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
                 <ul className='space-y-4 mb-8'>;
                   {plan && plan.features.map((feature, featureIndex) => (;
                     <li
                       key={featureIndex}
+
                       className='flex items-center text-gray-300'
                     >
                       <CheckCircle className='w-5 h-5 text-blue-400 mr-3 flex-shrink-0' />
@@ -2080,33 +922,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </Button>;
               </Card>;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     </li>
                   ))}
                 </ul>
 
-<<<<<<< HEAD
-=======
                 <Button
-<<<<<<< HEAD
-<<<<<<< HEAD
                   href="/contact"
                   className={`w-full ${plan.buttonColor} text-white`}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   size="lg"
                 >
                   Get Started
                   <ArrowRight className="w-5 h-5 ml-2" />
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 href='/contact'
                   className={`w-full ${plan.buttonColor} text-white`}
                   size='lg'
@@ -2117,32 +943,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </Button>
               </Card>
             ))}
-<<<<<<< HEAD
-          </div>
-        </div>
-      </section>
-
       {/* Integrations Section */}
-      <section className='py-24 bg-black relative overflow-hidden'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
-          <div className='text-center mb-20'>
-            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
-              Seamless Integrations
-            </h2>
-            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Connect with your favorite tools and platforms
-            </p>
-          </div>
-          <div className='grid grid-cols-2 md:grid-cols-4 gap-6'>      <section className="py-24 bg-black relative overflow-hidden">
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-      {/* Integrations Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       <section className="py-24 bg-black relative overflow-hidden">
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
             ))}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -2151,10 +954,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Seamless Integrations
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <Card
                 key={index}
                 className='text-center group border border-gray-700 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300'>;
@@ -2176,37 +975,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <h3 className="font-semibold text-white mb-2">{integration && integration.name}</h3>;
                 <p className="text-sm text-gray-400">{integration && integration.description}</p>;
               </Card>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-              Connect with your favorite tools and platforms
-            </p>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {integrations.map((integration, index) => (
-              <Card
-                key={index}
-                className="text-center group border border-gray-700 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300"
-              >
-                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                  {integration.icon}
-                </div>
-                <h3 className="font-semibold text-white mb-2">{integration.name}</h3>
-                <p className="text-sm text-gray-400">{integration.description}</p>
-              </Card>
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-
-
-              </Card>
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <section className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
           <div className='text-center mb-20'>
@@ -2234,12 +1002,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {integration.description}
                 </p>
               </Card>
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
             ))}
           </div>
         </div>
@@ -2249,35 +1012,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             ))}
       {/* CTA Section */}
-<<<<<<< HEAD
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* CTA Section */}
 <section className='py-24 bg-gradient-to-r from-blue-600 to-green-600 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
           <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
 
-<<<<<<< HEAD
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             Ready to Dominate Search Rankings?
           </h2>
           <p className='text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
@@ -2304,23 +1047,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               href='#demo'
               variant='outline'
               size='lg'
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-              className='border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl'>;
-              <Play className='w-5 h-5 mr-2' />              Watch Demo            Ready to Dominate Search Rankings?;
-          </h2>;
-          <p className="text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed">;
-            Join thousands of businesses who are already ranking higher and driving more organic traffic.;
-          </p>;
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">;
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
             <Button
               href="/contact"
               variant="secondary"
@@ -2333,21 +1059,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               href="#demo"
               variant="outline"
               size="lg"
-<<<<<<< HEAD
-=======
-  );
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               Watch Demo;
             </Button>;
           </div>;
@@ -2359,12 +1071,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
     </>);
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
               className='border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl'
             >
               <Play className='w-5 h-5 mr-2' />
@@ -2376,9 +1082,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

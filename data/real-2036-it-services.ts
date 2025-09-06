@@ -1,70 +1,17 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-<<<<<<< HEAD
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 export const real2036ITServices = [
   {
     id: 'quantum-cloud-infrastructure-platform'
     name: 'Quantum Cloud Infrastructure Platform'
     tagline: 'Next-generation quantum cloud computing'
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 id: 'quantum-cloud-infrastructure-platform',
     name: 'Quantum Cloud Infrastructure Platform',
     tagline: 'Next-generation quantum cloud computing',
 origin/cursor/automate-test-improve-and-merge-code-2533
     description:
-<<<<<<< HEAD
-      'Revolutionary quantum cloud infrastructure platform providing quantum computing resources, quantum-classical hybrid computing, and quantum cloud services. Features quantum resource management, quantum networking, and quantum security.'
-    price: '$6,999'
-    period: 'month'
-      'Quantum computing resources'
-      'Quantum-classical hybrid computing'
-      'Quantum resource management'
-      'Quantum networking'
-      'Quantum security protocols'
-      'Scalable quantum infrastructure'
-
-    ]
-    popular: true
-    category: 'Quantum Cloud'
-    icon: '☁️⚛️'
-    marketPrice: '$8,000-15,000/month'
-    benefits: [
-      'Access to quantum computing power'
-      'Hybrid classical-quantum processing'
-      'Future-proof cloud infrastructure'
-      'Quantum advantage in the cloud'
-    ]
-    useCases: [
-      'Scientific research computing'
-      'Financial modeling'
-      'Drug discovery'
-      'Climate simulation'
-    ]
-  }
-  {
-    id: 'ai-powered-devops-platform'
-    name: 'AI-Powered DevOps Platform'
-    tagline: 'Intelligent DevOps automation'
-    description:
-      'Advanced DevOps platform with AI-powered automation, intelligent deployment strategies, and predictive infrastructure management. Features automated testing, deployment optimization, and intelligent monitoring.'
-    price: '$2,999'
-    period: 'month'
-=======
       'Revolutionary quantum cloud infrastructure platform providing quantum computing resources, quantum-classical hybrid computing, and quantum cloud services. Features quantum resource management, quantum networking, and quantum security.',
     price: '$6,999',
     period: 'month',
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     features: [
       'Quantum computing resources',
       'Quantum-classical hybrid computing',
@@ -348,18 +295,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Future-proof storage technology',
     ],
     useCases: [
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-  }
-];
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       'Data center recovery'
       'Cloud recovery'
       'Application recovery'
@@ -1037,16 +972,6 @@ export const real2036ITServices = [;
       'Reduced recovery time',
     ],
     use_cases: [;
-=======
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-
-
-export const real2036ITServices = [
-  {
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Data center recovery',
       'Cloud recovery',
       'Application recovery',
@@ -1056,24 +981,27 @@ export const real2036ITServices = [
   },;
 ];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
     ]
-<<<<<<< HEAD
   },;
 ];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
     ]
-  }
-];
-;  }
-];
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
-=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
+export const real2036ITServices = [
+  {
+
+
+      'Data center recovery',
+      'Cloud recovery',
+      'Application recovery',
+      'Business continuity',
+    ],
+
+  },;
+];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
+    ]
 
 export const real2036ITServices = [;
   {;
@@ -1295,7 +1223,6 @@ ursor/fix-website-loading-errors-and-merge-6662
   },;
 ];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
     ]
-
 origin/cursor/expand-services-advertise-and-build-project-c28b
 export const real2036ITServices = [;
   {;
@@ -1507,13 +1434,8 @@ export const real2036ITServices = [;
     useCases: [;
       'Data center recoveryCloud recoveryApplication recoveryBusiness continuity';
     ];
-
-
   }
 ];
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Big data storage',
       'Data archiving',
       'Cloud storage',
@@ -1554,9 +1476,4 @@ export const real2036ITServices = [;
     ],
   },
 ];
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

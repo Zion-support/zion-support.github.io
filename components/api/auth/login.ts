@@ -1,51 +1,15 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {
-  createSessionCookie
-  validateCredentials;
-  createSessionCookie,;
-  validateCredentials,;
-} from '../../../utils/auth-utils';import { createSessionCookie, validateCredentials } from '../../../utils/auth-utils';
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import {
   createSessionCookie,
   validateCredentials,;
 } from '../../../utils/auth-utils';
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST') {
     return res && res.status(405).json({ error: 'Method not allowed' });
   }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-  const { email, password, code } = req && req.body || {};
-  if (!email || !password || !code) {
-    return res && res.status(400).json({ error: 'Missing credentials' });
-
-  }
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const result = validateCredentials(email, password, code);
   res.setHeader('Set-Cookie', cookie);
 
@@ -77,20 +41,6 @@ if ( {) {
   return res.status (200).json ({ ok: true });  const cookie = createSessionCookie ({ email, role: result.role, twofa_verified: true });
   res.set_header ('Set - Cookie', cookie);
   return res.status (200).json ({ ok: true });
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const cookie = createSessionCookie({
     email,
     role: result.role,
@@ -100,9 +50,4 @@ const cookie = createSessionCookie({
   return res.status(200).json({ ok: true });
   return res.status(200).json({ ok: true })
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

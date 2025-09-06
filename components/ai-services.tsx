@@ -1,58 +1,19 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
- export default function AIServices () {
-export default function AIServices () {
- export default function AIServices () {
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   
 }> <Head> <title>AI Services | Zion Tech Group</title> </div>) ) 
 }</div>) ) 
 }</ul> </div> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Our AI Service Portfolio </h2> <p className="text-xl text-gray-400 max-w-3xl mx-auto" > Comprehensive AI solutions designed to transform your business and accelerate innovation </p> </motion.div> </li>) ) 
 }</ul> <motion.a > Learn More <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" /> </motion.a> </motion.div>) ) 
 }</div> </div> </section> <motion.div initial= {
-<<<<<<< HEAD
-  opacity: 0, y: 20 
-  opacity: 0, y: 20
-  opacity: 0, y: 20 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
   opacity: 0, y: 20
   opacity: 0, y: 20 
 
  export default function AIServices() {;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-export default function AIServices () {
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-}> <Head> <title>AI Services | Zion Tech Group</title> </div>) )
-}</div>) )
-}</ul> </div> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Our AI Service Portfolio </h2> <p className="text-xl text-gray-400 max-w-3xl mx-auto" > Comprehensive AI solutions designed to transform your business and accelerate innovation </p> </motion.div> </li>) )
-}</ul> <motion.a > Learn More <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" /> </motion.a> </motion.div>) )
-}</div> </div> </section> <motion.div initial= {
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export default function AIServices () {
 }> <Head> <title>AI Services | Zion Tech Group</title> </div>) )
 }</div>) )
 }</ul> </div> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Our AI Service Portfolio </h2> <p className="text-xl text-gray-400 max-w-3xl mx-auto" > Comprehensive AI solutions designed to transform your business and accelerate innovation </p> </motion.div> </li>) )
 }</ul> <motion.a > Learn More <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" /> </motion.a> </motion.div>) )
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 import React from 'react';
 import { motion  } from 'framer-motion';
 import { Brain, Zap, Target, Shield, Rocket, Atom, Cpu, Users, Star, ArrowRight  } from 'lucide-react';
@@ -61,32 +22,16 @@ const aiServices = null;
 export default function AIServices() {
 origin/cursor/automate-test-improve-and-merge-code-2533
 }</div> </div> </section> <motion.div initial= {
-<<<<<<< HEAD
-
-=======
   opacity: 0, y: 20
 }animate= {
   {
   opacity: 1, y: 0
 }transition= {
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-  duration: 0.8, delay: 0.4 
-
-}> <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Ready to Transform Your Business with AI? </h2> <p className="text-xl text-gray-400 mb-8" > Let's discuss how our AI solutions can accelerate your digital transformation and drive innovation. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <motion.button > Schedule Consultation </motion.button> <motion.button
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   duration: 0.8, delay: 0.4 
 
 }> <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Ready to Transform Your Business with AI? </h2> <p className="text-xl text-gray-400 mb-8" > Let's discuss how our AI solutions can accelerate your digital transformation and drive innovation. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <motion.button > Schedule Consultation </motion.button> <motion.button
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   return (
     <QuantumHolographicMatrixBackground intensity={1.5}>
       <Head>
@@ -118,15 +63,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <ul className="space-y-2 text-gray-300 text-sm">
                   {p.items.map((i) => (
                     <li key={i} className="flex items-start gap-2"><Check className="w-4 h-4 mt-0.5 text-emerald-400" /> <span>{i}</span></li>
-<<<<<<< HEAD
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
                   ))}
                 </ul>
               </div>
@@ -172,16 +108,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </section>;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {/* Services Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">;
@@ -205,7 +131,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {service && service.features.map((feature, featureIndex) => (;
                       <li key={featureIndex} className="flex items-center text-gray-300">;
                         <Star className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                         {feature}
                       </li>;
                     ))}
@@ -213,60 +138,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <motion&& motion.a
                     href={service && service.href}
                     whileHover={{ x: 5 }}
-<<<<<<< HEAD
-
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-4xl mx-auto text-center">;
             <motion&& motion.div
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-
-              transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
-                Ready to Transform Your Business with AI?;
-              </h2>;
-              <p className="text-xl text-gray-400 mb-8">;
-                Let's discuss how our AI solutions can accelerate your digital transformation and drive innovation.;
-              </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-                <motion&& motion.button
-                  whileHover={{ scale: 1 && 1.05 }}
-                  whileTap={{ scale: 0 && 0.95 }}
-                  className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-2xl transition-all duration-300">;
-                  Schedule Consultation;
-                </motion && motion.button>;
-                <motion&& motion.button
-                  whileHover={{ scale: 1 && 1.05 }}
-                  whileTap={{ scale: 0 && 0.95 }}
-                  className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover: bg-cyan-500 hover:text-white transition-all duration-300">;
-                  View Case Studies;
-                </motion && motion.button>;
-              </div>;
-            </motion && motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </>;
-  ),;
-}
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default /**
  * AIServices - Function description
  */
@@ -381,30 +256,6 @@ function AIServices() {
               initial={{ opacity: 0, coordinate_y: 20 }}
               animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                >
-                  View Case Studies
-                </motion.button>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </>
-  ),
-};
-;
-}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
             >;
               <h2 className="text - 4xl md:text - 5xl font - bold text-white mb-6">;
                 Ready to Transform Your Business with AI?;
@@ -433,9 +284,6 @@ function AIServices() {
         </section>;
       </div>;
     </>),
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Business with AI?
@@ -467,4 +315,3 @@ function AIServices() {
   )
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

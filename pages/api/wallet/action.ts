@@ -1,39 +1,5 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-  } catch (err: any) {
-
-}
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-=======
-}
-;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import type { NextApiRequest, NextApiResponse } from "next";
 import { handleAction } from "../../../utils/token/service";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -48,14 +14,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     res.status(200).json({ tx: 'transaction-id' });
   } catch (err: any) {
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
 
 
   } catch (err: any) {
@@ -64,59 +22,23 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 }
 ;
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     res.status(400).json({
       error: err.message
     });
 import type { NextApiRequest, NextApiResponse } from "next",
 import { handleAction } from "../../../utils/token/service",
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { handleAction } from "../../../utils/token/service",;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
-  const { userId, action, metadata } = req.body || {},
-  if (!userId || !action) return res.status(400).json({ error: "userId and action required" }),
-  try {
-    const tx = handleAction(userId, action, metadata),
-<<<<<<< HEAD
-=======
-=======
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
   const { userId, action, metadata } = req.body || {}
   if (!userId || !action) return res.status(400).json({ error: "userId and action required" })
   try {
     const tx = handleAction(userId, action, metadata)
+<<<<<<< HEAD
+=======
 >>>>>>> main
 =======
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
@@ -125,25 +47,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const tx = null;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+>>>>>>> pr-12243
     return res.status(200).json({ tx })
   } catch (err: any) {
     return res.status(400).json({ error: err.message })
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-  };
-};
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from "next";
 import { handleAction } from "../../../utils/token/service";
 export default function handler(req, res) {
@@ -183,40 +91,13 @@ export default function handler(req, res) {
 }
   }
 }
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
   }
 }
   }
 }
 
 
-<<<<<<< HEAD
-  }
-}
-  }
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
   }
 };
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
-    return res.status(200).json({ tx })
-  } catch (err: any) {
-    return res.status(400).json({ error: err.message })
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,37 +1,22 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
 <<<<<<< HEAD
 <<<<<<< HEAD
+
+
+=======
 <<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-import type { NextApiRequest, NextApiResponse } from 'next';
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import type { NextApiRequest, NextApiResponse } from 'next',;
 const bwipjs = require('bwip-js'),
-
 =======
+>>>>>>> pr-12243
+import type { NextApiRequest, NextApiResponse } from 'next';
+const bwipjs = require('bwip-js')
 
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const code = (req.query.code as string) || '',
+  const code = (req.query.code as string) || ''
   if (!code) {
-    res.status(400).json({ error: 'Missing code' }),
+    res.status(400).json({ error: 'Missing code' })
     return
 =======
 const bwipjs = null;
@@ -41,26 +26,12 @@ const bwipjs = null;
   try {
     const png = await bwipjs.toBuffer({
 <<<<<<< HEAD
-<<<<<<< HEAD
-      bcid: 'ean13',
-      text: code.replace(/[^0-9]/g, ''),
-      scale: 3,
-      height: 10,
-      includetext: false}),
-    res.setHeader('Content-Typeimage/png'),
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       bcid: 'ean13'
       text: code.replace(/[^0-9]/g, '')
       scale: 3
       height: 10
       includetext: false})
     res.setHeader('Content-Typeimage/png')
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
       bcid: 'ean13',
@@ -76,12 +47,10 @@ scale: 3,
   }
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     res.status(200).send(png)
   } catch (e: any) {
     res.status(500).json({ error: e?.message || 'Failed to render barcode' })
   }
-<<<<<<< HEAD
 <<<<<<< HEAD
 }
 ;
@@ -108,28 +77,6 @@ scale: 3,
 }
   }
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 };
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

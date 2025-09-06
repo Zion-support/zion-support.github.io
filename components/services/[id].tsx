@@ -1,53 +1,18 @@
-<<<<<<< HEAD
-
-=======
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React from 'react';
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 import Head from 'next/head';
 import { useRouter  } from 'next/router';
 import { getServiceById  } from '../../data/micro-saas-services';
 import ServiceDetail from '../../components/sections/ServiceDetail',
 import Button from '../../components/ui/Button';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 export default function ServiceDetailPage() {
 
 export default function ServiceDetailPage() {;
 
 export default function ServiceDetailPage() {
-<<<<<<< HEAD
-<<<<<<< HEAD
   const router = useRouter();
   const { id } = router.query;
 
 import {ArrowLeft, ExternalLink} from 'lucide-react';
-<<<<<<< HEAD
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function ServiceDetailPage() {
 
   if (!id || typeof id !== 'string') {;
@@ -71,29 +36,12 @@ export default function ServiceDetailPage() {
           </Button>;
         </div>;
       </div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     );
   }
   const service = getServiceById(id);
 
   if (!service) {;
     return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        <div className="text-center">
-          <h1 className="text-2xl font-bold text-white mb-4">Service Not Found</h1>
-          <p className="text-gray-400 mb-6">The requested service "{id}" could not be found.</p>
-          <Button href="/services" variant="primary">
-            <ArrowLeft className="w-4 h-4 mr-2" />
-
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 if (!id || typeof id !== 'string') {
     return (
       <div className='min-h-screen bg-black flex items-center justify-center'>
@@ -131,37 +79,10 @@ if (!id || typeof id !== 'string') {
       </div>
 );
   }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <>
       <Head>
         <title>{service.name} | Zion Tech Group - Micro SaaS Services</title>
-<<<<<<< HEAD
-
-                Back to Services
-              </Button>
-              <Button
-                href={service.website}
-
-                size="sm"
-                icon={<ExternalLink className="w-4 h-4" />}
-              >
-                Visit Service
-              </Button>
-            </div>
-          </div>
-        </nav>
-  return (
-
-          content={`${service && service.name} | Zion Tech Group`}
-        />;
-        <meta property='og:description' content={service && service.description} />;
-        <meta name='twitter:card' content='summary_large_image' />;
-      </Head>;
-
-      <div className='min-h-screen bg-black'>;
-
-=======
 <meta name='description' content={service.description} />
         <meta
           property='og:title'
@@ -171,25 +92,22 @@ if (!id || typeof id !== 'string') {
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
       <div className='min-h-screen bg-black'>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {/* Navigation */}
         <nav className='border-b border-gray-800 bg-black/50 backdrop-blur-sm sticky top-0 z-50'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <div className='flex items-center justify-between h-16'>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
               <Button
                 href='/services'
                 variant='ghost'
                 size='sm'
+              <Button
+                href="/services"
+                variant="ghost"
+                size="sm"
+                className="text-gray-400 hover:text-white"
+              >
+                <ArrowLeft className="w-4 h-4 mr-2" />
                 className='text-gray-400 hover:text-white'
               >
                 <ArrowLeft className='w-4 h-4 mr-2' />
@@ -213,17 +131,10 @@ variant='primary'
         {/* Service Detail Content */}
         <ServiceDetail service={service} />;
 
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
         {/* Related Services CTA */}
         <section className='py-16 bg-gray-900/50'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
             <h2 className='text-3xl font-bold text-white mb-6'>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </h2>
             <p className='text-gray-400 mb-8 max-w-2xl mx-auto'>
               Explore our complete portfolio of micro SaaS services to find the
@@ -251,9 +162,6 @@ variant='primary'
                 href='/contact'
                 variant='outline'
                 size='lg'
-<<<<<<< HEAD
-
-=======
         {/* Related Services CTA */}
 <section className='py-16 bg-gray-900/50'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
@@ -276,21 +184,9 @@ variant='primary'
 href='/contact'
                 variant='outline'
                 size='lg'
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-                className='border-white/20 text-white hover:border-white/40'
-              >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                 className='border-white/20 text-white hover:border-white/40'
               >
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 Get Custom Solution
               </Button>;
             </div>;
@@ -299,16 +195,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>;
     </>;
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 }
-<<<<<<< HEAD
-              <Button
-;
-              <Button
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 ;
               <Button
 
@@ -479,10 +367,5 @@ if ( {) {
         </section>;
       </div>;
     </>);
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

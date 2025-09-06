@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -25,64 +23,6 @@ class ErrorBoundary extends React.Component {
 import React, { useState } from 'react';
 
 export interface TreeNode {;
-<<<<<<< HEAD
-
-  name: string;
-  path: string;
-
-  type: 'folder' | 'file';
-  exists?: boolean;
-  children?: TreeNode[];
-
-function NodeItem({
-  node
-  depth
-  onDeploy
-}: {
-  node: TreeNode;
-  depth: number;
-  onDeploy?: (path: string) => void;
-}) {
-  const [open, setOpen] = useState<boolean>(false);
-  const hasChildren = Array.isArray(node.children) && node.children.length > 0;
-  const toggle = () => setOpen(v => !v);
-  const copyPath = async () => {
-    await navigator.clipboard.writeText(node.path);  }
-export interface TreeNode {
-
-  exists?: boolean;
-  children?: TreeNode[]
-}
-interface TreeProps {
-
-  nodes: TreeNode[]
-
-  onDeploy?: (path: string) => void
-}
-function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, onDeploy?: (path: string) => void }) {
-  const [open, setOpen] = useState<boolean>(false);
-
-  const hasChildren = Array.isArray(node.children) && node.children.length > 0;
-  const toggle = () => setOpen((v) => !v);
-  const copyPath = async () => {
-    await navigator.clipboard.writeText(node.path)
-  }
-  const clonePath = async () => {
-    const url = `${window.location.origin}/api/dev/source-map`;
-    await fetch(url, {
-      method: 'POST'
-      headers: {
-        'Content-Type': 'application/json'
-        // Expect an admin token in local storage, fall back to prompt
-        'x-admin-token': localStorage.getItem('ADMIN_TOKEN') |''
-      } as any
-      body: JSON.stringify({ path: node.path })
-    });  };      headers: {
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   name: string;
   path: string;
 
@@ -93,9 +33,6 @@ function NodeItem({
   node
   depth
   onDeploy
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
 }: {
 
 interface TreeProps {;
@@ -130,7 +67,6 @@ export interface TreeNode {;
   name: string,
   path: string,
   type: "folder" | "file",;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   exists?: boolean;
   children?: TreeNode[];
 }
@@ -138,40 +74,15 @@ export interface TreeNode {;
 
   const hasChildren = Array && Array.isArray(node && node.children) && node && node.children.length > 0;
   const toggle = () => setOpen((v) => !v);
-<<<<<<< HEAD
-
-  };
-
-  const clonePath = async () => {
-    const url = `${window.location.origin}/api/dev/source-map`;
-    await fetch(url, {
-      method: "POST",
-      headers: {
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         "Content-Type": "application/json";
         // Expect an admin token in local storage, fall back to prompt
         "x-admin-token": localStorage.getItem("ADMIN_TOKEN") |""} as any;
       body: JSON.stringify({ path: node.path })})
-<<<<<<< HEAD
-
-          </button>
-        ) : (
-          <span className="inline-block w-4" />
-        )}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
   return (
     <div className='ml-2'>;
       <div className='flex items-center gap-2 py-1'>;
         {hasChildren ? (;
           <button className='text-sm' onClick={toggle} aria-label='Toggle'>;
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 import React, { useState } from 'react';
 
 export interface TreeNode {
@@ -325,47 +236,22 @@ function NodeItem ({ node, depth, on_deploy }: { node: TreeNode, depth: number, 
       </div>;
               node={child}
               depth={depth + 1}
-<<<<<<< HEAD
-<<<<<<< HEAD
               on_deploy={on_deploy}
             />          ))}
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-              onDeploy={onDeploy}
-            />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
               onDeploy={onDeploy}
             />
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
           ))}
         </div>
       )}
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-  );
-export default Tree;
-}</div> </div> {
-  hasChildren && open && (<div className="ml-4 border-l pl-2"> {
-  node.children!.map ( (child) => (<NodeItem key= {
-  child.path
-=======
 export function Tree(): any ({ nodes, onDeploy }: TreeProps) {;
   return (
   return (
     <div className="w-full">;
       {nodes && nodes.map((n) => (;
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 );
 
 export function Tree({ nodes, onDeploy }: TreeProps) {
@@ -376,63 +262,23 @@ export function Tree({ nodes, onDeploy }: TreeProps) {
 origin/cursor/automate-test-improve-and-merge-code-2533
       ))}
     </div>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   );
 export default Tree;
-<<<<<<< HEAD
-
-}</div> </div> {;
-  hasChildren && open && (<div className="ml-4 border-l pl-2"> {;
-  node && node.children!.map ( (child) => (<NodeItemkey= {
-  child && child.path 
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }node= {
   child
 }depth= {
   depth + 1
 }onDeploy= {
-<<<<<<< HEAD
-  onDeploy
-}/>) )
-}</div>)
-}</div>)
-}export function Tree ({
-  nodes, onDeploy
-}: TreeProps) {
-  return (<div className="w-full"> {
-  nodes.map ( (n) => (<NodeItem key= {
-  n.path
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }node= {
   n
 }depth= {
   0
 }onDeploy= {
-<<<<<<< HEAD
-  onDeploy
-}/>) )
-}</div>)
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   onDeploy 
-<<<<<<< HEAD
-<<<<<<< HEAD
 }/>) ) ;
 }</div>) ;
 
 export default Tree;
-<<<<<<< HEAD
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
     <div className="w-full">
       {nodes.map((n) => (
@@ -468,18 +314,7 @@ function Tree() {
 }export default Tree;}
 export default Tree;
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 }/>) ) 
 }</div>) 
 }export default Tree;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

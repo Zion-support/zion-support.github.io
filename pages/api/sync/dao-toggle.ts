@@ -1,110 +1,41 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../utils/sync/storage";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { readState, writeState } from "../../../utils/sync/storage",;
 ;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next",
 import { readState, writeState } from "../../../utils/sync/storage",
+=======
+import type { NextApiRequest, NextApiResponse } from "next"
+import { readState, writeState } from "../../../utils/sync/storage"
 
 
 <<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+=======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
   const { paused } = req.body as { paused: boolean },
   const state = readState(),
   state.config.paused = Boolean(paused),
   writeState(state),
 <<<<<<< HEAD
-
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-import type { NextApiRequest, NextApiResponse } from "next";
-import { readState, writeState } from "../../../utils/sync/storage";
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
-
-<<<<<<< HEAD
-  return res.status(200).json({ paused: state.config.paused })
-import type { NextApiRequest, NextApiResponse } from "next",;
-import { readState, writeState } from "../../../utils/sync/storage",;
-;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-import type { NextApiRequest, NextApiResponse } from "next",;
-import { readState, writeState } from "../../../utils/sync/storage",;
-;
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from "next",
-import { readState, writeState } from "../../../utils/sync/storage",
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
-  const { paused } = req.body as { paused: boolean },
-  const state = readState(),
-  state.config.paused = Boolean(paused),
-  writeState(state),
-<<<<<<< HEAD
-  return res.status(200).json({ paused: state.config.paused });
-};
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return res.status(200).json({ paused: state.config.paused })
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../utils/sync/storage";
@@ -125,49 +56,27 @@ export default function handler(req, res) {
   }
 }
 }
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 }
 }
 
 
-<<<<<<< HEAD
-}
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
+>>>>>>> pr-12243
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
   const { paused } = req.body as { paused: boolean }
   const state = readState()
   state.config.paused = Boolean(paused)
   writeState(state)
+<<<<<<< HEAD
+=======
 >>>>>>> main
 =======
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
   const { paused } = req.body as { paused: boolean },
   const state = null;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+>>>>>>> pr-12243
   return res.status(200).json({ paused: state.config.paused })
 };
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
-  return res.status(200).json({ paused: state.config.paused })
-};
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

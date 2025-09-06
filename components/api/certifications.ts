@@ -1,73 +1,23 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs-extra';
-import path from 'path';
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs-extra';
-import path from 'path';
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const CERTS_FILE = path.join(
   process.cwd()
   'data'
   'certifications'
   'certifications.json'
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const CERTS_FILE = path.join(
   process.cwd()
   'data'
   'certifications'
   'certifications.json'
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 );
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-}
 }
 };
-  };
-}
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-}
-
-
-=======
-=======
-=======
-}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-};
-=======
-}
-};
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   if (req && req.method !== 'GET') {
     res && res.setHeader('Allow', 'GET');
     return res && res.status(405).json({ error: 'Method Not Allowed' });
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
@@ -107,7 +57,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res && res.status(500).json({ error: "Failed to load certifications" })
   };
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
 const CERTS_FILE = path.join (
   process.cwd (),
@@ -148,21 +97,6 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
   }
 
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

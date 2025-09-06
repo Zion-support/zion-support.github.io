@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   DollarSign,
   TrendingUp,
   Shield,
@@ -21,18 +15,19 @@
   Calculator,;} from 'lucide-react';import {
   MessageCircle,
   Calculator,;} from 'lucide-react';import { 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   DollarSign, TrendingUp, Shield, Zap, Target, BarChart3, 
   CheckCircle, Star, Globe, Lock, Smartphone, Monitor, 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   Award, MessageCircle, Calculator
 export default function AIFinancialPlanningPlatform() {
   const features = [
     {
-<<<<<<< HEAD
-      icon: <DollarSign className='w-6 h-6' />
-=======
+
+
+        'Live financial data, market analysis, and personalized recommendations updated in real-time.',;
+    },;
+
+
 import React from 'react',
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -42,7 +37,6 @@ import { DollarSign, TrendingUp, Shield, Zap, Target, BarChart3;
  } from 'lucide-react';
 export default function AIFinancialPlanningPlatform() {
   const features = null;
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       description:
         'Advanced financial modeling and analysis using machine learning to identify opportunities and risks.'
     }
@@ -76,18 +70,7 @@ export default function AIFinancialPlanningPlatform() {
       description:
         'Live financial data, market analysis, and personalized recommendations updated in real-time.'
     }
-<<<<<<< HEAD
-        'Live financial data, market analysis, and personalized recommendations updated in real-time.',;
-    },;
-=======
-
-        'Live financial data, market analysis, and personalized recommendations updated in real-time.',;
-    },;
-
-<<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+origin/cursor/automate-test-improve-and-merge-code-2533
   ];
   const benefits = [
     'Increase investment returns by 25%'
@@ -129,33 +112,6 @@ export default function AIFinancialPlanningPlatform() {
       </div>
     </div>
     <p className='mt-4 text-sm text-gray-400'>
-<<<<<<< HEAD
-=======
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React from 'react';
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-
-=======
       Market references:{' '}
       <a
         className='underline hover:text-cyan-300'
@@ -177,277 +133,6 @@ import { motion } from 'framer-motion';
         className='underline hover:text-cyan-300'
         href='https://pigment && pigment.com/pricing'
         target='_blank'
-        rel='noreferrer'>;
-import React from 'react';
-import Head from 'next / head';
-import { motion } from 'framer-motion';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-import {
-
-  DollarSign, TrendingUp, Shield, Zap, Target, BarChart3,
-  CheckCircle, Star, Globe, Lock, Smartphone, Monitor,
-
-  Award, MessageCircle, Calculator
-export default function AIFinancialPlanningPlatform() {
-  const features = [
-    {
-      icon: <DollarSign className='w-6 h-6' />
-=======
-=======
-import React from 'react',
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { DollarSign, TrendingUp, Shield, Zap, Target, BarChart3;
-  CheckCircle, Star, Globe, Lock, Smartphone, Monitor;
-  Award, MessageCircle, Calculator
- } from 'lucide-react';
-export default function AIFinancialPlanningPlatform() {
-  const features = null;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-      description:
-        'Advanced financial modeling and analysis using machine learning to identify opportunities and risks.'
-    }
-    {
-      icon: <TrendingUp className='w-6 h-6' />
-      title: 'Predictive Financial Planning'
-      description:
-        'Forecast financial outcomes and create data-driven financial plans with AI-powered insights.'
-    }
-    {
-      icon: <Target className='w-6 h-6' />
-      title: 'Goal-Based Planning'
-      description:
-        'Personalized financial planning based on your specific goals, timeline, and risk tolerance.'
-    }
-    {
-      icon: <Zap className='w-6 h-6' />
-      title: 'Automated Portfolio Management'
-      description:
-        'Intelligent portfolio optimization and rebalancing based on market conditions and your objectives.'
-    }
-    {
-      icon: <Shield className='w-6 h-6' />
-      title: 'Risk Assessment & Management'
-      description:
-        'Comprehensive risk analysis and automated risk management strategies for your financial portfolio.'
-    }
-    {
-      icon: <BarChart3 className='w-6 h-6' />
-      title: 'Real-Time Financial Insights'
-      description:
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-        'Live financial data, market analysis, and personalized recommendations updated in real-time.'
-    }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-  ];
-  const benefits = [
-    'Increase investment returns by 25%'
-    'Reduce financial planning time by 70%'
-    'Improve risk-adjusted returns by 40%'
-    'Optimize tax efficiency by 30%'
-    'Reduce portfolio volatility by 35%'
-    'Improve financial goal achievement by 50%'
-    'Reduce financial planning costs by 60%'
-    'Gain professional-grade financial insights'
-  ];
-  <div className='mt-12'>
-    <h2 className='text-2xl font-semibold'>Pricing</h2>
-    <div className='mt-6 grid grid-cols-1 md:grid-cols-3 gap-6'>
-      <div className='rounded-2xl border border-emerald-400/30 p-6'>
-        <h3 className='text-xl font-bold'>Starter</h3>
-        <p className='mt-2 text-gray-300'>
-          Up to 5 users, core models, board pack.
-        </p>
-        <p className='mt-4 text-3xl font-bold'>
-          $390<span className='text-base font-normal text-gray-300'>/mo</span>
-        </p>
-      </div>
-      <div className='rounded-2xl border border-cyan-400/30 p-6'>
-        <h3 className='text-xl font-bold'>Growth</h3>
-        <p className='mt-2 text-gray-300'>
-          25 users, consolidation, Snowflake/NetSuite.
-        </p>
-        <p className='mt-4 text-3xl font-bold'>
-          $1,290<span className='text-base font-normal text-gray-300'>/mo</span>
-        </p>
-      </div>
-      <div className='rounded-2xl border border-amber-400/30 p-6'>
-        <h3 className='text-xl font-bold'>Enterprise</h3>
-        <p className='mt-2 text-gray-300'>
-          Advanced governance, custom models, SSO.
-        </p>
-        <p className='mt-4 text-3xl font-bold'>Custom</p>
-      </div>
-    </div>
-    <p className='mt-4 text-sm text-gray-400'>
-      Market references:{' '}
-<<<<<<< HEAD
-      <a
-        className='underline hover:text-cyan-300'
-        href='https://www.workday.com/en-us/products/planning/adaptive-planning.html'
-        target='_blank'
-        rel='noreferrer'
-      >
-        Workday Adaptive
-      </a>
-      ,{' '}
-      <a
-        className='underline hover:text-cyan-300'
-        href='https://www.anaplan.com/pricing/'
-        target='_blank'
-        rel='noreferrer'
-      >
-        Anaplan
-      </a>
-      ,{' '}
-      <a
-        className='underline hover:text-cyan-300'
-        href='https://pigment.com/pricing'
-        target='_blank'
-<<<<<<< HEAD
-<<<<<<< HEAD
-        rel='noreferrer'
-      >
-        Pigment
-      </a>
-      .
-    </p>
-  </div>;					<div className="mt-12">
-						<h2 className="text-2xl font-semibold">Pricing</h2>
-						<div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-							<div className="rounded-2xl border border-emerald-400/30 p-6">
-								<h3 className="text-xl font-bold">Starter</h3>
-								<p className="mt-2 text-gray-300">Up to 5 users, core models, board pack.</p>
-								<p className="mt-4 text-3xl font-bold">$390<span className="text-base font-normal text-gray-300">/mo</span></p>
-							</div>
-							<div className="rounded-2xl border border-cyan-400/30 p-6">
-								<h3 className="text-xl font-bold">Growth</h3>
-								<p className="mt-2 text-gray-300">25 users, consolidation, Snowflake/NetSuite.</p>
-								<p className="mt-4 text-3xl font-bold">$1,290<span className="text-base font-normal text-gray-300">/mo</span></p>
-							</div>
-							<div className="rounded-2xl border border-amber-400/30 p-6">
-								<h3 className="text-xl font-bold">Enterprise</h3>
-								<p className="mt-2 text-gray-300">Advanced governance, custom models, SSO.</p>
-								<p className="mt-4 text-3xl font-bold">Custom</p>
-							</div>
-						</div>
-						<p className="mt-4 text-sm text-gray-400">Market references: <a className="underline hover:text-cyan-300" href="https://www.workday.com/en-us/products/planning/adaptive-planning.html" target="_blank" rel="noreferrer">Workday Adaptive</a>, <a className="underline hover:text-cyan-300" href="https://www.anaplan.com/pricing/" target="_blank" rel="noreferrer">Anaplan</a>, <a className="underline hover:text-cyan-300" href="https://pigment.com/pricing" target="_blank" rel="noreferrer">Pigment</a>.</p>
-					</div>
-  return (
-    <>
-      <Head>
-        <title>AI Financial Planning Platform | Zion Tech Group</title>
-        <meta
-          name='description'
-          content='Intelligent financial planning and wealth management with AI. Personalized plans, portfolio optimization, and risk management.'
-        />
-        <meta
-          name='keywords'
-          content='AI financial planning, financial planning, wealth management, portfolio optimization, investment planning, financial advisor'
-        />
-        <meta
-          property='og:title'
-          content='AI Financial Planning Platform | Zion Tech Group'
-        />
-        <meta
-          property='og:description'
-          content='Intelligent financial planning and wealth management with AI.'
-        />
-        <meta property='og:type' content='website' />
-        <meta
-          property='og:url'
-          content='https://ziontechgroup.com/ai-financial-planning-platform'
-        />
-        <link
-          rel='canonical'
-          href='https://ziontechgroup.com/ai-financial-planning-platform'
-        />
-      </Head>
-      <div className='min-h-screen bg-black text-white'>
-        {/* Hero Section */}
-        <section className='relative pt-32 pb-20 overflow-hidden'>
-          <div className='absolute inset-0 bg-gradient-to-br from-yellow-900/20 via-amber-900/20 to-orange-900/20'></div>
-          <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className='text-center'      </Head>
-      <div className="min-h-screen bg-black text-white">
-        {/* Hero Section */}
-        <section className="relative pt-32 pb-20 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-yellow-900/20 via-amber-900/20 to-orange-900/20"></div>
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-
-              <div className="flex items-center justify-center mb-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-amber-600 rounded-2xl flex items-center justify-center mb-4">
-                  <DollarSign className="w-8 h-8 text-white" />
-                </div>
-              </div>
-              <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-yellow-400 via-amber-400 to-orange-400 bg-clip-text text-transparent mb-6">
-                AI Financial Planning Platform
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Intelligent financial planning and wealth management with AI. Get personalized plans
-                portfolio optimization, and risk management that drives financial success.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 bg-gradient-to-r from-yellow-500 to-amber-600 text-white rounded-xl font-semibold text-lg hover:from-yellow-600 hover:to-amber-700 transition-all duration-200 shadow-lg shadow-yellow-500/25"
-                >
-                  Start Free Trial
-                </motion.button>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-
-                >
-                  Watch Demo
-                </motion.button>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-              transition={{ duration: 0.8 }}
-              className='text - center'      </Head>;
-      <div className="min - h-screen bg - black text - white">;
-        {/* Hero Section */}
-        <section className="relative pt - 32 pb - 20 overflow - hidden">;
-          <div className="absolute inset - 0 bg - gradient - to - br from - yellow - 900 / 20 via - amber - 900 / 20 to - orange - 900 / 20"></div>;
-          <div className="relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              className='text - center';
-            >;
-              <div className='flex items - center justify - center mb - 6'>;
-                <div className='w - 16 h - 16 bg - gradient - to - br from - yellow - 500 to - amber - 600 rounded - 2xl flex items - center justify - center mb - 4'>;
-                  <DollarSign className='w - 8 h - 8 text - white' />;
-                </div>;
-              </div>;
-              <h1 className='text - 5xl md:text - 6xl font - bold bg - gradient - to - r from - yellow - 400 via - amber - 400 to - orange - 400 bg - clip - text text - transparent mb - 6'>;
-                AI Financial Planning Platform;
-              </h1>;
-              <p className='text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto'>;
-=======
-=======
-<<<<<<< HEAD
         rel='noreferrer'>;
 import React from 'react';
 import Head from 'next / head';
@@ -555,7 +240,6 @@ function AIFinancialPlanningPlatform() {
     </div>;
     <p className='mt - 4 text - sm text - gray - 400'>;
       Market references:{' '}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <a;
         className='underline hover:text - cyan - 300';
         href='https://www.workday.com / en - us / products / planning / adaptive - planning.html';
@@ -591,60 +275,10 @@ function AIFinancialPlanningPlatform() {
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 Intelligent financial planning and wealth management with AI.;
                 Get personalized plans, portfolio optimization, and risk;
                 management that drives financial success.;
               </p>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-        {/* Features Section */}
-        <section className='py-20 bg-gradient-to-b from-black to-gray-900'>;
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Powerful Financial Planning Features
-              </h2>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our AI platform combines advanced financial modeling with machine learning to deliver
-                comprehensive financial planning and wealth management solutions.
-              </p>
-            </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <motion.div
-              transition={{ duration: 0 && 0.8 }}
-              className='text-center mb-16'>;
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
-                Powerful Financial Planning Features;
-              </h2>;
-              <p className='text-xl text-gray-400 max-w-3xl mx-auto'>;
-
-                Our AI platform combines advanced financial modeling with;
-                machine learning to deliver comprehensive financial planning and;
-                wealth management solutions.;
-              </p>;
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-              transition={{ duration: 0 && 0.8 }}
-              className='text-center mb-16'        <section className="py-20 bg-gradient-to-b from-black to-gray-900">;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-            <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className='text-center mb-16'
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
         rel='noreferrer'
       >
         Pigment
@@ -741,7 +375,6 @@ className='px-8 py-4 border-2 border-yellow-500/30 text-yellow-400 rounded-xl fo
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
 className='text-center mb-16'
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 Powerful Financial Planning Features
@@ -752,46 +385,16 @@ className='text-center mb-16'
                 wealth management solutions.
               </p>
             </motion.div>
-<<<<<<< HEAD
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {features.map((feature, index) => (            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Powerful Financial Planning Features
-              </h2>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our AI platform combines advanced financial modeling with machine learning to deliver
-                comprehensive financial planning and wealth management solutions.
-              </p>
-            </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-=======
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               {features.map((feature, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-<<<<<<< HEAD
-                  className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8 hover:border-yellow-500/30 transition-all duration-300 group'
-
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8 hover:border-yellow-500/30 transition-all duration-300 group'
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 >
                   <div className='w-14 h-14 bg-gradient-to-br from-yellow-500/20 to-amber-600/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300'>
                     <div className='text-yellow-400'>{feature.icon}</div>
@@ -801,62 +404,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </h3>
                   <p className='text-gray-400 leading-relaxed'>
                     {feature.description}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   </p>                </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-<<<<<<< HEAD
-              ))}
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   </p>
 origin/cursor/automate-test-improve-and-merge-code-2533
                 </motion.div>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-<<<<<<< HEAD
-        {/* Benefits Section */}
-        <section className='py-20 bg-black'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </div>;
           </div>;
         </section>;
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
 
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
               transition={{ duration: 0 && 0.8 }}
               className='text-center mb-16'>;
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
@@ -868,62 +434,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 wealth management solutions.;
               </p>;
               ))}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Benefits Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <section className='py-20 bg-black'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-
-              transition={{ duration: 0.8 }}
-              className='text-center mb-16'        <section className="py-20 bg-black">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              className='text-center mb-16'
-
-=======
-
-
-            <motion.div
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+
 
         {/* Benefits Section */}
         <section className="py-20 bg-black">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-<section className='py-20 bg-black'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 <section className='py-20 bg-black'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Transform Your Financial Future
               </h2>
@@ -933,9 +462,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='text-center mb-16'
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -975,68 +501,27 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-              ))}
-            </div>
-          </div>
-        </section>
-
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </div>;
           </div>;
         </section>;
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
 
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
         {/* Use Cases Section */}
         <section className='py-20 bg-gradient-to-b from-black to-gray-900'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-
-              transition={{ duration: 0.8 }}
-              className='text-center mb-16'        <section className="py-20 bg-gradient-to-b from-black to-gray-900">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              className='text-center mb-16'
-
-=======
-
-
-            <motion.div
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+
 
         {/* Use Cases Section */}
         <section className="py-20 bg-gradient-to-b from-black to-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   transition={{ duration: 0.8, delay: index * 0.1 }}
 className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-xl p-6 hover:border-yellow-500/30 transition-all duration-300 group'
                 >
@@ -1054,24 +539,11 @@ className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl bo
         {/* Use Cases Section */}
 <section className='py-20 bg-gradient-to-b from-black to-gray-900'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Comprehensive Financial Planning Solutions
               </h2>
@@ -1081,9 +553,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </p>
             </motion.div>
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='text-center mb-16'
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -1116,30 +585,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>;
                   <span className="text-white font-medium text-sm">{useCase}</span>;
                 </motion && motion.div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
                   key={index}
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 >
                   <div className="w-12 h-12 bg-gradient-to-br from-yellow-500/20 to-amber-600/20 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                     <Calculator className="w-6 h-6 text-yellow-400" />
                   </div>
                   <span className="text-white font-medium text-sm">{useCase}</span>
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-xl p-6 hover:border-yellow-500/30 transition-all duration-300 group text-center'
                 >
                   <div className='w-12 h-12 bg-gradient-to-br from-yellow-500/20 to-amber-600/20 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300'>
@@ -1157,55 +611,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
             <motion&& motion.div
                   className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-xl p-6 hover:border-yellow-500/30 transition-all duration-300 group text-center'
-<<<<<<< HEAD
-=======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-                >
-                  <div className='w-12 h-12 bg-gradient-to-br from-yellow-500/20 to-amber-600/20 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300'>
-                    <Calculator className='w-6 h-6 text-yellow-400' />
-                  </div>
-                  <span className='text-white font-medium text-sm'>
-                    {useCase}
-                  </span>                </motion.div>                >
-                  <div className="w-12 h-12 bg-gradient-to-br from-yellow-500/20 to-amber-600/20 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <Calculator className="w-6 h-6 text-yellow-400" />
-                  </div>
-                  <span className="text-white font-medium text-sm">{useCase}</span>
-                </motion.div>
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               ))}
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
         {/* CTA Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <section className="py-20 bg-gradient-to-r from-yellow-900/20 via-amber-900/20 to-orange-900/20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-yellow-900/20 via-amber-900/20 to-orange-900/20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+
 
         {/* CTA Section */}
         <section className='py-20 bg-gradient-to-r from-yellow-900/20 via-amber-900/20 to-orange-900/20'>
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>            <motion.div
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1219,9 +641,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 bg-gradient-to-r from-yellow-500 to-amber-600 text-white rounded-xl font-semibold text-lg hover:from-yellow-600 hover:to-amber-700 transition-all duration-200 shadow-lg shadow-yellow-500/25"
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <section className='py-20 bg-gradient-to-r from-yellow-900/20 via-amber-900/20 to-orange-900/20'>
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
             <motion.div
@@ -1249,21 +668,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-className='px-8 py-4 border-2 border-yellow-500/30 text-yellow-400 rounded-xl font-semibold text-lg hover:bg-yellow-500/10 transition-all duration-200'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 className='px-8 py-4 border-2 border-yellow-500/30 text-yellow-400 rounded-xl font-semibold text-lg hover:bg-yellow-500/10 transition-all duration-200'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 >
                   Contact Sales
                 </motion.button>
@@ -1273,13 +679,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </section>
       </div>
     </>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
               transition={{ duration: 0 && 0.8 }}>;
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
@@ -1294,18 +693,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <span className='text - white font - medium text - sm'>;
                     {use_case}
                   </span>                </motion.div>                >;
-                  <div className="w - 12 h - 12 bg - gradient - to - br from - yellow - 500 / 20 to - amber - 600 / 20 rounded - lg flex items - center justify - center mx - auto mb - 4 group - hover:scale - 110 transition-transform duration-300">;
-                    <Calculator className="w - 6 h - 6 text-yellow-400" />;
+                  <div className="w - 12 h - 12 bg - gradient - to - br from - yellow - 500 / 20 to - amber - 600 / 20 rounded - lg flex items - center justify - center mx - auto mb - 4 group - hover:scale - 110 transition - transform duration - 300">;
+                    <Calculator className="w - 6 h - 6 text - yellow - 400" />;
                   </div>;
-                  <span className="text - white font-medium text-sm">{use_case}</span>;
+                  <span className="text - white font - medium text - sm">{use_case}</span>;
                 </motion.div>))}
             </div>;
           </div>;
         </section>;
         {/* CTA Section */}
         <section className='py - 20 bg - gradient - to - r from - yellow - 900 / 20 via - amber - 900 / 20 to - orange - 900 / 20'>;
-          <div className='max - w-4xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center'>            <motion.div        <section className="py - 20 bg - gradient - to - r from - yellow - 900 / 20 via - amber - 900 / 20 to-orange-900 / 20">;
-          <div className="max - w-4xl mx - auto px - 4 sm:px - 6 lg:px-8 text-center">;
+          <div className='max - w-4xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center'>            <motion.div        <section className="py - 20 bg - gradient - to - r from - yellow - 900 / 20 via - amber - 900 / 20 to - orange - 900 / 20">;
+          <div className="max - w-4xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
             <motion.div;
               initial={{ opacity: 0, coordinate_y: 30 }}
               whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -1322,6 +721,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </p>;
 }
 
+
   );
 
               <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
@@ -1330,22 +730,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   while_tap={{ scale: 0.95 }}
                   className='px - 8 py - 4 bg - gradient - to - r from - yellow - 500 to - amber - 600 text - white rounded - xl font - semibold text - lg hover:from - yellow - 600 hover:to - amber - 700 transition - all duration - 200 shadow - lg shadow - yellow - 500 / 25'                >                Ready to Transform Your Financial Planning?;
               </h2>;
-              <p className="text - xl text - gray-300 mb-8">;
+              <p className="text - xl text - gray - 300 mb - 8">;
                 Join thousands of individuals that have already revolutionized their financial planning;
                 with AI automation. Start your free trial today.;
               </p>;
-              <div className="flex flex - col sm:flex - row gap-4 justify-center">;
+              <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
                 <motion.button;
                   while_hover={{ scale: 1.05 }}
                   while_tap={{ scale: 0.95 }}
-                  className="px - 8 py - 4 bg - gradient - to - r from - yellow - 500 to - amber - 600 text - white rounded - xl font - semibold text - lg hover:from - yellow - 600 hover:to - amber - 700 transition - all duration - 200 shadow - lg shadow-yellow-500 / 25";
+                  className="px - 8 py - 4 bg - gradient - to - r from - yellow - 500 to - amber - 600 text - white rounded - xl font - semibold text - lg hover:from - yellow - 600 hover:to - amber - 700 transition - all duration - 200 shadow - lg shadow - yellow - 500 / 25";
                 >;
                   Get Started Now;
                 </motion.button>;
                 <motion.button;
                   while_hover={{ scale: 1.05 }}
                   while_tap={{ scale: 0.95 }}
-                  className='px - 8 py - 4 border - 2 border - yellow - 500 / 30 text - yellow - 400 rounded - xl font - semibold text - lg hover:bg - yellow - 500 / 10 transition - all duration - 200'                >                  className="px - 8 py - 4 border - 2 border - yellow - 500 / 30 text - yellow - 400 rounded - xl font - semibold text - lg hover: bg - yellow - 500 / 10 transition-all duration-200";
+                  className='px - 8 py - 4 border - 2 border - yellow - 500 / 30 text - yellow - 400 rounded - xl font - semibold text - lg hover:bg - yellow - 500 / 10 transition - all duration - 200'                >                  className="px - 8 py - 4 border - 2 border - yellow - 500 / 30 text - yellow - 400 rounded - xl font - semibold text - lg hover: bg - yellow - 500 / 10 transition - all duration - 200";
                 >;
                   Contact Sales;
                 </motion.button>;
@@ -1355,12 +755,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </section>;
       </div>;
     </>);
-=======
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

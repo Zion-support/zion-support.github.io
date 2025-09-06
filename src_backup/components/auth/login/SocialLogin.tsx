@@ -1,56 +1,26 @@
-<<<<<<< HEAD:src/components/auth/login/SocialLogin.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import { Facebook, Twitter, Loader2 } from 'lucide-react'
-import { Button } from "@/components/ui/button",
-import { Web3Login } from "./Web3Login",
-import { useState } from "react",
-import { openAuthPopup } from "@/api/authSocial",
-export function SocialLogin() {
-  const [isLoading, setIsLoading] = useState(false),
-
-  const handleGoogle = () => {
-    setIsLoading(true),
-    window.location.href = '/auth/google'
-  },
 =======
-return (
-    <div className='mt-6'>
-      <div className='relative'>
-        <div className='absolute inset-0 flex items-center'>
-          <div className='w-full border-t border-zion-blue-light' />
-=======
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> main
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> pr-12243
 import { Facebook, Twitter, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Web3Login } from "./Web3Login";
 import { useState } from "react";
 import { openAuthPopup } from "@/api/authSocial";
 =======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/login/SocialLogin.tsx
 import { Facebook, Twitter, Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Web3Login } from './Web3Login';
 import { useState } from 'react';
 import { openAuthPopup } from '@/api/authSocial';
 
-origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export function SocialLogin() {
   const [isLoading, setIsLoading] = useState(false);
 
@@ -59,25 +29,14 @@ export function SocialLogin() {
     window.location.href = "/auth/google";
   };
 
-<<<<<<< HEAD:src/components/auth/login/SocialLogin.tsx
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/login/SocialLogin.tsx
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <div className="mt-6">
       <div className="relative">
         <div className="absolute inset-0 flex items-center">
           <div className="w-full border-t border-zion-blue-light" />
-<<<<<<< HEAD:src/components/auth/login/SocialLogin.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
 <<<<<<< HEAD
 =======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/login/SocialLogin.tsx
         </div>
         <div className="relative flex justify-center text-sm">
           <span className="px-2 bg-zion-blue-dark text-zion-slate-light">
@@ -86,38 +45,15 @@ return (
       <div className='relative'>
         <div className='absolute inset-0 flex items-center'>
           <div className='w-full border-t border-zion-blue-light' />
-<<<<<<< HEAD:src/components/auth/login/SocialLogin.tsx
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/login/SocialLogin.tsx
         </div>
         <div className='relative flex justify-center text-sm'>
           <span className='px-2 bg-zion-blue-dark text-zion-slate-light'>
-
-<<<<<<< HEAD:src/components/auth/login/SocialLogin.tsx
-=======
-main
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/login/SocialLogin.tsx
             Or continue with
           </span>
         </div>
       </div>
 
-<<<<<<< HEAD:src/components/auth/login/SocialLogin.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/login/SocialLogin.tsx
 
 import { Facebook, Twitter, Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -131,23 +67,6 @@ export function SocialLogin() {;
     setIsLoading(true);
     window && window.location.href = '/auth/google';
   };
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-  return (
-    <div className="mt-6">
-      <div className="relative">
-        <div className="absolute inset-0 flex items-center">
-          <div className="w-full border-t border-zion-blue-light" />
-        </div>
-        <div className="relative flex justify-center text-sm">
-          <span className="px-2 bg-zion-blue-dark text-zion-slate-light">Or continue with</span>
-        </div>
-      </div>
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
 
   return (
     <div className='mt-6'>;
@@ -184,18 +103,10 @@ function SocialLogin() {
         </div>;
       </div>;
 
-
-
-<<<<<<< HEAD:src/components/auth/login/SocialLogin.tsx
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+<<<<<<< HEAD
 =======
 
-main
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/login/SocialLogin.tsx
+
       <div className="mt-6 grid grid-cols-4 gap-3">
         <Button
           type="button"
@@ -205,8 +116,6 @@ main
           disabled={isLoading}
         >
           <span className="sr-only">Sign in with Google</span>
-<<<<<<< HEAD:src/components/auth/login/SocialLogin.tsx
-
           {isLoading ? (
             <Loader2 className="h-5 w-5 animate-spin" />
           ) : (
@@ -233,11 +142,8 @@ main
                 fill="#34A853"
               />
 
-=======
 
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/login/SocialLogin.tsx
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           {isLoading ? (
             <Loader2 className="h-5 w-5 animate-spin" />
           ) : (
@@ -246,58 +152,19 @@ main
               <path d="M23.49 12.275C23.49 11.49 23.415 10.73 23.3 10H12V14.51H18.47C18.18 15.99 17.34 17.25 16.08 18.1L19.945 21.1C22.2 19.01 23.49 15.92 23.49 12.275Z" fill="#4285F4" />
               <path d="M5.26498 14.2949C5.02498 13.5699 4.88501 12.7999 4.88501 11.9999C4.88501 11.1999 5.01998 10.4299 5.26498 9.7049L1.275 6.60986C0.46 8.22986 0 10.0599 0 11.9999 C0 13.9399 0.46 15.7699 1.28 17.3899L5.26498 14.2949Z" fill="#FBBC05" />
               <path d="M12.0004 24C15.2404 24 17.9654 22.935 19.9454 21.095L16.0804 18.095C15.0054 18.82 13.6204 19.245 12.0004 19.245C8.8704 19.245 6.21537 17.135 5.2654 14.29L1.27539 17.385C3.25539 21.31 7.3104 24 12.0004 24Z" fill="#34A853" />
-
-<<<<<<< HEAD:src/components/auth/login/SocialLogin.tsx
             </svg>
           )}
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        </Button>
-        <Button
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
         </Button>;
         <Button
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-main
-            </svg>
-          )}
-        </Button>;
-        <Button
-
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/login/SocialLogin.tsx
-        </Button>
-        <Web3Login />
-      </div>
-    </div>;
-  );
-};
-
-<<<<<<< HEAD:src/components/auth/login/SocialLogin.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
-=======
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           type="button"
           variant="outline"
           className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
           onClick={() => openAuthPopup("facebook")}
 
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         </Button>
         <Web3Login />
       </div>
@@ -305,66 +172,55 @@ main
   );
 };
 
+<<<<<<< HEAD
 =======
           type="button"
           variant="outline"
           className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
           onClick={() => openAuthPopup('facebook')}
-
-main
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/login/SocialLogin.tsx
           disabled={isLoading}
         >
           <span className="sr-only">Sign in with Facebook</span>
           <Facebook className="h-5 w-5" />
-
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         </Button>
         <Button
           type="button"
           variant="outline"
           className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
-<<<<<<< HEAD:src/components/auth/login/SocialLogin.tsx
-
-=======
           onClick={() => openAuthPopup('twitter')}
-
-main
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/login/SocialLogin.tsx
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> pr-12243
           disabled={isLoading}
         >
           <span className="sr-only">Sign in with Twitter</span>
           <Twitter className="h-5 w-5" />
 
-<<<<<<< HEAD:src/components/auth/login/SocialLogin.tsx
+
+
+<<<<<<< HEAD
 =======
-
-
-
-main
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/login/SocialLogin.tsx
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> pr-12243
         </Button>
         <Web3Login />
       </div>
     </div>
-<<<<<<< HEAD:src/components/auth/login/SocialLogin.tsx
 <<<<<<< HEAD
   )
-<<<<<<< HEAD
-=======
 
           disabled={isLoading}        >;
           <span className='sr-only'>Sign in with Twitter</span>;
           <Twitter className='h-5 w-5' />;
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/login/SocialLogin.tsx
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD:src/components/auth/login/SocialLogin.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import { Facebook, Twitter, Loader2 } from 'lucide-react';
 import { Button } from "@/components/ui/button",;
 import { Web3Login } from "./Web3Login",;
@@ -426,32 +282,27 @@ export function SocialLogin() {;
           <span className="sr-only">Sign in with Twitter</span>;
           <Twitter className="h-5 w-5" />;
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 =======
 
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/login/SocialLogin.tsx
         </Button>;
         <Web3Login />;
       </div>;
     </div>;
   );
-
-<<<<<<< HEAD:src/components/auth/login/SocialLogin.tsx
-=======
-
-main
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/login/SocialLogin.tsx
-}
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> pr-12243
+
+}
+
+
 
       <div className='mt - 6 grid grid - cols - 4 gap - 3'>;
         <Button;
@@ -509,26 +360,8 @@ main
       </div>;
     </div>);
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ;
-<<<<<<< HEAD:src/components/auth/login/SocialLogin.tsx
-=======
-;
-<<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 =======
   );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-  );
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/auth/login/SocialLogin.tsx

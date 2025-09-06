@@ -1,70 +1,17 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-<<<<<<< HEAD
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 export const real2036AIServices = [
   {
     id: 'ai-emotion-intelligence-platform'
     name: 'AI Emotion Intelligence Platform'
     tagline: 'Advanced emotional AI understanding'
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 id: 'ai-emotion-intelligence-platform',
     name: 'AI Emotion Intelligence Platform',
     tagline: 'Advanced emotional AI understanding',
 origin/cursor/automate-test-improve-and-merge-code-2533
     description:
-<<<<<<< HEAD
-      'Revolutionary AI platform for understanding, analyzing, and responding to human emotions. Features emotion recognition, sentiment analysis, emotional response generation, and emotional intelligence training.'
-    price: '$3,999'
-    period: 'month'
-      'Emotion recognition'
-      'Sentiment analysis'
-      'Emotional response generation'
-      'Emotional intelligence training'
-      'Multi-modal emotion detection'
-      'Emotional pattern analysis'
-
-    ]
-    popular: true
-    category: 'Emotional AI'
-    icon: '😊🤖'
-    marketPrice: '$5,000-8,000/month'
-    benefits: [
-      'Enhanced customer experience'
-      'Better emotional understanding'
-      'Improved human-AI interaction'
-      'Emotional intelligence development'
-    ]
-    useCases: [
-      'Customer service'
-      'Mental health support'
-      'Education technology'
-      'Human resources'
-    ]
-  }
-  {
-    id: 'ai-creativity-orchestrator'
-    name: 'AI Creativity Orchestrator'
-    tagline: 'Intelligent creative collaboration'
-    description:
-      'Advanced AI platform for orchestrating creative processes, generating innovative ideas, and facilitating human-AI creative collaboration. Features idea generation, creative workflow management, and artistic collaboration tools.'
-    price: '$2,999'
-    period: 'month'
-=======
       'Revolutionary AI platform for understanding, analyzing, and responding to human emotions. Features emotion recognition, sentiment analysis, emotional response generation, and emotional intelligence training.',
     price: '$3,999',
     period: 'month',
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     features: [
       'Emotion recognition',
       'Sentiment analysis',
@@ -348,18 +295,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Scalable ecosystem management',
     ],
     useCases: [
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-  }
-];
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       'Autonomous vehicles'
       'Fleet management'
       'Traffic optimization'
@@ -1037,16 +972,6 @@ export const real2036AIServices = [;
       'Predictive maintenance',
     ],
     use_cases: [;
-=======
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-
-
-export const real2036AIServices = [
-  {
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Autonomous vehicles',
       'Fleet management',
       'Traffic optimization',
@@ -1056,24 +981,27 @@ export const real2036AIServices = [
   },;
 ];      'Autonomous vehiclesFleet managementTraffic optimizationSafety systems'
     ]
-<<<<<<< HEAD
   },;
 ];      'Autonomous vehiclesFleet managementTraffic optimizationSafety systems'
     ]
-  }
-];
-;  }
-];
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
-=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
+export const real2036AIServices = [
+  {
+
+
+      'Autonomous vehicles',
+      'Fleet management',
+      'Traffic optimization',
+      'Safety systems',
+    ],
+
+  },;
+];      'Autonomous vehiclesFleet managementTraffic optimizationSafety systems'
+    ]
 
 export const real2036AIServices = [;
   {;
@@ -1295,7 +1223,6 @@ ursor/fix-website-loading-errors-and-merge-6662
   },;
 ];      'Autonomous vehiclesFleet managementTraffic optimizationSafety systems'
     ]
-
 origin/cursor/expand-services-advertise-and-build-project-c28b
 export const real2036AIServices = [;
   {;
@@ -1507,13 +1434,8 @@ export const real2036AIServices = [;
     useCases: [;
       'Autonomous vehiclesFleet managementTraffic optimizationSafety systems';
     ];
-
-
   }
 ];
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Business partnerships',
       'Platform ecosystems',
       'Supply chain management',
@@ -1554,9 +1476,4 @@ export const real2036AIServices = [;
     ],
   },
 ];
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

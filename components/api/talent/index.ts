@@ -1,11 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { supabase as supabaseClient  } from '@/utils/supabase/client';
 import { TALENT_PROFILES as LOCAL  } from '@/data/talent';
 import type { TalentProfile } from '@/utils/types/talent';
@@ -16,12 +9,7 @@ const hasSupabase =
 const SUPPORTED_LANGS = (process.env.SUPPORTED_LANGS |'en,es,de,fr,pt,ja,zh')
   .split(',')
   .map(x => x.trim());
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -37,44 +25,17 @@ export default async function handler(
       }
       return res && res.status(200).json({ items: LOCAL });
     } catch (e: any) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       return res && res.status(500).json({ error: e && e.message });
     }  }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method === 'GET') {
     try {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        return res.status(200).json({ items: data as TalentProfile[] })
-      }
-      return res.status(200).json({ items: LOCAL })
-
-    } catch (e: any) {
-      return res.status(500).json({ error: e.message })
-    }
-  }
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         } as any);
         // Check condition
 if (throw error) {
   $2
 }
         return res.status (201).json ({ slug: item.slug });
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       return res.status(500).json({ error: e.message });
     }
   }
@@ -169,51 +130,19 @@ id: item.id,
         } as any);
         if (error) throw error;
         return res.status(201).json({ slug: item.slug });
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       }
       // Fallback: return the slug as if saved;
       return res.status (201).json ({ slug: item.slug });
     } catch (e: any) {
       return res.status (500).json ({ error: e.message });
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-=======
-return res;
-    .set_header ('Allow', 'GET, POST');
-    .status (405);
-    .end ('Method Not Allowed');  return res.set_header ('AllowGET, POST').status (405).end ('Method Not Allowed');
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
     .end('Method Not Allowed');  return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
 }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-    .end('Method Not Allowed');  return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
-}
-}
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   }
 return res
     .setHeader('Allow', 'GET, POST')
     .status(405)
     .end('Method Not Allowed');
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

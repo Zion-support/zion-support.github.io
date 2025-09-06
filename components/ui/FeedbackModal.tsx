@@ -1,27 +1,9 @@
 import { useState } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-export type FeedbackContext = { actionType?: string; metadata?: any }
-export default function FeedbackModal({
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-export type FeedbackContext = any;
-    onClose(true)
-export default function FeedbackModal({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 export type FeedbackContext = any;
     onClose(true)
 export default function FeedbackModal({
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   isOpen
   onClose
   defaultContext
@@ -34,168 +16,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   defaultKind = 'general',
   userHeaders,
 }: {;
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   isOpen: boolean;
   onClose: (submitted: boolean) => void;
   defaultContext?: FeedbackContext;
   defaultKind?: 'general' | 'bug' | 'feature';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  userHeaders?: Record<string, string>;}) {export default function FeedbackModal({;
-  isOpen;
-  onClose;
-  defaultContext;
-  defaultKind = 'general';
-  userHeaders}: {
-  isOpen: boolean
-  onClose: (submitted: boolean) => void
-  defaultContext?: FeedbackContext;
-  defaultKind?: 'general' | 'bug' | 'feature';
-  userHeaders?: Record<string, string>
-}) {
-  const [rating, setRating] = useState<number>(0);
-  const [hover, setHover] = useState<number>(0);
-  const [kind, setKind] = useState<'general' | 'bug' | 'feature'>(defaultKind);
-  const [comment, setComment] = useState('');
-  const [loading, setLoading] = useState(false);
-  if (!isOpen) return null;
-  async function submit() {
-    if (rating < 1) return onClose(false);
-    setLoading(true);
-    try {
-      await fetch('/api/feedback', {
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json', ...(userHeaders |{}) }
-        body: JSON.stringify({
-          rating
-          comment
-          kind
-          context: defaultContext |{}
-        })
-      });
-
-    setLoading(false);
-    onClose(true);
-  }
-
-  }
-  return (
-    <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/40'>
-      <div className='bg-white w-full max-w-md rounded shadow-lg p-5 space-y-4'>
-        <div className='text-lg font-medium'>Was this helpful?</div>
-        <div className='flex gap-2'>
-          {[1, 2, 3, 4, 5].map(n => (            <button    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
-      <div className="bg-white w-full max-w-md rounded shadow-lg p-5 space-y-4">
-        <div className="text-lg font-medium">Was this helpful?</div>
-        <div className="flex gap-2">
-          {[1,2,3,4,5].map(n => (
-
-              key={n}
-              onMouseEnter={() => setHover(n)}
-              onMouseLeave={() => setHover(0)}
-              onClick={() => setRating(n)}
-              className={
-                hover >= n |rating >= n ? 'text-yellow-500' : 'text-gray-300'
-              }
-              aria-label={`${n} stars`}
-            >
-              ★
-            </button>
-          ))}
-        </div>
-        <div className='text-sm'>
-          <label className='block mb-1'>Optional comment</label>
-          <textarea
-            value={comment}
-            onChange={e => setComment(e.target.value)}
-            className='w-full border rounded p-2'
-            rows={3}
-          />
-        </div>
-        <div className='text-sm'>
-          <label className='block mb-1'>Also</label>
-          <div className='flex gap-3'>
-            <label className='inline-flex items-center gap-1'>
-              <input
-                type='radio'
-                checked={kind === 'general'}
-                onChange={() => setKind('general')}
-              />
-              General
-            </label>
-            <label className='inline-flex items-center gap-1'>
-              <input
-                type='radio'
-                checked={kind === 'bug'}
-                onChange={() => setKind('bug')}
-              />
-              Report a bug
-            </label>
-            <label className='inline-flex items-center gap-1'>
-              <input
-                type='radio'
-                checked={kind === 'feature'}
-                onChange={() => setKind('feature')}
-              />
-              Suggest a feature
-            </label>
-          </div>
-        </div>
-        <div className='flex justify-end gap-2'>
-          <button
-            onClick={() => onClose(false)}
-            className='px-3 py-2 rounded border'
-          >
-            Later
-          </button>
-          <button
-            onClick={submit}
-            disabled={loading |rating < 1}
-            className='px-3 py-2 rounded bg-gray-900 text-white'
-          >
-            {loading ? 'Submitting…' : 'Submit'}
-          </button>        </div>
-      </div>
-    </div>
-  );
-}              aria-label={`${n} stars`}
-            >★</button>
-          ))}
-        </div>
-        <div className="text-sm">
-          <label className="block mb-1" htmlFor="input-Optional comment">Optional comment</label>
-          <textarea value={comment} onChange={(e)=>setComment(e.target.value)} className="w-full border rounded p-2" rows={3} />
-        </div>
-        <div className="text-sm">
-          <label className="block mb-1" htmlFor="input-Also">Also</label>
-          <div className="flex gap-3">
-            <label className="inline-flex items-center gap-1"><input type="radio" checked={kind==='general'} onChange={()=>setKind('general')} />General</label>
-            <label className="inline-flex items-center gap-1"><input type="radio" checked={kind==='bug'} onChange={()=>setKind('bug')} />Report a bug</label>
-            <label className="inline-flex items-center gap-1"><input type="radio" checked={kind==='feature'} onChange={()=>setKind('feature')} />Suggest a feature</label>
-          </div>
-        </div>
-        <div className="flex justify-end gap-2">
-          <button onClick={()=>onClose(false)} className="px-3 py-2 rounded border">Later</button>
-          <button onClick={submit} disabled={loading |rating<1} className="px-3 py-2 rounded bg-gray-900 text-white">{loading? 'Submitting…' : 'Submit'}</button>
-        </div>
-      </div>
-    </div>
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   userHeaders?: Record<string, string>;}) {export default function FeedbackModal(): any ({;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   isOpen;
   onClose;
   defaultContext;
   defaultKind = 'general';
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   userHeaders?: Record<string, string>;
 }) {
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -205,23 +34,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const [comment, setComment] = useState('');
   const [loading, setLoading] = useState(false);
   if (!isOpen) return null;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-
-<<<<<<< HEAD
-      });
-    setLoading(false);
-    onClose(true);
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     setLoading(false);
     onClose(true);
 
@@ -229,27 +42,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         headers: { 'Content-Type': 'application/json', ...(userHeaders || {}) };
         body: JSON.stringify({ rating, comment, kind, context: defaultContext || {} })})
     } catch {}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     setLoading(false);
     onClose(true)
   }
   return (
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
       <div className="bg-white w-full max-w-md rounded shadow-lg p-5 space-y-4">
         <div className="text-lg font-medium">Was this helpful?</div>
         <div className="flex gap-2">
           {[1,2,3,4,5].map(n => (
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   async function submit() {
     if (rating < 1) return onClose(false);
     setLoading(true);
@@ -274,12 +75,7 @@ headers: { 'Content-Type': 'application/json', ...(userHeaders || {}) },
         <div className='flex gap-2'>
           {[1, 2, 3, 4, 5].map(n => (
             <button
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
               key={n}
               onMouseEnter={() => setHover(n)}
               onMouseLeave={() => setHover(0)}
@@ -446,29 +242,6 @@ function submit() {
           </div>;
         </div>;
           ))}
-<<<<<<< HEAD
-
-        </div>;
-        <div className="text-sm">;
-          <label className="block mb-1" htmlFor="input-Optional comment">Optional comment</label>;
-          <textarea value={comment} onChange={(e)=>setComment(e && e.target.value)} className="w-full border rounded p-2" rows={3} />;
-        </div>;
-        <div className="text-sm">;
-          <label className="block mb-1" htmlFor="input-Also">Also</label>;
-          <div className="flex gap-3">;
-            <label className="inline-flex items-center gap-1"><input type="radio" checked={kind==='general'} onChange={()=>setKind('general')} />General</label>;
-            <label className="inline-flex items-center gap-1"><input type="radio" checked={kind==='bug'} onChange={()=>setKind('bug')} />Report a bug</label>;
-            <label className="inline-flex items-center gap-1"><input type="radio" checked={kind==='feature'} onChange={()=>setKind('feature')} />Suggest a feature</label>;
-          </div>;
-        </div>;
-        <div className="flex justify-end gap-2">;
-          <button onClick={()=>onClose(false)} className="px-3 py-2 rounded border">Later</button>;
-          <button onClick={submit} disabled={loading || rating<1} className="px-3 py-2 rounded bg-gray-900 text-white">{loading? 'Submitting…' : 'Submit'}</button>;
-        </div>;
-      </div>;
-    </div>;
-
-=======
           <button onClick={submit} disabled={loading || rating<1} className="px-3 py-2 rounded bg-gray-900 text-white">{loading? 'Submitting…' : 'Submit'}</button>
         </div>
         <div className='flex justify-end gap-2'>
@@ -489,11 +262,8 @@ function submit() {
 origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
     </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
         <div className='flex justify - end gap - 2'>;
           <button;
             on_click={() => on_close (false)}
@@ -527,31 +297,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <button on_click={()=>on_close (false)} className="px-3 py-2 rounded border">Later</button>;
 
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-
-}
-=======
   );
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-  );
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

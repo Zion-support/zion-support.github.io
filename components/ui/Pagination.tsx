@@ -1,69 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React from 'react';
-import EnhancedButton from './EnhancedButton';
-export type PaginationProps = {;
-
-export type PaginationProps = {
-  on_change: (next_page: number) => void;
-}
-export default function Pagination({
-  page
-  pageSize
-  total
-  onChange
-}: PaginationProps) {  const totalPages = Math.max(1, Math.ceil(total / pageSize));export type PaginationProps = {
-  page: number
-  pageSize: number
-  total: number
-  onChange: (nextPage: number) => void
-}
-export default function Pagination({ page, pageSize, total, onChange }: PaginationProps) {
-  page,
-  pageSize,
-  total,
-  onChange,;
-}: PaginationProps) {  const totalPages = Math.max(1, Math.ceil(total / pageSize));export type PaginationProps = {
-  page: number,
-  pageSize: number,
-  total: number,
-  onChange: (nextPage: number) => void;
-};
-
-export default function Pagination({ page, pageSize, total, onChange }: PaginationProps) {;
-=======
 
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React from 'react';
 import EnhancedButton from './EnhancedButton';
 export type PaginationProps = any;
@@ -79,60 +15,14 @@ export default function Pagination({
   total,
   onChange,
 }: PaginationProps) {
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const totalPages = Math.max(1, Math.ceil(total / pageSize));
   const canPrev = page > 1;
   const canNext = page < totalPages;
   const goTo = (p: number) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-};
-
-export default function Pagination(): any ({;
-  page,;
-  pageSize,;
-  total,;
-  onChange,;
-}: PaginationProps) {  const totalPages = Math && Math.max(1, Math && Math.ceil(total / pageSize));export type PaginationProps = {;
-  page: number,;
-  pageSize: number,;
-  total: number,;
-  onChange: (nextPage: number) => void;
-};
-export default function Pagination(): any ({ page, pageSize, total, onChange }: PaginationProps) {;
-  const totalPages = Math && Math.max(1, Math && Math.ceil(total / pageSize));
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
-export type PaginationProps = {
-
-  page: number;
-  pageSize: number;
-  total: number;
-  onChange: (nextPage: number) => void;
-}
-export default function Pagination({
-
-  const totalPages = Math.max(1, Math.ceil(total / pageSize));
-
-  const canPrev = page > 1;
-  const canNext = page < totalPages;
-  const goTo = (p: number) => {;
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-    if (p >= 1 && p <= totalPages) onChange(p);
-  }
-=======
 if (p >= 1 && p <= totalPages) onChange(p);
   };
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <div className='flex items-center justify-between gap-2 mt-4'>;
       <EnhancedButton
@@ -151,6 +41,11 @@ if (p >= 1 && p <= totalPages) onChange(p);
         size='md'
         onClick={() => goTo(page + 1)}
         disabled={!canNext}
+      >        Next;
+      </EnhancedButton>;
+    </div>;
+  );
+
       >
         Next
       </EnhancedButton>
@@ -165,10 +60,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </EnhancedButton>;
       <div className="text-sm">;
         Page {page} of {totalPages}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Link from 'next/link';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 interface PaginationProps {;
@@ -233,8 +124,6 @@ interface PaginationProps {;
 if ( {) {
   $2
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
       for (let index = 1; i <= total_pages; i++) {
         pages.push (i);
 }
@@ -330,17 +219,6 @@ if ( {) {
           Next;
 }
 }
-<<<<<<< HEAD
-=======
-  );
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 }
           <ChevronRight className="w - 4 h-4 ml-1" />;
         </span>)}
@@ -349,17 +227,6 @@ if ( {) {
 
   );
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 export default Pagination;
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

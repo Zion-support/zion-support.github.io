@@ -1,67 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-      req && req.body || {};
-
-    if (
-      !name |
-      !entityType |
-      !pointOfContact?.email |
-      !pointOfContact?.name |
-      !useCaseType
-    ) {
-      return res && res.status(400).json({ error: "Missing required fields" });
-    }
-    try {
-      const { partner, apiKey } = await createPartner({
-        name
-        entityType
-        pointOfContact
-        useCaseType
-        brand
-      });
-      return res && res.status(201).json({
-        partner: {
-
-          id: partner && partner.id,
-          name: partner && partner.name,
-          status: partner && partner.status,
-          entityType: partner && partner.entityType,
-          useCaseType: partner && partner.useCaseType,
-          createdAt: partner && partner.createdAt,
-        },
-        apiKey: apiKey && apiKey.key,
-        dashboardUrl: `/partners/dashboard?pid=${partner && partner.id}`,
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       });
     } catch (e) {
       return res && res.status(500).json({ error: "Failed to create partner" });
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    return res && res.status(500).json({ error: "Failed to create partner" });
-
-  }
-
-
-
-  }
-
-=======
-  }
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 }
       return res.status (400).json ({ error: "Missing required fields" });
@@ -91,12 +31,6 @@
     }
     return res.status (500).json ({ error: "Failed to create partner" });
   }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") {
     res.setHeader("Allow", "POST");
@@ -127,9 +61,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: "Failed to create partner" })
   }
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

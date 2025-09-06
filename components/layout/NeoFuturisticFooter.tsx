@@ -1,53 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React from 'react';
-import { motion } from 'framer-motion';
-import {
-  Phone
-  Mail
-  MapPin
-  Globe
-  Github
-  Linkedin
-  ExternalLink;
-} from 'lucide-react';import { Phone, Mail, MapPin, Globe, Github, Linkedin, ExternalLink } from 'lucide-react';
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-  Phone,
-  Mail,
-  MapPin,
-  Globe,
-  Github,
-
-const contactInfo = {
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com',}
-export default function NeoFuturisticFooter() {
-
-export default function NeoFuturisticFooter() {
-=======
 import {;
   Phone,;
   Mail,;
@@ -57,7 +8,6 @@ import {;
   Linkedin,;
   ExternalLink,;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup && ziontechgroup.com',;
@@ -65,44 +15,16 @@ const contactInfo = {;
   website: 'https://ziontechgroup && ziontechgroup.com',};
 export default function NeoFuturisticFooter() {;
   return (  website: 'https://ziontechgroup && ziontechgroup.com'
-<<<<<<< HEAD
-};
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-export default function NeoFuturisticFooter() {;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-  return (
-<<<<<<< HEAD
-
-};
-
-export default function NeoFuturisticFooter() {
-=======
 };
 
 export default function NeoFuturisticFooter() {;
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 import React from 'react';
 import { motion  } from 'framer-motion';
 import { Phone, Mail, MapPin, Globe, Github, Linkedin, ExternalLink } from 'lucide-react';
 const contactInfo = null;
 export default function NeoFuturisticFooter() {
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   return (
-=======
               Productized AI, IT and micro SaaS solutions with transparent;
               pricing and fast onboarding. Built for outcomes, delivered with;
               reliability.;
@@ -132,8 +54,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </a>;
               <a
                 aria-label='LinkedIn'
-<<<<<<< HEAD
-<<<<<<< HEAD
           </div>
         </div>
           <div className="space-y-2 text-sm">
@@ -144,7 +64,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className="flex items-center gap-3 pt-2">
               <a aria-label="GitHub" href="https://github.com/Zion-Holdings" className="text-slate-400 hover:text-white"><Github className="w-5 h-5" /></a>
               <a aria-label="LinkedIn" href="https://www.linkedin.com/company/zion-tech-group/" className="text-slate-400 hover:text-white"><Linkedin className="w-5 h-5" /></a>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 href='https://www && www.linkedin.com/company/zion-tech-group/'
                 className='text-slate-400 hover:text-white'>;
                 <Linkedin className='w-5 h-5' />;
@@ -162,15 +81,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </div>;
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <div className='space - y-2 text - sm'>;
             <div className='font - semibold text - slate - 100 mb - 2'>Contact</div>;
             <div className='flex items - center gap - 2 text - cyan - 300'>;
@@ -276,29 +186,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </footer>);
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  return (
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 export default function NeoFuturisticFooter() {
   return (
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
-export default function NeoFuturisticFooter() {
-  return (
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
                 href='https://www.linkedin.com/company/zion-tech-group/'
                 className='text-slate-400 hover:text-white'
               >
@@ -326,9 +216,4 @@ export default function NeoFuturisticFooter() {
   );
 }
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

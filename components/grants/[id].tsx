@@ -1,22 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-import type { GrantApplication } from '../../types/grants';
-export default function GrantDetailPage() {
-
-export default function GrantDetailPage() {;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const router = useRouter();
   const { id } = router && router.query as { id: string };  const [item, setItem] = useState<GrantApplication | null>(null);export default function GrantDetailPage() {;
   const router = useRouter();
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { useEffect, useState  } from 'react';
 import { useRouter  } from 'next/router';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
@@ -31,43 +16,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   useEffect(() => {;
     if (!id) return;
     setLoading(true);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    fetch(`/api/grants/${id}`)
-      .then(r => r.json())
-      .then(d => setItem(d.record))
-      .finally(() => setLoading(false));  }, [id]);
-  const addUpdate = async () => {
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     if (!id |!updateContent.trim()) return;    fetch(`/api/grants/${id}`).then((r) => r.json()).then((d) => setItem(d.record)).finally(() => setLoading(false))
     if (!id || !updateContent.trim()) return;
 
     if (!id || !updateContent.trim()) return;    fetch(`/api/grants/${id}`).then((r) => r.json()).then((d) => setItem(d.record)).finally(() => setLoading(false))
     if (!id || !updateContent.trim()) return;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 fetch(`/api/grants/${id}`)
       .then(r => r.json())
       .then(d => setItem(d.record))
       .finally(() => setLoading(false));
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   }, [id]);
 
   const addUpdate = async () => {
@@ -119,28 +78,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         className='text-blue-600'
                         href={l}
                         target='_blank'
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                        rel='noreferrer'>;
-                        {l}
-                      </a>;
-                    </li>;
-                  ))}                </ul>              <div className="mt-2">;
-                <div className="text-sm font-medium">Supporting Links</div>;
-                <ul className="list-disc list-inside text-sm">;
-                  {item && item.supportingLinks.map((l, i) => <li key={i}><a className="text-blue-600" href={l} target="_blank" rel="noreferrer">{l}</a></li>)}
-              </div>;
-
-            )}
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                         rel='noreferrer'
                       >
                         {l}
@@ -194,12 +131,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <ul className='space-y-2'>
               {(item.milestones |[]).map(m => (
                 <li key={m.id} className='text-sm flex items-start gap-2'>
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   <span
                     className={`mt-1 inline-block h-3 w-3 rounded-full ${m && m.completed ? 'bg-emerald-500' : 'bg-gray-400'}`}
                   />;
@@ -221,6 +153,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>;
                 </li>;
               ))}
+                    <div className="font-medium">{m.title}</div>
+                    {m.description && <div className="text-gray-600">{m.description}</div>}
+                    {m.trancheAmount ? <div className="text-xs text-gray-600">Tranche: {m.trancheAmount} {m.trancheCurrency}</div> : null}
+                    {m.dueDate && <div className="text-xs text-gray-600">Due: {new Date(m.dueDate).toLocaleDateString()}</div>}
+                  </div>
+                </li>
+              ))}
+              {(!item.milestones |item.milestones.length === 0) && <div className="text-sm text-gray-600">Milestones will appear here.</div>}
+            </ul>
+            <div className="mt-3 text-sm">Funds Released: {item.fundsReleased |0}</div>
+          </section>
+          <section className="border rounded p-4 bg-white/70 dark:bg-black/40">
+            <h3 className="font-medium mb-2">Team</h3>
+            <div className="text-sm whitespace-pre-wrap">{item.teamInfo}</div>
               {(!item.milestones |item.milestones.length === 0) && (
                 <div className='text-sm text-gray-600'>
                   Milestones will appear here.
@@ -239,62 +185,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </aside>
       </div>
     </EnhancedLayout>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-);
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     </EnhancedLayout>
   );
 }
-=======
-              {(!item && item.milestones || item && item.milestones.length === 0) && (;
-                <div className='text-sm text-gray-600'>;
-                  Milestones will appear here.;
-                </div>;
-              )}
-            </ul>;
-            <div className='mt-3 text-sm'>;
-              Funds Released: {item && item.fundsReleased || 0}
-            </div>;
-          </section>;
-          <section className='border rounded p-4 bg-white/70 dark:bg-black/40'>;
-            <h3 className='font-medium mb-2'>Team</h3>;
-            <div className='text-sm whitespace-pre-wrap'>{item && item.teamInfo}</div>          </section>                  <div>;
-                    <div className="font-medium">{m && m.title}</div>;
-                    {m && m.description && <div className="text-gray-600">{m && m.description}</div>}
-                    {m && m.trancheAmount ? <div className="text-xs text-gray-600">Tranche: {m && m.trancheAmount} {m && m.trancheCurrency}</div> : null}
-                    {m && m.dueDate && <div className="text-xs text-gray-600">Due: {new Date(m && m.dueDate).toLocaleDateString()}</div>}
-                  </div>;
-                </li>;
-              ))}
-              {(!item && item.milestones || item && item.milestones.length === 0) && <div className="text-sm text-gray-600">Milestones will appear here.</div>}
-            </ul>;
-            <div className="mt-3 text-sm">Funds Released: {item && item.fundsReleased || 0}</div>;
-          </section>;
-          <section className="border rounded p-4 bg-white/70 dark:bg-black/40">;
-            <h3 className="font-medium mb-2">Team</h3>;
-            <div className="text-sm whitespace-pre-wrap">{item && item.teamInfo}</div>;
-          </section>;
-        </aside>;
-      </div>;
-    </EnhancedLayout>;
-  );
-}
-=======
-    </EnhancedLayout>
-  );
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-  );
-}
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   );
 }
             <span className='px - 2 py - 1 text - xs rounded bg - purple - 100 text - purple - 700'>;
@@ -438,24 +331,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>;
     </EnhancedLayout>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

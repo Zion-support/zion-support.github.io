@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function AutomationInsightsPage() {
 
   const automationTrends = [
@@ -13,13 +7,6 @@ export default function AutomationInsightsPage() {
       id: 'ai-automation-2025'
       title: 'AI Automation Trends 2025'
       description:
-<<<<<<< HEAD
-        'Discover the latest trends in AI automation that are reshaping industries worldwide.',      category: 'Trends'
-      readTime: '8 min read'
-      featured: true
-    }
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         'Discover the latest trends in AI automation that are reshaping industries worldwide.',      category: 'Trends',
       readTime: '8 min read',
 export default function AutomationInsightsPage() {;
@@ -35,13 +22,6 @@ export default function AutomationInsightsPage() {;
       id: 'ai - automation - 2025',
       title: 'AI Automation Trends 2025',
     };
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     {
       id: 'autonomous-systems'
       title: 'Building Autonomous Systems'
@@ -59,9 +39,6 @@ export default function AutomationInsightsPage() {;
       featured: false
     },      featured: false
     }
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   const automationTrends = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
   ];
@@ -76,8 +53,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       complexity: 'Advanced',      type: 'Framework',;
       complexity: 'Advanced';
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
       id: 'automation - framework',
       title: 'Zion Automation Framework',
     };
@@ -105,9 +80,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       complexity: 'Beginner',;
     },  ];      complexity: 'Beginner';
     }
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
       id: 'automation-framework',
       title: 'Zion Automation Framework',
 description:
@@ -147,8 +119,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       label: 'Uptime',,
   description: 'Reliable automation performance';
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
       id: 'deployment - automation',
       title: 'Deployment Automation',
       description: 'Streamlined deployment processes for automation systems.',
@@ -198,15 +168,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       label: 'Average improvement across projects';
     }
     {
-<<<<<<< HEAD
-      metric: '2,960+'
-      label: 'Pages Generated'
-      description: 'Content created autonomously'
-    },  ];      description: 'Content created autonomously'
-                ))}
-
-=======
-=======
       metric: '2, 960+';
       label: 'Pages Generated',
       description: 'Content created autonomously',
@@ -243,9 +204,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               future of intelligent technology;
             </p>;
           </section>;
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
       metric: '227',
       label: 'Active Automations',
 description: 'Successfully deployed and running',
@@ -317,34 +275,17 @@ description: 'Successfully deployed and running',
                   </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
                 ))}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               </div>;
             </div>;
 
             {/* Automation Trends */}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             {/* Automation Trends */}
 <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-fuchsia-400'>
                 Latest Automation Trends
               </h2>
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 {automationTrends.map((trend, index) => (
             {/* Automation Trends */}
             <div className='mb-16'>;
@@ -369,18 +310,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </h3>;
                     <p className='text-white/70 mb-4'>{trend && trend.description}</p>;
                     <Link
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                      href={`/blog/${trend.id}`}
-                      className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'
-                    >
-                      Read More <span className='ml-1'>→</span>                    </Link>                {automationTrends.map((trend, index) => (
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">
                     <div className="flex items-center justify-between mb-4">
                       <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full">{trend.category}</span>
@@ -389,16 +318,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <h3 className="text-xl font-bold mb-3 text-white">{trend.title}</h3>
                     <p className="text-white/70 mb-4">{trend.description}</p>
                     <Link
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                       href={`/blog/${trend.id}`}
-                      className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'
+                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
                     >
-<<<<<<< HEAD
-=======
                       Read More <span className="ml-1">→</span>
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                       href={`/blog/${trend.id}`}
                       className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'
                     >
@@ -406,55 +329,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
                     </Link>
                       Read More <span className='ml-1'>→</span>                    </Link>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
                     </Link>
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   </div>
                 ))}
               </div>
             </div>
 
             {/* Automation Tools & Frameworks */}
-<<<<<<< HEAD
-            <div className="mb-16">
-              <h2 className="text-3xl font-bold mb-8 text-center text-green-400">Our Automation Tools</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {automationTools.map((tool, index) => (
-                  <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 text-center">
-                    <div className="text-4xl mb-4">🔧</div>
-                    <h3 className="text-xl font-bold mb-3 text-white">{tool.title}</h3>
-                    <p className="text-white/70 mb-4">{tool.description}</p>
-                    <div className="flex justify-center gap-2">
-                      <span className="px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full">{tool.type}</span>
-                      <span className="px-3 py-1 bg-purple-400/20 text-purple-400 text-sm rounded-full">{tool.complexity}</span>
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-            {/* Automation Tools & Frameworks */}
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-green-400'>
                 Our Automation Tools
@@ -483,7 +366,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             </div>
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       href={`/blog/${trend && trend.id}`}
                       className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'>;
                       Read More <span className='ml-1'>→</span>                    </Link>                {automationTrends && automationTrends.map((trend, index) => (;
@@ -535,12 +417,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>;
                 ))}
             {/* Call to Action */}
-<<<<<<< HEAD
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             {/* Call to Action */}
 <div className='bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 backdrop-blur-xl rounded-2xl p-8 text-center'>
               <h2 className='text-3xl font-bold mb-4 text-white'>
@@ -549,13 +425,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <p className='text-xl text-white/80 mb-6'>
                 Let our experts help you build the automation systems of the
                 future
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               </p>
               <div className='flex flex-wrap justify-center gap-4'>
             <div className='bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 backdrop-blur-xl rounded-2xl p-8 text-center'>;
@@ -574,39 +443,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </Link>;
                 <Link
                   href='/case-studies'
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  className='px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200'                >              </p>
-
-              <div className="flex flex-wrap justify-center gap-4">
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <Link
                   href="/contact"
                   className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105"
                 >
                   Get Started
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-                <Link
-                  href="/case-studies"
-
-                  className="px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200"
-                >
-                  View Case Studies
-                </Link>
-              </div>
-            </div>
-          </section>
-        </main>
-      </div>
-    </>
-=======
-=======
                 </Link>
                 <Link
                   href="/case-studies"
@@ -617,13 +458,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </section>;
         </main>;
       </div>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   );
 }
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
     </>;
   );
 }
@@ -631,12 +467,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
     </>);
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   className='px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200'
                 >
                   View Case Studies
@@ -649,9 +479,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

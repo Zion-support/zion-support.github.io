@@ -1,40 +1,11 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import {
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-  Code
-  Database
-  Globe
-  Shield
-  Zap
-  Bot
-  BarChart3
-  Lock
-  ArrowRight
-  CheckCircle
-  Star
-  ExternalLink
-  Play
-  BookOpen
-  Github
-  Terminal;} from 'lucide-react';import {
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 import Head from 'next / head';
 import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
 import {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   Code,
   Database,
   Globe,
@@ -49,13 +20,6 @@ import {
   ExternalLink,
   Play,
   BookOpen,
-<<<<<<< HEAD
-  Github,
-  Terminal,;} from 'lucide-react';import { 
-  Github,;
-  Terminal,;} from 'lucide-react';import { ;
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   Code;
   Database
   Globe
@@ -63,15 +27,9 @@ import {
   Zap
   Bot
   BarChart3
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
   Code;
   Database,
   Globe,
@@ -79,9 +37,6 @@ import {
   Zap,
   Bot,
   BarChart3,
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { Code;
   Database;
   Globe;
@@ -98,210 +53,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   Play;
   BookOpen;
   Github;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-export default function ApiToolsPage() {
-  const apiTools = [
-    {
-      icon: <Code className='w-8 h-8 text-white' />
-      description:
-        'Generate production-ready code in multiple languages using natural language descriptions and AI.'
-      features: [
-        'Support for 20+ programming languages'
-        'Real-time code completion and suggestions'
-        'Custom code templates and patterns'
-        'Integration with popular IDEs'
-        'Code review and optimization suggestions'
-      ]
-      pricing: {
-        free: '100 requests/month'
-        pro: '$49/month'
-        enterprise: 'Custom'
-      }
-      category: 'Development',      color: 'bg-gradient-to-br from-blue-500 to-cyan-600',      gradient: 'from-blue-400 to-cyan-500'
-      website: 'https://codegen.api'
-      docs: 'https://docs.codegen.api'
-      github: 'https://github.com/codegen-api'
-      status: 'Live'
-      users: '15,000+'
-      rating: 4.8
-      responseTime: '<100ms'
-    }
-    {
-      icon: <Database className='w-8 h-8 text-white' />
-      title: 'DataSync API - Real-time Data Synchronization'
-      description:
-        'Seamlessly sync data across multiple databases, applications, and cloud services in real-time.'
-      features: [
-        'Multi-database support (PostgreSQL, MySQL, MongoDB)'
-        'Real-time change detection and propagation'
-        'Conflict resolution and data validation'
-        'Webhook support for custom integrations'
-        'Comprehensive audit logging and monitoring'
-      ]
-      pricing: {
-        free: '1,000 syncs/month'
-        pro: '$79/month'
-        enterprise: 'Custom'
-      }
-      category: 'Data',      color: 'bg-gradient-to-br from-green-500 to-emerald-600',      gradient: 'from-green-400 to-emerald-500'
-      website: 'https://datasync.api'
-      docs: 'https://docs.datasync.api'
-      github: 'https://github.com/datasync-api'
-      status: 'Live'
-      users: '8,500+'
-      rating: 4.9
-      responseTime: '<50ms'
-    }
-    {
-      icon: <Globe className='w-8 h-8 text-white' />
-      title: 'GeoAPI - Advanced Geospatial Services'
-      description:
-        'Comprehensive geolocation, mapping, and spatial analysis APIs for location-based applications.'
-      features: [
-        'Global geocoding and reverse geocoding'
-        'Real-time traffic and routing optimization'
-        'Geofencing and location tracking'
-        'Map visualization and customization'
-        'Spatial data analysis and clustering'
-      ]
-      pricing: {
-        free: '10,000 requests/month'
-        pro: '$99/month'
-        enterprise: 'Custom'
-      }
-      category: 'Location',      color: 'bg-gradient-to-br from-purple-500 to-pink-600',      gradient: 'from-purple-400 to-pink-500'
-      website: 'https://geo.api'
-      docs: 'https://docs.geo.api'
-      github: 'https://github.com/geo-api'
-      status: 'Live'
-      users: '12,000+'
-      rating: 4.7
-      responseTime: '<75ms'
-    }
-    {
-      icon: <Shield className='w-8 h-8 text-white' />
-      title: 'AuthGuard API - Enterprise Authentication'
-      description:
-        'Secure, scalable authentication and authorization system with advanced security features.'
-      features: [
-        'Multi-factor authentication (MFA)'
-        'OAuth 2.0 and OpenID Connect support'
-        'Role-based access control (RBAC)'
-        'Advanced threat detection and prevention'
-        'Compliance with SOC2, GDPR, and HIPAA'
-      ]
-      pricing: {
-        free: '1,000 users/month'
-        pro: '$149/month'
-        enterprise: 'Custom'
-      }
-      category: 'Security',      color: 'bg-gradient-to-br from-red-500 to-orange-600',      gradient: 'from-red-400 to-orange-500'
-      website: 'https://authguard.api'
-      docs: 'https://docs.authguard.api'
-      github: 'https://github.com/authguard-api'
-      status: 'Live'
-      users: '6,800+'
-      rating: 4.9
-      responseTime: '<25ms'
-    }
-    {
-      icon: <Zap className='w-8 h-8 text-white' />
-      title: 'WebhookHub - Intelligent Webhook Management'
-      description:
-        'Reliable webhook delivery, retry logic, and event processing for modern applications.'
-      features: [
-        'Guaranteed webhook delivery with retry logic'
-        'Event filtering and transformation'
-        'Real-time monitoring and analytics'
-        'Custom authentication and security'
-        'Integration with popular platforms'
-      ]
-      pricing: {
-        free: '5,000 webhooks/month'
-        pro: '$39/month'
-        enterprise: 'Custom'
-      }
-      category: 'Integration',      color: 'bg-gradient-to-br from-yellow-500 to-orange-600',      gradient: 'from-yellow-400 to-orange-500'
-      website: 'https://webhookhub.api'
-      docs: 'https://docs.webhookhub.api'
-      github: 'https://github.com/webhookhub-api'
-      status: 'Live'
-      users: '9,200+'
-      rating: 4.8
-      responseTime: '<30ms'
-    }
-    {
-      icon: <Bot className='w-8 h-8 text-white' />
-      title: 'NLP API - Natural Language Processing'
-      description:
-        'Advanced text analysis, sentiment detection, and language understanding capabilities.'
-      features: [
-        'Text classification and categorization'
-        'Sentiment analysis and emotion detection'
-        'Named entity recognition (NER)'
-        'Language detection and translation'
-        'Custom model training and fine-tuning'
-      ]
-      pricing: {
-        free: '5,000 requests/month'
-        pro: '$69/month'
-        enterprise: 'Custom'
-      }
-      category: 'AI/ML',      color: 'bg-gradient-to-br from-indigo-500 to-purple-600',      gradient: 'from-indigo-400 to-purple-500'
-      website: 'https://nlp.api'
-      docs: 'https://docs.nlp.api'
-      github: 'https://github.com/nlp-api'
-      status: 'Live'
-      users: '11,500+'
-      rating: 4.7
-      responseTime: '<200ms'
-    }
-    {
-      icon: <BarChart3 className='w-8 h-8 text-white' />
-      title: 'Analytics API - Business Intelligence'
-      description:
-        'Comprehensive analytics and reporting APIs for data-driven decision making.'
-      features: [
-        'Real-time data aggregation and analysis'
-        'Custom dashboard creation and sharing'
-        'Advanced filtering and segmentation'
-        'Export capabilities (CSV, JSON, PDF)'
-        'Scheduled reports and alerts'
-      ]
-      pricing: {
-        free: '10,000 events/month'
-        pro: '$89/month'
-        enterprise: 'Custom'
-      }
-      category: 'Analytics',      color: 'bg-gradient-to-br from-teal-500 to-cyan-600',      gradient: 'from-teal-400 to-cyan-500'
-      website: 'https://analytics.api'
-      docs: 'https://docs.analytics.api'
-      github: 'https://github.com/analytics-api'
-      status: 'Live'
-      users: '7,800+'
-      rating: 4.8
-      responseTime: '<150ms'
-    }
-    {
-      icon: <Lock className='w-8 h-8 text-white' />
-      title: 'EncryptAPI - Data Encryption Services'
-      description:
-        'Enterprise-grade encryption, hashing, and cryptographic operations for secure applications.'
-      features: [
-        'AES-256 encryption and decryption'
-        'Secure key management and rotation'
-        'Digital signatures and certificates'
-        'Compliance with FIPS 140-2 standards'
-        'Hardware security module (HSM) support'
-      ]
-      pricing: {
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         free: '1,000 operations/month'
         pro: '$119/month'
         enterprise: 'Custom'
@@ -314,22 +65,10 @@ export default function ApiToolsPage() {
       users: '4,200+'
       responseTime: '<20ms'
     }
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
 
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   Terminal
  } from 'lucide-react';
 export default function ApiToolsPage() {
@@ -540,16 +279,12 @@ rating: 4.8,
         'Scheduled reports and alerts'
       ]
       pricing: {
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
         free: '1,000 operations/month',
         pro: '$119/month',
         enterprise: 'Custom',
       },
+      category: 'Security',      color: 'bg-gradient-to-br from-gray-500 to-slate-600',      gradient: 'from-gray-400 to-slate-500',
       category: 'Security',
       color: 'bg-gradient-to-br from-gray-500 to-slate-600',
       gradient: 'from-gray-400 to-slate-500',
@@ -559,31 +294,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       github: 'https://github.com/encrypt-api',
       status: 'Live',
       users: '4,200+',
-<<<<<<< HEAD
-<<<<<<< HEAD
       responseTime: '<20ms',
     },;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-rating: 4.9,
-      responseTime: '<20ms',
-    },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 rating: 4.9,
       responseTime: '<20ms',
     },
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   ];
   const categories = [
     'All'
@@ -596,210 +312,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     'Analytics'
   ];
   const [selectedCategory, setSelectedCategory] = React.useState('All');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      title: 'CodeGen API - AI-Powered Code Generation',
-      description: 'Generate production-ready code in multiple languages using natural language descriptions and AI.',
-      features: [
-        'Support for 20+ programming languagesReal-time code completion and suggestionsCustom code templates and patternsIntegration with popular IDEsCode review and optimization suggestions'
-];
-      pricing: {
-        free: '100 requests/month',
-        pro: '$49/month',
-        enterprise: 'Custom'
-},
-    category: 'Development',
-      color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
-      gradient: 'from-blue-400 to-cyan-500',
-      website: 'https://codegen.api',
-      docs: 'https://docs.codegen.api',
-      github: 'https://github.com/codegen-api',
-      status: 'Live',
-      users: '15,000+',
-rating: 4.8,
-      responseTime: '<100ms'
-    };
-    {
-      icon: <Database className="w-8 h-8 text-white" />,
-      title: 'DataSync API - Real-time Data Synchronization',
-      description: 'Seamlessly sync data across multiple databases, applications, and cloud services in real-time.',
-    features: [
-        'Multi-database support (PostgreSQL, MySQL, MongoDB)Real-time change detection and propagationConflict resolution and data validationWebhook support for custom integrationsComprehensive audit logging and monitoring'
-      ];
-      pricing: {
-        free: '1,000 syncs/month',
-    pro: '$79/month',
-        enterprise: 'Custom'
-    },
-    category: 'Data',
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
-      gradient: 'from-green-400 to-emerald-500',
-      website: 'https://datasync.api',
-      docs: 'https://docs.datasync.api',
-      github: 'https://github.com/datasync-api',
-      status: 'Live',
-      users: '8,500+',
-rating: 4.9,
-      responseTime: '<50ms'
-    };
-    {
-      icon: <Globe className="w-8 h-8 text-white" />,
-      title: 'GeoAPI - Advanced Geospatial Services',
-      description: 'Comprehensive geolocation, mapping, and spatial analysis APIs for location-based applications.',
-    features: [
-        'Global geocoding and reverse geocodingReal-time traffic and routing optimizationGeofencing and location trackingMap visualization and customizationSpatial data analysis and clustering'
-      ];
-      pricing: {
-        free: '10,000 requests/month',
-    pro: '$99/month',
-        enterprise: 'Custom'
-    },
-    category: 'Location',
-      color: 'bg-gradient-to-br from-purple-500 to-pink-600',
-      gradient: 'from-purple-400 to-pink-500',
-      website: 'https://geo.api',
-      docs: 'https://docs.geo.api',
-      github: 'https://github.com/geo-api',
-      status: 'Live',
-      users: '12,000+',
-rating: 4.7,
-      responseTime: '<75ms'
-    };
-    {
-      icon: <Shield className="w-8 h-8 text-white" />,
-      title: 'AuthGuard API - Enterprise Authentication',
-      description: 'Secure, scalable authentication and authorization system with advanced security features.',
-    features: [
-        'Multi-factor authentication (MFA)OAuth 2.0 and OpenID Connect supportRole-based access control (RBAC)Advanced threat detection and preventionCompliance with SOC2, GDPR, and HIPAA'
-      ];
-      pricing: {
-        free: '1,000 users/month',
-    pro: '$149/month',
-        enterprise: 'Custom'
-    },
-    category: 'Security',
-      color: 'bg-gradient-to-br from-red-500 to-orange-600',
-      gradient: 'from-red-400 to-orange-500',
-      website: 'https://authguard.api',
-      docs: 'https://docs.authguard.api',
-      github: 'https://github.com/authguard-api',
-      status: 'Live',
-      users: '6,800+',
-rating: 4.9,
-      responseTime: '<25ms'
-    };
-    {
-      icon: <Zap className="w-8 h-8 text-white" />,
-      title: 'WebhookHub - Intelligent Webhook Management',
-      description: 'Reliable webhook delivery, retry logic, and event processing for modern applications.',
-    features: [
-        'Guaranteed webhook delivery with retry logicEvent filtering and transformationReal-time monitoring and analyticsCustom authentication and securityIntegration with popular platforms'
-      ];
-      pricing: {
-        free: '5,000 webhooks/month',
-    pro: '$39/month',
-        enterprise: 'Custom'
-    },
-    category: 'Integration',
-      color: 'bg-gradient-to-br from-yellow-500 to-orange-600',
-      gradient: 'from-yellow-400 to-orange-500',
-      website: 'https://webhookhub.api',
-      docs: 'https://docs.webhookhub.api',
-      github: 'https://github.com/webhookhub-api',
-      status: 'Live',
-      users: '9,200+',
-rating: 4.8,
-      responseTime: '<30ms'
-    };
-    {
-      icon: <Bot className="w-8 h-8 text-white" />,
-      title: 'NLP API - Natural Language Processing',
-      description: 'Advanced text analysis, sentiment detection, and language understanding capabilities.',
-    features: [
-        'Text classification and categorizationSentiment analysis and emotion detectionNamed entity recognition (NER)Language detection and translationCustom model training and fine-tuning'
-      ];
-      pricing: {
-        free: '5,000 requests/month',
-    pro: '$69/month',
-        enterprise: 'Custom'
-    },
-    category: 'AI/ML',
-      color: 'bg-gradient-to-br from-indigo-500 to-purple-600',
-      gradient: 'from-indigo-400 to-purple-500',
-      website: 'https://nlp.api',
-      docs: 'https://docs.nlp.api',
-      github: 'https://github.com/nlp-api',
-      status: 'Live',
-      users: '11,500+',
-rating: 4.7,
-      responseTime: '<200ms'
-    };
-    {
-      icon: <BarChart3 className="w-8 h-8 text-white" />,
-      title: 'Analytics API - Business Intelligence',
-      description: 'Comprehensive analytics and reporting APIs for data-driven decision making.',
-      features: [
-        'Real-time data aggregation and analysisCustom dashboard creation and sharingAdvanced filtering and segmentationExport capabilities (CSV, JSON, PDF)Scheduled reports and alerts'
-];
-      pricing: {
-        free: '10,000 events/month',
-    pro: '$89/month',
-        enterprise: 'Custom'
-    },
-    category: 'Analytics',
-      color: 'bg-gradient-to-br from-teal-500 to-cyan-600',
-      gradient: 'from-teal-400 to-cyan-500',
-      website: 'https://analytics.api',
-      docs: 'https://docs.analytics.api',
-      github: 'https://github.com/analytics-api',
-      status: 'Live',
-      users: '7,800+',
-rating: 4.8,
-      responseTime: '<150ms'
-    };
-    {
-      icon: <Lock className="w-8 h-8 text-white" />,
-      title: 'EncryptAPI - Data Encryption Services',
-      description: 'Enterprise-grade encryption, hashing, and cryptographic operations for secure applications.',
-    features: [
-        'AES-256 encryption and decryptionSecure key management and rotationDigital signatures and certificatesCompliance with FIPS 140-2 standardsHardware security module (HSM) support'
-      ];
-      pricing: {
-
-        enterprise: 'Custom'
-    },
-    category: 'Security',
-      color: 'bg-gradient-to-br from-gray-500 to-slate-600',
-      gradient: 'from-gray-400 to-slate-500',
-      website: 'https://encrypt.api',
-      docs: 'https://docs.encrypt.api',
-      github: 'https://github.com/encrypt-api',
-      status: 'Live',
-      users: '4,200+',
-rating: 4.9,
-      responseTime: '<20ms'
-    }
-
-  ];
-  const categories = ['AllDevelopmentDataLocationSecurityIntegrationAI/MLAnalytics'];
-  const [selectedCategory, setSelectedCategory] = React.useState('All');
-  const filteredTools = selectedCategory === 'All'
-    ? apiTools
-    : apiTools.filter(tool => tool.category === selectedCategory);
-
-  return (
-    <>
-      <Head>
-
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function ApiToolsPage() {;
   const apiTools = [;
     {;
-      icon: <Code className='w-8 h-8 text-white' />,,
-  description:;
+      icon: <Code className='w-8 h-8 text-white' />,;
+      description:;
         'Generate production-ready code in multiple languages using natural language descriptions and AI.',;
       features: [;
         'Support for 20+ programming languages',;
@@ -824,8 +341,8 @@ export default function ApiToolsPage() {;
     },
     {
       icon: <Database className='w-8 h-8 text-white' />,;
-      title: 'DataSync API - Real-time Data Synchronization',,
-  description:;
+      title: 'DataSync API - Real-time Data Synchronization',;
+      description:;
         'Seamlessly sync data across multiple databases, applications, and cloud services in real-time.',;
       features: [;
         'Multi-database support (PostgreSQL, MySQL, MongoDB)',;
@@ -850,8 +367,8 @@ export default function ApiToolsPage() {;
     },
     {
       icon: <Globe className='w-8 h-8 text-white' />,;
-      title: 'GeoAPI - Advanced Geospatial Services',,
-  description:;
+      title: 'GeoAPI - Advanced Geospatial Services',;
+      description:;
         'Comprehensive geolocation, mapping, and spatial analysis APIs for location-based applications.',;
       features: [;
         'Global geocoding and reverse geocoding',;
@@ -876,8 +393,8 @@ export default function ApiToolsPage() {;
     },
     {
       icon: <Shield className='w-8 h-8 text-white' />,;
-      title: 'AuthGuard API - Enterprise Authentication',,
-  description:;
+      title: 'AuthGuard API - Enterprise Authentication',;
+      description:;
         'Secure, scalable authentication and authorization system with advanced security features.',;
       features: [;
         'Multi-factor authentication (MFA)',;
@@ -902,8 +419,8 @@ export default function ApiToolsPage() {;
     },
     {
       icon: <Zap className='w-8 h-8 text-white' />,;
-      title: 'WebhookHub - Intelligent Webhook Management',,
-  description:;
+      title: 'WebhookHub - Intelligent Webhook Management',;
+      description:;
         'Reliable webhook delivery, retry logic, and event processing for modern applications.',;
       features: [;
         'Guaranteed webhook delivery with retry logic',;
@@ -928,8 +445,8 @@ export default function ApiToolsPage() {;
     },
     {
       icon: <Bot className='w-8 h-8 text-white' />,;
-      title: 'NLP API - Natural Language Processing',,
-  description:;
+      title: 'NLP API - Natural Language Processing',;
+      description:;
         'Advanced text analysis, sentiment detection, and language understanding capabilities.',;
       features: [;
         'Text classification and categorization',;
@@ -954,8 +471,8 @@ export default function ApiToolsPage() {;
     },
     {
       icon: <BarChart3 className='w-8 h-8 text-white' />,;
-      title: 'Analytics API - Business Intelligence',,
-  description:;
+      title: 'Analytics API - Business Intelligence',;
+      description:;
         'Comprehensive analytics and reporting APIs for data-driven decision making.',;
       features: [;
         'Real-time data aggregation and analysis',;
@@ -980,8 +497,8 @@ export default function ApiToolsPage() {;
     },
     {
       icon: <Lock className='w-8 h-8 text-white' />,;
-      title: 'EncryptAPI - Data Encryption Services',,
-  description:;
+      title: 'EncryptAPI - Data Encryption Services',;
+      description:;
         'Enterprise-grade encryption, hashing, and cryptographic operations for secure applications.',;
       features: [;
         'AES-256 encryption and decryption',;
@@ -1244,7 +761,6 @@ function ApiToolsPage() {
           API Tools & Developer Services | Zion Tech Group - Powerful APIs for;
           Modern Applications;
         </title>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Hero Section */}
       <section className="relative py-24 bg-gradient-to-br from-gray-900 via-indigo-900 to-gray-900 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(99,102,241,0.15),transparent_50%)]" />
@@ -1290,33 +806,6 @@ function ApiToolsPage() {
           <p className="text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">;
             Build faster, scale better, and deliver more with our comprehensive collection of developer APIs. Each tool is designed for performance, reliability, and ease of integration.;
           </p>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <div className="flex flex-wrap justify-center gap-4 mb-8">;
-            {categories && categories.map((category) => (;
-
-
-              <button
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-              <button
-
-              <button
-
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const filteredTools =
     selectedCategory === 'All'
       ? apiTools
@@ -1367,12 +856,7 @@ function ApiToolsPage() {
           <div className='flex flex-wrap justify-center gap-4 mb-8'>
             {categories.map(category => (
               <button
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${;
@@ -1382,10 +866,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 }`}
               >;
                 {category}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* API Tools Grid */}
 <section className='py-24 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -1395,33 +875,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 ? 'All API Tools'
                 : `${selectedCategory} APIs`}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-      {/* API Tools Grid */}
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 
 
 
       {/* API Tools Grid */}
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-      {/* API Tools Grid */}
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
               {filteredTools.length} APIs available. Each tool is
@@ -1431,9 +890,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {filteredTools.map((tool, index) => (
-<<<<<<< HEAD
-
-=======
             </h2>;
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>;
               {filteredTools && filteredTools.length} APIs available. Each tool is;
@@ -1444,7 +900,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
             {filteredTools && filteredTools.map((tool, index) => (;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <Card
                 key={index}
                 className='group border border-gray-800 hover:border-indigo-500/30 transition-all duration-300'
@@ -1463,85 +918,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           <Star className='w - 4 h - 4 fill - current' />;
                           <span className='ml - 1 text - sm font - medium'>;
                             {tool.rating}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      <section className="py-24 bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-white">
-              {selectedCategory === 'All' ? 'All API Tools' : `${selectedCategory} APIs`}
-            </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              {filteredTools.length} APIs available. Each tool is production-ready with comprehensive documentation, SDKs, and support.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {filteredTools.map((tool, index) => (
-              <Card
-                key={index}
-                className="group border border-gray-800 hover:border-indigo-500/30 transition-all duration-300"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="flex items-start space-x-6">
-                  <div className="relative">
-                    <div className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl ${tool.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>
-                      {tool.icon}
-                    </div>
-                    <div className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${tool.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`} />
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex items-center justify-between mb-3">
-                      <h3 className="text-2xl font-bold text-white group-hover:text-indigo-400 transition-colors duration-300">
-                        {tool.title}
-                      </h3>
-                      <div className="flex items-center space-x-2">
-                        <div className="flex items-center text-yellow-400">
-                          <Star className="w-4 h-4 fill-current" />
-                          <span className="ml-1 text-sm font-medium">{tool.rating}</span>
-                        </div>
-=======
-                        <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full font-medium">
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                           </span>
                         </div>
                         <span className='px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full font-medium'>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                           {tool.status}
                         </span>
                       </div>
                     </div>
-<<<<<<< HEAD
-=======
-                    <p className='text-gray-400 leading-relaxed mb-6'>
-                      {tool.description}
-                    </p>;
-                    <div className='grid grid - cols - 3 gap - 4 mb - 6'>;
-                      <div className='text - center p - 3 bg - gray - 800 / 50 rounded - lg'>;
-                        <div className='text - lg font - bold text - indigo - 400'>;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 <p className='text-gray-400 leading-relaxed mb-6'>
                       {tool.description}
                     </p>
                     <div className='grid grid-cols-3 gap-4 mb-6'>
                       <div className='text-center p-3 bg-gray-800/50 rounded-lg'>
                         <div className='text-lg font-bold text-indigo-400'>
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                           {tool.users}
                         </div>;
                         <div className='text - xs text - gray - 500'>Users</div>;
@@ -1569,41 +959,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         href={tool && tool.website}
                         variant='primary'
                         size='sm'
-<<<<<<< HEAD
-<<<<<<< HEAD
                         className='bg-indigo-600 hover:bg-indigo-700'>;
                         <ExternalLink className='w-4 h-4 mr-2' />                        Visit API;
                       </Button>;
                       <Button
-<<<<<<< HEAD
-                    <p className="text-gray-400 leading-relaxed mb-6">
-                      {tool.description}
-                    </p>
-                    <div className="grid grid-cols-3 gap-4 mb-6">
-                      <div className="text-center p-3 bg-gray-800/50 rounded-lg">
-                        <div className="text-lg font-bold text-indigo-400">{tool.users}</div>
-                        <div className="text-xs text-gray-500">Users</div>
-                      </div>
-                      <div className="text-center p-3 bg-gray-800/50 rounded-lg">
-                        <div className="text-lg font-bold text-green-400">{tool.responseTime}</div>
-                        <div className="text-xs text-gray-500">Response</div>
-                      </div>
-                      <div className="text-center p-3 bg-gray-800/50 rounded-lg">
-                        <div className="text-sm font-medium text-gray-300">Starting at</div>
-                        <div className="text-lg font-bold text-green-400">{tool.pricing.free}</div>
-                      </div>
-                    </div>
-                    <ul className="space-y-2 mb-6">
-                      {tool.features.slice(0, 3).map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-                          {feature}
-                        </li>;
-                      ))}
-
-=======
                         href={tool && tool.docs}                      {tool && tool.description}
                     </p>;
 
@@ -1630,37 +989,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       ))}
                       <Button
                         href={tool.website}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                         variant="primary"
                         size="sm"
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-                        variant="primary"
-                        size="sm"
-                        className="bg-indigo-600 hover:bg-indigo-700"
-                      >
-                        <ExternalLink className="w-4 h-4 mr-2" />
-
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-                        className='bg-indigo-600 hover:bg-indigo-700'
-                      >
-                        <ExternalLink className='w-4 h-4 mr-2' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                         className='bg-indigo-600 hover:bg-indigo-700'
                       >
                         <ExternalLink className='w-4 h-4 mr-2' />
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                         Visit API
                       </Button>
                         className="bg-indigo-600 hover:bg-indigo-700">;
@@ -1668,14 +1003,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         Visit API;
                       </Button>;
                       <Button
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                        href={tool.docs}
-
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         href={tool && tool.docs}
                         variant='outline'
                         size='sm'
@@ -1684,7 +1011,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </Button>;
                       <Button
                         href={tool && tool.github}                        variant="outline"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                         size="sm"
                         className="border-gray-600 text-gray-300 hover:border-indigo-500 hover:text-indigo-400"
                       >
@@ -1692,19 +1018,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         Documentation
                       </Button>
                       <Button
-<<<<<<< HEAD
-<<<<<<< HEAD
-                        href={tool.github}
-variant="ghost"
-                        size="sm"
-                        className="text-gray-400 hover:text-indigo-400"
-                      >
-                        <Github className="w-4 h-4 mr-2" />
-
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                         href={tool.docs}
 variant='outline'
                         size='sm'
@@ -1721,56 +1034,23 @@ variant='ghost'
                       >
                         <Github className='w-4 h-4 mr-2' />
                         GitHub
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       </Button>
                     </div>
                   </div>
                 </div>
               </Card>
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       {/* Developer Resources */}
 <section className='py-24 bg-gray-800'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-20'>
             <h2 className='text-3xl sm:text-4xl font-bold mb-6 text-white'>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-      {/* Developer Resources */}
-      <section className='py-24 bg-gray-800'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='text-center mb-20'>
-            <h2 className='text-3xl sm:text-4xl font-bold mb-6 text-white'>
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               Developer Resources
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
@@ -1823,41 +1103,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </p>
               <Button href='/sdk' variant='outline' size='sm'>
                 Browse SDKs
-<<<<<<< HEAD
-                <ArrowRight className='w-4 h-4 ml-2' />              </Button>                <ArrowRight className="w-4 h-4 ml-2" />
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
                 <ArrowRight className='w-4 h-4 ml-2' />
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </Button>
             </Card>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-              View Documentation
-            </Button>
-          </div>
-        </div>
-      </section>
-    </>
-
-}
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       {/* Developer Resources */}
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-      {/* Developer Resources */}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <section className='py-24 bg-gray-800'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <div className='text-center mb-20'>;
@@ -1865,10 +1117,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Developer Resources;
             </h2>;
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               Everything you need to get started and build amazing applications;
               with our APIs.;
             </p>;
@@ -1898,23 +1146,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </div>;
       </section>;
-<<<<<<< HEAD
-
-
-=======
-=======
-  );
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-    </>);
-=======
-);
-=======
-}
-  );
-}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
     </>);
 }
   );
@@ -1922,12 +1153,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
     </>);
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       {/* CTA Section */}
 <section className='py-24 bg-gradient-to-r from-indigo-600 to-indigo-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
@@ -1962,9 +1187,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

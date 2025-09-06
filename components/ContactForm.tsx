@@ -1,121 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-      });
-;
-      setSubmitStatus ('success');
-    } catch {
-      setSubmitStatus ('error');
-    } finally {
-      setIsSubmitting (false);
-    }
-  }
-;
-  return (
-    <div className="max - w-2xl mx - auto p - 6 bg - white rounded - lg shadow - lg">;
-      <h2 className="text - 3xl font - bold text - gray - 900 mb - 6 text - center">;
-        Get In Touch;
-      </h2>;
-      {submit_status === 'success' && (
-        <div className="mb - 6 p - 4 bg - green - 100 border border - green - 400 text - green - 700 rounded">;
-          Thank you for your message! We & apos;ll get back to you soon.;
-        </div>)}
-      {submit_status === 'error' && (
-        <div className="mb - 6 p - 4 bg - red - 100 border border - red - 400 text - red - 700 rounded">;
-          Something went wrong. Please try again.;
-        </div>)}
-      <form on_submit={handle_submit} className="space - y-6">;
-        <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
-          <div>;
-            <label html_for="name" className="block text - sm font - medium text - gray - 700 mb - 2">;
-              Name *;
-            </label>;
-            <input;
-              type="text";
-              id="name";
-              name="name";
-              value={form_data.name}
-              on_change={handleInputChange}
-              required;
-              className="w - full px - 3 py - 2 border border - gray - 300 rounded - md focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent";
-            />;
-          </div>;
-          <div>;
-            <label html_for="email" className="block text - sm font - medium text - gray - 700 mb - 2">;
-              Email *;
-            </label>;
-            <input;
-              type="email";
-              id="email";
-              name="email";
-              value={form_data.email}
-              on_change={handleInputChange}
-              required;
-              className="w - full px - 3 py - 2 border border - gray - 300 rounded - md focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent";
-            />;
-          </div>;
-        </div>;
-        <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
-          <div>;
-            <label html_for="company" className="block text - sm font - medium text - gray - 700 mb - 2">;
-              Company;
-            </label>;
-            <input;
-              type="text";
-              id="company";
-              name="company";
-              value={form_data.company}
-              on_change={handleInputChange}
-              className="w - full px - 3 py - 2 border border - gray - 300 rounded - md focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent";
-            />;
-          </div>;
-          <div>;
-            <label html_for="phone" className="block text - sm font - medium text - gray - 700 mb - 2">;
-              Phone;
-            </label>;
-            <input;
-              type="tel";
-              id="phone";
-              name="phone";
-              value={form_data.phone}
-              on_change={handleInputChange}
-              className="w - full px - 3 py - 2 border border - gray - 300 rounded - md focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent";
-            />;
-          </div>;
-        </div>;
-        <div>;
-          <label html_for="service" className="block text - sm font - medium text - gray - 700 mb - 2">;
-            Service Interest;
-          </label>;
-          <select;
-            id="service";
-            name="service";
-            value={form_data.service}
-            on_change={handleInputChange}
-            className="w - full px - 3 py - 2 border border - gray - 300 rounded - md focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent";
-          >;
-            <option value="">Select a service</option>;
-            <option value="web - development">Web Development</option>;
-            <option value="mobile - development">Mobile Development</option>;
-            <option value="ai - services">AI Services</option>;
-            <option value="cloud - solutions">Cloud Solutions</option>;
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React, { useState } from 'react';
 import LoadingSpinner from './LoadingSpinner';
 
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
@@ -123,6 +8,7 @@ interface FormData {
   name: string;
   email: string;
   company: string;
+  phone: string;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   service: string;
   message: string;
@@ -135,8 +21,6 @@ const ContactForm: React.FC = () => {
     company: '',
     phone: '',
     service: '',
-<<<<<<< HEAD
-<<<<<<< HEAD
     message: ''
   });
 
@@ -148,8 +32,8 @@ const ContactForm: React.FC = () => {
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }))
-};
+    }));
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -170,9 +54,6 @@ const ContactForm: React.FC = () => {
       });
     } catch {
       setSubmitStatus('error');
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     message: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -203,7 +84,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     }
   };
 
-<<<<<<< HEAD
   return (
     <div className="max-w-2xl mx-auto bg-white rounded-lgshadow-lgp-8">
       <h2 className="text-3xl font-bold text-gray-900mb-6text-center">Get In Touch</h2>
@@ -335,18 +215,11 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
         </button>
       </form>
     </div>
-  )
+  );
 };
 
-<<<<<<< HEAD
 export default ContactForm;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+pr-12243
       setSubmitStatus('success');
     } catch {;
       setSubmitStatus('error');
@@ -355,7 +228,6 @@ export default ContactForm;
     }
   }
   return (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <option value="consulting">Consulting</option>;
             <option value="other">Other</option>;
           </select>;
@@ -376,33 +248,6 @@ export default ContactForm;
       </form>;
     </div>;
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-export default ContactForm;
-export default ContactForm;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
-export default ContactForm;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   if (isSubmitted) {
     return (
       <div className="bg-green-50 border border-green-200 rounded-xl p-8 text-center">
@@ -581,9 +426,5 @@ export default ContactForm;
   );
 };
 export default ContactForm;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+pr-12243

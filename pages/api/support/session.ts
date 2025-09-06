@@ -1,14 +1,14 @@
 <<<<<<< HEAD
-
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import type { NextApiRequest, NextApiResponse } from 'next',;
-
+=======
+>>>>>>> pr-12243
+import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJson, writeJson } from '../../../utils/fsDb',;
 import { logSupportEventToOperator } from '../../../utils/operator',;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -23,8 +23,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   await logSupportEventToOperator({ type: eventType, sessionId, payload })
 
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
   return res.status(200).json({ ok: true });
 };
@@ -82,4 +80,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   return res.status(200).json({ ok: true })
 };
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

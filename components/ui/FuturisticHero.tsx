@@ -1,24 +1,7 @@
-<<<<<<< HEAD
-=======
-import Link from 'next / link';
-import AnimatedBackground from './AnimatedBackground';
-
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-export default function FuturisticHero() {
-
-
-export default function FuturisticHero() {
-
-=======
 export default function FuturisticHero() {
 
 export default function FuturisticHero() {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <section className='relative py-20 sm:py-28'>;
       <AnimatedBackground />;
       <div className='text-center max-w-4xl mx-auto'>;
@@ -58,17 +41,8 @@ function FuturisticHero() {
             </a>;
           </Link>;
         </div>;
-<<<<<<< HEAD
-
-  );
-}
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <p className="text-sm text-gray-700 dark:text-gray-300">
             Talent marketplace • Project accelerators • Secure contracts • Integrated AI toolchain
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     <section className='relative py-20 sm:py-28'>
       <AnimatedBackground />
       <div className='text-center max-w-4xl mx-auto'>
@@ -99,14 +73,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </p>
         </div>
       </div>
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         <div className='mt - 10 mx - auto max - w-3xl p - 6 rounded - 2xl bg - white / 70 dark:bg - black / 40 backdrop - blur border border - gray - 200 dark:border - gray - 800 shadow'>;
           <p className='text - sm text - gray - 700 dark:text - gray - 300'>;
@@ -136,18 +103,5 @@ function FuturisticHero() {
         </div>;
       </div>;
     </section>);
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 }
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

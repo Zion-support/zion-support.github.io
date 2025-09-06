@@ -1,79 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 
 
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 import { NextApiRequest,NextApiResponse } from 'next' import { createMocks,createRequest,createResponse } from 'node-mocks-http' import productHandler from '@/pages/api/products/index' import { PrismaClient } from '@prisma/client' jest.mock('@prisma/client',() => { const mPrismaClient = { product: { findMany: jest.fn(),aggregate: jest.fn() },productReview: { aggregate: jest.fn() },$queryRawUnsafe: jest.fn(),$disconnect: jest.fn() }; return { PrismaClient: jest.fn(() => mPrismaClient) }}); let prisma: PrismaClient interface ProductLike { id: string name: string description?: string images?: unknown[] price?: number | null currency?: string tags?: string[] } describe('/api/products API Endpoint', () => { let req: ReturnType<typeof createRequest> let res: ReturnType<typeof createResponse> beforeEach(() => { jest.clearAllMocks() prisma = new PrismaClient(); (prisma.productReview.aggregate as jest.Mock).mockResolvedValue({ _avg: { rating: null },_count: { id: 0 } })}) describe('GET /api/products with fuzzy search', () => { it('should return products matching "gpt"
     it('should return products matching "gpt"
           "id"
           "id"
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import { NextApiRequest,NextApiResponse } from 'next' import { createMocks,createRequest,createResponse } from 'node-mocks-http' import productHandler from '@/pages/api/products/index' import { PrismaClient } from '@prisma/client' jest.mock('@prisma/client',() => { const mPrismaClient = { product: { findMany: jest.fn(),aggregate: jest.fn() },productReview: { aggregate: jest.fn() },$queryRawUnsafe: jest.fn(),$disconnect: jest.fn() }; return { PrismaClient: jest.fn(() => mPrismaClient) }}); let prisma: PrismaClient interface ProductLike { id: string name: string description?: string images?: unknown[] price?: number | null currency?: string tags?: string[] } describe('/api/products API Endpoint', () => { let req: ReturnType<typeof createRequest> let res: ReturnType<typeof createResponse> beforeEach(() => { jest.clearAllMocks() prisma = new PrismaClient(); (prisma.productReview.aggregate as jest.Mock).mockResolvedValue({ _avg: { rating: null },_count: { id: 0 } })}) describe('GET /api/products with fuzzy search', () => { it('should return products matching "gpt"
-    it('should return products matching "gpt"
-          "id"
-          "id"
-          "id"
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import { NextApiRequest,NextApiResponse } from 'next' import { createMocks,createRequest,createResponse } from 'node-mocks-http' import productHandler from '@/pages/api/products/index' import { PrismaClient } from '@prisma/client' jest.mock('@prisma/client',() => { const mPrismaClient = { product: { findMany: jest.fn(),aggregate: jest.fn() },productReview: { aggregate: jest.fn() },$queryRawUnsafe: jest.fn(),$disconnect: jest.fn() }; return { PrismaClient: jest.fn(() => mPrismaClient) }}); let prisma: PrismaClient interface ProductLike { id: string name: string description?: string images?: unknown[] price?: number | null currency?: string tags?: string[] } describe('/api/products API Endpoint',() => { let req: ReturnType<typeof createRequest> let res: ReturnType<typeof createResponse> beforeEach(() => { jest.clearAllMocks() prisma = new PrismaClient(); (prisma.productReview.aggregate as jest.Mock).mockResolvedValue({ _avg: { rating: null },_count: { id: 0 } })}) describe('GET /api/products with fuzzy search',() => { it('should return products matching "gpt" with similarity >= 0.8',async () => { const mockRawResults = [ { id: 'product-gpt-high-score',name_similarity: 0.9,description_similarity: 0.5 },{ id: 'product-other',name_similarity: 0.2,description_similarity: 0.1 },{ id: 'product-gpt-medium-score',name_similarity: 0.82,description_similarity: 0.85 } ]; const mockProductsData: ProductLike[] = [ { id: 'product-gpt-high-score',name: 'Super GPT Model',description: 'Latest generation AI',images: [] price: null,currency: 'USD',tags: [] },{ id: 'product-gpt-medium-score',name: 'Advanced GPT Assistant',description: 'Your personal AI helper powered by GPT',images: [] price: null,currency: 'USD',tags: [] } ]; const filteredMockRawResults = mockRawResults .filter(p => p.name_similarity >= 0.3 || p.description_similarity >= 0.3) .sort((a,b) => Math.max(b.name_similarity,b.description_similarity) - Math.max(a.name_similarity,a.description_similarity) ) (prisma.$queryRawUnsafe as jest.Mock).mockResolvedValue(filteredMockRawResults) const expectedProductIds = filteredMockRawResults.map(p => p.id) (prisma.product.findMany as jest.Mock).mockImplementation( async ({ where }: { where: { id: { in: string[] } } }) => { return mockProductsData.filter(p => where.id.in.includes(p.id)) } ) const { req,res } = createMocks({ method: 'GET',url: '/api/products?q=gpt',query: { q: 'gpt' } }); await productHandler( req as unknown as NextApiRequest,res as unknown as NextApiResponse ); expect(res._getStatusCode()).toBe(200) const responseData: ProductLike[] = JSON.parse(res._getData()) expect(responseData.length).toBeGreaterThanOrEqual(1) expect(responseData.length).toBe(filteredMockRawResults.length); expect(responseData[0].id).toBe('product-gpt-high-score') expect(responseData[0].name).toBe('Super GPT Model') const idsFromResponse = responseData.map((p: ProductLike) => p.id) expect(idsFromResponse).toContain('product-gpt-high-score') expect(idsFromResponse).toContain('product-gpt-medium-score') expect(prisma.$queryRawUnsafe).toHaveBeenCalledWith( expect.stringContaining('similarity(name,$1)'),'gpt' ); expect(prisma.product.findMany).toHaveBeenCalledWith({ where: { id: { in: expectedProductIds } } }) }) }) })
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-import { NextApiRequest,NextApiResponse } from 'next' import { createMocks,createRequest,createResponse } from 'node-mocks-http' import productHandler from '@/pages/api/products/index' import { PrismaClient } from '@prisma/client' jest.mock('@prisma/client',() => { const mPrismaClient = { product: { findMany: jest.fn(),aggregate: jest.fn() },productReview: { aggregate: jest.fn() },$queryRawUnsafe: jest.fn(),$disconnect: jest.fn() }; return { PrismaClient: jest.fn(() => mPrismaClient) }}); let prisma: PrismaClient interface ProductLike { id: string name: string description?: string images?: unknown[] price?: number | null currency?: string tags?: string[] } describe('/api/products API Endpoint',() => { let req: ReturnType<typeof createRequest> let res: ReturnType<typeof createResponse> beforeEach(() => { jest.clearAllMocks() prisma = new PrismaClient(); (prisma.productReview.aggregate as jest.Mock).mockResolvedValue({ _avg: { rating: null },_count: { id: 0 } })}) describe('GET /api/products with fuzzy search',() => { it('should return products matching "gpt" with similarity >= 0.8',async () => { const mockRawResults = [ { id: 'product-gpt-high-score',name_similarity: 0.9,description_similarity: 0.5 },{ id: 'product-other',name_similarity: 0.2,description_similarity: 0.1 },{ id: 'product-gpt-medium-score',name_similarity: 0.82,description_similarity: 0.85 } ]; const mockProductsData: ProductLike[] = [ { id: 'product-gpt-high-score',name: 'Super GPT Model',description: 'Latest generation AI',images: [] price: null,currency: 'USD',tags: [] },{ id: 'product-gpt-medium-score',name: 'Advanced GPT Assistant',description: 'Your personal AI helper powered by GPT',images: [] price: null,currency: 'USD',tags: [] } ]; const filteredMockRawResults = mockRawResults .filter(p => p.name_similarity >= 0.3 || p.description_similarity >= 0.3) .sort((a,b) => Math.max(b.name_similarity,b.description_similarity) - Math.max(a.name_similarity,a.description_similarity) ) (prisma.$queryRawUnsafe as jest.Mock).mockResolvedValue(filteredMockRawResults) const expectedProductIds = filteredMockRawResults.map(p => p.id) (prisma.product.findMany as jest.Mock).mockImplementation( async ({ where }: { where: { id: { in: string[] } } }) => { return mockProductsData.filter(p => where.id.in.includes(p.id)) } ) const { req,res } = createMocks({ method: 'GET',url: '/api/products?q=gpt',query: { q: 'gpt' } }); await productHandler( req as unknown as NextApiRequest,res as unknown as NextApiResponse ); expect(res._getStatusCode()).toBe(200) const responseData: ProductLike[] = JSON.parse(res._getData()) expect(responseData.length).toBeGreaterThanOrEqual(1) expect(responseData.length).toBe(filteredMockRawResults.length); expect(responseData[0].id).toBe('product-gpt-high-score') expect(responseData[0].name).toBe('Super GPT Model') const idsFromResponse = responseData.map((p: ProductLike) => p.id) expect(idsFromResponse).toContain('product-gpt-high-score') expect(idsFromResponse).toContain('product-gpt-medium-score') expect(prisma.$queryRawUnsafe).toHaveBeenCalledWith( expect.stringContaining('similarity(name,$1)'),'gpt' ); expect(prisma.product.findMany).toHaveBeenCalledWith({ where: { id: { in: expectedProductIds } } }) }) }) })
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { NextApiRequest, NextApiResponse } from 'next'
 import { createMocks, createRequest, createResponse } from 'node-mocks-http'
 import productHandler from '@/pages/api/products/index'
@@ -117,6 +50,21 @@ describe('/api/products API Endpoint', () => {
   describe('GET /api/products with fuzzy search', () => {
     it('should return products matching "gpt" with similarity >= 0.8', async () => {
       // 1. Mock database responses
+      const mockRawResults = [{
+          "id": 'product-gpt-high-score',
+          "name_similarity": 0.9,
+          "description_similarity": 0.5
+        },
+        {
+          "id": 'product-other',
+          "name_similarity": 0.2,
+          "description_similarity": 0.1
+        },
+        {
+          "id": 'product-gpt-medium-score',
+          "name_similarity": 0.82,
+          "description_similarity": 0.85
+        }
       const mockRawResults = [
         {
           id: 'product-gpt-high-score',
@@ -227,52 +175,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       });
     });
   });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-});
-<<<<<<< HEAD
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
-});
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-          "id"
-});
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-
-          "id"
-
-=======
-          "id"});
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-});
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-});
-<<<<<<< HEAD
-=======
-=======
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
           "id"
 });
 
@@ -280,75 +182,12 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 });
 });
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ursor/add-new-services-and-deploy-updates-0462
 ursor/integrate-build-improve-and-re-verify-8f7d
           "id"
           "id"
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
-=======
-          "id"
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-});
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-<<<<<<< HEAD
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
-});
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 });
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
-<<<<<<< HEAD
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-});
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-=======
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
 main
-
-
 });
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -1,15 +1,10 @@
-<<<<<<< HEAD
 export interface CybersecurityQuantumService {
-<<<<<<< HEAD
 export interface CybersecurityQuantumService {;
   id: string;
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 id: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
   name: string;
-  tagline: string,
+  tagline: string;
   description: string;
   category: string;
   price: {
@@ -18,22 +13,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     currency: string;
     trialDays: number;
     setupTime: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     enterprise: string
   },
   features: string[];
@@ -58,19 +39,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   rating: number;
   reviews: number
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
   {
 
       'Leading AI-powered threat hunting platform. Competes with CrowdStrike ($8 && 8.99-15/user), SentinelOne ($4 && 4.99-8 && 8.99/user), and Carbon Black ($6 && 6.27-8 && 8.57/user). Our advantage: Autonomous threat hunting and AI intelligence.',
     competitors: ['CrowdStrike, SentinelOne, Carbon Black, Cylance, Darktrace'],
-<<<<<<< HEAD
-<<<<<<< HEAD
     techStack: [
       'OpenAI GPT-4, TensorFlow, PyTorch, React, Node && Node.js, PostgreSQL, Elasticsearch',
     ],
@@ -92,11 +66,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ]
     support:
       '24/7 security support, threat hunting training, custom development, and dedicated security manager.'
-    compliance: [];      'Application security testingNetwork vulnerability assessmentCloud security scanningCompliance auditingPenetration testingSecurity monitoring'
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+    compliance: [
 
-<<<<<<< HEAD
       'SOC 2 Type II, ISO 27001, NIST Cybersecurity Framework, FedRAMP, FISMA',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-threat-hunting-platform',
@@ -170,12 +141,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     link: 'https://ziontechgroup.com / ai - powered - threat - hunting - platform',
 
     icon: '🕵️',
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     color: 'from - purple - 500 to - indigo - 600',
     popular: true,
     launch_date: '2024 - 02 - 01',
@@ -184,23 +150,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 950,
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
       'Zscaler, Palo Alto Prisma, Cloudflare Access, Okta, Duo Security',
     ],
     techStack: ['OpenAI GPT-4, React, Node && Node.js, PostgreSQL, Redis, Kubernetes'],
     realImplementation: true,
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     implementationDetails:
       'Production-ready zero-trust platform with enterprise-grade security, comprehensive monitoring, and mobile applications. Includes admin dashboard and compliance tools.'
     roi: 'Organizations achieve 300% ROI through reduced security incidents and simplified access management.'
@@ -216,11 +172,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Active Directory, LDAP, SAML, OAuth, Custom identity providers'
     ]
     support:
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
       '24/7 technical support, implementation consulting, custom development, and dedicated success manager.',
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS, FedRAMP'],
@@ -293,12 +244,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     link: 'https://ziontechgroup.com / zero - trust - network - access - platform',
 
     icon: '🛡️',
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     color: 'from - blue - 500 to - cyan - 600',
     popular: true,
     launch_date: '2024 - 01 - 20',
@@ -307,11 +253,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 1400,
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
       'Highest security standards, Government security requirements, Industry-specific standards',
     ],
@@ -388,12 +329,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     link: 'https://ziontechgroup.com / quantum - key - distribution - network',
 
     icon: '🔮',
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     color: 'from - purple - 500 to - pink - 600',
     popular: true,
     launch_date: '2024 - 03 - 01',
@@ -402,23 +338,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 95,
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
       'Leading AI-powered vulnerability assessment platform. Competes with Nessus ($2,190-6,570/year), Qualys ($2,000-5,000/year), and Rapid7 ($2,000-8,000/year). Our advantage: AI intelligence and automated remediation.',
     competitors: ['Nessus, Qualys, Rapid7, OpenVAS, Acunetix'],
     techStack: ['OpenAI GPT-4, TensorFlow, React, Node && Node.js, PostgreSQL, Redis'],
     realImplementation: true,
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     implementationDetails:
       'Production-ready vulnerability assessment platform with AI-powered scanning, comprehensive reporting, and mobile applications. Includes API and integration tools.'
     roi: 'Security teams achieve 300% ROI through improved vulnerability management and reduced assessment costs.'
@@ -434,17 +360,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools'
     ]
     support:
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       '24/7 technical support, security consulting, custom development, and dedicated success manager.',
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
     link: 'https://ziontechgroup.com/ai-powered-vulnerability-assessment',
@@ -456,21 +373,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.8,
     reviews: 1900,
   },;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 ];      'Application security testingNetwork vulnerability assessmentCloud security scanningCompliance auditingPenetration testingSecurity monitoring'
 
-<<<<<<< HEAD
 
       '24/7 technical support, security consulting, custom development, and dedicated success manager.',
-=======
-=======
-=======
-
-];      'Application security testingNetwork vulnerability assessmentCloud security scanningCompliance auditingPenetration testingSecurity monitoring'
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     techStack: ['OpenAI GPT-4, TensorFlow, PyTorch, React, Node.js, PostgreSQL, Elasticsearch'],
     realImplementation: true;
     implementationDetails: 'Production-ready threat hunting platform with real-time monitoring, automated response, and comprehensive analytics. Includes mobile app and security dashboard.',
@@ -616,22 +522,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ];
     integrations: ['Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools'],
     support: '24/7 technical support, security consulting, custom development, and dedicated success manager.',
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
-=======
-      '24/7 technical support, security consulting, custom development, and dedicated success manager.',    compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-vulnerability-assessment',
     id: 'ai - powered - vulnerability - assessment',
     name: 'AI - Powered Vulnerability Assessment Platform',
@@ -696,19 +588,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     support:;
       '24 / 7 technical support, security consulting, custom development, and dedicated success manager.',
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
-<<<<<<< HEAD
-<<<<<<< HEAD
-    link: 'https://ziontechgroup.com / ai - powered - vulnerability - assessment',
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
     link: 'https://ziontechgroup.com / ai - powered - vulnerability - assessment',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     icon: '🔍',
     color: 'from - green - 500 to - emerald - 600',
     popular: true,
@@ -717,12 +599,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4 && 4.8,
     reviews: 1900,
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
   id: string, name: string,
   tagline: string, description: string,
@@ -749,8 +625,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 ];      'Application security testing_network vulnerability assessment_cloud security scanning_compliance auditing_penetration testing_security monitoring';
 origin/cursor/automate-test-improve-and-merge-code-20a4
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     ];
 
     integrations: ['Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools'];
@@ -758,78 +632,41 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'];
 
     icon: '🔍';
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     color: 'from - green - 500 to - emerald - 600';
-=======
-    link: 'https://ziontechgroup.com / ai - powered - vulnerability - assessment',    color: 'from - green - 500 to - emerald - 600';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     popular: true;
     launch_date: '2024 - 02 - 15';
     customers: 2500;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-    rating: 4.8,
-    reviews: 1900
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-<<<<<<< HEAD
     rating: 4.8,
     reviews: 1900;
   }
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-
-<<<<<<< HEAD
-=======
-=======
-=======
+    rating: 4.8,
+    reviews: 1900;
+  }
+;
 
     rating: 4 && 4.8,
 
     reviews: 1900
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+    rating: 4.8,
+    reviews: 1900;
+  }
+
 
 export interface CybersecurityQuantumService {;
 
   }
 
 ];
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-=======
 origin/cursor/integrate-build-improve-and-re-verify-2156
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 ;
-export interface CybersecurityQuantumService {;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-  id: string,;
-=======
-};
+origin/cursor/expand-services-advertise-and-build-project-c28b
   }
-];  id: string,;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+];
+export interface CybersecurityQuantumService {;
+  id: string,;
   name: string,;
-  tagline: string,,
+  tagline: string,;
   description: string,;
   category: string,;
   price: {;
@@ -867,8 +704,8 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
   {;
     id: 'quantum-resistant-encryption-platform',;
     name: 'Quantum-Resistant Encryption Platform',;
-    tagline: 'Future-proof security with post-quantum cryptography',,
-  description: 'Revolutionary encryption platform that implements quantum-resistant algorithms, ensuring data security remains impenetrable even when quantum computers become mainstream.',;
+    tagline: 'Future-proof security with post-quantum cryptography',;
+    description: 'Revolutionary encryption platform that implements quantum-resistant algorithms, ensuring data security remains impenetrable even when quantum computers become mainstream.',;
     category: 'Quantum Security & Cryptography',;
     price: {;
       monthly: 499,;
@@ -912,8 +749,8 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
   {;
     id: 'ai-powered-threat-hunting-platform',;
     name: 'AI-Powered Threat Hunting Platform',;
-    tagline: 'Proactive threat detection with autonomous security intelligence',,
-  description: 'Advanced AI-powered cybersecurity platform that autonomously hunts for threats, analyzes attack patterns, and provides real-time security intelligence to prevent cyber attacks.',;
+    tagline: 'Proactive threat detection with autonomous security intelligence',;
+    description: 'Advanced AI-powered cybersecurity platform that autonomously hunts for threats, analyzes attack patterns, and provides real-time security intelligence to prevent cyber attacks.',;
     category: 'AI Cybersecurity & Threat Intelligence',;
     price: {;
       monthly: 399,;
@@ -957,8 +794,8 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
   {;
     id: 'zero-trust-network-access-platform',;
     name: 'Zero-Trust Network Access Platform',;
-    tagline: 'Secure access with continuous verification and least privilege',,
-  description: 'Comprehensive zero-trust platform that provides secure, context-aware access to applications and resources while continuously verifying user identity and device health.',;
+    tagline: 'Secure access with continuous verification and least privilege',;
+    description: 'Comprehensive zero-trust platform that provides secure, context-aware access to applications and resources while continuously verifying user identity and device health.',;
     category: 'Zero-Trust Security & Access Control',;
     price: {;
       monthly: 299,;
@@ -1002,8 +839,8 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
   {;
     id: 'quantum-key-distribution-network',;
     name: 'Quantum Key Distribution Network',;
-    tagline: 'Unhackable communication with quantum entanglement',,
-  description: 'Revolutionary quantum key distribution network that uses quantum entanglement to create unbreakable encryption keys, ensuring absolutely secure communications.',;
+    tagline: 'Unhackable communication with quantum entanglement',;
+    description: 'Revolutionary quantum key distribution network that uses quantum entanglement to create unbreakable encryption keys, ensuring absolutely secure communications.',;
     category: 'Quantum Communications & Security',;
     price: {;
       monthly: 999,;
@@ -1047,8 +884,8 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
   {;
     id: 'ai-powered-vulnerability-assessment',;
     name: 'AI-Powered Vulnerability Assessment Platform',;
-    tagline: 'Intelligent security scanning with AI-driven risk analysis',,
-  description: 'Advanced vulnerability assessment platform that uses AI to identify, prioritize, and remediate security vulnerabilities with unprecedented accuracy and speed.',;
+    tagline: 'Intelligent security scanning with AI-driven risk analysis',;
+    description: 'Advanced vulnerability assessment platform that uses AI to identify, prioritize, and remediate security vulnerabilities with unprecedented accuracy and speed.',;
     category: 'Vulnerability Management & Security Testing',;
     price: {;
       monthly: 199,;
@@ -1088,52 +925,13 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     customers: 2500,;
     rating: 4.8,;
     reviews: 1900;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
     rating: 4.8,
     reviews: 1900;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
-
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   }
-=======
-    rating: 4.8,
-    reviews: 1900;  }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     rating: 4.8;
     reviews: 1900
   }
 ];
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

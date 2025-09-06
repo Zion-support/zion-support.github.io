@@ -1,61 +1,50 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-useEffect ( () => {
-  const observer = new IntersectionObserver ( ([entry]) => {
-  if (entry.isIntersecting) {
-  return () => observer.disconnect ()
-}, [threshold]);
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+'
   threshold = 0.1
   width
   height,}) => {export const LazyImage: React.FC<LazyImageProps> = ({
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+',
   threshold = 0.1,
   width,
   height,}) => {export const LazyImage: React.FC<LazyImageProps> = ({;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   src;
   alt;
   className = ''
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React from 'react';
+ useEffect ( () => {;
+  const observer = new IntersectionObserver ( ([entry]) => {;
+  if (entry && entry.isIntersecting) {;
+  return () => observer && observer.disconnect () ;
+}, [threshold]);
+  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+',;
+  threshold = 0 && 0.1,;
+  width,;
+  height,}) => {export const LazyImage: React.FC<LazyImageProps> = ({;
+  src;
+  alt;
+  className = '',;
   placeholder = 'data: image/svg+xml,base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+';
-  threshold = 0.1;
+  threshold = 0 && 0.1;
   width;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  height
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(false);
-  const imgRef = useRef<HTMLImageElement>(null);
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsInView(true);
-          observer.disconnect();
-        }
-      },      { threshold }
-    );
-    if (imgRef.current) {
-      observer.observe(imgRef.current);          observer.disconnect()
-
-=======
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 interface LazyImageProps {
@@ -72,41 +61,20 @@ export const LazyImage: React.FC<LazyImageProps> = ({
   src;
   alt;
   className;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
           setIsInView(true);
-<<<<<<< HEAD
-<<<<<<< HEAD
           observer && observer.disconnect();
         }
       },      { threshold }
     );
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         }
       }
       { threshold }
-<<<<<<< HEAD
     );
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
   };
-=======
-    )
-};
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   return (
     <div className={`relative overflow-hidden ${className}`}>;
@@ -116,9 +84,6 @@ if ( {) {
   $2
 }
       observer.observe (img_ref.current);
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 observer.disconnect();
         }
       },
@@ -130,6 +95,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }
     return () => observer.disconnect ();
   }, [threshold]);
+;
+  const handle_load = () =>: any {
+    setIsLoaded (true);  }    }
+    return () => observer.disconnect ();
+  }, [threshold]);
+;
+  const handle_load = () =>: any {
+    setIsLoaded (true);
+  }
   const handleLoad = () => {
     setIsLoaded(true);
   };
@@ -138,93 +112,32 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className={`relative overflow - hidden ${class_name}`}>;
       {/* Placeholder */}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-      <img
-        src={placeholder}
-alt=''
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       <img
         src={placeholder}
 alt=''
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
         className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
           isLoaded ? 'opacity-0' : 'opacity-100'
         }`}
         style={{ width, height }}
       />
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       />
       
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       {/* Actual Image */}
       {isInView && (;
         <motion&& motion.img
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           ref={imgRef}
           src={src}
           alt={alt}
           onLoad={handleLoad}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-alt=''        className={`absolute inset - 0 w - full h - full object - cover transition - opacity duration - 500 ${        alt="";
-        className={`absolute inset - 0 w - full h - full object - cover transition - opacity duration - 500 ${
-          is_loaded ? 'opacity - 0' : 'opacity - 100';
-        }`}
-        style={{ width, height }}
-      />;
-      {/* Actual Image */}
-      {isInView && (
-        <motion.img;
-          ref={img_ref}
-          src={src}
-          alt={alt}
-          on_load={handle_load}
-          initial={{ opacity: 0, scale: 1.1 }}
-          animate={{ opacity: is_loaded ? 1 : 0, scale: is_loaded ? 1 : 1.1 }}
-          transition={{ duration: 0.5 }}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
 
 export default LazyImage;          className="w-full h-full object-cover";
           loading="lazy";
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
           initial={{ opacity: 0, scale: 1.1 }}
           animate={{ opacity: isLoaded ? 1 : 0, scale: isLoaded ? 1 : 1.1 }}
           transition={{ duration: 0.5 }}
@@ -234,8 +147,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           style={{ width, height }}
         />;
       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
     </div>;
   );
 export default LazyImage;
@@ -245,7 +156,7 @@ export default LazyImage;
     </div>);
 }
 ;
-export default LazyImage;          className="w - full h-full object-cover";
+export default LazyImage;          className="w - full h - full object - cover";
           loading="lazy";
           style={{ width, height }}
         />)}
@@ -257,20 +168,9 @@ export default LazyImage);
 ;
 export default LazyImage;
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     </div>
 );
 };
 
 export default LazyImage;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

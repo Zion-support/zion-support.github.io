@@ -1,60 +1,33 @@
 {
   "compilerOptions": {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "es6"],
-=======
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     "target": "ES2020",
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     "lib": [
       "dom",
       "dom.iterable",
-<<<<<<< HEAD
-      "ES2020"
-=======
-      "esnext"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
+      "es6",
+      "es2017",
+      "es2018",
+      "es2019",
+      "es2020",
+      "es2021",
+      "es2022"
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": false,
+    "strict": true,
     "noEmit": true,
-    "incremental": true,
     "esModuleInterop": true,
 <<<<<<< HEAD
-<<<<<<< HEAD
     "module": "esnext",
-<<<<<<< HEAD
     "moduleResolution": "bundler",
-=======
-    "moduleResolution": "node",
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
     "module": "ESNext",
     "moduleResolution": "node",
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-    "module": "esnext",
-    "moduleResolution": "bundler",
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> pr-12243
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
+    "incremental": true,
     "plugins": [
       {
         "name": "next"
@@ -63,131 +36,37 @@
     "baseUrl": ".",
     "paths": {
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      "@/*": [
-        "./*"
-      ]
-=======
-      "@/*": ["./*"]
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-    }
-  },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       "@/*": ["./src/*"],
       "@/components/*": ["./src/components/*"],
+      "@/pages/*": ["./src/pages/*"],
       "@/utils/*": ["./src/utils/*"],
-<<<<<<< HEAD
       "@/hooks/*": ["./src/hooks/*"],
       "@/types/*": ["./src/types/*"],
       "@/styles/*": ["./src/styles/*"],
       "@/assets/*": ["./src/assets/*"]
     },
     "allowSyntheticDefaultImports": true
-  }
-}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
 =======
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       "@/*": ["./*"],
       "@/components/*": ["./components/*"],
       "@/pages/*": ["./pages/*"],
       "@/styles/*": ["./styles/*"],
       "@/utils/*": ["./utils/*"],
       "@/types/*": ["./types/*"]
-<<<<<<< HEAD
-    }
-=======
     },
     "allowSyntheticDefaultImports": true
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-      "@/*": ["./*"]
-    }
-=======
-      "@/*": [
-        "./*"
-      ],
-      "@/components/*": [
-        "./components/*"
-      ],
-      "@/pages/*": [
-        "./pages/*"
-      ],
-      "@/styles/*": [
-        "./styles/*"
-      ],
-      "@/utils/*": [
-        "./utils/*"
-      ],
-      "@/types/*": [
-        "./types/*"
-      ]
-    },
-    "allowSyntheticDefaultImports": true,
-    "strictNullChecks": true
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-      "@/types/*": ["./src/types/*"]
-    }
-  },
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   "include": [
     "next-env.d.ts",
-    ".next/types/**/*.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"
   ]
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+>>>>>>> pr-12243
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-}
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-}
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
-}
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -1,11 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEADexport default PerformanceEnhancer.dynamic;
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+pr-12243
 ;
 const PerformanceEnhancer.dynamic = () => {
   return (
@@ -15,9 +10,5 @@ const PerformanceEnhancer.dynamic = () => {
 }
 ;
 
-<<<<<<< HEAD
+pr-12243
 export default PerformanceEnhancer.dynamic;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-export default PerformanceEnhancer.dynamic;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

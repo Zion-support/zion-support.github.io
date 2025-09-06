@@ -1,18 +1,6 @@
-<<<<<<< HEAD:src/components/services/ServiceLandingTemplate.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-import React from "react",
-import { GradientHeading } from "@/components/GradientHeading",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardFooter } from "@/components/ui/card",
-import Image from "next/image",
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 name: string;
 =======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/services/ServiceLandingTemplate.tsx
 import React from 'react';
 import { GradientHeading } from '@/components/GradientHeading';
 import { Button } from '@/components/ui/button';
@@ -26,11 +14,12 @@ export interface Benefit {
 }
 export interface Testimonial {
   name: string;
-origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   role?: string;
   text: string;
   avatar?: string
 }
+
 
 interface ServiceLandingTemplateProps {;
 
@@ -41,7 +30,6 @@ interface ServiceLandingTemplateProps {;
   benefits: Benefit[];
   testimonials: Testimonial[];
   ctaText: string;
-<<<<<<< HEAD:src/components/services/ServiceLandingTemplate.tsx
 <<<<<<< HEAD
 import React from "react";
 import { GradientHeading } from "@/components/GradientHeading";
@@ -88,65 +76,36 @@ export interface Benefit {;
 }
 export const ServiceLandingTemplate: React.FC < ServiceLandingTemplateProps> = ({
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export interface Benefit {
-  title: string,
-  description: string,
+  title: string;
+  description: string;
   icon?: React.ReactNode
-<<<<<<< HEAD
-import React from "react",;
-import { GradientHeading } from "@/components/GradientHeading",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardFooter } from "@/components/ui/card",;
-import Image from "next/image",;
-export interface Benefit {;
-  title: string,;
-  description: string,;
-  icon?: React.ReactNode;
-}
-;
-export interface Testimonial {;
-  name: string,;
-  role?: string,;
-  text: string,;
-  avatar?: string;
-}
-;
-interface ServiceLandingTemplateProps {;
-  title: string,;
-  subtitle: string,;
-  heroImage?: string,;
-  description: string,;
-  benefits: Benefit[],;
-  testimonials: Testimonial[],;
-  ctaText: string,;
-  ctaLink: string;
-=======
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 
 export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
+
   title,
   subtitle,
-=======
+<<<<<<< HEAD
   heroImage,
-
-main
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/services/ServiceLandingTemplate.tsx
-
-  description,
-  benefits,
+=======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+  heroImage,
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> pr-12243
+  description,
+  benefits,
+
 
 export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
   title,;
@@ -162,18 +121,10 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
   return (
 
           </p>
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   testimonials,
   ctaText,
-<<<<<<< HEAD
-  ctaLink}) => {
-=======
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   return (
     <div className="bg-background text-white">
       <section className="bg-zion-blue py-16 px-4 text-center">
@@ -184,14 +135,8 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
             {subtitle}
           </p>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           {heroImage && (
             <div className="mx-auto mt-8 rounded-lg shadow-xl max-w-3xl relative h-80">
               <Image
@@ -208,21 +153,10 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
       <section className="py-12 px-4">
         <div className="container mx-auto text-center">
           <p className="text-lg text-zion-slate-light max-w-3xl mx-auto">
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+
             {description}
-<<<<<<< HEAD
-          </p>
-        </div>
-      </section>
-=======
 
     <div className="min - h-screen bg - white">;
       <section className="py - 20 px - 4 bg - gradient - to - br from - blue - 50 to - indigo - 100">;
@@ -240,8 +174,6 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
         </div>;
       </section>;
       {benefits.length > 0 && (
-<<<<<<< HEAD:src/components/services/ServiceLandingTemplate.tsx
-
         <section className="py - 16 px - 4">;
           <div className="max - w-7xl mx - auto">;
             <h2 className="text - 3xl font - bold text - center text - gray - 900 mb - 12">;
@@ -262,10 +194,6 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
             </div>;
           </div>;
         </section>;
-
-<<<<<<< HEAD
-=======
-=======
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
@@ -278,7 +206,6 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
                     <div className="mb-4 text-blue-600">
                       {benefit.icon}
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/services/ServiceLandingTemplate.tsx
           </p>;
         </div>;
       </section>;
@@ -297,6 +224,7 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
                       {benefit && benefit.icon}
                     </div>;
 
+=======
   title;
   subtitle;
   heroImage;
@@ -368,7 +296,7 @@ className='rounded-full mr-4'
                         <p className='text-sm text-gray-400'>{t.role}</p>
                       )}
                     </div>
-origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                   )}
                   <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
                   <p className="text-gray-600">{benefit.description}</p>
@@ -377,15 +305,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </div>
         </section>
-<<<<<<< HEAD:src/components/services/ServiceLandingTemplate.tsx
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-main
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/services/ServiceLandingTemplate.tsx
       )}
+
 
       {features && features.length > 0 && (;
         <section className="py-16 px-4 bg-gray-50">;
@@ -401,15 +322,9 @@ main
                 </div>;
 
               ))}
-<<<<<<< HEAD:src/components/services/ServiceLandingTemplate.tsx
-
-=======
             </div>
           </div>
         </section>
-
-main
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/services/ServiceLandingTemplate.tsx
       )}
 
                     </div>)}
@@ -436,27 +351,20 @@ main
         </section>)}
 
       {stats.length > 0 && (
-<<<<<<< HEAD:src/components/services/ServiceLandingTemplate.tsx
-
         <section className="py - 16 px - 4">;
           <div className="max - w-7xl mx - auto">;
             <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8 text - center">;
               {stats.map ((stat, index) => (
                 <div key={index}>;
                   <div className="text - 4xl font - bold text - blue - 600 mb - 2">;
-=======
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
               {stats.map((stat, index) => (
                 <div key={index}>
                   <div className="text-4xl font-bold text-blue-600 mb-2">
-
-main
                     {stat.value}
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/services/ServiceLandingTemplate.tsx
 
-                    {stat.value}
 
       {stats && stats.length > 0 && (;
         <section className="py-16 px-4">;
@@ -471,17 +379,11 @@ main
                 </div>;
 
               ))}
-<<<<<<< HEAD:src/components/services/ServiceLandingTemplate.tsx
-=======
             </div>
           </div>
         </section>
-
-main
       )}
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/services/ServiceLandingTemplate.tsx
 
-      )}
 
       <section className="py-16 px-4 bg-blue-600">;
         <div className="max-w-4xl mx-auto text-center">;
@@ -494,14 +396,8 @@ main
 
           <a
             href={ctaLink}
-<<<<<<< HEAD:src/components/services/ServiceLandingTemplate.tsx
-
-=======
             className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block"
           >
-
-main
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/services/ServiceLandingTemplate.tsx
             {ctaText}
 
           </a>;
@@ -510,11 +406,7 @@ main
     </div>;
   );
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       <section className="py-16 bg-zion-blue-light">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold text-white text-center mb-8">
@@ -529,13 +421,23 @@ main
                 {benefit.icon && (
                   <div className="mb-4 flex justify-center text-zion-cyan">
                     {benefit.icon}
-<<<<<<< HEAD:src/components/services/ServiceLandingTemplate.tsx
+<<<<<<< HEAD
+                  </div>;
+=======
+<<<<<<< HEAD
+                  </div>
+=======
+<<<<<<< HEAD
+                  </div>
+=======
+<<<<<<< HEAD
+                  </div>
 =======
                   </div>;
-
-main
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/services/ServiceLandingTemplate.tsx
-
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> pr-12243
                 )}
                 <h3 className="text-lg font-bold mb-2">{benefit.title}</h3>
                 <p className="text-zion-slate-light">{benefit.description}</p>
@@ -545,7 +447,6 @@ main
         </div>
       </section>
 
-<<<<<<< HEAD:src/components/services/ServiceLandingTemplate.tsx
 <<<<<<< HEAD
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4">
@@ -578,20 +479,38 @@ main
                       {t.role && (
                         <p className="text-sm text-gray-400">{t.role}</p>
                       )}
-
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> pr-12243
                     </div>
                   </div>
                 </CardFooter>
               </Card>
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> pr-12243
                     </div>;
                   </div>;
                 </CardFooter>;
               </Card>;
-
-main
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/services/ServiceLandingTemplate.tsx
-
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> pr-12243
             ))}
           </div>
         </div>
@@ -603,20 +522,27 @@ main
           className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white"
           asChild
         >
-<<<<<<< HEAD:src/components/services/ServiceLandingTemplate.tsx
+<<<<<<< HEAD
+          <a href={ctaLink}>{ctaText}</Link>
+=======
+<<<<<<< HEAD
+          <a href={ctaLink}>{ctaText}</a>
+=======
+<<<<<<< HEAD
+          <a href={ctaLink}>{ctaText}</a>
+=======
+<<<<<<< HEAD
+          <a href={ctaLink}>{ctaText}</a>
 =======
           <a href={ctaLink}>{ctaText}</Link>
-
-main
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/services/ServiceLandingTemplate.tsx
-
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> pr-12243
         </Button>
       </section>
     </div>
   )
-<<<<<<< HEAD
-},
-=======
 
                   </div>;
                   <div className="text - gray - 600">{stat.label}</div>;
@@ -644,13 +570,7 @@ main
 }
 
 },
-<<<<<<< HEAD:src/components/services/ServiceLandingTemplate.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/services/ServiceLandingTemplate.tsx
 <section className='py-12 bg-zion-blue-dark text-center'>
         <Button
           size='lg'
@@ -664,9 +584,4 @@ main
 );
 };
 "
-<<<<<<< HEAD:src/components/services/ServiceLandingTemplate.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/services/ServiceLandingTemplate.tsx

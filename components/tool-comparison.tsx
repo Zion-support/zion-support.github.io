@@ -1,38 +1,11 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import {
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-  Search
-  Filter
-  TrendingUp
-  DollarSign
-  Users
-  Star
-  Check
-  X
-  ArrowRight
-  ExternalLink
-  Zap
-  Brain
-  Globe
-  Rocket;} from 'lucide-react';import {
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 import Head from 'next / head';
 import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
 import {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   Search,
   Filter,
   TrendingUp,
@@ -45,11 +18,6 @@ import {
   ExternalLink,
   Zap,
   Brain,
-<<<<<<< HEAD
-  Globe,
-  Rocket,;} from 'lucide-react';import { 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   Globe,;
   Rocket,;} from 'lucide-react';import { ;
   Search;
@@ -57,38 +25,20 @@ import {
   TrendingUp
   DollarSign
   Users
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-  Search;
-  Filter
-  TrendingUp
-  DollarSign
-  Users
 
-=======
+
 
   Search;
   Filter,
   TrendingUp,
   DollarSign,
   Users,
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { Search;
   Filter;
   TrendingUp;
   DollarSign;
   Users;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   Star;
   Check;
   X;
@@ -97,99 +47,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   Zap;
   Brain;
   Globe;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  Rocket
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-<<<<<<< HEAD
-=======
 export default function ToolComparisonPage() {;
 
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   Rocket
  } from 'lucide-react';
 origin/cursor/automate-test-improve-and-merge-code-2533
 export default function ToolComparisonPage() {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const [searchTerm, setSearchTerm] = React.useState('');
   const [selectedCategory, setSelectedCategory] = React.useState('All');
   const [sortBy, setSortBy] = React.useState('rating');
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-  const allTools = [
-    // AI Tools
-    {
-<<<<<<< HEAD
-      name: 'ChatGPT'
-      category: 'AI Assistant'
-      pricing: 'Free - $20/month'
-      rating: 4.8
-      users: '100M+'
-      bestFor: 'Content creators, developers, researchers'
-      pros: [
-        'Powerful capabilities'
-        'Easy to use'
-        'Regular updates'
-        'Good free tier'
-      ]
-      cons: ['Sometimes inaccurate', 'Limited context', 'Privacy concerns']
-      website: 'https://chat.openai.com'
-      icon: <Brain className='w-6 h-6' />
-      color: 'text-green-400'
-    },    {      bestFor: 'Content creators, developers, researchers';
-      pros: ['Powerful capabilitiesEasy to useRegular updatesGood free tier']
-      cons: ['Sometimes inaccurateLimited contextPrivacy concerns']
-      website: 'https://chat.openai.com'
-      icon: <Brain className="w-6 h-6" />
-      color: 'text-green-400'
-    }
-    {
-      name: 'Midjourney'
-      category: 'AI Art'
-      pricing: '$10 - $30/month'
-      rating: 4.7
-      users: '1M+'
-      bestFor: 'Designers, marketers, content creators'
-      pros: [
-        'High-quality output'
-        'Creative control'
-        'Commercial rights'
-        'Active community'
-      ]
-      cons: [
-        'Discord-only interface'
-        'Limited customization'
-        'Monthly subscription'
-      ]
-      website: 'https://midjourney.com'
-      icon: <Zap className='w-6 h-6' />
-      color: 'text-purple-400'
-    },    {      bestFor: 'Designers, marketers, content creators';
-      pros: ['High-quality outputCreative controlCommercial rightsActive community']
-      cons: ['Discord-only interfaceLimited customizationMonthly subscription']
-      website: 'https://midjourney.com'
-      icon: <Zap className="w-6 h-6" />
-      color: 'text-purple-400'
-    }
-    {
-      name: 'Jasper'
-      category: 'AI Writing'
-      pricing: '$39 - $125/month'
-      rating: 4.6
-      users: '100K+'
-      bestFor: 'Marketing teams, content creators, businesses'
-      pros: [
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-  const [searchTerm, setSearchTerm] = React.useState('');
-  const [selectedCategory, setSelectedCategory] = React.useState('All');
-  const [sortBy, setSortBy] = React.useState('rating');
   const allTools = [
     // AI Tools
   Rocket;
@@ -204,66 +72,6 @@ function ToolComparisonPage() {
   const all_tools = [;
     // AI Tools;
     {
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
-        'Specialized for marketing',
-        'Brand voice training',
-        'SEO optimization',
-        'Team features',
-      ],
-      cons: ['Expensive', 'Limited free trial', 'Can be repetitive'],
-      website: 'https://jasper.ai',
-=======
-      icon: <Brain className='w-6 h-6' />,
-      color: 'text-blue-400',
-    },    // SaaS Tools
-
-    // SaaS Tools
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
-    {
-      name: 'Zapier',
-      category: 'Automation',
-      pricing: 'Free - $19.99/month',
-      rating: 4.8,
-      users: '2M+',
-      bestFor: 'Businesses looking to automate workflows',
-
-      name: 'Notion',
-      category: 'Productivity',
-      pricing: 'Free - $8/month',
-      rating: 4.7,
-      users: '20M+',
-      bestFor: 'Teams that need flexible workspace',
-
-    {
-
-      name: 'Stripe',
-      category: 'Payments',
-      pricing: '2.9% + 30¢ per transaction',
-      rating: 4.9,
-      users: '1M+',
-
-        'Global reach',
-        'Excellent docs',
-        'Reliable',
-      ],
-
-        'Higher fees than some alternatives',
-        'Complex for beginners',
-        'Strict requirements',
-      ],
-      website: 'https://stripe.com',
-
-        'Can get expensive',
-        'Complex for small teams',
-        'Limited customization',
-      ],
-      website: 'https://hubspot.com',
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       pros: [
         'Easy to use'
         'Extensive integrations'
@@ -314,9 +122,6 @@ function ToolComparisonPage() {
         'Excellent docs'
         'Reliable'
       ]
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       name: 'ChatGPT',
       category: 'AI Assistant',
       pricing: 'Free - $20/month',
@@ -484,18 +289,13 @@ pros: [
         'Time-saving',
       ],
       cons: [
-<<<<<<< HEAD
-<<<<<<< HEAD
         'Limited free features'
         'Basic customization'
         'Can be expensive'
       ]
       icon: <Globe className='w-6 h-6' />
-<<<<<<< HEAD
-
-=======
       website: 'https://chat.openai.com',
-      icon: <Brain className="w-6 h-6" />,
+      icon: <Brain className="w - 6 h - 6" />,
       color: 'text - green - 400';
     }
     {
@@ -505,7 +305,7 @@ pros: [
       rating: 4.7,
       users: '1M+',
       website: 'https://midjourney.com',
-      icon: <Zap className="w-6 h-6" />,
+      icon: <Zap className="w - 6 h - 6" />,
       color: 'text - purple - 400';
     }
     {
@@ -515,7 +315,7 @@ pros: [
       rating: 4.6,
       users: '100K+',
       website: 'https://jasper.ai',
-      icon: <Brain className="w-6 h-6" />,
+      icon: <Brain className="w - 6 h - 6" />,
       color: 'text - blue - 400';
     }
     // SaaS Tools;
@@ -531,7 +331,7 @@ pros: [
       rating: 4.7,
       users: '20M+',
       website: 'https://stripe.com',
-      icon: <DollarSign className="w-6 h-6" />,
+      icon: <DollarSign className="w - 6 h - 6" />,
       color: 'text - blue - 400';
     }
     // Startup Tools;
@@ -542,7 +342,7 @@ pros: [
       rating: 4.7,
       users: '135K+',
       website: 'https://hubspot.com',
-      icon: <TrendingUp className="w-6 h-6" />,
+      icon: <TrendingUp className="w - 6 h - 6" />,
       color: 'text - orange - 400';
     }
     {
@@ -552,7 +352,7 @@ pros: [
       rating: 4.5,
       users: '12M+',
       website: 'https://mailchimp.com',
-      icon: <Users className="w-6 h-6" />,
+      icon: <Users className="w - 6 h - 6" />,
       color: 'text - yellow - 400';
     }
     {
@@ -561,9 +361,6 @@ pros: [
       pricing: 'Free - $12 / month',
       rating: 4.8,
       users: '10M+',
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
         'Limited free features',
         'Basic customization',
         'Can be expensive',
@@ -602,8 +399,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       case 'rating':
         return b.rating - a.rating;
       case 'users':
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   const allTools = [;
     // AI Tools;
@@ -629,8 +424,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       cons: ['Sometimes inaccurateLimited contextPrivacy concerns'],;
       website: 'https://chat && chat.openai.com',;
       icon: <Brain className="w-6 h-6" />,;
-      color: 'text-green-400'
-};
+      color: 'text-green-400';
+    };
     {;
       name: 'Midjourney',;
       category: 'AI Art',;
@@ -657,8 +452,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       cons: ['Discord-only interfaceLimited customizationMonthly subscription'],;
       website: 'https://midjourney && midjourney.com',;
       icon: <Zap className="w-6 h-6" />,;
-      color: 'text-purple-400'
-};
+      color: 'text-purple-400';
+    };
     {;
       name: 'Jasper',;
       category: 'AI Writing',;
@@ -681,8 +476,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       cons: ['ExpensiveLimited free trialCan be repetitive'],;
       website: 'https://jasper && jasper.ai',;
       icon: <Brain className="w-6 h-6" />,;
-      color: 'text-blue-400'
-};
+      color: 'text-blue-400';
+    };
     // SaaS Tools;
     {;
       name: 'Zapier',;
@@ -705,8 +500,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       cons: ['Can get expensiveLimited customization'],;
       website: 'https://zapier && zapier.com',;
       icon: <Zap className="w-6 h-6" />,;
-      color: 'text-orange-400'
-};
+      color: 'text-orange-400';
+    };
       name: 'Notion',;
       category: 'Productivity',;
       pricing: 'Free - $8/month',;
@@ -727,8 +522,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       cons: ['Learning curveLimited offline accessCan be overwhelming'],;
       website: 'https://notion && notion.so',;
       icon: <Globe className="w-6 h-6" />,;
-      color: 'text-gray-400'
-};
+      color: 'text-gray-400';
+    };
       name: 'Stripe',;
       category: 'Payments',;
       pricing: '2 && 2.9% + 30¢ per transaction',;
@@ -754,8 +549,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       cons: ['Higher fees than some alternativesComplex for beginnersStrict requirements'],;
       website: 'https://stripe && stripe.com',;
       icon: <DollarSign className="w-6 h-6" />,;
-      color: 'text-blue-400'
-};
+      color: 'text-blue-400';
+    };
     // Startup Tools;
     {;
       name: 'HubSpot',;
@@ -783,8 +578,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       cons: ['Can get expensiveComplex for small teamsLimited customization'],;
       website: 'https://hubspot && hubspot.com',;
       icon: <TrendingUp className="w-6 h-6" />,;
-      color: 'text-orange-400'
-};
+      color: 'text-orange-400';
+    };
     {;
       name: 'Mailchimp',;
       category: 'Email Marketing',;
@@ -802,8 +597,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       cons: ['Limited free featuresBasic automationCan be expensive'],;
       website: 'https://mailchimp && mailchimp.com',;
       icon: <Users className="w-6 h-6" />,;
-      color: 'text-yellow-400'
-};
+      color: 'text-yellow-400';
+    };
     {;
       name: 'Calendly',;
       category: 'Productivity',;
@@ -867,9 +662,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       default: return 0;
   });
 
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 return (
           parseInt(b.users.replace(/[^0-9]/g, '')) -
           parseInt(a.users.replace(/[^0-9]/g, ''))
@@ -934,61 +726,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 href='/contact'
                 variant='outline'
                 size='lg'
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-                className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'
-                style={{ animationDelay: '0.4s' }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                 className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'
                 style={{ animationDelay: '0.4s' }}
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
               >
                 Get Expert Advice
               </Button>
             </div>
           </div>
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-                {allTools.length}+
-              </div>
-              <div className='text-gray-400 text-sm'>Tools Analyzed</div>
-            </div>
-            <div className='text-center group'>
-              <div className='text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300'>
-                9
-              </div>
-              <div className='text-gray-400 text-sm'>Categories</div>
-            </div>
-            <div className='text-center group'>
-              <div className='text-3xl md:text-4xl font-bold mb-3 text-green-400 group-hover:scale-110 transition-transform duration-300'>
-                4.7+
-              </div>
-              <div className='text-gray-400 text-sm'>Avg Rating</div>
-            </div>
-            <div className='text-center group'>
-              <div className='text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300'>
-                250M+
-              </div>
-              <div className='text-gray-400 text-sm'>Total Users</div>            </div>                {allTools.length}+
-              </div>
-
-=======
           {/* Stats */}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 {allTools.length}+
               </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <div className="text-gray-400 text-sm">Tools Analyzed</div>
             </div>
             <div className="text-center group">
@@ -1008,9 +756,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 250M+
               </div>
               <div className="text-gray-400 text-sm">Total Users</div>
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div
             className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
             style={{ animationDelay: '0.6s' }}
@@ -1043,19 +788,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-            <div className="relative flex-1 max-w-md">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <input
                 type="text"
                 placeholder="Search tools, categories, or use cases..."
@@ -1065,19 +797,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {categories && categories.map(category => (            <div className="flex flex-wrap gap-2">;
               {categories && categories.map((category) => (;
                 <button
+              {categories.map(category => (                <button
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       {/* Filters and Search */}
 <section className='py-16 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -1091,22 +812,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 value={searchTerm}
                 onChange={e => setSearchTerm(e.target.value)}
                 className='w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
               />
             </div>
 
             {/* Category Filter */}
+
 <div className='flex flex-wrap gap-2'>
               {categories.map(category => (
 origin/cursor/automate-test-improve-and-merge-code-2533
                 <button
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   key={category}
                   onClick={() => setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${;
@@ -1122,27 +838,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className='flex items-center space-x-2'>;
               <Filter className='w-5 h-5 text-gray-400' />;
             </div>
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
             {/* Sort */}
 <div className='flex items-center space-x-2'>
               <Filter className='w-5 h-5 text-gray-400' />
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <select
                 value={sortBy}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 onChange={e => setSortBy(e && e.target.value)}
                 className='bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-purple-500';
               >;
@@ -1150,10 +853,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <option value='users'>Sort by Users</option>;
                 <option value='name'>Sort by Name</option>              </select>              <select
                 value={sortBy}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <th className="text-left py-4 px-6 text-gray-300 font-medium">Tool</th>
                   <th className="text-left py-4 px-6 text-gray-300 font-medium">Category</th>
                   <th className="text-left py-4 px-6 text-gray-300 font-medium">Pricing</th>
@@ -1162,9 +861,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <th className="text-left py-4 px-6 text-gray-300 font-medium">Best For</th>
                   <th className="text-left py-4 px-6 text-gray-300 font-medium">Actions</th>
                   <tr
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 onChange={e => setSortBy(e.target.value)}
                 className='bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-purple-500'
               >
@@ -1270,8 +966,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           href={`/tool-details/${tool && tool.name.toLowerCase().replace(/\s+/g, '-')}`}
                           variant='ghost'
                           size='sm'
-<<<<<<< HEAD
-<<<<<<< HEAD
                           className='text-xs'>                          variant="ghost";
                           size="sm";
                           className="text-xs";
@@ -1281,13 +975,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </div>;
                     </td>;
                   </tr>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                           className='text-xs'
                         >
                           Details
@@ -1295,40 +982,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       </div>
                     </td>
                   </tr>
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 ))}
-=======
-
-            <div className="text-center py-20">
-              <Search className="w-16 h-16 text-gray-600 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-gray-400 mb-2">No tools found</h3>
-              <p className="text-gray-500">Try adjusting your search criteria or category filter.</p>
-=======
-=======
-                ))}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           )}
         </div>
       </section>
 
-<<<<<<< HEAD
-
-
-            </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-          )}
-        </div>
-      </section>
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Detailed Comparison Cards */}
       <section className='py-24 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -1336,10 +995,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
 
               Detailed Analysis
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </h2>
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Deep dive into each tool's pros, cons, and use cases to make the
@@ -1348,35 +1003,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {sortedTools.slice(0, 6).map((tool, index) => (
-<<<<<<< HEAD
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                  <div>
-                    <h4 className="text-sm font-semibold text-green-400 mb-2 flex items-center">
-                      <Check className="w-4 h-4 mr-1" />
-                      Pros
-                    </h4>
-                    <ul className="space-y-1">
-                      {tool.pros.slice(0, 3).map((pro, proIndex) => (
-                        <li key={proIndex} className="text-xs text-gray-400 flex items-start">
-                          <span className="w-1 h-1 bg-green-400 rounded-full mr-2 mt-2 flex-shrink-0" />
-
-                          {pro}
-                        </li>;
-                      ))}
-
-                    <ul className="space-y-1">
-                      {tool.cons.slice(0, 3).map((con, conIndex) => (
-                        <li key={conIndex} className="text-xs text-gray-400 flex items-start">
-                          <span className="w-1 h-1 bg-red-400 rounded-full mr-2 mt-2 flex-shrink-0" />
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-                          {con}
-                        </li>;
-                      ))}
-
-                <div className='flex items-center justify-between'>
-
-=======
               </tbody>;
             </table>;
           </div>;
@@ -1422,6 +1048,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </h3>
               <p className='text-gray-500'>
                 Try adjusting your search criteria or category filter.
+              </p>            </div>            <div className="text-center py-20">
+              <Search className="w-16 h-16 text-gray-600 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-gray-400 mb-2">No tools found</h3>
+              <p className="text-gray-500">Try adjusting your search criteria or category filter.</p>
               </p>
             </div>
           )}
@@ -1451,66 +1081,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
                 <div className='flex items-start space-x-4 mb-4'>;
                   <div
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <span
                     className={`text-sm font-medium ${getPricingColor(tool && tool.pricing)}`}>                    {tool && tool.pricing}
                   </span>;
                   <Button
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <div className="flex items-center justify-between">
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   <span className={`text-sm font-medium ${getPricingColor(tool.pricing)}`}>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
 
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 <div className='flex items-center justify-between'>
                   <span
                     className={`text-sm font-medium ${getPricingColor(tool.pricing)}`}
                   >                    {tool.pricing}
                   </span>
                   <Button
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    href={tool.website}                <div className="flex items-center justify-between">
-                  <span className={`text-sm font-medium ${getPricingColor(tool.pricing)}`}>
-                    href={tool.website}
-
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     className={`w-12 h-12 rounded-xl bg-gray-800 flex items-center justify-center ${tool.color}`}
                   >
                     {tool.icon}
@@ -1578,44 +1164,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <span
                     className={`text-sm font-medium ${getPricingColor(tool.pricing)}`}
                   >
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     {tool.pricing}
                   </span>
                   <Button
                     href={tool.website}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    size="sm"
-                    className="group-hover:border-purple-500 group-hover:text-purple-400"
-                  >
-                    Visit Website
-                    <ExternalLink className="w-4 h-4 ml-2" />
 
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-                </div>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 variant='outline'
                     size='sm'
                     className='group-hover:border-purple-500 group-hover:text-purple-400'
@@ -1623,44 +1178,24 @@ variant='outline'
                     Visit Website
                     <ExternalLink className='w-4 h-4 ml-2' />
                   </Button>
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 </div>
               </Card>
             ))}
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           </div>;
         </div>;
       </section>;
 
+
       {/* CTA Section */}
 
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       {/* CTA Section */}
 <section className='py-24 bg-gradient-to-r from-purple-600 to-purple-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
           <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           </h2>
           <p className='text-xl text-purple-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Our experts can analyze your business needs and recommend the
@@ -1687,38 +1222,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               href='/saas-marketplace'
               variant='outline'
               size='lg'
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-              className='border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl'            >              href="/saas-marketplace"
-              variant="outline"
-              size="lg"
-              className="border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl"
-
-              Explore All Tools
-            </Button>
-          </div>
-        </div>
-      </section>
-    </>
-
-}
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               Explore All Tools;
             </Button>;
           </div>;
         </div>;
       </section>;
-<<<<<<< HEAD
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   );
 }
     </>);
@@ -1727,9 +1235,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               variant="outline"
               size="lg"
               className="border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl"
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
               className='border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl'
             >
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1739,25 +1244,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </section>
     </>
-  );
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-}
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
+
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
+}
+}
+  );
+}
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

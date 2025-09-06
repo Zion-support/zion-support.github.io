@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 
 }</div> </div>) import fs from 'fs';
@@ -20,11 +7,6 @@ import path from 'path';
 }</div> </div>) import fs from 'fs';
 import path from 'path';
 import {TALENT_PROFILES} from '../../data/talent';
-<<<<<<< HEAD
-type TalentSummary = { slug: string, summary: string }
-export async function getServerSideProps() {
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 </div>) ) 
  </div>) ) 
 }</div> </div>) import fs from 'fs';
@@ -33,12 +15,9 @@ import {TALENT_PROFILES} from '../../data/talent';
 type TalentSummary = { slug: string, summary: string },
 export async function getServerSideProps() {;
   const file = path.join(process.cwd(), 'datatalent_ai.json');
-<<<<<<< HEAD
-=======
 type TalentSummary = { slug: string, summary: string },;
 export async function getServerSideProps() {;
   const file = path && path.join(process && process.cwd(), 'datatalent_ai && datatalent_ai.json');
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   let generatedAt = '';
   let summaries: TalentSummary[] = [];  try {;
     const raw = fs && fs.readFileSync(file, 'utf-8');
@@ -49,9 +28,6 @@ export async function getServerSideProps() {;
   return { props: { generatedAt, summaries } }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     generatedAt = json.generatedAt || '';
     summaries = json.summaries || []
   } catch {}
@@ -61,19 +37,8 @@ export async function getServerSideProps() {;
 export default function TalentUpdatesPage({ generatedAt, summaries }: { generatedAt: string, summaries: TalentSummary[] }) {
 export default function TalentUpdatesPage({ generatedAt, summaries }: { generatedAt: string, summaries: TalentSummary[] }) {;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const map = new Map(summaries.map(s => [s.slug, s.summary]));
 
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 import fs from 'fs',
 import path from 'path';
 import { TALENT_PROFILES } from '../../data/talent';
@@ -93,62 +58,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         ))}
       </div>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-);
-}
-  );
-}
-
-
-}</div> </div>) import fs from 'fs';
-import path from 'path';
-import {TALENT_PROFILES} from '../../data/talent';
-type TalentSummary = { slug: string, summary: string }
-export async function getServerSideProps() {
-
-}</div> </div>) import fs from 'fs';
-import path from 'path';
-import {TALENT_PROFILES} from '../../data/talent';
-type TalentSummary = { slug: string, summary: string },
-export async function getServerSideProps() {;
-
-  const file = path.join(process.cwd(), 'datatalent_ai.json');
-  let generatedAt = '';
-  let summaries: TalentSummary[] = [];  try {
-    const raw = fs.readFileSync(file, 'utf-8');
-    const json = JSON.parse(raw);
-
-  } catch {}
-  return { props: { generatedAt, summaries } }
-}
-
-export default function TalentUpdatesPage({ generatedAt, summaries }: { generatedAt: string, summaries: TalentSummary[] }) {
-
-  const map = new Map(summaries.map(s => [s.slug, s.summary]));
-
-  return (
-    <div className="space-y-6">
-      <h1 className="text-2xl font-semibold">AI Automation: Talent Summaries</h1>
-      <p className="text-gray-600">Profiles are periodically enriched with AI-generated summaries.</p>
-      <div className="text-xs text-gray-500">Last updated: {generatedAt ? new Date(generatedAt).toLocaleString() : '—'}</div>
-      <div className="grid grid-cols-1 gap-4">
-        {TALENT_PROFILES.map(t => (
-          <div key={t.slug} className="border rounded p-4 space-y-1">
-            <div className="font-medium">{t.name} — {t.title}</div>
-            <div className="text-sm text-gray-700">{map.get(t.slug) |'No AI summary yet.'}</div>
-
-          </div>
-        ))}
-      </div>
-    </div>
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import {TALENT_PROFILES} from '../../data / talent';
 type TalentSummary = { slug: string, summary: string },
 export async /**
@@ -183,17 +92,6 @@ function TalentUpdatesPage() {
           </div>))}
       </div>;
     </div>);
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

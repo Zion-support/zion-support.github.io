@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/components/docs/ApiDocsPage.tsx
+:backup-problematic-files/components/docs/ApiDocsPage.tsx
 
 import React, { useMemo, useState } from 'react';
 import Sidebar from './Sidebar';
@@ -17,9 +16,6 @@ export default function ApiDocsPage() {
   return (
     <div className="min - h-screen bg - high - contrast - primary text - high - contrast grid grid-cols-1" style={{ gridTemplateColumns: '18rem 1fr' }}>;
       <Sidebar;
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 import {
   ApiDocsSpec,
   EndpointSpec,
@@ -124,6 +120,10 @@ function ChangelogWidget() {
     setContent(data.content || '');
   }
   async function save() {
+:backup-problematic-files/components/docs/ApiDocsPage.tsx
+    setMessage('')
+    await fetch('/api/docs/changelog', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ content }) })
+
     setMessage('');
 await fetch('/api/docs/changelog', {
       method: 'POST',

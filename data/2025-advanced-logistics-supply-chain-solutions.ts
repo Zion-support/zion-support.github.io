@@ -1,45 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
-=======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-import { ServiceVariant } from '../types/service-variants';
-export interface AdvancedLogisticsSupplyChainSolution2025 {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
 import { ServiceVariant } from '../types/service-variants';
 export interface AdvancedLogisticsSupplyChainSolution2025 {
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   id: string;
   name: string;
   tagline: string;
   price: string;
-  period: string,
+  period: string;
   description: string;
   features: string[];
   popular: boolean;
@@ -65,27 +34,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-<<<<<<< HEAD
-=======
     website: string;
   }
 
-=======
-<<<<<<< HEAD
-=======
-=======
-=======
-    website: string;
-  }
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   real_implementation: boolean;
   implementation_details: string;
   launch_date: string;
@@ -105,14 +56,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
         'Advanced AI - powered supply chain optimization platform that uses machine learning to optimize inventory, demand forecasting, and logistics operations.',
       features: [;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
         'Demand forecasting',
         'Inventory optimization',
         'Route optimization',
@@ -125,23 +69,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Compliance tools',
       ],
       popular: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      icon: '📦',
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
       icon: '📦',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       color: 'from - blue - 600 via - indigo - 600 to - purple - 600',
       text_color: 'text - blue - 400',
       link: 'https://ziontechgroup.com / ai - powered - supply - chain - optimization',
@@ -168,12 +98,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       growth_rate: '28% annual growth',
       variant: 'logistics',
       contact_info: {
-<<<<<<< HEAD
-=======
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -188,8 +114,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       reviews: 98,
     },
     {
-<<<<<<< HEAD
-=======
 
       id: 'quantum - logistics - optimization - platform',
       name: 'Quantum Logistics Optimization Platform',
@@ -201,8 +125,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
         'Quantum algorithms',
         'Route optimization',
         'Scheduling optimization',
@@ -215,8 +137,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Performance analytics',
       ],
       popular: false,
-<<<<<<< HEAD
-=======
       icon: '⚛️',
 
       color: 'from - purple - 600 via - violet - 600 to - indigo - 600',
@@ -249,8 +169,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       contact_info: {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -265,8 +183,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       reviews: 23,
     },
     {
-<<<<<<< HEAD
-=======
 
         'Real-time tracking',
       id: 'iot - fleet - management - platform',
@@ -280,8 +196,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Real - time tracking',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
         'Predictive maintenance',
         'Fuel monitoring',
         'Driver behavior analysis',
@@ -293,8 +207,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Compliance tools',
       ],
       popular: true,
-<<<<<<< HEAD
-=======
       icon: '🚛',
 
       color: 'from - green - 600 via - emerald - 600 to - teal - 600',
@@ -327,8 +239,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       contact_info: {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -343,8 +253,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       reviews: 145,
     },
     {
-<<<<<<< HEAD
-=======
 
         'End-to-end traceability',
       id: 'blockchain - supply - chain - transparency',
@@ -358,8 +266,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'End - to - end traceability',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
         'Smart contracts',
         'Compliance tracking',
         'Quality assurance',
@@ -371,8 +277,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Performance monitoring',
       ],
       popular: false,
-<<<<<<< HEAD
-=======
       icon: '⛓️',
 
       color: 'from - indigo - 600 via - purple - 600 to - pink - 600',
@@ -405,8 +309,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       contact_info: {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -421,80 +323,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       reviews: 56,
     },
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      id: 'ai-powered-warehouse-automation'
-      name: 'AI-Powered Warehouse Automation Platform'
-      tagline: 'Intelligent warehouse automation and optimization'
-      price: '$1,099'
-      period: '/month'
-      description:
-        'Advanced AI-powered warehouse automation platform that uses machine learning to optimize picking, packing, and warehouse operations.'
-      features: [
-        'Automated picking'
-        'Smart routing'
-        'Inventory optimization'
-        'Performance analytics'
-        'Predictive maintenance'
-        'Real-time monitoring'
-        'Mobile integration'
-        'API access'
-        'Custom workflows'
-        'Compliance tools'
-      ]
-      popular: true
-      icon: '🏭'
-      color: 'from-orange-600 via-amber-600 to-yellow-600'
-      textColor: 'text-orange-400'
-      link: 'https://ziontechgroup.com/ai-powered-warehouse-automation'
-      marketPosition:
-        'Leading AI warehouse automation platform with intelligent optimization'
-      targetAudience:
-        'E-commerce companies, Distribution centers, Manufacturing companies, Retail chains, Logistics providers'
-      trialDays: 21
-      setupTime: '10-15 days'
-      category: 'Logistics & Supply Chain'
-      realService: true
-      technology: [
-        'Machine Learning, Warehouse Automation, Robotics, Predictive Analytics, AI/ML'
-      ]
-      integrations: [
-        'WMS platforms, Robotics systems, Conveyor systems, Mobile devices, Analytics tools'
-      ]
-      useCases: [
-        'Warehouse automation, Picking optimization, Inventory management, Performance monitoring, Cost optimization'
-      ]
-      roi: 'Improve picking efficiency by 40%. Reduce labor costs by 30%. Increase throughput by 35%.'
-      competitors: [
-        'Locus Robotics, 6 River Systems, Fetch Robotics, RightHand Robotics, AutoStore'
-      ]
-      marketSize: '$28B warehouse automation market'
-      growthRate: '38% annual growth'
-      variant: 'ai-supply-chain-enterprise'
-      contactInfo: {
-        mobile: '+1 302 464 0950'
-        email: 'kleber@ziontechgroup.com'
-        address: '364 E Main St STE 1008 Middletown DE 19709'
-        website: 'https://ziontechgroup.com'
-      }
-      realImplementation: true
-      implementationDetails:
-        'Production-ready AI warehouse platform with comprehensive automation and optimization capabilities.'
-      launchDate: '2025-02-18'
-      customers: 178
-      rating: 4.8
-      reviews: 112
-    }
-        'Production-ready AI warehouse platform with comprehensive automation and optimization capabilities.',
-      launchDate: '2025-02-18',
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
       id: 'ai - powered - warehouse - automation',
       name: 'AI - Powered Warehouse Automation Platform',
@@ -505,14 +333,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Advanced AI - powered warehouse automation platform that uses machine learning to optimize picking, packing, and warehouse operations.',
       features: [;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
         'Automated picking',
         'Smart routing',
         'Inventory optimization',
@@ -525,8 +346,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Compliance tools',
       ],
       popular: true,
-<<<<<<< HEAD
-=======
       icon: '🏭',
 
       color: 'from - orange - 600 via - amber - 600 to - yellow - 600',
@@ -559,8 +378,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       contact_info: {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -570,54 +387,21 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       implementation_details:;
         'Production - ready AI warehouse platform with comprehensive automation and optimization capabilities.',
       launch_date: '2025 - 02 - 18',
-<<<<<<< HEAD
-        'Production-ready AI warehouse platform with comprehensive automation and optimization capabilities.',
-<<<<<<< HEAD
-      launchDate: '2025-02-18',
-=======
-=======
-
         'Production-ready AI warehouse platform with comprehensive automation and optimization capabilities.',
       launchDate: '2025-02-18',
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
         'Production-ready AI warehouse platform with comprehensive automation and optimization capabilities.',
       launchDate: '2025-02-18',
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       customers: 178,
-=======
-      launchDate: '2025-02-18',      customers: 178,
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       rating: 4 && 4.8,
       reviews: 112,
 
     },;
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ];    features: [
 
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-      'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration';
-      'Custom algorithmsCompliance tools'
-  ];    features: [;
-      'Demand forecasting_inventory optimization_route optimization_supplier management_risk assessment_performance analytics_real - time monitoringAPI integration';
-      'Custom algorithms_compliance tools';
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-  ];    features: [
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-
 export interface AdvancedLogisticsSupplyChainSolution2025 {
   id: string, name: string,
   tagline: string, price: string,
@@ -633,17 +417,9 @@ export interface AdvancedLogisticsSupplyChainSolution2025 {
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
-<<<<<<< HEAD
       'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration';
       'Custom algorithmsCompliance tools'
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-    ];      'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration';
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+    ];
     mobile: string, email: string,
     address: string,
     website: string
@@ -670,20 +446,10 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     description: 'Advanced AI-powered supply chain optimization platform that uses machine learning to optimize inventory, demand forecasting, and logistics operations.',
     features: [
 
-
 origin/cursor/expand-services-advertise-and-build-project-c28b
       'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration';
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       'Custom algorithmsCompliance tools'
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     technology: ['Machine Learning, Predictive Analytics, Supply Chain Management, Optimization Algorithms, AI/ML'];
     integrations: ['ERP systems, WMS platforms, TMS solutions, E-commerce platforms, Analytics tools'];
     useCases: ['Demand forecasting, Inventory management, Route optimization, Supplier optimization, Risk management'];
@@ -692,10 +458,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     marketSize: '$45B supply chain management market', growthRate: '28% annual growth'
     variant: 'logistics'
     contactInfo: {
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     popular: true, icon: '📦',
 
@@ -714,53 +476,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ];
 
     popular: true, icon: '🏭',
-<<<<<<< HEAD
-    color: 'from - orange - 600 via - amber - 600 to - yellow - 600', text_color: 'text - orange - 400',
-    link: 'https://ziontechgroup.com / ai - powered - warehouse - automation', market_position: 'Leading AI warehouse automation platform with intelligent optimization',
-    target_audience: 'E - commerce companies, Distribution centers, Manufacturing companies, Retail chains, Logistics providers',
-    trial_days: 21, setup_time: '10 - 15 days',
-    category: 'Logistics & Supply Chain', real_service: true,
-    technology: ['Machine Learning, Warehouse Automation, Robotics, Predictive Analytics, AI / ML'];
-    integrations: ['WMS platforms, Robotics systems, Conveyor systems, Mobile devices, Analytics tools'];
-    use_cases: ['Warehouse automation, Picking optimization, Inventory management, Performance monitoring, Cost optimization'];
-    roi: 'Improve picking efficiency by 40%. Reduce labor costs by 30%. Increase throughput by 35%.',
-    competitors: ['Locus Robotics, 6 River Systems, Fetch Robotics, RightHand Robotics, AutoStore'];
-=======
 
 ];
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-;
-    marketSize: '$28B warehouse automation market', growthRate: '38% annual growth'
-    variant: 'ai-supply-chain-enterprise'
-    contactInfo: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com'
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }
-    realImplementation: true, implementationDetails: 'Production-ready AI warehouse platform with comprehensive automation and optimization capabilities.'
-    launchDate: '2025-02-18', customers: 178
-    rating: 4.8
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
-=======
-=======
-=======
-=======
 origin/cursor/integrate-build-improve-and-re-verify-2156
 ;
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
     marketSize: '$28B warehouse automation market', growthRate: '38% annual growth'
     variant: 'ai-supply-chain-enterprise'
     contactInfo: {
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     popular: true;
     icon: '📦';
     color: 'from-blue-600 via-indigo-600 to-purple-600';
@@ -968,28 +691,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     launchDate: '2025-02-18';
     customers: 178;
     rating: 4.8;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-    reviews: 112
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-  }
-];
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
-=======
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
     reviews: 112
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+  }
+];
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedLogisticsSupplyChainSolution2025 {;
   id: string,;
@@ -1069,10 +774,6 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       address: '364 E Main St STE 1008 Middletown DE 19709',;
 origin/cursor/expand-services-advertise-and-build-project-c28b
       website: 'https://ziontechgroup.com';
-=======
-  }
-];      website: 'https://ziontechgroup.com';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     },;
     realImplementation: true,;
     implementationDetails: 'Production-ready AI supply chain platform with comprehensive optimization and analytics capabilities.',;
@@ -1086,8 +787,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     name: 'Quantum Logistics Optimization Platform',;
     tagline: 'Quantum computing for complex logistics problems',;
     price: '$2,999',;
-    period: '/month',,
-  description: 'Revolutionary quantum logistics optimization platform that leverages quantum computing to solve complex routing, scheduling, and optimization problems.',;
+    period: '/month',;
+    description: 'Revolutionary quantum logistics optimization platform that leverages quantum computing to solve complex routing, scheduling, and optimization problems.',;
     features: [;
       'Quantum algorithmsRoute optimizationScheduling optimizationVehicle routingCapacity planningReal-time optimizationHigh-performance computingAPI access',;
       'Custom modelsPerformance analytics';
@@ -1129,8 +830,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     name: 'IoT Fleet Management Platform',;
     tagline: 'Comprehensive IoT-based fleet monitoring and management',;
     price: '$799',;
-    period: '/month',,
-  description: 'Advanced IoT-based fleet management platform that provides real-time monitoring, predictive maintenance, and optimization for vehicle fleets.',;
+    period: '/month',;
+    description: 'Advanced IoT-based fleet management platform that provides real-time monitoring, predictive maintenance, and optimization for vehicle fleets.',;
     features: [;
       'Real-time trackingPredictive maintenanceFuel monitoringDriver behavior analysisRoute optimizationPerformance analyticsMobile integrationAPI access',;
       'Custom dashboardsCompliance tools';
@@ -1172,8 +873,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     name: 'Blockchain Supply Chain Transparency Platform',;
     tagline: 'End-to-end supply chain transparency with blockchain',;
     price: '$899',;
-    period: '/month',,
-  description: 'Advanced blockchain-based supply chain transparency platform that provides end-to-end visibility, traceability, and compliance across global supply chains.',;
+    period: '/month',;
+    description: 'Advanced blockchain-based supply chain transparency platform that provides end-to-end visibility, traceability, and compliance across global supply chains.',;
     features: [;
       'End-to-end traceabilitySmart contractsCompliance trackingQuality assuranceSustainability monitoringReal-time updatesAPI integrationData analytics',;
       'Audit trailsPerformance monitoring';
@@ -1215,8 +916,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     name: 'AI-Powered Warehouse Automation Platform',;
     tagline: 'Intelligent warehouse automation and optimization',;
     price: '$1,099',;
-    period: '/month',,
-  description: 'Advanced AI-powered warehouse automation platform that uses machine learning to optimize picking, packing, and warehouse operations.',;
+    period: '/month',;
+    description: 'Advanced AI-powered warehouse automation platform that uses machine learning to optimize picking, packing, and warehouse operations.',;
     features: [;
       'Automated pickingSmart routingInventory optimizationPerformance analyticsPredictive maintenanceReal-time monitoringMobile integrationAPI access',;
       'Custom workflowsCompliance tools';
@@ -1251,41 +952,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     launchDate: '2025-02-18',;
     customers: 178,;
     rating: 4.8;
-<<<<<<< HEAD
     reviews: 112;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 ];
-<<<<<<< HEAD
 ;
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-    reviews: 112;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
-  }
-];
-
-
 origin/cursor/expand-services-advertise-and-build-project-c28b
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

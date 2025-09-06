@@ -1,15 +1,58 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
+
+  ];
+  return (
+    <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
+      <Head>;
+        <title>Sitemap | Zion Tech Group</title>;
+        <meta
+          name="description"
+          content="Quick links to the main routes and pages."
+        />;
+        <link rel="canonical" href="https://ziontechgroup && ziontechgroup.com/sitemap" />;
+      </Head>;
+      <div className="max-w-4xl mx-auto space-y-6">;
+        <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">;
+          Sitemap;
+        </h1>;
+        <ul className="grid sm:grid-cols-2 gap-3">;
+          {links && links.map((l) => (;
+            <li
+              key={l && l.href}
+              className="p-4 rounded-xl bg-black/40 border border-cyan-500/20">;
+              <a className="text-cyan-300" href={l && l.href}>;
+                {l && l.name}
+              </a>;
+            </li>;
+          ))}
+        </ul>;
+      </div>;
+    </div>;
+  );
+
+
+import React from "react";
+import Head from "next/head";
+
+
+export default function SitemapPage() {
+
+
+  const links = [
+    { name: "Home", href: "/" }
+    { name: "Services", href: "/services" }
+    {
+      name: "All Services Showcase"
+      href: "/comprehensive-services-showcase-2025"
+    }
+    { name: "Pricing", href: "/pricing" }
+    { name: "Market Pricing", href: "/market-pricing" }
+    { name: "Services Advertising", href: "/services-advertising" }
+    { name: "Resources", href: "/resources" }
+    { name: "Support", href: "/support" }
+    { name: "Contact", href: "/contact" }
+
+pr-12243
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -31,7 +74,6 @@ class ErrorBoundary extends React.Component {
 import React from "react";
 import Head from "next/head";
 export default function SitemapPage() {;
-
   const links = [;
     { name: "Home", href: "/" },;
     { name: "Services", href: "/services" },;
@@ -74,7 +116,7 @@ export default function SitemapPage() {;
       </div>;
     </div>;
   );
-
+pr-12243
   const links = [;
     { name: "Home", href: "/" },;
     { name: "Services", href: "/services" },;
@@ -88,7 +130,6 @@ export default function SitemapPage() {;
     { name: "Resources", href: "/resources" },;
     { name: "Support", href: "/support" },;
     { name: "Contact", href: "/contact" },;
-
   ];
   return (
     <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
@@ -118,7 +159,6 @@ export default function SitemapPage() {;
       </div>;
     </div>;
   );
-
 }
 
 	const links = [
@@ -153,10 +193,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 				</ul>
 			</div>
 		</div>
-);
+	);
 
+pr-12243
+);
 }
-origin/cursor/integrate-build-improve-and-re-verify-2156
 import React from './react';
 import Head from './next / head';
 export default /**
@@ -177,146 +218,12 @@ function SitemapPage() {
     { name: "Resources", href: "/resources" },
     { name: "Support", href: "/support" },
     { name: "Contact", href: "/contact" },
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react';
 import Head from 'next/head';
 import React from "react";
 import Head from "next/head";
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 export default function SitemapPage() {
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-
-  const links = [
-    { name: "Home", href: "/" }
-    { name: "Services", href: "/services" }
-    {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-  ];
-  return (
-    <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
-      <Head>;
-        <title>Sitemap | Zion Tech Group</title>;
-        <meta
-          name="description"
-          content="Quick links to the main routes and pages."
-        />;
-        <link rel="canonical" href="https://ziontechgroup && ziontechgroup.com/sitemap" />;
-      </Head>;
-      <div className="max-w-4xl mx-auto space-y-6">;
-        <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">;
-          Sitemap;
-        </h1>;
-        <ul className="grid sm:grid-cols-2 gap-3">;
-          {links && links.map((l) => (;
-            <li
-              key={l && l.href}
-              className="p-4 rounded-xl bg-black/40 border border-cyan-500/20">;
-              <a className="text-cyan-300" href={l && l.href}>;
-                {l && l.name}
-              </a>;
-            </li>;
-          ))}
-        </ul>;
-      </div>;
-    </div>;
-  );
-
-import React from "react";
-import Head from "next/head";
-
-export default function SitemapPage() {
-
-<<<<<<< HEAD
-  const links = [
-    { name: "Home", href: "/" }
-    { name: "Services", href: "/services" }
-    {
-      name: "All Services Showcase"
-      href: "/comprehensive-services-showcase-2025"
-    }
-    { name: "Pricing", href: "/pricing" }
-    { name: "Market Pricing", href: "/market-pricing" }
-    { name: "Services Advertising", href: "/services-advertising" }
-    { name: "Resources", href: "/resources" }
-    { name: "Support", href: "/support" }
-    { name: "Contact", href: "/contact" }  const links = [;
-=======
-
-  const links = [;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-    { name: "Home", href: "/" },;
-    { name: "Services", href: "/services" },;
-    {;
-      name: "All Services Showcase",;
-      href: "/comprehensive-services-showcase-2025",;
-    },;
-    { name: "Pricing", href: "/pricing" },;
-    { name: "Market Pricing", href: "/market-pricing" },;
-    { name: "Services Advertising", href: "/services-advertising" },;
-    { name: "Resources", href: "/resources" },;
-    { name: "Support", href: "/support" },;
-    { name: "Contact", href: "/contact" },;
-  ];
-  return (
-    <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
-      <Head>;
-        <title>Sitemap | Zion Tech Group</title>;
-        <meta
-          name="description"
-          content="Quick links to the main routes and pages."
-        />;
-        <link rel="canonical" href="https://ziontechgroup && ziontechgroup.com/sitemap" />;
-      </Head>;
-      <div className="max-w-4xl mx-auto space-y-6">;
-        <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">;
-          Sitemap;
-        </h1>;
-        <ul className="grid sm:grid-cols-2 gap-3">;
-          {links && links.map((l) => (;
-            <li
-              key={l && l.href}
-              className="p-4 rounded-xl bg-black/40 border border-cyan-500/20">;
-              <a className="text-cyan-300" href={l && l.href}>;
-                {l && l.name}
-              </a>;
-            </li>;
-          ))}
-        </ul>;
-      </div>;
-    </div>;
-<<<<<<< HEAD
-  );import React from './react';
-import Head from './next / head';
-export default /**
- * SitemapPage - Function description
- */
-function SitemapPage() {
-  const links = [;
-    { name: "Home", href: "/" },
-    { name: "Services", href: "/services" },
-    {
-
-      name: "All Services Showcase",
-      href: "/comprehensive - services - showcase - 2025",
-    },
-    { name: "Pricing", href: "/pricing" },
-    { name: "Market Pricing", href: "/market - pricing" },
-    { name: "Services Advertising", href: "/services - advertising" },
-    { name: "Resources", href: "/resources" },
-    { name: "Support", href: "/support" },
-
-    { name: "Contact", href: "/contact" },;
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
   const links = [
     { name: "Home", href: "/" }
@@ -331,10 +238,6 @@ function SitemapPage() {
     { name: "Resources", href: "/resources" }
     { name: "Support", href: "/support" }
     { name: "Contact", href: "/contact" }
-=======
-  );
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   const links = [;
     { name: "Home", href: "/" },;
     { name: "Services", href: "/services" },;
@@ -348,7 +251,6 @@ function SitemapPage() {
     { name: "Resources", href: "/resources" },;
     { name: "Support", href: "/support" },;
     { name: "Contact", href: "/contact" },;
-<<<<<<< HEAD
   ];
   return (
     <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -382,47 +284,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-  ];
-  return (
-    <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
-      <Head>;
-        <title>Sitemap | Zion Tech Group</title>;
-        <meta
-          name="description"
-          content="Quick links to the main routes and pages."
-        />;
-        <link rel="canonical" href="https://ziontechgroup && ziontechgroup.com/sitemap" />;
-      </Head>;
-      <div className="max-w-4xl mx-auto space-y-6">;
-        <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">;
-          Sitemap;
-        </h1>;
-        <ul className="grid sm:grid-cols-2 gap-3">;
-          {links && links.map((l) => (;
-            <li
-              key={l && l.href}
-              className="p-4 rounded-xl bg-black/40 border border-cyan-500/20">;
-              <a className="text-cyan-300" href={l && l.href}>;
-                {l && l.name}
-              </a>;
-            </li>;
-          ))}
-        </ul>;
-      </div>;
-    </div>;
-  );
-
-}
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   ];
   return (
     <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -464,10 +325,6 @@ function SitemapPage() {
     { name: "Home", href: "/" },
     { name: "Services", href: "/services" },
     {
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       name: "All Services Showcase",
       href: "/comprehensive - services - showcase - 2025",
     },
@@ -475,34 +332,12 @@ function SitemapPage() {
     { name: "Market Pricing", href: "/market - pricing" },
     { name: "Services Advertising", href: "/services - advertising" },
     { name: "Resources", href: "/resources" },
-<<<<<<< HEAD
     { name: "Support", href: "/support" },
-<<<<<<< HEAD
-<<<<<<< HEAD
     { name: "Contact", href: "/contact" },;
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+pr-12243
   ];
   return (
     <div className="min - h-screen pt - 24 pb - 20 px - 4 sm:px - 6 lg:px - 8">;
-=======
-    { name: "Support", href: "/support" },  return (
-    <div className="min - h-screen pt - 24 pb - 20 px - 4 sm:px-6 lg:px-8">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       <Head>;
         <title > Sitemap | Zion Tech Group</title>;
         <meta;
@@ -511,17 +346,17 @@ function SitemapPage() {
         />;
         <link rel="canonical" href="https://ziontechgroup.com / sitemap" />;
       </Head>;
-      <div className="max - w-4xl mx-auto space-y-6">;
-        <h1 className="text - 4xl md:text - 6xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip-text text-transparent">;
+      <div className="max - w-4xl mx - auto space - y-6">;
+        <h1 className="text - 4xl md:text - 6xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent">;
           Sitemap;
         </h1>;
-        <ul className="grid sm:grid - cols-2 gap-3">;
+        <ul className="grid sm:grid - cols - 2 gap - 3">;
           {links.map ((l) => (
             <li;
               key={l.href}
-              className="p - 4 rounded - xl bg - black / 40 border border-cyan-500 / 20";
+              className="p - 4 rounded - xl bg - black / 40 border border - cyan - 500 / 20";
             >;
-              <a className="text-cyan-300" href={l.href}>;
+              <a className="text - cyan - 300" href={l.href}>;
                 {l.name}
               </a>;
             </li>))}
@@ -543,7 +378,7 @@ function SitemapPage() {
     { name: "Contact", href: "/contact" },
   ];
   return (
-    <div className="min - h-screen pt - 24 pb - 20 px - 4 sm:px-6 lg:px-8">;
+    <div className="min - h-screen pt - 24 pb - 20 px - 4 sm:px - 6 lg:px - 8">;
       <Head>;
         <title > Sitemap | Zion Tech Group</title>;
         <meta;
@@ -552,17 +387,17 @@ function SitemapPage() {
         />;
         <link rel="canonical" href="https://ziontechgroup.com / sitemap" />;
       </Head>;
-      <div className="max - w-4xl mx-auto space-y-6">;
-        <h1 className="text - 4xl md:text - 6xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip-text text-transparent">;
+      <div className="max - w-4xl mx - auto space - y-6">;
+        <h1 className="text - 4xl md:text - 6xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent">;
           Sitemap;
         </h1>;
-        <ul className="grid sm:grid - cols-2 gap-3">;
+        <ul className="grid sm:grid - cols - 2 gap - 3">;
           {links.map ((l) => (
             <li;
               key={l.href}
-              className="p - 4 rounded - xl bg - black / 40 border border-cyan-500 / 20";
+              className="p - 4 rounded - xl bg - black / 40 border border - cyan - 500 / 20";
             >;
-              <a className="text-cyan-300" href={l.href}>;
+              <a className="text - cyan - 300" href={l.href}>;
                 {l.name}
               </a>;
             </li>))}
@@ -570,43 +405,9 @@ function SitemapPage() {
       </div>;
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 
 
 
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+pr-12243

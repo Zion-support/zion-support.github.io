@@ -1,27 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+interface SearchResult {
+  title: string, description: string
+  url: string, type: 'service' | 'page' | 'category'
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 interface SearchResult {
   title: string;
@@ -29,8 +10,11 @@ interface SearchResult {
   url: string;
   type: 'service' | 'page' | 'category';
 }
-
-=======
+const SearchBar: React.FC = () => {
+interface SearchResult {;
+  title: string, description: string,;
+  url: string, type: 'service' | 'page' | 'category',;
+}
 
 const SearchBar: React.FC = () => {
   const [query, setQuery] = useState('');
@@ -60,8 +44,6 @@ const SearchBar: React.FC = () => {
       url: '/it-services',
       type: 'category',
     },
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     {
       title: 'Cloud Cost Guard',
       description: 'FinOps Assistant for anomaly detection and cost optimization',
@@ -210,41 +192,20 @@ const SearchBar: React.FC = () => {
 };
 
 export default SearchBar;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 interface SearchResult {
   title: string, description: string
   url: string, type: 'service' | 'page' | 'category'
-=======
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-import React, { useState } from 'react';
-import { Search, X } from 'lucide-react';
-=======
-interface SearchResult {
-  title: string, description: string
-  url: string, type: 'service' | 'page' | 'category'
-
+pr-12243
 import React, { useState } from 'react';
 import { Search, X } from 'lucide-react';
 import { useState, useEffect, useCallback, useMemo } from 'react';
 import Link from 'next/link';
 origin/cursor/analyze-improve-and-deploy-application-0a01
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 interface SearchBarProps {
   onSearch?: (query: string) => void;
   placeholder?: string;
   className?: string;
-<<<<<<< HEAD
-
-=======
-main
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }
 
 const SearchBar: React.FC<SearchBarProps> = ({
@@ -254,14 +215,11 @@ const SearchBar: React.FC<SearchBarProps> = ({
 }) => {
   const [query, setQuery] = useState('');
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (onSearch && query.trim()) {
       onSearch(query.trim());
     }
-<<<<<<< HEAD
     {
       title: 'Contact Us'
       description: 'Get in touch with our experts for consultation and quotes'
@@ -279,106 +237,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
     setResults(filteredResults);
     setIsOpen(true);
     setIsLoading(false);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  };
-
-  const handleInputChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
-    const value = e && e.target.value;
-    setQuery(value);
-    handleSearch(value),;
-  };
-  const handleResultClick = () => {;
-    setIsOpen(false),;
-    setQuery('');
-  };
-  const handleKeyDown = (e: React && React.KeyboardEvent) => {;
-    if (e && e.key === 'Escape') {;
-    setIsOpen(false),;
-    inputRef && inputRef.current?.blur();
-  }
-=======
-  };
-  useEffect(() => {;
-    const handleClickOutside = (event: MouseEvent) => {;
-      if (searchRef && searchRef.current && !searchRef && searchRef.current.contains(event && event.target as Node)) {;
-        setIsOpen(false),;
-      }
-    };
-    document && document.addEventListener('mousedown', handleClickOutside);
-    return () => {;
-      document && document.removeEventListener('mousedown', handleClickOutside);
-    };
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
-  }, []);
-  return (
-    <div ref={searchRef} className="relative w-full max-w-md">;
-      <div className="relative">;
-        <input
-          ref={inputRef}
-          type="text"
-          placeholder="Search services, pages..."
-          value={query}
-          onChange={handleInputChange}
-          onFocus={() => query && setIsOpen(true)}
-          className="w-full px-4 py-2 pl-10 pr-4 text-gray-700 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent";
-        />;
-        <div className="absolute inset-y-0 left-0 flex items-center pl-3">;
-          <svg
-            className="w-5 h-5 text-gray-400"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24">;
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-            />;
-          </svg>;
-        </div>;
-        {isLoading && (;
-          <div className="absolute inset-y-0 right-0 flex items-center pr-3">;
-            <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-blue-500"></div>;
-          </div>;
-        )}
-
-      </div>;
-
-
-      {/* Search Results Dropdown */}
-<<<<<<< HEAD
-
-                <Link
-                  key={index}
-                  href={result && result.url}
-                  onClick={handleResultClick}
-
-          ) : null}
-        </div>;
-      )}
-
-  );
-<<<<<<< HEAD
-
-export default SearchBar;
-export default SearchBar;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+pr-12243
   };
 
   const handleClear = () => {
@@ -433,6 +292,35 @@ export default SearchBar;
     setQuery('');
     setResults([]);
     setIsOpen(false);
+    setSelectedIndex(-1);
+  }, []);
+
+  const handleKeyDown = useCallback((e: React.KeyboardEvent) => {
+    if (!isOpen || results.length === 0) return;
+
+    switch (e.key) {
+      case 'ArrowDown':
+        e.preventDefault();
+        setSelectedIndex(prev => (prev + 1) % results.length);
+        break;
+      case 'ArrowUp':
+        e.preventDefault();
+        setSelectedIndex(prev => prev <= 0 ? results.length - 1 : prev - 1);
+        break;
+      case 'Enter':
+        e.preventDefault();
+        if (selectedIndex >= 0 && selectedIndex < results.length) {
+          window.location.href = results[selectedIndex].url;
+          handleResultClick();
+        }
+        break;
+      case 'Escape':
+        setIsOpen(false);
+        setSelectedIndex(-1);
+        break;
+    }
+  }, [isOpen, results, selectedIndex, handleResultClick]);
+
   }
 origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
   return (
@@ -485,13 +373,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
               role="option"
               aria-selected={index === selectedIndex}
               tabIndex={-1}
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0a01
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 origin/cursor/analyze-improve-and-deploy-application-0a01
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
             >
               <X className="w-4 h-4" />
             </button>
@@ -503,18 +385,5 @@ origin/cursor/analyze-improve-and-deploy-application-0a01
 };
 
 export default SearchBar;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> main
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 main
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+pr-12243

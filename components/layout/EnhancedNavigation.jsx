@@ -22,44 +22,19 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useState } from 'react';
-<<<<<<< HEAD
-=======
-import Link from 'next/link';
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-
-const EnhancedNavigation = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 const EnhancedNavigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import Link from 'next/link';
 ;
 const EnhancedNavigation = () =>: any {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState (false);
 ;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
-    <nav className='bg-white shadow-lg sticky top-0 z-50'>
-      <div className='container mx-auto px-4'>
-        <div className='flex justify-between items-center py-4'>
+    <nav className='bg - white shadow - lg sticky top - 0 z - 50'>;
+      <div className='container mx - auto px - 4'>;
+        <div className='flex justify - between items - center py - 4'>;
           {/* Logo */}
-<<<<<<< HEAD
-          <Link href='/' className='flex items-center space-x-2'>
-            <div className='w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center'>
-              <span className='text-white font-bold text-xl'>Z</span>
-            </div>
-            <span className='text-xl font-bold text-gray-800'>
-              Zion Tech Group
-            </span>
-          </Link>
-=======
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false),
 
           <Link href='/' className='flex items - center space - x-2'>;
@@ -70,114 +45,7 @@ const EnhancedNavigation = () =>: any {
               Zion Tech Group;
             </span>;
           </Link>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           {/* Desktop Navigation */}
-<<<<<<< HEAD
-          <div className='hidden lg:flex items-center space-x-8'>
-            <Link
-              href='/'
-              className='text-gray-600 hover:text-blue-600 font-medium transition-colors'
-            >
-              Home
-            </Link>
-            <Link
-              href='/services'
-              className='text-gray-600 hover:text-blue-600 font-medium transition-colors'
-            >
-              Services
-            </Link>
-            <Link
-              href='/products'
-              className='text-gray-600 hover:text-blue-600 font-medium transition-colors'
-            >
-              Products
-            </Link>
-            <Link
-              href='/about'
-              className='text-gray-600 hover:text-blue-600 font-medium transition-colors'
-            >
-              About
-            </Link>
-            <Link
-              href='/blog'
-              className='text-gray-600 hover:text-blue-600 font-medium transition-colors'
-            >
-              Blog
-            </Link>
-            <Link
-              href='/talent'
-              className='text-gray-600 hover:text-blue-600 font-medium transition-colors'
-            >
-              Careers
-            </Link>
-            <Link
-              href='/contact'
-              className='bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors'
-            >              Get Startedconst EnhancedNavigation = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-
-  return (
-<<<<<<< HEAD
-    <nav className="bg-white shadow-lg sticky top-0 z-50">
-      <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center py-4">
-=======
-    <nav className="bg - white shadow - lg sticky top-0 z-50">;
-      <div className="container mx-auto px-4">;
-        <div className="flex justify - between items-center py-4">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-          {/* Logo */}
-<<<<<<< HEAD
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">Z</span>
-            </div>
-            <span className="text-xl font-bold text-gray-800">Zion Tech Group</span>
-          </Link>
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
-            <Link href="/" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
-              Home
-            </Link>
-            <Link href="/services" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
-              Services
-            </Link>
-            <Link href="/products" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
-              Products
-            </Link>
-            <Link href="/about" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
-              About
-            </Link>
-            <Link href="/blog" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
-              Blog
-            </Link>
-            <Link href="/talent" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">
-              Careers
-            </Link>
-            <Link href="/contact" className="bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors">
-              Get Started
-            </Link>
-          </div>
-          {/* Mobile menu button */}
-          <button
-            className='lg:hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100'
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            <svg
-              className='w-6 h-6'
-              fill='none'
-              stroke='currentColor'
-              viewBox='0 0 24 24'
-            >
-              <path
-                strokeLinecap='round'
-                strokeLinejoin='round'
-                strokeWidth={2}
-                d='M4 6h16M4 12h16M4 18h16'
-              />            </svg>            className="lg:hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100"
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
           <div className='hidden lg:flex items - center space - x-8'>;
             <Link;
               href='/';
@@ -220,9 +88,6 @@ const EnhancedNavigation = () =>: any {
               className='bg - blue - 600 text - white px - 6 py - 2 rounded - lg font - medium hover:bg - blue - 700 transition - colors';
             >              Get Startedconst EnhancedNavigation = () =>: any {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState (false),
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
             >
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
@@ -230,16 +95,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <div className="container mx-auto px-4">;
         <div className="flex justify - between items-center py-4">;
           {/* Logo */}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
           <Link href="/" className="flex items-center space-x-2">
             <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-xl">Z</span>
@@ -293,55 +152,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <div className='lg:hidden border-t border-gray-200 py-4'>
-            <div className='space-y-2'>
-              <Link
-                href='/'
-                className='block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md'
-              >
-                Home
-              </Link>
-              <Link
-                href='/services'
-                className='block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md'
-              >
-                Services
-              </Link>
-              <Link
-                href='/products'
-                className='block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md'
-              >
-                Products
-              </Link>
-              <Link
-                href='/about'
-                className='block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md'
-              >
-                About
-              </Link>
-              <Link
-                href='/blog'
-                className='block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md'
-              >
-                Blog
-              </Link>
-              <Link
-                href='/talent'
-                className='block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md'
-              >
-                Careers
-              </Link>
-              <Link
-                href='/contact'
-                className='block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md'
-              >                Contact                Home
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </Link>
               <Link href="/services" className="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md">
                 Services
@@ -359,15 +169,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Careers
               </Link>
               <Link href="/contact" className="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md">
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div className='lg:hidden border-t border-gray-200 py-4'>
             <div className='space-y-2'>
               <Link
@@ -410,12 +211,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 href='/contact'
                 className='block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md'
               >
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 Contact
               </Link>
             </div>
@@ -423,8 +219,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         )}
       </div>
     </nav>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
           <Link href="/" className="flex items-center space-x-2">;
             <div className="w - 10 h - 10 bg - blue - 600 rounded - lg flex items-center justify-center">;
@@ -548,11 +342,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </nav>);
 }
 export default EnhancedNavigation;}
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   )
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
 export default EnhancedNavigation;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

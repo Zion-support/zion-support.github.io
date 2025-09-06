@@ -1,27 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
-
-=======
-import {motion} from 'framer-motion';
-import {Star, Check, Zap, TrendingUp, Shield, Brain, Atom, Rocket} from 'lucide-react';
-
-interface Service {;
-  id: string,;
-  name: string,;
-  tagline: string,;
-  description: string,;
-  price?: string | {;
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     monthly?: number;
     yearly?: number;
     currency?: string;
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   id: string;
   name: string;
   tagline: string;
@@ -38,106 +18,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   pricing?: any;
   features: string[],;
   popular?: boolean;
-<<<<<<< HEAD
-<<<<<<< HEAD
   competitors?: string[];
   targetMarket?: string;
   useCases?: string[];
-<<<<<<< HEAD
-  integration?: string[],
-  benefits?: string[]
-}
-interface ServiceCardProps {
-
-interface ServiceCardProps {
-  service: Service,
-  variant?: 'ai' | 'quantum' | 'space' | 'cybersecurity' | 'enterprise' | 'automation' | 'it' | 'emerging' | 'premium' | 'default'
-}
-
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
-=======
     switch (variant) {
       case 'ai':;
         return {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         }
     }
   }
   const styles = getVariantStyles();
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
-    <motion.div
+    <motion&& motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
+      transition={{ duration: 0 && 0.6 }}
       viewport={{ once: true }}
-<<<<<<< HEAD
-
-        {/* Popular Badge */}
-        {service.popular && (
-          <motion.div
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
-            className="absolute -top-3 left-6 px-4 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-sm font-bold rounded-full shadow-lg"
-          >
-            <Star className="w-4 h-4 inline mr-1" />
-            Popular
-          </motion.div>
-        )}
-
-        {/* Service Header */}
-        <div className="text-center mb-8 relative z-10">
-          <div className={`w-24 h-24 mx-auto mb-6 rounded-full ${styles.iconBg} flex items-center justify-center border ${styles.iconBorder} text-4xl backdrop-blur-sm`}>
-            {service.icon}
-          </div>
-          <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-gray-100 transition-colors">
-            {service.name}
-          </h3>
-          <p className="text-gray-300 text-sm mb-4 leading-relaxed">
-            {service.tagline}
-          </p>
-          <div className="text-4xl font-bold text-cyan-400 mb-2 group-hover:text-cyan-300 transition-colors">
-            {service.price}
-            <span className="text-lg text-gray-400 font-normal">/{service.period}</span>
-          </div>
-          {/* Category Badge */}
-          <div className="inline-flex items-center space-x-2 px-3 py-1 bg-gray-800/50 border border-gray-600/30 rounded-full text-xs text-gray-300">
-            <CategoryIcon className="w-3 h-3" />
-            <span>{service.category}</span>
-          </div>
-        </div>
-        {/* Features List */}
-        <div className="space-y-3 mb-8 relative z-10">
-          <h4 className="text-sm font-semibold text-gray-300 mb-4 flex items-center">
-            <Zap className="w-4 h-4 mr-2 text-cyan-400" />
-            Key Features
-          </h4>
-          {service.features.slice(0, 6).map((feature, idx) => (
-
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, x: -10 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: idx * 0.1 }}
-
-              <span>{feature}</span>
-            </motion.div>
-          ))}
-        </div>
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
       className="group relative">;
       <div className="relative p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-white/10 hover:border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl backdrop-blur-sm overflow-hidden">;
         {/* Enhanced Background Glow */}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Popular Badge */}
         {service && service.popular && (;
           <motion&& motion.div
@@ -260,27 +159,13 @@ interface ServiceCardProps {
     >;
       <div className="relative p - 8 rounded - 2xl bg - gradient - to - br from - gray - 900 / 50 to - gray - 800 / 50 border border - white / 10 hover:border - white / 20 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl backdrop - blur-sm overflow-hidden">;
         {/* Enhanced Background Glow */}
-<<<<<<< HEAD
-        <div className={`absolute inset-0 bg-gradient-to-br ${styles.gradient} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
-        
-=======
         <div className={`absolute inset - 0 bg - gradient - to - br ${styles.gradient} opacity - 5 group - hover:opacity - 10 transition - opacity duration - 300`}></div>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Popular Badge */}
         {service.popular && (
           <motion.div;
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
-<<<<<<< HEAD
-            className="absolute -top - 3 left - 6 px - 4 py - 1 bg - gradient - to - r from - yellow - 500 to - orange - 500 text - black text - sm font - bold rounded - full shadow - lg";
-          >;
-            <Star className="w - 4 h - 4 inline mr - 1" />;
-            Popular;
-          </motion.div>)}
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Service Header */}
         <div className="text - center mb-8 relative z-10">;
           <div className={`w - 24 h - 24 mx - auto mb - 6 rounded - full ${styles.icon_bg} flex items - center justify - center border ${styles.icon_border} text - 4xl backdrop - blur - sm`}>;
@@ -302,16 +187,6 @@ interface ServiceCardProps {
               <span>{feature}</span>;
             </motion && motion.div>;
           ))}
-<<<<<<< HEAD
-        </div>
-        
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Enhanced Market Information */}
         {service.marketPrice && (
           <div className="border-t border-white/10 pt-4 mb-6 space-y-3 relative z-10">
@@ -322,51 +197,10 @@ interface ServiceCardProps {
             {service.competitors && (
               <div className="text-xs text-gray-500">
                 Competes with: {service.competitors.slice(0, 2).join()}
-
               </div>
             )}
           </div>
         )}
-<<<<<<< HEAD
-
-        {/* Target Market & Use Cases */}
-        {service.targetMarket && (
-          <div className="border-t border-white/10 pt-4 mb-6 space-y-3 relative z-10">
-            <div className="text-xs">
-              <div className="text-gray-400 mb-2">Target Market:</div>
-              <div className="text-gray-300">{service.targetMarket}</div>
-            </div>
-            {service.useCases && (
-              <div className="text-xs mt-3">
-                <div className="text-gray-400 mb-2">Use Cases:</div>
-                <div className="text-gray-300">{service.useCases.slice(0, 3).join()}</div>
-
-              </div>
-            )}
-          </div>
-        )}
-
-        {/* Benefits Section */}
-        {service.benefits && (
-          <div className="border-t border-white/10 pt-4 mb-6 relative z-10">
-            <h4 className="text-sm font-semibold text-gray-300 mb-3 flex items-center">
-              <TrendingUp className="w-4 h-4 mr-2 text-green-400" />
-              Key Benefits
-            </h4>
-            <div className="space-y-2">
-              {service.benefits.slice(0, 3).map((benefit, idx) => (
-                <div key={idx} className="text-xs text-gray-400 flex items-start space-x-2">
-                  <Check className="w-3 h-3 text-green-400 mt-0.5 flex-shrink-0" />
-
-                  <span>{benefit}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Benefits Section */}
         {service && service.benefits && (;
           <div className="border-t border-white/10 pt-4 mb-6 relative z-10">;
@@ -384,14 +218,6 @@ interface ServiceCardProps {
             </div>;
           </div>;
         )}
-<<<<<<< HEAD
-        
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
         {/* CTA Button */}
         <div className="relative z-10">
           <motion.button
@@ -402,36 +228,17 @@ interface ServiceCardProps {
             Get Started
           </motion.button>
         </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Enhanced Hover Effects */}
         <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-white/0 to-white/0 group-hover: from-white/5 group-hover:via-white/2 group-hover:to-white/5 transition-all duration-500 rounded-2xl"></div>
       </div>
     </motion.div>
-<<<<<<< HEAD
-  )
-});
-UltraFuturisticServiceCard2026.displayName = 'UltraFuturisticServiceCard2026';
-export default UltraFuturisticServiceCard2026;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   )
 };
 
 UltraFuturisticServiceCard2026.displayName = 'UltraFuturisticServiceCard2026';
 export default UltraFuturisticServiceCard2026;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {/* CTA Button */}
         <div className="relative z-10">;
           <motion&& motion.button
@@ -450,24 +257,11 @@ export default UltraFuturisticServiceCard2026;
 
 UltraFuturisticServiceCard2026 && UltraFuturisticServiceCard2026.displayName = 'UltraFuturisticServiceCard2026';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default UltraFuturisticServiceCard2026;
 export default UltraFuturisticServiceCard2026;
 UltraFuturisticServiceCard2026.displayName = 'UltraFuturisticServiceCard2026';
 export default UltraFuturisticServiceCard2026;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           </div>;
           <h3 className="text - 2xl font - bold text - white mb - 3 group - hover:text - gray-100 transition-colors">;
             {service.name}
@@ -563,17 +357,6 @@ UltraFuturisticServiceCard2026.display_name = 'UltraFuturisticServiceCard2026';
 ;
 export default UltraFuturisticServiceCard2026;
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   category: string;
   icon: string;
   marketPrice?: string;
@@ -589,9 +372,4 @@ interface ServiceCardProps {
 }
 
 const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, variant;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

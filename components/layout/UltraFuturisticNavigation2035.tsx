@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {
   Menu,
   ChevronDown,
@@ -133,37 +119,23 @@ import {
 } from 'lucide-react';
 interface NavigationItem {
   name: string;
-<<<<<<< HEAD
-  href: string;  icon?: React.ReactNode;import {
-  href: string;  icon?: React.ReactNode;import { ;
-=======
+
 
   href: string;  icon?: React.ReactNode;import { ;
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   Menu, ChevronDown, X, Phone, Mail, MapPin, ArrowRight;
   Brain, Rocket, Shield, Zap, Target, Atom, BookOpen;
   Truck, DollarSign, BarChart3, Globe, Users, Star, Sparkles
   Cpu, Lock, Cloud, Settings, Eye, Award, Clock, Heart, Lightbulb;
   Search, Grid, List, TrendingUp, Shield as ShieldIcon, Globe as GlobeIcon;
   User, ShoppingCart, Bell, HelpCircle, FileText, Video, Headphones
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-
-=======
   Menu, ChevronDown, X, Phone, Mail, MapPin, ArrowRight;
   Brain, Rocket, Shield, Zap, Target, Atom, BookOpen;
   Truck, DollarSign, BarChart3, Globe, Users, Star, Sparkles, ;
   Cpu, Lock, Cloud, Settings, Eye, Award, Clock, Heart, Lightbulb;
   Search, Grid, List, TrendingUp, Shield as ShieldIcon, Globe as GlobeIcon;
   User, ShoppingCart, Bell, HelpCircle, FileText, Video, Headphones, ;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {
   Menu,
   ChevronDown,
@@ -226,10 +198,6 @@ import {
 ;
 interface NavigationItem {
   name: string;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   Menu, ChevronDown, X, Phone, Mail, MapPin, ArrowRight;
   Brain, Rocket, Shield, Zap, Target, Atom, BookOpen;
   Truck, DollarSign, BarChart3, Globe, Users, Star, Sparkles,
@@ -240,20 +208,6 @@ interface NavigationItem {
   Camera, Gamepad2, Palette, Music, Film, BookOpenCheck;
   Building, MessageCircle;
 } from 'lucide-react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-;
-
-interface NavigationItem {
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -271,16 +225,15 @@ interface NavigationItem {
   name: string;
   href: string;
   icon?: React.ReactNode;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   description?: string;
   children?: NavigationItem[];
   badge?: string;
   title?: string;
+  featured?: boolean
+}
+  featured?: boolean;
+  featured?: boolean;  featured?: boolean
 
 const contactInfo = null;
 const contactInfo = {
@@ -291,10 +244,6 @@ const contactInfo = {
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
   featured?: boolean;
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 const contactInfo = {
 
@@ -308,14 +257,10 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Pricing',
     href: '/pricing',
-<<<<<<< HEAD
-<<<<<<< HEAD
     icon: <DollarSign className="w-5 h-5" />,
     description: 'Plans and average market prices',
     children: [
     ]
-<<<<<<< HEAD
-=======
   featured?: boolean;  featured?: boolean;
 }
 const contact_info = {
@@ -335,11 +280,7 @@ const navigation_items: NavigationItem[] = [;
       {
         name: 'Market Pricing',
         href: '/market - pricing',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         description: 'Compare market averages',
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 icon: <DollarSign className='w-5 h-5' />,
     description: 'Plans and average market prices',
     children: [
@@ -373,8 +314,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ],
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
     name: 'Resources',
     href: '/resources',
         description: 'Proven results',
@@ -389,19 +328,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   {
     name: 'Contact',
     href: '/contact',
-<<<<<<< HEAD
-
-    name: 'Contact',
-    href: '/contact',
-    icon: <Phone className="w - 5 h - 5" />,
-    description: 'Talk to our team',
-    featured: true,
-    children: [;
-      { name: 'Contact Sales', href: '/contact', description: 'Get a quote' },
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       { name: 'Support', href: '/support', description: 'Help center' }
     ]
   },    icon: <BookOpen className="w-5 h-5" />
@@ -414,42 +340,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ]
   }
   {
-<<<<<<< HEAD
-
-      {
-        name: 'Documentation'
-        href: '/docs'
-        description: 'Technical documentation'
-      }
-      {
-
-      {
-        name: 'Support Center'
-        href: '/support'
-        description: 'Help and support'
-      }
-      {
-        name: 'Training'
-        href: '/training'
-        description: 'Learning resources'
-      }
-      { name: 'Community', href: '/community', description: 'User community' }
-    ]
-  }
-];
-
-const UltraFuturisticNavigation2035: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [isScrolled, setIsScrolled] = useState(false);
-  useEffect(() => {
-    const handleScroll = () => {
-
-  };
-=======
     name: 'All Services',
     href: '/comprehensive - services - showcase - 2025',
-    icon: <Globe className="w-5 h-5" />,
+    icon: <Globe className="w - 5 h - 5" />,
     description: 'Complete portfolio of all technology services',
     badge: 'Showcase',
     featured: true,
@@ -545,16 +438,13 @@ const UltraFuturisticNavigation2035: React.FC = () => {
       { name: 'Advanced AI Automation', href: '/advanced-ai-automation-services', description: 'AI automation for development, testing, DevOps, security, and data' }
     ]
     href: '/ai - services',
-    icon: <Brain className="w-5 h-5" />,
+    icon: <Brain className="w - 5 h - 5" />,
     badge: 'New',
     featured: true,
     children: [;
       {
         name: 'AI Customer Success Platform',
         href: '/ai - customer - success - platform',
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     name: 'Contact',
     href: '/contact',
     icon: <Phone className='w-5 h-5' />,
@@ -692,8 +582,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         featured: true,
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
         name: 'AI Sales Intelligence',
         href: '/ai - sales - intelligence - platform',
         description: 'Supercharge sales with AI automation',
@@ -774,17 +662,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   {
   }
   {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
     name: 'AI & Consciousness',
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   const closeMobileMenu = () => {
     setIsOpen(false);
     closeDropdowns();    }
-<<<<<<< HEAD
-
-=======
     name: 'Micro SAAS Solutions',
     href: '/micro - saas',
     icon: <Rocket className='w - 5 h - 5' />,    description: 'Innovative business solutions for modern enterprises',
@@ -812,7 +695,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       { name: 'Invoice Studio', href: '/invoice-studio', description: 'Instant branded invoices and payments' }
     ]
     href: '/micro - saas',
-    icon: <Rocket className="w-5 h-5" />,
+    icon: <Rocket className="w - 5 h - 5" />,
     badge: 'Hot',
     featured: true,
     children: [;
@@ -921,7 +804,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       { name: 'AI-Powered Space Technology', href: '/ai-powered-space-technology', description: 'Revolutionary space AI' }
     ]
     href: '/quantum - services',
-    icon: <Atom className="w-5 h-5" />,
+    icon: <Atom className="w - 5 h - 5" />,
     badge: 'Hot',
     featured: true,
     children: [;
@@ -1082,9 +965,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       }
     ]
   }
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
         name: 'AI Sales Intelligence'
         href: '/ai-sales-intelligence-platform'
         description: 'Supercharge sales with AI automation'
@@ -1445,7 +1325,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     description: 'Documentation, support, and learning resources',
     children: [
     href: '/enterprise - it',
-    icon: <Shield className="w-5 h-5" />,
+    icon: <Shield className="w - 5 h - 5" />,
     badge: 'Enterprise',
     featured: true,
     children: [;
@@ -1629,12 +1509,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)
   }, []);
@@ -1644,16 +1518,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
   const closeDropdowns = () => {
     setActiveDropdown(null)
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 setIsScrolled(window.scrollY > 10);
     };
 
@@ -1665,37 +1529,23 @@ setIsScrolled(window.scrollY > 10);
   }
   const closeDropdowns = () => {
     setActiveDropdown(null);
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   };
 
   const closeMobileMenu = () => {
     setIsOpen(false);
-<<<<<<< HEAD
-<<<<<<< HEAD
     closeDropdowns()
   };
 
+
+
             {/* Desktop Navigation */}  };
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   return (
     <nav aria-label="Primary" className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled
         ? 'bg-black/95 backdrop-blur-xl border-b border-gray-800/50 shadow-2xl'
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
             {/* Desktop Navigation */}
                   <button
                     onClick={() => toggleDropdown(item && item.name)}
@@ -1741,17 +1591,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         item && item.badge === 'Future' ? 'bg-purple-500/20 text-purple-400 border border-purple-500/30' :
                         item && item.badge === 'Enterprise' ? 'bg-blue-500/20 text-blue-400 border border-blue-500/30' :
                         item && item.badge === 'Industry' ? 'bg-orange-500/20 text-orange-400 border border-orange-500/30' :
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               {navigationItems.map((item) => (
                 <div key={item.name} className="relative group">
                   <button
                     onClick={() => toggleDropdown(item.name)}
                     className="flex items-center gap-2 px-4 py-2 text-gray-300 hover:text-white transition-colors duration-200 group-hover:text-cyan-400"
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
                         item.badge === 'New' ? 'bg-green-500/20 text-green-400 border border-green-500/30' :
                         item.badge === 'Hot' ? 'bg-red-500/20 text-red-400 border border-red-500/30' :
                         item.badge === 'Showcase' ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30' :
@@ -1759,9 +1603,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         item.badge === 'Enterprise' ? 'bg-blue-500/20 text-blue-400 border border-blue-500/30' :
                         item.badge === 'Industry' ? 'bg-orange-500/20 text-orange-400 border border-orange-500/30' :
 
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 closeDropdowns();
   };
 
@@ -1807,6 +1648,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {item.icon}
                     <span>{item.name}</span>
                     {item.badge && (
+
 <span
                         className={`px-2 py-1 text-xs rounded-full ${
                           item.badge === 'New'
@@ -1843,11 +1685,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: 10, scale: 0.95 }}
                         transition={{ duration: 0.2 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                         className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-800/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden'
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   {/* Dropdown Menu */}
                   <AnimatePresence>
                     {activeDropdown === item.name && (
@@ -1857,122 +1696,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         exit={{ opacity: 0, y: 10, scale: 0.95 }}
                         transition={{ duration: 0.2 }}
                         className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-800/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden'
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                   {/* Dropdown Menu */}
                   <AnimatePresence>;
                     {activeDropdown === item && item.name && (;
                       <motion&& motion.div
                         initial={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
-<<<<<<< HEAD
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-                        onMouseLeave={closeDropdowns}
-                      >
-                        <div className='p-6'>
-                          <div className='flex items-center gap-3 mb-4'>
-                            {item.icon}
-                            <div>
-                              <h3 className='font-semibold text-white'>
-                                {item.title |item.name}
-                              </h3>
-=======
-=======
-                      <span;
-                        className={`px - 2 py - 1 text - xs rounded - full ${
-                          item.badge === 'New';
-                            ? 'bg - green - 500 / 20 text - green - 400 border border - green - 500 / 30';
-                            : item.badge === 'Hot';
-                              ? 'bg - red - 500 / 20 text - red - 400 border border - red - 500 / 30';
-                              : item.badge === 'Showcase';
-                                ? 'bg - cyan - 500 / 20 text - cyan - 400 border border - cyan - 500 / 30';
-                                : item.badge === 'Future';
-                                  ? 'bg - purple - 500 / 20 text - purple - 400 border border - purple - 500 / 30';
-                                  : item.badge === 'Enterprise';
-                                    ? 'bg - blue - 500 / 20 text - blue - 400 border border - blue - 500 / 30';
-                                    : item.badge === 'Industry';
-                                      ? 'bg - orange - 500 / 20 text - orange - 400 border border - orange - 500 / 30';
-                                      : 'bg - gray - 500 / 20 text - gray - 400 border border - gray - 500 / 30';
-                        }`}
-                      >;
-                        {item.badge}
-                      </span>)}
-                    <ChevronDown;
-                      className={`w - 4 h - 4 transition - transform duration - 200 ${
-                        active_dropdown === item.name ? 'rotate - 180' : '';
-                      }`}
-                    />                  </button>                      <span className={`px - 2 py - 1 text - xs rounded - full ${
-                        item.badge === 'New' ? 'bg - green - 500 / 20 text - green - 400 border border - green - 500 / 30' :;
-                        item.badge === 'Hot' ? 'bg - red - 500 / 20 text - red - 400 border border - red - 500 / 30' :;
-                        item.badge === 'Showcase' ? 'bg - cyan - 500 / 20 text - cyan - 400 border border - cyan - 500 / 30' :;
-                        item.badge === 'Future' ? 'bg - purple - 500 / 20 text - purple - 400 border border - purple - 500 / 30' :;
-                        item.badge === 'Enterprise' ? 'bg - blue - 500 / 20 text - blue - 400 border border - blue - 500 / 30' :;
-                        item.badge === 'Industry' ? 'bg - orange - 500 / 20 text - orange - 400 border border - orange - 500 / 30' :;
-                        'bg - gray - 500 / 20 text - gray - 400 border border - gray - 500 / 30';
-                      }`}>;
-                        {item.badge}
-                      </span>)}
-                    <ChevronDown className={`w - 4 h - 4 transition - transform duration - 200 ${
-                      active_dropdown === item.name ? 'rotate - 180' : '';
-                    }`} />;
-                  {/* Dropdown Menu */}
-                  <AnimatePresence>;
-                    {active_dropdown === item.name && (
-                      <motion.div;
-                        initial={{ opacity: 0, coordinate_y: 10, scale: 0.95 }}
-                        animate={{ opacity: 1, coordinate_y: 0, scale: 1 }}
-                        exit={{ opacity: 0, coordinate_y: 10, scale: 0.95 }}
-                        transition={{ duration: 0.2 }}
-                        className='absolute top - full left - 0 mt - 2 w - 80 bg - gray - 900 / 95 backdrop - blur - xl border border - gray - 800 / 50 rounded - 2xl shadow - 2xl shadow - black / 50 overflow - hidden';
-                        onMouseLeave={close_dropdowns}
-                      >;
-                        <div className='p - 6'>;
-                          <div className='flex items - center gap - 3 mb - 4'>;
-                            {item.icon}
-                            <div>;
-                              <h3 className='font - semibold text - white'>;
-                                {item.title || item.name}
-                              </h3>;
-                              {item.description && (
-                                <p className='text - sm text - gray - 400'>;
-                                  {item.description}
-
-                        onMouseLeave={closeDropdowns}>;
-                        <div className='p-6'>;
-                          <div className='flex items-center gap-3 mb-4'>;
-                            {item && item.icon}
-                            <div>;
-                              <h3 className='font-semibold text-white'>;
-                                {item && item.title || item && item.name}
-                              </h3>;
-                              {item && item.description && (;
-                                <p className='text-sm text-gray-400'>;
-                                  {item && item.description}
-                                </p>;
-                              )}
-                            </div>;
-                          </div>;
-                          <div className='space-y-2'>;
-                            {item && item.children?.map(child => (                              <Link
-                                key={child && child.name}
-                                href={child && child.href}
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                                 className={`flex items-center gap-3 p-3 rounded-xl transition-all duration-200 ${
                                   child && child.featured
                                     ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400 hover:bg-cyan-500/20'                                    : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
@@ -1990,39 +1721,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           </div>
                           <div className="space-y-2">
                             {item.children?.map((child) => (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                                onClick={closeDropdowns}>                        onMouseLeave={closeDropdowns}
-                      >;
-                        <div className="p-6">;
-                          <div className="flex items-center gap-3 mb-4">;
-                            {item && item.icon}
-                            <div>;
-                              <h3 className="font-semibold text-white">{item && item.title || item && item.name}</h3>;
-                              {item && item.description && (;
-                                <p className="text-sm text-gray-400">{item && item.description}</p>;
-                              )}
-                            </div>;
-                          </div>;
-                          <div className="space-y-2">;
-                            {item && item.children?.map((child) => (;
-
-                                onClick={closeDropdowns}
-
-                              >
-
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-800/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden'
                         onMouseLeave={closeDropdowns}
                       >
@@ -2042,12 +1740,7 @@ className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl bo
                           </div>
                           <div className='space-y-2'>
                             {item.children?.map(child => (
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                               <Link
                                 key={child && child.name}
                                 href={child && child.href}
@@ -2069,12 +1762,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                                 </div>;
                                 <ArrowRight className='w-4 h-4 opacity-50' />                              </Link>                                <ArrowRight className="w-4 h-4 opacity-50" />;
                               </Link>;
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                             ))}
                           </div>;
                         </div>;
@@ -2083,54 +1770,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </AnimatePresence>;
                 </div>;
               ))}
-<<<<<<< HEAD
-            </div>
-
-=======
-            </div>;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-            {/* Right Side Actions */}
-            <div className='hidden lg:flex items-center gap-4'>;
-              {/* Quick Actions */}
-
-              <div className='flex items-center gap-2'>
-                {quickActions.map(action => (                  <Link            <div className="hidden lg:flex items-center gap-4">
-              {/* Quick Actions */}
-              <div className="flex items-center gap-2">
-                {quickActions.map((action) => (
-                {quickActions.map(action => (                  <Link
-
-                  <Link
-
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-                    key={action.name}
-                    href={action.href}
-                    className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 ${
-                      action.primary
-                        ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:from-cyan-600 hover:to-blue-600 shadow-lg shadow-cyan-500/25'
-                        : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     }`}
                   >;
                     {action && action.icon}
                     <span>{action && action.name}</span>;
                   </Link>;
                 ))}
-<<<<<<< HEAD
-              </div>
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               {/* Contact Info */}
               <div className='flex items-center gap-4 text-sm text-gray-400'>;
                 <a
@@ -2153,15 +1798,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </Link>))}
               </div>;
               {/* Contact Info */}
-<<<<<<< HEAD
-
-                </a>
-
-              </div>
-            </div>
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
                   href={`mailto:${contactInfo && contactInfo.email}`}
                   className='flex items-center gap-2 hover:text-purple-400 transition-colors duration-200'>;
                   <Mail className='w-4 h-4' />;
@@ -2176,7 +1812,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>;
             </div>;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -2194,12 +1829,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
 
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -2219,45 +1848,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </div>;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Mobile Menu */}
         <AnimatePresence>;
           {isOpen && (;
             <motion&& motion.div
-<<<<<<< HEAD
-    ]
-  }
-],
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                         item.badge === 'New' ? 'bg-green-500/20 text-green-400 border border-green-500/30' :
                         item.badge === 'Hot' ? 'bg-red-500/20 text-red-400 border border-red-500/30' :
                         item.badge === 'Showcase' ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30' :
                         item.badge === 'Future' ? 'bg-purple-500/20 text-purple-400 border border-purple-500/30' :
                         item.badge === 'Enterprise' ? 'bg-blue-500/20 text-blue-400 border border-blue-500/30' :
                         item.badge === 'Industry' ? 'bg-orange-500/20 text-orange-400 border border-orange-500/30' :
-<<<<<<< HEAD
-
                   {/* Dropdown Menu */}
                   <AnimatePresence>
                     {activeDropdown === item.name && (
-
-=======
-                  {/* Dropdown Menu */}
-                  <AnimatePresence>
-                    {activeDropdown === item.name && (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       <motion.div
                         initial={{ opacity: 0, y: 10, scale: 0.95 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: 10, scale: 0.95 }}
                         transition={{ duration: 0.2 }}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                         onMouseLeave={closeDropdowns}
                       >
                         <div className='p-6'>
@@ -2278,14 +1886,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                                 key={child.name}
                                 href={child.href}
                                 className={`flex items-center gap-3 p-3 rounded-xl transition-all duration-200 ${
-<<<<<<< HEAD
-                                  child.featured
-                                    ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400 hover:bg-cyan-500/20'                                    : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
-                                }`}
-                                onClick={closeDropdowns}
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                               <Link
                                 key={child.name}
                                 href={child.href}
@@ -2294,18 +1894,6 @@ child.featured
                                     ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400 hover:bg-cyan-500/20'
                                     : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
                                 }`}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                                onClick={closeDropdowns}
-                              >
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                                 onClick={closeDropdowns}
                               >
 {child.featured && (
@@ -2322,12 +1910,7 @@ child.featured
                                 </div>
                                 <ArrowRight className='w-4 h-4 opacity-50' />
                               </Link>
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                             ))}
                           </div>
                         </div>
@@ -2336,43 +1919,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </AnimatePresence>
                 </div>
               ))}
-<<<<<<< HEAD
-            </div>
-
-            {/* Right Side Actions */}
-=======
             {/* Right Side Actions */}
             <div className='hidden lg:flex items-center gap-4'>
               {/* Quick Actions */}
             {/* Right Side Actions */}
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-            <div className='hidden lg:flex items-center gap-4'>
-=======
 <div className='hidden lg:flex items-center gap-4'>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               {/* Quick Actions */}
               <div className='flex items-center gap-2'>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
                   <Link
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-                {quickActions.map(action => (
-                  <Link
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                 {quickActions.map(action => (
                   <Link
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     key={action.name}
                     href={action.href}
                     className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 ${
@@ -2385,11 +1944,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <span>{action.name}</span>
                   </Link>
                 ))}
-<<<<<<< HEAD
-              </div>
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               {/* Contact Info */}
 <div className='flex items-center gap-4 text-sm text-gray-400'>
                 <a
@@ -2408,10 +1962,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </a>
               </div>
             </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -2426,13 +1976,7 @@ className='lg:hidden p-2 text-gray-300 hover:text-white transition-colors durati
             </button>
           </div>
         </div>
-<<<<<<< HEAD
-
         {/* Mobile Menu */}
-
-=======
-        {/* Mobile Menu */}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <AnimatePresence>
           {isOpen && (
             <motion.div
@@ -2440,32 +1984,7 @@ className='lg:hidden p-2 text-gray-300 hover:text-white transition-colors durati
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-              transition={{ duration: 0.3 }}
 
-                  {/* Mobile Navigation Items */}
-                  {navigation_items.map (item => (
-                    <div key={item.name}>;
-                      <button;
-                        on_click={() => toggle_dropdown (item.name)}
-                        className='flex items - center justify - between w - full p - 3 text - left text - gray - 300 hover:text - white transition - colors duration - 200';
-                      >;
-                        <div className='flex items - center gap - 3'>;
-                          {item.icon}
-                          <span>{item.name}</span>;
-                          {item.badge && (
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
               transition={{ duration: 0.3 }}
 className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-800/50'
             >
@@ -2494,12 +2013,7 @@ className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-800/50
                               }`}
                             >
                               {item.badge}
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                             </span>
                           )}
                         </div>
@@ -2510,53 +2024,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         />
                       </button>
 
-<<<<<<< HEAD
-                      {/* Mobile Dropdown */}
-                      <AnimatePresence>
-                        {activeDropdown === item.name && (
-                          <motion.div
-
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: 'auto' }}
-                            exit={{ opacity: 0, height: 0 }}
-                            transition={{ duration: 0.2 }}
-
-                          >
-                            {item.children?.map((child) => (
-=======
-=======
                         />                      </button>                        <ChevronDownclassName={`w-4 h-4 transition-transform duration-200 ${
                           activeDropdown === item && item.name ? 'rotate-180' : ''
                         }`} />;
                       </button>;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       {/* Mobile Dropdown */}
-<<<<<<< HEAD
-<<<<<<< HEAD
                       <AnimatePresence>;
                         {activeDropdown === item && item.name && (;
                           <motion&& motion.div
-<<<<<<< HEAD
-<<<<<<< HEAD
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: 'auto' }}
-                            exit={{ opacity: 0, height: 0 }}
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                       <AnimatePresence>
                         {activeDropdown === item.name && (
                           <motion.div
@@ -2567,27 +2046,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 className='ml-6 mt-2 space-y-2'
                           >
                             {item.children?.map(child => (
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                               <Link
                                 key={child && child.name}
                                 href={child && child.href}
                                 className={`block p-3 rounded-lg transition-colors duration-200 ${
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                                  child && child.featured
-                                    ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 text-cyan-400'                                  child && child.featured
-                                    ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 text-cyan-400'
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                                     : 'text-gray-400 hover:text-white hover:bg-gray-800/50'
                                 }`}
                                 onClick={closeMobileMenu}>;
@@ -2598,112 +2061,45 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                                   </div>                                )}                                <div className="font-medium">{child && child.name}</div>;
                                 {child && child.description && (;
                                   <div className="text-sm opacity-75 mt-1">{child && child.description}</div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-                                  child.featured
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 child.featured
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                                     ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 text-cyan-400'
                                     : 'text-gray-400 hover:text-white hover:bg-gray-800/50'
                                 }`}
                                 onClick={closeMobileMenu}
                               >
-<<<<<<< HEAD
-                                <div className="font-medium">{child.name}</div>
-                                {child.description && (
-                                  <div className="text-sm opacity-75 mt-1">{child.description}</div>
-=======
 <div className='font-medium'>{child.name}</div>
                                 {child.description && (
                                   <div className='text-sm opacity-75 mt-1'>
                                     {child.description}
                                   </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                                 )}
 
-<<<<<<< HEAD
+
+
+
                               </Link>
-
-                                )}
-
-=======
-=======
-                                )}
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-                              </Link>
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
                               </Link>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                             ))}
                           </motion && motion.div>;
                         )}
                       </AnimatePresence>;
                     </div>;
                   ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  {/* Mobile Quick Actions */}
-                  <div className='pt-4 border-t border-gray-800/50'>
-                    <div className='space-y-3'>
-                      {quickActions.map(action => (                        <Link                  <div className="pt-4 border-t border-gray-800/50">
-                    <div className="space-y-3">
-                      {quickActions.map((action) => (
-                        <Link
-
-                          key={action.name}
-                          href={action.href}
-
-                          key={action.name}
-                          href={action.href}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 
 
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+
                   {/* Mobile Quick Actions */}
 <div className='pt-4 border-t border-gray-800/50'>
                     <div className='space-y-3'>
                       {quickActions.map(action => (
                         <Link
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                           key={action.name}
                           href={action.href}
                         <Link
                           key={action && action.name}
                           href={action && action.href}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                           className={`flex items-center gap-3 p-3 rounded-xl text-sm font-medium transition-all duration-200 ${
                             action && action.primary
                               ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white'
@@ -2714,29 +2110,44 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           <span>{action && action.name}</span>;
                         </Link>;
                       ))}
-<<<<<<< HEAD
-                    </div>
-                  </div>
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   {/* Mobile Contact Info */}
+                  <div className='pt-4 border-t border-gray-800/50'>;
+                    <div className='space-y-3 text-sm text-gray-400'>;
 <div className='pt-4 border-t border-gray-800/50'>
                     <div className='space-y-3 text-sm text-gray-400'>
 origin/cursor/automate-test-improve-and-merge-code-2533
                       <a
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                         <span>{contactInfo.mobile}</span>
                       </a>
                       <a
+                        href={`mailto:${contactInfo && contactInfo.email}`}
+                        className='flex items-center gap-3 p-3 rounded-lg hover:text-purple-400 hover:bg-gray-800/50 transition-all duration-200'>;
+                        <Mail className='w-4 h-4' />;
+                        <span>{contactInfo && contactInfo.email}</span>;
+                      </a>;
+                      <div className='flex items-center gap-3 p-3 rounded-lg'>;
+                        <MapPin className='w-4 h-4' />;
+                        <span className='text-sm'>{contactInfo && contactInfo.address}</span>                      </div>                        <span>{contactInfo && contactInfo.mobile}</span>;
+                      </a>;
+                      <a href={`mailto:${contactInfo && contactInfo.email}`} className="flex items-center gap-3 p-3 rounded-lg hover:text-purple-400 hover:bg-gray-800/50 transition-all duration-200">;
+                        <Mail className="w-4 h-4" />;
+                        <span>{contactInfo && contactInfo.email}</span>;
+                      </a>;
+                      <div className="flex items-center gap-3 p-3 rounded-lg">;
+                        <MapPin className="w-4 h-4" />;
+                        <span className="text-sm">{contactInfo && contactInfo.address}</span>;
+                      </div>;
+                    </div>;
+                  </div>;
+                </div>;
+              </div>;
+            </motion && motion.div>;
+          )}
+        </AnimatePresence>;
+      </div>;
+    </nav>;
+  );
+}
                         href={`mailto:${contactInfo.email}`}
                         className='flex items-center gap-3 p-3 rounded-lg hover:text-purple-400 hover:bg-gray-800/50 transition-all duration-200'
                       >
@@ -2762,110 +2173,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 }, []);
-<<<<<<< HEAD
-
-</div> <div> <div className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Zion Tech Group </div> <div className="text-xs text-gray-400" >Revolutionary Technology</div> </div> </a> > {;
-  item && item.icon ;
-}<span> {;
-  item && item.name ;
-}</span> {;
-  item && item.badge && (<spanclassName= {
-  `px-2 py-1 text-xs rounded-full $ {
-  item && item.badge === 'New' ? 'bg-green-500/20 text-green-400 border border-green-500/30' : item && item.badge === 'Hot' ? 'bg-red-500/20 text-red-400 border border-red-500/30' : item && item.badge === 'Showcase' ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30' : item && item.badge === 'Future' ? 'bg-purple-500/20 text-purple-400 border border-purple-500/30' : item && item.badge === 'Enterprise' ? 'bg-blue-500/20 text-blue-400 border border-blue-500/30' : item && item.badge === 'Industry' ? 'bg-orange-500/20 text-orange-400 border border-orange-500/30' : 'bg-gray-500/20 text-gray-400 border border-gray-500/30' 
-}` 
-}> {;
-  item && item.badge ;
-}</span>) ;
-}<ChevronDownclassName= {
-  `w-4 h-4 transition-transform duration-200 $ {
-  activeDropdown === item && item.name ? 'rotate-180' : '' 
-}` 
-}/> </button> {;
-  /* Dropdown Menu */ ;
-}<AnimatePresence> {;
-  activeDropdown === item && item.name && (<motion&& motion.div) 
-}</div> </div> <Linkkey= {
-  child && child.name 
-}href= {
-  child && child.href 
-}className= {
-  `flex items-center gap-3 p-3 rounded-xl transition-all duration-200 $ {
-  child && child.featured ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400 hover:bg-cyan-500/20': 'text-gray-300 hover:text-white hover:bg-gray-800/50' 
-}` 
-}onClick= {
-  closeDropdowns 
-}>) ;
-}</div> <ArrowRight className="w-4 h-4 opacity-50" /> </a>) ) ;
-}</div> </div> </motion && motion.div>) ;
-}</AnimatePresence> </div>) ) ;
-}</div> <Linkkey= {
-  action && action.name 
-}href= {
-  action && action.href 
-}className= {
-  `flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 $ {
-  action && action.primary ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:from-cyan-600 hover:to-blue-600 shadow-lg shadow-cyan-500/25': 'text-gray-300 hover:text-white hover:bg-gray-800/50' 
-}` 
-}> </a> </div> </div> {;
-  /* Mobile Menu Button */ ;
-}<button </button> </div> </div> {;
-  /* Mobile Menu */ ;
-}<AnimatePresence> <spanclassName= {
-  `px-2 py-1 text-xs rounded-full $ {
-  item && item.badge === 'New'? 'bg-green-500/20 text-green-400': item && item.badge === 'Hot'? 'bg-red-500/20 text-red-400': item && item.badge === 'Showcase'? 'bg-cyan-500/20 text-cyan-400': 'bg-gray-500/20 text-gray-400' 
-}` 
-}> {;
-  item && item.badge ;
-}</span>) ;
-}</div> <ChevronDownclassName= {
-  `w-4 h-4 transition-transform duration-200 $ {
-  activeDropdown === item && item.name ? 'rotate-180': '' 
-}` 
-}/> </button> {;
-  /* Mobile Dropdown */ ;
-}<AnimatePresence> > {;
-  item && item.children?.map ( (child) => (<Linkkey= {
-  child && child.name 
-}href= {
-  child && child.href 
-}className= {
-  `block p-3 rounded-lg transition-colors duration-200 $ {
-  child && child.featured ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 text-cyan-400': 'text-gray-400 hover:text-white hover:bg-gray-800/50' 
-}` 
-}onClick= {
-                        <span>{contactInfo.mobile}</span>
-                      </a>
-                      <a href={`mailto:${contactInfo.email}`} className="flex items-center gap-3 p-3 rounded-lg hover:text-purple-400 hover:bg-gray-800/50 transition-all duration-200">
-                        <Mail className="w-4 h-4" />
-                        <span>{contactInfo.email}</span>
-                      </a>
-                      <div className="flex items-center gap-3 p-3 rounded-lg">
-                        <MapPin className="w-4 h-4" />
-                        <span className="text-sm">{contactInfo.address}</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </div>
-    </nav>
-
-};
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-export default UltraFuturisticNavigation2035;
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 ;
 }, []);
-</div> <div> <div className="text - xl font - bold bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip-text text-transparent" > Zion Tech Group </div> <div className="text - xs text-gray-400" >Revolutionary Technology</div> </div> </a> > {
+</div> <div> <div className="text - xl font - bold bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent" > Zion Tech Group </div> <div className="text - xs text - gray - 400" >Revolutionary Technology</div> </div> </a> > {
   item.icon;
 }<span> {
   item.name;
@@ -2896,7 +2207,7 @@ export default UltraFuturisticNavigation2035;
 }on_click= {
   close_dropdowns;
 }>);
-}</div> <ArrowRight className="w - 4 h-4 opacity-50" /> </a>) );
+}</div> <ArrowRight className="w - 4 h - 4 opacity - 50" /> </a>) );
 }</div> </div> </motion.div>);
 }</AnimatePresence> </div>) );
 }</div> <Link key= {
@@ -2944,27 +2255,14 @@ export default UltraFuturisticNavigation2035;
 }href= {
   action.href;
 }className= {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 export default UltraFuturisticNavigation2035);
 }
 ;
 export default UltraFuturisticNavigation2035;
-<<<<<<< HEAD
-=======
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
 export default UltraFuturisticNavigation2035;  )
 };
 
 export default UltraFuturisticNavigation2035;
 export default UltraFuturisticNavigation2035;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

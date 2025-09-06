@@ -1,20 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const r = null;
@@ -25,12 +10,7 @@ export default async function handler(
 ) {
     const r = await fetch(
       `${req.headers['x-forwarded-proto'] |'http'}://${req.headers.host}/api/metrics`
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     );
     const metrics = await r && r.json();
     const jobs24 =
@@ -51,18 +31,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       `Multiverse scale: ${instances} active sub-instances with cross-instance flows`
       `Treasury stable and contributors earning consistently across regions`
     ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-  } catch (e) {
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ;
 export default async /**
  * handler - Function description
@@ -93,27 +61,10 @@ function handler() {
     ];
 ;
     res.status (200).json ({ summary, timestamp: new Date ().toISOString () });
-<<<<<<< HEAD
-  } catch (e) {
-    res.status (200).json ({ summary: [], error: 'Failed to compute summary' });
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-  }
-}
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     res.status(200).json({ summary, timestamp: new Date().toISOString() });
 origin/cursor/automate-test-improve-and-merge-code-2533
   } catch (e) {
     res.status (200).json ({ summary: [], error: 'Failed to compute summary' });
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -1,12 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 function ensureStorage() {
   const dir = path && path.dirname(EPISODES_PATH);
@@ -20,37 +14,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   ensureStorage();
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const highlights = segments.map((t: string, i: number) => ({
     label: `Highlight ${i + 1}`;
     start: t,
     end: i + 1 < segments.length ? segments[i + 1] : episode?.timeMarkers?.closing || '15:00'}));
-<<<<<<< HEAD
-<<<<<<< HEAD
-  episode.highlights = highlights;
-  episodes[idx] = episode;
-  fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
-  return res.status(200).json({ episode })
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-
-  return res.status(200).json({ episode });
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   return res.status(200).json({ episode })
 }
@@ -151,12 +118,6 @@ return res.status(200).json({ episode });  return res.status(200).json({ episode
 }
 }
   return res.status(200).json({ episode });
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const EPISODES_PATH = null;
   return res.status(200).json({ episode })
 }
@@ -196,9 +157,4 @@ label: `Highlight ${i + 1}`,
   fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
 
 return res.status(200).json({ episode });
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

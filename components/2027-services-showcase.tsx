@@ -1,17 +1,7 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import {
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   Search
   Star
   Users
@@ -70,22 +60,7 @@ import {
   Share2,
   Download,
   Phone,
-<<<<<<< HEAD
-  Mail,
-  MapPin,} from 'lucide-react';import {
-  Search, Star, Users, TrendingUp, DollarSign, Clock,
-  CheckCircle, ArrowRight, Rocket, Brain, Atom, Globe,
-  Zap, Sparkles, Shield, Target, Cpu, Database, Cloud,
-  Lock, ShieldCheck, Eye, Heart, Share2, Download, Phone, Mail, MapPin;
 
-<<<<<<< HEAD
-import { cuttingEdge2027Innovations } from '../data/2027-cutting-edge-innovations';
-import { practicalMicroSaas2027 } from '../data/2027-practical-micro-saas';
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -115,12 +90,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 import { cuttingEdge2027Innovations } from '../data/2027-cutting-edge-innovations';
 import { practicalMicroSaas2027 } from '../data/2027-practical-micro-saas';
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 import { Search, Star, Users, TrendingUp, DollarSign, Clock;
   CheckCircle, ArrowRight, Rocket, Brain, Atom, Globe;
   Zap, Sparkles, Shield, Target, Cpu, Database, Cloud;
@@ -128,48 +97,14 @@ import { Search, Star, Users, TrendingUp, DollarSign, Clock;
  } from 'lucide-react';
 import { cuttingEdge2027Innovations  } from '../data/2027-cutting-edge-innovations';
 import { practicalMicroSaas2027  } from '../data/2027-practical-micro-saas';
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+origin/cursor/automate-test-improve-and-merge-code-2533
 import UltraFuturisticNavigation2027 from '../components/layout/UltraFuturisticNavigation2027';
 import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisticMatrixBackground2027';
   const [searchTerm, setSearchTerm] = useState('');
-<<<<<<< HEAD
 
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
   const [sortBy, setSortBy] = useState<string>('name');
-<<<<<<< HEAD
-
-
-  Search,
-  Star,
-  Users,
-  TrendingUp,
-  DollarSign,
-  Clock,
-  CheckCircle,
-  ArrowRight,
-  Rocket,
-  Brain,
-  Atom,
-  Globe,
-  Zap,
-  Sparkles,
-  Shield,
-  Target,
-  Cpu,
-  Database,
-  Cloud,
-  Lock,
-  ShieldCheck,
-  Eye,
-  Heart,
-  Share2,
-  Download,
-  Phone,
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import UltraFuturisticNavigation2027 from '../components/layout/UltraFuturisticNavigation2027';
 import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisticMatrixBackground2027';
 export default function ServicesShowcase2027() {;
@@ -184,32 +119,6 @@ export default function ServicesShowcase2027() {;
     { value: 'price', label: 'Sort by Price' }
     { value: 'roi', label: 'Sort by ROI' }
   ];
-<<<<<<< HEAD
-
-  ];
-
-  // Filter services based on search and category
-  const filteredServices = allServices.filter(service => {
-    const matchesSearch =
-      service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
-      service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
-      service.category.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory =
-      selectedCategory === 'all' |service.category.includes(selectedCategory);
-    const matchesPrice =
-      selectedPriceRange === 'all' |
-      (selectedPriceRange === 'low' &&
-        parseInt(service.price.replace(/[^0-9]/g, '')) < 1000) |
-      (selectedPriceRange === 'medium' &&
-        parseInt(service.price.replace(/[^0-9]/g, '')) >= 1000 &&
-        parseInt(service.price.replace(/[^0-9]/g, '')) < 10000) |
-      (selectedPriceRange === 'high' &&
-        parseInt(service.price.replace(/[^0-9]/g, '')) >= 10000);
-    return matchesSearch && matchesCategory && matchesPrice;  });    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                          service.category.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'all' |service.category.includes(selectedCategory);
     const matchesPrice = selectedPriceRange === 'all' |
@@ -217,19 +126,6 @@ export default function ServicesShowcase2027() {;
                         (selectedPriceRange === 'medium' && parseInt(service.price.replace(/[^0-9]/g, '')) >= 1000 && parseInt(service.price.replace(/[^0-9]/g, '')) < 10000) |
                         (selectedPriceRange === 'high' && parseInt(service.price.replace(/[^0-9]/g, '')) >= 10000);
     return matchesSearch && matchesCategory && matchesPrice
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
-import UltraFuturisticNavigation2027 from '../components/layout/UltraFuturisticNavigation2027';
-import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisticMatrixBackground2027';
-  const [searchTerm, setSearchTerm] = useState('');
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all'),
   const [sortBy, setSortBy] = useState<string>('name'),
@@ -253,31 +149,16 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
     return matchesSearch && matchesCategory && matchesPrice;
   });
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'name':
         return a.name.localeCompare(b.name);
       case 'price':
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         return (
           parseInt(a && a.price.replace(/[^0-9]/g, '')) -;
           parseInt(b && b.price.replace(/[^0-9]/g, ''));
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 return (
           parseInt(a.price.replace(/[^0-9]/g, '')) -
           parseInt(b.price.replace(/[^0-9]/g, ''))
@@ -288,6 +169,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           parseInt(a && a.roi.replace(/[^0-9]/g, '')) -;
           parseInt(b && b.roi.replace(/[^0-9]/g, ''));
         );
+      default:;
+        return 0;    }        return parseInt(a && a.price.replace(/[^0-9]/g, '')) - parseInt(b && b.price.replace(/[^0-9]/g, ''));
+      case 'roi':;
+        return parseInt(a && a.roi.replace(/[^0-9]/g, '')) - parseInt(b && b.roi.replace(/[^0-9]/g, ''));
+      default: return 0;
+  });
+  return (
+    <UltraFuturisticMatrixBackground2027>;
+      <Head>;
+        <title>;
+          2027 Services Showcase - Zion Tech Group | Cutting-Edge Innovations &;
+          Micro SAAS;
+        </title>;
       default:
         return 0;
     }
@@ -420,15 +314,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         />;
         <link
           rel='canonical'
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Open Graph */}
         <meta
           property='og:title'
           content='2027 Services Showcase - Zion Tech Group'
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
         <meta
           property='og:url'
         {/* Twitter */}
@@ -436,41 +325,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <meta
           name='twitter:title'
           content='2027 Services Showcase - Zion Tech Group'
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <meta
           name='twitter:description'
           content='Revolutionary 2027 services featuring AI consciousness evolution, quantum computing, and practical micro SAAS solutions.'
-<<<<<<< HEAD
-<<<<<<< HEAD
         />      </Head>        {/* Open Graph */}
-<<<<<<< HEAD
-
-        <meta property="og:title" content="2027 Services Showcase - Zion Tech Group" />
-        <meta property="og:description" content="Revolutionary 2027 services featuring AI consciousness evolution, quantum computing, and practical micro SAAS solutions." />
-        <meta property="og:url" content="https://ziontechgroup.com/2027-services-showcase" />
-        <meta property="og:type" content="website" />
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="2027 Services Showcase - Zion Tech Group" />
-        <meta name="twitter:description" content="Revolutionary 2027 services featuring AI consciousness evolution, quantum computing, and practical micro SAAS solutions." />
-      </Head>
-      <UltraFuturisticNavigation2027 />
-
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-cyan-300 mb-8 max-w-4xl mx-auto">
               Experience the future of technology with our revolutionary 2027 services. From AI consciousness evolution to practical micro SAAS solutions.
             </p>
             {/* Stats */}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">
@@ -497,54 +361,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className="text-green-300">Rating</div>
               </div>
             </div>
-<<<<<<< HEAD
-=======
-transition={{ duration: 0 && 0.8 }}>;
-            <h1 className='text-5xl md:text-7xl font-bold mb-6'>;
-              <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
-                2027 Services Showcase;
-              </span>;
-            </h1>;
-            <p className='text-xl md:text-2xl text-cyan-300 mb-8 max-w-4xl mx-auto'>;
-              Experience the future of technology with our revolutionary 2027;
-              services. From AI consciousness evolution to practical micro SAAS;
-              solutions.;
-            </p>;
-            {/* Stats */}
-            <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-12'>;
-              <div className='text-center'>;
-                <div className='text-3xl md:text-4xl font-bold text-cyan-400 mb-2'>;
-                  {allServices && allServices.length}+;
-                </div>;
-                <div className='text-cyan-300'>Services</div>;
-              </div>;
-              <div className='text-center'>;
-                <div className='text-3xl md:text-4xl font-bold text-purple-400 mb-2'>;
-                  15+;
-                </div>;
-                <div className='text-purple-300'>Categories</div>;
-              </div>;
-              <div className='text-center'>;
-                <div className='text-3xl md:text-4xl font-bold text-pink-400 mb-2'>;
-                  1000+;
-                </div>;
-                <div className='text-pink-300'>Customers</div>;
-              </div>;
-              <div className='text-center'>;
-                <div className='text-3xl md:text-4xl font-bold text-green-400 mb-2'>;
-                  4 && 4.9★;
-                </div>;
-                <div className='text-green-300'>Rating</div>              </div>;
-            </div>;
-
-            {/* CTA Buttons */}
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <Link
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 flex items-center justify-center space-x-2">;
                 <Rocket className="w-5 h-5" />;
@@ -553,16 +369,6 @@ transition={{ duration: 0 && 0.8 }}>;
               <Link
                 href="/pricing"
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
         />
       </Head>
       <UltraFuturisticNavigation2027 />
@@ -625,12 +431,7 @@ transition={{ duration: 0 && 0.8 }}>;
                 className='px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center space-x-2'
               >
                 <DollarSign className='w-5 h-5' />
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 <span>View Pricing</span>
               </Link>
             </div>
@@ -638,62 +439,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Search and Filters */}
-      <section className='px-4 sm:px-6 lg:px-8 mb-16'>
-        <div className='max-w-7xl mx-auto'>
-          <div className='bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6 shadow-2xl shadow-cyan-500/20'>
-            {/* Search Bar */}
-            <div className='mb-6'>
-              <div className='relative'>
-                <Search className='absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-cyan-400' />
-                <input
-                  type='text'
-                  placeholder='Search services...'
-                  value={searchTerm}
-                  onChange={e => setSearchTerm(e.target.value)}
-                  className='w-full pl-12 pr-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white placeholder-cyan-300 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/20'                />            {/* Search Bar */}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-      {/* Search and Filters */}
-
-            <div className="mb-6">
-              <div className="relative">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-cyan-400" />
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-                <input
-                  type="text"
-                  placeholder="Search services..."
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-            {/* Filters */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {/* Category Filter */}
-              <div>
-                <label className="block text-cyan-400 font-medium mb-2" htmlFor="input-Category">Category</label>
-                <select
-                  value={selectedCategory}
-                  onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus:outline-none focus:border-cyan-400"
-                >
-                  {categories.map((category) => (
-                    <option key={category.id} value={category.id}>
-                      {category.icon} {category.name} ({category.count})
-                    </option>
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-                  ))}
-                </select>
-              </div>
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
                 className="px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center space-x-2">;
                 <DollarSign className="w-5 h-5" />;
                 <span>View Pricing</span>;
@@ -704,8 +449,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </section>;
 
       {/* Search and Filters */}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <input
                   type="text"
                   placeholder="Search services..."
@@ -713,14 +456,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </select>;
               </div>;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               {/* Price Range Filter */}
               <div>;
                 <label className='block text-cyan-400 font-medium mb-2'>;
@@ -740,9 +475,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <option key={range && range.id} value={range && range.id}>;
                       {range && range.name} ({range && range.count});
                     </option>;
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 <section className='px-4 sm:px-6 lg:px-8 mb-16'>
         <div className='max-w-7xl mx-auto'>
           <div className='bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6 shadow-2xl shadow-cyan-500/20'>
@@ -794,43 +526,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </option>
 origin/cursor/automate-test-improve-and-merge-code-2533
                   ))}
-<<<<<<< HEAD
-                </select>
-              </div>
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
               {/* Sort By */}
               <div>;
                 <label className='block text-cyan-400 font-medium mb-2'>;
                   Sort By;
                 </label>;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               {/* Sort By */}
               <div>
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <label className="block text-cyan-400 font-medium mb-2" htmlFor="input-Sort By">Sort By</label>
                 <select
                   value={sortBy}
@@ -841,9 +544,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <option value='price'>Price</option>;
                   <option value='roi'>ROI</option>                </select>                <select
                   value={sortBy}
-<<<<<<< HEAD
-
-=======
                 >;
                   <option value="name">Name</option>;
                   <option value="price">Price</option>;
@@ -858,9 +558,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <section className="px-4 sm:px-6 lg:px-8 mb-20">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <label className='block text-cyan-400 font-medium mb-2'>
                   Sort By
                 </label>
@@ -884,7 +581,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
 origin/cursor/automate-test-improve-and-merge-code-2533
             <AnimatePresence>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Services Grid */}
       <section className='px - 4 sm:px - 6 lg:px - 8 mb - 20'>;
         <div className='max - w-7xl mx - auto'>;
@@ -898,24 +594,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   initial={{ opacity: 0, coordinate_y: 30, scale: 0.9 }}
                   animate={{ opacity: 1, coordinate_y: 0, scale: 1 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                  exit={{ opacity: 0, coordinate_y: -30, scale: 0.9 }}
-                  className='group';
-                >;
-                  <div className='bg - black / 40 backdrop - blur - xl border border - cyan - 500 / 30 rounded - 2xl p - 6 h - full hover:border - cyan - 400 / 50 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30 shadow - 2xl shadow - cyan - 500 / 20'>;
-                    {/* Service Header */}
-                    <div className='flex items - start justify - between mb - 4'>;
-                      <div className='text - 4xl'>🚀</div>;
-                    </div>;
-                    {/* Service Info */}
-                    <h3 className='text - xl font - bold text - white mb - 2 group - hover:text - cyan - 400 transition - colors duration - 300'>;
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   exit={{ opacity: 0, y: -30, scale: 0.9 }}
 className='group'
                 >
@@ -927,49 +605,12 @@ className='group'
 origin/cursor/automate-test-improve-and-merge-code-2533
                     {/* Service Info */}
                     <h3 className="text - xl font - bold text - white mb - 2 group - hover:text - cyan - 400 transition-colors duration-300">;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-                      {service.name}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    </h3>;
-<<<<<<< HEAD
-                    <p className='text - cyan - 300 text - sm mb - 4 line - clamp - 3'>                      {service.description}
-                    </p>;
-                    {/* Price */}
-
-                    {/* Service Header */}
-                    <div className="flex items - start justify - between mb - 4">;
-                      <div className="text - 4xl">🚀</div>;
-                    </div>;
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-                    {/* Service Info */}
-                    <h3 className="text - xl font - bold text - white mb - 2 group - hover:text - cyan - 400 transition-colors duration-300">;
                       {service.name}
                     </h3>;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     <p className="text - cyan - 300 text - sm mb - 4 line-clamp-3">;
                       {service.description}
-<<<<<<< HEAD
-
-                    <div className="mb-4">
-
-                      <div className="text-2xl font-bold text-white">
-                        {service.price}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
                       <div className='text-2xl font-bold text-white'>                        {service.price}
 
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
                     </h3>
                     <p className='text-cyan-300 text-sm mb-4 line-clamp-3'>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -977,14 +618,33 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </p>
 
                     {/* Price */}
+
 <div className='mb-4'>
                       <div className='text-2xl font-bold text-white'>
 origin/cursor/automate-test-improve-and-merge-code-2533
                         {service.price}
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       </div>
                     </div>
+                    <div className="flex items-start justify-between mb-4">;
+                      <div className="text-4xl">🚀</div>;
+                    </div>;
+                    {/* Service Info */}
+                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">;
+                      {service && service.name}
+                    </h3>;
+                    <p className="text-cyan-300 text-sm mb-4 line-clamp-3">;
+                      {service && service.description}
+                    </p>;
+                    {/* Price */}
+                    <div className='mb-4'>;
+                      <div className='text-2xl font-bold text-white'>                    <div className="mb-4">;
+                      <div className="text-2xl font-bold text-white">;
+                        {service && service.price}
+                      </div>;
+                    </div>;
+                        {service.features.length > 3 && (
+                          <div className="text-cyan-400 text-sm">
                     {/* Features */}
 <div className='mb-6'>
                       <h4 className='text-cyan-400 font-semibold mb-3'>
@@ -1007,19 +667,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
                             +{service.features.length - 3} more features
                           </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         )}
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-                        )}
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     {/* ROI */}
+
+                      </div>;
+                    </div>;
+                    <div className="mb-6 text-center">
+                      <div className="text-green-400 font-semibold text-lg">ROI: {service.roi}</div>
+                      <div className="text-gray-400 text-xs">Return on Investment</div>
 <div className='mb-6 text-center'>
                       <div className='text-green-400 font-semibold text-lg'>
                         ROI: {service.roi}
@@ -1030,14 +686,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     {/* ROI */}
                     <div className='mb-6 text-center'>;
                       <div className='text-green-400 font-semibold text-lg'>;
@@ -1050,40 +698,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {/* Actions */}
                     <div className="flex space-x-3">;
                       <Link
-<<<<<<< HEAD
-<<<<<<< HEAD
                         href={service && service.link}
                         className="flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 text-center text-sm">;
                         Learn More;
                       </Link>;
                       <Link
                         href='/contact'
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                        href={service.link}
-                        className="flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 text-center text-sm"
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-                        href={service.link}
-                        className='flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 text-center text-sm'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                         href={service.link}
                         className='flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 text-center text-sm'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                       >
                         Learn More
                       </Link>
                       <Link
+                        href="/contact"
+                        className="px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm"
 href='/contact'
                         className='px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm'
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1091,28 +720,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         Contact
                     </div>
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
                         className="px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm">;
                         Contact;
                       </Link>;
                     </div>;
 
                         className='px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm'                        href="/contact"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     {/* Category Badge */}
-<<<<<<< HEAD
-<<<<<<< HEAD
                     <div className='mt-4'>;
                       <span className='inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-medium rounded-full border border-cyan-500/30'>                        {service && service.category}                    <div className="mt-4">;
                       <span className="inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-medium rounded-full border border-cyan-500/30">;
@@ -1121,13 +735,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>;
                   </div>;
                 </motion && motion.div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div className='mt-4'>
                       <span className='inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-medium rounded-full border border-cyan-500/30'>
                         {service.category}
@@ -1135,77 +742,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
                   </div>
                 </motion.div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
               ))}
-            </AnimatePresence>
-          </div>
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-              ))}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           {/* No Results */}
           {sortedServices && sortedServices.length === 0 && (;
             <motion&& motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'                  setSelectedPriceRange('all');
-                }}
-
-            >
-              <div className="text-6xl mb-4">🔍</div>
-              <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
-              <p className="text-cyan-300 mb-6">Try adjusting your search criteria or browse all services.</p>
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 onClick={() => {
                   setSearchTerm('');
                   setSelectedCategory('all');
-=======
-                  setSelectedPriceRange('all');
-                }}
-                className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'              >              className="text-center py-20"
-            >
-              <div className="text-6xl mb-4">🔍</div>
-              <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
-              <p className="text-cyan-300 mb-6">Try adjusting your search criteria or browse all services.</p>
-                className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'              >
-
-              <button
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-                onClick={() => {
-                  setSearchTerm('');
-                  setSelectedCategory('all');
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   setSelectedPriceRange('all');
                 }}
                 className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'                  setSelectedPriceRange('all')
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
                   setSelectedPriceRange('all')
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='text-center py-20'
             >
               <div className='text-6xl mb-4'>🔍</div>
@@ -1222,12 +773,7 @@ className='text-center py-20'
 setSelectedPriceRange('all');
                 }}
                 className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 }}
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
               >
@@ -1235,39 +781,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </button>
             </motion.div>
           )}
-<<<<<<< HEAD
-        </div>
-      </section>
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Contact Section */}
 <section className='px-4 sm:px-6 lg:px-8 mb-20'>
         <div className='max-w-4xl mx-auto'>
           <div className='bg-gradient-to-r from-cyan-900/40 via-purple-900/40 to-pink-900/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-8 text-center shadow-2xl shadow-cyan-500/20'>
             <h2 className='text-3xl font-bold text-white mb-4'>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-      {/* Contact Section */}
-      <section className='px-4 sm:px-6 lg:px-8 mb-20'>
-        <div className='max-w-4xl mx-auto'>
-          <div className='bg-gradient-to-r from-cyan-900/40 via-purple-900/40 to-pink-900/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-8 text-center shadow-2xl shadow-cyan-500/20'>
-            <h2 className='text-3xl font-bold text-white mb-4'>
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               Ready to Transform Your Business?
             </h2>
             <p className='text-cyan-300 mb-8 text-lg'>
@@ -1292,37 +811,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           )}
               <Link
                 href='/contact'
-<<<<<<< HEAD
-<<<<<<< HEAD
                 className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25'>;
                 Get Started Today;
               </Link>;
               <Link
                 href='/pricing'
-<<<<<<< HEAD
-                className='px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300'              >              Ready to Transform Your Business?
-
-            </h2>
-            <p className="text-cyan-300 mb-8 text-lg">
-              Contact our team to discuss how our 2027 services can revolutionize your operations and drive unprecedented growth.
-            </p>
-
-              <div className="flex items-center justify-center space-x-3">
-                <Phone className="w-5 h-5 text-cyan-400" />
-                <span className="text-white">{contactInfo.mobile}</span>
-              </div>
-              <div className="flex items-center justify-center space-x-3">
-                <Mail className="w-5 h-5 text-purple-400" />
-                <span className="text-white">{contactInfo.email}</span>
-              </div>
-              <div className="flex items-center justify-center space-x-3">
-                <MapPin className="w-5 h-5 text-pink-400" />
-                <span className="text-white">{contactInfo.address}</span>
-              </div>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 className='px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300'>              Ready to Transform Your Business?;
             </h2>;
             <p className="text-cyan-300 mb-8 text-lg">;
@@ -1344,74 +837,33 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
               <Link
                 href="/contact"
-<<<<<<< HEAD
-<<<<<<< HEAD
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25"
-              >
-                Get Started Today
-
-=======
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25'
               >
                 Get Started Today
               </Link>
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
               <Link
 href='/pricing'
                 className='px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300'
               >
                 View Pricing Plans
               </Link>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-
-=======
       {/* Footer */}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
             </div>
             <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">
               Zion Tech Group
             </h3>
             <p className="text-cyan-300">2027 Innovation Hub</p>
           </div>
-
+          <div className="text-cyan-300 text-sm">
             <p>&copy, 2027 Zion Tech Group. All rights reserved.</p>
             <p className="mt-2">
               <Link href="/privacy" className="hover:text-cyan-400 transition-colors duration-300">Privacy Policy</Link>
-<<<<<<< HEAD
-                className='hover:text-cyan-400 transition-colors duration-300'>;
-                Contact Us;
-              </Link>            </p>              Z;
-            </div>;
-            <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">;
-              Zion Tech Group;
-            </h3>;
-            <p className="text-cyan-300">2027 Innovation Hub</p>;
-          </div>;
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <div className="text-cyan-300 text-sm">;
             <p>&copy, 2027 Zion Tech Group. All rights reserved.</p>;
             <p className="mt-2">;
@@ -1419,11 +871,6 @@ href='/pricing'
               {' • '}
               <Link href="/terms" className="hover:text-cyan-400 transition-colors duration-300">Terms of Service</Link>;
               {' • '}
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 }
               <Link href="/contact" className="hover: text-cyan-400 transition-colors duration-300">Contact Us</Link>;
                     </p>;
@@ -1673,12 +1120,6 @@ href='/pricing'
 }
     </UltraFuturisticMatrixBackground2027>));
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 <footer className='px-4 sm:px-6 lg:px-8 py-12 border-t border-cyan-500/30'>
         <div className='max-w-7xl mx-auto text-center'>
           <div className='mb-8'>
@@ -1719,9 +1160,4 @@ href='/pricing'
       </footer>
     </UltraFuturisticMatrixBackground2027>
 );
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

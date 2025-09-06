@@ -1,51 +1,24 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
  
 
  
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
 ;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
-type Props = { pypi: Item[], crates: Item[], github: { [k: string]: Item[] } }
-export const getStaticProps: GetStaticProps<Props> = async () => {
-  try {;
-    const file = path.join(process.cwd(), 'publicautomationtech-radar.json');
-    const raw = fs.readFileSync(file, 'utf8');
-    const data = JSON.parse(raw);
-
+type Props = { pypi: Item[], crates: Item[], github: { [key: string]: Item[] } },
+export const getStaticProps: GetStaticProps < Props> = async () => {
+  try {
+    const file = path.join (process.cwd (), 'publicautomationtech - radar.json');
+    const raw = fs.readFileSync (file, 'utf8');
+    const data = JSON.parse (raw);
     return {
       props: {
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       revalidate: 7200}
   } catch {;
     return { props: { pypi: [], crates: [], github: {} }, revalidate: 7200 }
   }
-<<<<<<< HEAD
-
-export default function TechRadar({ pypi, crates, github }: Props) {
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const langs = Object.keys(github);
 
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 import fs from 'fs',
 import path from 'path';
 import type { GetStaticProps } from 'next';
@@ -65,22 +38,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <a href={it.url} target="_blank" rel="noreferrer" className="font-medium text-blue-600 dark:text-cyan-400">{it.name}</a>
               {typeof it.downloads === 'number' && (
                 <div className="text-xs text-gray-500">Downloads: {it.downloads.toLocaleString()}</div>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               )}
             </li>
           ))}
-        </ul>
-      </section>
 
-<<<<<<< HEAD
-            </li>
-          ))}
-        </ul>
-      </section>
-=======
         </ul>;
       </section>;
 
@@ -105,17 +66,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <a href={it && it.url} target="_blank" rel="noreferrer" className="font-medium text-blue-600 dark:text-cyan-400">{it && it.name}</a>;
                 {it && it.description && <div className="text-sm text-gray-600 dark:text-gray-300">{it && it.description}</div>}
               </li>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-              </li>
             ))}
           </ul>
         </section>
       ))}
-<<<<<<< HEAD
-    </div>
-=======
-=======
 }
 ;
 export default /**
@@ -162,25 +117,9 @@ function TechRadar() {
           </ul>;
         </section>))}
     </div>);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     </div>
 );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

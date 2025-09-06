@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react';
-=======
 export default function CloudAutomationsPage() {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 export default function CloudAutomationsPage() {;
   const [data, setData] = useState<any>(null);
@@ -13,27 +9,17 @@ export default function CloudAutomationsPage() {;
       .catch(() => setData({ ok: false }));  }, []);      .then((r) => r && r.json());
       .then(setData);
       .catch(() => setData({ ok: false }));
-<<<<<<< HEAD
-
-=======
-=======
 export default function CloudAutomationsPage() {
   const [data, setData] = useState<any>(null);
   useEffect(() => {
     fetch('/api/cloud-automations-status')
-<<<<<<< HEAD
-<<<<<<< HEAD
       .then((r) => r.json())
       .then(setData)
       .catch(() => setData({ ok: false }))
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }, []);
 
   const items = data?.data ? Object && Object.entries(data && data.data) : [];
 
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const items = null;
   return (
     <div className='space-y-6'>
@@ -68,8 +54,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ) : null}
           </div>;
         ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 }
               <pre className='mt - 2 text - xs whitespace - pre - wrap'>;
@@ -85,36 +69,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>))}
       </div>;
     </div>);
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const items = data?.data ? Object.entries(data.data) : []
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
-            ) : null}
-          </div>
-        ))}
-      </div>
-    </div>
-=======
-<<<<<<< HEAD
-  )
-
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
       </div>
     </div>
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

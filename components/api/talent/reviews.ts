@@ -1,105 +1,45 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    return res.status(200).json({ slug, reviews: [], average: null, count: 0 });  }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   if (req.method === 'POST') {
-    // In a real implementation, validate and insert review into Supabaseexport default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === 'GET') {
-
-    return res.status(200).json({ slug, reviews: [], average: null, count: 0 })
+    // In a real implementation, validate and insert review into Supabase
+  }
   if (req.method === 'POST') {
+    // In a real implementation, validate and insert review into Supabase
+  }
 
+
+  if (req.method === 'POST') {
     // In a real implementation, validate and insert review into Supabase
-<<<<<<< HEAD
-<<<<<<< HEAD
-    return res && res.status(201).json({ ok: true });
   }
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-  }  if (req.method === 'POST') {
-    // In a real implementation, validate and insert review into Supabase
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-  }
+
 
   return res && res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
 }
-=======
-  if (req.method === 'POST') {
-    // In a real implementation, validate and insert review into Supabase
-  }
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-  if (req.method === 'POST') {
-    // In a real implementation, validate and insert review into Supabase
-  }
 origin/cursor/integrate-build-improve-and-re-verify-2156
-
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method;
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+pr-12243
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
   if (req.method === 'GET') {
-<<<<<<< HEAD
-<<<<<<< HEAD
     // In a real implementation, fetch reviews from Supabase by talent id/slug
-<<<<<<< HEAD
     const { slug } = req.query as { slug?: string }
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-=======
     // In a real implementation, fetch reviews from Supabase by talent id/slug;
     const { slug } = req.query as { slug?: string };
     return res.status(200).json({ slug, reviews: [], average: null, count: 0 });  }
   if (req.method === 'POST') {
     // In a real implementation, validate and insert review into Supabaseexport default async function handler(req: NextApiRequest, res: NextApiResponse) {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   if (req.method === 'GET') {
     // In a real implementation, fetch reviews from Supabase by talent id/slug
     const { slug } = req.query as { slug?: string }
     // In a real implementation, fetch reviews from Supabase by talent id/slug;
     const { slug } = req.query as { slug?: string };
-<<<<<<< HEAD
-=======
     return res.status(200).json({ slug, reviews: [], average: null, count: 0 })
 
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     const { slug } = req.query as { slug?: string };
     return res.status(200).json({ slug, reviews: [], average: null, count: 0 });
   }
@@ -126,15 +66,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 return res && res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
 }
-<<<<<<< HEAD
-=======
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-
+pr-12243
 ;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 export default async /**
  * handler - Function description
  */
@@ -174,55 +107,26 @@ return res;
     .end ('Method Not Allowed');    return res.status (201).json ({ ok: true });
   }
   return res.set_header ('AllowGET, POST').status (405).end ('Method Not Allowed');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-}
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-}
-
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+origin/cursor/automate-test-improve-and-merge-code-20a4
+pr-12243
   if (req.method === 'GET') {
 
     // In a real implementation, fetch reviews from Supabase by talent id/slug;
     const { slug } = req.query as { slug?: string };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     return res.status(200).json({ slug, reviews: [], average: null, count: 0 });  }
   if (req.method === 'POST') {
     // In a real implementation, validate and insert review into Supabaseexport default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
-<<<<<<< HEAD
-    // In a real implementation, fetch reviews from Supabase by talent id/slug
-    const { slug } = req.query as { slug?: string }
-    // In a real implementation, fetch reviews from Supabase by talent id/slug;
-    const { slug } = req.query as { slug?: string };
-    return res.status(200).json({ slug, reviews: [], average: null, count: 0 })
-
-    return res.status(200).json({ slug, reviews: [], average: null, count: 0 })
-  if (req.method === 'POST') {
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     // In a real implementation, validate and insert review into Supabase
     return res.status(201).json({ ok: true });
   }
 return res
     .setHeader('Allow', 'GET, POST')
     .status(405)
+    .end('Method Not Allowed');    return res.status(201).json({ ok: true })
+  }
   return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
 }
 
@@ -232,23 +136,18 @@ return res
 }
 }
     // In a real implementation, validate and insert review into Supabase
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
+
+    // In a real implementation, fetch reviews from Supabase by talent id/slug;
+    const { slug } = req.query as { slug?: string };
+    return res.status(200).json({ slug, reviews: [], average: null, count: 0 })
 
 
-<<<<<<< HEAD
     return res.status(200).json({ slug, reviews: [], average: null, count: 0 })
   if (req.method === 'POST') {
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
+ursor/fix-website-loading-errors-and-merge-6662
+pr-12243
   return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
 }
 
@@ -258,24 +157,6 @@ return res
 }
 }
     // In a real implementation, validate and insert review into Supabase
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-    .end('Method Not Allowed');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
     .end('Method Not Allowed');
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+pr-12243

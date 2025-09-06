@@ -1,48 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import PDFDocument from 'pdfkit';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-
-<<<<<<< HEAD
-
-import {
-  getWhitepaperSections
-  OPERATOR_PROMPT;
-  getWhitepaperSections,;
-  OPERATOR_PROMPT,;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-} from '../../utils/whitepaper/zionWhitepaper';import { getWhitepaperSections, OPERATOR_PROMPT } from '../../utils/whitepaper/zionWhitepaper';
-function writeSection(doc: PDFDocument, title: string, content: string) {
-  doc.addPage()
-  doc.fontSize(20).fillColor('#111111').text(title, { underline: true });
-  doc.moveDown();
-  doc.fontSize(11).fillColor('#222222').text(content, {
-    width: 480
-    align: 'left'
-  });
-
-<<<<<<< HEAD
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   getWhitepaperSections,;
   OPERATOR_PROMPT,;
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 } from '../../utils/whitepaper/zionWhitepaper';import { getWhitepaperSections, OPERATOR_PROMPT } from '../../utils/whitepaper/zionWhitepaper';
 function writeSection(doc: PDFDocument, title: string, content: string) {
 
@@ -71,12 +32,6 @@ function write_section() {
 ) {;
   const editionParam = (req.query.edition as string) || 'full';
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 import { getWhitepaperSections, OPERATOR_PROMPT } from '../../utils/whitepaper/zionWhitepaper';
 function writeSection(doc: PDFDocument, title: string, content: string) {
   doc.addPage();
@@ -108,42 +63,19 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const editionParam = (req.query.edition as string) |'full';
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const edition =
     editionParam === 'investor' |editionParam === 'developer'
       ? editionParam
       : 'full';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   const editionParam = (req.query.edition as string) || 'full';
   const edition = editionParam === 'investor' || editionParam === 'developer' ? editionParam : 'full';
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const editionParam = (req.query.edition as string) |'full';
   const edition = editionParam === 'investor' |editionParam === 'developer' ? editionParam : 'full';
   res.setHeader('Content-Typeapplication/pdf');
   res.setHeader('Content-Disposition', `attachment, filename="zion-protocol-${edition}.pdf"`);
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   res.setHeader('Content-Type', 'application/pdf');
   res.setHeader(
     'Content-Disposition'
@@ -156,13 +88,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   doc.info.Title = `Zion Protocol Whitepaper (${edition})`;
   doc.info.Author = 'Zion Protocol';
   doc.pipe(res);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   doc
     .fontSize(26)
     .fillColor('#000000')
@@ -176,9 +101,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   sections.forEach(s => writeSection(doc, s.title, s.contentMd));
 
   const sections = getWhitepaperSections(edition as any);
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   // Cover page
   doc.addPage();
 doc
@@ -209,8 +131,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     .text(
       '© Zion Protocol. This document is provided for informational purposes and does not constitute financial advice.'
     );
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   doc && doc.end();
   // End
@@ -298,18 +218,7 @@ function handler() {
   doc.fontSize(9).fillColor('#666666').text(OPERATOR_PROMPT, { width: 480 });
 
   const sections = getWhitepaperSections(edition as any);
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   doc.end();
   doc.end()
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

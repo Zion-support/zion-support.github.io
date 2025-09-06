@@ -1,18 +1,11 @@
-<<<<<<< HEAD:pages/api/admin/partners/fraud-flags.ts
 <<<<<<< HEAD
-
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 =======
+>>>>>>> pr-12243
 import type { NextApiRequest, NextApiResponse } from 'next';
->>>>>>> main
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-main
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/admin/partners/fraud-flags.ts
 import { getServerSupabase } from '../../../../utils/supabase/server',;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const code = (req.query.code as string)?.toLowerCase()
@@ -24,6 +17,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (usingPlaceholder) {
       return res.status(200).json({ flags: [
         { type: 'suspicious_ip', severity: 'low', note: 'Multiple visits from same IP' }]})
+=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../../utils/supabase/server';
   try {
@@ -31,7 +25,7 @@ import { getServerSupabase } from '../../../../utils/supabase/server';
     const supabase = getServerSupabase();
     const { data: flags } = await supabase.from('fraud_flags').select().eq('partner_code', code);
     return res.status(200).json({ flags });
-origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     }
 
     const supabase = getServerSupabase()
@@ -39,14 +33,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       .from('referral_events')
       .select('ip_address, created_at')
       .eq('partner_code', code)
-<<<<<<< HEAD:pages/api/admin/partners/fraud-flags.ts
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/admin/partners/fraud-flags.ts
 .gte(
         'created_at',
         new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString()
@@ -57,26 +48,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     for (const row of data || []) {
       const key = (row as any).ip_address || 'unknown';
 counts.set(key, (counts.get(key) || 0) + 1);
-origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     }
-<<<<<<< HEAD:pages/api/admin/partners/fraud-flags.ts
 =======
 <<<<<<< HEAD
       .gte('created_at', new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString()),
     if (error) return res.status(500).json({ error: error.message }),
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-    const flags: any[] = []
 
+    const flags: any[] = [],
 =======
+>>>>>>> pr-12243
       .gte('created_at', new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString())
     if (error) return res.status(500).json({ error: error.message })
 
 
-
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     const flags: any[] = []
-main
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/admin/partners/fraud-flags.ts
     counts.forEach((count, ip) => {
       if (count > 30 && ip !== 'unknown') {
 flags.push({
@@ -87,12 +75,9 @@ flags.push({
           note: 'High number of events from a single IP in 7 days',
         });
       }
-<<<<<<< HEAD:pages/api/admin/partners/fraud-flags.ts
 <<<<<<< HEAD
     })
 
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
     return res.status(500).json({ error: e?.message })
   };
@@ -104,14 +89,13 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   }
 }
 =======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/admin/partners/fraud-flags.ts
     return res.status(200).json({ flags })
   } catch (e: any) {
     return res.status(500).json({ error: e?.message })
   }
 };
-
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
     });
   } catch (error) {
     return res.status(500).json({ error: 'Internal server error' });
@@ -121,9 +105,4 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     return res.status(500).json({ error: e?.message });
   }
 }
-<<<<<<< HEAD:pages/api/admin/partners/fraud-flags.ts
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/admin/partners/fraud-flags.ts

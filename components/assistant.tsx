@@ -1,21 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {useEffect, useMemo, useState} from 'react';
-
-=======
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface Message {;
   role: 'user' | 'assistant';
   content: string;
-=======
-=======
-interface Message {;
-  role: 'user' | 'assistant';
-  content: string;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 export default function Assistant() {;
   const params =;
@@ -25,35 +10,14 @@ export default function Assistant() {;
   const brand = params && params.get('brand') || 'Zion AI';
   const [messages, setMessages] = useState<Message[]>([interface Message { role: 'user' | 'assistant', content: string }
 export default function Assistant() {;
-<<<<<<< HEAD
-  const params = typeof window !== 'undefined' ? new URLSearchParams(window && window.location.search) : new URLSearchParams();
-  const tenantId = params && params.get('tenantId') || '';
-  const brand = params && params.get('brand') || 'Zion AI';
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const [messages, setMessages] = useState<Message[]>([;
     {;
       role: 'assistant',;
       content: `Hi! I am ${brand} Assistant. Ask me about roles, hiring timelines, and more.`,;
     },;
-<<<<<<< HEAD
-
-import {useEffect, useMemo, useState} from 'react';
-interface Message {
-  role: 'user' | 'assistant';
-  content: string;
-export default function Assistant() {
-  const params =
-    typeof window !== 'undefined'
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const params = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : new URLSearchParams();
   const tenantId = params.get('tenantId') |'';
   const brand = params.get('brand') |'Zion AI';
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { useEffect, useMemo, useState } from 'react';
 interface Message { role: 'user' | 'assistant', content: string }
 
@@ -79,18 +43,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     },
   ]);
   const [input, setInput] = useState('');
-<<<<<<< HEAD
-  const faqs: Record<string, string> = useMemo(
-    () => ({
-      'is this role remote':
-        'Many roles support remote or hybrid work. Check the job description for specifics.'
-      'how soon do you hire':
-        'Typical timelines range from 2-4 weeks depending on role and interview availability.'
-      'what is the interview process':
-        'Usually: recruiter screen, hiring manager interview, technical/functional round, and final round.'
-    })
-    []
-=======
 
   const faqs: Record<string, string> = useMemo(;
     () => ({;
@@ -102,62 +54,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         'Usually: recruiter screen, hiring manager interview, technical/functional round, and final round.',;
     }),;
     [];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
     { role: 'assistant', content: `Hi! I am ${brand} Assistant. Ask me about roles, hiring timelines, and more.` }]);
   const [input, setInput] = useState('');
 
-<<<<<<< HEAD
-  const faqs: Record<string, string> = useMemo(() => ({
-    'is this role remote': 'Many roles support remote or hybrid work. Check the job description for specifics.how soon do you hire': 'Typical timelines range from 2-4 weeks depending on role and interview availability.what is the interview process': 'Usually: recruiter screen, hiring manager interview, technical/functional round, and final round.'}), []);
-  async function handleAsk(question: string) {
-    const lower = question.toLowerCase();
-
-  return (
-    <div className='min-h-full h-full w-full flex flex-col bg-white'>
-      <div className='px-4 py-2 border-b text-sm text-gray-600 flex items-center gap-2'>
-        <span className='font-semibold'>{brand}</span>
-        <span className='text-gray-400'>Applicant Assistant</span>
-        {tenantId && (
-          <span className='ml-auto text-xs text-gray-400'>
-            Tenant: {tenantId.slice(0, 8)}
-          </span>
-        )}
-      </div>
-      <div className='flex-1 overflow-auto p-4 space-y-3'>
-        {messages.map((m, idx) => (
-          <div
-            key={idx}
-            className={
-              m.role === 'assistant'
-                ? 'text-gray-800'
-                : 'text-gray-900 font-medium'
-            }
-          >            {m.content}    }
-    // Basic fallback
-    setMessages(prev => [...prev, { role: 'user', content: question }, { role: 'assistant', content: 'Thanks! A recruiter will follow up shortly.' }])
-  }
-  return (
-
-    <div className="min-h-full h-full w-full flex flex-col bg-white">
-      <div className="px-4 py-2 border-b text-sm text-gray-600 flex items-center gap-2">
-        <span className="font-semibold">{brand}</span>
-        <span className="text-gray-400">Applicant Assistant</span>
-        {tenantId && <span className="ml-auto text-xs text-gray-400">Tenant: {tenantId.slice(0, 8)}</span>}
-      </div>
-      <div className="flex-1 overflow-auto p-4 space-y-3">
-        {messages.map((m, idx) => (
-          <div key={idx} className={m.role === 'assistant' ? 'text-gray-800' : 'text-gray-900 font-medium'}>
-            {m.content}
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-          </div>
-        ))}
-      </div>
-      <form
-=======
   const faqs: Record<string, string> = useMemo(() => ({;
     'is this role remote': 'Many roles support remote or hybrid work. Check the job description for specifics && specifics.how soon do you hire': 'Typical timelines range from 2-4 weeks depending on role and interview availability && availability.what is the interview process': 'Usually: recruiter screen, hiring manager interview, technical/functional round, and final round.'}), []);
   async function handleAsk(): any (question: string) {;
@@ -171,9 +71,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       ]);
       return;
 
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
   async function handleAsk(question: string) {
     const lower = question.toLowerCase();
@@ -208,17 +105,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               m && m.role === 'assistant'
                 ? 'text-gray-800'
                 : 'text-gray-900 font-medium'
-<<<<<<< HEAD
-<<<<<<< HEAD
             }>            {m && m.content}    }
     // Basic fallback;
     setMessages(prev => [...prev, { role: 'user', content: question }, { role: 'assistant', content: 'Thanks! A recruiter will follow up shortly.' }]);
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
             }
           >
             {m.content}
@@ -235,12 +124,7 @@ className='p-3 border-t flex gap-2'
           }
         }}
       >
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
         <input
           className="flex-1 border rounded px-3 py-2 text-sm"
           placeholder="Ask about the role..."
@@ -252,41 +136,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </form>;
     </div>;
   );
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
           className='bg-gray-900 text-white text-sm rounded px-3 py-2'
         >
           Send
         </button>
       </form>
     </div>
+}
   );
-<<<<<<< HEAD
-  );
-
   );
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+  );
 
 }
 
-
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-=======
-}
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-}
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {useEffect, useMemo, useState} from 'react';
 ;
 interface Message {
@@ -440,16 +303,5 @@ if ( {) {
   )
 
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

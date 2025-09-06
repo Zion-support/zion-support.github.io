@@ -1,15 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 interface TextAnalysisResult {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    bigrams: Array<{ phrase: string, count: number }>;
-    trigrams: Array<{ phrase: string, count: number }>;
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
 }
 export default async function handler(
@@ -24,17 +14,9 @@ export default async function handler(
 
     // Basic statistics
 
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     const characters = text.length;
     const charactersNoSpaces = text.replace(/\s/g, '').length;
     const words = text
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 text: string;
   statistics: {
     characters: number;
@@ -251,16 +233,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       .slice(0, 5)
       .map(([phrase, count]) => ({ phrase, count }));
     // Language detection (simplified - assume English for demo)
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    const isEnglish = /^[a-zA-Z\s.,!?,:'"()-]+$/.test(text);
-    const detectedLanguage = isEnglish ? 'en' : 'unknown';
-    const confidence = isEnglish ? 0.95 : 0.5;
-
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       text
         characters
         charactersNoSpaces
@@ -271,9 +243,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         readingTime
         speakingTime
       }
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const isEnglish = /^[a-zA-Z\s.,!?;:'"()-]+$/.test(text);
     const detectedLanguage = isEnglish ? 'en' : 'unknown';
     const confidence = isEnglish ? 0.95 : 0.5;
@@ -305,50 +274,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         positiveWords: textWords.filter(word => positiveWords.includes(word))
         negativeWords: textWords.filter(word => negativeWords.includes(word))
       }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       language: {
   } catch (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
     console && console.error('Text analysis error:', error);
     res && res.status(500).json({ error: 'Internal server error' });
   }        score: sentimentScore;
         label: sentimentLabel;
-<<<<<<< HEAD
-
-        positiveWords: textWords && textWords.filter(word => positiveWords && positiveWords.includes(word));
-        negativeWords: textWords && textWords.filter(word => negativeWords && negativeWords.includes(word))};
-
-      language: {
-
-=======
-      text;
-      statistics: {
-        characters;
-        charactersNoSpaces;
-        words;
-        sentences;
-        paragraphs;
-        syllables;
-        readingTime;
-        speakingTime
-    },
-    readability: {
-        fleschReadingEase: Math.round(fleschReadingEase * 100) / 100, fleschKincaidGrade: Math.round(fleschKincaidGrade * 100) / 100,
-        gunningFog: Math.round(gunningFog * 100) / 100, smog: Math.round(smog * 100) / 100,
-        colemanLiau: Math.round(colemanLiau * 100) / 100, automatedReadability: Math.round(automatedReadability * 100) / 100,
-        averageGrade};
-      sentiment: {
-        score: sentimentScore, label: sentimentLabel,
-        positiveWords: textWords.filter(word => positiveWords.includes(word)),
-        negativeWords: textWords.filter(word => negativeWords.includes(word))
-    },
-    language: {
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         detectedLanguage;
         confidence;
         isEnglish}
@@ -378,53 +309,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       keywords: {
         top_words;
         bigrams;
-<<<<<<< HEAD
-
-        trigrams}};
-    res && res.status(200).json(result)
-  } catch (error) {
-    console && console.error('Text analysis error:', error);
-    res && res.status(500).json({ error: 'Internal server error' })
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-  }
-
-}
-
-  }
-}
-
-    const result: TextAnalysisResult = {
-    const result: TextAnalysisResult = {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
   }
   }
 }
 
-<<<<<<< HEAD
 
 
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     console.error('Text analysis error:', error);
     res.status(500).json({ error: 'Internal server error' });
   }
     res.status(500).json({ error: 'Internal server error' })
   }
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-<<<<<<< HEAD
-=======
 
 
   {
@@ -42,16 +34,12 @@
       'Unbreakable encryption security',
       'Future - proof against quantum attacks',
       'Reduce security risks by 99.9%',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   id: string;
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export interface EmergingTechService {
 id: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
   name: string;
-  tagline: string,
+  tagline: string;
   description: string;
   category: string;
   price: {
@@ -59,34 +47,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     yearly: number;
     currency: string;
     trialDays: number;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
       'Comply with future regulations',
       'Enable quantum - safe communications',
     ],
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'NIST standards, Government security, Financial regulations, Healthcare compliance, International security protocols',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-encryption',
@@ -129,14 +95,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     link: 'https://ziontechgroup.com / quantum - encryption',
 
     icon: '🔐',
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     color: 'from - blue - 500 to - indigo - 600',
     popular: true,
     launch_date: '2025 - 02 - 25',
@@ -145,8 +104,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 145,
   },
   {
-<<<<<<< HEAD
-=======
 
       'Biosafety standards, Research ethics, Laboratory safety, Government regulations, International standards',
     ],
@@ -223,8 +180,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     icon: '🧬',
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     color: 'from - green - 500 to - teal - 600',
     popular: true,
     launch_date: '2025 - 03 - 01',
@@ -233,8 +188,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 56,
   },
   {
-<<<<<<< HEAD
-=======
 
       'Nuclear safety standards, Energy regulations, Government safety protocols, International energy standards',
     ],
@@ -312,8 +265,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     icon: '⚡',
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     color: 'from - yellow - 500 to - orange - 600',
     popular: true,
     launch_date: '2025 - 03 - 05',
@@ -322,8 +273,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 6,
   },
   {
-<<<<<<< HEAD
-=======
 
       'Network security standards, Government security, Financial regulations, International communication standards',
     ],
@@ -402,8 +351,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     icon: '🌐',
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     color: 'from - cyan - 500 to - blue - 600',
     popular: true,
     launch_date: '2025 - 03 - 10',
@@ -412,8 +359,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 23,
   },
   {
-<<<<<<< HEAD
-=======
 
       'Medical device regulations, Research ethics, Safety standards, Government approval, International standards',
     ],
@@ -491,8 +436,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     icon: '🧠',
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     color: 'from - pink - 500 to - purple - 600',
     popular: true,
     launch_date: '2025 - 03 - 15',
@@ -501,8 +444,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 42,
   },
   {
-<<<<<<< HEAD
-=======
 
       'Sensor standards, Safety protocols, Environmental regulations, International measurement standards',
     ],
@@ -578,8 +519,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     icon: '📡',
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     color: 'from - indigo - 500 to - purple - 600',
     popular: true,
     launch_date: '2025 - 03 - 20',
@@ -588,8 +527,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 98,
   },
   {
-<<<<<<< HEAD
-=======
 
       'Robotics safety standards, Industrial regulations, Safety protocols, International robotics standards',
     ],
@@ -667,8 +604,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     icon: '🤖',
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     color: 'from - gray - 500 to - slate - 600',
     popular: true,
     launch_date: '2025 - 03 - 25',
@@ -677,8 +612,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 187,
   },
   {
-<<<<<<< HEAD
-=======
 
       'Research ethics, Laboratory safety, Patent compliance, International materials standards',
     ],
@@ -756,8 +689,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
     icon: '🔬',
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     color: 'from - teal - 500 to - cyan - 600',
     popular: true,
     launch_date: '2025 - 03 - 30',
@@ -766,13 +697,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 67,
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     price: {
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     id: 'quantum - communications',
     name: 'Quantum Communications Platform',
@@ -781,30 +706,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     description:;
       'Revolutionary platform that enables secure quantum communication networks with quantum key distribution, quantum entanglement, and unbreakable data transmission capabilities.',
     category: 'Quantum Technology',
-<<<<<<< HEAD
     price: {
-<<<<<<< HEAD
-
-  return emergingTechServices2025.filter(service => service.popular);
-}
-      'Government security, Financial regulations, Healthcare compliance, Defense standards, International protocols',
-    ],
-    link: 'https://ziontechgroup && ziontechgroup.com/quantum-communications',
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-];
-
-export const getPopularEmergingTechServices = () => {;
-  return emergingTechServices2025.filter(service => service.popular);
-}
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-    price: {    price: {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+origin/cursor/expand-services-advertise-and-build-project-c28b
       monthly: 2999,
       yearly: 29990,
       currency: 'USD',
@@ -831,6 +734,7 @@ export const getPopularEmergingTechServices = () => {;
       'Reduce security risks by 99 && 99.9%',
       'Comply with future regulations',
     ],
+    targetAudience: [
       'Government agencies'
       'Financial institutions'
       'Healthcare organizations'
@@ -896,18 +800,13 @@ export const getPopularEmergingTechServices = () => {;
       'Enable quantum applications',
       'Reduce security risks by 99 && 99.9%',
       'Comply with future regulations',
-    ],  return emergingTechServices2025 && emergingTechServices2025.filter(service => service && service.popular)
-=======
-
-    price: {
+    ],
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
 
       'Government security, Financial regulations, Healthcare compliance, Defense standards, International protocols',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-communications',
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
     target_audience: [;
       'Government agencies',
       'Financial institutions',
@@ -958,13 +857,9 @@ origin/cursor/automate-test-improve-and-merge-code-382a
 ];
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
   return emergingTechServices2025 && emergingTechServices2025.filter(service => service && service.popular);
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 };
 
-<<<<<<< HEAD
-=======
 
     setupTime: string
   },
@@ -1437,32 +1332,9 @@ export const emergingTechServices2025: EmergingTechService[] = [
 export const getPopularEmergingTechServices = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
 export const getEmergingTechServicesByCategory = (category: string) => {
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-export const getEmergingTechServicesByCategory = (category: string) => {
-<<<<<<< HEAD
-=======
   return emergingTechServices2025.filter(
     service => service.category === category;
-<<<<<<< HEAD
-
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-export const getEmergingTechServicesByCategory = (category: string) => {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-  return emergingTechServices2025.filter(
-    service => service.category === category;
-
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   );
 };
 
@@ -1470,40 +1342,16 @@ export const getEmergingTechServicesByPriceRange = (
   minPrice: number,
   maxPrice: number
 ) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  return emergingTechServices2025.filter(service => {
-    const price = parseInt(service.price.monthly.toString()) |0;
-  return emergingTechServices2025.filter(service => {;
-    const price = parseInt(service.price.monthly.toString()) || 0;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     return price >= minPrice && price <= maxPrice;
-  })
+  });
 };import { MicroSaasService  } from "./enhanced-real-micro-saas-services";
 const contact = {mobile: "+1 302 464 0950"
   email: "kleber@ziontechgroup.com"
   address: "364 E Main St STE 1008 Middletown DE 19709";
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   website: "https://ziontechgroup.com";
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-  website: "https://ziontechgroup.com";
-=======
 
   website: "https://ziontechgroup.com";
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   id: string, name: string,
   tagline: string, description: string,
   category: string,
@@ -1525,20 +1373,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   popular: boolean, launchDate: string,
   customers: number, rating: number,
   reviews: number
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }
 export const emergingTechServices2025: MicroSaasService[] = [;
   // Quantum Computing Services;
@@ -2004,21 +1840,11 @@ const contact = {
   mobile: "+1 302 464 0950",
   email: "kleber@ziontechgroup && ziontechgroup.com",
   address: "364 E Main St STE 1008 Middletown DE 19709";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 ;
   website: "https://ziontechgroup.com";,
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }
 export const emergingTechServices2025: MicroSaasService[] = [;
   // Quantum Computing Services;
@@ -2040,11 +1866,6 @@ export const emergingTechServices2025: MicroSaasService[] = [;
       "Expert quantum computing consultation",
       "Training and educational resources" ],
     popular: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     icon: "⚛️",
 
     color: "from - purple - 600 to - pink - 700",
@@ -2058,31 +1879,16 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     real_service: true,
     technology["Qiskit, Cirq, PennyLane, Python, React, Node.js"],
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     integrations["IBM Quantum, Google Quantum, AWS Braket, Azure Quantum"],
     use_cases["Drug discovery, Financial modeling, Logistics optimization, Cryptography"],
     roi: "Solve previously intractable problems 1000x faster than classical computers",
     competitors["IBM Quantum, Amazon Braket, Google Quantum, Microsoft Azure Quantum"],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     market_size: "$1.5B Quantum Computing market",
     growth_rate: "45% CAGR",
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     variant: "quantum",
     contact_info: contact,
     real_implementation: true,
@@ -2111,11 +1917,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       "Mobile and web applications",
       "API and SDK for developers" ],
     popular: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     icon: "🔗",
 
     color: "from - blue - 600 to - cyan - 700",
@@ -2129,12 +1930,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     real_service: true,
     technology["Ethereum, Solana, Polkadot, Rust, Go, React, Node.js"],
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     integrations["AWS, Azure, GCP, Oracle, SAP, Salesforce"],
     use_cases["Supply chain tracking, Digital identity, Asset tokenization, DeFi protocols"],
     roi: "Reduce transaction costs by 80% and increase transparency by 100%",
@@ -2169,11 +1965,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       "Real - time data streaming and alerts",
       "Custom analytics and reporting tools" ],
     popular: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     icon: "🛰️",
 
     color: "from - indigo - 600 to - purple - 700",
@@ -2187,21 +1978,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     real_service: true,
     technology["Python, TensorFlow, React, Node.js, PostgreSQL, Redis"],
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     integrations["NASA APIs, ESA data, commercial satellite providers, GIS systems"],
     use_cases["Precision agriculture, Environmental monitoring, Urban planning, Space operations"],
     roi: "Improve agricultural yields by 25% and reduce environmental monitoring costs by 60%",
     competitors["Planet Labs, Maxar Technologies, Airbus Defence and Space, BlackSky"],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     market_size: "$4.5B Space Data market",
     growth_rate: "35% CAGR",
@@ -2211,12 +1992,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     implementation_details: "Cloud - based platform with satellite data access, custom analytics, and dedicated space technology experts.",
     launch_date: "2025 - 01 - 20",
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     customers: 12,
     rating: 4 && 4.9,
     reviews: 9;,
@@ -2240,11 +2016,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       "API access for third - party integrations",
       "Scalable cloud infrastructure" ],
     popular: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     icon: "🌐",
 
     color: "from - green - 600 to - blue - 700",
@@ -2258,31 +2029,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     real_service: true,
     technology["Kubernetes, Docker, Python, React, Node.js, PostgreSQL, Redis"],
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     integrations["AWS, Azure, GCP, industrial protocols, enterprise systems"],
     use_cases["Industrial monitoring, Smart cities, Asset tracking, Predictive maintenance"],
     roi: "Reduce operational costs by 30% and improve efficiency by 40%",
     competitors["AWS IoT, Azure IoT Hub, Google Cloud IoT, PTC ThingWorx"],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     market_size: "$1.1T IoT market",
     growth_rate: "25% CAGR",
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     variant: "default",
     contact_info: contact,
     real_implementation: true,
@@ -2311,11 +2067,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       "Mobile and web applications",
       "Custom content development services" ],
     popular: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     icon: "🥽",
 
     color: "from - pink - 600 to - purple - 700",
@@ -2329,12 +2080,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     real_service: true,
     technology["Unity, Unreal Engine, React, Node.js, Python, PostgreSQL"],
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     integrations["3D modeling software, enterprise systems, social platforms"],
     use_cases["Employee training, Product design, Customer engagement, Remote collaboration"],
     roi: "Reduce training costs by 50% and improve learning retention by 80%",
@@ -2369,11 +2115,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       "Custom robotics and drone development",
       "Training and simulation environments" ],
     popular: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     icon: "🤖",
 
     color: "from - gray - 600 to - blue - 700",
@@ -2387,12 +2128,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     real_service: true,
     technology["Python, TensorFlow, PyTorch, ROS, React, Node.js"],
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     integrations["Industrial robots, drones, autonomous vehicles, IoT sensors"],
     use_cases["Industrial automation, Autonomous logistics, Precision agriculture, Research and development"],
     roi: "Increase operational efficiency by 200% and reduce human error by 90%",
@@ -2427,11 +2163,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       "Research collaboration and data sharing",
       "Regulatory compliance and documentation" ],
     popular: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     icon: "🧬",
 
     color: "from - green - 600 to - blue - 700",
@@ -2445,12 +2176,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     real_service: true,
     technology["Python, TensorFlow, PyTorch, React, Node.js, PostgreSQL"],
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     integrations["Laboratory equipment, DNA synthesis services, research databases"],
     use_cases["Drug discovery, Bioengineering, Agricultural biotechnology, Research automation"],
     roi: "Accelerate drug discovery by 10x and reduce research costs by 70%",
@@ -2485,11 +2211,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       "Energy trading and market optimization",
       "Sustainability reporting and compliance" ],
     popular: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     icon: "⚡",
 
     color: "from - yellow - 600 to - green - 700",
@@ -2503,12 +2224,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     real_service: true,
     technology["Python, TensorFlow, React, Node.js, PostgreSQL, Redis, IoT"],
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     integrations["Smart meters, renewable energy systems, grid infrastructure, IoT sensors"],
     use_cases["Renewable energy optimization, Smart grid management, Energy efficiency, Sustainability reporting"],
     roi: "Reduce energy costs by 25% and improve renewable energy utilization by 40%",
@@ -2543,11 +2259,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       "Analytics and performance reporting",
       "API access for third - party applications" ],
     popular: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     icon: "🚗",
 
     color: "from - blue - 600 to - green - 700",
@@ -2561,12 +2272,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     real_service: true,
     technology["Python, TensorFlow, React, Node.js, PostgreSQL, Redis, IoT"],
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     integrations["Traffic signals, public transportation systems, IoT sensors, automotive systems"],
     use_cases["Traffic optimization, Public transportation, Logistics optimization, Autonomous vehicles"],
     roi: "Reduce traffic congestion by 30% and improve transportation efficiency by 40%",
@@ -2601,11 +2307,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       "Real - time security monitoring and alerts",
       "Expert cybersecurity consultation" ],
     popular: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     icon: "🔐",
 
     color: "from - red - 600 to - purple - 700",
@@ -2619,12 +2320,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     real_service: true,
     technology["Python, Rust, Go, React, Node.js, PostgreSQL"],
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     integrations["Existing security infrastructure, identity management systems, communication platforms"],
     use_cases["Post - quantum cryptography, Quantum - resistant security, Advanced threat protection, Compliance"],
     roi: "Future - proof security infrastructure and maintain compliance with emerging standards",
@@ -2641,14 +2337,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 7;
 ]}
 export interface EmergingTechService {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    return price >= minPrice && price <= maxPrice
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   })
 }
 
@@ -2656,7 +2344,7 @@ export interface EmergingTechService {;
   });
   id: string,;
   name: string,;
-  tagline: string,,
+  tagline: string,;
   description: string,;
   category: string,;
   price: {;
@@ -2693,8 +2381,8 @@ export const emergingTechServices2025: EmergingTechService[] = [;
   {;
     id: 'neuromorphic-computing',;
     name: 'Neuromorphic Computing Platform',;
-    tagline: 'Brain-inspired computing that mimics neural networks for ultra-efficient AI',,
-  description: 'Revolutionary computing platform that mimics the human brain\'s neural structure for ultra-efficient AI processing, enabling edge computing with minimal power consumption and maximum window.window.window.performance.',;
+    tagline: 'Brain-inspired computing that mimics neural networks for ultra-efficient AI',;
+    description: 'Revolutionary computing platform that mimics the human brain\'s neural structure for ultra-efficient AI processing, enabling edge computing with minimal power consumption and maximum window.window.window.performance.',;
     category: 'Emerging Technology',;
     price: {;
       monthly: 3499,;
@@ -2737,8 +2425,8 @@ export const emergingTechServices2025: EmergingTechService[] = [;
   {;
     id: 'quantum-encryption',;
     name: 'Quantum Encryption Platform',;
-    tagline: 'Unbreakable quantum encryption for the post-quantum era',,
-  description: 'Next-generation encryption platform that uses quantum-resistant algorithms and quantum key distribution to provide unbreakable security for the post-quantum computing era.',;
+    tagline: 'Unbreakable quantum encryption for the post-quantum era',;
+    description: 'Next-generation encryption platform that uses quantum-resistant algorithms and quantum key distribution to provide unbreakable security for the post-quantum computing era.',;
     category: 'Cybersecurity',;
     price: {;
       monthly: 1899,;
@@ -2781,8 +2469,8 @@ export const emergingTechServices2025: EmergingTechService[] = [;
   {;
     id: 'synthetic-biology-platform',;
     name: 'Synthetic Biology Platform',;
-    tagline: 'Design, build, and test synthetic biological systems with AI',,
-  description: 'Revolutionary platform that combines synthetic biology with AI to design, build, and test synthetic biological systems for healthcare, agriculture, and industrial applications.',;
+    tagline: 'Design, build, and test synthetic biological systems with AI',;
+    description: 'Revolutionary platform that combines synthetic biology with AI to design, build, and test synthetic biological systems for healthcare, agriculture, and industrial applications.',;
     category: 'Biotechnology',;
     price: {;
       monthly: 2799,;
@@ -2825,8 +2513,8 @@ export const emergingTechServices2025: EmergingTechService[] = [;
   {;
     id: 'fusion-energy-ai',;
     name: 'Fusion Energy AI Platform',;
-    tagline: 'AI-powered fusion energy optimization and control systems',,
-  description: 'Revolutionary platform that uses AI to optimize fusion energy reactions, control plasma stability, and accelerate the development of commercial fusion power.',;
+    tagline: 'AI-powered fusion energy optimization and control systems',;
+    description: 'Revolutionary platform that uses AI to optimize fusion energy reactions, control plasma stability, and accelerate the development of commercial fusion power.',;
     category: 'Energy Technology',;
     price: {;
       monthly: 5999,;
@@ -2869,8 +2557,8 @@ export const emergingTechServices2025: EmergingTechService[] = [;
   {;
     id: 'quantum-internet',;
     name: 'Quantum Internet Platform',;
-    tagline: 'Build the quantum internet with secure quantum communication networks',,
-  description: 'Revolutionary platform for building quantum internet infrastructure with quantum entanglement, quantum key distribution, and ultra-secure quantum communication networks.',;
+    tagline: 'Build the quantum internet with secure quantum communication networks',;
+    description: 'Revolutionary platform for building quantum internet infrastructure with quantum entanglement, quantum key distribution, and ultra-secure quantum communication networks.',;
     category: 'Quantum Technology',;
     price: {;
       monthly: 3999,;
@@ -2913,8 +2601,8 @@ export const emergingTechServices2025: EmergingTechService[] = [;
   {;
     id: 'brain-computer-interface',;
     name: 'Brain-Computer Interface Platform',;
-    tagline: 'Direct brain-to-computer communication for enhanced human capabilities',,
-  description: 'Revolutionary platform that enables direct communication between the human brain and computers, opening new possibilities for human-computer interaction, medical applications, and cognitive enhancement.',;
+    tagline: 'Direct brain-to-computer communication for enhanced human capabilities',;
+    description: 'Revolutionary platform that enables direct communication between the human brain and computers, opening new possibilities for human-computer interaction, medical applications, and cognitive enhancement.',;
     category: 'Human-Computer Interaction',;
     price: {;
       monthly: 4499,;
@@ -2957,8 +2645,8 @@ export const emergingTechServices2025: EmergingTechService[] = [;
   {;
     id: 'quantum-sensors',;
     name: 'Quantum Sensors Platform',;
-    tagline: 'Ultra-sensitive quantum sensors for precision measurement and detection',,
-  description: 'Revolutionary platform that leverages quantum mechanics to create ultra-sensitive sensors for precision measurement, detection, and monitoring across various applications.',;
+    tagline: 'Ultra-sensitive quantum sensors for precision measurement and detection',;
+    description: 'Revolutionary platform that leverages quantum mechanics to create ultra-sensitive sensors for precision measurement, detection, and monitoring across various applications.',;
     category: 'Quantum Technology',;
     price: {;
       monthly: 1999,;
@@ -3001,8 +2689,8 @@ export const emergingTechServices2025: EmergingTechService[] = [;
   {;
     id: 'autonomous-robotics',;
     name: 'Autonomous Robotics Platform',;
-    tagline: 'AI-powered autonomous robots for industrial and commercial applications',,
-  description: 'Revolutionary platform that enables the creation and management of autonomous robots for industrial automation, commercial applications, and advanced robotics systems.',;
+    tagline: 'AI-powered autonomous robots for industrial and commercial applications',;
+    description: 'Revolutionary platform that enables the creation and management of autonomous robots for industrial automation, commercial applications, and advanced robotics systems.',;
     category: 'Robotics & Automation',;
     price: {;
       monthly: 1299,;
@@ -3045,8 +2733,8 @@ export const emergingTechServices2025: EmergingTechService[] = [;
   {;
     id: 'quantum-materials',;
     name: 'Quantum Materials Platform',;
-    tagline: 'AI-powered discovery and design of quantum materials for next-generation technology',,
-  description: 'Revolutionary platform that uses AI to discover, design, and optimize quantum materials for next-generation electronics, energy storage, and advanced technology applications.',;
+    tagline: 'AI-powered discovery and design of quantum materials for next-generation technology',;
+    description: 'Revolutionary platform that uses AI to discover, design, and optimize quantum materials for next-generation electronics, energy storage, and advanced technology applications.',;
     category: 'Materials Science',;
     price: {;
       monthly: 2499,;
@@ -3089,8 +2777,8 @@ export const emergingTechServices2025: EmergingTechService[] = [;
   {;
     id: 'quantum-communications',;
     name: 'Quantum Communications Platform',;
-    tagline: 'Secure quantum communication networks for unbreakable data transmission',,
-  description: 'Revolutionary platform that enables secure quantum communication networks with quantum key distribution, quantum entanglement, and unbreakable data transmission capabilities.',;
+    tagline: 'Secure quantum communication networks for unbreakable data transmission',;
+    description: 'Revolutionary platform that enables secure quantum communication networks with quantum key distribution, quantum entanglement, and unbreakable data transmission capabilities.',;
     category: 'Quantum Technology',;
     price: {;
       monthly: 2999,;
@@ -3141,71 +2829,27 @@ export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: 
   return emergingTechServices2025.filter(service => {;
     const price = parseInt(service.price.monthly.toString()) || 0,;
     return price >= minPrice && price <= maxPrice;
-  })
+  });
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
-
-};
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
 };
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     return price >= min_price && price <= max_price;
   });
 }
 ;
-<<<<<<< HEAD
-=======
 origin/cursor/automate-test-improve-and-merge-code-20a4
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
-
 export interface EmergingTechService {;
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
-export interface EmergingTechService {
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
-
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   return emergingTechServices2025.filter(service => {
     const price = parseInt(service.price.monthly.toString()) || 0;
     return price >= minPrice && price <= maxPrice;
   });
 };
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

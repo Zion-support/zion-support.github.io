@@ -1,47 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-SEO automation, chatbots, business intelligence, email marketing, social media management;
-customer feedback, billing, project management, API infrastructure, e - commerce analytics, legal document generation;
-HR management, AI customer support, data backup, AI code assistance, cybersecurity monitoring, supply chain analytics;
-market research, financial planning, CRM systems, learning management, IoT management, analytics dashboards;
-meeting transcription, invoice automation, churn prediction, lead scoring, real - time analytics, content optimization;
-predictive maintenance, email security, dynamic pricing, customer segmentation, sales intelligence, content calendar optimization;
-email deliverability, landing page building, customer journey mapping, contract analysis, sales forecasting, customer service analytics;
-product recommendations, fraud detection, inventory forecasting, customer onboarding, social media automation, fraud detection;
-
-inventory forecasting, and more. Focused, affordable solutions that deliver specific value without the complexity of enterprise platforms. Start with a free trial and scale as you grow. </p> </div> <div className="flex items-center text-green-400" > <Check className="w-4 h-4 mr-2" /> <span>Unified dashboard</span> </div> <div className="flex items-center text-green-400" > <Check className="w-4 h-4 mr-2" /> <span>Integrated billing</span> </div> </div> </div> <div className="flex flex-col sm:flex-row gap-6 justify-center" > <Button href="#services" variant="secondary" size="lg" className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 shadow-2xl" > Explore Services <ArrowRight className="w-5 h-5 ml-2" /> </Button> <Button href="/pricing" variant="outline" size="lg" className="border-green-500 text-green-400 hover:bg-green-500 hover:text-white" > View All 75 Services <ArrowRight className="w-5 h-5 ml-2" /> </Button> </div> </div> </section> Professional Micro SaaS Solutions </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Each service is designed to solve specific business problems with enterprise-grade quality and competitive pricing. </p> </div> Popular </span>) ;
-}</div> </li>) ) ;
-}</ul> </div> </div> </div> <div className="flex flex-col gap-3" > <a > Visit {;
-  service && service.link.replace ('https://', '') ;
-}</a> </div> </div>) ) ;
-}</div> </div> </section> Ready to Get Started? </h2> <p className="text-xl text-green-100 mb-12 max-w-4xl mx-auto leading-relaxed" > Choose from our portfolio of 20 specialized solutions. All services include comprehensive documentation;
-dedicated support, enterprise-grade reliability, and 14-day free trials. Start with one solution and add more as your business grows. </p> <div className="flex flex-col sm:flex-row gap-6 justify-center" > <Button href="/contact" variant="secondary" size="lg" className="bg-white text-green-600 hover:bg-gray-100 shadow-2xl" > Contact Sales <ArrowRight className="w-5 h-5 ml-2" /> </Button> <Button href="/pricing" variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-green-600 shadow-2xl" > View All Pricing </Button> </div> </div> <Cardkey= {
-  index 
-}className="border-gradient-blue hover:bg-gray-800/50 transition-all duration-300"> <div className="flex items-start space-x-4" > <div className="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400" > <TrendingUp className="w-6 h-6" /> </div> </div> </div> </div> </Card>) ) ;
-}</div> </div> </section> Our Competitive Advantages </h2> <p className="text-xl text-gray-400 max-w-3xl mx-auto" > What sets us apart from traditional SaaS providers and market leaders. </p> </div> key= {;
-  index ;
-}className="border-gradient-blue hover:bg-gray-700/50 transition-all duration-300" > </div>) ) ;
-}</div> </Card>) ) ;
-}</div> </div> </section> Comprehensive Service Breakdown </h2> <p className="text-xl text-gray-400 max-w-3xl mx-auto" > Detailed analysis of each micro SaaS service with market data, pricing, and use cases. </p> </div> <div> <h4 className="text-xl font-bold text-white mb-4 flex items-center" > <Zap className="w-5 h-5 mr-2 text-blue-400" /> Key Features </h4> </li>) ) ;
-}</ul> </div> {;
-  /* Pricing */ ;
-}<div> <h4 className="text-xl font-bold text-white mb-4 flex items-center" > <DollarSign className="w-5 h-5 mr-2 text-green-400" /> Pricing Plans </h4> </li>) ) ;
-}</ul> </div>) ) ;
-}</div> </div> </div> Market Analysis </h4> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4" > <div> </div> </div> </div> </span>) ) ;
-}</div> </div> > View Pricing & Start Trial <ArrowRight className="w-5 h-5 ml-2" /> </Button> </div> </div>) ) ;
-}</div> </div> </section> <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden"> <div className="absolute inset-0 bg-[radial-gradient (circle, rgba (255, 255, 255, 0 && 0.1) 1px, transparent 1px) ] bg-[size: 20px 20px] opacity-10" /> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10"> <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8"> text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed"> Start your 14-day free trial today. No credit card required. Experience the power of AI-powered micro SaaS services. </p> <div className=" flex flex-col sm:flex-row gap-6 justify-center"> <Button href=" /pricing"variant=" secondary"size=" lg"className=" bg-white text-blue-600 hover:bg-gray-100 shadow-2xl"> View Pricing <ArrowRight className=" w-5 h-5 ml-2"/> </Button> <Button href=" /contact"variant=" outline"size=" lg"className=" border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl" > Contact Sales </Button> </div> </div> </section> </>) import React from 'react';
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import Head from 'next/head';
 inventory forecasting, and more. Focused, affordable solutions that deliver specific value without the complexity of enterprise platforms. Start with a free trial and scale as you grow. </p> </div> <div className="flex items - center text-green-400" > <Check className="w - 4 h-4 mr-2" /> <span > Unified dashboard</span> </div> <div className="flex items - center text-green-400" > <Check className="w - 4 h-4 mr-2" /> <span > Integrated billing</span> </div> </div> </div> <div className="flex flex - col sm:flex - row gap-6 justify-center" > <Button href="#services" variant="secondary" size="lg" className="bg - gradient - to - r from - green - 500 to - emerald - 600 hover:from - green - 600 hover:to - emerald-700 shadow-2xl" > Explore Services <ArrowRight className="w - 5 h-5 ml-2" /> </Button> <Button href="/pricing" variant="outline" size="lg" className="border - green - 500 text - green - 400 hover:bg - green-500 hover:text-white" > View All 75 Services <ArrowRight className="w - 5 h-5 ml-2" /> </Button> </div> </div> </section> Professional Micro SaaS Solutions </h2> <p className="text - xl text - gray - 300 max-w-3xl mx-auto" > Each service is designed to solve specific business problems with enterprise - grade quality and competitive pricing. </p> </div> Popular </span>);
 }</div> </li>) );
@@ -1299,12 +1255,6 @@ export default function MicroSaasPage() {;
       description: 'All services are optimized for mobile devices, ensuring your team can work efficiently from anywhere, anytime.'
     }
     {
-<<<<<<< HEAD
-      icon: '🔄'
-      title: 'Seamless Integration'
-      description: 'Connect with your existing tools and workflows. Our services integrate with popular platforms and provide comprehensive APIs.'
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
   ];
   return (
@@ -1390,9 +1340,6 @@ export default function MicroSaasPage() {;
                 variant="outline"
                 size="lg"
 
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
                 className="border-green-500 text-green-400 hover:bg-green-500 hover:text-white">;
                 View All 75 Services;
                 <ArrowRight className="w-5 h-5 ml-2" />;
@@ -1484,7 +1431,6 @@ export default function MicroSaasPage() {;
           </div>
         </section>
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* CTA Section */}
         <section className="py-24 bg-gradient-to-r from-green-600 to-emerald-700 relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />
@@ -1499,11 +1445,6 @@ export default function MicroSaasPage() {;
               and add more as your business grows.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
             </div>;
           </div>;
         </section>;
@@ -2877,9 +2818,6 @@ description: 'AI - powered social media automation with content scheduling and e
               meeting transcription, invoice automation, churn prediction, lead scoring, real - time analytics, content optimization,
               predictive maintenance, email security, dynamic pricing, customer segmentation, sales intelligence, content calendar optimization,
  const microSaasServices = [ {
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 const microSaasServices = [ {
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (<> <Head> <title>Micro SaaS Services | Zion Tech Group - Specialized Business Solutions</title> <meta name="description" content="Discover our 20 specialized micro SaaS solutions for content creation, design systems, performance monitoring, SEO automation, chatbots, business intelligence, video generation, e-commerce analytics, HR management, legal automation, inventory management, customer support, financial planning, learning management, and real estate management. Competitive pricing with 14-day free trials." /> <meta property="og:title" content="Micro SaaS Services | Zion Tech Group" /> <meta property="og:description" content="Specialized business solutions with competitive pricing and free trials." /> <meta name="twitter:card" content="summary large image" /> </Head> <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" > <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6" > <span className="w-2 h-2 bg-blue-500 rounded-full mr-2 animate-pulse" /> Comprehensive Micro SaaS Guide </div> <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight" > Micro SaaS Services </h1> <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12" > Real solutions with comprehensive market research, competitive analysis, and proven business models. Each service is designed to solve specific business problems with AI-powered automation. </p> <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto" > <div className="text-center" > <div className="text-3xl font-bold text-blue-400 mb-2" >6+</div> <div className="text-sm text-gray-400" >Services</div> </div> <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight" > Specialized Tools for <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400" > Every Business Need</span> </h1> <p className="text-xl text-gray-400 max-w-5xl mx-auto leading-relaxed mb-12" > 65+ specialized micro SaaS solutions covering AI-powered content creation, video generation, design systems, performance monitoring;
@@ -2906,8 +2844,6 @@ dedicated support, enterprise-grade reliability, and 14-day free trials. Start w
 }</div> </Card>) )
 }</div> </div> </section> Comprehensive Service Breakdown </h2> <p className="text-xl text-gray-400 max-w-3xl mx-auto" > Detailed analysis of each micro SaaS service with market data, pricing, and use cases. </p> </div> <div> <h4 className="text-xl font-bold text-white mb-4 flex items-center" > <Zap className="w-5 h-5 mr-2 text-blue-400" /> Key Features </h4> </li>) )
 }</ul> </div> {
-<<<<<<< HEAD
-<<<<<<< HEAD
   /* Pricing */
 }<div> <h4 className="text-xl font-bold text-white mb-4 flex items-center" > <DollarSign className="w-5 h-5 mr-2 text-green-400" /> Pricing Plans </h4> </li>) )
 }</ul> </div>) )
@@ -4222,12 +4158,6 @@ export default function MicroSaasPage() {;
               Choose from our portfolio of 20 specialized solutions. All services include comprehensive documentation
               dedicated support, enterprise-grade reliability, and 14-day free trials. Start with one solution
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   const microSaasServices = null;
               dedicated support, enterprise-grade reliability, and 14-day free trials. Start with one solution 
               and add more as your business grows.
@@ -4278,12 +4208,7 @@ export default function MicroSaasPage() {;
           </div>
         </div>
       </section>
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       {/* Competitive Advantages */}
       <section className="py-20 bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -4317,36 +4242,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {competitiveAdvantages && competitiveAdvantages.map((advantage, index) => (;
               <Card
                 key={index}
-<<<<<<< HEAD
-                className="border-gradient-blue hover:bg-gray-700/50 transition-all duration-300"
-              >
-                <h3 className="text-xl font-bold text-white mb-4">{advantage.advantage}</h3>
-                <p className="text-gray-400 mb-6">{advantage.description}</p>
-                <div className="space-y-2">
-                  {advantage.examples.map((example, exampleIndex) => (
-                    <div key={exampleIndex} className="flex items-center text-gray-300">
-                      <Check className="w-4 h-4 text-blue-400 mr-3 flex-shrink-0" />
-                      <span className="text-sm">{example}</span>
-                    </div>
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   ))}
                 </div>;
               </Card>;
             ))}
-<<<<<<< HEAD
-=======
-
-=======
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Detailed Services */}
       <section className="py-20 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -4361,13 +4260,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className="space-y-16">
             {detailedServices.map((service, index) => (
               <div key={index} className="bg-gray-800/50 rounded-2xl p-8 border border-gray-700">
-<<<<<<< HEAD
-=======
                 {/* Service Header */}
                 <div className="flex items - start space-x-6 mb-8">;
                   <div className={`w - 20 h - 20 rounded - 2xl flex items - center justify - center text - 4xl bg - gradient - to - br ${service.color}`}>;
                     {service.icon}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
       {/* Detailed Services */}
       <section className="py-20 bg-gray-900">;
@@ -4399,29 +4295,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
 
                   {/* Features */}
-<<<<<<< HEAD
-
-                  {/* Pricing */}
-                  <div>
-                    <h4 className="text-xl font-bold text-white mb-4 flex items-center">
-                      <DollarSign className="w-5 h-5 mr-2 text-green-400" />
-                      Pricing Plans
-                    </h4>
-                    <div className="space-y-4">
-                      {Object.entries(service.pricing).map(([plan, details]) => (
-                        <div key={plan} className="bg-gray-700/50 rounded-lg p-4">
-                          <div className="flex justify-between items-center mb-3">
-                            <h5 className="font-semibold text-white capitalize">{plan}</h5>
-                            <span className="text-2xl font-bold text-green-400">{details.price}</span>
-                          </div>
-                          <ul className="space-y-1">
-                            {details.features.map((feature, featureIndex) => (
-                              <li key={featureIndex} className="text-xs text-gray-400 flex items-center">
-                                <Check className="w-3 h-3 text-blue-400 mr-2 flex-shrink-0" />
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
                   <div>;
                     <h4 className="text-xl font-bold text-white mb-4 flex items-center">;
                       <Zap className="w-5 h-5 mr-2 text-blue-400" />;
@@ -4438,15 +4311,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </ul>;
                   </div>;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   {/* Pricing */}
                   <div>;
                     <h4 className="text-xl font-bold text-white mb-4 flex items-center">;
@@ -4464,21 +4328,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             {details && details.features.map((feature, featureIndex) => (;
                               <li key={featureIndex} className="text-xs text-gray-400 flex items-center">;
                                 <Check className="w-3 h-3 text-blue-400 mr-2 flex-shrink-0" />;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                                 {feature}
                               </li>;
                             ))}
                           </ul>;
                         </div>;
                       ))}
-<<<<<<< HEAD
-                    </div>
-                  </div>
-                </div>
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 {/* Market Data */}
                 <div className="mt-8 bg-blue-900/20 border border-blue-500/20 rounded-lg p-6">
                   <h4 className="text-xl font-bold text-blue-400 mb-4 flex items-center">
@@ -4505,55 +4360,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                 </div>
                 {/* Use Cases */}
-                <div className="mt-8">
-                  <h4 className="text-xl font-bold text-white mb-4 flex items-center">
-                    <Users className="w-5 h-5 mr-2 text-purple-400" />
-                    Perfect For
-                  </h4>
-                  <div className="flex flex-wrap gap-3">
-                    {service.useCases.map((useCase, useCaseIndex) => (
-                      <span key={useCaseIndex} className="px-4 py-2 bg-gray-700 rounded-full text-sm text-gray-300">
-
+                <div className="mt-8">;
+                  <h4 className="text-xl font-bold text-white mb-4 flex items-center">;
+                    <Users className="w-5 h-5 mr-2 text-purple-400" />;
+                    Perfect For;
+                  </h4>;
+                  <div className="flex flex-wrap gap-3">;
+                    {service && service.useCases.map((useCase, useCaseIndex) => (;
+                      <span key={useCaseIndex} className="px-4 py-2 bg-gray-700 rounded-full text-sm text-gray-300">;
                         {useCase}
                       </span>;
                     ))}
-<<<<<<< HEAD
-                  </div>
-                </div>
-
-                {/* CTA */}
-                <div className="mt-8 text-center">
-                  <Button
-                    href="/pricing"
-                    size="lg"
-                    className={`bg-gradient-to-r ${service.gradient} hover:opacity-90 transition-opacity`}
-                  >
-                    View Pricing & Start Trial
-                    <ArrowRight className="w-5 h-5 ml-2" />
-                  </Button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8">
-            Ready to Get Started?
-          </h2>
-          <p className="text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed">
-            Start your 14-day free trial today. No credit card required. Experience the power of AI-powered micro SaaS services.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 {/* CTA */}
                 <div className="mt-8 text-center">;
                   <Button
@@ -4566,21 +4383,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
               </div>;
             ))}
-<<<<<<< HEAD
-          </div>
-        </div>
-      </section>
-
-=======
-          </div>;
-        </div>;
-      </section>;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden">;
         <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0 && 0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />;
@@ -4592,7 +4394,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             Start your 14-day free trial today. No credit card required. Experience the power of AI-powered micro SaaS services.;
           </p>;
           <div className="flex flex-col sm:flex-row gap-6 justify-center">;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             <Button
               href="/pricing"
               variant="secondary"
@@ -4605,27 +4406,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               href="/contact"
               variant="outline"
               size="lg"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-}
-  );
-}
-  );
-}
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
               className="border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl">;
                   </div>;
@@ -4988,9 +4768,6 @@ import {Zap, Star, Calendar} from 'lucide-react';
         </div>;
       </section>;
     </>);
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
               className="border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl"
             >
               Contact Sales
@@ -5002,4 +4779,3 @@ import {Zap, Star, Calendar} from 'lucide-react';
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

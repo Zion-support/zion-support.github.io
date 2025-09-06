@@ -1,94 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-import React, { useEffect } from 'react';
-import {Star} from 'lucide-react';
-
-;
-interface PerformanceData {
-  domContentLoaded: number,
-  load_complete: number,
-  totalLoadTime: number,
-  first_paint: number,
-  firstContentfulPaint: number,
-  resource_count: number,
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   memory: {
     used: number
     total: number
     limit: number
   } | null;
 }
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 import React, { useEffect } from 'react';
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
-<<<<<<< HEAD
-import React, { useEffect } from 'react';
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 interface PerformanceMonitorProps {
   onPerformanceData?: (data: any) => void;
 }
-
-const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-
-  useEffect(() => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-
-        }
-      });
-
-      observer.observe({ entryTypes: ['navigation'] });
-
-      return () => observer.disconnect();
-
-    }
-  }, []);
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 interface Performance {
   getEntriesByType (type: string): PerformanceEntry[];
   now (): number;
@@ -107,9 +27,6 @@ interface PerformanceData {;
     total: number,;
     limit: number,;
   } | null;
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React, { useEffect, useState } from 'react'
 interface PerformanceMetrics {
 import React, { useEffect, useState } from 'react' from 'react'';interface PerformanceMetrics {'
@@ -217,6 +134,21 @@ interface PerformanceNavigationTiming extends PerformanceEntry {
 }
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
   useEffect(() => {
+// Only run on client side
+    if (typeof window === 'undefined' |typeof window.performance === 'undefined') return;
+    const measurePerformance = () => {
+      const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const paint = window.performance.getEntriesByType('paint');
+      
+      const performanceData = null;
+        // Memory usage (if available)
+        memory: (window.performance as unknown as { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory ? {
+          used: (window.performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory.usedJSHeapSize;
+          total: (window.performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory.totalJSHeapSize;
+          limit: (window.performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory.jsHeapSizeLimit
+        } : null
+      };
+
       const navigationEntries = window.performance.getEntriesByType('navigation');
       const navigation = navigationEntries[0] as PerformanceNavigationTiming;
       const paintEntries = window.performance.getEntriesByType('paint');
@@ -313,9 +245,7 @@ if ( {) {
     }
   }, [onPerformanceData]);
 ;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return null;
-<<<<<<< HEAD
 }
 ;
 export default PerformanceMonitor;
@@ -350,53 +280,6 @@ interface PerformanceMetrics {fcp?: number;
         )}
           </div>;
         )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-const PerformanceMonitor: React.FC = () => {
-  const [metrics, set_metrics] = useState < PerformanceMetrics>({});
-  const [is_visible, setIsVisible] = useState (false);
-  useEffect (() => {
-// Check condition
-if (return) {
-  $2
-}
-    // Only show in development or for admin users;
-    const is_dev = process.env.NODE_ENV === 'development;
-    const is_admin = local_storage.get_item ('admin_mode') === 'true;
-    '    // Check condition
-if (return) {
-  $2
-}
-    const observer = new PerformanceObserver ((list) => {const entries = list.get_entries ();
-;
-      entries.for_each ((entry) => {
-        switch (entry.entry_type) {
-case 'paint': if ( {'              set_metrics (prev => ({ ...prev, fcp: entry.start_time }))) {
-  $2
-}'            }
-            break;
-          case 'largest - contentful - paint': set_metrics (prev => ({ ...prev, lcp: entry.start_time }));'            break;'          case 'first - input': set_metrics (prev => ({ ...prev, fid: entry.processing_start - entry.start_time }));'            break;'          case 'layout - shift': // Check condition
-if (.hadRecentInput) {'              set_metrics (prev => ({ '                ...prev, cls: (prev.cls || 0) + (entry as any).value ) {
-  $2
-}
-}));
-}
-            break;
-          case 'navigation': set_metrics (prev => ({ ...prev, ttfb: entry.response_start - entry.request_start }));'            break;'        }});
-});
-    // Observe different types of performance entries;
-    try {
-observer.observe ({ entry_types: ['paint', 'largest - contentful - paint', 'first - input', 'layout - shift', 'navigation'] });
-'    } catch (e) {'      // Fallback for browsers that don & apos;t support all entry types;
-      observer.observe ({ entry_types: ['paint', 'largest - contentful - paint'] });
-'    }';
-    // Show metrics after 3 seconds;
-    const timer = set_timeout (() => {setIsVisible (true);
-}, 3000);
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
   useEffect(() => {
@@ -470,6 +353,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
           limit: (performance as any).memory.jsHeapSizeLimit
         } : null
       };
+pr-12243
 import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
@@ -478,12 +362,29 @@ interface PerformanceMetrics {
   memoryUsage: number;
 }
 
-
+interface PerformanceMetrics {
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+  fcp?: number;
+  ttfb?: number;
+}
 
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
 
   useEffect(() => {
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const navigationEntry = entries.find(entry => entry.entryType === 'navigation');
+        
+        if (navigationEntry) {
+          setMetrics({
+            loadTime: navigationEntry.loadEventEnd - navigationEntry.loadEventStart,
+            renderTime: navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart,
+            memoryUsage: (window.performance as any).memory?.usedJSHeapSize || 0
+          });
       const metrics: PerformanceMetrics = {};
 
       // Monitor Largest Contentful Paint (LCP)
@@ -526,7 +427,6 @@ const PerformanceMonitor: React.FC = () => {
 origin/cursor/analyze-improve-and-deploy-application-347d
         }
       });
-main
 
       observer.observe({ entryTypes: ['navigation'] });
 
@@ -543,14 +443,9 @@ main
       window.addEventListener('load', measurePerformance);
     }
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return () => {
-<<<<<<< HEAD
       observer.disconnect ();
       clear_timeout (timer);
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 if (typeof window ===, undefined
   ') return'    // Only show in development or for admin users
     const isDev = process.env.NODE_ENV ===
@@ -762,25 +657,11 @@ if (return 'Needs Improvement) {
 <div className="mt - 3 pt - 2 border - t border - gray - 200>        <button"          on_click={() => setIsVisible (false)}
           className="text - xs text - gray - 500 hover: text - gray - 700        >"          Hide</button>;
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-<<<<<<< HEAD
-=======
-=======
       window.removeEventListener('load', measurePerformance);
     };
   }, [onPerformanceData]);
-
+pr-12243
       return () => observer.disconnect();
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       // Monitor Cumulative Layout Shift (CLS)
       let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
@@ -835,11 +716,7 @@ if (return 'Needs Improvement) {
 origin/cursor/analyze-improve-and-deploy-application-347d
     }
   }, []);
-main
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   if (!metrics) return null;
 
   return (
@@ -849,31 +726,11 @@ main
       <div>Memory: {(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB</div>
     </div>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 };
 
 export default PerformanceMonitor;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   return null; // This component doesn't render anything
 };
 
 export default PerformanceMonitor;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

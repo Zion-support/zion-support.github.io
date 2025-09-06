@@ -1,30 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export type InnovativeMicroSaas = {
       'Multi-speaker diarization',
   launch_date?: string;
 
+export type InnovativeMicroSaas = {
+export type InnovativeMicroSaas = {;
   id: string;
-<<<<<<< HEAD
-  name: string,
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export type InnovativeMicroSaas = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
   name: string;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   description: string;
   tagline?: string;
   category:
@@ -45,72 +28,41 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   realService?: boolean;
   rating?: number;
   launchDate?: string;
-
 }
-<<<<<<< HEAD
-;
-export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
-  {
-    id: 'podcast - transcription - seo - suite',
-    name: 'Podcast Transcription & SEO Suite',
-    tagline: 'Turn episodes into SEO - optimized blogs in minutes',
-=======
 export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
-<<<<<<< HEAD
-
-  {
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
+export type InnovativeMicroSaas = {
+      'Multi-speaker diarization',
+  launch_date?: string;
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+
+
+  {
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
     id: 'local - seo - reviews - booster',
     name: 'Local SEO Reviews Booster',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     description:;
-      'Accurate multi - speaker transcription with summaries, quotes, and SEO - ready blog drafts including schema and social cards.',
-    category: 'Content Marketing',
-    pricing: { starter: '$39 / mo' },
+      'Automated post - visit SMS / email review requests with smart routing to preferred platforms and churn - risk alerts.',
+    category: 'Marketing Automation',
+    pricing: { starter: '$29 / mo' },
     features: [;
-      'Multi - speaker diarization',
-      'SEO blog drafts',
-      'Pull - quotes',
-      'Schema & social cards',
+
+      'Smart review routing',
+      'NPS & CSAT',
+      'Churn alerts',
+      'Multi - location dashboards',
     ],
-    integrations: ['YouTube', 'Spotify', 'WordPress'],
-    use_cases: ['Content repurposing', 'SEO growth'],
-    link: 'https://ziontechgroup.com / services / podcast - transcription - seo - suite',
+    integrations: ['Google Business Profile', 'Yelp'],
+
+    use_cases: ['Local ranking', 'Reputation management'],
+    link: 'https://ziontechgroup.com / services / local - seo - reviews - booster',
     real_service: true,
-    rating: 4.7,
-    launch_date: '2025 - 12 - 01',
+
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-<<<<<<< HEAD
-  {
-
-      'Summarize resumes, score against job descriptions, and auto-generate interview question sets.',
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     id: 'smart - invoice - reconciliation',
     name: 'Smart Invoice Reconciliation',
     description:;
@@ -125,10 +77,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Export to ERP',
     ],
     integrations: ['QuickBooks', 'Xero', 'Stripe'],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       'Summarize resumes, score against job descriptions, and auto-generate interview question sets.'
     category: 'Human Resources'
     pricing: { starter: '$69/mo' }
@@ -139,7 +87,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     realService: true
   }
       'Summarize resumes, score against job descriptions, and auto-generate interview question sets.',
-=======
 
     use_cases: ['Accounting automation', 'Finance ops'],
     link: 'https://ziontechgroup.com / services / smart - invoice - reconciliation',
@@ -150,8 +97,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
       'Summarize resumes, score against job descriptions, and auto-generate interview question sets.',
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     id: 'candidate - screening - copilot',
     name: 'Candidate Screening Copilot',
     description:;
@@ -201,46 +146,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     pricing: { starter: '$69/mo' },
     features: ['Resume parsing', 'JD matching', 'Question sets', 'ATS sync'],
     integrations: ['Greenhouse', 'Lever'],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
     category: 'Human Resources',
     pricing: { starter: '$69 / mo' },
     features: ['Resume parsing', 'JD matching', 'Question sets', 'ATS sync'],
     integrations: ['Greenhouse', 'Lever'],
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     use_cases: ['Faster hiring', 'Bias reduction'],
     link: 'https://ziontechgroup.com / services / candidate - screening - copilot',
     real_service: true,
 
   },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ];	id: string;
 
 	id: string, name: string,
 	description: string, tagline?: string,
-<<<<<<< HEAD
-	}
-];
-
-<<<<<<< HEAD
-=======
-=======
-
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
 	category:
 		| 'Content Marketing'
 		| 'Business Operations'
@@ -277,7 +200,6 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 		rating: 4 && 4.7,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
 		launchDate: '2025-12-01'
 	}
 	{
@@ -293,7 +215,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		link: 'https://ziontechgroup && ziontechgroup.com/services/local-seo-reviews-booster',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
 		realService: true
 	}
 	{
@@ -309,7 +230,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		link: 'https://ziontechgroup && ziontechgroup.com/services/smart-invoice-reconciliation',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
 		realService: true
 	}
 	{
@@ -321,36 +241,24 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		features: ['Resume parsingJD matchingQuestion setsATS sync'];
 		integrations: ['GreenhouseLever'];
 		useCases: ['Faster hiringBias reduction'];
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+	}
+];
 
-		link: 'https://ziontechgroup && ziontechgroup.com/services/candidate-screening-copilot',
-
-		realService: true
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 	}
 ];
 
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-origin/cursor/expand-services-advertise-and-build-project-c28b
+		link: 'https://ziontechgroup && ziontechgroup.com/services/candidate-screening-copilot',
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+		realService: true
+origin/cursor/expand-services-advertise-and-build-project-c28b
+	}
+];
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
 name: string;
 description: string;
-=======
-name: string,
-  description: string;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 tagline?: string;
 category:;
   | 'Content Marketing';
@@ -390,7 +298,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
 }
 {
   id: 'local - seo - reviews - booster';
-  name: 'Local SEO Reviews Booster',
+  name: 'Local SEO Reviews Booster';
   description: 'Automated post - visit SMS / email review requests with smart routing to preferred platforms and churn - risk alerts.';
   category: 'Marketing Automation',
   pricing: { starter: '$29 / mo' }
@@ -424,43 +332,17 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
   link: 'https://ziontechgroup.com / services / candidate - screening - copilot',
   real_service: true;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export type InnovativeMicroSaas = {;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 	}
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-];
-;
-=======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
-=======
-=======];
-;
-
-export type InnovativeMicroSaas = {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 ursor/fix-website-loading-errors-and-merge-6662
 ];
 ;
 
 export type InnovativeMicroSaas = {;
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 	id: string,;
-	name: string,,
-  description: string,;
+	name: string,;
+	description: string,;
 	tagline?: string,;
 	category:;
 		| 'Content Marketing';
@@ -485,8 +367,8 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
 	{;
 		id: 'podcast-transcription-seo-suite',;
 		name: 'Podcast Transcription & SEO Suite',;
-		tagline: 'Turn episodes into SEO-optimized blogs in minutes',,
-  description: 'Accurate multi-speaker transcription with summaries, quotes, and SEO-ready blog drafts including schema and social cards.',;
+		tagline: 'Turn episodes into SEO-optimized blogs in minutes',;
+		description: 'Accurate multi-speaker transcription with summaries, quotes, and SEO-ready blog drafts including schema and social cards.',;
 		category: 'Content Marketing',;
 		pricing: { starter: '$39/mo' },;
 		features: ['Multi-speaker diarizationSEO blog draftsPull-quotesSchema & social cards'],;
@@ -499,8 +381,8 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
 	},;
 	{;
 		id: 'local-seo-reviews-booster',;
-		name: 'Local SEO Reviews Booster',,
-  description: 'Automated post-visit SMS/email review requests with smart routing to preferred platforms and churn-risk alerts.',;
+		name: 'Local SEO Reviews Booster',;
+		description: 'Automated post-visit SMS/email review requests with smart routing to preferred platforms and churn-risk alerts.',;
 		category: 'Marketing Automation',;
 		pricing: { starter: '$29/mo' },;
 		features: ['Smart review routingNPS & CSATChurn alertsMulti-location dashboards'],;
@@ -511,8 +393,8 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
 	},;
 	{;
 		id: 'smart-invoice-reconciliation',;
-		name: 'Smart Invoice Reconciliation',,
-  description: 'Reconciling bank transactions with invoices using OCR and matching heuristics, with discrepancy alerts.',;
+		name: 'Smart Invoice Reconciliation',;
+		description: 'Reconciling bank transactions with invoices using OCR and matching heuristics, with discrepancy alerts.',;
 		category: 'Financial Technology',;
 		pricing: { starter: '$59/mo' },;
 		features: ['OCR ingestionMatching heuristicsDiscrepancy alertsExport to ERP'],;
@@ -523,8 +405,8 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
 	},;
 	{;
 		id: 'candidate-screening-copilot',;
-		name: 'Candidate Screening Copilot',,
-  description: 'Summarize resumes, score against job descriptions, and auto-generate interview question sets.',;
+		name: 'Candidate Screening Copilot',;
+		description: 'Summarize resumes, score against job descriptions, and auto-generate interview question sets.',;
 		category: 'Human Resources',;
 		pricing: { starter: '$69/mo' },;
 		features: ['Resume parsingJD matchingQuestion setsATS sync'],;
@@ -532,24 +414,14 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
 		useCases: ['Faster hiringBias reduction'],;
 		link: 'https://ziontechgroup.com/services/candidate-screening-copilot',;
 		realService: true;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 	}
 ];
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-	}
-];
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ;
 
 export type InnovativeMicroSaas = {;
 	id: string,;
-	name: string,,
-  description: string,;
+	name: string,;
+	description: string,;
 	tagline?: string,;
 	category:;
 		| 'Content Marketing';
@@ -574,8 +446,8 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
 	{;
 		id: 'podcast-transcription-seo-suite',;
 		name: 'Podcast Transcription & SEO Suite',;
-		tagline: 'Turn episodes into SEO-optimized blogs in minutes',,
-  description: 'Accurate multi-speaker transcription with summaries, quotes, and SEO-ready blog drafts including schema and social cards.',;
+		tagline: 'Turn episodes into SEO-optimized blogs in minutes',;
+		description: 'Accurate multi-speaker transcription with summaries, quotes, and SEO-ready blog drafts including schema and social cards.',;
 		category: 'Content Marketing',;
 		pricing: { starter: '$39/mo' },;
 		features: ['Multi-speaker diarizationSEO blog draftsPull-quotesSchema & social cards'],;
@@ -588,8 +460,8 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
 	},;
 	{;
 		id: 'local-seo-reviews-booster',;
-		name: 'Local SEO Reviews Booster',,
-  description: 'Automated post-visit SMS/email review requests with smart routing to preferred platforms and churn-risk alerts.',;
+		name: 'Local SEO Reviews Booster',;
+		description: 'Automated post-visit SMS/email review requests with smart routing to preferred platforms and churn-risk alerts.',;
 		category: 'Marketing Automation',;
 		pricing: { starter: '$29/mo' },;
 		features: ['Smart review routingNPS & CSATChurn alertsMulti-location dashboards'],;
@@ -600,8 +472,8 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
 	},;
 	{;
 		id: 'smart-invoice-reconciliation',;
-		name: 'Smart Invoice Reconciliation',,
-  description: 'Reconciling bank transactions with invoices using OCR and matching heuristics, with discrepancy alerts.',;
+		name: 'Smart Invoice Reconciliation',;
+		description: 'Reconciling bank transactions with invoices using OCR and matching heuristics, with discrepancy alerts.',;
 		category: 'Financial Technology',;
 		pricing: { starter: '$59/mo' },;
 		features: ['OCR ingestionMatching heuristicsDiscrepancy alertsExport to ERP'],;
@@ -612,8 +484,8 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
 	},;
 	{;
 		id: 'candidate-screening-copilot',;
-		name: 'Candidate Screening Copilot',,
-  description: 'Summarize resumes, score against job descriptions, and auto-generate interview question sets.',;
+		name: 'Candidate Screening Copilot',;
+		description: 'Summarize resumes, score against job descriptions, and auto-generate interview question sets.',;
 		category: 'Human Resources',;
 		pricing: { starter: '$69/mo' },;
 		features: ['Resume parsingJD matchingQuestion setsATS sync'],;
@@ -626,7 +498,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
 
 export type InnovativeMicroSaas = {
   id: string;
-  name: string,
+  name: string;
   description: string;
   tagline?: string;
   category:;
@@ -689,8 +561,8 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 	}
 	{
 		id: 'local-seo-reviews-booster';
-		name: 'Local SEO Reviews Booster',
-  description: 'Automated post-visit SMS/email review requests with smart routing to preferred platforms and churn-risk alerts.';
+		name: 'Local SEO Reviews Booster';
+		description: 'Automated post-visit SMS/email review requests with smart routing to preferred platforms and churn-risk alerts.';
 		category: 'Marketing Automation'
 		pricing: { starter: '$29/mo' }
 		features: ['Smart review routingNPS & CSATChurn alertsMulti-location dashboards'];
@@ -721,8 +593,8 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 		realService: true
 	}
 ];
-name: string,
-  description: string;
+name: string;
+description: string;
 tagline?: string;
 category:;
   | 'Content Marketing';
@@ -762,7 +634,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
 }
 {
   id: 'local - seo - reviews - booster';
-  name: 'Local SEO Reviews Booster',
+  name: 'Local SEO Reviews Booster';
   description: 'Automated post - visit SMS / email review requests with smart routing to preferred platforms and churn - risk alerts.';
   category: 'Marketing Automation',
   pricing: { starter: '$29 / mo' }
@@ -797,36 +669,11 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
   real_service: true;
 }
 ];
-<<<<<<< HEAD
 ;
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
-=======
-
-
-	}
-];
-
-
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     useCases: ['Faster hiring', 'Bias reduction'],
     link: 'https://ziontechgroup.com/services/candidate-screening-copilot',
     realService: true,
   },
 ];
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

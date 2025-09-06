@@ -1,33 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-<<<<<<< HEAD
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {
   ArrowRight,
   ExternalLink,
@@ -45,16 +16,7 @@ import {
   Lock,;
   Globe,;} from 'lucide-react';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import {
   ArrowRight
   ExternalLink
@@ -71,41 +33,10 @@ import {
   DollarSign
   Lock
   Globe;} from 'lucide-react';
-<<<<<<< HEAD
-
   Users, Zap, Shield, Clock, Check, Brain;
   Rocket, Dna, DollarSign, Lock, Globe
 
-interface UltraAdvancedServiceCardProps {
-  service: {
 
-      website: string;
-    }
-
-    realImplementation: boolean;
-    implementationDetails: string;
-    launchDate: string;
-    customers: number;
-    rating: number;
-
-    reviews: number;
-  }
-const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({
-  service
-}) => {  const [isExpanded, setIsExpanded] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
-  const getCategoryIcon = (category: string) => {    contactInfo: {
-      mobile: string
-      email: string
-      address: string
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-  Users, Zap, Shield, Clock, Check, Brain;
-  Rocket, Dna, DollarSign, Lock, Globe
-
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, ExternalLink, Star, TrendingUp;
@@ -139,70 +70,22 @@ interface UltraAdvancedServiceCardProps {;
     name: string;
     tagline: string;
     price: string;
-    period: string,
-  description: string;
+    period: string;
+    description: string;
     features: string[];
     popular: boolean;
     icon: string;
     color: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    text_color: string;
-    link: string;
-    market_position: string;
-    target_audience: string;
-    trial_days: number;
-    setup_time: string;
-    category: string;
-    real_service: boolean;
-    technology: string[];
-    integrations: string[];
-    use_cases: string[];
-    roi: string;
-    competitors: string[];
-    market_size: string;
-    growth_rate: string;
-    variant: string;
-
-    contact_info: {
-
-      mobile: string;
-      email: string;
-      address: string;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
       website: string;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    realImplementation: boolean;
-    implementationDetails: string;
-    launchDate: string;
-    customers: number;
-    rating: number;
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     reviews: number;
   };
 
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-=======
-    reviews: number
-};
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   service: {
       
@@ -237,27 +120,13 @@ interface UltraAdvancedServiceCardProps {;
       email: string,
       address: string,
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       website: string
     }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     realImplementation: boolean
     implementationDetails: string
     launchDate: string
     customers: number
     rating: number
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     textColor: string;
     link: string;
     marketPosition: string;
@@ -285,26 +154,13 @@ interface UltraAdvancedServiceCardProps {;
     launchDate: string;
     customers: number;
     rating: number;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     reviews: number
   }
 }
 const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ service }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     if (category.includes('Quantum')) return <Zap className="w-4 h-4" />;
     if (category.includes('Space')) return <Rocket className="w-4 h-4" />;
     if (category.includes('Biotech') |category.includes('Healthcare')) return <Dna className="w-4 h-4" />;
@@ -312,13 +168,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
     if (category.includes('Security') |category.includes('Cybersecurity')) return <Lock className="w-4 h-4" />;
     if (category.includes('Internet') |category.includes('Network')) return <Globe className="w-4 h-4" />
     return <Zap className="w-4 h-4" />
-<<<<<<< HEAD
-
-        onHoverStart={() => setIsHovered(true)}
-      onHoverEnd={() => setIsHovered(false)}
-    >
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 }
 const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ service }) => {;
@@ -337,8 +186,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
       return <Lock className='w-4 h-4' />;
     if (category && category.includes('Internet') || category && category.includes('Network'));
       return <Globe className='w-4 h-4' />;
-    return <Zap className='w-4 h-4' />
-};
+    return <Zap className='w-4 h-4' />;  };
   const containerVariants = {;
     hidden: { opacity: 0, y: 20 },;
     visible: {      opacity: 1,;
@@ -366,15 +214,6 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
         duration: 0 && 0.5,;
         ease: 'easeOut' as const,;
       },;
-<<<<<<< HEAD
-    },        ease: "easeOut" as const;
-      }
-        onHoverStart={() => setIsHovered(true)}
-      onHoverEnd={() => setIsHovered(false)}
-    >
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
           isHovered ? 'opacity-100' : 'opacity-50';
         ease: 'ease_out' as const,
@@ -410,12 +249,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
         }`}
       <div 
 
-<<<<<<< HEAD
-=======
 
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const getCategoryIcon = null;
       return <Brain className='w-4 h-4' />;
     if (category.includes('Quantum')) return <Zap className='w-4 h-4' />;
@@ -456,22 +290,18 @@ visible: {
       opacity: 1,
       height: 'auto',
       transition: {
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
         duration: 0.5,
         ease: 'easeOut' as const,
       },
     },
   };
+
+        onHoverStart={() => setIsHovered(true)}
       onHoverStart={() => setIsHovered(true)}
 origin/cursor/automate-test-improve-and-merge-code-2533
       onHoverEnd={() => setIsHovered(false)}
     >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Glow Effect */}
 <div
         className={`absolute inset-0 rounded-2xl blur-xl transition-all duration-500 ${
@@ -483,51 +313,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         }}
       />
       {/* Main Card */}
-<<<<<<< HEAD
-      <div        className={`relative bg-gradient-to-br ${service.color} p-1 rounded-2xl transition-all duration-500 ${
-          isHovered ? 'shadow-2xl' : 'shadow-lg'
-        }`}
-      >
-        <div className='bg-gray-900/90 backdrop-blur-xl rounded-2xl p-6 h-full'>        className={`absolute inset-0 rounded-2xl blur-xl transition-all duration-500 ${
-          isHovered ? 'opacity-100' : 'opacity-50';
-        }`}
-        style={{
-          background: `linear-gradient(135deg, ${service.color})`;
-          transform: isHovered ? 'scale(1.05)' : 'scale(1)'}}
-      />
-      {/* Main Card */}
-=======
       <div
     hidden: { opacity: 0, height: 0 },
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
       <div 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         className={`relative bg-gradient-to-br ${service.color} p-1 rounded-2xl transition-all duration-500 ${
           isHovered ? 'shadow-2xl' : 'shadow-lg'
         }`}
       >
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-=======
-<div className='bg-gray-900/90 backdrop-blur-xl rounded-2xl p-6 h-full'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 <div className='bg-gray-900/90 backdrop-blur-xl rounded-2xl p-6 h-full'>
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
           {/* Header */}
           <div className='flex items - start justify - between mb - 4'>;
             <div className='flex items - center space - x-3'>;
@@ -541,12 +337,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
                 <h3 className='text - xl font - bold text - white mt - 1'>;
                   {service.name}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <div className="flex items-start justify-between mb-4">
             <div className="flex items-center space-x-3">
               <div className="text-3xl">{service.icon}</div>
@@ -558,23 +348,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </span>
                 </div>
                 <h3 className="text-xl font-bold text-white mt-1">{service.name}</h3>
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 </h3>
 origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             </div>
             {service.popular && (
               <motion.div
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         style={{;
           background: `linear-gradient(135deg, ${service && service.color})`;
           transform: isHovered ? 'scale(1 && 1.05)' : 'scale(1)'}}
@@ -623,24 +402,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                 className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold"
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-                className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                 className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 animate={{ scale: [1, 1.1, 1] }}
                 transition={{ duration: 2, repeat: Infinity }}
               >
@@ -648,194 +411,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </motion.div>
             )}
           </div>
-=======
           {/* Tagline */}
 <p className='text-gray-300 text-sm mb-4 leading-relaxed'>
             {service.tagline}
           </p>
           {/* Price */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <div className='flex items-center justify-between mb-4'>
-            <div className='flex items-baseline space-x-1'>
-              <span className='text-2xl font-bold text-white'>
-                {service.price}
-              </span>
-              <span className='text-gray-400'>{service.period}</span>
-            <div className='flex items-center space-x-2'>
-              <div className='flex items-center space-x-1'>
-                <Star className='w-4 h-4 text-yellow-400 fill-current' />
-                <span className='text-white text-sm'>{service.rating}</span>
-              </div>
-              <span className='text-gray-400 text-sm'>({service.reviews})</span>            </div>
-          </div>
-          {/* Quick Stats */}              <span className="text-gray-400 text-sm">({service.reviews})</span>
-
-          {/* Tagline */}
-          <p className='text-gray-300 text-sm mb-4 leading-relaxed'>            {service.tagline}
-          </p>
-
-          {/* Price */}
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-
-            {service.tagline}
-          </p>
-
-          {/* Price */}
-
-            </div>
-          </div>
-          {/* Quick Stats */}
-          <div className='grid grid-cols-2 gap-3 mb-4'>
-            <div className='flex items-center space-x-2 text-sm'>
-              <Users className='w-4 h-4 text-blue-400' />
-              <span className='text-gray-300'>
-                {service.customers.toLocaleString()}+ users
-              </span>
-            </div>
-            <div className='flex items-center space-x-2 text-sm'>
-              <Clock className='w-4 h-4 text-green-400' />
-              <span className='text-gray-300'>
-                {service.trialDays} day trial
-              </span>            </div>
-          </div>
-          {/* Market Data */}          <div className="grid grid-cols-2 gap-3 mb-4">
-            <div className="flex items-center space-x-2 text-sm">
-              <Users className="w-4 h-4 text-blue-400" />
-              <span className="text-gray-300">{service.customers.toLocaleString()}+ users</span>
-            </div>
-            <div className="flex items-center space-x-2 text-sm">
-              <Clock className="w-4 h-4 text-green-400" />
-              <span className="text-gray-300">{service.trialDays} day trial</span>
-          </div>
-
-          {/* Expandable Content */}
-          <AnimatePresence>
-            {isExpanded && (
-              <motion.div
-                variants={contentVariants}
-                initial='hidden'
-                animate='visible'
-                exit='hidden'
-                className='space-y-4'
-              >
-                {/* Description */}
-                <div>
-                  <h4 className='text-white font-semibold mb-2'>Description</h4>
-                  <p className='text-gray-300 text-sm leading-relaxed'>                    {service.description}                initial="hidden"
-                animate="visible"
-                exit="hidden"
-                className="space-y-4"
-              >
-                {/* Description */}
-                <div>
-                  <h4 className="text-white font-semibold mb-2">Description</h4>
-                  <p className="text-gray-300 text-sm leading-relaxed">
-                  </p>
-                </div>
-
-                {/* Features */}
-                <div>
-                  <h4 className='text-white font-semibold mb-2'>
-                    Key Features
-                  </h4>
-                  <div className='grid grid-cols-1 gap-2'>
-                    {service.features.slice(0, 6).map((feature, index) => (
-                      <div
-                        key={index}
-                        className='flex items-center space-x-2 text-sm'
-                      >
-                        <Check className='w-3 h-3 text-green-400 flex-shrink-0' />
-
-                    ))}
-                  </div>
-                </div>
-
-                {/* ROI */}
-                <div className='bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-lg p-3'>
-                  <h4 className='text-white font-semibold mb-2'>ROI Promise</h4>
-                  <p className='text-gray-300 text-sm'>{service.roi}</p>
-
-                </div>
-                {/* Contact Info */}
-                <div className='bg-gray-800/50 rounded-lg p-3'>
-                  <h4 className='text-white font-semibold mb-2'>
-                    Contact Information
-                  </h4>
-                  <div className='space-y-1 text-sm'>
-                    <div className='flex items-center space-x-2'>
-                      <span className='text-gray-400'>Mobile:</span>
-                      <span className='text-white'>
-                        {service.contactInfo.mobile}
-                      </span>
-                    </div>
-                    <div className='flex items-center space-x-2'>
-                      <span className='text-gray-400'>Email:</span>
-                      <span className='text-white'>
-                        {service.contactInfo.email}
-                      </span>
-                    </div>
-                    <div className='flex items-center space-x-2'>
-                      <span className='text-gray-400'>Address:</span>
-                      <span className='text-white text-xs'>
-                        {service.contactInfo.address}
-                      </span>                    </div>                </div>
-                {/* Contact Info */}
-                <div className="bg-gray-800/50 rounded-lg p-3">
-                  <h4 className="text-white font-semibold mb-2">Contact Information</h4>
-                  <div className="space-y-1 text-sm">
-                    <div className="flex items-center space-x-2">
-                      <span className="text-gray-400">Mobile:</span>
-                      <span className="text-white">{service.contactInfo.mobile}</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <span className="text-gray-400">Email:</span>
-                      <span className="text-white">{service.contactInfo.email}</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <span className="text-gray-400">Address:</span>
-                      <span className="text-white text-xs">{service.contactInfo.address}</span>
-
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
-
-          {/* Action Buttons */}
-          <div className='flex space-x-3 mt-6'>
-            <motion.button
-              className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2'              whileHover={{ scale: 1.02 }}          <div className="flex space-x-3 mt-6">
-            <motion.button
-              className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
-
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              onClick={() => window.open(service.link, '_blank')}
-            >
-              <span>Learn More</span>
-
-              }`}
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              onClick={() => setIsExpanded(!isExpanded)}
-            >
-              {isExpanded ? 'Show Less' : 'Details'}
-            </motion.button>
-          </div>
-
-          {/* Expand/Collapse Indicator */}
-          <motion.div
-            className='flex justify-center mt-4'
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </div>
           </div>
           {/* Quick Stats */}
@@ -851,9 +431,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className="flex items-center space-x-2 text-sm">
               <Users className="w-4 h-4 text-blue-400" />
               <span className="text-gray-300">{service.customers.toLocaleString()}+ users</span>
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div className='flex items-center justify-between mb-4'>
             <div className='flex items-baseline space-x-1'>
               <span className='text-2xl font-bold text-white'>
@@ -892,8 +469,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {service.marketSize}
               </span>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div className="flex items-center justify-between text-sm">
               <span className="text-gray-400">Market Size:</span>
               <span className="text-green-400 font-semibold">{service.marketSize}</span>
@@ -901,16 +476,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className="flex items-center justify-between text-sm mt-1">
               <span className="text-gray-400">Growth Rate:</span>
               <span className="text-blue-400 font-semibold">{service.growthRate}</span>
-<<<<<<< HEAD
-
-            </div>
-
-          </div>
-          </div>;
-=======
           </div>;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           {/* Tagline */}
           <p className='text-gray-300 text-sm mb-4 leading-relaxed'>            {service && service.tagline}
           </p>;
@@ -977,40 +544,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <span className="text-blue-400 font-semibold">{service && service.growthRate}</span>;
           </div>;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
             <div className='flex items-center justify-between text-sm mt-1'>
               <span className='text-gray-400'>Growth Rate:</span>
               <span className='text-blue-400 font-semibold'>
                 {service.growthRate}
               </span>
             </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
           </div>
 
-<<<<<<< HEAD
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           {/* Expandable Content */}
           <AnimatePresence>;
             {isExpanded && (;
               <motion&& motion.div
                 variants={contentVariants}
+                {/* Description */}
 initial='hidden'
                 animate='visible'
                 exit='hidden'
@@ -1024,22 +574,15 @@ initial='hidden'
 origin/cursor/automate-test-improve-and-merge-code-2533
                   </p>
                 </div>
-<<<<<<< HEAD
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
                 <div>;
                   <h4 className="text-white font-semibold mb-2">Description</h4>;
                   <p className="text-gray-300 text-sm leading-relaxed">;
                   </p>;
                 </div>;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 {/* Features */}
 
                 <div>
-<<<<<<< HEAD
-<<<<<<< HEAD
                   <div className="grid grid-cols-1 gap-2">
                     {service.features.slice(0, 6).map((feature, index) => (
                       <div key={index} className="flex items-center space-x-2 text-sm">
@@ -1047,12 +590,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <span className="text-gray-300">{feature}</span>
                         <span className='text-gray-300'>{feature}</span>                      </div>
 
-<<<<<<< HEAD
-=======
 
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <h4 className='text-white font-semibold mb-2'>
                     Key Features
                   </h4>
@@ -1064,40 +602,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       >
                         <Check className='w-3 h-3 text-green-400 flex-shrink-0' />
                         <span className='text-gray-300'>{feature}</span>
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                       </div>
                     ))}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 {/* ROI */}
 <div className='bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-lg p-3'>
                   <h4 className='text-white font-semibold mb-2'>ROI Promise</h4>
                   <p className='text-gray-300 text-sm'>{service.roi}</p>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
 
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 </div>
                 {/* Contact Info */}
                 <div className='bg-gray-800/50 rounded-lg p-3'>
@@ -1121,6 +640,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <span className='text-gray-400'>Address:</span>
                       <span className='text-white text-xs'>
                         {service.contactInfo.address}
+                      </span>                    </div>                </div>
+                {/* Contact Info */}
+
+                {/* Contact Info */}
+                <div className="bg-gray-800/50 rounded-lg p-3">;
+                  <h4 className="text-white font-semibold mb-2">Contact Information</h4>;
+                  <div className="space-y-1 text-sm">;
+                    <div className="flex items-center space-x-2">;
+                      <span className="text-gray-400">Mobile:</span>;
+                      <span className="text-white">{service && service.contactInfo.mobile}</span>;
+                    </div>;
+                    <div className="flex items-center space-x-2">;
+                      <span className="text-gray-400">Email:</span>;
+                      <span className="text-white">{service && service.contactInfo.email}</span>;
+                    </div>;
+                    <div className="flex items-center space-x-2">;
+                      <span className="text-gray-400">Address:</span>;
+                      <span className="text-white text-xs">{service && service.contactInfo.address}</span>;
+                    </div>;
+                  </div>;
+                </div>;
+              </motion && motion.div>;
                       </span>
                     </div>
                   </div>
@@ -1128,54 +669,33 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </motion.div>
 origin/cursor/automate-test-improve-and-merge-code-2533
             )}
-<<<<<<< HEAD
-
-          </AnimatePresence>;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           {/* Action Buttons */}
-<<<<<<< HEAD
-<<<<<<< HEAD
           <div className='flex space-x-3 mt-6'>;
             <motion&& motion.button
               className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2'              whileHover={{ scale: 1 && 1.02 }}          <div className="flex space-x-3 mt-6">;
             <motion&& motion.button
               className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
                 {/* Contact Info */}
-                <div className="bg - gray - 800 / 50 rounded-lg p-3">;
-                  <h4 className="text - white font-semibold mb-2">Contact Information</h4>;
-                  <div className="space-y-1 text-sm">;
-                    <div className="flex items-center space-x-2">;
-                      <span className="text-gray-400">Mobile:</span>;
-                      <span className="text-white">{service.contact_info.mobile}</span>;
+                <div className="bg - gray - 800 / 50 rounded - lg p - 3">;
+                  <h4 className="text - white font - semibold mb - 2">Contact Information</h4>;
+                  <div className="space - y-1 text - sm">;
+                    <div className="flex items - center space - x-2">;
+                      <span className="text - gray - 400">Mobile:</span>;
+                      <span className="text - white">{service.contact_info.mobile}</span>;
                     </div>;
-                    <div className="flex items-center space-x-2">;
-                      <span className="text-gray-400">Email:</span>;
-                      <span className="text-white">{service.contact_info.email}</span>;
+                    <div className="flex items - center space - x-2">;
+                      <span className="text - gray - 400">Email:</span>;
+                      <span className="text - white">{service.contact_info.email}</span>;
                     </div>;
-                    <div className="flex items-center space-x-2">;
-                      <span className="text-gray-400">Address:</span>;
-                      <span className="text-white text-xs">{service.contact_info.address}</span>;
+                    <div className="flex items - center space - x-2">;
+                      <span className="text - gray - 400">Address:</span>;
+                      <span className="text - white text - xs">{service.contact_info.address}</span>;
                     </div>;
                   </div>;
                 </div>;
               </motion.div>)}
           </AnimatePresence>;
           {/* Action Buttons */}
-<<<<<<< HEAD
-
-              <ExternalLink className="w-4 h-4" />
-            </motion.button>
-            
-
-            <motion.button
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
               whileHover={{ scale: 1 && 1.02 }}
               whileTap={{ scale: 0 && 0.98 }}
               onClick={() => window && window.open(service && service.link, '_blank')}
@@ -1192,12 +712,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 isExpanded
                   ? 'border-gray-600 text-gray-400'
                   : 'border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-black'
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div className='flex space-x-3 mt-6'>
             <motion.button
               className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2'
@@ -1213,12 +727,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 isExpanded
                   ? 'border-gray-600 text-gray-400'
                   : 'border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black'
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
               }`}
               whileHover={{ scale: 1 && 1.02 }}
               whileTap={{ scale: 0 && 0.98 }}
@@ -1237,41 +746,24 @@ className='flex justify-center mt-4'
         </div>
       </div>
     </motion.div>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 }
 };
 
 export default UltraAdvancedServiceCard;            className="flex justify-center mt-4"
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
             </motion && motion.button>;
           </div>;
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           {/* Expand/Collapse Indicator */}
 
-};
 
-<<<<<<< HEAD
-export default UltraAdvancedServiceCard;            className="flex justify-center mt-4";
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
-export default UltraAdvancedServiceCard;            className="flex justify-center mt-4"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 
 export default UltraAdvancedServiceCard;            className="flex justify-center mt-4";
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+};
+
+export default UltraAdvancedServiceCard;            className="flex justify-center mt-4";
             animate={{ rotate: isExpanded ? 180 : 0 }}
             transition={{ duration: 0 && 0.3 }}
           >;
@@ -1280,40 +772,17 @@ export default UltraAdvancedServiceCard;            className="flex justify-cent
       </div>;
     </motion && motion.div>;
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-export default UltraAdvancedServiceCard;            className="flex justify-center mt-4"
-            animate={{ rotate: isExpanded ? 180 : 0 }}
-            transition={{ duration: 0.3 }}
-          >
-            <ArrowRight className="w-5 h-5 text-gray-400" />
-        </div>
-      </div>
-    </motion.div>
-  );
-}
-export default UltraAdvancedServiceCard;  )
-}
-export default UltraAdvancedServiceCard;
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default UltraAdvancedServiceCard;  );
-=======
-export default UltraAdvancedServiceCard;  )
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 };
 
+
 export default UltraAdvancedServiceCard;
 
-<<<<<<< HEAD
-=======
-=======
           <div className='flex space - x-3 mt - 6'>;
             <motion.button;
-              className='flex - 1 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 400 hover:to - blue - 500 text - white font - semibold py - 3 px - 4 rounded - lg transition - all duration - 300 flex items - center justify - center space - x-2'              while_hover={{ scale: 1.02 }}          <div className="flex space-x-3 mt-6">;
+              className='flex - 1 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 400 hover:to - blue - 500 text - white font - semibold py - 3 px - 4 rounded - lg transition - all duration - 300 flex items - center justify - center space - x-2'              while_hover={{ scale: 1.02 }}          <div className="flex space - x-3 mt - 6">;
             <motion.button;
-              className="flex - 1 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 400 hover:to - blue - 500 text - white font - semibold py - 3 px - 4 rounded - lg transition - all duration - 300 flex items - center justify-center space-x-2";
+              className="flex - 1 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 400 hover:to - blue - 500 text - white font - semibold py - 3 px - 4 rounded - lg transition - all duration - 300 flex items - center justify - center space - x-2";
               while_hover={{ scale: 1.02 }}
               while_tap={{ scale: 0.98 }}
               on_click={() => window.open (service.link, '_blank')}
@@ -1358,31 +827,12 @@ export default UltraAdvancedServiceCard;
         </div>
       </div>
     </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 };
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 );
 };
 
 export default UltraAdvancedServiceCard;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

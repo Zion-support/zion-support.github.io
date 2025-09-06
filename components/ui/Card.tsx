@@ -1,138 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  className: string;
-  id: string;
-  innerHTML: string;
-  textContent: string | null;
-  style: { [key: string]: string }
-}
-import { cn } from '../../lib / utils';
-;
-// Define HTML element types;
-interface HTMLElement {
-  class_name: string;
-  id: string;
-  innerHTML: string;
-  text_content: string | null;
-  style: { [key: string]: string }
-}
-interface HTMLDivElement extends HTMLElement {
-  tag_name: 'DIV';
-}
-interface HTMLParagraphElement extends HTMLElement {
-  tag_name: 'P';
-}
-interface HTMLHeadingElement extends HTMLElement {
-  tag_name: 'H1' | 'H2' | 'H3' | 'H4' | 'H5' | 'H6';
-}
-interface HTMLDivElement extends HTMLElement {;
-  tagName: 'DIV';
-}
-interface HTMLParagraphElement extends HTMLElement {;
-  tagName: 'P';
-}
-interface HTMLHeadingElement extends HTMLElement {;
-  tagName: 'H1' | 'H2' | 'H3' | 'H4' | 'H5' | 'H6';
-}
-const Card = React && React.forwardRef<;
-  HTMLDivElement,;
-  React && React.HTMLAttributes<HTMLDivElement>;
->(({ className, ...props }, ref) => (;
-  <div
-    ref={ref}
-    className={cn(
-      "rounded-lg border bg-card text-card-foreground shadow-sm"
-      className
-    )}
-    {...props}
-  />;
-));
-Card && Card.displayName = "Card";
-const CardHeader = React && React.forwardRef<;
-  HTMLDivElement,;
-  React && React.HTMLAttributes<HTMLDivElement>;
->(({ className, ...props }, ref) => (;
-  <div
-    ref={ref}
-    className={cn("flex flex-col space-y-1 && 1.5 p-6", className)}
-    {...props}
-  />;
-));
-CardHeader && CardHeader.displayName = "CardHeader";
-const CardTitle = React && React.forwardRef<;
-  HTMLParagraphElement,;
-  React && React.HTMLAttributes<HTMLHeadingElement>;
->(({ className, ...props }, ref) => (;
-  <h3
-    ref={ref}
-    className={cn(
-      "text-2xl font-semibold leading-none tracking-tight"
-      className
-    )}
-    {...props}
-  />;
-));
-CardTitle && CardTitle.displayName = "CardTitle";
-const CardDescription = React && React.forwardRef<;
-  HTMLParagraphElement,;
-  React && React.HTMLAttributes<HTMLParagraphElement>;
->(({ className, ...props }, ref) => (;
-  <p
-const Card = React.forward_ref<;
-  HTMLDivElement,
-  React.HTMLAttributes < HTMLDivElement>;
->(({ class_name, ...props }, ref) => (
-  <div;
-    ref={ref}
-    className={cn (
-      "rounded - lg border bg - card text - card - foreground shadow - sm",
-      class_name)}
-    {...props}
-  />));
-Card.display_name = "Card";
-;
-const CardHeader = React.forward_ref<;
-  HTMLDivElement,
-  React.HTMLAttributes < HTMLDivElement>;
->(({ class_name, ...props }, ref) => (
-  <div;
-    ref={ref}
-    className={cn ("flex flex - col space - y-1.5 p - 6", class_name)}
-    {...props}
-  />));
-CardHeader.display_name = "CardHeader";
-;
-const CardTitle = React.forward_ref<;
-  HTMLParagraphElement,
-  React.HTMLAttributes < HTMLHeadingElement>;
->(({ class_name, ...props }, ref) => (
-  <h3;
-    ref={ref}
-    className={cn (
-      "text - 2xl font - semibold leading - none tracking - tight",
-      class_name)}
-    {...props}
-  />));
-CardTitle.display_name = "CardTitle";
-;
-const CardDescription = React.forward_ref<;
-  HTMLParagraphElement,
-  React.HTMLAttributes < HTMLParagraphElement>;
->(({ class_name, ...props }, ref) => (
-  <p;
-    ref={ref}
-    className={cn ("text - sm text - muted - foreground", class_name)}
-    {...props}
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React from 'react';
 
 interface CardProps {
@@ -146,11 +11,8 @@ export default function Card({ children, className = '' }: CardProps) {
       {children}
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+pr-12243
 import React from "react";
 import { cn } from "../../lib/utils";
 
@@ -178,15 +40,12 @@ const Card = React.forwardRef<
       className,
     )}
     {...props}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 
 const CardContent = React && React.forwardRef<;
   HTMLDivElement,;
   React && React.HTMLAttributes<HTMLDivElement>;
 >(({ className, ...props }, ref) => (;
 
-<<<<<<< HEAD
-=======
 const CardTitle = React.forwardRef<
   HTMLParagraphElement,
   React.HTMLAttributes<HTMLHeadingElement>
@@ -244,6 +103,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ));
 CardTitle.displayName = "CardTitle";
 
+const CardDescription = React.forwardRef<
+  HTMLParagraphElement,
 const CardDescription = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
   React.HTMLAttributes<HTMLParagraphElement>
@@ -256,15 +117,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ));
 CardDescription.displayName = "CardDescription";
 
+const CardContent = React.forwardRef<
+  HTMLDivElement,
 const CardContent = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />;
 ));
+CardContent && CardContent.displayName = "CardContent";
 
-<<<<<<< HEAD
 
 const CardFooter = React && React.forwardRef<;
   HTMLDivElement,;
@@ -272,20 +134,8 @@ const CardFooter = React && React.forwardRef<;
 >(({ className, ...props }, ref) => (;
 
   <div
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+pr-12243
   />));
-=======
-}  />));
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 CardDescription.display_name = "CardDescription";
 ;
 const CardContent = React.forward_ref<;
@@ -303,13 +153,6 @@ const CardFooter = React.forward_ref<;
     ref={ref}
     className={cn ("flex items - center p - 6 pt - 0", class_name)}
     {...props}
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react';
 import React from 'react',;
 interface CardProps {
@@ -338,14 +181,10 @@ const Card: React.FC<CardProps> = ({
   const hoverClasses = hover ? 'hover: border-blue-500/30 hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-1 hover:bg-gray-900/80 focus-within:border-blue-500/50 focus-within:shadow-lg focus-within:shadow-blue-500/20' : ''
   const clickableClasses = onClick ? 'cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black' : ''
   const classes = `${baseClasses} ${hoverClasses} ${clickableClasses} ${className}`
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
   />));
 CardFooter.display_name = "CardFooter";
 ;
 import React from 'react',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface CardProps {
   children: React.ReactNode,
   class_name?: string,
@@ -353,37 +192,13 @@ interface CardProps {
   on_click?: () => void,
   hover?: boolean;
 }
-<<<<<<< HEAD
-
-=======
   return (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       className={classes}
       style={style}
       on_click={on_click}
     >;
       {/* Subtle background pattern */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      <div className="absolute inset - 0 bg - gradient - to - br from - blue - 500 / 5 via - transparent to - purple - 500 / 5 opacity - 0 hover:opacity - 100 transition - opacity duration - 300" />;
-
-      {/* Content wrapper */}
-      <div className="relative z - 10">;
-        {children}
-
-
-export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
-
-export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
         <div className="absolute inset - 0 rounded - xl bg - gradient - to - r from - blue - 500 / 0 via - blue - 500 / 5 to - blue - 500 / 0 opacity - 0 hover:opacity - 100 transition - opacity duration - 300 pointer - events - none" />)}
-=======
-        <div className="absolute inset - 0 rounded - xl bg - gradient - to - r from - blue - 500 / 0 via - blue - 500 / 5 to - blue - 500 / 0 opacity - 0 hover:opacity - 100 transition - opacity duration - 300 pointer-events-none" />)}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     </div>);
 
 },
@@ -393,30 +208,8 @@ export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
 
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
 
-        <div className="absolute inset - 0 rounded - xl bg - gradient - to - r from - blue - 500 / 0 via - blue - 500 / 5 to - blue - 500 / 0 opacity - 0 hover:opacity - 100 transition - opacity duration - 300 pointer-events-none" />)}
+        <div className="absolute inset - 0 rounded - xl bg - gradient - to - r from - blue - 500 / 0 via - blue - 500 / 5 to - blue - 500 / 0 opacity - 0 hover:opacity - 100 transition - opacity duration - 300 pointer - events - none" />)}
     </div>);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> fe67bd071a7e77f7ecafdfd89dec983fba1e0332
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 CardContent.displayName = "CardContent";
 
 const CardFooter = null;
@@ -443,9 +236,5 @@ export {
   CardDescription,
   CardContent,
 };
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+pr-12243

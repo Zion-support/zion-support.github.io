@@ -1,45 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
-=======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-import { ServiceVariant } from '../types/service-variants';
-export interface InnovativeMicroSaasService2026 {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
 import { ServiceVariant } from '../types/service-variants';
 export interface InnovativeMicroSaasService2026 {
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   id: string;
   name: string;
   tagline: string;
   price: string;
-  period: string,
+  period: string;
   description: string;
   features: string[];
   popular: boolean;
@@ -64,32 +33,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   customers: number;
   rating: number;
   reviews: number;
-<<<<<<< HEAD
-;
-
-const contact = {
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com'
-}
-export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
-  [
-    // AI-Powered Business Intelligence & Analytics
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     {
       id: 'ai-business-intelligence-suite'
       name: 'AI Business Intelligence Suite'
@@ -705,11 +651,6 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
       customers: 24,
       rating: 4.3,
       reviews: 18,
-<<<<<<< HEAD
-
-    },;
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   ];
 export const getInnovativeMicroSaasServices2026ByCategory = (
   category: string
@@ -719,19 +660,9 @@ export const getInnovativeMicroSaasServices2026ByCategory = (
   );
   return innovativeMicroSaasServices2026.filter(service => service.popular);
 }
-<<<<<<< HEAD
-export const getPopularInnovativeMicroSaasServices2026 = () => {
-};
-
-export const getPopularInnovativeMicroSaasServices2026 = () => {;
-=======
   return innovativeMicroSaasServices2026.filter(service => service.popular);
 }
-<<<<<<< HEAD
   ];
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     website: string;
   }
 
@@ -755,75 +686,38 @@ const contact = {
 
     },;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   ];
-export const getInnovativeMicroSaasServices2026ByCategory = (
-  category: string
-) => {
-  return innovativeMicroSaasServices2026.filter(
-    service => service.category === category;
-  );
 
-  return innovativeMicroSaasServices2026.filter(service => service.popular);
-}
-<<<<<<< HEAD
-=======
+
 };
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
-<<<<<<< HEAD
-=======
 export const getPopularInnovativeMicroSaasServices2026 = () => {;
 
+
   return innovativeMicroSaasServices2026.filter(service => service.popular);
 }
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
+};
 
+export const getPopularInnovativeMicroSaasServices2026 = () => {;
+  return innovativeMicroSaasServices2026.filter(service => service.popular);
+}
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export const getInnovativeMicroSaasServices2026ByPriceRange = (
   minPrice: number
   maxPrice: number
 ) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   return innovativeMicroSaasServices2026.filter(service => {
     const price = parseInt(service.price.replace('$', ''));
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     return price >= minPrice && price <= maxPrice;
   });
 };    return price >= minPrice && price <= maxPrice
   })
 }
-<<<<<<< HEAD
-
-  return innovativeMicroSaasServices2026.filter(service => {;
-    const price = parseInt(service.price.replace('$', ''));
-    return price >= minPrice && price <= maxPrice;
-  });
-
-};
-  })
-}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
 
   })
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
 export interface InnovativeMicroSaasService2026 {
   id: string, name: string,
   tagline: string, price: string,
@@ -1108,35 +1002,12 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (minPrice: number,
   return innovativeMicroSaasServices2026.filter(service => {
     const price = parseInt(service.price.replace('$', ''));
 };
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-
-  })
-}
 origin/cursor/integrate-build-improve-and-re-verify-2156
 
 
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 ;
-=======
-  ];  return innovativeMicroSaasServices2026.filter(service => service.popular);
-}
-export const getInnovativeMicroSaasServices2026ByPriceRange = (
-  minPrice: number
-  maxPrice: number
-) => {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export const getInnovativeMicroSaasServices2026ByCategory = (
   category: string) =>: any {
   return innovativeMicroSaasServices2026.filter (
@@ -1154,32 +1025,13 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (
     const price = parse_int (service.price.replace ('$', ''));
     return price >= min_price && price <= max_price;
   });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 
 
 };
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     website: string
   },
   realImplementation: boolean;
@@ -1188,9 +1040,4 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   customers: number;
   rating: number;
 };
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

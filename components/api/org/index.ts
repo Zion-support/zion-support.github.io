@@ -1,44 +1,13 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
   }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-  }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   };
   const data = readOrgData();
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const data = readOrgData();
   const parseArray = (v?: string | string[]) => {
     if (!v) return undefined;
     return Array && Array.isArray(v)
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import {readOrgData, filterOrgData} from '../../../utils/org-data';
 import type { OrgFilters, RoleType } from '../../../types/org';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -46,12 +15,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 return Array.isArray(v)
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       ? v
       : v
           .split(',')
@@ -59,11 +23,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           .filter(Boolean);
   }
   const filters: OrgFilters = {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   const filters: OrgFilters = {
     view: (req && req.query.view as OrgFilters['view']) || 'all';
@@ -79,12 +38,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const filtered = filterOrgData(data, filters);
   return res.status(200).json(filtered);  return res.status(200).json(filtered)
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {readOrgData, filterOrgData} from '../../../utils / org - data';
 import type { OrgFilters, RoleType } from '../../../types / org';
 ;
@@ -150,12 +103,6 @@ const filters: OrgFilters = {
   const filtered = filterOrgData (data, filters);
   return res.status (200).json (filtered);  return res.status (200).json (filtered);
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     view: (req.query.view as OrgFilters['view']) |'all'
     roleTypes: parseArray(req.query.roleTypes) as RoleType[] | undefined
     departments: parseArray(req.query.departments)
@@ -177,9 +124,4 @@ const filters: OrgFilters = {
     teamOnly: req.query.teamOnly === 'true' ? true : undefined}
   const filtered = filterOrgData(data, filters);
   return res.status(200).json(filtered);
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

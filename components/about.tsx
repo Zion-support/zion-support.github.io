@@ -1,57 +1,19 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-];}</div> </a> </div> </div> <div className="mt-6 flex justify-center" > <Button href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white" >Contact Us</Button> </div> </Card> </div> </section> </UltraFuturisticBackground>)
- ];}</div> </a> </div> </div> <div className="mt-6 flex justify-center" > <Button href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white" >Contact Us</Button> </div> </Card> </div> </section> </UltraFuturisticBackground>) 
-];}</div> </a> </div> </div> <div className="mt-6 flex justify-center" > <Button href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white" >Contact Us</Button> </div> </Card> </div> </section> </UltraFuturisticBackground>) 
- ];}</div> </a> </div> </div> <div className="mt-6 flex justify-center" > <Button href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white" >Contact Us</Button> </div> </Card> </div> </section> </UltraFuturisticBackground>) 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 ];}</div> </a> </div> </div> <div className="mt-6 flex justify-center" > <Button href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white" >Contact Us</Button> </div> </Card> </div> </section> </UltraFuturisticBackground>) 
  ];}</div> </a> </div> </div> <div className="mt-6 flex justify-center" > <Button href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white" >Contact Us</Button> </div> </Card> </div> </section> </UltraFuturisticBackground>) 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }return ({
   /* Mission & Vision */
 }<> <Head> <title>About Zion Tech Group | Autonomous Innovation Hub</title> <meta name="description" content="Learn about Zion Tech Group's mission to revolutionize technology through autonomous innovation and AI-powered solutions." /> <meta property="og:title" content="About Zion Tech Group" /> <meta property="og:description" content="Learn about Zion Tech Group's mission and vision." /> <meta name="twitter:card" content="summary large image" /> <link rel="canonical" href="https://ziontechgroup.com/about" /> </Head> <section className="relative section-padding bg-gradient-cursor overflow-hidden" > <div className="absolute inset-0 bg-[radial-gradient (circle at 30% 20%, rgba (0, 122, 204, 0.08), transparent 50%) ]" /> <div className="absolute inset-0 bg-[radial-gradient (circle at 70% 80%, rgba (0, 122, 204, 0.06), transparent 50%) ]" /> <div className="absolute inset-0 bg-grid opacity-10" /> <div className="relative z-10 container-cursor text-center" > <div className="inline-flex items-center px-4 py-2 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-sm font-medium mb-6" > <span className="w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse" /> About Our Company </div> <h1 className="text-responsive-xl font-black mb-8 gradient-text text-shadow-lg" > About Zion Tech Group </h1> <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed" > Pioneering the future of autonomous technology and AI-driven innovation </p> </div> </section> <section className="section-padding bg-gradient-cursor-accent" > <div className="container-cursor" > <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20" > <Card className="card-hover group border-gradient-blue hover:border-cyan-400/40 hover:shadow-2xl hover:shadow-cyan-400/20" > <h2 className="text-3xl font-bold mb-6 text-cyan-400" >Our Mission</h2> <p className="text-lg text-gray-300 mb-4 leading-relaxed" > To create a world where technology operates autonomously, continuously improving and innovating without human intervention. </p> <p className="text-gray-400 leading-relaxed" > We believe in the power of AI to solve complex problems, automate routine tasks, and unlock new possibilities for humanity. </p> </Card> <Card className="card-hover group border-gradient-purple hover:border-fuchsia-400/40 hover:shadow-2xl hover:shadow-fuchsia-400/20" > <h2 className="text-3xl font-bold mb-6 text-fuchsia-400" >Our Vision</h2> <p className="text-lg text-gray-300 mb-4 leading-relaxed" > To be the leading force in autonomous technology, creating systems that think, learn, and evolve independently. </p> <p className="text-gray-400 leading-relaxed" > We envision a future where AI and automation work seamlessly together to enhance human capabilities and drive progress. </p> </Card> </div> </div> </section> <section className="section-padding bg-gradient-cursor" > <div className="container-cursor" > <div className="text-center mb-20" > <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow" >Our Core Values</h2> <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed" > The principles that guide our innovation and shape our future </p> </div> </Card>) )
 }</div> </div> </section> <section className="section-padding bg-gradient-cursor-blue" > <div className="container-cursor" > <div className="text-center mb-20" > <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow" >What We Do</h2> <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed" > Comprehensive solutions that drive innovation and transformation </p> </div> </div> </div> </Card>) )
 }</div> </div> </section> </div>) )
 }</div> </div> </section> Let's work together to build the next generation of autonomous technology and shape the future of innovation. </p> <div className="flex flex-col sm:flex-row gap-6 justify-center" > <Button href="/contact" size="lg" className="bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl hover-glow" >Get in Touch</Button> <Button href="/services" variant="outline" size="lg" className="border-white text-white hover:bg:white hover:text-cursor-blue shadow-2xl" >Explore Services</Button> </div> </div> Get in touch with our experts today for a free consultation and discover how our 500+ revolutionary micro SaaS services can drive unprecedented growth </p> </div> </div> <p className="text-gray-400 text-lg" > Start your 21-day free trial today and experience the future of technology </p> </div> </div> </section> </section> </>)
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react';
 import Head from 'next/head';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Card from '../components/ui/Card';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import Button from '../components/ui/Button'
-import Button from '../components/ui/Button',
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
 import Button from '../components/ui/Button',
 
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
-import Button from '../components/ui/Button',
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import {Mail, Phone, MapPin, ShieldCheck, Rocket, Sparkles, Globe, Cpu, Brain} from 'lucide-react';
 export default function AboutPage() {
 	const contactInfo = {
@@ -71,8 +33,6 @@ export default function AboutPage() {
 		website: 'https://ziontechgroup.com'
 };
 
-<<<<<<< HEAD
-=======
 	const pillars = [
 		{ title: 'AI-first Engineering', icon: <Brain className="w-6 h-6" />, desc: 'LLM apps, RAG, guardrails, evals and AI observability from day one.' }
 		{ title: 'Platform and SRE', icon: <ShieldCheck className="w-6 h-6" />, desc: 'GitOps, IaC, SLOs, incident automation, cost and compliance by default.' }
@@ -179,16 +139,12 @@ import Card from '../components/ui/Card';
 
 import Button from '../components/ui/Button';
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
 };
 
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 import React from 'react',
 import Head from 'next/head',
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
@@ -365,14 +321,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </section>
       </section>
     </>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export default function AboutPage() {;
   const values = [;
     {;
@@ -645,7 +593,6 @@ function AboutPage() {
 							<ul className=&quot;list-disc list-inside text-gray-300 space-y-2&quot;>
 								<li>Productized service tiers with clear SLAs</li>
 								<li>Security, _compliance, _and FinOps baked in</li>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {Mail, Phone, MapPin, ShieldCheck, Rocket, Sparkles, Globe, Cpu, Brain} from 'lucide-react';
 export default function AboutPage() {
 	const contactInfo = {
@@ -654,12 +601,8 @@ export default function AboutPage() {
 		address: '364 E Main St STE 1008 Middletown DE 19709'
 		website: 'https://ziontechgroup.com'
 	}
-<<<<<<< HEAD
-
-=======
 import Button from '../components/ui/Button',;
 import Button from '../components/ui/Button',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import {Mail, Phone, MapPin, ShieldCheck, Rocket, Sparkles, Globe, Cpu, Brain} from 'lucide-react';
 export default function AboutPage() {
 	const contactInfo = {
@@ -709,122 +652,20 @@ export default function AboutPage() {
 							<ul className="list-disc list-inside text-gray-300 space-y-2">
 								<li>Productized service tiers with clear SLAs</li>
 								<li>Security, compliance, and FinOps baked in</li>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 								<li>Build-operate-transfer options for in-house teams</li>
 								<li>Transparent pricing and usage-based add-ons</li>
 							</ul>
 						</Card>
 					</div>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 									{contactInfo.address}
 								</a>
 							</div>
 						</div>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 						</div>
 					</Card>
 				</div>
 			</section>
 		</UltraFuturisticBackground>
-<<<<<<< HEAD
-
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com';
-
-  return (
-      {/* Mission & Vision */}
-    <>
-      <Head>
-        <title>About Zion Tech Group | Autonomous Innovation Hub</title>
-        <meta name="description" content="Learn about Zion Tech Group's mission to revolutionize technology through autonomous innovation and AI-powered solutions." />
-        <meta property="og:title" content="About Zion Tech Group" />
-        <meta property="og:description" content="Learn about Zion Tech Group's mission and vision." />
-        <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href="https://ziontechgroup.com/about" />
-      </Head>
-      <section className="relative section-padding bg-gradient-cursor overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,122,204,0.08),transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,122,204,0.06),transparent_50%)]" />
-        <div className="absolute inset-0 bg-grid opacity-10" />
-        <div className="relative z-10 container-cursor text-center">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-sm font-medium mb-6">
-            <span className="w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse" />
-            About Our Company
-          </div>
-          <h1 className="text-responsive-xl font-black mb-8 gradient-text text-shadow-lg">
-            About Zion Tech Group
-          </h1>
-          <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed">
-
-            Pioneering the future of autonomous technology and AI-driven innovation
-          </p>
-        </div>
-      </section>
-
-                We envision a future where AI and automation work seamlessly together to enhance human capabilities and drive progress.
-              </p>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-                  <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center text-2xl bg-gradient-to-br ${value.gradient} shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                    {value.icon}
-                  </div>
-                </div>
-                <h3 className={`text-2xl font-bold mb-4 ${value.color}`}>{value.title}</h3>
-
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-                    <div className={`w-16 h-16 rounded-2xl flex items-center justify-center text-2xl bg-gradient-to-br ${service.gradient} shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                      {service.icon}
-                    </div>
-                  </div>
-
-                  </div>
-                </div>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section-padding bg-gradient-to-r from-cursor-blue to-blue-600 relative overflow-hidden">
-        <div className="absolute inset-0 bg-dots opacity-10" />
-        <div className="container-cursor text-center relative z-10">
-          <h2 className="text-responsive-lg font-bold text-white mb-8 text-shadow-lg">Ready to Join the Future?</h2>
-          <p className="text-responsive-md text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed">
-
-                Start your 21-day free trial today and experience the future of technology
-              </p>
-            </div>
-          </div>
-        </section>
-      </section>
-    </>
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 	);
 }
 import React from 'react';
@@ -837,17 +678,6 @@ import Button from '../components/ui/Button';
           </div>;
         </section>;
       </section>;
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

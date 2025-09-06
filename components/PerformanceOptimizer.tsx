@@ -1,28 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import React, { useEffect, useState, useCallback } from 'react';
-import { motion } from 'framer-motion';
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React, { useEffect, useState, useCallback } from 'react';
 import { motion  } from 'framer-motion';
 import { Zap, Clock, TrendingUp, Activity, Gauge, Cpu, Database, Network } from 'lucide-react';
 import { motion } from 'framer-motion';
 import {
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   Zap
   Clock
   TrendingUp
@@ -40,19 +21,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   Database,;
   Network,;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 } from 'lucide-react';
-<<<<<<< HEAD
 
 interface PerformanceMetrics {;
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 interface PerformanceMetrics {
 origin/cursor/automate-test-improve-and-merge-code-2533
   loadTime: number;
@@ -63,15 +35,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   Gauge,
   Cpu,
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  Database,;
-  Network,;
-} from 'lucide-react';
-=======
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 } from 'lucide-react';
 interface PerformanceMetrics {
   load_time: number;
@@ -79,6 +43,26 @@ interface PerformanceMetrics {
   largestContentfulPaint: number;
   cumulativeLayoutShift: number;
   firstInputDelay: number;
+interface PerformanceMetrics {
+  loadTime: number
+  firstContentfulPaint: number
+  largestContentfulPaint: number
+  cumulativeLayoutShift: number
+  firstInputDelay: number
+//Add responsive sizes if not present // Check condition
+if ( {) {
+  $2
+}
+  optimized_count++;
+const PerformanceOptimizer: React.FC < PerformanceOptimizerProps> = ({
+  class_name = '',
+}) => {  const [metrics, set_metrics] = useState < PerformanceMetrics>({
+interface PerformanceMetrics {
+  load_time: number,
+  firstContentfulPaint: number,
+  largestContentfulPaint: number,
+  cumulativeLayoutShift: number,
+  firstInputDelay: number,
   className = '',
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   preloadImages = [], preloadFonts = [
@@ -99,6 +83,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 interface PerformanceOptimizerProps {
   class_name?: string;
 }
+    firstContentfulPaint: 0,
+    largestContentfulPaint: 0,
+    cumulativeLayoutShift: 0,
+    firstInputDelay: 0,
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className;
   });
@@ -125,26 +113,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         largestContentfulPaint: lcp ? lcp.startTime : 0
         cumulativeLayoutShift: 0, // Would need to be measured with CLS API
         firstInputDelay: 0, // Would need to be measured with FID API
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 timeToInteractive:
           navigation.domContentLoadedEventEnd - navigation.navigationStart,
       };
 
       setMetrics(newMetrics);
     }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   }, []);
   // Optimize images
   const optimizeImages = useCallback(async () => {
@@ -157,70 +132,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         if (img.complete && img.naturalWidth > 0) {
           // Add lazy loading
           img.loading = 'lazy';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-          // Add responsive sizes if not present
-          if (!img.sizes) {
-            img.sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-          }
-
-      console.error('Image optimization error:', error)
-    } finally {
-      setIsOptimizing(false)
-    }
-
-    try {
-      // Add font-display: swap to improve font loading
-      const style = document.createElement('style')
-      style.textContent = `
-        @font-face {
-
-      console.error('Font optimization error:', error)
-    } finally {
-      setIsOptimizing(false)
-    }
-
-      // Re-measure performance after optimization
-      setTimeout(() => {
-        measurePerformance()
-      }, 500)
-    }
-  }, []);
-
-
-  // Run all optimizations;
-  const runAllOptimizations = useCallback(async () => {;
-    setIsOptimizing(true);
-    setOptimizationStatus('Starting comprehensive optimization...');
-    try {;
-
-      await optimizeImages();
-      await optimizeFonts();
-      await optimizeCode();
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
-      setOptimizationStatus('Optimization failed');
-
-      console.error('Optimization error:', error)
-    } finally {
-      setIsOptimizing(false)
-
-    }
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'largest-contentful-paint') {
-            const lcp = entry.startTime;
-            if (lcp > 2500) { // LCP should be under 2.5s
-              console.warn('LCP is too slow:', lcp)
-
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           }
           optimized_count++;        }
       }
@@ -235,9 +146,6 @@ if ( {) {
           optimized_count++;
         }
       }
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 // Add responsive sizes if not present
           if (!img.sizes) {
             img.sizes =
@@ -256,6 +164,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       setOptimizationStatus ('Image optimization failed');
       console.error ('Image optimization error:', error);
     } finally {
+      setIsOptimizing (false);
+    }
+  }, []);
+          font-display: swap;        }          font-family: 'Orbitron',;
+          font-display: swap;
+        }
+      `;
+      document && document.head.appendChild(style);
       setIsOptimizing(false);
     }
   }, []);
@@ -291,6 +207,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       setOptimizationStatus ('Font optimization failed');
       console.error ('Font optimization error:', error);
     } finally {
+      ];
+
+      preloadLinks && preloadLinks.forEach(linkAttrs => {;
+      setIsOptimizing (false);
       setIsOptimizing(false);
 origin/cursor/automate-test-improve-and-merge-code-2533
     }
@@ -302,6 +222,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     setOptimizationStatus ('Optimizing code...');
 ;
     try {
+      // Add resource hints for critical resources;
+      const preload_links = [;
+        {
+          rel: 'preload',
+          href: '/fonts / inter - var.woff2',
+          as: 'font',
+          type: 'font / woff2',
+          crossorigin: 'anonymous',
+        },
+        {
+          rel: 'preload',
+          href: '/fonts / jetbrains - mono - var.woff2',
+          as: 'font',
+          type: 'font / woff2',
+          crossorigin: 'anonymous',
+        },      ];        { rel: 'preload', href: '/fonts / inter - var.woff2', as: 'font', type: 'font / woff2', crossorigin: 'anonymous' },
+        { rel: 'preload', href: '/fonts / jetbrains - mono - var.woff2', as: 'font', type: 'font / woff2', crossorigin: 'anonymous' }
       // Add resource hints for critical resources
       const preloadLinks = [
 {
@@ -338,8 +275,6 @@ if (entry && entry.entryType === 'largest-contentful-paint') {'            conso
         console && console.log('Performance monitoring not fully supported');
 '      }';
       // Resource hints for better performance;
-<<<<<<< HEAD
-<<<<<<< HEAD
       const addResourceHint = (href: string, as: string, type?: string) => {;
         const link = document && document.createElement('link');
         Object && Object.entries(linkAttrs).forEach(([key, value]) => {;
@@ -349,12 +284,6 @@ if (entry && entry.entryType === 'largest-contentful-paint') {'            conso
             (link as any)[key] = value;
           }
         });
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       const addResourceHint = (href: string, as: string, type?: string) => {const link = document.createElement('link');
         Object.entries(linkAttrs).forEach(([key, value]) => {
           if (key === 'crossorigin') {
@@ -409,36 +338,19 @@ setOptimizationStatus('All optimizations complete!');
             if (lcp > 2500) {
               // LCP should be under 2.5s
               console.warn('LCP is too slow:', lcp);
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-            }
-          }
-        }
-<<<<<<< HEAD
-      });
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-      return () => {
-        window.removeEventListener('load', measurePerformance);
-        observer.disconnect()
-};    }
-      observer.observe({ entryTypes: ['largest-contentful-paint'] })
-      return () => {
-        window.removeEventListener('load', measurePerformance);
-        observer.disconnect()
-=======
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
             }
           }
         }
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+      });
+      return () => {
+        window.removeEventListener('load', measurePerformance);
+        observer.disconnect();
+      };    }
+      observer.observe({ entryTypes: ['largest-contentful-paint'] })
+      return () => {
+        window.removeEventListener('load', measurePerformance);
+        observer.disconnect()
       })
 
       try {
@@ -448,14 +360,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         console.log('Performance monitoring not fully supported')
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       }
-<<<<<<< HEAD
-
-    }
-
-  }, [measurePerformance]);
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const getPerformanceScore = (): number => {
     let score = 100;
 
@@ -476,85 +380,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     if (metrics.firstContentfulPaint > 1800) score -= 20;
     if (metrics.largestContentfulPaint > 2500) score -= 25;
     if (metrics.loadTime > 3000) score -= 15;
-<<<<<<< HEAD
     if (metrics.timeToInteractive > 3500) score -= 20;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-
-
-      observer && observer.observe({ entryTypes: ['largest-contentful-paint'] });
-      return () => {;
-        window && window.removeEventListener('load', measurePerformance);
-        observer && observer.disconnect();
-      };    }      ;
-      observer && observer.observe({ entryTypes: ['largest-contentful-paint'] }),;
-      return () => {;
-        window && window.removeEventListener('load', measurePerformance);
-        observer && observer.disconnect();
-      }
-  }, [measurePerformance]);
-  const getPerformanceScore = (): number => {;
-    let score = 100;
-    if (metrics && metrics.firstContentfulPaint > 1800) score -= 20;
-    if (metrics && metrics.largestContentfulPaint > 2500) score -= 25;
-    if (metrics && metrics.loadTime > 3000) score -= 15;
-    if (metrics && metrics.timeToInteractive > 3500) score -= 20;
-    return Math && Math.max(0, score);  };    ;
-    return Math && Math.max(0, score);
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   };
-=======
-    if (metrics.timeToInteractive > 3500) score -= 20
-};
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
   const getPerformanceGrade = (score: number): string => {;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    return Math.max(0, score);  }
-    return Math.max(0, score)
-  }
-  const getPerformanceGrade = (score: number): string => {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 return Math.max(0, score);
   };
 
   const getPerformanceGrade = (score: number): string => {
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     if (score >= 90) return 'A';
     if (score >= 80) return 'B';
     if (score >= 70) return 'C';
     if (score >= 60) return 'D';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 return 'F';
   };
 
@@ -570,49 +408,15 @@ return 'F';
         <button
           onClick={() => setShowMetrics(!showMetrics)}
 className='text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300'
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
         >
           {showMetrics ? 'Hide' : 'Show'} Metrics
         </button>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-        <div className="w-full bg-white/10 rounded-full h-3">
-          <motion.div
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             className="h-3 bg-gradient-to-r from-red-500 via-yellow-500 to-green-500 rounded-full"
             initial={{ width: 0 }}
             animate={{ width: `${performanceScore}%` }}
             transition={{ duration: 1, ease: "easeOut" }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      {/* Metrics Display */}
-      {showMetrics && (
-
-        <motion.div
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       {/* Performance Score */}
 <div className='mb-6'>
         <div className='flex items-center justify-between mb-2'>
@@ -633,41 +437,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <span className='text-sm text-white/60'>{performanceScore}/100</span>
         </div>
       </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       {/* Metrics Display */}
       {showMetrics && (;
         <motion&& motion.div
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: 'auto' }}
           exit={{ opacity: 0, height: 0 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-          className='grid grid-cols-2 md:grid-cols-3 gap-4 mb-6'
-
-=======
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-className='grid grid-cols-2 md:grid-cols-3 gap-4 mb-6'
-        >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 className='grid grid-cols-2 md:grid-cols-3 gap-4 mb-6'
         >
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
           <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>
             <Clock className='w-6 h-6 text-blue-400 mx-auto mb-2' />
             <div className='text-lg font-bold text-white'>
@@ -708,8 +487,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className='text-lg font-bold text-white'>
               {Math.round(metrics.firstInputDelay)}ms
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div className='text-xs text-white/60'>FID</div>          </div>
           className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6"
         >
@@ -747,87 +524,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <Network className="w-6 h-6 text-red-400 mx-auto mb-2" />
             <div className="text-lg font-bold text-white">{Math.round(metrics.firstInputDelay)}ms</div>
             <div className="text-xs text-white/60">FID</div>
-<<<<<<< HEAD
-
-          <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>;
-            <Clock className='w-6 h-6 text-blue-400 mx-auto mb-2' />;
-            <div className='text-lg font-bold text-white'>;
-              {Math && Math.round(metrics && metrics.loadTime)}ms;
-            </div>;
-            <div className='text-xs text-white/60'>Load Time</div>;
-          </div>;
-
-          <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>;
-            <Activity className='w-6 h-6 text-green-400 mx-auto mb-2' />;
-            <div className='text-lg font-bold text-white'>;
-              {Math && Math.round(metrics && metrics.firstContentfulPaint)}ms;
-            </div>;
-            <div className='text-xs text-white/60'>FCP</div>;
-          </div>;
-
-          <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>;
-            <TrendingUp className='w-6 h-6 text-purple-400 mx-auto mb-2' />;
-            <div className='text-lg font-bold text-white'>;
-              {Math && Math.round(metrics && metrics.largestContentfulPaint)}ms;
-            </div>;
-            <div className='text-xs text-white/60'>LCP</div>;
-          </div>;
-
-          <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>;
-            <Cpu className='w-6 h-6 text-yellow-400 mx-auto mb-2' />;
-            <div className='text-lg font-bold text-white'>;
-              {Math && Math.round(metrics && metrics.timeToInteractive)}ms;
-            </div>;
-            <div className='text-xs text-white/60'>TTI</div>;
-          </div>;
-
-          <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>;
-            <Database className='w-6 h-6 text-orange-400 mx-auto mb-2' />;
-            <div className='text-lg font-bold text-white'>;
-              {metrics && metrics.cumulativeLayoutShift.toFixed(3)}
-            </div>;
-            <div className='text-xs text-white/60'>CLS</div>;
-          </div>;
-
-          <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>;
-            <Network className='w-6 h-6 text-red-400 mx-auto mb-2' />;
-            <div className='text-lg font-bold text-white'>;
-              {Math && Math.round(metrics && metrics.firstInputDelay)}ms;
-            </div>;
-            <div className='text-xs text-white/60'>FID</div>          </div>          ;
-          <div className="text-center p-3 rounded-lg bg-white/5 border border-white/10">;
-            <Network className="w-6 h-6 text-red-400 mx-auto mb-2" />;
-            <div className="text-lg font-bold text-white">{Math && Math.round(metrics && metrics.firstInputDelay)}ms</div>;
-            <div className="text-xs text-white/60">FID</div>;
-        </motion && motion.div>;
-
-      )}
-      {/* Optimization Controls */}
-      <div className='space-y-3'>        <button      <div className="space-y-3">;
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
       <div className='space-y-3'>        <button      <div className="space-y-3">
         <button
 
-<<<<<<< HEAD
-=======
 
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
             <div className='text-xs text-white/60'>FID</div>
           </div>
         </motion.div>
       )}
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       {/* Optimization Controls */}
 <div className='space-y-3'>
         <button
@@ -835,45 +540,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
         <button
 
+
+
       {/* Optimization Controls */}
 
         <button
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           onClick={runAllOptimizations}
           disabled={isOptimizing}
           className={`w-full px-4 py-3 rounded-lg font-semibold text-white transition-all duration-300 ${
             isOptimizing
               ? 'bg-gray-600 cursor-not-allowed'
               : 'bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 hover:scale-105'
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-          } flex items-center justify-center gap-2`}
-        >
-          {isOptimizing ? (
-            <>
-              <div className='w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin' />              <span>Optimizing...</span>
-            </>
-          ) : (
-            <>
-              <Zap className='w-4 h-4' />              <span>Run All Optimizations</span>              <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-
-              <span>Optimizing...</span>
-            </>
-          ) : (
-            <>
-
-              <span>Run All Optimizations</span>
-            </>
-          )}
-        </button>
-
-            <div className="text-sm text-white/80">{optimizationStatus}</div>
-          </div>
-
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       {/* Performance Tips */}
       <div className='mt-6 pt-4 border-t border-white/10'>;
         <h4 className='text-sm font-semibold text-white/80 mb-3'>;
@@ -890,7 +567,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </ul>;
       </div>;
     </div>;
-  )
+  );
 };export default PerformanceOptimizer;}
       // Preload critical resources;
 '      });'    }}, [preloadImages, preloadFonts]);
@@ -913,18 +590,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <div className="mt-6 pt-4 border-t border-white/10">
         <h4 className="text-sm font-semibold text-white/80 mb-3">Performance Tips</h4>
         <ul className="text-xs text-white/60 space-y-1">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Performance Tips */}
       <div className="mt-6 pt-4 border-t border-white/10">
         <h4 className="text-sm font-semibold text-white/80 mb-3">Performance Tips</h4>
         <ul className="text-xs text-white/60 space-y-1">
 
-<<<<<<< HEAD
-=======
 
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
           } flex items-center justify-center gap-2`}
         >
           {isOptimizing ? (
@@ -943,47 +614,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>
             <div className='text-sm text-white/80'>{optimizationStatus}</div>
           </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
         )}
       </div>
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Performance Tips */}
 <div className='mt-6 pt-4 border-t border-white/10'>
         <h4 className='text-sm font-semibold text-white/80 mb-3'>
           Performance Tips
         </h4>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-        <ul className='text-xs text-white/60 space-y-1'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
         <ul className='text-xs text-white/60 space-y-1'>
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
           <li>• Use WebP images for better compression</li>
           <li>• Implement lazy loading for images</li>
           <li>• Minimize CSS and JavaScript bundles</li>
@@ -992,11 +633,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </ul>
       </div>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
   }, [measure_performance]);
 ;
   const getPerformanceScore = (): number => {
@@ -1054,13 +691,13 @@ if (return 'D') {
           on_click={() => setShowMetrics (!show_metrics)}
           className='text - sm text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 300'        >  return (
     <div className={`bg - slate - 800 / 50 backdrop - blur - xl rounded - 2xl border border - white / 10 p - 6 ${class_name}`}>;
-      <div className="flex items - center justify-between mb-6">;
-        <h3 className="text - xl font - bold text - white flex items-center gap-2">;
-          <Gauge className="w - 5 h - 5 text-cyan-400" />;
+      <div className="flex items - center justify - between mb - 6">;
+        <h3 className="text - xl font - bold text - white flex items - center gap - 2">;
+          <Gauge className="w - 5 h - 5 text - cyan - 400" />;
         </h3>;
         <button;
           on_click={() => setShowMetrics (!show_metrics)}
-          className='text - sm text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 300'          className="text - sm text - cyan - 400 hover:text - cyan - 300 transition-colors duration-300";
+          className='text - sm text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 300'          className="text - sm text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 300";
         >;
           {show_metrics ? 'Hide' : 'Show'} Metrics;
         </button>;
@@ -1083,16 +720,16 @@ if (return 'D') {
         </div>;
         <div className='text - right mt - 1'>;
           <span className='text - sm text - white / 60'>{performance_score}/100</span>        </div>        </div>;
-        <div className="w - full bg - white / 10 rounded-full h-3">;
+        <div className="w - full bg - white / 10 rounded - full h - 3">;
           <motion.div;
-            className="h - 3 bg - gradient - to - r from - red - 500 via - yellow - 500 to - green-500 rounded-full";
+            className="h - 3 bg - gradient - to - r from - red - 500 via - yellow - 500 to - green - 500 rounded - full";
             initial={{ width: 0 }}
             animate={{ width: `${performance_score}%` }}
             transition={{ duration: 1, ease: "ease_out" }}
           />;
         </div>;
-        <div className="text-right mt-1">;
-          <span className="text-sm text-white / 60">{performance_score}/100</span>;
+        <div className="text - right mt - 1">;
+          <span className="text - sm text - white / 60">{performance_score}/100</span>;
         </div>;
       </div>;
       {/* Metrics Display */}
@@ -1143,13 +780,13 @@ if (return 'D') {
               {Math.round (metrics.firstInputDelay)}ms;
             </div>;
             <div className='text - xs text - white / 60'>FID</div>          </div>;
-          <div className="text - center p - 3 rounded - lg bg-white / 5 border border-white / 10">;
-            <Network className="w - 6 h - 6 text - red - 400 mx-auto mb-2" />;
-            <div className="text - lg font-bold text-white">{Math.round (metrics.firstInputDelay)}ms</div>;
-            <div className="text-xs text-white / 60">FID</div>;
+          <div className="text - center p - 3 rounded - lg bg - white / 5 border border - white / 10">;
+            <Network className="w - 6 h - 6 text - red - 400 mx - auto mb - 2" />;
+            <div className="text - lg font - bold text - white">{Math.round (metrics.firstInputDelay)}ms</div>;
+            <div className="text - xs text - white / 60">FID</div>;
         </motion.div>)}
       {/* Optimization Controls */}
-      <div className='space - y-3'>        <button      <div className="space-y-3">;
+      <div className='space - y-3'>        <button      <div className="space - y-3">;
         <button;
           on_click={runAllOptimizations}
           disabled={is_optimizing}
@@ -1164,18 +801,18 @@ if (return 'D') {
               <div className='w - 4 h - 4 border - 2 border - white / 30 border - t-white rounded - full animate - spin' />              <span > Optimizing...</span>;
             </>) : (
             <>;
-              <Zap className='w - 4 h - 4' />              <span > Run All Optimizations</span>              <div className="w - 4 h - 4 border - 2 border - white / 30 border - t-white rounded-full animate-spin" />;
+              <Zap className='w - 4 h - 4' />              <span > Run All Optimizations</span>              <div className="w - 4 h - 4 border - 2 border - white / 30 border - t-white rounded - full animate - spin" />;
               <span > Optimizing...</span>;
             </>) : (
             <>;
-              <Zap className='w - 4 h - 4' />              <Zap className="w-4 h-4" />;
+              <Zap className='w - 4 h - 4' />              <Zap className="w - 4 h - 4" />;
               <span > Run All Optimizations</span>;
             </>)}
         </button>;
         {optimization_status !== 'idle' && (
           <div className='text - center p - 3 rounded - lg bg - white / 5 border border - white / 10'>;
-            <div className='text - sm text - white / 80'>{optimization_status}</div>          </div>          <div className="text - center p - 3 rounded - lg bg-white / 5 border border-white / 10">;
-            <div className="text-sm text-white / 80">{optimization_status}</div>;
+            <div className='text - sm text - white / 80'>{optimization_status}</div>          </div>          <div className="text - center p - 3 rounded - lg bg - white / 5 border border - white / 10">;
+            <div className="text - sm text - white / 80">{optimization_status}</div>;
           </div>)}
       </div>;
       {/* Performance Tips */}
@@ -1183,9 +820,9 @@ if (return 'D') {
         <h4 className='text - sm font - semibold text - white / 80 mb - 3'>;
           Performance Tips;
         </h4>;
-        <ul className='text - xs text - white / 60 space - y-1'>          <li>• Use WebP images for better compression</li>      <div className="mt - 6 pt - 4 border-t border-white / 10">;
-        <h4 className="text - sm font - semibold text-white / 80 mb-3">Performance Tips</h4>;
-        <ul className="text - xs text-white / 60 space-y-1">;
+        <ul className='text - xs text - white / 60 space - y-1'>          <li>• Use WebP images for better compression</li>      <div className="mt - 6 pt - 4 border - t border - white / 10">;
+        <h4 className="text - sm font - semibold text - white / 80 mb - 3">Performance Tips</h4>;
+        <ul className="text - xs text - white / 60 space - y-1">;
           <li>• Use WebP images for better compression</li>;
           <li>• Implement lazy loading for images</li>;
           <li>• Minimize CSS and JavaScript bundles</li>;
@@ -1195,7 +832,6 @@ if (return 'D') {
       </div>;
     </div>);
 }export default PerformanceOptimizer;}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       // Preload critical resources;
       preload_images.for_each (image => {
 addResourceHint (image, 'image');
@@ -1205,14 +841,6 @@ addResourceHint (image, 'image');
 '      });'    }}, [preload_images, preload_fonts]);
   return (
     <Head>;
-<<<<<<< HEAD
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 {/* Preload critical resources */}
       {preload_images.map ((image, index) => (
         <link;
@@ -1242,9 +870,6 @@ if ( {'              window.addEventListener ('load', function () {'            
   );
 }
 ;
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 );
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1271,34 +896,8 @@ interface PerformanceOptimizerProps {
       window && window.addEventListener('load', measureWebVitals);
     }
 export default PerformanceOptimizer;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   );
 
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

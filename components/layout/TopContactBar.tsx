@@ -1,45 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-  Clock, ChevronDown, ChevronUp;
-  MessageCircle, Calendar, Star
-const contactInfo = {
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com'
-  hours: 'Mon-Fri: 9AM-6PM EST'
-  rating: '4.9/5 (200+ Reviews)'
-}
-const quickActions = [
-  {
-    name: 'Get Quote'
-    href: '/quote'
-    icon: <MessageCircle className='w-4 h-4' />
-  }
-  { name: 'Book Demo', href: '/demo', icon: <Calendar className='w-4 h-4' /> }
-  {
-    name: 'Live Chat'
-    href: '/chat'
-    icon: <MessageCircle className='w-4 h-4' />
-  },];  rating: '4.9/5 (200+ Reviews)'
-}
-const quickActions = [
-  { name: 'Get Quote', href: '/quote', icon: <MessageCircle className="w-4 h-4" /> }
-  { name: 'Book Demo', href: '/demo', icon: <Calendar className="w-4 h-4" /> }
-  { name: 'Live Chat', href: '/chat', icon: <MessageCircle className="w-4 h-4" /> }
-export default function TopContactBar() {
-
-export default function TopContactBar() {;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   Calendar,;
   Star,;} from 'lucide-react';import { ;
   Phone, Mail, MapPin, Globe, ;
@@ -83,14 +41,10 @@ export default function TopContactBar() {;
 
 export default function TopContactBar() {;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
     <div className='relative z-40'>;
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Phone, Mail, MapPin, Globe;
@@ -113,6 +67,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className='flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group'>;
                 <Phone className='w-4 h-4 text-cyan-400 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-200' />;
                 <a
+                  href={`tel:${contactInfo && contactInfo.mobile}`}
+                  className='hover:text-cyan-400 transition-colors duration-200'>                  {contactInfo && contactInfo.mobile}      {/* Main Contact Bar */}
+      <div className="bg-gradient-to-r from-gray-900 via-black to-gray-900 border-b border-cyan-500/30">;
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
+          <div className="flex items-center justify-between h-12">;
+            {/* Left Side - Contact Info */}
+            <div className="hidden md:flex items-center space-x-6 text-sm">;
+              {/* Phone */}
+                <Mail className="w-4 h-4 text-cyan-400 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-200" />
+                <a href={`mailto:${contactInfo.email}`} className="hover:text-cyan-400 transition-colors duration-200">
                   href={`tel:${contactInfo.mobile}`}
                   className='hover:text-cyan-400 transition-colors duration-200'
                 >
@@ -131,17 +95,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </a>
               </div>
               {/* Address */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-              <div className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group">
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <MapPin className="w-4 h-4 text-cyan-400 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-200" />
                 <span className="hover:text-cyan-400 transition-colors duration-200">
                   {contactInfo.address}
@@ -149,21 +102,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
                 <Globe className="w-4 h-4 text-cyan-400 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-200" />
                 <a href={contactInfo.website} target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors duration-200">
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-              {/* Business Hours */}
-
-              <div className='flex items-center space-x-2 text-gray-300'>;
-                <Clock className='w-4 h-4 text-cyan-400' />                <span>{contactInfo && contactInfo.hours}</span>;
-              </div>;
-
-
-=======
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div className='flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group'>
                 <MapPin className='w-4 h-4 text-cyan-400 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-200' />
                 <span className='hover:text-cyan-400 transition-colors duration-200'>
@@ -179,42 +117,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   rel='noopener noreferrer'
                   className='hover:text-cyan-400 transition-colors duration-200'
                 >
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   {contactInfo.website.replace('https://', '')}
                 </a>
               </div>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               {/* Rating */}
               <div className='flex items-center space-x-2 text-gray-300'>;
                 <Star className='w-4 h-4 text-yellow-400 fill-current' />                <span>{contactInfo && contactInfo.rating}</span>            <div className="hidden lg:flex items-center space-x-6 text-sm">;
               {/* Business Hours */}
-<<<<<<< HEAD
-
-                <span>{contactInfo.hours}</span>
-
-              </div>
-              {/* Rating */}
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-              <div className="flex items-center space-x-2 text-gray-300">
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <Star className="w-4 h-4 text-yellow-400 fill-current" />
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
             {/* Center - Business Hours & Rating */}
 <div className='hidden lg:flex items-center space-x-6 text-sm'>
               {/* Business Hours */}
@@ -229,151 +141,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <span>{contactInfo.rating}</span>
               </div>
             </div>
-<<<<<<< HEAD
-
-              <div className="flex items-center space-x-2 text-gray-300">;
-                <Clock className="w-4 h-4 text-cyan-400" />;
-              </div>;
-            {/* Right Side - Quick Actions & Expand Button */}
-            <div className="flex items-center space-x-4">
-              {/* Quick Actions */}
-
-              <div className="hidden sm:flex items-center space-x-2">
-                {quickActions.map((action) => (
-                  <a
-  hours: 'Mon - Fri: 9AM - 6PM EST',
-  rating: '4.9 / 5 (200+ Reviews)',
-}
-;
-const quick_actions = [;
-  {
-    name: 'Get Quote',
-    href: '/quote',
-    icon: <MessageCircle className='w - 4 h - 4' />,
-  },
-  { name: 'Book Demo', href: '/demo', icon: <Calendar className='w - 4 h - 4' /> },
-  {
-    name: 'Live Chat',
-    href: '/chat',
-    icon: <MessageCircle className='w - 4 h - 4' />,
-  }, ];  rating: '4.9 / 5 (200+ Reviews)';
-}
-;
-const quick_actions = [;
-  { name: 'Get Quote', href: '/quote', icon: <MessageCircle className="w - 4 h - 4" /> },
-  { name: 'Book Demo', href: '/demo', icon: <Calendar className="w - 4 h - 4" /> },
-  { name: 'Live Chat', href: '/chat', icon: <MessageCircle className="w - 4 h - 4" /> }
-export default /**
- * TopContactBar - Function description
- */
-function TopContactBar() {
-  const [is_expanded, setIsExpanded] = useState (false);
-;
-  return (
-    <div className='relative z - 40'>;
-      {/* Main Contact Bar */}
-      <div className='bg - gradient - to - r from - gray - 900 via - black to - gray - 900 border - b border - cyan - 500 / 30'>;
-        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>;
-          <div className='flex items - center justify - between h - 12'>;
-            {/* Left Side - Contact Info */}
-            <div className='hidden md:flex items - center space - x-6 text - sm'>;
-              {/* Phone */}
-              <div className='flex items - center space - x-2 text - gray - 300 hover:text - cyan - 400 transition - colors duration - 200 group'>;
-                <Phone className='w - 4 h - 4 text - cyan - 400 group - hover:shadow - lg hover:shadow - cyan - 400 / 40 transition - transform duration - 200' />;
-                <a;
-                  href={`tel:${contact_info.mobile}`}
-                  className='hover:text - cyan - 400 transition - colors duration - 200';
-                >                  {contact_info.mobile}      {/* Main Contact Bar */}
-      <div className="bg - gradient - to - r from - gray - 900 via - black to - gray - 900 border - b border - cyan - 500 / 30">;
-        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
-          <div className="flex items - center justify - between h - 12">;
-            {/* Left Side - Contact Info */}
-            <div className="hidden md:flex items - center space - x-6 text - sm">;
-              {/* Phone */}
-              <div className="flex items - center space - x-2 text - gray - 300 hover:text - cyan - 400 transition - colors duration - 200 group">;
-                <Phone className="w - 4 h - 4 text - cyan - 400 group - hover:shadow - lg hover:shadow - cyan - 400 / 40 transition - transform duration - 200" />;
-                <a href={`tel:${contact_info.mobile}`} className="hover:text - cyan - 400 transition - colors duration - 200">;
-                  {contact_info.mobile}
-                </a>;
-              </div>;
-              {/* Email */}
-              <div className='flex items - center space - x-2 text - gray - 300 hover:text - cyan - 400 transition - colors duration - 200 group'>;
-                <Mail className='w - 4 h - 4 text - cyan - 400 group - hover:shadow - lg hover:shadow - cyan - 400 / 40 transition - transform duration - 200' />;
-                <a;
-                  href={`mailto:${contact_info.email}`}
-                  className='hover:text - cyan - 400 transition - colors duration - 200';
-                >                  {contact_info.email}              <div className="flex items - center space - x-2 text - gray - 300 hover:text - cyan - 400 transition - colors duration - 200 group">;
-                <Mail className="w - 4 h - 4 text - cyan - 400 group - hover:shadow - lg hover:shadow - cyan - 400 / 40 transition - transform duration - 200" />;
-                <a href={`mailto:${contact_info.email}`} className="hover:text - cyan - 400 transition - colors duration - 200">;
-                  {contact_info.email}
-                </a>;
-              </div>;
-              {/* Address */}
-              <div className='flex items - center space - x-2 text - gray - 300 hover:text - cyan - 400 transition - colors duration - 200 group'>;
-                <MapPin className='w - 4 h - 4 text - cyan - 400 group - hover:shadow - lg hover:shadow - cyan - 400 / 40 transition - transform duration - 200' />;
-                <span className='hover:text - cyan - 400 transition - colors duration - 200'>                  {contact_info.address}              <div className="flex items - center space - x-2 text - gray - 300 hover:text - cyan - 400 transition - colors duration - 200 group">;
-                <MapPin className="w - 4 h - 4 text - cyan - 400 group - hover:shadow - lg hover:shadow - cyan - 400 / 40 transition - transform duration - 200" />;
-                <span className="hover:text - cyan - 400 transition - colors duration - 200">;
-                  {contact_info.address}
-                </span>;
-              </div>;
-              {/* Website */}
-              <div className='flex items - center space - x-2 text - gray - 300 hover:text - cyan - 400 transition - colors duration - 200 group'>;
-                <Globe className='w - 4 h - 4 text - cyan - 400 group - hover:shadow - lg hover:shadow - cyan - 400 / 40 transition - transform duration - 200' />;
-                <a;
-                  href={contact_info.website}
-                  target='_blank';
-                  rel='noopener noreferrer';
-                  className='hover:text - cyan - 400 transition - colors duration - 200';
-                >                  {contact_info.website.replace ('https://', '')}              <div className="flex items - center space - x-2 text - gray - 300 hover:text - cyan - 400 transition - colors duration - 200 group">;
-                <Globe className="w - 4 h - 4 text - cyan - 400 group - hover:shadow - lg hover:shadow - cyan - 400 / 40 transition - transform duration - 200" />;
-                <a href={contact_info.website} target="_blank" rel="noopener noreferrer" className="hover:text - cyan - 400 transition - colors duration - 200">;
-                  {contact_info.website.replace ('https://', '')}
-                </a>;
-              </div>;
-            </div>;
-            {/* Center - Business Hours & Rating */}
-            <div className='hidden lg:flex items - center space - x-6 text - sm'>;
-              {/* Business Hours */}
-              <div className='flex items - center space - x-2 text - gray - 300'>;
-                <Clock className='w - 4 h - 4 text - cyan - 400' />                <span>{contact_info.hours}</span>;
-              </div>;
-              {/* Rating */}
-              <div className='flex items - center space - x-2 text - gray - 300'>;
-                <Star className='w - 4 h - 4 text - yellow - 400 fill - current' />                <span>{contact_info.rating}</span>            <div className="hidden lg:flex items - center space - x-6 text - sm">;
-              {/* Business Hours */}
-              <div className="flex items - center space - x-2 text - gray - 300">;
-                <Clock className="w - 4 h - 4 text - cyan - 400" />;
-              </div>;
-              {/* Rating */}
-              <div className='flex items - center space - x-2 text - gray - 300'>;
-                <Star className='w - 4 h - 4 text - yellow - 400 fill - current' />              <div className="flex items - center space - x-2 text - gray - 300">;
-                <Star className="w - 4 h - 4 text - yellow - 400 fill - current" />;
-                <span>{contact_info.rating}</span>;
-              </div>;
-            </div>;
-            {/* Right Side - Quick Actions & Expand Button */}
-            <div className='flex items - center space - x-4'>;
-              {/* Quick Actions */}
-              <div className='hidden sm:flex items - center space - x-2'>;
-                {quick_actions.map (action => (
-                  <a;
                     key={action.name}
                     href={action.href}
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-                    key={action.name}
-                    href={action.href}
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     className="flex items - center space - x-2 px - 3 py - 1.5 text - xs text - gray - 300 hover:text - white bg - gray - 800 / 50 hover:bg - cyan - 500 / 20 border border - gray - 700 / 50 hover:border - cyan - 500 / 50 rounded - lg transition - all duration - 200 hover:shadow - xl hover:shadow-cyan-500 / 30";
                   >;
-<<<<<<< HEAD
-=======
             {/* Right Side - Quick Actions & Expand Button */}
+                    className='flex items-center space-x-2 px-3 py-1.5 text-xs text-gray-300 hover:text-white bg-gray-800/50 hover:bg-cyan-500/20 border border-gray-700/50 hover:border-cyan-500/50 rounded-lg transition-all duration-200 hover:shadow-xl hover:shadow-cyan-500/30'                  >
+
 <div className='flex items-center space-x-4'>
               {/* Quick Actions */}
               <div className='hidden sm:flex items-center space-x-2'>
@@ -385,35 +159,18 @@ function TopContactBar() {
 origin/cursor/automate-test-improve-and-merge-code-2533
                   >
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     {action.icon}
                     <span>{action.name}</span>
                   </a>
                 ))}
               </div>
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     {action.icon}
                     <span>{action.name}</span>
                   </a>
                 ))}
               </div>
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     {action.icon}
 
               </div>;
@@ -424,85 +181,27 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                 )}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               {/* Expand/Collapse Button */}
               <button
                 onClick={() => setIsExpanded(!isExpanded)}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 className='flex items-center space-x-1 px-3 py-1.5 text-xs text-gray-300 hover:text-white bg-gray-800/50 hover:bg-cyan-500/20 border border-gray-700/50 hover:border-cyan-500/50 rounded-lg transition-all duration-200 hover:shadow-xl hover:shadow-cyan-500/30'
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-className='flex items-center space-x-1 px-3 py-1.5 text-xs text-gray-300 hover:text-white bg-gray-800/50 hover:bg-cyan-500/20 border border-gray-700/50 hover:border-cyan-500/50 rounded-lg transition-all duration-200 hover:shadow-xl hover:shadow-cyan-500/30'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 className='flex items-center space-x-1 px-3 py-1.5 text-xs text-gray-300 hover:text-white bg-gray-800/50 hover:bg-cyan-500/20 border border-gray-700/50 hover:border-cyan-500/50 rounded-lg transition-all duration-200 hover:shadow-xl hover:shadow-cyan-500/30'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
               >
                 <span>More Info</span>
                 {isExpanded ? (
                   <ChevronUp className='w-4 h-4' />
                 ) : (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
-                  <ChevronDown className='w-4 h-4' />
-                )}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                   <ChevronDown className='w-4 h-4' />
                 )}
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
               </button>
             </div>
           </div>
         </div>
       </div>
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
                     <span>{action.name}</span>;
                   </a>))}
               </div>;
@@ -527,7 +226,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
         </div>;
       </div>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Expanded Information Panel */}
       <AnimatePresence>;
         {isExpanded && (;
@@ -535,32 +233,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            transition={{ duration: 0.3 }}
-            className='bg-gray-900/95 backdrop-blur-md border-b border-cyan-500/30 overflow-hidden'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
-=======
-            transition={{ duration: 0.3 }}
-className='bg-gray-900/95 backdrop-blur-md border-b border-cyan-500/30 overflow-hidden'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
             transition={{ duration: 0.3 }}
 className='bg-gray-900/95 backdrop-blur-md border-b border-cyan-500/30 overflow-hidden'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
           >
             <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
@@ -583,28 +259,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <div className='flex items-center space-x-3 text-gray-300'>
                       <Mail className='w-4 h-4 text-cyan-400' />
                       <a
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                        href={`mailto:${contactInfo.email}`}
-                        className='hover:text-cyan-400 transition-colors duration-200'
-                      >
-                        {contactInfo.email}
-                      </a>
-                    </div>
-                    <div className='flex items-start space-x-3 text-gray-300'>
-                      <MapPin className='w-4 h-4 text-cyan-400 mt-1' />
-                      <span className='text-sm'>{contactInfo.address}</span>                    </div>          >
-
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 {/* Contact Details */}
-
-=======
-                {/* Contact Details */}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <div className="space-y-4">
                   <h3 className="text-lg font-semibold text-white flex items-center space-x-2">
                     <Phone className="w-5 h-5 text-cyan-400" />
@@ -666,9 +321,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <div className="flex items-center space-x-3 text-gray-300">
                       <Globe className="w-4 h-4 text-cyan-400" />
                       <a href={contactInfo.website} target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors duration-200">
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                         href={`mailto:${contactInfo.email}`}
                         className='hover:text-cyan-400 transition-colors duration-200'
                       >
@@ -710,164 +362,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
                   </div>
                 </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-                        className='hover:text-cyan-400 transition-colors duration-200'>                        Visit Website                    <span>Business Info</span>;
-                  </h3>;
-                  <div className="space-y-3">;
-                    <div className="flex items-center space-x-3 text-gray-300">;
-                      <Clock className="w-4 h-4 text-cyan-400" />;
-                      <span>{contactInfo && contactInfo.hours}</span>;
-                    </div>;
-                    <div className="flex items-center space-x-3 text-gray-300">;
-                      <Star className="w-4 h-4 text-yellow-400 fill-current" />;
-                      <span>{contactInfo && contactInfo.rating}</span>;
-                    </div>;
-                    <div className="flex items-center space-x-3 text-gray-300">;
-                      <Globe className="w-4 h-4 text-cyan-400" />;
-                      <a href={contactInfo && contactInfo.website} target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors duration-200">;
-      {/* Expanded Information Panel */}
-      <AnimatePresence>;
-        {is_expanded && (
-          <motion.div;
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className='bg - gray - 900 / 95 backdrop - blur - md border - b border - cyan - 500 / 30 overflow - hidden';
-          >;
-            <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 6'>;
-              <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6'>;
-                {/* Contact Details */}
-                <div className='space - y-4'>;
-                  <h3 className='text - lg font - semibold text - white flex items - center space - x-2'>;
-                    <Phone className='w - 5 h - 5 text - cyan - 400' />;
-                    <span > Contact Details</span>;
-                  </h3>;
-                  <div className='space - y-3'>;
-                    <div className='flex items - center space - x-3 text - gray - 300'>;
-                      <Phone className='w - 4 h - 4 text - cyan - 400' />;
-                      <a;
-                        href={`tel:${contact_info.mobile}`}
-                        className='hover:text - cyan - 400 transition - colors duration - 200';
-                      >;
-                        {contact_info.mobile}
-                      </a>;
-                    </div>;
-                    <div className='flex items - center space - x-3 text - gray - 300'>;
-                      <Mail className='w - 4 h - 4 text - cyan - 400' />;
-                      <a;
-                        href={`mailto:${contact_info.email}`}
-                        className='hover:text - cyan - 400 transition - colors duration - 200';
-                      >;
-                        {contact_info.email}
-                      </a>;
-                    </div>;
-                    <div className='flex items - start space - x-3 text - gray - 300'>;
-                      <MapPin className='w - 4 h - 4 text - cyan - 400 mt - 1' />;
-                      <span className='text - sm'>{contact_info.address}</span>                    </div>          >;
-            <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 6">;
-              <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6">;
-                {/* Contact Details */}
-                <div className="space - y-4">;
-                  <h3 className="text - lg font - semibold text - white flex items - center space - x-2">;
-                    <Phone className="w - 5 h - 5 text - cyan - 400" />;
-                    <span > Contact Details</span>;
-                  </h3>;
-                  <div className="space - y-3">;
-                    <div className="flex items - center space - x-3 text - gray - 300">;
-                      <Phone className="w - 4 h - 4 text - cyan - 400" />;
-                      <a href={`tel:${contact_info.mobile}`} className="hover:text - cyan - 400 transition - colors duration - 200">;
-                        {contact_info.mobile}
-                      </a>;
-                    </div>;
-                    <div className="flex items - center space - x-3 text - gray - 300">;
-                      <Mail className="w - 4 h - 4 text - cyan - 400" />;
-                      <a href={`mailto:${contact_info.email}`} className="hover:text - cyan - 400 transition - colors duration - 200">;
-                        {contact_info.email}
-                      </a>;
-                    </div>;
-                    <div className="flex items - start space - x-3 text - gray - 300">;
-                      <MapPin className="w - 4 h - 4 text - cyan - 400 mt - 1" />;
-                      <span className="text - sm">{contact_info.address}</span>;
-                    </div>;
-                  </div>;
-                </div>;
-                {/* Business Information */}
-                <div className='space - y-4'>;
-                  <h3 className='text - lg font - semibold text - white flex items - center space - x-2'>;
-                    <Clock className='w - 5 h - 5 text - cyan - 400' />;
-                    <span > Business Info</span>;
-                  </h3>;
-                  <div className='space - y-3'>;
-                    <div className='flex items - center space - x-3 text - gray - 300'>;
-                      <Clock className='w - 4 h - 4 text - cyan - 400' />;
-                      <span>{contact_info.hours}</span>;
-                    </div>;
-                    <div className='flex items - center space - x-3 text - gray - 300'>;
-                      <Star className='w - 4 h - 4 text - yellow - 400 fill - current' />;
-                      <span>{contact_info.rating}</span>;
-                    </div>;
-                    <div className='flex items - center space - x-3 text - gray - 300'>;
-                      <Globe className='w - 4 h - 4 text - cyan - 400' />;
-                      <a;
-                        href={contact_info.website}
-                        target='_blank';
-                        rel='noopener noreferrer';
-                        className='hover:text - cyan - 400 transition - colors duration - 200';
-                      >                        Visit Website                    <span > Business Info</span>;
-                  </h3>;
-                  <div className="space - y-3">;
-                    <div className="flex items - center space - x-3 text - gray - 300">;
-                      <Clock className="w - 4 h - 4 text - cyan - 400" />;
-                      <span>{contact_info.hours}</span>;
-                    </div>;
-                    <div className="flex items - center space - x-3 text - gray - 300">;
-                      <Star className="w - 4 h - 4 text - yellow - 400 fill - current" />;
-                      <span>{contact_info.rating}</span>;
-                    </div>;
-                    <div className="flex items - center space - x-3 text - gray - 300">;
-                      <Globe className="w - 4 h - 4 text - cyan - 400" />;
-                      <a href={contact_info.website} target="_blank" rel="noopener noreferrer" className="hover:text - cyan - 400 transition - colors duration - 200">;
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         Visit Website;
                       </a>;
                     </div>;
                   </div>;
                 </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-                  <div className="space-y-3">
-                    {quickActions.map((action) => (
-                      <a
-                {/* Quick Actions */}
-                <div className='space - y-4'>;
-                  <h3 className='text - lg font - semibold text - white flex items - center space - x-2'>;
-                    <MessageCircle className='w - 5 h - 5 text - cyan - 400' />;
-                    <span > Quick Actions</span>;
-                  </h3>;
-                  <div className='space - y-3'>;
-                    {quick_actions.map (action => (
-                      <a;
-                        key={action.name}
-                        href={action.href}
-
-=======
-                        key={action.name}
-                        href={action.href}
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 {/* Quick Actions */}
 <div className='space-y-4'>
                   <h3 className='text-lg font-semibold text-white flex items-center space-x-2'>
@@ -880,97 +379,27 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
                         key={action.name}
                         href={action.href}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                         className="flex items - center space - x-3 p - 3 text - gray - 300 hover:text - white bg - gray - 800 / 30 hover:bg - cyan - 500 / 20 border border - gray - 700 / 30 hover:border - cyan - 500 / 50 rounded - lg transition - all duration - 200 hover:shadow - xl hover:shadow-cyan-500 / 30 group";
                       >;
                         <div className="text - cyan - 400 group - hover:shadow - lg hover:shadow - cyan - 400 / 40 transition-transform duration-200">;
                           {action.icon}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                         </div>
                         <span className='font-medium'>{action.name}</span>
                       </a>
                     ))}
                   </div>
                 </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 {/* Company Highlights */}
 <div className='space-y-4'>
                   <h3 className='text-lg font-semibold text-white flex items-center space-x-2'>
                     <Star className='w-5 h-5 text-cyan-400' />
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 {/* Company Highlights */}
 
-
-
-
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-                {/* Company Highlights */}
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-                {/* Company Highlights */}
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     <span>Why Choose Us</span>
-<<<<<<< HEAD
-<<<<<<< HEAD
                     ))}
                   </h3>
-<<<<<<< HEAD
-                  <div className='space-y-3'>
-                    <div className='p-3 bg-gradient-to-r from-cyan-500/10 to-blue-600/10 border border-cyan-500/30 rounded-lg'>
-                      <div className='text-sm font-medium text-white mb-1'>
-                        15+ Years Experience
-                      </div>
-                      <div className='text-xs text-gray-400'>
-                        Industry expertise and proven track record
-                      </div>
-                    </div>
-                    <div className='p-3 bg-gradient-to-r from-purple-500/10 to-pink-600/10 border border-purple-500/30 rounded-lg'>
-                      <div className='text-sm font-medium text-white mb-1'>
-                        500+ Services Delivered
-                      </div>
-                      <div className='text-xs text-gray-400'>
-                        Successful implementations worldwide
-                      </div>
-                    </div>
-                    <div className='p-3 bg-gradient-to-r from-green-500/10 to-emerald-600/10 border border-green-500/30 rounded-lg'>
-                      <div className='text-sm font-medium text-white mb-1'>
-                        24/7 Support
-                      </div>
-                      <div className='text-xs text-gray-400'>
-                        Round-the-clock technical assistance
-                      </div>                    </div>                    <span>Why Choose Us</span>
-                  </h3>
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <div className="space-y-3">
                     <div className="p-3 bg-gradient-to-r from-cyan-500/10 to-blue-600/10 border border-cyan-500/30 rounded-lg">
                       <div className="text-sm font-medium text-white mb-1">15+ Years Experience</div>
@@ -983,9 +412,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <div className="p-3 bg-gradient-to-r from-green-500/10 to-emerald-600/10 border border-green-500/30 rounded-lg">
                       <div className="text-sm font-medium text-white mb-1">24/7 Support</div>
                       <div className="text-xs text-gray-400">Round-the-clock technical assistance</div>
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   </h3>
                   <div className='space-y-3'>
                     <div className='p-3 bg-gradient-to-r from-cyan-500/10 to-blue-600/10 border border-cyan-500/30 rounded-lg'>
@@ -1016,49 +442,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-                  <p className="text-gray-400 mb-4 max-w-2xl mx-auto">
-                    Get in touch with our team of experts to discuss how our cutting-edge technology solutions can drive your business forward.
-                  </p>
-                  <div className="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-4">
-                    <a
-                      href="/contact"
-                      className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:shadow-xl hover:shadow-cyan-500/30 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25"
-                    >
-                      Get Started Today
-                    </a>
-                    <a
-
-                      className="px-6 py-3 text-cyan-400 hover:text-white border border-cyan-500/50 hover:border-cyan-400 rounded-lg transition-all duration-300 hover:bg-cyan-500/10"
-                    >
-                      View All Services
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                       View All Services;
                     </a>;
                   </div>;
                 </div>;
               </div>;
             </div>;
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
               {/* Call to Action */}
 <div className='mt-6 pt-6 border-t border-cyan-500/30'>
                 <div className='text-center'>
@@ -1088,37 +477,13 @@ href='/comprehensive-services-showcase-2025'
               </div>
             </div>
           </motion.div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
         )}
-=======
       </AnimatePresence>;
     </div>;
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-  /* Expanded Information Panel */ 
-}<AnimatePresence> </div> </div> </div> Visit Website </a> </div> </div> </div> </a>) ) 
-}</div> </div> <span>Why Choose Us</span> </h3> <div className="space-y-3" > <div className="p-3 bg-gradient-to-r from-cyan-500/10 to-blue-600/10 border border-cyan-500/30 rounded-lg" > <div className="text-sm font-medium text-white mb-1" >15+ Years Experience</div> <div className="text-xs text-gray-400" >Industry expertise and proven track record</div> </div> <div className="p-3 bg-gradient-to-r from-purple-500/10 to-pink-600/10 border border-purple-500/30 rounded-lg" > <div className="text-sm font-medium text-white mb-1" >500+ Services Delivered</div> <div className="text-xs text-gray-400" >Successful implementations worldwide</div> </div> <div className="p-3 bg-gradient-to-r from-green-500/10 to-emerald-600/10 border border-green-500/30 rounded-lg" > <div className="text-sm font-medium text-white mb-1" >24/7 Support</div> <div className="text-xs text-gray-400" >Round-the-clock technical assistance</div> </div> </div> </div> </div> Ready to Transform Your Business? </h3> <p className="text-gray-400 mb-4 max-w-2xl mx-auto" > Get in touch with our team of experts to discuss how our cutting-edge technology solutions can drive your business forward. </p> <div className="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-4" > <a href="/contact" className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:shadow-xl hover:shadow-cyan-500/30 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25" > Get Started Today </a> <a href="/comprehensive-services-showcase-2025" className="px-6 py-3 text-cyan-400 hover:text-white border border-cyan-500/50 hover:border-cyan-400 rounded-lg transition-all duration-300 hover:bg-cyan-500/10" > View All Services </a> </div> </div> </div> </div> </motion.div>) 
-}</AnimatePresence> </div>)
-=======
-=======
-=======
-/* Main Contact Bar */ 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 /* Main Contact Bar */ 
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }</a> </div> </div> > {
   action.icon
 }<span> {
@@ -1128,35 +493,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   /* Expand/Collapse Button */
 }<button) : (<ChevronDown className="w-4 h-4" />)
 }</button> </div> </div> </div> </div> {
-<<<<<<< HEAD
-<<<<<<< HEAD
   /* Expanded Information Panel */
 }<AnimatePresence> </div> </div> </div> Visit Website </a> </div> </div> </div> </a>) )
 }</div> </div> <span>Why Choose Us</span> </h3> <div className="space-y-3" > <div className="p-3 bg-gradient-to-r from-cyan-500/10 to-blue-600/10 border border-cyan-500/30 rounded-lg" > <div className="text-sm font-medium text-white mb-1" >15+ Years Experience</div> <div className="text-xs text-gray-400" >Industry expertise and proven track record</div> </div> <div className="p-3 bg-gradient-to-r from-purple-500/10 to-pink-600/10 border border-purple-500/30 rounded-lg" > <div className="text-sm font-medium text-white mb-1" >500+ Services Delivered</div> <div className="text-xs text-gray-400" >Successful implementations worldwide</div> </div> <div className="p-3 bg-gradient-to-r from-green-500/10 to-emerald-600/10 border border-green-500/30 rounded-lg" > <div className="text-sm font-medium text-white mb-1" >24/7 Support</div> <div className="text-xs text-gray-400" >Round-the-clock technical assistance</div> </div> </div> </div> </div> Ready to Transform Your Business? </h3> <p className="text-gray-400 mb-4 max-w-2xl mx-auto" > Get in touch with our team of experts to discuss how our cutting-edge technology solutions can drive your business forward. </p> <div className="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-4" > <a href="/contact" className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:shadow-xl hover:shadow-cyan-500/30 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25" > Get Started Today </a> <a href="/comprehensive-services-showcase-2025" className="px-6 py-3 text-cyan-400 hover:text-white border border-cyan-500/50 hover:border-cyan-400 rounded-lg transition-all duration-300 hover:bg-cyan-500/10" > View All Services </a> </div> </div> </div> </div> </motion.div>)
 }</AnimatePresence> </div>) }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }</AnimatePresence> </div>) }
 
 ;
 }</AnimatePresence> </div>)
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   /* Expanded Information Panel */ 
 }<AnimatePresence> </div> </div> </div> Visit Website </a> </div> </div> </div> </a>) ) 
 }</div> </div> <span>Why Choose Us</span> </h3> <div className="space-y-3" > <div className="p-3 bg-gradient-to-r from-cyan-500/10 to-blue-600/10 border border-cyan-500/30 rounded-lg" > <div className="text-sm font-medium text-white mb-1" >15+ Years Experience</div> <div className="text-xs text-gray-400" >Industry expertise and proven track record</div> </div> <div className="p-3 bg-gradient-to-r from-purple-500/10 to-pink-600/10 border border-purple-500/30 rounded-lg" > <div className="text-sm font-medium text-white mb-1" >500+ Services Delivered</div> <div className="text-xs text-gray-400" >Successful implementations worldwide</div> </div> <div className="p-3 bg-gradient-to-r from-green-500/10 to-emerald-600/10 border border-green-500/30 rounded-lg" > <div className="text-sm font-medium text-white mb-1" >24/7 Support</div> <div className="text-xs text-gray-400" >Round-the-clock technical assistance</div> </div> </div> </div> </div> Ready to Transform Your Business? </h3> <p className="text-gray-400 mb-4 max-w-2xl mx-auto" > Get in touch with our team of experts to discuss how our cutting-edge technology solutions can drive your business forward. </p> <div className="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-4" > <a href="/contact" className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:shadow-xl hover:shadow-cyan-500/30 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25" > Get Started Today </a> <a href="/comprehensive-services-showcase-2025" className="px-6 py-3 text-cyan-400 hover:text-white border border-cyan-500/50 hover:border-cyan-400 rounded-lg transition-all duration-300 hover:bg-cyan-500/10" > View All Services </a> </div> </div> </div> </div> </motion.div>) 
 }</AnimatePresence> </div>)
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

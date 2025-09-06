@@ -1,43 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-
-<<<<<<< HEAD
 
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React from "react";
-type QA = { q: string; a: string };
-type Props = { items: QA[] };
-export default function FAQ({ items }: Props) {
-  if (!items |items.length === 0) return null;
-
-export default function FAQ({ items }: Props) {;
-export default function FAQ({ items }: Props) {
-  if (!items || items.length === 0) return null;
-export default function FAQ({ items }: Props) {
-  if (!items |items.length === 0) return null;
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
 export default function FAQ({ items }: Props) {;
 export default function FAQ({ items }: Props) {
   if (!items || items.length === 0) return null;
@@ -57,19 +19,9 @@ export default function FAQ(): any ({ items }: Props) {;
               {it && it.a}
             </div>;
           </div>;
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-import React from 'react';
-type QA = any;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 import React from 'react';
 type QA = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   return (
     <div className="mt-10 border-t border-gray-200 dark:border-gray-800 pt-6">
       <h2 className="text-lg font-semibold mb-4">Frequently Asked Questions</h2>
@@ -83,16 +35,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-}
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from './react';
 type QA = { q: string; array: string }
 type Props = { items: QA[] }
@@ -103,10 +45,7 @@ function FAQ() {
   // Check condition
 if (return null) {
   $2
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }
-<<<<<<< HEAD
   return (
     <div className="mt - 10 border - t border - gray - 200 dark:border - gray-800 pt-6">;
       <h2 className="text - lg font-semibold mb-4">Frequently Asked Questions</h2>;
@@ -119,16 +58,5 @@ if (return null) {
             <div className="font-medium">{it.q}</div>;
             <div className="mt - 1 text - sm text - gray - 700 dark:text-gray-300">;
               {it.a}
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

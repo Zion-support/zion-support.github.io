@@ -1,24 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from 'react';
-export type ModerationModalProps = {;
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export type ModerationModalProps = {
+  flag: any | null;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -38,82 +21,24 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useState } from 'react';
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   onAction: (;
     action: 'approve' | 'remove' | 'warn' | 'ban',;
     adminNotes?: string;
   ) => Promise<void>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function ModerationModal(): any ({;
   flag,;
   onClose,;
   onAction,;
 }: ModerationModalProps) {;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-export default function ModerationModal({
-  flag
-  onClose
-  onAction
-}: ModerationModalProps) {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
   flag,
   onClose,
   onAction,
 }: ModerationModalProps) {;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+ursor/fix-website-loading-errors-and-merge-6662
+pr-12243
   flag,
   onClose,
   onAction,
@@ -145,19 +70,7 @@ import React, { useState } from 'react';
 
 export type ModerationModalProps = {;
   flag: any | null;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+pr-12243
   const [adminNotes, setAdminNotes] = useState('');
   if (!flag) return null;
 
@@ -168,14 +81,9 @@ export type ModerationModalProps = {;
           <div className='font-semibold'>Review Flag — {flag && flag.id}</div>;
           <button
             onClick={onClose}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
+pr-12243
             className='text-gray-500 hover:text-gray-700'>;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
             ✕;
           </button>;
         </div>;
@@ -228,16 +136,8 @@ export type ModerationModalProps = {;
             <label className='block text-sm font-medium mb-1'>;
               Admin Notes;
             </label>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+pr-12243
             <textarea
               value={adminNotes}
               onChange={e => setAdminNotes(e && e.target.value)}
@@ -274,15 +174,9 @@ export type ModerationModalProps = {;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
 
-  );
-}        <div className="p-4 border-t flex items-center justify-end gap-2">
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
+pr-12243
 export type ModerationModalProps = {
   flag: any | null,
   onClose: () => void,
@@ -341,28 +235,19 @@ export default function ModerationModal({ flag, onClose, onAction }: ModerationM
           </div>
         </div>
         <div className="p-4 border-t flex items-center justify-end gap-2">
-
+pr-12243
   );
 }        <div className="p-4 border-t flex items-center justify-end gap-2">
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
           <button onClick={() => onAction('approve', adminNotes)} className="px-3 py-2 rounded bg-green-600 text-white">Approve</button>
           <button onClick={() => onAction('remove', adminNotes)} className="px-3 py-2 rounded bg-red-600 text-white">Remove</button>
           <button onClick={() => onAction('warn', adminNotes)} className="px-3 py-2 rounded bg-yellow-600 text-white">Warn</button>
           <button onClick={() => onAction('ban', adminNotes)} className="px-3 py-2 rounded bg-gray-800 text-white">Ban User</button>
       </div>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );}
-=======
-=======
+  );
 );
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-
+pr-12243
 }
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   on_close: () => void;
   on_action: (
     action: 'approve' | 'remove' | 'warn' | 'ban',
@@ -473,34 +358,19 @@ if (return null) {
           </button>        </div>;
       </div>;
     </div>);
-}        <div className="p - 4 border - t flex items - center justify-end gap-2">;
-          <button on_click={() => on_action ('approve', admin_notes)} className="px - 3 py - 2 rounded bg - green-600 text-white">Approve</button>;
-          <button on_click={() => on_action ('remove', admin_notes)} className="px - 3 py - 2 rounded bg - red-600 text-white">Remove</button>;
-          <button on_click={() => on_action ('warn', admin_notes)} className="px - 3 py - 2 rounded bg - yellow-600 text-white">Warn</button>;
-          <button on_click={() => on_action ('ban', admin_notes)} className="px - 3 py - 2 rounded bg - gray-800 text-white">Ban User</button>;
+}        <div className="p - 4 border - t flex items - center justify - end gap - 2">;
+          <button on_click={() => on_action ('approve', admin_notes)} className="px - 3 py - 2 rounded bg - green - 600 text - white">Approve</button>;
+          <button on_click={() => on_action ('remove', admin_notes)} className="px - 3 py - 2 rounded bg - red - 600 text - white">Remove</button>;
+          <button on_click={() => on_action ('warn', admin_notes)} className="px - 3 py - 2 rounded bg - yellow - 600 text - white">Warn</button>;
+          <button on_click={() => on_action ('ban', admin_notes)} className="px - 3 py - 2 rounded bg - gray - 800 text - white">Ban User</button>;
       </div>;
     </div>);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
-=======
-}
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+origin/cursor/automate-test-improve-and-merge-code-20a4
+pr-12243
 
   );
 
-
-ursor/fix-website-loading-errors-and-merge-6662
 
   );
 
@@ -528,6 +398,7 @@ export default function ModerationModal({
 }: ModerationModalProps) {;
   const [adminNotes, setAdminNotes] = useState('');
   if (!flag) return null;
+
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/50'>
@@ -627,29 +498,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
     </div>
   );
-
-
+}        <div className="p-4 border-t flex items-center justify-end gap-2">
+          <button onClick={() => onAction('approve', adminNotes)} className="px-3 py-2 rounded bg-green-600 text-white">Approve</button>
+          <button onClick={() => onAction('remove', adminNotes)} className="px-3 py-2 rounded bg-red-600 text-white">Remove</button>
+          <button onClick={() => onAction('warn', adminNotes)} className="px-3 py-2 rounded bg-yellow-600 text-white">Warn</button>
+          <button onClick={() => onAction('ban', adminNotes)} className="px-3 py-2 rounded bg-gray-800 text-white">Ban User</button>
+      </div>
+    </div>
+);
 }
-<<<<<<< HEAD
   );
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-}
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+pr-12243

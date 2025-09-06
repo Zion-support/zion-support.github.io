@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-setIsMobile (isMobileDevice);
- setIsMobile (isMobileDevice);
-setIsMobile (isMobileDevice);
- setIsMobile (isMobileDevice);
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Smartphone, Tablet, Monitor, RotateCcw;
@@ -42,12 +25,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
   children;
   showDebugInfo;
 setIsMobile (isMobileDevice);
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 setIsTablet (isTabletDevice);
 
 //Apply mobile - specific optimizations // Check condition
@@ -169,13 +147,9 @@ if (return) {
   /* Global Mobile Styles */
 }<style jsx global> {
   `.mobile-optimized * {
-<<<<<<< HEAD
-<<<<<<< HEAD
 }`
 }</style> </>)
 }
-<<<<<<< HEAD
-=======
 //Set up event listeners window && window.addEventListener ('orientationchange', handleOrientationChange);
 window && window.addEventListener ('resize', handleResize);
 //Set up orientation change detection const mediaQuery = window && window.matchMedia (' (orientation: portrait) ');
@@ -287,7 +261,6 @@ if (isMobileDevice && enablePerformanceMode) {
   useEffect(() => {
     if (!enableTouchGestures || !isMobile) return;
     const handleTouchStart = (e: TouchEvent) => {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
     checkDevice(),
     window.addEventListener('resize', checkDevice),
@@ -830,23 +803,6 @@ if (img.loading = 'lazy') {
 // Check condition
 if (img.decoding = 'async') {
   $2
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-setIsTablet (isTabletDevice);
-//Apply mobile-specific optimizations if (isMobileDevice && enableMobileLayout) {
-  checkDevice ();
-window.addEventListener ('resize', checkDevice);
-}, [enableMobileLayout, enablePerformanceMode]);
-//Detect orientation changes checkOrientation ();
-window.addEventListener ('orientationchange', checkOrientation);
-window.addEventListener ('resize', checkOrientation);
-const handleTouchStart = (e: TouchEvent) => {
-  if (e.touches.length === 1) {
-  touchStartRef.current = {
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 });
 //Optimize fonts fonts.for_each (font => {
@@ -870,10 +826,6 @@ if (return) {
   $2
 }
 //Set up event listeners window.addEventListener ('orientationchange', handleOrientationChange);
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 // Check condition
 if (return null) {
@@ -881,10 +833,6 @@ if (return null) {
 }
 }
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }{
   /* Mobile Optimization Panel */;
 }<AnimatePresence> {
@@ -901,26 +849,9 @@ if (return null) {
 }
 export default MobileOptimizer;
 export default MobileOptimizer;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   
 }` 
 }</style> </>) 
 };
 export default MobileOptimizer;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

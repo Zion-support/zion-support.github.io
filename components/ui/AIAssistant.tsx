@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 class ErrorBoundary extends React.Component {
@@ -20,37 +15,17 @@ class ErrorBoundary extends React.Component {
   systemPrompt?: string;
   onAccept: (markdown: string) => void;
   authorizationToken?: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-export default function AIAssistant({
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   buttonLabel = "Generate with AI"
   title = "AI Writing Assistant"
   defaultPrompt
   systemPrompt
   onAccept
   authorizationToken
-<<<<<<< HEAD
-}: AIAssistantProps) {
-
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 export type AIAssistantProps = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
 }: AIAssistantProps) {
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   buttonLabel = "Generate with AI",
   title = "AI Writing Assistant",
   defaultPrompt,
@@ -58,47 +33,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   onAccept,
   authorizationToken,
 }: AIAssistantProps) {;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const [isOpen, setIsOpen] = useState(false);
   const [prompt, setPrompt] = useState(defaultPrompt);
   const [output, setOutput] = useState("");
   const [loading, setLoading] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
   const [error, setError] = useState<string | null>(null);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-    } catch {}
-}, [output]);
-  const onOpen = useCallback(() => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-    setIsOpen(true);
-    setOutput("");
-    setIsEditing(false);
-
-
-  }, []);
-  const onClose = useCallback(() => setIsOpen(false), []);
-
-
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   useEffect(() => {
 setPrompt(defaultPrompt);
   }, [defaultPrompt]);
@@ -153,23 +93,13 @@ const canAccept = useMemo(() => output && output.trim().length > 0, [output]);
 type='button'
         onClick={onOpen}
         className='inline-flex items-center gap-2 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-1.5 text-sm hover:bg-gray-50 dark:hover:bg-gray-800'
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   return (
     <>;
       <button
         type="button"
         onClick={onOpen}
       {isOpen && (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className="fixed inset-0 z-50 flex items-center justify-center">
           <div className="absolute inset-0 bg-black/50" onClick={onClose} />
           <div className="relative z-10 w-full max-w-2xl rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black shadow-xl">
@@ -227,11 +157,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>;
               {error && <div className="text-red-600 text-sm">{error}</div>}
               <div>;
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div className='fixed inset-0 z-50 flex items-center justify-center'>
           <div className='absolute inset-0 bg-black/50' onClick={onClose} />
           <div className='relative z-10 w-full max-w-2xl rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black shadow-xl'>
@@ -301,12 +226,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 {error && <div className='text-red-600 text-sm'>{error}</div>}
 
               <div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 <label
                   className="block text-xs font-medium mb-1"
                   Output (markdown);
@@ -314,11 +234,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {isEditing ? (;
                   <textarea
                     value={output}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     onChange={(e) => setOutput(e && e.target.value)}
                     rows={12}
                 )}
@@ -331,11 +246,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 }
                   <pre className="w-full rounded-md border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-3 text-sm whitespace-pre-wrap">{output || 'No content yet. Click Generate.'}</pre>
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     onChange={e => setOutput(e.target.value)}
                     rows={12}
                     className='w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 p-2 text-sm'
@@ -344,12 +254,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <pre className='w-full rounded-md border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-3 text-sm whitespace-pre-wrap'>
                     {output || 'No content yet. Click Generate.'}
                   </pre>
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 )}
               </div>
             </div>
@@ -357,17 +262,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       )}
     </>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

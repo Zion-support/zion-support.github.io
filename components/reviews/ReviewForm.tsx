@@ -1,24 +1,10 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+pr-12243
   categories?: {
     communication?: number;
     qualityOfWork?: number;
     timeliness?: number;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -44,12 +30,11 @@ class ErrorBoundary extends React.Component {
 }
  </div> <div> <label className="block text-sm font-medium mb-2" >Your Review</label> <textarea required /> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <button > {;
   submitting ? 'Submitting...' : 'Submit Review' ;
-}</button> </form>) 
+}</button> </form>) ;
 };
 
 type Props = {;
-  initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>
-};import React, { useState } from 'react';
+  initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;};import React, { useState } from 'react';
 import StarRating from './StarRating';
 export type ReviewFormValues = {;
   projectId: string,;
@@ -61,9 +46,9 @@ export type ReviewFormValues = {;
     communication?: number;
     qualityOfWork?: number;
     timeliness?: number;
-    wouldWorkWithAgain?: boolean
-};
-  anonymous?: boolean
+    wouldWorkWithAgain?: boolean;
+  };
+  anonymous?: boolean;
 };
 
 type Props = {;
@@ -85,8 +70,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const [submitting, setSubmitting] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     wouldWorkWithAgain?: boolean;
   }
   anonymous?: boolean;
@@ -113,7 +96,6 @@ function handle_submit() {
     set_submitting (true);
     set_message (null),
     try {
-<<<<<<< HEAD
       const res = await fetch ('/api / reviews / submit', {
         method: 'POST',
         headers: { 'Content - Type': 'application / json' },
@@ -124,13 +106,7 @@ function handle_submit() {
           rating,
           text,
           anonymous,
-=======
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+
       const res = await fetch('/api/reviews/submit', {
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
@@ -141,12 +117,8 @@ function handle_submit() {
 rating,
           text,
           anonymous,
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+pr-12243
           categories: {
             communication
             qualityOfWork
@@ -155,32 +127,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           }
         })
       });
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       setMessage('Review submitted! Pending admin approval.');
-<<<<<<< HEAD
     } catch (err: any) {;
       setMessage(err && err.message);
     } finally {;
       setSubmitting(false);    }
   }
   return (
-
-<<<<<<< HEAD
-    <form onSubmit={handleSubmit} className='space-y-6'>;
-      <div>;
-        <label className='block text-sm font-medium mb-2'>Overall Rating</label>        <StarRating value={rating} onChange={setRating} />;
-      </div>;
-
-      <div>;
-        <label className='block text-sm font-medium mb-2'>Your Review</label>          categories: {;
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-      setMessage('Review submitted! Pending admin approval.');
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       const data = await res.json ();
       if (throw new Error (data.error || 'Failed to submit')) {
   $2
@@ -198,18 +151,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>;
       <div>;
         <label className='block text - sm font - medium mb - 2'>Your Review</label>          categories: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-  return (
-
-=======
-
             communication;
             qualityOfWork;
             timeliness;
             wouldWorkWithAgain}})});
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+    }
+  }
+  return (
+
+
     }
   }
   return (
@@ -228,22 +178,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       <div>;
         <label className='block text-sm font-medium mb-2'>Your Review</label>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-            communication;
-            qualityOfWork;
-            timeliness;
-            wouldWorkWithAgain}})});
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     } catch (err: any) {
       setMessage(err.message);
     } finally {
@@ -258,75 +192,44 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
       <div>
 <label className='block text-sm font-medium mb-2'>Your Review</label>
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+pr-12243
         <textarea
           className='w-full rounded-md border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-blue-500'
           rows={5}
           value={text}
-<<<<<<< HEAD
-<<<<<<< HEAD
           onChange={e => setText(e && e.target.value)}          required;
         />;
       </div>;
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
         <label className="block text-sm font-medium mb-2" htmlFor="input-Your Review">Your Review</label>
 
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
         <textarea
           className="w-full rounded-md border border-gray-300 p-3 focus: outline-none focus:ring-2 focus:ring-blue-500"
           rows={5}
           value={text}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+
           onChange={e => setText(e.target.value)}
           required
         />
       </div>
 
 <div className='flex items-center gap-3'>
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+pr-12243
         <input
           id='anonymous'
           type='checkbox'
           checked={anonymous}
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       set_submitting (false);
     }
   }
   return (
     <form on_submit={handle_submit} className='space - y-6'>;
       <div>;
-        <label className='block text - sm font - medium mb - 2'>Overall Rating</label>    <form on_submit={handle_submit} className="space-y-6">;
+        <label className='block text - sm font - medium mb - 2'>Overall Rating</label>    <form on_submit={handle_submit} className="space - y-6">;
       <div>;
-        <label className="block text - sm font-medium mb-2" html_for="input - Overall Rating">Overall Rating</label>;
+        <label className="block text - sm font - medium mb - 2" html_for="input - Overall Rating">Overall Rating</label>;
         <StarRating value={rating} on_change={set_rating} />;
       </div>;
       <div>;
@@ -339,7 +242,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         />;
       </div>;
         <textarea;
-          className="w - full rounded - md border border - gray - 300 p - 3 focus: outline - none focus:ring - 2 focus:ring-blue-500";
+          className="w - full rounded - md border border - gray - 300 p - 3 focus: outline - none focus:ring - 2 focus:ring - blue - 500";
           rows={5}
           value={text}
           on_change={(e) => set_text (e.target.value)}
@@ -365,82 +268,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
           <span className='pill'>Optional</span>;
         </div>;
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <div className='enhanced - card'>;
-          <div className='flex items - center justify - between mb - 2'>;
-            <span className='text - sm'>Quality of Work</span>;
-            <StarRating;
-              value={qualityOfWork || 0}
-              on_change={v => setQualityOfWork (v)}
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
             />;
           </div>;
           <span className='pill'>Optional</span>;
         </div>;
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-              onChange={e => setWouldWorkWithAgain(e && e.target.checked)}            />;
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
             />;
           </div>;
           <span className='pill'>Optional</span>;
         </div>;
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-              onChange={e => setWouldWorkWithAgain(e && e.target.checked)}
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
         <div className='enhanced - card'>;
           <div className='flex items - center justify - between mb - 2'>;
             <span className='text - sm'>Would Work With Again</span>;
             <input;
               type='checkbox';
               checked={wouldWorkWithAgain}
+              on_change={e => setWouldWorkWithAgain (e.target.checked)}
 
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
             />;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </div>;
           <span className='pill'>Optional</span>        </div>;
       </div>;
-<<<<<<< HEAD
-
-      </button>;
-<<<<<<< HEAD
-
-      {message && <p className='text-sm'>{message}</p>}
-    </form>;
-  )
-};
-
-export default ReviewForm;    </form>;
-  );
-
-        disabled={submitting}
-      >;
-        {submitting ? 'Submitting...' : 'Submit Review'}
-<<<<<<< HEAD
-=======
-
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       <button
         type="submit"
         className="enhanced-button enhanced-button-primary"
@@ -458,14 +305,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         disabled={submitting}
       >;
         {submitting ? 'Submitting...' : 'Submit Review'}
+};
 
-<<<<<<< HEAD
 export default ReviewForm;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       </button>;
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       {message && <p className='text - sm'>{message}</p>}
     </form>);
 }
@@ -476,13 +319,6 @@ export default ReviewForm;    </form>);
 export default ReviewForm;
 ;
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       </button>
 
 {message && <p className='text-sm'>{message}</p>}
@@ -491,9 +327,5 @@ export default ReviewForm;
 };
 
 export default ReviewForm;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+pr-12243

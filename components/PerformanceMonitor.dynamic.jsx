@@ -1,11 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEADexport default PerformanceMonitor.dynamic;
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+pr-12243
 ;
 const PerformanceMonitor.dynamic = () => {
   return (
@@ -15,9 +10,5 @@ const PerformanceMonitor.dynamic = () => {
 }
 ;
 
-<<<<<<< HEAD
+pr-12243
 export default PerformanceMonitor.dynamic;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-export default PerformanceMonitor.dynamic;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

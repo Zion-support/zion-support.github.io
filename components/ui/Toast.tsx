@@ -1,28 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-export type ToastType = 'success' | 'error' | 'info' | 'warning';
-
-
-export type ToastType = 'success' | 'error' | 'info' | 'warning';
-}, [toast.id, toast.duration, onRemove]);
-const getIcon = () => {
-  switch (toast.type) {
-  case 'success':
-interface ToastProps {
-  toast: Toast;
-  onRemove: (id: string) => void;
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   message?: string;
   duration?: number
 }
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 import { CheckCircle, AlertCircle, X, Info } from 'lucide-react';
@@ -36,23 +14,7 @@ interface ToastProps {
   toast: Toast
   onRemove: (id: string) => void
 }
-<<<<<<< HEAD
-=======
-=======
 
-<<<<<<< HEAD
-export interface Toast {;
-  id: string,;
-  type: ToastType,;
-  title: string,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React from 'react';
  export type ToastType = 'success' | 'error' | 'info' | 'warning';
 import React, { useState, useEffect } from 'react';
@@ -66,39 +28,15 @@ const getIcon = () => {;
 interface ToastProps {;
   toast: Toast;
   onRemove: (id: string) => void;
-<<<<<<< HEAD
-<<<<<<< HEAD
 export type ToastType = 'success' | 'error' | 'info' | 'warning';
-<<<<<<< HEAD
-export interface Toast {
-  id: string
-  type: ToastType
-  title: string
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-  id: string,
-  type: ToastType,
-  title: string,;
-=======
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
   id: string,
   type: ToastType,
   title: string,;
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export interface Toast {;
   id: string,;
   type: ToastType,;
   title: string,;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   message?: string;
   duration?: number
 }
@@ -106,43 +44,13 @@ interface ToastProps {
   toast: Toast
   onRemove: (id: string) => void
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
   const [isVisible, setIsVisible] = useState(true);
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(false);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        return <AlertCircle className="w-5 h-5 text-red-400" />;
-      case 'warning':
-        return <AlertCircle className="w-5 h-5 text-yellow-400" />;
-      case 'info':
-        return <Info className="w-5 h-5 text-blue-400" />;
-      default: return <Info className="w-5 h-5 text-blue-400" />
-    }
-=======
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 setTimeout(() => onRemove(toast.id), 300);
     }, toast.duration || 5000);
 
@@ -154,12 +62,7 @@ setTimeout(() => onRemove(toast.id), 300);
       case 'success':
 return <CheckCircle className='w-5 h-5 text-green-400' />;
       case 'error':
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
         return <AlertCircle className='w-5 h-5 text-red-400' />;
       case 'warning':
         return <AlertCircle className='w-5 h-5 text-yellow-400' />;
@@ -170,52 +73,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }
 origin/cursor/automate-test-improve-and-merge-code-2533
   }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  };
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         return <Info className='w-5 h-5 text-blue-400' />;    }
 
     }
 
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   };
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const getBorderColor = () => {
     switch (toast.type) {
       case 'success':
 
-<<<<<<< HEAD
-
-    >
-      <div className='flex items-start space-x-3'>
-        <div className='flex-shrink-0 mt-0.5'>{getIcon()}</div>
-        <div className='flex-1 min-w-0'>
-          <h4 className='text-sm font-semibold text-white'>{toast.title}</h4>
-          {toast.message && (
-=======
-            <p className='mt-1 text-sm text-white/70'>{toast.message}</p>          )}    }
-  }
-=======
         return 'border-green-500/20';
       case 'error':
         return 'border-red-500/20';
@@ -223,6 +91,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         return 'border-yellow-500/20';
       case 'info':
         return 'border-blue-500/20';
+  const getBorderColor = () => {;
+    switch (toast && toast.type) {;
+      case 'success':;
+        return 'border-green-500/20';
+      case 'error':;
+        return 'border-red-500/20';
+      case 'warning':;
+        return 'border-yellow-500/20';
+      case 'info':;
+        return 'border-blue-500/20';
+      default:;
+        return 'border-blue-500/20';    }      default: return 'border-blue-500/20';
+    }
+        return 'bg-green-500/10';
+      case 'error':;
+        return 'bg-red-500/10';
+      case 'warning':;
+        return 'bg-yellow-500/10';
+      case 'info':;
+        return 'bg-blue-500/10';
+      default:;
+        return 'bg-blue-500/10';
 default:
         return 'border-blue-500/20';
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -234,12 +124,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         return 'bg-yellow-500/10';
       case 'info':
         return 'bg-blue-500/10';
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
     <motion&& motion.div
       initial={{ opacity: 0, x: 300, scale: 0 && 0.8 }}
@@ -250,52 +134,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <div className="flex items-start space-x-3">;
         <div className="flex-shrink-0 mt-0 && 0.5">;
           {getIcon()}
-<<<<<<< HEAD
-<<<<<<< HEAD
-        </div>
-        <div className="flex-1 min-w-0">
-          <h4 className="text-sm font-semibold text-white">
-            {toast.title}
-          </h4>
-          {toast.message && (
-            <p className="mt-1 text-sm text-white/70">
-              {toast.message}
-            </p>
-          )}
-            <p className='mt-1 text-sm text-white/70'>{toast.message}</p>          )}
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-
-              {toast.message}
-            </p>
-          )}
-
-        </div>
-        <button
-          onClick={() => {
-
-  );};          }}
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-        <button
-          onClick={() => {;
-            setIsVisible(false);
-
-  return (
-<<<<<<< HEAD
-    <div className='fixed top-4 right-4 z-50 space-y-3'>
-      <AnimatePresence>
-        {toasts.map(toast => (          <ToastItem key={toast.id} toast={toast} onRemove={onRemove} />
-        ))}
-      </AnimatePresence>
-    </div>
-    </div>;
-  );};          }}
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 default:
         return 'bg-blue-500/10';
     }
@@ -313,20 +151,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <button
           onClick={() => {;
             setIsVisible(false);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   return (
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 setTimeout(() => onRemove(toast.id), 300);
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
           }}
       {/* Progress bar */}
       <div className='absolute bottom-0 left-0 right-0 h-1 bg-white/20 rounded-b-xl overflow-hidden'>;
@@ -359,28 +187,17 @@ export const ToastContainer: React.FC<ToastContainerProps> = ({;
   onRemove,;
 }) => {;
   return (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           className="flex-shrink-0 ml-2 p-1 rounded-lg hover:bg-white/10 transition-colors duration-200"
         >
           <X className="w-4 h-4 text-white/60 hover:text-white" />
         </button>
       </div>
-      {/* Progress bar */}
-      <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/20 rounded-b-xl overflow-hidden">
-        <motion.div
-          className={`h-full ${
+          className="flex-shrink-0 ml-2 p-1 rounded-lg hover:bg-white/10 transition-colors duration-200";
+        >;
+          <X className="w-4 h-4 text-white/60 hover:text-white" />;
+        </button>;
+      </div>;
 
-<<<<<<< HEAD
-            toast.type === 'success' ? 'bg-green-400' :
-            toast.type === 'error' ? 'bg-red-400' :
-            toast.type === 'warning' ? 'bg-yellow-400' :
-
-            'bg-blue-400'
-          }`}
-          initial={{ width: '100%' }}
-          animate={{ width: '0%' }}
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Progress bar */}
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/20 rounded-b-xl overflow-hidden">;
         <motion&& motion.div
@@ -392,51 +209,19 @@ export const ToastContainer: React.FC<ToastContainerProps> = ({;
           }`}
           initial={{ width: '100%' }}
           animate={{ width: '0%' }}
-<<<<<<< HEAD
-          transition={{ duration: toast.duration |5000, ease: "linear" }}
-        />
-      </div>
-    </motion.div>
-  )
-}
-};
-    </div>
-  );};
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
     <div className='fixed top-4 right-4 z-50 space-y-3'>
       <AnimatePresence>
-<<<<<<< HEAD
-<<<<<<< HEAD
         {toasts.map(toast => (          <ToastItem key={toast.id} toast={toast} onRemove={onRemove} />
         ))}
       </AnimatePresence>
     </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 interface ToastContainerProps {
   toasts: Toast[]
   onRemove: (id: string) => void
 }
 export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove }) => {
-<<<<<<< HEAD
-  return (
-    <div className="fixed top-4 right-4 z-50 space-y-3">
-      <AnimatePresence>
-        {toasts.map((toast) => (
-  );};
-
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
           transition={{ duration: toast && toast.duration || 5000, ease: "linear" }}
         />;
@@ -444,72 +229,21 @@ export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove
     </motion && motion.div>;
   );
   return (
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <ToastItem key={toast.id} toast={toast} onRemove={onRemove} />
         ))}
       </AnimatePresence>
     </div>
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface ToastContainerProps {
   toasts: Toast[]
   onRemove: (id: string) => void
 }
 export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove }) => {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <div className="fixed top-4 right-4 z-50 space-y-3">
       <AnimatePresence>
         {toasts.map((toast) => (
-<<<<<<< HEAD
-
-          <ToastItem key={toast.id} toast={toast} onRemove={onRemove} />
-        ))}
-      </AnimatePresence>
-
-export const useToast = () => {;
-  const [toasts, setToasts] = useState<Toast[]>([]);
-  const addToast = (toast: Omit<Toast, 'id'>) => {;
-    const id = Math && Math.random().toString(36).substr(2, 9);
-    const newToast = { ...toast, id };
-    setToasts(prev => [...prev, newToast]);
-  const removeToast = (id: string) => {;
-    setToasts(prev => prev && prev.filter(toast => toast && toast.id !== id));
-  };
-  const showSuccess = (title: string, message?: string) => {;
-    addToast({ type: 'success', title, message });
-  };
-  const showError = (title: string, message?: string) => {;
-    addToast({ type: 'error', title, message });
-  };
-  const showInfo = (title: string, message?: string) => {;
-    addToast({ type: 'info', title, message });
-  };
-  const showWarning = (title: string, message?: string) => {;
-    addToast({ type: 'warning', title, message });
-  };
-  return {;
-    toasts,;
-    showSuccess,;
-    showError,;
-    showInfo,;
-    showWarning,;
-    removeToast,;
-  };
-=======
           <ToastItem key={toast.id} toast={toast} onRemove={onRemove} />
         ))}
       </AnimatePresence>
@@ -518,21 +252,12 @@ interface ToastContainerProps {;
   onRemove: (id: string) => void;
 }
   return (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <div className="fixed top-4 right-4 z-50 space-y-3">;
       <AnimatePresence>;
         {toasts && toasts.map((toast) => (;
           <ToastItem key={toast && toast.id} toast={toast} onRemove={onRemove} />;
         ))}
-<<<<<<< HEAD
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 };    toasts;
-
-=======
-};    toasts;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     showSuccess;
     showError;
     showInfo;
@@ -564,79 +289,6 @@ interface ToastContainerProps {;
       </div>;
     </motion.div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-;
-interface ToastContainerProps {
-  toasts: Toast[],
-  on_remove: (id: string) => void;
-}
-export const ToastContainer: React.FC < ToastContainerProps> = ({ toasts, on_remove }) => {
-  return (
-    <div className="fixed top - 4 right - 4 z - 50 space - y-3">;
-      <AnimatePresence>;
-        {toasts.map ((toast) => (
-          <ToastItem key={toast.id} toast={toast} on_remove={on_remove} />))}
-      </AnimatePresence>;
-    </div>));
-}
-;
-// Hook for managing toasts;
-export const use_toast = () =>: any {
-  const [toasts, set_toasts] = useState < Toast[]>([]);
-;
-  const add_toast = (toast: Omit < Toast, 'id'>) =>: any {
-    const id = Math.random ().to_string (36).substr (2, 9);
-    const new_toast = { ...toast, id }
-    set_toasts (prev => [...prev, new_toast]);
-;
-  const remove_toast = (id: string) =>: any {
-    set_toasts (prev => prev.filter (toast => toast.id !== id));
-  }
-;
-  const show_success = (title: string, message?: string) =>: any {
-    add_toast ({ type: 'success', title, message });
-  }
-;
-  const show_error = (title: string, message?: string) =>: any {
-    add_toast ({ type: 'error', title, message });
-  }
-;
-  const show_info = (title: string, message?: string) =>: any {
-    add_toast ({ type: 'info', title, message });
-  }
-;
-  const show_warning = (title: string, message?: string) =>: any {
-    add_toast ({ type: 'warning', title, message });
-  }
-;
-  return {
-    toasts,
-    show_success,
-    show_error,
-    show_info,
-    show_warning,
-    remove_toast,
-  }
-}    toasts;
-    show_success;
-    show_error;
-    show_info;
-    show_warning;
-    remove_toast}
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
         {toasts.map(toast => (
           <ToastItem key={toast.id} toast={toast} onRemove={onRemove} />
         ))}
@@ -678,9 +330,4 @@ setToasts(prev => [...prev, newToast]);
     removeToast,
   };
 };
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

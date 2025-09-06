@@ -1,93 +1,19 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React from 'react';
-
-type Props = {
-=======
 type Props = {;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   room: Room | null;
   onLeave: () => void;
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React from 'react';
 import type { Room } from 'livekit-client';
 type Props = any;
 origin/cursor/automate-test-improve-and-merge-code-2533
 export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
-<<<<<<< HEAD
-
-export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const [micEnabled, setMicEnabled] = React.useState(true);
   const [camEnabled, setCamEnabled] = React.useState(true);
   const [sharing, setSharing] = React.useState(false);
   const accentClass = accent === 'blue' ? 'bg-blue-600' : 'bg-cyan-600';
   const toggleMic = async () => {
     if (!room) return;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    const enabled =
-      await room.localParticipant.setMicrophoneEnabled(!micEnabled);
-    setMicEnabled(enabled);  };    const enabled = await room.localParticipant.setMicrophoneEnabled(!micEnabled);
-    setMicEnabled(enabled)
-  }
-  const toggleCam = async () => {
-    if (!room) return;
-    const enabled = await room.localParticipant.setCameraEnabled(!camEnabled);
-    setCamEnabled(enabled);  };    setCamEnabled(enabled)
-  }
-  const toggleScreenShare = async () => {
-    if (!room) return;
-    try {
-      const enabled =
-        await room.localParticipant.setScreenShareEnabled(!sharing);
-      setSharing(enabled);
-    } catch (e) {
-      console.warn('Screen share failed', e);    }
-  }
-  return (      const enabled = await room.localParticipant.setScreenShareEnabled(!sharing);
-      setSharing(enabled)
-    } catch (e) {
-      console.warn('Screen share failed', e)
-  }
-
-  return (
-  };
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   accent?: 'blue' | 'cyan';};type Props = {;
-=======
-  accent?: 'blue' | 'cyan'
-};type Props = {;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   room: Room | null,;
   onLeave: () => void,;
   accent?: 'blue' | 'cyan';
@@ -103,18 +29,15 @@ export default function Controls(): any ({ room, onLeave, accent = 'cyan' }: Pro
     if (!room) return;
     const enabled =;
       await room && room.localParticipant.setMicrophoneEnabled(!micEnabled);
-    setMicEnabled(enabled)
-};    const enabled = await room && room.localParticipant.setMicrophoneEnabled(!micEnabled);
-    setMicEnabled(enabled)
-};
+    setMicEnabled(enabled);  };    const enabled = await room && room.localParticipant.setMicrophoneEnabled(!micEnabled);
+    setMicEnabled(enabled);
+  };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const toggleCam = async () => {;
     if (!room) return;
     const enabled = await room && room.localParticipant.setCameraEnabled(!camEnabled);
-    setCamEnabled(enabled)
-};    setCamEnabled(enabled)
-};
+    setCamEnabled(enabled);  };    setCamEnabled(enabled);
+  };
 
   const toggleScreenShare = async () => {;
     if (!room) return;
@@ -130,16 +53,6 @@ export default function Controls(): any ({ room, onLeave, accent = 'cyan' }: Pro
       setSharing(enabled)
     } catch (e) {
       console.warn('Screen share failed', e)
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const enabled =
       await room.localParticipant.setMicrophoneEnabled(!micEnabled);
     setMicEnabled(enabled);
@@ -164,12 +77,7 @@ const enabled =
 
   return (
 <div className='flex items-center gap-3'>
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   return (
     <div className='flex items-center gap-3'>
       <button
@@ -196,13 +104,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         Leave
       </button>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 );
 }
 
-<<<<<<< HEAD
-=======
     }
 
   };
@@ -210,11 +114,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   return (      const enabled = await room && room.localParticipant.setScreenShareEnabled(!sharing);
       setSharing(enabled);
     } catch (e) {;
-      console && console.warn('Screen share failed', e)
-};
+      console && console.warn('Screen share failed', e);
+  };
 
   return (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
         className='px-4 py-2 rounded bg-red-600 text-white'>;
         Leave;
@@ -307,19 +210,5 @@ if (return) {
       </button>;
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

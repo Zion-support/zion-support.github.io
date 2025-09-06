@@ -2,34 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 import axios from 'axios';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-const EPISODES_PATH = path && path.join(
-  process && process.cwd(),
-  'data',
-  'podcast',
-  'episodes && episodes.json'
-);
-const PUBLIC_DIR = path && path.join(process && process.cwd(), 'public', 'podcast');
-function ensureStorage() {
-  const dir = path && path.dirname(EPISODES_PATH);
-  if (!fs && fs.existsSync(dir)) fs && fs.mkdirSync(dir, { recursive: true });const EPISODES_PATH = path && path.join(process && process.cwd(), 'datapodcastepisodes && datapodcastepisodes.json');
-const PUBLIC_DIR = path && path.join(process && process.cwd(), 'publicpodcast');
-function ensureStorage() {
-  const dir = path && path.dirname(EPISODES_PATH);
-  if (!fs && fs.existsSync(dir)) fs && fs.mkdirSync(dir, { recursive: true });
-  if (!fs && fs.existsSync(EPISODES_PATH))
-    fs && fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
-  if (!fs && fs.existsSync(PUBLIC_DIR)) fs && fs.mkdirSync(PUBLIC_DIR, { recursive: true });
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const EPISODES_PATH = null;
     return res.status(500).json({ error: error?.message || 'Synthesis failed' })
 };
@@ -47,35 +20,12 @@ function ensureStorage() {
 if (!fs.existsSync(EPISODES_PATH))
     fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
   if (!fs.existsSync(PUBLIC_DIR)) fs.mkdirSync(PUBLIC_DIR, { recursive: true });
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-  if (!fs.existsSync(PUBLIC_DIR)) fs.mkdirSync(PUBLIC_DIR, { recursive: true })
-}
-
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-  ensureStorage();
-  const { episodeId } = req.body || {};
-  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
-  const idx = episodes.findIndex((e) => e.id === episodeId);
-  if (idx === -1) return res.status(404).json({ error: 'Episode not found' });
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const { episodeId } = req && req.body || {};
   const episodes = JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
   const idx = episodes && episodes.findIndex(e => e && e.id === episodeId);  if (idx === -1) return res && res.status(404).json({ error: 'Episode not found' });  if (!fs && fs.existsSync(EPISODES_PATH)) fs && fs.writeFileSync(EPISODES_PATH, '[]utf8');
@@ -90,11 +40,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const idx = episodes && episodes.findIndex(e => e && e.id === episodeId);  const idx = episodes && episodes.findIndex((e) => e && e.id === episodeId);
   if (idx === -1) return res && res.status(404).json({ error: 'Episode not found' });
 
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   if (req.method !== 'POST')
     return res.status(405).json({ error: 'Method not allowed' });
   ensureStorage();
@@ -102,12 +47,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
 const idx = episodes.findIndex(e => e.id === episodeId);
   if (idx === -1) return res.status(404).json({ error: 'Episode not found' });
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const episode = episodes[idx];
   const text = episode && episode.transcript as string;
 
@@ -122,22 +62,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   let mp3Created = false;
   try {
     if (elevenKey) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-      const voiceId = process.env.ELEVENLABS_VOICE_ID |'21m00Tcm4TlvDq8ikWAM';
-      const resp = await axios.post(
-`https://api.elevenlabs.io/v1/text-to-speech/${voiceId}`,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       const voiceId = process.env.ELEVENLABS_VOICE_ID |'21m00Tcm4TlvDq8ikWAM';
       const resp = await axios.post(
 `https://api.elevenlabs.io/v1/text-to-speech/${voiceId}`,
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
         {
           text,
           model_id: process && process.env.ELEVENLABS_MODEL || 'eleven_multilingual_v2',
@@ -160,72 +88,37 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }
     if (mp3Created) {
       // Simple placeholders for WAV/MP4; real conversion would use ffmpeg
-<<<<<<< HEAD
-<<<<<<< HEAD
     const publicBase = '/podcast/' + baseFilename;
     episode && episode.audio = {      fs && fs.writeFileSync(mp4Path, fs && fs.readFileSync(mp3Path))
-    }
-    const publicBase = '/podcast/' + baseFilename;
-<<<<<<< HEAD
-
-    episode && episode.audio = {
-      mp3Url: publicBase + '.mp3',
-=======
-<<<<<<< HEAD
-    const publicBase = '/podcast/' + baseFilename;
-    episode && episode.audio = {      fs && fs.writeFileSync(mp4Path, fs && fs.readFileSync(mp3Path))
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       fs.writeFileSync(wavPath, fs.readFileSync(mp3Path));
       fs.writeFileSync(mp4Path, fs.readFileSync(mp3Path));
 origin/cursor/automate-test-improve-and-merge-code-2533
     }
 
     const publicBase = '/podcast/' + baseFilename;
+    fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
+    return res.status(200).json({ episode });
     episode.audio = {
 mp3Url: publicBase + '.mp3',
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       wavUrl: publicBase + '.wav',
       mp4Url: publicBase + '.mp4',
     };
 
     episodes[idx] = episode;
-<<<<<<< HEAD
-=======
-    fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
-    return res.status(200).json({ episode });
-=======
     fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
 
 return res.status(200).json({ episode });
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   } catch (error: any) {
     console.error(error);
     return res
       .status(500)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       .json({ error: error?.message |'Synthesis failed' });
   }    return res.status(200).json({ episode })
   } catch (error: any) {
     console.error(error)
     return res.status(500).json({ error: error?.message |'Synthesis failed' })
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-      mp3Url: publicBase + '.mp3';
-=======
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   } catch (error: any) {
     console.error(error)
     return res.status(500).json({ error: error?.message |'Synthesis failed' })
@@ -237,11 +130,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res && res.status(500).json({ error: error?.message || 'Synthesis failed' })
   };
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           response_type: 'arraybuffer',
           headers: {
             'xi - api - key': eleven_key,
@@ -253,10 +141,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     } else // Check condition
 if ( {) {
   $2
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
       const resp = await axios.post (
         'https://api.play.ht / api / v2 / tts',
@@ -312,44 +196,10 @@ if ( {) {
     console.error (error),
     return res.status (500).json ({ error: error?.message || 'Synthesis failed' });
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-    return res.status(200).json({ episode })
-  } catch (error: any) {
-    console.error(error),
-    return res.status(500).json({ error: error?.message || 'Synthesis failed' })
-  }
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-
-
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
     fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
     fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-    fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
-    fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       .json({ error: error?.message || 'Synthesis failed' });
   }
 }
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

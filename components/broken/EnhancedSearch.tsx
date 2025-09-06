@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-//Mock search results - in real app, this would come from API const mockSearchResults: SearchResult[] = [ {
- //Mock search results - in real app, this would come from API const mockSearchResults: SearchResult[] = [ {
-//Mock search results - in real app, this would come from API const mockSearchResults: SearchResult[] = [ {
- //Mock search results - in real app, this would come from API const mockSearchResults: SearchResult[] = [ {
-  
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }];
 setIsSearching (true);
 
@@ -24,9 +9,6 @@ set_results (sorted_results);
 setShowResults (true);
 setIsSearching (false);
 
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 import { Search, X, Filter, TrendingUp, Clock, Star, Zap, Brain, Atom, Shield, Rocket } from 'lucide-react';
@@ -73,86 +55,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 [selected_filters]);
 [selected_filters]);
 //Close search on outside click useEffect ( () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  const handleClickOutside = (event: MouseEvent) =>: any {
-  if () {) {
-  $2
-}
-}, []);
-//Handle filter toggle const toggle_filter = (filter_id: string) =>: any {
-  setSelectedFilters (prev => prev.includes (filter_id) ? prev.filter (id => id !== filter_id);
-}> {
-  /* Search Form */;
-}<form on_submit= {
-  handle_search;
-}className="relative"> <div className="relative"> <Search className="absolute left - 4 top - 1/2 transform -translate - y-1 / 2 text - gray - 400 w - 5 h - 5" /> <input /> {
-  /* Clear Button */;
-}{
-  query && (<button type="button" on_click= {
-  clear_search;
-}className="absolute right - 16 top - 1/2 transform -translate - y-1 / 2 text - gray - 400 hover:text - white transition - colors" > <X className="w - 4 h - 4" /> </button>);
-}{
-  /* Search Button */;
-}<button type="submit" className="absolute right - 2 top - 1/2 transform -translate - y-1 / 2 px - 4 py - 1.5 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white text - sm font - medium rounded - lg hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 focus:outline - none focus:ring - 2 focus:ring - cyan - 500 / 50" > Search </button> </div> </form> {
-  /* Search Results Dropdown */;
-
-}<AnimatePresence> {
-  show_results && (<motion.div initial= {
-  {
-
-
- //Mock search results - in real app, this would come from API const mockSearchResults: SearchResult[] = [ {;
-
-}];
-setIsSearching (true);
-//Simulate API call delay setTimeout ( () => {;
-  const filteredResults = mockSearchResults && mockSearchResults.filter (result => {;
-  const matchesQuery = result && result.name.toLowerCase () .includes (searchQuery && searchQuery.toLowerCase () ) || result && result.description.toLowerCase () .includes (searchQuery && searchQuery.toLowerCase () ) || result && result.category.toLowerCase () .includes (searchQuery && searchQuery.toLowerCase () );
-const matchesFilters = selectedFilters && selectedFilters.length === 0 || selectedFilters && selectedFilters.some (filter => result && result.category.toLowerCase () .includes (filter && filter.toLowerCase () ) || result && result.type.toLowerCase () .includes (filter && filter.toLowerCase () ) );
-setResults (sortedResults);
-setShowResults (true);
-setIsSearching (false) ;
-}, 300) ;
-}, 300);
-[selectedFilters]);
-[selectedFilters]);
-//Close search on outside click useEffect ( () => {;
-  const handleClickOutside = (event: MouseEvent) => {;
-  if (searchRef && searchRef.current && !searchRef && searchRef.current.contains (event && event.target as Node) ) {;
-
-}, []);
-//Handle filter toggle const toggleFilter = (filterId: string) => {;
-  setSelectedFilters (prev => prev && prev.includes (filterId) ? prev && prev.filter (id => id !== filterId) ;
-}> {;
-  /* Search Form */ ;
-}<formonSubmit= {
-  handleSearch 
-}className="relative"> <div className="relative"> <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" /> <input /> {;
-  /* Clear Button */ ;
-}{;
-  query && (<buttontype="button" onClick= {
-  clearSearch 
-}className="absolute right-16 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"> <X className="w-4 h-4" /> </button>) ;
-}{;
-  /* Search Button */ ;
-}<button type="submit" className="absolute right-2 top-1/2 transform -translate-y-1/2 px-4 py-1 && 1.5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-500/50" > Search </button> </div> </form> {;
-  /* Search Results Dropdown */ ;
-}<AnimatePresence> {;
-  showResults && (<motion&& motion.div initial= {
-  {
-  opacity: 0, y: -10, scale: 0 && 0.95 
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const handleClickOutside = (event: MouseEvent) => {
   if (searchRef.current && !searchRef.current.contains (event.target as Node) ) {
   
@@ -179,58 +81,14 @@ setIsSearching (false) ;
   {
   opacity: 0, y: -10, scale: 0.95 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }animate= {
   {
   opacity: 1, y: 0, scale: 1 
 
 }exit= {
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-}className="absolute top-full left-0 right-0 mt-2 bg-gray-900/95 backdrop-blur-md border border-gray-700 rounded-xl shadow-2xl z-50 max-h-96 overflow-y-auto" > {
-  /* Filters */
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }{
-  showFilters && (<div className="p-4 border-b border-gray-700"> <div className="flex items-center gap-2 mb-3"> <Filter className="w-4 h-4 text-gray-400" /> <span className="text-sm font-medium text-gray-300">Filter by Category</span> </div> <div className="flex flex-wrap gap-2"> {
-  categories.map ( (category) => (<button key= {
-  category.id
-}onClick= {
-  () => toggleFilter (category.id)
-}className= {
-  `flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-300 $ {
-  selectedFilters.includes (category.id) ? `bg-gradient-to-r $ {
-  category.color
-}text-white`: 'bg-gray-700/50 text-gray-300 hover:bg-gray-600/50'
-}`
-}> <category.icon className="w-3 h-3" /> {
-  category.name
-}</button>)
-}<div className="flex-shrink-0 pr-4"> <button onClick= {
-  () => handleSearch ()
-}disabled= {
-  isSearching |!query.trim ()
-}className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-medium hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed" > {
-  isSearching ? 'Searching...' : 'Search'
-}</button> </div> </div> {
-  /* Search Suggestions */
-}<AnimatePresence> {
-  showSuggestions && suggestions.length > 0 && (<motion.div initial= {
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-}{
-=======
-}{
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   show_filters && (<div className="p - 4 border - b border-gray-700"> <div className="flex items - center gap-2 mb-3"> <Filter className="w - 4 h - 4 text-gray-400" /> <span className="text - sm font - medium text-gray-300">Filter by Category</span> </div> <div className="flex flex-wrap gap-2"> {
   categories.map ( (category) => (<button key= {
 
@@ -268,16 +126,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }<AnimatePresence> {;
   showSuggestions && suggestions && suggestions.length > 0 && (<motion&& motion.div initial= {
 
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   opacity: 0, y: -10, scale: 0.95 
 
 }transition= {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   {
   duration: 0.2 
 
@@ -318,16 +169,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }exit= {
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 // Debounce utility function
 function debounce<T extends (...args: any[]) => any>(
   func: T
@@ -335,7 +176,6 @@ function debounce<T extends (...args: any[]) => any>(
 ): (...args: Parameters<T>) => void {
   let timeout: NodeJS.Timeout
   return (...args: Parameters<T>) => {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }className="absolute top-full left-0 right-0 mt-2 bg-gray-900 border border-gray-700 rounded-xl shadow-2xl overflow-hidden z-10"> {;
   /* Quick Actions */ ;
 }<div className="p-4 border-b border-gray-700"> <h3 className="text-sm font-medium text-gray-400 mb-3">Quick Actions</h3> <div className="grid grid-cols-2 gap-2"> {;
@@ -431,13 +271,6 @@ function debounce<T extends (...args: any[]) => any>(;
 };
 }
 export default EnhancedSearch;
-<<<<<<< HEAD
-
-=======
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
   category.id;
 }on_click= {
   () => toggle_filter (category.id);
@@ -547,7 +380,6 @@ export default EnhancedSearch;
 }</div> </div> </div>);
 }</div> </motion.div>);
 }</AnimatePresence> </div>);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 // Debounce utility function function debounce < T extends (...args: unknown[]) => any> (func: T;
 wait: number;
@@ -562,22 +394,6 @@ function debounce < T extends (...args: any[]) => any>(
     timeout = set_timeout (() => func (...args), wait);
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-}
-}
-}
-}
-}
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   opacity: 0, y: -10 
 
 }className="absolute top-full left-0 right-0 mt-2 bg-gray-900 border border-gray-700 rounded-xl shadow-2xl overflow-hidden z-10" > {
@@ -664,9 +480,4 @@ function debounce < T extends (...args: any[]) => any>(
 // Debounce utility function function debounce<T extends (...args: unknown[]) => any> (func: T;
 wait: number 
 }export default EnhancedSearch;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

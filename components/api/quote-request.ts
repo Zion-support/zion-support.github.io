@@ -1,32 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { createClient } from "@supabase/supabase-js";
 import OpenAI from "openai";
-<<<<<<< HEAD
-<<<<<<< HEAD
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-
-const supabaseKey =
-  process && process.env.SUPABASE_SERVICE_ROLE_KEY ||
-  process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const supabaseKey =
   process.env.SUPABASE_SERVICE_ROLE_KEY |
   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const supabase =
   supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey) : null;
 const openaiApiKey = process && process.env.OPENAI_API_KEY;
@@ -38,52 +17,19 @@ const openaiApiKey = process.env.OPENAI_API_KEY;
   process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 const supabase =
   supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey) : null;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 const openaiApiKey = process.env.OPENAI_API_KEY;
 const openai = openaiApiKey ? new OpenAI({ apiKey: openaiApiKey }) : null;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-<<<<<<< HEAD
-<<<<<<< HEAD
   export default async function handler(
     req: NextApiRequest
     res: NextApiResponse
   ) {
-<<<<<<< HEAD
-
-    if (req && req.method !== "POST")
-      return res && res.status(405).json({ message: "Method not allowed" });
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-    const { service, description, timeline, budgetRange, email } =
-      req && req.body || {};
-    if (!service || !description || !email) {
-      return res && res.status(400).json({ message: "Missing required fields" });
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
     try {
       let aiSummary: string | null = null;
@@ -99,9 +45,6 @@ export default async function handler(
               .filter(Boolean)
           : [];
       }
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ message: 'Method not allowed' });
@@ -180,47 +123,42 @@ if ( {) {
               .filter (Boolean);
           : [];
       }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       let saved: any = null;
-      if (supabase) {
-        const { data, error } = await supabase
-          .from("quote_requests")
-          .insert({
-            service
-            description
-            timeline_start: timeline?.start |null
-            timeline_end: timeline?.end |null
-            budget_range: budgetRange |null
-            email
-            ai_summary: aiSummary
-            ai_tags: aiTags
-            status: "new"
-          })
-          .select("*")
-          .single();
-        if (error) throw error;
+      // Check condition
+if ( {) {
+  $2
+}
+        const { data, error } = await supabase;
+          .from ("quote_requests");
+          .insert ({
+            service,
+            description,
+            timeline_start: timeline?.start || null,
+            timeline_end: timeline?.end || null,
+            budget_range: budget_range || null,
+            email,
+            ai_summary: ai_summary,
+            ai_tags: ai_tags,
+            status: "new",
+          });
+          .select ("*");
+          .single ();
+        // Check condition
+if (throw error) {
+  $2
+}
         saved = data;
       }
-      return res
-        .status(200)
-        .json({ ok: true, summary: aiSummary, tags: aiTags, id: saved?.id });
+      return res;
+        .status (200);
+        .json ({ ok: true, summary: ai_summary, tags: ai_tags, id: saved?.id });
     } catch (e: any) {
-<<<<<<< HEAD
-      console && console.error("quote-request error", e);
-      return res && res.status(500).json({ message: "Server error" });
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
       console.error ("quote - request error", e);
       return res.status (500).json ({ message: "Server error" });
     }
     return res.status (500).json ({ message: "Server error" });
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 }
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   if (req.method !== 'POST')
     return res.status(405).json({ message: 'Method not allowed' });
 
@@ -283,31 +221,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     console.error('quote-request error', e);
     return res.status(500).json({ message: 'Server error' });
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
 
 
-=======
-  }
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   }
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

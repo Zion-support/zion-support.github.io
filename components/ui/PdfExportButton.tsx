@@ -1,31 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    if (!targetRef.current) return;
-    const element = targetRef.current;
-
-    const html2pdf = (await import('html2pdf.js')).default;
-
-    const opt = {
-      margin: [10, 10, 10, 10],
-
-      filename: fileName,
-      image: { type: 'jpeg', quality: 0.98 },
-      html2canvas: { scale: 2, useCORS: true },
-      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-    } as any;
-
-    html2pdf().set(opt).from(element).save();
-  };
-
-      >
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     const opt = {
       jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -39,7 +13,7 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
- html2pdf () .set (opt) .from (element) .save () 
+ html2pdf () .set (opt) .from (element) .save () ;
 };
 export default function PdfExportButton(): any ({;
   targetRef,;
@@ -48,7 +22,7 @@ export default function PdfExportButton(): any ({;
 export type PdfExportButtonProps = {;
   targetRef: React && React.RefObject<HTMLDivElement>,;
   fileName?: string;
-  theme?: 'light' | 'dark'
+  theme?: 'light' | 'dark';
 };
     const opt = {;
       margin: [10, 10, 10, 10],;
@@ -56,20 +30,6 @@ export type PdfExportButtonProps = {;
       html2canvas: { scale: 2, useCORS: true },;
       jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },;
     } as any;
-<<<<<<< HEAD
-    html2pdf().set(opt).from(element).save();
-  }
-html2pdf () .set (opt) .from (element) .save () 
-};
-
-export default function PdfExportButton({
-  targetRef,
-  fileName = 'resume.pdf',
-}: PdfExportButtonProps) {  const onClick = async () => {
-
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   fileName = 'resume.pdf',;
 }: PdfExportButtonProps) {  const onClick = async () => {import React from 'react';
 export type PdfExportButtonProps = {
@@ -79,9 +39,6 @@ export type PdfExportButtonProps = {
 };
 
 export default function PdfExportButton({ targetRef, fileName = 'resume.pdf' }: PdfExportButtonProps) {;
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React from 'react';
 export type PdfExportButtonProps = any;
   return (
@@ -92,6 +49,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     const html2pdf = (await import('html2pdf.js')).default;
 
     const opt = {
+      margin: [10, 10, 10, 10],
+
 margin: [10, 10, 10, 10],
 origin/cursor/automate-test-improve-and-merge-code-2533
       filename: fileName,
@@ -100,25 +59,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
     } as any;
 
-<<<<<<< HEAD
     html2pdf().set(opt).from(element).save();
   };
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
 
-=======
-    html2pdf().set(opt).from(element).save()
-};
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       >
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     >
 origin/cursor/automate-test-improve-and-merge-code-2533
       Download as PDF
@@ -128,14 +74,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       Download as PDF;
     </button>;
   );
+}  return (
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
     <button
       onClick={onClick}
       className="no-print fixed right-4 top-20 z-50 inline-flex items-center gap-2 rounded-md bg-blue-600 text-white px-4 py-2 shadow hover: bg-blue-700 focus:outline-none"
       aria-label="Download as PDF"
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;
     html2pdf ().set (opt).from (element).save ();
   }
@@ -146,58 +91,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }  return (
     <button;
       on_click={on_click}
-      className="no - print fixed right - 4 top - 20 z - 50 inline - flex items - center gap - 2 rounded - md bg - blue - 600 text - white px - 4 py - 2 shadow hover: bg - blue-700 focus:outline-none";
+      className="no - print fixed right - 4 top - 20 z - 50 inline - flex items - center gap - 2 rounded - md bg - blue - 600 text - white px - 4 py - 2 shadow hover: bg - blue - 700 focus:outline - none";
       aria - label="Download as PDF";
       Download as PDF;
     </button>);
-<<<<<<< HEAD
-<<<<<<< HEAD
-    html2pdf().set(opt).from(element).save()
-  },
-
-  return (
-    <button
-      onClick={onClick}
-      aria-label="Download as PDF"
-      className=&quot;no-print fixed right-4 top-20 z-50 inline-flex items-center gap-2 rounded-md bg-blue-600 text-white px-4 py-2 shadow hover:bg-blue-700 focus:outline-none&quot;
-      aria-label=&quot;Download as PDF&quot;
-
-    >
-      Download as PDF
-    </button>
-  )
-
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-      Download as PDF
-    </button>
-
-    <button
-      onClick={onClick}
-      className="no-print fixed right-4 top-20 z-50 inline-flex items-center gap-2 rounded-md bg-blue-600 text-white px-4 py-2 shadow hover: bg-blue-700 focus:outline-none"
-      aria-label="Download as PDF"
-      Download as PDF
-    </button>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       Download as PDF
     </button>
 );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -1,63 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
-
-
-
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export const innovativeITInfrastructureServices2025 = [
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-
-<<<<<<< HEAD
-=======
-=======export const innovativeITInfrastructureServices2025 = [
   {
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
-id: 'quantum-edge-computing-orchestrator',
-    name: 'Quantum Edge Computing Orchestrator',
-    description:
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
+
 id: 'quantum-edge-computing-orchestrator',
     name: 'Quantum Edge Computing Orchestrator',
     description:
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Revolutionary edge computing platform that leverages quantum computing principles to provide ultra-fast, secure, and intelligent edge processing for IoT, autonomous systems, and real-time applications.'
       'Quantum-enhanced edge processing with 1000x speed improvement'
       'Intelligent workload distribution and optimization'
@@ -71,8 +24,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Energy-efficient quantum processing'
     pricing: {
       starter: {
-<<<<<<< HEAD
-=======
     pricing: {
       starter: {
 
@@ -110,28 +61,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     tags: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Zero Trust',
       'Quantum Security',
       'AI Security',
       'Threat Detection',
       'Network Security',
     ],
-<<<<<<< HEAD
-=======
 
     website: 'https://ziontechgroup.com / zero - trust - quantum - security - platform',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
-=======
 
       'https://ziontechgroup && ziontechgroup.com/autonomous-devops-intelligence-platform',
     market_size: '$42.3B',
@@ -156,8 +99,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     compliance: ['SOC2', 'ISO 27001', 'NIST', 'FedRAMP', 'HIPAA', 'PCI DSS'],
   },
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   {
     id: 'autonomous-devops-intelligence-platform'
     name: 'Autonomous DevOps Intelligence Platform'
@@ -197,8 +138,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         ]
       }
       enterprise: {
-<<<<<<< HEAD
-=======
         price: 1199,
         period: 'month',
         features: [;
@@ -221,14 +160,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'https://ziontechgroup.com / autonomous - devops - intelligence - platform',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
-=======
 
     market_size: '$35.8B',
     target_audience:;
@@ -252,8 +187,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     compliance: ['SOC2', 'ISO 27001', 'GDPR', 'Industry - specific regulations'],
   },
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   {
     id: 'quantum-cloud-infrastructure-platform'
     name: 'Quantum Cloud Infrastructure Platform'
@@ -293,8 +226,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         ]
       }
       enterprise: {
-<<<<<<< HEAD
-=======
         price: 2299,
         period: 'month',
         features: [;
@@ -309,28 +240,20 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     tags: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Quantum Computing',
       'Cloud Infrastructure',
       'Hybrid Computing',
       'Infrastructure Optimization',
       'Quantum Security',
     ],
-<<<<<<< HEAD
-=======
 
     website: 'https://ziontechgroup.com / quantum - cloud - infrastructure - platform',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
-=======
 
     market_size: '$65.4B',
     target_audience:;
@@ -360,8 +283,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ],
   },
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   {
     id: 'ai-powered-data-center-automation'
     name: 'AI-Powered Data Center Automation'
@@ -401,8 +322,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         ]
       }
       enterprise: {
-<<<<<<< HEAD
-=======
         price: 2999,
         period: 'month',
         features: [;
@@ -417,22 +336,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     tags: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'AI Automation',
       'Data Center',
       'Energy Optimization',
       'Predictive Maintenance',
       'Infrastructure Management',
     ],
-<<<<<<< HEAD
-=======
 
     website: 'https://ziontechgroup.com / ai - powered - data - center - automation',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -457,35 +370,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Compliance tools'
     ]
     compliance: [
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'SOC2',
       'ISO 27001',
       'Uptime Institute',
       'Energy Star',
       'Industry-specific regulations',
-<<<<<<< HEAD
-<<<<<<< HEAD
     ],;
       'SOC2'
       'ISO 27001'
@@ -495,34 +387,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ]
   },];
       'Data center operations automationEnergy efficiency optimizationPredictive maintenanceCapacity planning and optimizationCost reduction and management'
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   },];
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     id: 'quantum-edge-computing-orchestrator', name: 'Quantum Edge Computing Orchestrator',
     description: 'Revolutionary edge computing platform that leverages quantum computing principles to provide ultra-fast, secure, and intelligent edge processing for IoT, autonomous systems, and real-time applications.',
     features: [
       'Quantum-enhanced edge processing with 1000x speed improvementIntelligent workload distribution and optimizationReal-time data processing and analyticsAdvanced security with quantum encryptionAutonomous edge node managementMulti-cloud edge orchestrationAI-powered predictive maintenanceZero-latency communication protocols';
       'Scalable edge infrastructureEnergy-efficient quantum processing'
     ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-  }
-];
-=======
-      'Data center operations automationEnergy efficiency optimizationPredictive maintenanceCapacity planning and optimizationCost reduction and management'
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-    market_size: '$31.2B',
-=======
     pricing: {
       starter: { 
         price: 199, 
@@ -703,13 +574,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       email: 'kleber@ziontechgroup.com'
     },
 
-      'Data center operations automationEnergy efficiency optimizationPredictive maintenanceCapacity planning and optimizationCost reduction and management'    market_size: '$31.2B',
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
+      'Data center operations automationEnergy efficiency optimizationPredictive maintenanceCapacity planning and optimizationCost reduction and management'
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
     market_size: '$31.2B',
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     target_audience:;
       'Data center operators, cloud providers, enterprise businesses, colocation facilities',
     competitive_advantage:;
@@ -729,76 +596,28 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Compliance tools',
     ],
     compliance: [;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'SOC2',
       'ISO 27001',
       'Uptime Institute',
       'Energy Star',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-=======
-<<<<<<< HEAD
-      'Industry-specific regulations',
-    ],;
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
 
 ;
 origin/cursor/automate-test-improve-and-merge-code-20a4
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Industry-specific regulations',
     ],;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   },];
       'Data center operations automationEnergy efficiency optimizationPredictive maintenanceCapacity planning and optimizationCost reduction and management'
     ];
     integrations: ['Data center infrastructureMonitoring systemsEnergy managementSecurity platformsCompliance tools'];
     compliance: ['SOC2ISO 27001Uptime InstituteEnergy StarIndustry-specific regulations']
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-];
-
-=======
-<<<<<<< HEAD
-=======
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export const innovativeITInfrastructureServices2025 = [;
   {;
     id: 'quantum-edge-computing-orchestrator',;
@@ -1004,26 +823,7 @@ export const innovativeITInfrastructureServices2025 = [;
     ],;
     integrations: ['Data center infrastructureMonitoring systemsEnergy managementSecurity platformsCompliance tools'],;
     compliance: ['SOC2ISO 27001Uptime InstituteEnergy StarIndustry-specific regulations'];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
-];
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-  }
-=======
-=======      'SOC2',
-      'ISO 27001',
-      'Uptime Institute',
-      'Energy Star',  }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ];
       'Industry - specific regulations',
     ],
@@ -1035,35 +835,13 @@ export const innovativeITInfrastructureServices2025 = [;
   }
 ];
 ;
-];
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-    ],
-  },
-];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
 
 
   }
 ];
-
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
     ],
   },
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

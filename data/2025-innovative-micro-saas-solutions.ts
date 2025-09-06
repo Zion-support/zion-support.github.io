@@ -1,14 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export const innovativeMicroSaasSolutions2025 = [
-
   {
 
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+
 id: 'ai-powered-customer-feedback-analyzer',
     name: 'AI-Powered Customer Feedback Analyzer',
     description:
@@ -27,7 +21,6 @@ id: 'ai-powered-customer-feedback-analyzer',
 origin/cursor/automate-test-improve-and-merge-code-2533
     pricing: {
       starter: {
-<<<<<<< HEAD
         price: 49
         period: 'month'
         features: [
@@ -37,7 +30,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           'Standard reports'
         ]
       }
-=======
 
         price: 49,
         period: 'month',
@@ -49,8 +41,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         ],
       },
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       professional: {
         price: 149
         period: 'month'
@@ -82,22 +72,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Advanced reporting and analytics',
     ],
     pricing: {
-<<<<<<< HEAD
       starter: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-      'CRM systems',
-      'E-commerce platforms',
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
         price: 79,
         period: 'month',
         features: [;
@@ -426,6 +402,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     id: 'ai-powered-customer-feedback-analyzer', name: 'AI-Powered Customer Feedback Analyzer',
     description: 'Intelligent platform that automatically analyzes customer feedback from multiple channels, providing actionable insights and sentiment analysis to improve customer experience.',
     features: [
+      'Multi-channel feedback collection (email, social media, surveys, reviews)AI-powered sentiment analysis with 95.8% accuracyReal-time feedback processing and alertsAutomated insight generation and recommendationsCustomer satisfaction trend analysisCompetitor feedback monitoringCustom dashboard and reportingIntegration with CRM and support systems';
+      'Multi-language supportAPI access for custom integrations'
+
     market_size: '$22.1B',
     target_audience:;
       'E - commerce businesses, marketing agencies, SaaS companies, retail companies, service providers',
@@ -440,14 +419,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ],
     integrations: [;
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'CRM systems',
       'E - commerce platforms',
       'AI-powered demand forecasting with 92.4% accuracy'
@@ -609,115 +582,71 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Marketing ROI optimization'
     ]
     integrations: [
+      'CRM systems'
+      'E-commerce platforms'
+      'Analytics tools'
+      'Social media platforms'
+      'Marketing tools'
+    ]
+    compliance: ['CAN-SPAM', 'GDPR', 'CCPA', 'Email marketing regulations']
+  }
+];      'Email campaign automationCustomer segmentation and personalizationConversion rate optimizationSubscriber engagement improvementMarketing ROI optimization'
+    id: 'ai-powered-customer-feedback-analyzer', name: 'AI-Powered Customer Feedback Analyzer',
+    description: 'Intelligent platform that automatically analyzes customer feedback from multiple channels, providing actionable insights and sentiment analysis to improve customer experience.',
+    features: [
+      'Multi-channel feedback collection (email, social media, surveys, reviews)AI-powered sentiment analysis with 95.8% accuracyReal-time feedback processing and alertsAutomated insight generation and recommendationsCustomer satisfaction trend analysisCompetitor feedback monitoringCustom dashboard and reportingIntegration with CRM and support systems';
+      'Multi-language supportAPI access for custom integrations'
+    market_size: '$22.1B',
+    target_audience:;
+      'E - commerce businesses, marketing agencies, SaaS companies, retail companies, service providers',
+    competitive_advantage:;
+      'AI - powered personalization, optimal send time prediction, and comprehensive automation capabilities',
+    use_cases: [;
+      'Email campaign automation',
+      'Customer segmentation and personalization',
+      'Conversion rate optimization',
+      'Subscriber engagement improvement',
+      'Marketing ROI optimization',
+    ],
+    integrations: [;
+      'CRM systems',
+      'E - commerce platforms',
       'CRM systems',
       'E-commerce platforms',
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-      'CRM systems',
-      'E-commerce platforms',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
 origin/cursor/expand-services-advertise-and-build-project-c28b
       'CRM systems',
       'E-commerce platforms',
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Analytics tools',
       'Social media platforms',
       'Marketing tools',
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
-=======
 ];      'Email campaign automation_customer segmentation and personalization_conversion rate optimization_subscriber engagement improvement_marketing ROI optimization';
 
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     ];
-=======
-      starter: {    ];
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     integrations: ['CRM systems_e - commerce platforms_analytics tools_social media platforms_marketing tools'];
     compliance: ['CAN - SPAMGDPRCCPAEmail marketing regulations'];
   }
 ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     compliance: ['CAN-SPAM', 'GDPR', 'CCPA', 'Email marketing regulations'],
   },;
-=======
-
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
 
 ;
 origin/cursor/automate-test-improve-and-merge-code-20a4
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     compliance: ['CAN-SPAM', 'GDPR', 'CCPA', 'Email marketing regulations'],
-  },;    compliance: ['CAN-SPAM', 'GDPR', 'CCPA', 'Email marketing regulations'],
   },;
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 ];      'Email campaign automationCustomer segmentation and personalizationConversion rate optimizationSubscriber engagement improvementMarketing ROI optimization'
     ];
     integrations: ['CRM systemsE-commerce platformsAnalytics toolsSocial media platformsMarketing tools'];
     compliance: ['CAN-SPAMGDPRCCPAEmail marketing regulations']
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-];
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
-=======
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export const innovativeMicroSaasSolutions2025 = [;
   {;
     id: 'ai-powered-customer-feedback-analyzer',;
@@ -923,48 +852,17 @@ export const innovativeMicroSaasSolutions2025 = [;
     ],;
     integrations: ['CRM systemsE-commerce platformsAnalytics toolsSocial media platformsMarketing tools'],;
     compliance: ['CAN-SPAMGDPRCCPAEmail marketing regulations'];
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
 ];
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-
+  }
+];
 
 
   }
 ];
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-];      'Email campaign automationCustomer segmentation and personalizationConversion rate optimizationSubscriber engagement improvementMarketing ROI optimization'
-    ];
-    integrations: ['CRM systemsE-commerce platformsAnalytics toolsSocial media platformsMarketing tools'];
-    compliance: ['CAN-SPAMGDPRCCPAEmail marketing regulations']
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-    compliance: ['CAN-SPAM', 'GDPR', 'CCPA', 'Email marketing regulations'],
-  },
-];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
     compliance: ['CAN-SPAM', 'GDPR', 'CCPA', 'Email marketing regulations'],
   },
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

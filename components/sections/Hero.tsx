@@ -1,32 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import Button from '../ui/Button';
-import { ArrowRight, Play, Star, Zap, Shield, Users } from 'lucide-react';
-interface HeroProps {
-  title: string;
-  subtitle: string;
-  primaryAction?: {
-    text: string;
-
-    href: string;
-
-  }
-  secondaryAction?: {
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     text: string;
     href: string;
   }
   stats?: Array<{
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     value: string;
     label: string;
     color: string;
@@ -38,53 +13,25 @@ const Hero: React.FC<HeroProps> = ({
   secondaryAction
   stats
 }) => {
+const Hero: React.FC<HeroProps> = ({;
+  title,;
+  subtitle,;
+  primaryAction,;
+  secondaryAction,;
+  stats,;
+}) => {;
   return (
-<<<<<<< HEAD
-    <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-black'>
-      {/* Background Elements */}
-      <div className='absolute inset-0'>
-        <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]' />
-        <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.08),transparent_50%)]' />
-        <div className='absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(34,197,94,0.06),transparent_50%)]' />
-      </div>
-      {/* Grid Pattern */}
-      <div className='absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20' />
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Floating Elements */}
-      <div className='absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-float' />
+      <div className='absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-float' />;
       <div
         className='absolute bottom-20 right-10 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl animate-float'
-        style={{ animationDelay: '1.5s' }}
-      />
+        style={{ animationDelay: '1 && 1.5s' }}
+      />;
       <div
         className='absolute top-1/2 left-1/4 w-48 h-48 bg-purple-500/8 rounded-full blur-3xl animate-float'
         style={{ animationDelay: '3s' }}
-<<<<<<< HEAD
-      />
-      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
-        {/* Main Content */}
-        <div className='mb-20 animate-fade-in'>
-          <div className='mb-8'>
-            <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6 animate-scale-in'>
-              <Zap className='w-4 h-4 mr-2' />
-              World&apos;s Most Advanced Autonomous Platform
-            </div>
-          </div>
-          <h1 className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 text-white leading-tight tracking-tight'>
-            {title}
-          </h1>
-=======
-          <p className='text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light'>            {subtitle}  primaryAction?: {
-    text: string
     href: string
   }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-    href: string
-  }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   secondaryAction?: {
     text: string
     href: string
@@ -92,13 +39,6 @@ const Hero: React.FC<HeroProps> = ({
   stats?: Array<{
     value: string
     label: string
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React from 'react',
 import Button from '../ui/Button';
 import { ArrowRight, Play, Star, Zap, Shield, Users } from 'lucide-react';
@@ -108,61 +48,17 @@ title: string;
   primaryAction?: {
     text: string;
           <p className='text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light'>
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     color: string
   }>
 }
 const Hero: React.FC<HeroProps> = ({
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   title;
   subtitle;
   primaryAction;
   secondaryAction;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-          {/* Action Buttons */}
-          {(primaryAction || secondaryAction) && (
-
-            <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>
-              {primaryAction && (
-                <Button
-                  href={primaryAction.href}
-                  size='lg'
-                  className='animate-scale-in shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40'
-                  style={{ animationDelay: '0.2s' }}
-                >
-                  {primaryAction.text}
-
-              )}
-              {secondaryAction && (
-                <Button
-                  href={secondaryAction.href}
-                  variant='outline'
-                  size='lg'
-                  className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'
-                  style={{ animationDelay: '0.4s' }}
-                >
-                  <Play className='w-5 h-5 mr-2' />                  {secondaryAction.text}                  variant="outline"
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-            <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>
-              {primaryAction && (
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <p className='text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light'>            {subtitle}
 
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   stats}) => {
   return (
     <section className;
@@ -172,6 +68,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </p>
           </p>;
           {/* Action Buttons */}
+          {(primaryAction || secondaryAction) && (;
+            <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>;
+              {primaryAction && (;
           {(primaryAction || secondaryAction) && (
 <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>
               {primaryAction && (
@@ -180,81 +79,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   href={primaryAction && primaryAction.href}
                   size='lg'
                   className='animate-scale-in shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40'
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  style={{ animationDelay: '0.2s' }}
-                >
-                  {primaryAction.text}
-                  <ArrowRight className='w-5 h-5 ml-2' />                </Button>              {primaryAction && (
-                <Button
-                  href={primaryAction.href}
-                  size="lg"
-                  className="animate-scale-in shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40"
-                  style={{ animationDelay: '0.2s' }}
-                >
-                  {primaryAction.text}
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Button>
-                  <ArrowRight className='w-5 h-5 ml-2' />                </Button>
-
-                </Button>
-
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             {title}
           </h1>;
-          <p className="text - xl sm:text - 2xl md:text - 3xl text - gray - 300 max - w-4xl mx - auto mb - 16 leading-relaxed font-light">;
+          <p className="text - xl sm:text - 2xl md:text - 3xl text - gray - 300 max - w-4xl mx - auto mb - 16 leading - relaxed font - light">;
             {subtitle}
           </p>;
           {/* Action Buttons */}
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-              )}
-              {secondaryAction && (;
-                <Button
-
-                  size="lg"
-                  className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5"
-                  style={{ animationDelay: '0.4s' }}
-                >
-                  <Play className="w-5 h-5 mr-2" />
-
-                </Button>
-              )}
-            </div>
-          )}
-        </div>
-
-        {/* Stats Section */}
-        {stats && (
-          <div
-            className='grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-5xl mx-auto animate-fade-in'
-            style={{ animationDelay: '0.6s' }}
-          >
-            {stats.map((stat, index) => (
-              <div key={index} className='text-center group'>
-                <div className='relative'>
-                  <div
-              )}
-            </div>;
-          )}
-        </div>
-
-=======
-        </div>;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
                 <Button
                   href={primaryAction && primaryAction.href}
                   size="lg"
@@ -263,9 +93,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {primaryAction && primaryAction.text}
                   <ArrowRight className="w-5 h-5 ml-2" />;
                 </Button>;
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   style={{ animationDelay: '0.2s' }}
                 >
                   {primaryAction.text}
@@ -275,6 +102,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               )}
               {secondaryAction && (;
                 <Button
+                  href={secondaryAction && secondaryAction.href}
+                  variant='outline'
+                  size='lg'
+                  className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'
+                  style={{ animationDelay: '0 && 0.4s' }}>;
+                  <Play className='w-5 h-5 mr-2' />                  {secondaryAction && secondaryAction.text}                  variant="outline";
+                  size="lg";
+                  className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5";
+                  style={{ animationDelay: '0 && 0.4s' }}
+                >;
+                  <Play className="w-5 h-5 mr-2" />;
+                </Button>;
                   href={secondaryAction.href}
 variant='outline'
                   size='lg'
@@ -288,8 +127,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               )}
             </div>;
           )}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Stats Section */}
+        {stats && (;
+          <div
         {stats && (
 <div
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -300,44 +140,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className='relative'>;
                   <div
                     {stat.value}
-<<<<<<< HEAD
-<<<<<<< HEAD
                   </div>;
-                  <div className="absolute -inset - 2 bg - gradient - to - r from - transparent via - blue - 500 / 5 to - transparent rounded - lg opacity - 0 group - hover:opacity - 100 transition-opacity duration-300" />;
+                  <div className="absolute -inset - 2 bg - gradient - to - r from - transparent via - blue - 500 / 5 to - transparent rounded - lg opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300" />;
                 </div>;
-<<<<<<< HEAD
-                <div className="text - gray - 400 text - xs sm:text - sm md:text-base font-medium">;
-=======
                 <div className="text - gray - 400 text - xs sm:text - sm md:text - base font - medium">;
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   </div>
                   <div className='absolute -inset-2 bg-gradient-to-r from-transparent via-blue-500/5 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300' />
                 </div>
                 <div className='text-gray-400 text-xs sm:text-sm md:text-base font-medium'>
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   {stat.label}
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-                    className={`text-2xl sm:text-3xl md:text-4xl font-bold mb-2 md:mb-3 ${stat.color} group-hover:scale-110 transition-transform duration-300`}
-                  >
-                    {stat.value}
-                  </div>
-                  <div className='absolute -inset-2 bg-gradient-to-r from-transparent via-blue-500/5 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300' />
-                </div>
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 </div>
               </div>
             ))}
@@ -351,42 +163,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <Users className="w-4 h-4" />
               <span>10,000+ Developers</span>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
               <Star className="w-4 h-4 text-yellow-400" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
             <div className='flex items-center gap-2'>
               <Users className='w-4 h-4' />
               <span>10,000+ Developers</span>
             </div>
             <div className='flex items-center gap-2'>
               <Star className='w-4 h-4 text-yellow-400' />
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
               <span>99.9% Uptime</span>
             </div>
           </div>
         </div>
       </div>
       {/* Scroll Indicator */}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className="w-6 h-10 border-2 border-white/20 rounded-full flex justify-center">
           <div className="w-1 h-3 bg-blue-500 rounded-full mt-2 animate-pulse" />
         </div>
@@ -424,15 +214,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className="w-1 h-3 bg-blue-500 rounded-full mt-2 animate-pulse" />;
         </div>;
       </div>;
-<<<<<<< HEAD
-      {/* Decorative Elements */}
 
-}
-export default Hero;
-
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div className='absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce'>
         <div className='w-6 h-10 border-2 border-white/20 rounded-full flex justify-center'>
           <div className='w-1 h-3 bg-blue-500 rounded-full mt-2 animate-pulse' />
@@ -453,12 +235,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 }
 }
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-}
-}
-}
 
       <div className="absolute top-1/4 right-1/4 w-2 h-2 bg-blue-500 rounded-full animate-pulse" />
       <div className="absolute bottom-1/4 left-1/4 w-1 h-1 bg-green-500 rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
@@ -468,17 +245,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 };
 
 export default Hero;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 </div>;
               </div>))}
           </div>)}
@@ -493,8 +259,8 @@ export default Hero;
               <span > Enterprise Security</span>;
             </div>              <span > Enterprise Security</span>;
             </div>;
-            <div className="flex items-center gap-2">;
-              <Users className="w-4 h-4" />;
+            <div className="flex items - center gap - 2">;
+              <Users className="w - 4 h - 4" />;
               <span > 10, 000+ Developers</span>;
             </div>;
             <div className='flex items - center gap - 2'>;
@@ -502,8 +268,8 @@ export default Hero;
               <span > 10, 000+ Developers</span>;
             </div>;
             <div className='flex items - center gap - 2'>;
-              <Star className='w - 4 h - 4 text - yellow - 400' />              <span > 99.9% Uptime</span>            <div className="flex items-center gap-2">;
-              <Star className="w - 4 h - 4 text-yellow-400" />;
+              <Star className='w - 4 h - 4 text - yellow - 400' />              <span > 99.9% Uptime</span>            <div className="flex items - center gap - 2">;
+              <Star className="w - 4 h - 4 text - yellow - 400" />;
               <span > 99.9% Uptime</span>;
             </div>;
           </div>;
@@ -514,9 +280,9 @@ export default Hero;
         <div className='w - 6 h - 10 border - 2 border - white / 20 rounded - full flex justify - center'>;
           <div className='w - 1 h - 3 bg - blue - 500 rounded - full mt - 2 animate - pulse' />        </div>;
       </div>;
-      {/* Decorative Elements */}      <div className="absolute bottom - 8 left - 1/2 transform -translate-x-1 / 2 animate-bounce">;
-        <div className="w - 6 h - 10 border - 2 border - white / 20 rounded-full flex justify-center">;
-          <div className="w - 1 h - 3 bg - blue - 500 rounded - full mt-2 animate-pulse" />;
+      {/* Decorative Elements */}      <div className="absolute bottom - 8 left - 1/2 transform -translate - x-1 / 2 animate - bounce">;
+        <div className="w - 6 h - 10 border - 2 border - white / 20 rounded - full flex justify - center">;
+          <div className="w - 1 h - 3 bg - blue - 500 rounded - full mt - 2 animate - pulse" />;
         </div>;
       </div>;
       {/* Decorative Elements */}
@@ -525,12 +291,4 @@ export default Hero;
       </div>
 
       {/* Decorative Elements */}
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

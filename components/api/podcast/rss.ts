@@ -1,41 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  const siteUrl = process.env.SITE_URL || 'http://localhost:3000';
-
-  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
-  const items = episodes
-    .filter(e => e.audio?.mp3Url)
-    .map(e => {      const pubDate = new Date(e.createdAt).toUTCString();    .filter((e) => e.audio?.mp3Url)
-    .map((e) => {
-
-      const pubDate = new Date(e.createdAt).toUTCString();
-      const audioUrl = `${siteUrl}${e.audio.mp3Url}`;
-      return `
-    <item>
-      <title><![CDATA[${e.title}]]></title>
-      <description><![CDATA[${e.youtubeDescription |e.spotifyDescription |''}]]></description>
-      <link>${siteUrl}/media/podcast/${e.id}</link>
-      <guid isPermaLink="false">${e.id}</guid>
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 function ensureStorage() {
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8')
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const EPISODES_PATH = null;
   return res.status(200).json({ ok: true, path: '/podcast.xml' })
 }
@@ -46,61 +16,12 @@ const EPISODES_PATH = path.join(
   'episodes.json'
 );
 const RSS_PATH = path.join(process.cwd(), 'public', 'podcast.xml');
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 function ensureStorage() {
 
   const dir = path.dirname(EPISODES_PATH);
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  if (!fs.existsSync(EPISODES_PATH))
-    fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json');
-const RSS_PATH = path.join(process.cwd(), 'publicpodcast.xml');
-function ensureStorage() {
-  const dir = path.dirname(EPISODES_PATH);
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-  if (!fs.existsSync(EPISODES_PATH))
-    fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST');
-    return res.status(405).json({ error: 'Method not allowed' });
-  ensureStorage();
-  const siteUrl = process.env.SITE_URL |'http://localhost:3000';
-
-  const siteUrl = process.env.SITE_URL || 'http://localhost:3000';
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
-      return `
-    <item>
-
-      <title><![CDATA[${e && e.title}]]></title>
-      <description><![CDATA[${e && e.youtubeDescription || e && e.spotifyDescription || ''}]]></description>
-      <link>${siteUrl}/media/podcast/${e && e.id}</link>
-      <guid isPermaLink="false">${e && e.id}</guid>
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 if (!fs.existsSync(EPISODES_PATH))
     fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -108,12 +29,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(405).json({ error: 'Method not allowed' });
   ensureStorage();
   const siteUrl = process.env.SITE_URL |'http://localhost:3000';
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
 
   const siteUrl = process && process.env.SITE_URL || 'http://localhost:3000';
@@ -129,23 +45,19 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   ensureStorage();
   const items = episodes
     .filter(e => e.audio?.mp3Url)
+    .map(e => {      const pubDate = new Date(e.createdAt).toUTCString();    .filter((e) => e.audio?.mp3Url)
+    .map((e) => {
     .map(e => {
       const pubDate = new Date(e.createdAt).toUTCString();
       const audioUrl = `${siteUrl}${e.audio.mp3Url}`;
 origin/cursor/automate-test-improve-and-merge-code-2533
       return `
     <item>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       <pubDate>${pubDate}</pubDate>
       <enclosure url="${audioUrl}" length="0" type="audio/mpeg" />
     </item>`;
     })
     .join('\n');
-<<<<<<< HEAD
-  const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   <channel>
     <title>Zion Podcast</title>
     <link>${siteUrl}/media/podcast</link>
@@ -155,48 +67,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ${items}
   </channel>
 </rss>`;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-fs.writeFileSync(RSS_PATH, xml, 'utf8');
-  return res.status(200).json({ ok: true, path: '/podcast.xml' });
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
   fs.writeFileSync(RSS_PATH, xml, 'utf8');
 return res.status(200).json({ ok: true, path: '/podcast.xml' });
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }) .join ('\n');
 <channel> <title>Zion Podcast</title> <link>$ {
   siteUrl
 }/media/podcast</link> <language>en-us</language> <itunes:author>Zion</itunes:author> <description>Zion interviews builders, founders, and contributors.</description> $ {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  items
-}</channel> </rss>`;  return res.status(200).json({ ok: true, path: '/podcast.xml' })
 }
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-}
+
 
   fs.writeFileSync(RSS_PATH, xml, 'utf8');
   return res.status(200).json({ ok: true, path: '/podcast.xml' })
@@ -294,16 +175,6 @@ fs.writeFileSync (RSS_PATH, xml, 'utf8');
   items 
 }</channel> </rss>`;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-  items 
-}</channel> </rss>`;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
   items 
 }</channel> </rss>`;
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

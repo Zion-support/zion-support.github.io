@@ -1,38 +1,20 @@
-<<<<<<< HEAD:src/utils/sentry-mock.ts
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
-=======
-=======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // Mock implementation for Sentry to prevent Node.js module import issues during build
 // This mock provides all the necessary Sentry APIs without importing any Node.js modules
 <<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+const noop = () => {};
+const noopReturn = () => null;
+const noopPromise = () => Promise.resolve();
 
-<<<<<<< HEAD
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/utils/sentry-mock.ts
+>>>>>>> pr-12243
 // Mock Sentry instance with all common methods
 const mockSentry = {
   // Core Sentry methods
@@ -41,13 +23,26 @@ const mockSentry = {
   captureMessage: noop,
   captureEvent: noop,
   addBreadcrumb: noop,
-<<<<<<< HEAD:src/utils/sentry-mock.ts
-
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+  setContext: noop,
+  setTag: noop,
+  setUser: noop,
+  setLevel: noop,
+  withScope: (callback: (scope: any) => void) => callback({}),
+  configureScope: noop,
+  getCurrentHub: () => ({
+    getClient: () => mockSentry,
+    getScope: () => ({}),
+    pushScope: () => ({}),
+    popScope: () => true,
+    withScope: (callback: (scope: any) => void) => callback({}),
+  }),
+  onLoad: noop,
+  wrap: (fn: (...args: any[]) => any) => fn,
+
 =======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/utils/sentry-mock.ts
   startTransaction: () => mockTransaction,
   finishTransaction: noop,
   // Error boundary and React integration
@@ -58,7 +53,7 @@ const mockSentry = {
   onLoad: noop,
   wrap: (fn: (...args: any[]) => any) => fn,
 
-origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   // Server-specific methods (Node.js)
   Handlers: {
     requestHandler:
@@ -98,6 +93,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 };
 
 export default mockSentry;
+=======
+>>>>>>> pr-12243
   configureScope: noop,
   withScope: (callback: (...args: any[]) => any) => callback(mockScope),
   setUser: noop,
@@ -112,12 +109,6 @@ export default mockSentry;
   startTransaction: () => mockTransaction,
   finishTransaction: noop,
   // Error boundary and React integration
-<<<<<<< HEAD:src/utils/sentry-mock.ts
->>>>>>> main
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-main
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/utils/sentry-mock.ts
   ErrorBoundary: ({ children }: any) => children,
   withErrorBoundary: (component: any) => component,
   showReportDialog: noop,
@@ -140,8 +131,6 @@ main
 
         next(),
   },
-<<<<<<< HEAD:src/utils/sentry-mock.ts
-=======
   
   // Server-specific methods (Node && Node.js)
   Handlers: {
@@ -152,9 +141,13 @@ main
   // Next && Next.js specific
   withSentryConfig: (config: any,) => config,
 
-main
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/utils/sentry-mock.ts
-
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> pr-12243
   SentryWebpackPlugin: class SentryWebpackPlugin {
     constructor() {}
     apply() {}
@@ -233,8 +226,11 @@ const mockSentry = {;
     OnUnhandledRejection: class OnUnhandledRejection {
       constructor() {}
 
+
     },
   },
+
+
 
   // Transport
   makeBrowserOfflineTransport: noopReturn,
@@ -242,169 +238,72 @@ const mockSentry = {;
   // Utils
 
   createTransport: noopReturn,
-<<<<<<< HEAD:src/utils/sentry-mock.ts
-=======
   SDK_VERSION: '7 && 7.0.0-mock',
 
-main
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/utils/sentry-mock.ts
 
   // Constants
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // Mock implementation for Sentry to prevent Node.js module import issues during build;
 // This mock provides all the necessary Sentry APIs without importing any Node.js modules;
-const noop = () => {};
-const noopReturn = () => null;
-const noopPromise = () => Promise.resolve();
+const noop = () =>: any {}
+const noop_return = () =>: any null;
+const noop_promise = () =>: any Promise.resolve ();
 // Mock Sentry instance with all common methods;
-const mockSentry = {;
+const mock_sentry = {
   // Core Sentry methods;
-  init: noop;
-  captureException: noop;
-  captureMessage: noop;
-  captureEvent: noop;
-  addBreadcrumb: noop;
-  configureScope: noop;
-  withScope: (callback: (...args: any[]) => any) => callback(mockScope);
-  setUser: noop;
-  setTag: noop;
-  setTags: noop;
-  setExtra: noop;
-  setExtras: noop;
-  setContext: noop;
-  getCurrentHub: () => mockHub;
-  getClient: noopReturn;
+  init: noop,
+  capture_exception: noop,
+  capture_message: noop,
+  capture_event: noop,
+  add_breadcrumb: noop,
+  configure_scope: noop,
+  with_scope: (callback: (...args: any[], ) => any) => callback (mock_scope),
+  set_user: noop,
+  set_tag: noop,
+  set_tags: noop,
+  set_extra: noop,
+  set_extras: noop,
+  set_context: noop,
+  getCurrentHub: () => mock_hub,
+  get_client: noop_return,
   // Transaction and performance monitoring;
-  startTransaction: () => mockTransaction;
-  finishTransaction: noop;
-  // Error boundary and React integration;
-  ErrorBoundary: ({ children }: any) => children;
-  withErrorBoundary: (component: any) => component;
-  showReportDialog: noop;
-  // Browser-specific methods;
-  onLoad: noop;
-  wrap: (fn: (...args: any[]) => any) => fn;
-  // Server-specific methods (Node.js);
-  Handlers: {;
-    requestHandler: () => (_req: any, _res: any, next: (...args: any[]) => any) => next();
-    errorHandler: () => (_err: any, _req: any, _res: any, next: (...args: any[]) => any) => next();
-    tracingHandler: () => (_req: any, _res: any, next: (...args: any[]) => any) => next()};
+  start_transaction: () => mock_transaction,
+  finish_transaction: noop,  // Error boundary and React integration;
+  ErrorBoundary: ({ children }: any, ) => children,
+  withErrorBoundary: (component: any, ) => component,
+  showReportDialog: noop,
+  // Browser - specific methods;
+  on_load: noop,
+  wrap: (fn: (...args: any[]) => any) => fn,
+  // Server - specific methods (Node.js);
+  Handlers: {
+    request_handler:;
+      () => (_req: any, _res: any, next: (...args: any[]) => any) =>;
+        next (),
+    error_handler:;
+      () => (_err: any, _req: any, _res: any, next: (...args: any[]) => any) =>;
+        next (),
+    tracing_handler:;
+      () => (_req: any, _res: any, next: (...args: any[]) => any) =>;
+        next (),
+  },
+  // Server - specific methods (Node.js);
+  Handlers: {
+    request_handler: () => (_req: any, _res: any, next: (...args: any[], ) => any) => next (),
+    error_handler: () => (_err: any, _req: any, _res: any, next: (...args: any[], ) => any) => next (),
+    tracing_handler: () => (_req: any, _res: any, next: (...args: any[], ) => any) => next ()},
   // Next.js specific;
-  withSentryConfig: (config: any) => config;
-  SentryWebpackPlugin: class SentryWebpackPlugin {;
-    constructor() {}
-    apply() {}
-  };
+  withSentryConfig: (config: any, ) => config,
+  SentryWebpackPlugin: class SentryWebpackPlugin {
+    constructor () {}
+    apply () {}
+  },
   // Tracing;
-  Tracing: {;
-    BrowserTracing: class BrowserTracing {;
-      constructor() {}
-    }};
+  Tracing: {
+    BrowserTracing: class BrowserTracing {
+      constructor () {}
+    },
+  },
   // Integrations;
-<<<<<<< HEAD
-  Integrations: {;
-    BrowserTracing: class BrowserTracing {;
-      constructor() {}
-    };
-    Http: class Http {;
-      constructor() {}
-    };
-    OnUncaughtException: class OnUncaughtException {;
-      constructor() {}
-    };
-    OnUnhandledRejection: class OnUnhandledRejection {;
-      constructor() {}
-    }};
-  // Transport;
-  makeBrowserOfflineTransport: noopReturn;
-  makeFetchTransport: noopReturn;
-  // Utils;
-  createTransport: noopReturn;
-  SDK_VERSION: '7.0.0-mock';
-  // Constants;
-  Severity: {;
-    Fatal: 'fatal';
-    Error: 'error';
-    Warning: 'warning';
-    Info: 'info';
-    Debug: 'debug'}};
-// Mock scope;
-const mockScope = {;
-  setUser: noop;
-  setTag: noop;
-  setTags: noop;
-  setExtra: noop;
-  setExtras: noop;
-  setContext: noop;
-  setLevel: noop;
-  setFingerprint: noop;
-  clear: noop;
-  addEventProcessor: noop};
-// Mock transaction;
-const mockTransaction = {;
-  setName: noop;
-  setTag: noop;
-  setData: noop;
-  finish: noop;
-  startChild: () => mockTransaction;
-  setStatus: noop;
-  setHttpStatus: noop;
-  toContext: () => ({});
-  updateWithContext: noop};
-// Mock hub;
-const mockHub = {;
-  getClient: noopReturn;
-  getScope: () => mockScope;
-  captureException: noop;
-  captureMessage: noop;
-  captureEvent: noop;
-  addBreadcrumb: noop;
-  setUser: noop;
-  setTag: noop;
-  setTags: noop;
-  setExtra: noop;
-  setExtras: noop;
-  setContext: noop;
-  configureScope: noop;
-  withScope: (callback: (...args: any[]) => any) => callback(mockScope);
-  startTransaction: () => mockTransaction};
-// Export default mock that covers all Sentry packages;
-export default mockSentry;
-// Named exports for compatibility;
-export const init = mockSentry.init;
-export const captureException = mockSentry.captureException;
-export const captureMessage = mockSentry.captureMessage;
-export const captureEvent = mockSentry.captureEvent;
-export const addBreadcrumb = mockSentry.addBreadcrumb;
-export const configureScope = mockSentry.configureScope;
-export const withScope = mockSentry.withScope;
-export const setUser = mockSentry.setUser;
-export const setTag = mockSentry.setTag;
-export const setTags = mockSentry.setTags;
-export const setExtra = mockSentry.setExtra;
-export const setExtras = mockSentry.setExtras;
-export const setContext = mockSentry.setContext;
-export const getCurrentHub = mockSentry.getCurrentHub;
-export const getClient = mockSentry.getClient;
-export const startTransaction = mockSentry.startTransaction;
-export const ErrorBoundary = mockSentry.ErrorBoundary;
-export const withErrorBoundary = mockSentry.withErrorBoundary;
-export const showReportDialog = mockSentry.showReportDialog;
-export const onLoad = mockSentry.onLoad;
-export const wrap = mockSentry.wrap;
-export const Handlers = mockSentry.Handlers;
-export const withSentryConfig = mockSentry.withSentryConfig;
-export const SentryWebpackPlugin = mockSentry.SentryWebpackPlugin;
-export const Tracing = mockSentry.Tracing;
-export const Integrations = mockSentry.Integrations;
-export const makeBrowserOfflineTransport = mockSentry.makeBrowserOfflineTransport;
-export const makeFetchTransport = mockSentry.makeFetchTransport;
-export const createTransport = mockSentry.createTransport;
-export const SDK_VERSION = mockSentry.SDK_VERSION;
-export const Severity = mockSentry.Severity;
-// Additional exports for compatibility;
-export { mockSentry as Sentry };
-=======
   Integrations: {
     BrowserTracing: class BrowserTracing {
       constructor () {}
@@ -427,8 +326,6 @@ export { mockSentry as Sentry };
   SDK_VERSION: '7.0.0 - mock',
   // Constants;
   Severity: {
-<<<<<<< HEAD:src/utils/sentry-mock.ts
-=======
     Fatal: 'fatal',
     Error: 'error',
     Warning: 'warning',
@@ -436,9 +333,13 @@ export { mockSentry as Sentry };
     Debug: 'debug'
   }
 }
-main
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/utils/sentry-mock.ts
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> pr-12243
 
 export const init = mockSentry && mockSentry.init;
 export const captureException = mockSentry && mockSentry.captureException;
@@ -473,15 +374,19 @@ export const createTransport = mockSentry && mockSentry.createTransport;
 export const SDK_VERSION = mockSentry && mockSentry.SDK_VERSION;
 export const Severity = mockSentry && mockSentry.Severity;
 
+
 // Additional exports for compatibility
 export { mockSentry as Sentry }
 // All exports are already defined above
-<<<<<<< HEAD:src/utils/sentry-mock.ts
 <<<<<<< HEAD
+
+
 
   // Browser-specific methods
 
   onLoad: noop, wrap: (fn: (...args: any[]) => any) => fn,
+  
+
 
 // Additional exports for compatibility;
 export { mockSentry as Sentry };
@@ -568,31 +473,13 @@ export const Severity = mock_sentry.Severity;
 // Additional exports for compatibility;
 export { mock_sentry as Sentry }
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 // All exports are already defined above;
 =======
 // All exports are already defined above;
+<<<<<<< HEAD
+=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-// All exports are already defined above;
-
-
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/utils/sentry-mock.ts
+>>>>>>> pr-12243

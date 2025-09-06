@@ -1,45 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface InnovativeITService {
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-  id: string;
-=======
 id: string;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   name: string;
   tagline: string;
   price: string;
-  period: string,
+  period: string;
   description: string;
   features: string[];
   popular: boolean;
   icon: string;
   color: string;
-<<<<<<< HEAD
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
   text_color: string;
   link: string;
   market_position: string;
@@ -60,12 +29,10 @@ id: string;
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
 
     website: string;
   }
   {
-=======
 
 
   {
@@ -80,8 +47,6 @@ id: string;
     features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Distributed edge nodes',
       'Real - time data processing',
       'Low - latency computing',
@@ -94,14 +59,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       '5G optimization',
     ],
     popular: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
     icon: '🌐',
-<<<<<<< HEAD
-=======
-=======
-    icon: '🌐',
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     color: 'from - blue - 500 to - cyan - 600',
     text_color: 'text - blue - 400',
@@ -116,12 +74,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     real_service: true,
     technology: [;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Edge Computing',
       'IoT',
       '5G',
@@ -132,11 +85,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Python',
       'AWS',
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     integrations: [;
       'AWS IoT',
@@ -521,105 +469,12 @@ export const innovativeITServices: InnovativeITService[] = [
     competitors: ['Palo Alto NetworksCrowdStrikeZscalerOktaCyberArk'], marketSize: '$45B cybersecurity market',
     growthRate: '110% annual growth', variant: 'cyberpunk',
     contactInfo: {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
-<<<<<<< HEAD
-    reviews: 1250
-  }
-];
-export interface InnovativeITService {;
-  id: string,;
-  name: string,;
-  tagline: string,;
-  price: string,;
-  period: string,;
-  description: string,;
-  features: string[],;
-  popular: boolean,;
-  icon: string,;
-  color: string,;
-  textColor: string,;
-  link: string,;
-  marketPosition: string,;
-  targetAudience: string,;
-  trialDays: number,;
-  setupTime: string,;
-  category: string,;
-  realService: boolean,;
-  technology: string[],;
-  integrations: string[],;
-  useCases: string[],;
-  roi: string,;
-  competitors: string[],;
-  marketSize: string,;
-  growthRate: string,;
-  variant: string,;
-  contactInfo: {;
-    mobile: string,;
-    email: string,;
-    address: string,;
-    website: string;
-  },;
-  realImplementation: boolean,;
-  implementationDetails: string,;
-  launchDate: string,;
-  customers: number,;
-  rating: number,;
-  reviews: number;
-}
-;
-export const innovativeITServices: InnovativeITService[] = [;
-  {;
-    id: 'zero-trust-security-platform',;
-    name: 'Zero Trust Security Platform',;
-    tagline: 'Next-generation cybersecurity with zero trust architecture',;
-    price: '$599',;
-    period: '/month',;
-    description: 'Comprehensive zero trust security platform that provides continuous verification, micro-segmentation, and advanced threat detection for modern enterprises.',;
-    features: [;
-      'Continuous identity verificationMicro-segmentationAdvanced threat detectionBehavioral analyticsAPI securityCloud workload protectionNetwork segmentationPrivileged access management',;
-      'Compliance reportingReal-time monitoring';
-    ],;
-    popular: true,;
-    icon: '🔒',;
-    color: 'from-red-500 to-pink-600',;
-    textColor: 'text-red-400',;
-    link: 'https://ziontechgroup.com/zero-trust-security-platform',;
-    marketPosition: 'Competitive with Palo Alto Networks ($50,000+), CrowdStrike ($8.99-15.99), and Zscaler ($5-25). Our advantage: Modern architecture, better pricing, and comprehensive coverage.',;
-    targetAudience: 'Enterprise companies, Financial institutions, Healthcare organizations, Government agencies, Technology companies, Critical infrastructure',;
-    trialDays: 30,;
-    setupTime: '2 hours',;
-    category: 'IT & Cybersecurity',;
-    realService: true,;
-    technology: ['Zero Trust ArchitectureMachine LearningAIKubernetesDockerReactNode.jsAWS'],;
-    integrations: ['Active DirectoryOktaAzure ADSlackTeamsJiraServiceNowSplunk'],;
-    useCases: ['Enterprise securityCloud securityNetwork protectionIdentity managementComplianceThreat detection'],;
-    roi: 'Average customer sees 400% ROI within 12 months through reduced security incidents and compliance costs.',;
-    competitors: ['Palo Alto NetworksCrowdStrikeZscalerOktaCyberArk'],;
-    marketSize: '$45B cybersecurity market',;
-    growthRate: '110% annual growth',;
-    variant: 'cyberpunk',;
-    contactInfo: {;
-      mobile: '+1 302 464 0950',;
-      email: 'kleber@ziontechgroup.com',;
-      address: '364 E Main St STE 1008 Middletown DE 19709',;
       website: 'https://ziontechgroup.com';
     }
-
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-      website: 'https://ziontechgroup.com';
-    }
-<<<<<<< HEAD
     real_implementation: true,
     implementation_details: 'Complete DevOps automation platform with CI / CD, infrastructure management, and comprehensive monitoring capabilities.';
     launch_date: '2024 - 01 - 20';
@@ -629,9 +484,6 @@ export const innovativeITServices: InnovativeITService[] = [;
 
   }
 
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 export interface InnovativeITService {;
 
@@ -640,17 +492,8 @@ export interface InnovativeITService {;
 ];
 origin/cursor/integrate-build-improve-and-re-verify-2156
 ;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     realImplementation: true
-=======
-    icon: '🌐',    realImplementation: true
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     implementationDetails:
       'Enterprise-grade zero trust platform with advanced AI, real-time monitoring, and comprehensive security controls.'
     launchDate: '2024-01-01'
@@ -856,33 +699,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     }
     realImplementation: true
     implementationDetails:
-<<<<<<< HEAD
       'Complete DevOps automation platform with CI/CD, infrastructure management, and comprehensive monitoring capabilities.'
     launchDate: '2024-01-20'
     customers: 2500
     rating: 4.7
     reviews: 1250
-<<<<<<< HEAD
   }
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Complete DevOps automation platform with CI/CD, infrastructure management, and comprehensive monitoring capabilities.',
     launchDate: '2024-01-20',
     customers: 2500,
     rating: 4.7,
     reviews: 1250,
   },;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 ];      mobile: '+1 302 464 0950';
-=======
-  }];      mobile: '+1 302 464 0950';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
@@ -894,35 +723,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.7
 
     reviews: 1250
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
   }
 ];
-=======
 export interface InnovativeITService {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-export interface InnovativeITService {;
-
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   id: string,;
-=======
-  }
-];  id: string,;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   name: string,;
   tagline: string,;
   price: string,;
-  period: string,,
+  period: string,;
   description: string,;
   features: string[],;
   popular: boolean,;
@@ -964,8 +773,8 @@ export const innovativeITServices: InnovativeITService[] = [;
     name: 'Zero Trust Security Platform',;
     tagline: 'Next-generation cybersecurity with zero trust architecture',;
     price: '$599',;
-    period: '/month',,
-  description: 'Comprehensive zero trust security platform that provides continuous verification, micro-segmentation, and advanced threat detection for modern enterprises.',;
+    period: '/month',;
+    description: 'Comprehensive zero trust security platform that provides continuous verification, micro-segmentation, and advanced threat detection for modern enterprises.',;
     features: [;
       'Continuous identity verificationMicro-segmentationAdvanced threat detectionBehavioral analyticsAPI securityCloud workload protectionNetwork segmentationPrivileged access management',;
       'Compliance reportingReal-time monitoring';
@@ -993,14 +802,6 @@ export const innovativeITServices: InnovativeITService[] = [;
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
-<<<<<<< HEAD
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-  }
-];
-=======
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true,
@@ -1009,30 +810,12 @@ export const innovativeITServices: InnovativeITService[] = [;
     customers: 2500;
     rating: 4.7,
     reviews: 1250;
-<<<<<<< HEAD
 
   }
-;  }
-];
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
-=======
-
-
+;
   }
 ];
-
-
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -1218,9 +1001,4 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 1250
   }
 ];
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

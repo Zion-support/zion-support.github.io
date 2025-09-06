@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React from 'react';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 };
 export default function FilterBar(): any ({;
   category,;
@@ -19,11 +5,6 @@ export default function FilterBar(): any ({;
   isFree,;
   onChange,;
 }: Props) {;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 
 type Props = {
@@ -38,114 +19,47 @@ export default function FilterBar({
   isFree
   onChange
 }: Props) {
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   return (
       <select
         className='border rounded px-3 py-2 bg-white dark:bg-black'
         value={category}
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-import React from 'react';
-type Props = {
-  category: string,
-  level: string,
-  isFree: string,
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
         onChange={e => onChange({ category: e.target.value, level, isFree })}
       >
         <option value=''>All Categories</option>        <option>AI Development</option>type Props = {
   category: string
   level: string
   isFree: string
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+pr-12243
   onChange: (next: { category: string, level: string, isFree: string }) => void
 }
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         onChange={e => onChange({ category: e && e.target.value, level, isFree })}
       >;
         <option value=''>All Categories</option>        <option>AI Development</option>type Props = {;
   category: string,;
   level: string,;
   isFree: string,;
-  onChange: (next: { category: string, level: string, isFree: string }) => void
+  onChange: (next: { category: string, level: string, isFree: string }) => void;
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function FilterBar(): any ({ category, level, isFree, onChange }: Props) {;
   return (
     <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">;
       <select
         className="border rounded px-3 py-2 bg-white dark:bg-black"
         value={category}
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+pr-12243
 export default function FilterBar(): any ({ category, level, isFree, onChange }: Props) {;
   return (
     <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">;
 import React from 'react';
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  onChange: (next: { category: string, level: string, isFree: string }) => void
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 type Props = any;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+pr-12243
 type Props = {
   category: string;
   level: string;
@@ -165,21 +79,17 @@ export default function FilterBar({
         value={category}
         onChange={e => onChange({ category: e.target.value, level, isFree })}
       >
-<<<<<<< HEAD
-<<<<<<< HEAD
         <option value=''>All Categories</option>        <option>AI Development</option>type Props = {
-=======
         onChange={e => onChange({ category: e && e.target.value, level, isFree })}
       >;
         <option value=''>All Categories</option>        <option>AI Development</option>type Props = {;
   category: string,;
   level: string,;
   isFree: string,;
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-
   onChange: (next: { category: string, level: string, isFree: string }) => void;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 };
+
+
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -202,10 +112,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         value={category}
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         onChange={(e) => onChange({ category: e.target.value, level, isFree })}
       >
         <option value="">All Categories</option>
@@ -236,27 +142,14 @@ className='border rounded px-3 py-2 bg-white dark:bg-black'
     </div>;
     </div>
   );
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+pr-12243
 
 
   );
 
-<<<<<<< HEAD
-=======
   );
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
-  );
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+pr-12243
   is_free: string;
   on_change: (next: { category: string; level: string; is_free: string }) => void;
 }
@@ -298,44 +191,7 @@ function FilterBar() {
       </select>;
       <select;
         className='border rounded px - 3 py - 2 bg - white dark:bg - black';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         value={level}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        on_change={e => on_change ({ category, level: e.target.value, is_free })}
-      >;
-        <option value=''>All Levels</option>        <option > Beginner</option>        value={level}
-        on_change={(e) => on_change ({ category, level: e.target.value, is_free })}
-      >;
-        <option value="">All Levels</option>;
-        <option > Beginner</option>;
-        <option > Intermediate</option>;
-        <option > Advanced</option>;
-      </select>;
-      <select;
-        className='border rounded px - 3 py - 2 bg - white dark:bg - black';
-        value={is_free}
-        on_change={e => on_change ({ category, level, is_free: e.target.value })}
-      >;
-        <option value=''>All Pricing</option>;
-        <option value='true'>Free</option>;
-        <option value='false'>Paid</option>;
-      </select>;
-    </div>);        value={is_free}
-        on_change={(e) => on_change ({ category, level, is_free: e.target.value })}
-      >;
-        <option value="">All Pricing</option>;
-        <option value="true">Free</option>;
-        <option value="false">Paid</option>;
-      </select>;
-    </div>);
-}
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-
-=======
-
 
 }
 
@@ -345,7 +201,6 @@ function FilterBar() {
 }
 
 }
-
         onChange={e => onChange({ category, level: e.target.value, isFree })}
       >
         <option value=''>All Levels</option>        <option>Beginner</option>        value={level}
@@ -375,36 +230,8 @@ function FilterBar() {
         <option value="false">Paid</option>
       </select>
     </div>
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   );
-<<<<<<< HEAD
 }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
-}
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+pr-12243

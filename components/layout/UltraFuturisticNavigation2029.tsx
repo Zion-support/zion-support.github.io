@@ -1,15 +1,5 @@
-<<<<<<< HEAD
-
-=======
-import React, { useState, useEffect } from 'react',
-import React, { useState, useEffect } from 'react';
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import {
   Menu
@@ -68,45 +58,7 @@ import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
   Microscope, DollarSign, Home, Briefcase
 
-<<<<<<< HEAD
-=======
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useState, useEffect } from 'react';
-import Link from 'next / link';
-import { motion, AnimatePresence } from 'framer-motion';
-
-=======
 import {
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-import {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   Menu,
   X,
   ChevronDown,
@@ -163,54 +115,21 @@ import {
   Menu, X, ChevronDown, Phone, Mail, MapPin, 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Microscope, DollarSign, Home, Briefcase, ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-import { Menu, X, ChevronDown, Phone, Mail, MapPin;
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
-  Microscope, DollarSign, Home, Briefcase;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 import { Menu, X, ChevronDown, Phone, Mail, MapPin;
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
   Microscope, DollarSign, Home, Briefcase;
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   BookOpen, MessageCircle, Star, TrendingUp, Target;
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
   Palette, Camera, Video, Music, Gamepad2, Heart;
   Leaf, Sun, Moon, Wind, Droplets, Mountain;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  Code, Wrench, Smartphone, BarChart3, Eye, Timer
-
-const serviceCategories = [
-  {
-    title: '🧠 2029 AI Consciousness & Innovation'
-    icon: Brain
-    color: 'from-purple-600 to-pink-600'
-    description: 'Beyond human consciousness simulation'
-    services: [
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     services: [;
       {
         name: 'Mars Colonization Automation Platform',
         href: '/mars - colonization - automation - platform',
         description: 'Automate Mars colonization process',
         price: '$99, 999 / month',
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   Code, Wrench, Smartphone, BarChart3, Eye, Timer
  } from 'lucide-react';
 const contactInfo = null;
@@ -235,8 +154,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         price: '$75, 999 / month',
       },
       {
-<<<<<<< HEAD
-<<<<<<< HEAD
       },
     ],
   },  {      { name: 'Mars Colonization Automation Platform', href: '/mars - colonization - automation - platform', description: 'Automate Mars colonization process', price: '$99, 999 / month' }
@@ -253,23 +170,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     icon: Layers,
     color: 'from - orange - 600 to - red - 600',
     description: 'Decentralized and blockchain solutions',
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-const mainNavItems = [
-  { name: 'Home', href: '/', icon: Home }
-  { name: 'Services', href: '/services', icon: Briefcase }
-  { name: 'Solutions', href: '/solutions', icon: Target }
-  { name: 'Pricing', href: '/pricing', icon: DollarSign }
-  { name: 'Resources', href: '/resources', icon: BookOpen }
-  { name: 'News', href: '/news', icon: TrendingUp }
-  { name: 'Support', href: '/support', icon: MessageCircle }
-=======
-  { name: 'Contact', href: '/contact', icon: Phone },];  { name: 'Contact', href: '/contact', icon: Phone }
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
         name: 'AI Reality Augmentation Platform',
         href: '/ai-reality-augmentation-platform',
         description: 'Real-time AI reality enhancement',
@@ -529,32 +429,26 @@ const mainNavItems = [
   { name: 'News', href: '/news', icon: TrendingUp },
   { name: 'Support', href: '/support', icon: MessageCircle },
 { name: 'Contact', href: '/contact', icon: Phone },
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ];
-<<<<<<< HEAD
-export default function UltraFuturisticNavigation2029() {
-
-export default function UltraFuturisticNavigation2029() {;
-=======
 
 const mainNavItems = [
     services: [;
       {;
         name: 'AI Personalized Medicine Platform',;
-        href: '/ai-personalized-medicine-platform',,
-  description: 'AI-powered personalized treatment',;
+        href: '/ai-personalized-medicine-platform',;
+        description: 'AI-powered personalized treatment',;
         price: '$8,999/month',;
       },;
       {;
         name: 'AI Healthcare Diagnosis Platform',;
-        href: '/ai-healthcare-diagnosis-platform',,
-  description: 'Revolutionary medical diagnosis',;
+        href: '/ai-healthcare-diagnosis-platform',;
+        description: 'Revolutionary medical diagnosis',;
         price: '$3,999/month',;
       },;
       {;
         name: 'Biotech Research Automation',;
-        href: '/biotech-research-automation',,
-  description: 'Automated biotechnology research',;
+        href: '/biotech-research-automation',;
+        description: 'Automated biotechnology research',;
         price: '$4,999/month',;
       },;
     ],;
@@ -565,29 +459,29 @@ const mainNavItems = [
     description: 'Advanced healthcare solutions',
       { name: 'AI Healthcare Diagnosis Platform', href: '/ai-healthcare-diagnosis-platform', description: 'Revolutionary medical diagnosis', price: '$3,999/month' };
       { name: 'Biotech Research Automation', href: '/biotech-research-automation', description: 'Automated biotechnology research', price: '$4,999/month' }
-    ]
-};
+    ];
+  };
     title: '🏙️ Smart City & Infrastructure',;
     icon: Building,;
-    color: 'from-slate-600 to-gray-600',,
-  description: 'Intelligent urban management',;
+    color: 'from-slate-600 to-gray-600',;
+    description: 'Intelligent urban management',;
     services: [;
       {;
         name: 'AI Smart City Orchestrator',;
-        href: '/ai-smart-city-orchestrator',,
-  description: 'Comprehensive city infrastructure AI',;
+        href: '/ai-smart-city-orchestrator',;
+        description: 'Comprehensive city infrastructure AI',;
         price: '$12,999/month',;
       },;
       {;
         name: 'Smart Traffic Management',;
-        href: '/smart-traffic-management',,
-  description: 'AI-powered traffic optimization',;
+        href: '/smart-traffic-management',;
+        description: 'AI-powered traffic optimization',;
         price: '$3,999/month',;
       },;
       {;
         name: 'Energy Grid Optimization',;
-        href: '/energy-grid-optimization',,
-  description: 'Smart energy management',;
+        href: '/energy-grid-optimization',;
+        description: 'Smart energy management',;
         price: '$5,999/month',;
       },;
     ],;
@@ -598,29 +492,29 @@ const mainNavItems = [
     description: 'Intelligent urban management',
       { name: 'Smart Traffic Management', href: '/smart-traffic-management', description: 'AI-powered traffic optimization', price: '$3,999/month' };
       { name: 'Energy Grid Optimization', href: '/energy-grid-optimization', description: 'Smart energy management', price: '$5,999/month' }
-    ]
-};
+    ];
+  };
     title: '🔬 Research & Development',;
     icon: Microscope,;
-    color: 'from-blue-600 to-indigo-600',,
-  description: 'Advanced research tools and platforms',;
+    color: 'from-blue-600 to-indigo-600',;
+    description: 'Advanced research tools and platforms',;
     services: [;
       {;
         name: 'AI Research Assistant',;
-        href: '/ai-research-assistant',,
-  description: 'AI-powered research acceleration',;
+        href: '/ai-research-assistant',;
+        description: 'AI-powered research acceleration',;
         price: '$1,999/month',;
       },;
       {;
         name: 'Data Analysis Platform',;
-        href: '/data-analysis-platform',,
-  description: 'Advanced data analytics',;
+        href: '/data-analysis-platform',;
+        description: 'Advanced data analytics',;
         price: '$2,499/month',;
       },;
       {;
         name: 'Research Collaboration Hub',;
-        href: '/research-collaboration-hub',,
-  description: 'Global research collaboration',;
+        href: '/research-collaboration-hub',;
+        description: 'Global research collaboration',;
         price: '$1,799/month',;
       },;
     ],;
@@ -631,29 +525,29 @@ const mainNavItems = [
     description: 'Advanced research tools and platforms',
       { name: 'Data Analysis Platform', href: '/data-analysis-platform', description: 'Advanced data analytics', price: '$2,499/month' };
       { name: 'Research Collaboration Hub', href: '/research-collaboration-hub', description: 'Global research collaboration', price: '$1,799/month' }
-    ]
-};
+    ];
+  };
     title: '💼 Enterprise & Business Solutions',;
     icon: Briefcase,;
-    color: 'from-emerald-600 to-blue-600',,
-  description: 'Corporate and business automation',;
+    color: 'from-emerald-600 to-blue-600',;
+    description: 'Corporate and business automation',;
     services: [;
       {;
         name: 'Enterprise AI Operations Center',;
-        href: '/enterprise-ai-operations-center',,
-  description: 'Centralized AI operations',;
+        href: '/enterprise-ai-operations-center',;
+        description: 'Centralized AI operations',;
         price: '$15,999/month',;
       },;
       {;
         name: 'Business Process Automation',;
-        href: '/business-process-automation',,
-  description: 'End-to-end process automation',;
+        href: '/business-process-automation',;
+        description: 'End-to-end process automation',;
         price: '$4,999/month',;
       },;
       {;
         name: 'Corporate Intelligence Platform',;
-        href: '/corporate-intelligence-platform',,
-  description: 'AI-powered business intelligence',;
+        href: '/corporate-intelligence-platform',;
+        description: 'AI-powered business intelligence',;
         price: '$7,999/month',;
       },;
     ],;
@@ -673,20 +567,12 @@ const mainNavItems = [
   { name: 'Resources', href: '/resources', icon: BookOpen },
   { name: 'News', href: '/news', icon: TrendingUp },
   { name: 'Support', href: '/support', icon: MessageCircle },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const mainNavItems = [;
   { name: 'Home', href: '/', icon: Home },;
   { name: 'Services', href: '/services', icon: Briefcase },;
@@ -695,33 +581,26 @@ const mainNavItems = [;
   { name: 'Resources', href: '/resources', icon: BookOpen },;
   { name: 'News', href: '/news', icon: TrendingUp },;
   { name: 'Support', href: '/support', icon: MessageCircle },;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   { name: 'Contact', href: '/contact', icon: Phone },];  { name: 'Contact', href: '/contact', icon: Phone }
 ];
 ];
 
-<<<<<<< HEAD
-=======
 export default function UltraFuturisticNavigation2029() {;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {;
     const handleScroll = () => {;
-      setScrolled(window && window.scrollY > 50)
-};
+      setScrolled(window && window.scrollY > 50);
+    };
     window && window.addEventListener('scroll', handleScroll);
-    return () => window && window.removeEventListener('scroll', handleScroll);  }, []);      setScrolled(window && window.scrollY > 50)
-};
+    return () => window && window.removeEventListener('scroll', handleScroll);  }, []);      setScrolled(window && window.scrollY > 50);
+    };
     window && window.addEventListener('scroll', handleScroll);
     return () => window && window.removeEventListener('scroll', handleScroll);
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
 
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 setScrolled(window.scrollY > 50);
     };
     window.addEventListener('scroll', handleScroll);
@@ -734,12 +613,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <>;
       {/* Top Contact Bar */}
-<<<<<<< HEAD
-=======
-      <div className='bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white text-sm py-2 px-4'>
-=======
 <div className='bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white text-sm py-2 px-4'>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <div className='max-w-7xl mx-auto flex flex-wrap items-center justify-between'>
           <div className='flex items-center space-x-6'>
             <a
@@ -747,13 +621,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               className='flex items-center space-x-2 hover:text-cyan-300 transition-colors'
             >
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <Phone size={14} />
               <span>{contactInfo.mobile}</span>
             </a>
@@ -764,12 +631,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               href={`tel:${contactInfo.mobile}`}
               className='flex items-center space-x-2 hover:text-cyan-300 transition-colors'
             >
-<<<<<<< HEAD
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <Phone size={14} />
               <span>{contactInfo.mobile}</span>
             </a>
@@ -785,55 +646,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <span>{contactInfo.address}</span>
             </div>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <div className='flex items-center space-x-4'>
-            <a
-              href={contactInfo.website}
-              className='hover:text-cyan-300 transition-colors'
-            >              {contactInfo.website.replace('https://', '')}          <div className="flex items-center space-x-4">
-            <a href={contactInfo.website} className="hover:text-cyan-300 transition-colors">
-              {contactInfo.website.replace('https://', '')}
-
-              {contactInfo.website.replace('https://', '')}
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div className='flex items-center space-x-4'>
             <a
               href={contactInfo.website}
               className='hover:text-cyan-300 transition-colors'
             >
               {contactInfo.website.replace('https://', '')}
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
             </a>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               className="flex items-center space-x-3"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             >
               <div className="relative">
                 <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center">
@@ -844,9 +670,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className="flex flex-col">
                 <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
                   Zion Tech Group
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       {/* Main Navigation */}
 <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -879,8 +702,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </span>
               </div>
             </motion.div>
-<<<<<<< HEAD
-<<<<<<< HEAD
               className='flex items-center space-x-3'>;
               <div className='relative'>;
                 <div className='w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center'>;
@@ -896,33 +717,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   2029 Innovation Hub;
                 </span>              </div>;
             </motion && motion.div>;
-<<<<<<< HEAD
-            {/* Desktop Navigation */}
-
-                <Link
-                  key={item.name}
-                  href={item.href}
-className="group relative text-gray-300 hover:text-white transition-colors duration-200"
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 >
                   <div className="flex items-center space-x-2">
                     <item.icon size={16} className="group-hover:text-cyan-400 transition-colors" />
                     <span>{item.name}</span>
                   </div>
                   <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 group-hover:w-full"></div>
-<<<<<<< HEAD
-=======
-                </Link>
-
-              ))}
-              {/* Services Dropdown */}
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <div className='relative group'>
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
             {/* Desktop Navigation */}
 <div className='hidden lg:flex items-center space-x-8'>
               {mainNavItems.map(item => (
@@ -955,86 +756,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   />
                 </button>
                 {/* Mega Menu */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <div className='absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-cyan-500/30 rounded-lg shadow-2xl shadow-cyan-500/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0'>
-                  <div className='p-6 grid grid-cols-2 lg:grid-cols-3 gap-6'>                    {serviceCategories.map((category, index) => (                <div className="absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-cyan-500/30 rounded-lg shadow-2xl shadow-cyan-500/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                  <div className="p-6 grid grid-cols-2 lg:grid-cols-3 gap-6">
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
               </div>
             </motion.div>
 
             {/* Desktop Navigation */}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
-                <div className='absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-cyan-500/30 rounded-lg shadow-2xl shadow-cyan-500/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0'>
-                  <div className='p-6 grid grid-cols-2 lg:grid-cols-3 gap-6'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                 <div className='absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-cyan-500/30 rounded-lg shadow-2xl shadow-cyan-500/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0'>
                   <div className='p-6 grid grid-cols-2 lg:grid-cols-3 gap-6'>
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     {serviceCategories.map((category, index) => (
                       <motion.div
                         key={category.title}
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: index * 0.1 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                         className='group'
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-className='group'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 className='group'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                       >
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-                      >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-                      >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                         <div
                           className={`p-4 rounded-lg bg-gradient-to-br ${category && category.color} bg-opacity-10 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300`}>;
                           <div className='flex items-center space-x-3 mb-3'>;
@@ -1052,8 +795,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           <div className='space-y-2'>;
                             {category && category.services.slice(0, 3).map(service => (;
                               <Link
-<<<<<<< HEAD
-<<<<<<< HEAD
                                 key={service && service.name}
                                 href={service && service.href}
                                 className='block p-2 rounded bg-black/30 hover:bg-cyan-500/20 transition-all duration-200 group'>;
@@ -1092,22 +833,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                                 </div>;
                                 <p className="text-xs text-gray-500 mt-1">{service && service.description}</p>;
                               </Link>;
-<<<<<<< HEAD
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
                         key={category.title}
                         initial={{ opacity: 0, coordinate_y: 20 }}
                         animate={{ opacity: 1, coordinate_y: 0 }}
                         transition={{ delay: index * 0.1 }}
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                                 key={service.name}
                                 href={service.href}
                                 className='block p-2 rounded bg-black/30 hover:bg-cyan-500/20 transition-all duration-200 group'
@@ -1124,77 +853,29 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                                   {service.description}
                                 </p>
                               </Link>
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                             ))}
                           </div>;
                         </div>;
                       </motion && motion.div>;
                     ))}
-<<<<<<< HEAD
-                  </div>
-                </div>
-              </div>
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               {/* CTA Button */}
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
               >
                 Get Started
               </motion.button>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
             {/* Mobile Menu Button */}
 <div className='lg:hidden'>
               <button
                 onClick={toggleMenu}
                 className='text-gray-300 hover:text-white transition-colors'
               >
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 {isOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
             </div>
@@ -1202,25 +883,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </nav>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-                className='text-gray-300 hover:text-white transition-colors'              >
 
-              >
-
-                {isOpen ? <X size={24} /> : <Menu size={24} />}
-              </button>
-            </div>
-          </div>
-        </div>
-      </nav>
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 {isOpen ? <X size={24} /> : <Menu size={24} />}
               </button>;
             </div>;
@@ -1228,18 +891,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </nav>;
 
-<<<<<<< HEAD
 
 
 
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       {/* Mobile Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -1247,29 +902,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, x: '100%' }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            className='fixed inset-0 z-50 lg:hidden'
-=======
 
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
-=======
-className='fixed inset-0 z-50 lg:hidden'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 className='fixed inset-0 z-50 lg:hidden'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
           >
             <div
               className='absolute inset-0 bg-black/80 backdrop-blur-sm'
@@ -1288,16 +923,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                   <button
                     onClick={closeMenu}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    className='text-gray-400 hover:text-white'
-                  >                    <X size={24} />          >
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" onClick={closeMenu} />
             <div className="absolute right-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-cyan-500/30 overflow-y-auto">
               <div className="p-6">
@@ -1327,18 +952,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <X size={24} />;
                   </button>;
                 </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-                {/* Mobile Navigation Items */}
-
-=======
-                  {mainNavItems.map((item) => (
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     className='text-gray-400 hover:text-white'
                   >
                     <X size={24} />
@@ -1347,53 +960,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {/* Mobile Navigation Items */}
 <div className='space-y-4'>
                   {mainNavItems.map(item => (
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     <Link
                       key={item.name}
                       href={item.href}
                       onClick={closeMenu}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                    >
-                      <item.icon size={20} className="text-cyan-400" />
-                      <span>{item.name}</span>
-
-                {/* Mobile Services */}
-                <div className="mt-8">
-                  <h3 className="text-lg font-semibold text-white mb-4">Our Services</h3>
-                  <div className="space-y-3">
-                    {serviceCategories.slice(0, 6).map((category) => (
-                      <div key={category.title} className="p-3 rounded-lg bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20">
-                        <h4 className="font-medium text-white mb-2">{category.title}</h4>
-                        <p className="text-sm text-gray-400 mb-3">{category.description}</p>
-                        <div className="space-y-2">
-                          {category.services.slice(0, 2).map((service) => (
-                            <Link
-                              key={service.name}
-                              href={service.href}
-                              onClick={closeMenu}
-
-                            >
-                              <div className="flex items-center justify-between">
-                                <span className="text-sm text-gray-300">{service.name}</span>
-                                <span className="text-xs text-cyan-400 font-mono">{service.price}</span>
-
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='flex items-center space-x-3 p-3 rounded-lg text-gray-300 hover:text-white hover:bg-cyan-500/20 transition-all duration-200'
                     >
                       <item.icon size={20} className='text-cyan-400' />
@@ -1401,12 +972,7 @@ className='flex items-center space-x-3 p-3 rounded-lg text-gray-300 hover:text-w
                     </Link>
                   ))}
                 </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 {/* Mobile Services */}
 <div className='mt-8'>
                   <h3 className='text-lg font-semibold text-white mb-4'>
@@ -1438,41 +1004,16 @@ className='block p-2 rounded bg-black/30 hover:bg-cyan-500/20 transition-all dur
                                 </span>
                                 <span className='text-xs text-cyan-400 font-mono'>
                                   {service.price}
-<<<<<<< HEAD
-<<<<<<< HEAD
                                 </span>                              </div>                              className="block p-2 rounded bg-black/30 hover:bg-cyan-500/20 transition-all duration-200"
                             >
                               <div className="flex items-center justify-between">
                                 <span className="text-sm text-gray-300">{service.name}</span>
                                 <span className="text-xs text-cyan-400 font-mono">{service.price}</span>
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
-                                </span>
-                              </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                                 </span>
                               </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                             </Link>
                   ))}
                 {/* Mobile Services */}
@@ -1525,21 +1066,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         </div>;
                       </div>;
                     ))}
-<<<<<<< HEAD
-=======
-
-=======
-                  </div>;
-                </div>;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 {/* Mobile CTA */}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <div className='mt-8'>;
                   <motion&& motion.button
                     whileHover={{ scale: 1 && 1.02 }}
@@ -1556,24 +1083,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
           </motion && motion.div>;
         )}
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 {/* Mobile CTA */}
                 <div className="mt-8">
                   <motion.button
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                     className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-<<<<<<< HEAD
-
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div className='mt-8'>
                   <motion.button
                     whileHover={{ scale: 1.02 }}
@@ -1581,7 +1096,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     className='w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'
 origin/cursor/automate-test-improve-and-merge-code-2533
                   >
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     Get Started
                   </motion.button>
                 </div>
@@ -1590,22 +1104,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </motion.div>
         )}
       </AnimatePresence>
-<<<<<<< HEAD
-    </>
-      </AnimatePresence>;
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Spacer for fixed navigation */}
-<<<<<<< HEAD
-<<<<<<< HEAD
       <div className='h-20' />;
     </>;
   );      <div className="h-20" />;
     </>;
   );
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
       {/* Mobile Menu */}
       <AnimatePresence>;
         {is_open && (
@@ -1634,17 +1138,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     on_click={close_menu}
                     className='text - gray - 400 hover:text - white';
                   >                    <X size={24} />          >;
-            <div className="absolute inset - 0 bg - black / 80 backdrop-blur-sm" on_click={close_menu} />;
-            <div className="absolute right - 0 top - 0 h - full w - 80 bg - black / 95 backdrop - blur - xl border - l border - cyan-500 / 30 overflow-y-auto">;
-              <div className="p-6">;
-                <div className="flex items - center justify-between mb-8">;
-                  <div className="flex items-center space-x-3">;
-                    <div className="w - 8 h - 8 bg - gradient - to - r from - cyan - 400 to - purple - 500 rounded - lg flex items-center justify-center">;
-                      <Rocket className="w - 5 h-5 text-white" />;
+            <div className="absolute inset - 0 bg - black / 80 backdrop - blur - sm" on_click={close_menu} />;
+            <div className="absolute right - 0 top - 0 h - full w - 80 bg - black / 95 backdrop - blur - xl border - l border - cyan - 500 / 30 overflow - y-auto">;
+              <div className="p - 6">;
+                <div className="flex items - center justify - between mb - 8">;
+                  <div className="flex items - center space - x-3">;
+                    <div className="w - 8 h - 8 bg - gradient - to - r from - cyan - 400 to - purple - 500 rounded - lg flex items - center justify - center">;
+                      <Rocket className="w - 5 h - 5 text - white" />;
                     </div>;
-                    <span className="text - lg font-bold text-white">Zion Tech</span>;
+                    <span className="text - lg font - bold text - white">Zion Tech</span>;
                   </div>;
-                  <button on_click={close_menu} className="text - gray-400 hover:text-white">;
+                  <button on_click={close_menu} className="text - gray - 400 hover:text - white">;
                     <X size={24} />;
                   </button>;
                 </div>;
@@ -1656,7 +1160,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       on_click={close_menu}
                       className='flex items - center space - x-3 p - 3 rounded - lg text - gray - 300 hover:text - white hover:bg - cyan - 500 / 20 transition - all duration - 200';
                     >;
-                      <item.icon size={20} className='text - cyan - 400' />                      <span>{item.name}</span>                <div className="space-y-4">;
+                      <item.icon size={20} className='text - cyan - 400' />                      <span>{item.name}</span>                <div className="space - y-4">;
                   {mainNavItems.map ((item) => (
                     <Link;
                       key={item.name}
@@ -1664,9 +1168,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       on_click={close_menu}
                       className='flex items - center space - x-3 p - 3 rounded - lg text - gray - 300 hover:text - white hover:bg - cyan - 500 / 20 transition - all duration - 200';
                     >;
-                      <item.icon size={20} className='text - cyan - 400' />                      className="flex items - center space - x-3 p - 3 rounded - lg text - gray - 300 hover:text - white hover:bg - cyan - 500 / 20 transition-all duration-200";
+                      <item.icon size={20} className='text - cyan - 400' />                      className="flex items - center space - x-3 p - 3 rounded - lg text - gray - 300 hover:text - white hover:bg - cyan - 500 / 20 transition - all duration - 200";
                     >;
-                      <item.icon size={20} className="text-cyan-400" />;
+                      <item.icon size={20} className="text - cyan - 400" />;
                       <span>{item.name}</span>;
                     </Link>))}
                 </div>;
@@ -1691,14 +1195,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           {category.services.slice (0, 2).map (service => (                            <Link;
                               key={service.name}
                               href={service.href}
-                              on_click={close_menu}                <div className="mt-8">;
-                  <h3 className="text - lg font - semibold text-white mb-4">Our Services</h3>;
-                  <div className="space-y-3">;
+                              on_click={close_menu}                <div className="mt - 8">;
+                  <h3 className="text - lg font - semibold text - white mb - 4">Our Services</h3>;
+                  <div className="space - y-3">;
                     {service_categories.slice (0, 6).map ((category) => (
-                      <div key={category.title} className="p - 3 rounded - lg bg - gradient - to - r from - cyan - 500 / 10 to - purple - 500 / 10 border border-cyan-500 / 20">;
-                        <h4 className="font - medium text-white mb-2">{category.title}</h4>;
-                        <p className="text - sm text - gray-400 mb-3">{category.description}</p>;
-                        <div className="space-y-2">;
+                      <div key={category.title} className="p - 3 rounded - lg bg - gradient - to - r from - cyan - 500 / 10 to - purple - 500 / 10 border border - cyan - 500 / 20">;
+                        <h4 className="font - medium text - white mb - 2">{category.title}</h4>;
+                        <p className="text - sm text - gray - 400 mb - 3">{category.description}</p>;
+                        <div className="space - y-2">;
                           {category.services.slice (0, 2).map ((service) => (
                               key={service.name}
                               href={service.href}
@@ -1711,11 +1215,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                                 </span>;
                                 <span className='text - xs text - cyan - 400 font - mono'>;
                                   {service.price}
-                                </span>                              </div>                              className="block p - 2 rounded bg - black / 30 hover:bg - cyan - 500 / 20 transition-all duration-200";
+                                </span>                              </div>                              className="block p - 2 rounded bg - black / 30 hover:bg - cyan - 500 / 20 transition - all duration - 200";
                             >;
-                              <div className="flex items-center justify-between">;
-                                <span className="text - sm text-gray-300">{service.name}</span>;
-                                <span className="text - xs text - cyan-400 font-mono">{service.price}</span>;
+                              <div className="flex items - center justify - between">;
+                                <span className="text - sm text - gray - 300">{service.name}</span>;
+                                <span className="text - xs text - cyan - 400 font - mono">{service.price}</span>;
                             </Link>))}
                         </div>;
                       </div>))}
@@ -1726,11 +1230,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <motion.button;
                     while_hover={{ scale: 1.02 }}
                     while_tap={{ scale: 0.98 }}
-                    className='w - full px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white rounded - lg font - semibold hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300'                  >                <div className="mt-8">;
+                    className='w - full px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white rounded - lg font - semibold hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300'                  >                <div className="mt - 8">;
                   <motion.button;
                     while_hover={{ scale: 1.02 }}
                     while_tap={{ scale: 0.98 }}
-                    className="w - full px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white rounded - lg font - semibold hover:from - cyan - 600 hover:to - purple - 700 transition-all duration-300";
+                    className="w - full px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white rounded - lg font - semibold hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300";
                     Get Started;
                   </motion.button>;
                 </div>;
@@ -1740,22 +1244,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </AnimatePresence>;
       {/* Spacer for fixed navigation */}
       <div className='h - 20' />;
-    </>);      <div className="h-20" />;
+    </>);      <div className="h - 20" />;
     </>);
 }
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-<div className='h-20' />
-    </>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 <div className='h-20' />
     </>
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

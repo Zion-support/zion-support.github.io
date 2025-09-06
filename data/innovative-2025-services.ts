@@ -1,100 +1,21 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
-<<<<<<< HEAD
-  customers: number;
-  rating: number;
-  reviews: number;
-export const innovative2025Services: Innovative2025Service[] = [;
-  // AI & Machine Learning Innovation Services;
-  {  reviews: number;
-}
-export const innovative2025Services: Innovative2025Service[] = [;
-  // AI & Machine Learning Innovation Services;
-=======
 import { ServiceVariant } from '../types / service - variants';
 
 export interface Innovative2025Service {
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   {
-    id: 'ai - multimodal - fusion - platform',
-    name: 'AI Multimodal Fusion Platform',
-    tagline: 'Unified AI processing across text, image, video, and audio',
-    price: '$2, 999',
-    period: '/month',
-    description:;
-      'Revolutionary platform that seamlessly processes and analyzes multiple data types simultaneously, enabling breakthrough insights and applications across industries.',
-      'Cross - modal data fusion algorithms',
-      'Real - time multimodal analysis',
-      'Advanced pattern recognition',
-      'Custom model training',
-      'API - first architecture',
-      'Enterprise security & compliance',
-    ],
-    popular: true,
-    icon: '🔮',
-    color: 'from - purple - 500 to - indigo - 600',
-    text_color: 'text - purple - 400',
-    link: 'https://ziontechgroup.com / ai - multimodal - fusion - platform',
-    market_position:;
-      'Leading edge in multimodal AI. Competes with OpenAI GPT - 4V ($0.03 / token) and Google Gemini ($0.0025 / token) but offers unified processing.',
-    target_audience:;
-      'Research institutions, Healthcare, Autonomous vehicles, Content creation, Security & surveillance',
-    trial_days: 30,
-    setup_time: '2 - 3 weeks',
-    category: 'AI & Machine Learning',
-    real_service: true,
-    technology: [;
-      'PyTorch',
-      'TensorFlow',
-      'CUDA',
-      'NVIDIA A100',
-      'Kubernetes',
-      'Redis',
-    ],
-    integrations: ['AWS', 'Azure', 'GCP', 'Docker', 'Kubernetes', 'REST API'],
-    use_cases: [;
-      'Medical diagnosis',
-      'Autonomous navigation',
-      'Content moderation',
-      'Research analysis',
-    ],
-    roi: 'Average customer sees 500% ROI within 6 months through improved accuracy and efficiency.',
-    competitors: [;
-      'OpenAI GPT - 4V',
-      'Google Gemini',
-      'Anthropic Claude',
-      'Microsoft Azure AI',
-    ],
-    market_size: '$15B+ multimodal AI market',
-    growth_rate: '250% annual growth',
-    variant: 'quantum - holographic',
-    contact_info: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com',
-    },
-    real_implementation: true,
-    implementation_details:;
-      'Production - ready platform with GPU acceleration, real - time processing, and enterprise - grade security.',
-    launch_date: '2025 - 01 - 15',
-    customers: 45,
-    rating: 4 && 4.9,
-    reviews: 28,
-  },
+
+    id: 'ai-multimodal-fusion-platform'
+    name: 'AI Multimodal Fusion Platform'
+    tagline: 'Unified AI processing across text, image, video, and audio'
+    price: '$2,999'
+    period: '/month'
+    description:
+
   {
 
       'Real-time emotion detection',
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+origin/cursor/expand-services-advertise-and-build-project-c28b
     id: 'ai - emotional - intelligence - platform',
     name: 'AI Emotional Intelligence Platform',
     tagline: 'Advanced emotion recognition and response generation',
@@ -104,10 +25,8 @@ export interface Innovative2025Service {
       'Cutting - edge platform that understands, analyzes, and responds to human emotions in real - time, enabling more empathetic and effective AI interactions.',
     features: [;
       'Real - time emotion detection',
-=======
-origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+origin/cursor/expand-services-advertise-and-build-project-c28b
       'Sentiment analysis & mood tracking',
       'Emotional response generation',
       'Cultural context awareness',
@@ -115,19 +34,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Multi - language support',
     ],
     popular: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     icon: '💝',
 
-<<<<<<< HEAD
-=======
-=======
-=======
-    icon: '💝',
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     color: 'from - pink - 500 to - rose - 600',
     text_color: 'text - pink - 400',
     link: 'https://ziontechgroup.com / ai - emotional - intelligence - platform',
@@ -156,14 +64,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ],
     use_cases: [;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Mental health monitoring',
       'Customer sentiment analysis',
       'Educational engagement',
@@ -171,8 +72,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ],
     roi: 'Improves customer satisfaction by 40% and engagement rates by 60% within 3 months.',
     competitors: ['Affectiva', 'Realeyes', 'Emotient', 'Noldus'],
-<<<<<<< HEAD
-=======
 
     market_size: '$3.8B emotional AI market',
     growth_rate: '180% annual growth',
@@ -180,8 +79,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     contact_info: {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -196,8 +93,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 52,
   },
   {
-<<<<<<< HEAD
-=======
 
       'Quantum-classical hybrid algorithms',
       'Real-time quantum resource allocation',
@@ -213,16 +108,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Real - time quantum resource allocation',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Advanced optimization solvers',
       'Quantum machine learning',
       'Secure quantum communications',
       'Scalable quantum infrastructure',
     ],
     popular: true,
-<<<<<<< HEAD
-=======
     icon: '⚛️',
 
     color: 'from - cyan - 500 to - blue - 600',
@@ -253,16 +144,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     use_cases: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Portfolio optimization',
       'Drug discovery',
       'Supply chain optimization',
       'Cryptography',
     ],
     roi: 'Delivers 1000%+ ROI through solving previously impossible problems in weeks instead of years.',
-<<<<<<< HEAD
-=======
 
     competitors: ['IBM Quantum', 'Google Quantum', 'Rigetti', 'D - Wave'],
     market_size: '$8.6B quantum computing market',
@@ -271,8 +158,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     contact_info: {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -286,8 +171,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4 && 4.9,
     reviews: 18,
   },
-<<<<<<< HEAD
-=======
 
       'Real-time blockchain monitoring',
       'AI-powered fraud detection',
@@ -305,16 +188,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'AI - powered fraud detection',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Market trend analysis',
       'Smart contract auditing',
       'DeFi risk assessment',
       'NFT market insights',
     ],
     popular: true,
-<<<<<<< HEAD
-=======
     icon: '🔗',
 
     color: 'from - green - 500 to - emerald - 600',
@@ -346,8 +225,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     use_cases: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Fraud detection',
       'Market analysis',
       'Compliance monitoring',
@@ -355,15 +232,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ],
     roi: 'Reduces fraud losses by 85% and improves trading decisions by 40% within 2 months.',
     competitors: ['Chainalysis', 'Elliptic', 'CipherTrace', 'TRM Labs'],
-<<<<<<< HEAD
-=======
 
     market_size: '$2.1B blockchain analytics market',
     growth_rate: '220% annual growth',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     variant: 'cyberpunk',
     contact_info: {
       mobile: '+1 302 464 0950',
@@ -379,14 +252,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4 && 4.7,
     reviews: 89,
   },
-<<<<<<< HEAD
       'Production financial AI platform with real-time trading and comprehensive risk management.'
     launchDate: '2025-01-15'
     customers: 45
     rating: 4.8
     reviews: 32
   }
-=======
 
       'AI-generated 3D environments',
   // Metaverse & Virtual Reality Innovation Services;
@@ -688,8 +559,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   // Financial Technology Innovation Services;
   {
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     id: 'ai - financial - trading - platform',
     name: 'AI Financial Trading Platform',
     tagline: 'Intelligent algorithmic trading and portfolio management',
@@ -706,55 +575,24 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Real - time monitoring',
       'Regulatory compliance',
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-    popular: true,
-<<<<<<< HEAD
-=======
-    icon: '📈',
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
     popular: true,
     icon: '📈',
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Production financial AI platform with real-time trading and comprehensive risk management.',
     launchDate: '2025-01-15',
     customers: 45,
     rating: 4.8,
     reviews: 32,
   },;
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     color: 'from - green - 500 to - emerald - 600',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / ai - financial - trading - platform',
@@ -788,11 +626,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Market analysis',
     ],
     roi: 'Improves trading performance by 35% and reduces risk by 50% within 6 months.',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     competitors: ['Alpaca', 'Interactive Brokers', 'Robinhood', 'E * TRADE'],
     market_size: '$11.3B algorithmic trading market',
@@ -800,12 +633,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     variant: 'quantum - cyberpunk',
     contact_info: {
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -822,42 +650,25 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
     implementation_details: 'Production financial AI platform with real - time trading and comprehensive risk management.';
     launch_date: '2025 - 01 - 15';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
 ];
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+  }
+];
     customers: 45;
 
     rating: 4 && 4.8,
 
     reviews: 32
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -1087,37 +898,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     competitors: ['AlpacaInteractive BrokersRobinhoodE*TRADE'], marketSize: '$11.3B algorithmic trading market',
     growthRate: '260% annual growth', variant: 'quantum-cyberpunk',
     contactInfo: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
+    },
+    realImplementation: true, implementationDetails: 'Production financial AI platform with real-time trading and comprehensive risk management.',
+    launchDate: '2025-01-15', customers: 45,
+    rating: 4.8,
+    reviews: 32;
 
-<<<<<<< HEAD
-];      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }
-
-
-<<<<<<< HEAD
-    rating: 4.8
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { ServiceVariant } from '../types/service-variants',;
 export interface Innovative2025Service {;
   id: string,;
@@ -1545,45 +1336,7 @@ export const innovative2025Services: Innovative2025Service[] = [;
     customers: 45,;
     rating: 4.8;
     reviews: 32;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-    reviews: 32
-
-<<<<<<< HEAD
-  }
-];
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  }
-];
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-;
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
-
-;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-    popular: true,  }
-];
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 
 ursor/fix-website-loading-errors-and-merge-6662
   }
@@ -1592,8 +1345,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 ;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   id: string;
   name: string;
   tagline: string;
@@ -2015,9 +1766,4 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 32
   }
 ];
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

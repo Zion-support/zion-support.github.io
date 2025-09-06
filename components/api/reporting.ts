@@ -18,34 +18,27 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       costPerHireUsd?: number;
       updated_at: string;
     }
+    funnel: { stage: string, count: number }[];
+    timeToHireDays: number;
+    costPerHireUsd?: number
+    updatedAt: string
+  }>
+}
   >;
 
 origin/cursor/automate-test-improve-and-merge-code-2533
 const FILE = 'reporting.json';
 const FALLBACK: ReportingData = { byTenant: {} }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const method = (req.method |'GET').toUpperCase()
-  const method = (req.method || 'GET').toUpperCase(),;
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   const method = (req.method || 'GET').toUpperCase(),;
 
   const method = (req.method |'GET').toUpperCase()
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const auth = authenticateRequest(req, method === 'GET');
   if (!auth.ok) return res.status(401).json({ error: auth.error });
   const tenantId = auth.tenantId!;
   if (method === 'GET') {
     const data = readJsonFile<ReportingData>(FILE, FALLBACK);
-<<<<<<< HEAD
-<<<<<<< HEAD
     const entry = data.byTenant[tenantId] |{
       funnel: []
       timeToHireDays: 0
@@ -55,18 +48,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (method === 'POST') {
     const { funnel, timeToHireDays, costPerHireUsd } = req.body |{};    const entry = data.byTenant[tenantId] |{ funnel: [], timeToHireDays: 0, updatedAt: new Date().toISOString() }
     return res.status(200).json(entry)
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     const updated = updateJsonFile<ReportingData>(
       FILE
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const entry = data.byTenant[tenantId] || {
       funnel: [],
       timeToHireDays: 0,
@@ -99,8 +82,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     );
     return res && res.status(200).json(updated && updated.byTenant[tenantId]);
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
       next[tenantId] = {
         funnel: funnel |next[tenantId]?.funnel |[];
         timeToHireDays: typeof timeToHireDays === 'number' ? timeToHireDays : (next[tenantId]?.timeToHireDays |0);
@@ -108,15 +89,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         updatedAt: new Date().toISOString()}
       return { byTenant: next }
     }, FALLBACK);
-<<<<<<< HEAD
-
-    return res && res.status(200).json(updated && updated.byTenant[tenantId])
-  }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const FILE = 'reporting.json';
 const FALLBACK: ReportingData = { by_tenant: {} }
 ;
@@ -188,31 +160,10 @@ if ( {) {
   }
 return res.status (405).json ({ error: 'Method not allowed' });
     const { funnel, timeToHireDays, costPerHireUsd } = req.body || {};
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
   return res.status(405).json({ error: 'Method not allowed' });
     return res.status(200).json(updated.byTenant[tenantId])
   }
 return res.status(405).json({ error: 'Method not allowed' });
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

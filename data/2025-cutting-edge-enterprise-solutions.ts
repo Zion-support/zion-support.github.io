@@ -1,65 +1,15 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
 
 export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
   // ENTERPRISE SOLUTIONS
   {
-<<<<<<< HEAD
-=======
-
-const contact = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com', }const contact = {
-  mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com'
-}
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup && ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup && ziontechgroup.com',};const contact = {
-  mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup && ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup && ziontechgroup.com'
-const contact = {
-  mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-      'Industry-specific compliance',
-  website: 'https://ziontechgroup.com';
-}
-;
-export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [;
-  // ENTERPRISE SOLUTIONS;
-=======
 
 
 };
 
 origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // ENTERPRISE SOLUTIONS
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { UnifiedService } from '../types/unified-service-types';
 const contact = null;
     description:
@@ -149,61 +99,31 @@ const contact = null;
       website: 'https://ziontechgroup.com'
     }
   }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-  {
-
-      'Data governance',
-      'Security standards',
-      'Regulatory requirements',
-<<<<<<< HEAD
-    ],
-<<<<<<< HEAD
-=======
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
   {
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
       'Data governance',
       'Security standards',
       'Regulatory requirements',
     ],
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     link: 'https://ziontechgroup.com / ai - powered - enterprise - risk - management',
 
     icon: '⚠️',
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     color: 'from - orange - 600 via - red - 600 to - pink - 600',
     popular: true,
     launch_date: '2025 - 01 - 15',
     customers: 45,
     rating: 4 && 4.8,
     reviews: 67,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     market_size: '$12.8B enterprise risk management market',
     growth_rate: '25% annual growth',
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     category: 'Enterprise Solutions',
     contact_info: {
       mobile: '+1 302 464 0950',
@@ -213,11 +133,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     },
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
       'Industry-specific compliance',
     id: 'autonomous - business - process - optimization',
@@ -296,52 +211,27 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     compliance: [;
       'Industry - specific compliance',
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Data governance',
       'Security standards',
       'Regulatory requirements',
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     link: 'https://ziontechgroup.com / autonomous - business - process - optimization',
 
     icon: '⚙️',
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     color: 'from - blue - 600 via - cyan - 600 to - teal - 600',
     popular: true,
     launch_date: '2025 - 01 - 15',
     customers: 38,
     rating: 4 && 4.7,
     reviews: 52,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     market_size: '$19.6B business process automation market',
     growth_rate: '31% annual growth',
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     category: 'Enterprise Solutions',
     contact_info: {
       mobile: '+1 302 464 0950',
@@ -351,72 +241,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     },
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    id: 'ai-enterprise-knowledge-management'
-    name: 'AI Enterprise Knowledge Management'
-    tagline: 'Intelligent knowledge discovery and management for enterprises'
-    price: '$799'
-    period: '/month'
-    description:
-      'Advanced AI platform that intelligently discovers, organizes, and manages enterprise knowledge, enabling better decision-making and knowledge sharing across organizations.'
-    features: [
-      'AI knowledge discovery'
-      'Intelligent categorization'
-      'Semantic search'
-      'Knowledge graphs'
-      'Collaborative workspaces'
-      'Version control'
-      'Access control'
-      'Analytics dashboard'
-      'Integration capabilities'
-      'Mobile access'
-    ]
-    popular: true
-    icon: '🧠'
-    color: 'from-purple-600 via-violet-600 to-indigo-600'
-    textColor: 'text-purple-400'
-    link: 'https://ziontechgroup.com/ai-powered-enterprise-knowledge-management'
-    marketPosition:
-      'Leading AI enterprise knowledge management platform with intelligent discovery'
-    targetAudience:
-      'Large enterprises, Consulting firms, Research organizations, Government agencies'
-    category: 'AI Automation'
-    realService: true
-    technology: [
-      'AI/ML'
-      'Natural Language Processing'
-      'Knowledge Graphs'
-      'Machine Learning'
-      'Semantic Search'
-    ]
-    integrations: [
-      'Document management systems'
-      'CRM platforms'
-      'ERP systems'
-      'Collaboration tools'
-      'Business intelligence tools'
-    ]
-    useCases: [
-      'Knowledge discovery'
-      'Document management'
-      'Research collaboration'
-      'Decision support'
-      'Training and onboarding'
-    ]
-    roi: 'Improve knowledge discovery by 80%. Reduce information search time by 70%. Increase collaboration efficiency by 60%.'
-    competitors: [
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       'Microsoft SharePoint'
-=======
-    ],      'Microsoft SharePoint'
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       'Confluence'
       'Notion'
       'Slack'
@@ -428,14 +253,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.6
     reviews: 41
     contactInfo: contact
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-=======
+
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
-
     id: 'ai - enterprise - knowledge - management',
     name: 'AI Enterprise Knowledge Management',
     tagline: 'Intelligent knowledge discovery and management for enterprises',
@@ -457,12 +277,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Mobile access',
     ],
     popular: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     icon: '🧠',
 
     color: 'from - purple - 600 via - violet - 600 to - indigo - 600',
@@ -499,21 +313,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     competitors: [;
 
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     id: 'ai-enterprise-knowledge-management'
     name: 'AI Enterprise Knowledge Management'
     tagline: 'Intelligent knowledge discovery and management for enterprises'
@@ -567,30 +368,17 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ]
     roi: 'Improve knowledge discovery by 80%. Reduce information search time by 70%. Increase collaboration efficiency by 60%.'
     competitors: [
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Microsoft SharePoint',
       'Confluence',
       'Notion',
       'Slack',
       'Box',
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   },];      'AI knowledge discoveryIntelligent categorizationSemantic searchKnowledge graphsCollaborative workspacesVersion controlAccess controlAnalytics dashboard';
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+  },];      'AI knowledge discoveryIntelligent categorizationSemantic searchKnowledge graphsCollaborative workspacesVersion controlAccess controlAnalytics dashboard';
+
 
     market_size: '$15.2B enterprise content management market',
     growth_rate: '28% annual growth',
@@ -600,23 +388,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     reviews: 41,
 
     contactInfo: contact,;
-<<<<<<< HEAD
-  },];      'AI knowledge discoveryIntelligent categorizationSemantic searchKnowledge graphsCollaborative workspacesVersion controlAccess controlAnalytics dashboard';
-
-=======
 
 
   },];      'AI knowledge discoveryIntelligent categorizationSemantic searchKnowledge graphsCollaborative workspacesVersion controlAccess controlAnalytics dashboard';
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     id: 'ai-powered-enterprise-risk-management', name: 'AI-Powered Enterprise Risk Management',
     tagline: 'Intelligent risk assessment and mitigation for enterprise',
     price: {
@@ -683,11 +459,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     techStack: ['AI/MLMachine LearningProcess MiningAutomationWorkflow Management'], realImplementation: true,
     implementationDetails: 'Intelligent platform with AI-powered process optimization and workflow automation.', roi: 'Improve process efficiency by 70%. Reduce operational costs by 45%. Increase productivity by 60%.',
     useCases: [
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       'Process optimizationWorkflow automationCost reductionEfficiency improvementCompliance'
     ];
     integrations: ['ERP systemsCRM platformsBPM toolsWorkflow enginesBusiness intelligence tools'], support: '24/7 enterprise support with process optimization specialists.',
@@ -711,26 +482,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [
       'AI knowledge discoveryIntelligent categorizationSemantic searchKnowledge graphsCollaborative workspacesVersion controlAccess controlAnalytics dashboard';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+origin/cursor/expand-services-advertise-and-build-project-c28b
       'Integration capabilitiesMobile access'
     ];
     popular: true;
     icon: '🧠';
     color: 'from-purple-600 via-violet-600 to-indigo-600';
     textColor: 'text-purple-400';
-=======
 
     link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-enterprise-knowledge-management';
     marketPosition: 'Leading AI enterprise knowledge management platform with intelligent discovery',
 
     targetAudience: 'Large enterprises, Consulting firms, Research organizations, Government agencies';
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     contact_info: contact,
   }, ];      'AI knowledge discovery_intelligent categorization_semantic search_knowledge graphs_collaborative workspaces_version control_access control_analytics dashboard';
       'Integration capabilities_mobile access';
@@ -749,22 +513,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     use_cases: ['Knowledge discovery_document management_research collaboration_decision support_training and onboarding'];
     roi: 'Improve knowledge discovery by 80%. Reduce information search time by 70%. Increase collaboration efficiency by 60%.';
     competitors: ['Microsoft SharePointConfluenceNotionSlackBox'];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    marketSize: '$15.2B enterprise content management market';
-    growthRate: '28% annual growth';
-    customers: 29;
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     customers: 29;
     rating: 4.6;
     reviews: 41
     contactInfo: contact
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { UnifiedService } from '../types/unified-service-types',;
 const contact = {;
   mobile: '+1 302 464 0950',;
@@ -785,8 +537,8 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [;
       trialDays: 30,;
       setupTime: '2-3 weeks',;
       enterprise: 'Custom enterprise pricing available';
-    },,
-  description: 'Advanced AI platform that identifies, assesses, and mitigates enterprise risks in real-time, providing comprehensive risk intelligence and automated response capabilities.',;
+    },;
+    description: 'Advanced AI platform that identifies, assesses, and mitigates enterprise risks in real-time, providing comprehensive risk intelligence and automated response capabilities.',;
     features: [;
       'Real-time risk monitoringAI risk assessmentAutomated mitigationCompliance trackingRisk scoringScenario modelingIncident responseReporting dashboard',;
       'Integration capabilitiesCustom workflows';
@@ -838,8 +590,8 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [;
       trialDays: 21,;
       setupTime: '2-3 weeks',;
       enterprise: 'Custom enterprise pricing available';
-    },,
-  description: 'Intelligent platform that autonomously analyzes, optimizes, and automates business processes using AI, improving efficiency by up to 70% and reducing operational costs.',;
+    },;
+    description: 'Intelligent platform that autonomously analyzes, optimizes, and automates business processes using AI, improving efficiency by up to 70% and reducing operational costs.',;
     features: [;
       'Process analysis AIAutomated optimizationWorkflow automationPerformance monitoringCost optimizationCompliance automationIntegration capabilitiesReal-time analytics',;
       'Custom workflowsReporting dashboard';
@@ -885,8 +637,8 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [;
     name: 'AI Enterprise Knowledge Management',;
     tagline: 'Intelligent knowledge discovery and management for enterprises',;
     price: '$799',;
-    period: '/month',,
-  description: 'Advanced AI platform that intelligently discovers, organizes, and manages enterprise knowledge, enabling better decision-making and knowledge sharing across organizations.',;
+    period: '/month',;
+    description: 'Advanced AI platform that intelligently discovers, organizes, and manages enterprise knowledge, enabling better decision-making and knowledge sharing across organizations.',;
     features: [;
       'AI knowledge discoveryIntelligent categorizationSemantic searchKnowledge graphsCollaborative workspacesVersion controlAccess controlAnalytics dashboard',;
       'Integration capabilitiesMobile access';
@@ -913,11 +665,7 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [;
     contactInfo: contact;
   }
 ];
-    contactInfo: contact  }
-];
-;  }
-];
-=======
+    contactInfo: contact
 
     market_size: '$15.2B enterprise content management market';
     growth_rate: '28% annual growth';
@@ -928,23 +676,15 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [;
     reviews: 41,
 
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   }
 ];
-<<<<<<< HEAD
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     rating: 4.6;
     reviews: 41
     contactInfo: contact
+origin/cursor/expand-services-advertise-and-build-project-c28b
+  }
+];
 
 import { UnifiedService } from '../types/unified-service-types',;
 const contact = {;
@@ -1092,29 +832,8 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [;
     rating: 4.6,;
     reviews: 41;
     contactInfo: contact;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
 ];
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
-=======
-
-
-  }
-];
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     marketSize: '$15.2B enterprise content management market',
     growthRate: '28% annual growth',
     customers: 29,
@@ -1123,9 +842,4 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [;
     contactInfo: contact,
   },
 ];
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

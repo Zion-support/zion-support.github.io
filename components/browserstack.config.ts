@@ -1,34 +1,12 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     baseURL: process && process.env.PLAYWRIGHT_BASE_URL || http://localhost:3000',    trace: on-first-retry'};
 
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+pr-12243
 import { defineConfig, devices } from @playwright/test';
 default defineConfig({
   testDir: tests/e2e',  use: {
     baseURL: process.env.PLAYWRIGHT_BASE_URL |http://localhost:3000',    trace: on-first-retry'}
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+pr-12243
   projects: [
       name: Desktop Chrome',      use: {
         browserName: chromium',        channel: chrome'}
@@ -44,15 +22,7 @@ default defineConfig({
     {
       name: Mobile Chrome',      use: {
         browserName: chromium',        ...devices['Pixel 5']}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+pr-12243
 import { define_config, devices } from @playwright / test';
 default define_config ({
   test_dir: tests / e2e',  use: {
@@ -72,32 +42,14 @@ default define_config ({
     {
       name: Mobile Chrome',      use: {
         browser_name: chromium',        ...devices['Pixel 5']}
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 origin/cursor/automate-test-improve-and-merge-code-20a4
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+pr-12243
     }
-=======
-    baseURL: process && process.env.PLAYWRIGHT_BASE_URL || http://localhost:3000',    trace: on-first-retry'};    }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     {
       name: Mobile Safari',      use: {
         browser_name: webkit',        ...devices['i_phone 12']}
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   ];
-<<<<<<< HEAD
 });
   reporter: [;
     ['list'],    ['html', { output_folder: playwright - logs / html - report', open: never' }]];
@@ -120,74 +72,28 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
         browserName: webkit', _...devices['iPhone 12']}
     }
   ],
-=======
-  ];
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   reporter: [
     ['list'],    ['html', { outputFolder: playwright-logs/html-report', open: never' }]]
+}),
 
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-  ];
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+pr-12243
     }
-=======
-  ];    }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     {
       name: Mobile Safari',      use: {
         browserName: webkit',        ...devices['iPhone 12']}
     }
   ];
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+  reporter: [
+    ['list'],    ['html', { outputFolder: playwright-logs/html-report', open: never' }]]
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 });
   reporter: [;
     ['list'],    ['html', { output_folder: playwright - logs / html - report', open: never' }]];
 });
 ;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 });
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
-
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 projects: [ {
   name: Desktop Chrome', use: {
   browserName: chromium', channel: window.chrome' 
@@ -214,9 +120,5 @@ projects: [ {
 
 }];
 reporter: [
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+pr-12243

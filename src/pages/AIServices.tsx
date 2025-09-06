@@ -1,5 +1,9 @@
+<<<<<<< HEAD
+import React from "react";
+=======
 import React from 'react';
 
+>>>>>>> pr-12243
 const AIServices = () => {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -45,5 +49,9 @@ const AIServices = () => {
     </div>
   );
 };
+<<<<<<< HEAD
+export default AIServices;
+=======
 
 export default AIServices;
+>>>>>>> pr-12243

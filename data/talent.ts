@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 // Stub talent data - placeholder for missing functionality
 
 export const TALENT_PROFILES = [
@@ -14,9 +5,6 @@ export const TALENT_PROFILES = [
   {
     id: '1',
     slug: 'sample - talent',
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 // Stub talent data - placeholder for missing functionality
 id: '1',
     slug: 'sample-talent',
@@ -27,8 +15,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     location: 'Remote',
     timezone: 'UTC',
     region: 'Global',
-<<<<<<< HEAD
-<<<<<<< HEAD
     skills: ['React', 'Node && Node.js', 'TypeScript'],
     summary: 'Experienced developer with expertise in modern web technologies.',
     bio: 'Passionate about creating innovative solutions.',
@@ -42,39 +28,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     rating: 0,
   },
 ];
-<<<<<<< HEAD
-// Stub talent data - placeholder for missing functionality;
-export const TALENT_PROFILES = [;
-  {;
-    id: '1',;
-    slug: 'sample-talent',;
-    name: 'Sample Talent',;
-    title: 'Full Stack Developer',;
-    category: 'Development',;
-    location: 'Remote',;
-    timezone: 'UTC',;
-    region: 'Global',;
-    skills: ['ReactNode.jsTypeScript'],;
-    summary: 'Experienced developer with expertise in modern web technologies.',;
-    bio: 'Passionate about creating innovative solutions.',;
-    hourlyRateUsd: 75,;
-    requestQuote: true,;
-    availability: 'Open',;
-    profileImageUrl: null,;
-    videoUrl: null,;
-    portfolio: null,;
-    verified: false,;
-    rating: 0,;
-    reviewsCount: 0,;
-    createdAt: new Date().toISOString(),;
-    originalLanguage: 'en',;
-=======
 ];
 ;
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
-<<<<<<< HEAD
 // Stub talent data - placeholder for missing functionality;
 export const TALENT_PROFILES = [;
 
@@ -95,42 +51,16 @@ export const TALENT_PROFILES = [;
     portfolio: null, verified: false,
     rating: 0, reviewsCount: 0,
     createdAt: new Date().toISOString(), originalLanguage: 'en',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     translations: {}
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }
 
 ];
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
 ;
 origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
 
-<<<<<<< HEAD
->>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
-
-
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     skills: ['React', 'Node.js', 'TypeScript'],
     summary: 'Experienced developer with expertise in modern web technologies.',
     bio: 'Passionate about creating innovative solutions.',
@@ -148,9 +78,4 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     translations: {},
   },
 ];
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

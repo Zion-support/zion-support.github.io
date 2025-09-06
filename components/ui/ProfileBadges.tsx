@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-
-=======
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import React from 'react';
 import type { KycProfile } from '../../utils / kyc';
 import { getBadgeLabels } from '../../utils / kyc';
@@ -23,24 +19,9 @@ function ProfileBadges() {
 
 import React from 'react';
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import type { KycProfile } from '../../utils/kyc';
 import { getBadgeLabels } from '../../utils/kyc';
 import { VerifiedBadge } from './VerifiedBadge';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-export function ProfileBadges({ profile }: { profile?: KycProfile | null }) {
-
-  const labels = getBadgeLabels(profile |undefined);
-  return <VerifiedBadge labels={labels} />;export function ProfileBadges({ profile }: { profile?: KycProfile | null }) {
-  const labels = getBadgeLabels(profile |undefined);
-  return <VerifiedBadge labels={labels} />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export function ProfileBadges({ profile }: { profile?: KycProfile | null }) {;
   const labels = getBadgeLabels(profile || undefined);
@@ -53,24 +34,10 @@ export function ProfileBadges({ profile }: { profile?: KycProfile | null }) {;
 
 }
 
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export function ProfileBadges({ profile }: { profile?: KycProfile | null }) {
   const labels = null;
   return <VerifiedBadge labels={labels} />
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

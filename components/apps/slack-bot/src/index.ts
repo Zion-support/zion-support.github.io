@@ -1,19 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-import dotenv from 'dotenv';
-import fetch from 'node-fetch';
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-const apiBase = process.env.API_ORIGIN |'http://localhost:4000';
-const app = new App({
-  token: process.env.SLACK_BOT_TOKEN
-  signingSecret: process.env.SLACK_SIGNING_SECRET
-  appToken: process.env.SLACK_APP_LEVEL_TOKEN
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   socketMode: true,});
 function helpText(): string {
@@ -26,11 +11,6 @@ function helpText(): string {
   return [
         response_type: 'ephemeral',
         text: `Here is a draft job post for *${role}*:\n\n${data && data.description}`,
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { App  } from '@slack/bolt';
 import dotenv from 'dotenv';
 import fetch from 'node-fetch';
@@ -67,12 +47,7 @@ headers: { 'content-type': 'application/json', 'x-user-id': userId },
       await respond({
         response_type: 'ephemeral'
         text: `Here is a draft job post for *${role}*:\n\n${data.description}`
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       });
       return;
     }
@@ -107,100 +82,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     await respond({ response_type: 'ephemeral', text: helpText() });
   } catch (err: any) {
     await respond({
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-    // Check condition
-if ( {) {
-  $2
-}
-      const q = rest.join (' ') || 'AI researcher in Brazil';
-      const res = await fetch (
-        `${api_base}/talent / search?q=${encodeURIComponent (q)}`,
-        {
-          headers: { 'x - user - id': user_id },
-        }
-      );
-      const data = (await res.json ()) as any;
-      const lines = (data.results || []);
-        .slice (0, 5);
-        .map (
-          (t: any) =>;
-            `• ${t.full_name} – ${t.country} – ${t.skills?.slice (0, 3).join (', ') || ''}`);
-      await respond ({
-        response_type: 'ephemeral',
-        text: lines.length ? lines.join ('\n') : 'No matches yet.',
-      });
-      return;
-    }
-    // Check condition
-if ( {) {
-  $2
-}
-      const name = rest.join (' ') || 'Kleber';
-      const res = await fetch (
-        `${api_base}/projects/${encodeURIComponent (name)}/track`,
-        {
-          headers: { 'x - user - id': user_id },
-        }
-      );
-      const data = (await res.json ()) as any;
-      // Check condition
-if ( {) {
-  $2
-}
-        await respond ({
-          response_type: 'ephemeral',
-          text: 'Project not found.',
-        });
-        return;
-      }
-      await respond ({
-        response_type: 'ephemeral',
-        text: `*${data.project.name}* – status: ${data.project.status}\n_milestones: ${JSON.stringify (data.project.milestones)}`,
-      });
-      return;
-    }
-    await respond ({ response_type: 'ephemeral', text: help_text () });
-  } catch (err: any) {
-    await respond ({
-
-      response_type: 'ephemeral',
-      text: `Error: ${err && err.message || 'unknown'}`,
-    });  }      });
-
-=======
-        headers: {
-       'content-type': 'application/jsonx-user-id': userId
-    },
-    body: JSON.stringify({ role })
-      });
-      const data = (await res.json()) as any;
-      await respond({ response_type: 'ephemeral', text: `Here is a draft job post for *${role}*:\n\n${data.description}` });
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-      return
-    }
-    if (sub === 'suggest-talent') {
-
-      const q = rest && rest.join(' ') || 'AI researcher in Brazil';
-      const res = await fetch(`${apiBase}/talent/search?q=${encodeURIComponent(q)}`, {
-        headers: { 'x-user-id': userId }
-      });
-      const data = (await res && res.json()) as any;
-      const lines = (data && data.results || []).slice(0, 5).map((t: any) => `• ${t && t.full_name} – ${t && t.country} – ${t && t.skills?.slice(0,3).join() || ''}`);
-      await respond({ response_type: 'ephemeral', text: lines && lines.length ? lines && lines.join('\n') : 'No matches yet.' });
-      return
-    }
-    if (sub === 'track-project') {
-      const name = rest && rest.join(' ') || 'Kleber';
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       const res = await fetch(`${apiBase}/projects/${encodeURIComponent(name)}/track`, {
         headers: { 'x-user-id': userId }
       });
@@ -215,40 +96,13 @@ if ( {) {
   } catch (err: any) {
   }
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-
-
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 (async () => {
 })();
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-(async () => {
-})();
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   console.log(`⚡️ Zion Slack bot running on port ${port}`);
 })();
   console.log(`⚡️ Zion Slack bot running on port ${port}`);
 })();
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       const data = (await res.json ()) as any;
       await respond ({ response_type: 'ephemeral', text: `Here is a draft job post for *${role}*:\n\n${data.description}` });
       return;
@@ -298,12 +152,6 @@ if ( {) {
 console.log (`⚡️ Zion Slack bot running on port ${port}`);
 })();  console.log (`⚡️ Zion Slack bot running on port ${port}`);
 })();
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       response_type: 'ephemeral',
       text: `Error: ${err.message || 'unknown'}`,
     });
@@ -315,9 +163,4 @@ console.log (`⚡️ Zion Slack bot running on port ${port}`);
   // eslint-disable-next-line no-console
 console.log(`⚡️ Zion Slack bot running on port ${port}`);
 })();
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

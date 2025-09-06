@@ -1,6 +1,4 @@
-<<<<<<< HEAD:pages/api/auth/verify-sol.ts
 <<<<<<< HEAD
-
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8,20 +6,13 @@
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 =======
+>>>>>>> pr-12243
 import type { NextApiRequest, NextApiResponse } from 'next';
->>>>>>> main
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-main
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/auth/verify-sol.ts
 import nacl from 'tweetnacl',;
 import bs58 from 'bs58',;
 import jwt from 'jsonwebtoken',;
 const JWT_SECRET = process.env.JWT_SECRET || 'dev-secret-change-me'
 
-<<<<<<< HEAD:pages/api/auth/verify-sol.ts
-=======
 
 const cookieHeader = req.headers.cookie || '';
     const match = cookieHeader.match(/siwe-nonce=([^]+)/);
@@ -112,9 +103,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: e?.message || 'Verify failed' })
   };
 };
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/auth/verify-sol.ts
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> pr-12243
 import type { NextApiRequest, NextApiResponse } from 'next';
 import nacl from 'tweetnacl';
 import bs58 from 'bs58';
@@ -142,16 +136,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 }
 
+
     const token = jwt.sign({ sub: publicKey, chain: 'sol' }, JWT_SECRET, { expiresIn: '7d' })
     res.setHeader('Set-Cookie', `web3-session=${token}, HttpOnly, Path=/, SameSite=Lax, Max-Age=${7 * 24 * 3600}`)
+=======
 const JWT_SECRET = null;
-origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(200).json({ ok: true })
   } catch (e: any) {
     return res.status(500).json({ error: e?.message || 'Verify failed' })
   }
-<<<<<<< HEAD:pages/api/auth/verify-sol.ts
+<<<<<<< HEAD
+}
 =======
 };
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/api/auth/verify-sol.ts
-
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

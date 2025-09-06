@@ -1,11 +1,8 @@
-<<<<<<< HEAD:src/components/EnhancedNewsletterForm.tsx
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-<<<<<<< HEAD
     setIsSubmitting(true),
 =======
 <<<<<<< HEAD
@@ -14,34 +11,14 @@
 >>>>>>> main
 <<<<<<< HEAD
 <<<<<<< HEAD
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { useState, useRef } from "react",
-import { Mail } from 'lucide-react'
-import { useToast } from "@/hooks/use-toast",
-import {logErrorToProduction} from '@/utils/productionLogger',
-export function EnhancedNewsletterForm() {
-=======
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { useState, useRef } from 'react';
-import { Mail } from 'lucide-react';
-import { useToast } from '@/hooks/use-toast';
-import { logErrorToProduction } from '@/utils/productionLogger';
-
-=======
-<<<<<<< HEAD
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { useState, useRef } from 'react'
 import { Mail } from 'lucide-react'
 import { useToast } from "@/hooks/use-toast";
 import {logErrorToProduction} from '@/utils/productionLogger';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 export function EnhancedNewsletterForm() {
 =======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/EnhancedNewsletterForm.tsx
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useState, useRef } from 'react';
@@ -51,35 +28,26 @@ import { logErrorToProduction } from '@/utils/productionLogger';
 
 export function EnhancedNewsletterForm() {
 
-origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   const [email, setEmail] = useState("");
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> pr-12243
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useState, useRef } from 'react';
 import { Mail } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { logErrorToProduction } from '@/utils/productionLogger';
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
-<<<<<<< HEAD:src/components/EnhancedNewsletterForm.tsx
+export function EnhancedNewsletterForm() {
+  const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const { toast } = useToast();
 <<<<<<< HEAD
   const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-=======
-export function EnhancedNewsletterForm() {
-  const [email, setEmail] = useState('');
-
-main
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const { toast } = useToast();
-
-main
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/EnhancedNewsletterForm.tsx
   const lastSubmit = useRef(0);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -88,8 +56,6 @@ main
     if (now - lastSubmit.current < 1000) return;
     lastSubmit.current = now;
 
-<<<<<<< HEAD:src/components/EnhancedNewsletterForm.tsx
-=======
     const trimmed = email.trim();
     if (!EMAIL_REGEX.test(trimmed)) {
       toast({
@@ -97,214 +63,27 @@ main
         description: 'Please enter a valid email address.',
         variant: 'destructive'
       });
-
-main
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/EnhancedNewsletterForm.tsx
       return;
     }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
     setIsSubmitting(true);
-
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     try {
-<<<<<<< HEAD:src/components/EnhancedNewsletterForm.tsx
-
       const res = await fetch("/api/newsletter", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: trimmed }),
       });
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault(),
-    const now = Date.now(),
-    if (now - lastSubmit.current < 1000) return,
-    lastSubmit.current = now,
-
-    const trimmed = email.trim(),
-    if (!EMAIL_REGEX.test(trimmed)) {
-      toast.error("Invalid email"),
-      return
-    }
-
-    setIsSubmitting(true),
-    try {
-      const res = await fetch("/api/newsletter", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: trimmed })}),
-
-      const data = await res.json().catch(() => ({})),
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-      if (res.ok) {
-        // Handle different success statuses
-        if (data.status === 'already_subscribed') {
-          toast({
-            title: 'Already subscribed',
-            description: data.message || "You're already subscribed!",
-          });
-        } else {
-<<<<<<< HEAD
-          toast.success(data.message || "Thanks for subscribing!")
-=======
-          toast({
-            title: 'Success!',
-            description: data.message || 'Thanks for subscribing!',
-          });
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-        }
-        setIsSubmitted(true);
-        setEmail('');
-      } else {
-        // Handle error responses
-        logErrorToProduction('Newsletter subscription failed:', { data: data });
-        toast({
-          title: 'Subscription failed',
-          description: data.error || 'Please try again.',
-          variant: 'destructive'
-        });
-      }
-    } catch (err: any) {
-<<<<<<< HEAD
-      logErrorToProduction('Newsletter subscription error:', { data: err }),
-      toast.error("Unable to subscribe right now. Please try again later.")
-    } finally {
-      setIsSubmitting(false)
-    }
-  },
-
-  return (
-    <div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">
-      <div className="flex items-center mb-4">
-        <div className="p-2 bg-zion-purple/20 rounded-full text-zion-cyan mr-3">
-          <Mail className="h-6 w-6" />
-        </div>
-        <div>
-          <h3 className="text-lg font-bold text-white">Stay Updated</h3>
-          <p className="text-zion-slate-light text-sm">Get exclusive offers, trending AI news, and early access to best deals</p>
-        </div>
-      </div>
-      
-      {isSubmitted ? (
-        <div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">
-          <p className="text-white font-medium">Thank you for subscribing!</p>
-          <p className="text-zion-slate-light mt-1">We'll keep you updated with the latest from Zion.</p>
-        </div>
-      ) : (
-        <form onSubmit={handleSubmit} className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2">
-          <label htmlFor="enhanced-newsletter-email" className="sr-only">
-            Email address for newsletter subscription
-          </label>
-          <Input
-            type="email"
-            id="enhanced-newsletter-email"
-            name="email"
-            placeholder="Enter your email"
-            className="flex-grow bg-zion-blue-dark text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple"
-            value={email}
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
-            autoComplete="email"
-            required
-          />
-          <Button 
-            type="submit" 
-            disabled={isSubmitting}
-            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple"
-          >
-            {isSubmitting ? "Subscribing..." : "Subscribe"}
-          </Button>
-        </form>
-      )}
-      
-      <div className="mt-4 flex items-center text-xs text-zion-slate-light">
-        <div className="flex -space-x-1 mr-2">
-          {[...Array(3)].map((_, i) => (
-            <div key={i} className="h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan">
-    } catch (err: any) {;
-      logErrorToProduction('Newsletter subscription error:', { data: err });
-      toast.error("Unable to subscribe right now. Please try again later.");
-    } finally {;
-      setIsSubmitting(false);
-    }
-  };
-  return (;
-    <div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">;
-      <div className="flex items-center mb-4">;
-        <div className="p-2 bg-zion-purple/20 rounded-full text-zion-cyan mr-3">;
-          <Mail className="h-6 w-6" />;
-        </div>;
-        <div>;
-          <h3 className="text-lg font-bold text-white">Stay Updated</h3>;
-          <p className="text-zion-slate-light text-sm">Get exclusive offers, trending AI news, and early access to best deals</p>;
-        </div>;
-      </div>;
-      {isSubmitted ? (;
-        <div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">;
-          <p className="text-white font-medium">Thank you for subscribing!</p>;
-          <p className="text-zion-slate-light mt-1">We'll keep you updated with the latest from Zion.</p>;
-        </div>;
-      ) : (;
-        <form onSubmit={handleSubmit} className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2">;
-          <label htmlFor="enhanced-newsletter-email" className="sr-only">;
-            Email address for newsletter subscription;
-          </label>;
-          <Input;
-            type="email";
-            id="enhanced-newsletter-email";
-            name="email";
-            placeholder="Enter your email";
-            className="flex-grow bg-zion-blue-dark text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple";
-            value={email}
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
-            autoComplete="email";
-            required;
-          />;
-          <Button;
-            type="submit";
-            disabled={isSubmitting}
-            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple";
-          >;
-            {isSubmitting ? "Subscribing..." : "Subscribe"}
-          </Button>;
-        </form>;
-      )}
-;
-      <div className="mt-4 flex items-center text-xs text-zion-slate-light">;
-        <div className="flex -space-x-1 mr-2">;
-          {[...Array(3)].map((_, i) => (;
-            <div key={i} className="h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan">;
-              {String.fromCharCode(65 + i)}
-            </div>;
-          ))}
-        </div>;
-        <span>Join 10,000+ tech professionals who already subscribe</span>;
-      </div>;
-    </div>;
-=======
-      logErrorToProduction('Newsletter subscription error:', { data: err });
-      toast({
-        title: 'Error',
-        description: 'Something went wrong. Please try again.',
-        variant: 'destructive'
-      });
-    } finally {
-      setIsSubmitting(false);
-=======
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       setIsSubmitting (false);
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
     }
   }
 
       const data = await res.json().catch(() => ({})),
+
+
 
       if (res.ok) {
         // Handle different success statuses
@@ -327,10 +106,6 @@ main
       setIsSubmitting(false)
     }
   }
-
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/EnhancedNewsletterForm.tsx
           toast.success(data.message || "Thanks for subscribing!")
         }
         setIsSubmitted(true),;
@@ -348,7 +123,6 @@ main
     }
   },
 
-<<<<<<< HEAD:src/components/EnhancedNewsletterForm.tsx
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -358,14 +132,7 @@ main
 =======
   const EMAIL_REGEX = null;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
-
-  const EMAIL_REGEX = null;
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/EnhancedNewsletterForm.tsx
+>>>>>>> pr-12243
   return (
     <div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">
       <div className="flex items-center mb-4">
@@ -384,16 +151,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {isSubmitted ? (
         <div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">
           <p className="text-white font-medium">Thank you for subscribing!</p>
-<<<<<<< HEAD:src/components/EnhancedNewsletterForm.tsx
-          <p className="text-zion-slate-light mt-1">We'll keep you updated with the latest from Zion.</p>
-
-=======
           <p className="text-zion-slate-light mt-1">
             We&apos;ll keep you updated with the latest from Zion.
           </p>
-
       
-
 
 
       <div className='mt-4 flex items-center text-xs text-zion-slate-light'>;
@@ -411,13 +172,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       
 
-main
       {isSubmitted ? (
         <div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">
           <p className="text-white font-medium">Thank you for subscribing!</p>
           <p className="text-zion-slate-light mt-1">We'll keep you updated with the latest from Zion.</p>
-main
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/EnhancedNewsletterForm.tsx
         </div>
       ) : (
         <form
@@ -465,23 +223,10 @@ main
         <span>Join 10,000+ tech professionals who already subscribe</span>
       </div>
     </div>
-<<<<<<< HEAD:src/components/EnhancedNewsletterForm.tsx
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
   )
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-  )
-
-=======
 
 
-
-main
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/EnhancedNewsletterForm.tsx
             type="email"
             id="enhanced-newsletter-email"
             name="email"
@@ -566,19 +311,8 @@ main
         <span>Join 10,000+ tech professionals who already subscribe</span>;
       </div>;
     </div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   );
-<<<<<<< HEAD:src/components/EnhancedNewsletterForm.tsx
-
 }
-
-<<<<<<< HEAD
-=======
-=======
-
-
-}
-
 
 
 
@@ -631,14 +365,12 @@ main
 
 
 }
-main
       const res = await fetch('/api/newsletter', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: trimmed })
       });
 
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/EnhancedNewsletterForm.tsx
       const data = await res.json().catch(() => ({}));
 
       if (res.ok) {
@@ -748,13 +480,14 @@ main
     </div>
   );
 }
-
-main
-
-  );
-<<<<<<< HEAD:src/components/EnhancedNewsletterForm.tsx
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+<<<<<<< HEAD
 =======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/EnhancedNewsletterForm.tsx
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> pr-12243

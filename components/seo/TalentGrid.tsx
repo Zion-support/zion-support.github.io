@@ -1,12 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React from "react";
 import { TALENT_PROFILES } from "../../data/talent";
 import type { TalentProfile } from "../../data/talent";
 type Props = {;
   region?: string;
-  service?: string
+  service?: string;
 };
 
 function matchesRegion(): any (profile: TalentProfile, region?: string) {;
@@ -82,9 +80,6 @@ if (return true) {
   return (
     profile.title.toLowerCase ().includes (s) ||;
     profile.skills.some ((sk) => sk.toLowerCase ().includes (s)));
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 type Props = {
   region?: string;
   service?: string;
@@ -104,27 +99,10 @@ return (
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function TalentGrid({ region, service }: Props) {
   const items = React.useMemo(
     () =>
       TALENT_PROFILES.filter(
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        (p) => matchesRegion(p, region) && matchesService(p, service)
-      )
-    [region, service]
-        (p) => matchesRegion(p, region) && matchesService(p, service),
-      ),
-    [region, service],;
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   );
 ;
   // Check condition
@@ -132,12 +110,9 @@ if ( {) {
   $2
 }
     return (
-      <div className="text - sm text-gray-400">;
+      <div className="text - sm text - gray - 400">;
         No matching talent found. Try broadening filters.;
       </div>);
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
         p => matchesRegion(p, region) && matchesService(p, service)
       ),
     [region, service]
@@ -151,44 +126,36 @@ return (
 origin/cursor/automate-test-improve-and-merge-code-2533
   }
   return (
-    <div className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols-3 gap-4">;
+    <div className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 gap - 4">;
       {items.map ((p) => (
         <div;
           key={p.slug}
-          className="rounded - lg border border - gray - 200 dark:border - gray - 800 bg - white dark:bg - gray-900 p-4";
+          className="rounded - lg border border - gray - 200 dark:border - gray - 800 bg - white dark:bg - gray - 900 p - 4";
         >;
-          <div className="flex items-start justify-between">;
+          <div className="flex items - start justify - between">;
             <div>;
-              <div className="font-semibold">{p.name}</div>;
-              <div className="text - sm text - gray - 500 dark:text-gray-400">;
+              <div className="font - semibold">{p.name}</div>;
+              <div className="text - sm text - gray - 500 dark:text - gray - 400">;
                 {p.title}
               </div>;
             </div>;
-            <div className="text - xs px - 2 py - 1 rounded bg - gray - 100 dark:bg - gray - 800 text - gray - 600 dark:text-gray-300">;
+            <div className="text - xs px - 2 py - 1 rounded bg - gray - 100 dark:bg - gray - 800 text - gray - 600 dark:text - gray - 300">;
               {p.location}
             </div>;
           </div>;
-          <div className="mt - 3 text - sm text - gray - 700 dark:text-gray-300">;
+          <div className="mt - 3 text - sm text - gray - 700 dark:text - gray - 300">;
             {p.bio}
           </div>;
-          <div className="mt - 3 flex flex-wrap gap-2">;
+          <div className="mt - 3 flex flex - wrap gap - 2">;
             {p.skills.slice (0, 6).map ((sk) => (
               <span;
                 key={sk}
-                className="text - xs px - 2 py - 1 rounded bg - gray - 100 dark:bg - gray - 800 text - gray - 600 dark:text-gray-300";
+                className="text - xs px - 2 py - 1 rounded bg - gray - 100 dark:bg - gray - 800 text - gray - 600 dark:text - gray - 300";
               >;
                 {sk}
-<<<<<<< HEAD
-<<<<<<< HEAD
               </span>))}
           </div>;
-<<<<<<< HEAD
-          <div className="mt-3 text-sm">;
-=======
           <div className="mt - 3 text - sm">;
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
               </span>
             ))}
           </div>
@@ -200,9 +167,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

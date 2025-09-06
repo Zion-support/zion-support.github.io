@@ -1,103 +1,18 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { NextApiRequest, NextApiResponse } from '[^']*';
 import { requireUser } from '[^']*';
 import { getConversationById, markAsRead } from '[^']*';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
-  const user = requireUser(req, res);
-  if (!user) return;
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-  const { conversationId } = req.body || {};
-  if (!conversationId) return res.status(400).json({ error: 'Missing conversationId' });
-  const conv = getConversationById(conversationId);
-  if (!conv || !conv.participants.includes(user.id)) return res.status(404).json({ error: 'Conversation not found' });
-  markAsRead(conversationId, user.id);
-  res.status(200).json({ success: true })
-}
-
-
-=======
-<<<<<<< HEAD
-=======
-  res.status(200).json({ success: true })
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-import { NextApiRequest, NextApiResponse } from 'next',
-import { require_user } from '../../../utils / auth',
-import { getConversationById, markAsRead } from '../../../utils / messaging / storage',
-;
-export default /**
- * handler - Function description
- */
-function handler() {
-  const user = require_user (req, res),
-  // Check condition
-if (return, ) {
-  $2
-}
-  if (return res.status (405).json ({ error: 'Method not allowed' }), ) {
-  $2
-}
-  const { conversation_id } = req.body || {},
-  if (return res.status (400).json ({ error: 'Missing conversation_id' }), ) {
-  $2
-}
-  const conv = getConversationById (conversation_id),
-  if () return res.status (404).json ({ error: 'Conversation not found' }), ) {
-  $2
-}
-  markAsRead (conversation_id, user.id),
-  res.status (200).json ({ success: true });
-}
-;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-=======
-}
-
-
-import { NextApiRequest, NextApiResponse } from 'next';
-import { requireUser } from '../../../utils/auth';
-import { getConversationById, markAsRead } from '../../../utils/messaging/storage';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const user = requireUser(req, res)
-  if (!user) return
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
-  const { conversationId } = req.body |{}
-  if (!conversationId) return res.status(400).json({ error: 'Missing conversationId' })
-  const conv = getConversationById(conversationId)
-  if (!conv |!conv.participants.includes(user.id)) return res.status(404).json({ error: 'Conversation not found' })
-  markAsRead(conversationId, user.id)
-
-=======
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   res.status(200).json({ success: true })
 =======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { NextApiRequest, NextApiResponse } from 'next',;
 import { requireUser } from '../../../utils/auth',;
 import { getConversationById, markAsRead } from '../../../utils/messaging/storage',
@@ -112,19 +27,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const conv = getConversationById(conversationId),
   if (!conv || !conv.participants.includes(user.id)) return res.status(404).json({ error: 'Conversation not found' }),
   markAsRead(conversationId, user.id),
-<<<<<<< HEAD
-<<<<<<< HEAD
-  res.status(200).json({ success: true });
-};
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' });
+=======
+>>>>>>> pr-12243
 import { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 import { requireUser } from '../../../utils/auth';
 import { getConversationById, markAsRead } from '../../../utils/messaging/storage';
 export default function handler(req, res) {
   try {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const user = requireUser(req, res);
   if (!user) return;
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
@@ -133,64 +43,10 @@ export default function handler(req, res) {
   const conv = getConversationById(conversationId);
   if (!conv || !conv.participants.includes(user.id)) return res.status(404).json({ error: 'Conversation not found' });
   markAsRead(conversationId, user.id);
-<<<<<<< HEAD
-  res.status(200).json({ success: true });
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-}
-}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-}
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
-=======
-}
-
-}
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
 =======
 import { requireUser } from '../../../utils/auth',;
 import { getConversationById, markAsRead } from '../../../utils/messaging/storage'
@@ -204,14 +60,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const conv = getConversationById(conversationId)
   if (!conv || !conv.participants.includes(user.id)) return res.status(404).json({ error: 'Conversation not found' })
   markAsRead(conversationId, user.id)
+<<<<<<< HEAD
+=======
 >>>>>>> main
 =======
   const user = null;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+>>>>>>> pr-12243
   res.status(200).json({ success: true })
 };
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

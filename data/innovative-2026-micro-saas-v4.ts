@@ -1,28 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
-=======
 import { ServiceVariant } from '../types / service - variants';
 
 export interface Innovative2026MicroSaasServiceV4 {
 
         'Multi-format content generation',
         'AI-powered content optimization',
-<<<<<<< HEAD
-=======
   real_implementation: boolean;
   implementation_details: string;
   launch_date: string;
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   customers: number;
   rating: number;
   reviews: number;
@@ -42,14 +27,7 @@ export const innovative2026MicroSaasServicesV4: Innovative2026MicroSaasServiceV4
         'Multi - format content generation',
         'AI - powered content optimization',
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
         'Social media scheduling',
         'SEO optimization for each format',
         'Brand voice consistency',
@@ -60,8 +38,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'ROI tracking',
       ],
       popular: true,
-<<<<<<< HEAD
-=======
       icon: '🔄',
 
         'GPT-4',
@@ -80,8 +56,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'GPT - 4',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
         'Claude 3',
         'Computer Vision',
         'React',
@@ -90,17 +64,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Redis',
         'AWS',
       ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-=======
-<<<<<<< HEAD
-=======
-=======
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       integrations: [;
         'WordPress',
         'Shopify',
@@ -112,14 +76,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       ],
       use_cases: [;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
         'Content marketing',
         'Social media management',
         'Brand awareness',
@@ -127,8 +84,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'SEO optimization',
       ],
       roi: 'Save 20+ hours per week on content creation, increase reach by 300%, improve engagement by 150%',
-<<<<<<< HEAD
-=======
 
       competitors: ['Repurpose.io', 'Loomly', 'Buffer'],
       market_size: '$400B global content marketing market',
@@ -137,8 +92,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       contact_info: {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -152,8 +105,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       rating: 4 && 4.8,
       reviews: 89,
     },
-<<<<<<< HEAD
-=======
 
     // Quantum - Enhanced Customer Journey Mapping;
     {
@@ -249,8 +200,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
         'AI email writing',
         'Automatic send time optimization',
         'Intelligent audience segmentation',
@@ -263,8 +212,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'ROI tracking',
       ],
       popular: true,
-<<<<<<< HEAD
-=======
       icon: '📧',
 
         'GPT-4',
@@ -283,8 +230,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'GPT - 4',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
         'Claude 3',
         'Machine Learning',
         'React',
@@ -293,8 +238,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Redis',
         'AWS',
       ],
-<<<<<<< HEAD
-=======
 
       integrations: [;
         'Mailchimp',
@@ -308,8 +251,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       use_cases: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
         'Email marketing automation',
         'Lead nurturing',
         'Customer retention',
@@ -318,8 +259,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       ],
       roi: 'Save 15+ hours per week, increase open rates by 35%, improve click - through rates by 50%',
       competitors: ['Mailchimp', 'ConvertKit', 'ActiveCampaign'],
-<<<<<<< HEAD
-=======
 
       market_size: '$1.2B email marketing market',
       growth_rate: '20% annual growth',
@@ -327,8 +266,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       contact_info: {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -342,8 +279,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       rating: 4 && 4.7,
       reviews: 156,
     },
-<<<<<<< HEAD
-=======
 
         'Blockchain-based rewards',
         'Cross-business partnerships',
@@ -606,8 +541,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       features: [;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
         'AI content creation',
         'Automatic posting',
         'Community engagement',
@@ -620,8 +553,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Crisis management',
       ],
       popular: true,
-<<<<<<< HEAD
-=======
       icon: '📱',
 
         'GPT-4',
@@ -640,8 +571,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'GPT - 4',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
         'Claude 3',
         'Computer Vision',
         'React',
@@ -650,8 +579,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         'Redis',
         'AWS',
       ],
-<<<<<<< HEAD
-=======
 
       integrations: [;
         'Facebook',
@@ -677,8 +604,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       contact_info: {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -692,8 +617,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       rating: 4 && 4.7,
       reviews: 145,
     },
-<<<<<<< HEAD
-=======
 
     // Metaverse Business Development Platform;
     {
@@ -766,8 +689,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       contact_info: {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -775,7 +696,25 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       },
       real_implementation: true,
       implementation_details:;
-<<<<<<< HEAD
+        'Comprehensive metaverse business development platform with 3D creation tools and NFT integration.',
+      launch_date: '2026 - 03 - 15',
+      customers: 40,
+      rating: 4 && 4.8,
+      reviews: 32,
+    },
+
+    // AI - Powered Legal Document Generator;
+    {
+      id: 'ai - legal - document - generator',
+      name: 'AI Legal Document Generator',
+      tagline: 'Generate legal documents with AI precision and compliance',
+      price: '$199',
+      period: '/month',
+      description:;
+        'Intelligent legal document generation platform that creates contracts, agreements, and legal forms with AI - powered accuracy, compliance checking, and customization options.',
+      features: [;
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
         'AI document generation',
         'Compliance checking',
         'Customizable templates',
@@ -789,16 +728,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       ],
       popular: true,
       icon: '⚖️',
-=======
-        'Comprehensive metaverse business development platform with 3D creation tools and NFT integration.',
-      launch_date: '2026 - 03 - 15',
-      customers: 40,
-      rating: 4 && 4.8,
-      reviews: 32,
-    },
-
-    // AI - Powered Legal Document Generator;
-    {
 
         'GPT-4',
       color: 'from - amber - 600 to - yellow - 600',
@@ -859,8 +788,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       launchDate: '2026-02-20',
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       customers: 120,
       rating: 4 && 4.9,
       reviews: 98,
@@ -868,11 +795,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     },;
   ];    features: [
 
-<<<<<<< HEAD
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -893,15 +816,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     website: string
   
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
@@ -2001,6 +1915,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       description:
         'Intelligent legal document generation platform that creates contracts, agreements, and legal forms with AI-powered accuracy, compliance checking, and customization options.',
       features: [
+        'AI document generation'
+        'Compliance checking'
+        'Customizable templates'
+        'Legal clause library'
+        'Risk assessment'
+        'Document versioning'
+        'Electronic signatures'
+        'Legal research tools'
+        'Multi-jurisdiction support'
+        'Expert consultation'
+      ]
+      popular: true
+      icon: '⚖️'
+      color: 'from-amber-600 to-yellow-600'
+      textColor: 'text-amber-400'
+      link: 'https://ziontechgroup.com/ai-legal-document-generator'
+origin/cursor/expand-services-advertise-and-build-project-c28b
         'AI document generation',
         'Compliance checking',
         'Customizable templates',
@@ -2017,12 +1948,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       color: 'from-amber-600 to-yellow-600',
       textColor: 'text-amber-400',
       link: 'https://ziontechgroup.com/ai-legal-document-generator',
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       marketPosition:
         'First AI-powered legal document generation platform. Competitive advantage: AI accuracy, compliance checking, and comprehensive legal support.',
       targetAudience:
@@ -2062,24 +1988,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       growthRate: '30% annual growth',
       variant: 'ai-futuristic',
       contactInfo: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       customers: 120,
       rating: 4 && 4.9,
       reviews: 98,
 
     },;
 
-  ];    features: [
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+  ];    features: [
+
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup.com'
         address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -2087,24 +2004,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       }
       realImplementation: true
       implementationDetails:
-<<<<<<< HEAD
-<<<<<<< HEAD
         'AI-powered legal document generation platform with compliance checking and legal support.'
       launchDate: '2026-02-20'
       customers: 120
       rating: 4.9
       reviews: 98
     }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2112,36 +2018,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       },
       realImplementation: true,
       implementationDetails:
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
         'AI-powered legal document generation platform with compliance checking and legal support.',
       launchDate: '2026-02-20',
       customers: 120,
       rating: 4.9,
       reviews: 98,
-<<<<<<< HEAD
-<<<<<<< HEAD
     },;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   ];    features: [
       'AI document generationCompliance checkingCustomizable templatesLegal clause libraryRisk assessmentDocument versioningElectronic signaturesLegal research tools';
       'Multi-jurisdiction supportExpert consultation'
-
-=======
-  ];    features: [
-      'AI document generationCompliance checkingCustomizable templatesLegal clause libraryRisk assessmentDocument versioningElectronic signaturesLegal research tools';
-      'Multi-jurisdiction supportExpert consultation'
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     ];
     popular: true, icon: '🔄',
     color: 'from-blue-600 to-cyan-600', textColor: 'text-blue-400',
@@ -2179,15 +2065,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     popular: true, icon: '⚖️',
     color: 'from-amber-600 to-yellow-600', textColor: 'text-amber-400',
@@ -2211,15 +2088,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     rating: 4 && 4.9,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
     },
   ];
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     reviews: 98
     real_implementation: true, implementation_details: 'AI - powered legal document generation platform with compliance checking and legal support.',
     launch_date: '2026 - 02 - 20', customers: 120,
@@ -2227,8 +2098,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     reviews: 98;
   }
 ];
-<<<<<<< HEAD
-=======
 
     color: 'from - amber - 600 to - yellow - 600';
     text_color: 'text - amber - 400';
@@ -2244,8 +2113,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     use_cases: ['Contract generation_legal compliance_document automation_risk management_legal research'];
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     roi: 'Save 80% on legal document costs, reduce review time by 70%, improve compliance by 90%';
     competitors: ['LegalZoomRocket LawyerDocuSign'];
     market_size: '$25B legal tech market';
@@ -2255,82 +2122,26 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-<<<<<<< HEAD
-=======
 
       website: 'https://ziontechgroup && ziontechgroup.com'
     };
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     realImplementation: true;
     implementationDetails: 'AI-powered legal document generation platform with compliance checking and legal support.';
     launchDate: '2026-02-20';
     customers: 120;
     rating: 4 && 4.9;
     reviews: 98
-<<<<<<< HEAD
   }
 ];
-<<<<<<< HEAD
 ;
-<<<<<<< HEAD
-export const innovative2026MicroSaasServicesV4: Innovative2026MicroSaasServiceV4[] = [;
-  // AI-Powered Content Repurposing Engine;
-  {;
-    id: 'ai-content-repurposing-engine',;
-    name: 'AI Content Repurposing Engine',;
-    tagline: 'Transform one piece of content into 50+ formats automatically',;
-    price: '$297',;
-    period: '/month',;
-    description: 'Intelligent content repurposing platform that automatically transforms blog posts, videos, and articles into multiple formats including social media posts, infographics, podcasts, and more.',;
-    features: [;
-      'Multi-format content generationAI-powered content optimizationSocial media schedulingSEO optimization for each formatBrand voice consistencyPerformance analyticsContent calendar managementMulti-platform publishing',;
-      'A/B testing capabilitiesROI tracking';
-    ],;
-    popular: true,;
-    icon: '🔄',;
-    color: 'from-blue-600 to-cyan-600',;
-    textColor: 'text-blue-400',;
-    link: 'https://ziontechgroup.com/ai-content-repurposing-engine',;
-    marketPosition: 'First AI-powered content repurposing platform with automated multi-format generation. Competitive advantage: Intelligent content transformation, brand consistency, and ROI optimization.',;
-    targetAudience: 'Content creators, Marketing agencies, Social media managers, Small businesses, Influencers',;
-    trialDays: 14,;
-    setupTime: '24 hours',;
-    category: 'AI Content Marketing',;
-    realService: true,;
-    technology: ['GPT-4Claude 3Computer VisionReactNode.jsPostgreSQLRedisAWS'],;
-    integrations: ['WordPressShopifyHubSpotMailchimpBufferHootsuiteCanva'],;
-    useCases: ['Content marketingSocial media managementBrand awarenessLead generationSEO optimization'],;
-    roi: 'Save 20+ hours per week on content creation, increase reach by 300%, improve engagement by 150%',;
-    competitors: ['Repurpose.ioLoomlyBuffer'],;
-    marketSize: '$400B global content marketing market',;
-    growthRate: '25% annual growth',;
-    variant: 'ai-futuristic',;
-    contactInfo: {;
-      mobile: '+1 302 464 0950',;
-      email: 'kleber@ziontechgroup.com',;
-      address: '364 E Main St STE 1008 Middletown DE 19709',;
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 
 
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       website: 'https://ziontechgroup.com';
-=======
-;      website: 'https://ziontechgroup.com';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     }
     real_implementation: true;
     implementation_details: 'AI - powered legal document generation platform with compliance checking and legal support.';
@@ -2338,36 +2149,15 @@ ursor/fix-website-loading-errors-and-merge-6662
     customers: 120;
     rating: 4.9;
     reviews: 98;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-<<<<<<< HEAD
-=======
 
 
 
 ursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   }
 ];
-<<<<<<< HEAD
 ;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { ServiceVariant } from '../types/service-variants',;
 export interface Innovative2026MicroSaasServiceV4 {;
   id: string,;
@@ -2842,25 +2632,6 @@ export interface Innovative2026MicroSaasServiceV4 {;
     customers: 120,;
     rating: 4.9;
     reviews: 98;
-
-
   }
 ];
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-;  }
-];
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

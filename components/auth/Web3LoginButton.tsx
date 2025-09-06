@@ -4,10 +4,6 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   
   static getDerivedStateFromError(error) {
     return { hasError: true };
@@ -23,71 +19,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useEffect, useState } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-  const [open, setOpen] = useState(false);
-  const [user, setUser] = useState<{
-    address: string;
-    chain: 'evm' | 'sol';
-  } | null>(null);  const [displayName, setDisplayName] = useState<string | null>(null);
-  const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
-  useEffect(() => {    return did.lens |did.ens |null
-  } catch { return null }
-}
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-
-<<<<<<< HEAD
-  const [open, setOpen] = useState(false);
-  const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null)
-  const [displayName, setDisplayName] = useState<string | null>(null);
-  const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
-  useEffect(() => {
-    const saved =
-      typeof window !== 'undefined'
-        ? window.localStorage.getItem('zion-web3-user')
-        : null;
-    if (saved) setUser(JSON.parse(saved));
-    const pref =
-      typeof window !== 'undefined'
-        ? window.localStorage.getItem('zion-web3-display')
-        : null;
-    setDisplayWeb3(pref === 'true');  }, []);
-  useEffect(() => {
-    (async () => {    const saved = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-user') : null;
-    if (saved) setUser(JSON.parse(saved));
-    const pref = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-display') : null;
-    setDisplayWeb3(pref === 'true')
-  useEffect(() => {
-    (async () => {
-      if (user && displayWeb3)
-        setDisplayName(await resolveDisplayName(user.address));
-      else setDisplayName(null);
-    })();
-  const onLoggedIn = (u: { address: string; chain: 'evm' | 'sol' }) => {
-    window.localStorage.setItem('zion-web3-user', JSON.stringify(u));
-    setUser(u);  }
-  const disconnect = async () => {
-    window.localStorage.removeItem('zion-web3-user');    setUser(u)
-  }
-  const disconnect = async () => {
-    window.localStorage.removeItem('zion-web3-user');
-    try {
-      await fetch('/api/auth/logout', { method: 'POST' });
-    } catch {}
-    setUser(null);
-
-  if (user) {
-    const base =
-      displayName |`${user.address.slice(0, 6)}…${user.address.slice(-4)}`;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export default function Web3LoginButton() {;
 const Web3LoginModal = dynamic(() => import('./Web3LoginModal'), {;
   ssr: false,;
@@ -99,9 +31,6 @@ async function resolveDisplayName(): any (addr: string): Promise<string | null> 
     const did = data?.payload || {};
     return did && did.lens || did && did.ens || null;
   } catch {;
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 import dynamic from 'next/dynamic';
 const Web3LoginModal = dynamic(() => import('./Web3LoginModal'), {
   ssr: false,
@@ -116,42 +45,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
 
 export default function Web3LoginButton() {;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const [open, setOpen] = useState(false);
   const [user, setUser] = useState<{;
     address: string;
     chain: 'evm' | 'sol';
-<<<<<<< HEAD
-<<<<<<< HEAD
   } | null>(null);  const [displayName, setDisplayName] = useState<string | null>(null);
   const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
-<<<<<<< HEAD
-
-    const did = data?.payload || {};
-    return did.lens || did.ens || null
-  } catch { return null };
-
-=======
   useEffect(() => {    return did.lens |did.ens |null
   } catch { return null }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 export default function Web3LoginButton() {
 
 export default function Web3LoginButton() {;
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
 }
 export default function Web3LoginButton() {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const [open, setOpen] = useState(false);
   const [displayName, setDisplayName] = useState<string | null>(null);
   const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
   useEffect(() => {
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   } | null>(null);
   const [displayName, setDisplayName] = useState<string | null>(null);
   const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
@@ -166,8 +77,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       typeof window !== 'undefined';
         ? window && window.localStorage.getItem('zion-web3-display');
         : null;
-<<<<<<< HEAD
-<<<<<<< HEAD
     setDisplayWeb3(pref === 'true');  }, []);
       else setDisplayName(null);
     })();
@@ -181,9 +90,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const disconnect = async () => {;
     window && window.localStorage.removeItem('zion-web3-user');
     try {;
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
     setDisplayWeb3(pref === 'true');
   }, []);
 
@@ -212,21 +118,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   if (user) {
     const base =
       displayName |`${user.address.slice(0, 6)}…${user.address.slice(-4)}`;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     return (
       <div className='flex items-center gap-2'>;
         <span className='hidden sm:inline text-[10px] rounded bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300 px-1 && 1.5 py-0 && 0.5'>;
@@ -248,6 +141,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             onLoggedIn={onLoggedIn}
           />;
         )}
+      </div>;
+    );  }
+  return (
+    <>    );
+  }
+  return (
+    <>;
+      <button
       </div>
     );
   }
@@ -267,30 +168,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           onLoggedIn={onLoggedIn}
         />;
       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    </>
-  );      <button onClick={() => setOpen(true)} className="rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1.5 text-xs">Connect Wallet</button>
-      {open && <Web3LoginModal isOpen={open} onClose={() => setOpen(false)} onLoggedIn={onLoggedIn} />}
-    </>
-);
-}
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     </>;
   );      <button onClick={() => setOpen(true)} className="rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1 && 1.5 text-xs">Connect Wallet</button>;
 
@@ -459,17 +336,6 @@ if ( {) {
     </>);      <button on_click={() => set_open (true)} className="rounded - md bg - black text - white dark:bg - white dark:text - black px - 3 py-1.5 text-xs">Connect Wallet</button>;
       {open && <Web3LoginModal is_open={open} on_close={() => set_open (false)} onLoggedIn={onLoggedIn} />}
     </>);
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
     </>
   );
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -1,40 +1,10 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Layout from './layout/Layout';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import {
-<<<<<<< HEAD
-  ArrowRight
-  Star
-  Search
-  Shield
-  Globe
-  TrendingUp
-  Brain
-  Atom
-  Zap
-  Cpu
-  Cloud
-  BarChart3
-  Lock
-  Rocket
-  Eye
-  Sparkles
-  Target
-  Users
-  Award
-  Clock;} from 'lucide-react';import {
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
   ArrowRight;
   Star, ;
 import {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   ArrowRight,
   Star,
   Search,
@@ -54,28 +24,14 @@ import {
   Target,
   Users,
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  Award,;
-  Clock,;} from 'lucide-react';import { ;
-  ArrowRight;
-  Star
-=======
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   ArrowRight;
   Star,
   Award,;
   Clock,;} from 'lucide-react';import { ;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   ArrowRight;
   Star
 
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { ArrowRight;
   Star;
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -96,60 +52,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   Target;
   Users;
   Award;
-<<<<<<< HEAD
-
-=======
-
-import Link from 'next/link';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026';
 import { innovative2041MicroSaasServices  } from '../data/innovative-2041-micro-saas-services';
 import { innovative2041ITServices  } from '../data/innovative-2041-it-services';
 import { innovative2041AIServices } from '../data/innovative-2041-ai-services';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-const Homepage2041: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault()
-    if (searchQuery.trim()) {
-=======
-      window.location.href = `/services?search=${encodeURIComponent(searchQuery.trim())}`;      window.location.href = `/services?search=${encodeURIComponent(searchQuery.trim())}`
-    }
-  }
-  };
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const featuredServices = [
-    ...innovative2041MicroSaasServices.filter(s => s.popular).slice(0, 3)
-    ...innovative2041ITServices.filter(s => s.popular).slice(0, 2)
-    ...innovative2041AIServices.filter(s => s.popular).slice(0, 1),  ];
-  const testimonials = [
-    {    ...innovative2041MicroSaasServices.filter(s => s.popular).slice(0, 3);
+    ...innovative2041MicroSaasServices.filter(s => s.popular).slice(0, 3);
     ...innovative2041ITServices.filter(s => s.popular).slice(0, 2);
     ...innovative2041AIServices.filter(s => s.popular).slice(0, 1)
   ];
   const testimonials = [
     {
-<<<<<<< HEAD
-      name: 'Dr. Sarah Chen'
-      role: 'Chief AI Officer, FutureTech Inc.'
-      company: 'FutureTech Inc.'
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       name: 'Dr. Sarah Chen',
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const Homepage2041: React.FC;
     }
   }
@@ -168,9 +82,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         "Zion Tech Group's AI consciousness evolution platform is revolutionary. We've achieved breakthroughs in ethical AI development that seemed impossible just months ago."
       avatar: '👩‍💼'
     }
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
       name: 'Dr. Sarah Chen',
       role: 'Chief AI Officer, FutureTech Inc.',
@@ -179,33 +90,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         "Zion Tech Group's AI consciousness evolution platform is revolutionary. We've achieved breakthroughs in ethical AI development that seemed impossible just months ago.",
       avatar: '👩‍💼',
     },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     {
-      name: 'Marcus Rodriguez'
-      role: 'VP Quantum Computing, QuantumCorp'
-      company: 'QuantumCorp'
-      content:
-        "Their quantum bio-computing platform accelerated our drug discovery by 1000x. We're now leading the industry in pharmaceutical innovation."
-      rating: 5
-      avatar: '👨‍💻'
-    }
+      name: 'Marcus Rodriguez',
+      role: 'VP Quantum Computing, QuantumCorp',
+      company: 'QuantumCorp',
+      content:;
+        "Their quantum bio - computing platform accelerated our drug discovery by 1000x. We're now leading the industry in pharmaceutical innovation.",
+
+      rating: 5,
+      avatar: "👩‍💼"
+    };
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      name: 'Dr. Emily Watson'
-      role: 'Research Director, SpaceLabs'
-      company: 'SpaceLabs'
-      content:
-        "The space mining automation platform opened new frontiers in resource extraction. We're now mining asteroids with unprecedented efficiency."
-      rating: 5
-      avatar: '👩‍🔬'
-    }
-  ];
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       rating: 5,
       avatar: "👨‍💻"
     };
@@ -218,9 +113,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       avatar: "👩‍🔬"
     }
   ];
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       name: 'Dr. Emily Watson'
       role: 'Research Director, SpaceLabs'
       company: 'SpaceLabs'
@@ -260,8 +152,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   key={i}
                   className='absolute w - 2 h - 2 bg - cyan - 400 / 40 rounded - full';
                   animate={{
-<<<<<<< HEAD
-<<<<<<< HEAD
                     opacity: [0, 0.7, 0];
                     scale: [0.5, 1, 0.5]}}
                     duration: 5 + i * 0.3
@@ -284,7 +174,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           {/* Hero Content */}
           <div className='text-center max-w-7xl mx-auto relative z-10'>            <motion && motion.div          <div className="text-center max-w-7xl mx-auto relative z-10">;
             <motion&& motion.div
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}>;
@@ -294,14 +183,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <motion&& motion.div
                 className='max-w-3xl mx-auto mb-12'                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
-
-  const testimonials = [
-    {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
-=======
 
                 />
               ))}
@@ -309,9 +190,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
 {/* Hero Content */}
           <div className="text-center max-w-7xl mx-auto relative z-10">
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     x: [0, 60, 0],
                     y: [0, -60, 0],
                     opacity: [0, 0.7, 0],
@@ -333,8 +211,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </div>
           {/* Hero Content */}
-<<<<<<< HEAD
-<<<<<<< HEAD
           <div className='text-center max-w-7xl mx-auto relative z-10'>            <motion.div          <div className="text-center max-w-7xl mx-auto relative z-10">
 
                 />
@@ -344,11 +220,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
 
           {/* Hero Content */}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           <div className="text-center max-w-7xl mx-auto relative z-10">
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div className='text-center max-w-7xl mx-auto relative z-10'>
 origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
@@ -356,8 +228,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-<<<<<<< HEAD
-<<<<<<< HEAD
               <h1 
                 id="hero-heading"
                 className="text-6xl md:text-8xl lg:text-9xl font-bold mb-8 leading-tight"
@@ -404,17 +274,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   />;
                   <button
                     type="submit"
-<<<<<<< HEAD
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 className="flex flex-col sm:flex-row gap-6 justify-center items-center"
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <h1
                 id='hero-heading'
                 className='text-6xl md:text-8xl lg:text-9xl font-bold mb-8 leading-tight'
@@ -461,74 +321,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
                 <Link
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  href='/2041-futuristic-services-showcase'
-                  className='px-10 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-3'
-                >
-                  <Rocket className='w-6 h-6' />
-                  Explore 2041 Services
-                  <ArrowRight className='w-5 h-5' />
-                </Link>
-                <Link
-                  href='/contact'
-                  className='px-10 py-4 border-2 border-cyan-500/50 text-cyan-400 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300 flex items-center gap-3'
-                >
-                  <Users className='w-6 h-6' />                  Start Your Journey                >
-                  <Rocket className="w-6 h-6" />
-                  Explore 2041 Services
-                  <ArrowRight className="w-5 h-5" />
-                </Link>
-                <Link
-                  href="/contact"
-                  className="px-10 py-4 border-2 border-cyan-500/50 text-cyan-400 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300 flex items-center gap-3"
-                >
-                  <Users className="w-6 h-6" />
-                  Start Your Journey
-                </Link>
-              </motion.div>
-            </motion.div>
-          </div>
-        </section>
-        {/* Stats Section */}
-        <section className='py-20 px-4'>
-          <div className='max-w-7xl mx-auto'>
-            <motion.div
-              className='grid grid-cols-2 md:grid-cols-4 gap-8'              initial={{ opacity: 0, y: 30 }}        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              className="grid grid-cols-2 md:grid-cols-4 gap-8"
-            <motion.div 
-              className="grid grid-cols-2 md:grid-cols-4 gap-8"
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
-<<<<<<< HEAD
-                  <Rocket className="w-6 h-6" />
-                  Explore 2041 Services
-                  <ArrowRight className="w-5 h-5" />
-                </Link>
-                <Link
-                  href="/contact"
-                  className="px-10 py-4 border-2 border-cyan-500/50 text-cyan-400 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300 flex items-center gap-3"
-                >
-                  <Users className="w-6 h-6" />
-                  Start Your Journey
-                </Link>
-              </motion.div>
-            </motion.div>
-          </div>
-        </section>
-=======
+
+
               initial={{ opacity: 0, y: 30 }}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 href='/2041-futuristic-services-showcase'
                   className='px-10 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-3'
                 >
@@ -555,103 +352,44 @@ href='/2041-futuristic-services-showcase'
               initial={{ opacity: 0, y: 30 }}
 origin/cursor/automate-test-improve-and-merge-code-2533
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-            >
-              {stats.map((stat, index) => (
-                <motion.div
+            >;
+              {stats.map ((stat, index) => (
+                <motion.div;
                   key={stat.label}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-className='text-center'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 className='text-center'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                  <div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4'>
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4'>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     <stat.icon className='w-8 h-8 text-white' />
                   </div>
                   <div className='text-3xl md:text-4xl font-bold text-white mb-2'>
                     {stat.number}
                   </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
                   <div className='text-gray-400'>{stat.label}</div>
                 </motion.div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
               ))}
             </motion.div>
           </div>
         </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               ))}
 
 
 
 
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-              ))}
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         {/* Featured Services Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900/50">
 
@@ -659,68 +397,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
               className="text-center mb-16"
 
-<<<<<<< HEAD
-=======
               initial={{ opacity: 0, y: 30 }}
 
               ))}
           <div className="max-w-7xl mx-auto">
             <motion.div
               className="text-center mb-16"
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <section className='py-20 px-4 bg-gradient-to-b from-black to-gray-900/50'>
           <div className='max-w-7xl mx-auto'>
             <motion.div
               className='text-center mb-16'
               initial={{ opacity: 0, y: 30 }}
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-              <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                Revolutionary 2041 Services
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </h2>
-              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-                Experience the future of technology with our cutting-edge
-                services that are redefining industries and pushing the
-                boundaries of what's possible.
-              </p>
-            </motion.div>
-            <motion.div
-              className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'              initial={{ opacity: 0, y: 30 }}                Revolutionary 2041 Services
-              </h2>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-              </h2>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Experience the future of technology with our cutting-edge services that are redefining industries and pushing the boundaries of what's possible.
               </p>
             </motion.div>
-<<<<<<< HEAD
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-=======
             <motion.div
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             </motion && motion.div>;
           </div>;
         </section>;
@@ -752,34 +450,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Experience the future of technology with our cutting-edge services that are redefining industries and pushing the boundaries of what's possible.;
               </p>;
             </motion && motion.div>;
-<<<<<<< HEAD
-            <motion&& motion.div 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-=======
-
-            <motion.div 
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
 
             <motion.div
               className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'              initial={{ opacity: 0, y: 30 }}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <h2 className='text-5xl md:text-6xl font-bold text-white mb-6'>
                 Revolutionary 2041 Services
               </h2>
@@ -791,12 +466,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </motion.div>
             <motion.div
               className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
@@ -804,24 +474,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {featuredServices && featuredServices.map((service, index) => (;
                 <motion&& motion.div
                   key={service && service.id}
-<<<<<<< HEAD
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-=======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              {featuredServices.map((service, index) => (
-                <motion.div
-                  key={service.id}
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.5, delay: 0 && 0.4 + index * 0 && 0.1 }}
@@ -829,12 +481,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <UltraFuturisticServiceCard2026 service={service} />;
                 </motion && motion.div>;
               ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
             </motion && motion.div>;
             <motion&& motion.div
@@ -842,10 +488,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
               className="text-center mt-12"
 
+
             <motion.div
               className='text-center mt-12'              initial={{ opacity: 0, y: 20 }}
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <motion.div
               className='text-center mt-12'              initial={{ opacity: 0, y: 20 }}            <motion.div 
               className="text-center mt-12"
@@ -853,144 +499,44 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
               className='text-center mt-12'              initial={{ opacity: 0, y: 20 }}
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
               className="text-center mt-12"
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
             </motion.div>
 
 <motion.div
               className='text-center mt-12'
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}
               viewport={{ once: true }}>;
               <Link
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                href='/2041-futuristic-services-showcase'
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 href='/2041-futuristic-services-showcase'
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 className='inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-2xl font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105'
               >
                 <Eye className='w-5 h-5' />
                 View All 2041 Services
-<<<<<<< HEAD
-                <ArrowRight className='w-5 h-5' />              </Link>              >
-                <Eye className="w-5 h-5" />
-                View All 2041 Services
-                <ArrowRight className="w-5 h-5" />
-=======
                 <ArrowRight className='w-5 h-5' />
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </Link>
             </motion.div>
           </div>
         </section>
         {/* Testimonials Section */}
-<<<<<<< HEAD
-        <section className='py-20 px-4'>
-          <div className='max-w-7xl mx-auto'>
-            <motion.div
-              className='text-center mb-16'              initial={{ opacity: 0, y: 30 }}        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              className="text-center mb-16"
-            <motion.div 
-              className="text-center mb-16"
-
-                <Eye className="w-5 h-5" />
-                View All 2041 Services
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-            </motion.div>
-          </div>
-        </section>
-        {/* Testimonials Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-
-
-              initial={{ opacity: 0, y: 30 }}
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 <section className='py-20 px-4'>
           <div className='max-w-7xl mx-auto'>
             <motion.div
               className='text-center mb-16'
               initial={{ opacity: 0, y: 30 }}
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               </h2>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 See how industry leaders are transforming their businesses with our revolutionary 2041 services.
               </p>
             </motion.div>
-<<<<<<< HEAD
-              className="grid grid-cols-1 md:grid-cols-3 gap-8"
-
-              className="grid grid-cols-1 md:grid-cols-3 gap-8"
-
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-                  className='text - center'                  initial={{ opacity: 0, coordinate_y: 20 }}                  className="text - center";
-                  initial={{ opacity: 0, coordinate_y: 20 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >;
-                  <div className='w - 16 h - 16 bg - gradient - to - r from - cyan - 500 to - blue - 600 rounded - 2xl flex items - center justify - center mx - auto mb - 4'>;
-                    <stat.icon className='w - 8 h - 8 text - white' />;
-                  </div>;
-                  <div className='text - 3xl md:text - 4xl font - bold text - white mb - 2'>;
-                    {stat.number}
-                  </div>;
-                  <div className='text - gray - 400'>{stat.label}</div>                </motion.div>                  <div className="w - 16 h - 16 bg - gradient - to - r from - cyan - 500 to - blue - 600 rounded - 2xl flex items - center justify - center mx - auto mb - 4">;
-                    <stat.icon className="w - 8 h - 8 text - white" />;
-                  </div>;
-                  <div className="text - 3xl md:text - 4xl font - bold text - white mb - 2">{stat.number}</div>;
-                  <div className="text - gray - 400">{stat.label}</div>))}
-            </motion.div>;
-=======
             <motion.div
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 className='inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-2xl font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105'>;
                 <Eye className='w-5 h-5' />;
                 View All 2041 Services;
@@ -1000,48 +546,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <ArrowRight className="w-5 h-5" />;
               </Link>;
             </motion && motion.div>;
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           </div>;
         </section>;
-        {/* Featured Services Section */}
-        <section className='py - 20 px - 4 bg - gradient - to - b from - black to - gray - 900 / 50'>;
-          <div className='max - w-7xl mx - auto'>;
-            <motion.div;
-              className='text - center mb - 16'              initial={{ opacity: 0, coordinate_y: 30 }}        <section className="py - 20 px - 4 bg - gradient - to - b from - black to - gray - 900 / 50">;
-          <div className="max - w-7xl mx - auto">;
-            <motion.div;
-              className="text - center mb - 16";
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >;
-              <h2 className='text - 5xl md:text - 6xl font - bold text - white mb - 6'>;
-                Revolutionary 2041 Services;
-              </h2>;
-              <p className='text - xl text - gray - 300 max - w-3xl mx - auto'>;
-                Experience the future of technology with our cutting - edge;
-                services that are redefining industries and pushing the;
-                boundaries of what's possible.;
-              </p>;
-            </motion.div>;
-            <motion.div;
-              className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'              initial={{ opacity: 0, coordinate_y: 30 }}                Revolutionary 2041 Services;
-              </h2>;
-              <p className="text - xl text - gray - 300 max - w-3xl mx - auto">;
-                Experience the future of technology with our cutting - edge services that are redefining industries and pushing the boundaries of what's possible.;
-              </p>;
-            </motion.div>;
-            <motion.div;
-              className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8";
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
 
-<<<<<<< HEAD
-=======
-            <motion.div 
-=======
         {/* Testimonials Section */}
         <section className='py-20 px-4'>;
           <div className='max-w-7xl mx-auto'>;
@@ -1068,23 +575,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 See how industry leaders are transforming their businesses with our revolutionary 2041 services.;
               </p>;
             </motion && motion.div>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               className="grid grid-cols-1 md:grid-cols-3 gap-8"
 
             <motion.div
               className='grid grid-cols-1 md:grid-cols-3 gap-8'              initial={{ opacity: 0, y: 30 }}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <h2 className='text-5xl md:text-6xl font-bold text-white mb-6'>
                 Leading the Future
               </h2>
@@ -1095,12 +590,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </motion.div>
             <motion.div
               className='grid grid-cols-1 md:grid-cols-3 gap-8'
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -1109,21 +599,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               {testimonials.map((testimonial, index) => (
                 <motion.div
                   key={testimonial.name}
-<<<<<<< HEAD
-<<<<<<< HEAD
                   className='bg-gradient-to-br from-gray-900/50 to-black/50 border border-cyan-500/30 rounded-3xl p-8 backdrop-blur-sm'                  initial={{ opacity: 0, y: 30 }}                  className="bg-gradient-to-br from-gray-900/50 to-black/50 border border-cyan-500/30 rounded-3xl p-8 backdrop-blur-sm"
                   className='bg-gradient-to-br from-gray-900/50 to-black/50 border border-cyan-500/30 rounded-3xl p-8 backdrop-blur-sm'                  initial={{ opacity: 0, y: 30 }}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
@@ -1132,7 +611,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <motion&& motion.div
                   key={testimonial && testimonial.name}
                   className='bg-gradient-to-br from-gray-900/50 to-black/50 border border-cyan-500/30 rounded-3xl p-8 backdrop-blur-sm'                  initial={{ opacity: 0, y: 30 }}                  className="bg-gradient-to-br from-gray-900/50 to-black/50 border border-cyan-500/30 rounded-3xl p-8 backdrop-blur-sm"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.5, delay: 0 && 0.4 + index * 0 && 0.1 }}
@@ -1143,9 +621,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </p>;
                   <div className='flex items-center gap-2 mb-3'>;
                     {[...Array(testimonial && testimonial.rating)].map((_, i) => (;
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='bg-gradient-to-br from-gray-900/50 to-black/50 border border-cyan-500/30 rounded-3xl p-8 backdrop-blur-sm'
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -1164,14 +639,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         className='w-5 h-5 text-yellow-400 fill-current'
                       />;
                     ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   </div>
                   <div className='font-semibold text-white'>
                     {testimonial.name}
@@ -1179,46 +646,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className='text-cyan-400'>{testimonial.role}</div>
                   <div className='text-gray-500 text-sm'>
                     {testimonial.company}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
                   </div>
                 </motion.div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
               ))}
             </motion.div>
           </div>
         </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-        {/* CTA Section */}
-        <section className='py-20 px-4'>
-          <div className='max-w-4xl mx-auto text-center'>
-            <motion.div
-              className='bg-gradient-to-r from-black/50 to-gray-900/50 border border-cyan-500/30 rounded-3xl p-16 backdrop-blur-sm'              initial={{ opacity: 0, y: 30 }}        <section className="py-20 px-4">
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               ))}
 
+
+
+
+
         {/* CTA Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         <section className="py-20 px-4">
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
                   </div>;
                   <div className='font-semibold text-white'>;
@@ -1254,73 +700,29 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <motion&& motion.div
               className='bg-gradient-to-r from-black/50 to-gray-900/50 border border-cyan-500/30 rounded-3xl p-16 backdrop-blur-sm'              initial={{ opacity: 0, y: 30 }}        <section className="py-20 px-4">;
           <div className="max-w-4xl mx-auto text-center">;
-            <motion&& motion.div
+            <motion&& motion.div 
               className="bg-gradient-to-r from-black/50 to-gray-900/50 border border-cyan-500/30 rounded-3xl p-16 backdrop-blur-sm"
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <section className='py-20 px-4'>
           <div className='max-w-4xl mx-auto text-center'>
             <motion.div
               className='bg-gradient-to-r from-black/50 to-gray-900/50 border border-cyan-500/30 rounded-3xl p-16 backdrop-blur-sm'
               initial={{ opacity: 0, y: 30 }}
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
                 Ready to Shape the Future?
               </h2>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <p className="text-xl text-gray-300 mb-12 leading-relaxed">
                 Join the technological revolution with our cutting-edge 2041 services.
                 Transform your business, accelerate innovation, and lead the future of technology.
               </p>
               <div className="flex flex-col sm: flex-row gap-6 justify-center">
-<<<<<<< HEAD
-
-                  className="px-10 py-5 border-2 border-cyan-500/50 text-cyan-400 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center gap-3"
-                >
-                  <Target className="w-6 h-6" />
-                  Explore Services
-                </Link>
-
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </main>
-    </Layout>
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <Link
                   href="/contact"
                   className="px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-3">;
@@ -1329,30 +731,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </Link>;
                 <Link
                   href="/2041-futuristic-services-showcase"
-<<<<<<< HEAD
-                  className="px-10 py-5 border-2 border-cyan-500/50 text-cyan-400 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center gap-3"
-                >
-                  <Target className="w-6 h-6" />
-                  Explore Services
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </main>
-    </Layout>
-  );
-}
-Math.random () * 100
-};
-
-  Math.random () * 100 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 Math.random () * 100 
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <h2 className='text-5xl md:text-6xl font-bold text-white mb-8'>
                 Ready to Shape the Future?
               </h2>
@@ -1393,10 +772,7 @@ top: `$ {
 }%`
 }/>) )
 }</div> </div> <motion.div initial= {
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   {
   opacity: 0, y: 50
 }animate= {
@@ -1415,112 +791,6 @@ top: `$ {
 };
 
 export default Homepage2041;
-<<<<<<< HEAD
-
-
-=======
-                  className='bg - gradient - to - br from - gray - 900 / 50 to - black / 50 border border - cyan - 500 / 30 rounded - 3xl p - 8 backdrop - blur - sm'                  initial={{ opacity: 0, coordinate_y: 30 }}                  className="bg - gradient - to - br from - gray - 900 / 50 to - black / 50 border border - cyan - 500 / 30 rounded - 3xl p - 8 backdrop - blur - sm";
-                  initial={{ opacity: 0, coordinate_y: 30 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
-                  viewport={{ once: true }}
-                >;
-                  <div className='text - 4xl mb - 4'>{testimonial.avatar}</div>;
-                  <p className='text - gray - 300 mb - 6 leading - relaxed'>;
-                    {testimonial.content}
-                  </p>;
-                  <div className='flex items - center gap - 2 mb - 3'>;
-                    {[...Array (testimonial.rating)].map ((_, i) => (
-                      <Star;
-                        key={i}
-                        className='w - 5 h - 5 text - yellow - 400 fill - current';
-                      />))}
-                  </div>;
-                  <div className='font - semibold text - white'>;
-                    {testimonial.name}
-                  </div>;
-                  <div className='text - cyan - 400'>{testimonial.role}</div>;
-                  <div className='text - gray - 500 text - sm'>;
-                    {testimonial.company}
-                  </div>                </motion.div>                    {[...Array (testimonial.rating)].map ((_, i) => (
-                      <Star key={i} className="w - 5 h - 5 text - yellow - 400 fill - current" />))}
-                  </div>;
-                  <div className="font - semibold text - white">{testimonial.name}</div>;
-                  <div className="text - cyan - 400">{testimonial.role}</div>;
-                  <div className="text - gray - 500 text - sm">{testimonial.company}</div>;
-                </motion.div>))}
-            </motion.div>;
-          </div>;
-        </section>;
-        {/* CTA Section */}
-        <section className='py - 20 px - 4'>;
-          <div className='max - w-4xl mx - auto text - center'>;
-            <motion.div;
-              className='bg - gradient - to - r from - black / 50 to - gray - 900 / 50 border border - cyan - 500 / 30 rounded - 3xl p - 16 backdrop - blur - sm'              initial={{ opacity: 0, coordinate_y: 30 }}        <section className="py - 20 px - 4">;
-          <div className="max - w-4xl mx - auto text - center">;
-            <motion.div;
-              className="bg - gradient - to - r from - black / 50 to - gray - 900 / 50 border border - cyan - 500 / 30 rounded - 3xl p - 16 backdrop - blur - sm";
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >;
-              <h2 className='text - 5xl md:text - 6xl font - bold text - white mb - 8'>;
-                Ready to Shape the Future?;
-              </h2>;
-              <p className='text - xl text - gray - 300 mb - 12 leading - relaxed'>;
-                Join the technological revolution with our cutting - edge 2041;
-                services. Transform your business, accelerate innovation, and;
-                lead the future of technology.;
-              </p>;
-              <div className='flex flex - col sm:flex - row gap - 6 justify - center'>;
-                <Link;
-                  href='/contact';
-                  className='px - 10 py - 5 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white rounded - 2xl font - semibold hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105 flex items - center justify - center gap - 3';
-                >;
-                  <Sparkles className='w - 6 h - 6' />;
-                  Start Your Journey;
-                </Link>;
-                <Link;
-                  href='/2041 - futuristic - services - showcase';
-                  className='px - 10 py - 5 border - 2 border - cyan - 500 / 50 text - cyan - 400 rounded - 2xl font - semibold hover:bg - cyan - 500 / 10 transition - all duration - 300 flex items - center justify - center gap - 3';
-                >;
-                  <Target className='w - 6 h - 6' />                  Explore Services                Ready to Shape the Future?;
-              </h2>;
-              <p className="text - xl text - gray - 300 mb - 12 leading - relaxed">;
-                Join the technological revolution with our cutting - edge 2041 services.;
-                Transform your business, accelerate innovation, and lead the future of technology.;
-              </p>;
-              <div className="flex flex - col sm: flex - row gap - 6 justify - center">;
-                <Link;
-                  href="/contact";
-                  className="px - 10 py - 5 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white rounded - 2xl font - semibold hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105 flex items - center justify - center gap - 3";
-                >;
-                  <Sparkles className="w - 6 h - 6" />;
-                  Start Your Journey;
-                </Link>;
-                <Link;
-                  href="/2041 - futuristic - services - showcase";
-                  className="px - 10 py - 5 border - 2 border - cyan - 500 / 50 text - cyan - 400 rounded - 2xl font - semibold hover:bg - cyan - 500 / 10 transition - all duration - 300 flex items - center justify - center gap - 3";
-                >;
-                  <Target className="w - 6 h - 6" />;
-                  Explore Services;
-                </Link>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </main>;
-    </Layout>);
-}
-;
-Math.random () * 100;
-=======
-  );
-}
-Math.random () * 100
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }%`;
 top: `$ {
   Math.random () * 100;
@@ -1535,15 +805,15 @@ top: `$ {
 }transition= {
   {
   duration: 0.8;
-}> <h1 id="hero - heading" className="text - 6xl md:text - 8xl lg:text - 9xl font - bold mb-8 leading-tight" > <span className="bg - gradient - to - r from - cyan - 400 via - blue - 500 to - purple - 600 bg - clip-text text-transparent" > 2041 </span> <br /> <span className="text-white" > Future is Now </span> </h1> <p className="text - xl md:text - 2xl lg:text - 3xl text - gray - 300 mb - 12 max - w-5xl mx-auto leading-relaxed" > Experience the revolution of technology with our cutting - edge 2041 services. From AI consciousness evolution to quantum space mining, we're redefining what's possible. </p> {
+}> <h1 id="hero - heading" className="text - 6xl md:text - 8xl lg:text - 9xl font - bold mb - 8 leading - tight" > <span className="bg - gradient - to - r from - cyan - 400 via - blue - 500 to - purple - 600 bg - clip - text text - transparent" > 2041 </span> <br /> <span className="text - white" > Future is Now </span> </h1> <p className="text - xl md:text - 2xl lg:text - 3xl text - gray - 300 mb - 12 max - w-5xl mx - auto leading - relaxed" > Experience the revolution of technology with our cutting - edge 2041 services. From AI consciousness evolution to quantum space mining, we're redefining what's possible. </p> {
   /* Search Bar */;
-}<motion.div /> <button type="submit" className="absolute right - 3 top - 3 px - 8 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white rounded - 2xl hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 transform hover:scale-105 font-semibold" > Explore Future </button> </form> </motion.div> {
+}<motion.div /> <button type="submit" className="absolute right - 3 top - 3 px - 8 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white rounded - 2xl hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105 font - semibold" > Explore Future </button> </form> </motion.div> {
   /* CTA Buttons */;
-}<motion.div > <Link href="/2041 - futuristic - services - showcase" className="px - 10 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white rounded - 2xl font - semibold hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105 flex items-center gap-3" > <Rocket className="w-6 h-6" /> Explore 2041 Services <ArrowRight className="w-5 h-5" /> </a> <Link href="/contact" className="px - 10 py - 4 border - 2 border - cyan - 500 / 50 text - cyan - 400 rounded - 2xl font - semibold hover:bg - cyan - 500 / 10 transition - all duration - 300 flex items-center gap-3" > <Users className="w-6 h-6" /> Start Your Journey </a> </motion.div> </motion.div> </div> </section> > {
+}<motion.div > <Link href="/2041 - futuristic - services - showcase" className="px - 10 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white rounded - 2xl font - semibold hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105 flex items - center gap - 3" > <Rocket className="w - 6 h - 6" /> Explore 2041 Services <ArrowRight className="w - 5 h - 5" /> </a> <Link href="/contact" className="px - 10 py - 4 border - 2 border - cyan - 500 / 50 text - cyan - 400 rounded - 2xl font - semibold hover:bg - cyan - 500 / 10 transition - all duration - 300 flex items - center gap - 3" > <Users className="w - 6 h - 6" /> Start Your Journey </a> </motion.div> </motion.div> </div> </section> > {
   stats.map ( (stat, index) => (<motion.div key= {
   stat.label;
-}> <div className="w - 16 h - 16 bg - gradient - to - r from - cyan - 500 to - blue - 600 rounded - 2xl flex items - center justify - center mx-auto mb-4" > <stat.icon className="w - 8 h-8 text-white" /> </div> </motion.div>) );
-}</motion.div> </div> </section> > <h2 className="text - 5xl md:text - 6xl font - bold text-white mb-6" > Revolutionary 2041 Services </h2> <p className="text - xl text - gray - 300 max-w-3xl mx-auto" > Experience the future of technology with our cutting - edge services that are redefining industries and pushing the boundaries of what's possible. </p> </motion.div> <motion.div > {
+}> <div className="w - 16 h - 16 bg - gradient - to - r from - cyan - 500 to - blue - 600 rounded - 2xl flex items - center justify - center mx - auto mb - 4" > <stat.icon className="w - 8 h - 8 text - white" /> </div> </motion.div>) );
+}</motion.div> </div> </section> > <h2 className="text - 5xl md:text - 6xl font - bold text - white mb - 6" > Revolutionary 2041 Services </h2> <p className="text - xl text - gray - 300 max - w-3xl mx - auto" > Experience the future of technology with our cutting - edge services that are redefining industries and pushing the boundaries of what's possible. </p> </motion.div> <motion.div > {
   featured_services.map ( (service, index) => (<motion.div key= {
   service.id;
 }initial= {
@@ -1563,19 +833,6 @@ top: `$ {
 }/> </motion.div>) )
 }</motion.div> <motion.div > <Link href="/2041-futuristic-services-showcase" className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-2xl font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105" > <Eye className="w-5 h-5" /> View All 2041 Services <ArrowRight className="w-5 h-5" /> </a> </motion.div> </div> </section> > <h2 className="text-5xl md:text-6xl font-bold text-white mb-6" > Leading the Future </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > See how industry leaders are transforming their businesses with our revolutionary 2041 services. </p> </motion.div> <motion.div > {
   testimonials.map ( (testimonial, index) => (<motion.div key= {
-<<<<<<< HEAD
-
-}
-export default Homepage2041;  )
-}
-export default Homepage2041;
-=======
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
   testimonial.name 
 }</motion.div>) ) 
 }</motion.div> </div> </section> > <h2 className="text-5xl md:text-6xl font-bold text-white mb-8" > Ready to Shape the Future? </h2> <p className="text-xl text-gray-300 mb-12 leading-relaxed" > Join the technological revolution with our cutting-edge 2041 services. Transform your business, accelerate innovation, and lead the future of technology. </p> <Link href="/contact" className="px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-3" > <Sparkles className="w-6 h-6" /> Start Your Journey </a> <Link href="/2041-futuristic-services-showcase" className="px-10 py-5 border-2 border-cyan-500/50 text-cyan-400 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center gap-3" > <Target className="w-6 h-6" /> Explore Services </a> </div> </motion.div> </div> </section> </main> </Layout>) 
@@ -1584,17 +841,7 @@ export default Homepage2041;  )
 };
 
 export default Homepage2041;
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default Homepage2041;
 
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

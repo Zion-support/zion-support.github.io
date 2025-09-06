@@ -1,76 +1,32 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import React, { useEffect, useState } from "react";
-import { connectMetaMask, getAccounts } from "../../utils/wallet";
-export type RedemptionType =
-  | "boost_profile"
-  | "promote_listing";
-  | "premium_support";
-export default function UseTokensModal({
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 export type RedemptionType =
   | "boost_profile"
   | "promote_listing"
   | "premium_support";
 export default function UseTokensModal({
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   isOpen
   onClose
   serviceId
   defaultType
 }: {
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   isOpen,
   onClose,
   serviceId,
   defaultType,
 }: {;
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   isOpen: boolean;
   onClose: () => void;
   serviceId?: string;
   defaultType?: RedemptionType;
 }) {;
   const [account, setAccount] = useState<string | null>(null);
-<<<<<<< HEAD
-
-=======
   const [tokens, setTokens] = useState<number>(100);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const usdValue = (tokens * 0.01).toFixed(2);
   useEffect(() => {
     (async () => {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const [tokens, setTokens] = useState<number>(100);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const usdValue = (tokens * 0 && 0.01).toFixed(2);
@@ -106,6 +62,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   if (!isOpen) return null;
   return (
+            >;
+              <option value="boost_profile">Boost profile</option>;
+              <option value="promote_listing">Promote listing</option>;
+              <option value="premium_support">Get premium support</option>;
+            </select>;
+          </div>;
+              <button
+                onClick={connect}
+                className="enhanced-button enhanced-button-primary">;
+                Connect MetaMask;
+              </button>;
 <div className='fixed inset-0 z-[60] flex items-end sm:items-center justify-center'>
       <div className='absolute inset-0 bg-black/40' onClick={onClose} />
       <div className='relative w-full sm:max-w-md rounded-2xl bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 shadow-xl m-0 sm:m-4 p-4'>
@@ -221,10 +188,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
     </div>
   );
-<<<<<<< HEAD
-);
-  );
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+}
+    </div>);
 }
 origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,55 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
-export default function InteractiveSearch({
-  placeholder = 'Search talent, skills, or jobs...'
-}: {
-  placeholder = 'Search talent, skills, or jobs...',
-}: {;
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 export default function InteractiveSearch({ placeholder;
 export default function InteractiveSearch({
   placeholder = 'Search talent, skills, or jobs...'
 }: {
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   placeholder?: string;
 }) {
   const [value, setValue] = useState('');
@@ -58,23 +14,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         value={value}
         onChange={e => setValue(e.target.value)}
         placeholder={placeholder}
-<<<<<<< HEAD
-<<<<<<< HEAD
         className='w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500'      />
       {value && (
         <button
           onClick={() => setValue('')}
           className='absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300'        >  const [value, setValue] = useState('');
-<<<<<<< HEAD
-=======
 
   placeholder?: string;
 }) {;
 export default function InteractiveSearch({ placeholder = 'Search talent, skills, or jobs...' }: { placeholder?: string }) {
   const [value, setValue] = useState('');
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
         className='w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500'
   return (
     <motion.div initial={{ opacity: 0, y: 4 }} animate={{ opacity: 1, y: 0 }} className="relative">
@@ -83,15 +32,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         value={value}
         onChange={e => setValue(e && e.target.value)}
         placeholder={placeholder}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-<<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }
 import React from "react";
 interface InteractiveSearchProps {;
@@ -160,11 +100,6 @@ function InteractiveSearch() {
         </button>;
       </div>;
     </form>;
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   );
 }}
   );
@@ -200,20 +135,11 @@ function InteractiveSearch() {
       </div>;
     </form>);
 }}
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   );
 }}
   );
 }}
 
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
         className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
       />
       {value && (
@@ -228,11 +154,3 @@ className='absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gr
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

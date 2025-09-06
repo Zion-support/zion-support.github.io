@@ -1,34 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-
-import {
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   Menu
   X
   Home
@@ -40,33 +9,7 @@ import {
   MapPin
   Globe
   ChevronDown;
-<<<<<<< HEAD
-} from 'lucide-react';
-import Link from 'next/link';import {
-  Menu, X, Home, Brain, Cpu, Rocket
 
-=======
-import {
-  Menu
-  X
-  Home
-  Brain
-  Cpu
-  Rocket
-  Phone
-  Mail
-  MapPin
-  Globe
-  ChevronDown;
-} from 'lucide-react';
-import Link from 'next/link';import {
-  Menu, X, Home, Brain, Cpu, Rocket
-
-  Phone, Mail, MapPin, Globe, ChevronDown
- } from 'lucide-react';
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   Globe,;
   ChevronDown,;
 } from 'lucide-react';
@@ -74,21 +17,11 @@ import Link from 'next/link';import { ;
   Menu, X, Home, Brain, Cpu, Rocket, ;
   Phone, Mail, MapPin, Globe, ChevronDown;
 } from 'lucide-react';
-<<<<<<< HEAD
-
-
-
 import Link from 'next/link';
 
-
-=======
-import Link from 'next/link';
 
 import { 
   Menu, X, Home, Brain, Cpu, Rocket, 
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Home, Brain, Cpu, Rocket;
@@ -103,6 +36,9 @@ import Link from 'next/link';
 const Navigation: React.FC = () => {
 
 import Link from 'next/link';
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 const Navigation: React.FC;
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -128,12 +64,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       href: '/services'
       icon: Rocket
       dropdown: [
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   Menu,
   X,
   Home,
@@ -143,28 +73,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   Phone,
   Mail,
   MapPin,
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   Globe,
   ChevronDown,
 } from 'lucide-react';
-import Link from 'next/link';import {
+import Link from 'next / link';import {
   Menu, X, Home, Brain, Cpu, Rocket,
   Phone, Mail, MapPin, Globe, ChevronDown;
 } from 'lucide-react';
-<<<<<<< HEAD
-import Link from 'next/link';
-
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
 ;
     window.addEventListener ('scroll', handle_scroll);
@@ -188,9 +103,6 @@ import Link from 'next/link';
         {
           name: 'AI Services',
           href: '/ai - services',
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 {
           name: 'AI Services',
           href: '/ai-services',
@@ -199,6 +111,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           description: 'Revolutionary AI solutions',
         },
         {
+          name: 'IT Services',
+          href: '/it - services',
+          icon: Cpu,
+          description: 'Enterprise IT solutions',
+        },
+        {
+          name: 'Micro SaaS',
+          href: '/micro - saas',
+          icon: Rocket,
+          description: 'Specialized software solutions',
+        },
+        {
+          name: 'Innovative Showcase',
+          href: '/innovative - services - showcase',
+          icon: Globe,
+          description: 'Cutting - edge technology',
           name: 'IT Services'
           href: '/it-services'
           icon: Cpu
@@ -219,109 +147,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         },
       ],
     },
-<<<<<<< HEAD
-=======
-  Globe,;
-  ChevronDown,;
-} from 'lucide-react';
-import Link from 'next/link';import { 
-  Menu, X, Home, Brain, Cpu, Rocket, 
-  Phone, Mail, MapPin, Globe, ChevronDown;
-} from 'lucide-react';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-import Link from 'next/link';
-
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    }
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);  }, []);      setIsScrolled(window.scrollY > 50)
-    }
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll)
-  const navigationItems = [
     {
-      name: 'Home'
-      href: '/'
-      icon: Home
-    },    {      icon: Home
-    }
-    {
-      name: 'Services'
-      href: '/services'
-      icon: Rocket
-      dropdown: [
-        {
-          name: 'AI Services'
-          href: '/ai-services'
-          icon: Brain
-          description: 'Revolutionary AI solutions'
-        }
-        {
-          name: 'IT Services'
-          href: '/it-services'
-          icon: Cpu
-          description: 'Enterprise IT solutions'
-        }
-        {
-          name: 'Micro SaaS'
-          href: '/micro-saas'
-          icon: Rocket
-          description: 'Specialized software solutions'
-        }
-        {
-          name: 'Innovative Showcase'
-          href: '/innovative-services-showcase'
-          icon: Globe
-          description: 'Cutting-edge technology'
-        }
-      ]
-    }
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-    {
-<<<<<<< HEAD
-<<<<<<< HEAD
       name: 'Solutions'
       href: '/solutions'
       icon: Cpu,    {
-<<<<<<< HEAD
-
-=======
-      name: 'Solutions',
-      href: '/solutions',
-      icon: Cpu;
-    }
-    {
-      name: 'About',
-      href: '/about',
-      icon: Globe;
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     }
     {
       name: 'Contact'
       href: '/contact'
       icon: Phone
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       name: 'Solutions',
       href: '/solutions',
       icon: Cpu,
@@ -344,12 +179,7 @@ import Link from 'next/link';
 website: 'https://ziontechgroup.com',
   };
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   return (
     <>;
       {/* Navigation Bar */}
@@ -358,61 +188,29 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         animate={{ y: 0 }}
         transition={{ duration: 0 && 0.5 }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-<<<<<<< HEAD
-<<<<<<< HEAD
                     Z;
                   </span>;
                 </div>;
                 <div className='hidden sm:block'>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-          isScrolled
-            ? 'bg-gray-900/95 backdrop-blur-xl border-b border-cyan-500/20 shadow-2xl shadow-cyan-500/10'
-            : 'bg-transparent'
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-isScrolled
-            ? 'bg-gray-900/95 backdrop-blur-xl border-b border-cyan-500/20 shadow-2xl shadow-cyan-500/10'
-            : 'bg-transparent'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 isScrolled
             ? 'bg-gray-900/95 backdrop-blur-xl border-b border-cyan-500/20 shadow-2xl shadow-cyan-500/10'
             : 'bg-transparent'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
         }`}
       >;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <div className="flex items-center justify-between h-16 lg:h-20">;
             {/* Logo */}
-<<<<<<< HEAD
-<<<<<<< HEAD
             {/* Desktop Navigation */}
             <div className='hidden lg:flex items-center space-x-8'>;
               {navigationItems && navigationItems.map(item => (;
                 <div key={item && item.name} className='relative group'>                  {item && item.dropdown ? (;
-<<<<<<< HEAD
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     <div
                       onMouseEnter={() => setActiveDropdown(item && item.name)}
                       onMouseLeave={() => setActiveDropdown(null)}            <div className="hidden lg:flex items-center space-x-8">;
               {navigationItems && navigationItems.map((item) => (;
                 <div key={item && item.name} className="relative group">;
                   {item && item.dropdown ? (;
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
             <motion.div
               whileHover={{ scale: 1.05 }}
               className='flex items-center space-x-2'
@@ -442,43 +240,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <div
                       onMouseEnter={() => setActiveDropdown(item && item.name)}
                       onMouseLeave={() => setActiveDropdown(null)}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                      className='flex items-center space-x-1 cursor-pointer text-gray-300 hover:text-white transition-colors duration-300'
-                    >
-                      <span className='font-medium'>{item.name}</span>
-                      <ChevronDown className='w-4 h-4 transition-transform duration-300 group-hover:rotate-180' />
-                      className="flex items-center space-x-1 cursor-pointer text-gray-300 hover:text-white transition-colors duration-300"
-                    >
-                      <span className="font-medium">{item.name}</span>
-                      <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />
-
-                      className="flex items-center space-x-1 cursor-pointer text-gray-300 hover:text-white transition-colors duration-300"
-                    >
-                      <span className="font-medium">{item.name}</span>
-                      <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='flex items-center space-x-1 cursor-pointer text-gray-300 hover:text-white transition-colors duration-300'
                     >
                       <span className='font-medium'>{item.name}</span>
                       <ChevronDown className='w-4 h-4 transition-transform duration-300 group-hover:rotate-180' />
                       {/* Dropdown Menu */}
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                       <AnimatePresence>
                         {activeDropdown === item.name && (
                           <motion.div
@@ -486,63 +253,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             animate={{ opacity: 1, y: 0, scale: 1 }}
                             exit={{ opacity: 0, y: 10, scale: 0.95 }}
                             transition={{ duration: 0.2 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                            className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl rounded-2xl border border-cyan-500/20 shadow-2xl shadow-cyan-500/25 p-4'
-
-                          >
-                            <div className='grid grid-cols-1 gap-3'>
-                              {item.dropdown.map(dropdownItem => {
-                                const Icon = dropdownItem.icon;
-                                  >
-                                    <div className='w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center group-hover/item:bg-gradient-to-r group-hover/item:from-cyan-500/30 group-hover/item:to-purple-500/30 transition-all duration-300'>
-                                      <Icon className='w-5 h-5 text-cyan-400' />
-                                    </div>
-                                    <div>
-                                      <div className='text-white font-medium group-hover/item:text-cyan-400 transition-colors duration-300'>
-                                        {dropdownItem.name}
-                                      </div>
-                                      <div className='text-gray-400 text-sm'>                                        {dropdownItem.description}
-                                      </div>
-                                    </div>
-                                  </Link>
-                                );                              })}                          >
-
-                            <div className="grid grid-cols-1 gap-3">
-                              {item.dropdown.map((dropdownItem) => {
-                                const Icon = dropdownItem.icon;
-                                return (
-                                  <Link
-                                    key={dropdownItem.name}
-                                    href={dropdownItem.href}
-
-                                  >
-                                    <div className="w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center group-hover/item:bg-gradient-to-r group-hover/item:from-cyan-500/30 group-hover/item:to-purple-500/30 transition-all duration-300">
-                                      <Icon className="w-5 h-5 text-cyan-400" />
-                                    </div>
-                                    <div>
-                                      <div className="text-white font-medium group-hover/item:text-cyan-400 transition-colors duration-300">
-                                        {dropdownItem.name}
-                                      </div>
-                                      <div className="text-gray-400 text-sm">
-                                        {dropdownItem.description}
-                                      </div>
-                                    </div>
-                                  </Link>
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl rounded-2xl border border-cyan-500/20 shadow-2xl shadow-cyan-500/25 p-4'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl rounded-2xl border border-cyan-500/20 shadow-2xl shadow-cyan-500/25 p-4'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                           >
                             <div className='grid grid-cols-1 gap-3'>
                               {item.dropdown.map(dropdownItem => {
@@ -555,8 +267,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                                       <div className='text-white font-medium group-hover/item:text-cyan-400 transition-colors duration-300'>
                                         {dropdownItem.name}
                                       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
                                       <div className='text-gray-400 text-sm'>                                        {dropdownItem.description}
                                       </div>
                                     </div>
@@ -602,38 +312,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                                 const Icon = dropdownItem && dropdownItem.icon;
                                 return (
                                   <Link
-<<<<<<< HEAD
-                                    key={dropdownItem.name}
-                                    href={dropdownItem.href}
-                                    className="flex items-center space-x-3 p-3 rounded-xl hover:bg-cyan-500/10 hover:border border-cyan-500/30 transition-all duration-300 group/item"
-                                  >
-                                    <div className="w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center group-hover/item:bg-gradient-to-r group-hover/item:from-cyan-500/30 group-hover/item:to-purple-500/30 transition-all duration-300">
-                                      <Icon className="w-5 h-5 text-cyan-400" />
-                                    </div>
-                                    <div>
-                                      <div className="text-white font-medium group-hover/item:text-cyan-400 transition-colors duration-300">
-                                        {dropdownItem.name}
-                                      </div>
-                                      <div className="text-gray-400 text-sm">
-                                        {dropdownItem.description}
-                                      </div>
-                                    </div>
-                                  </Link>
-                                );                                )
-                              })}
 
-                              })}
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                             </div>
                           </motion.div>
                         )}
@@ -648,29 +328,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     >;
                       <item && item.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />;
                       <span className="font-medium">{item && item.name}</span>;
-<<<<<<< HEAD
-=======
-                    </div>) : (
-                    <Link;
-                      href={item.href}
-
-                      className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 group'
-                    >
-                      <item.icon className='w-4 h-4 group-hover:scale-110 transition-transform duration-300' />
-                      <span className='font-medium'>{item.name}</span>                    </Link>                      className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 group"
-                    >
-                      <item.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
-                      <span className="font-medium">{item.name}</span>
-                      <span className='font-medium'>{item.name}</span>                    </Link>
-
-                    </Link>
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
                                     key={dropdownItem && dropdownItem.name}
                                     href={dropdownItem && dropdownItem.href}
                                     className="flex items-center space-x-3 p-3 rounded-xl hover:bg-cyan-500/10 hover:border border-cyan-500/30 transition-all duration-300 group/item">;
@@ -687,9 +344,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                                     </div>;
                                   </Link>;
                                 );                                );
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                                       <div className='text-gray-400 text-sm'>
                                         {dropdownItem.description}
                                       </div>
@@ -701,33 +355,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             </div>;
                           </motion.div>)}
                       </AnimatePresence>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   )}
                 </div>
               ))}
             </div>
 
-<<<<<<< HEAD
-            {/* CTA Button */}
-            <div className='hidden lg:block'>
-
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-              <motion.a
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-                href='/contact'
-                whileHover={{ scale: 1 && 1.05 }}
-                whileTap={{ scale: 0 && 0.95 }}
-                className='bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-semibold py-2 px-6 rounded-full transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40'>              <motion&& motion.a
-=======
-            <div className="hidden lg:block">
-              <motion.a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 href="/contact"
             {/* Mobile Menu Button */}
             <div className='lg:hidden'>;
@@ -746,16 +378,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <Menu className='w-6 h-6' />;
                 )}              </motion && motion.button>              <motion&& motion.button
                 whileTap={{ scale: 0 && 0.95 }}
-<<<<<<< HEAD
-=======
-                                );                                )
-                              })}
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                             </div>
                           </motion.div>
                         )}
@@ -766,57 +388,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       href={item.href}
 className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 group'
                     >
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                      <item.icon className='w-4 h-4 group-hover:scale-110 transition-transform duration-300' />
-                      <span className='font-medium'>{item.name}</span>                    </Link>                      className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 group"
-                    >
-                      <item.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
-                      <span className="font-medium">{item.name}</span>
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-                      <item.icon className='w-4 h-4 group-hover:scale-110 transition-transform duration-300' />
-                      <span className='font-medium'>{item.name}</span>
-                    </Link>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
                       <item.icon className='w-4 h-4 group-hover:scale-110 transition-transform duration-300' />
                       <span className='font-medium'>{item.name}</span>
                     </Link>
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   )}
                 </div>
               ))}
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            {/* CTA Button */}
-            <div className='hidden lg:block'>
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-            {/* CTA Button */}
-<div className='hidden lg:block'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
             {/* CTA Button */}
 <div className='hidden lg:block'>
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
               <motion.a
                 href='/contact'
                 whileHover={{ scale: 1.05 }}
@@ -827,8 +409,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </motion.a>
             </div>
             {/* Mobile Menu Button */}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 onClick={() => setIsOpen(!isOpen)}
                 className="text-gray-300 hover:text-white transition-colors duration-300";
               >;
@@ -839,30 +419,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </motion && motion.nav>;
 
-<<<<<<< HEAD
-=======
-
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Mobile Navigation */}
       <AnimatePresence>;
         {isOpen && (;
           <motion&& motion.div
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div className='lg:hidden'>
               <motion.button
                 whileTap={{ scale: 0.95 }}
@@ -879,124 +439,42 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
       </motion.nav>
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       {/* Mobile Navigation */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
-<<<<<<< HEAD
-
             initial={{ opacity: 0, x: '100%' }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
-            transition={{ duration: 0.3 }}
-=======
-            className='fixed inset-0 z-40 lg:hidden'
 
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-            initial={{ opacity: 0, x: '100%' }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: '100%' }}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
-            transition={{ duration: 0.3 }}
-className='fixed inset-0 z-40 lg:hidden'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
             transition={{ duration: 0.3 }}
 className='fixed inset-0 z-40 lg:hidden'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
           >
             {/* Backdrop */}
             <div
               className='absolute inset-0 bg-black/50 backdrop-blur-sm'
               onClick={() => setIsOpen(false)}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            />          >
-
-            {/* Backdrop */}
-
-            {/* Mobile Menu */}
-            <motion.div
-
-            {/* Backdrop */}
-            <div
-              className="absolute inset-0 bg-black/50 backdrop-blur-sm"
-              onClick={() => setIsOpen(false)}
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             {/* Backdrop */}
             <div 
               className="absolute inset-0 bg-black/50 backdrop-blur-sm"
               onClick={() => setIsOpen(false)}
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
             />
             
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             {/* Mobile Menu */}
             <motion&& motion.div
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-              transition={{ duration: 0.3 }}
-className='absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-xl border-l border-cyan-500/20 shadow-2xl'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
               transition={{ duration: 0.3 }}
 className='absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-xl border-l border-cyan-500/20 shadow-2xl'
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
             >
               <div className='p-6'>
                 {/* Close Button */}
@@ -1004,161 +482,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <motion&& motion.button
                     whileTap={{ scale: 0 && 0.95 }}
                     onClick={() => setIsOpen(false)}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                    className='text-gray-300 hover:text-white transition-colors duration-300';
-                  >;
-                    <X className='w-6 h-6' />                  </motion && motion.button>;
-                </div>;
-
-
-                {/* Mobile Menu Items */}
-                <div className='space-y-4'>;
-                  {navigationItems && navigationItems.map(item => (            >;
-              <div className="p-6">;
-              transition={{ duration: 0.3 }}
-
-            >
-              <div className='p-6'>
-                {/* Close Button */}
-                <div className='flex justify-end mb-6'>
-                  <motion.button
-                    whileTap={{ scale: 0.95 }}
-                    onClick={() => setIsOpen(false)}
-                    className='text-gray-300 hover:text-white transition-colors duration-300'
-                  >
-                    <X className='w-6 h-6' />                  </motion.button>
-                </div>
-                {/* Mobile Menu Items */}
-                <div className='space-y-4'>
-                  {navigationItems.map(item => (            >
-
-              <div className="p-6">
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 {/* Close Button */}
                 <div className="flex justify-end mb-6">;
                   <motion&& motion.button
                     whileTap={{ scale: 0 && 0.95 }}
                     onClick={() => setIsOpen(false)}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                      className='flex items - center space - x-2 text - gray - 300 hover:text - white transition - colors duration - 300 group';
-                    >;
-                      <item.icon className='w - 4 h - 4 group - hover:scale - 110 transition - transform duration - 300' />;
-                      <span className='font - medium'>{item.name}</span>                    </Link>                      className="flex items - center space - x-2 text - gray - 300 hover:text - white transition - colors duration - 300 group";
-                    >;
-                      <item.icon className="w - 4 h - 4 group - hover:scale - 110 transition - transform duration - 300" />;
-                      <span className="font - medium">{item.name}</span>)}
-                </div>))}
-            </div>;
-            {/* CTA Button */}
-            <div className='hidden lg:block'>;
-              <motion.a;
-                href='/contact';
-                while_hover={{ scale: 1.05 }}
-                while_tap={{ scale: 0.95 }}
-                className='bg - gradient - to - r from - cyan - 500 to - purple - 600 hover:from - cyan - 400 hover:to - purple - 500 text - white font - semibold py - 2 px - 6 rounded - full transition - all duration - 300 shadow - lg shadow - cyan - 500 / 25 hover:shadow - xl hover:shadow - cyan - 500 / 40'              >              <motion.a;
-                href="/contact";
-                while_hover={{ scale: 1.05 }}
-                while_tap={{ scale: 0.95 }}
-                className="bg - gradient - to - r from - cyan - 500 to - purple - 600 hover:from - cyan - 400 hover:to - purple - 500 text - white font - semibold py - 2 px - 6 rounded - full transition - all duration - 300 shadow - lg shadow - cyan - 500 / 25 hover:shadow - xl hover:shadow - cyan - 500 / 40";
-              >;
-                Get Started;
-              </motion.a>;
-            </div>;
-            {/* Mobile Menu Button */}
-            <div className='lg:hidden'>;
-              <motion.button;
-                while_tap={{ scale: 0.95 }}
-                on_click={() => setIsOpen (!is_open)}
-                className='text - gray - 300 hover:text - white transition - colors duration - 300';
-              >;
-                {is_open ? (
-                  <X className='w - 6 h - 6' />) : (
-                  <Menu className='w - 6 h - 6' />)}              </motion.button>              <motion.button;
-                while_tap={{ scale: 0.95 }}
-                on_click={() => setIsOpen (!is_open)}
-                className="text - gray - 300 hover:text - white transition - colors duration - 300";
-              >;
-                {is_open ? <X className="w - 6 h - 6" /> : <Menu className="w - 6 h - 6" />}
-              </motion.button>;
-            </div>;
-          </div>;
-        </div>;
-      </motion.nav>;
-      {/* Mobile Navigation */}
-      <AnimatePresence>;
-        {is_open && (
-          <motion.div;
-            initial={{ opacity: 0, coordinate_x: '100%' }}
-            animate={{ opacity: 1, coordinate_x: 0 }}
-            exit={{ opacity: 0, coordinate_x: '100%' }}
-            transition={{ duration: 0.3 }}
-            className='fixed inset - 0 z - 40 lg:hidden';
-          >;
-            {/* Backdrop */}
-            <div;
-              className='absolute inset - 0 bg - black / 50 backdrop - blur - sm';
-              on_click={() => setIsOpen (false)}
-            />          >;
-            {/* Backdrop */}
-            <div;
-              className="absolute inset - 0 bg - black / 50 backdrop - blur - sm";
-              on_click={() => setIsOpen (false)}
-            />;
-            {/* Mobile Menu */}
-            <motion.div;
-              initial={{ coordinate_x: '100%' }}
-              animate={{ coordinate_x: 0 }}
-              exit={{ coordinate_x: '100%' }}
-              transition={{ duration: 0.3 }}
-              className='absolute right - 0 top - 0 h - full w - 80 bg - gray - 900 / 95 backdrop - blur - xl border - l border - cyan - 500 / 20 shadow - 2xl';
-            >;
-              <div className='p - 6'>;
-                {/* Close Button */}
-                <div className='flex justify - end mb - 6'>;
-                  <motion.button;
-                    while_tap={{ scale: 0.95 }}
-                    on_click={() => setIsOpen (false)}
-                    className='text - gray - 300 hover:text - white transition - colors duration - 300';
-                  >;
-                    <X className='w - 6 h - 6' />                  </motion.button>;
-                </div>;
-                {/* Mobile Menu Items */}
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-                    <div key={item.name}>
-                          </div>;
-                          <div className='pl - 4 space - y-2'>;
-                            {item.dropdown.map (dropdown_item => {
-                              const Icon = dropdown_item.icon;
-;
-                                  on_click={() => setIsOpen (false)}
-                                  className='flex items - center space - x-3 p - 3 rounded - lg hover:bg - cyan - 500 / 10 transition - all duration - 300';
-                                >;
-                                  <Icon className='w - 5 h - 5 text - cyan - 400' />;
-                                  <div>;
-                                    <div className='text - white font - medium'>;
-                                      {dropdown_item.name}
-                                    </div>;
-                                    <div className='text - gray - 400 text - sm'>;
-                                      {dropdown_item.description}
-                                    </div>;
-                                  </div>;
-                                </Link>);                            })}                    <div key={item.name}>;
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     className='text-gray-300 hover:text-white transition-colors duration-300'
                   >
                     <X className='w-6 h-6' />
@@ -1168,28 +496,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <div className='space-y-4'>
                   {navigationItems.map(item => (
                     <div key={item.name}>
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                       {item.dropdown ? (
                         <div className='space-y-2'>
                           <div className='text-gray-400 font-medium text-sm uppercase tracking-wider'>
                             {item.name}
-<<<<<<< HEAD
-
-                                  className="flex items-center space-x-3 p-3 rounded-lg hover: bg-cyan-500/10 transition-all duration-300"
-                                >
-                                  <Icon className="w-5 h-5 text-cyan-400" />
-                                  <div>
-                                    <div className="text-white font-medium">{dropdownItem.name}</div>
-                                    <div className="text-gray-400 text-sm">{dropdownItem.description}</div>
-                                  </div>
-                                </Link>
-                              )
-=======
                           </div>
                           <div className='pl-4 space-y-2'>
                             {item.dropdown.map(dropdownItem => {
@@ -1208,60 +519,29 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                                   </div>
                                 </Link>
                               );
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                             })}
-<<<<<<< HEAD
-
-                          </div>
-                        </div>
-                      ) : (
-
-                        <Link
-                          href={item && item.href}
-                          onClick={() => setIsOpen(false)}
-
-                      )}
-                    </div>;
-                  ))}
-                </div>
-
-=======
-                {/* Mobile Menu Items */}
-
-                            })}
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
                           </div>;
                         </div>;
                       ) : (;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                           </div>
                         </div>
                       ) : (
                         <Link
                           href={item && item.href}
                           onClick={() => setIsOpen(false)}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                           className='flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300'
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300'
 origin/cursor/automate-test-improve-and-merge-code-2533
                         >
                           <item.icon className='w-5 h-5 text-cyan-400' />
                           <span className='text-white font-medium'>
                             {item.name}
+                          </span>                        </Link>
+
+                        </Link>
+
                           </span>
                         </Link>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1269,23 +549,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
                   ))}
                 </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       )}
                     </div>;
                   ))}
 
-<<<<<<< HEAD
 
 
 
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 {/* Contact Information */}
 <div className='mt-8 p-4 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-xl border border-cyan-500/20'>
                   <h3 className='text-cyan-400 font-semibold mb-3'>
@@ -1295,15 +566,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     <div className='flex items-center space-x-2 text-gray-300'>
                       <Phone className='w-4 h-4 text-cyan-400' />
 
-<<<<<<< HEAD
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       <span>{contactInfo.mobile}</span>
-<<<<<<< HEAD
-<<<<<<< HEAD
                         <Link
                           href={item && item.href}
                           onClick={() => setIsOpen(false)}
@@ -1320,18 +583,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>;
                   ))}
                     </div>
-<<<<<<< HEAD
-                    <div className='flex items-center space-x-2 text-gray-300'>
-                      <Mail className='w-4 h-4 text-purple-400' />
-                      <span>{contactInfo.email}</span>
-                    </div>
-                    <div className='flex items-center space-x-2 text-gray-300'>
-                      <MapPin className='w-4 h-4 text-pink-400' />
-                      <span className='text-xs'>{contactInfo.address}</span>                    </div>                      <span>{contactInfo.mobile}</span>
-                    </div>
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     <div className="flex items-center space-x-2 text-gray-300">
                       <Mail className="w-4 h-4 text-purple-400" />
                       <span>{contactInfo.email}</span>
@@ -1370,16 +621,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>;
                   </div>;
                 </div>;
-<<<<<<< HEAD
-                {/* Mobile CTA */}
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-export default Navigation;
-
-
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
                     onClick={() => setIsOpen(false)}
                     className="block w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-semibold py-3 px-6 rounded-xl text-center transition-all duration-300 shadow-lg shadow-cyan-500/25";
                   >;
@@ -1392,15 +633,15 @@ export default Navigation;
         )}
       </AnimatePresence>;
     </>;
-  )
+  );
 };
 
-export default Navigation;  )
+export default Navigation;  );
 };
 
 export default Navigation;
                           </div>;
-                          <div className="pl-4 space-y-2">;
+                          <div className="pl - 4 space - y-2">;
                             {item.dropdown.map ((dropdown_item) => {
                               const Icon = dropdown_item.icon;
                               return (
@@ -1408,12 +649,12 @@ export default Navigation;
                                   key={dropdown_item.name}
                                   href={dropdown_item.href}
                                   on_click={() => setIsOpen (false)}
-                                  className="flex items - center space - x-3 p - 3 rounded - lg hover: bg - cyan - 500 / 10 transition-all duration-300";
+                                  className="flex items - center space - x-3 p - 3 rounded - lg hover: bg - cyan - 500 / 10 transition - all duration - 300";
                                 >;
-                                  <Icon className="w - 5 h - 5 text-cyan-400" />;
+                                  <Icon className="w - 5 h - 5 text - cyan - 400" />;
                                   <div>;
-                                    <div className="text-white font-medium">{dropdown_item.name}</div>;
-                                    <div className="text - gray-400 text-sm">{dropdown_item.description}</div>;
+                                    <div className="text - white font - medium">{dropdown_item.name}</div>;
+                                    <div className="text - gray - 400 text - sm">{dropdown_item.description}</div>;
                                   </div>;
                                 </Link>);
                             })}
@@ -1427,10 +668,10 @@ export default Navigation;
                           <item.icon className='w - 5 h - 5 text - cyan - 400' />;
                           <span className='text - white font - medium'>;
                             {item.name}
-                          </span>                        </Link>                          className="flex items - center space - x-3 p - 3 rounded - lg hover:bg - cyan - 500 / 10 transition-all duration-300";
+                          </span>                        </Link>                          className="flex items - center space - x-3 p - 3 rounded - lg hover:bg - cyan - 500 / 10 transition - all duration - 300";
                         >;
-                          <item.icon className="w - 5 h - 5 text-cyan-400" />;
-                          <span className="text-white font-medium">{item.name}</span>)}
+                          <item.icon className="w - 5 h - 5 text - cyan - 400" />;
+                          <span className="text - white font - medium">{item.name}</span>)}
                     </div>))}
                 </div>;
                 {/* Contact Information */}
@@ -1451,13 +692,13 @@ export default Navigation;
                       <MapPin className='w - 4 h - 4 text - pink - 400' />;
                       <span className='text - xs'>{contact_info.address}</span>                    </div>                      <span>{contact_info.mobile}</span>;
                     </div>;
-                    <div className="flex items - center space - x-2 text-gray-300">;
-                      <Mail className="w - 4 h - 4 text-purple-400" />;
+                    <div className="flex items - center space - x-2 text - gray - 300">;
+                      <Mail className="w - 4 h - 4 text - purple - 400" />;
                       <span>{contact_info.email}</span>;
                     </div>;
-                    <div className="flex items - center space - x-2 text-gray-300">;
-                      <MapPin className="w - 4 h - 4 text-pink-400" />;
-                      <span className="text-xs">{contact_info.address}</span>;
+                    <div className="flex items - center space - x-2 text - gray - 300">;
+                      <MapPin className="w - 4 h - 4 text - pink - 400" />;
+                      <span className="text - xs">{contact_info.address}</span>;
                     </div>;
                   </div>;
                 </div>;
@@ -1471,7 +712,7 @@ export default Navigation;
                     href="/contact";
                     while_tap={{ scale: 0.95 }}
                     on_click={() => setIsOpen (false)}
-                    className="block w - full bg - gradient - to - r from - cyan - 500 to - purple - 600 hover:from - cyan - 400 hover:to - purple - 500 text - white font - semibold py - 3 px - 6 rounded - xl text - center transition - all duration - 300 shadow - lg shadow-cyan-500 / 25";
+                    className="block w - full bg - gradient - to - r from - cyan - 500 to - purple - 600 hover:from - cyan - 400 hover:to - purple - 500 text - white font - semibold py - 3 px - 6 rounded - xl text - center transition - all duration - 300 shadow - lg shadow - cyan - 500 / 25";
                   >;
                     Get Started Today;
                   </motion.a>;
@@ -1488,23 +729,12 @@ export default Navigation);
 ;
 export default Navigation;
 ;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   );
 export default Navigation;  )
 }
 export default Navigation;
 
 export default Navigation;
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default Navigation;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     </div>
                     <div className='flex items-center space-x-2 text-gray-300'>
                       <Mail className='w-4 h-4 text-purple-400' />
@@ -1537,9 +767,4 @@ export default Navigation;
 };
 
 export default Navigation;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

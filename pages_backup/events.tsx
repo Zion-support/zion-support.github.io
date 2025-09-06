@@ -1,16 +1,11 @@
-<<<<<<< HEAD:pages/events.tsx
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
+>>>>>>> pr-12243
 }
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/events.tsx
-
 import React from 'react',
 import SEO from '../components / SEO',
 export default /**
@@ -27,11 +22,6 @@ return (
   </>);
 }
 
-<<<<<<< HEAD:pages/events.tsx
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/events.tsx
 
 		<>
 			<SEO title=&quot;Events | Zion Tech Group&quot; description=&quot;Upcoming events and conferences.&quot; canonical=&quot;/events&quot; />
@@ -47,7 +37,6 @@ return (
 import React from 'react';
 import SEO from '../components/SEO';
 export default function EventsPage() {
-<<<<<<< HEAD:pages/events.tsx
 <<<<<<< HEAD
 	return (
 		<>
@@ -59,32 +48,24 @@ export default function EventsPage() {
 		</>
 	)
 }
+<<<<<<< HEAD
+=======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/events.tsx
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> pr-12243
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
-<<<<<<< HEAD:pages/events.tsx
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -92,19 +73,8 @@ export default function EventsPage() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
-=======
-
-
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/events.tsx
   return (
     <>
       <SEO
@@ -120,9 +90,5 @@ export default function EventsPage() {
       </div>
     </>
   );
-<<<<<<< HEAD:pages/events.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:pages_backup/events.tsx
+>>>>>>> pr-12243

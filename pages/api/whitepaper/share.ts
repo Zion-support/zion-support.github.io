@@ -1,12 +1,10 @@
 <<<<<<< HEAD
-
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { randomUUID } from 'crypto',;
 // In-memory store for demo purposes. Replace with persistent storage in production.
@@ -19,10 +17,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const id = randomUUID(),
   store[id] = { markdown, createdAt: Date.now(), public: !!publicPreview },
   const url = `${process.env.NEXT_PUBLIC_BASE_URL || ''}/whitepaper/preview/${id}`,
-<<<<<<< HEAD
-
 =======
-=======
+>>>>>>> pr-12243
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { randomUUID } from 'crypto',;
 =======
@@ -66,6 +62,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 =======
   const url = `${process.env.NEXT_PUBLIC_BASE_URL || ''}/whitepaper/preview/${id}`
+<<<<<<< HEAD
+=======
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
@@ -74,14 +72,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!markdown) return res.status(400).json({ error: 'Missing markdown' });
   const id = null;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+>>>>>>> pr-12243
   res.status(200).json({ id, url })
 }
 export function getShared(id: string) {
   return store[id]
-<<<<<<< HEAD
-
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -133,4 +128,3 @@ function get_shared() {
 =======
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

@@ -1,41 +1,9 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next',;
-;
-function randomString(length: number) {
-  const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789',
-  let res = '',
-  const cryptoObj = require('crypto'),
-  const bytes: Buffer = cryptoObj.randomBytes(length),
-  for (let i = 0, i < length, i++) res += charset[bytes[i] % charset.length],
-  return res
-}
-
 =======
 <<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-  let res = '';
-  const cryptoObj = require('crypto');
-  const bytes: Buffer = cryptoObj.randomBytes(length);
-  for (let i = 0; i < length; i++) res += charset[bytes[i] % charset.length];
-
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-function randomString(length: number) {
-  const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
-  let res = ''
-  const cryptoObj = require('crypto')
-  const bytes: Buffer = cryptoObj.randomBytes(length)
-  for (let i = 0, i < length, i++) res += charset[bytes[i] % charset.length]
-
-<<<<<<< HEAD
 function randomString(length: number): string {
   const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 =======
@@ -50,15 +18,12 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   return res;
 <<<<<<< HEAD
 }
+
+
+=======
 <<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-
-=======
 import type { NextApiRequest, NextApiResponse } from 'next',
 ;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 function randomString(length: number) {
   const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789',
   let res = '',
@@ -66,7 +31,23 @@ function randomString(length: number) {
   const bytes: Buffer = cryptoObj.randomBytes(length),
   for (let i = 0, i < length, i++) res += charset[bytes[i] % charset.length],
 =======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> pr-12243
+import type { NextApiRequest, NextApiResponse } from 'next'
+;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+function randomString(length: number) {
+  const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+  let res = ''
+  const cryptoObj = require('crypto')
+  const bytes: Buffer = cryptoObj.randomBytes(length)
+  for (let i = 0, i < length, i++) res += charset[bytes[i] % charset.length]
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> pr-12243
   return res
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
@@ -74,40 +55,10 @@ function randomString(length: number) {
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const nonce = randomString(16)
   res.setHeader('Set-Cookie', `siwe-nonce=${nonce}, HttpOnly, Path=/, SameSite=Lax`)
-<<<<<<< HEAD
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-  res.status(200).json({ nonce })
-  try {
-    const nonce = randomString(16);
-    res.setHeader('Set-Cookie', `siwe-nonce=${nonce}, HttpOnly, Path=/, SameSite=Lax`);
-    res.status(200).json({ nonce });
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
-
-=======
-  res.status(200).json({ nonce })
-
-=======
-}
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import type { NextApiRequest, NextApiResponse } from 'next',
 ;
 /**
@@ -132,12 +83,6 @@ function handler() {
 ;
 
 
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
   const nonce = randomString(16);
@@ -149,6 +94,4 @@ function handler() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   res.status(200).json({ nonce })
 };
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

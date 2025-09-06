@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-</div>);
- </div>);
-</div>);
- </div>);
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React, { useEffect, useState, useCallback, useMemo } from 'react',
 import Layout from './layout/Layout';
 import { motion } from 'framer-motion';
@@ -37,12 +20,7 @@ import { innovativeMicroSaasSolutions2025 } from '../data/2025-innovative-micro-
 // Lazy load new components for better performance
 const ServiceCard = null;
 </div>);
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 //Memoize expensive computations const allRevolutionaryServices = useMemo ( () => [ ...revolutionary2044AdvancedMicroSaas;
 ...revolutionary2044ITServices;
 ...revolutionary2044AIServices ], []);
@@ -123,17 +101,6 @@ top: `$ {
 }> <div className="relative p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 rounded-3xl backdrop-blur-xl shadow-[0 0 50px rgba (0, 0, 0, 0.5) ] hover:shadow-[0 0 80px rgba (6, 182, 212, 0.3) ] transition-all duration-300 group-hover:border-cyan-500/50" > <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" ></div> <div className="relative z-10" > <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-[0 0 30px rgba (6, 182, 212, 0.3) ] mb-6" > <feature.icon className="w-8 h-8 text-white" /> </div> </p> </div> </div> </motion.div>) )
 }</div> </div> </section> > <h2 className="text-5xl font-bold text-white mb-6" > Revolutionary <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent" >Features</span> </h2> <p className="text-xl text-gray-400 max-w-3xl mx-auto" > Discover the cutting-edge capabilities that set Zion Tech Group apart in the 2044 technology landscape </p> </motion.div> > Learn More <ArrowRight className="w-4 h-4 transition-transform duration-300" /> </a> </div> </div> </motion.div>) )
 }</div> </div> </section> <motion.div initial= {
-<<<<<<< HEAD
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-//Memoize expensive computations const allRevolutionaryServices = useMemo ( () => [ ...revolutionary2044AdvancedMicroSaas;
-...revolutionary2044ITServices;
-...revolutionary2044AIServices ], []);
-const featuredServices = useMemo ( () => allRevolutionaryServices.slice (0, 6), [allRevolutionaryServices]);
-
-=======
   {
   opacity: 0, y: 30
 }whileInView= {
@@ -141,7 +108,6 @@ const featuredServices = useMemo ( () => allRevolutionaryServices.slice (0, 6), 
   opacity: 1, y: 0
 }transition= {
   {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ], []);
 ;
 }window.location.href = '/revolutionary - 2044 - pricing - showcase';
@@ -217,10 +183,6 @@ top: `$ {
   scale: 0.95;
 }initial= {
   {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }transition= {
   {
   duration: 0.5, delay: index * 0.1;
@@ -237,30 +199,12 @@ top: `$ {
   duration: 0.8;
 }viewport= {
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
   once: true;
 }> <h2 className="text - 5xl font - bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text - xl text - gray - 400 mb - 12 max-w-3xl mx-auto" > Join thousands of forward - thinking companies already leveraging our revolutionary 2044 technology solutions </p> <div className="flex flex - col sm:flex - row gap - 6 justify-center items-center" > <button > <span className="flex items-center" > Start Your Journey <Rocket className="w - 7 h - 7 ml - 4 group - hover:translate - x-1 transition-transform duration-300" /> </span> </button> <button > <span className="flex items-center" > Schedule Demo <Play className="w - 7 h-7 ml-4" /> </span> </button> </div> </div> </section> </main> </Layout> </>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default Homepage2044;export default Homepage2044;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   once: true 
 
 }> <h2 className="text-5xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-400 mb-12 max-w-3xl mx-auto" > Join thousands of forward-thinking companies already leveraging our revolutionary 2044 technology solutions </p> <div className="flex flex-col sm:flex-row gap-6 justify-center items-center" > <button > <span className="flex items-center" > Start Your Journey <Rocket className="w-7 h-7 ml-4 group-hover:translate-x-1 transition-transform duration-300" /> </span> </button> <button > <span className="flex items-center" > Schedule Demo <Play className="w-7 h-7 ml-4" /> </span> </button> </div> </div> </section> </main> </Layout> </>) 
 };
 export default Homepage2044;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

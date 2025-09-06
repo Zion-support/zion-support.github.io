@@ -1,40 +1,9 @@
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  "timestamp": "2025-09-06T20:40:15.907Z",
-  "duration": "124s",
-=======
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-  "timestamp": "2025-09-06T17:31:43.872Z",
-  "duration": "46s",
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-=======
-  "timestamp": "2025-09-06T20:40:15.907Z",
-  "duration": "124s",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
-
   "timestamp": "2025-09-06T17:31:43.872Z",
   "duration": "46s",
   "timestamp": "2025-09-06T20:40:15.907Z",
   "duration": "124s",
 origin/cursor/automate-test-improve-and-merge-code-646c
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   "results": {
     "syntaxFixes": 0,
     "buildSuccess": false,
@@ -77,6 +46,15 @@ origin/cursor/automate-test-improve-and-merge-code-646c
     "syntaxFixes": 0,
     "buildSuccess": false,
     "testsPassed": 0,
+    "totalErrors": 5
+  "timestamp": "2025-09-06T10:42:27.266Z",
+  "totalDuration": 60241,
+  "successfulTasks": 6,
+  "totalTasks": 8,
+  "results": {
+    "dependencyFix": {
+      "success": true,
+      "duration": 7037,
       "duration": 22421,
 ursor/automate-test-improve-and-merge-code-e883
   "timestamp": "2025-09-06T08:34:04.724Z",
@@ -86,84 +64,89 @@ ursor/automate-test-improve-and-merge-code-e883
       "success": true,
       "duration": 84429,
 origin/cursor/automate-test-improve-and-merge-code-2533
-
       "errors": [],
       "warnings": [
         "Command failed: npm audit --fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
       ]
     },
     "codeQuality": {
+      "success": false,
+      "duration": 27333,
       "duration": 27631,
 ursor/automate-test-improve-and-merge-code-e883
       "success": true,
       "duration": 56422,
 origin/cursor/automate-test-improve-and-merge-code-2533
-
       "errors": [],
       "warnings": []
     },
     "securityAudit": {
       "success": true,
+      "duration": 1719,
       "duration": 1683,
 ursor/automate-test-improve-and-merge-code-e883
       "duration": 1450,
 origin/cursor/automate-test-improve-and-merge-code-2533
       "duration": 1719,
-
       "errors": [],
       "warnings": []
     },
     "buildOptimization": {
       "success": true,
+      "duration": 6250,
       "duration": 6198,
 ursor/automate-test-improve-and-merge-code-e883
       "duration": 11039,
 origin/cursor/automate-test-improve-and-merge-code-2533
       "duration": 6250,
-
       "errors": [],
       "warnings": []
     },
     "seoOptimization": {
-
       "success": false,
       "duration": 39,
 "errors": [],
       "success": true,
       "duration": 46,
       "errors": [],
+ursor/automate-test-improve-and-merge-code-e883
       "success": false,
       "duration": 0,
       "errors": [],
 origin/cursor/automate-test-improve-and-merge-code-2533
-
       "warnings": []
     },
     "accessibilityImprovement": {
       "success": false,
+      "duration": 9508,
       "duration": 9692,
 ursor/automate-test-improve-and-merge-code-e883
       "duration": 0,
 origin/cursor/automate-test-improve-and-merge-code-2533
       "duration": 9508,
-
       "errors": [],
       "warnings": []
     },
     "performanceOptimization": {
+      "success": true,
+      "duration": 6736,
       "duration": 7154,
 ursor/automate-test-improve-and-merge-code-e883
       "success": false,
       "duration": 0,
 origin/cursor/automate-test-improve-and-merge-code-2533
-
       "errors": [],
       "warnings": []
     },
     "deployment": {
+      "success": true,
+      "duration": 1612,
+      "errors": [],
+      "warnings": []
+    }
+origin/cursor/expand-services-advertise-and-build-project-c28b
     "totalErrors": 6
 origin/cursor/automate-test-improve-and-merge-code-646c
-
   }
 }
       "success": false,

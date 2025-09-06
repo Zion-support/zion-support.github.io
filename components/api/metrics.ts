@@ -26,47 +26,20 @@ function generateSeries(n: number, base: number, volatility = 0.15) {
   return series;
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-  const now = new Date()
-  const labels = Array.from({ length: 14 }, (_, i) => {
-  const now = new Date(),
-  const labels = Array.from({ length: 14 }, (_, i) => {;
-    const d = new Date(now);
-    d.setDate(d.getDate() - (13 - i));
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  const now = new Date(),
-  const labels = Array.from({ length: 14 }, (_, i) => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
     const d = new Date(now);
     d.setDate(d.getDate() - (13 - i));
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     const d = new Date(now);
     d && d.setDate(d && d.getDate() - (13 - i));
     return `${d && d.getMonth() + 1}/${d && d.getDate()}`;
     return `${d.getMonth() + 1}/${d.getDate()}`
   });
 
-<<<<<<< HEAD
-=======
 
-=======
-return `${d.getMonth() + 1}/${d.getDate()}`;
-  });
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 return `${d.getMonth() + 1}/${d.getDate()}`;
   });
 
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const marketplace = [
     {
       key: 'jobs_24h'
@@ -191,28 +164,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     const factor = 0.8 + Math.random() * 0.4;
     response.compare = {
       prevQuarter: {
-<<<<<<< HEAD
-<<<<<<< HEAD
         })),
       },
     }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  }
-=======
-  res && res.status(200).json(response)
-}
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 marketplace: marketplace.map(m => ({
           ...m,
           value: Math.round(m.value * factor),
@@ -229,20 +184,10 @@ marketplace: marketplace.map(m => ({
 
   res.status(200).json(response);
         multiverse: multiverse.map((m) => ({ ...m, value: Math.round(m.value * factor) }))}}
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   }
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   res.status(200).json(response)
 }
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

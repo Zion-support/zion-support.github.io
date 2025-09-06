@@ -1,27 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-export interface EmergingTechService2026 {
-export interface EmergingTechService2026 {;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   id: string;
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export interface EmergingTechService2026 {
 id: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
   name: string;
   tagline: string;
   price: string;
-  period: string,
+  period: string;
   description: string;
   features: string[];
   popular: boolean;
@@ -46,12 +30,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   text_color: string;
   link: string;
   market_position: string;
@@ -70,15 +48,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   contact_info: {
     mobile: string;
     email: string;
-    address: string
-};
-=======
+    address: string;
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
-
 };
 
+export const emergingTechServices2026: EmergingTechService2026[] = [
+  // Quantum Computing Services
+  {
+  {
 origin/cursor/automate-test-improve-and-merge-code-382a
 export const emergingTechServices2026: EmergingTechService2026[] = [
   // Quantum Computing Services
@@ -90,8 +69,6 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
   return emergingTechServices2026 && emergingTechServices2026.filter(service => service && service.popular);
 };
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     id: 'ai-digital-twin-platform'
     name: 'AI Digital Twin Platform'
     tagline:
@@ -161,17 +138,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.4
     reviews: 29
   }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ];
 export const getEmergingTechServices2026ByCategory = (category: string) => {
   return emergingTechServices2026.filter(
     service => service.category === category;
   );
-<<<<<<< HEAD
-
-  return emergingTechServices2026.filter(service => service.popular);
-}
-=======
       'AI-powered digital twin platform with intelligent creation, real-time simulation, and comprehensive analytics capabilities.',
     launchDate: '2024-06-25',
     customers: 56,
@@ -184,10 +155,12 @@ export const getEmergingTechServices2026ByCategory = (category: string) => {
     service => service.category === category;
   );
 
+
 ];
 
-  return emergingTechServices2026 && emergingTechServices2026.filter(service => service && service.popular)
+  return emergingTechServices2026 && emergingTechServices2026.filter(service => service && service.popular);
 };
+
 
 export const emergingTechServices2026: EmergingTechService2026[] = [
   // Quantum Computing Services
@@ -616,16 +589,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ]
     roi: 'Organizations report 300% ROI through improved operational efficiency and reduced maintenance costs.'
     competitors: [
-<<<<<<< HEAD
       'Siemens Digital Twin',
       'PTC ThingWorx',
       'GE Digital Twin',
       'Autodesk',
-    ],    customers: 56,
-    rating: 4 && 4.4,
-    reviews: 29,
-  },
-=======
+    ],
       'Siemens Digital Twin'
       'PTC ThingWorx'
       'GE Digital Twin'
@@ -636,94 +604,48 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     contactInfo: contact
     realImplementation: true
     implementationDetails:
+      'AI-powered digital twin platform with intelligent creation, real-time simulation, and comprehensive analytics capabilities.'
+    launchDate: '2024-06-25'
+    customers: 56
+    rating: 4.4
+    reviews: 29
+  }
       'AI-powered digital twin platform with intelligent creation, real-time simulation, and comprehensive analytics capabilities.',
     launchDate: '2024-06-25',
 origin/cursor/expand-services-advertise-and-build-project-c28b
     customers: 56,
     rating: 4 && 4.4,
     reviews: 29,
+  },
+];
   },;
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 ];
 export const getEmergingTechServices2026ByCategory = (category: string) => {
   return emergingTechServices2026.filter(
     service => service.category === category;
   );
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
 export const getPopularEmergingTechServices2026 = () => {
-=======
-};
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
 };
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export const getEmergingTechServices2026ByPriceRange = (
   minPrice: number
   maxPrice: number
 ) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
   return emergingTechServices2026 && emergingTechServices2026.filter(service => {
     const price = parseInt(service && service.price.replace('$', ''));
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  return emergingTechServices2026 && emergingTechServices2026.filter(service => {
-    const price = parseInt(service && service.price.replace('$', ''));
-=======
   return emergingTechServices2026.filter(service => {;
     const price = parseInt(service.price.replace('$', ''));
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-export const getPopularEmergingTechServices2026 = () => {export const getEmergingTechServices2026ByPriceRange = (
-  minPrice: number
-  maxPrice: number
-) => {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-  return emergingTechServices2026.filter(service => {;
-    const price = parseInt(service.price.replace('$', ''));
-
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     return price >= minPrice && price <= maxPrice;
-<<<<<<< HEAD
-  })
-=======
   });
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };    return price >= minPrice && price <= maxPrice
 
   })
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+origin/cursor/expand-services-advertise-and-build-project-c28b
     id: 'quantum-computing-as-a-service', name: 'Quantum Computing as a Service (QCaaS)',
     tagline: 'Access quantum computing power through the cloud with AI-optimized algorithms', price: '$999',
     period: '/month',
@@ -912,31 +834,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 29
   }
 ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export const getEmergingTechServices2026ByCategory = (category: string) => {
   return emergingTechServices2026.filter(service => service.category === category)
 };
 export const getPopularEmergingTechServices2026 = () => {
   return emergingTechServices2026.filter(service => service.popular)
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export const getEmergingTechServices2026ByPriceRange = (minPrice: number, maxPrice: number) => {
   return emergingTechServices2026.filter(service => {
     const price = parseInt(service.price.replace('$', ''));
@@ -944,24 +848,31 @@ export const getEmergingTechServices2026ByPriceRange = (minPrice: number, maxPri
 
   })
 };
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-};
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 ;
 export const getEmergingTechServices2026ByCategory = (category: string) =>: any {
   return emergingTechServices2026.filter (
     service => service.category === category);
 }
-<<<<<<< HEAD
+;
+export const getPopularEmergingTechServices2026 = () =>: any {
+  return emergingTechServices2026.filter (service => service.popular);
+}
+;
+export const getEmergingTechServices2026ByPriceRange = (
+  min_price: number,
+  max_price: number) =>: any {
+  return emergingTechServices2026.filter (service => {
+    const price = parse_int (service.price.replace ('$', ''));
+    return price >= min_price && price <= max_price;
+  });
+}    return price >= min_price && price <= max_price;
+  });
+}
+;
+origin/cursor/automate-test-improve-and-merge-code-20a4
 
 export interface EmergingTechService2026 {;
+origin/cursor/expand-services-advertise-and-build-project-c28b
 
   })
 };
@@ -976,7 +887,7 @@ export interface EmergingTechService2026 {;
   name: string,;
   tagline: string,;
   price: string,;
-  period: string,,
+  period: string,;
   description: string,;
   features: string[],;
   popular: boolean,;
@@ -1010,8 +921,6 @@ export interface EmergingTechService2026 {;
   rating: number,;
   reviews: number;
 }
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 ;
 export const getPopularEmergingTechServices2026 = () =>: any {
   return emergingTechServices2026.filter (service => service.popular);
@@ -1028,36 +937,11 @@ export const getEmergingTechServices2026ByPriceRange = (
   });
 }
 ;
-origin/cursor/automate-test-improve-and-merge-code-20a4
 
-<<<<<<< HEAD
-export interface EmergingTechService2026 {
-};
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 export interface EmergingTechService2026 {;
-origin/cursor/expand-services-advertise-and-build-project-c28b
 
-  })
 };
-
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
-
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

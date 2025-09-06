@@ -1,20 +1,7 @@
-<<<<<<< HEAD
-=======
-import React, { useMemo, useState } from 'react';
-import { useUser } from '../../providers/UserProvider';
-import { useToast } from '../ui/ToastProvider';
-import Link from 'next/link';
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 export default function OnboardingWizard() {;
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function OnboardingWizard() {
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function OnboardingWizard() {
 
 class ErrorBoundary extends React.Component {
@@ -45,29 +32,14 @@ import React, { useMemo, useState } from 'react';
   const [step, setStep] = useState(0);
   const isClient = user?.role === 'client';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   const steps = useMemo(() => {
     if (isClient) {
       return [
-<<<<<<< HEAD
-export default function OnboardingWizard() {
-  const { user, completeOnboarding, setUser } = useUser()
-  const { addToast } = useToast()
-  const [step, setStep] = useState(0)
-
-  const isClient = user?.role === 'client'
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const steps = useMemo(() => {
     if (isClient) {
       return [
         {
           title: 'Ready to find top IT talent?'
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const isClient = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
           content: (
@@ -91,19 +63,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           )
         }
         {
-<<<<<<< HEAD
-<<<<<<< HEAD
-          title: 'Invite or message talent'
-          content: <p>Send invites or start a conversation to move fast.</p>
-        }
-          title: 'Invite or message talent',;
-          content: <p>Send invites or start a conversation to move fast.</p>,;
-        },;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   const steps = useMemo(() => {
     if (isClient) {
@@ -113,7 +72,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           content: <p>Send invites or start a conversation to move fast.</p>,;
         },;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       ];
     }
     return [
@@ -155,35 +113,6 @@ export default function OnboardingWizard() {;
                   {a}
                 </button>;
               ))}
-<<<<<<< HEAD
-
-            </div>;
-          </div>;
-        ),;
-      },;
-      {;
-        title: 'Preview your profile',;
-        content: <p>Review how clients will see your profile.</p>,;
-      },;
-      {;
-        title: 'Enable AI matchmaking',;
-        content: (;
-          <div className='space-y-2'>;
-            <p>Turn on AI-powered matching to get discovered faster.</p>;
-            <label className='inline-flex items-center gap-2 text-sm'>;
-              <input type='checkbox' defaultChecked /> Enable AI matchmaking;
-            </label>;
-          </div>;
-        ),;
-      },;
-    ];
-  }, [isClient, setUser]);
-  if (!user |user.onboardingCompleted) return null;
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <div className='mb-6 rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40'>;
       <div className='flex items-center justify-between'>;
@@ -219,8 +148,6 @@ export default function OnboardingWizard() {;
               completeOnboarding();
               });
             }}
-<<<<<<< HEAD
-<<<<<<< HEAD
             className='px-3 py-2 rounded-md border';
           >;
             Finish;
@@ -229,12 +156,6 @@ export default function OnboardingWizard() {;
     </div>;
   );
 }    }
-<<<<<<< HEAD
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     return [;
       { title: 'Complete your profile', content: (;
         <div className="space-y-3">;
@@ -248,38 +169,8 @@ export default function OnboardingWizard() {;
             {['AILLMNext && AILLMNext.jsPythonDevOpsSecurity'].map(s => (;
               <button key={s} className="px-3 py-1 rounded-full border hover:bg-gray-50 dark:hover:bg-white/5">{s}</button>;
             ))}
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-  return (
-    <div className="mb-6 rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40">
-      <div className="flex items-center justify-between">
-        <div>
-          <div className="text-xs uppercase tracking-wide opacity-70 mb-1">Onboarding</div>
-          <div className="text-sm font-medium">{steps[step]?.title}</div>
-        </div>
-        <div className="text-xs opacity-70">Step {step + 1} of {steps.length}</div>
-      </div>
-      <div className="mt-4 text-sm">{steps[step]?.content}</div>
-      <div className="mt-4 flex items-center justify-between">
-
-        {step < steps.length - 1 ? (
-          <button onClick={() => setStep(s => Math.min(steps.length - 1, s + 1))} className="px-3 py-2 rounded-md border">Next</button>
-        ) : (
-          <button onClick={() => { completeOnboarding(), addToast({ title: 'Onboarding completed', description: 'You can revisit anytime from Settings.', variant: 'success' }) }} className="px-3 py-2 rounded-md border">Finish</button>
-        )}
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
           </div>;
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       </div>;
       <div className="mt-4 text-sm">{steps[step]?.content}</div>;
       <div className="mt-4 flex items-center justify-between">;
@@ -504,9 +395,6 @@ if (return null) {
           <button on_click={() => { complete_onboarding (), add_toast ({ title: 'Onboarding completed', description: 'You can revisit anytime from Settings.', variant: 'success' }) }} className="px - 3 py-2 rounded-md border">Finish</button>)}
       </div>;
     </div>);
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
             className='px-3 py-2 rounded-md border'
           >
             Finish
@@ -548,4 +436,3 @@ if (return null) {
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

@@ -6,8 +6,6 @@ interface SEOProps {
   title: string;
   description: string;
   keywords?: string;
-<<<<<<< HEAD:src/components/SEO.tsx
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -65,14 +63,7 @@ export const SEO = ({
 =======
 >>>>>>> main
 >>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
-main
-
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/SEO.tsx
+>>>>>>> pr-12243
   url?: string;
   image?: string;
   type?: string;
@@ -89,10 +80,7 @@ const SEO: React.FC<SEOProps> = ({
   const siteName = 'Zion Tech Group';
   const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
   const fullUrl = url ? `https://ziontechgroup.com${url}` : 'https://ziontechgroup.com';
-<<<<<<< HEAD:src/components/SEO.tsx
 =======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/SEO.tsx
   type?: 'website' | 'article' | 'product' | 'service';
   author?: string;
   publishedTime?: string;
@@ -157,6 +145,7 @@ export function SEO({
       "Quantum Computing",
       "Machine Learning"
     ]
+=======
 export const SEO: React.FC<SEOProps> = ({
   title = 'Zion Tech Group - Leading Technology Solutions Provider', description = 'Leading technology solutions provider offering AI services, IT services, and micro SaaS solutions. Enterprise-grade infrastructure and development services.',
   keywords = 'technology solutions, AI services, IT services, micro SaaS, enterprise software, cloud services, cybersecurity', image = 'https: //ziontechgroup.com/og-image.jpg',
@@ -172,7 +161,7 @@ export const SEO: React.FC<SEOProps> = ({
       '@type': 'ContactPoint',
       'telephone': '+1-555-ZION-TECH', 'contactType': 'customer service'
     }
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   };
 
   // Service-specific structured data
@@ -291,7 +280,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     }
     return null;
   };
-origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4210
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4210
 
   // Combine all structured data
   const combinedStructuredData = [
@@ -349,7 +338,6 @@ origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4210
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-<<<<<<< HEAD:src/components/SEO.tsx
 <<<<<<< HEAD
       <link rel="canonical" href={fullUrl} />
 
@@ -363,12 +351,6 @@ origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4210
       <meta property="og:url" content={url} />
       <meta property="og:title" content={title} />
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-=======
-      <meta property="og: type" content={type} />
-      <meta property="og:url" content={url} />
-      <meta property="og:title" content={title} />
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/SEO.tsx
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
       <meta property="og:site_name" content={siteName} />
@@ -423,13 +405,10 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     </Helmet>
   );
 };
-<<<<<<< HEAD:src/components/SEO.tsx
 <<<<<<< HEAD
 
 export default SEO;
 =======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/SEO.tsx
       <meta name="author" content={author} />
       <meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow'} />
       
@@ -440,6 +419,7 @@ export default SEO;
       <meta property="og:type" content={type} />
       <meta property="og:url" content={currentUrl} />
       <meta property="og:title" content={fullTitle} />
+=======
   title = 'Zion Tech Group - Advanced AI Solutions', description = 'Leading provider of AI-powered solutions, cloud infrastructure, and digital transformation services.',
   keywords = 'AI, artificial intelligence, cloud computing, digital transformation, automation', image = '/og-image.jpg',
   url = 'https: //ziontechgroup.com', type = 'website'
@@ -453,7 +433,7 @@ export default SEO;
       
       {/* Open Graph */}
       <meta property="og: title" content={title} />
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
       <meta property="og:image:width" content="1200" />
@@ -546,8 +526,4 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     </Helmet>
   );
 }
-<<<<<<< HEAD:src/components/SEO.tsx
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4210
-=======
-origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4210
->>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/SEO.tsx

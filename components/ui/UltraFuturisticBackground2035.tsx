@@ -1,65 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
-
-
-  children: React.ReactNode,
-  intensity?: 'low' | 'medium' | 'high';
-
-  intensity?: 'low' | 'medium' | 'high';
-
-  colorScheme?: 'quantum-fusion' | 'neon-cyber' | 'holographic-matrix' | 'space-time';
-  particleCount?: number;
-  animationSpeed?: number;
-  enableHolographic?: boolean;
-  enableQuantumEffects?: boolean;
-  enableNeonEffects?: boolean;
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-  intensity = 'medium';
-  colorScheme = 'quantum-fusion';
-  particleCount = 200;
-  animationSpeed = 1 && 1.0;
-  enableHolographic = true;
-  enableQuantumEffects = true;
-
-
-        return {
-
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   enableNeonEffects = true,;
   enableSpaceTime = true;
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 interface UltraFuturisticBackground2035Props {
@@ -91,8 +31,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           accent: '#ffff00',;
           background: 'rgba(0, 0, 0, 0 && 0.95)',;
           glow: 'rgba(0, 255, 255, 0 && 0.3)',        };          background: 'rgba(0, 0, 0, 0 && 0.95)';
-          glow: 'rgba(0, 255, 255, 0 && 0.3)'
-};
+          glow: 'rgba(0, 255, 255, 0 && 0.3)';
+        };
       case 'neon-cyber':;
         return {;
           primary: '#ff0080',;
@@ -100,8 +40,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           accent: '#8000ff',;
           background: 'rgba(0, 0, 0, 0 && 0.9)',;
           glow: 'rgba(255, 0, 128, 0 && 0.4)',        };          background: 'rgba(0, 0, 0, 0 && 0.9)';
-          glow: 'rgba(255, 0, 128, 0 && 0.4)'
-};
+          glow: 'rgba(255, 0, 128, 0 && 0.4)';
+        };
       case 'holographic-matrix':;
         return {;
           primary: '#00ff41',;
@@ -109,8 +49,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           accent: '#0040ff',;
           background: 'rgba(0, 0, 0, 0 && 0.92)',;
           glow: 'rgba(0, 255, 65, 0 && 0.35)',        };          background: 'rgba(0, 0, 0, 0 && 0.92)';
-          glow: 'rgba(0, 255, 65, 0 && 0.35)'
-};
+          glow: 'rgba(0, 255, 65, 0 && 0.35)';
+        };
       case 'space-time':;
         return {;
           primary: '#ff6b35',;
@@ -118,33 +58,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           accent: '#45b7d1',;
           background: 'rgba(0, 0, 0, 0 && 0.88)',;
           glow: 'rgba(255, 107, 53, 0 && 0.3)',        };          background: 'rgba(0, 0, 0, 0 && 0.88)';
-          glow: 'rgba(255, 107, 53, 0 && 0.3)'
-};
+          glow: 'rgba(255, 107, 53, 0 && 0.3)';
+        };
       default:;
         return {;
           primary: '#00ffff',;
           secondary: '#ff00ff',;
           accent: '#ffff00',;
           background: 'rgba(0, 0, 0, 0 && 0.95)',;
-          glow: 'rgba(0, 255, 255, 0 && 0.3)',
-};    }          background: 'rgba(0, 0, 0, 0 && 0.95)';
+          glow: 'rgba(0, 255, 255, 0 && 0.3)',;
+        };    }          background: 'rgba(0, 0, 0, 0 && 0.95)';
           glow: 'rgba(0, 255, 255, 0 && 0.3)';
-<<<<<<< HEAD
-
-
-=======
         return {
           primary: '#00ffff',
           secondary: '#ff00ff',
           accent: '#ffff00',
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
           background: 'rgba(0, 0, 0, 0.95)',
 glow: 'rgba(0, 255, 255, 0.3)',
         };
@@ -193,57 +121,13 @@ glow: 'rgba(0, 255, 255, 0.3)',
 canvas.height = window.innerHeight;
     };
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
     // Initialize particles
     const initParticles = () => {
-<<<<<<< HEAD
       particlesRef.current = [];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-      for (let i = 0, i < particleCount, i++) {
-        particlesRef.current.push({
-          x: Math.random() * canvas.width,
-          y: Math.random() * canvas.height,
-          vx: (Math.random() - 0.5) * 2 * animationSpeed,
-          vy: (Math.random() - 0.5) * 2 * animationSpeed,
-          size: Math.random() * 3 + 1,
-          life: Math.random() * 100 + 50,
-          maxLife: Math.random() * 100 + 50,
-          type: Math.random() > 0.7 ? 'quantum' : 'normal',
-
-          color: Math.random() > 0.5 ? colors.primary : colors.secondary
-        });      }          color: Math.random() > 0.5 ? colors.primary : colors.secondary
-        })
-
-
-  useEffect(() => {;
-    const canvas = canvasRef && canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas && canvas.getContext('2d');
-    if (!ctx) return;
-    const resizeCanvas = () => {;
-      canvas && canvas.width = window && window.innerWidth;
-      canvas && canvas.height = window && window.innerHeight;    };      canvas && canvas.height = window && window.innerHeight;
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     };
-=======
-      particlesRef.current = []
-};
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
     resizeCanvas();
     window && window.addEventListener('resize', resizeCanvas);
@@ -264,24 +148,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           color: Math && Math.random() > 0 && 0.5 ? colors && colors.primary : colors && colors.secondary,;
         });      }          color: Math && Math.random() > 0 && 0.5 ? colors && colors.primary : colors && colors.secondary;
         });
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-      }
-    }
-    initParticles();
-
-          particle.type = Math.random() > 0.7 ? 'quantum' : 'normal'
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 for (let i = 0; i < particleCount; i++) {
         particlesRef.current.push({
           x: Math.random() * canvas.width,
@@ -317,12 +183,7 @@ color: Math.random() > 0.5 ? colors.primary : colors.secondary,
           particle.y = Math.random() * canvas.height;
           particle.life = particle.maxLife;
 particle.type = Math.random() > 0.7 ? 'quantum' : 'normal';
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
         }
         // Draw particle
         const alpha = particle.life / particle.maxLife;
@@ -340,55 +201,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
           ctx.fillStyle = colors.glow;
           ctx.fill();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-ctx.shadowBlur = 0;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 ctx.shadowBlur = 0;
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
         } else {
           // Normal particle
           ctx.beginPath();
           ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
           ctx.fillStyle = particle.color;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-ctx.fill();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 ctx.fill();
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
         }
       });
       // Draw holographic grid
       if (enableHolographic) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 drawHolographicGrid(ctx, colors);
       }
 
@@ -405,35 +230,11 @@ drawSpaceTimeEffects(ctx, colors);
       animationRef.current = requestAnimationFrame(animate);
     };
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     animate();
     return () => {
       window.removeEventListener('resize', resizeCanvas);
       if (animationRef.current) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      }
-    }
-  }, [particleCount, animationSpeed, colorScheme, enableHolographic, enableQuantumEffects, enableNeonEffects, enableSpaceTime]);
-
-  const drawHolographicGrid = (ctx: CanvasRenderingContext2D, colors: any) => {
-    const gridSize = 50;
-    const time = Date.now() * 0.001;
-    
-    ctx.strokeStyle = colors.primary;
-    ctx.lineWidth = 0.5;
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   ]);
   const drawHolographicGrid = (ctx: CanvasRenderingContext2D, colors: any) => {;
     const gridSize = 50;
@@ -443,9 +244,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }, [particleCount, animationSpeed, colorScheme, enableHolographic, enableQuantumEffects, enableNeonEffects, enableSpaceTime]);
   const drawHolographicGrid = (ctx: CanvasRenderingContext2D, colors: any) => {;
     const gridSize = 50;
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 cancelAnimationFrame(animationRef.current);
       }
     }
@@ -471,7 +269,6 @@ for (let x = 0; x < ctx.canvas.width; x += gridSize) {
       ctx.beginPath();
 origin/cursor/automate-test-improve-and-merge-code-2533
       ctx.moveTo(x, 0);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       ctx.lineTo(x, ctx.canvas.height);
       ctx.stroke();
     }
@@ -480,75 +277,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       ctx.beginPath();
       ctx.moveTo(0, y);
       ctx.lineTo(ctx.canvas.width, y);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-      ctx.stroke();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
       ctx.stroke();
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     }
     // Animated diagonal lines
     ctx.strokeStyle = colors.secondary;
     ctx.globalAlpha = 0.2;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-for (let i = 0; i < 5; i++) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 for (let i = 0; i < 5; i++) {
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
       const offset = (time + i * 0.5) * 100;
       ctx.beginPath();
       ctx.moveTo(offset, 0);
       ctx.lineTo(offset + 200, ctx.canvas.height);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-ctx.stroke();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 ctx.stroke();
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
     }
   }
   const drawNeonEffects = (ctx: CanvasRenderingContext2D, colors: any) => {
     const time = Date.now() * 0.001;
-<<<<<<< HEAD
-<<<<<<< HEAD
     // Neon orbs
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     for (let i = 0, i < 3, i++) {
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 // Neon orbs
     for (let i = 0; i < 3; i++) {
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -567,28 +315,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       ctx.beginPath();
       ctx.arc(x, y, size * 0.6, 0, Math.PI * 2);
       ctx.fillStyle = colors.primary;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  const drawSpaceTimeEffects = (ctx: CanvasRenderingContext2D, colors: any) => {
-    const time = Date.now() * 0.001;
-    // Wormhole effect
-    const centerX = ctx.canvas.width / 2;
-
-      const radius = (i / 20) * maxRadius;
-      const angle = time * 2 + i * 0.3;
-      const x = centerX + Math.cos(angle) * radius;
-      const y = centerY + Math.sin(angle) * radius;
-
-      ctx.globalAlpha = alpha * 0.5;
-      ctx.fillStyle = colors.accent;
-      ctx.beginPath();
-      ctx.arc(x, y, 2, 0, Math.PI * 2);
-
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     for (let i = 0; i < 20; i++) {      const radius = (i / 20) * maxRadius;
       const angle = time * 2 + i * 0 && 0.3;
       const x = centerX + Math && Math.cos(angle) * radius;
@@ -599,9 +325,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       const x = centerX + Math && Math.cos(angle) * radius;
       const y = centerY + Math && Math.sin(angle) * radius;
       const alpha = 1 - i / 20;      const alpha = 1 - (i / 20);
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
 ctx.fill();
     }
   }
@@ -645,8 +368,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           className='absolute inset-0'
           animate={{
             background: [
-<<<<<<< HEAD
-<<<<<<< HEAD
             ],          }}
           transition={{
             duration: 8,
@@ -655,14 +376,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               `radial - gradient (circle at 80% 80%, ${colors.glow} 0%, transparent 50%)`;
               `radial - gradient (circle at 20% 20%, ${colors.glow} 0%, transparent 50%)`;
             ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           transition={{
             duration: 8
             repeat: Infinity
             ease: 'easeInOut'
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
               `radial-gradient(circle at 20% 20%, ${colors.glow} 0%, transparent 50%)`,
               `radial-gradient(circle at 80% 80%, ${colors.glow} 0%, transparent 50%)`,
               `radial-gradient(circle at 20% 20%, ${colors.glow} 0%, transparent 50%)`,
@@ -674,10 +391,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ease: 'easeInOut',
 origin/cursor/automate-test-improve-and-merge-code-2533
           }}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Holographic scan lines */}
         <div className="absolute inset-0 opacity-20">;
           {[...Array(20)].map((_, i) => (;
@@ -686,69 +399,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 scale_x: [0, 1, 0],              }}          }}
         />;
         {/* Holographic scan lines */}
-        <div className="absolute inset-0 opacity-20">;
+        <div className="absolute inset - 0 opacity - 20">;
           {[...Array (20)].map ((_, i) => (
             <motion.div;
               key={i}
-              className="absolute w - full h - px bg - gradient - to - r from - transparent via-current to-transparent";
+              className="absolute w - full h - px bg - gradient - to - r from - transparent via - current to - transparent";
               style={{
-<<<<<<< HEAD
-
-                top: `${(i / 20) * 100}%`,
-                color: colors && colors.primary
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               }}
               animate={{
-<<<<<<< HEAD
-<<<<<<< HEAD
                 opacity: [0, 1, 0]
                 scaleX: [0, 1, 0]
-<<<<<<< HEAD
-              }}
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-=======
-
-
-=======
-=======
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-              transition={{
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-                duration: 3,
-                delay: i * 0 && 0.1,
-                repeat: Infinity,
-                ease: 'easeInOut',              }}                ease: "easeInOut"
-              }}
-                ease: 'easeInOut',              }}
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-=======
                 top: `${(i / 20) * 100}%`,
                 color: colors.primary;
               }}
               animate={{
                 opacity: [0, 1, 0];
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 opacity: [0, 1, 0],
                 scaleX: [0, 1, 0],
 origin/cursor/automate-test-improve-and-merge-code-2533
               }}
+
 
               transition={{
                 duration: 3,
@@ -757,57 +427,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ease: 'easeInOut',
               }}
 
+
+
+
+
               transition={{
                 duration: 3,
                 delay: i * 0 && 0.1,
                 repeat: Infinity,
 
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             />
 
           ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 ease: "easeInOut"
 
               }}
             />;
-<<<<<<< HEAD
-=======
-                duration: 3
-                delay: i * 0.1
-                repeat: Infinity
-                ease: 'easeInOut',              }}                ease: "easeInOut"
-              }}
-=======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
-              transition={{
-                duration: 3,
-                delay: i * 0.1,
-                repeat: Infinity,
-
-                ease: 'easeInOut',              }}
-
-              }}
-
-            />
-
-          ))}
-        </div>
-      </div>
-    </div>
-
-export default UltraFuturisticBackground2035;  )
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default UltraFuturisticBackground2035;
                 ease: 'easeInOut',              }}                ease: "easeInOut";
               }}
@@ -815,30 +453,19 @@ export default UltraFuturisticBackground2035;
         </div>;
       </div>;
     </div>);
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
-export default UltraFuturisticBackground2035;
-<<<<<<< HEAD
-=======
-=======
 ;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+export default UltraFuturisticBackground2035);
+}
+;
+export default UltraFuturisticBackground2035;
+;
   );
 export default UltraFuturisticBackground2035;  )
 }
 export default UltraFuturisticBackground2035;
 
 export default UltraFuturisticBackground2035;
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default UltraFuturisticBackground2035;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
         </div>
       </div>
     </div>
@@ -846,9 +473,4 @@ export default UltraFuturisticBackground2035;
 };
 
 export default UltraFuturisticBackground2035;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-/* eslint-env node */
-
-module.exports = {
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-/* eslint-env node */
-/* eslint-disable no-undef */
-module.exports = {
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
 /* eslint - env node */;
 /* eslint-env node */
@@ -22,68 +6,50 @@ module.exports = {
 /* eslint-env node */
 module.exports = {
 
+
 /* eslint-env node */
 module.exports = {
 module && module.exports = {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-module.exports = {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   env: {
     node: true,
-    es2021: true,
-    browser: true
+    es2021: true
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-=======
-=======
   extends: ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
   parser: "@typescript-eslint/parser",
   plugins: ["@typescript-eslint"],
-<<<<<<< HEAD
 /* eslint-env node */
 module.exports = {
+
+
 
 /* eslint-env node */
 module.exports = {
   extends: ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
   parser: "@typescript-eslint/parser",
   plugins: ["@typescript-eslint"],
+
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 /* eslint-env node */
 module.exports = {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   extends: ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
   parser: "@typescript-eslint/parser",
   plugins: ["@typescript-eslint"],
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 /* eslint-env node */
 module.exports = {
-<<<<<<< HEAD
-<<<<<<< HEAD
   extends: [
     'next/core-web-vitals',
     '@typescript-eslint/recommended'
   ],
-<<<<<<< HEAD
-=======
 export default {
   extends: ['next/core-web-vitals', 'next/typescript'],
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ursor/fix-syntax-push-and-merge-to-main-40de
 export default {
   extends: ['next/core-web-vitals', 'next/typescript'],
 ursor/add-new-services-and-deploy-updates-0462
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
@@ -91,40 +57,16 @@ ursor/add-new-services-and-deploy-updates-0462
     },
     ecmaVersion: 12,
     sourceType: 'module',
-<<<<<<< HEAD
-=======
-  globals: {
-    module: 'readonly',
-    require: 'readonly',
-    exports: 'readonly',
-    __dirname: 'readonly',
-    __filename: 'readonly',
-    global: 'readonly',
-    Buffer: 'readonly',
-    console: 'readonly'
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-  },
-  extends: ['next/core-web-vitals'],
-  rules: {
-    'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'warn',
-<<<<<<< HEAD
-=======
   },
   plugins: ['react', '@typescript-eslint'],
   rules: {
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': 'warn',
     'no-console': 'off',
     'no-undef': 'off',
-<<<<<<< HEAD
-
-=======
 ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   "extends": [
     "next/core-web-vitals",
     "next/typescript"
@@ -136,10 +78,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     },
     "ecmaVersion": 12,
     "sourceType": "module"
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   },
   "plugins": [
     "react",
@@ -149,16 +88,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "no-unused-vars": "off",
-=======
-  rules: {
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     "@typescript-eslint/no-unused-vars": "warn",
-    "@typescript-eslint/no-explicit-any": "warn",
-    "react-hooks/exhaustive-deps": "warn",
-    "react/react-in-jsx-scope": "off",
-    "no-undef": "off",
     "no-console": "off",
-<<<<<<< HEAD
     "no-undef": "off",
     "react/no-unescaped-entities": "off",
     "@typescript-eslint/no-explicit-any": "warn"
@@ -212,23 +143,9 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-<<<<<<< HEAD
-  env: {
-ursor/fix-syntax-push-and-merge-to-main-40de
-  "extends": [
-    "next/core-web-vitals",
-    "next/typescript"
-  ],
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
-    },
-    "ecmaVersion": 12,
-    "sourceType": "module"
-=======
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+
 
     node: true,
     browser: true,
@@ -237,6 +154,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     vitest: true
   },
 
+
+
+
     node: true,
     browser: true,
     es2021: true
@@ -244,7 +164,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
   env: {
     node: true,
     es2021: true
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   },
   extends: ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
   parser: "@typescript-eslint/parser",
@@ -259,15 +178,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     "@next/next/no-html-link-for-pages": "off",
     "@next/next/no-img-element": "off"
   },
-<<<<<<< HEAD
-  env: {
-    browser: true,
-    es2021: true,
-  },
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     node: true,
     browser: true,
     es2021: true
@@ -277,8 +187,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     node: true,
     es2021: true
   },
-<<<<<<< HEAD
-=======
   extends: ['next/core-web-vitals', 'plugin:@typescript-eslint/recommended'],
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint'],
@@ -301,7 +209,6 @@ module.exports = {
     "@next/next/no-html-link-for-pages": "off",
     "@next/next/no-img-element": "off"
   },
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   extends: ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
   parser: "@typescript-eslint/parser",
   plugins: ["@typescript-eslint"],
@@ -316,38 +223,17 @@ module.exports = {
     "@next/next/no-img-element": "off"
   },
 
-<<<<<<< HEAD
-=======
-    '@typescript-eslint/no-unused-vars': [
-      'warn',
-      { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }
-    ],
-    '@typescript-eslint/no-explicit-any': 'warn',
-    '@typescript-eslint/no-empty-object-type': 'warn',
-    '@next/next/no-html-link-for-pages': 'warn'
-  },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
+
+
+
+
+
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   ignorePatterns: [
     'node_modules/',
     '.next/',
     'out/',
-<<<<<<< HEAD
-    'build/',
-    'dist/',
-    '*.config.js',
-    '*.config.ts',
-    'scripts/',
-    'automation/',
-    'netlify/',
-    'src/',
-    'apps/'
-  ]
-<<<<<<< HEAD
-=======
     'dist/',
     'build/',
     'coverage/',
@@ -500,7 +386,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     'clean-conflicts.js',
     'commit-and-push.js'
   ]
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   parserOptions: {
     ecmaVersion: 2020,
     sourceType: 'module',
@@ -509,10 +394,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     }
   extends: ['next/core-web-vitals'],
 
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   rules: {
     "@typescript-eslint/no-unused-vars": "off",
     "@typescript-eslint/no-explicit-any": "off",
@@ -523,14 +404,11 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     "@next/next/no-html-link-for-pages": "off",
     "@next/next/no-img-element": "off"
   },
-<<<<<<< HEAD
-
-=======
     'react/no-unescaped-entities': 'off',
     'no-unused-vars': 'warn',
     '@next/next/no-img-element': 'warn'
   }
-}
+};
 };
   ignore_patterns: [;
 
@@ -540,29 +418,20 @@ ursor/integrate-build-improve-and-re-verify-8f7d
   ignorePatterns: [
   ignorePatterns: [
   ignorePatterns: [
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     "node_modules/",
     ".next/",
     "out/",
     "dist/",
     "build/",
     "coverage/",
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     "*.config.js",
     "*.config.cjs",
     "*.config.mjs",
     "fix - critical - files.js",
-<<<<<<< HEAD
-
-=======
     "*.config && config.js",
     "*.config && config.cjs",
     "*.config && config.mjs",
     "fix-critical-files && files.js",
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     "fix-*.js",
     "fix-*.cjs",
     "*-fix*.cjs",
@@ -570,25 +439,12 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     "advanced-*.cjs",
     "aggressive-*.cjs",
     "aggressive-*.js",
-<<<<<<< HEAD
-    "app - improvement-*.cjs",
-    "analyze-*.cjs",
-    "code - quality-*.js",
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     "automation/",
     "automation_backup/",
     "backup/",
     "lib_backup/",
     "data_backup/",
     "styles_backup/",
-<<<<<<< HEAD
-    "api - backup/",
-    "temp_backup/",
-    "corrupted_files_backup_2/",
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     "ai - optimization - backups/",
     "optimization - reports/",
     "test - generation - reports/",
@@ -598,9 +454,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     "pages.__backup/",
     "pages - disabled/",
     "pages.disabled_auto/",
-<<<<<<< HEAD
-
-=======
     "ai-optimization-backups/",
     "optimization-reports/",
     "test-generation-reports/",
@@ -610,7 +463,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     "pages && pages.__backup/",
     "pages-disabled/",
     "pages && pages.disabled_auto/",
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     "zion_academy/",
     "pm2 - automation/",
     "scripts/",
@@ -618,10 +470,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     "temp_*/",
     "temp_exclude/",
     "test_build/",
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     "tests.disabled/",
     "pages.disabled/",
     "src.disabled/",
@@ -630,10 +478,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     "types.disabled/",
     "contracts.disabled/",
     "solutions.disabled/",
-<<<<<<< HEAD
-    "zion - os.disabled/",
-
-=======
     "tests && tests.disabled/",
     "pages && pages.disabled/",
     "src && src.disabled/",
@@ -643,15 +487,10 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     "contracts && contracts.disabled/",
     "solutions && solutions.disabled/",
     "zion-os && os.disabled/",
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     "src_backup_temp/",
     "temp - backup/",
     "tests/",
     "supabase/",
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     "*.test.js",
     "*.test.ts",
     "*.test.tsx",
@@ -659,15 +498,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     "*.spec.ts",
     "*.spec.tsx",
     "temp_footer_start.tsx",
-<<<<<<< HEAD
-    "test - simple.js",
-    "test - utils.js",
-    "ultimate - automation - runner.js",
-    "vite.config - backup.ts",
-    "vite.config.ts",
-    "types / empty.ts",
-    "types / index.ts",
-=======
     "*.test && test.js",
     "*.test && test.ts",
     "*.test && test.tsx",
@@ -702,40 +532,16 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     "setupTests && setupTests.ts",
     "simple-test && test.js",
     "src/components/layout/",
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     "pages_backup_conflicts/",
     "pages_disabled/",
     "src.broken/",
     "src.corrupted/",
     "src.pages.disabled/",
-<<<<<<< HEAD
-    "performance - monitor.js",
-    "performance - optimization.js",
-    "playwright.config.ts",
-    "postcss.config - backup.js",
-    "public/",
-    "resolve - conflicts.js",
-    "resolve - merge - conflicts.js",
-    "run - automation - safely.js",
-    "run - automation.js",
-    "run - complete - automation.js",
-    "security - config.js",
-    "server/",
-    "setup_tests.ts",
-    "simple - test.js",
-    "src / components / layout/",
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     "types/",
     "utils/",
     "pages_backup/",
     "pages_backup_before_cleanup/",
     "services/",
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     "components.disabled_full/",
     "comprehensive - automation - runner.js",
     "comprehensive - automation.js",
@@ -752,39 +558,17 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     "clean-conflicts && conflicts.js",
     "commit-and-push && push.js",
 
-<<<<<<< HEAD
-  ],
-};
 
 
 
-=======
 
 
-=======
 };
 
 
 
 };
 
-=======
-
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-    "commit-and-push.js"
-  ]
-};
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-};
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-}
-};
 
     "components && components.disabled_full/",
     "comprehensive-automation-runner && runner.js",
@@ -846,14 +630,23 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     "commit-and-push.js",
     "temp_exclude/",
   ],
-}
-}
 };
 
-  ],
-}
-}
 };
+
+
+
+};
+
+
+  ],
+};
+};
+
+
+
+};
+
 
     "commit-and-push.js"
   ]
@@ -884,8 +677,13 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     "clean - conflicts.js",
     "commit - and - push.js",
 
-}
+
 };
+
+
+
+};
+
 
     "build-verification.js",
     "check-syntax.js",
@@ -895,7 +693,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 };
     "commit-and-push.js",
   ],
-}
+};
 };
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -908,7 +706,7 @@ origin/automation-improvements-final
 ;
     "commit-and-push.js"
   ]
-}
+};
 };
 ;
 ;
@@ -944,14 +742,6 @@ module.exports = {;
   ];
 },;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    "react/no-unescaped-entities": "warn"
-  }
-};
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 
 
 
@@ -959,9 +749,6 @@ module.exports = {;
 
 
 
-=======
-=======
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
   root: true,
   env: {
     browser: true,
@@ -995,9 +782,4 @@ module.exports = {;
     },
   },
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
