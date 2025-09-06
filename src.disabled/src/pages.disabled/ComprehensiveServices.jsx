@@ -10,18 +10,5 @@ class ErrorBoundary extends React.Component {
   }
 
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-
-    return this.props.children;
-  }
-
-import React from \'react\'; const ComprehensiveServices = () => { return ( <div> <h1>ComprehensiveServices</h1> <p>Component placeholder</p> </div> )}; export default ComprehensiveServices;
-const React from "react"; const ComprehensiveServices = () => { return ( <div> <h1>ComprehensiveServices</h1> <p>Component placeholder</p> </div> )}; export default ComprehensiveServices;''"
-import _React from 'react'; const ComprehensiveServices = () => { return ( <div> <h1>ComprehensiveServices</h1> <p>Component placeholder</p> </div> )}; export default ComprehensiveServices;
-import _React from 'react'; const ComprehensiveServices = () => { return ( <div> <h1>ComprehensiveServices</h1> <p>Component placeholder</p> </div> )}; export default ComprehensiveServices;
+    console.error('Error caught by boundary: any
+const React from "react"; const ComprehensiveServices = () => { return ( <div> <h1>ComprehensiveServices</h1> <p>Component placeholder</p> 

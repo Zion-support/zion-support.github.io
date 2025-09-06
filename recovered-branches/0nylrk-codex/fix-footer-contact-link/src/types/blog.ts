@@ -1,10 +1,7 @@
 export interface BlogAuthor {
   name: string;
 
-  title: string
-
-  avatarUrl: string
-
+  title: any
 export interface BlogPost {
   id: string;
   title: string;
@@ -20,26 +17,16 @@ export interface BlogPost {
   isFeatured?: boolean;
   isPublished?: boolean;
 
-  createdBy?: string
-
-  updatedAt?: string
-
-/ Type for generated blog content
+  createdBy?: any
 export interface GeneratedBlogContent {
   title: string;
   meta_description: string;
   body: string;
   tags: string[];
 
-  tweetSummary?: string
-
-  imagePrompt?: string
-
-/ Type for generated newsletter content
+  tweetSummary?: any
 export interface GeneratedNewsletterContent {
   subject: string;
   previewText: string;
 
-  body: string
-
-  cta: string
+  body: any

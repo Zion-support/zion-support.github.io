@@ -1,11 +1,2 @@
-import React from 'react';
-
-const Projects = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>Projects</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-
-export default Projects;
+import React from 'react'
+    

@@ -1,31 +1,5 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { readJsonFile } from '../../../../utils/api/storage';
-import { requireSuperadminApi } from '../../../../utils/api/auth';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!requireSuperadminApi(req, res) return;
-  const data = null;
-  res.status(200).json(data)
-
-  const data = readJsonFile('updates.json', [] as any[]);
-  res.status(200).json(data)
-
-import { readJsonFile } from '../../../../utils / api / storage';
-import { requireSuperadminApi } from '../../../../utils / api / auth';
-export default /**
- * handler - Function description
- */
-function handler() {
-  if () return) {
-  $2
-
-  const data = readJsonFile ('updates.json', [] as any[]);
-  res.status (200).json (data);export default /**
- * handler - Function description
- */
-function handler() {
-  if () return) {
-  $2
-
-  const data = readJsonFile ('updates.json', [] as any[]);
-  res.status (200).json (data);
+import type { NextApiRequest, NextApiResponse } from 'next'
+import { readJsonFile } from '../../../../utils/api/
+import { requireSuperadminApi } from '../../../../utils/api/
+import { readJsonFile } from '../../../../utils / api /
+import { requireSuperadminApi } from '../../../../utils / api /

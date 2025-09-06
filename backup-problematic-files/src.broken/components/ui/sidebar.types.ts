@@ -1,4 +1,3 @@
-/ Module for sidebar.types,;
+ Module for sidebar.types,;
 export const sidebar.types = {,;
-  // TODO:Implement module functionality;
-,
+  //

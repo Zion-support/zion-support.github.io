@@ -1,11 +1,2 @@
-import React from 'react';
-
-const Mobile = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>Mobile</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-
-export default Mobile;
+import React from 'react'
+    

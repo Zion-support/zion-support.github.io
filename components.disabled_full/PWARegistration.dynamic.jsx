@@ -1,5 +1,2 @@
-const PWARegistration = dynamic() => import(\"./PWARegistration\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default PWARegistration\' ,
-const PWARegistration = dynamic() => import("./PWARegistration"),{"; loading: () => <p>Loading.</p,>}) export: "default PWARegistration" ,"""
-const PWARegistration = dynamic() => import("./PWARegistration"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default PWARegistration' ,'
-</p>'
-</p>'
+const PWARegistration = dynamic() => import(\"./
+const PWARegistration = dynamic() => import("./

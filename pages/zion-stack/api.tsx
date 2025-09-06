@@ -1,18 +1,5 @@
-import dynamic from 'next/dynamic';
-
-const ApiDocsPage = dynamic() => import('../../components/docs/ApiDocsPage'), { ssr: false })
-
-export default function ZionStackApiRoute() {
-  return <ApiDocsPage />
-
-const ApiDocsPage = dynamic() => import('../../components/docs/ApiDocsPage'), { ssr: false }),
-export default function ZionStackApiRoute() {
-  return <ApiDocsPage />
-
-import dynamic from 'next / dynamic',
-const ApiDocsPage = dynamic () => import ('../../components / docs / ApiDocsPage'), { ssr: false }),
-export default /**
- * ZionStackApiRoute - Function description
- */
-function ZionStackApiRoute() {
-  return <ApiDocsPage />;
+import dynamic from 'next/
+const ApiDocsPage = dynamic() => import('../../components/docs/
+const ApiDocsPage = dynamic() => import('../../components/docs/
+import dynamic from 'next /
+const ApiDocsPage = dynamic () => import ('../../components / docs /

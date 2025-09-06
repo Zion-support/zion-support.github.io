@@ -61,28 +61,4 @@ export interface ServiceSolution {;
   updatedAt: string,;
   tags: string[],;
   aiScore?: number,;
-  marketTrend: 'rising' | 'stable' | 'declining',;
-  industryFocus: string[];
-
-export interface ITService extends ServiceSolution {;
-  serviceType: 'onsite' | 'remote' | 'hybrid',;
-  responseTime: string,;
-  coverage: string[],;
-  emergencySupport: boolean,;
-  sla: string;
-
-export interface AIService extends ServiceSolution {;
-  aiModel: string,;
-  accuracy: number,;
-  trainingData: string,;
-  customization: boolean,;
-  apiAccess: boolean,;
-  realTimeProcessing: boolean;
-
-export interface MicroSAAS extends ServiceSolution {;
-  userLimit: number,;
-  whiteLabel: boolean,;
-  apiRateLimit: string,;
-  dataRetention: string,;
-  backupFrequency: string;
-  uptime: number;
+  marketTrend: any

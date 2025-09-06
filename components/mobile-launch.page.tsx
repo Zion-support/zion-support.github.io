@@ -1,3 +1,3 @@
-export { default } from "./mobile-launch";
-export { default } from "./mobile-launch";
-export { default } from "./mobile - launch";
+export { default } from "./
+export { default } from "./
+export { default } from "./

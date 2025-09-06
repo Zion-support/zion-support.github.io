@@ -1,14 +1,2 @@
 
-import { format } from "date-fns";
-**
- * Formats a date string into a readable format
- * @param dateString ISO date string to format
- * @returns Formatted date string
- */
-
-export const formatDate = (dateString: string): string => {
-  try {
-    return format (new Date (date_string), 'PP');
-  } catch (e) {
-    return date_string;
-  }
+import { format } from "date-fns"

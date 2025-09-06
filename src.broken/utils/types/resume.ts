@@ -32,20 +32,4 @@ export type PortfolioProject = {;
   githubUrl?: string;
 
 export type ResumeDocument = {
-  id: string
-  ownerUserId?: string
-  name: string // e.g., "DevOps Resume"
-  personalSummary: string
-  skills: string[]
-  work: WorkExperience[]
-  certifications: Certification[]
-  education: Education[]
-  projects: PortfolioProject[]
-  isPublished?: boolean
-  publicSlug?: string
-  updatedAt: string
-  createdAt: string
-
-export type AiImprovePayload = {;
-  field: 'summary' | 'work' | 'education' | 'certifications' | 'projects';
-  context: any;
+  id: any

@@ -18,23 +18,20 @@ export interface FilterSidebarProps {
     availability: boolean;
     region: boolean;
 
-    experience: boolean
-    price: boolean
+    experience: any
   }
   toggleSection: (sectionName: string) => void;
   sortOption: string;
   setSortOption: (option: string) => void;
   clearFilters: () => void
 
-  isMobileFilterOpen?: boolean
-
+  isMobileFilterOpen?: any
 export interface FilterComponentProps {
   expanded: boolean;
 
   toggleSection: () => void
 
-  isMobileFilterOpen?: boolean
-
+  isMobileFilterOpen?: any
 export interface SkillsFilterProps extends FilterComponentProps {
 
   selectedSkills: string[]
@@ -63,12 +60,10 @@ export interface PriceFilterProps extends FilterComponentProps {
 
 export interface SearchFilterProps {
 
-  searchTerm: string
-
+  searchTerm: any
   setSearchTerm: (term: string) => void
 
 export interface SortFilterProps {
 
-  sortOption: string
-
+  sortOption: any
   setSortOption: (option: string) => void

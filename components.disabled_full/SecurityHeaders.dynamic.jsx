@@ -1,5 +1,2 @@
-const SecurityHeaders = dynamic() => import(\"./SecurityHeaders\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default SecurityHeaders\' ,
-const SecurityHeaders = dynamic() => import("./SecurityHeaders"),{"; loading: () => <p>Loading.</p,>}) export: "default SecurityHeaders" ,"""
-const SecurityHeaders = dynamic() => import("./SecurityHeaders"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default SecurityHeaders' ,'
-</p>'
-</p>'
+const SecurityHeaders = dynamic() => import(\"./
+const SecurityHeaders = dynamic() => import("./

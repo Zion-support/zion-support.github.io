@@ -1,7 +1,2 @@
-import { render, screen  } from '@testing-library/reactimport ProductReviews from ./ProductReviewsdescribe(ProductReviews, () => {';';
-  it(renders without crashing', () => {'';
-    render(<ProductReviews />)';
-    expect(screen && screen.getByRole('main') || screen && screen.getByText(/.*/).toBeInTheDocument()})';
-  it('displays expected content';
-    render(<ProductReviews />)';
-    // Add specific test assertions based on component content})});';
+import { render, screen  } from '@testing-library/reactimport ProductReviews from ./
+    render(

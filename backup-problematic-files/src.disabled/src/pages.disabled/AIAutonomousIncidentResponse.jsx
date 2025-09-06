@@ -1,11 +1,2 @@
-import React from 'react';
-
-const AIAutonomousIncidentResponse = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>AIAutonomousIncidentResponse</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-
-export default AIAutonomousIncidentResponse;
+import React from 'react'
+    

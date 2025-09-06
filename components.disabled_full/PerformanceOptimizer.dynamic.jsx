@@ -1,5 +1,2 @@
-const PerformanceOptimizer = dynamic() => import(\"./PerformanceOptimizer\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default PerformanceOptimizer\' ,
-const PerformanceOptimizer = dynamic() => import("./PerformanceOptimizer"),{"; loading: () => <p>Loading.</p,>}) export: "default PerformanceOptimizer" ,"""
-const PerformanceOptimizer = dynamic() => import("./PerformanceOptimizer"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default PerformanceOptimizer' ,'
-</p>'
-</p>'
+const PerformanceOptimizer = dynamic() => import(\"./
+const PerformanceOptimizer = dynamic() => import("./

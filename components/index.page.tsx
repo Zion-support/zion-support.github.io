@@ -1,3 +1,3 @@
-export { default } from "./index";
-export { default } from "./index";
-export { default } from "./index";
+export { default } from "./
+export { default } from "./
+export { default } from "./

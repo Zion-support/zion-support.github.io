@@ -10,17 +10,6 @@ class ErrorBoundary extends React.Component {
   }
 
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-
-    return this.props.children;
-  }
-
-import React from \'react\'; import SEOHead from \'../src/components/SEOHead\'; const NewsPage = () => {; return ( <> <SEOHead title=\"News - Zion Tech Group\" description=\"Latest news and updates from Zion Tech Group.\" /> <main className=\"max-w-5xl mx-auto px-4 py-16\"> <h1 className=\"text-4xl font-bold mb-6\">News></div> <p className=\"text-gray-600\">Stay tuned for company announcements,product updates,and industry insights.></div></div></div> );}; export default NewsPage;
-const React from "react"; import SEOHead from "./src/components/SEOHead"; const NewsPage = () => {; return ( <> <SEOHead title="News - Zion Tech Group" description="Latest news and updates from Zion Tech Group." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">News></div> <p className="text-gray-600">Stay tuned for company announcements,product updates,and industry insights.></div></div></div> );}; export default NewsPage;'"'";
-import _React from 'react'; import SEOHead from '../src/components/SEOHead'; const NewsPage = () => {; return ( <> <SEOHead title="News - Zion Tech Group" description="Latest news and updates from Zion Tech Group." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">News></div> <p className="text-gray-600">Stay tuned for company announcements,product updates,and industry insights.></div></div></div> );}; export default NewsPage;
+    console.error('Error caught by boundary: any
+import React from \'react\'; import SEOHead from \'../src/components/
+const React from "react"; import SEOHead from "./src/components/SEOHead"; const NewsPage = () => {; return ( <> <SEOHead title="News - Zion Tech Group" description="Latest news and updates from Zion Tech Group." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">News></div> <p className="text-gray-600">Stay tuned for company announcements,product updates,and industry insights.></div></div>

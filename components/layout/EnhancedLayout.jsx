@@ -10,35 +10,4 @@ class ErrorBoundary extends React.Component {
   }
 
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-
-    return this.props.children;
-  }
-
-import React from 'react';
-import EnhancedNavigation from './EnhancedNavigation';
-import EnhancedFooter from './EnhancedFooter';
-  return (
-    <div className="min - h-screen flex flex - col">;
-      <EnhancedNavigation />;
-      <main className="flex - 1">;
-        {children}
-      </main>
-      <EnhancedFooter />
-    </div>
-
-  );
-
-export default EnhancedLayout;
-
-      </main>;
-      <EnhancedFooter />;
-    </div>);
-,
-export default EnhancedLayout;
+    console.error('Error caught by boundary: any

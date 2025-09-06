@@ -1,11 +1,2 @@
-import React from 'react';
-
-const AIAutonomousScientificResearcher = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>AIAutonomousScientificResearcher</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-
-export default AIAutonomousScientificResearcher;
+import React from 'react'
+    

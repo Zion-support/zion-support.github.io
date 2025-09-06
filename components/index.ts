@@ -1,21 +1,15 @@
-/ UI Components
-export { default as Card } from "./ui/Card";
-export { default as Card } from "./ui/Card";
-
-/ Layout Components
-export { default as Layout } from "./layout/Layout";
-/ Re-export types for external use
-export type { ButtonProps } from "./ui/Button";
-export type { CardProps } from "./ui/Card";
-export type { LayoutProps } from "./layout/Layout";
-export type { ButtonProps } from "./ui/Button";
-export type { CardProps } from "./ui/Card";
-export type { LayoutProps } from "./layout/Layout";
-/ UI Components;
-export { default as Card } from "./ui / Card";
-/ Layout Components;
-export { default as Layout } from "./layout / Layout";
-/ Re - export types for external use;
-export type { ButtonProps } from "./ui / Button";
-export type { CardProps } from "./ui / Card";
-export type { LayoutProps } from "./layout / Layout";
+ UI Components
+export { default as Card } from "./ui/
+export { default as Card } from "./ui/
+export { default as Layout } from "./layout/
+export type { ButtonProps } from "./ui/
+export type { CardProps } from "./ui/
+export type { LayoutProps } from "./layout/
+export type { ButtonProps } from "./ui/
+export type { CardProps } from "./ui/
+export type { LayoutProps } from "./layout/
+export { default as Card } from "./ui /
+export { default as Layout } from "./layout /
+export type { ButtonProps } from "./ui /
+export type { CardProps } from "./ui /
+export type { LayoutProps } from "./layout /

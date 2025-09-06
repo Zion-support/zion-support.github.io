@@ -1,3 +1,3 @@
-/ Module for partner-profiles,;
+ Module for partner-profiles,;
 export const partner-profiles = {,;
-  // TODO: Implement module functionality;
+  //

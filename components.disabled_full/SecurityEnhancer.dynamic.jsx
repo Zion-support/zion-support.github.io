@@ -1,5 +1,2 @@
-const SecurityEnhancer = dynamic() => import(\"./SecurityEnhancer\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default SecurityEnhancer\' ,
-const SecurityEnhancer = dynamic() => import("./SecurityEnhancer"),{"; loading: () => <p>Loading.</p,>}) export: "default SecurityEnhancer" ,"""
-const SecurityEnhancer = dynamic() => import("./SecurityEnhancer"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default SecurityEnhancer' ,'
-</p>'
-</p>'
+const SecurityEnhancer = dynamic() => import(\"./
+const SecurityEnhancer = dynamic() => import("./

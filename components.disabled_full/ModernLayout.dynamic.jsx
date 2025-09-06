@@ -1,5 +1,2 @@
-const ModernLayout = dynamic() => import(\"./ModernLayout\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default ModernLayout\' ,
-const ModernLayout = dynamic() => import("./ModernLayout"),{"; loading: () => <p>Loading.</p,>}) export: "default ModernLayout" ,"""
-const ModernLayout = dynamic() => import("./ModernLayout"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default ModernLayout' ,'
-</p>'
-</p>'
+const ModernLayout = dynamic() => import(\"./
+const ModernLayout = dynamic() => import("./

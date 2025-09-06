@@ -1,5 +1,2 @@
-const InteractiveElements = dynamic() => import(\"./InteractiveElements\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default InteractiveElements\' ,
-const InteractiveElements = dynamic() => import("./InteractiveElements"),{"; loading: () => <p>Loading.</p,>}) export: "default InteractiveElements" ,"""
-const InteractiveElements = dynamic() => import("./InteractiveElements"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default InteractiveElements' ,'
-</p>'
-</p>'
+const InteractiveElements = dynamic() => import(\"./
+const InteractiveElements = dynamic() => import("./

@@ -6,12 +6,9 @@ export interface JobData {
   category: string;
   budget: {
 
-    min: number
-
-    max: number
+    min: any
   }
-  deadline: string
-
+  deadline: any
 export interface TalentProfile {
   id: string;
   full_name: string;
@@ -20,10 +17,7 @@ export interface TalentProfile {
   skills: string[];
   years_experience: number;
 
-  hourly_rate?: number
-
-  availability_type?: string
-
+  hourly_rate?: any
 export interface TalentMatch {
   talent_id: string;
   job_id: string;
@@ -31,12 +25,11 @@ export interface TalentMatch {
 
   matched_skills: string[]
 
-  created_at: string
-
+  created_at: any
 export interface MatchResult {
   talent_id: string;
   score: number;
 
   matchedSkills: string[]
 
-  reason?: string
+  reason?: any

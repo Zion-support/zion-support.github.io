@@ -1,11 +1,2 @@
-import React from 'react';
-
-const NewProductsPage = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>NewProductsPage</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-
-export default NewProductsPage;
+import React from 'react'
+    

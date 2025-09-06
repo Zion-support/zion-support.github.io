@@ -30,14 +30,12 @@ export interface UserProfile {
 
   permissions?: string[]
 
-  companyId?: string
-
-/ Update AuthContextType definition to match implementation
+  companyId?: any
 export interface AuthContextType {
   user: UserDetails | null;
   isLoading: boolean;
 
-  isAuthenticated: boolean
+  isAuthenticated: any
   login: (email: string, password: string) => Promise<{ data?: any, error?: any }>;
   signup: (email: string, password: string, userData?: any) => Promise<{ error?: any }>;
   logout: () => Promise<void>

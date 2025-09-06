@@ -1,4 +1,3 @@
-/ Type definitions for talent,;
+ Type definitions for talent,;
 interface talent {;
-  // TODO:Add proper type definitions;
-,; 
+  //

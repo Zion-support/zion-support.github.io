@@ -1,26 +1,5 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
-
-          </li>
-        </ul>
-      </main>
-    </div>
-  )
-
-          </li>;
-        </ul>;
-      </main>;
-    </div>;
-  ),;
-
-export default AutoIndex;
-
-import Head from 'next / head';
-import Link from 'next / link';
-          </li>;
-        </ul>;
-      </main>;
-    </div>),
-
-export default AutoIndex;
+import type { NextPage } from 'next'
+import Head from 'next/
+import Link from 'next/
+import Head from 'next /
+import Link from 'next /

@@ -1,5 +1,5 @@
 
-/ Additional type declaration for the badge variants
+ Additional type declaration for the badge variants
 
 declare type BadgeVariant =
   | "default"
@@ -8,4 +8,4 @@ declare type BadgeVariant =
   | "outline"
   | "success"
   | "warning"
-  | "info";
+  | "info"

@@ -45,5 +45,4 @@ export interface HireRequest {;
     endDate?:string,;
     estimatedDuration?:string;
   },;
-  status:'pending' | 'accepted' | 'rejected' | 'completed',;
-  createdAt:string;
+  status: any

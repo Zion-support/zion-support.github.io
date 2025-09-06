@@ -10,27 +10,4 @@ class ErrorBoundary extends React.Component {
   }
 
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-
-    return this.props.children;
-  }
-
-import React from 'react';
-interface ComprehensiveServicesOverview2025Props {
-  // Add props here as needed
-
-export default function ComprehensiveServicesOverview2025({ }: ComprehensiveServicesOverview2025Props) {
-  return (
-    <div>
-      <h1>ComprehensiveServicesOverview2025</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-
-src.pages.disabled/ComprehensiveServicesOverview2025.jsx
+    console.error('Error caught by boundary: any

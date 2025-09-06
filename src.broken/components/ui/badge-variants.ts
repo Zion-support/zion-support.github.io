@@ -1,3 +1,3 @@
-/ Module for badge-variants,;
+ Module for badge-variants,;
 export const badge-variants = {,;
-  // TODO: Implement module functionality;
+  //

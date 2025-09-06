@@ -10,26 +10,5 @@ class ErrorBoundary extends React.Component {
   }
 
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-
-    return this.props.children;
-  }
-
-const { BundleAnalyzerPlugin } from "webpack-bundle-analyzer"; const withBundleAnalyzer = (nextConfig = {}) => { return { .nextConfig,webpack: (config,{ dev,isServer }) => { if (process && process.env.ANALYZE = = "true") { config && config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: "static",openAnalyzer: "false",reportFilename: isServer ? "server-bundle && bundle.html" : "client-bundle && bundle.html"})} if (nextConfig && nextConfig.webpack) { return nextConfig && nextConfig.webpack(config,{ dev,isServer })} return config} } module && module.exports = withBundleAnalyzer;'"'"
-import React from 'react';
-interface BundleanalyzerProps {
-  // Add props here as needed
-
-export default function Bundleanalyzer({ }: BundleanalyzerProps) {
-  return (
-    <div>
-      <h1>Bundleanalyzer</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
+    console.error('Error caught by boundary: any
+const { BundleAnalyzerPlugin } from "webpack-bundle-analyzer"; const withBundleAnalyzer = (nextConfig = {}) => { return { .nextConfig,webpack: (config,{ dev,isServer }) => { if (process && process.env.ANALYZE = = "true") { config && config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: "static",openAnalyzer: "false",reportFilename: isServer ? "server-bundle && bundle.html" : "client-bundle && bundle.html"})} if (nextConfig && nextConfig.webpack) { return nextConfig && nextConfig.webpack(config,{ dev,isServer })} return config} } module && module.exports = withBundleAnalyzer;'"'

@@ -10,51 +10,7 @@ class ErrorBoundary extends React.Component {
   }
 
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-
-    return this.props.children;
-  }
-
-import React from 'react';
-interface SkeletonLoaderProps {
-  lines?: number, class_name?: string;
-
-const SkeletonLoader: React.FC<SkeletonLoaderProps> = ({
-
-    lines = 3
+    console.error('Error caught by boundary: any
     className = ''
-  }) => {
-
-    <div className={`animate-pulse ${className}`}>
-      {Array.from({ length: lines }).map(_, index) => (
-        <div
-          key={index}
-          className={`h-4 bg-gray-200 rounded mb-2 ${
-            index = = lines - 1 ? 'w-3/4' : 'w-full'
-          }`}
-        />;
-      )}
-    </div>;
-  );
-
-const SkeletonLoader: React.FC < SkeletonLoaderProps> = ({
-    lines = 3,
-    class_name = '';
-  }) => {
-    <div className={`animate - pulse ${class_name}`}>;
-      {Array.from ({ length: lines }).map (_, index) => (
-        <div;
-          key={index}
-          className={`h - 4 bg - gray - 200 rounded mb - 2 ${
-            index = = lines - 1 ? 'w - 3/4' : 'w - full';
-          }`}
-        />)}
-    </div>);
-
-export default SkeletonLoader;
+            index = = lines - 1 ? 'w-3/
+            index = = lines - 1 ? 'w - 3/

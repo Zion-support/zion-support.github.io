@@ -10,17 +10,5 @@ class ErrorBoundary extends React.Component {
   }
 
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-
-    return this.props.children;
-  }
-
-import React from \'react\';\''\'; import { Button } from \'@/components/ui/button\'; export default function CreatePostButton({ categoryId }) {}; return null} </Button>)} export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton };
-const React from "react";"""; import { Button } from "@/components/ui/button"; export default function CreatePostButton({ categoryId }) {}; return null} </Button>)} export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton };""
-import _React from 'react';'''; import { Button } from '@/components/ui/button'; export default function CreatePostButton({ categoryId }) {}; return null} </Button>)} export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton };
+    console.error('Error caught by boundary: any
+import React from \'react\';\''\'; import { Button } from \'@/components/ui/

@@ -1,4 +1,2 @@
-const Layout = dynamic() => import(\"./Layout\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default Layout\' ,
-const Layout = dynamic() => import("./Layout"),{"; loading: () => <p>Loading.</p,>}) export: "default Layout" ,"""
-const Layout = dynamic() => import("./Layout"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default Layout' ,'
-</p>'
+const Layout = dynamic() => import(\"./
+const Layout = dynamic() => import("./

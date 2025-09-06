@@ -1,11 +1,2 @@
-import React from 'react';
-
-const TranslationManager = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>TranslationManager</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-
-export default TranslationManager;
+import React from 'react'
+    

@@ -10,51 +10,9 @@ class ErrorBoundary extends React.Component {
   }
 
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-
-    return this.props.children;
-  }
-
-import React from 'react';
-import dynamic from 'next/dynamic';
-
-const NotificationCenter = dynamic() => import('../components/notifications/NotificationCenter')
-  {
-    ssr: false
-  }
-;
-
-export default function NotificationsPage() {
-  return <NotificationCenter />;const NotificationCenter = dynamic() => import('../components/notifications/NotificationCenter'), {
-  ssr: false})
-export default function NotificationsPage() {
-const NotificationCenter = dynamic(;
-  () => import('../components/notifications/NotificationCenter'),;
-  {;
-    ssr: false,;
-  }
-;
-
-export default function NotificationsPage() {;
-  return <NotificationCenter />;const NotificationCenter = dynamic() => import('../components/notifications/NotificationCenter'), {;
-  ssr: false}),;
-export default function NotificationsPage() {;
-  return <NotificationCenter />;
-
-export default /**
- * NotificationsPage - Function description
- */
-function NotificationsPage() {
-  return <NotificationCenter />;const NotificationCenter = dynamic () => import ('../components / notifications / NotificationCenter'), {
-  ssr: false}),
-export default /**
- * NotificationsPage - Function description
- */
-function NotificationsPage() {
-  return <NotificationCenter />;
+    console.error('Error caught by boundary: any
+const NotificationCenter = dynamic() => import('../components/notifications/
+  return <NotificationCenter />;const NotificationCenter = dynamic() => import('../components/notifications/
+  () => import('../components/notifications/
+  return <NotificationCenter />;const NotificationCenter = dynamic() => import('../components/notifications/
+  return <NotificationCenter />;const NotificationCenter = dynamic () => import ('../components / notifications /

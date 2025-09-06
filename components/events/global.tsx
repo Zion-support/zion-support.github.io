@@ -1,34 +1,8 @@
-import dynamic from 'next/dynamic';
-
-const ExpoPage = dynamic() => import('../../components/expo/ExpoPage'), {
-  ssr: false
-);
-
-export default function GlobalEventRoute() {
-  return <ExpoPage />;const ExpoPage = dynamic() => import('../../components/expo/ExpoPage'), { ssr: false })
-export default function GlobalEventRoute() {
-const ExpoPage = dynamic() => import('../../components/expo/ExpoPage'), {;
-  ssr: false,;
-);
-
-export default function GlobalEventRoute() {;
-  return <ExpoPage />;const ExpoPage = dynamic() => import('../../components/expo/ExpoPage'), { ssr: false }),;
-export default function GlobalEventRoute() {;
-  return <ExpoPage />;
-
-import dynamic from 'next / dynamic';
-
-const ExpoPage = dynamic () => import ('../../components / expo / ExpoPage'), {
-  ssr: false,
-);
-
-export default /**
- * GlobalEventRoute - Function description
- */
-function GlobalEventRoute() {
-  return <ExpoPage />;const ExpoPage = dynamic () => import ('../../components / expo / ExpoPage'), { ssr: false }),
-export default /**
- * GlobalEventRoute - Function description
- */
-function GlobalEventRoute() {
-  return <ExpoPage />;
+import dynamic from 'next/
+const ExpoPage = dynamic() => import('../../components/expo/
+  return <ExpoPage />;const ExpoPage = dynamic() => import('../../components/expo/
+const ExpoPage = dynamic() => import('../../components/expo/
+  return <ExpoPage />;const ExpoPage = dynamic() => import('../../components/expo/
+import dynamic from 'next /
+const ExpoPage = dynamic () => import ('../../components / expo /
+  return <ExpoPage />;const ExpoPage = dynamic () => import ('../../components / expo /

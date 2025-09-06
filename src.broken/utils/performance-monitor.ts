@@ -1,3 +1,3 @@
-/ Utility functions for performance-monitor,;
+ Utility functions for performance-monitor,;
 export const performance-monitor = {,;
-  // TODO: Implement utility functions;
+  //

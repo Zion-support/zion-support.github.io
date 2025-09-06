@@ -1,26 +1,2 @@
-import React, { useEffect } from 'react';
-
-interface AnalyticsProps {
-  trackingId?: string;
-
-const Analytics: React.FC<AnalyticsProps> = ({ trackingId }) => {
-  useEffect() => {
-    if (typeof window != 'undefined' && trackingId) {
-      // Analytics initialized with tracking ID
-    }, [trackingId]);
-
-  return null;
-
-export default Analytics;
-                      });
-                    }
-                }, 0);
-              });
-            }
-          `;
-        }
-      />
-    </Head>
-  );
-
-export default Analytics;
+import React, { useEffect } from 'react'
+    if (typeof window != 'undefined'

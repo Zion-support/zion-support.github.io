@@ -1,8 +1,8 @@
 export default function ServicesLayout({
   children
-: {
+ {
   children: React.ReactNode;
-) {
+ {
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -15,25 +15,4 @@ class ErrorBoundary extends React.Component {
   }
 
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-
-    return this.props.children;
-  }
-
-import React from 'react';
-export default function ServicesLayout(): any ({;
-  children,;
-: {;
-  children: React && React.ReactNode;
-) {;
-export default /**
- * ServicesLayout - Function description
- */
-function ServicesLayout() {
-  return <div>{children}</div>;
+    console.error('Error caught by boundary: any

@@ -1,11 +1,6 @@
 
-  "timestamp": "2025-09-06T09:31:58.709Z",
-  "filesFixed": 5,
-  "errors": 0,
-  "fixedFiles": [
-    "pages/api/generate-service-description.ts",
-    "pages/api/integrations/oauth/[provider]/start.ts",
-    "pages/api/integrations/overrides.ts",
-    "pages/api/integrations/providers.ts",
-    "pages/api/integrations/resync.ts"
-  ]
+  "timestamp": any
+    "pages/api/integrations/oauth/[provider]/
+    "pages/api/integrations/
+    "pages/api/integrations/
+    "pages/api/integrations/

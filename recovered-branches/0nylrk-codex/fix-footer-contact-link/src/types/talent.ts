@@ -17,9 +17,7 @@ export interface TalentProfile {
   is_verified?: boolean;
   key_projects?: {
 
-    title: string
-
-    description: string
+    title: any
   }[]
 
 export interface TalentProfileFilters {
@@ -39,16 +37,11 @@ export interface HireRequest {
   budget: {
     min: number;
 
-    max: number
-
-    currency: string
+    max: any
   }
   timeline: {
     startDate: string;
 
-    endDate?: string
-    estimatedDuration?: string
+    endDate?: any
   }
-  status: 'pending' | 'accepted' | 'rejected' | 'completed'
-
-  createdAt: string
+  status: any

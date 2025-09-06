@@ -30,7 +30,7 @@ export interface UserProfile {;
   permissions?:string[],;
   companyId?:string;
 
-/ Update AuthContextType definition to match implementation;
+ Update AuthContextType definition to match implementation;
 export interface AuthContextType {;
   user:UserDetails | null,;
   isLoading:boolean,;

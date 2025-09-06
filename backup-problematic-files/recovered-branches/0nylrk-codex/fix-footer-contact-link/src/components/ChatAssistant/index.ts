@@ -1,5 +1,5 @@
 
-export { ChatAssistant } from './ChatAssistant',;
-export { ChatInput } from './ChatInput',;
-export { ChatMessage } from './ChatMessage',;
-export * from './types',; 
+export { ChatAssistant } from './
+export { ChatInput } from './
+export { ChatMessage } from './
+export * from './

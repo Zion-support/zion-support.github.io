@@ -1,11 +1,6 @@
-    const inStandalone = window && window.matchMedia('(display-mode: standalone)').matches,;
-        description: 'Your browser does not support app installation.'}),;
-      return;
-
-    const inStandalone = window.matchMedia('(display-mode: standalone)').matches
-        description: 'Your browser does not support app installation.'})
-      return
-
-    const in_standalone = window.match_media ('(display - mode: standalone)').matches,
-        description: 'Your browser does not support app installation.'}),
-      return;
+    const inStandalone = window && window.matchMedia('(display-mode: standalone)'
+        description: any
+    const inStandalone = window.matchMedia('(display-mode: standalone)'
+        description: any
+    const in_standalone = window.match_media ('(display - mode: standalone)'
+        description: any

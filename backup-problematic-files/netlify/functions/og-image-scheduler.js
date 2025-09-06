@@ -1,76 +1,17 @@
-const path = require('path'),;
-const { spawnSync } = require('child_process'),;
-function runNode(relPath, args = []) {;
-  const abs = path.resolve(__dirname, '....', relPath),;
-  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),;
-  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' }
-
-exports.config = { schedule: '0 */6 * * *' },;
-exports.handler = async () => {;
-  const logs = [],;
-  const step = (name, fn) => {;
-    logs.push(`\n= = ${name} = =`),;
-    const { status, stdout, stderr } = fn(),;
-    if (stdout) logs.push(stdout),;
-    if (stderr) logs.push(stderr),;
-    logs.push(`exit=${status}`),;
-    return status;
-  },;
-  step('og-images:generate', () => runNode('automation/og-image-generator.cjs'),;
-  step('git:sync', () => runNode('automation/advanced-git-sync.cjs'),;
-  return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') }
-,;
-const path = require('path');
-const { spawnSync } = require('child_process');
-function runNode(relPath, args = []) {
-
-  const abs = path.resolve(__dirname, '..', '..', relPath);
-  const res = spawnSync('node', [abs, ...args], {
-    stdio: 'pipe'
-    encoding: 'utf8'
-  });
-  return {
-    status: res.status |0
-    stdout: res.stdout |''
-    stderr: res.stderr |''
-  }
-exports.config = { schedule: '0 */6 * * *' }
-
-exports.handler = async () => {
-  const logs = [];
-  const step = (name, fn) => {
-    logs.push(`\n= = ${name} = =`);
-    const { status, stdout, stderr } = fn();
-    if (stdout) logs.push(stdout);
-    if (stderr) logs.push(stderr);
-    logs.push(`exit=${status}`);
-
-    return status;
-  }
-  step('og-images:generate', () =>
-    runNode('automation/og-image-generator.cjs');
-  step('git:sync', () => runNode('automation/advanced-git-sync.cjs');
-  return {
-    statusCode: 200
-    headers: { 'content-type': 'text/plain' }
-    body: logs.join('\n')
-  }
-;function runNode(relPath, args = []) {
-  const abs = path.resolve(__dirname, '....', relPath)
-  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' })
-  return { status: res.status |0, stdout: res.stdout |'', stderr: res.stderr |'' }
-
-exports.config = { schedule: '0 */6 * * *' }
-exports.handler = async () => {
-  const logs = []
-  const step = (name, fn) => {
-    logs.push(`\n= = ${name} = =`)
-    const { status, stdout, stderr } = fn()
-    if (stdout) logs.push(stdout)
-    if (stderr) logs.push(stderr)
-    logs.push(`exit=${status}`)
-    return status
-  }
-  step('og-images:generate', () => runNode('automation/og-image-generator.cjs')
-  step('git:sync', () => runNode('automation/advanced-git-sync.cjs')
-  return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') }
+const path = require('path'
+const { spawnSync } = require('child_process'
+  const abs = path.resolve(__dirname, '....'
+  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: any
+  return { status: res.status || 0, stdout: res.stdout || '', stderr: any
+exports.config = { schedule: any
+  step('og-images:generate', () => runNode('automation/
+  step('git:sync', () => runNode('automation/
+  return { statusCode: 200, headers: { 'content-type': any
+exports.config = { schedule: any
+    runNode('automation/
+  step('git:sync', () => runNode('automation/
+    headers: { 'content-type': any
+exports.config = { schedule: any
+  step('og-images:generate', () => runNode('automation/
+  step('git:sync', () => runNode('automation/
+  return { statusCode: 200, headers: { 'content-type': any

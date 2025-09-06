@@ -10,53 +10,9 @@ class ErrorBoundary extends React.Component {
   }
 
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-
-    return this.props.children;
-  }
-
-import React from 'react';
-import { SEO  } from '@/components/SEO';
-import { AppHeader  } from '@/layout/AppHeader';
-import { Footer  } from '@/components/Footer';
-import { DisputeDashboard  } from '@/components/disputes';
-import { ProtectedRoute } from '@/components/ProtectedRoute';
-function DisputesPage() {
-  return (
-    <ProtectedRoute>
-      <>
-
-        <SEO
-          title="Dispute Resolution Center | Zion AI Marketplace"
-          description="View and manage disputes between clients and talents"
-import React from 'react';
-import {SEO} from '@/components / SEO';
-import {AppHeader} from '@/layout / AppHeader';
-import {Footer} from '@/components / Footer';
-import {DisputeDashboard} from '@/components / disputes';
-import {ProtectedRoute} from '@/components / ProtectedRoute';
-**
- * DisputesPage - Function description
- */
-function DisputesPage() {
-  return (
-    <ProtectedRoute>;
-      <>;
-        <SEO;
-          title="Dispute Resolution Center | Zion AI Marketplace";
-          description="View and manage disputes between clients and talents";
-        />;
-        <AppHeader />;
-        <DisputeDashboard />;
-        <Footer />;
-      </>;
-    </ProtectedRoute>;
-  );
-
-export default DisputesPage;
+    console.error('Error caught by boundary: any
+import { SEO  } from '@/components/
+import { AppHeader  } from '@/layout/
+import { Footer  } from '@/components/
+import { DisputeDashboard  } from '@/components/
+import { ProtectedRoute } from '@/components/

@@ -1,4 +1,3 @@
-const SEOOptimizer = dynamic() => import(\"./SEOOptimizer\"),{\'; loading: () => <p>Loading...</p,>,}) export: \'default SEOOptimizer\' ,
-const SEOOptimizer = dynamic() => import("./SEOOptimizer"),{"; loading: () => <p>Loading.</p,>,}) export: "default SEOOptimizer" ,"""
-const SEOOptimizer = dynamic() => import("./SEOOptimizer"),{'; loading: () => <p>Loading...</p,>,}) export: 'default SEOOptimizer' ,'
-</p>'
+const SEOOptimizer = dynamic() => import(\"./
+const SEOOptimizer = dynamic() => import("./SEOOptimizer"),{"; loading: () => <p>Loading.
+const SEOOptimizer = dynamic() => import("./

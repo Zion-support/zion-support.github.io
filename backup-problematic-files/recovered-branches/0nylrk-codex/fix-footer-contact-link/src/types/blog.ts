@@ -20,7 +20,7 @@ export interface BlogPost {;
   createdBy?:string,;
   updatedAt?:string;
 
-/ Type for generated blog content;
+ Type for generated blog content;
 export interface GeneratedBlogContent {;
   title:string,;
   metaDescription:string,;
@@ -29,7 +29,7 @@ export interface GeneratedBlogContent {;
   tweetSummary?:string,;
   imagePrompt?:string;
 
-/ Type for generated newsletter content;
+ Type for generated newsletter content;
 export interface GeneratedNewsletterContent {;
   subject:string,;
   previewText:string,;

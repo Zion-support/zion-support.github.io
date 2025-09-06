@@ -4,8 +4,7 @@ export interface Job {
   description: string;
   company_name?: string;
   budget?: string;
-  client_id: string
-
+  client_id: any
 export interface ApplyToJobModalProps {
   job: Job;
   isOpen: boolean;

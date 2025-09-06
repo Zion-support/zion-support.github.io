@@ -1,3 +1,3 @@
-export { default as AIAssistant } from "./AIAssistant";
-export type { AIAssistantProps } from "./AIAssistant";
-export type { AIAssistantProps } from "./AIAssistant";
+export { default as AIAssistant } from "./
+export type { AIAssistantProps } from "./
+export type { AIAssistantProps } from "./
